@@ -1,21 +1,7 @@
-<<<<<<< HEAD
 import { CategoryCard } from "@/components/CategoryCard",
 import { GradientHeading } from "@/components/GradientHeading",
 import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-=======
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-
-
-<<<<<<< HEAD:temp_exclude/hooks.disabled/AllCategoriesPage.tsx
-
-// Reusing the categories array from CategoriesSection.tsx
-// Ideally, this would come from a shared data source or API
-
-const categories = [
-  {
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
@@ -158,7 +144,7 @@ const categories = [;
     link: "/innovation",;
     color: undefined, // Let CategoryCard use default color;
   }];
-<<<<<<< HEAD:temp_exclude/hooks.disabled/AllCategoriesPage.tsx
+:temp_exclude/hooks.disabled/AllCategoriesPage.tsx
 export default function AllCategoriesPage() {;
   return (;
     <div className="min-h-screen bg-zion-blue">;
@@ -173,27 +159,14 @@ export default function AllCategoriesPage() {;
           </p>;
         </div>;
         <ErrorBoundary>;
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
             {categories.map((category) => (;
               <CategoryCard;
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export default function AllCategoriesPage() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/AllCategoriesPage.tsx
                 key={category.title}
                 title={category.title}
                 description={category.description}
                 icon={category.icon}
-<<<<<<< HEAD
-=======
 
-}
-
-<<<<<<< HEAD:temp_exclude/hooks.disabled/AllCategoriesPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 // The CategoryCard itself is a Link to its specific category page;
                 // So we don't pass the category.link to a 'to' prop here directly;
 =======
@@ -209,46 +182,7 @@ export default function AllCategoriesPage() { return null; }
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
 
-        <ErrorBoundary>;'
-          <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
-            {categories.map (category => (
-              <CategoryCard;
-                key={category.id}
-                title={category.title}
-                description={category.description}
-                icon={category.icon}
-                href={category.href}
-              />))}
-          </div>;
-        <ErrorBoundary>;'
-          <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;"
-            {categories.map (category => (          <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
-            {categories.map ((category) => (
-              <CategoryCard;
-                key={category.title}
-                title={category.title}
-                description={category.description}
-                icon={category.icon}
-            {categories.map ((category, ) => (
-              <CategoryCard;
-                key = {category.title, }
-                title = {category.title, }
-                description = {category.description, }
-                icon = {category.icon, }
-                // The CategoryCard itself is a Link to its specific category page;'
-                // So we don't pass the category.link to a 'to' prop here directly;'
-                // The 'link' in the categories array above is used by CategoryCard's internal Link;
-              />))}
-          </div>;
-        </ErrorBoundary>;
-      </div>;
-    </div>);
-}
-<<<<<<< HEAD:temp_exclude/hooks.disabled/AllCategoriesPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
 ;'"

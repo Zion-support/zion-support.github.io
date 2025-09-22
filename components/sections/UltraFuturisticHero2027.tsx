@@ -70,22 +70,22 @@ import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
  } from 'lucide-react';
 export default function UltraFuturisticHero2027() {
   const features = null;
-            ease: "easeInOut"
+            ease: "easeInOut";
     {
-      icon: Atom
-      text: 'Quantum Computing'
-      color: 'from-blue-400 to-cyan-400'
+      icon: Atom;
+      text: 'Quantum Computing';
+      color: 'from-blue-400 to-cyan-400';
     }
     {
-      icon: Globe
-      text: 'Digital Reality'
-      color: 'from-green-400 to-emerald-400'
+      icon: Globe;
+      text: 'Digital Reality';
+      color: 'from-green-400 to-emerald-400';
     }
     {
 origin/cursor/automate-test-improve-and-merge-code-2533
-      icon: Shield
-      text: 'Enterprise Security'
-      color: 'from-red-400 to-orange-400'
+      icon: Shield;
+      text: 'Enterprise Security';
+      color: 'from-red-400 to-orange-400';
     };
   ];
       icon: Shield,'
@@ -179,11 +179,11 @@ import { motion } from 'framer-motion';
           }}
           transition={{}
             duration: 8;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
           transition={{}
             duration: 10;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
         <motion&& motion.div'
           className='absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl'
@@ -193,7 +193,7 @@ import { motion } from 'framer-motion';
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          }}
           transition={{}
             duration: 12;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
 
           }}
@@ -218,7 +218,7 @@ import { motion } from 'framer-motion';
             repeat: Infinity,
 
   return (
-    <section className='relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>
+    <section className='relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>;
       {/* Background Elements */}
       <div className='absolute inset-0 pointer-events-none'>
         {/* Floating Orbs */}
@@ -263,7 +263,7 @@ ease: 'easeInOut',
           }}
         />
         {/* Grid Pattern */}
-<div className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]' />
+<div className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]' />;
       </div>
       <div className='max-w-7xl mx-auto relative z-10'>
         <div className='text-center'>
@@ -276,22 +276,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='mb-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight'>
+            <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight'>;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 Welcome to 2027;
               </span>
             </h1>'
-            <h2 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
+            <h2 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>;
               The Future of'
               <span className='bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4'>                Technology          >"
             className="mb-8"
           >"
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight">"
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight">";
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Welcome to 2027;
               </span>
             </h1>"
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">;
               The Future of"
               <span className="bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4">
               <span className='bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4'>
@@ -321,7 +321,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-className='text-xl md:text-2xl lg:text-3xl text-cyan-300 mb-12 max-w-5xl mx-auto leading-relaxed'
+className='text-xl md:text-2xl lg:text-3xl text-cyan-300 mb-12 max-w-5xl mx-auto leading-relaxed';
           >
             Experience revolutionary AI consciousness evolution, quantum
             computing breakthroughs, and practical micro SAAS solutions that
@@ -332,19 +332,19 @@ className='text-xl md:text-2xl lg:text-3xl text-cyan-300 mb-12 max-w-5xl mx-auto
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-className='flex flex-col sm:flex-row gap-6 justify-center mb-16'
+className='flex flex-col sm:flex-row gap-6 justify-center mb-16';
           >
             <Link'
               href='/2027-services-showcase''
-              className='group px-10 py-5 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-xl rounded-2xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/25 flex items-center justify-center space-x-3'
+              className='group px-10 py-5 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-xl rounded-2xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/25 flex items-center justify-center space-x-3';
             >'
-              <Rocket className='w-6 h-6 group-hover:rotate-12 transition-transform duration-300' />
+              <Rocket className='w-6 h-6 group-hover:rotate-12 transition-transform duration-300' />;
               <span>Explore 2027 Services</span>'
-              <ArrowRight className='w-6 h-6 group-hover:translate-x-1 transition-transform duration-300' />
+              <ArrowRight className='w-6 h-6 group-hover:translate-x-1 transition-transform duration-300' />;
             </Link>
             <Link'
               href='/contact''
-              className='px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 font-bold text-xl rounded-2xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 flex items-center justify-center space-x-3'
+              className='px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 font-bold text-xl rounded-2xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 flex items-center justify-center space-x-3';
             >
               <Sparkles className='w-6 h-6' />
               <span>Start Your Journey</span>
@@ -414,12 +414,12 @@ className='flex flex-col sm:flex-row gap-6 justify-center mb-16'
             animate={{ opacity: 1, y: 0 }}
 
             transition={{ duration: 0.8, delay: 0.6 }}
-className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
+className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             transition={{ duration: 0.8;, delay: 0.6 ;}
 }
-className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
+className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
            />
             {features.map((feature, index) => (
               <motion.div;
@@ -450,17 +450,17 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}'
                 className='group'
 
-                <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
+                <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
                   <div;
                     className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
                   >'
                     <feature.icon className='w-8 h-8 text-white' />
                   </div>
-                  <h3 className='text-white font-semibold text-center group-hover:text-cyan-400 transition-colors duration-300'>
+                  <h3 className='text-white font-semibold text-center group-hover:text-cyan-400 transition-colors duration-300'>;
                     {feature.text}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-                  <h3 className='text-white font-semibold text-center group-hover:text-cyan-400 transition-colors duration-300' />
+                  <h3 className='text-white font-semibold text-center group-hover:text-cyan-400 transition-colors duration-300' />;
                     {feature.text}
                   </h3>
                 </div>
@@ -476,7 +476,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{ opacity: 1, y: 0 }}
 
             transition={{ duration: 0.8, delay: 1.0 }}
-className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'
+className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16';
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
           <motion&& motion.div;
@@ -488,7 +488,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             transition={{ duration: 0.8;, delay: 1.0 ;}
 }
-className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'
+className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16';
            />
             {stats.map((stat, index) => (
               <motion.div'
@@ -549,7 +549,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
             transition={{ duration: 0.8;, delay: 1.0 ;}}"
             className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16'           />            className=\"grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16\">
-
+;
                 key={stat.labe}
 }
                 initial={{ opacity: 0;, scale: 0.8 ;}
@@ -567,7 +567,7 @@ className='text-center group'
                   {stat.number}
 
                 </div>
-                <div className='text-cyan-300 font-medium group-hover:text-cyan-400 transition-colors duration-300'>
+                <div className='text-cyan-300 font-medium group-hover:text-cyan-400 transition-colors duration-300'>;
                   {stat.label}
                 </div>
                 <div className='flex justify-center mt-2'>
@@ -590,7 +590,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h3 className='text-2xl font-bold text-white mb-6'>
               Trusted by Industry Leaders;
             </h3>'
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>;
               {['
                 'Fortune 500''
                 'Tech Giants''
@@ -603,7 +603,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h3 className="text-2xl font-bold text-white mb-6">
               Trusted by Industry Leaders;
             </h3>"
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">'
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">';
               {['Fortune 500Tech GiantsResearch LabsGovernment'].map((trust, index) => (
                   key={trust}
                   initial={{ opacity: 0, x: -20 }}

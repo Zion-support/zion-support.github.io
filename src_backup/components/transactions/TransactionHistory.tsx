@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/transactions/TransactionHistory.tsx
-<<<<<<< HEAD
+:src/components/transactions/TransactionHistory.tsx
 <<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { useQuery } from "@tanstack/react-query",
@@ -109,13 +108,13 @@ export function TransactionHistory() {;
       const { data, error } = await supabase.functions.invoke('manage-transaction', {;
         body: { transactionId, action }
       }),
-      
+
       if (error) throw error,
-      
+
       toast({
         title: "Success",
         description: (data as any)?.message || "Transaction updated successfully"}),
-      
+
       refetch()
     } catch (error) {
       logErrorToProduction('Error managing transaction:', { data: error }),
@@ -125,7 +124,7 @@ export function TransactionHistory() {;
         variant: "destructive"})
     }
   },
-  
+
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'in_escrow':
@@ -210,7 +209,7 @@ export function TransactionHistory() {;
       <div className="p-6">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold text-white">Transaction History</h2>
-          
+
           <div className="flex space-x-2">
             <Button 
               size="sm" 
@@ -246,7 +245,7 @@ export function TransactionHistory() {;
             </Button>
           </div>
         </div>
-        
+
         {isLoading ? (
           Array(3).fill(0).map((_, i) => (
             <div key={i} className="mb-4">
@@ -278,7 +277,7 @@ export function TransactionHistory() {;
               const canRelease = !isClient && isPending && isInEscrow,
               const canCancel = isClient && isPending,
               const canRefund = isClient && transaction.status === 'released',
-              
+
               const counterpartyName = isClient 
                 ? transaction.provider?.display_name || 'Service Provider' 
                 : 'Client',
@@ -458,9 +457,6 @@ export function TransactionHistory() {;
               const canCancel = isClient && isPending,;
               const canRefund = isClient && transaction.status === 'released';
               const counterpartyName = isClient;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export /**
  * TransactionHistory - Function description
  */
@@ -492,13 +488,10 @@ if (return []) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 ? transaction.provider?.display_name || 'Service Provider';
                 : 'Client';
-<<<<<<< HEAD:src/components/transactions/TransactionHistory.tsx
+:src/components/transactions/TransactionHistory.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/transactions/TransactionHistory.tsx
               return (;
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
                   <CardHeader className="pb-3">;
@@ -525,7 +518,7 @@ if (return []) {
                         {formatCurrency(transaction.amount)}
                       </span>
                     </div>
-                    
+
                     <div className="flex justify-between items-center text-sm">
                       <span className="text-zion-slate-light">Date:</span>
                       <span className="text-zion-slate-light">
@@ -533,7 +526,7 @@ if (return []) {
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
                     </div>
-                    
+
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
@@ -603,21 +596,10 @@ if (return []) {
         )}
       </div>;
     </div>;
-<<<<<<< HEAD:src/components/transactions/TransactionHistory.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+:src/components/transactions/TransactionHistory.tsx
   );
-<<<<<<< HEAD
 }
 ;
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}  );
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/transactions/TransactionHistory.tsx
@@ -721,9 +703,6 @@ default: return (<Badge variant="outline" className="bg-gray-500/20 text-gray-50
 }'"
   )
 }
-<<<<<<< HEAD:src/components/transactions/TransactionHistory.tsx
+:src/components/transactions/TransactionHistory.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/transactions/TransactionHistory.tsx

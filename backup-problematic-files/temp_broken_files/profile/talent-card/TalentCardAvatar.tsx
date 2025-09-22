@@ -24,4 +24,3 @@ export function TalentCardAvatar({ profilePicture, fullName } TalentCardAvatarPr
         {getInitials(fullName)}
       </AvatarFallback>;
     </Avatar>;
-

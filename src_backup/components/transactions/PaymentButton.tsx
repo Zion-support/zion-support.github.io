@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
 import { toast } from "@/hooks/use-toast",
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import { Loader2 } from 'lucide-react'
 import { useRouter } from 'next/router',
@@ -33,7 +28,7 @@ export function PaymentButton({
   const [isProcessing, setIsProcessing] = useState(false),
   const { isAuthenticated, user } = useAuth(),
   const router = useRouter(),
-  
+
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
       toast({
@@ -87,13 +82,8 @@ export function PaymentButton({;
       setIsProcessing(true),;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
-=======
-redirectUrl?: string
-}
-export function PaymentButton({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
-      
+
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
@@ -103,11 +93,11 @@ export function PaymentButton({
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
           cancelUrl: window.location.href}}),
-      
+
       if (error) {
         throw error
       }
-      
+
       // Type assertion needed for mock Supabase client compatibility
       if ((data as any)?.url) {
         // Open Stripe checkout in a new tab
@@ -115,7 +105,7 @@ export function PaymentButton({
       } else {
         throw new Error("No checkout URL returned")
       }
-      
+
     } catch (error) {
       logErrorToProduction('Payment error:', { data: error }),
       toast({
@@ -126,8 +116,7 @@ export function PaymentButton({
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
-<<<<<<< HEAD
-      }, 1500)
+}, 1500)
 ;
       // Call the create-checkout edge function;
       const { data, error } = await supabase.functions.invoke("create-checkout", {;
@@ -169,36 +158,6 @@ export function PaymentButton({
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]",
-=======
-import { supabase } from "@/integrations/supabase/client";
-import { Loader2 } from 'lucide-react'
-import { useRouter  } from 'next/router';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface PaymentButtonProps {
-  amount: number;
-  serviceId: string;
-  providerId: string;
-  buttonText?: string;
-  className?: string;
-  onPaymentInitiated?: () => void;
-        description: "Please sign in to make a purchase."})
-import { useRouter } from 'next/router'
-import {logErrorToProduction} from '@/utils/productionLogger'
-interface PaymentButtonProps {
-  amount: number
-  serviceId: string
-  providerId: string
-  buttonText?: string
-  className?: string
-  onPaymentInitiated?: () => void
-  redirectUrl?: string
-}
-export function PaymentButton({
-  amount;
-  serviceId;
-  providerId;
-  buttonText;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         className
       )}
     >
@@ -210,33 +169,7 @@ export function PaymentButton({
       ) : (
         buttonText
       )}
-<<<<<<< HEAD
-    </Button>;
+</Button>;
   );
 }
 ;
-=======
-      }, 1500)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    </Button>
-  );
-
-}catch (error) {';
-  logErrorToProduction ('Payment error:', {;
-  data: error ;
-});
-toast ({;
-  ;
-}finally {;
-  //Reset button state after a short delay setTimeout ( () => {;
-  setIsProcessing (false) ;
-}, 1500) ;
-
-};
-
-}> {";
-  isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText) ;
-}</Button>) ;
-}'"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

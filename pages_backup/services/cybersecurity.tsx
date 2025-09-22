@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -137,18 +135,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
-
-=======
-import * as React from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 
 const securityServices = [
-<<<<<<< HEAD
-
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -186,175 +178,6 @@ export default function CybersecurityPage() {
       description="Advanced cybersecurity solutions to protect your business from evolving threats and ensure compliance."";
     >;
       <div className="min-h-screen bg-gray-50">";
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-const securityServices = [
-ursor/fix-syntax-push-and-merge-to-main-40de
-import Layout from "../../components/Layout";";
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { Eye, Shield, Lock, AlertTriangle } from 'lucide-react';
-export default function CybersecurityPage() {
-  const securityServices = [;
-    {}
-      title: "Security Assessment","
-      description: "Comprehensive security evaluation of your systems","
-      icon: Eye,
-      features: ["Vulnerability Scanning", "Penetration Testing", "Risk Analysis"]"
-    },
-    {}
-      title: "Threat Protection","
-      description: "Advanced threat detection and prevention systems","
-      icon: Shield,
-      features: ["Real-time Monitoring", "AI-Powered Detection", "Incident Response"]"
-    },
-    {}
-      title: "Data Encryption","
-      description: "End-to-end encryption for sensitive data","
-      icon: Lock,
-      features: ["Data at Rest", "Data in Transit", "Key Management"]"
-    },
-    {}
-      title: "Compliance","
-      description: "Ensure compliance with industry standards","
-      icon: AlertTriangle,
-      features: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"]"
-    }
-;  ];
-  return (;
-    <Layout );
-      title="Cybersecurity Services - Zion Tech Group"";
-      description="Advanced cybersecurity solutions to protect your business from evolving threats and ensure compliance."";
-    >;
-      <div className="min-h-screen bg-gray-50">";
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 text-white py-20">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center""
-            >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
-                Cybersecurity Services;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-                Protect your business with our comprehensive cybersecurity solutions. 
-                Stay ahead of threats with advanced security measures and expert support.;
-              </p>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Services Section */}
-        <section className="py-20">"
-          <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-              {securityServices.map((service, index) => {}
-                const IconComponent = service.icon;
-                return (;
-                  <motion.div);
-                    key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >,
-                    <div className="text-red-600 mb-4">";
-                      <IconComponent className="w-10 h-10" />";
-                    </div>;
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
-                      {service.title}
-                    </h3>,
-                    <p className="text-gray-600 mb-4">";
-                      {service.description}
-                    </p>,
-                    <ul className="space-y-2">";
-                      {service.features.map((feature, featureIndex) => (,
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
-                          {feature}
-                        </li>,
-                      ))}
-                    </ul>,
-                  </motion.div>;
-                );
-              })}
-            </div>,
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600 text-white">"
-          <div className="container mx-auto px-4 text-center">";
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">";
-              Secure Your Business Today;
-            </h2>;
-            <p className="text-xl mb-8 max-w-2xl mx-auto">";
-              Don't wait for a security breach. Let our experts help you build a robust security framework.';
-            </p>;
-            <motion.a;
-              href="/contact"";
-              className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
-              whileHover={{ scale: 1.05 }}
-            >,
-              Get Security Assessment;
-              <ArrowRight className="w-5 h-5 ml-2" />";
-            </motion.a>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-import Layout from '../../components/Layout';
-import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
-const features = [
-  {
-    icon: Shield,
-    title: 'Security Assessment',
-    description: 'Comprehensive security audits and vulnerability assessments'
-  },
-  {
-    icon: Lock,
-    title: 'Data Protection',
-    description: 'Advanced encryption and data protection solutions'
-  },
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-  {
-    icon: Eye,
-    title: 'Threat Monitoring',
-    description: '24/7 security monitoring and threat detection'
-  },
-  {
-    icon: AlertTriangle,
-    title: 'Incident Response',
-    description: 'Rapid response to security incidents and breaches'
-  },
-  {
-    icon: CheckCircle,
-    title: 'Compliance',
-    description: 'GDPR, HIPAA, SOX, and other regulatory compliance'
-  },
-  {
-    icon: ArrowRight,
-    title: 'Security Training',
-    description: 'Employee security awareness and training programs'
-=======
-  {
-    title: "Security Assessment",
-=======
-import * as React from 'react';'
-import Head from 'next/head';'
-import Link from 'next/link';'
-import { motion } from 'framer-motion';'
-import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
-
-const securityServices = []
-  {}
-    title: "Security Assessment","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: "Comprehensive security evaluation of your systems",
     icon: Eye,"
     features: ["Vulnerability scanning", "Penetration testing", "Security audit", "Risk assessment"],"
@@ -384,9 +207,7 @@ const securityServices = []
   }
 ];
 
-<<<<<<< HEAD
 export default function CybersecurityPage() {
-<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 const benefits = [
   'Protection against cyber threats and attacks',
@@ -499,10 +320,6 @@ const features = [
     title: 'Data Protection',
     description: 'Advanced encryption and data protection solutions'
   },
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Layout
@@ -513,9 +330,6 @@ const features = [
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const benefits = [
   'Protection against cyber threats and attacks',
   'Compliance with industry regulations',
@@ -541,20 +355,7 @@ export default function CybersecurityServices() {
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Protect your business with comprehensive cybersecurity solutions.
-<<<<<<< HEAD
-                Advanced threat protection, compliance, and 24/7 monitoring.
-=======
-=======
-const benefits = [
-  'Protection against cyber threats and attacks',
-  'Compliance with industry regulations',
-  'Reduced risk of data breaches',
-  'Enhanced customer trust and confidence',
-  'Lower insurance costs and liability',
-  'Peace of mind with 24/7 monitoring'
-];
-export default function CybersecurityServices() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+Advanced threat protection, compliance, and 24/7 monitoring.
   return (
     <Layout
       title="Cybersecurity Services - Zion Tech Group"
@@ -562,25 +363,9 @@ export default function CybersecurityServices() {
       keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+<section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
-=======
-export default function CybersecurityPage() {}
-  return (
-    <>
-      <Head>
-        <title>Cybersecurity Services - Zion Tech Group</title>"
-        <meta name="description" content="Comprehensive cybersecurity services including threat detection, data protection, security assessment, and training programs." />
-      </Head>
-"
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}"
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">"
-          <div className="max-w-7xl mx-auto px-4">;
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
@@ -603,12 +388,6 @@ export default function CybersecurityPage() {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -619,9 +398,6 @@ export default function CybersecurityPage() {}
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
         {/* Services Grid */}"
@@ -638,48 +414,13 @@ export default function CybersecurityPage() {}
                 >"
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">"
                     <service.icon className="w-6 h-6 text-blue-600" />
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-        {/* Services Grid */}
-        <section className="py-16 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {securityServices && securityServices.map((service, index) => (;
-                <motion&& motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
-<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-        <section className="bg-gradient-to-r from-red-600 to-orange-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Cybersecurity Services
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Protect your business with comprehensive cybersecurity solutions.
-                Advanced threat protection, compliance, and 24/7 monitoring.              </p>
-            </motion.div>
-          </div>
-        </section>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                Advanced threat protection, compliance, and 24/7 monitoring.              </p>
-            </motion.div>
-          </div>
-        </section>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -696,14 +437,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <feature.icon className="w-6 h-6 text-red-600" />
+<feature.icon className="w-6 h-6 text-red-600" />
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -712,9 +449,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     {feature.description}
                   </p>
                 </div>
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <feature.icon className="w-6 h-6 text-red-600" />                  </div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
@@ -748,11 +482,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -771,8 +500,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">{benefit}</span>
                     </li>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   ))}
                 </ul>
               </div>
@@ -790,8 +517,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -818,14 +543,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       </div>
 
     </>
-
-=======
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-600">
-=======
-        {/* CTA Section */}"
-        <section className="py-20 bg-blue-600">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -852,10 +569,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 >
                   View Security;
                 </Link>
-=======
-                  ))}
-                </ul>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </div>
               <div className="bg-gradient-to-r from-red-600 to-orange-700 p-8 rounded-xl text-white">
                 <h3 className="text-2xl font-bold mb-6">Ready to Secure Your Business?</h3>
@@ -871,17 +584,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-      </div>
+</div>
     </>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 =======
 import Head from 'next/head';
@@ -1132,7 +839,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-orange-400" />
@@ -1145,7 +851,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
-
 
       {/* Services Grid */}
 <section className='py-20 px-6'>
@@ -1170,7 +875,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 
-
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
               Cybersecurity Services;
@@ -1184,7 +888,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services && services.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.title}
-
 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

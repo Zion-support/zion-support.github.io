@@ -3,7 +3,7 @@ import React from 'react';
   const featuredNews = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 {
- featured: true 
+ featured: true ;
 };
 {;
   title: 'Cybersecurity Partnership with Global Tech Leaders';'
@@ -69,7 +69,7 @@ export default function News () {}
   category.name;
 }className= {}
   `px-6 py-3 rounded-xl font-semibold transition-all duration-300 $ {'
-  category.active ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'`
+  category.active ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'`;
 }`
 }> </button>) )
 }</div> </section>)"
@@ -200,7 +200,7 @@ type: 'Workshop';
   opacity: 1, y: 0;
 }transition= {}
   {}
-  once: true "
+  once: true ";
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent" > Stay Updated </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Subscribe to our newsletter for the latest news, insights, and updates from Zion Tech Group. </p> <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email" className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500" /> <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300" > Subscribe </button> </div> </motion && motion.div> </div> </section> ;"
 }</span> </div> <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion && motion.article>) ) ;"
 }</div> </div> </section> > Latest News </motion && motion.h2> > <div className="h-full bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300" > <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center" > <BookOpen className="w-12 h-12 text-cyan-400" /> </div> </span> </div> </div> </div> </motion && motion.article>) ) ;"
@@ -214,8 +214,8 @@ type: 'Workshop';
   {}
   once: true;
 "
-}> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent" > Stay Updated </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Subscribe to our newsletter for the latest news, insights, and updates from Zion Tech Group. </p> <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email" className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500" /> <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300" > Subscribe </button> </div> </motion.div> </div> </section>"
-}</span> </div> <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion.article>) ) "
+}> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent" > Stay Updated </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Subscribe to our newsletter for the latest news, insights, and updates from Zion Tech Group. </p> <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email" className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500" /> <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300" > Subscribe </button> </div> </motion.div> </div> </section>";
+}</span> </div> <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion.article>) ) ";
 }</div> </div> </section> > Latest News </motion.h2> > <div className="h-full bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300" > <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center" > <BookOpen className="w-12 h-12 text-cyan-400" /> </div> </span> </div> </div> </div> </motion.article>) ) "
 }</div> </div> </section> > Upcoming Events </motion.h2> </div> </div> <a > Register Now <ExternalLink className="w-4 h-4" /> </a> </div> </div> </motion.div>) ) "
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > Stay Updated </h2> <p className="text-xl text-gray-300 mb-8" > Get the latest news, insights, and updates delivered directly to your inbox. </p> <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email address" className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:bg-white/20 transition-all duration-300" /> <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Subscribe </button> </div> <p className="text-sm text-gray-400 mt-4" > No spam, unsubscribe at any time. We respect your privacy. </p> </motion.div> </div> </section> <div className="max-w-7xl mx-auto" > <motion.div > <h2 className="text-4xl font-bold mb-4" >Latest News</h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Stay updated with our most recent developments and announcements </p> </motion.div> </div> </div> <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2" > Read More <ArrowRight className="w-4 h-4" /> </button> </motion.article>) ) "
@@ -232,7 +232,7 @@ type: 'Workshop';
   {}
 }viewport= {}
   {}
-  once: true"
+  once: true";
 }> <h2 className="text-4xl font-bold text-white mb-4" > Media Inquiries </h2> <p className="text-xl text-gray-300 mb-8" > For press inquiries, media interviews, or additional information;
   {}
   opacity: 0, y: 20;
@@ -243,8 +243,8 @@ type: 'Workshop';
   {}
 }viewport= {}
   {}
-  once: true"
-}> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Stay Informed? </h2> <p className="text-xl text-gray-300 mb-8" > Explore our latest research, industry insights, and technology breakthroughs that are shaping the future of AI and quantum computing. </p> <Link href="/blog" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Explore Our Blog <ArrowRight className="w-5 h-5 ml-2" /> </a> <Link href="/contact" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300" > Contact Our Team </a> </div> </motion.div> </div> </section> </div>)
+  once: true";
+}> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Stay Informed? </h2> <p className="text-xl text-gray-300 mb-8" > Explore our latest research, industry insights, and technology breakthroughs that are shaping the future of AI and quantum computing. </p> <Link href="/blog" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Explore Our Blog <ArrowRight className="w-5 h-5 ml-2" /> </a> <Link href="/contact" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300" > Contact Our Team </a> </div> </motion.div> </div> </section> </div>);
 }<motion.div initial= {}
   {}
   opacity: 0, y: 20;
@@ -361,7 +361,7 @@ author: "Sarah Chen";
 }
 }
 {
-image: "🤝" 
+image: "🤝" ;
 }
 };
 {;
@@ -373,7 +373,7 @@ category: "Sustainability";"
 author: "Lisa Park";
 }
 {
-image: "🌱" 
+image: "🌱" ;
 };
 {;
   id: 7;"
@@ -384,7 +384,7 @@ category: "Case Studies";"
 author: "Alex Thompson";
 }
 {
-image: "📊" 
+image: "📊" ;
 };
 {;
   id: 8;"
@@ -394,7 +394,7 @@ date: "2025 - 01 - 12";"
 category: "Research";"
 author: "Prof. Maria Garcia";
       {/* Upcoming Events Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">";
         <div className="max-w-7xl mx-auto">
           <motion.h2"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
@@ -402,7 +402,7 @@ author: "Prof. Maria Garcia";
           <motion&& motion.h2 
 
       {/* Upcoming Events Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.h2;
             initial={{ opacity: 0, y: 20 }}
@@ -519,7 +519,7 @@ author: "Prof. Maria Garcia";
               <input"
                 type="email""
                 placeholder="Enter your email address""
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:bg-white/20 transition-all duration-300"
+                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:bg-white/20 transition-all duration-300";
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.1 * index }}"
@@ -567,7 +567,7 @@ author: "Prof. Maria Garcia";
                 <input"
                   type="email""
                   placeholder="Enter your email""
-                  className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50"
+                  className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50";
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -659,8 +659,8 @@ author: "Prof. Maria Garcia";
 }
     }
     {}
-      id: 3"
-      title: "AI Ethics Guidelines Released for Responsible Development""
+      id: 3";
+      title: "AI Ethics Guidelines Released for Responsible Development"";
       excerpt: "Comprehensive framework ensuring our AI solutions are developed with transparency, fairness, and societal benefit in mind.";"
       date: "2025 - 01 - 17","
       category: "Innovation","
@@ -723,7 +723,7 @@ author: "Prof. Maria Garcia";
   const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
 ;
 readTime: "7 min read";
-image: "📚"
+image: "📚";
 }];
 min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className=" container mx-auto px-6 py-12"> <section className=" text-center mb-16"> <h1 className=" text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> Latest News </h1> > {
   category
@@ -732,9 +732,9 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
   article.date
 }</span> <span>•</span> <span> {
   article.readTime 
-}</span> </div> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read Full Article </button> </div> </div> </div>) ) 
-}</div> <button className=" w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read More </button> </article>) ) 
-}</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>)
+}</span> </div> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read Full Article </button> </div> </div> </div>) ) ;
+}</div> <button className=" w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read More </button> </article>) ) ;
+}</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>);
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
         <meta name="description" content="Stay informed with the latest news, company updates, and industry insights from Zion Tech Group." />;
@@ -839,7 +839,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <input"
                     type="email""
                     placeholder="Enter your email""
-                    className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"
+                    className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50";
                     Subscribe;
                   </button>;
                 </div>;
@@ -849,7 +849,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </main>;
       </div>;
                   />
-                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">
+                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">;
                     Subscribe
                   </button>
                 </div>

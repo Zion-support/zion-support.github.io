@@ -1,47 +1,22 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 import React, { forwardRef } from "react",
 import { ChevronDown } from "lucide-react",
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { forwardRef } from "react";
 import {ChevronDown} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {SafeRef} from "@/types/ref-types";
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonElement> {;
-  icon?: React && React.ReactNode;
-=======
-import React, { forwardRef } from "react";"
-import {ChevronDown} from "lucide-react";"
-import {cn} from "@/lib/utils";"
-import {SafeRef} from "@/types/ref-types";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   active?: boolean;
   href?: string;
   target?: string;
   badge?: React && React.ReactNode;
 
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { forwardRef } from "react",
 import { ChevronDown } from "lucide-react",
@@ -49,29 +24,14 @@ import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  active?: boolean;
-  href?: string;
-  target?: string;
-  badge?: React && React.ReactNode;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
 =======
 interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonElement> {;
-<<<<<<< HEAD
-  icon?: React && React.ReactNode;interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
+icon?: React && React.ReactNode;interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonElement> {;
-  icon?: React && React.ReactNode;interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   icon?: React && React.ReactNode;
 
@@ -82,9 +42,7 @@ interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonE
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   icon?: React.ReactNode,
   active?: boolean,
@@ -92,18 +50,8 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   target?: string,
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
   badge?: React.ReactNode
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { forwardRef } from "react",;
 =======
@@ -146,28 +94,15 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   href?: string,;
   target?: string,;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   badge?: React.ReactNode;
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   badge?: React.ReactNode;
 
@@ -178,31 +113,8 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(;
   ({ icon, active, children, href, target, badge, className, ...props }, ref) => {;
     if (href) {;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React, { forward_ref } from './react';
-import { ChevronDown } from './lucide-react';
-import { cn } from '@/lib / utils';
-=======
-import React, { forward_ref } from './react';'
-import { ChevronDown } from './lucide-react';'
-import { cn } from '@/lib / utils';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { SafeRef } from '@/types / ref - types';
 interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement> {}
-=======
-import React, { forward_ref } from './react';
-import { ChevronDown } from './lucide-react';
-import { cn } from '@/lib / utils';
-import { SafeRef } from '@/types / ref - types';
-=======
-
-interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {;
-
-const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement> {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   icon?: React.ReactNode;
@@ -211,10 +123,8 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
   target?: string;
   badge?: React.ReactNode;
 }
-<<<<<<< HEAD
 const SidebarMenuItem = forward_ref < HTMLButtonElement, SidebarMenuItemProps>(
-<<<<<<< HEAD
-  ({ icon, active, children, href, target, badge, class_name, ...props }, ref) => {}
+({ icon, active, children, href, target, badge, class_name, ...props }, ref) => {}
     // Check condition;
 if ( {) {}
   $2;
@@ -230,33 +140,8 @@ if ( {) {}
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent","
             active && "bg-accent font-medium text-accent-foreground",
 
-
-
-
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-}
-
-const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
-  ({ icon, active, children, href, target, badge, className, ...props }, ref) => {
-    if (href) {
-      return (
-        <a
-          href={href}
-          target={target}
-          rel={target === "_blank" ? "noopener noreferrer" : undefined}
-          className={cn(
-<<<<<<< HEAD
-
-=======
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
-            active && "bg-accent font-medium text-accent-foreground"
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
-            active && "bg-accent font-medium text-accent-foreground",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className
           )}
@@ -306,23 +191,9 @@ if ( {) {
       )
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 "
@@ -341,28 +212,14 @@ if ( {) {
         >;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
             className;
           )}>;
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 import React, { forwardRef } from "react",;
@@ -410,25 +267,8 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -437,18 +277,8 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
             active && "bg - accent font - medium text - accent - foreground",
             class_name)}
         >;
-<<<<<<< HEAD
-          <div className="flex items - center gap-2">;
+<div className="flex items - center gap-2">;
             {icon && <span className="text - muted-foreground">{icon}</span>}
-=======
-          className={cn ("
-            "flex w - full items - center justify - between rounded - md px - 3 py - 2 text - sm hover: bg - accent";"
-            active && "bg - accent font - medium text - accent - foreground",
-            class_name)}
-        >;"
-          <div className="flex items - center gap - 2">;"
-            {icon && <span className="text - muted - foreground">{icon}</span>}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
           <div className="flex items - center gap - 2">;
             {icon && <span className="text - muted - foreground">{icon}</span>}
@@ -457,47 +287,9 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
           </div>;
           {badge && <span>{badge}</span>}
         </a>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className
+className
         )}
         {...props}>;    }
-=======
-
-
-
-
-
-
-=======
-
-
-
-    }
-    return (
-      <button;
-        ref={ref}
-
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
-          active && "bg-accent font-medium text-accent-foreground",
-
-
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
-          active && "bg-accent font-medium text-accent-foreground",
-
-          className
-        )}
-        {...props}>;
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
-          active && "bg-accent font-medium text-accent-foreground",
-          className
-        )}
-        {...props}>;
-      ),;
-
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
-          active && "bg-accent font-medium text-accent-foreground",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
     return (
       <button;
@@ -507,7 +299,6 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
           "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent","
           active && "bg-accent font-medium text-accent-foreground",
 
-
     }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return (
@@ -515,18 +306,9 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
         ref={ref}
           className;
         )}
-<<<<<<< HEAD
-        {...props}
+{...props}
       >;
 <<<<<<< HEAD
-=======
-"
-        <div className="flex items-center gap-2">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-        {...props}>;
-        <div className="flex items-center gap-2">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {icon && <span className="text-muted-foreground">{icon}</span>}
           <span>{children}</span>;
         </div>;
@@ -535,14 +317,9 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     );
   }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
 ),
 ),
 
@@ -554,17 +331,7 @@ SidebarMenuItem.displayName = "SidebarMenuItem",
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-SidebarMenuItem.displayName = "SidebarMenuItem",
-
-
-SidebarMenuItem.displayName = "SidebarMenuItem",
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -581,9 +348,6 @@ SidebarMenuItem.displayName = "SidebarMenuItem",
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ),
 ),
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 SidebarMenuItem.displayName = "SidebarMenuItem",
 
   }
@@ -593,26 +357,6 @@ SidebarMenuItem.displayName = "SidebarMenuItem",
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-
-
-SidebarMenuItem.displayName = "SidebarMenuItem",
-
-
-SidebarMenuItem.displayName = "SidebarMenuItem",
-
-
-SidebarMenuItem.displayName = "SidebarMenuItem",
-
-    );
-  }
-
-SidebarMenuItem.displayName = "SidebarMenuItem",
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   children: React.ReactNode
@@ -634,25 +378,8 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-}
-export { SidebarMenuItem, SidebarMenuGroup }
-
-=======
-},
-
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export { SidebarMenuItem, SidebarMenuGroup },
@@ -660,15 +387,7 @@ export { SidebarMenuItem, SidebarMenuGroup },
 SidebarMenuItem.displayName = "SidebarMenuItem",;
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 export { SidebarMenuItem, SidebarMenuGroup },;
@@ -696,8 +415,6 @@ interface SidebarMenuGroupProps extends React && React.HTMLAttributes<HTMLDivEle
 }
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
 "
     <div className="space-y-1" {...props}>;"
@@ -716,16 +433,6 @@ export { SidebarMenuItem, SidebarMenuGroup };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-  );
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   return (
     <div className="space-y-1" {...props}>;
       <div className="rounded-md px-3 py-2 text-sm font-medium">{title}</div>;
@@ -737,18 +444,9 @@ export { SidebarMenuItem, SidebarMenuGroup };
 
 );
 
-<<<<<<< HEAD
-
-
 "
         type="button";
-<<<<<<< HEAD
-=======
-  return (        type="button";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  return (        type="button";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 =======
         type="button";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -758,19 +456,8 @@ export { SidebarMenuItem, SidebarMenuGroup };
           class_name)}
         {...props}
       >;
-<<<<<<< HEAD
-        <div className="flex items - center gap-2">;
+<div className="flex items - center gap-2">;
           {icon && <span className="text - muted-foreground">{icon}</span>}
-=======
-        className={cn ("
-          "flex w - full items - center justify - between rounded - md px - 3 py - 2 text - sm hover: bg - accent";"
-          active && "bg - accent font - medium text - accent - foreground",
-          class_name)}
-        {...props}
-      >;"
-        <div className="flex items - center gap - 2">;"
-          {icon && <span className="text - muted - foreground">{icon}</span>}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
         <div className="flex items - center gap - 2">;
           {icon && <span className="text - muted - foreground">{icon}</span>}
@@ -788,34 +475,17 @@ interface SidebarMenuGroupProps extends React.HTMLAttributes < HTMLDivElement> {
   title: string,
   children: React.ReactNode;
 }
-<<<<<<< HEAD
 const SidebarMenuGroup: React.FC < SidebarMenuGroupProps> = ({ title, children, ...props }) => {
   return (
-<<<<<<< HEAD
-    <div className="space-y-1" {...props}>;
+<div className="space-y-1" {...props}>;
       <div className="rounded - md px - 3 py - 2 text - sm font-medium">{title}</div>;
       <div className="pl-2">{children}</div>;
-=======
-const SidebarMenuGroup: React.FC < SidebarMenuGroupProps> = ({ title, children, ...props }) => {}
-  return ("
-    <div className="space - y-1" {...props}>;"
-      <div className="rounded - md px - 3 py - 2 text - sm font - medium">{title}</div>;"
-      <div className="pl - 2">{children}</div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    <div className="space - y-1" {...props}>;
-      <div className="rounded - md px - 3 py - 2 text - sm font - medium">{title}</div>;
-      <div className="pl - 2">{children}</div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </div>);
 }
 ;
 export { SidebarMenuItem, SidebarMenuGroup };
 ;
-<<<<<<< HEAD
-
 },
-
 
 export { SidebarMenuItem, SidebarMenuGroup };
 export { SidebarMenuItem, SidebarMenuGroup };
@@ -869,25 +539,13 @@ className)
 export { SidebarMenuItem, SidebarMenuGroup };
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export { SidebarMenuItem, SidebarMenuGroup };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
-
 },
-
-
-
 
 export { SidebarMenuItem, SidebarMenuGroup };
 

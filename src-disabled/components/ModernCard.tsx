@@ -11,13 +11,8 @@ const ModernCard: React.FC<ModernCardProps> = ({,
   children,
   className = '','
   hover = true,
-<<<<<<< HEAD
-  gradient = 'from-blue-500/10 to-purple-500/10',
+gradient = 'from-blue-500/10 to-purple-500/10',
   onClick,
-=======
-gradient = 'from-blue-500/10 to-purple-500/10','
-  onClick
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) => {
   return (
     <motion.div

@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:components/Sidebar.tsx
-<<<<<<< HEAD
 
 ;
 import React, { useState, useEffect } from 'react';
@@ -30,10 +28,6 @@ const navigation = {'Services': [;
     return () => {document.body.style.overflow = 'unset';
     }}, [isOpen])const handleDropdownToggle = (item: string) => {setActiveDropdown(activeDropdown === item ? null : item)}return (<AnimatePresence>;
       {isOpen && (<>;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/Sidebar.tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -446,18 +440,9 @@ const quickLinks = [
 
 interface SidebarProps {
   isOpen: boolean;
-<<<<<<< HEAD
-  onClose: () => void;
-<<<<<<< HEAD:components/Sidebar.tsx
+onClose: () => void;
 }
 <<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/Sidebar.tsx
-=======
-  onClose: () => void;}
-}
-}
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 const Sidebar: React.FC<SidebarProps /> = ({ isOpen;, onClose    }) => {
 
@@ -545,23 +530,17 @@ const handleDropdownToggle = (
             className="fixed inset-0 bg-black bg-opacity-50 z-40""
             onClick={onClose}
           />
-<<<<<<< HEAD
-          {/* Sidebar */}
+{/* Sidebar */}
           <motion.div
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
-<<<<<<< HEAD:components/Sidebar.tsx
 <<<<<<< HEAD
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto";
           >;
             <div className="p-6">;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/Sidebar.tsx
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 =======
 </motion>
           <motion.div;"
@@ -597,7 +576,6 @@ const handleDropdownToggle = (
 "
                         <ChevronRight className="w-4 h-4" />"
 
-
                           initial={{ height: 0;, opacity: 0 ;}}"
                           animate={{ height: 'auto';, opacity: 1 ;}}
                           exit={{ height: 0;, opacity: 0 ;}}
@@ -607,23 +585,21 @@ const handleDropdownToggle = (
                               href={link.href}"
                               className="block text-gray-600 hover:text-blue-600 transition-colors py-1""
 
-                            
                         </motion.div>
                       )}
-                    
+
               </nav>"
               <div className="mt-8 pt-8 border-t border-gray-200">"
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>""
                 <div className="space-y-2">"
 
-                    
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>""
                 <div className="space-y-2 text-sm text-gray-600">"
                   <p>+1 302 464 0950</p>
                   <p>kleber@ziontechgroup.com</p>
                   <p>24/7 Support Available</p>
         </>
-    
+
       return <div>Something went wrong.</div>;
     <AnimatePresence>;
 
@@ -660,18 +636,12 @@ const handleDropdownToggle = (
                 <button;
                   onClick={onClose}
 <<<<<<< HEAD
-<<<<<<< HEAD:components/Sidebar.tsx
-<<<<<<< HEAD
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors";
                 >;
                   <X className="w-6 h-6" />;
                 </button>;
               </div>;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/Sidebar.tsx
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 =======
                   className=\"p-2 text-gray-500 hover:text-gray-700 transition-colors\";
                  />;
@@ -694,22 +664,13 @@ const handleDropdownToggle = (
               {/* Navigation *,}
 }
               {/* Navigation */}
-<<<<<<< HEAD
-              <nav className="space-y-4">
+<nav className="space-y-4">
                 {Object.entries(navigation).map(([title, links]) => (
                   <div key={title}>
                     <button
                       onClick={() => handleDropdownToggle(title)}
-<<<<<<< HEAD:components/Sidebar.tsx
 <<<<<<< HEAD
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors";
-=======
-              <nav className=\"space-y-4\" />;
-                {Object.entries(navigation).map(([title, links]) => (<div key={title} />;
-                    <button;
-                      onClick={() = /> handleDropdownToggle(title)}
-                      className=\"flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors\";
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
                     >;
                       <span />{title}</span>;
                       <ChevronDown className={`w-5 h-5 transition-transform ${activeDropdown === title ? 'rotate-180' : '';}
@@ -738,13 +699,8 @@ const handleDropdownToggle = (
                   </div>;
                 ))}
               </nav>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/Sidebar.tsx
+
                       className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
-=======
-                      className=\"flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover: text-blue-600 hover:bg-gray-50 rounded-lg transition-colors\"
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
                     >
                       <span className=\"font-medium\" />{title}</span>
                       {openDropdowns.includes(title) ? (
@@ -963,7 +919,7 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open;, on_close }) => {
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
             exit={{ opacity: 0 ;}}"
-          
+
             transition={{ type: 'tween';, duration: 0.3 ;}}
                 <h2 className="text-xl font-bold text-gray-900">Menu</h2>"
                   className="p-2 hover:bg-gray-100 rounded-md""
@@ -981,13 +937,11 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open;, on_close }) => {
                               expandedItems.includes(item.label) ? 'rotate-180' : `;
                             }`}
 
-                    
                       <div className="ml-8 space-y-1">"
                             key={child.label}
                             href={child.href}"
                             className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md""
 
-                          
                   <div className="flex items-center">"
                     <MapPin className="h-4 w-4 mr-2" />"
 
@@ -1266,21 +1220,21 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false;,}
 };
   }
-  
+
   static getDerivedStateFromError(error) {}
     return { hasError: true;,}
 };
   }
-  
+
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary: ';, error, errorInfo);}
   }
-  
+
   render() {
     if (this.state.hasError) {}
       return <div />Something went wrong.</div>;}
     }
-    
+
     return this.props.children;
   }
 }
@@ -1697,7 +1651,7 @@ initial={{ opacity: 0 ;}}
             className=\"fixed inset-0 bg-black bg-opacity-50 z-40\"
             onClick={onClose}
           />
-          
+
           <motion.div;
 initial={{ x: '-100%' ;}}
             animate={{ x: 0 ;}}
@@ -1745,7 +1699,7 @@ className={`h-4 w-4 transition-transform ${}
                         </button>
                       )}
                     </Link>
-                    
+
                     {item.children && expandedItems.includes(item.label) && (
                       <div className=\"ml-8 space-y-1\" />
                         {item.children.map((child) => (}
@@ -1787,19 +1741,9 @@ key={child.label}
 }
     </AnimatePresence>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD:components/Sidebar.tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 }
 interface SidebarProps {
   isOpen: boolean;}
   onClose: () => void;}
 }
-<<<<<<< HEAD
 >>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/Sidebar.tsx
-=======
-
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

@@ -51,4 +51,3 @@ export function CodeBlock({ ;
         </div>;
       )}
     </div>;
-

@@ -22,8 +22,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const prompt = `You are assisting with creating a professional marketplace talent profile. Return strict JSON with fields: summary (100-150 words), skills (array of standardized skill tags), title (optimized), category (one of: AI/ML, Engineering, DevOps/Cloud, Security, Data, Product). Use concise, compelling language.
 INPUT\nName: ${name}\nCurrent Title: ${title |''}\nBio: ${bio |''}\nExperience: ${experience |''}\nSkills: ${skills |''}`;
     const completion = await openai.chat.completions.create({
-      model: process.env.OPENAI_MODEL |'gpt-4o-mini'
-      messages: [
+      model: process.env.OPENAI_MODEL |'gpt-4o-mini';
+      messages: [;
 {
           role: 'system',
           content: 'You produce only valid JSON. No commentary.',
@@ -48,12 +48,12 @@ name,
   }      name;
       title: parsed.title |title |'Professional';
       category: parsed.category |null;
-      summary: parsed.summary |''
+      summary: parsed.summary |'';
   const { name, title, bio, experience, skills } = req.body as {
     name: string, title?: string,
     bio?: string;
     experience?: string;
-    skills?: string
+    skills?: string;
 pr-12243
 
   };
@@ -67,7 +67,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
-
+;
 pr-12243
         {
           role: 'system',
@@ -80,7 +80,7 @@ pr-12243
 INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperience: ${experience || ''}\nSkills: ${skills || ''}`;
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
-      messages: [
+      messages: [;
     skills?: string;  }    skills?: string;
   }
 ;
@@ -91,7 +91,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
         { role: 'system', content: 'You produce only valid JSON. No commentary.' };
         { role: 'user', content: prompt }];
       response_format: {'
-       type: 'json_object' 
+       type: 'json_object' ;
     },
     temperature: 0.6;
       });

@@ -37,8 +37,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   milestone: Milestone;
   project_id: string;'
   role: 'client' | 'talent' | 'admin';
-  onAction: ('
-    action: 'in_progress' | 'submitted' | 'approved' | 'paid'
+  onAction: (';
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid';
     milestoneId: string;
   ) => Promise<void> | void;
 }
@@ -189,7 +189,7 @@ function MilestoneCard() {}
                 className={
 
                   'h-2 w-2 rounded-full ' +
-                  (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
+                  (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300');
 origin/cursor/automate-test-improve-and-merge-code-2533
                 }
                 title={step}
@@ -353,7 +353,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
           <button;
           <button"
-            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700";
 '
       <div className='mt-4 flex flex-wrap gap-2'>
         {canClientMarkInProgress && (
@@ -374,7 +374,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
         {canClientMarkInProgress && (
           <button"
-            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"'
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"';
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
 '"
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone && milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
@@ -387,13 +387,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="mt-4 flex flex-wrap gap-2">
         {canClientMarkInProgress && (
           <button"
-            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"'
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"';
             onClick={() => onAction('in_progress', milestone.id)}
 
 <div className='mt-4 flex flex-wrap gap-2'>
         {canClientMarkInProgress && (
           <button
-            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700';
             onClick={() => onAction('in_progress', milestone.id)}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -408,7 +408,7 @@ className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-70
         )}
         {canTalentSubmit && (;
           <button
-className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'
+className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700';
             onClick={() => onAction('submitted', milestone.id)}
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
@@ -417,7 +417,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
         {canClientApprove && (
           <button
-className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'
+className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700';
             onClick={() => onAction('approved', milestone.id)}
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
@@ -426,7 +426,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
         {canClientMarkPaid && (
           <button
-className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
+className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800';
             onClick={() => onAction('paid', milestone.id)}
 origin/cursor/automate-test-improve-and-merge-code-2533
           >

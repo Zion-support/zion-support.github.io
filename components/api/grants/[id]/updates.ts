@@ -119,9 +119,9 @@ if (!content || !content.trim())
 origin/cursor/automate-test-improve-and-merge-code-2533
       return res.status(400).json({ error: 'Missing content' });
     const update = {}
-      id: uuidv4()
-      createdAt: new Date().toISOString()
-      content: content.trim()
+      id: uuidv4();
+      createdAt: new Date().toISOString();
+      content: content.trim();
     }
     existing.updates = [...(existing.updates || []), update];
     existing.updated_at = new Date ().toISOString ();

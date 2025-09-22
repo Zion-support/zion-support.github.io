@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/contracts/ContractBuilder.tsx
-<<<<<<< HEAD
+:src/components/contracts/ContractBuilder.tsx
 <<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
@@ -98,9 +97,6 @@ export function ContractBuilder({;
         onContractGenerated={onContractGenerated}
       />;
     );
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 isOpen;
   onClose;
   talent;
@@ -115,11 +111,8 @@ isOpen;
   );
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/ContractBuilder.tsx
 
-<<<<<<< HEAD
-  const handleLoadTemplate = (templateData: ContractFormValues,) => {;
+const handleLoadTemplate = (templateData: ContractFormValues,) => {;
     setFormValues(templateData)
 };
 
@@ -137,12 +130,7 @@ isOpen;
         onClose={() => {;
           setShowSmartContractBuilder(false);          onClose();
 
-<<<<<<< HEAD:src/components/contracts/ContractBuilder.tsx
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 
@@ -186,35 +174,24 @@ export function ContractBuilder({
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
   const handleLoadTemplate = null;
           onClose()
-<<<<<<< HEAD:src/components/contracts/ContractBuilder.tsx
+:src/components/contracts/ContractBuilder.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/ContractBuilder.tsx
         }}
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
-<<<<<<< HEAD:src/components/contracts/ContractBuilder.tsx
-<<<<<<< HEAD
+:src/components/contracts/ContractBuilder.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
       />;
     );
   }
 
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
   return (
-
-
-            
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -223,9 +200,6 @@ import { Save } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { ContractForm, ContractFormValues } from "./components/ContractForm",
 import { ContractPreview } from "./components/ContractPreview",
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/ContractBuilder.tsx
       />
     )
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -243,22 +217,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
-<<<<<<< HEAD:src/components/contracts/ContractBuilder.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+:src/components/contracts/ContractBuilder.tsx
 =======
       />;
     );
   }
 
-
   }
 
   return (
-
-
-            
-
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/ContractBuilder.tsx
 
@@ -272,12 +239,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Save className="h-4 w-4" />
                 Templates
-<<<<<<< HEAD
-              </Button>
-<<<<<<< HEAD:src/components/contracts/ContractBuilder.tsx
+</Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
-              
+
               <Button
                 variant="secondary"
                 size="sm"
@@ -287,7 +252,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
             </div>
           </div>
-          
+
           <TabsContent value="form" className="pt-4">
             <ContractForm 
               talent={talent}
@@ -297,7 +262,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onContractGenerated={handleContractGenerated}
             />
           </TabsContent>
-          
+
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <ContractPreview 
@@ -314,9 +279,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/ContractBuilder.tsx
 
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
@@ -332,13 +294,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             <div className="flex gap-2">;
               <Button
-<<<<<<< HEAD:src/components/contracts/ContractBuilder.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/ContractBuilder.tsx
+:src/components/contracts/ContractBuilder.tsx
                 variant="outline" 
 =======
               </Button>                variant="outline" 
@@ -351,14 +307,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Templates;
               </Button>;
 
-<<<<<<< HEAD
-              
-
-              <Button
+<Button
                 variant="secondary"
                 size="sm"
-<<<<<<< HEAD:src/components/contracts/ContractBuilder.tsx
-              <Button
+<Button
                 variant="secondary"
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}
@@ -370,35 +322,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <ContractForm
 
             <ContractForm               talent = {talent,}
-=======
-              <Button
-                variant="secondary"
-                size="sm"
-
-=======
-                onClick = {() => setShowSmartContractBuilder(true),}
-
-              >;
-                Smart Contract Builder;
-              </Button>;
-            </div>;
-          </div>;
-
-          <TabsContent value="form" className="pt-4">;
-
-            <ContractForm
-
-            <ContractForm 
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/ContractBuilder.tsx
               talent = {talent,}
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               clientName = {clientName,}
               initialValues = {formValues,}
               onFormValuesChange = {setFormValues,}
               onContractGenerated = {handleContractGenerated,}
-<<<<<<< HEAD:src/components/contracts/ContractBuilder.tsx
+:src/components/contracts/ContractBuilder.tsx
 <<<<<<< HEAD
             />
           </TabsContent>
@@ -414,45 +344,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             )}
           </TabsContent>
         </Tabs>        <TemplateManager
-=======
-
-=======
-
-            />;
-          </TabsContent>;
-
-          <TabsContent value="preview" className="pt-4">;
-            {generatedContract && (;
-
-              <ContractPreview
-
-              <ContractPreview 
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/ContractBuilder.tsx
                 contractContent = {generatedContract,}
                 talent = {talent,}
                 onClose = {onClose,}
                 status="ready"
-<<<<<<< HEAD:src/components/contracts/ContractBuilder.tsx
-
-=======
-              />;
-            )}
-
-          </TabsContent>;
-        </Tabs>;
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/ContractBuilder.tsx
+:src/components/contracts/ContractBuilder.tsx
         <TemplateManager
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}
           currentValues = {formValues,}
-<<<<<<< HEAD:src/components/contracts/ContractBuilder.tsx
+:src/components/contracts/ContractBuilder.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -462,144 +365,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Dialog>;
   );
 <<<<<<< HEAD
-=======
-
-  handleContractGenerated;
-}/> </TabsContent> />);
-}</TabsContent> </Tabs> <TemplateManager is_open= {
-  templateManagerOpen;
-}on_close= {
-  () => setTemplateManagerOpen (false);
-}onSelectTemplate= {
-  handleLoadTemplate;
-}current_values= {
-  form_values;
-}/> </DialogContent> </Dialog>);
-}"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-        />
-      </DialogContent>
-    </Dialog>
-<<<<<<< HEAD
-  )
-}
-}/>)
-}</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {
-  talent
-}clientName= {
-  clientName
-}initialValues= {
-  formValues
-}onFormValuesChange= {
-  setFormValues
-}onContractGenerated= {
-  handleContractGenerated
-}/> </TabsContent> />)
-}</TabsContent> </Tabs> <TemplateManager isOpen= {
-  templateManagerOpen
-}onClose= {
-  () => setTemplateManagerOpen (false)
-}onSelectTemplate= {
-  handleLoadTemplate
-}currentValues= {
-  formValues
-}/> </DialogContent> </Dialog>)
-}"}
-          
-          <TabsContent value="form" className="pt-4">
-            <ContractForm 
-              talent={talent}
-              clientName={clientName}
-              initialValues={formValues}
-              onFormValuesChange={setFormValues}
-              onContractGenerated={handleContractGenerated}
-            />
-          </TabsContent>
-          
-          <TabsContent value="preview" className="pt-4">
-            {generatedContract && (
-              <ContractPreview 
-                contractContent={generatedContract}
-                talent={talent}
-                onClose={onClose}
-                status="ready"
-              />
-            )}
-          </TabsContent>;
-        </Tabs>;
-        <TemplateManager;
-          isOpen={templateManagerOpen}
-          onClose={() => setTemplateManagerOpen(false)}
-          onSelectTemplate={handleLoadTemplate}
-          currentValues={formValues}        />;
-      </DialogContent>;
-    </Dialog>;
-  );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
-=======
-=======
-
-
-        />;
-      </DialogContent>;
-    </Dialog>;
-  );
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/ContractBuilder.tsx
 
         />;
       </DialogContent>;
     </Dialog>;
   );
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-  handleContractGenerated;
-}/> </TabsContent> />);
-}</TabsContent> </Tabs> <TemplateManager is_open= {
-  templateManagerOpen;
-}on_close= {
-  () => setTemplateManagerOpen (false);
-}onSelectTemplate= {
-  handleLoadTemplate;
-}current_values= {
-  form_values;
-}/> </DialogContent> </Dialog>);
-}"}
-}
-;
-
-  );
-
-};
-
-}/>) ;
-}</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {;
-  talent ;
-}clientName= {;
-  clientName ;
-}initialValues= {;
-  formValues ;
-}onFormValuesChange= {;
-  setFormValues ;
-}onContractGenerated= {;
-  handleContractGenerated ;
-}/> </TabsContent> />) ;
-}</TabsContent> </Tabs> <TemplateManager isOpen= {;
-  templateManagerOpen ;
-}onClose= {;
-  () => setTemplateManagerOpen (false) ;
-}onSelectTemplate= {;
-  handleLoadTemplate ;
-}currentValues= {;
-  formValues ;
-}/> </DialogContent> </Dialog>) ;
-}"
-<<<<<<< HEAD:src/components/contracts/ContractBuilder.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -43,10 +43,10 @@ const Footer: React.FC = () => {
   ];
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">;
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2">;
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-6">
               Leading technology solutions provider specializing in AI, cloud computing, 
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                   href={social && social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-gray-400 hover:text-blue-400 transition-colors";
                   aria-label={social && social.name}>;
                   <social && social.icon className="h-5 w-5" />;
                 </a>;
@@ -154,7 +154,7 @@ import Link from 'next/link';
                 <li key={service.name}>
                   <Link 
                     href={service.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors flex items-center space-x-2"
+                    className="text-gray-300 hover:text-blue-400 transition-colors flex items-center space-x-2";
                   >
                     <service.icon className="h-4 w-4" />
                     <span>{service.name}</span>
@@ -199,11 +199,11 @@ pr-12243
   return (
     <footer className="bg-gray-900 text-white">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">;
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2">;
             <div className="flex items-center mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">Z</span>
@@ -233,9 +233,9 @@ pr-12243
                 <Clock className="h-5 w-5 mr-3 text-blue-400" />
                 <span>Mon-Fri 9AM-6PM EST</span>
               </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1">;
             <div className="text-2xl font-bold text-blue-400 mb-4">Zion Tech Group</div>
             <p className="text-gray-300 mb-6">
               Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.
@@ -247,7 +247,7 @@ pr-12243
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-gray-400 hover:text-blue-400 transition-colors";
                   aria-label={social.name}
                 >
                   <social.icon className="h-5 w-5" />
@@ -265,7 +265,7 @@ pr-12243
                 <li key={item.name}>
                   <Link 
                     href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                    className="text-gray-300 hover:text-white transition-colors duration-200";
                   >
                     {item.name}
 
@@ -283,7 +283,7 @@ pr-12243
                 <li key={solution.name}>
                   <Link 
                     href={solution.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors";
                   >
                     {item.name}
 
@@ -301,7 +301,7 @@ pr-12243
                 <li key={item.name}>
                   <Link 
                     href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                    className="text-gray-300 hover:text-white transition-colors duration-200";
                   >
                     {item.name}
                   </Link>
@@ -318,7 +318,7 @@ pr-12243
                 <li key={item.name}>
                   <Link 
                     href={item.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors";
                   >
                     {item.name}
                   </Link>
@@ -335,7 +335,7 @@ pr-12243
                 <li key={item.name}>
                   <Link 
                     href={item.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors";
                   >
                     {item.name}
                   </Link>
@@ -347,32 +347,32 @@ pr-12243
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row justify-between items-center">;
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">;
               © {currentYear} Zion Tech Group. All rights reserved.
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">;
+          <div className="col-span-1 md:col-span-2">;
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
               Leading provider of AI-powered technology solutions and digital transformation services.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="#" className="text-gray-400 hover:text-white">;
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="#" className="text-gray-400 hover:text-white">;
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="#" className="text-gray-400 hover:text-white">;
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="#" className="text-gray-400 hover:text-white">;
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -381,10 +381,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-gray-300 hover:text-white">Home</Link></li>
-              <li><Link href="/services" className="text-gray-300 hover:text-white">Services</Link></li>
-              <li><Link href="/about" className="text-gray-300 hover:text-white">About</Link></li>
-              <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
+              <li><Link href="/" className="text-gray-300 hover:text-white">Home</Link></li>;
+              <li><Link href="/services" className="text-gray-300 hover:text-white">Services</Link></li>;
+              <li><Link href="/about" className="text-gray-300 hover:text-white">About</Link></li>;
+              <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>;
             </ul>
           </div>
 
@@ -407,29 +407,29 @@ pr-12243
             {/* Social Links */}
             <div className="flex space-x-4">
               <a 
-                href="https://twitter.com/ziontechgroup" 
-                className="text-gray-400 hover:text-blue-400 transition-colors"
+                href="https://twitter.com/ziontechgroup" ;
+                className="text-gray-400 hover:text-blue-400 transition-colors";
                 aria-label="Twitter"
               >
                 <Twitter className="h-5 w-5" />
               </a>
               <a 
-                href="https://linkedin.com/company/ziontechgroup" 
-                className="text-gray-400 hover:text-blue-400 transition-colors"
+                href="https://linkedin.com/company/ziontechgroup" ;
+                className="text-gray-400 hover:text-blue-400 transition-colors";
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a 
-                href="https://instagram.com/ziontechgroup" 
-                className="text-gray-400 hover:text-blue-400 transition-colors"
+                href="https://instagram.com/ziontechgroup" ;
+                className="text-gray-400 hover:text-blue-400 transition-colors";
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a 
-                href="https://github.com/ziontechgroup" 
-                className="text-gray-400 hover:text-blue-400 transition-colors"
+                href="https://github.com/ziontechgroup" ;
+                className="text-gray-400 hover:text-blue-400 transition-colors";
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
@@ -438,12 +438,12 @@ pr-12243
           </div>
 
           {/* Legal Links */}
-          <div className="mt-4 flex flex-wrap justify-center md:justify-start space-x-6">
+          <div className="mt-4 flex flex-wrap justify-center md:justify-start space-x-6">;
             {legal.map((item) => (
               <Link 
                 key={item.name}
                 href={item.href}
-                className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                className="text-gray-400 hover:text-blue-400 transition-colors text-sm";
               >
                 {item.name}
               </Link>
@@ -452,26 +452,26 @@ pr-12243
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center">;
             <p className="text-gray-400 text-sm">
               © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
+            <div className="flex space-x-6 mt-4 md:mt-0">;
+              <Link href="/privacy" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">;
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
+              <Link href="/terms" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">;
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
+              <Link href="/cookies" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">;
                 Cookie Policy
               </Link>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">;
             <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-            <div className="flex items-center mt-2 md:mt-0">
+            <div className="flex items-center mt-2 md:mt-0">;
               <span className="mr-2">Trusted by</span>
               <span className="font-semibold text-white">500+</span>
               <span className="ml-2">companies worldwide</span>

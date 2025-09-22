@@ -1,21 +1,7 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -62,15 +48,7 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {}
   return (`
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -82,9 +60,6 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 import DatePicker from 'react-datepicker';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 }
 function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
   const max = Math.max(1, ...data.map((d) => d.value))
@@ -98,48 +73,10 @@ function LineChart({ data, width = 360, height = 140 }: { data: { date: string, 
       <polyline fill="none" stroke="#3b82f6" strokeWidth="2" points={points} />
     </svg>
   )
-=======
-<<<<<<< HEAD
-=======
-
-  const total = Math.max(1, data.reduce((s, d) => s + d.value, 0));
-=======
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {;
-  const result = await requireAdminRole(ctx);
-  // @ts-ignore;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-};
-type Datum = { label: string, value: number };
-function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
-  const total = Math.max(1, data.reduce((s, d) => s + d.value, 0)),;
-
-  let acc = 0;
-  const radius = size / 2;
-  const center = radius;
-  const colors = ['#3b82f6#10b981#f59e0b#8b5cf6#ef4444#06b6d4'];
-  const slices = data.map((d, i) => {
-    const start = (acc / total) * 2 * Math.PI;
-    acc += d.value;
-    const end = (acc / total) * 2 * Math.PI;
-    const x1 = center + radius * Math.cos(start);
-    const y1 = center + radius * Math.sin(start);
-    const x2 = center + radius * Math.cos(end);
-    const y2 = center + radius * Math.sin(end);
-    const largeArc = end - start > Math.PI ? 1 : 0;
-    const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z`;
-
-    return <path key={d.label} d={path} fill={colors[i % colors.length]} />;
-  });
-  return (;
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>;
-  );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
 function Funnel({ data }: { data: Datum[] }) {
   return (
@@ -152,16 +89,9 @@ function Funnel({ data }: { data: Datum[] }) {
       ))  } catch (error) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
 '
 import React, { useCallback, useEffect, useMemo, useState } from 'react';'
@@ -170,7 +100,6 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';'
 import { GetServerSideProps } from 'next';'
 import { requireAdminRole } from '../../utils/auth';'
 import DatePicker from 'react-datepicker';
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
@@ -194,41 +123,17 @@ function Funnel({ data }: { data: Datum[] }) {}
     <div className="flex flex-col gap-2">
       {data.map((d, i) => ("`
         <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
-<<<<<<< HEAD
-=======
-=======
-import React, { useCallback, useEffect, useMemo, useState } from 'react',
-import Head from 'next/head',
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { GetServerSideProps  } from 'next';
-import { requireAdminRole  } from '../../utils/auth';
-import DatePicker from 'react-datepicker';
-export const getServerSideProps: GetServerSideProps;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {d.label}: {d.value}
         </div>
       ))}
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
-<<<<<<< HEAD
-  )
+)
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  )
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />
   })'
 import React, { useCallback, useEffect, useMemo, useState } from 'react','
@@ -240,20 +145,11 @@ import DatePicker from 'react - datepicker',
 export const getServerSideProps: GetServerSideProps = async (ctx) => {};
   const result = await requireAdminRole (ctx),;
   // @ts - ignore;
-<<<<<<< HEAD
-  // Check condition
+// Check condition
 if (return result, ) {
   $2
-<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  // Check condition;
-if (return result, ) {}
-  $2;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
   return result;
 },
@@ -279,120 +175,8 @@ function PieChart() {}
     const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${large_arc} 1 ${x2} ${y2} Z`,
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />;
   }),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-);
-
-export default function UsageAnalytics() {
-  const [start, setStart] = useState<Date>(
-    new Date(Date.now() - 29 * 24 * 3600 * 1000)
-  );
-  const [end, setEnd] = useState<Date>(new Date());
-  const [userType, setUserType] = useState<string>('all');
-  const [loading, setLoading] = useState(false);
-  const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([]);
-  const [events, setEvents] = useState<Datum[]>([]);
-const [line, setLine] = useState<{ date: string; value: number }[]>([]);
-  const [funnel, setFunnel] = useState<Datum[]>([]);
-
-  const refresh = useCallback(async () => {
-    setLoading(true)
-    try {
-const params = new URLSearchParams({
-        start: start.toISOString(),
-        end: end.toISOString(),
-        userType,
-      });
-      const res = await fetch(
-        `/api/admin/analytics/summary?${params.toString()}`
-      );
-      const json = await res.json();
-      setPagesMostUsed(json.pagesMostUsed || []);
-      setEvents(json.events || []);
-      setLine(json.line || []);
-setFunnel(json.funnel || []);
-    } finally {
-      setLoading(false);
-    }, 1000);
-  }, []);
-
-  useEffect(() => {
-    refresh();
-  }, []);
-
-  return (
-    <>
-      <Head>
-        <title>Usage Analytics - Admin</title>
-        <meta name="description" content="Usage analytics and performance metrics" />
-      </Head>
-      <div className='space-y-6'>
-        <div className='flex items-center justify-between'>
-          <h1 className='text-2xl font-semibold'>Usage Analytics</h1>
-          <button
-            onClick={refresh}
-            disabled={loading}
-            className='px-3 py-2 rounded bg-blue-600 text-white disabled:opacity-50'
-          >
-            Refresh
-          </button>
-        </div>
-
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 border rounded p-4 bg-white/70 dark:bg-gray-900'>
-          <div>
-            <div className='text-sm'>Start</div>
-            <DatePicker
-              selected={start}
-              onChange={d => d && setStart(d)}
-              className='w-full border rounded px-2 py-1 bg-transparent'
-            />
-          </div>
-          <div>
-            <div className='text-sm'>End</div>
-            <DatePicker
-              selected={end}
-              onChange={d => d && setEnd(d)}
-              className='w-full border rounded px-2 py-1 bg-transparent'
-            />
-          </div>
-          <div>
-            <div className='text-sm'>User type</div>
-            <select
-              value={userType}
-              onChange={e => setUserType(e.target.value)}
-              className='w-full border rounded px-2 py-1 bg-transparent'
-            >
-              <option value='all'>All</option>
-              <option value='freelancer'>Freelancer</option>
-              <option value='b2b'>B2B</option>
-              <option value='hiring_manager'>Hiring Manager</option>
-              <option value='guest'>Guest</option>
-            </select>
-          </div>
-        </div>
-
-<div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
-          <div className='border rounded p-4 bg-white/70 dark:bg-gray-900'>
-            <div className='font-medium mb-2'>Most Used Features</div>
-            <div className='flex items-center gap-4'>
-              <PieChart data={pagesMostUsed.slice(0, 6)} />
-              <ul className='text-sm'>
-                {pagesMostUsed.slice(0, 6).map(d => (
-                  <li
-                    key={d.label}
-                    className='flex justify-between gap-4 min-w-[180px]'
-                  >
-                    <span>{d.label}</span>
-                    <span className='text-gray-500'>{d.value}</span>
-                  </li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
-=======
-  return (`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <svg width={size} height={size} view_box={`0 0 ${size} ${size}`}>{slices}</svg>);
 }
 
@@ -413,23 +197,6 @@ function LineChart() {}
     </svg>);
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-/**
- * Funnel - Function description
- */
-function Funnel() {
-
-  return (
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -437,13 +204,6 @@ function Funnel() {
       {data.map((d, i) => ("`
         <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {d.label}: {d.value  } catch (error) {
     console.error("Error:", error);
 =======
@@ -454,12 +214,7 @@ function Funnel() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
-
-
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
@@ -477,16 +232,10 @@ function Funnel() {
   }
 }
 ;
-<<<<<<< HEAD
 export default function UsageAnalytics(req, res) {
   try {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 export default function UsageAnalytics(req, res) {}
   try {};
@@ -505,59 +254,13 @@ export default function UsageAnalytics(req, res) {}
       setEvents(json.events || []);
       setLine(json.line || []);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      setFunnel(json.funnel || [])
-export default /**
- * UsageAnalytics - Function description
- */
-function UsageAnalytics() {
-  const [start, set_start] = useState < Date>(new Date (Date.now () - 29 * 24 * 3600 * 1000)),
-  const [end, set_end] = useState < Date>(new Date ()),
-  const [user_type, setUserType] = useState < string>('all'),
-  const [loading, set_loading] = useState (false),
-  const [pagesMostUsed, setPagesMostUsed] = useState < Datum[]>([]),
-  const [events, set_events] = useState < Datum[]>([]),
-  const [line, set_line] = useState<{ date: string, value: number }[]>([]),
-  const [funnel, set_funnel] = useState < Datum[]>([]),
-  const refresh = useCallback (async () => {
-    set_loading (true),
-    try {
-      const params = new URLSearchParams ({ start: start.toISOString (), end: end.toISOString (), user_type }),
-      const res = await fetch (`/api / admin / analytics / summary?${params.to_string ()}`),
-      const json = await res.json (),
-      setPagesMostUsed (json.pagesMostUsed || []),
-      set_events (json.events || []),
-      set_line (json.line || []),
-      set_funnel (json.funnel || []);
-    } finally {
-      set_loading (false);
-    }
-
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
-            <div className="font-medium mb-2">Most Used Features</div>
-            <div className="flex items-center gap-4">
-              <PieChart data={pagesMostUsed.slice(0, 6)} />
-              <ul className="text-sm">
-                {pagesMostUsed.slice(0, 6).map((d) => (
-                  <li key={d.label} className="flex justify-between gap-4 min-w-[180px]"><span>{d.label}</span><span className="text-gray-500">{d.value}</span></li>
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 ))  } catch (error) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-                ))  } catch (error) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-    </div>;
+</div>;
   );
   } catch (error) {
     console.error("Error:", error);
@@ -634,15 +337,10 @@ export default function UsageAnalytics(req, res) {
                 {pagesMostUsed.slice(0, 6).map((d) => (
                   <li key={d.label} className="flex justify-between gap-4 min-w-[180px]"><span>{d.label}</span><span className="text-gray-500">{d.value}</span></li>
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
                 ))  } catch (error) {"
@@ -651,22 +349,13 @@ export default function UsageAnalytics(req, res) {
   }
 }
 
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </ul>
             </div>
           </div>
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900 lg:col-span-2">
 "
             <div className="font-medium mb-2">Events Over Time</div>
@@ -676,14 +365,6 @@ export default function UsageAnalytics(req, res) {
                 <div key={e.label} className="flex justify-between border rounded px-2 py-1">
                   <span>{e.label}</span>"
                   <span className="text-gray-500">{e.value}</span>
-=======
-
-          <div className="border rounded p-4 bg-white/70 dark:bg-gray-900 lg:col-span-2">
-            <div className="font-medium mb-2">Events Over Time</div>
-=======
-<div className='border rounded p-4 bg-white/70 dark:bg-gray-900 lg:col-span-2'>
-            <div className='font-medium mb-2'>Events Over Time</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <LineChart data={line} />
             <div className='mt-3 grid grid-cols-2 gap-2 text-sm'>
               {events.slice(0, 8).map(e => (
@@ -700,24 +381,11 @@ export default function UsageAnalytics(req, res) {
           </div>
         </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-"
-        <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="font-medium mb-2">Funnel</div>
           <Funnel data={funnel} />
         </div>"
@@ -738,47 +406,23 @@ export default function UsageAnalytics(req, res) {
       </div>
     </EnhancedLayout>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 }
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-}
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }, [start, end, user_type]),
@@ -847,21 +491,11 @@ export default function UsageAnalytics(req, res) {
     </EnhancedLayout>);
 }
 
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

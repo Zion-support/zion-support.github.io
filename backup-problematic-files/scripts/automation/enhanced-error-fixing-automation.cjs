@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
@@ -35,43 +33,32 @@ class EnhancedErrorFixingAutomation {
 
   async fixMergeConflicts() {
     this.log("Fixing merge conflicts...");
-    
+
     const files = this.getTypeScriptFiles();
-    
+
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, "utf8");
-        if (content.includes("<<<<<<< HEAD") || content.includes("=======") || content.includes(">>>>>>> ")) {
-=======
-
-<<<<<<< HEAD
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+        if (content.includes("<<<<<<< HEAD") || content.includes("
           this.log(`Fixing merge conflicts in ${file}`);
-          
+
           // Simple merge conflict resolution - keep the HEAD version
           const lines = content.split("\n");
           const newLines = [];
           let inConflict = false;
-          
+
           for (const line of lines) {
-<<<<<<< HEAD
-            if (line.includes("<<<<<<< HEAD")) {
+if (line.includes("<<<<<<< HEAD")) {
               inConflict = true;
               continue;
-            } else if (line.includes("=======")) {
-              continue;
-            } else if (line.includes(">>>>>>> ")) {
-=======
-            if (line.includes("
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+            } else if (line.includes("
               inConflict = false;
               continue;
             } else if (!inConflict) {
               newLines.push(line);
             }
           }
-          
+
           fs.writeFileSync(file, newLines.join("\n"));
           this.fixesApplied.push({
             type: "merge_conflict",
@@ -88,7 +75,7 @@ class EnhancedErrorFixingAutomation {
   getTypeScriptFiles() {
     const files = [];
     const srcDir = path.join(process.cwd(), "src");
-    
+
     function walkDir(dir) {
       if (!fs.existsSync(dir)) return;
       const items = fs.readdirSync(dir);
@@ -102,7 +89,7 @@ class EnhancedErrorFixingAutomation {
         }
       }
     }
-    
+
     walkDir(srcDir);
     return files;
   }
@@ -118,7 +105,7 @@ class EnhancedErrorFixingAutomation {
         mergeConflictFixes: this.fixesApplied.filter(f => f.type === "merge_conflict").length
       }
     };
-    
+
     const reportPath = path.join(this.projectRoot, "error-fixing-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Error fixing report saved to: ${reportPath}`);
@@ -127,15 +114,15 @@ class EnhancedErrorFixingAutomation {
 
   async run() {
     this.log("Starting Enhanced Error Fixing Automation...");
-    
+
     try {
       // Run all fix operations
       await this.fixMergeConflicts();
-      
+
       // Generate report
       const report = await this.generateReport();
       this.log(`Error fixing completed! Applied ${report.summary.totalFixes} fixes.`);
-      
+
       return report;
     } catch (error) {
       this.log(`Error fixing automation failed: ${error.message}`, "error");
@@ -151,10 +138,7 @@ if (require.main === module) {
 }
 
 module.exports = EnhancedErrorFixingAutomation;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 =======
@@ -332,15 +316,7 @@ export default function"
       "summary"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
-<<<<<<< HEAD
-        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
-<<<<<<< HEAD
+"mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

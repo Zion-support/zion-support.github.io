@@ -6,20 +6,11 @@ interface SkeletonProps {
   width?: string;
   rounded?: boolean;
 }
-<<<<<<< HEAD
-
 const Skeleton: React.FC<SkeletonProps> = ({
   className = '',
   height = 'h-4',
   width = 'w-full',
   rounded = true,
-=======
-const Skeleton: React.FC<SkeletonProps> = ({ ,
-  className = '', '
-  height = 'h-4', '
-  width = 'w-full', '
-  rounded = true
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) => {
   return (
     <motion.div
@@ -30,11 +21,7 @@ const Skeleton: React.FC<SkeletonProps> = ({ ,
       transition={{
         duration: 1.5,
         repeat: Infinity,
-<<<<<<< HEAD
-        ease: 'easeInOut',
-=======
-ease: "easeInOut","
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+ease: 'easeInOut',
       }}
     />
   );

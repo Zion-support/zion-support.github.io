@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 // Define types for the pricing recommendation;
 export interface PricingSuggestion {;
@@ -246,7 +242,7 @@ confidence;
 explanation 
 }
 }catch (error) {
-  
+
 }
 }// Function to save pricing analytics data 
 }

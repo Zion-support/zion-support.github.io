@@ -3,7 +3,6 @@ export default function ForumPostPage() {};
   // can't determine the generic type for the helper from React Router.
   // Cast the result instead to provide the expected shape.
 
-<<<<<<< HEAD
 import { useState } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -40,10 +39,8 @@ const mockPost: ForumPost = {
   isAnswered: true,
   isFeatured: true
 },
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD:temp_exclude/hooks.disabled/ForumPostPage.tsx
+:temp_exclude/hooks.disabled/ForumPostPage.tsx
 // Mock data for replies
 const mockReplies: ForumReply[] = [
   {
@@ -93,12 +90,6 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-02T11:20:00Z",
     upvotes: 4,
     downvotes: 0
-=======
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ForumPostPage.tsx
   }
 ],
 
@@ -112,16 +103,10 @@ export default function ForumPostPage() {
   const { toast } = useToast(),
   const [post, setPost] = useState(mockPost),
   const [replies, setReplies] = useState(mockReplies),
-  
-<<<<<<< HEAD:temp_exclude/hooks.disabled/ForumPostPage.tsx
-<<<<<<< HEAD
-  // Check if this is the user's own post
+
+:temp_exclude/hooks.disabled/ForumPostPage.tsx
+// Check if this is the user's own post
   const isAuthor = user?.id === post?.authorId,
-=======
-  static getDerivedStateFromError(error) {
-=======
-  static getDerivedStateFromError(error) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ForumPostPage.tsx
     return { hasError: true };
   }
 '
@@ -137,7 +122,7 @@ export default function ForumPostPage() {
   '
   // Check if this is the user's own post;
   const isAuthor = user?.id === post?.authorId,
-  
+
   // Check if user is admin/mod'
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
   '
@@ -162,7 +147,7 @@ export default function ForumPostPage() {
       router.push(`/auth/login?returnTo=${returnTo}`),
       return;
     }
-    
+
     setPost({ ...post, upvotes: post.upvotes + 1 }),
     toast({"
       title: "Vote recorded","
@@ -178,7 +163,7 @@ export default function ForumPostPage() {
       router.push(`/auth/login?returnTo=${returnTo}`),
       return;
     }
-    
+
     setPost({ ...post, downvotes: post.downvotes + 1 }),
     toast({"
       title: "Vote recorded","
@@ -194,7 +179,7 @@ export default function ForumPostPage() {
       router.push(`/auth/login?returnTo=${returnTo}`),
       return;
     }
-    
+
     // Create a new reply;
     const newReply: ForumReply = {}`
       id: `reply${Date.now()}`,
@@ -208,10 +193,10 @@ export default function ForumPostPage() {
       upvotes: 0,
       downvotes: 0;
     },
-    
+
     setReplies([...replies, newReply]),
     setPost({ ...post, replyCount: post.replyCount + 1 }),
-    
+
     toast({"
       title: "Reply posted","
       description: "Your reply has been added to the discussion"})
@@ -227,16 +212,16 @@ export default function ForumPostPage() {
       }),
       return;
     }
-    
+
     // Update the replies;
     const updatedReplies = replies.map(reply => ({}
       ...reply,
       isAnswer: reply.id === replyId;
     })),
-    
+
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
-    
+
     toast({"
       title: "Answer marked","
       description: "The reply has been marked as the accepted answer"})
@@ -251,7 +236,7 @@ export default function ForumPostPage() {
       router.push(`/auth/login?returnTo=${returnTo}`),
       return;
     }
-    
+
     toast({"
       title: "Report submitted","
       description: "A moderator will review this content"})
@@ -259,7 +244,7 @@ export default function ForumPostPage() {
 
   const handlePinPost = () => {}
     setPost({ ...post, isPinned: !post.isPinned }),
-    
+
     toast({"
       title: post.isPinned ? "Post unpinned" : "Post pinned","
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
@@ -267,17 +252,17 @@ export default function ForumPostPage() {
 
   const handleLockPost = () => {}
     setPost({ ...post, isLocked: !post.isLocked }),
-    
+
     toast({"
       title: post.isLocked ? "Post unlocked" : "Post locked","
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
   },
-  
+
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
 '"
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  
+
   // Check if user is admin/mod'
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
   '
@@ -302,7 +287,7 @@ export default function ForumPostPage() {
       router.push(`/auth/login?returnTo=${returnTo}`),
       return;
     }
-    
+
     setPost({ ...post, upvotes: post.upvotes + 1 }),
     toast({"
       title: "Vote recorded","
@@ -318,7 +303,7 @@ export default function ForumPostPage() {
       router.push(`/auth/login?returnTo=${returnTo}`),
       return;
     }
-    
+
     setPost({ ...post, downvotes: post.downvotes + 1 }),
     toast({"
       title: "Vote recorded","
@@ -334,7 +319,7 @@ export default function ForumPostPage() {
       router.push(`/auth/login?returnTo=${returnTo}`),
       return;
     }
-    
+
     // Create a new reply;
     const newReply: ForumReply = {}`
       id: `reply${Date.now()}`,
@@ -348,10 +333,10 @@ export default function ForumPostPage() {
       upvotes: 0,
       downvotes: 0;
     },
-    
+
     setReplies([...replies, newReply]),
     setPost({ ...post, replyCount: post.replyCount + 1 }),
-    
+
     toast({"
       title: "Reply posted","
       description: "Your reply has been added to the discussion"})
@@ -367,16 +352,16 @@ export default function ForumPostPage() {
       }),
       return;
     }
-    
+
     // Update the replies;
     const updatedReplies = replies.map(reply => ({}
       ...reply,
       isAnswer: reply.id === replyId;
     })),
-    
+
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
-    
+
     toast({"
       title: "Answer marked","
       description: "The reply has been marked as the accepted answer"})
@@ -391,7 +376,7 @@ export default function ForumPostPage() {
       router.push(`/auth/login?returnTo=${returnTo}`),
       return;
     }
-    
+
     toast({"
       title: "Report submitted","
       description: "A moderator will review this content"})
@@ -399,9 +384,9 @@ export default function ForumPostPage() {
 
   const handlePinPost = () => {}
     if (!isAdminOrMod) return,
-    
+
     setPost({ ...post, isPinned: !post.isPinned }),
-    
+
     toast({"
       title: post.isPinned ? "Post unpinned" : "Post pinned","
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
@@ -409,17 +394,17 @@ export default function ForumPostPage() {
 
   const handleLockPost = () => {}
     if (!isAdminOrMod) return,
-    
+
     setPost({ ...post, isLocked: !post.isLocked }),
-    
+
     toast({"
       title: post.isLocked ? "Post unlocked" : "Post locked","
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
   },
-  
+
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),'"
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
-  
+
   return (
     <>
       <SEO"
@@ -634,7 +619,7 @@ export default function ForumPostPage() { return null; }
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"});
   },;
   const handleLockPost = () => {;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/ForumPostPage.tsx
+:temp_exclude/hooks.disabled/ForumPostPage.tsx
     if (!isAdminOrMod) return,;
     setPost({ ...post, isLocked: !post.isLocked }),;
     toast({;
@@ -651,7 +636,7 @@ export default function ForumPostPage() { return null; }
         keywords={`community, forum, discussion, ${post.tags.join()}`}
         canonical={`https://app.ziontechgroup.com/community/post/${post.id}`}
       />
-      
+
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
           <Link href="/community" className="text-sm text-muted-foreground hover:text-foreground">
@@ -664,7 +649,7 @@ export default function ForumPostPage() { return null; }
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium truncate max-w-[200px]">{post.title}</span>
         </div>
-        
+
         <Card>
           <CardContent className="p-6">
             <div className="flex justify-between items-start mb-6">
@@ -682,7 +667,7 @@ export default function ForumPostPage() { return null; }
                   )}
                 </div>
               </div>
-              
+
               <div className="flex items-center text-sm text-muted-foreground">
                 <Calendar className="h-4 w-4 mr-1" />
                 <time dateTime={post.createdAt} title={formattedDate}>
@@ -690,9 +675,9 @@ export default function ForumPostPage() { return null; }
                 </time>
               </div>
             </div>
-            
+
             <h1 className="text-2xl font-bold mb-2">{post.title}</h1>
-            
+
             <div className="flex flex-wrap gap-2 mb-6">
               {post.tags.map(tag => (
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
@@ -700,13 +685,13 @@ export default function ForumPostPage() { return null; }
                 </Badge>;
               ))}
             </div>
-            
+
             <div className="prose dark:prose-invert max-w-none mb-6">
               {post.content.split('\n\n').map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
             </div>
-            
+
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
               <div className="flex items-center gap-4">
                 <Button
@@ -728,7 +713,7 @@ export default function ForumPostPage() { return null; }
                   <span>{post.downvotes}</span>
                 </Button>
               </div>
-              
+
               <div className="flex items-center gap-2">
                 {(isAuthor || isAdminOrMod) && (
                   <Button variant="ghost" size="sm" asChild>
@@ -738,7 +723,7 @@ export default function ForumPostPage() { return null; }
                     </Link>
                   </Button>
                 )}
-                
+
                 {isAdminOrMod && (
                   <>
                     <Button
@@ -759,7 +744,7 @@ export default function ForumPostPage() { return null; }
                     </Button>
                   </>
                 )}
-                
+
                 <Button
                   variant="ghost"
                   size="sm"
@@ -772,10 +757,10 @@ export default function ForumPostPage() { return null; }
             </div>
           </CardContent>
         </Card>
-        
+
         <div className="mt-8">
           <h2 className="text-xl font-bold mb-6">Responses ({post.replyCount})</h2>
-          
+
           {post.isAnswered && (
             <div className="mb-6">
               <h3 className="flex items-center text-green-600 font-medium mb-2">
@@ -787,7 +772,7 @@ export default function ForumPostPage() { return null; }
               ))}
             </div>;
           )}
-          
+
           {!post.isLocked && (
             <div className="mb-8">
               <h3 className="text-lg font-medium mb-4">Your Response</h3>
@@ -802,7 +787,7 @@ export default function ForumPostPage() { return null; }
               )}
             </div>;
           )}
-          
+
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
@@ -811,7 +796,7 @@ export default function ForumPostPage() { return null; }
               </AlertDescription>
             </Alert>
           )}
-          
+
           <div className="space-y-6">
             {replies
               .filter(reply => !reply.isAnswer)
@@ -828,113 +813,6 @@ export default function ForumPostPage() { return null; }
       </div>;
     </>;
   );
-=======
-    if (!isAdminOrMod) return;
-
-    setPost({ ...post, isLocked: !post && post.isLocked }),;
-
-
-  const timeAgo = formatDistanceToNow(new Date(post && post.createdAt), { addSuffix: true }),;'"
-  const formattedDate = format(new Date(post && post.createdAt), "MMMM d, yyyy 'at' h: mm a"),;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ForumPostPage.tsx
-}
-<<<<<<< HEAD
-=======
-  );
 }
 
-
-  )
-}
-"
-    id: "reply1","
-    post_id: "1",'"
-    content: "Great post! I've had similar experiences with data preparation being the key to successful fine - tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.","
-    author_id: "user2","
-    author_name: "Sarah Chen","
-    author_avatar: "https://i.pravatar.cc / 150?img = 5","
-    created_at: "2025 - 04 - 01T14:30:00Z","
-    updated_at: "2025 - 04 - 01T14:30:00Z",
-    upvotes: 12,
-    downvotes: 0;
-  }
-  {"
-    id: "reply2","
-    post_id: "1",'"
-    content: "Have you tried using LoRA or QLoRA for efficient fine - tuning? I've found them to be much more resource - friendly while maintaining good performance.","
-    author_id: "user3","
-    author_name: "Michael Wong","
-    author_role: "AI Engineer","
-    created_at: "2025 - 04 - 01T16:15:00Z","
-    updated_at: "2025 - 04 - 01T16:15:00Z",
-    upvotes: 8,
-    downvotes: 0;
-  }
-  {"
-    id: "reply3","
-    post_id: "1",'"
-    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine - tuning process.\n\n_also, when fine - tuning language models, I've found that carefully crafting your prompts / templates for training can make a huge difference in the quality of the outputs.";"
-    author_id: "user4","
-    author_name: "Emma Davis","
-    author_role: "ML Research Lead","
-    created_at: "2025 - 04 - 02T09:45:00Z","
-    updated_at: "2025 - 04 - 02T09:45:00Z",
-    upvotes: 15,
-    downvotes: 0,
-    is_answer: true;
-  }
-  {"
-    id: "reply4","
-    post_id: "1","
-    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?","
-    author_id: "user5","
-    author_name: "David Lin","
-    created_at: "2025 - 04 - 02T11:20:00Z","
-    updated_at: "2025 - 04 - 02T11:20:00Z",
-    upvotes: 4,
-    downvotes: 0;
-  }
-];
-export default /**;
- * ForumPostPage - Function description;
- */
-function ForumPostPage() {}`
-  // Using `use_params` without type arguments avoids issues when TypeScript;'
-  // can't determine the generic type for the helper from React Router.;
-  // Cast the result instead to provide the expected shape.;
-  const router = use_router ();
-  const post_id = router.query.post_id as string;
-  const { user } = use_auth ();
-  const { toast } = use_toast ();
-  const [post, set_post] = useState (mock_post);
-  const [replies, set_replies] = useState (mock_replies);'
-  // Check if this is the user's own post;
-  const is_author = user?.id === post?.author_id;
-  // Check if user is admin / mod;'
-  const isAdminOrMod = user?.user_type === 'admin' || user?.role === 'admin';
-      return;
-    }
-  const handlePinPost = () =>: any {}
-    // Check condition;
-if (return) {}
-  $2;
-}
-    set_post ({ ...post, is_pinned: !post.is_pinned }),
-  const handleLockPost = () =>: any {}
-    // Check condition;
-if (return) {}
-  $2;
-}
-    set_post ({ ...post, is_locked: !post.is_locked }),
-  const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),'"
-  const formatted_date = format (new Date (post.created_at), "MMMM d, yyyy 'at' h: mm a"),
-}
-  );
-}
-
-<<<<<<< HEAD:temp_exclude/hooks.disabled/ForumPostPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ForumPostPage.tsx

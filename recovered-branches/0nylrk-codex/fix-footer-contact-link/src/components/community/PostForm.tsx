@@ -1,21 +1,8 @@
 <<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-=======
-<<<<<<< HEAD
-
-=======
-import { useState } from "react";
-import { useForm } from "react-hook-form";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -32,25 +19,6 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-import {useState} from "react";"
-import {useForm} from "react-hook-form";"
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";"
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";"
-import {Input} from "@/components/ui/input";"
-import {Button} from "@/components/ui/button";"
-import {Textarea} from "@/components/ui/textarea";"
-import {ForumCategory} from "@/types/community";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 "
 import { useState } from "react","
 import { useForm } from "react-hook-form",
@@ -64,31 +32,13 @@ import { useForm } from "react-hook-form",
 import { useState } from "react","
 import { useForm } from "react-hook-form",
 
-<<<<<<< HEAD
-=======
-
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { useState } from "react",
 import { useForm } from "react-hook-form",
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import { useState } from "react",
-import { useForm } from "react-hook-form",
-import { useState } from "react",
-import { useForm } from "react-hook-form",
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import { useState } from "react",
-import { useForm } from "react-hook-form",
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -101,8 +51,6 @@ import {
 import {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
-
-
 
 import { 
 
@@ -128,26 +76,16 @@ pr-12325
   CardHeader;
   CardTitle"
 } from "@/components/ui/card",
-<<<<<<< HEAD
 import {};
-=======
-import {
-  CardTitle;"
-} from "@/components/ui/card","
-  // TODO: Implement
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Form;
   FormControl;
   FormField;
   FormItem;
   FormLabel;
-<<<<<<< HEAD
-  FormMessage"
+FormMessage"
 } from "@/components/ui/form","
 import { Input } from "@/components/ui/input","
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,42 +93,13 @@ import { Button } from "@/components/ui/button",
 interface PostFormValues {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-<<<<<<< HEAD
-=======
-import { Textarea } from "@/components/ui/textarea",
-import { ForumCategory } from "@/types/community",
-
-import { Textarea } from "@/components/ui/textarea";
-import { ForumCategory } from "@/types/community";
-import { Textarea } from "@/components/ui/textarea",
-import { ForumCategory } from "@/types/community",
-interface PostFormValues {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   title: string
@@ -200,10 +109,7 @@ interface PostFormValues {
   tags: string
 }
 interface PostFormProps {
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
 =======
@@ -215,36 +121,9 @@ interface PostFormProps {
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
 
-<<<<<<< HEAD
 import { Textarea } from "@/components/ui/textarea",
-<<<<<<< HEAD
 import { ForumCategory } from "@/types/community",  onSubmit: (values: PostFormValues) => void,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-import { Textarea } from "@/components/ui/textarea",
-import { ForumCategory } from "@/types/community",  onSubmit: (values: PostFormValues) => void,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import { ForumCategory } from "@/types/community",
-
-interface PostFormValues {
-  title: string,
-  content: string,
-  categoryId: ForumCategory,
-  tags: string
-
-
-  title: string
-  content: string
-  categoryId: ForumCategory
-
-  tags: string
-}
-interface PostFormProps {
-  initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 import { Textarea } from "@/components/ui/textarea",;
 import { ForumCategory } from "@/types/community",  onSubmit: (values: PostFormValues) => void,;
@@ -271,27 +150,12 @@ interface PostFormProps {}
 export const PostForm = ({;
   initialValues;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   onSubmit;
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",;
 =======
-
 
 "
 import { useState } from "react",;"
@@ -307,11 +171,7 @@ import {;
   CardContent,;
   CardFooter,;
   CardHeader,;
-<<<<<<< HEAD
-  CardTitle;"
-=======
-  CardTitle;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+CardTitle;"
 } from "@/components/ui/card",;
 import {;
   Form,;
@@ -319,19 +179,11 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
-<<<<<<< HEAD
-  FormMessage;"
+FormMessage;"
 } from "@/components/ui/form",;"
 import { Input } from "@/components/ui/input",;"
 import { Button } from "@/components/ui/button",;"
 import { Textarea } from "@/components/ui/textarea",;"
-=======
-  FormMessage;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Textarea } from "@/components/ui/textarea",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ForumCategory } from "@/types/community",;
 interface PostFormValues {;
   title: string,;
@@ -345,23 +197,11 @@ interface PostFormProps {;
   onSubmit: (values: PostFormValues) => void,;
   isEditing?: boolean;
 }
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-
-
 
   initialValues?: Partial<PostFormValues>;
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-  onSubmit;  initialValues?: Partial<PostFormValues>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  onSubmit;  initialValues?: Partial<PostFormValues>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
   initialValues?: Partial<PostFormValues>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -376,18 +216,7 @@ export const PostForm = ({
   onSubmit;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  initialValues,
-  onSubmit,
-<<<<<<< HEAD
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -405,10 +234,6 @@ initialValues,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import {useState} from "react";
 import {useForm} from "react-hook-form";
@@ -428,24 +253,12 @@ interface PostFormValues {;
 interface PostFormProps {;
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,;
-<<<<<<< HEAD
-=======
-  onSubmit: (values: PostFormValues) => void;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   isEditing?: boolean;
 }
 export const PostForm = ({};
   isEditing = false;
-<<<<<<< HEAD
-=======
-  isEditing?: boolean;
-}
 
-export const PostForm = ({;
-  initialValues;
-  onSubmit;
-  isEditing = false;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }: PostFormProps) => {;
   const form = useForm<PostFormValues>({;
     defaultValues: {;
@@ -453,18 +266,10 @@ export const PostForm = ({;
       content: initialValues?.content || "",;
       categoryId: initialValues?.categoryId || "project-help",;
       tags: initialValues?.tags || "";
-<<<<<<< HEAD
-
-    }
+}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-=======
-    }
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -472,18 +277,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components / ui / input';
 import { Button } from '@/components / ui / button';
 import { Textarea } from '@/components / ui / textarea';
-=======
-}: PostFormProps) => {}
-  const form = useForm<PostFormValues>({}
-    defaultValues: {}
-import { useState } from './react';'
-import { use_form } from './react - hook - form';'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';'
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';'
-import { Input } from '@/components / ui / input';'
-import { Button } from '@/components / ui / button';'
-import { Textarea } from '@/components / ui / textarea';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ForumCategory } from '@/types / community';
 interface PostFormValues {}
   title: string,
@@ -515,30 +308,15 @@ export const PostForm = ({};
   const handle_submit = async (values: PostFormValues) => {}
     setIsSubmitting (true),
 
-
     try {}
       await on_submit (values);
-<<<<<<< HEAD
-    } finally {
-<<<<<<< HEAD
-      setIsSubmitting(false)
+} finally {
+setIsSubmitting(false)
     }
 
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-    try {
-      await on_submit (values);
-    } finally {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    try {
-      await on_submit (values);
-    } finally {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
@@ -590,50 +368,13 @@ export const PostForm = ({
     try {
       await on_submit (values);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     } finally {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-    } finally {
-
-<<<<<<< HEAD
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-title: initialValues?.title |""
-      content: initialValues?.content |""
-      categoryId: initialValues?.categoryId |"project-help"
-      tags: initialValues?.tags |""
-    }
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const handleSubmit = async (values: PostFormValues) => {
-    setIsSubmitting(true)
-    try {
-      await onSubmit(values)
-    } finally {
-      setIsSubmitting(false)
-    }
-    }
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-    try {
-      await on_submit (values);
-    } finally {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
       title: initialValues?.title || "",
       content: initialValues?.content || "",
       categoryId: initialValues?.categoryId || "project-help",
-<<<<<<< HEAD
-=======
-    } finally {}
-  }"
-      title: initialValues?.title || "","
-      content: initialValues?.content || "","
-      categoryId: initialValues?.categoryId || "project-help","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       tags: initialValues?.tags || ""
@@ -643,16 +384,9 @@ title: initialValues?.title |""
   const [isSubmitting, setIsSubmitting] = useState(false),;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const handleSubmit = async (values: PostFormValues) => {;
@@ -663,8 +397,6 @@ title: initialValues?.title |""
       setIsSubmitting(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     }
 <<<<<<< HEAD
@@ -672,19 +404,8 @@ title: initialValues?.title |""
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  }
-=======
-
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
 =======
     } finally {    }
@@ -700,12 +421,7 @@ title: initialValues?.title |""
   }
 
   return (
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    } finally {    }
-  }  return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <Card>;
       <CardHeader>;"
         <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>;
@@ -720,14 +436,6 @@ title: initialValues?.title |""
                 <FormItem>;
                   <FormLabel>Title</FormLabel>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setIsSubmitting (false);
     }
   }
@@ -738,18 +446,9 @@ title: initialValues?.title |""
         <CardTitle>{is_editing ? "Edit Post" : "Create New Post"}</CardTitle>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
-        <Form {...form}>;
-<<<<<<< HEAD
+<Form {...form}>;
 <<<<<<< HEAD
           <form className="space-y-6" on_submit={form.handle_submit (handle_submit)}>;
-=======
-        <Form {...form}>;"
-          <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
           <form className="space-y-6" on_submit={form.handle_submit (handle_submit)}>;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -759,16 +458,8 @@ title: initialValues?.title |""
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Title</FormLabel>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <FormControl>;
-=======
-
-                  <FormControl>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <Input placeholder="Enter post title..." {...field} />;
                   </FormControl>;
                   <FormMessage />;
@@ -776,13 +467,6 @@ title: initialValues?.title |""
             />;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <FormField
               control={form && form.control}
 =======
@@ -808,13 +492,6 @@ title: initialValues?.title |""
             />;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <FormField
               control={form && form.control}
 =======
@@ -843,13 +520,6 @@ title: initialValues?.title |""
             />;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <FormField
               control={form && form.control}
 =======
@@ -875,23 +545,10 @@ title: initialValues?.title |""
 "
             <Button type="submit" disabled={isSubmitting}>;"
               {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
-<<<<<<< HEAD
-    }
+}
   }
 
     }
-=======
-
-
-    }
-  }
-
-
-
-
-    }
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <Card>;
       <CardHeader>;"
@@ -916,18 +573,9 @@ title: initialValues?.title |""
         <CardTitle>{is_editing ? "Edit Post" : "Create New Post"}</CardTitle>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
-        <Form {...form}>;
-<<<<<<< HEAD
+<Form {...form}>;
 <<<<<<< HEAD
           <form className="space-y-6" on_submit={form.handle_submit (handle_submit)}>;
-=======
-        <Form {...form}>;"
-          <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
           <form className="space-y-6" on_submit={form.handle_submit (handle_submit)}>;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -949,8 +597,7 @@ title: initialValues?.title |""
                     </select>;
                   </FormControl>;
                   <FormMessage />;
-<<<<<<< HEAD
-                </FormItem>;
+</FormItem>;
               )}
             />;
             <FormField
@@ -1059,14 +706,9 @@ title: initialValues?.title |""
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </FormItem>)}
@@ -1110,15 +752,12 @@ title: initialValues?.title |""
 
     </Card>);
 
-
 }
 ;
 export default PostForm;
 ;
 
-
 },
-
 
 "
 import { useState } from "react",;"
@@ -1237,8 +876,7 @@ export const PostForm = ({;
                     </select>;
                   </FormControl>;
                   <FormMessage />;
-<<<<<<< HEAD
-                </FormItem>)}
+</FormItem>)}
             />;
             <FormField;
               control={form.control}
@@ -1336,9 +974,7 @@ interface PostFormProps {
 
   initialValues?: Partial<PostFormValues>,;
 
-
   const form = useForm<PostFormValues>({
-
 
   const form = useForm<PostFormValues>({;
 
@@ -1378,7 +1014,6 @@ export const PostForm = ({
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
 
-
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
@@ -1414,7 +1049,6 @@ export const PostForm = ({
               name="title";"
               render={({ field }) => (
 
-
                   <FormLabel > Title;
                   <FormControl>;
                     <Input placeholder="Enter post title..." {...field} />;"
@@ -1422,7 +1056,6 @@ export const PostForm = ({
                   <FormMessage />;
 
               name="content"")
-
 
                   <FormLabel>Content;
 
@@ -1432,9 +1065,7 @@ export const PostForm = ({
                       {...field} 
                     />;
 
-
               name="categoryId"")
-
 
                   <FormLabel>Category;
 
@@ -1456,26 +1087,8 @@ export const PostForm = ({
                     <Input;"
                       placeholder="e && e.g. resume, hiring, flutter""
 
-
                 ;"
             <Button type="submit" disabled={isSubmitting}>;"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <Card>
 
@@ -1494,14 +1107,9 @@ export const PostForm = ({
 
                   <FormMessage />
 
-
-
                   <FormLabel>Content
 
                     />
-
-
-
 
                   <FormLabel>Category
 
@@ -1512,17 +1120,14 @@ export const PostForm = ({
                       <option value="feedback">Feedback & Feature Requests</option>"
                     </select>
 
-
                   <FormLabel>Tags (comma-separated)
 
                       placeholder="e.g. resume, hiring, flutter""
-
 
             <Button type="submit" disabled={isSubmitting}>"
 
                 )}
               name="content";"
-
 
                   <FormLabel > Content;
 
@@ -1530,7 +1135,6 @@ export const PostForm = ({
                       className="min - h-[200px]";"
 
               name="category_id";"
-
 
                   <FormLabel > Category;
 
@@ -1545,7 +1149,6 @@ export const PostForm = ({
 
                       placeholder="e.g. resume, hiring, flutter";"
 
-
                 )}"
             <Button type="submit" disabled={is_submitting}>;"
 
@@ -1553,17 +1156,11 @@ export const PostForm = ({
     );
   initialValues?:Partial<PostFormValues>,;
 
-
-
         <CardTitle>{isEditing ? "Edit Post" :"Create New Post"};"
 
           <form className="space-y-6" onSubmit={form.handleSubmit(handleSubmit)}>;"
 
-
-
                 ;              )}
-
-
 
                     <Textarea ;"
                       placeholder="Write your post content here..." ;""
@@ -1572,16 +1169,10 @@ export const PostForm = ({
 
               name="categoryId";"
 
-
-
                       className="w-full p-2 border rounded-md";"
-
 
                     <Input ;"
                       placeholder="e.g. resume, hiring, flutter" ;"
-
-
-
 
   const form = useForm<PostFormValues> ({
 return (<Card> <CardHeader>  <FormMessage /> ) 
@@ -1600,13 +1191,8 @@ export default PostForm,
 pr-12325
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
                 </FormItem>;              )}
             />;
@@ -1682,7 +1268,6 @@ export default PostForm,
 ;
 export default PostForm;
 export default PostForm,
-
 
 '";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

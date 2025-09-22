@@ -179,13 +179,13 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
   return (
     <Link href={`/disputes/new?${query.toString()}`}>
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm">
-
+;
   });
 
   return (
     <Link href={`/disputes/new?${query.toString()}`} />"
       <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" />
-
+;
         Report a Problem;
       </a>
     </Link>
@@ -206,7 +206,7 @@ function ReportProblemButton() {}
   });
   return (`
     <Link href={`/disputes/new?${query.toString()}`}>"
-      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>;
     </Link>
   );
 }

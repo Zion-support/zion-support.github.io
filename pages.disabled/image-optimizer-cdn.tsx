@@ -1,15 +1,6 @@
-<<<<<<< HEAD:pages_backup/image-optimizer-cdn.tsx
-<<<<<<< HEAD:pages_backup/image-optimizer-cdn.tsx
+:pages_backup/image-optimizer-cdn.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/image-optimizer-cdn.tsx
-
-
-
 
 import React from 'react','
 import SEO from '../components / SEO',
@@ -33,17 +24,10 @@ return (
   </>);
 }
 
-
-
-
-
-
-
-
 '
 import React from 'react';'
 import SEO from '../components/SEO';
-<<<<<<< HEAD:pages_backup/image-optimizer-cdn.tsx
+:pages_backup/image-optimizer-cdn.tsx
 export default function ImageOptimizerCDNPage() {
 	return (
 		<>
@@ -64,11 +48,6 @@ export default function ImageOptimizerCDNPage() {
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -77,13 +56,7 @@ export default function ImageOptimizerCDNPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import SEO from '../components/SEO';
-<<<<<<< HEAD
-=======
-import React from 'react';
-import SEO from '../components/SEO';
-<<<<<<< HEAD:pages/image-optimizer-cdn.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 =======
 
 import React from 'react';
@@ -116,19 +89,9 @@ export default function ImageOptimizerCDNPage(req, res) {}
   }
 }
 
-<<<<<<< HEAD:pages_backup/image-optimizer-cdn.tsx
-<<<<<<< HEAD:pages_backup/image-optimizer-cdn.tsx
+:pages_backup/image-optimizer-cdn.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -179,23 +142,10 @@ export default function ImageOptimizerCDNPage() {
       </section>
     </>
   );
-<<<<<<< HEAD:pages_backup/image-optimizer-cdn.tsx
-<<<<<<< HEAD
+:pages_backup/image-optimizer-cdn.tsx
 <<<<<<< HEAD:pages/image-optimizer-cdn.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/image-optimizer-cdn.tsx
-=======
-
-
-
-
-
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/image-optimizer-cdn.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

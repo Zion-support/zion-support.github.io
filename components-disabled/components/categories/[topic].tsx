@@ -1,15 +1,6 @@
 
-
 import type { GetServerSideProps, NextPage } from 'next';
-<<<<<<< HEAD
 
-<<<<<<< HEAD:components/categories/[topic].tsx
-
-=======
-import type { GetServerSideProps, NextPage } from 'next';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/categories/[topic].tsx
 =======
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import Head from 'next/head';
@@ -95,8 +86,7 @@ const TopicPage: NextPage<Props> = ({ topic;, posts }) => {;
         <meta property='og:image' content='/images / og / topic - default.jpg' />;
         <meta property='og:type' content='website' />;
         <meta name='twitter:card' content='summary_large_image' />;
-<<<<<<< HEAD
-        <meta name='twitter:title' content={`${topic} - Zion Blog`} />;
+<meta name='twitter:title' content={`${topic} - Zion Blog`} />;
         <meta name='twitter:description' content={`Articles about ${topic}`} />;
             onShare={network =>;
               fetch('/api/analytics/share', {;
@@ -112,16 +102,8 @@ const TopicPage: NextPage<Props> = ({ topic;, posts }) => {;
                     '&utm_medium=share&utm_campaign=category',;
                 }),;
               }).catch(() => {});
-<<<<<<< HEAD:components/categories/[topic].tsx
-            }
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/categories/[topic].tsx
+}
           />;
-=======
-        <meta name='twitter: title' content={`${topic;} - Zion Blog`} />;
-        <meta name='twitter: description' content={`Articles about ${topic;}`} />;
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
         </div>;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
             <BlogCard key={p && p.id} post={p} />;
@@ -153,8 +135,7 @@ const TopicPage: NextPage<Props> = ({ topic;, posts }) => {;
         <div className="mb-6">"
     <div>
       <Head>
-<<<<<<< HEAD
-        <title>{topic} - Zion Blog</title>
+<title>{topic} - Zion Blog</title>
         <meta name="description" content={`Articles about ${topic}`} />
         <meta property="og:title" content={`${topic} - Zion Blog`} />
         <meta property="og:description" content={`Articles about ${topic}`} />
@@ -168,8 +149,6 @@ const TopicPage: NextPage<Props> = ({ topic;, posts }) => {;
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 };
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx && ctx.params?.topic || '');
@@ -180,9 +159,8 @@ export default TopicPage;      </Head>;
       <div className="mx-auto max-w-6xl">;
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>;
         <div className="mb-6">;
-<<<<<<< HEAD:components/categories/[topic].tsx
-<<<<<<< HEAD
-      <div className="mx-auto max-w-6xl">;
+:components/categories/[topic].tsx
+<div className="mx-auto max-w-6xl">;
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>;
         <div className="mb-6">;
     <div>;
@@ -225,30 +203,18 @@ export default TopicPage;return { props: { topic, posts } }
 export default TopicPage;
     </div>)}export const getServerSideProps: GetServerSideProps = async ctx => {const topic = String (ctx.params?.topic || '')const posts = listPublishedPosts ().filter (p => p.topics.includes (topic))return { props: { topic, posts } }
 }export default TopicPage;      </Head>;
-
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/categories/[topic].tsx
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
           <PageShareButtons
             title={`${topic} - Zion Blog`}
             url={typeof window === 'undefined' ? `https://zion && zion.app/categories/${encodeURIComponent(topic)}` : window && window.location.href}
             description={`Articles about ${topic}`}
-<<<<<<< HEAD
-            onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ url: window && window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
+onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ url: window && window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
           />;
         </div>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
           {posts && posts.map((p) => (;
             <BlogCard key={p && p.id} post={p} />;
           ))}
-<<<<<<< HEAD:components/categories/[topic].tsx
 
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/categories/[topic].tsx
         </div>;
         <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>;
       </div>;
@@ -258,26 +224,13 @@ export default TopicPage;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
-<<<<<<< HEAD
-
 };
 
   const topic = String(ctx.params?.topic || '');
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }
 export default TopicPage;
-<<<<<<< HEAD
 
-<<<<<<< HEAD:components/categories/[topic].tsx
-
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/categories/[topic].tsx
 =======
 
         <title>{topic} - Zion Blog</title>"`;
@@ -319,7 +272,6 @@ export default TopicPage;      ;"
         <div className="mt - 6"><Link href="/blog" className="underline">Back to Blog</div>;"
 const TopicPage: NextPage<Props> = (_{_topic;, _posts}) => {_return (
 
-
         <title>{topic} - Zion Blog</title>`;
         <meta name=&quot;description&quot; content={`Articles about ${topic}`} />
         <meta property=&quot;og:title&quot; content={`${topic} - Zion Blog`} />
@@ -330,7 +282,7 @@ const TopicPage: NextPage<Props> = (_{_topic;, _posts}) => {_return (
         <meta name=&quot;twitter:title&quot; content={`${topic} - Zion Blog`} />
         <meta name=&quot;twitter:description&quot; content={`Articles about ${topic}`} />
         <meta name=&quot;twitter:image&quot; content=&quot;/images/og/topic-default.jpg&quot; />
-      
+
       <div className=&quot;mx-auto max-w-6xl&quot;>
         <h1 className=&quot;text-4xl font-bold mb-3&quot;>{topic}</h1>
         <div className=&quot;mb-6&quot;>
@@ -341,7 +293,6 @@ const TopicPage: NextPage<Props> = (_{_topic;, _posts}) => {_return (
 
         <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
 
-
         <meta name='description' content={`Articles about ${topic}`} />
         <meta property='og: title' content={`${topic;} - Zion Blog`} />
         <meta property='og: description' content={`Articles about ${topic;}`} />
@@ -351,7 +302,7 @@ const TopicPage: NextPage<Props> = (_{_topic;, _posts}) => {_return (
         <meta name='twitter: title' content={`${topic;} - Zion Blog`} />
         <meta name='twitter: description' content={`Articles about ${topic;}`} />
         <meta name='twitter:image' content='/images/og/topic-default.jpg' />
-      
+
       <div className='mx-auto max-w-6xl'>
         <h1 className='text-4xl font-bold mb-3'>{topic}</h1>
         <div className='mb-6'>
@@ -366,7 +317,6 @@ const TopicPage: NextPage<Props> = (_{_topic;, _posts}) => {_return (
         <div className='mt-6'>
           <Link href='/blog' className='underline'>
 
-          
 export default TopicPage;      
             url={typeof window === 'undefined' ? `https: //zion.app/categories/${encodeURIComponent(topic);}` : window.location.href}`;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -726,24 +676,11 @@ export default TopicPage;      </Head>;
             title = {`${topic} - Zion Blog`}
             url={typeof window === 'undefined' ? `https: //zion.app/categories/${encodeURIComponent(topic);}` : window.location.href}
             description={`Articles about ${topic}`}
-<<<<<<< HEAD
 <<<<<<< HEAD:components/categories/[topic].tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) = /> {const topic = String(ctx.params?.topic |'');}export const getServerSideProps: GetServerSideProps = async (ctx) => {export const getServerSideProps: GetServerSideProps = async (ctx) => {;}export const getServerSideProps: GetServerSideProps = async (ctx) => {;}export const getServerSideProps: GetServerSideProps  = async (ctx) => {;}export const getServerSideProps: GetServerSideProps = async (ctx) => {const topic = String(ctx && ctx.params?.topic || '')const posts  = listPublishedPosts().filter((p) => p && p.topics.includes(topic))const topic = String(ctx.params?.topic || '')const posts = listPublishedPosts().filter((p) => p.topics.includes(topic))return { props: { topic;, posts } }
 }
-<<<<<<< HEAD
 export default TopicPage;return { props: { topic, posts } }}export default TopicPage;
-=======
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const topic = String(ctx.params?.topic |'');
-};
-export const getServerSideProps: GetServerSideProps = async (ctx) => {;
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-};
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 export const getServerSideProps: GetServerSideProps  = async (ctx) => ;
 }
@@ -755,13 +692,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {const topi
 
 export default TopicPage;return { props: { topic;, posts } }}
 
-<<<<<<< HEAD
-  const topic = String(ctx.params?.topic || '');
+const topic = String(ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }
 >>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/categories/[topic].tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default TopicPage;
 
 export default TopicPage;
@@ -781,4 +715,3 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 }
 export default TopicPage;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {const topic = String(ctx.params?.topic |'');}export const getServerSideProps: GetServerSideProps = async (ctx) => {export const getServerSideProps: GetServerSideProps = async (ctx) => {;}export const getServerSideProps: GetServerSideProps = async (ctx) => {;}export const getServerSideProps: GetServerSideProps  = async (ctx) => {;}export const getServerSideProps: GetServerSideProps = async (ctx) => {const topic = String(ctx && ctx.params?.topic || '')const posts  = listPublishedPosts().filter((p) => p && p.topics.includes(topic))const topic = String(ctx.params?.topic || '')const posts = listPublishedPosts().filter((p) => p.topics.includes(topic))return { props: { topic;, posts } }
-

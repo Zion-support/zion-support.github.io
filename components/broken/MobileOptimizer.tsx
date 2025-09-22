@@ -98,11 +98,11 @@ if (viewport) {
 }//Add touch-action CSS const style = document.createElement ('style');
 style.textContent = `.mobile-optimized * {
   touch-action: manipulation;
--webkit-tap-highlight-color: transparent
+-webkit-tap-highlight-color: transparent;
 }.mobile-optimized button;
 .mobile-optimized a {
   min-height: 44px;
-min-width: 44px
+min-width: 44px;
 }.mobile-optimized input;
 .mobile-optimized select;
 .mobile-optimized textarea {
@@ -125,7 +125,7 @@ const applyLandscapeOptimizations = () => {
 //Adjust layout for landscape const style = document.createElement ('style');
 style.textContent = `.landscape-mode .mobile-panel {
   width: 300px;
-height: 100vh
+height: 100vh;
 }`;
 document.head.appendChild (style)
 }
@@ -158,7 +158,7 @@ window && window.addEventListener ('resize', handleResize);'
 //Set up orientation change detection const mediaQuery = window && window.matchMedia (' (orientation: portrait) ');
 
 const handleMediaQueryChange = (e: MediaQueryListEvent) => {;
-  setCurrentOrientation (e && e.matches ? 'portrait' : 'landscape') 
+  setCurrentOrientation (e && e.matches ? 'portrait' : 'landscape') ;
 };
 if (!showPanel || !isVisible) return null
 };
@@ -209,7 +209,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({}
     fps: 0,
     memoryUsage: 0,
     batteryLevel: 0,'
-    networkSpeed: 'unknown'
+    networkSpeed: 'unknown';
 });
   const [showMobilePanel, setShowMobilePanel] = useState(false);
   const touchStartRef = useRef<{ x: number, y: number, time: number } | null>(null),
@@ -273,7 +273,7 @@ if (isMobileDevice && enablePerformanceMode) {}
   // Detect orientation changes;
   useEffect(() => {}
     const checkOrientation = () => {'
-      const newOrientation = window.innerHeight > window.innerWidth ? 'portrait' : 'landscape'
+      const newOrientation = window.innerHeight > window.innerWidth ? 'portrait' : 'landscape';
       setOrientation(newOrientation),
 
     checkOrientation(),'
@@ -295,7 +295,7 @@ if (isMobileDevice && enablePerformanceMode) {}
         touchStartRef.current = {}
           x: e.touches[0].clientX,
           y: e.touches[0].clientY,
-          time: Date.now()
+          time: Date.now();
         }
       }
 };
@@ -304,7 +304,7 @@ if (isMobileDevice && enablePerformanceMode) {}
         touchMoveRef.current = {}
           x: e.touches[0].clientX,
           y: e.touches[0].clientY,
-          time: Date.now()
+          time: Date.now();
         }
 }
     });
@@ -389,7 +389,7 @@ if (isMobileDevice && enablePerformanceMode) {}
         const updateBatteryLevel = () => {}
           setPerformanceMetrics(prev => ({}
             ...prev;
-            batteryLevel: Math.round(battery.level * 100)
+            batteryLevel: Math.round(battery.level * 100);
           }))
         };
         updateBatteryLevel();'
@@ -447,7 +447,7 @@ setPerformanceMetrics(prev => ({}
 };
   const handleGestureAction = (gesture: TouchGesture) => {}
     switch (gesture.type) {'
-      case 'swipe':'
+      case 'swipe':';
         if (gesture.direction === 'left') {}
           // Navigate forward;
           if (window.history.length > 1) {}
@@ -467,7 +467,7 @@ setPerformanceMetrics(prev => ({}
 }
         break;'
       case 'longPress':
-        // Show context menu or additional options'
+        // Show context menu or additional options';
         console.log('Long press detected');
         break;
     }
@@ -485,7 +485,7 @@ setPerformanceMetrics(prev => ({}
         }
         break,'
       case 'longPress':
-        // Show context menu or additional options'
+        // Show context menu or additional options';
         console.log('Long press detected'),
         break;
         break;
@@ -582,7 +582,7 @@ setPerformanceMetrics(prev => ({}
     // Set up orientation change detection'
     const mediaQuery = window.matchMedia('(orientation: portrait)'),
     const handleMediaQueryChange = (e: MediaQueryListEvent) => {'
-      setCurrentOrientation(e.matches ? 'portrait' : 'landscape')
+      setCurrentOrientation(e.matches ? 'portrait' : 'landscape');
     };'
     mediaQuery.addEventListener('change', handleMediaQueryChange);
     return () => {'
@@ -671,7 +671,7 @@ className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-md border-l
                 <h2 className="text-xl font-bold text-white">Mobile Optimizer</h2>
                 <button;
                   onClick={() => setShowMobilePanel(false)}"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors";
                 >
                   ×
                 </button>
@@ -731,13 +731,13 @@ className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-md border-l
                 <div className="space-y-2">
                   <button'
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}"
-                    className="w-full px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-sm rounded transition-colors"
+                    className="w-full px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-sm rounded transition-colors";
                   >
                     Scroll to Top;
                   </button>
                   <button'
                     onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}"
-className="w-full px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded transition-colors"
+className="w-full px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded transition-colors";
                   >
                     Scroll to Bottom;
                   </button>
@@ -750,7 +750,7 @@ className="w-full px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm
 {/* Mobile Toggle Button */}
       <button;
         onClick={() => setShowMobilePanel(!showMobilePanel)}"
-        className="fixed top-4 right-4 z-50 p-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-500/50""
+        className="fixed top-4 right-4 z-50 p-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-500/50"";
         aria-label="Mobile optimization panel"
       >"
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">"

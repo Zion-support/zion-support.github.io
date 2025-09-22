@@ -3,13 +3,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { format } from "date-fns";
 import { Edit, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,21 +10,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Education } from "@/types/resume";
 import { EducationItemProps } from "./types";
 export function EducationItem({
-<<<<<<< HEAD
-<<<<<<< HEAD
-  education
+education
   onEdit
   onDelete
 }: EducationItemProps) {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -49,21 +31,11 @@ export /**
  */
 function EducationItem() {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  education,
+education,
   onEdit,
   onDelete,
 }: EducationItemProps) {
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <Card className="bg-muted / 40">;
       <CardContent className="pt-6">;
@@ -71,16 +43,14 @@ function EducationItem() {
           <div>;
             <h4 className="font-medium">{education.degree}</h4>;
             <p className="text - sm text - muted-foreground">;
-<<<<<<< HEAD
-              {education.institution}
+{education.institution}
             </p>;
             {education.field_of_study && (
               <p className="text - sm text - muted-foreground">;
                 {education.field_of_study}
               </p>)}
             <p className="text - xs text - muted - foreground mt-1">;
-<<<<<<< HEAD
-              {typeof education.start_date === "string";
+{typeof education.start_date === "string";
                 ? education.start_date;
                 : format (education.start_date, "MMM yyyy")}{" "}
               -{" "}
@@ -111,27 +81,8 @@ import { Education } from '@/types/resume',
 import { EducationItemProps } from './types',
 
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {  return (
-=======
-  return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Card className="bg-muted/40">
       <CardContent className="pt-6">
-=======
-import { format } from "date-fns";"
-import { Edit, Trash2 } from "lucide-react";"
-import { Button } from "@/components/ui/button";"
-import { Card, CardContent } from "@/components/ui/card";"
-import { Education } from "@/types/resume";"
-import { EducationItemProps } from "./types";
-export function EducationItem({}
-  education,
-  onEdit,
-  onDelete,
-}: EducationItemProps) {}
-  return ("
-    <Card className="bg-muted/40">"
-      <CardContent className="pt-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="flex justify-between">
           <div>"
             <h4 className="font-medium">{education.degree}</h4>"
@@ -141,11 +92,8 @@ export function EducationItem({}
             {education.field_of_study && ("
               <p className="text-sm text-muted-foreground">
                 {education.field_of_study}
-<<<<<<< HEAD
-              </p>)}
+</p>)}
             <p className="text - xs text - muted - foreground mt - 1">;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {typeof education.start_date === "string";
                 ? education.start_date;
                 : format (education.start_date, "MMM yyyy")}{" "}
@@ -162,30 +110,14 @@ export function EducationItem({}
               <p className="text - xs text - muted-foreground">;
                 {education.location}
 
-<<<<<<< HEAD
-
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {format} from 'date-fns';
 import {Edit, Trash2} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent} from '@/components/ui/card';
 import {Education} from '@/types/resume';
 import {EducationItemProps} from './types';
-<<<<<<< HEAD
-=======
-=======
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -197,12 +129,9 @@ import { Card, CardContent } from '@/components/ui/card',
 import { Education } from '@/types/resume',
 import { EducationItemProps } from './types',
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -215,33 +144,17 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
             <p className="text-sm text-muted-foreground">{education && education.institution}</p>;
             {education && education.field_of_study && (;
               <p className="text-sm text-muted-foreground">{education && education.field_of_study}</p>;
-=======
-=======
-export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {  return (
-    <Card className="bg-muted/40">
-      <CardContent className="pt-6">
-        <div className="flex justify-between">
-          <div>
-            <h4 className="font-medium">{education.degree}</h4>
-            <p className="text-sm text-muted-foreground">
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {education.institution}
             </p>;
             {education.field_of_study && (
               <p className="text - sm text - muted-foreground">;
                 {education.field_of_study}
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </p>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             )}
             <p className="text-xs text-muted-foreground mt-1">
-=======
-            )}"
-            <p className="text-xs text-muted-foreground mt-1">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {typeof education.start_date === "string"
                 ? education.start_date"
                 : format(education.start_date, "MMM yyyy")}{" "}"
@@ -264,58 +177,20 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
             <Button"
               variant="ghost""
               size="icon"
-<<<<<<< HEAD
 import { format } from "date-fns";
 import { Edit, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Education } from "@/types/resume";
-=======
-
-"
-import { format } from "date-fns";"
-import { Edit, Trash2 } from "lucide-react";"
-import { Button } from "@/components/ui/button";"
-import { Card, CardContent } from "@/components/ui/card";"
-import { Education } from "@/types/resume";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { EducationItemProps } from "./types";
 export function EducationItem({}
   education,
   onEdit,
   onDelete,
-<<<<<<< HEAD
 }: EducationItemProps) {
-=======
-              </p>)}
-            <p className="text - xs text - muted - foreground mt-1">;
-              {typeof education.start_date === "string";
-                ? education.start_date;
-                : format (education.start_date, "MMM yyyy")}{" "}
-              -{" "}
-              {education.is_current;
-                ? "Present";
-                : education.end_date;
-                  ? typeof education.end_date === "string";
-                    ? education.end_date;
-                    : format (education.end_date, "MMM yyyy");
-                  : ""}
-            </p>;
-            {education.location && (
-              <p className="text - xs text - muted-foreground">;
-                {education.location}
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <Card className="bg-muted/40">
       <CardContent className="pt-6">
-=======
-}: EducationItemProps) {}
-  return ("
-    <Card className="bg-muted/40">"
-      <CardContent className="pt-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="flex justify-between">
           <div>"
             <h4 className="font-medium">{education.degree}</h4>"
@@ -347,8 +222,7 @@ export function EducationItem({}
             )};
           </div>;"
           <div className="flex gap-2">;
-<<<<<<< HEAD
-            <Button;
+<Button;
               variant="ghost";
               size="icon";
 <Button
@@ -370,22 +244,6 @@ export function EducationItem({}
               <Edit className="h-4 w-4" />;
             </Button>;
             >;
-=======
-
-              onClick={() => onEdit(education)}
-            >;"
-              <Edit className="h-4 w-4" />;
-            </Button>;
-
-            <Button"
-              variant="ghost""
-              size="icon"
-              onClick={() => onDelete(education && education.id!)}
-
-
-
-            >;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Trash2 className="h-4 w-4" />;
             </Button>;
           </div>;
@@ -395,106 +253,25 @@ export function EducationItem({}
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
       </CardContent>
     </Card>
   );
 }
 ;
-
-<<<<<<< HEAD
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </CardContent>
     </Card>
   );
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 }
 ;
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   )
-=======
-=======
-;
-
-
-import { format } from "date-fns";""
-import { Edit, Trash2 } from "lucide-react";""
-import { Button } from "@/components/ui/button";""
-import { Card, CardContent } from "@/components/ui/card";""
-import { Education } from "@/types/resume";""
-import { EducationItemProps } from "./types";"
-export function EducationItem({
-  education,
-  onEdit,
-  onDelete,)
-}: EducationItemProps) {
-  return ("
-    <Card className="bg-muted/40">"
-"
-      <CardContent className="pt-6">"
-        <div className="flex justify-between">"
-</div>
-          <div>
-</div>"
-            <h4 className="font-medium">{education.degree}</h4>""
-            <p className="text-sm text-muted-foreground">"
-</p>
-            </p>"
-            <p className="text-xs text-muted-foreground mt-1">"
-              <p className="text-xs text-muted-foreground">"
-          </div>;"
-          <div className="flex gap-2">;"
-            <Button;"
-              variant="ghost"""
-              size="icon"""
-              variant="ghost";""
-              size="icon";"
-              size="icon"")
-              onClick={() => onEdit(education)}
-            >
-              <Edit className="h-4 w-4" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => onDelete(education.id!)}
-            >
-              <Trash2 className="h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-        {education.description && (
-          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
-        )}
-      </CardContent>
-    </Card>
-  );
-}
-  )
-}
-;
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
               <Edit className="h-4 w-4" />;"
 
@@ -619,7 +396,6 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 }
 ;
 
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 =======
@@ -629,9 +405,3 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 ;
 
 ;
-
-<<<<<<< HEAD
-=======
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

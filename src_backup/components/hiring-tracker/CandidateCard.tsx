@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/hiring-tracker/CandidateCard.tsx
-<<<<<<< HEAD
+:src/components/hiring-tracker/CandidateCard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,14 +39,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   const isStalled = application.updated_at && 
     new Date(application.updated_at).getTime() < 
     (Date.now() - 7 * 24 * 60 * 60 * 1000),
-  
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleSaveNotes = () => {
-=======
-const handleSaveNotes = () => {
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/hiring-tracker/CandidateCard.tsx
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
@@ -130,7 +122,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }),
     setShowNotes(false)
   },
-  
+
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal
     toast({
@@ -140,14 +132,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
   const candidateName = application.talent_profile?.full_name || "Candidate",
-  
+
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {(provided) => (
           <Card 
             className="mb-2 p-0 shadow-sm border"
@@ -190,8 +179,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
     // Here you would save the notes to the database;
     // For now, we'll just show a toast;
     toast({;
-<<<<<<< HEAD
-      title: "Notes saved",;
+title: "Notes saved",;
       description: "Your notes have been saved";
     }),;
     setShowNotes(false);
@@ -205,25 +193,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
   };
   const candidateName = application.talent_profile?.full_name || "Candidate";
   return (;
-=======
-      title: 'Notes saved',,
-  description: 'Your notes have been saved',;
-    });
-    setShowNotes(false)
-};
-
-  const handleHireConfirmed = () => {;
-    // Hiring process completed via the modal;
-    toast({;
-      title: 'Hiring process initiated',,
-  description: 'Offer has been sent to the talent.',;
-    })
-};
-
-  const candidateName = application && application.talent_profile?.full_name || 'Candidate';
-
-  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>;
       <Draggable draggableId={application.id} index={index}>;
         {(provided) => (;
@@ -236,10 +205,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
           >;
             <CardContent className="p-3">;
               {/* Candidate Header */}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="flex justify-between items-start mb-2">;
                 <div className="flex items-center gap-2">;
                   <AvatarPrimitive className="h-8 w-8"> {/* Using renamed AvatarPrimitive */}
@@ -266,11 +232,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     </p>
                   </div>
                 </div>
-<<<<<<< HEAD
-                
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
@@ -279,8 +241,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
-<<<<<<< HEAD:src/components/hiring-tracker/CandidateCard.tsx
-<<<<<<< HEAD
+:src/components/hiring-tracker/CandidateCard.tsx
 <<<<<<< HEAD
                       {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>
@@ -298,9 +259,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                           View Resume
                         </Link>
                       </DropdownMenuItem>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/hiring-tracker/CandidateCard.tsx
                   </AvatarPrimitive>;
                   <div>;
                     <h4 className='font-medium text-sm'>{candidateName}</h4>;
@@ -345,15 +303,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                       </DropdownMenuItem>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     )}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
-<<<<<<< HEAD
-              {/* Application Info */}
+{/* Application Info */}
               <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">;
                 <div className="flex items-center">;
                   <Calendar className="h-3 w-3 mr-1" />;
@@ -362,27 +316,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                 {isStalled && (;
                   <div className="flex items-center text-amber-500">;
                     <AlertTriangle className="h-3 w-3 mr-1" />;
-=======
-
-              {/* Application Info */}
-              <div className='flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2'>;
-                <div className='flex items-center'>;
-                  <Calendar className='h-3 w-3 mr-1' />;
-                  {formatDistanceToNow(new Date(application && application.created_at), {;
-                    addSuffix: true,;
-                  })}
-                </div>;
-
-                {isStalled && (;
-                  <div className='flex items-center text-amber-500'>;
-                    <AlertTriangle className='h-3 w-3 mr-1' />;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     Stalled;
                   </div>;
                 )}
               </div>;
-<<<<<<< HEAD
-              {/* Match Score */}
+{/* Match Score */}
               {application.match_score !== null && application.match_score !== undefined && (;
                 <div className="mb-2">;
                   <ScoreBadge application={application} />;
@@ -405,21 +343,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
               )}
 ;
               {/* Action Buttons */}
-=======
-
-              {/* Match Score */}
-              {application && application.match_score !== null &&;
-                application && application.match_score !== undefined && (;
-                  <div className='mb-2'>;
-                    <ScoreBadge application={application} />;
-                  </div>;
-<<<<<<< HEAD:src/components/hiring-tracker/CandidateCard.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/hiring-tracker/CandidateCard.tsx
                 )}
               {/* Notes Section */}
               {showNotes && (;
@@ -446,13 +369,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   className="flex-1"
                   asChild
                 >
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -461,16 +378,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
                 </Button>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                
+
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button 
@@ -479,11 +390,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   className="flex-1"
                   asChild
                 >
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {application.resume?.file_url ? (
@@ -495,28 +402,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                       <FileText className="h-3 w-3 mr-1" /> No Resume
                     </span>
                   )}
-<<<<<<< HEAD
-                </Button>
-=======
+</Button>
 
-                </Button>;
-
-                <Button
-                  variant='default'
-                  size='sm'
-                  className='flex-1'
-                  onClick={() => setShowHireModal(true)}                >;
-                  <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire;
-                </Button>
-
-  handleHireConfirmed 
-}/> </>) 
-}'"};
-;
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button 
@@ -531,16 +418,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
             </CardContent>;
           </Card>;
         )}
-<<<<<<< HEAD:src/components/hiring-tracker/CandidateCard.tsx
+:src/components/hiring-tracker/CandidateCard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/hiring-tracker/CandidateCard.tsx
 
       </Draggable>;
-
 
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
@@ -635,7 +517,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }onConfirm= {;
   handleHireConfirmed ;
 }/> </>) ;
-<<<<<<< HEAD:src/components/hiring-tracker/CandidateCard.tsx
+:src/components/hiring-tracker/CandidateCard.tsx
 <<<<<<< HEAD
 }'"}
 
@@ -672,12 +554,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }'"}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </Draggable>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-      </Draggable>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         isOpen={showHireModal}
@@ -688,14 +564,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   );
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 }'"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,23 +1,11 @@
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useState  } from 'react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-
-=======
-import { useState  } from 'react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {useState} from 'react';
@@ -36,35 +24,8 @@ import {cn} from "@/lib/utils";"
 import {ProductListing} from "@/types/listings";'
 import {toast} from '@/hooks/use-toast';"
 import {supabase} from "@/integrations/supabase/client";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { useState } from 'react',
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-'
-import { useState } from 'react',
-'
-import { useState } from 'react','
-import { useState } from 'react',
-
-'
-import { useState } from 'react',
-<<<<<<< HEAD
-
-import { useState } from 'react',
-import { useState } from 'react',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import { useState } from 'react',
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -112,37 +73,16 @@ import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
 
-
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import { ProductListing } from "@/types/listings";
-import { toast  } from '@/hooks/use-toast';
-import { supabase } from "@/integrations/supabase/client";
-import { ProductListing } from "@/types/listings",
-import { toast } from '@/hooks/use-toast',
-import { supabase } from "@/integrations/supabase/client",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ServiceQuoteModalProps {
 =======
@@ -162,8 +102,7 @@ import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
 interface ServiceQuoteModalProps {
 
-<<<<<<< HEAD
-  open: boolean
+open: boolean
   onOpenChange: (open: boolean) => void
   service: ProductListing | null
 }
@@ -182,13 +121,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   const [formData, setFormData] = useState({
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
@@ -219,24 +151,13 @@ const TIMELINE_OPTIONS = [;"
   { label: "3-6 months", value: "3-6months" },;"]"
   { label: "6+ months", value: "6+months" }],;"
 export function ServiceQuoteModal(): any ({ open, onOpenChange, service }: ServiceQuoteModalProps) {;
-<<<<<<< HEAD
-  const [formData, setFormData] = useState({;
+const [formData, setFormData] = useState({;
     description: '',;
     email: '',;
     budget: BUDGET_RANGES[0].value,;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     timeframe: TIMELINE_OPTIONS[0].value}),;
-
-=======
-    description: ''
-    email: ''
-    budget: BUDGET_RANGES[0].value
-    timeframe: TIMELINE_OPTIONS[0].value})
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 "
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog","
@@ -255,10 +176,6 @@ import { cn } from "@/lib/utils",
 import { ProductListing } from "@/types/listings",'
 import { toast } from '@/hooks/use-toast',"
 import { supabase } from "@/integrations/supabase/client",
-
-
-
-
 
 interface ServiceQuoteModalProps {};
   open: boolean;
@@ -334,18 +251,11 @@ import { ProductListing } from '@/types / listings';''
 import {toast} from '@/hooks / use - toast';''
 import { supabase } from '@/integrations / supabase / client';'
 interface ServiceQuoteModalProps {
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  // TODO: Implement
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   open: boolean,
   onOpenChange: (open: boolean) => void,
   service: ProductListing | null;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 const BUDGET_RANGES = [;"
   { label: "Less than $5, 000", value: "0 - 5000" },"
   { label: "$5, 000 - $10, 000", value: "5000 - 10000" },"
@@ -363,37 +273,11 @@ export /**;
 function ServiceQuoteModal() {}
   const [form_data, setFormData] = useState ({'
     description: '','
-=======
-const BUDGET_RANGES = [;
-  { label: "Less than $5, 000", value: "0 - 5000" },
-  { label: "$5, 000 - $10, 000", value: "5000 - 10000" },
-  { label: "$10, 000 - $25, 000", value: "10000 - 25000" },
-  { label: "$25, 000 - $50, 000", value: "25000 - 50000" },
-  { label: "$50, 000+", value: "50000+" }],
-const TIMELINE_OPTIONS = [;
-  { label: "Less than 1 month", value: "lt - 1month" },
-  { label: "1 - 3 months", value: "1 - 3months" },
-  { label: "3 - 6 months", value: "3 - 6months" },
-  { label: "6+ months", value: "6 + months" }],
-=======
-const BUDGET_RANGES = [;'
-  { label: "Less than $5, 000", value: "0 - 5000" },""
-  { label: "$5, 000 - $10, 000", value: "5000 - 10000" },""
-  { label: "$10, 000 - $25, 000", value: "10000 - 25000" },""
-  { label: "$25, 000 - $50, 000", value: "25000 - 50000" },"]"
-  { label: "$50, 000+", value: "50000+" }],"
-const TIMELINE_OPTIONS = [;"
-  { label: "Less than 1 month", value: "lt - 1month" },""
-  { label: "1 - 3 months", value: "1 - 3months" },""
-  { label: "3 - 6 months", value: "3 - 6months" },"]"
-  { label: "6+ months", value: "6 + months" }],"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export /**
  * ServiceQuoteModal - Function description;
  */
 function ServiceQuoteModal() {
-<<<<<<< HEAD
-  const [form_data, setFormData] = useState ({
+const [form_data, setFormData] = useState ({
     description: '',
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     email: '',
@@ -406,34 +290,11 @@ function ServiceQuoteModal() {
   const [is_submitting, setIsSubmitting] = useState (false);
 ;
   const handleInputChange = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>) =>: any {}
-=======
-  const [end_date, setEndDate] = useState < Date | undefined>(undefined);
-  const [current_step, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
-  const [is_submitting, setIsSubmitting] = useState (false);
-;
-  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>) =>: any {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  const [form_data, setFormData] = useState ({"
-    description: '',''
-    email: '','
-    budget: BUDGET_RANGES[0].value,)
-    timeframe: TIMELINE_OPTIONS[0].value}),
-  const [start_date, setStartDate] = useState < Date | undefined>(new Date ());
-  const [end_date, setEndDate] = useState < Date | undefined>(undefined);'
-  const [current_step, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');'
-  const [is_submitting, setIsSubmitting] = useState (false);
-;
-  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>) =>: any {
-  // TODO: Implement
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const { name, value } = e.target;
     setFormData (prev => ({ ...prev, [name]: value }));
   }
 ;
-<<<<<<< HEAD
-  const handle_submit = async (e: React.FormEvent < HTMLFormElement>) => {}
+const handle_submit = async (e: React.FormEvent < HTMLFormElement>) => {}
     e.prevent_default ();
     setIsSubmitting (true),
 
@@ -443,84 +304,39 @@ function ServiceQuoteModal() {
     budget: BUDGET_RANGES[0].value,
 '
     description: '','
-=======
-  const handle_submit = async (e: React.FormEvent < HTMLFormElement>) => {
-    e.prevent_default ();
-    setIsSubmitting (true),
-
-'
-    description: '',''
-    email: '','
-    budget: BUDGET_RANGES[0].value,
-<<<<<<< HEAD
-
-    description: '',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     email: '',
     budget: BUDGET_RANGES[0].value,
     timeframe: TIMELINE_OPTIONS[0].value}),;
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
-<<<<<<< HEAD
-  const [endDate, setEndDate] = useState<Date | undefined>(undefined);'
-=======
-  const [endDate, setEndDate] = useState<Date | undefined>(undefined);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+const [endDate, setEndDate] = useState<Date | undefined>(undefined);'
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
   const [isSubmitting, setIsSubmitting] = useState(false);
     timeframe: TIMELINE_OPTIONS[0].value}),
   const [startDate, setStartDate] = useState<Date | undefined>(new Date()),
-<<<<<<< HEAD
-  const [endDate, setEndDate] = useState<Date | undefined>(undefined),'
+const [endDate, setEndDate] = useState<Date | undefined>(undefined),'
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),
   const [isSubmitting, setIsSubmitting] = useState(false),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {}
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-
-=======
-  }
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {}
     e.preventDefault(),
     setIsSubmitting(true),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {
       // Call Supabase function to process the quote;
       const { data, error } = await supabase.functions.invoke ('process - quote', {
         body: {
           service: service ? {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-    try {}
+try {}
       // Call Supabase function to process the quote;'
       const { data, error } = await supabase.functions.invoke ('process - quote', {}
         body: {}
@@ -545,88 +361,32 @@ function ServiceQuoteModal() {
           quoteDetails: {;
             ...formData,;
             startDate: startDate?.toISOString(),;
-
-
-<<<<<<< HEAD
-
-=======
-
-    try {
-      // Call Supabase function to process the quote
-      const { data, error } = await supabase.functions.invoke('process-quote', {
-        body: {
-          service: service ? {
-            id: service.id
-            title: service.title
-            category: service.category} : null
-          quoteDetails: {
-            ...formData
-            startDate: startDate?.toISOString()
-            endDate: endDate?.toISOString()}
-        }
-<<<<<<< HEAD
-=======
-      });
-      if (error) throw error;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }),
 
       if (error) throw error,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-
-
-
       // Show success message;
       toast({"
         title: "Quote Request Submitted!"'"
         description: "We've sent your request to the service provider. They will contact you soon."})
-<<<<<<< HEAD
-      // Close the modal and reset form
-<<<<<<< HEAD
+// Close the modal and reset form
 <<<<<<< HEAD
       onOpenChange(false);
       setFormData({
 
 <<<<<<< HEAD
-=======
-
-=======
-
-      onOpenChange(false),
-      setFormData({
-        description: ''
-        email: ''
-        budget: BUDGET_RANGES[0].value
-        timeframe: TIMELINE_OPTIONS[0].value})
-      setStartDate(new Date());
-      setEndDate(undefined);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         description: '',
-=======
-      // Close the modal and reset form;
-'
-        description: '','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         email: '',
         budget: BUDGET_RANGES[0].value,
         timeframe: TIMELINE_OPTIONS[0].value}),
       setStartDate(new Date()),
       setEndDate(undefined),
 
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setCurrentStep('details')
     } catch (error) {
       console.error("Error submitting quote:", error);
-=======
-      setCurrentStep('details')
-    } catch (error) {
-      console.error("Error submitting quote:", error),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -641,23 +401,9 @@ function ServiceQuoteModal() {
         title: "Error""
         description: "There was an error submitting your quote request. Please try again.""
         variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-    } finally {
+} finally {
       setIsSubmitting (false);
     }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-            endDate: endDate?.toISOString()}
-        }
-      });
-      if (error) throw error;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
     timeframe: TIMELINE_OPTIONS[0].value}),;    try {
 =======
@@ -682,9 +428,7 @@ function ServiceQuoteModal() {
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),'
   const [isSubmitting, setIsSubmitting] = useState(false),
 
-<<<<<<< HEAD
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
 
@@ -694,14 +438,12 @@ function ServiceQuoteModal() {
     e.preventDefault(),
     setIsSubmitting(true),
 
-
     try {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Call Supabase function to process the quote;
       const { data, error } = await supabase.functions.invoke ('process - quote', {
         body: {
           service: service ? {
-
 
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
     const { name, value } = e && e.target;
@@ -727,12 +469,9 @@ function ServiceQuoteModal() {
             endDate: endDate?.toISOString()}
         }
 
-
       }),
 
       if (error) throw error,
-
-
 
       // Show success message
       toast({
@@ -742,14 +481,12 @@ function ServiceQuoteModal() {
       onOpenChange(false);
       setFormData({
 
-
         description: '',
         email: '',
         budget: BUDGET_RANGES[0].value,
         timeframe: TIMELINE_OPTIONS[0].value}),
       setStartDate(new Date()),
       setEndDate(undefined),
-
 
       setCurrentStep('details')
     } catch (error) {
@@ -766,22 +503,6 @@ function ServiceQuoteModal() {
         variant: "destructive"})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-    timeframe: TIMELINE_OPTIONS[0].value}),;    try {
-      // Call Supabase function to process the quote;
-      const { data, error } = await supabase.functions.invoke ('process - quote', {
-        body: {
-          service: service ? {      // Show success message
-      toast({
-        title: "Quote Request Submitted!"
-        description: "We've sent your request to the service provider. They will contact you soon."})
-      // Close the modal and reset form      toast({
-        title: "Error"
-        description: "There was an error submitting your quote request. Please try again."
-        variant: "destructive"})
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             id: service.id,
@@ -793,7 +514,6 @@ function ServiceQuoteModal() {
             end_date: end_date?.toISOString ()}
         }
       });
-<<<<<<< HEAD
 ;
       // Check condition
 if (throw error) {
@@ -823,40 +543,24 @@ if (throw error) {
       setIsSubmitting (false);
     }
 
-
   },
-
-
 
   const nextStep = () => {
     if (currentStep === 'details') setCurrentStep('timeline');
     else if (currentStep === 'timeline') setCurrentStep('contact')
 
-
   },
-
-
 
   const prevStep = () => {
     if (currentStep === 'timeline') setCurrentStep('details');
     else if (currentStep === 'contact') setCurrentStep('timeline')
 
-
   },
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-
 
 <<<<<<< HEAD
-=======
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-  },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const nextStep = () => {
     if (currentStep === 'details') setCurrentStep('timeline'),
@@ -868,18 +572,13 @@ if (throw error) {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
@@ -898,27 +597,13 @@ if (throw error) {
                 <h3 className="font-medium text-zion-cyan mb-2">Selected Service</h3>"
                 <p className="text-white text-lg">{service?.title |"Custom Service"}</p>"
                 <p className="text-zion-slate-light text-sm mt-1">{service?.category}</p>
-<<<<<<< HEAD
-              </div>
+</div>
               <div className="space-y-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              </div>"
-              <div className="space-y-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Label htmlFor="description" className="text-white">Project Description</Label>
 
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Textarea
 =======
                 <Label htmlFor="description" className="text-white">Project Description</Label>                <Textarea
@@ -928,7 +613,6 @@ if (throw error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
                 <Label htmlFor="description" className="text-white">Project Description</Label>
-
 
                 <Textarea
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -951,8 +635,7 @@ if (throw error) {
                 <Select;
                   value={formData.budget}
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
-<<<<<<< HEAD
-                >
+>
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
                     <SelectValue placeholder="Select your budget range" />
                   </SelectTrigger>
@@ -962,14 +645,7 @@ if (throw error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from 'react',;
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",;
 import { Button } from "@/components/ui/button",;
@@ -985,25 +661,7 @@ import { CalendarIcon } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 import { ProductListing } from "@/types/listings",;
 import { toast } from '@/hooks/use-toast',;
-<<<<<<< HEAD
-=======
-'
-import { useState } from 'react',;"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",;"
-import { Button } from "@/components/ui/button",;"
-import { Input } from "@/components/ui/input",;"
-import { Textarea } from "@/components/ui/textarea",;"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;"
-import { Label } from "@/components/ui/label",;"
-import { Slider } from "@/components/ui/slider",;"
-import { Calendar } from "@/components/ui/calendar",;"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;"
-import { format } from "date-fns",;"
-import { CalendarIcon } from "lucide-react",;"
-import { cn } from "@/lib/utils",;"
-import { ProductListing } from "@/types/listings",;'
-import { toast } from '@/hooks/use-toast',;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from "@/integrations/supabase/client",;
@@ -1013,7 +671,6 @@ interface ServiceQuoteModalProps {;
   service: ProductListing | null;
 }
 ;
-<<<<<<< HEAD
 const BUDGET_RANGES = [;"
   { label: "Less than $5,000", value: "0-5000" },;"
   { label: "$5,000 - $10,000", value: "5000-10000" },;"
@@ -1029,27 +686,6 @@ export function ServiceQuoteModal() { return null; }
     timeframe: TIMELINE_OPTIONS[0].value}),;
   const [startDate, setStartDate] = useState<Date | undefined>(new Date()),;
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),;'
-=======
-const BUDGET_RANGES = [;
-  { label: "Less than $5,000", value: "0-5000" },;
-  { label: "$5,000 - $10,000", value: "5000-10000" },;
-  { label: "$10,000 - $25,000", value: "10000-25000" },;
-  { label: "$25,000 - $50,000", value: "25000-50000" },;
-  { label: "$50,000+", value: "50000+" }],;
-const TIMELINE_OPTIONS = [;
-  { label: "Less than 1 month", value: "lt-1month" },;
-  { label: "1-3 months", value: "1-3months" },;
-  { label: "3-6 months", value: "3-6months" },;
-  { label: "6+ months", value: "6+months" }],;
-export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {;
-  const [formData, setFormData] = useState({;
-    description: '',;
-    email: '',;
-    budget: BUDGET_RANGES[0].value,;
-    timeframe: TIMELINE_OPTIONS[0].value}),;
-  const [startDate, setStartDate] = useState<Date | undefined>(new Date()),;
-  const [endDate, setEndDate] = useState<Date | undefined>(undefined),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
@@ -1060,11 +696,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     e.preventDefault(),;
     setIsSubmitting(true),;
     try {;
-<<<<<<< HEAD
-      // Call Supabase function to process the quote;'
-=======
-      // Call Supabase function to process the quote;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+// Call Supabase function to process the quote;'
       const { data, error } = await supabase.functions.invoke('process-quote', {;
         body: {;
           service: service ? {;
@@ -1079,13 +711,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       }),;
       if (error) throw error,;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -1106,28 +731,9 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       setEndDate(undefined);
       setCurrentStep('details');
     } catch (error) {;
-<<<<<<< HEAD
-      console && console.error("Error submitting quote:", error);      toast({;
+console && console.error("Error submitting quote:", error);      toast({;
         title: "Error",,
   description: "There was an error submitting your quote request. Please try again.",;
-=======
-      // Show success message;
-      toast({;"
-        title: "Quote Request Submitted!",;'"
-        description: "We've sent your request to the service provider. They will contact you soon."}),;
-
-      // Close the modal and reset form;
-
-      setFormData({;'
-        description: '',;'
-        email: '',;
-        budget: BUDGET_RANGES[0].value,;
-        timeframe: TIMELINE_OPTIONS[0].value}),;
-
-      toast({;"
-        title: "Error",;"
-        description: "There was an error submitting your quote request. Please try again.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
       console && console.error("Error submitting quote:", error);
       toast({;
@@ -1138,8 +744,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     } finally {;
       setIsSubmitting(false);
     }
-<<<<<<< HEAD
-  };
+};
 
   const nextStep = () => {;
     if (currentStep === 'details') setCurrentStep('timeline');
@@ -1151,28 +756,14 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     else if (currentStep === 'contact') setCurrentStep('timeline');
   };
 
-<<<<<<< HEAD
-  return (    <Dialog open={open} onOpenChange={onOpenChange}>;
-=======
-
-    <Dialog open={open} onOpenChange={onOpenChange}>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  return (
-    <Dialog open={open} onOpenChange={onOpenChange}>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+return (    <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">;
         <DialogHeader>;"
           <DialogTitle className="text-2xl font-semibold text-white">;
             Request Service Quote;
           </DialogTitle>;
         </DialogHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-        <form onSubmit={handleSubmit} className="space-y-6">;
+<form onSubmit={handleSubmit} className="space-y-6">;
           {/* Step 1: Service Details */}
           {currentStep === 'details' && (;
             <div className="space-y-4">;
@@ -1186,84 +777,23 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 <Label htmlFor="description" className="text-white">Project Description</Label>;
                 <Textarea
                   id="description"
-=======
-"
-        <form onSubmit={handleSubmit} className="space-y-6">;
-          {/* Step 1: Service Details */}'
-          {currentStep === 'details' && (;"
-            <div className="space-y-4">;"
-              <div className="p-4 bg-zion-blue-dark rounded-md border border-zion-blue-light">;"
-                <h3 className="font-medium text-zion-cyan mb-2">Selected Service</h3>;"
-                <p className="text-white text-lg">{service?.title || "Custom Service"}</p>;"
-                <p className="text-zion-slate-light text-sm mt-1">{service?.category}</p>;
-              </div>;
-
-                <Textarea"
-                  id="description""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   name="description"
                   value={formData && formData.description}
                   onChange={handleInputChange}"
                   placeholder="Describe your project needs in detail...""
                   className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  required                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
-=======
-                  required
-
-                />;
-              </div>;
-
-              <div className="space-y-2">;
-                <Label htmlFor="budget" className="text-white">Estimated Budget</Label>;
-                <Select
-                  value={formData && formData.budget} 
-
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+required                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
                 >;
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
                     <SelectValue placeholder="Select your budget range" />;
                   </SelectTrigger>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                  required;
-                />;
-              </div>;
-"
-              <div className="space-y-2">;"
-                <Label htmlFor="budget" className="text-white">Estimated Budget</Label>;
-                <Select;
-                  value={formData && formData.budget} 
-
-
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
-
-                >;"
-                  <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;"
-                    <SelectValue placeholder="Select your budget range" />;
-                  </SelectTrigger>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
 
-<<<<<<< HEAD
-                    {BUDGET_RANGES.map((range) => (;
+{BUDGET_RANGES.map((range) => (;
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
 <<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1276,7 +806,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                     {BUDGET_RANGES.map((range) => (;
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
 
-
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         {range.label}
@@ -1287,31 +816,17 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         {range && range.label}
                       </SelectItem>;
                     ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-{BUDGET_RANGES.map((range) => (;
-                      <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
-                        {range.label}
-                      </SelectItem>;                    ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </SelectContent>;
                 </Select>;
               </div>;
             </div>;
           )}
-<<<<<<< HEAD
 '
           {currentStep === 'timeline' && (;"
             <div className="space-y-4">;"
               <div className="space-y-2">;"
                 <Label className="text-white">Project Timeline</Label>;
-
 
                   onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
 
@@ -1322,36 +837,10 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
 
                     {TIMELINE_OPTIONS && TIMELINE_OPTIONS.map((option) => (;"
-=======
-          {/* Step 2: Timeline */}
-
-;
-          {/* Step 2:Timeline */}
-          {currentStep === 'timeline' && (;
-            <div className="space-y-4">;
-              <div className="space-y-2">;
-                <Label className="text-white">Project Timeline</Label>;
-                <Select
-                  value={formData && formData.timeframe}
-
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
-<Select ;
-                  value={formData.timeframe}
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe:value }))}
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
-                >;
-                  <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
-                    <SelectValue placeholder="Select your timeline" />;
-                  </SelectTrigger>;
-                  <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
-                    {TIMELINE_OPTIONS && TIMELINE_OPTIONS.map((option) => (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <SelectItem key={option && option.value} value={option && option.value} className="text-white hover:bg-zion-blue-light">;
                         {option && option.label}
                       </SelectItem>;
                     ))}
-<<<<<<< HEAD
 "
               <div className="grid grid-cols-2 gap-4">;"
                 <div className="space-y-2">;"
@@ -1367,8 +856,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                     </PopoverTrigger>;"
                     <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">;
 
-
-
                       <Calendar"
                         mode="single"
                         selected={startDate}
@@ -1376,315 +863,17 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         initialFocus"
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
 
-
                       <Button;"
                         variant={"outline"}
-<<<<<<< HEAD
-                        className={cn(
+className={cn(
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-                          "justify-start text-left font-normal w-full"
-
-=======
-
-                          "justify-start text-left font-normal w-full",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-
-                  </SelectContent>;
-                </Select>;
-              </div>;
-
-{TIMELINE_OPTIONS.map((option) => (;
-                      <SelectItem key={option.value} value={option.value} className="text-white hover:bg-zion-blue-light">;
-                        {option.label}
-                      </SelectItem>;
-                    ))}
-                  </SelectContent>;
-                </Select>;
-              </div>;
-;
-              <div className="grid grid-cols-2 gap-4">;
-                <div className="space-y-2">;
-                  <Label className="text-white">Expected Start Date</Label>;
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-</HTMLInputElement>
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-</HTMLFormElement>
-  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
-</HTMLInputElement>
-  const handleSubmit = async (e: React && React.FormEvent<HTMLFormElement>) => {;
-</HTMLFormElement>
-    <Dialog open={open} onOpenChange={onOpenChange}>
-</Dialog>'
-      <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">"
-</DialogContent>
-        <DialogHeader>
-</DialogHeader>"
-          <DialogTitle className="text-2xl font-semibold text-white">"
-</DialogTitle>
-          </DialogTitle>
-        </DialogHeader>"
-        <form onSubmit={handleSubmit} className="space-y-6">"
-</form>"
-            <div className="space-y-4">"
-</div>"
-              <div className="p-4 bg-zion-blue-dark rounded-md border border-zion-blue-light">"
-</div>"
-                <h3 className="font-medium text-zion-cyan mb-2">Selected Service</h3>""
-                <p className="text-white text-lg">{service?.title |"Custom Service"}</p>""
-                <p className="text-zion-slate-light text-sm mt-1">{service?.category}</p>"
-              </div>"
-              <div className="space-y-2">"
-</div>"
-                <Label htmlFor="description" className="text-white">Project Description</Label>"
-                <Textarea;"
-                  id="description"""
-                  name="description""
-                  value={formData.description}
-                  onChange={handleInputChange}"
-                  placeholder="Describe your project needs in detail..."""
-                  className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none""
-                  required;
-                />
-</Textarea>
-              </div>"
-              <div className="space-y-2">"
-</div>"
-                <Label htmlFor="budget" className="text-white">Estimated Budget</Label>"
-                <Select;
-                  value={formData.budget}
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
-</Select>"
-                  <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">"
-</SelectTrigger>"
-                    <SelectValue placeholder="Select your budget range" />"
-</SelectValue>
-                  </SelectTrigger>"
-                  <SelectContent className="bg-zion-blue-dark border-zion-blue-light">"
-</SelectContent>"
-                      <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">"
-</SelectItem>
-  const [startDate, setStartDate] = useState<Date | undefined>(new Date()),;
-</Date>
-  const [endDate, setEndDate] = useState<Date | undefined>(undefined),;
-</Date>"
-  const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),;'
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
-</HTMLInputElement>
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {;
-</HTMLFormElement>
-    <Dialog open={open} onOpenChange={onOpenChange}>;
-</Dialog>'
-      <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">;"
-</DialogContent>
-        <DialogHeader>;
-</DialogHeader>"
-          <DialogTitle className="text-2xl font-semibold text-white">;"
-</DialogTitle>
-          </DialogTitle>;
-        </DialogHeader>;"
-        <form onSubmit={handleSubmit} className="space-y-6">;"
-</form>"
-            <div className="space-y-4">;"
-</div>"
-              <div className="p-4 bg-zion-blue-dark rounded-md border border-zion-blue-light">;"
-</div>"
-                <h3 className="font-medium text-zion-cyan mb-2">Selected Service</h3>;""
-                <p className="text-white text-lg">{service?.title || "Custom Service"}</p>;""
-                <p className="text-zion-slate-light text-sm mt-1">{service?.category}</p>;"
-              </div>;"
-              <div className="space-y-2">;"
-</div>"
-                <Label htmlFor="description" className="text-white">Project Description</Label>;"
-                <Textarea;"
-                  id="description"""
-                  name="description""
-                  value={formData && formData.description}
-                  onChange={handleInputChange}"
-                  placeholder="Describe your project needs in detail..."""
-                  className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none""
-                  required;
-                />;
-</Textarea>
-              </div>;"
-              <div className="space-y-2">;"
-</div>"
-                <Label htmlFor="budget" className="text-white">Estimated Budget</Label>;"
-                <Select;
-                  value={formData && formData.budget} 
-
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
-</Select>"
-                  <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;"
-</SelectTrigger>"
-                    <SelectValue placeholder="Select your budget range" />;"
-</SelectValue>
-                  </SelectTrigger>;"
-                  <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;"
-</SelectContent>"
-                      <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;"
-</SelectItem>
-                      </SelectItem>"
-                      <SelectItem key={range && range.value} value={range && range.value} className="text-white hover:bg-zion-blue-light">;"
-</SelectItem>
-                      </SelectItem>;
-                  </SelectContent>;
-                </Select>;
-              </div>;
-            </div>;"
-            <div className="space-y-4">;"
-</div>"
-              <div className="space-y-2">;"
-</div>"
-                <Label className="text-white">Project Timeline</Label>;"
-                <Select;
-                  value={formData && formData.timeframe}
-
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
-</Select>"
-                  <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;"
-</SelectTrigger>"
-                    <SelectValue placeholder="Select your timeline" />;"
-</SelectValue>
-                  </SelectTrigger>;"
-                  <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;"
-</SelectContent>"
-                      <SelectItem key={option && option.value} value={option && option.value} className="text-white hover:bg-zion-blue-light">;"
-</SelectItem>
-                      </SelectItem>;
-                  </SelectContent>;
-                </Select>;
-              </div>;"
-              <div className="grid grid-cols-2 gap-4">;"
-</div>"
-                <div className="space-y-2">;"
-</div>"
-                  <Label className="text-white">Expected Start Date</Label>;"
-                  <Popover>;
-</Popover>
-                    <PopoverTrigger asChild>;
-
-                      <Button
-                        variant={"outline"}
-                        className={cn(
-                          "justify-start text-left font-normal w-full"
-                          "bg-zion-blue-dark border-zion-blue-light text-white"
-</PopoverTrigger>
-
-                      <Button;"
-                        variant={"outline"}"
-                        className={cn("
-                          "justify-start text-left font-normal w-full"""
-                          "bg-zion-blue-dark border-zion-blue-light text-white"")
-                        )}>;
-</Button>"
-                        <CalendarIcon className="mr-2 h-4 w-4" />;"
-</CalendarIcon>"
-                        {startDate ? format(startDate, "PPP") : <span>Pick a date</span>}"
-                      </Button>;
-                    </PopoverTrigger>;
-                    <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">;
-{BUDGET_RANGES.map((range) => (;
-                      <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
-                        {range.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-          )}
-          {/* Step 2: Timeline */}
-          {currentStep === 'timeline' && (
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <Label className="text-white">Project Timeline</Label>
-                <Select
-                  value={formData.timeframe}
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
-                >
-                  <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
-                    <SelectValue placeholder="Select your timeline" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
-                    {TIMELINE_OPTIONS.map((option) => (
-                      <SelectItem key={option.value} value={option.value} className="text-white hover:bg-zion-blue-light">
-                        {option.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label className="text-white">Expected Start Date</Label>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <Button
-                        variant={"outline"}
-                        className={cn(
-                          "justify-start text-left font-normal w-full",
-                          "bg-zion-blue-dark border-zion-blue-light text-white"
-                        )}
-                      >
-                        <CalendarIcon className="mr-2 h-4 w-4" />
-                        {startDate ? format(startDate, "PPP") : <span>Pick a date</span>}
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">
-                      <Calendar
-                        mode="single"
-                        selected={startDate}
-                        onSelect={setStartDate}
-                        initialFocus
-                        className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
-
-                    </PopoverTrigger>;"
-                    <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">;"
-</PopoverContent>
-                      <Calendar;"
-                        mode="single""
-                        selected={startDate}
-                        onSelect={setStartDate}
-                        initialFocus;"
-                        className="p-3 pointer-events-auto bg-zion-blue-dark text-white""
-                      />;
-</Calendar>
-                    </PopoverContent>;
-                  </Popover>;
-                </div>;"
-                <div className="space-y-2">;"
-</div>"
-                  <Label className="text-white">Expected End Date</Label>;"
-                  <Popover>;
-</Popover>
-                    <PopoverTrigger asChild>;
-                      <Button
-                        variant={"outline"}
-                        className={cn(
-                          "justify-start text-left font-normal w-full"
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-"justify-start text-left font-normal w-full",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <Button;
                         variant={"outline"}
                         className={cn(;
                           "justify-start text-left font-normal w-full",;
-<<<<<<< HEAD
-=======
-                        className={cn(;"
-                          "justify-start text-left font-normal w-full",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                           "bg-zion-blue-dark border-zion-blue-light text-white";
                         )}
                       >;"
@@ -1724,43 +913,24 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         mode="single";"
                         selected={startDate}
                         onSelect={setStartDate}
-<<<<<<< HEAD
-                        initialFocus;
+initialFocus;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white";
-=======
-                        initialFocus;"
-                        className="p-3 pointer-events-auto bg-zion-blue-dark text-white";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       />;
 </Calendar>
                     </PopoverContent>;
                   </Popover>;
-<<<<<<< HEAD
-                </div>;
-<<<<<<< HEAD
+</div>;
 ;"
                 <div className="space-y-2">;"
-=======
-;
-                <div className="space-y-2">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Label className="text-white">Expected End Date</Label>;
-=======
-                </div>;"
-                <div className="space-y-2">;"
-</div>"
-                  <Label className="text-white">Expected End Date</Label>;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <Popover>;
 </Popover>
                     <PopoverTrigger asChild>;
 </PopoverTrigger>
                     </PopoverContent>
                   </Popover>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                </div>"
+</div>"
                 <div className="space-y-2">"
                   <Label className="text-white">Expected End Date</Label>
                   <Popover>
@@ -1774,13 +944,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           "bg-zion-blue-dark border-zion-blue-light text-white"
-=======
-                  <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;                          "bg-zion-blue-dark border-zion-blue-light text-white"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;                          "bg-zion-blue-dark border-zion-blue-light text-white"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1805,18 +970,9 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                           "justify-start text-left font-normal w-full",
 
                           "bg-zion-blue-dark border-zion-blue-light text-white"
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         )}>;
                         <CalendarIcon className="mr-2 h-4 w-4" />;
-=======
-
-
-"
-                          "bg-zion-blue-dark border-zion-blue-light text-white"
-                        )}>;"
-                        <CalendarIcon className="mr-2 h-4 w-4" />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}
 =======
 </PopoverTrigger>
@@ -1837,8 +993,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                     <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">;
                       <Calendar"
                         mode="single"
-<<<<<<< HEAD
-                        selected={endDate}
+selected={endDate}
                         onSelect={setEndDate}
 
 <Button;
@@ -1866,27 +1021,16 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         onSelect={setEndDate}
 
                         disabled={(date) => !startDate || date < startDate}
-<<<<<<< HEAD
-                        initialFocus;
-=======
-
-                        disabled={(date) => !startDate || date < startDate}
-                        initialFocus;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+initialFocus;
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white";
                       />;
-=======
-</Calendar>
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </PopoverContent>;
                   </Popover>;
                 </div>;
               </div>;
             </div>;
 
-<<<<<<< HEAD
-          )}
+)}
           {/* Step 3: Contact */}
 )}
 ;
@@ -1939,39 +1083,12 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   value={formData && formData.email}
                   onChange={handleInputChange}
                   placeholder="your@email && email.com"
                   className="bg-zion-blue-dark border-zion-blue-light text-white"
                   required
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-                        selected={endDate}
-                        onSelect={setEndDate}
-          )}
-          {/* Step 3: Contact */}
-'
-          {currentStep === 'contact' && (;"
-            <div className="space-y-4">;"
-              <div className="space-y-2">;"
-                <Label htmlFor="email" className="text-white">Contact Email</Label>;
-
-
-
-                <Input"
-                  id="email""
-                  name="email""
-                  type="email"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-                  value={formData && formData.email}
+value={formData && formData.email}
                   onChange={handleInputChange}"
                   placeholder="your@email && email.com""
                   className="bg-zion-blue-dark border-zion-blue-light text-white"
@@ -1986,99 +1103,18 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                     </div>
                   )}
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
               </div>;
-=======
-                  {endDate && (              </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                   {endDate && (              </div>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
 
-<<<<<<< HEAD
-=======              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">;
-=======
-
-value={formData.email}
-                  onChange={handleInputChange}
-                  placeholder="your@email.com"
-                  className="bg-zion-blue-dark border-zion-blue-light text-white"
-                  required
-                />
-              </div>
-              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">
-                <h3 className="font-medium text-zion-cyan mb-2">Quote Summary</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-zion-slate-light">Service:</span>
-                    <span className="text-white">{service?.title |"Custom Service"}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-zion-slate-light">Budget:</span>
-                    <span className="text-white">{BUDGET_RANGES.find(b => b.value === formData.budget)?.label}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-zion-slate-light">Timeline:</span>
-                    <span className="text-white">{TIMELINE_OPTIONS.find(t => t.value === formData.timeframe)?.label}</span>
-                  </div>
-                  {startDate && (
-                    <div className="flex justify-between">
-                      <span className="text-zion-slate-light">Start Date:</span>
-                      <span className="text-white">{format(startDate, "PPP")}</span>
-                    </div>
-                  )}
-                  {endDate && (
-                    <div className="flex justify-between">
-                      <span className="text-zion-slate-light">End Date:</span>
-                      <span className="text-white">{format(endDate, "PPP")}</span>
-                    </div>
-                  )}
-
-/>;
-          )}
-                </div>;
-              </div>;
-            </div>;
-
-                />;
-              </div>;
-                <Input;
-                  id="email";
-                  name="email";
-                  type="email";
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  placeholder="your@email.com";
-                  className="bg-zion-blue-dark border-zion-blue-light text-white";
-                  required;
-                />;
-              </div>;
-;
-            <div className=\"space-y-4\" />;
-              <div className=\"space-y-2\" />;
-                <Label htmlFor=\"email\" className=\"text-white\" />Contact Email</Label>;
-                <Input;
-id=\"email\"
-                  name=\"email\"
-                  type=\"email\"
-                  {endDate && (              </div />;
-            </div>;
-
-              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <h3 className="font-medium text-zion-cyan mb-2">Quote Summary</h3>;
                 <div className="space-y-2 text-sm">;
                   <div className="flex justify-between">;
                     <span className="text-zion-slate-light">Service:</span>;
 =======
-
-
 
                 />;
               </div>;
@@ -2102,21 +1138,10 @@ id=\"email\"
                     <span className="text-zion-slate-light">Service:</span>;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <span className="text-white">{service?.title || "Custom Service"}</span>;
-<<<<<<< HEAD
-                  </div>;"
+</div>;"
                   <div className="flex justify-between">;"
-=======
-                <h3 className=\"font-medium text-zion-cyan mb-2\" />Quote Summary</h3>;
-                <div className=\"space-y-2 text-sm\" />;
-                  <div className=\"flex justify-between\" />;}
-                    <span className=\"text-zion-slate-light\" />Service:</span>;}
-                    <span className=\"text-white\" />{service?.title || \"Custom Service\"}</span>;
-                  </div>;
-                  <div className="flex justify-between">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span className="text-zion-slate-light">Budget:</span>;
-<<<<<<< HEAD
-                    <span className="text-white">{BUDGET_RANGES && BUDGET_RANGES.find(b => b && b.value === formData && formData.budget)?.label}</span>;
+<span className="text-white">{BUDGET_RANGES && BUDGET_RANGES.find(b => b && b.value === formData && formData.budget)?.label}</span>;
                   </div>;
                   <div className="flex justify-between">;
                     <span className="text-zion-slate-light">Timeline:</span>;
@@ -2126,52 +1151,11 @@ id=\"email\"
                   <div className="flex justify-between">;
                     <span className="text-zion-slate-light">Timeline:</span>;
                     <span className="text-white">{TIMELINE_OPTIONS.find(t => t.value === formData.timeframe)?.label}</span>;
-<<<<<<< HEAD
-=======
-"
-                    <span className="text-white">{BUDGET_RANGES.find(b => b.value === formData.budget)?.label}</span>;
-                  </div>;"
-                  <div className="flex justify-between">;"
-                    <span className="text-zion-slate-light">Timeline:</span>;"
-                    <span className="text-white">{TIMELINE_OPTIONS.find(t => t.value === formData.timeframe)?.label}</span>;
 
-                  </div>;
-                  {startDate && (;"
-                    <div className="flex justify-between">;"
-                      <span className="text-zion-slate-light">Start Date:</span>;"
-                      <span className="text-white">{format(startDate, "PPP")}</span>;
-                    </div>;
-                  )}
-                  {endDate && (;"
-                    <div className="flex justify-between">;"
-                      <span className="text-zion-slate-light">End Date:</span>;"
-                      <span className="text-white">{format(endDate, "PPP")}</span>;
-
-                </div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                  </div>;
-                  {startDate && (;
-                    <div className="flex justify-between">;
-                      <span className="text-zion-slate-light">Start Date:</span>;
-                      <span className="text-white">{format(startDate, "PPP")}</span>;
-                    </div>;
-                  )}
-                  {endDate && (;
-                    <div className="flex justify-between">;
-                      <span className="text-zion-slate-light">End Date:</span>;
-                      <span className="text-white">{format(endDate, "PPP")}</span>;
-                    </div>;
-                  )}
-</div>;                  )}
-                </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>;
             </div>;
 
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 "
@@ -2180,10 +1164,6 @@ id=\"email\"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-          <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">;
-            {currentStep !== 'details' && (;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
               </div>
             </div>
@@ -2191,43 +1171,24 @@ id=\"email\"
                 </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           )}
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">;
             {currentStep !== 'details' && (;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           )}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
           )}
 "
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">'
             {currentStep !== 'details' && (
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          )}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Button
                 type="button"
-=======
-
-              <Button"
-                type="button""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 variant="outline"
                 onClick={prevStep}
 "
@@ -2258,18 +1219,11 @@ id=\"email\"
               </Button>;
             )}
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-              <Button"
+<Button"
                 type="button""
                 variant="outline"
                 onClick={() => onOpenChange(false)}
 "
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className={cn("flex gap-2", currentStep === 'details' && "ml-auto")}>;
 
 className="border-zion-blue-light text-white hover:bg-zion-blue-light"
@@ -2283,44 +1237,13 @@ className="border-zion-blue-light text-white hover:bg-zion-blue-light"
                 variant="outline"
                 onClick={() => onOpenChange(false)}
 
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-<div className={cn("flex gap-2", currentStep === 'details' && "ml-auto")}>;
-              <Button
-                type="button"
-                variant="outline"
-;
-          <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">;
-            {currentStep !== 'details' && (;
-              <Button;
-                type="button";
-                variant="outline";
-                onClick={prevStep}
-                className="border-zion-blue-light text-white hover:bg-zion-blue-light";
-              >;
-                Previous;
-              </Button>;
-            )}
-            ;
-            <div className={cn("flex gap-2", currentStep === 'details' && "ml-auto")}>;
-              <Button;
-                type="button";
-                variant="outline";
-                onClick={() => onOpenChange(false)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className="border-zion-blue-light text-white hover:bg-zion-blue-light";
               >;
                 Cancel;
               </Button>;
 
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -2342,48 +1265,15 @@ className="border-zion-blue-light text-white hover:bg-zion-blue-light"
                 <Button"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   type="submit"
-<<<<<<< HEAD
-                  disabled={isSubmitting}"
+disabled={isSubmitting}"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;"
                   {isSubmitting ? "Submitting..." : "Submit Request"}
-=======
-                  <div className=\"flex justify-between\" />;
-                    <span className=\"text-zion-slate-light\" />Budget:</span>;
-                    <span className=\"text-white\" />{BUDGET_RANGES && BUDGET_RANGES.find(b => b && b.value === formData && formData.budget)?.label}</span>;
-                  </div>;
-                  <div className=\"flex justify-between\" />;
-                    <span className=\"text-zion-slate-light\" />Timeline:</span>;
-                    <span className=\"text-white\" />{TIMELINE_OPTIONS && TIMELINE_OPTIONS.find(t => t && t.value === formData && formData.timeframe)?.label}</span>;                    <span className=\"text-white\" />{BUDGET_RANGES.find(b => b.value === formData.budget)?.label}</span>;
-                  </div>;
-                  <div className=\"flex justify-between\" />;
-                    <span className=\"text-zion-slate-light\" />Timeline:</span>;
-                    <span className=\"text-white\" />{TIMELINE_OPTIONS.find(t => t.value === formData.timeframe)?.label}</span>;
-              </div>;
-            </div>;
-          )}
-                <Button;
-type=\"submit\"
-                  disabled={isSubmitting}
-                  className=\"bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple\" />;
-                  {isSubmitting ? \"Submitting...\" : \"Submit Request\"}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </Button>;
               )}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -2393,8 +1283,7 @@ type=\"submit\"
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
-<<<<<<< HEAD
-  const next_step = () =>: any {'
+const next_step = () =>: any {'
     if (setCurrentStep ('timeline')) {}
   $2;
 }'
@@ -2409,39 +1298,14 @@ type=\"submit\"
 }'
     else if (setCurrentStep ('timeline')) {}
   $2;
-=======
-  const next_step = () =>: any {
-    if (setCurrentStep ('timeline')) {}
-  $2}
-}
-    else if (setCurrentStep ('contact')) {}
-  $2}
-}
-  }
-;
-  const prev_step = () =>: any {
-    if (setCurrentStep ('details')) {}
-  $2}
-}
-    else if (setCurrentStep ('timeline')) {}
-  $2}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
   }
 ;
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <Dialog open={open} onOpenChange={onOpenChange}>;
+<Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className="bg - zion - blue border - zion - blue - light text - white sm:max - w-[600px]">;
         <DialogHeader>;
           <DialogTitle className="text - 2xl font - semibold text - white">;
-=======
-    <Dialog open={open} onOpenChange={onOpenChange} />;
-      <DialogContent className=\"bg - zion - blue border - zion - blue - light text - white sm:max-w-[600px]\" />;
-        <DialogHeader />;
-          <DialogTitle className=\"text - 2xl font - semibold text-white\" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             Request Service Quote;
           </DialogTitle>;
         </DialogHeader>;
@@ -2627,8 +1491,7 @@ type=\"submit\"
                 <Select;
                   value={form_data.budget}
                   onValueChange={(value) => setFormData (prev => ({ ...prev, budget: value }))}
-<<<<<<< HEAD
-                >;
+>;
                   <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white">;
                     <SelectValue placeholder="Select your budget range" />;
                   </SelectTrigger>;
@@ -2636,51 +1499,6 @@ type=\"submit\"
                     {BUDGET_RANGES.map ((range) => (
 <<<<<<< HEAD
                       <SelectItem key={range.value} value={range.value} className="text - white hover:bg - zion - blue-light">;
-=======
-    <Dialog open={open} onOpenChange={onOpenChange}>;"
-      <DialogContent className="bg - zion - blue border - zion - blue - light text - white sm:max - w-[600px]">;
-        <DialogHeader>;"
-          <DialogTitle className="text - 2xl font - semibold text - white">;
-            Request Service Quote;
-          </DialogTitle>;
-        </DialogHeader>;"
-        <form on_submit={handle_submit} className="space - y-6">;
-          {/* Step 1: Service Details */}'
-          {current_step === 'details' && ("
-            <div className="space - y-4">;"
-              <div className="p - 4 bg - zion - blue - dark rounded - md border border - zion - blue - light">;"
-                <h3 className="font - medium text - zion - cyan mb - 2">Selected Service</h3>;"
-                <p className="text - white text - lg">{service?.title || "Custom Service"}</p>;"
-                <p className="text - zion - slate - light text - sm mt - 1">{service?.category}</p>;
-              </div>;"
-              <div className="space - y-2">;"
-                <Label html_for="description" className="text - white">Project Description</Label>;
-                <Textarea;"
-                  id="description";"
-                  name="description";
-                  value={form_data.description}
-                  on_change={handleInputChange}"
-                  placeholder="Describe your project needs in detail...";"
-                  className="h - 32 bg - zion - blue - dark border - zion - blue - light text - white resize - none";
-                  required;
-                />;
-              </div>;"
-              <div className="space - y-2">;"
-                <Label html_for="budget" className="text - white">Estimated Budget</Label>;
-                <Select;
-                  value={form_data.budget}
-                  onValueChange={(value) => setFormData (prev => ({ ...prev, budget: value }))}
-                >;"
-                  <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white">;"
-                    <SelectValue placeholder="Select your budget range" />;
-                  </SelectTrigger>;"
-                  <SelectContent className="bg - zion - blue - dark border - zion - blue - light">;
-                    {BUDGET_RANGES.map ((range) => ("
-                      <SelectItem key={range.value} value={range.value} className="text - white hover:bg - zion - blue - light">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                      <SelectItem key={range.value} value={range.value} className="text - white hover:bg - zion - blue - light">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         {range.label}
 =======
 </Select>"
@@ -2700,8 +1518,7 @@ type=\"submit\"
                 </Select>;
               </div>;
             </div>)}
-<<<<<<< HEAD
-          {/* Step 2: Timeline */}
+{/* Step 2: Timeline */}
           {current_step === 'timeline' && (
             <div className="space-y-4">;
               <div className="space-y-2">;
@@ -2716,28 +1533,7 @@ type=\"submit\"
                   <SelectContent className="bg - zion - blue - dark border - zion - blue-light">;
                     {TIMELINE_OPTIONS.map ((option) => (
 <<<<<<< HEAD
-<<<<<<< HEAD
                       <SelectItem key={option.value} value={option.value} className="text - white hover:bg - zion - blue-light">;
-=======
-          {/* Step 2: Timeline */}'
-          {current_step === 'timeline' && ("
-            <div className="space - y-4">;"
-              <div className="space - y-2">;"
-                <Label className="text - white">Project Timeline</Label>;
-                <Select;
-                  value={form_data.timeframe}
-                  onValueChange={(value) => setFormData (prev => ({ ...prev, timeframe: value }))}
-                >;"
-                  <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white">;"
-                    <SelectValue placeholder="Select your timeline" />;
-                  </SelectTrigger>;"
-                  <SelectContent className="bg - zion - blue - dark border - zion - blue - light">;
-                    {TIMELINE_OPTIONS.map ((option) => ("
-                      <SelectItem key={option.value} value={option.value} className="text - white hover:bg - zion - blue - light">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                      <SelectItem key={option.value} value={option.value} className="text - white hover:bg - zion - blue - light">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
                       <SelectItem key={option.value} value={option.value} className="text - white hover:bg - zion - blue-light">;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -2745,24 +1541,11 @@ type=\"submit\"
                       </SelectItem>))}
                   </SelectContent>;
                 </Select>;
-<<<<<<< HEAD
-              </div>;
-<<<<<<< HEAD
+</div>;
 <<<<<<< HEAD
               <div className="grid grid - cols - 2 gap-4">;
                 <div className="space-y-2">;
                   <Label className="text-white">Expected Start Date</Label>;
-=======
-              </div>;"
-              <div className="grid grid - cols - 2 gap - 4">;"
-                <div className="space - y-2">;"
-                  <Label className="text - white">Expected Start Date</Label>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              <div className="grid grid - cols - 2 gap - 4">;
-                <div className="space - y-2">;
-                  <Label className="text - white">Expected Start Date</Label>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
               <div className="grid grid - cols - 2 gap-4">;
                 <div className="space-y-2">;
@@ -2775,8 +1558,7 @@ type=\"submit\"
                         className={cn ("
                           "justify - start text - left font - normal w - full";"
                           "bg - zion - blue - dark border - zion - blue - light text - white")}
-<<<<<<< HEAD
-                      >;
+>;
                         <CalendarIcon className="mr - 2 h - 4 w-4" />;
                         {start_date ? format (start_date, "PPP") : <span > Pick a date</span>}
                       </Button>;
@@ -2793,33 +1575,8 @@ type=\"submit\"
                   </Popover>;
                 </div>;
 <<<<<<< HEAD
-<<<<<<< HEAD
                 <div className="space-y-2">;
                   <Label className="text-white">Expected End Date</Label>;
-=======
-                      >;"
-                        <CalendarIcon className="mr - 2 h - 4 w - 4" />;"
-                        {start_date ? format (start_date, "PPP") : <span > Pick a date</span>}
-                      </Button>;
-                    </PopoverTrigger>;"
-                    <PopoverContent className="w - auto p - 0 bg - zion - blue - dark border - zion - blue - light">;
-                      <Calendar;"
-                        mode="single";
-                        selected={start_date}
-                        on_select={setStartDate}
-                        initial_focus;"
-                        className="p - 3 pointer - events - auto bg - zion - blue - dark text - white";
-                      />;
-                    </PopoverContent>;
-                  </Popover>;
-                </div>;"
-                <div className="space - y-2">;"
-                  <Label className="text - white">Expected End Date</Label>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                <div className="space - y-2">;
-                  <Label className="text - white">Expected End Date</Label>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
                 <div className="space-y-2">;
                   <Label className="text-white">Expected End Date</Label>;
@@ -2831,39 +1588,20 @@ type=\"submit\"
                         className={cn ("
                           "justify - start text - left font - normal w - full";"
                           "bg - zion - blue - dark border - zion - blue - light text - white")}
-<<<<<<< HEAD
-                      >;
+>;
                         <CalendarIcon className="mr - 2 h - 4 w-4" />;
                         {end_date ? format (end_date, "PPP") : <span > Pick a date</span>}
                       </Button>;
                     </PopoverTrigger>;
                     <PopoverContent className="w - auto p - 0 bg - zion - blue - dark border - zion - blue-light">;
                       <Calendar;
-=======
-                      >;"
-                        <CalendarIcon className="mr - 2 h - 4 w - 4" />;"
-                        {end_date ? format (end_date, "PPP") : <span > Pick a date</span>}
-                      </Button>;
-                    </PopoverTrigger>;"
-                    <PopoverContent className="w - auto p - 0 bg - zion - blue - dark border - zion - blue - light">;
-                      <Calendar;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         mode="single";
                         selected={end_date}
                         on_select={setEndDate}
                         disabled={(date) => !start_date || date < start_date}
-<<<<<<< HEAD
-                        initial_focus;
-<<<<<<< HEAD
+initial_focus;
 <<<<<<< HEAD
                         className="p - 3 pointer - events - auto bg - zion - blue - dark text-white";
-=======
-                        initial_focus;"
-                        className="p - 3 pointer - events - auto bg - zion - blue - dark text - white";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                        className="p - 3 pointer - events - auto bg - zion - blue - dark text - white";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
                         className="p - 3 pointer - events - auto bg - zion - blue - dark text-white";
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -2961,8 +1699,7 @@ type=\"submit\"
                 </div>;
               </div>;
             </div>)}
-<<<<<<< HEAD
-          {/* Step 3: Contact */}
+{/* Step 3: Contact */}
           {current_step === 'contact' && (
             <div className="space-y-4">;
               <div className="space-y-2">;
@@ -3007,58 +1744,7 @@ type=\"submit\"
               </div>;
             </div>)}
 <<<<<<< HEAD
-<<<<<<< HEAD
           <DialogFooter className="flex - col sm:flex - row sm:justify - between sm:space-x-2">;
-=======
-          {/* Step 3: Contact */}'
-          {current_step === 'contact' && ("
-            <div className="space - y-4">;"
-              <div className="space - y-2">;"
-                <Label html_for="email" className="text - white">Contact Email</Label>;
-                <Input;"
-                  id="email";"
-                  name="email";"
-                  type="email";
-                  value={form_data.email}
-                  on_change={handleInputChange}"
-                  placeholder="your@email.com";"
-                  className="bg - zion - blue - dark border - zion - blue - light text - white";
-                  required;
-                />;
-              </div>;"
-              <div className="bg - zion - blue - dark border border - zion - blue - light rounded - md p - 4">;"
-                <h3 className="font - medium text - zion - cyan mb - 2">Quote Summary</h3>;"
-                <div className="space - y-2 text - sm">;"
-                  <div className="flex justify - between">;"
-                    <span className="text - zion - slate - light">Service:</span>;"
-                    <span className="text - white">{service?.title || "Custom Service"}</span>;
-                  </div>;"
-                  <div className="flex justify - between">;"
-                    <span className="text - zion - slate - light">Budget:</span>;"
-                    <span className="text - white">{BUDGET_RANGES.find (boolean => b.value === form_data.budget)?.label}</span>;
-                  </div>;"
-                  <div className="flex justify - between">;"
-                    <span className="text - zion - slate - light">Timeline:</span>;"
-                    <span className="text - white">{TIMELINE_OPTIONS.find (t => t.value === form_data.timeframe)?.label}</span>;
-                  </div>;
-                  {start_date && ("
-                    <div className="flex justify - between">;"
-                      <span className="text - zion - slate - light">Start Date:</span>;"
-                      <span className="text - white">{format (start_date, "PPP")}</span>;
-                    </div>)}
-                  {end_date && ("
-                    <div className="flex justify - between">;"
-                      <span className="text - zion - slate - light">End Date:</span>;"
-                      <span className="text - white">{format (end_date, "PPP")}</span>;
-                    </div>)}
-                </div>;
-              </div>;
-            </div>)}"
-          <DialogFooter className="flex - col sm:flex - row sm:justify - between sm:space - x-2">;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          <DialogFooter className="flex - col sm:flex - row sm:justify - between sm:space - x-2">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
           <DialogFooter className="flex - col sm:flex - row sm:justify - between sm:space-x-2">;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -3066,18 +1752,9 @@ type=\"submit\"
               <Button;"
                 type="button";"
                 variant="outline";
-<<<<<<< HEAD
-                on_click={prev_step}
-<<<<<<< HEAD
+on_click={prev_step}
 <<<<<<< HEAD
                 className="border - zion - blue - light text - white hover:bg - zion - blue-light";
-=======
-                on_click={prev_step}"
-                className="border - zion - blue - light text - white hover:bg - zion - blue - light";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                className="border - zion - blue - light text - white hover:bg - zion - blue - light";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
                 className="border - zion - blue - light text - white hover:bg - zion - blue-light";
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -3088,18 +1765,9 @@ type=\"submit\"
               <Button;"
                 type="button";"
                 variant="outline";
-<<<<<<< HEAD
-                on_click={() => onOpenChange (false)}
-<<<<<<< HEAD
+on_click={() => onOpenChange (false)}
 <<<<<<< HEAD
                 className="border - zion - blue - light text - white hover:bg - zion - blue-light";
-=======
-                on_click={() => onOpenChange (false)}"
-                className="border - zion - blue - light text - white hover:bg - zion - blue - light";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                className="border - zion - blue - light text - white hover:bg - zion - blue - light";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
                 className="border - zion - blue - light text - white hover:bg - zion - blue-light";
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -3109,18 +1777,9 @@ type=\"submit\"
               {current_step !== 'contact' ? (
                 <Button;"
                   type="button";
-<<<<<<< HEAD
-                  on_click={next_step}
-<<<<<<< HEAD
+on_click={next_step}
 <<<<<<< HEAD
                   className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion-purple";
-=======
-                  on_click={next_step}"
-                  className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                  className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
                   className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion-purple";
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -3129,44 +1788,24 @@ type=\"submit\"
                 </Button>) : (
                 <Button;"
                   type="submit";
-<<<<<<< HEAD
-                  disabled={is_submitting}
+disabled={is_submitting}
                   className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion-purple";
                 >;
-=======
-                  disabled={is_submitting}"
-                  className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
-                >;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   {is_submitting ? "Submitting..." : "Submit Request"}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </Button>)}
-
-
 
               ;'
               {currentStep !== 'contact' ? (;
                 <Button ;"
                   type="button" ;
                   onClick={nextStep}"
-=======
-                </Button>)}
-
-              ;
-              {currentStep !== 'contact' ? (;
-                <Button ;
-                  type="button" ;
-                  onClick={nextStep}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
                 >;
                   Next;
                 </Button>;
               ) :(;
-<<<<<<< HEAD
-                <Button ;"
+<Button ;"
                   type="submit";
                   disabled={isSubmitting}"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
@@ -3192,34 +1831,6 @@ type=\"submit\"
                   disabled={isSubmitting}"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                 >"
-=======
-                <Button ;
-                  type="submit";
-                  disabled={isSubmitting}
-                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
-                >;
-                  {isSubmitting ? "Submitting..." :"Submit Request"}
-                </Button>;
-              )}
-                className="border-zion-blue-light text-white hover:bg-zion-blue-light"
-              >
-                Cancel
-              </Button>
-              {currentStep !== 'contact' ? (
-                <Button
-                  type="button"
-                  onClick={nextStep}
-                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                >
-                  Next
-                </Button>
-              ) : (
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                >
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               )}
@@ -3230,18 +1841,11 @@ type=\"submit\"
     </Dialog>
   )
 }
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
-<<<<<<< HEAD
-
 <<<<<<< HEAD
 
     </Dialog>;
@@ -3280,48 +1884,6 @@ setIsSubmitting (true);
   service: service ? {}
   id: service.id, title: service.title, category: service.category;
 }: null, quoteDetails: {}
-=======
-    </Dialog>);
-=======
-import {useState} from 'react';
-import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";""
-import {Button} from "@/components/ui/button";""
-import {Input} from "@/components/ui/input";""
-import {Textarea} from "@/components/ui/textarea";""
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";""
-import {Label} from "@/components/ui/label";""
-import {Slider} from "@/components/ui/slider";""
-import {Calendar} from "@/components/ui/calendar";""
-import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";""
-import {format} from "date-fns";""
-import {CalendarIcon} from "lucide-react";""
-import {cn} from "@/lib/utils";""
-import {ProductListing} from "@/types/listings";""
-import {toast} from '@/hooks/use-toast';
-import {supabase} from "@/integrations/supabase/client";""
-import { useState } from 'react',;
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",""
-import { Button } from "@/components/ui/button",""
-import { Input } from "@/components/ui/input",""
-import { Textarea } from "@/components/ui/textarea",""
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",""
-import { Label } from "@/components/ui/label",""
-import { Slider } from "@/components/ui/slider",""
-import { Calendar } from "@/components/ui/calendar",""
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",""
-import { format } from "date-fns",""
-import { CalendarIcon } from "lucide-react",""
-import { cn } from "@/lib/utils",""
-import { ProductListing } from "@/types/listings",""
-import { toast } from '@/hooks/use-toast',;
-import { supabase } from "@/integrations/supabase/client",""
-import { ProductListing } from "@/types/listings";""
-import { toast  } from '@/hooks/use-toast';
-import { supabase } from "@/integrations/supabase/client";""
-import { supabase } from "@/integrations/supabase/client","
-interface ServiceQuoteModalProps {
-  // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
   open: boolean;,
   onOpenChange: (open: boolean) => void;,
@@ -3435,10 +1997,7 @@ function ServiceQuoteModal() {
     e.prevent_default ();
     setIsSubmitting (true),
 
-
     budget: BUDGET_RANGES[0].value,
-
-
 
   const [startDate, setStartDate] = useState<Date | undefined>(new Date()),
 
@@ -3446,7 +2005,6 @@ function ServiceQuoteModal() {
 
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),
   const [isSubmitting, setIsSubmitting] = useState(false),
-
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 
@@ -3551,7 +2109,6 @@ function ServiceQuoteModal() {
 
                     <PopoverTrigger asChild>;
 
-
                       <Button;"
                         variant={"outline"}"
                         className={cn("
@@ -3571,7 +2128,6 @@ function ServiceQuoteModal() {
 
                   <Label className="text-white">Expected End Date;"
 
-
                           "justify-start text-left font-normal w-full""
                         className={cn(;"
                           "justify-start text-left font-normal w-full",;""
@@ -3582,8 +2138,6 @@ function ServiceQuoteModal() {
 
                         mode="single";"
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white";"
-
-
 
                   <Label className="text-white">Expected End Date"
                   <Popover>
@@ -3706,7 +2260,6 @@ function ServiceQuoteModal() {
 
                   <Label className="text - white">Expected End Date;"
 
-
                         {end_date ? format (end_date, "PPP") : <span > Pick a date</span>}"
 
                         selected={end_date}
@@ -3755,10 +2308,8 @@ function ServiceQuoteModal() {
                   type="button" ;"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";"
 
-
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple""
                 >
-
 
         </form>
         </form>;
@@ -3768,7 +2319,6 @@ const [startDate, setStartDate] = useState<Date | undefined> (new Date () );
 const [endDate, setEndDate] = useState<Date | undefined> (undefined);
 const [currentStep, setCurrentStep] = useState<'details'| 'timeline'| 'contact'> ('details');
 const [isSubmitting, setIsSubmitting] = useState (false);
-<<<<<<< HEAD
 const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
   const {
   name, value 
@@ -3849,34 +2399,6 @@ return (<Dialog open= {}
 }> Cancel </Button> {'"
   currentStep !== 'contact' ? (<Button type=" button"onClick= {}
   nextStep "
-=======
-setFormData ({
-  description: '';
-email: '';
-budget: BUDGET RANGES[0].value;
-timeframe: TIMELINE OPTIONS[0].value 
-});
-setStartDate (new Date () );
-setEndDate (undefined);
-setCurrentStep ('details') 
-}catch (error) {
-  
-}finally {
-  setIsSubmitting (false) 
-}
-};
-const nextStep = () => {
-  if (currentStep === 'details') setCurrentStep ('timeline');
-else if (currentStep === 'timeline') setCurrentStep ('contact') 
-};
-const prevStep = () => {
-  if (currentStep === 'timeline') setCurrentStep ('details');
-else if (currentStep === 'contact') setCurrentStep ('timeline') 
-};
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 return (<Dialog open= {
   open;
 }onOpenChange= {
@@ -3894,7 +2416,6 @@ return (<Dialog open= {
 }<Input id=" email"name=" email"type=" email"value= {"
   formData.email;
 }required /> </div> </div>) 
-<<<<<<< HEAD
 }</div> </div> </div>) 
 }<Button type=" button"variant=" outline"onClick= {
   prevStep 
@@ -3903,21 +2424,7 @@ return (<Dialog open= {
   currentStep !== 'contact' ? (<Button type=" button"onClick= {
   nextStep 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-}className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" > Next </Button>) : (<Button </Button>) 
-=======
-
-}</div> </div> </div>) "
-}<Button type=" button"variant=" outline"onClick= {"
-  prevStep;"
-}className=" border-zion-blue-light text-white hover:bg-zion-blue-light"> Previous )"
-}> Cancel  {"
-  currentStep !== 'contact' ? (<Button type=" button"onClick= {"
-  nextStep;)"
-}className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" > Next ) : (<Button )"
-}</div>  </form>  ) 
-pr-12325
-}className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" > Next </Button>) : (<Button </Button>)"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+}className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" > Next </Button>) : (<Button </Button>)
 }</div> </DialogFooter> </form> </DialogContent> </Dialog>) 
 }
     </Dialog>;
@@ -3926,20 +2433,12 @@ pr-12325
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                </Button>)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                 </Button>)}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

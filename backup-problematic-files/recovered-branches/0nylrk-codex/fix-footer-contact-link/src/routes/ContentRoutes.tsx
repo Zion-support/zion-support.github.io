@@ -24,4 +24,3 @@ const ContentRoutes = () => {;
       <Route path="/home" element={<Home />} />;
       <Route path="/about" element={<About />} />;
 <<<<<<< HEAD
-

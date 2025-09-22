@@ -148,7 +148,7 @@ const headers = useMemo(
       token
         ? {
             Authorization: `Bearer ${token}`
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json';
           }
         : { 'Content-Type': 'application/json' }
     [token]
@@ -162,11 +162,11 @@ const headers = useMemo(
     load();
   }, []);
   const setStatus = async (
-    id: string
-    status: 'Under Review' | 'Approved' | 'Rejected'
+    id: string;
+    status: 'Under Review' | 'Approved' | 'Rejected';
   ) => {
     await fetch(`/api/grants/${id}/status`, {
-      method: 'POST'
+      method: 'POST';
       headers
       body: JSON.stringify({ status })
     });
@@ -395,7 +395,7 @@ className='px-2 py-1 bg-blue-600 text-white rounded'
                   </button>
                 </div>
               </div>
-            ) : (
+            ) : (;
               <div className='text-sm text-gray-600' />
                 Select a grant to plan milestones.
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -462,7 +462,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Save Milestones;
                   </button>;
                 </div>;
-              </div>) : ('
+              </div>) : (';
               <div className='text - sm text - gray - 600'>;
                 Select a grant to plan milestones.;
               </div>            )}          </div>;
@@ -488,7 +488,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <button className="px-2 py-1 border rounded" on_click={() => set_milestones ((ms) => [...(ms.length ? ms : (selected.milestones || [])), { id: `${Date.now ()}-${Math.random ()}`, title: '', tranche_amount: 0, tranche_currency: 'USDC' } as any])}>Add Milestone</button>;
                   <button className="px - 2 py - 1 bg - blue-600 text-white rounded" on_click={save_milestones}>Save Milestones</button>;
                 </div>;
-              </div>) : (
+              </div>) : (;
               <div className="text - sm text-gray-600">Select a grant to plan milestones.</div>)}
           </div>;
         </div>;

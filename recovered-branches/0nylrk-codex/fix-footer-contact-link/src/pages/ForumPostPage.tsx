@@ -1,19 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -31,15 +20,11 @@ import {useAuth} from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import {useToast} from "@/hooks/use-toast";
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+=======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -67,16 +52,9 @@ import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
 import ReplyForm from "@/components/community/ReplyForm",
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useToast } from "@/hooks/use-toast",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { useToast } from "@/hooks/use-toast",
@@ -93,43 +71,7 @@ const mockPost: ForumPost = {
   categoryId: "ai-tools",
   tags: ["machine-learning", "fine-tuning", "gpt"],
   createdAt: "2025-04-01T12:00:00Z",
-<<<<<<< HEAD
-=======
 
-import { useState } from "react","
-import { useParams, Link } from "react-router-dom","
-import { AppLayout } from "@/layout/AppLayout","
-import { SEO } from "@/components/SEO","
-import { Button } from "@/components/ui/button","
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
-import { Badge } from "@/components/ui/badge","
-import { Card, CardContent } from "@/components/ui/card","
-import { Separator } from "@/components/ui/separator","
-import { Alert, AlertDescription } from "@/components/ui/alert","
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from "lucide-react","
-import { formatDistanceToNow, format } from "date-fns","
-import { ForumPost, ForumReply } from "@/types/community","
-import { useAuth } from "@/hooks/useAuth","
-import ReplyCard from "@/components/community/ReplyCard",";
-import ReplyForm from "@/components/community/ReplyForm";"
-import { useToast } from "@/hooks/use-toast";
-// Mock data for a forum post"
-import ReplyForm from "@/components/community/ReplyForm","
-import { useToast } from "@/hooks/use-toast",
-;
-// Mock data for a forum post;
-const mockPost: ForumPost = {"
-  id: "1","
-  title: "Best practices for AI model fine-tuning","
-  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?","
-  authorId: "user1","
-  authorName: "Alex Johnson","
-  authorAvatar: "https://i.pravatar.cc/150?img=3","
-  authorRole: "Verified Talent","
-  categoryId: "ai-tools","
-  tags: ["machine-learning", "fine-tuning", "gpt"],"
-  createdAt: "2025-04-01T12:00:00Z","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   updatedAt: "2025-04-01T12:00:00Z",
@@ -137,19 +79,11 @@ const mockPost: ForumPost = {"
   downvotes: 2,
   replyCount: 4,
   isAnswered: true,
-<<<<<<< HEAD
-  isFeatured: true;
+isFeatured: true;
 },
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const mockPost: ForumPost = {
-=======
-import { useToast } from "@/hooks/use-toast",const mockPost: ForumPost = {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 import { useToast } from "@/hooks/use-toast",const mockPost: ForumPost = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -158,7 +92,6 @@ import { useToast } from "@/hooks/use-toast",const mockPost: ForumPost = {
 },
 
 const mockPost: ForumPost = {
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: "1"
   title: "Best practices for AI model fine-tuning"
@@ -191,29 +124,14 @@ const mockReplies: ForumReply[] = [
     upvotes: 12
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     downvotes: 0
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-  }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
-=======
-    downvotes: 0  {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     downvotes: 0  {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
     downvotes: 0
-
 
   {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -240,17 +158,11 @@ const mockReplies: ForumReply[] = [
     upvotes: 15
     downvotes: 0
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     isAnswer: true
 <<<<<<< HEAD
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    isAnswer: true
-  }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
   {
     id: "reply2",
@@ -278,20 +190,9 @@ const mockReplies: ForumReply[] = [
     isAnswer: true
   },
 <<<<<<< HEAD
-<<<<<<< HEAD
-
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
@@ -306,31 +207,25 @@ const mockReplies: ForumReply[] = [
     downvotes: 0
   }
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }
@@ -370,28 +265,7 @@ const mockPost: ForumPost = {;
   downvotes: 2,;
   replyCount: 4,;
   isAnswered: true,;
-<<<<<<< HEAD
-=======
 
-
-
-const mockPost: ForumPost = {"
-  id: "1""
-  title: "Best practices for AI model fine-tuning"'"
-  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?";"
-  authorId: "user1""
-  authorName: "Alex Johnson""
-  authorAvatar: "https://i.pravatar.cc/150?img=3""
-  authorRole: "Verified Talent""
-  categoryId: "ai-tools""
-  tags: ["machine-learning", "fine-tuning", "gpt"];"
-  createdAt: "2025-04-01T12:00:00Z""
-  updatedAt: "2025-04-01T12:00:00Z"
-  upvotes: 48;
-  downvotes: 2;
-  replyCount: 4;
-  isAnswered: true;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   isFeatured: true;
 }
 // Mock data for replies;
@@ -444,79 +318,14 @@ const mockReplies: ForumReply[] = []
   }
 
 export default function ForumPostPage() { return null; }
-=======
-  isFeatured: true;
-};
-
-// Mock data for replies;
-const mockReplies: ForumReply[] = [;
-  {;
-    id: "reply1",;
-    postId: "1",;
-    content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",;
-    authorId: "user2",;
-    authorName: "Sarah Chen",;
-    authorAvatar: "https://i && i.pravatar.cc/150?img=5",;
-    createdAt: "2025-04-01T14:30:00Z",;
-    updatedAt: "2025-04-01T14:30:00Z",;
-    upvotes: 12,;
-    downvotes: 0;
-  };
-  {;
-    id: "reply2",;
-    postId: "1",;
-    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance.",;
-    authorId: "user3",;
-    authorName: "Michael Wong",;
-    authorRole: "AI Engineer",;
-    createdAt: "2025-04-01T16:15:00Z",;
-    updatedAt: "2025-04-01T16:15:00Z",;
-    upvotes: 8,;
-    downvotes: 0;
-  };
-  {;
-    id: "reply3",;
-    postId: "1",;
-    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.";
-    authorId: "user4",;
-    authorName: "Emma Davis",;
-    authorRole: "ML Research Lead",;
-    createdAt: "2025-04-02T09:45:00Z",;
-    updatedAt: "2025-04-02T09:45:00Z",;
-    upvotes: 15,;
-    downvotes: 0,;
-    isAnswer: true;
-  };
-  {;
-    id: "reply4",;
-    postId: "1",;
-    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",;
-    authorId: "user5",;
-    authorName: "David Lin",;
-    createdAt: "2025-04-02T11:20:00Z",;
-    updatedAt: "2025-04-02T11:20:00Z",;
-    upvotes: 4,;
-    downvotes: 0;
-  }
-];
-
-export default function ForumPostPage() {;
-  // Using `useParams` without type arguments avoids issues when TypeScript;
-  // can't determine the generic type for the helper from React Router.;
-  // Cast the result instead to provide the expected shape.;
-  const { postId } = useParams() as { postId?: string };
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user } = useAuth();
   const { toast } = useToast();
   const [post, setPost] = useState(mockPost);
   const [replies, setReplies] = useState(mockReplies);
 
-<<<<<<< HEAD
 ],
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
@@ -529,18 +338,6 @@ export default function ForumPostPage() {
 
   // For this demo, we'll assume the post is found
   if (!post) {
-=======
-export default function ForumPostPage() {}
-  // Using `useParams` without type arguments avoids issues when TypeScript'
-  // can't determine the generic type for the helper from React Router.;
-=======
-
-],
-
-export default function ForumPostPage() {
-  // Using `useParams` without type arguments avoids issues when TypeScript
-  // can't determine the generic type for the helper from React Router.
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Cast the result instead to provide the expected shape.;
   const { postId } = useParams() as { postId?: string };
   const { user } = useAuth();
@@ -552,28 +349,20 @@ export default function ForumPostPage() {
   const { user } = useAuth();
   const { toast } = useToast();
   const [post, setPost] = useState(mockPost);
-<<<<<<< HEAD
-  const [replies, setReplies] = useState(mockReplies);'
+const [replies, setReplies] = useState(mockReplies);'
   // Check if this is the user's own post;
   const isAuthor = user?.id === post?.authorId;
   // Check if user is admin/mod'
-=======
-  const [replies, setReplies] = useState(mockReplies);
-  // Check if this is the user's own post
-  const isAuthor = user?.id === post?.authorId;
-  // Check if user is admin/mod
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const isAdminOrMod = user?.userType === 'admin' |user?.role === 'admin';
   const { postId } = useParams() as { postId?: string },
   const { user } = useAuth(),
   const { toast } = useToast(),
   const [post, setPost] = useState(mockPost),
   const [replies, setReplies] = useState(mockReplies),
-<<<<<<< HEAD
-  '
+'
   // Check if this is the user's own post;
   const isAuthor = user?.id === post?.authorId,
-  
+
   // Check if user is admin/mod'
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
   '
@@ -603,18 +392,6 @@ export default function ForumPostPage() {
       title: "Vote recorded""
       description: "You upvoted this post"})
 <<<<<<< HEAD
-
-=======
-  
-  // Check if this is the user's own post
-  const isAuthor = user?.id === post?.authorId,
-  
-  // Check if user is admin/mod
-  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
-  
-  // For this demo, we'll assume the post is found
-  if (!post) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return (
       <AppLayout>
         <div className="container py-8">
@@ -637,39 +414,10 @@ export default function ForumPostPage() {
     toast({
       title: "Vote recorded"
       description: "You upvoted this post"})
-<<<<<<< HEAD
-  }
+}
   },
 
-
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  // Cast the result instead to provide the expected shape.
-
-'
-  // For this demo, we'll assume the post is found;
-  if (!post) {}
-'
-  // Check if this is the user's own post;
-  const isAuthor = user?.id === post?.authorId;
-
-  // Check if user is admin/mod;'
-  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
-'
-  // For this demo, we'll assume the post is found;
-  if (!post) {;
-
-    return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-    isAnswer: true    return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    isAnswer: true    return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { postId } = useParams() as { postId?:string },;
   const { user } = useAuth(),;
   const { toast } = useToast(),;
@@ -678,7 +426,6 @@ export default function ForumPostPage() {
   ;
 =======
   // Cast the result instead to provide the expected shape.
-
 
   // For this demo, we'll assume the post is found
   if (!post) {
@@ -692,15 +439,7 @@ export default function ForumPostPage() {
 
   // For this demo, we'll assume the post is found;
   if (!post) {;
-<<<<<<< HEAD
-    return (;
-=======
-
-
-    return (
-
-      <AppLayout>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+return (;
 =======
     return (
     return (
@@ -713,14 +452,10 @@ export default function ForumPostPage() {
           </Button>;
         </div>;
       </AppLayout>;
-<<<<<<< HEAD
-    );
+);
   }
 
-
   },
-
-
 
     );
   }
@@ -728,94 +463,36 @@ export default function ForumPostPage() {
     if (!user) {
       toast({
         title: "Authentication required"
-=======
-
-
-    );
-  }
-
-  const handleDownvote = () => {}
-    if (!user) {}
-      toast({"
-        title: "Authentication required""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: "Please sign in to vote on posts"})
       return;
     }
     setPost({ ...post, downvotes: post.downvotes + 1 })
-<<<<<<< HEAD
-    toast({
+toast({
       title: "Vote recorded"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    toast({"
-      title: "Vote recorded""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: "You downvoted this post"})
 
-
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  }
-  },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
       description: "You downvoted this post"})
 
-
   },
-
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
         title: "Authentication required"
-<<<<<<< HEAD
-=======
-  const handleSubmitReply = async (content: string) => {}
-    if (!user) {}
-      toast({"
-        title: "Authentication required""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         description: "Please sign in to reply"})
       return;
     }
-<<<<<<< HEAD
-    // Create a new reply
+// Create a new reply
     const newReply: ForumReply = {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-      id: `reply${Date.now()}`
-      postId: post.id
-      content;
-      authorId: user.id |'unknown'
-      authorName: user.displayName |'Anonymous'
-      authorAvatar: user.avatarUrl
-      createdAt: new Date().toISOString()
-      updatedAt: new Date().toISOString()
-      upvotes: 0
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      downvotes: 0
-=======
-      description: "You downvoted this post"})      downvotes: 0
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+downvotes: 0
 =======
       description: "You downvoted this post"})      downvotes: 0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -825,7 +502,6 @@ export default function ForumPostPage() {
     }
     // Create a new reply
     const newReply: ForumReply = {
-
 
       downvotes: 0
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -843,10 +519,9 @@ export default function ForumPostPage() {
       upvotes: 0,
       downvotes: 0
     },
-    
+
     setReplies([...replies, newReply]),
     setPost({ ...post, replyCount: post.replyCount + 1 }),
-    
 
     toast({
       title: "Reply posted"
@@ -863,22 +538,14 @@ export default function ForumPostPage() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     toast({
       title: "Reply posted"
       description: "Your reply has been added to the discussion"})
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleMarkAsAnswer = (replyId: string) => {
@@ -888,24 +555,6 @@ export default function ForumPostPage() {
         title: "Permission denied"
         description: "Only the original poster or moderators can mark answers"
         variant: "destructive"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  const handleMarkAsAnswer = (replyId: string) => {}
-    // Only post author or admin can mark an answer;
-    if (!isAuthor && !isAdminOrMod) {}
-      toast({"
-        title: "Permission denied""
-        description: "Only the original poster or moderators can mark answers""
-        variant: "destructive"
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleUpvote = () => {;
     if (!user) {;
@@ -923,67 +572,39 @@ export default function ForumPostPage() {
     }
 
     setPost({ ...post, upvotes: post && post.upvotes + 1 }),;
-<<<<<<< HEAD
-    toast({;"
+toast({;"
       title: "Vote recorded",;"
-=======
-    toast({;
-      title: "Vote recorded",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description: "You upvoted this post"});
   };
 
   const handleDownvote = () => {;
     if (!user) {;
-<<<<<<< HEAD
-      toast({;"
+toast({;"
         title: "Authentication required",;"
-=======
-      toast({;
-        title: "Authentication required",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: "Please sign in to vote on posts"}),;
       return;
     }
 
     setPost({ ...post, downvotes: post && post.downvotes + 1 }),;
-<<<<<<< HEAD
-    toast({;"
+toast({;"
       title: "Vote recorded",;"
-=======
-    toast({;
-      title: "Vote recorded",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description: "You downvoted this post"});
   };
 
   const handleSubmitReply = async (content: string) => {;
     if (!user) {;
-<<<<<<< HEAD
-      toast({;"
+toast({;"
         title: "Authentication required",;"
-=======
-      toast({;
-        title: "Authentication required",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: "Please sign in to reply"}),;
       return;
     }
 
     // Create a new reply;
-<<<<<<< HEAD
-    const newReply: ForumReply = {;`
+const newReply: ForumReply = {;`
       id: `reply${Date && Date.now()}`,;
       postId: post && post.id,;
       content;'
       authorId: user && user.id || 'unknown',;'
-=======
-    const newReply: ForumReply = {;
-      id: `reply${Date && Date.now()}`,;
-      postId: post && post.id,;
-      content;
-      authorId: user && user.id || 'unknown',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       authorName: user && user.displayName || 'Anonymous',;
       authorAvatar: user && user.avatarUrl,;
       createdAt: new Date().toISOString(),;
@@ -995,31 +616,20 @@ export default function ForumPostPage() {
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post && post.replyCount + 1 }),;
 
-<<<<<<< HEAD
-    toast({;"
+toast({;"
       title: "Reply posted",;"
-=======
-    toast({;
-      title: "Reply posted",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description: "Your reply has been added to the discussion"});
   };
 
   const handleMarkAsAnswer = (replyId: string) => {;
     // Only post author or admin can mark an answer;
     if (!isAuthor && !isAdminOrMod) {;
-<<<<<<< HEAD
-      toast({;"
+toast({;"
         title: "Permission denied",;"
         description: "Only the original poster or moderators can mark answers",;"
         variant: "destructive";
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1033,18 +643,8 @@ export default function ForumPostPage() {
       return;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Update the replies;
+// Update the replies;
     const updatedReplies = replies && replies.map(reply => ({;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-    // Update the replies;
-    const updatedReplies = replies && replies.map(reply => ({;
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ...reply;
       isAnswer: reply && reply.id === replyId;
     }));
@@ -1052,28 +652,8 @@ export default function ForumPostPage() {
       ...reply,
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       isAnswer: reply.id === replyId
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
-      }),
-      return
-    }
-    // Update the replies
-    const updatedReplies = replies.map(reply => ({
-      ...reply,
-      isAnswer: reply.id === replyId
-    }));
-    setReplies(updatedReplies);
-    setPost({ ...post, isAnswered: true })
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
       isAnswer: reply.id === replyId;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1089,40 +669,23 @@ export default function ForumPostPage() {
 
     })),
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    
+
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
-    toast({
-      title: "Answer marked"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-    toast({
+toast({
       title: "Answer marked"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<<<<<<< HEAD
+<<<<<<< HEAD
       description: "The reply has been marked as the accepted answer"})
 
   },
 
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     toast({
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    toast({
-      title: "Answer marked"
-      description: "The reply has been marked as the accepted answer"})
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
       description: "The reply has been marked as the accepted answer"})    toast({
 =======
@@ -1142,7 +705,6 @@ export default function ForumPostPage() {
         title: "Authentication required"
 =======
 
-
     toast({"
       title: "Answer marked""
       description: "The reply has been marked as the accepted answer"})
@@ -1155,71 +717,40 @@ export default function ForumPostPage() {
         description: "Please sign in to report content"})
       return;
     }
-<<<<<<< HEAD
-    toast({
+toast({
       title: "Report submitted"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    toast({"
-      title: "Report submitted""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: "A moderator will review this content"})
 
-<<<<<<< HEAD
-    toast({
+toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned"
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
-
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-  }
-  const handlePinPost = () => {
-    if (!isAdminOrMod) return;
-    setPost({ ...post, isPinned: !post.isPinned })
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
   const handlePinPost = () => {}
 =======
       description: "A moderator will review this content"})
 
-
   },
 
   const handlePinPost = () => {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (!isAdminOrMod) return,
-    
-    setPost({ ...post, isPinned: !post.isPinned }),
-    
 
-<<<<<<< HEAD
-    toast({"
+    setPost({ ...post, isPinned: !post.isPinned }),
+
+toast({"
       title: post.isPinned ? "Post unpinned" : "Post pinned""
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
   }
-<<<<<<< HEAD
-  const handleLockPost = () => {
+const handleLockPost = () => {
 <<<<<<< HEAD
     if (!isAdminOrMod) return;
     setPost({ ...post, isLocked: !post.isLocked })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
 =======
-      description: "A moderator will review this content"})  },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      description: "A moderator will review this content"})  },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned"
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
@@ -1236,24 +767,15 @@ export default function ForumPostPage() {
 
   const handleLockPost = () => {
     if (!isAdminOrMod) return,
-    
+
     setPost({ ...post, isLocked: !post.isLocked }),
-    
 
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked"
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     toast({
-=======
-      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})    toast({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})    toast({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1266,47 +788,17 @@ export default function ForumPostPage() {
   }
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
-=======
-  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
-  
+
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
-  
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-  const handleLockPost = () => {}
-    toast({"
-      title: post.isLocked ? "Post unlocked" : "Post locked""
-      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
-  }
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })'"
-  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
   return (
     <AppLayout>
@@ -1332,8 +824,6 @@ export default function ForumPostPage() {
             <div className="flex justify-between items-start mb-6">"
               <div className="flex items-center gap-4">"
 =======
-
-
 
   return (
     <AppLayout>
@@ -1363,27 +853,14 @@ export default function ForumPostPage() {
                   <AvatarImage src={post.authorAvatar} />
                   <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>
                 </Avatar>
-<<<<<<< HEAD
-                <div>"
+<div>"
                   <div className="font-medium text-lg">{post.authorName}</div>
                   {post.authorRole && ("
                     <Badge variant="outline" className="mt-1">
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                <div>
-                  <div className="font-medium text-lg">{post.authorName}</div>
-                  {post.authorRole && (
-                    <Badge variant="outline" className="mt-1">
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -1400,26 +877,7 @@ import { ForumPost, ForumReply } from "@/types/community",;
 import { useAuth } from "@/hooks/useAuth",;
 import ReplyCard from "@/components/community/ReplyCard",;
 import ReplyForm from "@/components/community/ReplyForm",;
-<<<<<<< HEAD
-=======
-"
-import { useState } from "react",;"
-import { useParams, Link } from "react-router-dom",;"
-import { AppLayout } from "@/layout/AppLayout",;"
-import { SEO } from "@/components/SEO",;"
-import { Button } from "@/components/ui/button",;"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
-import { Badge } from "@/components/ui/badge",;"
-import { Card, CardContent } from "@/components/ui/card",;"
-import { Separator } from "@/components/ui/separator",;"
-import { Alert, AlertDescription } from "@/components/ui/alert",;"
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from "lucide-react",;"
-import { formatDistanceToNow, format } from "date-fns",;"
-import { ForumPost, ForumReply } from "@/types/community",;"
-import { useAuth } from "@/hooks/useAuth",;"
-import ReplyCard from "@/components/community/ReplyCard",;"
-import ReplyForm from "@/components/community/ReplyForm",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 import { useToast } from "@/hooks/use-toast",;
 // Mock data for a forum post;
 const mockPost: ForumPost = {;"
@@ -1457,8 +915,7 @@ const mockPost: ForumPost = {;
 },;
 // Mock data for replies;
 const mockReplies: ForumReply[] = [;
-<<<<<<< HEAD
-  {;"
+{;"
     id: "reply1",;"
     postId: "1",;'"
     content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",;"
@@ -1466,22 +923,11 @@ const mockReplies: ForumReply[] = [;
     authorName: "Sarah Chen",;"
     authorAvatar: "https://i.pravatar.cc/150?img=5",;"
     createdAt: "2025-04-01T14:30:00Z",;"
-=======
-  {;
-    id: "reply1",;
-    postId: "1",;
-    content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",;
-    authorId: "user2",;
-    authorName: "Sarah Chen",;
-    authorAvatar: "https://i.pravatar.cc/150?img=5",;
-    createdAt: "2025-04-01T14:30:00Z",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     updatedAt: "2025-04-01T14:30:00Z",;
     upvotes: 12,;
     downvotes: 0;
   },;
-<<<<<<< HEAD
-  {;"
+{;"
     id: "reply2",;"
     postId: "1",;'"
     content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.window.performance.",;"
@@ -1489,22 +935,11 @@ const mockReplies: ForumReply[] = [;
     authorName: "Michael Wong",;"
     authorRole: "AI Engineer",;"
     createdAt: "2025-04-01T16:15:00Z",;"
-=======
-  {;
-    id: "reply2",;
-    postId: "1",;
-    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.window.performance.",;
-    authorId: "user3",;
-    authorName: "Michael Wong",;
-    authorRole: "AI Engineer",;
-    createdAt: "2025-04-01T16:15:00Z",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     updatedAt: "2025-04-01T16:15:00Z",;
     upvotes: 8,;
     downvotes: 0;
   },;
-<<<<<<< HEAD
-  {;"
+{;"
     id: "reply3",;"
     postId: "1",;'"
     content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",;"
@@ -1512,57 +947,29 @@ const mockReplies: ForumReply[] = [;
     authorName: "Emma Davis",;"
     authorRole: "ML Research Lead",;"
     createdAt: "2025-04-02T09:45:00Z",;"
-=======
-  {;
-    id: "reply3",;
-    postId: "1",;
-    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",;
-    authorId: "user4",;
-    authorName: "Emma Davis",;
-    authorRole: "ML Research Lead",;
-    createdAt: "2025-04-02T09:45:00Z",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     updatedAt: "2025-04-02T09:45:00Z",;
     upvotes: 15,;
     downvotes: 0,;
     isAnswer: true;
   },;
-<<<<<<< HEAD
-  {;"
+{;"
     id: "reply4",;"
     postId: "1",;"
     content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",;"
     authorId: "user5",;"
     authorName: "David Lin",;"
     createdAt: "2025-04-02T11:20:00Z",;"
-=======
-  {;
-    id: "reply4",;
-    postId: "1",;
-    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",;
-    authorId: "user5",;
-    authorName: "David Lin",;
-    createdAt: "2025-04-02T11:20:00Z",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     updatedAt: "2025-04-02T11:20:00Z",;
     upvotes: 4,;
     downvotes: 0;
   }
 ],;
-<<<<<<< HEAD
 export default function ForumPostPage() { return null; }
-=======
-export default function ForumPostPage() {;
-  // Using `useParams` without type arguments avoids issues when TypeScript;
-  // can't determine the generic type for the helper from React Router.;
-  // Cast the result instead to provide the expected shape.;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { postId } = useParams() as { postId?: string },;
   const { user } = useAuth(),;
   const { toast } = useToast(),;
   const [post, setPost] = useState(mockPost),;
-<<<<<<< HEAD
-  const [replies, setReplies] = useState(mockReplies),;'
+const [replies, setReplies] = useState(mockReplies),;'
   // Check if this is the user's own post;
   const isAuthor = user?.id === post?.authorId,;
   // Check if user is admin/mod;'
@@ -1574,20 +981,6 @@ export default function ForumPostPage() {;
         <div className="container py-8">;
           <h1>Post not found</h1>;"
           <Button asChild className="mt-4">;"
-=======
-  const [replies, setReplies] = useState(mockReplies),;
-  // Check if this is the user's own post;
-  const isAuthor = user?.id === post?.authorId,;
-  // Check if user is admin/mod;
-  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',;
-  // For this demo, we'll assume the post is found;
-  if (!post) {;
-    return (;
-      <AppLayout>;
-        <div className="container py-8">;
-          <h1>Post not found</h1>;
-          <Button asChild className="mt-4">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Link to="/community">Back to Community</Link>;
           </Button>;
         </div>;
@@ -1597,77 +990,44 @@ export default function ForumPostPage() {;
 ;
   const handleUpvote = () => {;
     if (!user) {;
-<<<<<<< HEAD
-      toast({;"
+toast({;"
         title: "Authentication required",;"
-=======
-      toast({;
-        title: "Authentication required",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: "Please sign in to vote on posts"}),;
       return;
     }
 ;
     setPost({ ...post, upvotes: post.upvotes + 1 }),;
-<<<<<<< HEAD
-    toast({;"
+toast({;"
       title: "Vote recorded",;"
-=======
-    toast({;
-      title: "Vote recorded",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description: "You upvoted this post"});
   },;
   const handleDownvote = () => {;
     if (!user) {;
-<<<<<<< HEAD
-      toast({;"
+toast({;"
         title: "Authentication required",;"
-=======
-      toast({;
-        title: "Authentication required",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: "Please sign in to vote on posts"}),;
       return;
     }
 ;
     setPost({ ...post, downvotes: post.downvotes + 1 }),;
-<<<<<<< HEAD
-    toast({;"
+toast({;"
       title: "Vote recorded",;"
-=======
-    toast({;
-      title: "Vote recorded",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description: "You downvoted this post"});
   },;
   const handleSubmitReply = async (content: string) => {;
     if (!user) {;
-<<<<<<< HEAD
-      toast({;"
+toast({;"
         title: "Authentication required",;"
-=======
-      toast({;
-        title: "Authentication required",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: "Please sign in to reply"}),;
       return;
     }
 ;
     // Create a new reply;
-<<<<<<< HEAD
-    const newReply: ForumReply = {;`
+const newReply: ForumReply = {;`
       id: `reply${Date.now()}`,;
       postId: post.id,;
       content,;'
       authorId: user.id || 'unknown',;'
-=======
-    const newReply: ForumReply = {;
-      id: `reply${Date.now()}`,;
-      postId: post.id,;
-      content,;
-      authorId: user.id || 'unknown',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       authorName: user.displayName || 'Anonymous',;
       authorAvatar: user.avatarUrl,;
       createdAt: new Date().toISOString(),;
@@ -1677,27 +1037,16 @@ export default function ForumPostPage() {;
     },;
     setReplies([...replies, newReply]),;
     setPost({ ...post, replyCount: post.replyCount + 1 }),;
-<<<<<<< HEAD
-    toast({;"
+toast({;"
       title: "Reply posted",;"
-=======
-    toast({;
-      title: "Reply posted",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description: "Your reply has been added to the discussion"});
   },;
   const handleMarkAsAnswer = (replyId: string) => {;
     // Only post author or admin can mark an answer;
     if (!isAuthor && !isAdminOrMod) {;
-<<<<<<< HEAD
-      toast({;"
+toast({;"
         title: "Permission denied",;"
         description: "Only the original poster or moderators can mark answers",;"
-=======
-      toast({;
-        title: "Permission denied",;
-        description: "Only the original poster or moderators can mark answers",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive";
       }),;
       return;
@@ -1710,54 +1059,33 @@ export default function ForumPostPage() {;
     })),;
     setReplies(updatedReplies),;
     setPost({ ...post, isAnswered: true }),;
-<<<<<<< HEAD
-    toast({;"
+toast({;"
       title: "Answer marked",;"
-=======
-    toast({;
-      title: "Answer marked",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description: "The reply has been marked as the accepted answer"});
   },;
   const handleReportPost = () => {;
     if (!user) {;
-<<<<<<< HEAD
-      toast({;"
+toast({;"
         title: "Authentication required",;"
-=======
-      toast({;
-        title: "Authentication required",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: "Please sign in to report content"}),;
       return;
     }
 ;
-<<<<<<< HEAD
-    toast({;"
+toast({;"
       title: "Report submitted",;"
-=======
-    toast({;
-      title: "Report submitted",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description: "A moderator will review this content"});
   },;
   const handlePinPost = () => {;
     if (!isAdminOrMod) return,;
     setPost({ ...post, isPinned: !post.isPinned }),;
-<<<<<<< HEAD
-    toast({;"
+toast({;"
       title: post.isPinned ? "Post unpinned" : "Post pinned",;"
-=======
-    toast({;
-      title: post.isPinned ? "Post unpinned" : "Post pinned",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"});
   },;
   const handleLockPost = () => {;
     if (!isAdminOrMod) return,;
     setPost({ ...post, isLocked: !post.isLocked }),;
-<<<<<<< HEAD
-    toast({;"
+toast({;"
       title: post.isLocked ? "Post unlocked" : "Post locked",;"
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"});
   },;
@@ -1786,67 +1114,21 @@ export default function ForumPostPage() {;
           <CardContent className="p-6">;"
             <div className="flex justify-between items-start mb-6">;"
               <div className="flex items-center gap-4">;"
-=======
-    toast({;
-      title: post.isLocked ? "Post unlocked" : "Post locked",;
-      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"});
-  },;
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
-  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a");
-  return (;
-    <AppLayout>;
-      <SEO;
-        title={`${post.title} | Community Forum | Zion AI Marketplace`}
-        description={post.content.substring(0, 160)}
-        keywords={`community, forum, discussion, ${post.tags.join()}`}
-      />;
-      <div className="container py-8">;
-        <div className="flex items-center gap-3 mb-6">;
-          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
-            Forum;
-          </Link>;
-          <span className="text-muted-foreground">/</span>;
-          <Link to={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">;
-            {post.categoryId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-          </Link>;
-          <span className="text-muted-foreground">/</span>;
-          <span className="text-sm font-medium truncate max-w-[200px]">{post.title}</span>;
-        </div>;
-        <Card>;
-          <CardContent className="p-6">;
-            <div className="flex justify-between items-start mb-6">;
-              <div className="flex items-center gap-4">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <Avatar className="h-12 w-12">;
                   <AvatarImage src={post.authorAvatar} />;
                   <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>;
                 </Avatar>;
-<<<<<<< HEAD
-                <div>;"
+<div>;"
                   <div className="font-medium text-lg">{post.authorName}</div>;
                   {post.authorRole && (;"
                     <Badge variant="outline" className="mt-1">;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       {post.authorRole}
@@ -1862,12 +1144,9 @@ export default function ForumPostPage() {;
                   {post.authorRole && (;
                     <Badge variant="outline" className="mt-1">;
 
-
                       {post.authorRole}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </Badge>
@@ -1889,30 +1168,12 @@ export default function ForumPostPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true }),;
 
-
-
     toast({;"
       title: "Answer marked",;"
-=======
-=======
-// Update the replies;
-    const updatedReplies = replies && replies.map(reply => ({;
-      ...reply;
-      isAnswer: reply && reply.id === replyId;
-    }));
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true }),;
 
@@ -1923,8 +1184,7 @@ export default function ForumPostPage() {;
   };
   const handleReportPost = () => {;
     if (!user) {;
-<<<<<<< HEAD
-      toast({;"
+toast({;"
         title: "Authentication required",;"
         description: "Please sign in to report content"}),;
       return;
@@ -1939,34 +1199,15 @@ export default function ForumPostPage() {;
   };
     toast({;"
       title: post && post.isLocked ? "Post unlocked" : "Post locked",;"
-=======
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to report content"}),;
-      return;
-    }
-    toast({;
-      title: "Report submitted",;
-      description: "A moderator will review this content"});
-  };
-    toast({;
-      title: post && post.isPinned ? "Post unpinned" : "Post pinned",;
-      description: post && post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"});
-  };
-    toast({;
-      title: post && post.isLocked ? "Post unlocked" : "Post locked",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description: post && post.isLocked ? "Comments are now allowed" : "Comments are now disabled"});
   };
   return (
     <AppLayout>;
-<<<<<<< HEAD
-      <SEO;`
+<SEO;`
         title={`${post && post.title} | Community Forum | Zion AI Marketplace`}
         description={post && post.content.substring(0, 160)}`
         keywords={`community, forum, discussion, ${post && post.tags.join()}`}
       />;
-
 
 "
       <div className="container py-8">;"
@@ -1976,18 +1217,6 @@ export default function ForumPostPage() {;
           </Link>;"
           <span className="text-muted-foreground">/</span>;
 
-<<<<<<< HEAD
-=======
-          <Link to={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">;
-            {post.categoryId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-          </Link>;
-          <span className="text-muted-foreground">/</span>;
-          <span className="text-sm font-medium truncate max-w-[200px]">{post.title}</span>;
-        </div>;
-        ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card>;
 =======
     setPost({ ...post, isAnswered: true }),;        <Card>;
@@ -2153,11 +1382,7 @@ export default function ForumPostPage() {;
         </div>;
         ;
         <Card>;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    setPost({ ...post, isAnswered: true }),;        <Card>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <CardContent className="p-6">;
             <div className="flex justify-between items-start mb-6">;
               <div className="flex items-center gap-4">;
@@ -2169,21 +1394,7 @@ export default function ForumPostPage() {;
                   <div className="font-medium text-lg">{post && post.authorName}</div>;
                   {post && post.authorRole && (;
                     <Badge variant="outline" className="mt-1">;
-<<<<<<< HEAD
-                      {post && post.authorRole}                    </Badge>;
-=======
-
-
-        <Card>;"
-          <CardContent className="p-6">;"
-            <div className="flex justify-between items-start mb-6">;"
-              <div className="flex items-center gap-4">;"
-                <Avatar className="h-12 w-12">;
-
-
-
-                    </Badge>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+{post && post.authorRole}                    </Badge>;
 =======
                       {post && post.authorRole}
 <AvatarImage src={post.authorAvatar} />;
@@ -2195,57 +1406,22 @@ export default function ForumPostPage() {;
                     <Badge variant="outline" className="mt-1">;
                       {post.authorRole}
                     </Badge>;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                      {post && post.authorRole}                    </Badge>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   )}
                 </div>;
               </div>;
 
-<<<<<<< HEAD
-              <div className="flex items-center text-sm text-muted-foreground">;
+<div className="flex items-center text-sm text-muted-foreground">;
                 <Calendar className="h-4 w-4 mr-1" />;
-<<<<<<< HEAD
-                <time dateTime={post && post.createdAt} title={formattedDate}>;                  {timeAgo}
-=======
-
-
-                  {timeAgo}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                <time dateTime={post && post.createdAt} title={formattedDate}>;
-;
-              <div className="flex items-center text-sm text-muted-foreground">;
-                <Calendar className="h-4 w-4 mr-1" />;
-                <time dateTime={post.createdAt} title={formattedDate}>;
-                  {timeAgo}
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                <time dateTime={post && post.createdAt} title={formattedDate}>;                  {timeAgo}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<time dateTime={post && post.createdAt} title={formattedDate}>;                  {timeAgo}
                 </time>;
               </div>;
             </div>;
 
-
-<<<<<<< HEAD
-            <div className="flex flex-wrap gap-2 mb-6">;
-<<<<<<< HEAD
+<div className="flex flex-wrap gap-2 mb-6">;
 <<<<<<< HEAD
 <<<<<<< HEAD
               {post && post.tags.map(tag => (;
-=======
-            ;
-            <h1 className="text-2xl font-bold mb-2">{post.title}</h1>;
-            ;
-            <div className="flex flex-wrap gap-2 mb-6">;
-              {post.tags.map(tag => (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -2259,36 +1435,10 @@ export default function ForumPostPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {tag}
                 </Badge>;
-<<<<<<< HEAD
-              ))}                <Button
+))}                <Button
                   variant="outline"
                   size="sm"
                   onClick={handleUpvote}
-=======
-              {post && post.tags.map(tag => (;
-;
-            <h1 className="text-2xl font-bold mb-2">{post.title}</h1>;
-            ;
-            <div className="flex flex-wrap gap-2 mb-6">;
-              {post.tags.map(tag => (;
-                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
-                  {tag}
-                </Badge>;
-              ))}
-
-            </div>;
-
-            <div className="prose dark:prose-invert max-w-none mb-6">;
-              {post && post.content.split('\n\n').map((paragraph, i) => (;
-                <p key={i}>{paragraph}</p>;
-              ))}
-            </div>;
-
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">;
-              <div className="flex items-center gap-4">;
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 </div>;
                   {tag}
@@ -2849,7 +1999,6 @@ if (return) {
           </CardContent>;
         </Card>;
 
-
           {!post.isLocked && (
             <div className="mb-8">
               <h3 className="text-lg font-medium mb-4">Your Response</h3>
@@ -2896,84 +2045,15 @@ if (return) {
             </div>
           )}
 
-
               )}
             </div>
           )}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={handleReportPost}>;
-=======
-              ))}
-
-
-
-                <Button"
-                  variant="outline""
-                  size="sm"
-                  onClick={handleUpvote}
-"
-                  className="flex items-center gap-2">;"
-                  <ThumbsUp className="h-4 w-4" />;
-                  <span>{post && post.upvotes}</span>;
-                </Button>;
-
-
-
-                <Button"
-                  variant="outline""
-                  size="sm"
-                  onClick={handleDownvote}
-"
-                  className="flex items-center gap-2">;"
-                  <ThumbsDown className="h-4 w-4" />;
-                  <span>{post && post.downvotes}</span>;
-                </Button>;
-              </div>;
-"
-              <div className="flex items-center gap-2">;
-                {(isAuthor || isAdminOrMod) && (;"
-                  <Button variant="ghost" size="sm" asChild>;`
-                    <Link to={`/community/edit/${post && post.id}`}>;
-"
-                      <Edit className="h-4 w-4 mr-1" />;
-                      Edit;
-                    </Link>;
-                  </Button>;
-                )}
-
-
-
-                    <Button"
-                      variant="ghost""
-                      size="sm"
-                      onClick={handlePinPost}>;"
-                      <Pin className="h-4 w-4 mr-1" />;"
-                      {post && post.isPinned ? "Unpin" : "Pin"}
-                    </Button>;
-                    <Button"
-                      variant="ghost""
-                      size="sm"
-                      onClick={handleLockPost}>;"
-                      <Lock className="h-4 w-4 mr-1" />;"
-                      {post && post.isLocked ? "Unlock" : "Lock"}
-                    </Button>;
-                  </>;
-                )}
-
-                <Button"
-                  variant="ghost""
-                  size="sm"
-                  onClick={handleReportPost}>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Flag className="h-4 w-4 mr-1" />;
 '
 import { useState } from './react';'
@@ -3342,14 +2422,6 @@ if (return) {}
           </CardContent>;
         </Card>;
 
-
-
-<<<<<<< HEAD
-
-=======
-          
-          
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -3386,18 +2458,10 @@ if (return) {}
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-<<<<<<< HEAD
-
-
-              )}
+)}
             </div>
           )}
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
               {post && post.tags.map(tag => (;                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
                   {tag}
@@ -3431,19 +2495,9 @@ if (return) {}
             {replies;
               .filter(reply => !reply.isAnswer)
               .map(reply => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-{post && post.isLocked && (;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                <ReplyCard
-=======
-
-                <ReplyCard;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+<ReplyCard
                   key={reply.id}
                   reply={reply}                <ReplyCard
-
 
 import { useState } from "react",""
 import { useParams, Link } from "react-router-dom",""
@@ -3484,7 +2538,6 @@ const mockPost: ForumPost = {,"
   isAnswered: true,
   isFeatured: true;
 },
-
 
   id: "1"""
   title: "Best practices for AI model fine-tuning"","
@@ -3552,7 +2605,6 @@ const mockReplies: ForumReply[] = [
     upvotes: 15,
     downvotes: 0,
 
-
     id: "reply4"","
     content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?"","
   authorId: "user5"""
@@ -3616,7 +2668,6 @@ class ErrorBoundary extends React.Component {
                   <div className="font-medium text-lg">{post.authorName}</div>""
                     <Badge variant="outline" className="mt-1">"
 
-
       <SEO;`;
       />;
         <div className="flex items-center gap-3 mb-6">;"
@@ -3656,11 +2707,9 @@ class ErrorBoundary extends React.Component {
             <div className="flex flex-wrap gap-2 mb-6">"
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">"
 
-
         title={`${post && post.title} | Community Forum | Zion AI Marketplace`}
         description={post && post.content.substring(0, 160)}`;
         keywords={`community, forum, discussion, ${post && post.tags.join()}`}
-
 
           <Link to={`/community/category/${post && post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">;"
 
@@ -3713,7 +2762,6 @@ class ErrorBoundary extends React.Component {
 
                   </>;
                 )}
-
 
                   onClick={handleReportPost}>;
                   <Flag className="h-4 w-4 mr-1" />;"
@@ -3811,8 +2859,7 @@ pr-12325
                   reply={reply}
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
 
-<<<<<<< HEAD
-          {post && post.isLocked && (;
+{post && post.isLocked && (;
                 </Alert>;              )}
             </div>;
           )}
@@ -3840,29 +2887,11 @@ pr-12325
 
                   onMarkAnswer={() => handleMarkAsAnswer(reply && reply.id)}
                   canMarkAnswer={!post && post.isAnswered && (isAuthor || isAdminOrMod)}
-<<<<<<< HEAD
-                />;                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
-=======
-
-                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+/>;                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
 
                   canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
                 />
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-                />;
-onMarkAnswer={() => handleMarkAsAnswer(reply && reply.id)}
-                  canMarkAnswer={!post && post.isAnswered && (isAuthor || isAdminOrMod)}
-                />;
-                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
-
-                  canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
-                />
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
                 />
@@ -3878,10 +2907,6 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
                   canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
                 />
 
-<<<<<<< HEAD
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               ))}
           </div>;
         </div>;
@@ -3889,8 +2914,6 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
     </AppLayout>;
   );
 }
-
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -3908,9 +2931,6 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
             </div>)}
           {!post.is_locked && ("
             <div className="mb - 8">;"
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="mt - 8">;
           <h2 className="text - xl font - bold mb - 6">Responses ({post.reply_count})</h2>;
           {post.is_answered && (
@@ -3960,34 +2980,20 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
             <div className="mb - 8">;"
               <h3 className="text - lg font - medium mb - 4">Your Response</h3>;"
                 <ReplyForm on_submit={handleSubmitReply} />) : (
-<<<<<<< HEAD
-                <Alert>;
+<Alert>;
 <<<<<<< HEAD
                   <AlertDescription>;"
-=======
-                  <AlertDescription>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     Please <Link to="/login" className="font - medium text - zion - purple hover:underline">sign in</Link> to join the discussion.;
                   </AlertDescription>;
                 </Alert>)}
             </div>)}
-<<<<<<< HEAD
-          {post.is_locked && ("
+{post.is_locked && ("
             <Alert className="mb - 8">;"
               <AlertDescription className="flex items - center">;"
                 <Lock className="h - 4 w - 4 mr - 2" />;
                 This thread has been locked and is no longer open for responses.;
               </AlertDescription>;
             </Alert>)}"
-=======
-          {post.is_locked && (
-            <Alert className="mb - 8">;
-              <AlertDescription className="flex items - center">;
-                <Lock className="h - 4 w - 4 mr - 2" />;
-                This thread has been locked and is no longer open for responses.;
-              </AlertDescription>;
-            </Alert>)}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className="space - y-6">;
             {replies;
               .filter (reply => !reply.is_answer);
@@ -3995,18 +3001,6 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
                 <ReplyCard;
                   key={reply.id}
                   reply={reply}
-=======
-
-
-                    Please <Link to="/login" className="font - medium text - zion - purple hover:underline">sign in to join the discussion.;"
-                  ;)
-            <Alert className="mb - 8">;"
-              <AlertDescription className="flex items - center">;"
-                <Lock className="h - 4 w - 4 mr - 2" />;"
-
-            )}"
-          <div className="space - y-6">;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   onMarkAnswer={() => handleMarkAsAnswer (reply.id)}
                   canMarkAnswer={!post.is_answered && (is_author || isAdminOrMod)}
                 />))}
@@ -4014,16 +3008,7 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
         </div>;
       </div>;
     </AppLayout>);
-<<<<<<< HEAD
-
-
-          ;"
-=======
-}
-
-;
-          ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+;"
           <div className="space-y-6">;
             {replies;
               .filter(reply => !reply.isAnswer);
@@ -4039,8 +3024,7 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
         </div>;
       </div>;
     </AppLayout>;
-<<<<<<< HEAD
-  ),; downvotes: 0;
+),; downvotes: 0;
 };
 {"
   id: "reply3";"
@@ -4070,45 +3054,12 @@ downvotes: 0;
   return (<AppLayout> <div className="container py-8" > <h1>Post not found</h1> <Button asChild className="mt-4" > <Link to="/community" >Back to Community</Link> </Button> </div> </AppLayout> const handleUpvote = () => {}
   if (!user) {}
   toast ({}
-=======
-  ),; downvotes: 0 
-};
-{
-  id: "reply3";
-postId: "1";
-content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.";
-authorId: "user4";
-authorName: "Emma Davis";
-authorRole: "ML Research Lead";
-createdAt: "2025-04-02T09:45:00Z";
-updatedAt: "2025-04-02T09:45:00Z";
-upvotes: 15;
-downvotes: 0;
-isAnswer: true 
-};
-{
-  id: "reply4";
-postId: "1";
-content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?";
-authorId: "user5";
-authorName: "David Lin";
-createdAt: "2025-04-02T11:20:00Z";
-updatedAt: "2025-04-02T11:20:00Z";
-upvotes: 4;
-downvotes: 0 
-}];
-//Using `useParams` without type arguments avoids issues when TypeScript //can't determine the generic type for the helper from React Router. //Cast the result instead to provide the expected shape. //For this demo, we'll assume the post is found if (!post) {
-  return (<AppLayout> <div className="container py-8" > <h1>Post not found</h1> <Button asChild className="mt-4" > <Link to="/community" >Back to Community</Link> </Button> </div> </AppLayout> const handleUpvote = () => {
-  if (!user) {
-  toast ({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return;
 }
 ;
 
 };
-<<<<<<< HEAD
-  if (!user) {}
+if (!user) {}
   toast ({}
   return;
 }
@@ -4123,29 +3074,11 @@ downvotes: 0
 postId: post.id;
 content;'
 authorId: user.id || 'unknown';'
-=======
-  if (!user) {
-  toast ({
-  return;
-}
-};
-  if (!user) {
-  toast ({
-  return;
-}//Create a new reply const newReply: ForumReply = {
-  id: `reply$ {
-  Date.now () 
-}`;
-postId: post.id;
-content;
-authorId: user.id || 'unknown';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 authorName: user.displayName || 'Anonymous';
 authorAvatar: user.avatarUrl;
 createdAt: new Date () .toISOString ();
 updatedAt: new Date () .toISOString ();
 upvotes: 0;
-<<<<<<< HEAD
 downvotes: 0;
 };
 };
@@ -4186,79 +3119,17 @@ downvotes: 0;
 }onMarkAnswer= {}
   () => handleMarkAsAnswer (reply.id) 
 }canMarkAnswer= {}
-=======
-downvotes: 0 
-};
-};
-  //Only post author or admin can mark an answer if (!isAuthor && !isAdminOrMod) {
-  toast ({
-  return;
-}//Update the replies 
-};
-  if (!user) {
-  toast ({
-};
-};
-  post.authorRole 
-}</Badge>) 
-}</div> </div> </time> </div> </div> </Badge>) ) 
-}</div>) ) 
-}</div> <div className=" flex flex-wrap items-center justify-between gap-4 mt-6"> <div className=" flex items-center gap-4"> <Button <Link to= {
-  `/community/edit/$ {
-  post.id 
-}` 
-}> <Edit className=" h-4 w-4 mr-1"/> Edit </Link> </Button>) 
-}{
-  isAdminOrMod && (<> <Button variant=" ghost"size=" sm"onClick= {
-  handlePinPost 
-}> </Button> </>) 
-}<Button > <Flag className=" h-4 w-4 mr-1"/> Report </Button> </div> </div> </CardContent> </Card>) ) 
-
-    );"
-
-  return (<AppLayout> <div className="container py-8" > <h1>Post not found</h1> <Button asChild className="mt-4" > <Link to="/community" >Back to Community  </div>  const handleUpvote = () => {"
-}) 
-}</div> </div> </time> </div> </div> ) ) 
-}</div>) ) "
-}</div> <div className=" flex flex-wrap items-center justify-between gap-4 mt-6"> <div className=" flex items-center gap-4"> <Button <Link to= {"
-}> <Edit className=" h-4 w-4 mr-1"/> Edit  )"
-  isAdminOrMod && (<> <Button variant=" ghost"size=" sm"onClick= {"
-  handlePinPost;)
-}>  </>) "
-}<Button > <Flag className=" h-4 w-4 mr-1"/> Report  </div> </div>  ) )"
-}</div>) 
-  user ? (<ReplyForm onSubmit= {
-  handleSubmitReply;)"
-}/>) : (<Alert> <AlertDescription> Please <Link to=" /login"className=" font-medium text-zion-purple hover:underline" >sign in to join the discussion.  )"
-
-}This thread has been locked and is no longer open for responses.  ) 
-}.filter (reply => !reply.isAnswer) .map (reply => (<ReplyCard key= {
-  reply.id;
-}reply= {
-  reply;
-}onMarkAnswer= {)
-  () => handleMarkAsAnswer (reply.id) 
-}canMarkAnswer= {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   !post.isAnswered && (isAuthor || isAdminOrMod) 
 }/>) ) 
 }</div> </div> </div> </AppLayout>) 
 }
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

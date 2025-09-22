@@ -131,7 +131,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
             rotate: 360,
             scale: [1, 1 && 1.2, 1],
-            boxShadow: ['
+            boxShadow: [';
               '0 0 20px rgba(6, 182, 212, 0 && 0.5)','
               '0 0 40px rgba(168, 85, 247, 0 && 0.8)','
               '0 0 20px rgba(6, 182, 212, 0 && 0.5)',
@@ -162,7 +162,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
             rotate: 360,
             scale: [1, 1 && 1.2, 1]
-            boxShadow: ["
+            boxShadow: [";
               "0 0 20px rgba(6, 182, 212, 0 && 0.5)""
               "0 0 40px rgba(168, 85, 247, 0 && 0.8)""
               "0 0 20px rgba(6, 182, 212, 0 && 0.5)"
@@ -414,15 +414,15 @@ if ( {) {}
               }}
               transition={{}
                 duration: Math.random() * 10 + 10;
-                repeat: Infinity'
-                ease: 'easeInOut'
+                repeat: Infinity';
+                ease: 'easeInOut';
                 duration: Math.random() * 10 + 10,
                 repeat: Infinity,'
                 ease: 'easeInOut',
               }}
               style={{'
-                left: Math.random() * 100 + '%''
-                top: Math.random() * 100 + '%'
+                left: Math.random() * 100 + '%'';
+                top: Math.random() * 100 + '%';
               }}            />              animate={{}
           {/* Floating orbs */}
           {[...Array (20)].map ((_, i) => (
@@ -484,7 +484,7 @@ if ( {) {}
               transition={{ duration: 1 }}
             >
               <motion.h1 "
-                className="text-6xl md:text-8xl font-bold text-white mb-8"'
+                className="text-6xl md:text-8xl font-bold text-white mb-8"';
               className='absolute w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - full opacity - 30';
               animate={{}
                 coordinate_x: [0, Math.random () * 100 - 50],
@@ -533,7 +533,7 @@ if ( {) {}
                 className="text - 6xl md:text - 8xl font - bold text - white mb - 8";
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}"
-                className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
+                className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto";
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}>;'
                 Revolutionary{' '}
@@ -578,7 +578,7 @@ if ( {) {}
                 </span>
               </motion.h1>"
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
-
+;
       return () => observer.disconnect()
     }
   }, []),
@@ -660,7 +660,7 @@ sections.forEach(section => observer.observe(section));
         {/* Enhanced animated background */}'
         <div className='absolute inset-0'>
           {/* Quantum grid effect */}
-          <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>
+          <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>;
 origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Floating orbs */}
           {[...Array(20)].map((_, i) => (
@@ -692,7 +692,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 1 }}
             >
 <motion.h1
-                className='text-6xl md:text-8xl font-bold text-white mb-8'
+                className='text-6xl md:text-8xl font-bold text-white mb-8';
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.5, delay: 0.5 }}
@@ -706,7 +706,7 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,"
                 <span className="text-cyan-400 font-semibold"> Space Technology</span> Solutions;
               </motion.p>
               <motion.div"
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"'
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"';
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent'>
 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -721,8 +721,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Zion Tech Group;
                 </span>
               </motion.h1>"
-                className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
-                className='text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto'
+                className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto";
+                className='text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto';
                 initial={{ opacity: 0, y: 30 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
                 animate={{ opacity: 1, y: 0 }}
@@ -741,7 +741,7 @@ Revolutionary{' '}
                 </span>{' '}
                 Solutions
               <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'
+                className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12';
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.5 }}
@@ -750,7 +750,7 @@ Revolutionary{' '}
 "
                     whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
                     whileTap={{ scale: 0.95 }}"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
                   >"
                     Explore Services <ArrowRight className="w-5 h-5" />
                   </motion.button>
@@ -759,17 +759,17 @@ Revolutionary{' '}
                   <motion.button"
                     whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0.5)" }}
                     whileTap={{ scale: 0.95 }}"
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300";
                   >"
                     Get Started <Rocket className="w-5 h-5" />
 <Link href='/services'>
                   <motion.button
                     whileHover={{
-                      scale: 1.05
+                      scale: 1.05;
                       boxShadow: '0 0 30px rgba(6, 182, 212, 0.5)'
                     }}
                     whileTap={{ scale: 0.95 }}
-                    className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
+                    className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300';
                   >
                     Explore Services <ArrowRight className='w-5 h-5' />
                   </motion.button>
@@ -777,11 +777,11 @@ Revolutionary{' '}
                 <Link href='/contact'>
                   <motion.button
                     whileHover={{
-                      scale: 1.05
+                      scale: 1.05;
                       boxShadow: '0 0 30px rgba(168, 85, 247, 0.5)'
                     }}
                     whileTap={{ scale: 0.95 }}
-                    className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300'
+                    className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300';
                   >
                     Get Started <Rocket className='w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -803,7 +803,7 @@ className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 2 }}
             >
-<div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-center'>
+<div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-center'>;
                 <div className='flex flex-col items-center'>
                   <Phone className='w-6 h-6 text-cyan-400 mb-2' />
                   <p className='text-sm text-gray-300'>Phone</p>
@@ -855,7 +855,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
-              <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
+              <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
                   Revolutionary Services;
                 </span>
@@ -866,7 +866,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 worldwide.              </p>            >"
               className="text-center mb-16"
             >"
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">"
+              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">";
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Revolutionary Services;
                 </span>
@@ -907,14 +907,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
-              <div className='flex flex-col md:flex-row gap-4 justify-center items-center'>
+              <div className='flex flex-col md:flex-row gap-4 justify-center items-center'>;
                 <div className='relative flex-1 max-w-md'>
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
                   <input'
                     type='text''
                     placeholder='Search services...'
                     value={searchQuery}"
-              <div className="flex flex-col md:flex-row gap-4 justify-center items-center">"
+              <div className="flex flex-col md:flex-row gap-4 justify-center items-center">";
                 <div className="relative flex-1 max-w-md">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     onChange={e => setSearchQuery(e && e.target.value)}'
@@ -933,7 +933,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {categories.map(category => (                    <button
 
                     onChange={e => setSearchQuery(e.target.value)}
-                    className='w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 backdrop-blur-lg'
+                    className='w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 backdrop-blur-lg';
                   />
                 </div>
                 <div className='flex gap-2'>
@@ -957,7 +957,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 1, delay: 0 && 0.4 }}
               viewport={{ once: true }}
 
-className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
               {filteredServices.map((service, index) => (
@@ -973,7 +973,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='group'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
-                  <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>
+                  <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>;
                     <div className='flex items-start justify-between mb-4'>
                       <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
                         <Brain className='w-6 h-6 text-white' />
@@ -1016,7 +1016,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               className={`w-4 h-4 ${}
                                 i < Math && Math.floor(service && service.rating)'
                                   ? 'text-yellow-400 fill-current''
-                                  : 'text-gray-600'`
+                                  : 'text-gray-600'`;
                               }`}
                             />;
                           ))}
@@ -1028,7 +1028,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
 
-<h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>
+<h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>;
                       {service.name}
                     </h3>'
                     <p className='text-gray-300 text-sm mb-4 line-clamp-3'>
@@ -1041,11 +1041,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
 '
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>
-
+;
                         </div>
                       </div>
                     </div>"
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">;
                       {service.name}
                     </h3>"
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">
@@ -1103,7 +1103,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='space-y-2 mb-6'>
                       <h4 className='text-sm font-semibold text-white'>
                         Key Features:
-                      </h4>
+                      </h4>;
                       <ul className='space-y-1'>
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <li
@@ -1133,7 +1133,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>"
                         <div className="flex items-center gap-1">"
                           <Clock className="w-3 h-3" />
-className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2'
+className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2';
                         >
                           Learn More <ArrowUpRight className='w-4 h-4' />
                         </motion.button>
@@ -1502,14 +1502,14 @@ className='text-center mt-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <div className='bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-12 border border-cyan-400/30'>
-                <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+                <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
                   Ready to Transform Your Business?
                 </h3>'
                 <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
                   Join the future with our revolutionary quantum AI, neural;
                   interface, and space technology solutions.
                 </p>'
-                <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
+                <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
                   <Link href='/contact'>
                     <motion.button;
                       whileHover={{}
@@ -1542,7 +1542,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Link href='/services'>;
                     <motion&& motion.button
                       whileTap={{ scale: 0.95 }}
-                      className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
+                      className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300';
                     >
                       Get Started Today
                     </motion.button>
@@ -1553,7 +1553,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       whileHover={{
                       }}
                       whileTap={{ scale: 0 && 0.95 }}'
-                      className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300'>                    <motion&& motion.button"
+                      className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300'>                    <motion&& motion.button";
                       whileHover={{ scale: 1 && 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0 && 0.5)" }}
                       whileTap={{ scale: 0 && 0.95 }}"
                       className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover: bg-cyan-400 hover:text-gray-900 transition-all duration-300">;
@@ -1657,7 +1657,7 @@ export default Homepage2046;
 };
 
                       whileTap={{ scale: 0.95 }}
-                      className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300'
+                      className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300';
                     >
                       View All Services
                     </motion.button>

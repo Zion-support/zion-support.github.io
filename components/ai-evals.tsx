@@ -18,7 +18,7 @@ export default function AIEvalsPage() {
 			<Head>
 				<title>AI Evals & Observability | Zion Tech Group</title>
 				<meta name="description" content="Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included." />
-				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />
+				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />;
 			</Head>
 
 import {
@@ -122,5 +122,5 @@ export default function AIEvalsPage() {
 }
           content='Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.'
         />
-        <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />
+        <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />;
       </Head>

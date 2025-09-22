@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/pages/ContentGenerator.tsx
+:src_backup/pages/ContentGenerator.tsx
 import React, { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { Button } from '@/components/ui/button';
@@ -29,9 +29,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { useRouter } from 'next/router';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/ContentGenerator.tsx
 
 export default function ContentGenerator() {
 
@@ -358,7 +355,7 @@ export default function ContentGenerator() {
       </div>
     </>
 
-<<<<<<< HEAD:src_backup/pages/ContentGenerator.tsx
+:src_backup/pages/ContentGenerator.tsx
 }, [user, isLoading, router]);
 const generateContent = async () => {;
   setIsGenerating (true);
@@ -415,5 +412,3 @@ testEmail ;
 }</CardContent> </Card> </div> </div> </div> </div> </>) ;
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/ContentGenerator.tsx

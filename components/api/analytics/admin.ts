@@ -100,7 +100,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       referralConversions;'
       topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
       referralConversions: 2
-
+;
 const quotesAccepted = quotesData.filter(
       q => q.status === 'accepted'
     ).length;
@@ -130,7 +130,7 @@ usersData.forEach(u => {
         quotesAccepted,}
         activeProjects,}
       },
-      topCategories: Object.entries(categoryCounts)
+      topCategories: Object.entries(categoryCounts);
         .sort((a, b) => b[1] - a[1])
         .slice(0, 5)
         .map(([label, value]) => ({ label, value })),
@@ -176,7 +176,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         quotesAccepted: 1,}
         activeProjects: 2,}
       },
-      topCategories: [
+      topCategories: [;
         { label: 'AI/ML',}
   value: 2,}
 },
@@ -185,7 +185,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 },
       ],
       referralConversions: 2,
-      geo: [
+      geo: [;
 origin/cursor/automate-test-improve-and-merge-code-2533
         { label: 'US', value: 2 },
         { label: 'IN', value: 1 },

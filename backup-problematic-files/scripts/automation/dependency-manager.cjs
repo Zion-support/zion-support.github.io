@@ -105,8 +105,7 @@ class $1 {}
                   "current": version})};"
           if (packageJson.devDependencies) {}"
               packageJson.devDependencies;
-<<<<<<< HEAD
-            )) {}
+)) {}
   if (typeof version !== "string" || version.trim() === "") {}
   status.packageJsonIssues.push({})
   "type": "INVALID_DEV_VERSION",
@@ -123,11 +122,6 @@ class $1 {}
       // Check node_modules;
       const nodeModulesPath = path.join(this.projectRoot, "node_modules");
       if (fs.existsSync(nodeModulesPath)) {}
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } catch (error) {}
   status.packageJsonIssues.push({})
   "type": "PARSE_ERROR",
@@ -136,12 +130,6 @@ class $1 {}
 ;
       // Check node_modules;
       const nodeModulesPath = path.join(this.projectRoot, "node_modules");
-=======
-
-            "error": error.message})};"
-      // Check node_modules;"
-      const nodeModulesPath = path.join(this.projectRoot, "node_modules");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (fs.existsSync(nodeModulesPath)) {}
 
       // Check node_modules;"
@@ -190,32 +178,20 @@ class $1 {}
         "latest": info.latest}))} catch (error) {}"
   // npm outdated returns non-zero exit code when there are outdated deps;
       if (error.stdout) {}
-<<<<<<< HEAD
-  try {}
+try {}
   const outdated = JSON.parse(error.stdout);
           return Object.entries(outdated).map((["name", "info"]) => ({})
   name,
             "current": info.current,
             "wanted": info.wanted,
             "latest": info.latest}))} catch {}
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } catch (error) {}
-=======
-  const outdated = JSON.parse(error.stdout);"
-
-            "latest": info.latest}))} catch {}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // npm outdated returns non-zero exit code when there are outdated deps;
 
   return []} catch {}
   return []};
   async fixPackageJsonIssues(issues) {}
   const fixes = [];
-
 
       let modified = false;
       for (const issue of issues) {}
@@ -233,9 +209,7 @@ class $1 {}
             modified = true;
             fixes.push({})"
 
-
   // Set a reasonable default version;"
-
 
     return fixes};
   async cleanCorruptedDependencies() {}
@@ -308,19 +282,10 @@ async function $1() {}
     process.exit(1)};
 if (require.main === module) {}
   main()};
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = DependencyManager;
-module.exports = DependencyManager;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 module.exports = DependencyManager;
 "`;

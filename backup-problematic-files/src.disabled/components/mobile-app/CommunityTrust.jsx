@@ -7,20 +7,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }
@@ -28,14 +28,6 @@ import React from 'react';
 interface CommunityTrustProps {
   // Add props here as needed
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const CommunityTrust = ({ className }) => {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-const CommunityTrust = ({ className }) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 }
 
@@ -78,13 +70,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       <h1>CommunityTrust</h1>
       <p>This component is under development.</p>
     </div>
+);
 <<<<<<< HEAD
-  );
-<<<<<<< HEAD
-=======
-  )
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     </div>'
 pr-12325

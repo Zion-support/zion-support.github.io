@@ -1,28 +1,12 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
-=======
-import React, { useState } from 'react';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-<<<<<<< HEAD
-  TooltipTrigger} from "@/components/ui/tooltip",
+TooltipTrigger} from "@/components/ui/tooltip",
 import { useToast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 export function OnChainExport() {
@@ -31,39 +15,18 @@ export function OnChainExport() {
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
   const { toast } = useToast(),
   const { user } = useAuth(),
-  
+
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available
       const ethereum = (window as any).ethereum,
       if (!ethereum) {
         toast({
-=======
-
-  )
-}
-
-import React, { useState } from './react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
-import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
-=======
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-import { useToast } from '@/hooks/use-toast';
-import { useAuth } from '@/hooks/useAuth';
-
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Tooltip;
   TooltipContent;
   TooltipProvider;
-<<<<<<< HEAD
-  TooltipTrigger } from '@/components / ui / tooltip'; import { use_toast  } from '@/hooks / use - toast';
+TooltipTrigger } from '@/components / ui / tooltip'; import { use_toast  } from '@/hooks / use - toast';
 import { use_auth  } from '@/hooks / use_auth';
 export /**
  * OnChainExport - Function description
@@ -90,18 +53,18 @@ if ( {) {
         }),
         return
       }
-      
+
       // Request accounts
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
       const address = accounts[0],
-      
+
       // Sign message to verify ownership
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
       await ethereum.request({
         method: 'personal_sign',
         params: [address, message]
       }),
-      
+
       setIsConnected(true),
       toast({
         title: "Wallet connected",
@@ -114,15 +77,15 @@ if ( {) {
       })
     }
   },
-  
+
   const handleExportTokens = async () => {
     setIsExporting(true),
     setExportStatus('processing'),
-    
+
     try {
       // Simulate token export
       await new Promise(resolve => setTimeout(resolve, 2000)),
-      
+
       setExportStatus('success'),
       toast({
         title: "Tokens exported",
@@ -138,7 +101,7 @@ if ( {) {
       setIsExporting(false)
     }
   },
-  
+
   return (
     <Card>
       <CardHeader>
@@ -327,40 +290,4 @@ export function OnChainExport() {;
   );
 }
 <<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-  TooltipTrigger} from "@/components/ui/tooltip",
-import { useToast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-export function OnChainExport() {
-  );
-}//Request accounts ;
-
-};';
-setExportStatus ('success');
-toast ({;
-  ;
-}catch (error: any) {';
-  setExportStatus ('error');
-toast ({;
-  ;
-}finally {;
-  setIsExporting (false) ;
-
-};
-h-5 w-5"/>) ";
-}On-chain Export <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Info className=" h-4 w-4 text-muted-foreground cursor-help"/> </TooltipTrigger> <TooltipContent> <p className=" max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p> </TooltipContent> </Tooltip> </TooltipProvider> </CardTitle> <CardDescription>Export your ZION$ to an external wallet</CardDescription> </CardHeader> <CardContent> <span>Available to export:</span> <span className=" font-medium">250 ZION$</span> </div> {'";
-  exportStatus === 'success' ? (<Button className=" w-full bg-green-600 hover:bg-green-700"disabled> <Check className=" mr-2 h-4 w-4"/> Tokens Exported </Button>) : (<Button className=" w-full"onClick={;
-  handleExportTokens ;
-}disabled= {;
-  isExporting ;
-}> </Button>) ";
-}</div>) : (<div className=" space-y-2"> <p className=" text-sm text-muted-foreground mb-3" > Connect your web3 wallet to export tokens to the blockchain. </p> Connect Wallet </Button> </div>) ;
-}</CardContent> </Card>) ;
-}'"
-  )
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

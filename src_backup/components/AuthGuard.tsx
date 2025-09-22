@@ -1,17 +1,5 @@
-<<<<<<< HEAD:src/components/AuthGuard.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-<<<<<<< HEAD
-      const redirectTo = options?.redirectTo |'/login'      const returnUrl = options?.returnUrl |router.asPath
-=======
-=======
-const redirectTo = options?.redirectTo |'/login'
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthGuard.tsx
+:src/components/AuthGuard.tsx
+const redirectTo = options?.redirectTo |'/login'      const returnUrl = options?.returnUrl |router.asPath
       const returnUrl = options?.returnUrl |router.asPath
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           if (!requireAuth({ showToast: false })) return false
@@ -22,7 +10,7 @@ const redirectTo = options?.redirectTo |'/login'
     isAuthenticated
     user
 
-<<<<<<< HEAD:src/components/AuthGuard.tsx
+:src/components/AuthGuard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -36,11 +24,6 @@ export function AuthGuard({
   allowGuest = false}: AuthGuardProps) {
   const { user, isAuthenticated, isLoading } = useAuth(),
   const router = useRouter(),
-=======
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthGuard.tsx
       const redirectTo = options?.redirectTo || '/login';
       const returnUrl = options?.returnUrl || router && router.asPath;
           if (!requireAuth({ showToast: false })) return false,;
@@ -49,8 +32,6 @@ export function AuthGuard({
   useEffect(() => {
     // Don't redirect while auth is still loading
     if (isLoading) return,
-<<<<<<< HEAD
-
 <<<<<<< HEAD:src/components/AuthGuard.tsx
     // If authentication is required but user is not authenticated
     if (requireAuth && !isAuthenticated && !allowGuest) {
@@ -86,12 +67,6 @@ export function AuthGuard({;
       router.push(`${redirectTo}?returnTo=${returnTo}`),;
       return;
     }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthGuard.tsx
     const userRoles = user?.role ? [user && user.role] : [];
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
@@ -204,7 +179,7 @@ export function useAuthGuard() {
     if (!isAuthenticated) {
       const redirectTo = options?.redirectTo || '/login',
       const returnUrl = options?.returnUrl || router.asPath,
-      
+
       if (options?.showToast !== false) {
         toast({
           title: "Authentication Required",
@@ -292,15 +267,9 @@ export function useAuthGuard() {;
     user;
     isLoading}
 }
-<<<<<<< HEAD:src/components/AuthGuard.tsx
+:src/components/AuthGuard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthGuard.tsx
-
-
 
       const redirect_to = options?.redirect_to || '/login';
       const return_url = options?.return_url || router.as_path;
@@ -317,14 +286,8 @@ export function useAuthGuard() {;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src/components/AuthGuard.tsx
+:src/components/AuthGuard.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -570,9 +533,6 @@ return false;
 }'"
     isLoading}
 }
-<<<<<<< HEAD:src/components/AuthGuard.tsx
+:src/components/AuthGuard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthGuard.tsx

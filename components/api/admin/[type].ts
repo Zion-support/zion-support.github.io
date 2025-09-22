@@ -7,7 +7,7 @@ import { MOCK_DATA } from '../../../utils/admin/mockData';
 function isSupabaseConfigured() {
   return (
     !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
-    process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co'
+    process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co';
   );
 }
 
@@ -27,7 +27,7 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     page: page ? Number(page) : 0,
     pageSize: pageSize ? Number(pageSize) : 20,
     filters,
-    format: (format as any) || undefined
+    format: (format as any) || undefined;
   };
 }
 
@@ -46,7 +46,7 @@ function toCsv(rows: any[]): string {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse;
 ) {
   const { type } = req.query as { type: AdminType };
 
@@ -64,7 +64,7 @@ export default async function handler(
       let query = client.from(table).select('*', { count: 'exact' });
 
       if (params.search) {
-        // heuristic: search name/title/email
+        // heuristic: search name/title/email;
         query = query.or(
           'name.ilike.%' +
             params.search +
@@ -124,7 +124,7 @@ export default async function handler(
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
           return (
-            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
+            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
           );
         });
       }
@@ -180,7 +180,7 @@ export default async function handler(
       const updated = {
         ...list[idx],
         ...updates,
-        updated_at: new Date().toISOString()
+        updated_at: new Date().toISOString();
       };
       list[idx] = updated as any;
 

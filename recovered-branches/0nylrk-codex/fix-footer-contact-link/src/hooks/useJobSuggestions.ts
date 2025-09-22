@@ -1,35 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-useEffect(() => {
-
-    const fetchSuggestedJobs = async () => {
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -37,15 +14,11 @@ import {JobMatch} from "@/types/jobs";
 export function useJobSuggestions(talentId?: string) {;
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+=======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -66,30 +39,16 @@ import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
 
-
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { JobMatch } from "@/types/jobs";
 export function useJobSuggestions(talentId?: string) {};
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
-<<<<<<< HEAD
-  const [isLoading, setIsLoading] = useState(true);"
+const [isLoading, setIsLoading] = useState(true);"
 import { JobMatch } from "@/types/jobs",
 export function useJobSuggestions(talentId?: string) {}
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
-  
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -101,39 +60,19 @@ export function useJobSuggestions(talentId?: string) {}
       if (!talentId) return;
       try {
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  useEffect(() => {};
-    const fetchSuggestedJobs = async () => {};
-      if (!talentId) return;
-      try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         setIsLoading(true);
 
       if (!talentId) return,
-      
+
       try {}
         setIsLoading(true),
-        
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         // Get job matches with job details
         const { data, error } = await supabase
 =======
-
-
 
         // Get job matches with job details;
         const { data, error } = await supabase"
@@ -141,60 +80,24 @@ export function useJobSuggestions(talentId?: string) {}
           .from("job_talent_matches")
           .select(`
 
-<<<<<<< HEAD
-=======
-
-            *,
-            job:job_id (*)`
-          `)"
-          .eq("talent_id", talentId)
-<<<<<<< HEAD
-<<<<<<< HEAD
-          .order("created_at", { ascending: false });
-        if (error) throw error;
-        setJobMatches(data |[])
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           .order("created_at", { ascending: false }),
-          
+
         if (error) throw error,
-        
+
         setJobMatches(data || [])
-<<<<<<< HEAD
-
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       } catch (error) {
         console && console.error("Error fetching job matches:", error);
         toast({
 
-<<<<<<< HEAD
-=======
-=======
-      } catch (error) {
-        console.error("Error fetching job matches:", error),
-        toast({
-          title: "Error";
-          description: "Failed to load job suggestions"
-          title: "Error",
-          description: "Failed to load job suggestions",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           variant: "destructive"})
       } finally {
         setIsLoading(false)
       }
-<<<<<<< HEAD
-
-      } finally {
+} finally {
         setIsLoading(false)
       }
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 "
@@ -209,10 +112,6 @@ export function useJobSuggestions(talentId?: string) {}
         setIsLoading (false);
       }
 
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     fetchSuggestedJobs()
   }, [talentId]);
@@ -223,11 +122,9 @@ export function useJobSuggestions(talentId?: string) {}
 =======
         setIsLoading(true);
       if (!talentId) return,
-      
+
       try {
         setIsLoading(true),
-        
-
 
         // Get job matches with job details
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -239,8 +136,6 @@ export function useJobSuggestions(talentId?: string) {}
           `)
           .eq("talent_id", talentId)
 
-
-
             *,
             job:job_id (*)
           `)
@@ -249,41 +144,24 @@ export function useJobSuggestions(talentId?: string) {}
         if (error) throw error;
         setJobMatches(data |[])
           .order("created_at", { ascending: false }),
-          
-        if (error) throw error,
-        
-        setJobMatches(data || [])
 
+        if (error) throw error,
+
+        setJobMatches(data || [])
 
       } catch (error) {
         console && console.error("Error fetching job matches:", error);
         toast({
 
-
           title: "Error",
           description: "Failed to load job suggestions",
-
 
           variant: "destructive"})
       } finally {
         setIsLoading (false);
       }
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        setIsLoading(true);        // Get job matches with job details
-        const { data, error } = await supabase
-          .from("job_talent_matches")
-          .select(`
-            *,
-            job:job_id (*)
-          `)
-          .eq("talent_id", talentId)      } finally {
-        setIsLoading (false);
-      }
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
     }
@@ -299,7 +177,6 @@ export function useJobSuggestions(talentId?: string) {}
     }
     fetchSuggestedJobs()
   }, [talentId]);
-
 
       } finally {}
         setIsLoading(false)
@@ -308,33 +185,20 @@ export function useJobSuggestions(talentId?: string) {}
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
-    
+
     fetchSuggestedJobs()
   }, [talentId]),
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
@@ -343,8 +207,6 @@ export function useJobSuggestions(talentId?: string) {}
         status
 =======
 
-
-
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {}
     try {}
       const updates = {}
@@ -352,45 +214,27 @@ export function useJobSuggestions(talentId?: string) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
 
-
       },
-      
+
       const { error } = await supabase"
         .from("job_talent_matches")
         .update(updates)"
         .eq("id", matchId),
-        
+
       if (error) throw error,
-      
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Update local state
 
       setJobMatches(matches => 
         matches && matches.map(match => 
-          match && match.id === matchId 
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+          match && match.id === matchId
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match;
         )
 
-
       ),
-      
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 '
@@ -400,15 +244,6 @@ export function useJobSuggestions(talentId?: string) {}
 <<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-      );
-<<<<<<< HEAD
-<<<<<<< HEAD
-      ),
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // Show appropriate message
 =======
@@ -422,7 +257,7 @@ export function useJobSuggestions(talentId?: string) {}
         )
       );
       ),
-      
+
       // Show appropriate message
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       if (status === 'applied') {
@@ -445,21 +280,12 @@ export function useJobSuggestions(talentId?: string) {}
       }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
       console && console.error("Error updating job match status:", error);
       toast({
 <<<<<<< HEAD
-=======
-
-=======
-      console.error("Error updating job match status:", error),
-      toast({
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         title: "Error";
         description: "Failed to update job status"
@@ -467,18 +293,12 @@ export function useJobSuggestions(talentId?: string) {}
     }
   }
   // Filter matches by status
-<<<<<<< HEAD
-  const newMatches = jobMatches.filter(match => match.status === 'new');
+const newMatches = jobMatches.filter(match => match.status === 'new');
   const viewedMatches = jobMatches.filter(match => match.status === 'viewed');
   const appliedMatches = jobMatches.filter(match => match.status === 'applied');
   const declinedMatches = jobMatches.filter(match => match.status === 'declined');
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const newMatches = jobMatches && jobMatches.filter(match => match && match.status === 'new');
   const viewedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'viewed');
   const appliedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'applied');
@@ -498,50 +318,22 @@ export function useJobSuggestions(talentId?: string) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const declinedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'declined');
 
-
-
-
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return {
-=======
-
-  return {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     jobMatches;
     isLoading;
     updateJobMatchStatus;
     categorizedMatches: {}
       newMatches;
       viewedMatches;
-<<<<<<< HEAD
-      appliedMatches
+appliedMatches
 
       declinedMatches
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        title: "Error",
-        description: "Failed to update job status",
-        variant: "destructive"})
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
-=======
-      appliedMatches;
-      declinedMatches;
-"
-import { useState, useEffect } from "react",;"
-import { supabase } from "@/integrations/supabase/client",;"
-import { toast } from "@/hooks/use-toast",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { JobMatch } from "@/types/jobs",;
 export function useJobSuggestions() { return null; }
         const { data, error } = await supabase;"
@@ -602,9 +394,6 @@ export function useJobSuggestions() { return null; }
   const viewedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'viewed');
   const appliedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'applied');
   const declinedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'declined');
-
-
-
 
   return {
     jobMatches;
@@ -698,28 +487,15 @@ if ( {) {}
       }
     } catch (error) {"
       console.error ("Error updating job match status:", error);
-<<<<<<< HEAD
-      toast ({
-<<<<<<< HEAD
-        title: "Error",
+toast ({
+title: "Error",
   description: "Failed to update job status",
-=======
-      toast ({"
-        title: "Error";"
-        description: "Failed to update job status","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-        title: "Error";
-        description: "Failed to update job status",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive"});
     }
   }
 ;
-<<<<<<< HEAD
-  // Filter matches by status;
-<<<<<<< HEAD
-  const newMatches = jobMatches.filter(match => match.status === 'new'),;
+// Filter matches by status;
+const newMatches = jobMatches.filter(match => match.status === 'new'),;
   const viewedMatches = jobMatches.filter(match => match.status === 'viewed'),;
   const appliedMatches = jobMatches.filter(match => match.status === 'applied'),;
   const declinedMatches = jobMatches.filter(match => match.status === 'declined'),;
@@ -734,16 +510,6 @@ if ( {) {}
       declinedMatches;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  const new_matches = job_matches.filter (match => match.status === 'new');
-  const viewed_matches = job_matches.filter (match => match.status === 'viewed');
-  const applied_matches = job_matches.filter (match => match.status === 'applied');
-=======
-  // Filter matches by status;'
-  const new_matches = job_matches.filter (match => match.status === 'new');'
-  const viewed_matches = job_matches.filter (match => match.status === 'viewed');'
-  const applied_matches = job_matches.filter (match => match.status === 'applied');'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const declined_matches = job_matches.filter (match => match.status === 'declined');
 ;
   return {}
@@ -759,27 +525,13 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }
-<<<<<<< HEAD
 }}
-=======
-
-
-    }
-  }
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 import { useState, useEffect } from "react",;
@@ -904,7 +656,7 @@ job:job id (*) `)
   ...match, status, ... (status === 'viewed' ? {
   viewed at: new Date () .toISOString () 
 }: {
-  
+
 }) 
 }: match) );
 //Show appropriate message 
@@ -943,7 +695,6 @@ export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
 
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),;
-
 
   const [jobMatches, setJobMatches] = useState<JobMatch[]> ([]);
 "

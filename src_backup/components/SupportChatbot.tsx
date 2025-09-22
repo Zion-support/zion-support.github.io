@@ -1,13 +1,7 @@
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-<<<<<<< HEAD
+:src/components/SupportChatbot.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useState, useRef, useEffect } from 'react',;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
 }
     set_messages (prev => [...prev, user_msg]);
     set_loading (true);
@@ -24,11 +18,8 @@ import { useState, useRef, useEffect } from 'react',;
 
 =======
 
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
 import { useState, useRef, useEffect } from 'react'
 import { MessageSquare, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -46,34 +37,16 @@ import { Button } from '@/components/ui/button',;
 import { ChatMessage, ChatInput } from '@/components/ChatAssistant',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-<<<<<<< HEAD
+:src/components/SupportChatbot.tsx
 <<<<<<< HEAD
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Fallback responses when API is unavailable
 const FALLBACK_RESPONSES = [
-
-=======
-interface Msg { id: string, role: 'user' | 'assistant', message: string }
-
-
-
-
-// Fallback responses when API is unavailable
-
-const FALLBACK_RESPONSES = [
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
   "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-<<<<<<< HEAD
+:src/components/SupportChatbot.tsx
 <<<<<<< HEAD
   "While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance."
 ],
@@ -92,7 +65,7 @@ export function SupportChatbot() {
     setMessages(prev => [...prev, userMsg]),
     setLoading(true),
     setTyping(true),
-    
+
     try {
       // Try the Supabase AI chat function first with streaming
       let res = await fetch('https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat', {
@@ -107,18 +80,13 @@ export function SupportChatbot() {
         })
       }),
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
 
       // If Supabase function fails, try local API fallback
       if (!res.ok) {
         res = await fetch('/api/kb-chat', {
-<<<<<<< HEAD
-          method: 'POST',
+method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }]
@@ -147,17 +115,6 @@ export function SupportChatbot() {
             let line = lines[i]?.trim(),
             if (!line) continue,
 =======
-          method: 'POST'
-          headers: { 'Content-Type': 'application/json' }
-          body: JSON.stringify({
-
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
         const message = null;
@@ -169,15 +126,8 @@ export function SupportChatbot() {
         const finalMsg = null;
           message.trim() ||
 
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-<<<<<<< HEAD
+:src/components/SupportChatbot.tsx
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
           FALLBACK_RESPONSES[
 =======
 // Fallback responses when API is unavailable
@@ -207,22 +157,14 @@ const FALLBACK_RESPONSES = [          FALLBACK_RESPONSES[
         let accumulated = ''
         while (!done) {
 
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
           const result = await reader.read();
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           done = result.done;
           buffer += decoder.decode(result.value || new Uint8Array());
           const lines = buffer.split('\n');
 
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
           for (let i = 0; i < lines.length - 1; i++) {
             let line = lines[i]?.trim()
             if (!line) continue
@@ -232,23 +174,7 @@ const FALLBACK_RESPONSES = [          FALLBACK_RESPONSES[
               if (line === '[DONE]') {
                 done = true
                 break
-<<<<<<< HEAD
 ;
-=======
-              }
-              try {
-                const json = JSON.parse(line)
-
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-=======
-
-                const token = null;
-                  json.choices?.[0]?.delta?.content ||
-                  json.choices?.[0]?.text ||
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
                   ''
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 if (token) {
@@ -258,10 +184,7 @@ const FALLBACK_RESPONSES = [          FALLBACK_RESPONSES[
                       m.id === botId ? { ...m, message: accumulated } : m
                     )
                   )
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
 interface Msg {;
   id: string;
   role: 'user' | 'assistant';
@@ -283,21 +206,10 @@ export function SupportChatbot() {;
   const endRef = useRef<HTMLDivElement | null>(null),;
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [messages]),;
   const sendMessage = async (text: string) => {;
-<<<<<<< HEAD
-    const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text },;
+const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text },;
     setMessages(prev => [...prev, userMsg]),;
     setLoading(true),;
     setTyping(true),;
-=======
-    const userMsg: Msg = {;
-      id: Date && Date.now().toString(),;
-      role: 'user',;
-      message: text,
-};
-    setMessages(prev => [...prev, userMsg]);
-    setLoading(true);
-    setTyping(true);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {;
       // Try the Supabase AI chat function first with streaming;
       let res = await fetch('https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat', {;
@@ -354,45 +266,16 @@ export function SupportChatbot() {;
                 if (token) {;
                   accumulated += token,;
                   setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m));
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
 <<<<<<< HEAD
                 }
               } catch (_) {;
-=======
-
-                }
-              } catch (_) {
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
-
-
-                }
-              } catch (_) {
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
                 // ignore parse errors;
               }
             }
           }
-<<<<<<< HEAD
-          buffer = lines[lines.length - 1] || '';
+buffer = lines[lines.length - 1] || '';
         }
-=======
-
-
-        const final = null;
-          accumulated.trim() ||
-
-
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-=======
-
-                }
-              } catch (_) {
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
@@ -423,11 +306,8 @@ export function SupportChatbot() {;
       const errorMsg: Msg = {
         id: Date.now().toString() + '-e'
         role: 'assistant'
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
         message: fallbackResponse
 
           buffer = lines[lines.length - 1] || '';
@@ -442,26 +322,16 @@ export function SupportChatbot() {;
           prev.map (m => (m.id === bot_id ? { ...m, message: final } : m)));
       }
       setMessages(prev => [...prev, errorMsg])
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-=======
-        message: fallbackResponse
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
     } finally {
       setLoading(false)
       setTyping(false)
     }
 
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
   }
   if (!open) {
-    
+
         onClick={() => setOpen(true)}
         size='icon'
         variant='outline'
@@ -473,15 +343,11 @@ export function SupportChatbot() {;
         const final = accumulated.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m))
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-<<<<<<< HEAD
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
-      }
+:src/components/SupportChatbot.tsx
+}
     } catch (err) {
       logErrorToProduction('Chatbot error:', { data: err }),
-      
+
       // Provide a helpful fallback response instead of generic error
       const fallbackResponse = FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.",
       const errorMsg: Msg = { 
@@ -493,24 +359,6 @@ export function SupportChatbot() {;
     } finally {
       setLoading(false),
       setTyping(false)
-=======
-
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-          buffer = lines[lines && lines.length - 1] || '';
-        }
-        const final =;
-          accumulated && accumulated.trim() ||;
-          FALLBACK_RESPONSES[;
-            Math && Math.floor(Math && Math.random() * FALLBACK_RESPONSES && FALLBACK_RESPONSES.length);
-          ] ||;
-          "I'm experiencing technical difficulties. Please contact support@ziontechgroup && ziontechgroup.com for assistance.";
-        setMessages(prev =>;
-          prev && prev.map(m => (m && m.id === botId ? { ...m, message: final } : m));
-        );
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
     }
 =======
         message: fallbackResponse    }
@@ -547,36 +395,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         variant='outline'
         className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
         aria-label='Open help chat'      >
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
         <MessageSquare className='h-5 w-5' />      </Button>
-=======
-
-=======
-        <MessageSquare className='h-5 w-5' />
-
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
       </Button>
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )
   }
 
   return (
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
     <div className="fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40">
       <div className="bg-zion-blue-dark p-2 flex justify-between items-center">
         <span className="text-white font-medium">Help Bot</span>
         <Button
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           variant="ghost"
           size="icon"
           className="text-white"
@@ -584,13 +417,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           aria-label="Close help bot"
         >
           <X className="h-5 w-5" />
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -604,11 +430,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <ChatMessage 
             role="assistant" 
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" 
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
           />
 
         const final = accumulated.trim() ||;
@@ -664,42 +487,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             role="assistant";
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?";
           />;
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-=======
-          />
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         )}
         {messages.map(m => (;
           <ChatMessage key={m.id} role={m.role} message={m.message} />;
         ))}
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
         {typing && (
           <ChatMessage role="assistant" message="..." />
         )}
 =======
 
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
         <div ref={endRef} />
       </div>
       <div className="p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30">
@@ -707,14 +511,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
   )
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
-<<<<<<< HEAD
+:src/components/SupportChatbot.tsx
 <<<<<<< HEAD
 }
 ;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
 
         <div ref={endRef} />;
       </div>;
@@ -766,11 +566,8 @@ setTyping (false) ;
 }
 }
 
-
 }
 ;
-
-
 
       set_loading (false);
       set_typing (false);
@@ -850,7 +647,7 @@ set_typing (false);
 }/>) );
 });
 }<div ref= {
-<<<<<<< HEAD:src/components/SupportChatbot.tsx
+:src/components/SupportChatbot.tsx
 <<<<<<< HEAD
   end_ref;
 }/> </div> </div> </div>);
@@ -859,12 +656,6 @@ set_typing (false);
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======

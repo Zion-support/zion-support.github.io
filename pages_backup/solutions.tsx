@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions.tsx
 <<<<<<< HEAD:pages/solutions.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-import Head from 'next/head';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/solutions.tsx
 
 export default function Solutions() {
   const solutions = [
@@ -71,7 +64,7 @@ export default function Solutions() {
           </div>
         </div>
 
-<<<<<<< HEAD:pages_backup/solutions.tsx
+:pages_backup/solutions.tsx
                       <span className="text - lg text - gray - 400">/{solution.period}</span>;
                     </div>;
                   </div>;
@@ -124,13 +117,11 @@ export default function Solutions() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
-
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
@@ -179,24 +170,14 @@ export default function Solutions() {
                 <a
                   href="/contact"
 
-
-
                 <a
                   href="/contact"
-
-
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import { 
@@ -211,9 +192,6 @@ import {
   CheckCircle, 
   ArrowRight 
 } from 'lucide-react';
-
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const solutions = [
@@ -396,12 +374,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         </section>
 
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/solutions.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Solutions Grid */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4">
@@ -422,9 +395,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   </div>
                   <p className="text-gray-600 mb-4">{solution.description}</p>
                   <ul className="space-y-2">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Solutions Overview */}
@@ -481,17 +451,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
         </section>
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD:pages/solutions.tsx
 =======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
-=======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
@@ -1080,25 +1040,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </div>
             ))}
           </div>
-<<<<<<< HEAD:pages_backup/solutions.tsx
+:pages_backup/solutions.tsx
         </section>
       </div>
-<<<<<<< HEAD
 <<<<<<< HEAD:pages/solutions.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    </Layout>
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </UltraAdvancedFuturisticBackground>
@@ -1140,15 +1088,6 @@ export default Solutions,
 },
 
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/solutions.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-},
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     </Layout>
@@ -1158,20 +1097,14 @@ export default Solutions,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 
-
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
 =======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',
@@ -1191,16 +1124,8 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
 const Solutions: NextPage;
 export default Solutions;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/solutions.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
 =======
         </div>
 

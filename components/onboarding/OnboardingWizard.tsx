@@ -39,10 +39,10 @@ import React, { useMemo, useState } from 'react';
     if (isClient) {}
       return []
         {'
-          title: 'Ready to find top IT talent?'
+          title: 'Ready to find top IT talent?';
   const isClient = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-          content: (
+          content: (;
             <div className='space-y-4'>
               <p>Post a role or import your job brief to get started.</p>'
               <Link href='/jobs/post'>'
@@ -54,8 +54,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )
         }
         {'
-          title: 'View suggested matches'
-          content: (
+          title: 'View suggested matches';
+          content: (;
             <p>
               We will surface the best matches instantly based on your job;
               brief.
@@ -71,8 +71,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
     return []
       {'
-        title: 'Complete your profile'
-        content: ('
+        title: 'Complete your profile';
+        content: (';
           <div className='space-y-3'>
   const steps = useMemo(() => {;
     if (isClient) {;
@@ -210,7 +210,7 @@ if ( {) {}
       return [;
         {'
           title: 'Ready to find top IT talent?',
-          content: ('
+          content: (';
             <div className='space - y-4'>;
               <p > Post a role or import your job brief to get started.</p>;'
               <Link href='/jobs / post'>;'
@@ -222,7 +222,7 @@ if ( {) {}
         },
         {'
           title: 'View suggested matches',
-          content: (
+          content: (;
             <p>;
               We will surface the best matches instantly based on your job;
               brief.;
@@ -237,7 +237,7 @@ if ( {) {}
     return [;
       {'
         title: 'Complete your profile',
-        content: ('
+        content: (';
           <div className='space - y-3'>;
             <input;'
               className='w - full rounded - md border px - 3 py - 2 bg - transparent';'
@@ -254,7 +254,7 @@ if ( {) {}
       },
       {'
         title: 'Choose skills and availability',
-        content: ('
+        content: (';
           <div className='space - y-3 text - sm'>;'
             <div className='flex flex - wrap gap - 2'>;'
               {['AI', 'LLM', 'Next.js', 'Python', 'DevOps', 'Security'].map (
@@ -283,7 +283,7 @@ if ( {) {}
       },
       {'
         title: 'Enable AI matchmaking',
-        content: ('
+        content: (';
           <div className='space - y-2'>;
             <p > Turn on AI - powered matching to get discovered faster.</p>;'
             <label className='inline - flex items - center gap - 2 text - sm'>;'
@@ -326,7 +326,7 @@ if (return null) {}
             className='px - 3 py - 2 rounded - md border';
           >;
             Next;
-          </button>) : (
+          </button>) : (;
           <button;
             on_click={() => {}
               complete_onboarding ();
@@ -344,12 +344,12 @@ if (return null) {}
     </div>);
 }    }
     return [;
-      { title: 'Complete your profile', content: (
+      { title: 'Complete your profile', content: (;
         <div className="space-y-3">;
           <input className="w - full rounded - md border px - 3 py-2 bg-transparent" placeholder="Your title (e.g., Senior LLM Engineer)" on_change={(e) => set_user (prev => prev ? { ...prev, name: prev.name } : prev)} />;
           <textarea className="w - full rounded - md border px - 3 py-2 bg-transparent" placeholder="Short bio" />;
         </div>) }
-      { title: 'Choose skills and availability', content: (
+      { title: 'Choose skills and availability', content: (;
         <div className="space-y-3 text-sm">;
           <div className="flex flex-wrap gap-2">;
             {['AILLMNext.jsPythonDevOpsSecurity'].map (string => (
@@ -361,7 +361,7 @@ if (return null) {}
           </div>;
         </div>) }
       { title: 'Preview your profile', content: <p > Review how clients will see your profile.</p> },
-      { title: 'Enable AI matchmaking', content: (
+      { title: 'Enable AI matchmaking', content: (;
         <div className="space-y-2">;
           <p > Turn on AI - powered matching to get discovered faster.</p>;
           <label className="inline - flex items - center gap-2 text-sm">;
@@ -386,7 +386,7 @@ if (return null) {}
       <div className="mt - 4 flex items-center justify-between">;
         <button disabled={step === 0} on_click={() => set_step (string => Math.max (0, s - 1))} className="px - 3 py - 2 rounded-md border disabled:opacity-40">Back</button>;
         {step < steps.length - 1 ? (
-          <button on_click={() => set_step (string => Math.min (steps.length - 1, s + 1))} className="px - 3 py-2 rounded-md border">Next</button>) : (
+          <button on_click={() => set_step (string => Math.min (steps.length - 1, s + 1))} className="px - 3 py-2 rounded-md border">Next</button>) : (;
           <button on_click={() => { complete_onboarding (), add_toast ({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px - 3 py-2 rounded-md border">Finish</button>)}
       </div>;
     </div>);
@@ -399,7 +399,7 @@ if (return null) {}
     </div>
   );
 }
-      { title: 'Enable AI matchmaking', content: (
+      { title: 'Enable AI matchmaking', content: (;
         <div className="space-y-2">
           <p>Turn on AI-powered matching to get discovered faster.</p>
           <label className="inline-flex items-center gap-2 text-sm">
@@ -410,7 +410,7 @@ if (return null) {}
   }, [isClient, setUser])
   if (!user |user.onboardingCompleted) return null
   return (
-    <div className="mb-6 rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
+    <div className="mb-6 rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">;
       <div className="flex items-center justify-between">
         <div>
           <div className="text-xs uppercase tracking-wide opacity-70 mb-1">Onboarding</div>
@@ -420,10 +420,10 @@ if (return null) {}
       </div>
       <div className="mt-4 text-sm">{steps[step]?.content}</div>
       <div className="mt-4 flex items-center justify-between">
-        <button disabled={step === 0} onClick={() => setStep(s => Math.max(0, s - 1))} className="px-3 py-2 rounded-md border disabled:opacity-40">Back</button>
+        <button disabled={step === 0} onClick={() => setStep(s => Math.max(0, s - 1))} className="px-3 py-2 rounded-md border disabled:opacity-40">Back</button>;
         {step < steps.length - 1 ? (
           <button onClick={() => setStep(s => Math.min(steps.length - 1, s + 1))} className="px-3 py-2 rounded-md border">Next</button>
-        ) : (
+        ) : (;
           <button onClick={() => { completeOnboarding(), addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px-3 py-2 rounded-md border">Finish</button>
         )}
       </div>

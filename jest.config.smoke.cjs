@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 module.exports = {
   displayName: 'Smoke Tests',
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 const nextJest = require('next/jest');
 const createJestConfig = nextJest({
@@ -16,14 +9,8 @@ const createJestConfig = nextJest({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 const config = {
   testEnvironment: 'jsdom',
-=======
-const customJestConfig = {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
   moduleNameMapper: {
@@ -59,8 +46,6 @@ const customJestConfig = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapping: {
     '^@/(.*)$': '<rootDir>/src/$1',
@@ -93,12 +78,6 @@ const customJestConfig = {
   maxWorkers: '50%',
   verbose: true,
 };
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 =======
 =======
@@ -115,32 +94,16 @@ const customJestConfig = {
     },
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   verbose: true,
   collectCoverage: false,
   testTimeout: 30000,
-=======
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 
-<<<<<<< HEAD
 module.exports = createJestConfig(customJestConfig);
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-const customJestConfig = {
-<<<<<<< HEAD
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 =======
-module.exports = {
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-
-
 
 const customJestConfig = {
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
@@ -160,11 +123,7 @@ const customJestConfig = {
       ]
     }]
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-  testMatch: [
+testMatch: [
     '<rootDir>/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
     '<rootDir>/**/*.smoke.test.(js|jsx|ts|tsx)'
   ],
@@ -186,27 +145,6 @@ const customJestConfig = {
   collectCoverage: false,
   testTimeout: 30000,
 };
-
-
-=======
-// Add any custom config to be passed to Jest
-const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  testEnvironment: 'jsdom',
-  testMatch: [
-<<<<<<< HEAD
-    '**/__tests__/**/*.smoke.+(ts|tsx|js)',
-    '**/*.smoke.(test|spec).+(ts|tsx|js)
-  ],
-  transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest
-  },
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/src/$1
-=======
->>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   coverageThreshold: {
     global: {
       branches: 70,
@@ -214,19 +152,11 @@ const customJestConfig = {
       lines: 70,
       statements: 70,
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-<<<<<<< HEAD
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
+testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
 };
 
 module.exports = createJestConfig(config);
 moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-=======
-  modulePathIgnorePatterns: [
-    '<rootDir>/backup-problematic-files/',
-    '<rootDir>/backup*/',
-    '<rootDir>/temp*/',
-    '<rootDir>/corrupted*/
->>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
   verbose: true,
   collectCoverage: false,
   testTimeout: 30000,
@@ -277,17 +207,10 @@ moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 >>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 module.exports = createJestConfig(config);
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-module.exports = createJestConfig(config);
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -297,27 +220,8 @@ module.exports = createJestConfig(config);
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 module.exports = createJestConfig(customJestConfig);
-<<<<<<< HEAD
 >>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 =======
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1'
-  },
-  collectCoverageFrom: [
-    'components/**/*.{js,jsx,ts,tsx}',
-    'pages/**/*.{js,jsx,ts,tsx}',
-    'app/**/*.{js,jsx,ts,tsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
-  ],
-  passWithNoTests: true,
-  verbose: true
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-
-
-
 
 module.exports = createJestConfig(customJestConfig);
 

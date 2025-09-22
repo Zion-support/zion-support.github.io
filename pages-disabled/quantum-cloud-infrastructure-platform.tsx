@@ -1,46 +1,32 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }'
 import React from 'react';'
 import Head from 'next/head';'
 import ServiceLanding from '../components/sections/ServiceLanding';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <>;
@@ -82,33 +68,14 @@ import ServiceLanding from '../components/sections/ServiceLanding';
     </>;
   );
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 import React from 'react',
 import Head from 'next/head',
-=======
-'
-import Head from 'next/head','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import ServiceLanding from '../components/sections/ServiceLanding',
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function QuantumCloudInfrastructurePlatformPage() {
-=======
-import Head from 'next/head',
-import ServiceLanding from '../components/sections/ServiceLanding',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import Head from 'next/head',
@@ -148,24 +115,8 @@ export default function QuantumCloudInfrastructurePlatformPage() {}
 		</>
 	)
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-
-'
-import Head from 'next/head';'
-import ServiceLanding from '../components/sections/ServiceLanding';
-<<<<<<< HEAD
-export default function QuantumCloudInfrastructurePlatformPage() {
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 =======
 export default function QuantumCloudInfrastructurePlatformPage() {}
@@ -204,9 +155,7 @@ export default function QuantumCloudInfrastructurePlatformPage() {}
           'Government','
           'Energy','
           'Media',
-<<<<<<< HEAD
-        ]}
-<<<<<<< HEAD
+]}
 <<<<<<< HEAD
 
 import Head from 'next/head',
@@ -261,36 +210,17 @@ export default function QuantumCloudInfrastructurePlatformPage() {
   }
 }
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-        ]}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         canonical='https: //ziontechgroup.com / quantum - cloud - infrastructure - platform';
       />;
     </>);
 ;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-export default function QuantumCloudInfrastructurePlatformPage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

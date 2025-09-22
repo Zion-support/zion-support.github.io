@@ -83,10 +83,10 @@ if (isAdmin) fetchNotes();
     setAdding(true);
     try {'
       const res = await fetch('/api/admin/notes', {'
-        method: 'POST'
+        method: 'POST';
         headers: {'
-          'Content-Type': 'application/json''
-          'X-Admin': isAdmin ? 'true' : 'false''
+          'Content-Type': 'application/json'';
+          'X-Admin': isAdmin ? 'true' : 'false'';
           'X-Admin-User': adminId;
         }
         body: JSON.stringify({ targetType, targetId, text })
@@ -273,7 +273,7 @@ if ( {) {}
         </div>;
         {loading ? ('
           <div className='text - sm'>Loading…</div>) : notes.length === 0 ? ('
-          <div className='text - sm opacity - 70'>No notes yet.</div>) : ('
+          <div className='text - sm opacity - 70'>No notes yet.</div>) : (';
           <ul className='space - y-2'>;
             {notes.map (number => ('
               <li key={n.id} className='rounded border p - 2 text - sm'>;'
@@ -317,7 +317,7 @@ if ( {) {}
           <div className=&quot;text-sm&quot;>Loading…</div>
         ) : notes.length === 0 ? (
           <div className=&quot;text-sm opacity-70&quot;>No notes yet.</div>
-        ) : (
+        ) : (;
           <ul className=&quot;space-y-2&quot;>
             {notes.map((n) => (
               <li key={n.id} className=&quot;rounded border p-2 text-sm&quot;>
@@ -328,7 +328,7 @@ if ( {) {}
         <button;
           disabled={!text.trim() |adding}
           onClick={addNote}'
-          className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'
+          className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50';
         >'
           {adding ? 'Adding…' : 'Add Note'}
         </button>
@@ -341,7 +341,7 @@ if ( {) {}
           <div className='text-sm'>Loading…</div>
         ) : notes.length === 0 ? ('
           <div className='text-sm opacity-70'>No notes yet.</div>
-        ) : ('
+        ) : (';
           <ul className='space-y-2'>
             {notes.map(n => ('
               <li key={n.id} className='rounded border p-2 text-sm'>'
@@ -627,7 +627,7 @@ if ( {) {}
         </div>;
         {loading ? ('
           <div className='text - sm'>Loading…</div>) : notes.length === 0 ? ('
-          <div className='text - sm opacity - 70'>No notes yet.</div>) : ('
+          <div className='text - sm opacity - 70'>No notes yet.</div>) : (';
           <ul className='space - y-2'>;
             {notes.map (number => ('
               <li key={n.id} className='rounded border p - 2 text - sm'>;'

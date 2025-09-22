@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 key={index}
                 className=\"text-center\"
@@ -28,8 +27,7 @@ key={index}
             </p>
           </div>
 
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.id}
@@ -43,24 +41,6 @@ key={index}
                     {member.name.split(' ').map(n => n[0]).join('')}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">
-=======
-          <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8\" />
-            {teamMembers.slice(0, 3).map((member, index) => (}
-              <motion.div;}
-key={member.id}
-                className=\"bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow\"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-               />
-                <div className=\"text-center mb-4\" />
-                  <img
-src={member.image}
-                    alt={member.name}
-                    className=\"w-24 h-24 rounded-full mx-auto mb-4 object-cover\"
-                  />
-                  <h3 className=\"text-xl font-bold text-gray-900\" />
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
                     {member.name}
                   </h3>
                   <p className=\"text-purple-600 font-semibold\" />
@@ -104,93 +84,12 @@ href={member.github}
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Departments */}
+{/* Departments */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Our Departments
-=======
-      {/* All Team Members */}
-      <section className=\"py-16 bg-gray-50\" />
-        <div className=\"container mx-auto px-4\" />
-          <div className=\"text-center mb-12\" />
-            <h2 className=\"text-3xl font-bold text-gray-900 mb-4\" />
-              Our Expert Team
-            </h2>
-            <p className=\"text-xl text-gray-600\" />
-              Dedicated professionals across all departments
-            </p>
-          </div>
-
-          <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8\" />
-            {teamMembers.map((member, index) => (}
-              <motion.div;}
-key={member.id}
-                className=\"bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow\"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-               />
-                <div className=\"text-center mb-4\" />
-                  <img
-src={member.image}
-                    alt={member.name}
-                    className=\"w-20 h-20 rounded-full mx-auto mb-3 object-cover\"
-                  />
-                  <h3 className=\"text-lg font-bold text-gray-900\" />
-                    {member.name}
-                  </h3>
-                  <p className=\"text-purple-600 font-semibold text-sm\" />
-                    {member.position}
-                  </p>
-                  <p className=\"text-gray-500 text-xs\" />{member.department}</p>
-                </div>
-                <p className=\"text-gray-600 text-sm mb-4\" />{member.bio}</p>
-                <div className=\"flex flex-wrap gap-1 mb-4\" />
-                  {member.expertise.slice(0, 3).map((skill) => (}
-                    <span;}
-key={skill}
-                      className=\"px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs\"
-                     />
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-                <div className=\"flex justify-center space-x-3\" />
-                  <a
-href={member.linkedin}
-                    className=\"text-gray-400 hover:text-blue-600 transition-colors\"
-                   />
-                    <Linkedin className=\"w-4 h-4\" />
-                  </a>
-                  <a
-href={member.twitter}
-                    className=\"text-gray-400 hover:text-blue-400 transition-colors\"
-                   />
-                    <Twitter className=\"w-4 h-4\" />
-                  </a>
-                  <a
-href={member.github}
-                    className=\"text-gray-400 hover:text-gray-600 transition-colors\"
-                   />
-                    <Github className=\"w-4 h-4\" />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Departments */}
-      <section className=\"py-16 bg-white\" />
-        <div className=\"container mx-auto px-4\" />
-          <div className=\"text-center mb-12\" />
-            <h2 className=\"text-3xl font-bold text-gray-900 mb-4\" />
-              Our Departments
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
             </h2>
             <p className=\"text-xl text-gray-600\" />
               Specialized teams working together to deliver excellence
@@ -281,34 +180,4 @@ href=\"/contact\"
       </section>
     </Layout>
   )
-<<<<<<< HEAD
 }
-=======
-}
-}
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
-=======
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-
-import React from 'react';''
-import MainLayout from '../components/layout/MainLayout';'
-const Page = () => {
-  return (
-    <MainLayout;
-      title="Team - Zion Tech Group"""
-      description="Meet our team""
-    >
-"
-      <div className="min-h-screen bg-gray-50">"
-</div>"
-        <div className="container mx-auto px-4 py-16">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Team</h1>""
-          <p className="text-xl text-gray-600">Coming soon...</p>"
-        </div>
-    )"
-      </div>
-    </MainLayout>)"
-
->>>>>>> origin/main

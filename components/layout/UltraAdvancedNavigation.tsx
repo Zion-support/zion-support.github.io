@@ -84,12 +84,12 @@ icon: null,
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
-      name: 'AI Services'
-      href: '#'
-      icon: Brain'
-      description: 'Cutting-edge AI solutions'
-      dropdown: ['
-      description: 'Benchmarks & vendor references'
+      name: 'AI Services';
+      href: '#';
+      icon: Brain';
+      description: 'Cutting-edge AI solutions';
+      dropdown: [';
+      description: 'Benchmarks & vendor references';
     }
         {
           name: 'AI Agent Orchestrator',
@@ -133,7 +133,7 @@ price: '$5,999/month',
       href: '#',
       icon: Atom,
       description: 'Quantum-powered solutions',
-      dropdown: [
+      dropdown: [;
         {
           name: 'Quantum AI Supercomputer',
           href: '/quantum-ai-cognitive',
@@ -176,7 +176,7 @@ price: '$4,999/month',
       href: '#',
       icon: Rocket,
       description: 'Space mission management',
-      dropdown: [
+      dropdown: [;
         {
           name: 'Space Mission Control',
           href: '/space-technology',
@@ -198,7 +198,7 @@ price: '$35,999/month',
       href: '#',
       icon: Building2,
       description: 'Enterprise solutions',
-      dropdown: [
+      dropdown: [;
         {
           name: 'Cloud Migration',
           href: '/cloud-platform',
@@ -258,10 +258,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 description: '300+ micro SaaS services',
     },
     {
-      name: 'Market Pricing'
-      href: '/market-pricing'
-      icon: DollarSign'
-      description: 'Benchmarks & vendor references'
+      name: 'Market Pricing';
+      href: '/market-pricing';
+      icon: DollarSign';
+      description: 'Benchmarks & vendor references';
     },    {
       name: 'Market Pricing',
       href: '/market-pricing',
@@ -282,7 +282,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       isScrolled '
         ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' '
         : 'bg-transparent'
-
+;
       name: 'Contact',
       href: '/contact',
       icon: null,
@@ -296,7 +296,7 @@ address: '364 E Main St STE 1008 Middletown DE 19709',
 
   
     >
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
         <div className='flex justify-between items-center h-20'>
           {/* Logo */}
           <motion.div
@@ -307,10 +307,10 @@ className='flex items-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <Link href='/' className='flex items-center space-x-3 group'>
-              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
                 <Zap className='w-6 h-6 text-white' />
               </div>'
-              <div className='hidden sm:block'>'
+              <div className='hidden sm:block'>';
                 <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
                   Zion Tech Group;
                 </div>'
@@ -324,10 +324,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}"
             <Link href="/" className="flex items-center space-x-3 group">"
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";
                 <Zap className="w-6 h-6 text-white" />
               </div>"
-              <div className="hidden sm:block">"
+              <div className="hidden sm:block">";
                 <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Zion Tech Group
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -362,30 +362,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion && motion.div>;
 
           {/* Desktop Navigation */}
-<div className='hidden lg:flex items-center space-x-8'>
+<div className='hidden lg:flex items-center space-x-8'>;
             {navigationItems.map((item, index) => (
               <div key={item.name} className='relative group'>
                 {item.dropdown ? (
                   <button
                     onClick={() =>
                       setActiveDropdown(
-                        activeDropdown === item.name ? null : item.name
+                        activeDropdown === item.name ? null : item.name;
                       )
                     }
-                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
+                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2';
                   >
                     {item.icon && <item.icon className='w-4 h-4' />}
                     <span>{item.name}</span>
                     <ChevronDown
                       className={`w-4 h-4 transition-transform duration-300 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
+                        activeDropdown === item.name ? 'rotate-180' : '';
                       }`}
                     />
                   </button>
-                ) : (
+                ) : (;
                   <Link
                     href={item.href}
-className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
+className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2';
                   >
                     {item.icon && <item.icon className='w-4 h-4' />}
                     <span>{item.name}</span>
@@ -432,13 +432,13 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-                                className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group'
+                                className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group';
                               >
-                                <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200'>
+                                <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200'>;
                                   <dropdownItem.icon className='w-5 h-5 text-cyan-400' />
                                 </div>
                                 <div className='flex-1'>
-                                  <div className='text-white font-medium group-hover:text-cyan-400 transition-colors duration-200'>
+                                  <div className='text-white font-medium group-hover:text-cyan-400 transition-colors duration-200'>;
                                     {dropdownItem.name}
                                   </div>
                                   <div className='text-sm text-gray-400'>
@@ -461,7 +461,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Contact Info & CTA */}'
           <div className='hidden lg:flex items-center space-x-6'>;'
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
-<div className='hidden lg:flex items-center space-x-6'>
+<div className='hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <a
@@ -470,14 +470,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 
           {/* Contact Info & CTA */}"
-          <div className="hidden lg:flex items-center space-x-6">"
+          <div className="hidden lg:flex items-center space-x-6">";
             <div className="flex items-center space-x-4 text-sm text-gray-300">"`
-              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">"
+              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">";
                 <Phone className="w-4 h-4" />"
                 <span className="hidden xl:inline">{contactInfo.mobile}</span>
               </a>
 "`
-              <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">"
+              <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">";
                 <Mail className="w-4 h-4" />"
                 <span className="hidden xl:inline">{contactInfo.email}</span>
               </a>
@@ -486,20 +486,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href="/contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300";
             </div>
             <motion.a
               href='/contact'
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'
+              className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Get Started;
             </motion.a>
           </div>
           {/* Mobile Menu Button */}"
-          <div className="lg:hidden">
+          <div className="lg:hidden">;
             <button;
               onClick={() => setIsOpen(!isOpen)}'
               className='text-gray-300 hover:text-white transition-colors duration-200';
@@ -510,7 +510,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Menu className='w-6 h-6' />;
               )}            </button>            <button;
               onClick={() => setIsOpen(!isOpen)}"
-              className="text-gray-300 hover:text-white transition-colors duration-200"
+              className="text-gray-300 hover:text-white transition-colors duration-200";
             >"
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>;
@@ -518,14 +518,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
 
-<div className='lg:hidden'>
+<div className='lg:hidden'>;
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className='text-gray-300 hover:text-white transition-colors duration-200'
+              className='text-gray-300 hover:text-white transition-colors duration-200';
             >
               {isOpen ? (
                 <X className='w-6 h-6' />
-              ) : (
+              ) : (;
                 <Menu className='w-6 h-6' />
               )}
             </button>
@@ -541,7 +541,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden'
+className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden';
           >
             <div className='px-4 py-6 space-y-4'>
               {navigationItems.map(item => (
@@ -551,17 +551,17 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
                       <button
 onClick={() =>
                           setActiveDropdown(
-                            activeDropdown === item.name ? null : item.name
+                            activeDropdown === item.name ? null : item.name;
                           )
                         }
-                        className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3'
+                        className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3';
                         <div className='flex items-center space-x-3'>
                           {item.icon && <item.icon className='w-5 h-5' />}
                           <span>{item.name}</span>
                         </div>
                         <ChevronDown
                           className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item.name ? 'rotate-180' : ''
+                            activeDropdown === item.name ? 'rotate-180' : '';
                           }`}
                         />
                       </button>
@@ -572,7 +572,7 @@ onClick={() =>
                               key={dropdownItem.name}
                               href={dropdownItem.href}
                               onClick={() => setIsOpen(false)}
-className='block py-2 text-gray-400 hover:text-white transition-colors duration-200'
+className='block py-2 text-gray-400 hover:text-white transition-colors duration-200';
                             >
                               {dropdownItem.name}
                             </Link>
@@ -581,13 +581,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       )}
                     </div>
-                  ) : (
+                  ) : (;
                     <Link;
                       href={item.href}
                       onClick={() => setIsOpen(false)}'
                       {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>
 
-className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'
+className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3';
                     >
                       {item.icon && <item.icon className='w-5 h-5' />}
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -602,11 +602,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Mobile Contact Info */}"
               <div className="pt-6 border-t border-gray-800/50">"
                 <div className="space-y-3 text-sm text-gray-400">"`
-                  <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">"
+                  <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">";
                     <Phone className="w-4 h-4" />
                     <span>{contactInfo.mobile}</span>
                   </a>"`
-                  <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">"
+                  <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">";
                     <Mail className="w-4 h-4" />
                     <span>{contactInfo.email}</span>
                   </a>"
@@ -617,14 +617,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='space-y-3 text-sm text-gray-400'>
                   <a
                     href={`tel:${contactInfo.mobile}`}
-                    className='flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200'
+                    className='flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200';
                   >
                     <Phone className='w-4 h-4' />
                     <span>{contactInfo.mobile}</span>
                   </a>
                   <a
                     href={`mailto:${contactInfo.email}`}
-                    className='flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200'
+                    className='flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200';
                   >
                     <Mail className='w-4 h-4' />
                     <span>{contactInfo.email}</span>
@@ -708,7 +708,7 @@ export default UltraAdvancedNavigation;
                               {dropdown_item.name}
                             </Link>))}
                         </div>)}
-                    </div>) : (
+                    </div>) : (;
                     <Link;
                       href={item.href}
                       on_click={() => setIsOpen (false)}'
@@ -790,7 +790,7 @@ export default UltraAdvancedNavigation;
                   href='/contact'
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className='block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'
+                  className='block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300';
                 >
                   Get Started
                 </motion.a>

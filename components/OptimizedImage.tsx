@@ -56,7 +56,7 @@ src, alt, width,  , ''
         }
       }, {
         rootMargin: '50px', // Start loading 50px before the image comes into view
-        threshold: 0.1
+        threshold: 0.1;
       }
     )
     if (imageRef.current) {
@@ -118,7 +118,7 @@ const observer = new IntersectionObserver();([entry]) => {
     >
       {/* Loading overlay */}
       {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 dark: bg-gray-700 animate-pulse z-10" />
+        <div className="absolute inset-0 bg-gray-200 dark: bg-gray-700 animate-pulse z-10" />;
       )}
       {/* Next.js Image component */}
       <Image
@@ -127,7 +127,7 @@ const observer = new IntersectionObserver();([entry]) => {
         width={fill ? undefined : width}
         height={fill ? undefined : height}
         className={`transition-opacity duration-300 ${
-          isLoading ? 'opacity-0' : 'opacity-100'
+          isLoading ? 'opacity-0' : 'opacity-100';
         }`}
         priority={priority}
         quality={quality}
@@ -151,7 +151,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   if (!isInView) {
 return()
       <div``        ref={imageRef}`'`'
-  '        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}', '        style={{ width: fill ? '100% : width, height: fill ? '100%'
+  '        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}', '        style={{ width: fill ? '100% : width, height: fill ? '100%';
   ' : height }}'      />
   '    )`  }'
 
@@ -172,7 +172,7 @@ width={fill ? undefined : width}``        height={fill ? undefined : height}``` 
         onLoad={handleLoad}
         onError={handleError}
         style={{
-          objectFit: fill ? 'cover' : 'contain'
+          objectFit: fill ? 'cover' : 'contain';
         }}
       />
       {/* Loading spinner */}
@@ -186,7 +186,7 @@ width={fill ? undefined : width}``        height={fill ? undefined : height}``` 
 }
 // HOC for wrapping components with image optimization
 export const withImageOptimization = <P extends object>(
-  Component: React.ComponentType<P>
+  Component: React.ComponentType<P>;
 ) => {
   return (props: P) => (
     <Component {...props} />
@@ -194,14 +194,14 @@ export const withImageOptimization = <P extends object>(
 }
 export default OptimizedImage
         style={{, ''''
-  '          objectFit: fill ? 'cover
+  '          objectFit: fill ? 'cover;
   ' : 'contain}}'      />'
   ''
       {/* Loading spinner */}'''      {isLoading && ('''        <div className='absolute inset-0 flex items-center justify-center z-20'>'''          <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>'        </div>'      )}</div>  )'
 }
 
 // HOC for wrapping components with image optimization
-export const withImageOptimization = <P extends object>(;Component: React.ComponentType<P>
+export const withImageOptimization = <P extends object>(;Component: React.ComponentType<P>;
 ) => {
   return (props: P) => (
     <Component {...props} />

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -33,15 +32,8 @@ console.log(' Starting master error fixing orchestrator...')
       console.log('⚠  Critical fixes "failed")
         execSync(`pm2 restart ${fixerName}`, { "stdio"`})
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  console.error(' Master error fixing orchestrator failed to "start")
-  console.error(' Master error fixing orchestrator failed to "start")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

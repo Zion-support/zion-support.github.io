@@ -95,7 +95,7 @@ export function useHireRequest() {
   const submitHireRequest = async (requestData: HireRequestData) => {
     setIsSubmitting(true),
     setError(null),
-    
+
     try {
       // Call the edge function to process the hire request
       const { data: response, error } = await supabase.functions.invoke('process-hire-request', {
@@ -122,13 +122,13 @@ export function useHireRequest() {_const [isSubmitting, _setIsSubmitting] = useS
   const _submitHireRequest = async (_requestData: HireRequestData) => {
     setIsSubmitting(true);
     setError(null);
-    
+
     try {
       // Call the edge function to process the hire request
       const { data: response, _error} = await supabase.functions.invoke(_'process-hire-request', _{_body: requestData});
-      
+
       if (error) throw error,
-      
+
       // Show success message
       toast({
         title: "Request Submitted",
@@ -136,34 +136,26 @@ export function useHireRequest() {_const [isSubmitting, _setIsSubmitting] = useS
       return { success: true, requestId: response?.request_id }
     } catch (error) {
       console.error("Error submitting hire request:", error),
-      
+
       const errorMessage = error instanceof Error         ? error.message 
         : "There was a problem submitting your request. Please try again.",
       console.error(&quot;Error submitting hire request:&quot;, error);
-      
+
       const errorMessage = error instanceof Error 
         ? error.message 
         : &quot;There was a problem submitting your request. Please try again.&quot;;
-      
+
       setError(errorMessage),
-      
-<<<<<<< HEAD
+
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       toast({
         title: &quot;Error&quot;,
         description: errorMessage,
         variant: "destructive"}),
-=======
-      toast({
-        title: &quot;Error&quot;,
-        description: errorMessage,
-        variant: "destructive"}),      
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return { success: false, error: errorMessage }
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -176,33 +168,11 @@ export function useHireRequest() {_const [isSubmitting, _setIsSubmitting] = useS
   return {_submitHireRequest, _isSubmitting, _error};
 }finally {
   setIsSubmitting (false)
-=======
-  },
-  
-  return {
-    submitHireRequest,
-    isSubmitting,
-    error
-  }
-        title: "Error", _description: errorMessage, _variant: "destructive"});
-      
-      return {_success: false, _error: errorMessage};
-    } finally {_setIsSubmitting(false);}
-  };
-  
-  return {_submitHireRequest, _isSubmitting, _error};
-}finally {
-  setIsSubmitting (false) 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 };
 return {
   submitHireRequest;
 isSubmitting;
-<<<<<<< HEAD
 error
-=======
-error 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 }

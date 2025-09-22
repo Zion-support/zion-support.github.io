@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src_backup/components/interviews/InterviewCard.tsx
-<<<<<<< HEAD:src/components/interviews/InterviewCard.tsx
+:src_backup/components/interviews/InterviewCard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -70,7 +69,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
       interview_id: interview.id, 
       status 
     }),
-    
+
     if (success) {
       toast({
         title: `Interview ${status}`,
@@ -91,7 +90,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
   const handleCancelInterview = async () => {
     setIsLoading(true),
     const success = await cancelInterview(interview.id),
-    
+
     if (success) {
       toast({
         title: "Interview cancelled",
@@ -206,7 +205,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
           with {getOtherPartyName()}
         </p>
       </CardHeader>
-      
+
       <CardContent className="pt-2">
         <div className="space-y-3">
           <div className="flex items-start gap-3">
@@ -230,7 +229,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
               </div>
             </div>
           )}
-          
+
           {interview.notes && (
             <div className="flex items-start gap-3">
               <MessageSquare className="h-4 w-4 mt-0.5 text-muted-foreground" />
@@ -239,7 +238,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
           )}
         </div>
       </CardContent>
-      
+
       <CardFooter className="pt-2">
         <div className="grid grid-cols-1 gap-2 w-full">
           {/* For clients with pending requests */}
@@ -300,7 +299,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}
-              
+
               <AlertDialog>
                 <AlertDialogTrigger asChild>
                   <Button variant="outline" size="sm" className="w-full mt-2">
@@ -348,29 +347,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
   );
 }
 ;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import React, { useState } from './react';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
-import { Interview  } from '@/types / interview';
-import { use_auth  } from '@/hooks / use_auth';
-import { use_interviews  } from '@/hooks / use_interviews';
-import { format, formatDistanceToNow, is_past, parseISO  } from './date - fns';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger  } from '@/components / ui / alert - dialog';
-import { Dialog, DialogContent, DialogHeader, DialogTitle  } from '@/components / ui / dialog';
-import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'import { toast  } from '@/components / ui / use - toast';
-import { InterviewResponseForm  } from './InterviewResponseForm';
-interface InterviewCardProps {
-  interview: Interview,
-  on_refresh: () => Promise < void>;
-}
-export /**
- * InterviewCard - Function description
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/interviews/InterviewCard.tsx
 import React, { useState } from './react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -388,7 +364,7 @@ interface InterviewCardProps {
 }
   interview: Interview,
   on_refresh: () => Promise < void>;
-<<<<<<< HEAD:src_backup/components/interviews/InterviewCard.tsx
+:src_backup/components/interviews/InterviewCard.tsx
 }
 export /**
  * InterviewCard - Function description
@@ -409,16 +385,10 @@ function InterviewCard() {
         return <Badge>{interview.status}</Badge>;
 }
   );
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -501,7 +471,6 @@ import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { InterviewResponseForm } from './InterviewResponseForm';
 
-
 import { InterviewResponseForm } from "./InterviewResponseForm";
 interface InterviewCardProps {
   interview: Interview;
@@ -538,13 +507,9 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
 }'"
   )
 }
-<<<<<<< HEAD:src/components/interviews/InterviewCard.tsx
+:src/components/interviews/InterviewCard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD:src_backup/components/interviews/InterviewCard.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/InterviewCard.tsx
 =======
         return <Badge variant="outline" className="border - destructive text - destructive">Cancelled;"
         return <Badge>{interview.status};"

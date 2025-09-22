@@ -89,8 +89,7 @@ serve(async (req) => {;
 Deno.env.get ('SUPABASE SERVICE ROLE KEY') ?? '');
 try {
   //Look up the referrer from the referral code const {
-<<<<<<< HEAD
-  data: refCodeData, error: refError
+data: refCodeData, error: refError
 }= await supabase .from ('referral codes') .select ('user id') .eq ('code', refCode) .single ();
 }//Check if this user has already been referred const {
   data: existingReferral
@@ -102,21 +101,3 @@ try {
 }]) .select () .single ();
 }
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  data: refCodeData, error: refError 
-}= await supabase .from ('referral codes') .select ('user id') .eq ('code', refCode) .single ();
-}//Check if this user has already been referred const {
-  data: existingReferral 
-}= await supabase .from ('referrals') .select ('id') .eq ('referred id', userId) .single ();
-}// Create the referral record const {
-  data, error 
-}= await supabase .from ('referrals') .insert ([ {
-  referrer id: refCodeData.user id, referred id: userId, referral code: refCode, email, ip address: ipAddress 
-}]) .select () .single ();
-}
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

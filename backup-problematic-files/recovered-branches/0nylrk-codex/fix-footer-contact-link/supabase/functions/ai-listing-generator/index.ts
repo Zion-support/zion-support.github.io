@@ -103,13 +103,13 @@ Format the response as a JSON object with the following structure:;
       }
     );  }
 });
- 
+
 }try {
   const {
   title, category, keyFeatures, targetAudience 
 }= await req.json ();
 return new Response (JSON.stringify ({
-  
+
 }) 
 }const prompt = `Generate an optimized marketplace listing for the following product: Please create: 1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases 2. A list of 5-7 relevant tags for the listing 3. A suggested price range based on the category and features 4. A bulleted list of 3-5 key selling points Format the response as a JSON object with the following structure: "keyPoints": ["point1", "point2", "point3"] 
 }`;
@@ -137,7 +137,4 @@ headers: {
 }) 
 }
 });
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

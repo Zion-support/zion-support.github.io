@@ -1,61 +1,26 @@
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-<<<<<<< HEAD
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
 
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD
-=======
-    title: 'Zion DAO x Digital Labor Initiative'
-    targetInstitution: 'UN Development Programme'
-    type: 'Workforce Dev'
-    regionalScope: 'Global South'
-    budgetOrResolution: 'USD 3M over 24 months'
-    supportingMultiverses: 'Digital Labor, AI Ethics'
-    promptAssist:
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
-    language: 'en'
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
-    language: 'en',;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
-=======
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/protocol/un-bridge.tsx
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-  
+:pages_backup/protocol/un-bridge.tsx
+
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {}
     if (this.state.hasError) {}
-=======
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
       return <div>Something went wrong.</div>;
     }
     return this.props.children;
@@ -63,24 +28,16 @@ class ErrorBoundary extends React.Component {}
 }'
 import React, { useState } from 'react';
 
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
+:pages_backup/protocol/un-bridge.tsx
 '
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.','
     language: 'en',;
 
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);'
   const [translated, setTranslated] = useState<string>('');
   const onChange = (
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en',;
@@ -92,7 +49,6 @@ import React, { useState } from 'react';
 
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en',;
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
 import React, { useState } from 'react';
@@ -114,7 +70,7 @@ export default function UNBridge() {
   const onChange = null;
       setResult((r: any) => ({ ...r, meta: data.meta }))
     } finally { setLoading(false) }
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
+:pages_backup/protocol/un-bridge.tsx
     title: 'Zion DAO x Digital Labor Initiative'
     targetInstitution: 'UN Development Programme'
     type: 'Workforce Dev'
@@ -136,20 +92,12 @@ const onChange = (
     >
   ) => {}
     const { name, value } = e.target;
-<<<<<<< HEAD
-    setForm(f => ({ ...f, [name]: value }));  }
+setForm(f => ({ ...f, [name]: value }));  }
 <<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    setForm(f => ({ ...f, [name]: value }));
-  };
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function generate() {
     setLoading(true);
     try {
@@ -158,16 +106,7 @@ const onChange = (
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export default function UNBridge(req, res) {
-  try {
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/protocol/un-bridge.tsx
 
   async function generate() {}
     setLoading(true);
@@ -182,21 +121,8 @@ export default function UNBridge(req, res) {
 
   const [form, setForm] = useState({;'
     title: 'Zion DAO x Digital Labor Initiative',;
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD
-=======
-=======
-          ...form
-=======
-export default function UNBridge(req, res) {
-  try {
-          ...form;
-          supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ...form,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           supportingMultiverses: form.supportingMultiverses
@@ -205,8 +131,6 @@ export default function UNBridge(req, res) {
             .filter(Boolean)
         })
       });
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
       const data = await res.json();
       setResult(data);
@@ -258,23 +182,15 @@ export default function UNBridge(req, res) {
     } finally {
       setLoading(false);
     }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/protocol/un-bridge.tsx
-
 
 export default function UNBridge(req, res) {}
   try {};
   const [form, setForm] = useState({;'
     title: 'Zion DAO x Digital Labor Initiative';
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
+:pages_backup/protocol/un-bridge.tsx
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -288,44 +204,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     regionalScope: 'Global South',;
     budgetOrResolution: 'USD 3M over 24 months',;
     supportingMultiverses: 'Digital Labor, AI Ethics',;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    promptAssist:;
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
-    language: 'en',;
-  });  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null);
-  const [translated, setTranslated] = useState<string>('');
-  const onChange = (;
-    e: React && React.ChangeEvent<;
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
-    >;
-  ) => {;
-    const { name, value } = e && e.target;
-    setForm(f => ({ ...f, [name]: value }));  };
-  async function generate() {;
-    setLoading(true);
-    try {;
-      const res = await fetch('/api/proposals/generate', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          ...form,;
-          supportingMultiverses: form && form.supportingMultiverses;
-            .split(',');
-            .map(s => s && s.trim());
-            .filter(Boolean),;
-        }),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 '
@@ -342,26 +221,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } finally {;
       setLoading(false);
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/protocol/un-bridge.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }  }
-
 
     try {;'
       const res = await fetch('/api/proposals/translate', {;'
         method: 'POST',;'
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ markdown: result && result.markdown, targetLanguage }),;
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 
@@ -373,37 +239,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ markdown: result.markdown, targetLanguage }),
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/protocol/un-bridge.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       });
       const data = await res && res.json();
       setTranslated(data && data.translated);
     } finally {;
       setLoading(false);
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/protocol/un-bridge.tsx
-<<<<<<< HEAD
     }  }
-
-
-=======
-<<<<<<< HEAD
-    }  }
-
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 
@@ -415,16 +259,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ id: result.meta.id }),
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/protocol/un-bridge.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       });
       // Refresh meta;'
       const list = await fetch('/api/proposals/list');
@@ -436,14 +272,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } finally {;
       setLoading(false);
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/protocol/un-bridge.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }  }
-
-
 
   async function submit(): any (channels: string[]) {;
     if (!result?.meta?.id) return;
@@ -453,16 +282,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         method: 'POST',;'
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ id: result && result.meta.id, channels }),;
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
@@ -476,17 +299,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ id: result.meta.id, channels }),
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/protocol/un-bridge.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/protocol/un-bridge.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -496,8 +310,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } finally {;
       setLoading(false);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
 
   }
@@ -510,19 +322,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 =======
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
@@ -578,15 +380,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               value={form && form.regionalScope}
               onChange={onChange}'
               className='w-full border rounded p-2'
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-<<<<<<< HEAD
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
             />;
           </label>;'
           <label className='block'>;'
@@ -721,10 +517,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <div className="space-y-6">"
@@ -733,24 +526,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="space-y-3">"
           <label className="block">"
             <span className="text-sm">Title</span>
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
-=======
-=======
-<input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
             <input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-            <input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </label>
           <label className="block">
             <span className="text-sm">Target institution</span>
@@ -759,19 +540,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <label className="block">
             <span className="text-sm">Type</span>
             <select name="type" value={form.type} onChange={onChange} className="w-full border rounded p-2">
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-=======
-            >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
             >
@@ -804,26 +574,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <option>Education</option>
             </select>
           </label>
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-<<<<<<< HEAD
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <label className="block">
-=======
-          <label className="block">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <span className="text-sm">Regional scope</span>
             <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
-=======
-          <label className="block">
-            <span className="text-sm">Regional scope</span>
-            <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -843,17 +602,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onChange={onChange}
               className='w-full border rounded p-2'
             />
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-<<<<<<< HEAD
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
@@ -879,38 +631,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <textarea name="promptAssist" rows={5} value={form.promptAssist} onChange={onChange} className="w-full border rounded p-2" />
           </label>"
           <div className="flex gap-3">
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-            <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' : 'Generate Proposal'}</button>
-          </div>
-        </div>
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/protocol/un-bridge.tsx
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-=======
-            <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' : 'Generate Proposal'}</button>
-          </div>
-        </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
 
         <div className="space-y-3">
           <div className="text-sm opacity-70">Output</div>
           <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
             {result?.markdown || 'No draft yet'}
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
+:pages_backup/protocol/un-bridge.tsx
         <div className='space-y-3'>
           <div className='text-sm opacity-70'>Output</div>
           <div className='border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50'>
@@ -959,10 +691,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Submit (Email)
             </button>
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
+:pages_backup/protocol/un-bridge.tsx
         <div className="space-y-3">
           <div className="text-sm opacity-70">Output</div>
           <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
@@ -971,14 +700,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
+:pages_backup/protocol/un-bridge.tsx
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
           </div>
           <div className="flex items-center gap-2">
             <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
@@ -986,9 +711,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
           </div>
           {translated && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
+<div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
               {translated}
             </div>
           )}
@@ -1007,11 +730,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Submit (Email)
             </button>
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
               {translated  } catch (error) {
     console.error("Error:", error);
@@ -1026,20 +744,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
           </div>
           <div className="flex items-center gap-2">
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-<<<<<<< HEAD
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD
             <button onClick={exportArtifacts} disabled={loading || !result} className="px-3 py-2 border rounded">Export PDF + Sign + IPFS</button>
             <button onClick={() => submit(['email'])} disabled={loading || !result} className="px-3 py-2 border rounded">Submit (Email)</button>
-=======
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
@@ -1047,22 +756,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {result?.meta && (
             <div className="text-sm space-y-1">
               <div><span className="font-medium">Status:</span> {result.meta.status}</div>
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-<<<<<<< HEAD
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD
               {result.meta.artifacts?.markdownPath && (
 
               {result.meta.artifacts?.ipfsCid && (
                 <div>IPFS CID: {result.meta.artifacts.ipfsCid}</div>
               )}
-=======
-<<<<<<< HEAD
-=======
-              {result.meta.artifacts?.markdownPath && (
-<<<<<<< HEAD
-=======
-              {result.meta.artifacts?.markdownPath && (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</a></div>
               )}
               {result.meta.artifacts?.pdfPath && (
@@ -1177,17 +877,8 @@ if (return) {
     } finally {
       set_loading (false);
     }
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-=======
-
-
-}
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+:pages_backup/protocol/un-bridge.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
           </div>"
           <div className="flex items-center gap-2">'"
@@ -1352,15 +1043,9 @@ if (return) {
               <div>;'
                 <span className='font - medium'>Status:</span>{' '}
                 {result.meta.status}
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-<<<<<<< HEAD
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
               </div>;
               {result.meta.artifacts?.markdown_path && (
                 <div>;
@@ -1386,12 +1071,9 @@ if (return) {
                 </div>              )}
               {result.meta.artifacts?.ipfs_cid && (
                 <div > IPFS CID: {result.meta.artifacts.ipfs_cid}</div>)}
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               {result.meta.artifacts?.signature && (
-<<<<<<< HEAD
-
-            </div>
+</div>
           )}
         </div>
       </div>
@@ -1399,23 +1081,16 @@ if (return) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-              {result.meta.artifacts?.signature && (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div>;
                   Signature: {result.meta.artifacts.signature.slice (0, 30)}…;
                 </div>              )}
             </div>)}
         </div>;
       </div>;
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
 
     </div>;
   );
@@ -1425,18 +1100,11 @@ if (return) {
   }
 }
 
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-
+:pages_backup/protocol/un-bridge.tsx
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/protocol/un-bridge.tsx
               </div>
@@ -1478,19 +1146,10 @@ if (return) {
       </div>
     </div>
 );
-<<<<<<< HEAD:pages_backup/protocol/un-bridge.tsx
-<<<<<<< HEAD
+:pages_backup/protocol/un-bridge.tsx
 <<<<<<< HEAD:pages/protocol/un-bridge.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/protocol/un-bridge.tsx
-=======
-
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/protocol/un-bridge.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

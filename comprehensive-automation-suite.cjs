@@ -6,9 +6,7 @@ class ComprehensiveAutomationSuite {
 }
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
-<<<<<<< HEAD
-    this.startTime = new Date();
+this.startTime = new Date();
     this.results = {
       dependencyFix: { success: false, duration: 0, errors: [], warnings: [] },
       codeQuality: { success: false, duration: 0, errors: [], warnings: [] },
@@ -39,10 +37,6 @@ class ComprehensiveAutomationSuite {
       },
       deployment: { success: false, duration: 0, errors: [], warnings: [] },
     };
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 
   log(message, type = 'INFO') {
@@ -441,15 +435,8 @@ class ComprehensiveAutomationSuite {
     }
 
     return recommendations;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2bab
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
-
 
   async run() {
     console.log('🚀 Running Comprehensive Automation Suite...');
@@ -464,4 +451,3 @@ origin/cursor/automate-test-improve-and-merge-code-2bab
     for (const { cmd, desc } of commands) {
       try {
   // TODO: Implement
-

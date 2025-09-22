@@ -86,4 +86,3 @@ interface CategoriesSectionProps {;
         </div>;
       </div>;
     </section>;
-

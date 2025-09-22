@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
-<<<<<<< HEAD:src/components/auth/SignupForm.tsx
+:src_backup/components/auth/SignupForm.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,15 +28,6 @@ const signupSchema = z.object({
 }).refine((data) => data.password === data.confirmPassword, {
   message: "Passwords don't match",
   path: ["confirmPassword"]}),
-=======
-passwordStrength.strength >= 4 ? 'text-green-600' :
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-passwordStrength.strength >= 4 ? 'text-green-600' :
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/SignupForm.tsx
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
 =======
                 passwordStrength.strength >= 4 ? 'text-green-600' :                passwordStrength.strength >= 3 ? 'text-blue-600' :
@@ -56,9 +46,8 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
             <div className="text-xs text-gray-600 space-y-1">
               <div className="grid grid-cols-2 gap-1">
                 <span className={watchedFields.password?.length >= 8 ? 'text-green-600' : 'text-gray-400'}>
-<<<<<<< HEAD:src/components/auth/SignupForm.tsx
-<<<<<<< HEAD
-                   8+ characters
+:src/components/auth/SignupForm.tsx
+8+ characters
                 </span>
                 <span className={/[A-Z]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
                    Uppercase letter
@@ -71,22 +60,6 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
                 </span>
                 <span className={/[^A-Za-z0-9]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
                    Special character                </span>
-=======
-=======
-                  ✓ 8+ characters
-                </span>
-                <span className={/[A-Z]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Uppercase letter
-                </span>
-                <span className={/[a-z]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Lowercase letter
-                </span>
-                <span className={/[0-9]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Number
-                </span>
-                <span className={/[^A-Za-z0-9]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Special character
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/SignupForm.tsx
 
                 </span>
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -94,23 +67,17 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
             </div>
           </div>
         )}
-        
+
         {errors.password && (
           <p className="text-sm text-red-600 flex items-center gap-1">
             <AlertCircle className="h-3 w-3" />
             {errors.password.message}
           </p>
         )}
-<<<<<<< HEAD:src/components/auth/SignupForm.tsx
+:src/components/auth/SignupForm.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/SignupForm.tsx
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   path: ["confirmPassword"]}),;
 
@@ -132,8 +99,7 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
 
     return null;
   };
-<<<<<<< HEAD
-  return (;
+return (;
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;
       {/* Name Field */}
       <div className="space-y-2">;
@@ -226,11 +192,6 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
               <span>Password Strength</span>
               <span className={cn('font-medium', 
                 passwordStrength.strength >= 4 ? 'text-green-600' :
-=======
-
-                passwordStrength.strength >= 4 ? 'text-green-600' :
-passwordStrength.strength >= 4 ? 'text-green-600' :
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/SignupForm.tsx
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
               )}>
@@ -283,33 +244,7 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
             {errors.password.message}
           </p>;
         )}
-<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
-=======
-=======
-      </div>
-
-
-  path: ["confirmPassword"]}),;
-
-type SignupFormData = z && z.infer<typeof signupSchema>;
-
-        setFieldStates(prev => ({;
-          ...prev;
-
-        timeouts[fieldName] = setTimeout(async () => {;
-          const result = await trigger(typedFieldName);
-          const error = errors[typedFieldName];
-
-          setFieldStates(prev => ({;
-            ...prev;
-    const state = fieldStates[fieldName];
-    const isTouched = touchedFields[fieldName as keyof SignupFormData];    ;
-      return <AlertCircle className="h-4 w-4 text-red-500" />;
-    }
-
-    return null;
-  };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/SignupForm.tsx
+:src_backup/components/auth/SignupForm.tsx
 
   const getFieldClasses = (fieldName: string) => {;
     const state = fieldStates[fieldName];
@@ -328,24 +263,13 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
               <span className={cn('font-medium', passwordStrength && passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
 
-<<<<<<< HEAD:src/components/auth/SignupForm.tsx
+:src/components/auth/SignupForm.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
-
-<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
+:src_backup/components/auth/SignupForm.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/SignupForm.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/SignupForm.tsx
   path: ["confirm_password"]}),
 =======
       </div>  path: ["confirm_password"]}),
@@ -362,11 +286,8 @@ type SignupFormData = z.infer < typeof signup_schema>;
     const is_touched = touched_fields[field_name as keyof SignupFormData];
       return <AlertCircle className="h - 4 w - 4 text - red-500" />;
     }
-<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
-<<<<<<< HEAD:src/components/auth/SignupForm.tsx
+:src_backup/components/auth/SignupForm.tsx
 <<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/SignupForm.tsx
     return null
   }
   const getFieldClasses = (fieldName: string) => {
@@ -379,13 +300,8 @@ type SignupFormData = z.infer < typeof signup_schema>;
       fireEvent('signup_error', { message: error.message |'unexpected' })
       const errorMessage = 'An unexpected error occurred during signup. Please try again.'
       setError('root', { message: errorMessage })
-<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
+:src_backup/components/auth/SignupForm.tsx
               <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}}
-=======
-=======
-=======
-              <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/SignupForm.tsx
     return null;
   }
   const getFieldClasses = (field_name: string) =>: any {
@@ -481,7 +397,7 @@ type SignupFormData = z.infer < typeof signup_schema>;
         ) : (
           'Create Account'
         )}
-<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
+:src_backup/components/auth/SignupForm.tsx
       </Button>;
     </form>;
   );
@@ -490,11 +406,6 @@ type SignupFormData = z.infer < typeof signup_schema>;
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 ;
@@ -534,9 +445,6 @@ type SignupFormData = z.infer < typeof signup_schema>;
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Creating Account... </>) : ('Create Account') ;
 }</Button> </form>) ;
 }'"
-<<<<<<< HEAD:src/components/auth/SignupForm.tsx
+:src/components/auth/SignupForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/SignupForm.tsx

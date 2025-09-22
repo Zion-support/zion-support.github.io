@@ -181,7 +181,7 @@ const CardFooter = null;
 CardFooter.displayName = "CardFooter";
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-  hover?: boolean
+  hover?: boolean;
 }
 const Card: React.FC<CardProps> = ({
 origin/cursor/automate-test-improve-and-merge-code-2533

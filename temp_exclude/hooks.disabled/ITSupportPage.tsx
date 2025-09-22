@@ -1,62 +1,5 @@
-<<<<<<< HEAD
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
-=======
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
-export default function ITSupportPage() {}
-  const benefits = []
-    {import React from "react""
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-';
-import React from 'react';'
-import { ServiceLandingTemplate } from '@/components / services / ServiceLandingTemplate';'
-import { Phone, ShieldCheck, Clock } from 'lucide-react';
-export default /**;
- * ITSupportPage - Function description;
- */
-function ITSupportPage() {}
-  const benefits = [;'
-    {import React from './react';'
-import { ServiceLandingTemplate  } from '@/components / services / ServiceLandingTemplate';'
-import React from './react';
-export default /**;
- * ITSupportPage - Function description;
- */
-function ITSupportPage() {}
-  const benefits = [;
-    {'
-      title: '24 / 7 Assistance',
-      description:;'
-        'Our experts are available around the clock to keep your systems running.','
-      icon: <Clock className='h - 8 w - 8' />,
-    },
-    {'
-      title: 'Certified Professionals',
-      description:;'
-        'Work with seasoned technicians experienced in modern IT infrastructures.','
-      icon: <ShieldCheck className='h - 8 w - 8' />,
-    },
-    {'
-      title: 'Multi - Channel Support',
-      description:;'
-        'Get help via phone, chat, or onsite visits tailored to your needs.','
-      icon: <Phone className='h - 8 w - 8' />,
-    },
-  ];
-  const testimonials = [;
-
-    {'
-      name: 'Lisa Wong''
-      role: 'Operations Manager''"
-      text: "Zion's support team resolved our network outage within hours and saved us from a major downtime."'
-      avatar: '/placeholder.svg'
-    }
-<<<<<<< HEAD:temp_exclude/hooks.disabled/ITSupportPage.tsx
-    {
-
-import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     {}
 "
@@ -92,46 +35,7 @@ export default function ITSupportPage() {}
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
       avatar: "/placeholder.svg"}],
 
-<<<<<<< HEAD
-  return (
-=======
-
-class ErrorBoundary extends React.Component {};
-  constructor(props) {};
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {'
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}'
-import React from 'react';'
-import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';'
-import { Phone, ShieldCheck, Clock } from 'lucide-react';
-export default function ITSupportPage() { return null; }
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";'
-import { Phone, ShieldCheck, Clock } from 'lucide-react';
-"
-import React from "react";"
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-
-
-
-<<<<<<< HEAD:temp_exclude/hooks.disabled/ITSupportPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+return (
     <ServiceLandingTemplate
       title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
@@ -143,14 +47,7 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support""
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ITSupportPage.tsx
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
-<<<<<<< HEAD
-=======
 
-;
-}
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       benefits={benefits}
       testimonials={testimonials}"
       ctaText="Get IT Support""
@@ -160,7 +57,7 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 import React from "react",;"
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",;'
 import { Phone, ShieldCheck, Clock } from 'lucide-react';
-<<<<<<< HEAD:temp_exclude/hooks.disabled/ITSupportPage.tsx
+:temp_exclude/hooks.disabled/ITSupportPage.tsx
 export default function ITSupportPage() {;
   const benefits = [;
     {;
@@ -201,58 +98,16 @@ export default function ITSupportPage() {;
   );
 }
 ;
-=======
-      name: 'Carlos Diaz',;
-      role: 'IT Lead',;
-      text: 'Professional and responsive. Their technicians feel like an extension of our own team.',;
-=======
-export default function ITSupportPage() { return null; }
-    },;
-    {;'
-      title: 'Certified Professionals',;
-      description:;'
-        'Work with seasoned technicians experienced in modern IT infrastructures.',;'
-      icon: <ShieldCheck className='h-8 w-8' />,;
-    },;
-    {;'
-      title: 'Multi-Channel Support',;
-      description:;'
-        'Get help via phone, chat, or onsite visits tailored to your needs.',;'
-      icon: <Phone className='h-8 w-8' />,;
-    },;
-  ];
-
-  const testimonials = [;
-    {;'
-      name: 'Lisa Wong',;'
-      role: 'Operations Manager',;'"
-      text: "Zion's support team resolved our network outage within hours and saved us from a major downtime.",;'
-      avatar: '/placeholder && placeholder.svg',;
-    },;
-    {;'
-      name: 'Carlos Diaz',;'
-      role: 'IT Lead',;'
-      text: 'Professional and responsive. Their technicians feel like an extension of our own team.',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ITSupportPage.tsx
       avatar: '/placeholder && placeholder.svg',;
     },;
   ];
 
     return (
 
-
-
-<<<<<<< HEAD:temp_exclude/hooks.disabled/ITSupportPage.tsx
+:temp_exclude/hooks.disabled/ITSupportPage.tsx
     <ServiceLandingTemplate
       title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    <ServiceLandingTemplate"
-      title="IT Support Services""
-      subtitle="Reliable assistance to keep your business technology operating smoothly.""
-      heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support""
-      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ITSupportPage.tsx

@@ -46,4 +46,3 @@ export function CertificationsSection({ certifications } CertificationsSectionPr
       </div>;
     </div>;
 <<<<<<< HEAD
-

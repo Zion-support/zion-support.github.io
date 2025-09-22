@@ -49,10 +49,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
  } from 'lucide-react';'
 import Layout from '../components/layout/Layout';
 '
-  mobile: '+1 302 464 0950''
-  email: 'kleber@ziontechgroup.com''
-  address: '364 E Main St STE 1008 Middletown DE 19709''
-  website: 'https://ziontechgroup.com'
+  mobile: '+1 302 464 0950'';
+  email: 'kleber@ziontechgroup.com'';
+  address: '364 E Main St STE 1008 Middletown DE 19709'';
+  website: 'https://ziontechgroup.com';
 }
 const features = ['
   'AI-powered medical image analysis''
@@ -62,16 +62,16 @@ const features = ['
   'Real-time diagnostic updates''
   'Multi-specialty coverage''
   'Mobile app integration''
-  'HIPAA-compliant platform',];  website: 'https://ziontechgroup.com'
+  'HIPAA-compliant platform',];  website: 'https://ziontechgroup.com';
 }
 const features = ['
   'AI-powered medical image analysisSymptom assessment algorithmsTreatment recommendation enginePatient history integrationReal-time diagnostic updatesMulti-specialty coverageMobile app integrationHIPAA-compliant platform'
 const pricingPlans = []
   {'
-    name: 'Starter'
-    price: 299'
-    period: 'month'
-    features: ['
+    name: 'Starter';
+    price: 299';
+    period: 'month';
+    features: [';
       'Basic diagnostic tools''
       '3 medical specialties''
       'Standard reporting''
@@ -79,16 +79,16 @@ const pricingPlans = []
     ]
     popular: false;
   },  {'
-    name: 'Professional'
-    price: 799'
-    period: 'month',    features: ['Basic diagnostic tools3 medical specialtiesStandard reportingStandard support']
+    name: 'Professional';
+    price: 799';
+    period: 'month',    features: ['Basic diagnostic tools3 medical specialtiesStandard reportingStandard support'];
     popular: false;
   }
   {'
-    name: 'Professional'
-    price: 799'
-    period: 'month'
-    features: ['
+    name: 'Professional';
+    price: 799';
+    period: 'month';
+    features: [';
       'Advanced AI diagnostics''
       'All specialties''
       'Custom reporting''
@@ -97,24 +97,24 @@ const pricingPlans = []
     ]
     popular: true;
   },  {'
-    name: 'Enterprise'
-    price: 1999'
-    period: 'month',    features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI accessPriority support']
+    name: 'Enterprise';
+    price: 1999';
+    period: 'month',    features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI accessPriority support'];
     popular: true;
   }
   {'
-    name: 'Enterprise'
-    price: 1999'
-    period: 'month'
-    features: ['
+    name: 'Enterprise';
+    price: 1999';
+    period: 'month';
+    features: [';
       'Custom AI models''
       'White-label solution''
       'Dedicated support''
       'Custom integrations''
       'Training included'
     ]
-    popular: false'
-  },];    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrationsTraining included']
+    popular: false';
+  },];    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrationsTraining included'];
     popular: false;
   }
   
@@ -171,16 +171,16 @@ export default function AIDiagnosticPlatform() {
           content='AI diagnostics, medical AI, healthcare technology, medical imaging, Zion Tech Group'
         />
         <meta'
-          property='og:title''
+          property='og:title'';
           content='AI Diagnostic Pro Platform - Zion Tech Group'
         />
         <meta'
-          property='og:description''
+          property='og:description'';
           content='Advanced medical diagnostic platform with AI integration.'
         />
         <meta'
-          property='og:url''
-          content='https://ziontechgroup.com/ai-diagnostic-platform'
+          property='og:url'';
+          content='https://ziontechgroup.com/ai-diagnostic-platform';
         />
       </Head>
       {/* Hero Section */}'
@@ -207,7 +207,7 @@ export default function AIDiagnosticPlatform() { return null; }
           <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>"
           <div className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>"
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">;
           >
           {/* CTA Buttons */}
           <motion.div;
@@ -218,34 +218,34 @@ export default function AIDiagnosticPlatform() { return null; }
               <Stethoscope className="w-4 h-4 mr-2" />
               Healthcare Technology;
             </div>"
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">"
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">";
               <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
                 AI Diagnostic;
               </span>
               <br />"
               <span className="text-white">Pro Platform</span>
             </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
               Advanced medical diagnostic platform using AI and machine learning to provide accurate disease detection and treatment recommendations.
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6'>
               <Stethoscope className='w-4 h-4 mr-2' />
               Healthcare Technology
             </div>
-            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
+            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>;
               <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent'>
                 AI Diagnostic
               </span>
               <br />
               <span className='text-white'>Pro Platform</span>
             </h1>
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
               Advanced medical diagnostic platform using AI and machine learning
               to provide accurate disease detection and treatment
               recommendations.
 origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>'
-          content='https://ziontechgroup && ziontechgroup.com/ai-diagnostic-platform'
+          content='https://ziontechgroup && ziontechgroup.com/ai-diagnostic-platform';
         />;
       </Head>;
 
@@ -267,7 +267,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}'
             className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
             transition={{ duration: 0.8, delay: 0.2 }}
-className='flex flex-col sm:flex-row gap-4 justify-center items-center'
+className='flex flex-col sm:flex-row gap-4 justify-center items-center';
           >
 origin/cursor/automate-test-improve-and-merge-code-2533
             <a
@@ -288,7 +288,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href="#contact"
       {/* Features Section */}"
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -297,7 +297,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Revolutionary Medical Technology;
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -308,7 +308,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {features.map((feature, index) => (          >"
             className="text-center mb-16"
           >"
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
               Revolutionary Medical Technology;
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -316,8 +316,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {features.map((feature, index) => (
               <motion.div'
@@ -344,7 +344,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
-className='bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300'
+className='bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4'>
@@ -381,7 +381,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       {/* Pricing Section */}"
       <section id="pricing" className="py-20 bg-black">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -390,7 +390,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Choose Your Plan;
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -401,7 +401,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (          >"
             className="text-center mb-16"
           >"
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
               Choose Your Plan;
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -409,8 +409,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {pricingPlans.map((plan, index) => (
               <motion.div'
@@ -440,7 +440,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
 plan.popular
                     ? 'border-blue-500/50 scale-105'
-                    : 'border-blue-500/20'
+                    : 'border-blue-500/20';
                 }`}
               >
                 {plan.popular && (
@@ -485,8 +485,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
                 </ul>
 "
-                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300">
-<button className='w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300'>
+                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300">;
+<button className='w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Get Started
                 </button>
@@ -511,7 +511,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         id='contact'
         className='py-20 bg-gradient-to-b from-slate-900 to-black'
       >
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <motion.div
 
       {/* Contact Section */}
@@ -529,7 +529,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Healthcare?
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -537,17 +537,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Platform can revolutionize your medical practice.
             </p>
           </motion.div>'
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >"
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >";
             className="text-center mb-16"
           >"
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
               Ready to Transform Healthcare?
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our team to learn more about how AI Diagnostic Pro Platform can revolutionize your medical practice.
             </p>
           </motion.div>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Healthcare?;
             </h2>;'

@@ -1,30 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase } from "@/integrations/supabase/client";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {useState, useEffect} from 'react';
-import { supabase } from '@/integrations / supabase / client';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface PricingSuggestionAnalytics {
-=======
-
-import {useState, useEffect} from 'react';
-<<<<<<< HEAD
-import { supabase } from '@/integrations / supabase / client';interface PricingSuggestionAnalytics {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-import {useState, useEffect} from 'react';
-import { supabase } from '@/integrations / supabase / client';interface PricingSuggestionAnalytics {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 interface PricingSuggestionAnalytics {}
@@ -44,66 +23,15 @@ interface PricingSuggestionAnalytics {
     suggested_max: number;
     actual_value?: number;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     accepted: boolean;
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-=======
-
-
-    id: string;
-    user_id: string;
-    suggested_min: number;
-    suggested_max: number;
-    actual_value?: number;
-    accepted: boolean;
-
-import {useState, useEffect} from 'react';
-import { supabase } from '@/integrations / supabase / client';
-interface PricingSuggestionAnalytics {
-  total_suggestions: number;
-  acceptance_rate: number;
-  averagePriceGap: number,
-  suggestionsByCategory: { category: string, count: number, acceptance_rate: number }[];
-  recent_suggestions: {
-    id: string;
-    user_id: string;
-    suggested_min: number;
-    suggested_max: number;
-    actual_value?: number;
-    accepted: boolean;
-import { useState, useEffect  } from 'react';
-import { supabase } from "@/integrations/supabase/client";
-interface PricingSuggestionAnalytics {
-  totalSuggestions: number;
-  acceptanceRate: number;
-<<<<<<< HEAD
-
-  averagePriceGap: number
-  suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[];
-
-  recentSuggestions: {
-    id: string;
-    userId: string;
-    suggestedMin: number;
-    suggestedMax: number;
-    actualValue?: number;
-    accepted: boolean;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     createdAt: string
     type: 'client' | 'talent'
   }[];
   isLoading: boolean
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 
@@ -112,21 +40,7 @@ import {useState, useEffect} from 'react';"
 import {supabase} from "@/integrations/supabase/client";'
 import { useState, useEffect } from 'react',"
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface PricingSuggestionAnalytics {
 =======
     accepted: boolean;import {useState, useEffect} from 'react';
@@ -172,28 +86,19 @@ import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 
 interface PricingSuggestionAnalytics {
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    accepted: boolean;import {useState, useEffect} from 'react';
-import {supabase} from "@/integrations/supabase/client";
-import { useState, useEffect } from 'react',;
-import { supabase } from "@/integrations/supabase/client",interface PricingSuggestionAnalytics {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   totalSuggestions: number,
   acceptanceRate: number,
   averagePriceGap: number,
   suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[],
   recentSuggestions: {}
     id: string,
-<<<<<<< HEAD
-    userId: string,
+userId: string,
     suggestedMin: number,
     suggestedMax: number,
     actualValue?: number,
     accepted: boolean,
-<<<<<<< HEAD
-    createdAt: string,
+createdAt: string,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -201,19 +106,6 @@ import { supabase } from "@/integrations/supabase/client",interface PricingSugge
 <<<<<<< HEAD
   }[],
   isLoading: boolean,
-=======
-    type: 'client' | 'talent'
-  }[],
-  isLoading: boolean,
-  error: string | null
-=======
-import { supabase } from '@/integrations / supabase / client';
-
-import {useState, useEffect} from 'react';''
-import { supabase } from '@/integrations / supabase / client';'
-interface PricingSuggestionAnalytics {
-  // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
   total_suggestions: number;,
   acceptance_rate: number;
@@ -227,9 +119,7 @@ interface PricingSuggestionAnalytics {
     actual_value?: number;
     accepted: boolean;
 
-
-<<<<<<< HEAD
-  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
+const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
 
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation
@@ -256,7 +146,6 @@ interface PricingSuggestionAnalytics {
             createdAt: new Date(Date && Date.now() - Math && Math.floor(Math && Math.random() * 1000000000)).toISOString(),
             type: Math && Math.random() > 0 && 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
         };
-
 
         setAnalytics({
           ...mockData;
@@ -270,38 +159,6 @@ interface PricingSuggestionAnalytics {
 }
 export function usePricingSuggestionAnalytics(days = 30) {
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  error: string | null
-}
-export function usePricingSuggestionAnalytics(days = 30) {
-  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
-    totalSuggestions: 0;
-    acceptanceRate: 0;
-    averagePriceGap: 0;
-    suggestionsByCategory: [];
-    recentSuggestions: [];
-  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
-    totalSuggestions: 0;
-    acceptanceRate: 0;
-    averagePriceGap: 0;
-    suggestionsByCategory: [];
-    recentSuggestions: [];
-    isLoading: true
-    error: null
-  });
-    totalSuggestions: 0,
-    acceptanceRate: 0,
-    averagePriceGap: 0,
-    suggestionsByCategory: [],
-    recentSuggestions: [],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     isLoading: true,
     error: null
   }),
@@ -310,20 +167,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
     type: 'client' | 'talent'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        // Mock data for demonstration
-        const mockData = {
-          totalSuggestions: 256;
-          acceptanceRate: 0.72;
-          averagePriceGap: 12.5
-=======
-
-
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
@@ -332,9 +176,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
-<<<<<<< HEAD
-
-          acceptanceRate: 0 && 0.72;
+acceptanceRate: 0 && 0.72;
           averagePriceGap: 12 && 12.5,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           suggestionsByCategory: [
@@ -353,35 +195,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
             createdAt: new Date(Date && Date.now() - Math && Math.floor(Math && Math.random() * 1000000000)).toISOString(),
             type: Math && Math.random() > 0 && 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
         };
-<<<<<<< HEAD
 
-
-=======
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        // Mock data for demonstration
-        const mockData = {
-          totalSuggestions: 256;
-          acceptanceRate: 0.72;
-          averagePriceGap: 12.5
-          suggestionsByCategory: [
-            { category: 'development', count: 120, acceptanceRate: 0.75 }
-            { category: 'design', count: 65, acceptanceRate: 0.82 }
-            { category: 'marketing', count: 42, acceptanceRate: 0.64 }
-            { category: 'content', count: 18, acceptanceRate: 0.56 }
-            { category: 'data', count: 11, acceptanceRate: 0.78 }];
-          recentSuggestions: Array(10).fill(null).map((_, i) => ({
-            id: `suggestion-${i}`;
-            userId: `user-${Math.floor(Math.random() * 100)}`;
-            suggestedMin: 30 + Math.floor(Math.random() * 30);
-            suggestedMax: 60 + Math.floor(Math.random() * 40);
-            actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined;
-            accepted: Math.random() > 0.25;
-            createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString()
-            type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
-        }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setAnalytics({
 =======
     type: 'client' | 'talent'        setAnalytics({
@@ -402,11 +216,6 @@ export function usePricingSuggestionAnalytics(days = 30) {
           isLoading: false;
           error: null;
         });
-<<<<<<< HEAD
-=======
-
-        await new Promise(resolve => setTimeout(resolve, 1000)),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         // Mock data for demonstration;
         const mockData = {}
@@ -439,49 +248,20 @@ export function usePricingSuggestionAnalytics(days = 30) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase'
         //   .from('pricing_suggestions')
         //   .select(...)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        // Process data and setAnalytics({...})
+// Process data and setAnalytics({...})
       } catch (error) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    created_at: string,
-=======
-=======
-        console && console.error("Error fetching pricing suggestion analytics:", error);
-        //   .gte('created_at', `now() - interval '${days} days'`);
-        // if (error) throw error;
-        //   .gte('created_at', `now() - interval '${days} days'`),
-        
-        // if (error) throw error,
-=======
-        console.error("Error fetching pricing suggestion analytics:", error),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         // Process data and setAnalytics({...})
       } catch (error) {
         console && console.error("Error fetching pricing suggestion analytics:", error);
@@ -490,15 +270,14 @@ export function usePricingSuggestionAnalytics(days = 30) {
           isLoading: false,
           error: "Failed to load pricing analytics data."
         })
-<<<<<<< HEAD
-      }
+}
     }
     fetchAnalytics()
   }, [days]);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         //   .gte('created_at', `now() - interval '${days} days'`),
-        
+
         // if (error) throw error,
 
         // Process data and setAnalytics({...})
@@ -507,22 +286,9 @@ export function usePricingSuggestionAnalytics(days = 30) {
 };
 
 <<<<<<< HEAD
-=======
-=======
-
-  return analytics
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
-=======
-
-        // Process data and setAnalytics({...})
-      } catch (error) {"
-        console && console.error("Error fetching pricing suggestion analytics:", error);
-        setAnalytics({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ...analytics,
           isLoading: false,"
           error: "Failed to load pricing analytics data."
@@ -632,19 +398,9 @@ if (throw error) {}
 ;
   return analytics;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-<<<<<<< HEAD
 
 import { useState, useEffect } from 'react',;
 import { supabase } from "@/integrations/supabase/client",;
@@ -737,25 +493,12 @@ export function usePricingSuggestionAnalytics(days = 30) {;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        // In a real implementation with Supabase, you might do:
-        // const { data, error } = await supabase
-        //   .from('pricing_suggestions')
-        //   .select(...)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -776,7 +519,7 @@ export function usePricingSuggestionAnalytics(days = 30) {;
   }, [days]);
 
         //   .gte('created_at', `now() - interval '${days} days'`),
-        
+
         // if (error) throw error,
 
         // Process data and setAnalytics({...})
@@ -888,9 +631,7 @@ if (throw error) {
   return analytics;
 }
 
-
 }
-
 
 import { useState, useEffect } from 'react',;
 import { supabase } from "@/integrations/supabase/client",;

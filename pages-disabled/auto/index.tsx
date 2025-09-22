@@ -1,26 +1,13 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
 =======
-
 
 import type { NextPage } from 'next','
 import Head from 'next/head','
@@ -49,16 +36,8 @@ const AutoIndex: NextPage = () => {}
             <h2 className="font-semibold text-lg"><Link href="/auto/seo-audit">Autonomous SEO Auditor</Link></h2>"
             <p className="text-sm text-gray-600">Scans pages for SEO gaps and commits a report for fixes.</p>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -72,75 +51,17 @@ const AutoIndex: NextPage;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
-
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </li>
         </ul>
       </main>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-;
-          </li>;
-        </ul>;
-      </main>;
-    </div>;
-  ),;
-};
-
-
-
-
-
-
-
-
-
-export default AutoIndex;
-
-
-
-
-
-'
-import Head from 'next / head';'
-import Link from 'next / link';
-          </li>;
-        </ul>;
-      </main>;
-    </div>),
-}
-;
-export default AutoIndex;
-;
-
-<<<<<<< HEAD
-export default AutoIndex
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  ),
+),
 };
 
   )
-<<<<<<< HEAD
-
 export default AutoIndex;
-
-=======
-}
-export default AutoIndex;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 },
@@ -174,27 +95,13 @@ const AutoIndex: NextPage = () => {;
         </ul>;
       </main>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
+);
 },;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default AutoIndex;
 
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
-export default AutoIndex;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -209,9 +116,6 @@ export default AutoIndex;
 export default AutoIndex;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

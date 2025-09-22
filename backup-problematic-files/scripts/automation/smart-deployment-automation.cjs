@@ -21,49 +21,30 @@ class SmartDeploymentAutomation {}
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
-<<<<<<< HEAD
-    preDeploymentChecks() {}
+preDeploymentChecks() {}
         this.log('Running pre-deployment checks...');
-        
+
         const checks = {}
             "lint": this.runLintCheck(),
             "typeCheck": this.runTypeCheck(),
             "build": this.runBuildCheck(),
             "test": this.runTestCheck();
        };
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Health check after each instance
         const healthCheck = await this.performHealthCheck(environment);
         if (!healthCheck.healthy) {
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-        
-        
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
         try {}
             execSync('npm run lint', { })
-<<<<<<< HEAD
-                "cwd": this.projectRoot,
-=======
-                "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
@@ -73,11 +54,7 @@ class SmartDeploymentAutomation {}
     runTypeCheck() {}
         try {}
             execSync('npm run type-check', { })
-<<<<<<< HEAD
-                "cwd": this.projectRoot,
-=======
-                "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
@@ -87,11 +64,7 @@ class SmartDeploymentAutomation {}
     runBuildCheck() {}
         try {}
             execSync('npm run build', { })
-<<<<<<< HEAD
-                "cwd": this.projectRoot,
-=======
-                "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
@@ -101,11 +74,7 @@ class SmartDeploymentAutomation {}
     runTestCheck() {}
         try {}
             execSync('npm test', { })
-<<<<<<< HEAD
-                "cwd": this.projectRoot,
-=======
-                "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
@@ -115,18 +84,14 @@ class SmartDeploymentAutomation {}
     };
     generateBuild() {}
         this.log('Generating production build...');
-        
+
         try {}
             execSync('npm run build', { })
-<<<<<<< HEAD
-                "cwd": this.projectRoot,
-=======
-                "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
-            
+
             this.log('Production build generated successfully');
             return { "status": 'success', "message": 'Build completed' }} catch (error) {}
             this.log(`Build "failed": ${error.message}`);
@@ -134,27 +99,19 @@ class SmartDeploymentAutomation {}
     };
     optimizeBuild() {}
         this.log('Optimizing build...');
-        
+
         try {}
             // Check if build optimization is available;
             const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8';););
-            
+
             if ( {})
                 execSync('npm run "build": production', { })
-<<<<<<< HEAD
-                    "cwd": this.projectRoot,
-=======
-                    "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                     "stdio": 'pipe'
                 })) {}
      {}
                 execSync('npm run "build": production', { })
-<<<<<<< HEAD
-                    "cwd": this.projectRoot,
-=======
-                    "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
                     "stdio": 'pipe'
                 })};
                 this.log('Production build optimization completed')} else {}
@@ -165,21 +122,21 @@ class SmartDeploymentAutomation {}
     };
     checkDeploymentReadiness() {}
         this.log('Checking deployment readiness...');
-        
+
         const readiness = {}
             "buildExists": fs.existsSync(path.join(this.projectRoot, '.next')),
             "packageJsonExists": fs.existsSync(path.join(this.projectRoot, 'package.json')),
             "nodeModulesExists": fs.existsSync(path.join(this.projectRoot, 'node_modules')),
             "logsDirectoryExists": fs.existsSync(path.join(this.projectRoot, 'logs'));
        };
-        
+
         const isReady = Object.values(readiness).every(Boolean;);
-        
+
         this.log(`Deployment "readiness": ${isReady ? 'ready' : 'not ready'}`);
         return { ...readiness, isReady }};
     generateDeploymentReport() {}
         this.log('Generating deployment automation report...');
-        
+
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -192,7 +149,7 @@ class SmartDeploymentAutomation {}
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Deployment report saved to ${this.reportFile}`);
-        
+
         return report};
     generateDeploymentRecommendations() {}
         return [;]
@@ -206,7 +163,7 @@ class SmartDeploymentAutomation {}
         ]};
     async run() {}
         this.log('Smart Deployment Automation started');
-        
+
         try {}
             const report = this.generateDeploymentReport(;);
             this.log('Smart Deployment Automation completed successfully');
@@ -226,17 +183,8 @@ class SmartDeploymentAutomation {}
     const automation = new SmartDeploymentAutomation}(;);
     automation.run().catch(console.error)};
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = SmartDeploymentAutomation;
-module.exports = SmartDeploymentAutomation;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 module.exports = SmartDeploymentAutomation;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

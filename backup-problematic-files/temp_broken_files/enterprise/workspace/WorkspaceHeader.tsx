@@ -45,4 +45,3 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
         </div>;
       </div>;
     </div>;
-

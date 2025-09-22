@@ -1,27 +1,12 @@
 attachment_url?: string,
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  attachment_url?: string,
-  attachment_name?: string;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   attachment_url?: string,
   attachment_name?: string;
 }
 // Define the shape of a conversation;
 
 export interface Conversation {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-// Define the shape of a message
-export interface Message {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
   sender_id: string;
   recipient_id: string;
@@ -29,8 +14,6 @@ export interface Message {;
   created_at: string;
   read: boolean;
   sender_name?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   sender_avatar?: string;
@@ -44,18 +27,11 @@ export interface Message {;
 // Define the shape of a conversation
 export interface Conversation {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export interface Conversation {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   user_id: string;
   other_user: {}
     id: string;
     name: string;
-
-
 
   }
 =======
@@ -100,22 +76,13 @@ avatar_url?: string
   name: string;
 pr-12325
   avatar_url?: string;
-<<<<<<< HEAD
-  last_message?: {
+last_message?: {
 
-<<<<<<< HEAD
-    content: string,
+content: string,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     created_at: string;
-
-=======
-    content: string
-    created_at: string
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
   last_message?: {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -129,16 +96,10 @@ pr-12325
   context_type?: 'job' | 'talent' | 'general';
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   context_id?: string,
   context_data?: ConversationContextData;
 }
 // Context data for creating a conversation;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export interface ConversationContextData {
   // TODO: Implement
@@ -147,21 +108,9 @@ export interface ConversationContextData {
   image_url?: string;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-
-
-=======
-
-  context_id?: string
-=======
-context_id?: string
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   context_data?: ConversationContextData
 }
@@ -200,12 +149,7 @@ export interface MessagingContextType {;
 
   loadMessages: (conversationId: string) => Promise<void>
 }
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Define the shape of a message;
@@ -228,11 +172,7 @@ export interface Message {;
   },;
   last_message?: {;
   updated_at: string,;
-<<<<<<< HEAD
-  unread_count: number,;'
-=======
-  unread_count: number,;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+unread_count: number,;'
   context_type?: 'job' | 'talent' | 'general',;
   context_id?: string,;
 // Context data for creating a conversation;
@@ -243,13 +183,7 @@ export interface ConversationContextData {;
 }
 ;
 
-<<<<<<< HEAD
-
-
-   * Set the currently active conversation. Passing `null` will clear the;
-=======
-    created_at: string;   * Set the currently active conversation. Passing `null` will clear the;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+* Set the currently active conversation. Passing `null` will clear the;
 =======
     created_at: string;   * Set the currently active conversation. Passing `null` will clear the;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -260,44 +194,29 @@ export interface MessagingContextType {
   messages: Message[];,
   conversations: Conversation[];
 
-<<<<<<< HEAD
-   * Set the currently active conversation. Passing `null` will clear the;
+* Set the currently active conversation. Passing `null` will clear the;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
    * selection.;
    */;
   setActiveConversation: (value: Conversation | null) => void,;
   fetchConversations: () => Promise<void>;
   loadMessages: (conversationId: string) => Promise<void>;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
-
 
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

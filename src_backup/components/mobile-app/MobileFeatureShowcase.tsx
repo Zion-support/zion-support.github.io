@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/mobile-app/MobileFeatureShowcase.tsx
-<<<<<<< HEAD
+:src/components/mobile-app/MobileFeatureShowcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,8 +8,6 @@ import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
 
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       icon: <Users className="h-8 w-8 text-zion-cyan" />,
       title: "Hire from Anywhere",
@@ -37,14 +34,6 @@ export const MobileFeatureShowcase: React.FC = () => {
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
     }
 =======
-{
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 =======
 {
 
@@ -63,12 +52,9 @@ export const MobileFeatureShowcase: React.FC = () => {
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
     }
     {
-<<<<<<< HEAD:src/components/mobile-app/MobileFeatureShowcase.tsx
+:src/components/mobile-app/MobileFeatureShowcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
       icon: <Star className="h-8 w-8 text-zion-purple" />
 =======
     {      icon: <Star className="h-8 w-8 text-zion-purple" />
@@ -76,100 +62,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       title: "AI-Match Instantly"
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
 
-<<<<<<< HEAD:src/components/mobile-app/MobileFeatureShowcase.tsx
-<<<<<<< HEAD
-    },
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-    },
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
+:src/components/mobile-app/MobileFeatureShowcase.tsx
+},
     {
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
       title: "Track Milestones"
       description: "Monitor project progress and approve milestones directly from your phone."
 
-<<<<<<< HEAD:src/components/mobile-app/MobileFeatureShowcase.tsx
-<<<<<<< HEAD
-=======
-=======
-
-    },
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
-    {
+:src/components/mobile-app/MobileFeatureShowcase.tsx
+{
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       icon: <Mail className="h-8 w-8 text-zion-purple" />
       title: "Instant Messaging"
       description: "Chat with candidates or clients and receive notifications in real-time."
 
-<<<<<<< HEAD:src/components/mobile-app/MobileFeatureShowcase.tsx
+:src/components/mobile-app/MobileFeatureShowcase.tsx
 <<<<<<< HEAD
     },
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-    },
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
     {
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />
       title: "Biometric Security"
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
-<<<<<<< HEAD:src/components/mobile-app/MobileFeatureShowcase.tsx
-<<<<<<< HEAD
-      icon: <Star className="h - 8 w - 8 text - zion-purple" />,
-=======
-
-=======
-
-
-import React from 'react';
-};
-
-export const MobileFeatureShowcase: React.FC = () => {;
-  const features = [;
-    {;
-      icon: <Users className="h-8 w-8 text-zion-cyan" />,;
-      title: "Hire from Anywhere",;
-      description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
-    };
-    {;
-      icon: <Star className="h-8 w-8 text-zion-purple" />,;
-      title: "AI-Match Instantly",;
-      description: "Get matched with the perfect talent or jobs using our advanced AI algorithm.";
-    };
-    {;
-      icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />,;
-      title: "Track Milestones",;
-      description: "Monitor project progress and approve milestones directly from your phone.";
-    };
-    {;
-      icon: <Mail className="h-8 w-8 text-zion-purple" />,;
-      title: "Instant Messaging",;
-      description: "Chat with candidates or clients and receive notifications in real-time.";
-    };
-    {;
-      icon: <Smartphone className="h-8 w-8 text-zion-cyan" />,;
-      title: "Biometric Security",;
-      description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
-      icon: <Users className="h - 8 w - 8 text - zion - cyan" />,
-      title: "Hire from Anywhere",
-      description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
-    }
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
+:src/components/mobile-app/MobileFeatureShowcase.tsx
+icon: <Star className="h - 8 w - 8 text - zion-purple" />,
     {
       icon: <Star className="h - 8 w - 8 text - zion - purple" />,
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -192,15 +107,13 @@ export const MobileFeatureShowcase: React.FC = () => {;
       description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
     }
   ];
-<<<<<<< HEAD:src/components/mobile-app/MobileFeatureShowcase.tsx
+:src/components/mobile-app/MobileFeatureShowcase.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
     }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ],
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return (
     <section id="features" className="py-16 bg-zion-blue">
@@ -213,56 +126,14 @@ export const MobileFeatureShowcase: React.FC = () => {;
             The Zion mobile app brings the power of our AI marketplace to your pocket with these key features
           </p>
         </div>
-<<<<<<< HEAD
-        
-
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-    }
-
-  ],
-
-
-  return (
-
-
-
-        
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <div 
               key={index} 
-<<<<<<< HEAD
-              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
+className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
             >
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="mb-4">
-<<<<<<< HEAD
-                {feature.icon}
-=======
-    <section id="features" className="py - 16 bg - zion - blue">;
-      <div className="container mx - auto px - 4">;
-        <div className="text - center mb - 12">;
-          <h2 className="text - 3xl md:text - 4xl font - bold bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent">;
-=======
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {features.map((feature, index) => (
-            <div 
-              key={index} 
-
-              <div className="mb-4">
-    <section id="features" className="py - 16 bg - zion-blue">;
-      <div className="container mx - auto px-4">;
-        <div className="text - center mb-12">;
-          <h2 className="text - 3xl md:text - 4xl font - bold bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text-transparent">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+{feature.icon}
             Everything You Need On The Go;
           </h2>;
           <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx-auto">;
@@ -277,26 +148,13 @@ export const MobileFeatureShowcase: React.FC = () => {;
               <div className="mb-4">;
                 {feature.icon}
 
-<<<<<<< HEAD:src/components/mobile-app/MobileFeatureShowcase.tsx
-<<<<<<< HEAD
+:src/components/mobile-app/MobileFeatureShowcase.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-zion-slate-light">{feature.description}</p>
             </div>
-<<<<<<< HEAD
-=======
 
-'"},
-
-};
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react';
 export const MobileFeatureShowcase: React.FC = () => {;
@@ -328,16 +186,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
     }
   ];
   return (;
-<<<<<<< HEAD:src/components/mobile-app/MobileFeatureShowcase.tsx
+:src/components/mobile-app/MobileFeatureShowcase.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
     <section id="features" className="py-16 bg-zion-blue">;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -350,11 +200,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
             The Zion mobile app brings the power of our AI marketplace to your pocket with these key features;
           </p>;
         </div>;
-<<<<<<< HEAD:src/components/mobile-app/MobileFeatureShowcase.tsx
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">;
+:src/components/mobile-app/MobileFeatureShowcase.tsx
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">;
           {features.map((feature, index) => (;
             <div;
               key={index} ;
@@ -367,7 +214,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
               <p className="text-zion-slate-light">{feature.description}</p>;
             </div>;
           ))}
-<<<<<<< HEAD:src/components/mobile-app/MobileFeatureShowcase.tsx
+:src/components/mobile-app/MobileFeatureShowcase.tsx
 <<<<<<< HEAD
         </div>;
       </div>;
@@ -376,24 +223,11 @@ export const MobileFeatureShowcase: React.FC = () => {;
   );
 <<<<<<< HEAD
 };
-=======
-=======
-  )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 '"},
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-
-'"},
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 }
@@ -405,9 +239,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
   );
 };
 '"
-<<<<<<< HEAD:src/components/mobile-app/MobileFeatureShowcase.tsx
+:src/components/mobile-app/MobileFeatureShowcase.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/MobileFeatureShowcase.tsx

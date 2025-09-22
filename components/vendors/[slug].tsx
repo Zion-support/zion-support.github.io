@@ -29,8 +29,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     try {}
           // eslint-disable-next-line @next/next/no-img-element;
           <img src={vendor.logoUrl} alt={vendor.name} className="w-16 h-16 rounded" />
-        ) : ("
-          <div className="w-16 h-16 rounded bg-gray-100 dark: bg-gray-900" />
+        ) : (";
+          <div className="w-16 h-16 rounded bg-gray-100 dark: bg-gray-900" />;
         )}
         <div>"
           <div className="text-2xl font-semibold flex items-center gap-2">
@@ -60,8 +60,8 @@ body: JSON.stringify({ vendorId: vendor.id, title }),
             alt={vendor.name}
             className='w-16 h-16 rounded'
           />
-        ) : (
-          <div className='w-16 h-16 rounded bg-gray-100 dark:bg-gray-900' />
+        ) : (;
+          <div className='w-16 h-16 rounded bg-gray-100 dark:bg-gray-900' />;
         )}
         <div>
           <div className='text-2xl font-semibold flex items-center gap-2'>
@@ -120,7 +120,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         </div>
 <h2 className='text-lg font-medium mb-2'>About</h2>
-        <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line'>
+        <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line'>;
           {vendor.about || 'No description provided.'}
         </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -134,11 +134,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div>
 
 <h2 className='text-lg font-medium mb-2'>Packages</h2>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>;
             {vendor.packages.map(p => (
               <div
                 key={p.id}
-                className='border border-gray-200 dark:border-gray-800 rounded p-4'
+                className='border border-gray-200 dark:border-gray-800 rounded p-4';
               >
                 <div className='font-medium'>{p.title}</div>
                 <div className='text-sm text-gray-500'>{p.description}</div>
@@ -153,11 +153,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {vendor.sampleProjects && vendor.sampleProjects.length > 0 && (
         <div>
 <h2 className='text-lg font-medium mb-2'>Sample Projects</h2>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>;
             {vendor.sampleProjects.map(sp => (
               <div
                 key={sp.id}
-                className='border border-gray-200 dark:border-gray-800 rounded overflow-hidden'
+                className='border border-gray-200 dark:border-gray-800 rounded overflow-hidden';
               >
                 {sp.imageUrl ? (
                   // eslint-disable-next-line @next/next/no-img-element
@@ -166,8 +166,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     alt={sp.title}
                     className='w-full h-40 object-cover'
                   />
-                ) : (
-                  <div className='w-full h-40 bg-gray-100 dark:bg-gray-900' />
+                ) : (;
+                  <div className='w-full h-40 bg-gray-100 dark:bg-gray-900' />;
                 )}
                 <div className='p-3'>
                   <div className='font-medium'>{sp.title}</div>

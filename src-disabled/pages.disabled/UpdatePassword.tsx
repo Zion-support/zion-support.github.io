@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/pages/UpdatePassword.tsx
+:src_backup/pages/UpdatePassword.tsx
 
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
@@ -10,7 +10,6 @@ import { LockKeyhole } from 'lucide-react'
 
   )
 }
-
 
   FormMessage } from '@/components / ui / form'; import { toast  } from '@/hooks / use - toast';
 import { cleanupAuthState  } from '@/utils / auth_utils';
@@ -43,14 +42,6 @@ import {
   FormField,
   FormItem,
   FormLabel,
-=======
-
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/UpdatePassword.tsx
   FormMessage} from "@/components/ui/form",
 import { toast } from "@/hooks/use-toast",
 import { cleanupAuthState } from "@/utils/authUtils",
@@ -403,29 +394,7 @@ export default function UpdatePassword() {;
                   </form>
                 </Form>
               )}
-<<<<<<< HEAD:src_backup/pages/UpdatePassword.tsx
-=======
-            </div>;
-          </div>;
-        </div>;
-        <div className="hidden lg: block relative w-0 flex-1">;
-          <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;
-            <div className="flex flex-col justify-center items-center h-full px-8">;
-              <div className="max-w-md text-center">;
-                <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>;
-                <p className="text-lg text-white/80">;
-                  Set a strong password to secure your account and continue your journey in the Zion marketplace.;
-                </p>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;
-  );
-}
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/UpdatePassword.tsx
+:src_backup/pages/UpdatePassword.tsx
             </div>
           </div>
         </div>

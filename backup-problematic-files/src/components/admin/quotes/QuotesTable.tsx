@@ -150,4 +150,3 @@ export const QuotesTable:React.FC<QuotesTableProps> = ({;
         </TableBody>;
       </Table>;
     </div>;
-

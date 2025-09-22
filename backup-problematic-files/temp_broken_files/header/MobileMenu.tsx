@@ -80,4 +80,3 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
         ))}
       </nav>;
     </div>;
-

@@ -3,25 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -33,13 +15,6 @@ import { Button  } from '@/components/ui/button';
 import { Edit, Trash2  } from 'lucide-react';
 import { format } from 'date-fns';
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -48,21 +23,7 @@ import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {Edit, Trash2} from 'lucide-react';
 import {format} from 'date-fns';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import { Certification  } from '@/types/resume';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { Edit, Trash2  } from 'lucide-react';
-import { format } from 'date-fns';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CertificationsListProps {
@@ -78,14 +39,6 @@ interface CertificationsListProps {}
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -95,15 +48,7 @@ interface CertificationsListProps {;
   certifications: Certification[],;
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void;
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export function CertificationsList({
@@ -123,27 +68,18 @@ export function CertificationsList({}
     return null;
   }
 
-
-
-
-
-<<<<<<< HEAD
-  return (
+return (
 
 import { Certification  } from '@/types / resume';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Edit, Trash2  } from './lucide-react';
 import { format  } from './date - fns';
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Certification } from "@/types/resume";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Edit, Trash2 } from "lucide-react";
 import { format } from "date-fns";
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CertificationsListProps {
   certifications: Certification[];
@@ -161,8 +97,7 @@ if ( {) {
     return null;
   }
   return (
-<<<<<<< HEAD
-    <div className="space - y-4">;
+<div className="space - y-4">;
       <h3 className="text - md font - medium">Added Certifications</h3>;
       {certifications.map ((cert) => (
         <Card key={cert.id} className="bg - muted / 40">;
@@ -192,23 +127,6 @@ if ( {) {
                       ? cert && cert.expiration_date ;
                       : format(cert && cert.expiration_date, 'MMM yyyy')}
                     </>;
-
-=======
-                </p>
-                <p className="text-xs text-muted-foreground mt-1">
-
-                  Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
-                    ? cert.issue_date 
-                    : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
-                  {cert.expiration_date && (;
-                    <> · Expires: {typeof cert.expiration_date === 'string';
-                      ? cert.expiration_date;
-                      : format(cert.expiration_date, 'MMM yyyy')}
-                    </>;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -309,25 +227,11 @@ export function CertificationsList({
                         : format(cert.expiration_date, "MMM yyyy")}
                     </>
                   )}
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  onDelete: (id: string) => void
-import { Certification } from '@/types/resume',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { Button } from '@/components/ui/button',;
-import { Edit, Trash2 } from 'lucide-react',;
-import { format } from 'date-fns',;
-interface CertificationsListProps {;
-  certifications: Certification[],;
-  onEdit: (cert: Certification) => void;
-  onDelete: (id: string) => void;                  )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </p>;
               </div>;"
               <div className="flex gap-2">;
-<<<<<<< HEAD
-                <Button
+<Button
                   variant="ghost"
                   size="icon"
 <Button;
@@ -359,21 +263,7 @@ interface CertificationsListProps {;
                   on_click={() => on_edit (cert)}
                 >;
 <<<<<<< HEAD
-<<<<<<< HEAD
                   <Edit className="h - 4 w-4" />;
-=======
-
-
-
-                  onClick={() => onEdit(cert)}
-                >;"
-                  <Edit className="h-4 w-4" />;
-=======
-                  <Edit className="h - 4 w - 4" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  <Edit className="h - 4 w-4" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </Button>;
 "
                       {typeof cert.expiration_date === "string";
@@ -395,18 +285,9 @@ interface CertificationsListProps {;
                   variant="ghost";"
                   size="icon";
                   on_click={() => on_delete (cert.id!)}
-<<<<<<< HEAD
-                >;
-<<<<<<< HEAD
+>;
 <<<<<<< HEAD
                   <Trash2 className="h - 4 w-4" />;
-=======
-                >;"
-                  <Trash2 className="h - 4 w - 4" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                  <Trash2 className="h - 4 w - 4" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
                   <Trash2 className="h - 4 w-4" />;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -414,8 +295,7 @@ interface CertificationsListProps {;
               </div>;
             </div>;
 
-<<<<<<< HEAD
-            {cert.credential_url && (
+{cert.credential_url && (
               <p className="text-xs mt-2">
                 <a
                   href={cert.credential_url}
@@ -432,17 +312,7 @@ interface CertificationsListProps {;
       ))}
     </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
-=======
-  );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 ;
 
@@ -472,13 +342,7 @@ interface CertificationsListProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -487,7 +351,6 @@ interface CertificationsListProps {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -521,11 +384,6 @@ export function CertificationsList({
   if (certifications.length === 0) {}
     return null;}
   }
-
-
-
-
-
 
   return ("
     <div className="space-y-4">"

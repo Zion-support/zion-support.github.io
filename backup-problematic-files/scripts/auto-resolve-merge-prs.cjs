@@ -1,25 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/auto-resolve-merge-prs.cjs
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/auto-resolve-merge-prs.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-
-<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
@@ -27,8 +12,6 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 function sh(cmd, opts = {}) {}
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8', ...opts }).trim()};
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function getRepoFromGit() {}
   const remoteUrl = sh('git remote get-url origin');
   const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
@@ -66,8 +49,7 @@ async function main() {}
     const base = pr.base.ref;`;
     console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`);
     try {}
-<<<<<<< HEAD
-      // Checkout PR branch;
+// Checkout PR branch;
       try { sh(`git checkout ${head}`)} catch { sh(`git checkout -b ${head} --track origin/${head}`)};
       sh('git fetch origin');
       // Merge latest base into head;
@@ -104,12 +86,6 @@ async function main() {}
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 });
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

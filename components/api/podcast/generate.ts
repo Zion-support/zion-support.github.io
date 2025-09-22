@@ -45,8 +45,8 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8');
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 ) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
@@ -81,7 +81,7 @@ pr-12243
 
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
-1) 7-10 concise interview questions mixing visionary and technical angles
+1) 7-10 concise interview questions mixing visionary and technical angles;
 2) Time markers for: Intro, segment transitions, Closing CTA for Zion
 3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest
 4) YouTube and Spotify descriptions
@@ -97,8 +97,8 @@ let generated: any = null;
     if (apiKey) {
       const openai = new OpenAI({ apiKey });
       const completion = await openai.chat.completions.create({
-        model: process.env.ZION_GPT_MODEL |'gpt-4o-mini'
-        messages: [
+        model: process.env.ZION_GPT_MODEL |'gpt-4o-mini';
+        messages: [;
 { role: 'system', content: system },
           { role: 'user', content: user },
         ],
@@ -110,7 +110,7 @@ let generated: any = null;
         title: `Interview with ${invitee?.name |'Guest'} on ${topic |'Zion'}`
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
-        questions: [
+        questions: [;
           'What is the vision behind Zion as a global decentralized talent protocol?'
           'How does Zion practically onboard talent and organizations?'
           'What are the core protocol primitives (identity, reputation, incentives)?'
@@ -120,12 +120,12 @@ pr-12243
           'What does success look like in 3-5 years?'
         ]
         timeMarkers: {
-          intro: '00:00'
-          segments: ['03:00', '08:00', '12:00']
-          closing: '14:30'
+          intro: '00:00';
+          segments: ['03:00', '08:00', '12:00'];
+          closing: '14:30';
         }
         transcript:
-          'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.'
+          'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.';
         youtubeDescription:
           'Visionary + technical deep dive into Zion, a decentralized talent protocol. Learn how it works and how to join.'
         spotifyDescription:
@@ -167,7 +167,7 @@ pr-12243
 pr-12243
 
         model: process && process.env.ZION_GPT_MODEL || 'gpt-4o-mini',
-        messages: []
+        messages: [];
 ;
 const EPISODES_PATH = path.join (
   process.cwd (),'
@@ -301,21 +301,21 @@ Return a strict JSON object with keys: title, questions (array), time_markers { 
       });
     const episode = {}
       id;
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString();
       persona;
       invitee;
       topic;
       title: generated.title;
-      questions: generated.questions |[]
+      questions: generated.questions |[];
       timeMarkers: generated.timeMarkers |{'
-        intro: '00:00'
-        segments: []'
-        closing: '14:30'
+        intro: '00:00';
+        segments: []';
+        closing: '14:30';
       }
-      transcript: generated.transcript'
-      youtubeDescription: generated.youtubeDescription |'''
-      spotifyDescription: generated.spotifyDescription |'''
-      bestQuote: generated.bestQuote |''
+      transcript: generated.transcript';
+      youtubeDescription: generated.youtubeDescription |''';
+      spotifyDescription: generated.spotifyDescription |''';
+      bestQuote: generated.bestQuote |'';
       audio: {}
     }
     try {}
@@ -385,7 +385,7 @@ time_markers: generated.time_markers || {'
       const openai = new OpenAI({ apiKey });
       const completion = await openai.chat.completions.create({'
         model: process.env.ZION_GPT_MODEL || 'gpt-4o-mini',
-        messages: ['
+        messages: [';
           { role: 'system', content: system };'
           { role: 'user', content: user }];
         temperature: 0.8,
@@ -394,11 +394,11 @@ time_markers: generated.time_markers || {'
     } else {}
       content = JSON.stringify({'`
         title: `Interview with ${invitee?.name || 'Guest'} on ${topic || 'Zion'}`;
-        questions: ['
+        questions: [';
           'What is the vision behind Zion as a global decentralized talent protocol?How does Zion practically onboard talent and organizations?What are the core protocol primitives (identity, reputation, incentives)?How does governance work and how do contributors participate?What challenges have you faced scaling globally?How does Zion interoperate with existing web2 hiring systems?What does success look like in 3-5 years?'];
         timeMarkers: {'
           intro: '00:00', segments: ['03:0008:0012:00'],'
-          closing: '14:30'
+          closing: '14:30';
     },'
     transcript: 'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.','
         youtubeDescription: 'Visionary + technical deep dive into Zion, a decentralized talent protocol. Learn how it works and how to join.','

@@ -4,47 +4,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React from "react",
 import { Star } from "lucide-react",
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
 import React from "react",
 import { Star } from "lucide-react",
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from "react";
-
-import { Star } from "lucide-react";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
 import { Star } from "lucide-react";
 
 import React from "react",
 import { Star } from "lucide-react",
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
@@ -52,29 +25,13 @@ export const CommunityTrust: React.FC = () => {
     { value: "4.8", label: "App Store Rating" }
     { value: "50K+", label: "Downloads" }
     { value: "96%", label: "User Satisfaction" }
-<<<<<<< HEAD
+
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 import {Star} from "lucide-react";
 import React from "react",
 import { Star } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-import React from "react";
-import { Star } from "lucide-react";
->>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 import React from "react";
@@ -154,12 +111,6 @@ export const CommunityTrust: React.FC = () => {};
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Star } from "lucide-react",;
 export const CommunityTrust: React.FC = () => {;
@@ -188,16 +139,8 @@ export const CommunityTrust: React.FC = () => {;
               <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>;
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           ))}
         </div>
 
@@ -226,8 +169,6 @@ export const CommunityTrust: React.FC = () => {;
   );
 };
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -235,15 +176,7 @@ export const CommunityTrust: React.FC = () => {;
 },
 };
 },
-=======
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="w - 6 h - 6 text - zion - cyan";
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>;
               <div className="text - zion - slate-light">{stat.label}</div>;
             </div>))}
@@ -254,10 +187,7 @@ export const CommunityTrust: React.FC = () => {;
             {[1, 2, 3, 4, 5].map ((star) => (
               <Star;
                 key={star}                className="w - 6 h - 6 text - zion-cyan";
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
                 className="w - 6 h - 6 text - zion - cyan";
@@ -269,26 +199,9 @@ export const CommunityTrust: React.FC = () => {;
             "The Zion app has completely changed how I find tech talent. The AI;
             matching is spot on and I can manage everything from anywhere.";
           </blockquote>;
-<<<<<<< HEAD
-          <div className="text-center">;
+<div className="text-center">;
             <div className="font - semibold text - zion-cyan">Sarah Johnson</div>;
             <div className="text - sm text - zion - slate-light">CTO at TechFlow</div>;
-=======
-
-
-"
-                className="w - 6 h - 6 text - zion - cyan";"
-                fill="current_color";
-              />))}
-          </div>;"
-          <blockquote className="text - center text - lg text - white italic mb - 4">;"
-            "The Zion app has completely changed how I find tech talent. The AI;"
-            matching is spot on and I can manage everything from anywhere.";
-          </blockquote>;"
-          <div className="text - center">;"
-            <div className="font - semibold text - zion - cyan">Sarah Johnson</div>;"
-            <div className="text - sm text - zion - slate - light">CTO at TechFlow</div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
           <div className="text - center">;
             <div className="font - semibold text - zion - cyan">Sarah Johnson</div>;
@@ -304,18 +217,9 @@ export const CommunityTrust: React.FC = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -328,7 +232,6 @@ export const CommunityTrust: React.FC = () => {;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
 =======
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 

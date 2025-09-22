@@ -1,46 +1,20 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addSkillsSection(
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addSkillsSection(;
-<<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { jsPDF  } from 'jspdf';'
@@ -52,8 +26,6 @@ import {jsPDF} from 'jspdf';'
 import {Skill} from '@/types/resume';'
 import {PdfThemeColors} from '../themeConfig';
 export function addSkillsSection(;
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   doc: jsPDF;
@@ -67,31 +39,15 @@ export function addSkillsSection(  doc: jsPDF;
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
-<<<<<<< HEAD
 export function addSkillsSection(  doc: jsPDF;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-export function addSkillsSection(
-import {jsPDF} from 'jspdf';
-import {Skill} from '@/types/resume';
-import {PdfThemeColors} from '../themeConfig';
-export function addSkillsSection(;
-
-
-  doc: jsPDF;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   skills: Skill[];
   colors: PdfThemeColors;
-<<<<<<< HEAD
-  startY: number
+startY: number
 ): number {
-
 
   yPos += 8;
   // Group skills by category  yPos += 8;
@@ -125,7 +81,6 @@ const skillsByCategory = skills && skills.reduce((acc, skill) => {
     return acc
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
   }, {} as Record<string, typeof skills>);
 <<<<<<< HEAD
 
@@ -137,23 +92,7 @@ const skillsByCategory = skills && skills.reduce((acc, skill) => {
   }
   return yPos + 5
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-  }, {} as Record<string, typeof skills>);
-
-<<<<<<< HEAD
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   doc.setFontSize(11);
-=======
-doc.setFontSize(11);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   doc.setTextColor(colors.text);
   for (const [category, categorySkills] of Object.entries(skillsByCategory)) {
     doc.setFont('helveticabold');
@@ -189,27 +128,12 @@ export function addSkillsSection(;
       acc[category] = [];
     }
     acc[category].push(skill),;
-<<<<<<< HEAD
-=======
-  startY: number;
-): number {}
-  yPos += 8;
-  // Group skills by category;
-    if (!acc[category]) {}
-      acc[category] = []
-    }
-    acc[category].push(skill);
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
     return acc;
   }, {} as Record<string, typeof skills>);
 
-
-
   }
-<<<<<<< HEAD
-=======
-  }, {} as Record<string, typeof skills>);  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 =======
   }, {} as Record<string, typeof skills>);  }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -238,12 +162,7 @@ export function addSkillsSection(;
     doc && doc.text(skillLines, 30, yPos + 5);
     yPos += (skillLines && skillLines.length * 5) + 10
   }
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  }, {} as Record<string, typeof skills>);  }
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return yPos + 5
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types / resume';
@@ -294,7 +213,6 @@ import {Skill} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addSkillsSection(;
 
-
   doc: jsPDF;,
   skills: Skill[];
   colors: PdfThemeColors;,
@@ -328,12 +246,7 @@ pr-12325
   doc.setFontSize (11);
   doc.setTextColor (colors.text);
 ;
-<<<<<<< HEAD
-  for (const [category, category_skills] of Object.entries (skillsByCategory)) {'
-=======
-pr-12325
-  for (const [category, category_skills] of Object.entries (skillsByCategory)) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+for (const [category, category_skills] of Object.entries (skillsByCategory)) {'
     doc.set_font ('helveticabold');
     doc.text (category, 20, y_pos);'
     doc.set_font ('helveticanormal');
@@ -349,14 +262,8 @@ pr-12325
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
-=======
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 }}
     const skills_text = category_skills.map (skill => skill.name).join (', ');
@@ -413,21 +320,12 @@ return yPos + 5
   }
   return yPos + 5
 }
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 }
 

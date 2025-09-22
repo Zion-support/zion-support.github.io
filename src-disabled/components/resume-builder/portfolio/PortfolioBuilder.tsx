@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
-<<<<<<< HEAD:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -34,7 +33,7 @@ export function PortfolioBuilder() {;
       fetchProjects();
     }
   },
-  
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -42,18 +41,9 @@ export function PortfolioBuilder() {;
       </div>
     )
   }
-  
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-  
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-<<<<<<< HEAD
 }
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -75,17 +65,11 @@ export function PortfolioBuilder() {;
         </Button>
       </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-      
+
 <<<<<<< HEAD
       {/* Edit or Add Form */}
       {(showAddProject || editingProject) && (
         <Card>
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           Add Project;
         </Button>
@@ -95,14 +79,9 @@ export function PortfolioBuilder() {;
       {(showAddProject |editingProject) && (
         <Card>
 
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
           <CardContent className='pt-6'>
             <h2 className='text-xl font-semibold mb-6'>
-=======
-
-          <CardContent className='pt-6'>'
-            <h2 className='text-xl font-semibold mb-6'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
 
@@ -112,10 +91,7 @@ export function PortfolioBuilder() {;
               onCancel={() => {}
                 setShowAddProject(false)
                 setEditingProject(null) }}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -123,13 +99,12 @@ import { FilePlus, Loader2 } from 'lucide-react';
 import { ProjectCard } from './ProjectCard';
 =======
 
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
 import { ProjectForm } from './ProjectForm';
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 export function PortfolioBuilder() {
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -141,15 +116,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 setEditingProject(null);
 origin/cursor/automate-test-improve-and-merge-code-2533
                 setEditingProject(null)
-=======
-            <ProjectForm;
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {}
-                setShowAddProject(false)
-                setEditingProject(null);                setEditingProject(null)
-
-                setEditingProject(null)'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
           className='gap-2';
           disabled={showAddProject || !!editingProject}        >;'
           <FilePlus className='h-4 w-4' />;
@@ -186,7 +152,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>;
       )}
       {/* Projects List */}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 
       {projects && projects.length > 0 ? (;'
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
@@ -196,102 +162,57 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { ProjectCard } from './ProjectCard';'
 import { ProjectForm } from './ProjectForm';'
 import { PortfolioProject } from '@/types/resume';'
-=======
-      {projects && projects.length > 0 ? (;
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-          {projects && projects.map(project => (            <ProjectCard
-      {/* Projects List */}
-import { ProjectCard } from './ProjectCard';
-import { ProjectForm } from './ProjectForm';
-import { PortfolioProject } from '@/types/resume';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
 import { usePortfolio } from '@/hooks/usePortfolio';
 export function PortfolioBuilder() { const { projects, fetchProjects, deleteProject, isLoading  } = usePortfolio(),
   const [ showAddProject, setShowAddProject ] = useState(false),
   const [ editingProject, setEditingProject ] = useState<PortfolioProject | null>(null),
 
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
   useEffect(() => {
     fetchProjects()
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
-=======
-  
-  useEffect(() => {}
-    fetchProjects();
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
-  }, [fetchProjects]);
-  
+}, [fetchProjects]);
+
   const handleAddSuccess = () => {}
     setShowAddProject(false);
     fetchProjects()
   };
-  
+
   const handleEditSuccess = () => {}
     setEditingProject(null);
     fetchProjects()
   };
-  
+
   const handleDeleteProject = async (projectId: string) => {}
-=======
-
-  const handleAddSuccess = () => {
-    setShowAddProject(false);
-    fetchProjects()
-  };
-  const handleEditSuccess = () => {
-    setEditingProject(null);
-    fetchProjects()
-  };
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
     const success = await deleteProject(projectId);
     if (success) {}
       fetchProjects()
     }
   };
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
-  
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+
   if (isLoading) {}
     return ("
       <div className="flex justify-center items-center h-64">"
-=======
-
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center h-64">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     )
   }
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
-  
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+
   return ("
     <div className="space-y-6">"
       <div className="flex flex-col sm: flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div>"
           <h1 className="text-2xl font-bold">Portfolio Projects</h1>"
-=======
-  return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-        <div>
-          <h1 className="text-2xl font-bold">Portfolio Projects</h1>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
           <p className="text-muted-foreground">Showcase your best work and projects</p>
         </div>
       {projects.length > 0 ? ("
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
 
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
         <Button 
-          onClick={() => setShowAddProject(true)} 
-=======
-
-        <Button;
-          onClick={() => setShowAddProject(true)} "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
+          onClick={() => setShowAddProject(true)}
           className="gap-2"
           disabled={showAddProject || !!editingProject}
         >"
@@ -304,35 +225,19 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
         <Card>
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
-=======
-"
-          <CardContent className="pt-6">"
-            <h2 className="text-xl font-semibold mb-6">'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
-            
+
             <ProjectForm 
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-<<<<<<< HEAD
-              onCancel={() => {;
-=======
-          <CardContent className="pt-6">
-            <h2 className="text-xl font-semibold mb-6">
-              {editingProject ? 'Edit Project' : 'Add New Project'}
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+onCancel={() => {;
 =======
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
@@ -340,7 +245,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 setShowAddProject(false);
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
                 setEditingProject(null);
               }}
             />;
@@ -348,35 +253,17 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
         </Card>;
       )}
 ;
-=======
-              onCancel={() => {                setShowAddProject(false);
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
                 setEditingProject(null)
                 setEditingProject(null);
               }}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
-<<<<<<< HEAD:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
             />
           </CardContent>
         </Card>      )}
 
-      
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-      )}
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-<<<<<<< HEAD:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
 
       )}
       {/* Projects List */}
@@ -389,9 +276,8 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       {projects.length > 0 ? ("
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
             <ProjectCard
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 <<<<<<< HEAD
               key={project.id}
               project={project}
@@ -403,13 +289,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       ) : (
         !showAddProject && (
           <Card className="text-center py-12">
-=======
-
-=======
-            <ProjectCard;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
               key={project.id}
               project={project}
             <CardContent>
@@ -434,15 +313,9 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           <Card className="text-center py-12">
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <CardContent>
@@ -459,17 +332,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -528,24 +391,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>
         )
       )}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 <<<<<<< HEAD:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                   className='mt-2'                >            <CardContent>;
               <div className="flex flex-col items-center gap-4">;
                 <div className="bg-muted/50 p-6 rounded-full">;
-=======
-'
-                  className='mt-2'                >            <CardContent>;"
-              <div className="flex flex-col items-center gap-4">;"
-                <div className="bg-muted/50 p-6 rounded-full">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
                   <FilePlus className="h-12 w-12 text-muted-foreground" />;
                 </div>;"
                 <h3 className="text-xl font-medium">No portfolio projects yet</h3>;"
@@ -578,7 +431,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               on_delete = {handleDeleteProject, }
             />))}
         </div>) : (
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
         !showAddProject && ('
           <Card className='text - center py - 12'>;
             <CardContent>;'
@@ -589,26 +442,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <h3 className='text - xl font - medium'>;
                   No portfolio projects yet;
                 </h3>;'
-=======
-        !showAddProject && (
-          <Card className='text - center py - 12'>;
-            <CardContent>;
-              <div className='flex flex - col items - center gap - 4'>;
-                <div className='bg - muted / 50 p - 6 rounded - full'>;
-                  <FilePlus className='h - 12 w - 12 text - muted - foreground' />;
-                </div>;
-                <h3 className='text - xl font - medium'>;
-                  No portfolio projects yet;
-                </h3>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
                 <p className='text - muted - foreground max - w-md mx - auto'>;
                   Add your best work to showcase your skills and experience to;
                   potential employers.;
                 </p>;
                 <Button;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
-                  on_click={() => setShowAddProject (true)}
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+on_click={() => setShowAddProject (true)}
                   className='mt - 2'                >            <CardContent>;
               <div className="flex flex - col items - center gap-4">;
                 <div className="bg - muted / 50 p - 6 rounded-full">;
@@ -621,42 +461,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button;
                   on_click={() => setShowAddProject (true)}
                   className="mt-2";
-=======
-                  on_click={() => setShowAddProject (true)}'
-                  className='mt - 2'                >            <CardContent>;"
-              <div className="flex flex - col items - center gap - 4">;"
-                <div className="bg - muted / 50 p - 6 rounded - full">;"
-                  <FilePlus className="h - 12 w - 12 text - muted - foreground" />;
-                </div>;"
-                <h3 className="text - xl font - medium">No portfolio projects yet</h3>;"
-=======
-                  on_click={() => setShowAddProject (true)}
-                  className='mt - 2'                >            <CardContent>;
-              <div className="flex flex - col items - center gap - 4">;
-                <div className="bg - muted / 50 p - 6 rounded - full">;
-                  <FilePlus className="h - 12 w - 12 text - muted - foreground" />;
-                </div>;
-                <h3 className="text - xl font - medium">No portfolio projects yet</h3>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
                 <p className="text - muted - foreground max - w-md mx - auto">;
                   Add your best work to showcase your skills and experience to potential employers.;
                 </p>;
                 <Button;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
                   on_click={() => setShowAddProject (true)}"
                   className="mt - 2";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
-
-=======
-                  on_click={() => setShowAddProject (true)}
-                  className="mt - 2";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
                 >;
                   Add Your First Project;
                 </Button>;
               </div>;
             </CardContent>;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 
   );
 }
@@ -664,19 +482,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>))}
     </div>);
 }
-
-=======
-  );
-}
-          </Card>))}
-    </div>);
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
 ;
 }
 }
 }
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>;
@@ -684,20 +494,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 <<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 ;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
-=======
-    </div>;
-  );
-}
-;
-}))))))
-    </div>;
-  );
-}
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
     </div>
   );
 }

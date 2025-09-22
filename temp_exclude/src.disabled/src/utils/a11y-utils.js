@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Accessibility utilities
 export const a11yUtils = {
   // Focus management
@@ -34,14 +33,6 @@ export const a11yUtils = {
       document.body.removeChild(announcement)}, 1000)}
 };
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-  trapFocus: (element) => {
-=======
-// Accessibility utilities;
-export const a11yUtils = {};
-  // Focus management;
-  trapFocus: (element) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const focusableElements = element.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
     );
@@ -181,8 +172,4 @@ export const a11yUtils = {}
     }, 1000);
   },
 };
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

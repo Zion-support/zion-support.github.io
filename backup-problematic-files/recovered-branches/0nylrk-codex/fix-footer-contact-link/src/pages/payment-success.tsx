@@ -28,4 +28,3 @@ export default function PaymentSuccess() {;
           </Button>;
         </div>;
       </div>;
-

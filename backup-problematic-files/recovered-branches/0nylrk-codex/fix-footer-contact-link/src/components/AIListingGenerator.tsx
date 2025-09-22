@@ -1,9 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -14,25 +9,8 @@ import { Skeleton } from "@/components/ui/skeleton",;
 import { Sparkles, ArrowRight } from "@/components/icons",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Badge } from "@/components/ui/badge",;
-=======
-import React, { useState } from "react";""
-import { useToast } from "@/hooks/use-toast";""
-import { Button } from "@/components/ui/button";""
-import { Input } from "@/components/ui/input";""
-import { Textarea } from "@/components/ui/textarea";""
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""
-import { Skeleton } from "@/components/ui/skeleton";""
-import { Sparkles, ArrowRight } from "@/components/icons";""
-import { supabase } from "@/integrations/supabase/client";""
-import { Badge } from "@/components/ui/badge";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
-<<<<<<< HEAD
 interface GeneratedContent {;
-=======
-interface GeneratedContent {,
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description:string,;
   tags:string[],;
   suggestedPrice:{;
@@ -77,18 +55,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
   const handleGenerate = async () => {;
     if (!title || !category) {;
       toast({;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        title:"Missing required fields",;
+title:"Missing required fields",;
         description:"Please provide at least a title and category.",;
-=======
-        title:"Missing required fields",,
-  description:"Please provide at least a title and category.",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        title: "Missing required fields";,,
-  description: "Please provide at least a title and category.";,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant:"destructive";
         title: "Missing required fields";,;""
         description: "Please provide at least a title and category.";,;""
@@ -106,15 +74,8 @@ pr-12325
         throw new Error(data.error),;
       setGeneratedContent(data.generated),;
       toast({;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        title:"Content Generated",;
+title:"Content Generated",;
         description:"AI has created optimized listing content for you.";
-=======
-        title:"Content Generated",,
-=======
-        title: "Content Generated";,,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description:"AI has created optimized listing content for you.";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }),;
@@ -122,17 +83,8 @@ pr-12325
       console.error("Error generating content: ";, error),;
       toast({;
 <<<<<<< HEAD
-<<<<<<< HEAD
         title:"Generation Failed",;
         description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;
-=======
-        title:"Generation Failed",,
-  description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        title: "Generation Failed";,,
-  description: error instanceof Error ? error.message :"Failed to generate content. Please try again.";,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant:"destructive";
       }),;
         title: "Content Generated";,;""
@@ -150,14 +102,8 @@ pr-12325
       onApplyGenerated(generatedContent),;
       toast({;
 <<<<<<< HEAD
-<<<<<<< HEAD
         title:"Content Applied",;
         description:"The generated content has been applied to your listing.";
-=======
-        title:"Content Applied",,
-=======
-        title: "Content Applied";,,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description:"The generated content has been applied to your listing.";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }),;
@@ -191,7 +137,6 @@ pr-12325
               id="title";"
               value={title})"
               onChange={(e) => handleInputChange(e, 'title')}
-<<<<<<< HEAD
 <<<<<<< HEAD
               placeholder="Enter your product or service title";
               className="bg-zion-blue border border-zion-blue-light text-white";
@@ -231,7 +176,7 @@ pr-12325
               className="bg-zion-blue border border-zion-blue-light text-white";}
 }export function AIListingGenerator ({
   onApplyGenerated, initialValues = {
-  
+
 }
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
@@ -311,5 +256,3 @@ pr-12325
             <Button;
 
 }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

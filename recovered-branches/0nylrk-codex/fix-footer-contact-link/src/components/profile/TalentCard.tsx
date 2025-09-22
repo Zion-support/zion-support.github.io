@@ -1,20 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
-import { Link } from "react-router-dom";
-import { TalentProfile } from "@/types/talent";
-export interface TalentCardProps {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -23,11 +11,6 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean) => void
 
 <<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
@@ -44,11 +27,6 @@ export interface TalentCardProps {
   isAuthenticated: boolean
 }
 export function TalentCard({
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -64,34 +42,9 @@ import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
 import {Link} from "react-router-dom";
 import {TalentProfile} from "@/types/talent";
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
-=======
-=======
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
-import { Link } from "react-router-dom",
-import { TalentProfile } from "@/types/talent",
-export interface TalentCardProps {
-  talent: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire: (talent: TalentProfile) => void,
-  isSaved: boolean,
-  onToggleSave: (id: string, isSaved: boolean) => void,
-  isAuthenticated: boolean
-}
-
-export function TalentCard({;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   talent;
   onViewProfile;
   onRequestHire;
@@ -131,18 +84,7 @@ export interface TalentCardProps {
   isSaved: boolean,
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
-<<<<<<< HEAD
 }
-=======
-
-
-
-import {Button} from "@/components/ui/button";"
-import {Card} from "@/components/ui/card";"
-import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";"
-import {Link} from "react-router-dom";"
-import {TalentProfile} from "@/types/talent";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   talent;
   onViewProfile;
@@ -178,31 +120,17 @@ export interface TalentCardProps {}
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
   onRequestHire: (talent: TalentProfile) => void,
-<<<<<<< HEAD
-  isSaved: boolean,
+isSaved: boolean,
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
   };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
 import { Link } from "react-router-dom",;
 import { TalentProfile } from "@/types/talent",;
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   isSaved: boolean,;
@@ -219,16 +147,13 @@ import { TalentProfile } from "@/types/talent",;
 export interface TalentCardProps {;
 =======
 
-
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 export interface TalentCardProps {;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -236,57 +161,19 @@ export interface TalentCardProps {;
   isSaved: boolean,;
   onToggleSave: (id: string, isSaved: boolean) => void,;
   isAuthenticated: boolean;
-=======
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
-<<<<<<< HEAD
-
 export function TalentCard(): any ({;
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 export function TalentCard(): any ({;
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
-import {Button} from "@/components/ui/button";""
-import {Card} from "@/components/ui/card";""
-import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";""
-import {Link} from "react-router-dom";""
-import {TalentProfile} from "@/types/talent";"
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   talent;
   onViewProfile;
   onRequestHire;
   isSaved;
   onToggleSave;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   isAuthenticated;
 }: TalentCardProps) {;
   const handleViewProfile = () => {;
@@ -301,8 +188,6 @@ pr-12325
     if (onRequestHire) {;
       onRequestHire(talent);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   },;
@@ -321,18 +206,10 @@ pr-12325
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [],
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
 =======
 
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
   const handleToggleSave = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
@@ -347,18 +224,8 @@ pr-12325
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
-  // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) || [],
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -369,7 +236,6 @@ pr-12325
   isAuthenticated;
 }: TalentCardProps) {
 
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -377,7 +243,6 @@ pr-12325
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
       <div className="p-6">;
 =======
-
 
   return ("
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;"
@@ -392,21 +257,12 @@ pr-12325
                 <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
               </div>;
             )}
-<<<<<<< HEAD
-          {/* Main Info */}
+{/* Main Info */}
           <div className="flex-1">;
             <div className="flex justify-between items-start">;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          {/* Main Info */}"
-          <div className="flex-1">;"
-            <div className="flex justify-between items-start">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;
-
-
 
               <Button"
                 variant="ghost""
@@ -414,27 +270,12 @@ pr-12325
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                onClick={handleToggleSave}
-              >
-                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
-                <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
-              </Button>
-            </div>
-            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
                 onClick={handleToggleSave}>;"
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;"
@@ -554,24 +395,10 @@ onClick={handleToggleSave}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <p className="text-zion-cyan font-medium">{talent && talent.professional_title}</p>;
 
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-            
-
-
-
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Location & Availability */}
-=======
-              <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;            {/* Location & Availability */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
               <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;            {/* Location & Availability */}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -580,7 +407,6 @@ onClick={handleToggleSave}
             {/* Location & Availability */}"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
-            
 
             {/* Location & Availability */}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -599,24 +425,15 @@ onClick={handleToggleSave}
                 <div className="flex items-center text-zion-slate-light">;"
                   <Clock className="h-4 w-4 mr-1" />;
                   <span>{talent && talent.availability_type}</span>;
-<<<<<<< HEAD
-                </div>;
+</div>;
               )}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <span
-=======
-=======
-=======
-              {talent.profile_picture_url ? (;
-=======
-{talent.profile_picture_url ? (;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <img ;
                   src={talent.profile_picture_url} ;
                   alt={talent.full_name} ;
@@ -664,19 +481,10 @@ onClick={handleToggleSave}
                   <span>{talent.availability_type}</span>;
                 </div>;
               )}
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -685,8 +493,7 @@ onClick={handleToggleSave}
           </div>;
         </div>;
 
-<<<<<<< HEAD
-        {/* Skills */}
+{/* Skills */}
         {skills && skills.length > 0 && (;
           <div className="mt-4">;
             <div className="flex flex-wrap gap-2">;
@@ -790,7 +597,6 @@ onClick={handleToggleSave}
           </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
         </div>;
         {/* Skills */}
         {skills.length > 0 && (;
@@ -822,51 +628,19 @@ onClick={handleToggleSave}
                 className="bg-zion-purple hover:bg-zion-purple-light text-white">;
                 </span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-                <span;
-                  key={index}"
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
-                  {skill}
-                </span>;
-              ))}
-
-              {(talent && talent.skills?.length || 0) > 5 && (;"
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
-                  +{(talent && talent.skills?.length || 0) - 5} more;
-                </span>;
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               )}
             </div>;
           </div>;
         )}
 "
                 <span className="text-zion-slate-light font-normal">/hr</span>;
-<<<<<<< HEAD
-              </div>;
+</div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             )}
-=======
-        )}                <span className="text-zion-slate-light font-normal">/hr</span>;
-              </div>;
-            ) : (;
-              <div className="text-zion-slate-light">Rate not specified</div>;
-            )}            )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
         )}                <span className="text-zion-slate-light font-normal">/hr</span>;
               </div>;
@@ -889,18 +663,7 @@ onClick={handleToggleSave}
               <div className="text-zion-slate-light">Rate not specified</div>;
 
             )}
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-              ))}              )}
-            </div>;
-          </div>;
-        )}                <span className="text-zion-slate-light font-normal">/hr</span>;
-              </div>;
-            ) : (;
-              <div className="text-zion-slate-light">Rate not specified</div>;
-            )}            )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
           </div>;
 
@@ -1168,8 +931,7 @@ isAuthenticated: boolean;
               size="sm""
               variant="ghost"
               onClick={handleViewProfile}
-<<<<<<< HEAD
-              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
+className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >
               View <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
@@ -1180,16 +942,8 @@ isAuthenticated: boolean;
   )
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-
-"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
 
   const handleToggleSave = (e: React && React.MouseEvent) => {;
     if (onToggleSave) {;

@@ -56,14 +56,14 @@ export type ProposalForm = {};
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ProposalGenerator() {
   const [form, setForm] = useState<ProposalForm>({
-    targetInstitution: 'UNDP'
-    type: 'Workforce Dev'
-    regionalScope: 'Global'
-    budgetOrGoals: ''
-    supportingMultiverses: ''
-    language: 'English'
+    targetInstitution: 'UNDP';
+    type: 'Workforce Dev';
+    regionalScope: 'Global';
+    budgetOrGoals: '';
+    supportingMultiverses: '';
+    language: 'English';
     customPrompt:
-
+;
   language?: string;
   customPrompt?: string;
 }'
@@ -76,7 +76,7 @@ export type ProposalForm = {}
   regional_scope: string,
   budgetOrGoals: string,
   supporting_multiverses: string,
-  language?: string
+  language?: string;
 };
 export default function ProposalGenerator() {;
   const [form, setForm] = useState<ProposalForm>({;
@@ -109,8 +109,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
   function handleChange<K extends keyof ProposalForm>(
-    key: K
-    value: ProposalForm[K]
+    key: K;
+    value: ProposalForm[K];
   ) {
     setForm(prev => ({ ...prev, [key]: value }));
   }
@@ -155,9 +155,9 @@ meta: form,
       });
       const data = await res.json();
       setExportLinks({
-        pdfUrl: data.pdfUrl
-        jsonUrl: data.jsonUrl
-        mdUrl: data.mdUrl
+        pdfUrl: data.pdfUrl;
+        jsonUrl: data.jsonUrl;
+        mdUrl: data.mdUrl;
       });
       setStatusMessage('Exported. Files saved.');
     } catch (e) {
@@ -314,7 +314,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;"
           <div className="flex gap-2">;
             <button
-              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
+              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
 origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={handleGenerate}
               disabled={isGenerating}>;'

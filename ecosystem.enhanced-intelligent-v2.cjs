@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 module.exports = {
   apps: [
     // Main Application
     {
-=======
-module.exports = {}
-<<<<<<< HEAD
-  "apps": [// Main Application;]
-    {}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       name: 'ziontechgroup-web',
       script: 'npm',
       args: 'start',
@@ -42,17 +35,6 @@ module.exports = {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // AI-Powered Code Analysis & Auto-Fixing
@@ -68,18 +50,7 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 10000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // AI-Powered Code Analysis & Auto-Fixing;
     {}
@@ -94,8 +65,7 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 10000,
       "env": {}
-<<<<<<< HEAD
-    // AI-Powered Code Analysis & Auto-Fixing
+// AI-Powered Code Analysis & Auto-Fixing
     {
       name: 'ai-code-analyzer',
       script: 'node',
@@ -108,20 +78,9 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 10000,
       env: {
-<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -144,17 +103,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Smart Performance Optimizer
@@ -170,18 +118,7 @@ main
       max_memory_restart: '1G',
       restart_delay: 15000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -191,11 +128,9 @@ main
       "args": 'scripts/automation/smart-performance-optimizer.cjs',
       "cron_restart": '0 */4 * * *', // Every 4 hours;
       "max_memory_restart": '1G',
-<<<<<<< HEAD
-      "restart_delay": 15000,
+"restart_delay": 15000,
       "env": {}
-<<<<<<< HEAD
-    // Smart Performance Optimizer
+// Smart Performance Optimizer
     {
       name: 'smart-performance-optimizer',
       script: 'node',
@@ -210,18 +145,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -241,17 +166,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Intelligent Dependency Manager
@@ -267,18 +181,7 @@ main
       max_memory_restart: '512M',
       restart_delay: 20000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -287,12 +190,10 @@ main
       "name": 'intelligent-dependency-manager',
       "args": 'scripts/automation/intelligent-dependency-manager.cjs',
       "cron_restart": '0 0 * * 0', // Weekly on Sunday at midnight;
-<<<<<<< HEAD
-      "max_memory_restart": '512M',
+"max_memory_restart": '512M',
       "restart_delay": 20000,
       "env": {}
-<<<<<<< HEAD
-    // Intelligent Dependency Manager
+// Intelligent Dependency Manager
     {
       name: 'intelligent-dependency-manager',
       script: 'node',
@@ -307,18 +208,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -339,17 +230,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Smart Deployment Automation
@@ -365,18 +245,7 @@ main
       max_memory_restart: '1G',
       restart_delay: 30000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -385,12 +254,10 @@ main
       "name": 'smart-deployment-automation',
       "args": 'scripts/automation/smart-deployment-automation.cjs',
       "cron_restart": '0 */6 * * *', // Every 6 hours;
-<<<<<<< HEAD
-      "max_memory_restart": '1G',
+"max_memory_restart": '1G',
       "restart_delay": 30000,
       "env": {}
-<<<<<<< HEAD
-    // Smart Deployment Automation
+// Smart Deployment Automation
     {
       name: 'smart-deployment-automation',
       script: 'node',
@@ -405,18 +272,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -437,17 +294,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Intelligent Repository Manager
@@ -463,18 +309,7 @@ main
       max_memory_restart: '512M',
       restart_delay: 10000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -483,12 +318,10 @@ main
       "name": 'intelligent-repository-manager',
       "args": 'scripts/automation/intelligent-repository-manager.cjs',
       "cron_restart": '*/30 * * * *', // Every 30 minutes;
-<<<<<<< HEAD
-      "max_memory_restart": '512M',
+"max_memory_restart": '512M',
       "restart_delay": 10000,
       "env": {}
-<<<<<<< HEAD
-    // Intelligent Repository Manager
+// Intelligent Repository Manager
     {
       name: 'intelligent-repository-manager',
       script: 'node',
@@ -503,18 +336,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -535,17 +358,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Advanced Development Workflow
@@ -561,18 +373,7 @@ main
       max_memory_restart: '512M',
       restart_delay: 5000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -581,12 +382,10 @@ main
       "name": 'advanced-development-workflow',
       "args": 'scripts/automation/advanced-development-workflow.cjs',
       "cron_restart": '*/15 * * * *', // Every 15 minutes;
-<<<<<<< HEAD
-      "max_memory_restart": '512M',
+"max_memory_restart": '512M',
       "restart_delay": 5000,
       "env": {}
-<<<<<<< HEAD
-    // Advanced Development Workflow
+// Advanced Development Workflow
     {
       name: 'advanced-development-workflow',
       script: 'node',
@@ -601,18 +400,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -632,17 +421,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Intelligent CI/CD Orchestrator
@@ -658,18 +436,7 @@ main
       max_memory_restart: '1G',
       restart_delay: 15000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -678,12 +445,10 @@ main
       "name": 'intelligent-cicd-orchestrator',
       "args": 'scripts/automation/intelligent-cicd-orchestrator.cjs',
       "cron_restart": '*/10 * * * *', // Every 10 minutes;
-<<<<<<< HEAD
-      "max_memory_restart": '1G',
+"max_memory_restart": '1G',
       "restart_delay": 15000,
       "env": {}
-<<<<<<< HEAD
-    // Intelligent CI/CD Orchestrator
+// Intelligent CI/CD Orchestrator
     {
       name: 'intelligent-cicd-orchestrator',
       script: 'node',
@@ -698,18 +463,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -729,17 +484,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Enhanced CI/CD Automation
@@ -755,18 +499,7 @@ main
       max_memory_restart: '1G',
       restart_delay: 10000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -775,12 +508,10 @@ main
       "name": 'enhanced-ci-cd-automation',
       "args": 'scripts/automation/enhanced-ci-cd-automation.cjs',
       "cron_restart": '*/5 * * * *', // Every 5 minutes;
-<<<<<<< HEAD
-      "max_memory_restart": '1G',
+"max_memory_restart": '1G',
       "restart_delay": 10000,
       "env": {}
-<<<<<<< HEAD
-    // Enhanced CI/CD Automation
+// Enhanced CI/CD Automation
     {
       name: 'enhanced-ci-cd-automation',
       script: 'node',
@@ -795,18 +526,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -826,17 +547,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Enhanced Testing Automation
@@ -852,18 +562,7 @@ main
       max_memory_restart: '1G',
       restart_delay: 20000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -872,12 +571,10 @@ main
       "name": 'enhanced-testing-automation',
       "args": 'scripts/automation/enhanced-testing-automation.cjs',
       "cron_restart": '*/20 * * * *', // Every 20 minutes;
-<<<<<<< HEAD
-      "max_memory_restart": '1G',
+"max_memory_restart": '1G',
       "restart_delay": 20000,
       "env": {}
-<<<<<<< HEAD
-    // Enhanced Testing Automation
+// Enhanced Testing Automation
     {
       name: 'enhanced-testing-automation',
       script: 'node',
@@ -892,18 +589,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -923,17 +610,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Enhanced Security Automation
@@ -949,18 +625,7 @@ main
       max_memory_restart: '512M',
       restart_delay: 25000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -969,12 +634,10 @@ main
       "name": 'enhanced-security-automation',
       "args": 'scripts/automation/enhanced-security-automation.cjs',
       "cron_restart": '0 */3 * * *', // Every 3 hours;
-<<<<<<< HEAD
-      "max_memory_restart": '512M',
+"max_memory_restart": '512M',
       "restart_delay": 25000,
       "env": {}
-<<<<<<< HEAD
-    // Enhanced Security Automation
+// Enhanced Security Automation
     {
       name: 'enhanced-security-automation',
       script: 'node',
@@ -989,18 +652,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -1020,17 +673,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Project Health Monitor
@@ -1046,18 +688,7 @@ main
       max_memory_restart: '512M',
       restart_delay: 5000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -1065,8 +696,7 @@ main
     // Project Health Monitor;
       "name": 'project-health-monitor',
       "args": 'scripts/automation/project-health-monitor.cjs',
-<<<<<<< HEAD
-      "cwd": '/workspace',
+"cwd": '/workspace',
       "instances": 1,
       "autorestart": true,
       "watch": false,
@@ -1074,8 +704,7 @@ main
       "max_memory_restart": '512M',
       "restart_delay": 5000,
       "env": {}
-<<<<<<< HEAD
-    // Project Health Monitor
+// Project Health Monitor
     {
       name: 'project-health-monitor',
       script: 'node',
@@ -1090,18 +719,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -1121,17 +740,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // PM2 Sync Automation
@@ -1147,18 +755,7 @@ main
       max_memory_restart: '1G',
       restart_delay: 2000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -1167,12 +764,10 @@ main
       "name": 'pm2-sync-automation',
       "args": 'scripts/automation/pm2-sync-automation.cjs',
       "cron_restart": '*/1 * * * *', // Every minute;
-<<<<<<< HEAD
-      "max_memory_restart": '1G',
+"max_memory_restart": '1G',
       "restart_delay": 2000,
       "env": {}
-<<<<<<< HEAD
-    // PM2 Sync Automation
+// PM2 Sync Automation
     {
       name: 'pm2-sync-automation',
       script: 'node',
@@ -1187,18 +782,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -1218,17 +803,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Link Checker Automation
@@ -1244,18 +818,7 @@ main
       max_memory_restart: '512M',
       restart_delay: 30000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -1264,12 +827,10 @@ main
       "name": 'link-checker-automation',
       "args": 'scripts/automation/link-checker-automation.cjs',
       "cron_restart": '0 */8 * * *', // Every 8 hours;
-<<<<<<< HEAD
-      "max_memory_restart": '512M',
+"max_memory_restart": '512M',
       "restart_delay": 30000,
       "env": {}
-<<<<<<< HEAD
-    // Link Checker Automation
+// Link Checker Automation
     {
       name: 'link-checker-automation',
       script: 'node',
@@ -1284,18 +845,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -1315,17 +866,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // TypeScript Syntax Fixer
@@ -1341,18 +881,7 @@ main
       max_memory_restart: '256M',
       restart_delay: 5000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -1361,11 +890,9 @@ main
       "name": 'typescript-syntax-fixer',
       "args": 'scripts/automation/typescript-syntax-fixer.cjs',
       "max_memory_restart": '256M',
-<<<<<<< HEAD
-      "restart_delay": 5000,
+"restart_delay": 5000,
       "env": {}
-<<<<<<< HEAD
-    // TypeScript Syntax Fixer
+// TypeScript Syntax Fixer
     {
       name: 'typescript-syntax-fixer',
       script: 'node',
@@ -1380,18 +907,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -1411,17 +928,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Console Error Fixer
@@ -1437,18 +943,7 @@ main
       max_memory_restart: '256M',
       restart_delay: 3000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -1456,8 +951,7 @@ main
     // Console Error Fixer;
       "name": 'console-error-fixer',
       "args": 'scripts/automation/console-error-fixer.cjs',
-<<<<<<< HEAD
-      "cwd": '/workspace',
+"cwd": '/workspace',
       "instances": 1,
       "autorestart": true,
       "watch": false,
@@ -1465,8 +959,7 @@ main
       "max_memory_restart": '256M',
       "restart_delay": 3000,
       "env": {}
-<<<<<<< HEAD
-    // Console Error Fixer
+// Console Error Fixer
     {
       name: 'console-error-fixer',
       script: 'node',
@@ -1481,18 +974,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -1511,17 +994,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Quality Checks
@@ -1537,18 +1009,7 @@ main
       max_memory_restart: '256M',
       restart_delay: 10000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -1556,8 +1017,7 @@ main
     // Quality Checks;
       "name": 'quality-checks',
       "args": 'scripts/automation/quality-checks.cjs',
-<<<<<<< HEAD
-      "cwd": '/workspace',
+"cwd": '/workspace',
       "instances": 1,
       "autorestart": true,
       "watch": false,
@@ -1565,8 +1025,7 @@ main
       "max_memory_restart": '256M',
       "restart_delay": 10000,
       "env": {}
-<<<<<<< HEAD
-    // Quality Checks
+// Quality Checks
     {
       name: 'quality-checks',
       script: 'node',
@@ -1581,18 +1040,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -1612,17 +1061,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Security Audit
@@ -1638,18 +1076,7 @@ main
       max_memory_restart: '512M',
       restart_delay: 20000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -1657,8 +1084,7 @@ main
     // Security Audit;
       "name": 'security-audit',
       "args": 'scripts/automation/security-audit.cjs',
-<<<<<<< HEAD
-      "cwd": '/workspace',
+"cwd": '/workspace',
       "instances": 1,
       "autorestart": true,
       "watch": false,
@@ -1666,8 +1092,7 @@ main
       "max_memory_restart": '512M',
       "restart_delay": 20000,
       "env": {}
-<<<<<<< HEAD
-    // Security Audit
+// Security Audit
     {
       name: 'security-audit',
       script: 'node',
@@ -1682,18 +1107,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -1713,17 +1128,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Continuous Improvement
@@ -1739,18 +1143,7 @@ main
       max_memory_restart: '256M',
       restart_delay: 60000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -1759,12 +1152,10 @@ main
       "name": 'continuous-improvement',
       "args": 'scripts/automation/continuous-improvement.cjs',
       "cron_restart": '0 2 * * *', // Daily at 2 AM;
-<<<<<<< HEAD
-      "max_memory_restart": '256M',
+"max_memory_restart": '256M',
       "restart_delay": 60000,
       "env": {}
-<<<<<<< HEAD
-    // Continuous Improvement
+// Continuous Improvement
     {
       name: 'continuous-improvement',
       script: 'node',
@@ -1779,18 +1170,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -1810,17 +1191,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Daily Build Test
@@ -1836,18 +1206,7 @@ main
       max_memory_restart: '512M',
       restart_delay: 120000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -1856,12 +1215,10 @@ main
       "name": 'daily-build-test',
       "args": 'scripts/automation/daily-build-test.cjs',
       "cron_restart": '0 1 * * *', // Daily at 1 AM;
-<<<<<<< HEAD
-      "max_memory_restart": '512M',
+"max_memory_restart": '512M',
       "restart_delay": 120000,
       "env": {}
-<<<<<<< HEAD
-    // Daily Build Test
+// Daily Build Test
     {
       name: 'daily-build-test',
       script: 'node',
@@ -1876,18 +1233,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -1907,17 +1254,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Health Check
@@ -1933,18 +1269,7 @@ main
       max_memory_restart: '256M',
       restart_delay: 5000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -1953,12 +1278,10 @@ main
       "name": 'health-check',
       "args": 'scripts/automation/health-check.cjs',
       "cron_restart": '*/2 * * * *', // Every 2 minutes;
-<<<<<<< HEAD
-      "max_memory_restart": '256M',
+"max_memory_restart": '256M',
       "restart_delay": 5000,
       "env": {}
-<<<<<<< HEAD
-    // Health Check
+// Health Check
     {
       name: 'health-check',
       script: 'node',
@@ -1973,18 +1296,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -2004,17 +1317,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Security Scanner
@@ -2030,18 +1332,7 @@ main
       max_memory_restart: '512M',
       restart_delay: 30000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -2049,8 +1340,7 @@ main
     // Security Scanner;
       "name": 'security-scanner',
       "args": 'scripts/automation/security-scanner.cjs',
-<<<<<<< HEAD
-      "cwd": '/workspace',
+"cwd": '/workspace',
       "instances": 1,
       "autorestart": true,
       "watch": false,
@@ -2058,8 +1348,7 @@ main
       "max_memory_restart": '512M',
       "restart_delay": 30000,
       "env": {}
-<<<<<<< HEAD
-    // Security Scanner
+// Security Scanner
     {
       name: 'security-scanner',
       script: 'node',
@@ -2074,18 +1363,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -2105,17 +1384,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Performance Monitor
@@ -2131,18 +1399,7 @@ main
       max_memory_restart: '512M',
       restart_delay: 5000,
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -2151,12 +1408,10 @@ main
       "name": 'performance-monitor',
       "args": 'scripts/automation/performance-monitor.cjs',
       "cron_restart": '*/3 * * * *', // Every 3 minutes;
-<<<<<<< HEAD
-      "max_memory_restart": '512M',
+"max_memory_restart": '512M',
       "restart_delay": 5000,
       "env": {}
-<<<<<<< HEAD
-    // Performance Monitor
+// Performance Monitor
     {
       name: 'performance-monitor',
       script: 'node',
@@ -2171,18 +1426,8 @@ main
       env: {
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -2200,42 +1445,16 @@ main
     }
   ],
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // PM2 Deploy configuration
+// PM2 Deploy configuration
   deploy: {
     production: {
 
   // PM2 Deploy configuration
   deploy: {
     production: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  // PM2 Deploy configuration
-  deploy: {
-    production: {
-=======
-  // PM2 Deploy configuration;
-  "deploy": {}
-    production: {}
->>>>>>> main
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-  // PM2 Deploy configuration;
-  "deploy": {}
-    production: {}
-main
-
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
@@ -2256,18 +1475,7 @@ main
       ref: 'origin/develop',
       path: '/var/www/staging',
       'post-deploy': 'npm install && pm2 reload ecosystem.enhanced-intelligent-v2.cjs --env staging',
-<<<<<<< HEAD
-      'pre-setup': ''
-<<<<<<< HEAD
-    }
+'pre-setup': ''
+}
   }
 };
-=======
-    };
-  };
-};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    };
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

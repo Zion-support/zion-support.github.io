@@ -70,4 +70,3 @@ export const ResumeStepContent = ({ ;
         />;
       </TabsContent>;
     </>;
-

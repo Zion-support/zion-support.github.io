@@ -69,7 +69,7 @@ pr-12243
       tags: body.tags || [], topics: body.topics || [],
       seo: {'
         metaTitle: body.seo?.metaTitle || body.title!, metaDescription: body.seo?.metaDescription || '','
-        ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || ''
+        ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '';
     },'
     body: body.body || '', status: body.status || 'draft',
       metrics: { views: 0, likes: 0, shares: 0 }};
@@ -247,21 +247,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       return res.status(409).json({ error: 'Slug already exists' });
     }
     const post: BlogPost = {
-      id: uuidv4()
-      title: body.title!
-      slug: body.slug!
-      coverImageUrl: body.coverImageUrl |''
-      author: body.author!
-      publishDate: body.publishDate!
-      tags: body.tags |[]
-      topics: body.topics |[]
+      id: uuidv4();
+      title: body.title!;
+      slug: body.slug!;
+      coverImageUrl: body.coverImageUrl |'';
+      author: body.author!;
+      publishDate: body.publishDate!;
+      tags: body.tags |[];
+      topics: body.topics |[];
       seo: {
-        metaTitle: body.seo?.metaTitle |body.title!
-        metaDescription: body.seo?.metaDescription |''
-        ogImageUrl: body.seo?.ogImageUrl |body.coverImageUrl |''
+        metaTitle: body.seo?.metaTitle |body.title!;
+        metaDescription: body.seo?.metaDescription |'';
+        ogImageUrl: body.seo?.ogImageUrl |body.coverImageUrl |'';
       }
-      body: body.body |''
-      status: body.status |'draft'
+      body: body.body |'';
+      status: body.status |'draft';
       metrics: { views: 0, likes: 0, shares: 0 }
     }
     posts.unshift(post);

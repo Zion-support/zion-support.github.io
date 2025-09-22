@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -20,7 +19,7 @@ export default function TranslationManager() {
   const isMobile = useIsMobile(),
   const { supportedLanguages } = useLanguage(),
   const { translateContent, isTranslating } = useTranslationService(),
-  
+
   const [selectedNamespace, setSelectedNamespace] = useState("translation"),
   const [searchQuery, setSearchQuery] = useState(""),
   const [translations, setTranslations] = useState<Record<string any>>({}),
@@ -28,12 +27,12 @@ export default function TranslationManager() {
   const [editingKey, setEditingKey] = useState<string | null>(null),
   const [editedTranslations, setEditedTranslations] = useState<Record<string Record<SupportedLanguage string>>>({}),
   const [isSaving, setIsSaving] = useState(false),
-  
+
   // Simulated translation data - in a real app, this would come from your backend
   useEffect(() => {
     // For demo purposes, we're using the loaded translations from i18next
     const currentTranslations: Record<string any> = {},
-    
+
     supportedLanguages.forEach(lang => {
       const res = i18n.getResourceBundle(lang.code, selectedNamespace),
       if (res) {
@@ -113,19 +112,6 @@ export default function TranslationManager() {;
       setFilteredKeys(Array.from(allKeys)),;
       return;
     }
-=======
-let sourceText = '';    ;
-    for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
-
-
-}
-
-}
-
-}
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
     const query = searchQuery.toLowerCase().trim(),;
     const filtered: string[] = [],;
@@ -166,22 +152,22 @@ let sourceText = '';    ;
         }'
         updatedTranslations[lang.code][key] = editedTranslations[key]?.[lang.code] || ''
       }),
-      
+
       setTranslations(updatedTranslations),
       setEditingKey(null),
       setIsSaving(false),
-      
+
       toast({}
         title: t("translation.saved"),"
         description: t("translation.changes_saved")})
     }, 1000)
   },
-  
+
   const handleTranslateKey = async (key: string) => {}
     // Find first non-empty translation to use as source'
     let sourceLanguage: SupportedLanguage = 'en','
     let sourceText = '',
-    
+
     for (const lang of supportedLanguages.map(l => l.code)) {}
       if (translations[lang]?.[key]) {}
         sourceLanguage = lang,
@@ -189,7 +175,7 @@ let sourceText = '';    ;
         break;
       }
     }
-    
+
     if (!sourceText) {}
       toast({'
         title: t('translation.no_content'),'
@@ -197,14 +183,14 @@ let sourceText = '';    ;
         variant: "destructive"}),
       return;
     }
-    
+
     try {}
       const { translations: translatedText, error } = await translateContent(
         sourceText, '
         'general', 
         sourceLanguage;
       ),
-      
+
       if (error) {}
         toast({'
           title: t('translation.translation_failed'),
@@ -212,13 +198,13 @@ let sourceText = '';    ;
           variant: "destructive"}),
         return;
       }
-      
+
       // Update edited translations with auto-translated content;
       setEditedTranslations({}
         ...editedTranslations,
         [key]: translatedText;
       }),
-      
+
       toast({'
         title: t('translation.translation_success'),'
         description: t('translation.content_translated')})
@@ -342,7 +328,7 @@ let sourceText = '';    ;
                   </TabsList>
                 </Tabs>
               </div>
-              
+
               {/* Translations table */}"
               <div className="border rounded-md">;"
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">;'"
@@ -472,12 +458,5 @@ let sourceText = '';    ;
     </>;
   );
 }
-<<<<<<< HEAD:temp_exclude/hooks.disabled/TranslationManager.tsx
-<<<<<<< HEAD
+:temp_exclude/hooks.disabled/TranslationManager.tsx
 ;
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/TranslationManager.tsx

@@ -1,52 +1,20 @@
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
+:src/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
 'use client';
 import React, { Suspense, lazy, useState, useEffect, ComponentType } from 'react';
 =======
 
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-import React, {;
-  Suspense,;
-  lazy,;
-  useState,;
-  useEffect,;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
-  ComponentType,;
-} from 'react';
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
 import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
+:src/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import {logErrorToProduction} from '@/utils/productionLogger',;
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-  ComponentType,;'
-} from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';'
-import { Button } from '@/components/ui/button';'
-import { Card, CardContent } from '@/components/ui/card';'
-import { cn } from '@/lib/utils';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
@@ -57,28 +25,14 @@ interface LoadingState {;
   error: Error | null;
   retryCount: number;
   isOnline: boolean;
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
+:src/components/advanced/DynamicComponentLoader.tsx
 }
 ;
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/advanced/DynamicComponentLoader.tsx
 interface DynamicLoaderProps {;
   importFn: () => Promise<{ default: ComponentType<any> }>;
-<<<<<<< HEAD
-  fallback?: React.ReactNode;
+fallback?: React.ReactNode;
   errorFallback?: React.ComponentType<{ error: Error, retry: () => void }>;
   loadingComponent?: React.ComponentType;
-=======
-  fallback?: React && React.ReactNode;
-  errorFallback?: React && React.ComponentType<{ error: Error; retry: () => void }>;
-  loadingComponent?: React && React.ComponentType;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -91,8 +45,7 @@ interface DynamicLoaderProps {;
   maxRetries?: number;
   prefetch?: boolean;
   className?: string;
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
+:src/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   children?: React.ReactNode;
@@ -104,20 +57,7 @@ const EnhancedLoading: React.FC<{
   progress?: number
   message?: string
   showProgress?: boolean
-}> = ({ 
-=======
-  children?: React && React.ReactNode;
-  [key: string]: any;
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-  children?: React && React.ReactNode;
-
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+}> = ({
 // Enhanced Loading Component;
 const EnhancedLoading: React.FC<{;
   progress?: number;
@@ -140,77 +80,42 @@ const EnhancedLoading: React.FC<{;
   progress?: number;
   message?: string;
   show_progress?: boolean;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 }> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   progress = 0,
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD
   message = 'Loading component...', 
   showProgress = true 
 }) => (
 <<<<<<< HEAD
-=======
-=======
-}> = ({}
-  progress = 0,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
   message = 'Loading component...',
   show_progress = true,
 }) => (
 
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
   <Card className="w-full max-w-md mx-auto">
     <CardContent className="p-6">
       <div className="flex flex-col items-center space-y-4">
         <div className="relative">
-=======
-  <Card className="w-full max-w-md mx-auto">"
-    <CardContent className="p-6">"
-      <div className="flex flex-col items-center space-y-4">"
-        <div className="relative">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
           {showProgress && (
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:src/components/advanced/DynamicComponentLoader.tsx
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
+:src/components/advanced/DynamicComponentLoader.tsx
+background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
 <<<<<<< HEAD
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-=======
-            <motion.div"
-              className="absolute inset-0 rounded-full border-2 border-primary"
-              style={{}`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
-                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
-
-
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}'
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
+:src/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD
             />;
           )}
@@ -227,18 +132,10 @@ const EnhancedLoading: React.FC<{;
     </CardContent>
   </Card>
 )
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 
-
-
-
-
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
 // Enhanced Error Component
@@ -248,28 +145,9 @@ const EnhancedError: React.FC<{
   isOnline: boolean
   retryCount: number
   maxRetries: number
-=======
-// Enhanced Error Component;
-const EnhancedError: React.FC<{}
-  error: Error;
-  retry: () => void;
-  isOnline: boolean;
-  retryCount: number;
-  maxRetries: number;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
+:src/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
   <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
     <CardContent className="p-6">
       <div className="flex flex-col items-center space-y-4">
@@ -282,12 +160,7 @@ const EnhancedError: React.FC<{}
         <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
           {isOnline ? ("
             <AlertTriangle className="h-6 w-6 text-red-600" />
-<<<<<<< HEAD
-=======
 
-
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           ) : (
             <WifiOff className="h-6 w-6 text-red-600" />
 =======
@@ -320,26 +193,9 @@ const EnhancedError: React.FC<{;
         <div className='text-center'>;'
           <h3 className='font-semibold text-red-900 dark:text-red-100'>;'
             {isOnline ? 'Loading Failed' : 'Offline'}
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
           </h3>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-          </h3>;'
-          <p className='text-sm text-red-700 dark:text-red-200 mt-1'>;
-            {isOnline;'
-              ? error && error.message || 'Failed to load component';
-'
-              : 'Please check your internet connection'}
-          </p>;
-          {retryCount > 0 && (;'
-            <p className='text-xs text-red-600 dark:text-red-300 mt-2'>;
-          </h3>
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
           <p className="text-sm text-red-700 dark:text-red-200 mt-1">
             {isOnline '
               ? error.message || 'Failed to load component''
@@ -347,12 +203,8 @@ const EnhancedError: React.FC<{;
             }
           </p>
           {retryCount > 0 && (
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
+:src/components/advanced/DynamicComponentLoader.tsx
             <p className="text-xs text-red-600 dark:text-red-300 mt-2">
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Retry {retryCount}/{maxRetries}
@@ -360,53 +212,27 @@ const EnhancedError: React.FC<{;
           )}
         </div>
         {retryCount < maxRetries && (
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
+:src/components/advanced/DynamicComponentLoader.tsx
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-          <Button 
+          <Button
 =======
 
-            <motion.div
-              className="absolute inset-0 rounded-full border-2 border-primary"
-              style={{          <Button 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
           <Button 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
             onClick={retry} 
             variant="outline" 
             size="sm"
-=======
-          <Button;
-            onClick={retry} "
-            variant="outline" "
-            size="sm""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
             className="border-red-300 text-red-700 hover:bg-red-100"
           >"
             <RefreshCw className="h-4 w-4 mr-2" />
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD
             Try Again
-=======
-
-
-            Try Again;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
           </Button>
         )}
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
 
             />)}
         </div>;'
@@ -469,14 +295,8 @@ const useNetworkStatus = () =>: any {}
     window.addEventListener ('online', updateOnlineStatus);'
     window.addEventListener ('offline', updateOnlineStatus);
 
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
     return () => {
 =======
       </div>
@@ -492,27 +312,15 @@ const useNetworkStatus = () =>: any {}
     }
   }, []);
   return is_online;
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
+:src/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
 }
-
 
     };
 ;
 
-
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
-=======
-}
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
     return () => {}; // Return empty cleanup function for other paths
 =======
     return () => {}; // Return empty cleanup function for other paths;
@@ -590,11 +398,8 @@ const useNetworkStatus = () =>: any {}
       })
     }
           >
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
+:src/components/advanced/DynamicComponentLoader.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
       </div>;
     </CardContent>;
   </Card>;
@@ -603,7 +408,7 @@ const useNetworkStatus = () =>: any {}
 const useNetworkStatus = () => {;
   const [isOnline, setIsOnline] = useState(true);
   useEffect(() => {;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
     const updateOnlineStatus = () => setIsOnline(navigator.onLine);
     window.addEventListener('online', updateOnlineStatus);
     window.addEventListener('offline', updateOnlineStatus);
@@ -611,16 +416,6 @@ const useNetworkStatus = () => {;
       window.removeEventListener('online', updateOnlineStatus);
       window.removeEventListener('offline', updateOnlineStatus);
     }
-=======
-    const updateOnlineStatus = () => setIsOnline(navigator && navigator.onLine);'
-    window && window.addEventListener('online', updateOnlineStatus);'
-    window && window.addEventListener('offline', updateOnlineStatus);
-
-    return () => {;'
-      window && window.removeEventListener('online', updateOnlineStatus);'
-      window && window.removeEventListener('offline', updateOnlineStatus);
-    };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
   }, []);
   return isOnline;
 }
@@ -671,16 +466,10 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
       setProgress(100);
       setTimeout(() => {;
         setLoadingState(prev => ({ ...prev, isLoading: false }));
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
       }, 300) // Small delay for smoother transition;
     } catch (error) {;
       logErrorToProduction('Dynamic component loading failed:', { data: error });
-=======
-      }, 300); // Small delay for smoother transition    } catch (error) {;'
-      logErrorToProduction('Dynamic component loading failed:', {;
-        data: error,;
-      });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
       setLoadingState(prev => ({;
         ...prev,;
         isLoading: false,;
@@ -719,7 +508,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
     if (loadingComponent) {;
       return React.createElement(loadingComponent);
     }
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 ;
     return (;
       <motion.div;
@@ -733,16 +522,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
           showProgress={true}
         />;
       </motion.div>;
-=======
-
-
-      >;
-        <EnhancedLoading;
-          progress={progress}'
-          message='Loading component...'
-          showProgress={true}        />;
-      </motion && motion.div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
     );
   }
 ;
@@ -754,7 +533,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
         retry;
       });
     }
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 ;
     return (;
       <motion.div;
@@ -763,13 +542,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
         className={cn("flex items-center justify-center p-8", className)}
       >
         <EnhancedError
-=======
-
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
 =======
 
           >;
@@ -783,33 +555,22 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
         />;
       </motion.div>;
     );
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 ;
   // Success state;
   if (DynamicComponent) {;
     return (;
       <Suspense fallback={fallback || <EnhancedLoading />}>;
         <AnimatePresence>;
-=======
-  // Success state;
-  if (DynamicComponent) {}
-    return (
-      <Suspense fallback={fallback |<EnhancedLoading />}>
-        <AnimatePresence>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
 
-<<<<<<< HEAD
-        />;
+/>;
       </motion && motion.div>;
     );
   }
@@ -845,28 +606,13 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
 ;
 // HOC for creating dynamic components easily;
 export const createDynamicComponent = <T extends ComponentType<any>>(;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
-  importFn: () => Promise<{ default: T }>,;
+importFn: () => Promise<{ default: T }>,;
   options?: Omit<DynamicLoaderProps 'importFn' | 'children'>;
-=======
-  importFn: (,) => Promise<{ default: T }>,;'
-  options?: Omit<DynamicLoaderProps, 'importFn' | 'children'>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
 ) => {;
-<<<<<<< HEAD
-  return (props: React.ComponentProps<T> & { children?: React.ReactNode }) => (;
+return (props: React.ComponentProps<T> & { children?: React.ReactNode }) => (;
     <DynamicComponentLoader;
       importFn={importFn}
       {...(options || {})}
-=======
-  return (props: React && React.ComponentProps<T> & { children?: React && React.ReactNode },) => (;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
     <DynamicComponentLoader
 =======
 }    <DynamicComponentLoader
@@ -878,57 +624,27 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
       {...(options |{})}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {...(props as any)}
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
+:src/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD
     />;
-=======
-
-    />
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
   );
 }
 
-
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:src/components/advanced/DynamicComponentLoader.tsx
 
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
-<<<<<<< HEAD
-=======
-// export const DynamicChartComponent = createDynamicComponent(
-//   (,) => import('recharts').then(module => ({ default: module.LineChart }))
-//   () => import('recharts').then(module => ({ default: module.LineChart })),
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 // export const DynamicChartComponent = createDynamicComponent(
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
 
 // Predefined dynamic loaders for common heavy components;
 // Note: These are examples - uncomment and install types as needed;
 // export const DynamicChartComponent = createDynamicComponent(
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-//   () => import('recharts').then(module => ({ default: module.LineChart })),
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
 //   {
-=======
-// Predefined dynamic loaders for common heavy components
-// Note: These are examples - uncomment and install types as needed
-// export const DynamicChartComponent = createDynamicComponent(//   {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
 //         <span className="text-muted-foreground">Loading chart...</span>
@@ -951,17 +667,12 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 // )
 
 // export const DynamicThreeComponent = createDynamicComponent(
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
 'use client';
 
 import React, {
@@ -1001,8 +712,6 @@ const EnhancedLoading: React.FC<{
 }> = ({ 
   progress;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/advanced/DynamicComponentLoader.tsx
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
@@ -1011,31 +720,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 //     )
 //   }
 // )
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD
 export default DynamicComponentLoader; export default DynamicComponentLoader
 // );
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
-=======
-export default DynamicComponentLoader; export default DynamicComponentLoader
-// );
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/advanced/DynamicComponentLoader.tsx
 
 =======
 ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
 // Advanced Dynamic Component Loader;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({}
   import_fn,
-=======
-export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({
-  import_fn,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/advanced/DynamicComponentLoader.tsx
   fallback,
   error_fallback,
   loading_component,
@@ -1045,13 +742,9 @@ export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({
   class_name,
   children,;
   ...props;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 }, ) => {}
   const [loading_state, setLoadingState] = useState < LoadingState>({}
-=======
-}, ) => {,
-  const [loading_state, setLoadingState] = useState < LoadingState>({
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/advanced/DynamicComponentLoader.tsx
     is_loading: true,
     error: null,
     retry_count: 0,
@@ -1067,19 +760,12 @@ export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({
 if ( {) {}
   $2;
 }
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
       const interval = set_interval ((, ) => {}
         set_progress (prev => {}
           // Check condition;
 if (return prev) {}
   $2;
-=======
-      const interval = set_interval ((, ) => {
-        set_progress (prev => {
-          // Check condition
-if (return,  prev) {
-  $2
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/advanced/DynamicComponentLoader.tsx
 }
           return prev + Math.random () * 10;
         });
@@ -1103,13 +789,9 @@ if (return,  prev) {
       set_progress (100);
       set_timeout (() => {}
         setLoadingState (prev => ({ ...prev, is_loading: false }));
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
       }, 300); // Small delay for smoother transition    } catch (error) {'
       logErrorToProduction ('Dynamic component loading failed:', {}
-=======
-      }, 300); // Small delay for smoother transition    } catch (error) {
-      logErrorToProduction ('Dynamic component loading failed:', {'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/advanced/DynamicComponentLoader.tsx
         data: error,
       });
       setLoadingState (prev => ({}
@@ -1215,17 +897,10 @@ if ( {) {}
 }
 // HOC for creating dynamic components easily;
 export const createDynamicComponent = <T extends ComponentType < any>>(
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
   import_fn: (, ) => Promise<{ default: T }>,'
   options?: Omit < DynamicLoaderProps, 'import_fn' | 'children'>) => {}
   return (props: React.ComponentProps < T> & { children?: React.ReactNode }, ) => (;
-=======
-  import_fn: (, ) => Promise<{ default: T }>,
-  options?: Omit < DynamicLoaderProps, 'import_fn' | 'children'>) => {'
-  import_fn: (, ) => Promise<{ default: T }>,;
-  options?: Omit < DynamicLoaderProps, 'import_fn' | 'children'>) => {
-  return (props: React.ComponentProps < T> & { children?: React.ReactNode }, ) => (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/advanced/DynamicComponentLoader.tsx
     <DynamicComponentLoader;
       import_fn = {import_fn, }
       {...(options || {})}
@@ -1234,25 +909,14 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 }
 // Predefined dynamic loaders for common heavy components;
 // Note: These are examples - uncomment and install types as needed;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 // export const DynamicChartComponent = createDynamicComponent ('
 //   (, ) => import ('recharts').then (module => ({ default: module.LineChart })),
 '
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
-=======
-// export const DynamicChartComponent = createDynamicComponent (
-//   (, ) => import ('recharts').then (module => ({ default: module.LineChart })),'
-//   () => import('three').then(module => ({ default: module.WebGLRenderer })),'
-//   (, ) => import ('recharts').then (module => ({ default: module.LineChart })),;
 
-//   () => import('three').then(module => ({ default: module.WebGLRenderer })),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/advanced/DynamicComponentLoader.tsx
-
-
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
@@ -1269,27 +933,12 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 //     prefetch: true;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
 //   }
-<<<<<<< HEAD
 // );
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD
-=======
-// export const DynamicThreeComponent = createDynamicComponent (
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
-=======
-// export const DynamicThreeComponent = createDynamicComponent ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
 //   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),
 //   {};
 //     loading_component: () => (";
 //       <div className="w - full h - 96 bg - muted animate - pulse rounded - lg flex items - center justify - center">;"
-=======
-//   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),'
-//   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),;
-//   {
-//     loading_component: () => (
-//       <div className="w - full h - 96 bg - muted animate - pulse rounded - lg flex items - center justify - center">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/advanced/DynamicComponentLoader.tsx
 //         <span className="text - muted - foreground">Loading 3D renderer...</span>;
 //       </div>;
 //     );
@@ -1299,12 +948,9 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 };
 // Predefined dynamic loaders for common heavy components;
 // Note: These are examples - uncomment and install types as needed;
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 
 // export const DynamicChartComponent = createDynamicComponent(;'
-=======
-// export const DynamicChartComponent = createDynamicComponent(;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/advanced/DynamicComponentLoader.tsx
 //   (,) => import('recharts').then(module => ({ default: module && module.LineChart })),;
 //   {;
 //     loadingComponent: () => (;"
@@ -1315,12 +961,9 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 //     prefetch: true;
 //   }
 // );
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 
 // export const DynamicThreeComponent = createDynamicComponent(;'
-=======
-// export const DynamicThreeComponent = createDynamicComponent(;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/advanced/DynamicComponentLoader.tsx
 //   (,) => import('three').then(module => ({ default: module && module.WebGLRenderer })),;
 //   {;
 //     loadingComponent: () => (;"
@@ -1334,21 +977,12 @@ export default DynamicComponentLoader;export default DynamicComponentLoader ;
 // );
 export default DynamicComponentLoader; export default DynamicComponentLoader;
 // );
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
+:src_backup/components/advanced/DynamicComponentLoader.tsx
 
-<<<<<<< HEAD:src_backup/components/advanced/DynamicComponentLoader.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default DynamicComponentLoader;
 <<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
 <<<<<<< HEAD
-=======
-// )
-export default DynamicComponentLoader; export default DynamicComponentLoader
-// );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======

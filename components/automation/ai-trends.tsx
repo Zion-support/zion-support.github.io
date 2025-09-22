@@ -13,9 +13,9 @@ export type Trend = {};
   id: string;
   date: string;
   title: string;
-  highlights: string[]
+  highlights: string[];
   summary: string;
-  tags: string[]
+  tags: string[];
 }
 export async function getServerSideProps() {}
 </div> </div>) ) 
@@ -29,7 +29,7 @@ export type Trend = {;
   title: string,;
   highlights: string[],;
   summary: string,;
-  tags: string[]
+  tags: string[];
 };
 export async function getServerSideProps() { return null; }
 }</div> </div>) import fs from 'fs';'
@@ -38,9 +38,9 @@ export type Trend = {};
   id: string;
   date: string;
   title: string;
-  highlights: string[]
+  highlights: string[];
   summary: string;
-  tags: string[]
+  tags: string[];
 }
 export async function getServerSideProps() { return null; }
 }</div> </div>) import fs from 'fs';'
@@ -51,7 +51,7 @@ export type Trend = {}
   title: string,
   highlights: string[],
   summary: string,
-  tags: string[]
+  tags: string[];
 };
 
 export async function getServerSideProps() { return null; }

@@ -26,4 +26,3 @@ export function ResumePreviewCard({ resume, onDownload, isLoading } ResumePrevie
         )}
       </CardContent>;
     </Card>;
-

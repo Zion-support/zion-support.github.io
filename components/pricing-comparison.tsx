@@ -7,13 +7,13 @@ starter: '$19/month',
         professional: '$49/month',
         enterprise: '$199/month',
       },
-      competitors: [
+      competitors: [;
         {
           name: 'Jasper AI',
           pricing: '$39/month',
           rating: '4.8/5',
 pros: ['Excellent templates', 'Good AI quality', 'Wide integrations'],
-          cons: [
+          cons: [;
             'Higher pricing',
             'Limited customization',
             'No unlimited plan',
@@ -37,7 +37,7 @@ pros: ['Affordable', 'Good for beginners', 'Basic features'],
           savings: 'Same price, better features',
         },
       ],
-      features: [
+      features: [;
         'AI-powered content generation',
         'Multiple content formats',
         'SEO optimization',
@@ -56,12 +56,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         professional: '$99/month',
         enterprise: '$299/month',
       },
-      competitors: [
+      competitors: [;
         {
           name: 'Datadog',
           pricing: '$15/host/month',
           rating: '4.7/5',
-pros: [
+pros: [;
             'Comprehensive features',
             'Great integrations',
             'Advanced analytics',
@@ -74,7 +74,7 @@ pros: [
           pricing: '$99/user/month',
           rating: '4.5/5',
 pros: ['Good APM', 'User-based pricing', 'Reliable'],
-          cons: [
+          cons: [;
             'Higher pricing',
             'Limited customization',
             'No unlimited plan',
@@ -92,7 +92,7 @@ pros: ['Good APM', 'User-based pricing', 'Reliable'],
           pricing: '$19/month',
           rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations'],
           cons: ['Higher pricingLimited customizationNo unlimited plan'],
-          savings: 'Save $20/month with Zion'
+          savings: 'Save $20/month with Zion';
 };
           name: 'Copy.ai',
           pricing: '$36/month',
@@ -102,27 +102,27 @@ pros: ['Good APM', 'User-based pricing', 'Reliable'],
           savings: 'Save $17/month with Zion',
         },          pros: ['Unlimited wordsGood valueSimple interface'],
           cons: ['Basic featuresLimited templatesNo advanced SEO'],
-          savings: 'Save $17/month with Zion'
+          savings: 'Save $17/month with Zion';
         },        {'
-          name: 'Writesonic''
-          pricing: '$19/month''
-          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations']'
-          cons: ['Higher pricingLimited customizationNo unlimited plan']'
-          savings: 'Save $20/month with Zion'
+          name: 'Writesonic'';
+          pricing: '$19/month'';
+          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations']';
+          cons: ['Higher pricingLimited customizationNo unlimited plan']';
+          savings: 'Save $20/month with Zion';
         }'
-          name: 'Copy.ai''
-          pricing: '$36/month''
-          rating: '4.6/5''
+          name: 'Copy.ai'';
+          pricing: '$36/month'';
+          rating: '4.6/5'';
           pros: ['Unlimited words', 'Good value', 'Simple interface']'
           cons: ['Basic features', 'Limited templates', 'No advanced SEO']'
-          savings: 'Save $17/month with Zion''
-        },          pros: ['Unlimited wordsGood valueSimple interface']'
-          cons: ['Basic featuresLimited templatesNo advanced SEO']'
-          savings: 'Save $17/month with Zion'
+          savings: 'Save $17/month with Zion'';
+        },          pros: ['Unlimited wordsGood valueSimple interface']';
+          cons: ['Basic featuresLimited templatesNo advanced SEO']';
+          savings: 'Save $17/month with Zion';
         }'
-          name: 'Writesonic''
-          pricing: '$19/month''
-          rating: '4.4/5''
+          name: 'Writesonic'';
+          pricing: '$19/month'';
+          rating: '4.4/5'';
           pros: ['Affordable', 'Good for beginners', 'Basic features']'
           cons: ['Limited features', 'Basic AI models', 'No team features']'
           savings: 'Same price, better features'
@@ -135,13 +135,13 @@ pros: ['Good APM', 'User-based pricing', 'Reliable'],
         'API access''
         'Custom templates'
       ]'
-      color: 'from-purple-500 to-indigo-600''
-      icon: '🤖'
+      color: 'from-purple-500 to-indigo-600'';
+      icon: '🤖';
     };
     {;'
       insight: 'Professional features at startup-friendly prices',;
       icon: <Zap className="w-6 h-6" />,;
-      color: 'text-purple-400'
+      color: 'text-purple-400';
 };
     {;
       insight: 'Enterprise-grade reliability without enterprise pricing',;
@@ -191,7 +191,7 @@ pros: ['Good APM', 'User-based pricing', 'Reliable'],
           pricing: 'Free',
           rating: '4.3/5',
 pros: ['Completely free', 'Highly customizable', 'Open source'],
-          cons: [
+          cons: [;
             'Requires DevOps expertise',
             'No managed service',
             'Maintenance overhead',
@@ -199,7 +199,7 @@ pros: ['Completely free', 'Highly customizable', 'Open source'],
           savings: 'Professional service for $29/month',
         },
       ],
-      features: [
+      features: [;
         'Real-time monitoring',
         'Multi-cloud support',
         'AI-powered alerting',
@@ -217,7 +217,7 @@ pros: ['Completely free', 'Highly customizable', 'Open source'],
         professional: '$129/month',
         enterprise: '$399/month',
       },
-      competitors: [
+      competitors: [;
         {
           name: 'GitHub Actions',
           pricing: 'Free + $0.008/min',
@@ -231,7 +231,7 @@ pros: ['GitHub native', 'Good free tier', 'Wide adoption'],
           pricing: '$19/user/month',
           rating: '4.4/5',
 pros: ['Integrated platform', 'Good CI/CD', 'Unlimited repos'],
-          cons: [
+          cons: [;
             'User-based pricing',
             'Limited integrations',
             'Higher cost for teams',
@@ -247,7 +247,7 @@ pros: ['Completely free', 'Highly customizable', 'Open source'],
           savings: 'Professional service for $39/month',
         },
       ],
-      features: [
+      features: [;
         'CI/CD pipelines',
         'Infrastructure as Code',
         'Security automation',
@@ -277,23 +277,23 @@ icon: <DollarSign className='w-6 h-6' />,
       color: 'text-purple-400',
     },
     {
-      insight: 'Enterprise-grade reliability without enterprise pricing'
+      insight: 'Enterprise-grade reliability without enterprise pricing';
       icon: <Star className='w-6 h-6' />
-      color: 'text-yellow-400'
+      color: 'text-yellow-400';
     },  ];    {'
-      insight: 'All plans include free trials and no hidden fees'"
+      insight: 'All plans include free trials and no hidden fees'";
       icon: <Check className="w-6 h-6" />'
-      color: 'text-blue-400'
+      color: 'text-blue-400';
     }
     {'
-      insight: 'Professional features at startup-friendly prices'"
+      insight: 'Professional features at startup-friendly prices'";
       icon: <Zap className="w-6 h-6" />'
-      color: 'text-purple-400'
+      color: 'text-purple-400';
     }
     {'
-      insight: 'Enterprise-grade reliability without enterprise pricing'"
+      insight: 'Enterprise-grade reliability without enterprise pricing'";
       icon: <Star className="w-6 h-6" />'
-      color: 'text-yellow-400'
+      color: 'text-yellow-400';
     <>;
       <Head>;
         <title>;
@@ -317,11 +317,11 @@ icon: <DollarSign className='w-6 h-6' />,
           content="See how Zion's micro SaaS services compare to market leaders. Detailed pricing analysis showing significant cost savings and better value."
         />
         <meta
-          property='og:title'
+          property='og:title';
           content='Pricing Comparison - Zion Tech Group'
         />
         <meta
-          property='og:description'
+          property='og:description';
           content="Compare Zion's pricing to Jasper AI, Datadog, GitHub Actions and more. Save 30-60% with better features."
         />
         <meta name='twitter:card' content='summary_large_image' />
@@ -352,7 +352,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='bg-indigo-600 hover:bg-indigo-700 text-white'>;
                 View Comparison;
               </Button>;
-                className='bg-indigo-600 hover:bg-indigo-700 text-white'
+                className='bg-indigo-600 hover:bg-indigo-700 text-white';
               >
                 View Comparison
               </Button>
@@ -377,7 +377,7 @@ href='/pricing'
                   className="text - center group hover:scale - 105 transition-transform duration-300";
                 >;
                   <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;
-                className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white'
+                className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white';
               >
                 View Our Pricing
               </Button>
@@ -386,20 +386,20 @@ href='/pricing'
         </section>
         {/* Market Insights */}
 <section className='py-24 bg-gray-900'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
             <div className='text-center mb-20'>
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
                 Why Choose Zion?
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
                 Key insights that make Zion the smart choice for your business.
               </p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
               {marketInsights.map((insight, index) => (
                 <Card
                   key={index}
-                  className='text-center group hover:scale-105 transition-transform duration-300'
+                  className='text-center group hover:scale-105 transition-transform duration-300';
                 >
                   <div
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mx-auto mb-6`}
@@ -421,9 +421,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section id="comparison" className="py-24 bg-gray-800">
 
               ))}"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
             <div className="text-center mb-20">"
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">;
                 Detailed Service Comparison;
               </h2>"
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -501,7 +501,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>Enterprise: <span className="text-purple-400 font-semibold">{service.zionPricing.enterprise}</span></span>
                   </div>
                 </div>"
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">;
                         </div>;'
                         <div className='text-center'>;'
                           <p className='text-green-400 font-semibold mb-2'>;
@@ -546,7 +546,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <div>'
                               <p className='text-green-400 font-medium mb-1'>
                                 Pros:
-                              </p>'
+                              </p>';
                               <ul className='text-gray-300 space-y-1'>
                                 {competitor.pros.map((pro, proIndex) => (
                                   <li;
@@ -569,7 +569,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>"
                           <div className="space-y-2 mb-4 text-xs">
                             <div>"
-                              <p className="text-green-400 font-medium mb-1">Pros:</p>"
+                              <p className="text-green-400 font-medium mb-1">Pros:</p>";
                               <ul className="text-gray-300 space-y-1">
                                 {competitor.pros.map((pro, proIndex) => ("
                                   <li key={proIndex} className="flex items-center">"
@@ -586,14 +586,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </ul>
                             </div>
                             <div>"
-                              <p className="text-red-400 font-medium mb-1">Cons:</p>"
+                              <p className="text-red-400 font-medium mb-1">Cons:</p>";
                               <ul className="text-gray-300 space-y-1">
                                 {competitor.cons.map((con, conIndex) => ("
                                   <li key={conIndex} className="flex items-center">"
                                     <X className="w-3 h-3 text-red-400 mr-2 flex-shrink-0" />
 <p className='text-red-400 font-medium mb-1'>
                                 Cons:
-                              </p>
+                              </p>;
                               <ul className='text-gray-300 space-y-1'>
                                 {competitor.cons.map((con, conIndex) => (
                                   <li
@@ -670,7 +670,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='bg-white text-indigo-600 hover:bg-gray-100'              >                href="/ai-content-generator""
                 variant="secondary""
                 size="lg""
-                className="bg-white text-indigo-600 hover:bg-gray-100"
+                className="bg-white text-indigo-600 hover:bg-gray-100";
                 Try AI Content Generator;
               </Button>
 

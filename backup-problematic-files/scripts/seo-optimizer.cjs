@@ -6,26 +6,16 @@ class SEOOptimizer {
 }
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
-    this.reportFile = path.join(__dirname, '../logs/seo-report.json');
+this.reportFile = path.join(__dirname, '../logs/seo-report.json');
   }
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-  }
+}
   async optimizeSEO() {
     this.log('🔍 Starting SEO optimization...');
 // File extensions to analyze
 const fileExtensions = ['.js', '.jsx', '.ts', '.tsx'];
 // Analyze a single file for SEO
-=======
-
-// Analyze a single file for SEO;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function analyzeFile(filePath) {
   try {
   // TODO: Implement
@@ -111,16 +101,5 @@ function analyzeFile(filePath) {
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
   optimizer.run().catch(console.error);
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = SEOOptimizer;
-module.exports = SEOOptimizer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-module.exports = SEOOptimizer;
-`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

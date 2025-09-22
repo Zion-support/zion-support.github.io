@@ -1,8 +1,4 @@
 // Polyfill fetch and enable fetch mocks;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import 'whatwg-fetch';
 import fetchMock from 'jest-fetch-mock';
 fetchMock.enableMocks();
@@ -20,12 +16,7 @@ import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder;
 // @ts-expect-error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder;
-<<<<<<< HEAD
-=======
-import 'whatwg-fetch',;
-import fetchMock from 'jest-fetch-mock',;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 fetchMock.enableMocks(),;
 ;
 // Reset fetch mocks before each test to ensure isolation;
@@ -45,7 +36,6 @@ global.TextDecoder = TextDecoder,;
 // will transform import.meta.env.VITE_SOME_VAR to something like process.env.VITE_SOME_VAR;
 // or that import.meta itself is transformed into an object where 'env' can be populated.;
 <<<<<<< HEAD
-<<<<<<< HEAD
 process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup';
 process.env.NEXT_PUBLIC_SUPABASE_URL = 'http://localhost:54321';
 process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test_anon_key';
@@ -65,15 +55,6 @@ Object.defineProperty(window, 'matchMedia', {;
     addEventListener:jest.fn();
     removeEventListener:jest.fn();
     dispatchEvent:jest.fn()}))});
-=======
-process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',;
-process.env.NEXT_PUBLIC_SUPABASE_URL = 'http://localhost:54321',;
-process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test_anon_key',;
-=======
-process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup';
-process.env.NEXT_PUBLIC_SUPABASE_URL = 'http://localhost:54321';
-process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test_anon_key';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Jest-axe matchers for accessibility;
 import { toHaveNoViolations } from 'jest-axe';
 expect.extend(toHaveNoViolations);
@@ -87,16 +68,10 @@ Object.defineProperty(window, 'matchMedia', {;
     onchange:null;
     addListener:jest.fn(), // deprecated;
     removeListener:jest.fn(), // deprecated;
-<<<<<<< HEAD
-    addEventListener:jest.fn(),;
+addEventListener:jest.fn(),;
     removeEventListener:jest.fn(),;
     dispatchEvent:jest.fn()}))}),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    addEventListener:jest.fn();
-    removeEventListener:jest.fn();
-    dispatchEvent:jest.fn()}))});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',;
 process.env.NEXT_PUBLIC_SUPABASE_URL = 'http: //localhost:54321';,;
@@ -122,35 +97,19 @@ Object.defineProperty(window, 'matchMedia', {;
 //   meta:{;
 //     env:{;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 //       VITE_SUPABASE_URL:'mock_supabase_url';
 //       VITE_SUPABASE_ANON_KEY:'mock_supabase_anon_key';
 //       MODE:'test';
 //     };
 //   };
 // };
-<<<<<<< HEAD
-=======
-//       VITE_SUPABASE_URL:'mock_supabase_url',;
-//       VITE_SUPABASE_ANON_KEY:'mock_supabase_anon_key',;
-//       MODE:'test',;
-//     },;
-//   },;
-// },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 // Mock the supabase client module to prevent import.meta.env parsing errors;
 jest.mock('@/integrations/supabase/client', () => ({;
   supabase:{;
     auth:{;
       onAuthStateChange:jest.fn(() => ({;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        data:{ subscription:{ unsubscribe:jest.fn() } }}));
+data:{ subscription:{ unsubscribe:jest.fn() } }}));
       // Add any other specific methods from supabase.auth if they get called;
     };
     // Add other top-level Supabase client methods if they get called;
@@ -163,11 +122,6 @@ jest.mock('firebase/app', () => ({;
   initializeApp:jest.fn();
   // Add other app-level exports if needed, e.g., getApps, getApp;
 }));
-=======
-        data:{ subscription:{ unsubscribe:jest.fn() } }})),;
-=======
-        data:{ subscription:{ unsubscribe:jest.fn() } }}));
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Add any other specific methods from supabase.auth if they get called;
     };
     // Add other top-level Supabase client methods if they get called;
@@ -204,17 +158,13 @@ jest.mock('firebase/app', () => ({;')
   initializeApp: jest.fn();,;
   // Add other app-level exports if needed, e.g., getApps, getApp;
 })),;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 jest.mock('firebase/firestore', () => {;
   // Mock collection function to be available on the db instance (for v8 style);
   // and as a top-level export (for v9 style).;
   const mockCollection = jest.fn((firestoreInstanceOrPath, pathIfV8) => {;
 <<<<<<< HEAD
-<<<<<<< HEAD
     const actualPath = typeof firestoreInstanceOrPath === 'string' ? firestoreInstanceOrPath :pathIfV8;
     return {;
       path:actualPath;
@@ -249,11 +199,6 @@ jest.mock('firebase/firestore', () => {;
       onSnapshot:jest.fn(() => jest.fn()), // Returns an unsubscribe function;
     };
   });
-=======
-    const actualPath = typeof firestoreInstanceOrPath === 'string' ? firestoreInstanceOrPath :pathIfV8,;
-=======
-    const actualPath = typeof firestoreInstanceOrPath === 'string' ? firestoreInstanceOrPath :pathIfV8;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return {;
       path:actualPath;
       doc:jest.fn((docId) => ({;
@@ -285,20 +230,14 @@ jest.mock('firebase/firestore', () => {;
       update:jest.fn(() => Promise.resolve());
       delete:jest.fn(() => Promise.resolve());
       onSnapshot:jest.fn(() => jest.fn()), // Returns an unsubscribe function;
-<<<<<<< HEAD
-    },;
+},;
   }),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    };
-  });
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
   return {;
     getFirestore:jest.fn(() => ({;
       // For v8 style:db.collection('path');
 <<<<<<< HEAD
-<<<<<<< HEAD
       collection:mockCollection;
       // For v8 style:db.doc('path/docId');
       doc:mockDoc;
@@ -323,11 +262,6 @@ jest.mock('firebase/firestore', () => {;
     // Add other Firestore exports your code uses;
   };
 });
-=======
-      collection:mockCollection,;
-=======
-      collection:mockCollection;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // For v8 style:db.doc('path/docId');
       doc:mockDoc;
       // Add any other methods directly on db if used, e.g. batch, runTransaction;
@@ -349,20 +283,14 @@ jest.mock('firebase/firestore', () => {;
       now:jest.fn(() => ({ toDate:() => new Date() }));
       fromDate:jest.fn((date) => ({ toDate:() => date }))};
     // Add other Firestore exports your code uses;
-<<<<<<< HEAD
-  },;
+},;
 }),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  };
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 jest.mock('firebase/auth', () => ({;
   getAuth:jest.fn(() => ({;
     // Mock Auth instance properties/methods if needed, e.g., currentUser;
 <<<<<<< HEAD
-<<<<<<< HEAD
     currentUser:null;
     onAuthStateChanged:jest.fn(() => jest.fn()), // Returns an unsubscribe function;
   }));
@@ -375,11 +303,6 @@ jest.mock('firebase/auth', () => ({;
   // For example:;
   // GoogleAuthProvider:jest.fn();
   // signInWithPopup:jest.fn(() => Promise.resolve({ user:{ uid:'mock-uid' } }))}));
-=======
-    currentUser:null,;
-=======
-    currentUser:null;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     onAuthStateChanged:jest.fn(() => jest.fn()), // Returns an unsubscribe function;
   }));
   createUserWithEmailAndPassword:jest.fn(() => Promise.resolve({ user:{ uid:'mock-uid', email:'mock@example.com' } }));
@@ -389,20 +312,14 @@ jest.mock('firebase/auth', () => ({;
   signOut:jest.fn(() => Promise.resolve());
   // Add other Auth exports your code uses (e.g., GoogleAuthProvider, signInWithPopup, etc.);
   // For example:;
-<<<<<<< HEAD
-  // GoogleAuthProvider:jest.fn(),;
+// GoogleAuthProvider:jest.fn(),;
   // signInWithPopup:jest.fn(() => Promise.resolve({ user:{ uid:'mock-uid' } }))})),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  // GoogleAuthProvider:jest.fn();
-  // signInWithPopup:jest.fn(() => Promise.resolve({ user:{ uid:'mock-uid' } }))}));
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 jest.mock('firebase/storage', () => ({;
   getStorage:jest.fn(() => ({;
     // Mock Storage instance properties/methods if needed;
 <<<<<<< HEAD
-<<<<<<< HEAD
   }));
   ref:jest.fn((storageInstance, path) => ({;
     // Mock StorageReference;
@@ -435,11 +352,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({;
 // Polyfill for URL.revokeObjectURL;
 if (typeof URL.revokeObjectURL === 'undefined') {;
   URL.revokeObjectURL = jest.fn();
-=======
-  })),;
-=======
-  }));
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ref:jest.fn((storageInstance, path) => ({;
     // Mock StorageReference;
     name:path ? path.substring(path.lastIndexOf('/') + 1) :'mockfile.txt';
@@ -470,12 +382,8 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({;
 ;
 // Polyfill for URL.revokeObjectURL;
 if (typeof URL.revokeObjectURL === 'undefined') {;
-<<<<<<< HEAD
-  URL.revokeObjectURL = jest.fn(),;
+URL.revokeObjectURL = jest.fn(),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  URL.revokeObjectURL = jest.fn();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
     const actualPath = typeof firestoreInstanceOrPath === 'string' ? firestoreInstanceOrPath :pathIfV8,;
@@ -571,9 +479,6 @@ if (typeof BroadcastChannel === 'undefined') {;
       this.name = name;
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     postMessage = jest.fn();
     close = jest.fn();
     onmessage = null;
@@ -582,22 +487,7 @@ if (typeof BroadcastChannel === 'undefined') {;
     removeEventListener = jest.fn();
     dispatchEvent = jest.fn();
   };
-<<<<<<< HEAD
-=======
-=======
-}
-;
-// Polyfill for window.scrollTo;
-if (typeof window.scrollTo === 'undefined') {;
-  window.scrollTo = jest.fn();
-}
-;
-// Mock axios.create to return axios itself;
-import axios from 'axios';
-// @ts-ignore;
-axios.create = jest.fn(() => axios);
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     postMessage = jest.fn(),;
     close = jest.fn(),;
     onmessage = null,;
@@ -605,34 +495,20 @@ axios.create = jest.fn(() => axios);
     addEventListener = jest.fn(),;
     removeEventListener = jest.fn(),;
     dispatchEvent = jest.fn(),;
-<<<<<<< HEAD
-  },;
+},;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Polyfill for window.scrollTo;
 if (typeof window.scrollTo === 'undefined') {;
-<<<<<<< HEAD
-  window.scrollTo = jest.fn();
+window.scrollTo = jest.fn();
 }
 ;
 // Mock axios.create to return axios itself;
 import axios from 'axios';
 // @ts-ignore;
 axios.create = jest.fn(() => axios);
-=======
-  window.scrollTo = jest.fn(),;
-// Mock axios.create to return axios itself;
-import axios from 'axios';
-// @ts-ignore;
-axios.create = jest.fn(() => axios),;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // -----------------------------;
 // Vitest Compatibility Layer for Jest;
 // -----------------------------;
@@ -645,9 +521,7 @@ axios.create = jest.fn(() => axios),;
 // with the associated `moduleNameMapper` entry in `jest.config.cjs`.;
 // ---------------------------------------------------------------------------;
 jest.mock('vitest', () => {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const jestFn = (...args:unknown[]) => jest.fn(...(args as []));
+const jestFn = (...args:unknown[]) => jest.fn(...(args as []));
   return {;
     // Named export expected in `import { vi } from 'vitest'` statements;
     vi:{;
@@ -679,11 +553,6 @@ jest.mock('vitest', () => {;
     beforeAll:global.beforeAll;
     afterAll:global.afterAll} as unknown as Record<string unknown>;
 });
-=======
-  const jestFn = (...args:unknown[]) => jest.fn(...(args as [])),;
-=======
-  const jestFn = (...args:unknown[]) => jest.fn(...(args as []));
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return {;
     // Named export expected in `import { vi } from 'vitest'` statements;
     vi:{;
@@ -710,20 +579,12 @@ jest.mock('vitest', () => {;
     it:global.it;
     test:global.test;
     expect:expect, // Use expect from jest-dom/jest instead of global.expect;
-<<<<<<< HEAD
-    beforeEach:global.beforeEach,;
+beforeEach:global.beforeEach,;
     afterEach:global.afterEach,;
     beforeAll:global.beforeAll,;
     afterAll:global.afterAll} as unknown as Record<string unknown>,;
 }),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    beforeEach:global.beforeEach;
-    afterEach:global.afterEach;
-    beforeAll:global.beforeAll;
-    afterAll:global.afterAll} as unknown as Record<string unknown>;
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 // -----------------------------;
 // Lightweight Context & Redux mocks to avoid provider runtime errors;
@@ -733,16 +594,12 @@ jest.mock('vitest', () => {;
 jest.mock('@/context/auth/AuthProvider', () => {;
   const useAuth = () => ({;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     isAuthenticated:false;
     isLoading:false;
     user:null;
     login:jest.fn();
     logout:jest.fn();
     signUp:jest.fn()});
-<<<<<<< HEAD
 ;
   const AuthProvider = ({ children } any) => children;
 ;
@@ -752,39 +609,21 @@ jest.mock('@/context/auth/AuthProvider', () => {;
     default:AuthProvider;
     useAuth};
 });
-=======
-    isAuthenticated:false,;
-    isLoading:false,;
-    user:null,;
-    login:jest.fn(),;
-    logout:jest.fn(),;
-    signUp:jest.fn()}),;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
   const AuthProvider = ({ children } any) => children;
 ;
   return {;
-<<<<<<< HEAD
-    __esModule:true,;
+__esModule:true,;
     AuthProvider,;
     default:AuthProvider,;
     useAuth},;
 }),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    __esModule:true;
-    AuthProvider;
-    default:AuthProvider;
-    useAuth};
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 // Analytics Context;
 jest.mock('@/context/AnalyticsContext', () => {;
   const useAnalytics = () => ({;
 <<<<<<< HEAD
-<<<<<<< HEAD
     trackEvent:jest.fn();
     trackPageView:jest.fn()});
   const AnalyticsProvider = ({ children } any) => children;
@@ -794,35 +633,11 @@ jest.mock('@/context/AnalyticsContext', () => {;
     default:AnalyticsProvider;
     useAnalytics};
 });
-=======
-    trackEvent:jest.fn(),;
-    trackPageView:jest.fn()}),;
-  const AnalyticsProvider = ({ children } any) => children,;
-  return {;
-    __esModule:true,;
-    AnalyticsProvider,;
-    default:AnalyticsProvider,;
-    useAnalytics},;
-}),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    trackEvent:jest.fn();
-    trackPageView:jest.fn()});
-  const AnalyticsProvider = ({ children } any) => children;
-  return {;
-    __esModule:true;
-    AnalyticsProvider;
-    default:AnalyticsProvider;
-    useAnalytics};
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 // Whitelabel Context;
 jest.mock('@/context/WhitelabelContext', () => {;
   const useWhitelabel = () => ({;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    brand:'default';
+brand:'default';
     theme:'light'});
   const WhitelabelProvider = ({ children } any) => children;
   return {;
@@ -831,35 +646,11 @@ jest.mock('@/context/WhitelabelContext', () => {;
     default:WhitelabelProvider;
     useWhitelabel};
 });
-=======
-    brand:'default',;
-    theme:'light'}),;
-  const WhitelabelProvider = ({ children } any) => children,;
-  return {;
-    __esModule:true,;
-    WhitelabelProvider,;
-    default:WhitelabelProvider,;
-    useWhitelabel},;
-}),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    brand:'default';
-    theme:'light'});
-  const WhitelabelProvider = ({ children } any) => children;
-  return {;
-    __esModule:true;
-    WhitelabelProvider;
-    default:WhitelabelProvider;
-    useWhitelabel};
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 // Feedback Context;
 jest.mock('@/context/FeedbackContext', () => {;
   const useFeedback = () => ({;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    open:jest.fn()});
+open:jest.fn()});
   const FeedbackProvider = ({ children } any) => children;
   return {;
     __esModule:true;
@@ -895,13 +686,6 @@ jest.mock('@/hooks/useWishlist', () => {;
   const useWishlist = () => ({ items:[] as string[], toggle:jest.fn(), isWishlisted:() => false });
   return { __esModule:true, useWishlist, default:useWishlist };
 });
-=======
-    open:jest.fn()}),;
-  const FeedbackProvider = ({ children } any) => children,;
-=======
-    open:jest.fn()});
-  const FeedbackProvider = ({ children } any) => children;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return {;
     __esModule:true;
     FeedbackProvider;
@@ -933,16 +717,10 @@ jest.mock('@/context/CartContext', () => {;
 ;
 // Wishlist hook – return empty list helpers;
 jest.mock('@/hooks/useWishlist', () => {;
-<<<<<<< HEAD
-  const useWishlist = () => ({ items:[] as string[], toggle:jest.fn(), isWishlisted:() => false }),;
+const useWishlist = () => ({ items:[] as string[], toggle:jest.fn(), isWishlisted:() => false }),;
   return { __esModule:true, useWishlist, default:useWishlist },;
 }),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  const useWishlist = () => ({ items:[] as string[], toggle:jest.fn(), isWishlisted:() => false });
-  return { __esModule:true, useWishlist, default:useWishlist };
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 // Polyfill IntersectionObserver for components that use it (e.g., embla-carousel);
 if (typeof window.IntersectionObserver === 'undefined') {;
@@ -954,57 +732,28 @@ if (typeof window.IntersectionObserver === 'undefined') {;
   }
   // @ts-ignore;
 <<<<<<< HEAD
-<<<<<<< HEAD
   window.IntersectionObserver = MockIntersectionObserver;
   // @ts-ignore;
   global.IntersectionObserver = MockIntersectionObserver;
-=======
-  window.IntersectionObserver = MockIntersectionObserver,;
-  // @ts-ignore;
-  global.IntersectionObserver = MockIntersectionObserver,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  window.IntersectionObserver = MockIntersectionObserver;
-  // @ts-ignore;
-  global.IntersectionObserver = MockIntersectionObserver;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 // Ensure all code paths use the mock implementation;
 // Some services import the global fetch reference before jest-fetch-mock is enabled.;
 // Override it explicitly so those modules receive the mocked version.;
 // @ts-ignore;
-<<<<<<< HEAD
-<<<<<<< HEAD
 global.fetch = fetchMock;
-=======
-global.fetch = fetchMock,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-global.fetch = fetchMock;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 // Polyfill window.window.window.performance.getEntriesByType for JSDOM (used in productionLogger);
 if (typeof window.window.window.performance.getEntriesByType !== 'function') {;
   // @ts-ignore;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  window.window.window.performance.getEntriesByType = () => [];
-=======
-  window.window.window.performance.getEntriesByType = () => [],;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  window.window.window.performance.getEntriesByType = () => [];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+window.window.window.performance.getEntriesByType = () => [];
 }
 ;
 jest.mock('@supabase/ssr', () => ({;
   supabase:{;
     auth:{;
       onAuthStateChange:jest.fn(() => ({;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        data:{ subscription:{ unsubscribe:jest.fn() } }}))}}}));
+data:{ subscription:{ unsubscribe:jest.fn() } }}))}}}));
 ;
 // Provide minimal mocks for other @supabase/ssr helpers referenced by auth-js;
 jest.mock('@supabase/ssr/dist/main/cookies', () => ({;
@@ -1017,11 +766,6 @@ jest.mock('@/context', () => {;
   const useEnqueueSnackbar = () => jest.fn();
   return { __esModule:true, useEnqueueSnackbar };
 });
-=======
-        data:{ subscription:{ unsubscribe:jest.fn() } }}))}}})),;
-=======
-        data:{ subscription:{ unsubscribe:jest.fn() } }}))}}}));
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 // Provide minimal mocks for other @supabase/ssr helpers referenced by auth-js;
 jest.mock('@supabase/ssr/dist/main/cookies', () => ({;
@@ -1031,37 +775,23 @@ jest.mock('@supabase/ssr/dist/main/cookies', () => ({;
 ;
 // When a module imports '@/context' root index (e.g., useEnqueueSnackbar);
 jest.mock('@/context', () => {;
-<<<<<<< HEAD
-  const useEnqueueSnackbar = () => jest.fn(),;
+const useEnqueueSnackbar = () => jest.fn(),;
   return { __esModule:true, useEnqueueSnackbar },;
 }),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  const useEnqueueSnackbar = () => jest.fn();
-  return { __esModule:true, useEnqueueSnackbar };
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 // Extend Vitest shim with restoreAllMocks for suites that call it;
 // @ts-ignore - vi is added by the vitest mock above;
 if (global.vi && !global.vi.restoreAllMocks) {;
   // @ts-ignore;
 <<<<<<< HEAD
-<<<<<<< HEAD
   global.vi.restoreAllMocks = jest.restoreAllMocks;
-=======
-  global.vi.restoreAllMocks = jest.restoreAllMocks,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  global.vi.restoreAllMocks = jest.restoreAllMocks;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 // Mock @supabase/ssr createBrowserClient so components don't crash in tests;
 jest.mock('@supabase/ssr', () => ({;
   createBrowserClient:() => ({;
 <<<<<<< HEAD
-<<<<<<< HEAD
     auth:{ onAuthStateChange:jest.fn(), signInWithPassword:jest.fn(), signUp:jest.fn() }})}));
 ;
 // Ensure hooks/use-toast exports usable toast fn;
@@ -1076,11 +806,6 @@ jest.mock('msw/node', () => ({ setupServer:() => ({ listen:jest.fn(), resetHandl
 ;
 // Provide mock for missing component;
 jest.mock('@/components/search/FilterSidebar', () => ({ FilterSidebar:() => null }));
-=======
-    auth:{ onAuthStateChange:jest.fn(), signInWithPassword:jest.fn(), signUp:jest.fn() }})})),;
-=======
-    auth:{ onAuthStateChange:jest.fn(), signInWithPassword:jest.fn(), signUp:jest.fn() }})}));
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 // Ensure hooks/use-toast exports usable toast fn;
 jest.mock('@/hooks/use-toast', () => {;
@@ -1093,19 +818,14 @@ jest.mock('msw', () => ({ rest:{ get:jest.fn(), post:jest.fn(), put:jest.fn(), d
 jest.mock('msw/node', () => ({ setupServer:() => ({ listen:jest.fn(), resetHandlers:jest.fn(), close:jest.fn() }) }));
 ;
 // Provide mock for missing component;
-<<<<<<< HEAD
 jest.mock('@/components/search/FilterSidebar', () => ({ FilterSidebar:() => null })),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-jest.mock('@/components/search/FilterSidebar', () => ({ FilterSidebar:() => null }));
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 // Extend Vitest shim with timer helpers if not present;
 // @ts-ignore - vi is added by the vitest mock above;
 if (global.vi) {;
   // @ts-ignore;
 <<<<<<< HEAD
-<<<<<<< HEAD
   if (!global.vi.useFakeTimers) global.vi.useFakeTimers = jest.useFakeTimers.bind(jest);
   // @ts-ignore;
   if (!global.vi.useRealTimers) global.vi.useRealTimers = jest.useRealTimers.bind(jest);
@@ -1113,22 +833,13 @@ if (global.vi) {;
   if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind(jest);
   // @ts-ignore;
   if (!global.vi.advanceTimersByTime) global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest);}
-=======
-  if (!global.vi.useFakeTimers) global.vi.useFakeTimers = jest.useFakeTimers.bind(jest),;
-=======
-  if (!global.vi.useFakeTimers) global.vi.useFakeTimers = jest.useFakeTimers.bind(jest);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // @ts-ignore;
   if (!global.vi.useRealTimers) global.vi.useRealTimers = jest.useRealTimers.bind(jest);
   // @ts-ignore;
   if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind(jest);
   // @ts-ignore;
-<<<<<<< HEAD
-  if (!global.vi.advanceTimersByTime) global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest),;}
+if (!global.vi.advanceTimersByTime) global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest),;}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  if (!global.vi.advanceTimersByTime) global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest);}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 //Polyfill fetch and enable fetch mocks import 'whatwg-fetch';
 import fetchMock from 'jest-fetch-mock';
 fetchMock.enableMocks ();
@@ -1251,12 +962,12 @@ deleteObject: jest.fn ( () => Promise.resolve () );
 //Mock axios jest.mock ('axios', () => ({
   get: jest.fn ( () => Promise.resolve ({
   data: {
-  
+
 }
 }) );
 post: jest.fn ( () => Promise.resolve ({
   data: {
-  
+
 }
 }) );
 //Add other axios methods if used (e.g., put, delete, request) 
@@ -1289,13 +1000,13 @@ afterAll: global.afterAll
 //----------------------------- //Lightweight Context & Redux mocks to avoid provider runtime errors //----------------------------- //Auth Context //Polyfill IntersectionObserver for components that use it (e.g., embla-carousel) if (typeof window.IntersectionObserver === 'undefined') {
   class MockIntersectionObserver {
   constructor () {
-  
+
 }observe () {
-  
+
 }unobserve () {
-  
+
 }disconnect () {
-  
+
 }
 }//@ts-ignore window.IntersectionObserver = MockIntersectionObserver;
 //@ts-ignore global.IntersectionObserver = MockIntersectionObserver 
@@ -1305,7 +1016,7 @@ afterAll: global.afterAll
   onAuthStateChange: jest.fn ( () => ({
   //Provide minimal mocks for other @supabase/ssr helpers referenced by auth-js jest.mock ('@supabase/ssr/dist/main/cookies', () => ({
   getAll: () => ({
-  
+
 });
 setItem: jest.fn ();
 getItem: jest.fn () 

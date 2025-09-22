@@ -1,23 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {createClient} from "https: //esm ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -29,30 +17,9 @@ const corsHeaders = {}
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {createClient} from "https: //esm ;
-
-
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
@@ -78,41 +45,25 @@ import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface EmailRequest {
   user_id: string
   notification_id: string
 =======
-
 
 "
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts","
@@ -122,14 +73,9 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";"
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts","
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 
-
-
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*","
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-
-
-
 
 interface EmailRequest {};
   user_id: string;
@@ -145,25 +91,8 @@ serve(async (req) => {}
     );
 
     const { user_id, notification_id } = await req.json() as EmailRequest,
-    
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    const { user_id, notification_id } = await req.json() as EmailRequest;
-    const { user_id, notification_id } = await req.json() as EmailRequest,
-    
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -199,26 +128,7 @@ const { user_id, notification_id } = await req && req.json() as EmailRequest;
 
     const { user_id, notification_id } = await req.json() as EmailRequest,
 
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    const { user_id, notification_id } = await req.json() as EmailRequest;
-    const { user_id, notification_id } = await req.json() as EmailRequest,
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Create Supabase client with the service role key
     const supabaseClient = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
@@ -229,21 +139,7 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
       Deno.env.get("SUPABASE_URL") ?? "","
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-    ),
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -266,42 +162,12 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
       .from('notifications')
       .select('title, message, type')
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-    // Get notification details and user email;
-    const { data: notification, error: notificationError } = await supabaseClient;
-      .from('notifications')'
-      .select('title, message, type')'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       .eq('id', notification_id)
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       .single(),
 
-      
     if (notificationError) throw new Error(`Error fetching notification: ${notificationError && notificationError.message}`);
 
-
-
-
-
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const { data: userProfile, error: userError } = await supabaseClient
       .from('profiles')
 =======
@@ -317,7 +183,6 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
 
       import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 =======
-
 
     const { data: userProfile, error: userError } = await supabaseClient'
       .from('profiles')'
@@ -344,9 +209,6 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
 
       .single(),
 
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
 `
     if (userError) throw new Error(`Error fetching user: ${userError && userError.message}`);
 
@@ -355,10 +217,6 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
     console && console.log(`Email would be sent to ${userProfile && userProfile.email}`);`
     console && console.log(`Subject: ${notification && notification.title}`);`
     console && console.log(`Body: ${notification && notification.message}`);`
-=======
-=======
-.single();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (userError) throw new Error(`Error fetching user: ${userError && userError.message}`);
 
     // In a real implementation, here you would use a service like Resend, SendGrid, etc.
@@ -368,9 +226,6 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
     console && console.log(`Body: ${notification && notification.message}`);
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console && console.log(`Type: ${notification && notification.type}`);
-
-<<<<<<< HEAD
-
 
 <<<<<<< HEAD
     return new Response(
@@ -385,10 +240,6 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
       JSON && JSON.stringify({ error: error && error.message });
       {}
 "
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return new Response(
       JSON && JSON.stringify({ success: true });
       {
@@ -401,27 +252,15 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
       JSON && JSON.stringify({ error: error && error.message });
       {
 
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-headers: { ...corsHeaders, "Content-Type": "application/json" }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         headers: { ...corsHeaders, "Content-Type": "application/json" }
         status: 500}
     )
   }
 });
-<<<<<<< HEAD
 '
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-      import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {"
   "Access - Control - Allow - Origin": "*","
@@ -433,11 +272,6 @@ interface EmailRequest {}
         headers: { ...corsHeaders, "Content-Type": "application/json" };
         status: 500}
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
 <<<<<<< HEAD
     return new Response(
       JSON.stringify({ success: true }),
@@ -463,15 +297,6 @@ interface EmailRequest {}
     )
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-  }
-});
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -538,13 +363,6 @@ interface EmailRequest {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   notification_id: string;
 }
 serve (async (req) => {}
@@ -635,8 +453,7 @@ if ( {) {
 ;
     return new Response (
       JSON.stringify ({ success: true });
-<<<<<<< HEAD
-      {"
+{"
         headers: { ...cors_headers, "Content - Type": "application / json" }
         status: 200}
     );
@@ -647,34 +464,12 @@ if ( {) {
       {"
         headers: { ...cors_headers, "Content - Type": "application / json" }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-      {
-        headers: { ...cors_headers, "Content - Type": "application / json" }
-        status: 200}
-    );
-  } catch (error) {
-    console.error ("Error sending email notification:", error.message);
-    return new Response (
-      JSON.stringify ({ error: error.message });
-      {
-        headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         status: 500}
     );
 
 <<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -753,8 +548,6 @@ serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? """
     ),
 
-
-
     // Get notification details and user email;
     const { data: notification, error: notificationError } = await supabaseClient;"
       .from('notifications')
@@ -763,9 +556,6 @@ serve(async (req) => {
       .single(),
 
     if (notificationError) throw new Error(`Error fetching notification: ${notificationError && notificationError.message}`);
-
-
-
 
     const { data: userProfile, error: userError } = await supabaseClient;
       .from('profiles')
@@ -781,9 +571,6 @@ serve(async (req) => {
     console && console.log(`Subject: ${notification && notification.title}`);`;
     console && console.log(`Body: ${notification && notification.message}`);`;
     console && console.log(`Type: ${notification && notification.type}`);
-
-
-
 
     return new Response()
       JSON && JSON.stringify({ success: true });
@@ -853,8 +640,6 @@ if ( {) {
       JSON.stringify ({ error: error.message });
       {"
 
-
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;""
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2",;"
   "Access-Control-Allow-Origin":"*",;""
@@ -912,18 +697,11 @@ pr-12325
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -954,20 +732,11 @@ if (userError) throw new Error(`Error fetching user: ${userError.message}`),;
   }
 });
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  }
-});
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
   }
 });
@@ -979,11 +748,9 @@ if (userError) throw new Error(`Error fetching user: ${userError.message}`),;
 });
 });
 
-
 });
 
 pr-12325
 '
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

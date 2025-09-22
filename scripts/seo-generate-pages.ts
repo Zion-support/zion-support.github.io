@@ -2,30 +2,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
-<<<<<<< HEAD
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;/* eslint - disable no - console */;
-=======
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -37,25 +20,14 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
 
-
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 
 /* eslint - disable no - console */;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
-/* eslint - disable no - console */;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import fs from 'fs';
 import path from 'path';
 import https from 'https';
-<<<<<<< HEAD
-=======
-/* eslint - disable no - console */;
-import fs from 'fs';'
-import path from 'path';'
-import https from 'https';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = ['
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
@@ -71,20 +43,14 @@ import path from 'path';
 import https from 'https';
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const HOST = process.env.SELF_HOST |'http: //localhost:3000'
-<<<<<<< HEAD
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' }
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' }
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' }
@@ -106,11 +72,7 @@ const HOST = process.env.SELF_HOST |'http: //localhost:3000
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      method: 'POST',
+method: 'POST',
       headers: { 'Content-Type': 'application/jsonContent-Length': Buffer && Buffer.byteLength(data) }};
     const lib = u && u.protocol === 'https: ' ? https : require('http'),
     const req = lib && lib.request(url, opts, (res: any) => {
@@ -118,7 +80,6 @@ const HOST = process.env.SELF_HOST |'http: //localhost:3000
       res && res.on('data', (d: any) => (buf += d)),
       res && res.on('end', () => {
         try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
-
 
       })
     });
@@ -157,11 +118,6 @@ method: 'POST',
       res && res.on('end', () => {
         try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       })
@@ -179,15 +135,8 @@ async function main() {}
     console && console.log('Wrote', file)
   }
 }
-<<<<<<< HEAD
 main().catch((e) => {
-<<<<<<< HEAD
-=======
-
-=======
-main().catch((e) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  console && console.error(e);
+console && console.error(e);
   process && process.exit(1)
 });
 
@@ -200,36 +149,14 @@ async function post_json (url: string, body: any): Promise < any> {}
       method: 'POST','
       headers: { 'Content - Type': 'application / json_content - Length': Buffer.byte_length (data) }}'
     const lib = u.protocol === 'https: ' ? https : require ('http'),
-<<<<<<< HEAD
-    const req = lib.request (url, opts, (res: any) => {
+const req = lib.request (url, opts, (res: any) => {
       let buf = '',
       res.on ('data', (d: any) => (buf += d)),
       res.on ('end', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         try { resolve (JSON.parse (buf)) } catch { resolve ({}) }
-<<<<<<< HEAD
-=======
-
-
-=======
-=======
-      method: 'POST',
-      headers: { 'Content-Type': 'application/jsonContent-Length': Buffer && Buffer.byteLength(data) }};
-    const lib = u && u.protocol === 'https: ' ? https : require('http'),
-    const req = lib && lib.request(url, opts, (res: any) => {
-      let buf = '',
-      res && res.on('data', (d: any) => (buf += d)),
-      res && res.on('end', () => {
-        try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       })
     });
     req && req.on('error', reject);
@@ -276,16 +203,7 @@ async function post_json (url: string, body: any): Promise < any> {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         try { resolve (JSON.parse (buf)) } catch { resolve ({}) }
 
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-async function postJson(url: string, body: any): Promise<any> {
-  return new Promise((resolve, reject) => {
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    const u = new URL(url);
+const u = new URL(url);
     const data = JSON.stringify(body);
     const opts: any = {
       method: 'POST'
@@ -321,15 +239,8 @@ main().catch((e) => {
   console.error(e);
   process.exit(1)
 });
-<<<<<<< HEAD
-
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-        try { resolve (JSON.parse (buf)) } catch { resolve ({}) }
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* eslint-disable no-console */;
@@ -343,16 +254,10 @@ import path from 'path',;'
 import https from 'https',;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
-<<<<<<< HEAD
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;'
   { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' },;'
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' },;'
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' },;'
-=======
-  { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' },;
-  { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' },;
-  { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' },;']
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }],;
 async function postJson(url: string, body: any): Promise<any> {;
   return new Promise((resolve, reject) => {;
@@ -369,19 +274,10 @@ async function postJson(url: string, body: any): Promise<any> {;
         try { resolve(JSON.parse(buf)) } catch { resolve({}) }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       });
     });
-<<<<<<< HEAD
-=======
-        try { resolve (JSON.parse (buf)) } catch { resolve ({}) }    });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -420,10 +316,6 @@ main ().catch ((e) => {}
 });
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -432,26 +324,14 @@ main ().catch ((e) => {}
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-
 =======
 ;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -470,8 +350,7 @@ const prompts:Array<{ prompt:string, region?:string, service?:string }> = [;
   { prompt:'LLM Engineers in Toronto', region:'Toronto', service:'LLM' },;']
   { prompt:'Cybersecurity Experts in Berlin', region:'Berlin', service:'security' }],;
 async function postJson(url:string, body:any):Promise<any> {;
-<<<<<<< HEAD
-  return new Promise((resolve, reject) => {;
+return new Promise((resolve, reject) => {;
     const u = new URL(url),;
     const data = JSON.stringify(body),;
     const opts:any = {;
@@ -527,14 +406,8 @@ main().catch((e) => {;
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 ;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -542,7 +415,6 @@ main().catch((e) => {;
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 ;
 

@@ -21,4 +21,3 @@ function DisputeDetailPage() {;
         <Footer />;
       </>;
 <<<<<<< HEAD
-

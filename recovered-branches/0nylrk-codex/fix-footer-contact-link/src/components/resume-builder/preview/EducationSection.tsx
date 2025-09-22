@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {Education} from '@/types / resume';
 import {format} from 'date - fns';
 
@@ -14,20 +9,11 @@ import {format} from 'date-fns';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface EducationSectionProps {
 =======
 
-
 import {Education} from '@/types/resume';'
 import {format} from 'date-fns';
-
 
 interface EducationSectionProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -39,18 +25,9 @@ interface EducationSectionProps {
 
   const sortedEducation = [...education].sort((a, b) => {;
 
-
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -70,13 +47,8 @@ interface EducationSectionProps {}
 }
 export function EducationSection({ education }: EducationSectionProps) {}
   // Sort education by date (newest first)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const sortedEducation = [...education].sort((a, b) => {
+const sortedEducation = [...education].sort((a, b) => {
   const sortedEducation = [...education].sort((a, b) => {;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface EducationSectionProps {
 
@@ -104,14 +76,8 @@ interface EducationSectionProps {
 }
 export function EducationSection({ education }: EducationSectionProps) {
   // Sort education by date (newest first)
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface EducationSectionProps {
-=======
-interface EducationSectionProps {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   education: Education[];
 }
 
@@ -119,16 +85,7 @@ interface EducationSectionProps {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -140,7 +97,6 @@ interface EducationSectionProps {};
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
     if (a.is_current && !b.is_current) return -1;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (!a.is_current && b.is_current) return 1;
@@ -148,34 +104,17 @@ interface EducationSectionProps {};
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
     return dateB.getTime() - dateA.getTime()
   });
-<<<<<<< HEAD
-  const formatDate = (date: Date | string | undefined) => {
+const formatDate = (date: Date | string | undefined) => {
     if (!date) return ''
     if (typeof date === 'string') {
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
       return format(new Date(date), 'MMM yyyy')
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     return format(date, 'MMM yyyy')
   }
   if (sortedEducation.length === 0) return null;
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Education } from '@/types/resume',;
 =======
@@ -190,14 +129,11 @@ import { Education } from '@/types/resume',;
     if (typeof date === 'string') {'
       return format(new Date(date), 'MMM yyyy')
 
-
 '
 import { Education } from '@/types/resume',;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
       return format(new Date(date), 'MMM yyyy')
-
-
 
 import { Education } from '@/types/resume',;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -208,33 +144,14 @@ interface EducationSectionProps {;
 ;
 export function EducationSection() { return null; }
   }),;
-<<<<<<< HEAD
-  const formatDate = (date: Date | string | undefined) => {;
+const formatDate = (date: Date | string | undefined) => {;
     if (!date) return '',;
     if (typeof date === 'string') {;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  const formatDate = (date: Date | string | undefined) => {;'
-    if (!date) return '',;'
-    if (typeof date === 'string') {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return format(new Date(date), 'MMM yyyy');
 
-
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 =======
@@ -245,27 +162,16 @@ export function EducationSection() { return null; }
   }
   if (sortedEducation.length === 0) return null;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (sortedEducation.length === 0) return null,
+if (sortedEducation.length === 0) return null,
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
@@ -284,21 +190,7 @@ export function EducationSection() { return null; }
               <p className="text-sm">{edu.institution}</p>
               {edu.location && ("
                 <span className="text-sm">{edu.location}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import {Education} from '@/types/resume';
-import {format} from 'date-fns';
-interface EducationSectionProps {;
-=======
-interface EducationSectionProps {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   education: Education[];
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -309,8 +201,6 @@ interface EducationSectionProps {
             )}
           </div>;
         ))}
-
-
 
 export /**;
  * EducationSection - Function description;
@@ -373,30 +263,7 @@ if (return null) {}
     </div>);
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  ),;}
- if (sortedEducation.length === 0) return null;
-) 
-}</div>) ) 
-}</div> </div>) 
-}
-              )}
-            </div>
-            {edu.description && (
-              <p className="text-sm mt-2">{edu.description}</p>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
       return format(new Date(date), 'MMM yyyy');    }
     return format(date, 'MMM yyyy')
@@ -411,14 +278,10 @@ if (return null) {}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
       return format(new Date(date), 'MMM yyyy');
-
-
 
     }
     return format(date, 'MMM yyyy')
@@ -426,8 +289,7 @@ if (return null) {}
   if (sortedEducation.length === 0) return null;
 
   if (sortedEducation.length === 0) return null,
-  
-  
+
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -475,9 +337,4 @@ pr-12325
     </div>
   )
 }
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    </div>"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

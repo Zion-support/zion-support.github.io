@@ -71,12 +71,12 @@ serve(async (req) => {;
 });
  serve (async (req) => {
   //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
+
 }const {
   prompt, modelId, maxTokens = 500, temperature = 0.7 
 }= await req.json ();
 if (!prompt) {
-  
+
 }//Define the appropriate model to use //Default to base model if no specific model provided const response = await fetch ("https://api.openai.com/v1/chat/completions", {
   method: "POST";
 headers: {
@@ -102,7 +102,4 @@ return new Response (JSON.stringify ({
 );
 }
 });
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

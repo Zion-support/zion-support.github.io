@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/government.tsx
 import Layout from '../../components/Layout';
 import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
 import React from 'react';
@@ -33,9 +31,6 @@ const features = [;
 import Layout from '../../components/Layout';
 import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
-=======
-import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/government.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -51,89 +46,15 @@ const features = [
     title: 'Citizen Services',
     description: 'Digital platforms for citizen engagement and services',
     benefits: ['Online portals', 'Service delivery', 'Citizen engagement', 'Accessibility']
-=======
-import Layout from '../../components/Layout';
-import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import { Shield, Users, FileText, Globe, Database, CheckCircle, ArrowRight } from 'lucide-react';
-const features = [;
-  {}
-    icon: Shield,
-    title: 'Cybersecurity & Compliance,',
-    description: 'FISMA, FedRAMP, and other government security standards compliance solutions.',
-  },
-  {}
-    icon: Users,
-    title: 'Citizen Services,',
-    description: 'Digital platforms for citizen engagement, service delivery, and government transparency.',
-  },
-  {}
-    icon: FileText,
-    title: 'Document Management,',
-    description: 'Secure document management and workflow systems for government operations.'';
-  },
-  {}
-    icon: Globe,
-    title: 'Open Data Platforms,',
-    description: 'Public data portals and open government initiatives for transparency and accountability.'';
-  },
-  {}
-    icon: Database,
-    title: 'Data Analytics,',
-    description: 'Government data analytics and business intelligence for informed decision making.'';
-import Layout from '../../components/Layout';
-import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-import React from 'react';
-import * as React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Users, 
-  FileText, 
-  Globe, 
-  Database, 
-  CheckCircle, 
-  ArrowRight 
-} from 'lucide-react';
-
-const features = [
-  {
-    icon: Shield,
-    title: 'Cybersecurity & Compliance',
-    description: 'Comprehensive security solutions for government agencies',
-    benefits: ['FISMA compliance', 'Data encryption', 'Access control', 'Audit trails']
-  },
-  {
-    icon: Users,
-<<<<<<< HEAD
-    title: 'Citizen Engagement',
-    description: 'Platforms for citizen participation and feedback'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    title: 'Citizen Services',
-    description: 'Digital platforms for citizen engagement and services',
-    benefits: ['Online portals', 'Service delivery', 'Citizen engagement', 'Accessibility']
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },
   {
     icon: FileText,
     title: 'Document Management',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    description: 'Secure document management and workflow automation',
+description: 'Secure document management and workflow automation',
     benefits: ['Document storage', 'Workflow automation', 'Version control', 'Collaboration']
   },
   {
 <<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/government.tsx
-=======
-    description: 'Secure document storage and management systems'
-=======
-    description: 'Secure document management and workflow automation',
-    benefits: ['Document storage', 'Workflow automation', 'Version control', 'Collaboration']
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },
   {
     icon: CheckCircle,
@@ -413,16 +334,10 @@ const benefits = [;
   'Reduced operational costs',;
   'Increased government efficiency';
 ];
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: CheckCircle,
     title: 'Workflow Automation',
     description: 'Automated government processes and approvals'
-=======
-    icon: CheckCircle;,
-    title: 'Workflow Automation';,
-    description: 'Automated government processes and approvals';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },
   {
     icon: ArrowRight;,
@@ -460,11 +375,7 @@ export default function GovernmentSolutionsPage() {
                 </span>;
               </h1>;
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
-<<<<<<< HEAD
-                Transform government operations with our secure, compliant technology solutions.
-=======
-                Transform government operations with our secure, compliant technology solutions. 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+Transform government operations with our secure, compliant technology solutions.
                 From citizen portals to cybersecurity, we help government agencies deliver;
                 better services while maintaining the highest security standards.;
               </p>;
@@ -488,11 +399,7 @@ export default function GovernmentSolutionsPage() {
                 Comprehensive Government Technology Solutions;
               </h2>;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-<<<<<<< HEAD
-                Our government solutions are designed to enhance citizen services,
-=======
-                Our government solutions are designed to enhance citizen services, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+Our government solutions are designed to enhance citizen services,
                 improve operational efficiency, and ensure compliance with government regulations.,
               </p>;
             </div>;
@@ -515,11 +422,6 @@ const benefits = [
 ];
 export default function GovernmentSolutions() {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/government.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     icon: Database,
     title: 'Data Management',
     description: 'Secure data management and analytics for government data',
@@ -528,8 +430,7 @@ export default function GovernmentSolutions() {
 ];
 
 export default function GovernmentSolutionsPage() {
-<<<<<<< HEAD
-  return (
+return (
     <>
       <Head>
         <title>Government Solutions - Zion Tech Group</title>
@@ -552,9 +453,6 @@ export default function GovernmentSolutionsPage() {
                 From cybersecurity to citizen services and data management.
               </p>
             </motion.div>
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
@@ -577,8 +475,7 @@ export default function GovernmentSolutionsPage() {
                 Secure and compliant technology solutions for government agencies. 
                 From cybersecurity to citizen services and data management.
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Get Started
                 </button>
@@ -588,18 +485,11 @@ export default function GovernmentSolutionsPage() {
               </div>
             </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            </motion.div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        <section className="py-16 px-4">
+<section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -610,21 +500,8 @@ export default function GovernmentSolutionsPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Government Technology Features</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our government solutions are built with security and compliance in mind.
-<<<<<<< HEAD
-              </p>
+</p>
 <<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/government.tsx
-=======
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Government Technology Features
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive solutions designed to modernize government operations
-                and improve citizen services.
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </p>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>
@@ -633,9 +510,7 @@ export default function GovernmentSolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/government.tsx
+
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
@@ -651,22 +526,7 @@ export default function GovernmentSolutionsPage() {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/government.tsx
-=======
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-blue-600" />
-                  </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:backup-problematic-files/pages_backup/solutions/government.tsx
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -674,7 +534,6 @@ export default function GovernmentSolutionsPage() {
                     {feature.description}
                   </p>
                 </div>
-<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="bg-gradient-to-r from-gray-700 to-blue-800 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -738,30 +597,12 @@ export default function GovernmentSolutionsPage() {
         </section>;
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">";
-=======
-                        {benefit}
-                      </div>;
-                    ))}
-                  </div>;
-                </motion && motion.div>;
-              ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-              ))}
-            </div>,
-          </div>;
-        </section>;
-        {/* Solutions List */}
-        <section className="py-20 bg-gray-800/30">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto">";
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
                 Our Government Solutions;
               </h2>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",;
+<div className="grid grid-cols-1 md: grid-cols-2 gap-6">",;
                 {solutions && solutions.map((solution, index) => (,;
                   <div key={index} className="flex items-center space-x-3">";
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
@@ -769,30 +610,11 @@ export default function GovernmentSolutionsPage() {
                   </div>;
                 ))}
               </div>,;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
-                {solutions.map((solution, index) => (,
-                  <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
-                    <span className="text-gray-300 text-lg">{solution}</span>"
-                  </div>;
-                ))}
-              </div>,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
           </div>;
         </section>;
         {/* Compliance Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className="py-20">";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        <section className="py-20">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<section className="py-20">";
           <div className="container mx-auto px-4">";
             <div className="bg-gray-800/50 rounded-2xl p-12">";
               <div className="text-center mb-12">";
@@ -800,23 +622,11 @@ export default function GovernmentSolutionsPage() {
                   Government Compliant & Secure;
                 </h2>;
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  All our government solutions are built with security and compliance in mind, ;
+All our government solutions are built with security and compliance in mind, ;
                   ensuring your systems meet the highest government standards and regulations.;
                 </p>;
               </div>;
               <div className="grid grid-cols-1 md: grid-cols-3 gap-8">", <div className="text-center">",;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                  All our government solutions are built with security and compliance in mind, 
-                  ensuring your systems meet the highest government standards and regulations.;
-                </p>;
-              </div>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
-                <div className="text-center">";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
                     <Shield className="w-8 h-8 text-white" />";
                   </div>;
@@ -842,14 +652,7 @@ export default function GovernmentSolutionsPage() {
           </div>;
         </section>;
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className="py-20">";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        <section className="py-20">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<section className="py-20">";
           <div className="container mx-auto px-4">";
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
               <h2 className="text-4xl font-bold text-white mb-6">";
@@ -859,30 +662,16 @@ export default function GovernmentSolutionsPage() {
                 Let our government technology experts help you implement solutions that;
                 enhance citizen services while maintaining the highest security standards.;
               </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">",;
+<div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">",;
                   Schedule Consultation;
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover: bg-white hover:text-blue-600 transition-colors font-medium">", Download Government Guide,;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">";
-                  Schedule Consultation;
-                </button>;
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
-                  Download Government Guide;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </button>;
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </div>;
+</div>;
     </Layout>;
         {/* Benefits Section */}
         <section className="py-20">;
@@ -902,28 +691,6 @@ export default function GovernmentSolutionsPage() {
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
-=======
-      </div>;
-    </Layout>;
-        {/* Benefits Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Modernizing Government
-                </h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Our government solutions help public sector organizations improve
-                  citizen services, enhance transparency, and streamline operations.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   ))}
                 </ul>
               </div>
@@ -938,11 +705,6 @@ export default function GovernmentSolutionsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/government.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -950,14 +712,11 @@ export default function GovernmentSolutionsPage() {
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {benefit}
-<<<<<<< HEAD
-                      </div>;
+</div>;
                     ))}
                   </div>;
                 </motion && motion.div>;
               ))}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                       </div>
                     ))}
@@ -971,9 +730,6 @@ export default function GovernmentSolutionsPage() {
 
         {/* CTA Section */}
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -1003,148 +759,19 @@ export default function GovernmentSolutionsPage() {
                 </Link>
               </div>
             </motion.div>
-<<<<<<< HEAD
-          </div>
+</div>
         </section>
       </div>
 <<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/government.tsx
     </Layout>
     </Layout>
     </>
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/government.tsx
     </>
-<<<<<<< HEAD
 
-=======
-        <section className="py-20 bg-gray-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Government?
-            </h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Contact our government solutions team to discuss your specific requirements
-              and discover how we can help modernize your government operations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors">
-                Contact Government Team
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
-                Download Government Brochure
-              </button>
-            </div>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </section>
       </div>
     </Layout>
     </Layout>
     </>
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    </>
-  );
-}
-            </div>;"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,;"
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover: border-blue-500 transition-colors">";"
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";"
-                    <feature && feature.icon className="w-6 h-6 text-white" />";"
-</feature>
-                  </div>,;"
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature && feature.title}</h3>";""
-                  <p className="text-gray-300">{feature && feature.description}</p>";"
-    <Layout;"
-      title="Government Solutions - Zion Tech Group"""
-      description="Comprehensive government technology solutions for public sector organizations. Digital services, citizen engagement, and government process automation."""
-      keywords="government solutions, digital government, public sector, citizen services, government technology, e-government">;"
-      <div className="min-h-screen bg-white">;"
-</div>
-    <Layout)"
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">";"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";"
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">";"
-</button>"
-
-                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium">";"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";"
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">";"
-    <Layout );"
-      title="Government Solutions - Zion Tech Group"";""
-      description="Transform government operations with our secure, compliant solutions including citizen portals, cybersecurity, document management, and open data platforms."""
-pr-12325
-    >;
-        <section className="relative py-20 overflow-hidden">""
-
-        <section className="py-20">""
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">""
-                    <feature.icon className="w-6 h-6 text-white" />";"
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"""
-                  <p className="text-gray-300">{feature.description}</p>""
-      <div className="min-h-screen bg-white">"
-        <section className="bg-gradient-to-r from-gray-700 to-blue-800 text-white py-20">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-            <div className="text-center">"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
-</h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">"
-              </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-                <button className="bg-white text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">"
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-700 transition-colors">"
-        <section className="py-20 bg-gray-50">"
-            <div className="text-center mb-16">"
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
-              </h2>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-            </motion.div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">"
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">"
-                    <feature.icon className="w-6 h-6 text-gray-600" />"
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">"
-</h3>
-                  </h3>"
-                  <p className="text-gray-600">"
-                </motion && motion.div>;
-              ))}"
-            <div className="max-w-4xl mx-auto">";"
-              <h2 className="text-3xl font-bold text-white text-center mb-12">";"
-              </h2>;
-            <div className="bg-gray-800/50 rounded-2xl p-12">";"
-              <div className="text-center mb-12">";"
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";"
-                    <Shield className="w-8 h-8 text-white" />";"
-
-                  <h3 className="text-xl font-semibold text-white mb-2">FISMA Compliant</h3>";""
-                  <p className="text-gray-300">Built to meet all FISMA requirements for federal information security.</p>";"
-                <div className="text-center">";"
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">";"
-                    <Database className="w-8 h-8 text-white" />";"
-
-                  <h3 className="text-xl font-semibold text-white mb-2">FedRAMP Authorized</h3>";""
-                  <p className="text-gray-300">Cloud solutions that meet FedRAMP security requirements.</p>";"
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";"
-                    <FileText className="w-8 h-8 text-white" />";"
-
-                  <h3 className="text-xl font-semibold text-white mb-2">Section 508 Compliant</h3>";""
-                  <p className="text-gray-300">Accessible solutions that meet Section 508 accessibility standards.</p>";"
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";"
-              <h2 className="text-4xl font-bold text-white mb-6">";"
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">";"
-        </section>;
-        <section className="py-20 bg-gray-900 text-white">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">"
-            <p className="text-xl mb-8 max-w-3xl mx-auto">"
-              <button className="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors">"
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">"
-        </section>
-    
-    
-    </>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -2,35 +2,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -38,12 +13,6 @@
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
@@ -55,49 +24,18 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 =======
 
-
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 import dynamic from 'next/dynamic';
@@ -140,27 +78,14 @@ pr-12325
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-} from 'lucide-react'
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
 } from 'lucide-react'
 =======
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 } from 'lucide-react';
-
-
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -171,13 +96,9 @@ const "ContactPage": React.FC = () => {
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
 } from 'lucide-react';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -186,20 +107,8 @@ const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 const "ContactPage": React.FC = () => {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+
 =======
 >>>>>>> main
 =======
@@ -208,24 +117,13 @@ const "ContactPage": React.FC = () => {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 
-
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -237,25 +135,6 @@ const "ContactPage": React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const contactInfo = [{
@@ -286,39 +165,10 @@ const "ContactPage": React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -328,15 +178,6 @@ const "ContactPage": React.FC = () => {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
-
-
-
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const services = [\"AI & Machine Learning Solutions\",
@@ -355,24 +196,11 @@ const "ContactPage": React.FC = () => {
     "Blockchain Technology",
     "Digital Transformation",
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     "Consulting & Strategy"
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+
 =======
 >>>>>>> main
 =======
@@ -381,36 +209,20 @@ const "ContactPage": React.FC = () => {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 
-
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  ]
-  return (
-=======
-    "Consulting & Strategy"  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     "Consulting & Strategy"  return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
     "Consulting & Strategy"
 
-
-<<<<<<< HEAD
-  ]
+]
   return (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>
@@ -466,11 +278,6 @@ const "ContactPage": React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 =======
 >>>>>>> main
@@ -479,27 +286,6 @@ const "ContactPage": React.FC = () => {
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ]
@@ -586,16 +372,6 @@ const "ContactPage": React.FC = () => {;
                     href=\"tel:+13024640950\"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ \"scale\": 0.95 }}
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\"
@@ -619,29 +395,10 @@ const "ContactPage": React.FC = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -651,45 +408,19 @@ const "ContactPage": React.FC = () => {;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
-
-
-
-
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const \"Contact\": NextPage = () => {
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const "Contact": NextPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+
 =======
 >>>>>>> main
 =======
@@ -700,15 +431,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -723,31 +447,8 @@ const "Contact": NextPage = () => {  const contactInfo = [{
 =======
 const "Contact": NextPage = () => {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   const contactInfo = [{
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-const "Contact": NextPage = () => {  const contactInfo = [{
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       icon: Mail,
       \"title\": \'Email Us\',
       \"details\": \'info@ziontechgroup.com\',
@@ -772,14 +473,6 @@ const "Contact": NextPage = () => {  const contactInfo = [{
       \"link\": null
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ \"scale\": 0 && 0.95 }}
@@ -912,11 +605,7 @@ const "Contact": NextPage = () => {;
                       First Name *
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                     </label>
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                     whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ \"scale\": 0 && 0.95 }}
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\">;
@@ -984,19 +673,8 @@ const "Contact": NextPage = () => {;
       \"email\": \'london@ziontechgroup && ziontechgroup.com\';
     }
   ];
-<<<<<<< HEAD
-=======
 
-  return (
-    <MainLayout
-      title=\"Contact Us - Zion Tech Group\"
-      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Hero Section */}
-=======
-                    </label>      {/* Hero Section */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                     </label>      {/* Hero Section */}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1059,13 +737,7 @@ const "Contact": NextPage = () => {;
                     </label>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -1079,14 +751,6 @@ const "Contact": NextPage = () => {;
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 />;
                   </div>;
@@ -1103,25 +767,16 @@ const "Contact": NextPage = () => {;
                       Last Name *
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                     </label>
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                     />;
                   </div>;
                   <div>;
                     <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
                       Last Name *;
                     </label>;
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                     <input
-=======
-                    </label>                    <input
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                     </label>                    <input
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1139,14 +794,6 @@ const "Contact": NextPage = () => {;
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 />;
                   </div>;
@@ -1165,11 +812,7 @@ const "Contact": NextPage = () => {;
                     Email Address *
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   </label>
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                     />;
                   </div>;
                 </div>;
@@ -1177,14 +820,9 @@ const "Contact": NextPage = () => {;
                   <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
                     Email Address *;
                   </label>;
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   <input
-=======
-                  </label>                  <input
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                   </label>                  <input
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1202,14 +840,6 @@ const "Contact": NextPage = () => {;
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 />;
                 </div>;
@@ -1226,25 +856,16 @@ const "Contact": NextPage = () => {;
                     Company
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   </label>
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   />;
                 </div>;
                 <div>;
                   <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
                     Company;
                   </label>;
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   <input
-=======
-                  </label>                  <input
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                   </label>                  <input
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1261,14 +882,6 @@ const "Contact": NextPage = () => {;
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 />;
                 </div>;
@@ -1285,25 +898,16 @@ const "Contact": NextPage = () => {;
                     Phone Number
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   </label>
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   />;
                 </div>;
                 <div>;
                   <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
                     Phone Number;
                   </label>;
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   <input
-=======
-                  </label>                  <input
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                   </label>                  <input
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1320,14 +924,6 @@ const "Contact": NextPage = () => {;
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 />;
                 </div>;
@@ -1364,11 +960,7 @@ const "Contact": NextPage = () => {;
                     Message *
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   </label>
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   />;
                 </div>;
                 <div>;
@@ -1395,14 +987,9 @@ const "Contact": NextPage = () => {;
                   <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
                     Message *;
                   </label>;
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   <textarea
-=======
-                  </label>                  <textarea
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                   </label>                  <textarea
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1420,18 +1007,7 @@ const "Contact": NextPage = () => {;
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": ring-2 focus:ring-blue-500 focus:border-transparent\"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     placeholder=\"Tell us about your project or how we can help you...\"
@@ -1494,12 +1070,6 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -1551,20 +1121,10 @@ const "Contact": NextPage = () => {;
         </div>;
       </section>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* FAQ Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -1576,39 +1136,15 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
       {/* FAQ Section */}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
@@ -1619,31 +1155,10 @@ const "Contact": NextPage = () => {;
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+
 =======
 >>>>>>> main
 =======
@@ -1654,15 +1169,8 @@ const "Contact": NextPage = () => {;
 =======
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -1678,25 +1186,6 @@ const "Contact": NextPage = () => {;
                 What is your typical project timeline?
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                 What is your typical project timeline?
       {/* FAQ Section */}                What is your typical project timeline?
@@ -1711,74 +1200,24 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
-
-
-
-
-
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+
 =======
 >>>>>>> main
 =======
@@ -1787,24 +1226,13 @@ const "Contact": NextPage = () => {;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 
-
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -1814,47 +1242,13 @@ const "Contact": NextPage = () => {;
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
-<<<<<<< HEAD
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">                Do you provide ongoing support?
+<h3 className="text-lg font-semibold text-gray-900 mb-3">                Do you provide ongoing support?
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">                Do you provide ongoing support?
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 Do you provide ongoing support?
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">                Do you provide ongoing support?
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </h3>
               <p className=\"text-gray-600\">
                 Yes, we offer comprehensive support and maintenance packages to ensure 
@@ -1865,74 +1259,24 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
-
-
-
-
-
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+
 =======
 >>>>>>> main
 =======
@@ -1941,24 +1285,13 @@ const "Contact": NextPage = () => {;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 
-
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -1968,47 +1301,13 @@ const "Contact": NextPage = () => {;
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
-<<<<<<< HEAD
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">                What technologies do you specialize in?
+<h3 className="text-lg font-semibold text-gray-900 mb-3">                What technologies do you specialize in?
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">                What technologies do you specialize in?
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 What technologies do you specialize in?
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">                What technologies do you specialize in?
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </h3>
               <p className=\"text-gray-600\">
                 We work with modern technologies including React, Node.js, Python, 
@@ -2019,74 +1318,24 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
-
-
-
-
-
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+
 =======
 >>>>>>> main
 =======
@@ -2095,24 +1344,13 @@ const "Contact": NextPage = () => {;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 
-
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -2122,47 +1360,13 @@ const "Contact": NextPage = () => {;
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
-<<<<<<< HEAD
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">                How do you ensure project quality?
+<h3 className="text-lg font-semibold text-gray-900 mb-3">                How do you ensure project quality?
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">                How do you ensure project quality?
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 How do you ensure project quality?
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">                How do you ensure project quality?
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </h3>
               <p className=\"text-gray-600\">
                 We follow industry best practices including code reviews, automated 
@@ -2177,29 +1381,7 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-<div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
-
-
-
-
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
-=======
-  )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   )
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2279,15 +1461,6 @@ const "Contact": NextPage = () => {;
 
 <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
-
-
-
-
-
-
-
-
-
 
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
@@ -2379,21 +1552,12 @@ const "Contact": NextPage = () => {;
               <motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
-<<<<<<< HEAD
-              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+<div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
->>>>>>> main
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -2449,22 +1613,6 @@ const "Contact": NextPage = () => {;
                 </p>
               </motion.div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
-=======
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
->>>>>>> main
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -2556,21 +1704,10 @@ const "Contact": NextPage = () => {;
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
-<<<<<<< HEAD
-=======
-              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -2586,46 +1723,16 @@ const "Contact": NextPage = () => {;
               </motion.div>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
-=======
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
-=======
->>>>>>> main
-              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 <<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+
 =======
 >>>>>>> main
 >>>>>>> main
@@ -2635,14 +1742,8 @@ const "Contact": NextPage = () => {;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -2657,19 +1758,6 @@ const "Contact": NextPage = () => {;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
-
-
-
-
-
-
-
-
-
-
-
 
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
@@ -2729,24 +1817,15 @@ const "Contact": NextPage = () => {;
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <div className=\"max-w-4xl mx-auto\">
+<div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
 <<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 transition={{ \"duration\": 0.6 }}
                 className=\"text-center mb-16\"
               >
@@ -2760,45 +1839,16 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
-=======
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
-=======
->>>>>>> main
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 <<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+
 =======
 >>>>>>> main
 >>>>>>> main
@@ -2808,14 +1858,8 @@ const "Contact": NextPage = () => {;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -2828,19 +1872,6 @@ const "Contact": NextPage = () => {;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
-
-
-
-
-
-
-
-
-
-
-
 
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
@@ -2878,13 +1909,7 @@ const "Contact": NextPage = () => {;
                       <inputtype=\"text\"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -2897,14 +1922,6 @@ const "Contact": NextPage = () => {;
                         placeholder=\"Your full name\"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 />;
                     </div>;
@@ -2925,26 +1942,13 @@ const "Contact": NextPage = () => {;
                     </div>
                   </div>
 
-
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
-
-
-
-
-
-
-
-
-
-
 
 <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
-
-
 
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
@@ -2957,11 +1961,7 @@ const "Contact": NextPage = () => {;
                       </label>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <input type=\"email\"
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                        />;
                     </div>;
                     <div>;
@@ -2969,26 +1969,15 @@ const "Contact": NextPage = () => {;
                         Email Address *;
                       </label>;
                       <inputtype=\"email\"
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                         id=\"email\"
                         name=\"email\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
 <<<<<<< HEAD
-<<<<<<< HEAD
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
-=======
-=======
-<<<<<<< HEAD
-=======
-                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
-                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                         placeholder=\"your.email@example.com\"
                        />
@@ -2996,36 +1985,15 @@ const "Contact": NextPage = () => {;
                   </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
-=======
->>>>>>> main
-                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
-                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+
 =======
 >>>>>>> main
 >>>>>>> main
@@ -3035,19 +2003,8 @@ const "Contact": NextPage = () => {;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
-                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
-                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
-                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -3070,24 +2027,7 @@ const "Contact": NextPage = () => {;
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                      <input type=\"email\"                        id=\"email\"
-                        name=\"email\"
-                        required
-                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-                       />
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
-                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
-                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <div>
@@ -3098,14 +2038,6 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         placeholder=\"your && your.email@example && example.com\"
@@ -3128,13 +2060,7 @@ placeholder=\"your && your.email@example && example.com\"
                       <inputtype=\"tel\"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -3147,14 +2073,6 @@ placeholder=\"your && your.email@example && example.com\"
                         placeholder=\"+1 (555) 123-4567\"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 />;
                     </div>;
@@ -3172,37 +2090,10 @@ placeholder=\"your && your.email@example && example.com\"
                     </div>
                   </div>
 
-
-
-
-
-
                   <div className=\"mb-6\">
                     <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                       Service Interest
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -3214,11 +2105,7 @@ placeholder=\"your && your.email@example && example.com\"
                       </label>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <input type=\"text\"
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                        />;
                     </div>;
                     <div>;
@@ -3226,22 +2113,13 @@ placeholder=\"your && your.email@example && example.com\"
                         Company;
                       </label>;
                       <inputtype=\"text\"
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                         id=\"company\"
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your company name\"
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                        />
                     </div>
@@ -3249,29 +2127,10 @@ placeholder=\"your && your.email@example && example.com\"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -3279,31 +2138,9 @@ placeholder=\"your && your.email@example && example.com\"
                     <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-
-
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+
 =======
 >>>>>>> main
 =======
@@ -3314,20 +2151,8 @@ placeholder=\"your && your.email@example && example.com\"
 =======
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                      Service Interest
-=======
-                      <input type=\"text\"                        id=\"company\"
-                        name=\"company\"
-                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-                        placeholder=\"Your company name\"                      Service Interest
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                       <input type=\"text\"                        id=\"company\"
                         name=\"company\"
@@ -3376,12 +2201,6 @@ placeholder=\"your && your.email@example && example.com\"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 =======
 >>>>>>> main
@@ -3411,71 +2230,18 @@ placeholder=\"your && your.email@example && example.com\"
                         </option>;
                       ))}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-                    </select>
-                  </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   <div className=\"mb-6\">
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-
-
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+
 =======
 >>>>>>> main
 =======
@@ -3486,18 +2252,8 @@ placeholder=\"your && your.email@example && example.com\"
 =======
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                      Message *
-                    </label>
-=======
-=======
->>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                       Message *
@@ -3518,46 +2274,16 @@ placeholder=\"your && your.email@example && example.com\"
 =======
 =======
 
-
-
-
-
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className=\"mb-6\">
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                       Message *
-<<<<<<< HEAD
-                    </label>
+</label>
                       Message *
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  <div className=\"mb-6\">
-                    <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                  <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">                      Message *
-                    </label>                      Message *
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </label>
                     </select>;
                   </div>;
@@ -3569,13 +2295,7 @@ placeholder=\"your && your.email@example && example.com\"
                     </label>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -3588,8 +2308,6 @@ placeholder=\"your && your.email@example && example.com\"
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                       placeholder=\"Tell us about your project requirements...\"></textarea>;
                   </div>;
                   <motion&& motion.button
@@ -3597,26 +2315,13 @@ placeholder=\"your && your.email@example && example.com\"
 <<<<<<< HEAD
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       placeholder=\"Tell us about your project requirements...\"
                     ></textarea>
                   </div>
                   <motion.button
                     type=\"submit\"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     whileHover={{ scale: 1.02 }}
@@ -3632,46 +2337,13 @@ placeholder=\"your && your.email@example && example.com\"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
-=======
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
-=======
->>>>>>> main
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
                     whileHover={{ scale: 1 && 1.02 }}
                     whileTap={{ \"scale\": 0 && 0.98 }}
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
@@ -3685,16 +2357,8 @@ placeholder=\"your && your.email@example && example.com\"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+
 =======
 >>>>>>> main
 >>>>>>> main
@@ -3704,17 +2368,8 @@ placeholder=\"your && your.email@example && example.com\"
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-        {/* Hero Section */}
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">        {/* Hero Section */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">        {/* Hero Section */}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -3723,11 +2378,8 @@ placeholder=\"your && your.email@example && example.com\"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
-
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-
-
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">        {/* Hero Section */}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -3769,33 +2421,11 @@ placeholder=\"your && your.email@example && example.com\"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
 <<<<<<< HEAD
-=======
->>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                       placeholder=\"Tell us about your project requirements...\"></textarea>;
                   </div>;
@@ -3818,8 +2448,6 @@ placeholder=\"your && your.email@example && example.com\"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-
-
 
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -3845,63 +2473,20 @@ placeholder=\"your && your.email@example && example.com\"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+
 =======
 >>>>>>> main
 =======
@@ -3910,24 +2495,13 @@ placeholder=\"your && your.email@example && example.com\"
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 
-
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -3948,64 +2522,20 @@ placeholder=\"your && your.email@example && example.com\"
 =======
 =======
 
-
-
-
-
-
-
-
-
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 {isSubmitted ? (
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;              <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
-                <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
-                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>                {isSubmitted ? (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
                     <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">;
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>;
@@ -4032,11 +2562,7 @@ placeholder=\"your && your.email@example && example.com\"
                           Full Name *
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                         </label>
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">;
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>;
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">;
@@ -4060,14 +2586,9 @@ placeholder=\"your && your.email@example && example.com\"
                         <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
                           Full Name *;
                         </label>;
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                         <input
-=======
-                        </label>                        <input
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                         </label>                        <input
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -4084,14 +2605,6 @@ placeholder=\"your && your.email@example && example.com\"
                           required
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 value={formData && formData.name}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -4106,11 +2619,7 @@ value={formData && formData.name}
                           Email Address *
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                         </label>
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                           value={formData && formData.name}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
@@ -4121,14 +2630,9 @@ value={formData && formData.name}
                         <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
                           Email Address *;
                         </label>;
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                         <input
-=======
-                        </label>                        <input
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                         </label>                        <input
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -4145,27 +2649,12 @@ value={formData && formData.name}
                           required
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                           value={formData && formData.email}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
 <<<<<<< HEAD
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
-=======
-<<<<<<< HEAD
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                           placeholder=\"your@email.com\"
                         />
@@ -4173,36 +2662,15 @@ value={formData && formData.name}
                     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
-=======
->>>>>>> main
-                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
 =======
 >>>>>>> main
 >>>>>>> main
@@ -4212,55 +2680,24 @@ value={formData && formData.name}
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                          value={formData && formData.email}
-=======
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
-                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           placeholder=\"your@email.com\"
                         />
                       </div>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">                          value={formData && formData.email}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">                          value={formData && formData.email}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
-                        />
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">                          value={formData && formData.email}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -4270,21 +2707,8 @@ value={formData && formData.name}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
-
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-
-
-
-
-
-
-
-
-
-
-
 
 value={formData && formData.email}
                           onChange={handleInputChange}
@@ -4293,8 +2717,6 @@ value={formData && formData.email}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-
 
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -4319,14 +2741,6 @@ value={formData && formData.email}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           placeholder=\"your@email && email.com\"
@@ -4348,13 +2762,7 @@ placeholder=\"your@email && email.com\"
                         </label>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -4367,14 +2775,6 @@ placeholder=\"your@email && email.com\"
                           name=\"company\"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 value={formData && formData.company}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -4389,11 +2789,7 @@ value={formData && formData.company}
                           Phone Number
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                         </label>
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                           value={formData && formData.company}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
@@ -4404,33 +2800,17 @@ value={formData && formData.company}
                         <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
                           Phone Number;
                         </label>;
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                         <input
                           type=\"tel\"
                           id=\"phone\"
                           name=\"phone\"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-                        </label>                        <input
-=======
-                        </label>
-                        <input
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
                           type=\"tel\"
                           id=\"phone\"
                           name=\"phone\"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                        </label>                        <input
-                          type=\"tel\"
-                          id=\"phone\"
-                          name=\"phone\"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
                         </label>                        <input
                           type=\"tel\"
@@ -4467,11 +2847,7 @@ value={formData && formData.phone}
                         Message *
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                       </label>
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                           value={formData && formData.phone}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
@@ -4499,14 +2875,9 @@ value={formData && formData.phone}
                       <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
                         Message *;
                       </label>;
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                       <textarea
-=======
-                      </label>                      <textarea
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                       </label>                      <textarea
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -4521,8 +2892,6 @@ value={formData && formData.phone}
                         name=\"message\"
                         required
                         rows={6}
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                         value={formData && formData.message}
@@ -4555,13 +2924,6 @@ value={formData && formData.phone}
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
 =======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               <div className=\"space-y-8\">
                 <div>
                   <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>
@@ -4570,21 +2932,8 @@ value={formData && formData.phone}
                   </p>
                 </div>
 
-
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
-
-
-
-
-
-
-
-
-
-
-
-
 
 value={formData && formData.message}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -4617,37 +2966,15 @@ value={formData && formData.message}
               {/* Contact Information */}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                <div className=\"space-y-6\">
-                <div className="space-y-6">
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
               <div className=\"space-y-8\">
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
-<<<<<<< HEAD
-              <div className=\"space-y-8\">
+<div className=\"space-y-8\">
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                <div className=\"space-y-6\">
-                <div className="space-y-6">
-
-
-
-                <div className=\"space-y-6\">
-                <div className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div>
                   <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>
                   <p className=\"text-lg text-gray-300 mb-8\">
@@ -4659,37 +2986,15 @@ value={formData && formData.message}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
-=======
->>>>>>> main
-                <div className=\"space-y-6\">
-                <div className="space-y-6">
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+
 =======
 >>>>>>> main
 >>>>>>> main
@@ -4699,45 +3004,8 @@ value={formData && formData.message}
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                        value={formData && formData.message}
-                        onChange={handleInputChange}
-                        className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
-                        placeholder=\"Tell us about your project or requirements...\"
-                      />;
-                    </div>;
-                    <button
-                      type=\"submit\"
-                      disabled={isSubmitting}
-                      className=\"w-full inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300\">;
-                      {isSubmitting ? (;
-                        <>;
-                          <div className=\"animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2\"></div>;
-                          Sending...;
-                        </>;
-                      ) : (;
-                        <>;
-                          <Send className=\"w-5 h-5 mr-2\" />;
-                          Send Message;
-                        </>;
-                      )}
-                    </button>;
-                  </form>;
-                )}
-              </div>;
-              {/* Contact Information */}
-                <div className=\"space-y-6\">
-                <div className="space-y-6">
-                <div className=\"space-y-6\">
-                <div className="space-y-6">
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -4777,68 +3045,16 @@ value={formData && formData.message}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          </section>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
           </section>
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {/* Services Overview */}
@@ -4882,12 +3098,6 @@ value={formData && formData.message}
 export default ContactPage
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
 >>>>>>> main
 =======
@@ -4970,37 +3180,17 @@ export default ContactPage
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default ContactPage
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default ContactPage
-=======
-export default ContactPage
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 =======
 
 export default ContactPage
-
 
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-
-
-
-
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
@@ -5019,38 +3209,12 @@ export default ContactPage
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default ContactPage
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
+=======
 =======
 
-export default ContactPage
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 >>>>>>> main
@@ -5061,21 +3225,13 @@ export default ContactPage
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
+
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 export default ContactPage
@@ -5085,13 +3241,7 @@ export default ContactPage
         </section>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>;
 =======
 =======              </div>;
@@ -5110,16 +3260,8 @@ export default ContactPage
   );
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default ContactPage;
           </div>;
         </section>;
@@ -5132,59 +3274,23 @@ export default ContactPage;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
->>>>>>> main
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
->>>>>>> main
->>>>>>> main
-=======
-<<<<<<< HEAD
 
 =======
+>>>>>>> main
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+>>>>>>> main
+>>>>>>> main
+=======
 
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -5202,25 +3308,11 @@ export default ContactPage;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
-
-
-
-
-
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-
-
 
 import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-
-
-
-
-
-
-
 
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
@@ -5670,7 +3762,7 @@ const \"Contact\": NextPage = () => {"
                     className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center""
                     <h3 className="text-lg font-semibold text-gray-900">"
         </main>
-      
+
   )
 export default ContactPage;
               <div className=\"space-y-8\">;"

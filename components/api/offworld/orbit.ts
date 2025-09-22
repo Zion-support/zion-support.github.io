@@ -18,8 +18,8 @@ export default async function handler(';
   res: NextApiResponse;'
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

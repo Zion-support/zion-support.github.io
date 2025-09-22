@@ -58,19 +58,14 @@ class SimpleAutomationOrchestrator {}
       return null};
   async checkDependencies() {}"
     this.log("Checking project dependencies...");
-<<<<<<< HEAD
-    const nodeModulesPath = path.join(this.projectRoot, "node_modules";);
+const nodeModulesPath = path.join(this.projectRoot, "node_modules";);
     if () {}
       this.log("Installing dependencies...")) {}
     ) {}
       this.log("Installing dependencies...")};
       try {}
         execSync("npm install --no-audit --no-fund", { })
-<<<<<<< HEAD
-          "cwd": this.projectRoot,
-=======
-          "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
           "stdio": "pipe",
           "timeout": 300000;
         }
@@ -80,11 +75,7 @@ class SimpleAutomationOrchestrator {}
         this.log(`npm install failed, trying "yarn": ${error.message}`, "WARN");
         try {}
           execSync("yarn install --silent", { })
-<<<<<<< HEAD
-            "cwd": this.projectRoot,
-=======
-            "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
             "stdio": "pipe",
             "timeout": 300000;
           }
@@ -95,36 +86,15 @@ class SimpleAutomationOrchestrator {}
           return { "installed": false, "error": yarnError.message }};
       };
     };
-=======
-    const nodeModulesPath = path.join(this.projectRoot, "node_modules";);"
-      this.log("Installing dependencies...")) {}"
-      this.log("Installing dependencies...")};"
-
-          "timeout": 300000;"
-});"
-
-          return { "installed": false, "error": yarnError.message }};"
-    };"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log("Dependencies already installed");
     return { "installed": true, "existing": true }};"
   async runBasicTests() {}"
     this.log("Running basic application tests...");"
     const tests = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    // Test TypeScript compilation;
+// Test TypeScript compilation;
     try {}
       execSync("npx tsc --noEmit", { })
         "cwd": this.projectRoot,
-=======
-    
-    // Test TypeScript compilation;
-    try {}
-      execSync("npx tsc --noEmit", { })
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         "stdio": "pipe",
         "timeout": 60000;
       }
@@ -138,11 +108,7 @@ class SimpleAutomationOrchestrator {}
     // Test ESLint;
     try {}
       execSync("npx eslint . --max-warnings 0", { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "stdio": "pipe",
         "timeout": 60000;
       }
@@ -157,31 +123,19 @@ class SimpleAutomationOrchestrator {}
   async fixCommonIssues() {}
     this.log("Fixing common issues...");
     const fixes = [];
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Fix import issues;
     try {}
       const fixImportScript = path.join(this.projectRoot, "scripts", "fix-import-errors.cjs";);
       if () {}
         execSync(`node ${fixImportScript}`, { `})
-<<<<<<< HEAD
-          "cwd": this.projectRoot,
-=======
-          "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
           "stdio": "pipe",
           "timeout": 120000;
         })) {}
     ) {}
         execSync(`node ${fixImportScript}`, { `})
-<<<<<<< HEAD
-          "cwd": this.projectRoot,
-=======
-          "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
           "stdio": "pipe",
           "timeout": 120000;
         })};
@@ -195,21 +149,13 @@ class SimpleAutomationOrchestrator {}
       const fixSyntaxScript = path.join(this.projectRoot, "scripts", "fix-syntax-errors.cjs";);
       if () {}
         execSync(`node ${fixSyntaxScript}`, { `})
-<<<<<<< HEAD
-          "cwd": this.projectRoot,
-=======
-          "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
           "stdio": "pipe",
           "timeout": 120000;
         })) {}
     ) {}
         execSync(`node ${fixSyntaxScript}`, { `})
-<<<<<<< HEAD
-          "cwd": this.projectRoot,
-=======
-          "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
           "stdio": "pipe",
           "timeout": 120000;
         })};
@@ -218,48 +164,16 @@ class SimpleAutomationOrchestrator {}
         this.log("Syntax issues fixed")};
     } catch(error) {}
       this.log(`Syntax fix "failed": ${error.message}`, "WARN")};
-=======
-    // Test TypeScript compilation;
-
-        "timeout": 60000;"
-      tests.push({ "name": "TypeScript compilation", "status": "pass" }")
-
-    return { tests, "passed": tests.filter(t => t.status === "pass").length, "total": tests.length }};"
-  async fixCommonIssues() {}"
-    this.log("Fixing common issues...");"
-    const fixes = [];
-    // Fix import issues;
-      const fixImportScript = path.join(this.projectRoot, "scripts", "fix-import-errors.cjs";);"
-
-        fixes.push({ "type": "imports", "status": "fixed" }")
-        this.log("Import issues fixed")};"
-
-    // Fix syntax errors;
-      const fixSyntaxScript = path.join(this.projectRoot, "scripts", "fix-syntax-errors.cjs";);"
-
-        fixes.push({ "type": "syntax", "status": "fixed" }")
-        this.log("Syntax issues fixed")};"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.results.fixes = fixes;
     return fixes};
   async createAdditionalScripts() {}"
     this.log("Creating additional automation scripts...");"
     const newScripts = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    // Create enhanced error checker;
+// Create enhanced error checker;
     const enhancedErrorChecker = "#!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-=======
-    // Create enhanced error checker;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 class EnhancedErrorChecker {}
     this.logFile = path.join(this.projectRoot, "automation", "logs", "enhanced-error-checker.log");"
@@ -288,17 +202,11 @@ module.exports = EnhancedErrorChecker;";"
     fs.writeFileSync()"
       path.join(this.projectRoot, "scripts", "automation", "enhanced-error-checker.cjs"),"
       enhancedErrorChecker;
-<<<<<<< HEAD
-    );
+);
     newScripts.push({ "name": "enhanced-error-checker.cjs", "status": "created" }
 });
     this.log("Enhanced error checker created");
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    this.results.newScripts = newScripts;
+this.results.newScripts = newScripts;
     return newScripts};
   async commitAndPushChanges() {}
     this.log("Committing and pushing changes...");
@@ -307,21 +215,13 @@ module.exports = EnhancedErrorChecker;";"
       execSync("git add .", { "cwd": this.projectRoot }
 });
       this.log("Changes staged");
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Commit changes;
       const commitMessage = `"feat": automation improvements and fixes - ${new Date().toISOString()};;`
       execSync(`git commit -m "${commitMessage}"`, { "cwd": this.projectRoot }
 });
       this.log("Changes committed");
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Push to current branch;
       const currentBranch = execSync("git branch --show-current", {})
         "cwd": this.projectRoot,
@@ -330,43 +230,15 @@ module.exports = EnhancedErrorChecker;";"
       execSync(`git push origin ${currentBranch}`, { "cwd": this.projectRoot }
 });
       this.log(`Changes pushed to ${currentBranch}`);
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return {;}
-=======
-    );"
-    newScripts.push({ "name": "enhanced-error-checker.cjs", "status": "created" }")
-    this.log("Enhanced error checker created");"
-    this.results.newScripts = newScripts;
-    return newScripts};
-  async commitAndPushChanges() {}"
-    this.log("Committing and pushing changes...");"
-      // Add all changes;"
-      execSync("git add .", { "cwd": this.projectRoot }")
-      this.log("Changes staged");"
-
-      execSync(`git commit -m "${commitMessage}"`, { "cwd": this.projectRoot }")
-      this.log("Changes committed");"
-      // Push to current branch;"
-
-      return {;}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         "committed": true,
         "pushed": true,
         "branch": currentBranch,
         "message": commitMessage;"
 
       }).trim(;);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      if ( {})
+if ( {})
         this.log("Already on main branch")) {}
      {}
         this.log("Already on main branch")};
@@ -375,38 +247,22 @@ module.exports = EnhancedErrorChecker;";"
       execSync("git checkout main", { "cwd": this.projectRoot }
 });
       this.log("Switched to main branch");
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Pull latest changes;
       execSync("git pull origin main", { "cwd": this.projectRoot }
 });
       this.log("Pulled latest main changes");
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Merge current branch;
       execSync(`git merge ${currentBranch}`, { "cwd": this.projectRoot }
 });
       this.log(`Merged ${currentBranch} into main`);
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Push to main;
       execSync("git push origin main", { "cwd": this.projectRoot }
 });
       this.log("Pushed merged changes to main");
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return {;}
         "merged": true,
         "fromBranch": currentBranch,
@@ -423,9 +279,7 @@ module.exports = EnhancedErrorChecker;";"
     try {}
       // Step "1": Check dependencies;
       await this.runStep("Check Dependencies", () => this.checkDependencies());
-<<<<<<< HEAD
-
-      // Step "2": Run basic tests;
+// Step "2": Run basic tests;
       await this.runStep("Run Basic Tests", () => this.runBasicTests());
 
       // Step "3": Fix common issues;
@@ -439,48 +293,10 @@ module.exports = EnhancedErrorChecker;";"
 
       // Step "6": Merge to main;
       await this.runStep("Merge to Main", () => this.mergeToMain());
-
-=======
-      
-      // Step "2": Run basic tests;
-      await this.runStep("Run Basic Tests", () => this.runBasicTests());
-      
-      // Step "3": Fix common issues;
-      await this.runStep("Fix Common Issues", () => this.fixCommonIssues());
-      
-      // Step "4": Create additional scripts;
-      await this.runStep("Create Additional Scripts", () => this.createAdditionalScripts());
-      
-      // Step "5": Commit and push changes;
-      await this.runStep("Commit and Push Changes", () => this.commitAndPushChanges());
-      
-      // Step "6": Merge to main;
-      await this.runStep("Merge to Main", () => this.mergeToMain());
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.results.status = "completed";
       this.log("Simple Automation Orchestrator completed successfully!")} catch(error) {}
       this.results.status = "failed";
       this.log(`Simple Automation Orchestrator "failed": ${error.message}`, "ERROR")} finally {`}
-=======
-      if ( {})"
-        this.log("Already on main branch")) {}"
-     {}"
-        this.log("Already on main branch")};
-        return { "merged": true, "alreadyOnMain": true }};"
-      // Switch to main;"
-      execSync("git checkout main", { "cwd": this.projectRoot }")
-      this.log("Switched to main branch");"
-      // Pull latest changes;"
-      execSync("git pull origin main", { "cwd": this.projectRoot }")
-      this.log("Pulled latest main changes");"
-
-      this.log(`Merged ${currentBranch} into main`);
-      // Push to main;"
-      execSync("git push origin main", { "cwd": this.projectRoot }")
-      this.log("Pushed merged changes to main");"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Save results;
         const reportFile = path.join(this.projectRoot, "automation", "logs", "simple-automation-report.json";);"
 
@@ -488,14 +304,7 @@ module.exports = EnhancedErrorChecker;";"
   const orchestrator = new SimpleAutomationOrchestrator) {}
   const orchestrator = new SimpleAutomationOrchestrator}(;);
   orchestrator.run().catch(console.error)};
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = SimpleAutomationOrchestrator;
-<<<<<<< HEAD
-module.exports = SimpleAutomationOrchestrator;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 "`;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

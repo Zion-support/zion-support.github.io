@@ -67,10 +67,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   if (input.modules.token || input.tokenActivation) {
     ensureDir(tokenDir),
     const tokenConfigPath = path.join(tokenDir, `${instanceSlug}-token.json`),
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     writeTextFile(
       tokenConfigPath,
       JSON.stringify(
@@ -133,10 +130,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   // Schedule launch stream (/summit)
   ensureDir(eventsDir),
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   writeTextFile(
     summitEventPath,
     JSON.stringify(
@@ -152,10 +146,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   // 4. Activate Public Pages (record intent)
   const pagesActivationPath = path.join(baseDir, "pages.json"),
   const defaultNationRoute = `/nation/${toSlug(input.defaultLanguage || "default")}`
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   writeTextFile(
     pagesActivationPath,
     JSON.stringify(
@@ -192,10 +183,5 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     assets,
     logs,
     summary,
-<<<<<<< HEAD
-    version}
-
-=======
-    version};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+version}
 }

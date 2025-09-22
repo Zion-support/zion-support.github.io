@@ -2,22 +2,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 // Content flagging functionality
-=======
-import { supabase } from '@/integrations/supabase/client',
-import { FraudSeverity, FraudFlag } from '@/types/fraud',
-=======
-import { supabase } from '@/integrations/supabase/client','
-import { FraudSeverity, FraudFlag } from '@/types/fraud','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { FlagResult } from './types',
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -26,35 +13,8 @@ import { FlagResult } from './types',
  * Flag content for review;
  */
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-export const flagContent = async (;
-  userId: string;
-  userEmail: string | undefined;
-  contentType: FraudFlag['content_type'];
-  contentId: string;
-  contentExcerpt: string;
-  severity: FraudSeverity;
-export const flagContent = async (
-  userId: string;
-  userEmail: string | undefined;
-  contentType: FraudFlag['content_type'];
-  contentId: string;
-  contentExcerpt: string;
-<<<<<<< HEAD
-=======
-=======
-
 export const flagContent = async (;
   userId: string;
   userEmail: string | undefined;
@@ -69,16 +29,6 @@ export const flagContent = async (
   contentId: string;
   contentExcerpt: string;
 
-
-import { supabase } from '@/integrations/supabase/client',;
-import { FraudSeverity, FraudFlag } from '@/types/fraud',;
-import { FlagResult } from './types',;
-/**
- * Flag content for review;
- */
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 pr-12325
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -110,8 +60,6 @@ export const flag_content = async (;
   content_type: FraudFlag['content_type'];',
   content_id: string;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   content_excerpt: string;
 
   severity: FraudSeverity;
@@ -122,45 +70,18 @@ export const flagContent = async (;
   contentId: string;
   contentExcerpt: string;
 
-
   severity: FraudSeverity;
 <<<<<<< HEAD
-=======
-  content_excerpt: string;
-// Content flagging functionality
-import { supabase  } from '@/integrations/supabase/client';
-import { FraudSeverity, FraudFlag  } from '@/types/fraud';
-import { FlagResult } from './types';
-import { supabase } from '@/integrations/supabase/client',
-import { FraudSeverity, FraudFlag } from '@/types/fraud',
-import { FlagResult } from './types',
-/**
- * Flag content for review
- */
-
-export const flagContent = async (;
-  userId: string;
-  userEmail: string | undefined;
-  contentType: FraudFlag['content_type'];
-  contentId: string;
-  contentExcerpt: string;
-  severity: FraudSeverity;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const flagContent = async (
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
   contentId: string;
   contentExcerpt: string;
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   severity: FraudSeverity;
   reason: string
-=======
-  reason: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   userId: string,
   userEmail: string | undefined,'
 =======
@@ -174,73 +95,27 @@ export const flagContent = async (
   contentExcerpt: string,
   severity: FraudSeverity,
   reason: string,
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
 <<<<<<< HEAD
-=======
-  ipAddress?: string
-): Promise<FlagResult> => {
-  try {
-    console.log ('Flagging content for review:', {
-      user_id;
-      content_type;
-      content_id;
-
-      reason;
-      severity;
-    });
-
-    const { error } = await supabase && supabase.from('fraud_flags').insert({
-      user_id: userId;
-      user_email: userEmail;
-      content_type: contentType;
-      content_id: contentId,
-      content_excerpt: contentExcerpt && contentExcerpt.substring(0, 200), // Limit excerpt length
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // // // console.log('Flagging content for review:', {
   content_excerpt: string;    // // // console.log('Flagging content for review:', {
       userId,
       contentType,
       contentId,
       reason,
-<<<<<<< HEAD
-      severity
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log ('Flagging content for review:', {
-      user_id;
-      content_type;
-      content_id;
-
-      reason;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+severity
       severity;
     });
-<<<<<<< HEAD
-
-    
-    const { error } = await supabase && supabase.from('fraud_flags').insert({
+const { error } = await supabase && supabase.from('fraud_flags').insert({
       user_id: userId;
       user_email: userEmail;
       content_type: contentType;
       content_id: contentId,
       content_excerpt: contentExcerpt && contentExcerpt.substring(0, 200), // Limit excerpt length
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // // // console.log('Flagging content for review:', {
-=======
-  content_excerpt: string;    // // // console.log('Flagging content for review:', {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   content_excerpt: string;    // // // console.log('Flagging content for review:', {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -258,14 +133,7 @@ export const flagContent = async (
       severity;
       reason;
       severity;
-<<<<<<< HEAD
-    });      reason;
-=======
-    });
-
-      severity;
-      reason;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+});      reason;
       ip_address: ipAddress;
       timestamp: new Date().toISOString()'
       status: 'pending'
@@ -273,22 +141,9 @@ export const flagContent = async (
     if (error) throw error;
     return { success: true }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
-    console.error('Error flagging content:', error);
-    return {
-      success: false
-      error: error instanceof Error ? error.message : 'Unknown error'
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-  } catch (error) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }
 }
@@ -307,19 +162,13 @@ export const flagContent = async (
       timestamp: new Date().toISOString(),'
       status: 'pending'
     }),
-    
+
     if (error) throw error,
-    
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Content flagging functionality;
 import { supabase } from '@/integrations/supabase/client',;
 import { FraudSeverity, FraudFlag } from '@/types/fraud',;
-=======
-// Content flagging functionality;'
-import { supabase } from '@/integrations/supabase/client',;'
-import { FraudSeverity, FraudFlag } from '@/types/fraud',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { FlagResult } from './types',;
 /**;
  * Flag content for review;
@@ -362,30 +211,9 @@ export const flagContent = async (;
       success: false;'
       error: error instanceof Error ? error.message : 'Unknown error';
 
-<<<<<<< HEAD
-    }
+}
   }
 };
-=======
-<<<<<<< HEAD
-
-      reason;
-      severity;
-    });
-    const { error } = await supabase && supabase.from('fraud_flags').insert({
-      user_id: userId;
-      user_email: userEmail;
-      content_type: contentType;
-      content_id: contentId,
-      content_excerpt: contentExcerpt && contentExcerpt.substring(0, 200), // Limit excerpt length
-=======
-    const { error } = await supabase.from('fraud_flags').insert({
-      user_id: userId;
-      user_email: userEmail;
-      content_type: contentType;
-      content_id: contentId
-      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       severity;
       reason;
 reason;}
@@ -398,12 +226,8 @@ reason;}
     if (error) throw error;
     return { success: true }
   } catch (error) {
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     console && console.error('Error flagging content:', error);
-=======
-  } catch (error) {    console && console.error('Error flagging content:', error);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   } catch (error) {    console && console.error('Error flagging content:', error);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -579,22 +403,13 @@ export const flagContent = async (;
       severity;
       reason;
       ip_address: ip_address;
-<<<<<<< HEAD
-      timestamp: new Date ().toISOString (),'
+timestamp: new Date ().toISOString (),'
       status: 'pending';
-=======
-      timestamp: new Date ().toISOString (),}
-      status: 'pending';}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     });
 ;
     // Check condition;
 if (throw error) {}
-<<<<<<< HEAD
-  $2;
-=======
-  $2}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+$2;
 }
     return { success: true }
   } catch (error) {'
@@ -605,14 +420,6 @@ if (throw error) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
   ipAddress?: string;
 ): Promise<FlagResult> => {}
@@ -629,54 +436,30 @@ if (throw error) {}
       contentType,
       contentId,
       reason,
-<<<<<<< HEAD
-      severity;
+severity;
     }),
     '
     const { error } = await supabase.from('fraud_flags').insert({}
-=======
-      severity
-
-    }),
-    const { error } = await supabase.from('fraud_flags').insert({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       user_id: userId,
       user_email: userEmail,
       content_type: contentType,
       content_id: contentId,
-<<<<<<< HEAD
-      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length;
+content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length;
       severity,
       reason,
       ip_address: ipAddress,
       timestamp: new Date().toISOString(),'
-=======
-      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
-      severity,
-      reason,
-      ip_address: ipAddress,
-      timestamp: new Date().toISOString(),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       status: 'pending'
     }),
     if (error) throw error,
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -684,15 +467,6 @@ if (throw error) {}
   }
 };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
-=======    }
-  }
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======    }
   }
@@ -717,21 +491,11 @@ if (throw error) {}
   }
 };
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    }
-  }
-};
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
     }
   }
@@ -774,6 +538,5 @@ pr-12325
 </FlagResult>
 ): Promise<FlagResult> => {
 </FlagResult>'
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

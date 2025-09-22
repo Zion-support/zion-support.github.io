@@ -56,7 +56,7 @@ import { Brain;
 export default function MicroSaasServicesPage() {
   const microSaasServices = null;
             we deliver professional solutions with competitive pricing and exceptional value.
-      features: [
+      features: [;
         'AI-powered content generation'
         'Multiple content types (blog, social, email)'
         'SEO optimization suggestions'
@@ -64,7 +64,7 @@ export default function MicroSaasServicesPage() {
         'Plagiarism-free content'
         'Multi-language support'
       ]
-      useCases: [
+      useCases: [;
         'Blog content creation'
         'Social media posts'
         'Email marketing campaigns'
@@ -76,7 +76,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       pricing: {
         starter: {
           price: 19,
-          features: ['
+          features: [';
             '5 URLs','
             '5-min monitoring','
             'Basic metrics','
@@ -86,7 +86,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         professional: {}
           price: 49,
-          features: ['
+          features: [';
             '25 URLs','
             '1-min monitoring','
             'Advanced metrics','
@@ -96,8 +96,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         enterprise: {
-          price: 299
-          features: [
+          price: 299;
+          features: [;
             'Unlimited generations',
             'Custom templates',
             'White-label options',
@@ -114,12 +114,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {
       id: 'performance-monitor',
       name: 'Website Performance Monitor',
-      description:'
+      description:';
         'Monitor your website performance in real-time with comprehensive metrics, alerts, and optimization recommendations.','
       icon: <Monitor className='w-8 h-8 text-white' />,'
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600','
       gradient: 'from-blue-400 to-cyan-500',
-      features: ['
+      features: [';
         'Real-time performance monitoring','
         'Core Web Vitals tracking','
         'Uptime monitoring','
@@ -127,7 +127,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Historical data analysis','
         'Optimization recommendations',
       ],
-      useCases: ['
+      useCases: [';
         'Website performance tracking','
         'User experience monitoring','
         'SEO performance optimization','
@@ -138,7 +138,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       pricing: {}
         starter: {}
           price: 19,
-          features: ['
+          features: [';
             '5 URLs','
             '5-min monitoring','
             'Basic metrics','
@@ -148,7 +148,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         professional: {}
           price: 49,
-          features: ['
+          features: [';
             '25 URLs','
             '1-min monitoring','
             'Advanced metrics','
@@ -159,7 +159,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         enterprise: {}
           price: 149,
-          features: ['
+          features: [';
             'Unlimited URLs','
             'Real-time monitoring','
             'All metrics','
@@ -177,12 +177,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {'
       id: 'seo-analytics','
       name: 'SEO Analytics Dashboard',
-      description:'
+      description:';
         'Comprehensive SEO tracking, competitor analysis, and keyword monitoring to improve your search engine rankings.','
       icon: <Search className='w-8 h-8 text-white' />,'
       color: 'bg-gradient-to-br from-green-500 to-emerald-600','
       gradient: 'from-green-400 to-emerald-500',
-      features: ['
+      features: [';
         'Keyword tracking & ranking','
         'Competitor analysis','
         'Backlink monitoring','
@@ -190,7 +190,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Performance reporting','
         'Mobile optimization insights',
       ],
-      useCases: ['
+      useCases: [';
         'SEO performance tracking','
         'Competitor research','
         'Keyword strategy development','
@@ -201,7 +201,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       pricing: {}
         starter: {}
           price: 39,
-          features: ['
+          features: [';
             '100 keywords','
             'Basic analysis','
             'Monthly reports','
@@ -211,7 +211,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         professional: {}
           price: 89,
-          features: ['
+          features: [';
             '500 keywords','
             'Advanced analysis','
             'Weekly reports','
@@ -222,7 +222,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         enterprise: {}
           price: 199,
-          features: ['
+          features: [';
             'Unlimited keywords','
             'Full SEO suite','
             'Daily reports','
@@ -240,12 +240,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {'
       id: 'api-rate-limiter','
       name: 'API Rate Limiter',
-      description:'
+      description:';
         'Protect your APIs with intelligent rate limiting, traffic management, and comprehensive analytics.','
       icon: <Shield className='w-8 h-8 text-white' />,'
       color: 'bg-gradient-to-br from-red-500 to-orange-600','
       gradient: 'from-red-400 to-orange-500',
-      features: ['
+      features: [';
         'Intelligent rate limiting','
         'Traffic pattern analysis','
         'API key management','
@@ -253,7 +253,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Custom rules & policies','
         'Comprehensive analytics',
       ],
-      useCases: ['
+      useCases: [';
         'API protection & security','
         'Traffic management','
         'Developer portal management','
@@ -264,7 +264,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       pricing: {}
         starter: {}
           price: 25,
-          features: ['
+          features: [';
             '10 rate limit rules','
             'Basic limiting','
             'API key management','
@@ -274,7 +274,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         professional: {}
           price: 79,
-          features: ['
+          features: [';
             '50 rate limit rules','
             'Advanced limiting','
             'Unlimited API keys','
@@ -285,7 +285,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         enterprise: {}
           price: 199,
-          features: ['
+          features: [';
             'Unlimited rules','
             'Enterprise security','
             'Advanced features','
@@ -303,12 +303,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {'
       id: 'email-marketing','
       name: 'Email Marketing Automation',
-      description:'
+      description:';
         'Create engaging email campaigns, automate customer journeys, and drive conversions with intelligent email marketing.','
       icon: <Mail className='w-8 h-8 text-white' />,'
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600','
       gradient: 'from-indigo-400 to-purple-500',
-      features: ['
+      features: [';
         'Drag & drop email builder','
         'Advanced automation workflows','
         'A/B testing & optimization','
@@ -316,7 +316,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Performance analytics','
         'Template library',
       ],
-      useCases: ['
+      useCases: [';
         'Newsletter campaigns','
         'Welcome series automation','
         'Abandoned cart recovery','
@@ -327,7 +327,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       pricing: {}
         starter: {}
           price: 29,
-          features: ['
+          features: [';
             '1,000 subscribers','
             'Basic templates','
             'Simple automation','
@@ -337,7 +337,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         professional: {}
           price: 79,
-          features: ['
+          features: [';
             '10,000 subscribers','
             'Advanced templates','
             'Advanced automation','
@@ -348,7 +348,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         enterprise: {}
           price: 199,
-          features: ['
+          features: [';
             'Unlimited subscribers','
             'Custom templates','
             'Complex workflows','
@@ -366,12 +366,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {'
       id: 'social-media-scheduler','
       name: 'Social Media Scheduler',
-      description:'
+      description:';
         'Schedule, manage, and analyze your social media presence across multiple platforms from one unified dashboard.','
       icon: <Share2 className='w-8 h-8 text-white' />,'
       color: 'bg-gradient-to-br from-pink-500 to-rose-600','
       gradient: 'from-pink-400 to-rose-500',
-      features: ['
+      features: [';
         'Multi-platform scheduling','
         'Content calendar management','
         'Campaign planning tools','
@@ -379,7 +379,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Team collaboration','
         'Auto-posting & optimization',
       ],
-      useCases: ['
+      useCases: [';
         'Social media management','
         'Content calendar planning','
         'Campaign coordination','
@@ -417,16 +417,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ]
         }
       }'
-      marketPrice: '$19-149/month''
+      marketPrice: '$19-149/month'';
       competitors: ['Pingdom', 'GTmetrix', 'WebPageTest']'
-      website: 'https://performance.ziontech.ai''
-      demo: 'https://demo.performance.ziontech.ai''
-      demo: 'https://demo.ai-content.ziontech.ai'
+      website: 'https://performance.ziontech.ai'';
+      demo: 'https://demo.performance.ziontech.ai'';
+      demo: 'https://demo.ai-content.ziontech.ai';
     }
     }
   ];
     {
-          price: 199
+          price: 199;
     {
       id: 'seo-analytics',
       name: 'SEO Analytics Dashboard',
@@ -435,7 +435,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       icon: <Search className='w-8 h-8 text-white' />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500',
-      features: [
+      features: [;
         'Keyword tracking & ranking',
         'Competitor analysis',
         'Backlink monitoring',
@@ -443,7 +443,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Performance reporting',
         'Mobile optimization insights',
       ],
-      useCases: [
+      useCases: [;
         'SEO performance tracking',
         'Competitor research',
         'Keyword strategy development',
@@ -454,7 +454,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       pricing: {
         starter: {
           price: 39,
-          features: [
+          features: [;
             '100 keywords',
             'Basic analysis',
             'Monthly reports',
@@ -464,7 +464,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         professional: {
           price: 89,
-          features: [
+          features: [;
             '500 keywords',
             'Advanced analysis',
             'Weekly reports',
@@ -476,7 +476,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         enterprise: {
           price: 199,
 origin/cursor/automate-test-improve-and-merge-code-2533
-          features: [
+          features: [;
             'Unlimited keywords',
             'Full SEO suite',
             'Daily reports',
@@ -499,7 +499,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       icon: <Shield className='w-8 h-8 text-white' />,
       color: 'bg-gradient-to-br from-red-500 to-orange-600',
       gradient: 'from-red-400 to-orange-500',
-      features: [
+      features: [;
         'Intelligent rate limiting',
         'Traffic pattern analysis',
         'API key management',
@@ -507,7 +507,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Custom rules & policies',
         'Comprehensive analytics',
       ],
-      useCases: [
+      useCases: [;
         'API protection & security',
         'Traffic management',
         'Developer portal management',
@@ -518,7 +518,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       pricing: {
         starter: {
           price: 25,
-          features: [
+          features: [;
             '10 rate limit rules',
             'Basic limiting',
             'API key management',
@@ -528,7 +528,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         professional: {
           price: 79,
-          features: [
+          features: [;
             '50 rate limit rules',
             'Advanced limiting',
             'Unlimited API keys',
@@ -539,7 +539,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         enterprise: {
           price: 199,
-          features: [
+          features: [;
             'Unlimited rules',
             'Enterprise security',
             'Advanced features',
@@ -562,7 +562,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       icon: <Mail className='w-8 h-8 text-white' />,
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
       gradient: 'from-indigo-400 to-purple-500',
-      features: [
+      features: [;
         'Drag & drop email builder',
         'Advanced automation workflows',
         'A/B testing & optimization',
@@ -570,7 +570,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Performance analytics',
         'Template library',
       ],
-      useCases: [
+      useCases: [;
         'Newsletter campaigns',
         'Welcome series automation',
         'Abandoned cart recovery',
@@ -581,7 +581,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       pricing: {
         starter: {
           price: 29,
-          features: [
+          features: [;
             '1,000 subscribers',
             'Basic templates',
             'Simple automation',
@@ -591,7 +591,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         professional: {
           price: 79,
-          features: [
+          features: [;
             '10,000 subscribers',
             'Advanced templates',
             'Advanced automation',
@@ -606,7 +606,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             'Advanced calendar',
             'Enterprise analytics',
             'Dedicated support',
-    },  ];      demo: 'https://demo.social.ziontech.ai'
+    },  ];      demo: 'https://demo.social.ziontech.ai';
     }
   ];
   const marketInsights = []
@@ -644,7 +644,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Link building campaigns','
         'Content optimization',
           price: 199,
-          features: [
+          features: [;
             'Unlimited subscribers',
             'Custom templates',
             'Complex workflows',
@@ -667,7 +667,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       icon: <Share2 className='w-8 h-8 text-white' />,
       color: 'bg-gradient-to-br from-pink-500 to-rose-600',
       gradient: 'from-pink-400 to-rose-500',
-      features: [
+      features: [;
         'Multi-platform scheduling',
         'Content calendar management',
         'Campaign planning tools',
@@ -675,7 +675,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Team collaboration',
         'Auto-posting & optimization',
       ],
-      useCases: [
+      useCases: [;
         'Social media management',
         'Content calendar planning',
         'Campaign coordination',
@@ -687,7 +687,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       pricing: {
         starter: {
           price: 19,
-          features: [
+          features: [;
             '3 social accounts',
             'Basic scheduling',
             'Simple calendar',
@@ -697,7 +697,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         professional: {
           price: 49,
-          features: [
+          features: [;
             '10 social accounts',
             'Advanced scheduling',
             'Content calendar',
@@ -709,7 +709,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         enterprise: {
 
           price: 129,
-          features: [
+          features: [;
 origin/cursor/automate-test-improve-and-merge-code-2533
             'Unlimited accounts',
             'Enterprise scheduling',
@@ -885,11 +885,11 @@ description:
           content='Discover our comprehensive suite of micro SaaS services including AI content generation, performance monitoring, SEO analytics, API management, email marketing, and social media scheduling.'
         />
         <meta
-          property='og:title'
+          property='og:title';
           content='Micro SaaS Services | Zion Tech Group'
         />
         <meta
-          property='og:description'
+          property='og:description';
           content='Professional micro SaaS services for modern businesses. AI-powered solutions with competitive pricing and enterprise-grade features.'
         />
         <meta name='twitter:card' content='summary_large_image' />
@@ -928,7 +928,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               strong demand and proven business models.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {marketInsights.map((insight, index) => (
               <Card
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -951,7 +951,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Our services are positioned competitively in growing markets with strong demand and proven business models.
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {marketInsights.map((insight, index) => (
       {/* Hero Section */}'
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>;'
@@ -1120,7 +1120,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="space-y-16">
             {microSaasServices.map((service, index) => ("
               <div key={service.id} className="bg-gray-900/50 rounded-2xl p-8 border border-gray-800">"
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
                         </h3>;'
                         <p className='text - gray - 400'>{service.description}</p>;
                       </div>;
@@ -1165,7 +1165,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         href={service && service.website}"
                         size="sm""
                         className="bg-cursor-blue hover:bg-blue-600"
-
+;
                                   className='px-2 py-1 bg-gray-700 rounded text-xs text-gray-300'>;
                                   {competitor}
                                 </span>;
@@ -1183,7 +1183,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               We combine professional-grade features with competitive pricing to deliver exceptional value for your business.
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
             <Card className="card-hover border-gradient-blue text-center">"
               <div className="p-6">"
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center">"
@@ -1244,7 +1244,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               deliver exceptional value for your business.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
             <Card className='card-hover border-gradient-blue text-center'>
               <div className='p-6'>
                 <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>
@@ -1309,11 +1309,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Choose the micro SaaS service that fits your business needs and start transforming your operations today.
           </p>"
-          <div className="flex flex-col sm: flex-row gap-6 justify-center">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">;
             <Button"
               href="/contact""
               size="lg""
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
+              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow";
             >
               Get Started;
             </Button>
@@ -1336,11 +1336,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Choose the micro SaaS service that fits your business needs and
             start transforming your operations today.
           </p>
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
             <Button
               href='/contact'
               size='lg'
-              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow'
+              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow';
             >
               Get Started
             </Button>
@@ -1348,7 +1348,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 href='/pricing'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'
+              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl';
             >
               View Pricing
             </Button>

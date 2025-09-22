@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src_backup/components/blog/SocialShareButtons.tsx
-<<<<<<< HEAD:src/components/blog/SocialShareButtons.tsx
+:src_backup/components/blog/SocialShareButtons.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,15 +21,7 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`,
       '_blank'
     )
-=======
-const shareToTwitter = () => {
-=======
-const shareToTwitter = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/blog/SocialShareButtons.tsx
     window.open(
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 
   const shareUrl =
@@ -46,18 +37,11 @@ const shareToTwitter = () => {
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
-<<<<<<< HEAD:src_backup/components/blog/SocialShareButtons.tsx
+:src_backup/components/blog/SocialShareButtons.tsx
 
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
-=======
-'
-import React from 'react';'
-import { Button } from '@/components / ui / button';'
-import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/blog/SocialShareButtons.tsx
 import { toast } from '@/hooks / use - toast';
 interface SocialShareButtonsProps {}
   title: string;
@@ -86,13 +70,8 @@ function SocialShareButtons() {}
       '_blank');
 
   }
-<<<<<<< HEAD:src_backup/components/blog/SocialShareButtons.tsx
+:src_backup/components/blog/SocialShareButtons.tsx
 <<<<<<< HEAD:src/components/blog/SocialShareButtons.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/blog/SocialShareButtons.tsx
   const copy_link = () =>: any {
     // Check condition
 if (return) {
@@ -145,17 +124,11 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
   const copyLink = () => {;'
     if (typeof window === 'undefined') return;
     navigator && navigator.clipboard;
-<<<<<<< HEAD:src_backup/components/blog/SocialShareButtons.tsx
+:src_backup/components/blog/SocialShareButtons.tsx
       .writeText(window && window.location.href);
       .then(() => toast && toast.success('Link copied to clipboard'));
       .catch(() => toast && toast.error('Failed to copy link'))
 };
-=======
-      .writeText(window && window.location.href);'
-      .then(() => toast && toast.success('Link copied to clipboard'));'
-      .catch(() => toast && toast.error('Failed to copy link'));
-  };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/blog/SocialShareButtons.tsx
   const buttons = [;
     {;'
       icon: <Twitter className='h-4 w-4' />,;'
@@ -179,12 +152,8 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     },;
   ];
 
-<<<<<<< HEAD:src_backup/components/blog/SocialShareButtons.tsx
+:src_backup/components/blog/SocialShareButtons.tsx
   return (
-=======
-
-  return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/blog/SocialShareButtons.tsx
     <div className='mt-12 flex flex-wrap gap-2'>;
       {buttons && buttons.map(btn => (;
         <Button;
@@ -197,21 +166,7 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
         </Button>;
       ))}
 
-<<<<<<< HEAD:src/components/blog/SocialShareButtons.tsx
-=======
-    </div>;
-  );
-}
-
-}
-
-}
-
-
-<<<<<<< HEAD:src_backup/components/blog/SocialShareButtons.tsx
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/blog/SocialShareButtons.tsx
+:src/components/blog/SocialShareButtons.tsx
       icon: <Twitter className='h - 4 w - 4' />,
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -253,17 +208,11 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 }
 }
 
-<<<<<<< HEAD:src/components/blog/SocialShareButtons.tsx
-<<<<<<< HEAD
+:src/components/blog/SocialShareButtons.tsx
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/blog/SocialShareButtons.tsx
   },
@@ -278,23 +227,12 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 
   const copyLink = () => {'
     if (typeof window === 'undefined') return,
-<<<<<<< HEAD:src_backup/components/blog/SocialShareButtons.tsx
-<<<<<<< HEAD:src/components/blog/SocialShareButtons.tsx
+:src_backup/components/blog/SocialShareButtons.tsx
 <<<<<<< HEAD
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
-=======
-
-
-    navigator.clipboard;
-      .writeText(window.location.href)'
-      .then(() => toast.success('Link copied to clipboard'))'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/blog/SocialShareButtons.tsx
       .catch(() => toast.error('Failed to copy link'))
-<<<<<<< HEAD
-  },
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+},
 
   const buttons = ['
     { icon: <Twitter className="h-4 w-4" />, label: 'Twitter', onClick: shareToTwitter },'"
@@ -345,26 +283,9 @@ export function SocialShareButtons() { return null; }`
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-
-    navigator.clipboard
-      .writeText(window.location.href)
-      .then(() => toast.success('Link copied to clipboard'))
-      .catch(() => toast.error('Failed to copy link'))
-
-
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/blog/SocialShareButtons.tsx
     </div>;
-<<<<<<< HEAD
-  );
-<<<<<<< HEAD
-=======
-=======
-  )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+);
 };
 };
 
@@ -426,7 +347,7 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
           <span>{btn.label}</span>;
         </Button>;
       ))}
-<<<<<<< HEAD:src/components/blog/SocialShareButtons.tsx
+:src/components/blog/SocialShareButtons.tsx
 <<<<<<< HEAD
     </div>;
   );
@@ -435,23 +356,13 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
 <<<<<<< HEAD:src_backup/components/blog/SocialShareButtons.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/blog/SocialShareButtons.tsx
 ;
 
     </div>
   );
-<<<<<<< HEAD:src/components/blog/SocialShareButtons.tsx
+:src/components/blog/SocialShareButtons.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/blog/SocialShareButtons.tsx
 =======
 ;'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/blog/SocialShareButtons.tsx

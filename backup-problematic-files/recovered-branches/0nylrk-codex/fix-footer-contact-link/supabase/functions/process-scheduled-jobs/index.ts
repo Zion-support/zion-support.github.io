@@ -237,58 +237,9 @@ async function processContentGeneration(supabase, contentType) {;
   }
 }}
 });
-<<<<<<< HEAD
-
-      {
+{
         method: &quot;POST&quot;,
         headers: {
-
-=======
-async function processOnboardingReminder (supabase, userId, milestone, role) {
-  try {
-    // // // console.log(`Starting scheduled content generation for ${contentType}`),    
-    // Call the content generation function
-    const response = await fetch(
-      `${Deno.env.get(&quot;SUPABASE_URL&quot;)}/functions/v1/generate-content`,
-      {
-        method: &quot;POST&quot;,
-        headers: {
-          &quot;Content-Type&quot;: &quot;application/json&quot;,
-          &quot;Authorization&quot;: `Bearer ${Deno.env.get(&quot;SUPABASE_ANON_KEY&quot;)}`},
-        body: JSON.stringify({ 
-          contentType,
-          autoPublish: contentType === 'blog' ? true : false,
-          includeImage: contentType === 'blog' ? true : false
-        })}
-    ),
-
-    if (!response.ok) {
-      const errorData = await response.json(),
-      throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`)
-    }
-
-    const contentData = await response.json(),
-    // // // console.log(`Successfully generated ${contentType} content`),  } catch (error) {}
-}
-
-async function processContentGeneration(_supabase, _contentType) {_try {
-    
-    
-    // Call the content generation function
-    const _response = await fetch(_`${Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`,
-      {_method: "POST", _headers: {
-          "Content-Type": "application/json", _"Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
-        body: JSON.stringify({_contentType, _autoPublish: contentType === 'blog' ? true : false, _includeImage: contentType === 'blog' ? true : false})}
-    );
-
-    if (!response.ok) {_const _errorData = await response.json();
-      throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
-    }
-
-    const _contentData = await response.json();
-    
-    
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // If it's a newsletter, send a test email to the admin
     if (contentType === 'newsletter') {_// Get admin email from profiles
       const { data: adminProfiles} = await supabase
@@ -296,9 +247,7 @@ async function processContentGeneration(_supabase, _contentType) {_try {
         .select('email')
         .eq('roleadmin')
         .limit(1),
-<<<<<<< HEAD
-
-      if (adminProfiles && adminProfiles.length > 0) {
+if (adminProfiles && adminProfiles.length > 0) {
         const adminEmail = adminProfiles[0].email,
 
         // Send test newsletter to admin
@@ -307,57 +256,16 @@ async function processContentGeneration(_supabase, _contentType) {_try {
           {
             method: &quot;POST&quot;,
             headers: {
-
-=======
-      
-      if (adminProfiles && adminProfiles.length > 0) {
-        const adminEmail = adminProfiles[0].email,
-        
-        // Send test newsletter to admin
-        await fetch(
-          `${Deno.env.get(&quot;SUPABASE_URL&quot;)}/functions/v1/send-newsletter`,
-          {
-            method: &quot;POST&quot;,
-            headers: {
-              &quot;Content-Type&quot;: &quot;application/json&quot;,
-              &quot;Authorization&quot;: `Bearer ${Deno.env.get(&quot;SUPABASE_ANON_KEY&quot;)}`},
-            body: JSON.stringify({
-              subject: contentData.subject,
-              previewText: contentData.previewText,
-              body: contentData.body,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               testMode: true,
               testEmail: adminEmail
             })}
         ),
-<<<<<<< HEAD
-
-        // Create notification for admin
+// Create notification for admin
         await supabase.from('notifications').insert({
           user_id: null, // System notification visible to admins
-
-=======
-        
-        // Create notification for admin
-        await supabase.from('notifications').insert({
-          user_id: null, // System notification visible to admins
-          title: &quot;Newsletter Draft Ready&quot;,
-          message: &quot;AI-generated newsletter draft has been sent to your email for review.&quot;,
-          type: &quot;system&quot;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           read: false
         })
       }
     }
-<<<<<<< HEAD
-
-    return contentData
+return contentData
   } catch (error) {
-
-=======
-    
-    return contentData
-  } catch (error) {
-    console.error(`Error processing ${contentType} generation:`, error)
-  }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

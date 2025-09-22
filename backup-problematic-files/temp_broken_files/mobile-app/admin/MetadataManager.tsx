@@ -92,4 +92,3 @@ export const MetadataManager:React.FC = () => {;
           </div>;
         </TabsContent>;
       </Tabs>;
-

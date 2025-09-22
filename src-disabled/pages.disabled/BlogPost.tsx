@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/pages/BlogPost.tsx
+:src_backup/pages/BlogPost.tsx
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -46,14 +46,6 @@ import { Separator } from "@/components/ui/separator",
 import ReactMarkdown from 'react-markdown',
 import {logErrorToProduction} from '@/utils/productionLogger',
 // Importing the sample blog posts - in a real app, you would fetch this from an API
-=======
-
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog",;
-import { Separator } from "@/components/ui/separator";
-import ReactMarkdown from 'react-markdown';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/BlogPost.tsx
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
@@ -68,7 +60,7 @@ default:
     }
   };
 
-<<<<<<< HEAD:src_backup/pages/BlogPost.tsx
+:src_backup/pages/BlogPost.tsx
   const articleLd = {
     '@context': 'https://schema.org'
     '@type': 'BlogPosting'
@@ -83,9 +75,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/BlogPost.tsx
   return (
     <>
       <SEO
@@ -265,7 +254,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
                 >
 
-
                   #{tag}
                 </span>;
               ))}
@@ -273,7 +261,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
 
             <Separator className='my-12 bg-zion-blue-light' />;
-
 
             {/* Related articles */}
             {relatedPosts && relatedPosts.length > 0 && (;
@@ -464,33 +451,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </>
-<<<<<<< HEAD:src_backup/pages/BlogPost.tsx
-=======
-  )
-                <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
-              </p>;
-            </div>;
-            {/* Navigation */}
-            <div className="flex justify-between items-center mt-12">;
-              <Button;
-                variant="outline";
-                className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
-                asChild;
-              >;
-                <Link href="/blog">;
-                  <ChevronLeft className="mr-2 h-4 w-4" />;
-                  All Articles;
-                </Link>;
-              </Button>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;
-  );
-}
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/BlogPost.tsx
+:src_backup/pages/BlogPost.tsx
   );
 
 };

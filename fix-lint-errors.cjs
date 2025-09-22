@@ -1,46 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 [\s\S]*?
 
-    
     // Clean up any remaining conflict markers
     content = content.replace(/^.*$/gm, "");
     content = content.replace(/^
 ursor/fix-lint-push-and-merge-to-main-28da
-    
-=======
-
-
-    // Clean up any remaining conflict markers
-    content = content.replace(/^.*$/gm, "");
-    content = content.replace(/^
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     // Remove empty lines that might be left behind
     content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
-    
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     fs.writeFileSync(filePath, content);
     return true} catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false}
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 // Function to remove unused imports
 function removeUnusedImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, "utf8");
-    
+
     // Remove unused imports from lucide-react
     const lines = content.split('\n');
     const newLines = [];
     const usedIcons = new Set();
-    
+
     // Find all used icons in the file
     for (const line of lines) {
       const iconMatches = line.match(/(?:<|{)([A-Z][a-zA-Z0-9]*)(?:\s|>|})/g);
@@ -51,18 +32,18 @@ function removeUnusedImports(filePath) {
             usedIcons.add(iconName)}
         })}
     }
-    
+
     // Process import lines
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      
+
       // Check if this is an import line from lucide-react
       if (line.includes('from "lucide-react"') || line.includes("from 'lucide-react'")) {
         const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*["']lucide-react["']/);
         if (importMatch) {
           const imports = importMatch[1].split(',').map(imp => imp.trim());
           const usedImports = imports.filter(imp => usedIcons.has(imp));
-          
+
           if (usedImports.length === 0) {
             // Remove the entire import line
             continue} else if (usedImports.length < imports.length) {
@@ -71,11 +52,11 @@ function removeUnusedImports(filePath) {
             continue}
         }
       }
-      
+
       newLines.push(line)}
-    
+
     fs.writeFileSync(filePath, newLines.join('\n'));
-    
+
     return true} catch (error) {
     console.error(`❌ Error cleaning imports in ${filePath}:`, error.message);
     return false}
@@ -84,14 +65,14 @@ function removeUnusedImports(filePath) {
 // Function to find all files with issues
 function findFilesWithIssues(dir) {
   const files = [];
-  
+
   function searchDirectory(currentDir) {
     try {
       const items = fs.readdirSync(currentDir);
       for (const item of items) {
         const fullPath = path.join(currentDir, item);
         const stat = fs.statSync(fullPath);
-        
+
         if (stat.isDirectory() && !item.startsWith('.') && item !== "node_modules") {
           searchDirectory(fullPath)} else if (stat.isFile() && (
           item.endsWith(".tsx") || 
@@ -112,47 +93,41 @@ function findFilesWithIssues(dir) {
       // Skip directories that can't be read
     }
   }
-  
+
   searchDirectory(dir);
   return files}
 
 // Main execution
 try {
   const conflictedFiles = findFilesWithIssues(".");
-  
+
   if (conflictedFiles.length === 0) {
     } else {
-    
+
     conflictedFiles.forEach(file => );
-    
+
     let resolvedCount = 0;
     for (const file of conflictedFiles) {
       if (resolveMergeConflicts(file)) {
         resolvedCount++}
     }
-    
+
     }
-  
+
   // Try to run lint fix
-  
+
   try {
     execSync("npm run "lint": fix", { "stdio": "inherit" });
     } catch (error) {
     }
-  
+
 } catch (error) {
   console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}
 
 ursor/fix-lint-push-and-merge-to-main-28da
 ursor/automate-test-improve-and-merge-code-59d5
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")

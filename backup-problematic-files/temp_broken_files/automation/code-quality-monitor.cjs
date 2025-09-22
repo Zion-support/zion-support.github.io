@@ -1,132 +1,22 @@
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-
-
-  
   const complexFiles = [{ "file": 'components/PerformanceMonitor.tsx', "complexity": 12 },
     { "file": 'scripts/performance-monitor.js', "complexity": 12 },
   ];
   if (complexFiles.length > 0) {
-    
+
     complexFiles.forEach(f =>
       );
     return { "passed": false, "count": complexFiles.length, "details": complexFiles };
   }
-  
+
   return { "passed": true, "count": 0 };
 }
-
-=======
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-class CodeQualityMonitor {
-  constructor() {
-    this.metrics = {
-      complexity: 0,
-      maintainability: 0,
-      testCoverage: 0,
-      performance: 0,
-      lastUpdated: new Date().toISOString()
-    };
-    this.logFile = path.join(__dirname, "logs", "code-quality.log");
-  }
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
-    fs.appendFileSync(this.logFile, logMessage);
-  }
-  async analyzeCodeQuality() {
-    try {
-      this.log("Starting code quality analysis...");
-      this.metrics.complexity = this.calculateComplexity();
-      this.metrics.maintainability = this.calculateMaintainability();
-      this.metrics.testCoverage = this.calculateTestCoverage();
-      this.metrics.performance = this.calculatePerformance();
-      this.metrics.lastUpdated = new Date().toISOString();
-      this.saveMetrics();
-      this.log("Code quality analysis completed successfully");
-      return this.metrics;
-    } catch (error) {
-      this.log(`Code quality analysis failed: ${error.message}`, "ERROR");
-      return null;
-    }
-  }
-  calculateComplexity() {
-    try {
-      const files = this.getTypeScriptFiles();
-      let totalComplexity = 0;
-      files.forEach(file => {
-        const content = fs.readFileSync(file, "utf8");
-        const lines = content.split("\n");
-        totalComplexity += lines.length * 0.1; // Simplified complexity metric
-      });
-      return Math.min(Math.floor(totalComplexity), 100);
-    } catch (error) {
-      return Math.floor(Math.random() * 10) + 1;
-    }
-  }
-  calculateMaintainability() {
-    try {
-      const files = this.getTypeScriptFiles();
-      const totalFiles = files.length;
-      const avgFileSize = files.reduce((acc, file) => {
-        const stats = fs.statSync(file);
-        return acc + stats.size;
-      }, 0) / totalFiles;
-      // Lower file size = higher maintainability
-      return Math.max(50, 100 - Math.floor(avgFileSize / 1000));
-    } catch (error) {
-      return Math.floor(Math.random() * 100) + 50;
-    }
-  }
-  calculateTestCoverage() {
-    // Placeholder for test coverage calculation
-    return Math.floor(Math.random() * 100);
-  }
-  calculatePerformance() {
-    // Placeholder for performance calculation
-    return Math.floor(Math.random() * 100) + 70;
-  }
-  getTypeScriptFiles() {
-    const projectRoot = path.resolve(__dirname, "..");
-    const files = [];
-    const walkDir = (dir) => {
-      const items = fs.readdirSync(dir);
-      items.forEach(item => {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
-          walkDir(fullPath);
-        } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {
-          files.push(fullPath);
-        }
-      });
-    };
-    walkDir(projectRoot);
-    return files;
-  }
-  saveMetrics() {
-    const metricsFile = path.join(__dirname, "logs", "code-quality-metrics.json");
-    fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
-  }
-}
-
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
 async function checkCodeDuplication() {
-  
-  const duplications = [{  if (duplications.length > 0) {}
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-async function checkCodeDuplication() {
-  
+
   const duplications = [{
 =======
 async function checkCodeComplexity() {}
@@ -155,7 +45,7 @@ async function checkCodeDuplication() {}
     { "file": 'pages/about.tsx', "line": 127, "duplicateOf": 'pages/about.tsx' },
     { "file": 'pages/ai-services.tsx', "line": 7, "duplicateOf": 'pages/about.tsx' },
   ];
-    
+
     duplications
       .slice(0, 5)
       .forEach(d =>
@@ -163,22 +53,15 @@ async function checkCodeDuplication() {}
       );
     return { "passed": false, "count": duplications.length, "details": duplications };
   }
-  
+
   return { "passed": true, "count": 0 };
 }
 
 async function checkCodeStyle() {
-  
+
   try {
     execSync('npm run "lint": check', { "stdio": 'pipe' });
-    
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 =======
@@ -233,16 +116,8 @@ async function checkDocumentationCoverage() {
   if (docCoverage < 50) {
     return { "passed": false, "error": 'Low documentation coverage' };
   }
-  
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+
+:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 =======
@@ -294,25 +169,9 @@ async function runCodeQualityMonitor() {}
   const endTime = Date.now();
   const duration = endTime - startTime;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    process.exit(1);
+process.exit(1);
   } else {
-    
-=======
-<<<<<<< HEAD
-    process.exit(1);
-  } else {
-    
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-    process.exit(1);
-  } else {
-    
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality-monitor.cjs
   console.log()
@@ -335,20 +194,13 @@ async function runCodeQualityMonitor() {}
   };
 };
 runCodeQualityMonitor();
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality-monitor.cjs
+:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
     console.log("Metrics:", metrics);
   }
 });
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality-monitor.cjs

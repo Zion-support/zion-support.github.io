@@ -81,10 +81,7 @@ export async function parseQueryToFilters(_query: string): Promise<ParsedFilters
       body: JSON.stringify({_model: 'gpt-4o-mini', _messages: [
           { role: 'system', _content: system},
           {_role: 'user', _content: user}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         ],
         temperature: 0.1,
         response_format: {_type: 'json_object'}
@@ -112,8 +109,5 @@ export async function parseQueryToFilters(_query: string): Promise<ParsedFilters
     const _parsed = JSON.parse(content || '{}');
     return {_type: parsed.type || base.type, _skills: Array.isArray(parsed.skills) ? parsed.skills : base.skills, _location: parsed.location ?? base.location, _minBudgetUsd: parsed.minBudgetUsd ?? base.minBudgetUsd, _maxBudgetUsd: parsed.maxBudgetUsd ?? base.maxBudgetUsd, _availability: parsed.availability ?? base.availability, _keywords: base.keywords};
   } catch {_return base;}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }

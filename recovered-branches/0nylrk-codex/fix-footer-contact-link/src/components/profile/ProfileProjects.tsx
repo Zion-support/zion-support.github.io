@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {Card, CardContent} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -15,22 +13,7 @@ import { FileText } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { FileText } from "lucide-react",
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ProfileProject } from "@/types/profile";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { FileText } from "lucide-react";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ProfileProjectsProps {
-=======
-import { Card, CardContent } from "@/components/ui/card";"
-import { Badge } from "@/components/ui/badge";"
-import { ProfileProject } from "@/types/profile";"
-import { AspectRatio } from "@/components/ui/aspect-ratio";"
-import { FileText } from "lucide-react";
-interface ProfileProjectsProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   projects: ProfileProject[];
 }
 
@@ -64,7 +47,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
     <div className=\"bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8\" />
       <h3 className=\"text-xl font-bold text-white mb-4\" />Projects</h3>
 
-
       <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4\" />
         {projects.map((project) => (}
           <Card;}
@@ -85,19 +67,11 @@ src={project.imageUrl}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>
             )}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-"
-            <CardContent className="p-4">"
-              <h4 className="text-white font-medium mb-2">{project.title}</h4>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">
                 {project.description}
               </p>
@@ -111,8 +85,6 @@ src={project.imageUrl}
                       className="text-xs border-zion-slate-dark text-zion-slate-light"
                     >
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Card, CardContent } from "@/components/ui/card",;
@@ -151,18 +123,10 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
               {project.tags && project.tags.length > 0 && (;
                 <div className="flex flex-wrap gap-1 mb-2">;
                   {project.tags.map((tag, i) => (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
+<Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">
-=======
-                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;              <p className="text-zion-slate text-sm mb-3 line-clamp-2">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;              <p className="text-zion-slate text-sm mb-3 line-clamp-2">
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -186,7 +150,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                 {project.description}
               </p>
 
-
               {project.tags && project.tags.length > 0 && (
                 <div className=\"flex flex-wrap gap-1 mb-2\" />
                   {project.tags.map((tag, i) => (}
@@ -202,14 +165,8 @@ key={i}
                   ))}
                 </div>
               )}
-<<<<<<< HEAD
 "
               <div className="text-xs text-zion-slate-light mt-2">
-=======
-
-
-              <div className=\"text-xs text-zion-slate-light mt-2\" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {project.date}
               </div>
             </CardContent>
@@ -220,27 +177,12 @@ key={i}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
   )
-=======
-  );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
-=======
-  )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
-<<<<<<< HEAD
-=======
 
-  )
-}
-=======
-  )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -2,14 +2,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -20,7 +12,6 @@ import { Cloud, Server, Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from 'react';
@@ -28,22 +19,6 @@ import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-import * as React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-=======
-import * as React from 'react';'
-import Head from 'next/head';'
-import Link from 'next/link';'
-import { motion } from 'framer-motion';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -85,18 +60,9 @@ const cloudServices = []
   }
 ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function CloudServicesPage() {
 
 export default function CloudServicesPage() {
-=======
-ursor/fix-syntax-push-and-merge-to-main-40de
-export default function CloudServicesPage() {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-export default function CloudServicesPage() {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const cloudServices = [;
     {}
       title: "Cloud Migration","
@@ -130,42 +96,26 @@ export default function CloudServicesPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
-<<<<<<< HEAD
+return (
+    <Layout
+      title="Cloud Solutions - Zion Tech Group"
+      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
+  return (
+    <Layout
+      title="Cloud Solutions - Zion Tech Group"
+      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
 
-  return (
-    <Layout
-      title="Cloud Solutions - Zion Tech Group"
-      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
-  return (
-    <Layout
-      title="Cloud Solutions - Zion Tech Group"
-      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
-  
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     >
-=======
-export default function CloudServicesPage() {
-=======
-export default function CloudServicesPage() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
       <Head>
         <title>Cloud Services - Zion Tech Group</title>"
         <meta name="description" content="Comprehensive cloud services including migration, infrastructure, database management, and security solutions." />
       </Head>
-<<<<<<< HEAD
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="min-h-screen bg-gray-50">
-=======
-import React from 'react';
-import Layout from "../../components/Layout";";
-import { motion } from 'framer-motion';
-import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-    >      <div className="min-h-screen bg-gray-50">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
           <div className="container mx-auto px-4">";
@@ -173,9 +123,7 @@ import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'l
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-              className="text-center""
+className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 Cloud Solutions;
@@ -187,12 +135,6 @@ import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'l
             </motion.div>;
           </div>;
         </section>;
-
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -259,22 +201,7 @@ export default function CloudServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-              className="text-center""
-            >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
-                Cloud Solutions;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-                Transform your business with our comprehensive cloud solutions. 
-                From migration to optimization, we help you leverage the power of the cloud.,
-              </p>;
-            </motion.div>;
-          </div>;
-        </section>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -307,10 +234,6 @@ export default function CloudServicesPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -347,57 +270,13 @@ export default function CloudServicesPage() {
                 );
               })}
             </div>,
-<<<<<<< HEAD
-          </div>;
+</div>;
         </section>;
-=======
-
-        {/* Services Grid */}"
-        <section className="py-16 px-4">"
-          <div className="max-w-7xl mx-auto">"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {cloudServices.map((service, index) => (
-                <motion.div;
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}"
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
-                >"
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">"
-                    <service.icon className="w-6 h-6 text-blue-600" />
-                  </div>"
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>"
-                  <p className="text-gray-600 mb-4">{service.description}</p>"
-                  <div className="space-y-2 mb-4">
-                    {service.features.map((feature, featureIndex) => ("
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>"
-                  <div className="text-lg font-semibold text-blue-600 mb-4">{service.pricing}</div>
-                  <Link"
-                    href="/contact""
-                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    Get Quote"
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </motion.div>
-              ))}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
-<<<<<<< HEAD
-
-=======
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -439,13 +318,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="container mx-auto px-4 text-center">";
 
             <h2 className="text-3xl md: text-4xl font-bold mb-6">", Ready to Move to the Cloud?,;
@@ -466,22 +341,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
-    </Layout>;
-=======
-=======
-          <div className="container mx-auto px-4 text-center">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+</Layout>;
 
             <h2 className="text-3xl md: text-4xl font-bold mb-6">", Ready to Move to the Cloud?,;
 
-<<<<<<< HEAD
-        {/* CTA Section */}
+{/* CTA Section */}
         <section className="py-20 bg-blue-600">
-=======
-        {/* CTA Section */}"
-        <section className="py-20 bg-blue-600">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -516,24 +381,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     </>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
-<<<<<<< HEAD
-=======
-            </h2>;
-            <p className="text-xl mb-8 max-w-2xl mx-auto">";
-              Let our cloud experts help you transform your infrastructure and unlock new possibilities.;
-            </p>;
-              Get Started Today;
-              <ArrowRight className="w-5 h-5 ml-2" />";
-            </motion && motion.a>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;  );
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    </Layout>;  );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 =======
 }
@@ -765,7 +612,6 @@ className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 
-
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
               Cloud Infrastructure Services;
@@ -779,7 +625,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services && services.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.title}
-
 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -894,8 +739,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
 
-<<<<<<< HEAD
-      <EnhancedFooter />;
+<EnhancedFooter />;
     </div>;
   ),;
 
@@ -917,9 +761,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-}'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">

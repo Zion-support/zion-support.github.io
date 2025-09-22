@@ -13,7 +13,7 @@ const defaultTargets = null;
         onChange={(e) => setText(e.target.value)}
       />
       <div className="text-sm text-gray-500">{loading ? 'Translating…' : error ? `Error: ${error}` : 'Ready'}</div>
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 gap-4">;
         {targets.map((lng) => (
           <div key={lng} className="border rounded p-3">
             <div className="text-xs uppercase opacity-70 mb-2">{lng}</div>

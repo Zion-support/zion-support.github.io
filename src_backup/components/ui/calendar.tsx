@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/ui/calendar.tsx
-<<<<<<< HEAD
+:src/components/ui/calendar.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import * as React from "react",
@@ -116,11 +115,6 @@ Calendar.displayName = "Calendar",
 export { Calendar },
 Calendar.displayName = "Calendar";
 export { Calendar };
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/calendar.tsx
 class_name, class_names,  showOutsideDays = true, ...props;
 }: CalendarProps) {
 }/>);
@@ -129,10 +123,7 @@ class_name, class_names,  showOutsideDays = true, ...props;
 }/>) ;
 }";
 
-<<<<<<< HEAD:src/components/ui/calendar.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+:src/components/ui/calendar.tsx
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/calendar.tsx
@@ -142,18 +133,11 @@ import { DayPicker } from "react-day-picker",
 import { cn } from "@/lib/utils",
 import { buttonVariants } from "@/components/ui/button",
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-<<<<<<< HEAD:src/components/ui/calendar.tsx
+:src/components/ui/calendar.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-export type CalendarProps = React.ComponentProps<typeof DayPicker>,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/calendar.tsx
@@ -178,9 +162,6 @@ export { Calendar }
 }: CalendarProps) {
 }/>)
 }"
-<<<<<<< HEAD:src/components/ui/calendar.tsx
+:src/components/ui/calendar.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/calendar.tsx

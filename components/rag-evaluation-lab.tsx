@@ -20,7 +20,7 @@ export default function RAGEvaluationLabPage() {
         title='RAG Evaluation Lab''
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
               {'
-                title: 'Grounding & Faithfulness''
+                title: 'Grounding & Faithfulness'';
                 desc: 'Measure factual consistency, citation quality, and hallucination rate.'
               }
               {}
@@ -36,8 +36,8 @@ export default function RAGEvaluationLabPage() {
                 </p>;
               </div>;
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>"
-						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>"
-						<span className="text-gray-400">Call: +1 302 464 0950</span>
+						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>";
+						<span className="text-gray-400">Call: +1 302 464 0950</span>;
 					</div>
 				</div>
 			</section>

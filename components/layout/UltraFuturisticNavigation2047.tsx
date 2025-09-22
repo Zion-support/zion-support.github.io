@@ -375,17 +375,17 @@ description?: string;
 const navigationItems: NavigationItem[] = []
   {}
 '
-    name: 'Home & Core''
-    href: '/''
-    icon: <Home className='w-5 h-5' />,    description: 'Main pages and core information''
-    category: 'core''
-    color: 'from-emerald-500 to-cyan-500'
-    children: []
+    name: 'Home & Core'';
+    href: '/'';
+    icon: <Home className='w-5 h-5' />,    description: 'Main pages and core information'';
+    category: 'core'';
+    color: 'from-emerald-500 to-cyan-500';
+    children: [];
       {    icon: <Home className="w-5 h-5" />'
-    description: 'Main pages and core information''
-    category: 'core''
-    color: 'from-emerald-500 to-cyan-500'
-    children: []
+    description: 'Main pages and core information'';
+    category: 'core'';
+    color: 'from-emerald-500 to-cyan-500';
+    children: [];
       {}
 }
 const navigation_items: NavigationItem[] = [;
@@ -438,23 +438,23 @@ const navigation_items: NavigationItem[] = [;
     icon: <Rocket className='w-5 h-5' />,    description: 'Cutting-edge technology solutions','
     category: 'solutions','
     color: 'from-blue-500 to-cyan-500',
-    children: []
+    children: [];
       {}
 '
     description: 'Cutting-edge technology solutions','
     category: 'solutions','
     color: 'from-blue-500 to-cyan-500',
-    children: []
+    children: [];
 '
     description: 'Knowledge base and insights','
     category: 'resources','
     color: 'from-orange-500 to-red-500',
-    children: []
+    children: [];
 '
     description: 'Company information and support','
     category: 'company','
     color: 'from-gray-500 to-slate-500',
-    children: []
+    children: [];
       {'
         href: '/about','
         description: 'Our story and mission','
@@ -484,7 +484,7 @@ const navigation_items: NavigationItem[] = [;
       },
     ],"
   },];        icon: <Shield className="w-4 h-4" />,'
-        color: 'from-red-500 to-pink-500''
+        color: 'from-red-500 to-pink-500'';
     name: 'AI & Technology Services','
     href: '/services','
     icon: <Brain className='w - 5 h - 5' />,    description: 'Advanced AI and technology solutions',        name: 'Home','
@@ -545,7 +545,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
   return ('
     <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>'
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>';
         <div className='flex justify-between items-center h-16'>
           {/* Logo */}'
           <div className='flex-shrink-0'>'
@@ -579,12 +579,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div key={item && item.name} className='relative group'>;
                 <button
 
-<div className='hidden lg:flex lg:items-center lg:space-x-8'>
+<div className='hidden lg:flex lg:items-center lg:space-x-8'>;
             {navigationItems.map(item => (
               <div key={item.name} className='relative group'>
                 <button
                   onClick={() => handleDropdownToggle(item.name)}
-                  className='flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200'
+                  className='flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200';
                 >
                   {item.icon}
                   <span>{item.name}</span>
@@ -640,20 +640,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Contact Info & CTA */}'
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>;'
             <div className='flex items-center space-x-4 text-sm text-gray-400'>;
-<div className='hidden lg:flex lg:items-center lg:space-x-4'>
+<div className='hidden lg:flex lg:items-center lg:space-x-4'>;
             <div className='flex items-center space-x-4 text-sm text-gray-400'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <a
 
                 href={`tel:${contactInfo.mobile}`}
-                className='flex items-center space-x-1 hover:text-white transition-colors'
+                className='flex items-center space-x-1 hover:text-white transition-colors';
               >'
                 <Phone className='w-4 h-4' />                <span>{contactInfo.mobile}</span>
               </a>
             </div>"
-            <Link          <div className="hidden lg:flex lg:items-center lg:space-x-4">"
+            <Link          <div className="hidden lg:flex lg:items-center lg:space-x-4">";
             <div className="flex items-center space-x-4 text-sm text-gray-400">"`
-              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">"
+              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">";
                 <Phone className="w-4 h-4" />
 
               </a>
@@ -666,7 +666,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Link"
               href="/contact"
 "
-              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
+              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200";
             >
               Get Started"
               <ArrowRight className="ml-2 w-4 h-4" />'
@@ -680,22 +680,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <Link
 href='/contact'
-              className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'
+              className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200';
             >
               Get Started
               <ArrowRight className='ml-2 w-4 h-4' />
             </Link>
           </div>
           {/* Mobile menu button */}
-<div className='lg:hidden'>
+<div className='lg:hidden'>;
             <button
               onClick={toggleMenu}
-              className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'
+              className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white';
             >
               <span className='sr-only'>Open main menu</span>
               {isOpen ? (
                 <X className='block h-6 w-6' />
-              ) : (
+              ) : (;
                 <Menu className='block h-6 w-6' />
 origin/cursor/automate-test-improve-and-merge-code-2533
               )}
@@ -717,7 +717,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             exit={{ opacity: 0, height: 0 }}
 
             transition={{ duration: 0.3 }}
-className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50'
+className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50';
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <div className='px-2 pt-2 pb-3 space-y-1'>
@@ -739,7 +739,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name}>;
             transition={{ duration: 0.3 }}"
-            className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50"
+            className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50";
           >"
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigationItems.map((item) => (
@@ -781,7 +781,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <Link;
                             key={child.name}
                             href={child.href}"
-                            className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200"
+                            className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200";
                         ))}
                       </motion && motion.div>;
                     )}
@@ -799,7 +799,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                   <Link'
                     href='/contact''
-                    className='w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'
+                    className='w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200';
                     onClick={closeMenu}>;
                     Get Started;'
                     <ArrowRight className='ml-2 w-4 h-4' />                  </Link>              {/* Mobile Contact Info */}"
@@ -807,13 +807,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="px-3 py-2 text-sm text-gray-400">"
                   <div className="flex items-center space-x-2 mb-2">"
                     <Phone className="w-4 h-4" />"`
-                    <a href={`tel:${contactInfo.mobile}`} className="hover:text-white transition-colors">
+                    <a href={`tel:${contactInfo.mobile}`} className="hover:text-white transition-colors">;
                       {contactInfo.mobile}
                     </a>
                   </div>"
                   <div className="flex items-center space-x-2 mb-2">"
                     <Mail className="w-4 h-4" />"`
-                    <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">
+                    <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">;
                       {contactInfo.email}
                     </a>
                   </div>"
@@ -848,7 +848,7 @@ className='ml-4 mt-2 space-y-1'
                           <Link
                             key={child.name}
                             href={child.href}
-                            className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'
+                            className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200';
                             onClick={closeMenu}
 origin/cursor/automate-test-improve-and-merge-code-2533
                           >
@@ -867,7 +867,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Phone className='w-4 h-4' />
                     <a;`
                       href={`tel:${contactInfo.mobile}`}'
-                      className='hover:text-white transition-colors'
+                      className='hover:text-white transition-colors';
                     >
                       {contactInfo.mobile}
                     </a>
@@ -876,7 +876,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Mail className='w-4 h-4' />
                     <a;`
                       href={`mailto:${contactInfo.email}`}'
-                      className='hover:text-white transition-colors'
+                      className='hover:text-white transition-colors';
                     >
                       {contactInfo.email}
                     </a>
@@ -890,7 +890,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Link;
                   <Link"
                     href="/contact""
-                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
+                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200";
                   </Link>;
                 </div>;
               </div>;
@@ -914,7 +914,7 @@ export default UltraFuturisticNavigation2047;
 
 export default UltraFuturisticNavigation2047;
                     href='/contact'
-                    className='w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'
+                    className='w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200';
                     onClick={closeMenu}
                   >
                     Get Started

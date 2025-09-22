@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
@@ -634,9 +632,6 @@ runContinuous().catch(error => {
   console.error("Failed to start enhanced error fixer:", error);
   process.exit(1);
 });
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -888,15 +883,4 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
   console.error(" Failed to start enhanced error "fixer": ")
-<<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-  console.error(" Failed to start enhanced error "fixer": ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-// Get automation interval from environment variable ("default")"
-  console.log(` Running enhanced error fixer at ${new Date().toISOString()}`;
-console.log(` Starting enhanced error fixer automation...``)"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

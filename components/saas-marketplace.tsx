@@ -56,7 +56,7 @@ import { Zap;
  } from 'lucide-react';
 export default function SaaSMarketplacePage() {
   const microSaasServices = null;
-      features: [
+      features: [;
         '5000+ app integrations'
         'Visual workflow builder'
         'Multi-step automations'
@@ -64,10 +64,10 @@ export default function SaaSMarketplacePage() {
         'Error handling'
         'Team collaboration'
       ]
-      website: 'https://zapier.com'
+      website: 'https://zapier.com';
       useCase:
         'Perfect for businesses looking to automate customer support, marketing, and sales processes.'
-      pros: [
+      pros: [;
         'Easy to use'
         'Extensive integrations'
         'Reliable'
@@ -76,16 +76,16 @@ export default function SaaSMarketplacePage() {
       cons: ['Can get expensive', 'Limited customization']
     }
     {
-      name: 'Notion'
+      name: 'Notion';
       description:
         'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.'
-      category: 'Productivity'
-      pricing: 'Free - $8/month'
-      rating: 4.7
-      users: '20M+'
+      category: 'Productivity';
+      pricing: 'Free - $8/month';
+      rating: 4.7;
+      users: '20M+';
       icon: <Code className='w-8 h-8 text-gray-400' />
-      color: 'bg-gradient-to-br from-gray-500 to-gray-700'
-      features: [
+      color: 'bg-gradient-to-br from-gray-500 to-gray-700';
+      features: [;
         'Note-taking & docs'
         'Project management'
         'Team collaboration'
@@ -93,10 +93,10 @@ export default function SaaSMarketplacePage() {
         'Templates library'
         'API integration'
       ]
-      website: 'https://notion.so'
+      website: 'https://notion.so';
       useCase:
         'Ideal for teams that need a flexible workspace for documentation, project management, and knowledge sharing.'
-      pros: [
+      pros: [;
         'Highly flexible'
         'Beautiful interface'
         'Great templates'
@@ -105,16 +105,16 @@ export default function SaaSMarketplacePage() {
       cons: ['Learning curve', 'Limited offline access']
     }
     {
-      name: 'Stripe'
+      name: 'Stripe';
       description:
         'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.'
-      category: 'Payments'
-      pricing: '2.9% + 30¢ per transaction'
-      rating: 4.9
-      users: '1M+'
+      category: 'Payments';
+      pricing: '2.9% + 30¢ per transaction';
+      rating: 4.9;
+      users: '1M+';
       icon: <Shield className='w-8 h-8 text-blue-400' />
-      color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
-      features: [
+      color: 'bg-gradient-to-br from-blue-500 to-indigo-600';
+      features: [;
         'Global payment methods'
         'Subscription billing'
         'Fraud protection'
@@ -122,10 +122,10 @@ export default function SaaSMarketplacePage() {
         'Developer-friendly API'
         'Analytics dashboard'
       ]
-      website: 'https://stripe.com'
+      website: 'https://stripe.com';
       useCase:
         'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.'
-      pros: [
+      pros: [;
         'Developer-friendly'
         'Global reach'
         'Excellent docs'
@@ -134,16 +134,16 @@ export default function SaaSMarketplacePage() {
       cons: ['Higher fees than some alternatives', 'Complex for beginners']
     }
     {
-      name: 'Intercom'
+      name: 'Intercom';
       description:
         'Customer messaging platform that helps businesses build better customer relationships through personalized, messenger-based experiences.'
-      category: 'Customer Support'
-      pricing: '$39 - $999/month'
-      rating: 4.6
-      users: '25K+'
+      category: 'Customer Support';
+      pricing: '$39 - $999/month';
+      rating: 4.6;
+      users: '25K+';
       icon: <Users className='w-8 h-8 text-green-400' />
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      features: [
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
+      features: [;
         'Live chat'
         'Customer messaging'
         'Help desk'
@@ -151,10 +151,10 @@ export default function SaaSMarketplacePage() {
         'Analytics & reporting'
         'Integration ecosystem'
       ]
-      website: 'https://intercom.com'
+      website: 'https://intercom.com';
       useCase:
-        'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.'
-      pros: [
+        'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.';
+      pros: [;
         'Great UX'
         'Powerful features'
         'Good integrations'
@@ -163,7 +163,7 @@ export default function SaaSMarketplacePage() {
       cons: ['Expensive', 'Complex pricing', 'Can be overwhelming']
     }
     {
-      name: 'Mixpanel'
+      name: 'Mixpanel';
       description:
         'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
       category: 'Analytics',
@@ -172,7 +172,7 @@ export default function SaaSMarketplacePage() {
       users: '26K+',
 icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
-      features: [
+      features: [;
         'User behavior tracking',
         'Funnel analysis',
         'A/B testing',
@@ -183,7 +183,7 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
       website: 'https://mixpanel.com',
       useCase:
         'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.'
-      pros: [
+      pros: [;
         'Powerful analytics'
         'Real-time data'
         'Good documentation'
@@ -192,7 +192,7 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
       cons: ['Complex setup', 'Expensive at scale', 'Steep learning curve']
     }
     {
-      name: 'MongoDB Atlas'
+      name: 'MongoDB Atlas';
       description:
         'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',
       category: 'Database',
@@ -201,7 +201,7 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
       users: '35K+',
 icon: <Database className='w-8 h-8 text-green-400' />,
       color: 'bg-gradient-to-br from-green-500 to-teal-600',
-      features: [
+      features: [;
         'Fully managed MongoDB',
         'Global clusters',
         'Auto-scaling',
@@ -212,7 +212,7 @@ icon: <Database className='w-8 h-8 text-green-400' />,
       website: 'https://mongodb.com/atlas',
       useCase:
         'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.'
-      pros: [
+      pros: [;
         'Fully managed'
         'Global distribution'
         'Auto-scaling'
@@ -221,16 +221,16 @@ icon: <Database className='w-8 h-8 text-green-400' />,
       cons: ['Can be expensive', 'Vendor lock-in', 'Limited customization']
     }
     {
-      name: 'Vercel'
+      name: 'Vercel';
       description:
         'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.'
-      category: 'Hosting'
-      pricing: 'Free - $20/month'
-      rating: 4.8
-      users: '100K+'
+      category: 'Hosting';
+      pricing: 'Free - $20/month';
+      rating: 4.8;
+      users: '100K+';
       icon: <Cloud className='w-8 h-8 text-black' />
-      color: 'bg-gradient-to-br from-gray-800 to-black'
-      features: [
+      color: 'bg-gradient-to-br from-gray-800 to-black';
+      features: [;
         'Zero-config deployment'
         'Global CDN'
         'Automatic scaling'
@@ -238,14 +238,14 @@ icon: <Database className='w-8 h-8 text-green-400' />,
         'Preview deployments'
         'Edge functions'
       ]
-      website: 'https://vercel.com'
+      website: 'https://vercel.com';
       useCase:
-        'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent performance.'
+        'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent performance.';
       pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier']
       cons: ['Limited backend features', 'Can be expensive for high traffic']
     }
     {
-      name: 'Linear'
+      name: 'Linear';
       description:
         'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',
       category: 'Project Management',
@@ -254,7 +254,7 @@ icon: <Database className='w-8 h-8 text-green-400' />,
       users: '10K+',
 icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      features: [
+      features: [;
         'Issue tracking',
         'Roadmap planning',
         'Team collaboration',
@@ -265,7 +265,7 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
       website: 'https://linear.app',
       useCase:
         'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
-      pros: [
+      pros: [;
 origin/cursor/automate-test-improve-and-merge-code-2533
         'Lightning fast'
         'Beautiful design'
@@ -305,7 +305,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const filteredServices =
     selectedCategory === 'All'
       ? microSaasServices
-      : microSaasServices.filter(
+      : microSaasServices.filter(;
           service => service.category === selectedCategory
         );
 
@@ -320,7 +320,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Button'
                 href='#services''
                 size='lg''
-                className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40''
+                className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'';
                 style={{ animationDelay: '0 && 0.2s' }}>;
                 Explore Services;'
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -330,7 +330,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 variant='outline''
                 size='lg''
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5';
                 style={{ animationDelay: '0.4s' ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -344,46 +344,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-gray-400 text-sm">Curated Services</div>
             </div>"
             <div className="text-center group">"
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">;
                 9;
               </div>"
               <div className="text-gray-400 text-sm">Categories</div>
             </div>"
             <div className="text-center group">"
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">;
                 4.7+
               </div>"
               <div className="text-gray-400 text-sm">Avg Rating</div>
             </div>"
             <div className="text-center group">"
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">;
                 100K+
               </div>"
               <div className="text-gray-400 text-sm">Total Users</div>
 <div
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in';
             style={{ animationDelay: '0.6s' ;}}
           >
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
                 {microSaasServices.length}+
               </div>
               <div className='text-gray-400 text-sm'>Curated Services</div>
             </div>
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>;
                 9
               </div>
               <div className='text-gray-400 text-sm'>Categories</div>
             </div>
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>;
                 4.7+
               </div>
               <div className='text-gray-400 text-sm'>Avg Rating</div>
             </div>
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>;
                 100K+
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>
@@ -402,7 +402,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
       {/* Category Filter */}
 <section className='py-16 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex flex-wrap justify-center gap-4'>
             {categories.map(category => (
               <button
@@ -418,9 +418,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {category}
       {/* Services Grid */}
 <section id='services' className='py-24 bg-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
               {selectedCategory === 'All'
                 ? 'All Services'
                 : `${selectedCategory} Services`}
@@ -431,11 +431,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 : `Discover the best ${selectedCategory.toLowerCase()} tools to streamline your business operations.`}
             </p>
           </div>'
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {filteredServices.map((service, index) => (
               <Card;
                 key={index}'
-                className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'`
+                className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'`;
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;'
                 <div className='flex items-start space-x-6'>;'
                   <div className='relative'>;
@@ -445,7 +445,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>'
                   <div className='flex-1'>'
                     <div className='flex items-center justify-between mb-2'>'
-                      <h3 className='text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300'>
+                      <h3 className='text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300'>;
                         {service.name}
                       </h3>'
                       <div className='flex items-center space-x-2'>'
@@ -469,7 +469,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
-                      </h4>'
+                      </h4>';
                       <div className='grid grid-cols-2 gap-2'>
                         {service.features;
                           .slice(0, 4)
@@ -541,7 +541,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
               </Card>;
-                        className='group-hover:border-blue-500 group-hover:text-blue-400'
+                        className='group-hover:border-blue-500 group-hover:text-blue-400';
                       >
                         Visit Website
                         <ExternalLink className='w-4 h-4 ml-2' />
@@ -549,7 +549,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='text-right'>
                         <div className='text-xs text-gray-500 mb-1'>
                           Use Case:
-                        </div>
+                        </div>;
                         <div className='text-sm text-gray-300 max-w-xs'>
                           {service.useCase}
                         </div>
@@ -642,16 +642,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
-          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>;
           </h2>'
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our team of experts can help you select the perfect SaaS tools for;
             your business needs. Get personalized recommendations and;
             implementation support.
           </p>'
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
             <Button'
               href='/contact''
               variant='secondary''

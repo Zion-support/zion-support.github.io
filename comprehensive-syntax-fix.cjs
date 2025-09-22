@@ -1,20 +1,9 @@
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 main
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 class ComprehensiveSyntaxFixer {
@@ -37,7 +26,7 @@ class ComprehensiveSyntaxFixer {
 
   async fixMergeConflicts() {
     this.log('🔧 Fixing merge conflicts...');
-    
+
     const files = [
       'tsconfig.json',
       '.eslintrc.js',
@@ -49,15 +38,8 @@ class ComprehensiveSyntaxFixer {
       if (fs.existsSync(filePath)) {
         try {
           let content = fs.readFileSync(filePath, 'utf8');
-          
+
           // Remove merge conflict markers
-
-=======
-
-          content = content.replace(/
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 console.log('🔧 Running comprehensive syntax fix...');
 // Fix specific files with known issues;
@@ -140,28 +122,15 @@ let fixedCount = 0;
 for (const fix of fixes) {
   try {
 
-<<<<<<< HEAD
 console.log(`✅ Fixed ${fixedCount} files`);
-<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-59d5
 const { execSync } = require('child_process');
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
           content = content.replace(/
 
-<<<<<<< HEAD
-  ensureReportsDir() {
+ensureReportsDir() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
-=======
-          fs.writeFileSync(filePath, content);
-          this.log(`✅ Fixed merge conflicts in ${file}`);
-        } catch (error) {
-          this.log(`❌ Failed to fix merge conflicts in ${file}: ${error.message}`);
-        }
-      }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   }
 
@@ -220,11 +189,3 @@ const { execSync } = require('child_process');
     console.error(`Error fixing ${fix.file}:`, error.message);
 `;
 console.log(`✅ Fixed ${fixedCount} files`);
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

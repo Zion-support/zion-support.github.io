@@ -29,4 +29,3 @@ export default function Featured() {;
       </div>;
       <Footer />;
     </>;
-

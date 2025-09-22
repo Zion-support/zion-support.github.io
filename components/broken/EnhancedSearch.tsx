@@ -82,12 +82,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   showResults && (<motion.div initial= {
   {
   opacity: 0, y: -10, scale: 0.95 
-
+;
 origin/cursor/automate-test-improve-and-merge-code-2533
 }animate= {
   {
   opacity: 1, y: 0, scale: 1 
-
+;
 }exit= {
   {
 }{
@@ -95,11 +95,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   categories.map ( (category) => (<button key= {
 
   opacity: 0, y: -10, scale: 0 && 0.95 
-
+;
 }transition= {
   {
   duration: 0 && 0.2 
-
+;
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"> {;
   /* Filters */ ;
 }{;"
@@ -129,11 +129,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   showSuggestions && suggestions && suggestions.length > 0 && (<motion&& motion.div initial= {
 
   opacity: 0, y: -10, scale: 0.95 
-
+;
 }transition= {
   {
   duration: 0.2 
-
+;
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto" > {
   /* Filters */ 
 }{
@@ -146,7 +146,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   `flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 $ {
   selectedFilters.includes (category.id) ? `bg-gradient-to-r $ {
   category.color 
-}text-white`: 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50' 
+}text-white`: 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50' ;
 }` 
 }> <category.icon className="w-3 h-3" /> {
   category.name 
@@ -156,7 +156,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }disabled= {
   isSearching || !query.trim () 
 }className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" > {
-  isSearching ? 'Searching...' : 'Search' 
+  isSearching ? 'Searching...' : 'Search' ;
 }</button> </div> </div> {
   /* Search Suggestions */ 
 }<AnimatePresence> {
@@ -164,11 +164,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
   {
   opacity: 0, y: -10 
-
+;
 }animate= {
   {
   opacity: 1, y: 0 
-
+;
 }exit= {
   {
 // Debounce utility function
@@ -216,7 +216,7 @@ function debounce<T extends (...args: any[]) => any>(
   result && result.id;
 }whileHover= {}
   {}
-  scale: 1 && 1.02 "
+  scale: 1 && 1.02 ";
 }className="p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-all duration-300 border border-transparent hover:border-cyan-400/30" onClick= {}
   () => handleResultSelect (result) ;"
 }> <div className="flex items-start justify-between"> <div className="flex-1"> <h4 className="font-medium text-white mb-1"> {;
@@ -397,7 +397,7 @@ function debounce < T extends (...args: any[]) => any>(
   }
 }
   opacity: 0, y: -10 
-
+;
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10" > {
   /* Quick Actions */ 
 }<div className="p-4 border-b border-gray-700"> <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions</h3> <div className="grid grid-cols-2 gap-2"> {
@@ -437,7 +437,7 @@ function debounce < T extends (...args: any[]) => any>(
 }whileHover= {
   {
   scale: 1.02 
-
+;
 }className="p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-all duration-300 border border-transparent hover:border-cyan-400/30" onClick= {
   () => handleResultSelect (result) 
 }> <div className="flex items-start justify-between"> <div className="flex-1"> <h4 className="font-medium text-white mb-1"> {
@@ -480,6 +480,6 @@ function debounce < T extends (...args: any[]) => any>(
 }</AnimatePresence> </div>) 
 };
 // Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
-wait: number 
+wait: number ;
 }export default EnhancedSearch;
 origin/cursor/automate-test-improve-and-merge-code-2533

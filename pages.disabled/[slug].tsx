@@ -1,8 +1,4 @@
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD:pages_backup/[slug].tsx
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
+:pages_backup/[slug].tsx
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
@@ -19,15 +15,10 @@ import {GetStaticPaths, GetStaticProps} from 'next';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
-<<<<<<< HEAD:pages_backup/[slug].tsx
+:pages_backup/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD:pages/[slug].tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
 
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
@@ -60,14 +51,8 @@ const service = useMemo(() => {
         augmentedServicesBatch3 as any
         real2025Q3Additions as any
         realQ4Services2025 as any,        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+:pages_backup/[slug].tsx
+
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
         enhancedRealMicroSaasServices as any,
@@ -120,17 +105,10 @@ const service = useMemo(() => {
         real2025Q3Additions as any,
         realQ4Services2025 as any,
         require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
+:pages_backup/[slug].tsx
 <<<<<<< HEAD:pages/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
@@ -138,33 +116,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const byLink = all.find(s => {
       try {
         const url = new URL(s.link);
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
-        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
-      } catch {
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
-      } catch {
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
+:pages_backup/[slug].tsx
 return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
       } catch {
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
+      } catch {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
 =======
-
-
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -172,28 +135,18 @@ class ErrorBoundary extends React.Component {}
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD:pages_backup/[slug].tsx
-  
+:pages_backup/[slug].tsx
+
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {}
     if (this.state.hasError) {}
-=======
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
       return <div>Something went wrong.</div>;
     }
     return this.props.children;
@@ -213,17 +166,10 @@ if (return by_link) {}
   }, [slug]);'
 import React, { useMemo } from 'react';'
 import Head from 'next/head';
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD:pages_backup/[slug].tsx
+:pages_backup/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 
 function getAllServices(): Service[] {}
   return enhancedRealMicroSaasServices;
@@ -239,10 +185,7 @@ function getAllServices(): Service[] {
     .concat(curatedMarketServices as Service[])
     .concat(new2025Services as unknown as Service[])
 
-<<<<<<< HEAD:pages_backup/[slug].tsx
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
+:pages_backup/[slug].tsx
 function getAllServices(): any (): Service[] {;
   return enhancedRealMicroSaasServices;
     .concat(extraServices as Service[], additionalEnhancedServices as Service[]);
@@ -254,7 +197,7 @@ function getAllServices(): any (): Service[] {;
 		.concat(verified2025Additions as unknown as Service[]);
 		.concat(realServicesQ12025 as unknown as Service[]);
 		.concat(realEnterpriseServices2025 as unknown as Service[]);
-<<<<<<< HEAD:pages_backup/[slug].tsx
+:pages_backup/[slug].tsx
 
     if (byLink) return byLink;
   }, [slug]);
@@ -262,12 +205,7 @@ function getAllServices(): any (): Service[] {;
 import React, { useMemo } from 'react';'
 import Head from 'next/head';
 
-<<<<<<< HEAD:pages_backup/[slug].tsx
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
     if (byLink) return byLink;
   }, [slug]);
@@ -291,92 +229,38 @@ import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-ad
 import { real2026Q1Additions } from '../data/real-2026-q1-additions';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 type Service = typeof enhancedRealMicroSaasServices[number];
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
-
-
-'
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';'
-import Button from '../components/ui/Button';'
-import Card from '../components/ui/Card';'
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';'
-import { extraServices } from '../data/extra-services';'
-import { additionalEnhancedServices } from '../data/additional-real-services';'
-import { newlyAddedServices } from '../data/newly-added-services';'
-import { new2025Services } from '../data/new-2025-services';'
-import { marketValidatedServices } from '../data/market-validated-services';'
-import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';'
-import { realServicesQ32025 } from '../data/real-services-q3-2025';'
-import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-additions';'
-import { real2026Q1Additions } from '../data/real-2026-q1-additions';'
-import fs from 'fs';'
-import path from 'path';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
-
-
 
 type Service = typeof enhancedRealMicroSaasServices[number];
-<<<<<<< HEAD:pages_backup/[slug].tsx
+:pages_backup/[slug].tsx
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-type Service = typeof enhancedRealMicroSaasServices[number];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices
-=======
-
-function getAllServices(): Service[] {}
-  return enhancedRealMicroSaasServices;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
     .concat(extraServices as Service[], additionalEnhancedServices as Service[])
     .concat(newlyAddedServices as unknown as Service[])
     .concat(curatedMarketServices as Service[])
     .concat(new2025Services as unknown as Service[])
 		.concat(marketValidatedServices as unknown as Service[]);
-<<<<<<< HEAD:pages_backup/[slug].tsx
+:pages_backup/[slug].tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 		.concat(moreRealServices2025 as unknown as Service[]);
 		.concat(verified2025Additions as unknown as Service[]);
 		.concat(realServicesQ12025 as unknown as Service[]);
 		.concat(realEnterpriseServices2025 as unknown as Service[]);
-<<<<<<< HEAD:pages_backup/[slug].tsx
+:pages_backup/[slug].tsx
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
 		.concat(moreRealServices2025 as unknown as Service[])
 		.concat(verified2025Additions as unknown as Service[])
 		.concat(realServicesQ12025 as unknown as Service[])
 		.concat(realEnterpriseServices2025 as unknown as Service[])
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+:pages_backup/[slug].tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 =======
@@ -390,20 +274,10 @@ function getAllServices(): Service[] {}
 		.concat(realServicesQ32025 as unknown as Service[]);
 		.concat(realQ4Services2025 as unknown as Service[]);
 		.concat(real2025Q4Additions as unknown as Service[]);
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD:pages_backup/[slug].tsx
+:pages_backup/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 		.concat(realMarketServicesExtended as unknown as Service[]);
-=======
-<<<<<<< HEAD
-=======
-		.concat(realMarketServicesExtended as unknown as Service[]);
-<<<<<<< HEAD
-		.concat(real2026Q1Additions as unknown as Service[]);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
@@ -412,16 +286,11 @@ function getAllServices(): Service[] {}
 		.concat(real2026Q1Additions as unknown as Service[]);
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
 
-
 	const services = getAllServices(),
 	const slugs = new Set<string>(),
 	 })),;
 
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 		fallback: false;
 	}
 export async function getStaticProps() {}
@@ -429,33 +298,13 @@ export async function getStaticProps() {}
 	const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '')'
 	let service: Service | undefined = services.find((s) => toSlug(s.id |'') === incomingSlug |toSlug(s.name |'') === incomingSlug)
 	if (!service) {return { notFound: true }
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
+:pages_backup/[slug].tsx
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 	}
 	return {props: { service }
 	}
 export default function RootServiceDetailPage({ service }: { service: Service }) {const canonical = `https://ziontechgroup.com/${toSlug(service.id |service.name |'')}`,	return (
-=======
-<<<<<<< HEAD
-	}
-	return {props: { service }
-	}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
-	}
-	return {props: { service }
-	}
-
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/[slug].tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -671,82 +520,7 @@ export async function getStaticProps(req, res) {
 export default function RootServiceDetailPage({ service }: { service: Service }) {
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
 	return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-function toSlug(): any (value: string): string {;
-	return value && value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-function getExistingRootPageSlugs(): any (): Set<string> {;
-	const pagesDir = path && path.join(process && process.cwd(), 'pages'),;
-	const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
-	const reserved = new Set<string>(['apireportsservices']),;
-	const slugs = new Set<string>(),;
-		}
-		// Directories at root (folder routes);
-		if (entry && entry.isDirectory()) {;
-			slugs && slugs.add(entry && entry.name);
-	}
-	return slugs;
-export async function getStaticPaths() {;
-	const services = getAllServices(),;
-	const slugs = new Set<string>(),;
-	 })),;
-		fallback: false;
-	}
-export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {;
-	const services = getAllServices(),;
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),;
-	let service: Service | undefined = services && services.find((s) => toSlug(s && s.id || '') === incomingSlug || toSlug(s && s.name || '') === incomingSlug),;
-	if (!service) {;
-		return { notFound: true }
-	}
-	return {props: { service }
-	}
-
-
-<<<<<<< HEAD:pages_backup/[slug].tsx
-=======
-=======
-
-function toSlug(): any (value: string): string {;
-	return value && value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-function getExistingRootPageSlugs(): any (): Set<string> {;
-	const pagesDir = path && path.join(process && process.cwd(), 'pages'),;
-	const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
-	const reserved = new Set<string>(['apireportsservices']),;
-	const slugs = new Set<string>(),;
-		}
-		// Directories at root (folder routes);
-		if (entry && entry.isDirectory()) {;
-			slugs && slugs.add(entry && entry.name);
-	}
-	return slugs;
-export async function getStaticPaths() {;
-	const services = getAllServices(),;
-	const slugs = new Set<string>(),;
-	 })),;
-		fallback: false;
-	}
-export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {;
-	const services = getAllServices(),;
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),;
-	let service: Service | undefined = services && services.find((s) => toSlug(s && s.id || '') === incomingSlug || toSlug(s && s.name || '') === incomingSlug),;
-	if (!service) {;
-		return { notFound: true }
-	}
-	return {props: { service }
-	}
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -755,17 +529,10 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 export default function RootServiceDetailPage({ service }: { service: Service }) {;
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,
 	return (
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
+:pages_backup/[slug].tsx
 <<<<<<< HEAD:pages/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -777,22 +544,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				<title>{service.name} | Zion Tech Group</title>"
 				<meta name="description" content={service.tagline |service.description} />"
 				<link rel="canonical" href={canonical} />
-<<<<<<< HEAD:pages_backup/[slug].tsx
+:pages_backup/[slug].tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
-
-
 
 ;
 export default function RootServiceDetailPage(): any ({ service }: { service: Service }) {;'
@@ -802,30 +559,21 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				<title>{service && service.name} | Zion Tech Group</title>;"
 				<meta name="description" content={service && service.tagline || service && service.description} />;"
 				<link rel="canonical" href={canonical} />;
+:pages_backup/[slug].tsx
 <<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 				<script
 =======
-
 
 				<script"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{}
 						__html: JSON && JSON.stringify(
-<<<<<<< HEAD:pages_backup/[slug].tsx
+:pages_backup/[slug].tsx
 							{
-<<<<<<< HEAD:pages/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 								"@context": "https://schema.org"
@@ -842,11 +590,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 									name: "Zion Tech Group"
 									url: "https://ziontechgroup.com"
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 				<script
 					type="application/ld+json"
@@ -860,26 +603,12 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 									price: (service.price || '').replace(/[^0-9.]/g, ''),
 									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
-								}
+:pages_backup/[slug].tsx
+}
 								offers: {
 									"@type": "Offer"
 									price: (service.price |'').replace(/[^0-9.]/g, ''),									priceCurrency: "USD"
-<<<<<<< HEAD:pages_backup/[slug].tsx
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
-=======
-				<script
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{
-						__html: JSON && JSON.stringify(
-							{
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+:pages_backup/[slug].tsx
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
 "@context": "https://schema.org",
@@ -902,28 +631,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 								}
 							}
 							null;
-<<<<<<< HEAD:pages_backup/[slug].tsx
+:pages_backup/[slug].tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-							2;
-							);}
-				/>;			</Head>
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-2;
-							);}
-=======
 							2;
 							);}
 				/>;			</Head>
 2;
 							);}
-				/>;			</Head>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
 				/>;
 			</Head>
-
 
 			<div className="container mx-auto px-4 py-16">
 				<div className="text-center mb-10">
@@ -940,17 +656,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 							<p className="text-gray-300 leading-relaxed">{service.description}</p>
 						</Card>
 
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
+:pages_backup/[slug].tsx
 <<<<<<< HEAD:pages/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
@@ -1060,18 +769,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
 								{(service.features || []).slice(0, 12).map((f: string) => (
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
+:pages_backup/[slug].tsx
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
@@ -1079,9 +780,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-								))}
+))}
 							</ul>
 						</Card>
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
@@ -1092,12 +791,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 								))}
 								{(service.integrations || []).slice(0, 12).map((i: string) => (
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 								))}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 								))}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1125,13 +819,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/[slug].tsx
+:pages_backup/[slug].tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 							</ul>
 						</Card>
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
@@ -1151,25 +840,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/[slug].tsx
-=======
-							</ul>
-						</Card>
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
-							<div className="flex flex-wrap gap-2">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
+:pages_backup/[slug].tsx
 
 								{(service.integrations || []).slice(0, 12).map((i: string) => (
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
 
-<<<<<<< HEAD:pages_backup/[slug].tsx
+:pages_backup/[slug].tsx
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
 							</div>
 						</Card>
 					</div>
@@ -1180,54 +858,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 							<div className="mt-4 space-y-3">
 								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Phone className="w-4 h-4" /> +1 302 464 0950
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
+:pages_backup/[slug].tsx
 <<<<<<< HEAD:pages/[slug].tsx
 <<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
 
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
-								</a>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 								</a>
 
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
 								</a>
 								<div className="flex items-start gap-2 text-gray-300">
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-								</a>
-
-								</a>
-
-								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
-									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
-								</a>
-<<<<<<< HEAD:pages_backup/[slug].tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
 </Link>
@@ -1252,8 +899,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 									<Phone className="w-4 h-4" /> +1 302 464 0950;
 								</a>
 
-
-
 "
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">"
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com;
@@ -1269,44 +914,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
 						</Card>
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
+:pages_backup/[slug].tsx
 <<<<<<< HEAD:pages_backup/[slug].tsx
 
 <<<<<<< HEAD
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
 
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
 
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
-=======
-							<a href={service.link |canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
-<<<<<<< HEAD
-							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
+:pages_backup/[slug].tsx
 
-							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
 							<a href={service.link |canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
-<<<<<<< HEAD:pages/[slug].tsx
+:pages/[slug].tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
@@ -1326,19 +951,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
+:pages_backup/[slug].tsx
 <<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD:pages/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/[slug].tsx
 
 								"@context": "https://schema && schema.org",
 								"@type": "Service",								name: service && service.name,
@@ -1444,15 +1061,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 		</UltraFuturisticBackground>;
 	);
 
-<<<<<<< HEAD:pages_backup/[slug].tsx
-
-=======
-	)
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+:pages_backup/[slug].tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
@@ -1499,40 +1109,17 @@ const pages_dir = path.join (process.cwd (), 'pages'),
 const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),'
 const reserved = new Set < string>(['apireportsservices']),
 const slugs = new Set < string>(),
-<<<<<<< HEAD:pages_backup/[slug].tsx
+:pages_backup/[slug].tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 
 }
 }
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-<<<<<<< HEAD:pages_backup/[slug].tsx
-=======
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 	);
   } catch (error) {"
     console.error("Error:", error);"
@@ -1540,15 +1127,9 @@ const slugs = new Set < string>(),
     } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD
+:pages_backup/[slug].tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
   }
   // Directories at root (folder routes);
   if () {) {}
@@ -1582,33 +1163,13 @@ if ( {) {}
 }
   return { not_found: true }
   }
-<<<<<<< HEAD:pages_backup/[slug].tsx
-<<<<<<< HEAD:pages_backup/[slug].tsx
+:pages_backup/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 }
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-	);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 	);
@@ -1616,7 +1177,6 @@ if ( {) {}
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
 =======
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx

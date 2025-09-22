@@ -1,22 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 import { supabase } from "@/integrations/supabase/client",";
 import { toast } from "@/hooks/use-toast";"
 import type { UserProfile } from "@/types/auth";
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -27,11 +16,8 @@ import type { UserProfile } from "@/types/auth";
 
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 import { supabase } from "@/integrations/supabase/client",;
@@ -196,8 +182,6 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       if (!data.id) {;
       }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -206,87 +190,6 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       return { success: true }
     } catch (error: any) {
       console && console.error("Profile update error:", error);
-=======
-      // Update profiles table
-      const { error: profileError } = await supabase
-        .from("profiles")
-        .update({
-
-          display_name: data && data.displayName;
-          user_type: data && data.userType;
-          bio: data && data.bio;
-          headline: data && data.headline;
-          avatar_url: data && data.avatarUrl || data && data.avatar_url;
-          profile_complete: data && data.profileComplete,
-display_name: data.displayName;
-          user_type: data.userType;
-          bio: data.bio;
-          headline: data.headline;
-          avatar_url: data.avatarUrl |data.avatar_url;
-          profile_complete: data.profileComplete
-          updated_at: new Date().toISOString()})
-        .eq("id", data.id);
-      if (profileError) {
-        toast({
-          title: "Profile update failed";
-          description: profileError.message
-          variant: "destructive"});
-          display_name: data.displayName,
-          user_type: data.userType,
-          bio: data.bio,
-          headline: data.headline,
-          avatar_url: data.avatarUrl || data.avatar_url,
-          profile_complete: data.profileComplete,
-
-          updated_at: new Date().toISOString()})
-        .eq("id", data && data.id);
-
-      if (profileError) {
-        toast({
-
-title: "Profile update failed";
-          description: profileError && profileError.message,
-      // Update profiles table;
-        .update({      // Update profiles table;
-      const { error: profile_error } = await supabase;
-        .from ("profiles");
-        .update ({
-          display_name: data.display_name;
-          user_type: data.user_type;
-          bio: data.bio;
-          headline: data.headline;
-          avatar_url: data.avatar_url || data.avatar_url;
-          profile_complete: data.profile_complete,
-          updated_at: new Date ().toISOString ()});
-        .eq ("id", data.id);
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          title: "Profile update failed";
-          description: profile_error.message,
-          title: "Profile update failed",
-  description: profile_error.message,
-
-          variant: "destructive"});
-        return { error: profile_error }
-      }
-updated_at: new Date().toISOString()})
-        .eq("id", data.id),
-
-      if (profileError) {
-        toast({
-          title: "Profile update failed",
-          description: profileError.message,
-          variant: "destructive"}),
-        return { error: profileError }
-          variant: "destructive"});
-        return { error: profile_error }
-      }
-      }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       toast({
 
 ;
@@ -320,11 +223,6 @@ updated_at: new Date().toISOString()})
         title: "Profile update failed",;
         description: error.message || "An unexpected error occurred",;
         variant: "destructive"}),;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
 
       // Update profiles table
       const { error: profileError } = await supabase
@@ -354,9 +252,6 @@ updated_at: new Date().toISOString()})
       const { error: profile_error } = await supabase;
 =======
 
-
-
-
       // Update profiles table;
       const { error: profileError } = await supabase"
         .from("profiles")
@@ -367,8 +262,6 @@ updated_at: new Date().toISOString()})
           headline: data.headline,
           avatar_url: data.avatarUrl || data.avatar_url,
           profile_complete: data.profileComplete,
-
-
 
       // Update profiles table;
       const { error: profile_error } = await supabase;"
@@ -388,8 +281,7 @@ updated_at: new Date().toISOString()})
 if ( {) {}
   $2;
 }
-<<<<<<< HEAD
-        toast ({
+toast ({
           title: "Profile update failed";
           description: profile_error.message,
 
@@ -399,20 +291,9 @@ if ( {) {}
 
       if (profileError) {
         toast({
-=======
-        toast ({"
-          title: "Profile update failed";
-          description: profile_error.message,
-
-
-      if (profileError) {}
-        toast({"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           title: "Profile update failed",
           description: profileError.message,"
           variant: "destructive"}),
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
         return { error: profileError }
 "
@@ -430,29 +311,8 @@ if ( {) {}
 <<<<<<< HEAD
     } finally {;
       setIsLoading(false);
-=======
-    } finally {}
-      setIsLoading (false);
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
-=======
-  }
-
-"
-        title: "Profile update failed","
-        description: error.message || "An unexpected error occurred","
-        variant: "destructive"}),
-      return { error }
-    } finally {}
-      setIsLoading(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   };
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
       // Update profiles table;
       const { error: profileError } = await supabase;"
@@ -490,27 +350,17 @@ if ( {) {}
           headline: data.headline,;
           avatar_url: data.avatarUrl || data.avatar_url,;
           profile_complete: data.profileComplete,;
-<<<<<<< HEAD
-          updated_at: new Date().toISOString()});"
+updated_at: new Date().toISOString()});"
         .eq("id", data.id),;
       if (profileError) {;
         toast({;"
           title: "Profile update failed",;
           description: profileError.message,;"
-=======
-          updated_at: new Date().toISOString()});
-        .eq("id", data.id),;
-      if (profileError) {;
-        toast({;
-          title: "Profile update failed",;
-          description: profileError.message,;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           variant: "destructive"}),;
         return { error: profileError }
       }
 ;
-<<<<<<< HEAD
-      toast({;"
+toast({;"
         title: "Profile updated",;"
         description: "Your profile has been updated successfully."}),;
       return { success: true }
@@ -519,17 +369,6 @@ if ( {) {}
       toast({;"
         title: "Profile update failed",;"
         description: error.message || "An unexpected error occurred",;"
-=======
-      toast({;
-        title: "Profile updated",;
-        description: "Your profile has been updated successfully."}),;
-      return { success: true }
-    } catch (error: any) {;
-      console.error("Profile update error:", error),;
-      toast({;
-        title: "Profile update failed",;
-        description: error.message || "An unexpected error occurred",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive"}),;
       return { error }
     } finally {;
@@ -537,33 +376,13 @@ if ( {) {}
     }
   };
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   return { updateProfile }
 };
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-          variant: "destructive"});
-        return { error: profile_error }
-      }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       toast ({
-<<<<<<< HEAD
-=======
-        return { error: profileError }      toast ({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        return { error: profileError }      toast ({
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 =======
       toast ({
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -578,65 +397,28 @@ if ( {) {}
       console.error ("Profile update error:", error);
       toast ({
 
-<<<<<<< HEAD
-        title: "Profile update failed",
+title: "Profile update failed",
   description: error && error.message || "An unexpected error occurred",
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
         title: "Profile update failed";
 
         description: error && error.message || "An unexpected error occurred",
 
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-title: "Profile update failed";
-        description: error && error.message || "An unexpected error occurred",
-        title: "Profile update failed",
-  description: error && error.message || "An unexpected error occurred",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant: "destructive"});
       return { error }
     } finally {}
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-;
-  return { update_profile }
-}
-;
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-        title: "Profile update failed",
+title: "Profile update failed",
         description: error.message || "An unexpected error occurred",
-=======
-
-;
-  return { update_profile }
-}
-;
-
-"
-        title: "Profile update failed","
-        description: error.message || "An unexpected error occurred","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"}),
       return { error }
     } finally {}
       setIsLoading(false)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 return { updateProfile }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  return { updateProfile }
 };
   return { updateProfile }
 };
@@ -757,20 +539,11 @@ return {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  return { updateProfile }
-};
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
   return { updateProfile }
 };
@@ -790,7 +563,6 @@ import { toast } from "@/hooks/use-toast",""
 import type { UserProfile } from "@/types/auth","
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
-
 
   const update_profile = async (data: Partial < UserProfile>) => {
     try {
@@ -829,6 +601,5 @@ pr-12325
 </UserProfile>
   const updateProfile = async (data: Partial<UserProfile>) => {
 </UserProfile>"
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

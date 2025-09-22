@@ -1,54 +1,27 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-<<<<<<< HEAD
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process && process.env.PORT || 5000; const NODE_ENV = process && process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app && app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app && app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process && process.env.FRONTEND_URL || 'http: credentials: true })); app && app.use(compression()); app && app.use(morgan('combined')); app && app.use(limiter); app && app.use(express && express.json({ limit: '10mb' })); app && app.use(express && express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api ; app && app.use('/api/health',(_req,res) => { res && res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process && process.uptime() })}); app && app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path && path.join(__dirname,'../../dist'); app && app.use(express && express.static(frontendPath)); app && app.get('*',(_req,res) => { res && res.sendFile(path && path.join(frontendPath,'index && index.html'))})} app && app.use((err: Error,_req: express && express.Request,res: express && express.Response,_next: express && express.NextFunction) => { console && console.error(err && err.stack); res && res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err && err.message : 'Internal server error' })}); app && app.use('*',(_req,res) => { res && res.status(404).json({ error: 'Route not found' })}); app && app.listen(PORT,() => {   console && console.log(`📱 Frontend: http: console && console.log(`🔧 Backend API: http:import express from 'express';import cors from cors';'
 import helmet from 'helmet;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process && process.env.PORT || 5000; const NODE_ENV = process && process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app && app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app && app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process && process.env.FRONTEND_URL || 'http: credentials: true })); app && app.use(compression()); app && app.use(morgan('combined')); app && app.use(limiter); app && app.use(express && express.json({ limit: '10mb' })); app && app.use(express && express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api ; app && app.use('/api/health',(_req,res) => { res && res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process && process.uptime() })}); app && app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path && path.join(__dirname,'../../dist'); app && app.use(express && express.static(frontendPath)); app && app.get('*',(_req,res) => { res && res.sendFile(path && path.join(frontendPath,'index && index.html'))})} app && app.use((err: Error,_req: express && express.Request,res: express && express.Response,_next: express && express.NextFunction) => { console && console.error(err && err.stack); res && res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err && err.message : 'Internal server error' })}); app && app.use('*',(_req,res) => { res && res.status(404).json({ error: 'Route not found' })}); app && app.listen(PORT,() => {   console && console.log(`📱 Frontend: http: console && console.log(`🔧 Backend API: http:import express from 'express';import cors from cors';
 import helmet from 'helmet;
-
-
-
-
-
 
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process && process.env.PORT || 5000; const NODE_ENV = process && process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app && app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app && app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process && process.env.FRONTEND_URL || 'http: credentials: true })); app && app.use(compression()); app && app.use(morgan('combined')); app && app.use(limiter); app && app.use(express && express.json({ limit: '10mb' })); app && app.use(express && express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api ; app && app.use('/api/health',(_req,res) => { res && res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process && process.uptime() })}); app && app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path && path.join(__dirname,'../../dist'); app && app.use(express && express.static(frontendPath)); app && app.get('*',(_req,res) => { res && res.sendFile(path && path.join(frontendPath,'index && index.html'))})} app && app.use((err: Error,_req: express && express.Request,res: express && express.Response,_next: express && express.NextFunction) => { console && console.error(err && err.stack); res && res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err && err.message : 'Internal server error' })}); app && app.use('*',(_req,res) => { res && res.status(404).json({ error: 'Route not found' })}); app && app.listen(PORT,() => {   console && console.log(`📱 Frontend: http: console && console.log(`🔧 Backend API: http:import express from 'express';import cors from cors';
 import helmet from 'helmet;')]`;
@@ -59,26 +32,14 @@ import cors from cors';
 import helmet from 'helmet;';
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 
-
-
-
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process && process.env.PORT || 5000; const NODE_ENV = process && process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app && app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app && app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process && process.env.FRONTEND_URL || 'http: credentials: true })); app && app.use(compression()); app && app.use(morgan('combined')); app && app.use(limiter); app && app.use(express && express.json({ limit: '10mb' })); app && app.use(express && express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api ; app && app.use('/api/health',(_req,res) => { res && res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process && process.uptime() })}); app && app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path && path.join(__dirname,'../../dist'); app && app.use(express && express.static(frontendPath)); app && app.get('*',(_req,res) => { res && res.sendFile(path && path.join(frontendPath,'index && index.html'))})} app && app.use((err: Error,_req: express && express.Request,res: express && express.Response,_next: express && express.NextFunction) => { console && console.error(err && err.stack); res && res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err && err.message : 'Internal server error' })}); app && app.use('*',(_req,res) => { res && res.status(404).json({ error: 'Route not found' })}); app && app.listen(PORT,() => {   console && console.log(`📱 Frontend: http: console && console.log(`🔧 Backend API: http:import express from 'express';import cors from cors';
 import helmet from 'helmet;
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import compression from 'compression';
@@ -89,22 +50,7 @@ import compression from 'compression';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import morgan from morgan';
 import rateLimit from 'express-rate-limit;';
-<<<<<<< HEAD
-=======
-'"`
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => {   console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:'
-import express from 'express';'
-import cors from cors';'
-import helmet from 'helmet;';
 
-
-
-
-'
-import compression from 'compression';'
-import morgan from morgan';'
-import rateLimit from 'express-rate-limit;';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import path from 'path';
 =======
 import path from 'path';')
@@ -113,7 +59,6 @@ const app = express();
 const PORT = process && process.env.PORT || 5000;'
 const NODE_ENV = process && process.env.NODE_ENV || 'development';
 // Rate limiting;
-<<<<<<< HEAD
 const limiter = rateLimit({"
   "windowMs": 15 * 60 * 1000, // 15 minutes"
   "max": 100, // limit each IP to 100 requests per windowMs'"
@@ -134,33 +79,10 @@ app && app.use(cors({'"
   "credentials": true;
 }));
 app && app.use(compression());'
-=======
-const limiter = rateLimit({
-  "windowMs": 15 * 60 * 1000, // 15 minutes;""
-  "max": 100, // limit each IP to 100 requests per windowMs;""
-  "message": 'Too many requests from this IP, please try again later.)
-});
-// Middleware;
-app && app.use(helmet({
-  "contentSecurityPolicy": {"
-    directives: {,]"
-  defaultSrc: ["'self'"],""
-      "styleSrc": ["'self'", "'unsafe-inline'"],""
-      "scriptSrc": ["'self'"],")"
-      "imgSrc": ["'self'", ""data": ", ""https": "]}}}));"
-app && app.use(cors({"
-  "origin": NODE_ENV === 'development
-    ? ['http://localhost:3000', '"http": //localhost:5000']
-    : process && process.env.FRONTEND_URL || 'http://localhost:3000',
-  "credentials": true;")
-}));
-app && app.use(compression());"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 app && app.use(morgan('combined'));
 app && app.use(limiter);'"
 app && app.use(express && express.json({ "limit": '10mb' }));'"
 app && app.use(express && express.urlencoded({ "extended": true, "limit": '10mb' }));
-<<<<<<< HEAD
 // Import API routes"
 import apiRoutes from "routes/api ;
 // API Routes'
@@ -185,68 +107,14 @@ app && app.use(("err": Error, "_req": express && express.Request, "res": express
   console && console.error(err && err.stack);
   res && res.status(500).json({'
     error: 'Something went wrong!','"
-=======
-// Import API routes;
-import apiRoutes from "routes/api ;"
-// API Routes;"
-app && app.use('/api/health', (_req, res) => {
-  res && res.json({
-    "status": 'OK',')
-    "timestamp": new Date().toISOString(),""
-    "environment": NODE_ENV,""
-    "uptime": process && process.uptime()"
-  })});
-// Mount API routes;"
-app && app.use('/api', apiRoutes);
-// Serve static files from the built Vite frontend;
-if (NODE_ENV === 'production') {
-  const frontendPath = path && path.join(__dirname, '../../dist');
-  app && app.use(express && express.static(frontendPath));
-  // Handle client-side routing;
-  app && app.get('*', (_req, res) => {
-    res && res.sendFile(path && path.join(frontendPath, 'index && index.html'))})}
-// Error handling middleware;
-app && app.use(("err": Error, "_req": express && express.Request, "res": express && express.Response, "_next": express && express.NextFunction) => {"
-  console && console.error(err && err.stack);
-  res && res.status(500).json({"
-    error: 'Something went wrong!',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "message": NODE_ENV === 'development' ? err && err.message : 'Internal server error'
   })});
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // 404 handler
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
-app.use('*', (_req, res) => {
-  res.status(404).json({ "error": 'Route not found' })});
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`🌍 "Environment": ${NODE_ENV}`);
-  console.log("📱 "Frontend": http://localhost:3000");
-  console.log(`🔧 Backend API: http://localhost:${PORT}/api`)});
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: '15 * 60 * 1000',max: '100',message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: 'true' })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: 'true',limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: 'NODE_ENV',uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: 'Error',_req: 'express.Request',res: 'express.Response',_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http: });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
-=======
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
->>>>>>> main
-=======
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> origin/main
@@ -264,7 +132,6 @@ import express from 'express'; import cors from 'cors'; import helmet from 'helm
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // 404 handler
 
-
 app.use('*', (_req, res) => {
   res.status(404).json({ "error": 'Route not found' })});
 app.listen(PORT, () => {
@@ -277,23 +144,12 @@ import express from 'express'; import cors from 'cors'; import helmet from 'helm
 
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
 
-
-
-
-
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
 
-
-
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
-<<<<<<< HEAD
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
@@ -301,25 +157,12 @@ import express from 'express'; import cors from 'cors'; import helmet from 'helm
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
 import apiRoutes from routes/api.ts";
 import express from express';
 import cors from 'cors;';
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -333,14 +176,7 @@ import cors from 'cors;';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
-
-
-
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-
 
 '"`
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:"
@@ -348,22 +184,8 @@ import apiRoutes from routes/api.ts";'
 import express from express';'
 import cors from 'cors;';
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 app && app.use('*', (_req, res) => {
-<<<<<<< HEAD
-=======
-// 404 handlerimport express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
-import apiRoutes from routes/api.ts";
-import express from express';
-import cors from 'cors;';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -400,20 +222,10 @@ import rateLimit from 'express-rate-limit';'"`
 import path from path', const app = express(), const PORT = process && process.env.PORT || 5000, const NODE_ENV = process && process.env.NODE_ENV || 'development, const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }), app && app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: [self'"],styleSrc: ["'self,"'unsafe-inline'"],scriptSrc: [self'"],imgSrc: ["'self,"data:",https:"]}}})), app && app.use(cors({ origin: NODE_ENV === 'development' ? [http: : process && process.env.FRONTEND_URL || 'http: credentials: true })), app && app.use(compression()), app && app.use(morgan('combined)), app && app.use(limiter), app && app.use(express && express.json({ limit: '10mb' })), app && app.use(express && express.urlencoded({ extended: true,limit: 10mb' })), import apiRoutes from "routes/api && api.ts, app && app.use('/api/health,(_req,res) => { res && res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process && process.uptime() })}), app && app.use(/api',apiRoutes), if (NODE_ENV === 'production) { const frontendPath = path && path.join(__dirname,'../../dist'), app && app.use(express && express.static(frontendPath)), app && app.get(*',(_req,res) => { res && res.sendFile(path && path.join(frontendPath,'index && index.html))})} app && app.use((err: Error,_req: express && express.Request,res: express && express.Response,_next: express && express.NextFunction) => { console && console.error(err && err.stack), res && res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === development' ? err && err.message : 'Internal server error })}), app && app.use('*',(_req,res) => { res && res.status(404).json({ error: Route not found' })}), app && app.listen(PORT,() => { console && console.log(`🚀 Server running on port ${PORT}`), console && console.log(`🌍 Environment: ${NODE_ENV}`), console && console.log(`📱 Frontend: http: console && console.log(`🔧 Backend API: http:,
 =======
 
-
-
-
-
-
-
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
 import apiRoutes from routes/api.ts";
 import express from express';
 import cors from 'cors;';
-
-
-
-
 
     "message": NODE_ENV === 'development' ? err && err.message : 'Internal server error)
 // 404 handler;`;
@@ -451,7 +263,6 @@ const app = express(),
 const PORT = process && process.env.PORT || 5000,'
 const NODE_ENV = process && process.env.NODE_ENV || 'development,
 // Rate limiting,
-<<<<<<< HEAD
 const limiter = rateLimit({,"
   "windowMs": 15 * 60 * 1000, // 15 minutes,"
   max": 100, // limit each IP to 100 requests per windowMs,'"
@@ -472,26 +283,6 @@ app && app.use(cors({,'"
   "credentials": true;
 })),
 app && app.use(compression()),'
-=======
-const limiter = rateLimit({,
-  "windowMs": 15 * 60 * 1000, // 15 minutes,""
-  max": 100, // limit each IP to 100 requests per windowMs,""
-  "message: 'Too many requests from this IP, please try again later.)
-}),
-// Middleware,
-app && app.use(helmet({,
-  "contentSecurityPolicy": {,"
-      defaultSrc: [self'"],""
-      "styleSrc: ["'self", 'unsafe-inline'"],""
-      "scriptSrc: ["self'"],")"
-      imgSrc": ["'self, ""data: ", "https": "]}}})),"
-app && app.use(cors({,"
-  origin": NODE_ENV === 'development',
-    ? [http://localhost:3000"http: //localhost: 5000'],
-    : process && process.env.FRONTEND_URL || 'http: //localhost:3000,
-})),
-app && app.use(compression()),"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 app && app.use(morgan('combined')),
 app && app.use(limiter),'"
 app && app.use(express && express.json({ limit": 10mb' })),'"
@@ -499,22 +290,13 @@ app && app.use(express && express.urlencoded({ "extended: true, "limit": '10mb }
 // Import API routes,
 // API Routes,'
 app && app.use('/api/health', (_req, res) => {,
-<<<<<<< HEAD
-  res && res.json({,'"
+res && res.json({,'"
     status": OK',"
     "timestamp: new Date().toISOString(),"
     "environment": NODE_ENV,"
     uptime": process && process.uptime()
   })}),
 // Mount API routes,'
-=======
-  res && res.json({,
-    status": OK',')
-    "timestamp: new Date().toISOString(),""
-    uptime": process && process.uptime()"
-  })}),
-// Mount API routes,"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 app && app.use('/api, apiRoutes),
 // Serve static files from the built Vite frontend,'
 if (NODE_ENV === 'production') {,'
@@ -522,53 +304,14 @@ if (NODE_ENV === 'production') {,'
   app && app.use(express && express.static(frontendPath)),
   // Handle client-side routing,
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
 '
   app && app.get('*, (_req, res) => {,'
     res && res.sendFile(path && path.join(frontendPath, 'index ;
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
-  app && app.get('*, (_req, res) => {,
-    res && res.sendFile(path && path.join(frontendPath, 'index ;
-
-app.get('*, (_req, res) => {,;
-    res.sendFile(path.join(frontendPath, 'index.html'))})};
-
-
-
-
-
-
-
-  app.get('*, (_req, res) => {,;
-    res.sendFile(path.join(frontendPath, 'index.html'))})};
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Error handling middleware,
-=======
-
-
-
-
-
-// Error handling middleware,"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 app && app.use(("err: Error, "_req": express && express.Request, res": express && express.Response, "_next: express && express.NextFunction) => {,
 
   app && app.get('*, (_req, res) => {,
@@ -576,8 +319,7 @@ app && app.use(("err: Error, "_req": express && express.Request, res": express &
 // Error handling middleware,)
 app && app.use(("err: Error, "_req": express && express.Request, res": express && express.Response, "_next: express && express.NextFunction) => {,"
   console && console.error(err && err.stack),
-<<<<<<< HEAD
-  res && res.status(500).json({,'
+res && res.status(500).json({,'
     error: Something went wrong!','"
     "message": NODE_ENV === 'development ? err && err.message : 'Internal server error'
   })}),
@@ -595,58 +337,16 @@ app && app.listen(PORT, () => {,`
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process && process.env.PORT || 5000; const NODE_ENV = process && process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app && app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app && app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process && process.env.FRONTEND_URL || 'http: credentials: true })); app && app.use(compression()); app && app.use(morgan('combined')); app && app.use(limiter); app && app.use(express && express.json({ limit: '10mb' })); app && app.use(express && express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api ; app && app.use('/api/health',(_req,res) => { res && res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process && process.uptime() })}); app && app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path && path.join(__dirname,'../../dist'); app && app.use(express && express.static(frontendPath)); app && app.get('*',(_req,res) => { res && res.sendFile(path && path.join(frontendPath,'index && index.html'))})} app && app.use((err: Error,_req: express && express.Request,res: express && express.Response,_next: express && express.NextFunction) => { console && console.error(err && err.stack); res && res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err && err.message : 'Internal server error' })}); app && app.use('*',(_req,res) => { res && res.status(404).json({ error: 'Route not found' })}); app && app.listen(PORT,() => { console && console.log(`🚀 Server running on port ${PORT}`); console && console.log(`🌍 Environment: ${NODE_ENV}`); console && console.log(`📱 Frontend: http: console && console.log(`🔧 Backend API: http:'"`
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process && process.env.PORT || 5000; const NODE_ENV = process && process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app && app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app && app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process && process.env.FRONTEND_URL || 'http: credentials: true })); app && app.use(compression()); app && app.use(morgan('combined')); app && app.use(limiter); app && app.use(express && express.json({ limit: '10mb' })); app && app.use(express && express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api ; app && app.use('/api/health',(_req,res) => { res && res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process && process.uptime() })}); app && app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path && path.join(__dirname,'../../dist'); app && app.use(express && express.static(frontendPath)); app && app.get('*',(_req,res) => { res && res.sendFile(path && path.join(frontendPath,'index && index.html'))})} app && app.use((err: Error,_req: express && express.Request,res: express && express.Response,_next: express && express.NextFunction) => { console && console.error(err && err.stack); res && res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err && err.message : 'Internal server error' })}); app && app.use('*',(_req,res) => { res && res.status(404).json({ error: 'Route not found' })}); app && app.listen(PORT,() => { console && console.log(`🚀 Server running on port ${PORT}`); console && console.log(`🌍 Environment: ${NODE_ENV}`); console && console.log(`📱 Frontend: http: console && console.log(`🔧 Backend API: http:
 
-<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-  res && res.status(500).json({,"
-    error: Something went wrong!',
-    "message": NODE_ENV === 'development ? err && err.message : 'Internal server error)
-// 404 handler,
-app && app.use(*', (_req, res) => {,
-  res && res.status(404).json({ error": 'Route not found' })}),
-app && app.listen(PORT, () => {,`;
-  console && console.log(`🚀 Server running on port ${PORT}`),`;
-  console && console.log(`🌍 "Environment: ${NODE_ENV}`),""
-  console && console.log("📱 "Frontend: http: //localhost:3000"),"`;
-  console && console.log(`🔧 Backend API: http://localhost:${PORT}/api`)})
-}}}}})))))))))))))))))]]]]]],
-
-
-
-
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process && process.env.PORT || 5000; const NODE_ENV = process && process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app && app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app && app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process && process.env.FRONTEND_URL || 'http: credentials: true })); app && app.use(compression()); app && app.use(morgan('combined')); app && app.use(limiter); app && app.use(express && express.json({ limit: '10mb' })); app && app.use(express && express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api ; app && app.use('/api/health',(_req,res) => { res && res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process && process.uptime() })}); app && app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path && path.join(__dirname,'../../dist'); app && app.use(express && express.static(frontendPath)); app && app.get('*',(_req,res) => { res && res.sendFile(path && path.join(frontendPath,'index && index.html'))})} app && app.use((err: Error,_req: express && express.Request,res: express && express.Response,_next: express && express.NextFunction) => { console && console.error(err && err.stack); res && res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err && err.message : 'Internal server error' })}); app && app.use('*',(_req,res) => { res && res.status(404).json({ error: 'Route not found' })}); app && app.listen(PORT,() => { console && console.log(`🚀 Server running on port ${PORT}`); console && console.log(`🌍 Environment: ${NODE_ENV}`); console && console.log(`📱 Frontend: http: console && console.log(`🔧 Backend API: http:
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process && process.env.PORT || 5000; const NODE_ENV = process && process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app && app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app && app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process && process.env.FRONTEND_URL || 'http: credentials: true })); app && app.use(compression()); app && app.use(morgan('combined')); app && app.use(limiter); app && app.use(express && express.json({ limit: '10mb' })); app && app.use(express && express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api ; app && app.use('/api/health',(_req,res) => { res && res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process && process.uptime() })}); app && app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path && path.join(__dirname,'../../dist'); app && app.use(express && express.static(frontendPath)); app && app.get('*',(_req,res) => { res && res.sendFile(path && path.join(frontendPath,'index && index.html'))})} app && app.use((err: Error,_req: express && express.Request,res: express && express.Response,_next: express && express.NextFunction) => { console && console.error(err && err.stack); res && res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err && err.message : 'Internal server error' })}); app && app.use('*',(_req,res) => { res && res.status(404).json({ error: 'Route not found' })}); app && app.listen(PORT,() => { console && console.log(`🚀 Server running on port ${PORT}`); console && console.log(`🌍 Environment: ${NODE_ENV}`); console && console.log(`📱 Frontend: http: console && console.log(`🔧 Backend API: http:
-
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process && process.env.PORT || 5000; const NODE_ENV = process && process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app && app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app && app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process && process.env.FRONTEND_URL || 'http: credentials: true })); app && app.use(compression()); app && app.use(morgan('combined')); app && app.use(limiter); app && app.use(express && express.json({ limit: '10mb' })); app && app.use(express && express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api ; app && app.use('/api/health',(_req,res) => { res && res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process && process.uptime() })}); app && app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path && path.join(__dirname,'../../dist'); app && app.use(express && express.static(frontendPath)); app && app.get('*',(_req,res) => { res && res.sendFile(path && path.join(frontendPath,'index && index.html'))})} app && app.use((err: Error,_req: express && express.Request,res: express && express.Response,_next: express && express.NextFunction) => { console && console.error(err && err.stack); res && res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err && err.message : 'Internal server error' })}); app && app.use('*',(_req,res) => { res && res.status(404).json({ error: 'Route not found' })}); app && app.listen(PORT,() => { console && console.log(`🚀 Server running on port ${PORT}`); console && console.log(`🌍 Environment: ${NODE_ENV}`); console && console.log(`📱 Frontend: http: console && console.log(`🔧 Backend API: http:
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process && process.env.PORT || 5000; const NODE_ENV = process && process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app && app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app && app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process && process.env.FRONTEND_URL || 'http: credentials: true })); app && app.use(compression()); app && app.use(morgan('combined')); app && app.use(limiter); app && app.use(express && express.json({ limit: '10mb' })); app && app.use(express && express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api ; app && app.use('/api/health',(_req,res) => { res && res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process && process.uptime() })}); app && app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path && path.join(__dirname,'../../dist'); app && app.use(express && express.static(frontendPath)); app && app.get('*',(_req,res) => { res && res.sendFile(path && path.join(frontendPath,'index && index.html'))})} app && app.use((err: Error,_req: express && express.Request,res: express && express.Response,_next: express && express.NextFunction) => { console && console.error(err && err.stack); res && res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err && err.message : 'Internal server error' })}); app && app.use('*',(_req,res) => { res && res.status(404).json({ error: 'Route not found' })}); app && app.listen(PORT,() => { console && console.log(`🚀 Server running on port ${PORT}`); console && console.log(`🌍 Environment: ${NODE_ENV}`); console && console.log(`📱 Frontend: http: console && console.log(`🔧 Backend API: http:
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
-<<<<<<< HEAD
-=======
 
-
-
-
-
-'"`
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:'"`
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
 '"`
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
 
 '"`
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
-<<<<<<< HEAD
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
 <<<<<<< HEAD
@@ -655,11 +355,7 @@ import express from 'express'; import cors from 'cors'; import helmet from 'helm
 >>>>>>> main
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -668,25 +364,10 @@ import express from 'express'; import cors from 'cors'; import helmet from 'helm
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
-
 '"`
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
-<<<<<<< HEAD
-
-
 '"`
 import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process.env.PORT || 5000; const NODE_ENV = process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process.env.FRONTEND_URL || 'http: credentials: true })); app.use(compression()); app.use(morgan('combined')); app.use(limiter); app.use(express.json({ limit: '10mb' })); app.use(express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api.ts"; app.use('/api/health',(_req,res) => { res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process.uptime() })}); app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path.join(__dirname,'../../dist'); app.use(express.static(frontendPath)); app.get('*',(_req,res) => { res.sendFile(path.join(frontendPath,'index.html'))})} app.use((err: Error,_req: express.Request,res: express.Response,_next: express.NextFunction) => { console.error(err.stack); res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err.message : 'Internal server error' })}); app.use('*',(_req,res) => { res.status(404).json({ error: 'Route not found' })}); app.listen(PORT,() => { console.log(`🚀 Server running on port ${PORT}`); console.log(`🌍 Environment: ${NODE_ENV}`); console.log(`📱 Frontend: http: console.log(`🔧 Backend API: http:
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process && process.env.PORT || 5000; const NODE_ENV = process && process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app && app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app && app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process && process.env.FRONTEND_URL || 'http: credentials: true })); app && app.use(compression()); app && app.use(morgan('combined')); app && app.use(limiter); app && app.use(express && express.json({ limit: '10mb' })); app && app.use(express && express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api ; app && app.use('/api/health',(_req,res) => { res && res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process && process.uptime() })}); app && app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path && path.join(__dirname,'../../dist'); app && app.use(express && express.static(frontendPath)); app && app.get('*',(_req,res) => { res && res.sendFile(path && path.join(frontendPath,'index && index.html'))})} app && app.use((err: Error,_req: express && express.Request,res: express && express.Response,_next: express && express.NextFunction) => { console && console.error(err && err.stack); res && res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err && err.message : 'Internal server error' })}); app && app.use('*',(_req,res) => { res && res.status(404).json({ error: 'Route not found' })}); app && app.listen(PORT,() => { console && console.log(`🚀 Server running on port ${PORT}`); console && console.log(`🌍 Environment: ${NODE_ENV}`); console && console.log(`📱 Frontend: http: console && console.log(`🔧 Backend API: http:
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process && process.env.PORT || 5000; const NODE_ENV = process && process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app && app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app && app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process && process.env.FRONTEND_URL || 'http: credentials: true })); app && app.use(compression()); app && app.use(morgan('combined')); app && app.use(limiter); app && app.use(express && express.json({ limit: '10mb' })); app && app.use(express && express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api ; app && app.use('/api/health',(_req,res) => { res && res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process && process.uptime() })}); app && app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path && path.join(__dirname,'../../dist'); app && app.use(express && express.static(frontendPath)); app && app.get('*',(_req,res) => { res && res.sendFile(path && path.join(frontendPath,'index && index.html'))})} app && app.use((err: Error,_req: express && express.Request,res: express && express.Response,_next: express && express.NextFunction) => { console && console.error(err && err.stack); res && res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err && err.message : 'Internal server error' })}); app && app.use('*',(_req,res) => { res && res.status(404).json({ error: 'Route not found' })}); app && app.listen(PORT,() => { console && console.log(`🚀 Server running on port ${PORT}`); console && console.log(`🌍 Environment: ${NODE_ENV}`); console && console.log(`📱 Frontend: http: console && console.log(`🔧 Backend API: http:
-
-
-"`;
-import express from 'express'; import cors from 'cors'; import helmet from 'helmet'; import compression from 'compression'; import morgan from 'morgan'; import rateLimit from 'express-rate-limit'; import path from 'path'; const app = express(); const PORT = process && process.env.PORT || 5000; const NODE_ENV = process && process.env.NODE_ENV || 'development'; const limiter = rateLimit({ windowMs: 15 * 60 * 1000,max: 100,message: 'Too many requests from this IP,please try again later.' }); app && app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"],styleSrc: ["'self'","'unsafe-inline'"],scriptSrc: ["'self'"],imgSrc: ["'self'","data:","https:"],},},})); app && app.use(cors({ origin: NODE_ENV === 'development' ? ['http: : process && process.env.FRONTEND_URL || 'http: credentials: true })); app && app.use(compression()); app && app.use(morgan('combined')); app && app.use(limiter); app && app.use(express && express.json({ limit: '10mb' })); app && app.use(express && express.urlencoded({ extended: true,limit: '10mb' })); import apiRoutes from "routes/api ; app && app.use('/api/health',(_req,res) => { res && res.json({ status: 'OK',timestamp: new Date().toISOString(),environment: NODE_ENV,uptime: process && process.uptime() })}); app && app.use('/api',apiRoutes); if (NODE_ENV === 'production') { const frontendPath = path && path.join(__dirname,'../../dist'); app && app.use(express && express.static(frontendPath)); app && app.get('*',(_req,res) => { res && res.sendFile(path && path.join(frontendPath,'index && index.html'))})} app && app.use((err: Error,_req: express && express.Request,res: express && express.Response,_next: express && express.NextFunction) => { console && console.error(err && err.stack); res && res.status(500).json({ error: 'Something went wrong!',message: NODE_ENV === 'development' ? err && err.message : 'Internal server error' })}); app && app.use('*',(_req,res) => { res && res.status(404).json({ error: 'Route not found' })}); app && app.listen(PORT,() => { console && console.log(`🚀 Server running on port ${PORT}`); console && console.log(`🌍 Environment: ${NODE_ENV}`); console && console.log(`📱 Frontend: http: console && console.log(`🔧 Backend API: http:')]`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

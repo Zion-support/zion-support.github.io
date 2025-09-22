@@ -3,10 +3,10 @@
 export default function MarketResearchPage() {}
   const marketSegments = []
     {}
-      name: 'AI & Machine Learning''
-      marketSize: '$15.7B''
-      growthRate: '23.4% CAGR'
-      keyTrends: [
+      name: 'AI & Machine Learning'';
+      marketSize: '$15.7B'';
+      growthRate: '23.4% CAGR';
+      keyTrends: [;
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -34,7 +34,7 @@ export default function MarketResearchPage() {
         'Computer vision applications expanding',
       ],
       topPlayers: ['OpenAI', 'Anthropic', 'Google AI', 'Microsoft Azure AI'],
-      opportunities: [
+      opportunities: [;
         'AI content generation tools',
         'Predictive analytics platforms',
         'Automated customer service',
@@ -45,22 +45,22 @@ export default function MarketResearchPage() {
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
-      name: 'Database & Analytics'
-      marketSize: '$8.9B'
-      growthRate: '18.7% CAGR'
-      keyTrends: []
-      opportunities: ['
+      name: 'Database & Analytics';
+      marketSize: '$8.9B';
+      growthRate: '18.7% CAGR';
+      keyTrends: [];
+      opportunities: [';
         'Database performance monitoring''
         'Real-time analytics dashboards''
         'Data visualization tools''
         'Query optimization platforms'
       ]'
-      color: 'from-cyan-500 to-blue-600''
+      color: 'from-cyan-500 to-blue-600'';
       icon: <BarChart3 className='w-8 h-8 text-white' />
-    },    {      opportunities: ['
+    },    {      opportunities: [';
         'Database performance monitoringReal-time analytics dashboardsData visualization toolsQuery optimization platforms';
       ];'
-      color: 'from-cyan-500 to-blue-600'
+      color: 'from-cyan-500 to-blue-600';
       icon: <BarChart3 className="w-8 h-8 text-white" />
 'Real-time analytics demand',
         'Cloud database migration',
@@ -68,7 +68,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Performance optimization focus',
       ],
       topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],
-      opportunities: [
+      opportunities: [;
         'Database performance monitoring',
         'Real-time analytics dashboards',
         'Data visualization tools',
@@ -79,22 +79,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
-      name: 'Security & Identity'
-      marketSize: '$12.3B'
-      growthRate: '21.2% CAGR'
-      keyTrends: []
-      opportunities: ['
+      name: 'Security & Identity';
+      marketSize: '$12.3B';
+      growthRate: '21.2% CAGR';
+      keyTrends: [];
+      opportunities: [';
         'Identity verification platforms''
         'API security gateways''
         'Compliance monitoring tools''
         'Threat detection systems'
       ]'
-      color: 'from-green-500 to-emerald-600''
+      color: 'from-green-500 to-emerald-600'';
       icon: <Target className='w-8 h-8 text-white' />
-    },    {      opportunities: ['
+    },    {      opportunities: [';
         'Identity verification platformsAPI security gatewaysCompliance monitoring toolsThreat detection systems'
       ];'
-      color: 'from-green-500 to-emerald-600'"
+      color: 'from-green-500 to-emerald-600'";
       icon: <Target className="w-8 h-8 text-white" />
 'Zero-trust security adoption',
         'Multi-factor authentication growth',
@@ -102,7 +102,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Compliance requirements increasing',
       ],
       topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],
-      opportunities: [
+      opportunities: [;
         'Identity verification platforms',
         'API security gateways',
         'Compliance monitoring tools',
@@ -113,22 +113,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
-      name: 'Business Intelligence'
-      marketSize: '$22.1B'
-      growthRate: '19.8% CAGR'
-      keyTrends: []
-      opportunities: ['
+      name: 'Business Intelligence';
+      marketSize: '$22.1B';
+      growthRate: '19.8% CAGR';
+      keyTrends: [];
+      opportunities: [';
         'Custom dashboard builders''
         'Data integration platforms''
         'Mobile analytics solutions''
         'Predictive modeling tools'
       ]'
-      color: 'from-orange-500 to-red-600''
+      color: 'from-orange-500 to-red-600'';
       icon: <Activity className='w-8 h-8 text-white' />
-    },    {      opportunities: ['
+    },    {      opportunities: [';
         'Custom dashboard buildersData integration platformsMobile analytics solutionsPredictive modeling tools'
       ];'
-      color: 'from-orange-500 to-red-600'"
+      color: 'from-orange-500 to-red-600'";
       icon: <Activity className="w-8 h-8 text-white" />
 'Self-service BI adoption',
         'Real-time data integration',
@@ -136,7 +136,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Predictive analytics demand',
       ],
       topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
-      opportunities: [
+      opportunities: [;
         'Custom dashboard builders',
         'Data integration platforms',
         'Mobile analytics solutions',
@@ -147,22 +147,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
-      name: 'API Management'
-      marketSize: '$6.8B'
-      growthRate: '24.1% CAGR'
-      keyTrends: []
-      opportunities: ['
+      name: 'API Management';
+      marketSize: '$6.8B';
+      growthRate: '24.1% CAGR';
+      keyTrends: [];
+      opportunities: [';
         'API rate limiting services''
         'Developer portal platforms''
         'API analytics tools''
         'Webhook management systems'
       ]'
-      color: 'from-indigo-500 to-purple-600''
+      color: 'from-indigo-500 to-purple-600'';
       icon: <Globe className='w-8 h-8 text-white' />
-    },    {      opportunities: ['
+    },    {      opportunities: [';
         'API rate limiting servicesDeveloper portal platformsAPI analytics toolsWebhook management systems'
       ];'
-      color: 'from-indigo-500 to-purple-600'"
+      color: 'from-indigo-500 to-purple-600'";
       icon: <Globe className="w-8 h-8 text-white" />
 'Microservices architecture growth',
         'API-first development',
@@ -170,7 +170,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Developer experience focus',
       ],
       topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],
-      opportunities: [
+      opportunities: [;
         'API rate limiting services',
         'Developer portal platforms',
         'API analytics tools',
@@ -181,22 +181,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
-      name: 'User Experience Analytics'
-      marketSize: '$9.4B'
-      growthRate: '20.5% CAGR'
-      keyTrends: []
-      opportunities: ['
+      name: 'User Experience Analytics';
+      marketSize: '$9.4B';
+      growthRate: '20.5% CAGR';
+      keyTrends: [];
+      opportunities: [';
         'Heatmap and session recording''
         'A/B testing platforms''
         'User journey mapping tools''
         'Conversion funnel analytics'
       ]'
-      color: 'from-teal-500 to-cyan-600''
+      color: 'from-teal-500 to-cyan-600'';
       icon: <Users className='w-8 h-8 text-white' />
-    },  ];      opportunities: ['
+    },  ];      opportunities: [';
         'Heatmap and session recordingA/B testing platformsUser journey mapping toolsConversion funnel analytics'
       ];'
-      color: 'from-teal-500 to-cyan-600'"
+      color: 'from-teal-500 to-cyan-600'";
       icon: <Users className="w-8 h-8 text-white" />
     }'
         'AI content generation tools','
@@ -206,7 +206,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],'
       color: 'from-fuchsia-500 to-purple-600','
       icon: <Zap className='w-8 h-8 text-white' />,
-    },    {      opportunities: ['
+    },    {      opportunities: [';
         'AI content generation toolsPredictive analytics platformsAutomated customer serviceIntelligent process automation';
       ];'
       color: 'from-fuchsia-500 to-purple-600',"
@@ -217,7 +217,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'Database & Analytics','
       marketSize: '$8.9B','
       growthRate: '18.7% CAGR',
-      keyTrends: ['
+      keyTrends: [';
         'Real-time analytics demand','
         'Cloud database migration','
         'Data privacy regulations','
@@ -225,7 +225,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],'
       topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],
 
-      opportunities: ['
+      opportunities: [';
         'Database performance monitoring','
         'Real-time analytics dashboards','
         'Data visualization tools','
@@ -239,7 +239,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'Security & Identity','
       marketSize: '$12.3B','
       growthRate: '21.2% CAGR',
-      keyTrends: ['
+      keyTrends: [';
         'Zero-trust security adoption','
         'Multi-factor authentication growth','
         'API security concerns','
@@ -247,7 +247,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],'
       topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],
 
-      opportunities: ['
+      opportunities: [';
         'Identity verification platforms','
         'API security gateways','
         'Compliance monitoring tools','
@@ -261,7 +261,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'Business Intelligence','
       marketSize: '$22.1B','
       growthRate: '19.8% CAGR',
-      keyTrends: ['
+      keyTrends: [';
         'Self-service BI adoption','
         'Real-time data integration','
         'Mobile BI growth','
@@ -269,7 +269,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],'
       topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
 
-      opportunities: ['
+      opportunities: [';
         'Custom dashboard builders','
         'Data integration platforms','
         'Mobile analytics solutions','
@@ -283,7 +283,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'API Management','
       marketSize: '$6.8B','
       growthRate: '24.1% CAGR',
-      keyTrends: ['
+      keyTrends: [';
         'Microservices architecture growth','
         'API-first development','
         'Rate limiting importance','
@@ -291,7 +291,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],'
       topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],
 
-      opportunities: ['
+      opportunities: [';
         'API rate limiting services','
         'Developer portal platforms','
         'API analytics tools','
@@ -305,7 +305,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'User Experience Analytics','
       marketSize: '$9.4B','
       growthRate: '20.5% CAGR',
-      keyTrends: ['
+      keyTrends: [';
         'Privacy-compliant tracking','
         'Real-time user insights','
         'Conversion optimization focus','
@@ -313,14 +313,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],'
       topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
 
-      opportunities: [
+      opportunities: [;
 'Privacy-compliant tracking',
         'Real-time user insights',
         'Conversion optimization focus',
         'Mobile app analytics growth',
       ],
       topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
-      opportunities: [
+      opportunities: [;
 origin/cursor/automate-test-improve-and-merge-code-2533
         'Heatmap and session recording',
         'A/B testing platforms',
@@ -344,32 +344,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       company: 'Enterprise Giants',
 examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP'],
 origin/cursor/automate-test-improve-and-merge-code-2533
-      strengths: [
+      strengths: [;
         'Extensive resources and R&DEstablished customer baseComprehensive feature setsGlobal presence and support'
       ];
-      weaknesses: ['
+      weaknesses: [';
         'High pricing and complexitySlow innovation cyclesDifficult customizationLong implementation times'
       ];'
       marketShare: '45-60%',
 '
-      pricing: 'High ($1000+/month)'
+      pricing: 'High ($1000+/month)';
     },    {'
-      company: 'Mid-Market Leaders''
+      company: 'Mid-Market Leaders'';
       examples: ['HubSpot', 'Atlassian', 'Slack', 'Zoom']
-      strengths: ['
+      strengths: [';
         'Balanced features and pricing''
         'Strong user experience''
         'Active community support''
         'Regular feature updates'
       ]
-      weaknesses: ['
+      weaknesses: [';
         'Limited customization options''
         'Growing complexity over time''
         'Dependency on integrations''
         'Scalability challenges'
       ]'
-      marketShare: '25-35%''
-      pricing: 'Medium ($100-500/month)'
+      marketShare: '25-35%'';
+      pricing: 'Medium ($100-500/month)';
     }
         'High pricing and complexity',
         'Slow innovation cycles',
@@ -382,13 +382,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {
       company: 'Mid-Market Leaders',
       examples: ['HubSpot', 'Atlassian', 'Slack', 'Zoom'],
-      strengths: [
+      strengths: [;
         'Balanced features and pricing',
         'Strong user experience',
         'Active community support',
         'Regular feature updates',
       ],
-      weaknesses: [
+      weaknesses: [;
         'Limited customization options',
         'Growing complexity over time',
         'Dependency on integrations',
@@ -400,13 +400,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {
       company: 'Micro SaaS Innovators',
       examples: ['Zapier', 'Notion', 'Airtable', 'Linear'],
-      strengths: [
+      strengths: [;
         'Focused feature sets',
         'Fast innovation cycles',
         'Affordable pricing',
         'Easy implementation',
       ],
-      weaknesses: [
+      weaknesses: [;
         'Limited feature scope',
         'Smaller support teams',
         'Integration dependencies',
@@ -419,11 +419,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const marketTrends = []
     {'
-      trend: 'AI-First Approach''
-      description: 'Companies prioritizing AI capabilities in their products''
-      impact: 'High''
-      timeline: '2024-2026'
-      examples: []
+      trend: 'AI-First Approach'';
+      description: 'Companies prioritizing AI capabilities in their products'';
+      impact: 'High'';
+      timeline: '2024-2026';
+      examples: [];
 import {;
   TrendingUp,;
   BarChart3,;
@@ -482,7 +482,7 @@ import { Zap } from 'lucide-react';
       description: 'Growing focus on data privacy and compliance',
       impact: 'High',
       timeline: '2024-2027',
-      examples: [
+      examples: [;
 'GDPR compliance tools',
         'Privacy analytics platforms',
         'Data anonymization services',
@@ -496,7 +496,7 @@ import { Zap } from 'lucide-react';
       description: 'Shift towards API-centric application development',
       impact: 'Medium',
       timeline: '2024-2026',
-      examples: [
+      examples: [;
 'API management platforms',
         'Developer experience tools',
         'API analytics and monitoring',
@@ -510,7 +510,7 @@ import { Zap } from 'lucide-react';
       description: 'Demand for real-time data and analytics',
       impact: 'Medium',
       timeline: '2024-2025',
-      examples: [
+      examples: [;
 'Real-time dashboards',
         'Live collaboration tools',
         'Instant notifications',
@@ -523,15 +523,15 @@ import { Zap } from 'lucide-react';
 
   const pricingStrategies = [
     {
-      strategy: 'Value-Based Pricing'
-      description: 'Pricing based on customer value and ROI'
-      pros: [
+      strategy: 'Value-Based Pricing';
+      description: 'Pricing based on customer value and ROI';
+      pros: [;
 'Higher profit margins',
         'Customer alignment',
         'Scalable pricing model',
         'Competitive differentiation',
       ],
-      cons: [
+      cons: [;
         'Complex pricing structure'
         'Customer education required'
         'Value measurement challenges'
@@ -543,13 +543,13 @@ import { Zap } from 'lucide-react';
     {
       strategy: 'Usage-Based Pricing',
       description: 'Pricing based on actual usage or consumption',
-      pros: [
+      pros: [;
 'Fair pricing model',
         'Easy to understand',
         'Scalable with growth',
         'Low barrier to entry',
       ],
-      cons: [
+      cons: [;
         'Revenue predictability challenges',
         'Complex billing systems',
         'Usage optimization needed',
@@ -560,13 +560,13 @@ import { Zap } from 'lucide-react';
     {
       strategy: 'Freemium Model',
       description: 'Free basic tier with paid premium features',
-      pros: [
+      pros: [;
 'Low customer acquisition cost',
         'Viral growth potential',
         'Large user base',
         'Easy market entry',
       ],
-      cons: [
+      cons: [;
         'Low conversion rates',
         'Revenue per user challenges',
         'Support cost management',
@@ -612,11 +612,11 @@ description: 'Average time for SaaS companies to reach profitability',
           content='Comprehensive market research, competitive analysis, and industry insights for micro SaaS services. Data-driven market intelligence to inform your business decisions.'
         />
         <meta
-          property='og:title'
+          property='og:title';
           content='Market Research & Industry Insights | Zion Tech Group'
         />
         <meta
-          property='og:description'
+          property='og:description';
           content='Comprehensive market research and competitive analysis for micro SaaS services.'
         />
         <meta name='twitter:card' content='summary_large_image' />
@@ -652,7 +652,7 @@ description: 'Average time for SaaS companies to reach profitability',
               to help you understand the current market landscape.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
             {investmentInsights.map((insight, index) => (
               <Card
                 key={index}
@@ -699,10 +699,10 @@ description: 'Average time for SaaS companies to reach profitability',
                 style={{ animationDelay: `${index * 0.1;}s` }}
               >
                 <div className='p-8'>
-                  <div className='flex flex-col lg:flex-row gap-8'>
+                  <div className='flex flex-col lg:flex-row gap-8'>;
                     {/* Segment Header */}
-                    <div className='lg:w-1/3'>
-                      <div className='text-center lg:text-left'>
+                    <div className='lg:w-1/3'>;
+                      <div className='text-center lg:text-left'>;
                         <div
                           className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${segment.color} shadow-xl mx-auto lg: mx-0 mb-6`;}
                         >
@@ -770,13 +770,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {/* Market Data */}
                         <div className='space-y-3 text-sm mb-6'>
                           <div className='flex items-center justify-between'>
-                            <span className='text-gray-400'>Market Size:</span>
+                            <span className='text-gray-400'>Market Size:</span>;
                             <span className='text-white font-semibold'>
                               {segment.marketSize}
                             </span>
                           </div>
                           <div className='flex items-center justify-between'>
-                            <span className='text-gray-400'>Growth Rate:</span>
+                            <span className='text-gray-400'>Growth Rate:</span>;
                             <span className='text-green-400 font-semibold'>
                               {segment.growthRate}
                             </span>
@@ -785,8 +785,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                     {/* Market Analysis */}
-<div className='lg:w-2/3'>
-                      <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+<div className='lg:w-2/3'>;
+                      <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
                         {/* Key Trends */}
                         <div>
                           <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
@@ -828,7 +828,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <Target className='w-5 h-5 mr-2 text-blue-400' />
                           Market Opportunities;
                         </h4>'
-                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
                           {segment.opportunities.map(
                             (opportunity, oppIndex) => (
                               <div;
@@ -839,7 +839,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 {opportunity}
                               </div>
                             )"
-                          )}                        </div>                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          )}                        </div>                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
                           {segment.opportunities.map((opportunity, oppIndex) => ("
                             <div key={oppIndex} className="flex items-start text-gray-300 text-sm">"
                               <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
@@ -875,7 +875,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               for different types of SaaS companies.
             </p>
           </div>'
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
             {competitiveAnalysis.map((analysis, index) => (
               <Card;
                 key={index}'
@@ -902,7 +902,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Understanding the competitive landscape and positioning strategies for different types of SaaS companies.
             </p>
           </div>"
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {competitiveAnalysis.map((analysis, index) => (
               <Card;
                 key={index}"
@@ -913,17 +913,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h3 className="text-xl font-bold text-white mb-4">{analysis.company}</h3>
                   {/* Examples */}"
                   <div className="mb-6">"
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>"
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>";
                     <div className="text-sm text-gray-300">{analysis.examples.join()}</div>
                   </div>
                   {/* Market Share & Pricing */}"
                   <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                     <div>"
-                      <span className="text-gray-400">Market Share:</span>"
+                      <span className="text-gray-400">Market Share:</span>";
                       <div className="text-white font-semibold">{analysis.marketShare}</div>
                     </div>
                     <div>"
-                      <span className="text-gray-400">Pricing:</span>"
+                      <span className="text-gray-400">Pricing:</span>";
                       <div className="text-white font-semibold">{analysis.pricing}</div>
                     </div>
                   </div>
@@ -1002,7 +1002,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className="text-white font-semibold">{analysis && analysis.pricing}</div>;
                     </div>;
                   </div>;"
-                    <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>"
+                    <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>";
                     <ul className="space-y-1 text-xs text-gray-300">
                       {analysis.strengths.map((strength, strengthIndex) => ("
                         <li key={strengthIndex} className="flex items-start">"
@@ -1014,7 +1014,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-green-400 mb-2'>
                       Strengths:
-                    </h4>
+                    </h4>;
                     <ul className='space-y-1 text-xs text-gray-300'>
                       {analysis.strengths.map((strength, strengthIndex) => (
                         <li key={strengthIndex} className='flex items-start'>
@@ -1030,7 +1030,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div>
 <h4 className='text-sm font-semibold text-red-400 mb-2'>
                       Weaknesses:
-                    </h4>
+                    </h4>;
                     <ul className='space-y-1 text-xs text-gray-300'>
                       {analysis.weaknesses.map((weakness, weaknessIndex) => (
                         <li key={weaknessIndex} className='flex items-start'>
@@ -1072,7 +1072,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               opportunities for innovation and growth.
             </p>
           </div>'
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {marketTrends.map((trend, index) => (
               Key trends shaping the micro SaaS landscape and creating new;
               opportunities for innovation and growth.;
@@ -1096,12 +1096,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <h3 className="text-xl font-bold text-white">{trend.trend}</h3>"
                     <div className="flex items-center space-x-2">`
                       <span className={`px-2 py-1 rounded text-xs font-medium ${'
-                        trend.impact === 'High' ? 'bg-red-500/20 text-red-400' :'
-                        trend.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :'
+                        trend.impact === 'High' ? 'bg-red-500/20 text-red-400' :';
+                        trend.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :';
                         'bg-green-500/20 text-green-400'"
                   <p className="text-gray-300 mb-4">{trend.description}</p>"
                   <div className="mb-4">"
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>"
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>";
                     <ul className="space-y-1 text-xs text-gray-300">
                       {trend.examples.map((example, exampleIndex) => ("
                         <li key={exampleIndex} className="flex items-start">"
@@ -1123,7 +1123,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             ? 'bg-red-500/20 text-red-400'
                             : trend.impact === 'Medium'
                               ? 'bg-yellow-500/20 text-yellow-400'
-                              : 'bg-green-500/20 text-green-400'
+                              : 'bg-green-500/20 text-green-400';
                         }`}
                       >
                         {trend.impact} Impact
@@ -1138,7 +1138,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-gray-400 mb-2'>
                       Examples:
-                    </h4>
+                    </h4>;
                     <ul className='space-y-1 text-xs text-gray-300'>
                       {trend.examples.map((example, exampleIndex) => (
                         <li key={exampleIndex} className='flex items-start'>
@@ -1153,7 +1153,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p className="text-xs text-gray-300">{trend.opportunities}</p>
 <h4 className='text-sm font-semibold text-green-400 mb-2'>
                       Opportunities:
-                    </h4>
+                    </h4>;
                     <p className='text-xs text-gray-300'>
                       {trend.opportunities}
                     </p>
@@ -1179,7 +1179,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               market and their implications for business success.
             </p>
           </div>'
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
             {pricingStrategies.map((strategy, index) => (
               <Card"
             <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
@@ -1269,7 +1269,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               market and their implications for business success.
             </p>
           </div>'
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
             {pricingStrategies.map((strategy, index) => (
               <Card;
                 key={index}'
@@ -1284,7 +1284,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Analysis of different pricing strategies used in the micro SaaS market and their implications for business success.
             </p>
           </div>"
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {pricingStrategies.map((strategy, index) => (
               <Card;
                 key={index}"
@@ -1340,7 +1340,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-green-400 mb-2'>
                       Pros:
-                    </h4>
+                    </h4>;
                     <ul className='space-y-1 text-xs text-gray-300'>
                       {strategy.pros.map((pro, proIndex) => (
                         <li key={proIndex} className='flex items-start'>
@@ -1356,7 +1356,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-red-400 mb-2'>
                       Cons:
-                    </h4>'
+                    </h4>';
                     <ul className='space-y-1 text-xs text-gray-300'>
                       {strategy.cons.map((con, conIndex) => (
                         <li key={conIndex} className='flex items-start'>
@@ -1369,11 +1369,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   {/* Best For */}
                   <div>"
-                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>"
+                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>";
                     <p className="text-xs text-gray-300">{strategy.bestFor}</p>
 <h4 className='text-sm font-semibold text-blue-400 mb-2'>
                       Best For:
-                    </h4>
+                    </h4>;
                     <p className='text-xs text-gray-300'>{strategy.bestFor}</p>
 origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
@@ -1479,11 +1479,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Use our market research and competitive analysis to inform your;
             business strategy, pricing decisions, and market positioning.
           </p>'
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
             <Button'
               href='/contact''
               size='lg''
-              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow'            >
+              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow'            >;
               Get Strategic Consultation;
             </Button>
             <Button'
@@ -1493,12 +1493,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Use our market research and competitive analysis to inform your business strategy, pricing decisions, and market positioning.
           </p>"
-          <div className="flex flex-col sm: flex-row gap-6 justify-center">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">;
             <Button"
               href="/contact""
               size="lg""
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
-              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow'
+              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow";
+              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow';
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Get Strategic Consultation;
@@ -1514,7 +1514,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 href='/services'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'
+              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl';
             >
               View Our Services
             </Button>

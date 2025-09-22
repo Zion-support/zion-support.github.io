@@ -1,5 +1,5 @@
 import React from "react";
-<<<<<<< HEAD:src_backup/pages/News.tsx
+:src_backup/pages/News.tsx
 const News = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -20,21 +20,6 @@ const News = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {" "}
           <div className="bg-white p-6 rounded-lg shadow-md">
-=======
-const AISolutions = () => {}
-  return ("
-    <div className="min-h-screen bg-gray-50">"
-      {" "}"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">"
-        {" "}"
-        <div className="text-center mb-12">"
-          {" "}"
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">"
-            {" "}"
-            AI Solutions{" "}"
-          </h1>{" "}"
-          <p className="text-xl text-gray-600">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/services/AISolutions.tsx
             {" "}
             Harness the power of artificial intelligence to transform your"
             business.{" "}"
@@ -45,7 +30,7 @@ const AISolutions = () => {}
           <div className="bg-white p-6 rounded-lg shadow-md">"
             {" "}"
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-<<<<<<< HEAD:src_backup/pages/News.tsx
+:src_backup/pages/News.tsx
               New AI Solutions Launch
             </h3>{" "}
             <p className="text-gray-600 mb-4">
@@ -77,45 +62,13 @@ const AISolutions = () => {}
             <span className="text-sm text-blue-600">Read More</span>{" "}
           </div>{" "}
         </div>{" "}
-=======
-              Machine Learning"
-            </h3>{" "}"
-            <p className="text-gray-600 mb-4">
-              Build and deploy intelligent models that learn from your data."
-            </p>{" "}"
-            <span className="text-sm text-blue-600">Learn More</span>{" "}"
-          </div>{" "}"
-          <div className="bg-white p-6 rounded-lg shadow-md">"
-            {" "}"
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Natural Language Processing"
-            </h3>{" "}"
-            <p className="text-gray-600 mb-4">
-              Understand and process human language with advanced NLP solutions."
-            </p>{" "}"
-            <span className="text-sm text-blue-600">Learn More</span>{" "}"
-          </div>{" "}"
-          <div className="bg-white p-6 rounded-lg shadow-md">"
-            {" "}"
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Computer Vision"
-            </h3>{" "}"
-            <p className="text-gray-600 mb-4">
-              Extract insights from images and videos with computer vision;
-              technology."
-            </p>{" "}"
-            <span className="text-sm text-blue-600">Learn More</span>{" "}"
-          </div>{" "}"
-        </div>{" "}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/services/AISolutions.tsx
       </div>{" "}
     </div>
   );
 };
-<<<<<<< HEAD:src_backup/pages/News.tsx
+:src_backup/pages/News.tsx
 export default News;
 main
-
 
 import { SEO } from '../components/SEO';
 export default function Page() {
@@ -132,7 +85,3 @@ const News: React.FC = () => {
   )}
 ;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
-export default AISolutions;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/services/AISolutions.tsx

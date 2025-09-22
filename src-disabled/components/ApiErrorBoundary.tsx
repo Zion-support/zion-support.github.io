@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
+:src_backup/components/ApiErrorBoundary.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,14 +117,9 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
       // Use custom fallback if provided;
       if (this.props.fallback) {;
         return this.props.fallback;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
 
       return (
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ApiErrorBoundary.tsx
 =======
       }
 
@@ -168,20 +162,9 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
+:src_backup/components/ApiErrorBoundary.tsx
 
-<<<<<<< HEAD
-=======
-      return (
-        <div className='flex min - h-screen items - center justify - center p - 4'>;
-          <div className='w - full max - w-md space - y-4'>;
-            <Alert variant='destructive'>;
-              <div className='flex items - center gap - 2'>;
-                {isNetworkError ? (
-                  <WifiOff className='h - 4 w - 4' />) : ('
-                  <RefreshCw className='h - 4 w - 4' />)}'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
-                <AlertTitle>;
+<AlertTitle>;
                   {isNetworkError;
                     ? 'Connection Problem';
                     : 'Something went wrong'}'
@@ -189,15 +172,9 @@ if ( {) {
               </div>;
               </AlertDescription>;
             </Alert>;
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
+:src_backup/components/ApiErrorBoundary.tsx
 <<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ApiErrorBoundary.tsx
 =======
         <div className="flex min-h-screen items-center justify-center p-4">"
           <div className="w-full max-w-md space-y-4">"
@@ -361,25 +338,16 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
+:src_backup/components/ApiErrorBoundary.tsx
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
                   <RefreshCw className="h-4 w-4" />
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
+:src_backup/components/ApiErrorBoundary.tsx
 
 <<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ApiErrorBoundary.tsx
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
                 </AlertTitle>
@@ -396,26 +364,13 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 )}
               </AlertDescription>
             </Alert>
-<<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
+:src/components/ApiErrorBoundary.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ApiErrorBoundary.tsx
 
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
+:src_backup/components/ApiErrorBoundary.tsx
 <<<<<<< HEAD
             <div className="flex flex-col gap-2">
               <Button
-=======
-
-            <div className='flex flex-col gap-2'>;
-              <Button
-
-<<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ApiErrorBoundary.tsx
@@ -429,15 +384,8 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
+:src_backup/components/ApiErrorBoundary.tsx
 
-<<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ApiErrorBoundary.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -456,20 +404,12 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                     Try Again
                   </>
                 )}
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD
-              </Button>
+:src_backup/components/ApiErrorBoundary.tsx
+</Button>
 
 <<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
 <<<<<<< HEAD
               <Button
-=======
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ApiErrorBoundary.tsx
 =======
               </Button>
 
@@ -479,15 +419,8 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 onClick={() => window.location.reload()}
                 className="w-full"
               >
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
+:src_backup/components/ApiErrorBoundary.tsx
 
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ApiErrorBoundary.tsx
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
                 Reload Page
@@ -497,29 +430,16 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
             </div>
 
             {!this.state.isOnline && (
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
+:src_backup/components/ApiErrorBoundary.tsx
               <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
                 <WifiOff className="h-4 w-4" />
                 <span>Offline</span>
               </div>
             )}
-<<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-              <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>'
-                <WifiOff className='h-4 w-4' />'
-                <span>Offline</span>
-              </div>
-            )}
-            {process.env.NODE_ENV === 'development' && this.state.error && (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
               <AlertDescription className='mt - 2'>;
                 {isNetworkError;
                   ? !this.state.is_online;
@@ -595,28 +515,17 @@ export const useApiErrorHandler = () =>: any {
                 </pre>;
               </details>;
             )}
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
+:src_backup/components/ApiErrorBoundary.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ApiErrorBoundary.tsx
               <details className="mt-4 rounded border p-2 text-xs">
-=======
-            {process.env.NODE_ENV === 'development' && this.state.error && (              <details className="mt-4 rounded border p-2 text-xs">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <pre className="mt-2 whitespace-pre-wrap break-all">
 
-<<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ApiErrorBoundary.tsx
 =======
               <details className="mt-4 rounded border p-2 text-xs">"
                 <summary className="cursor-pointer font-medium">"
@@ -629,85 +538,13 @@ export const useApiErrorHandler = () =>: any {
                 </pre>;
               </details>;
             )}
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD
-=======
+:src_backup/components/ApiErrorBoundary.tsx
 
-}, ;
-  return { handleApiError };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}, ;
-  return { handleApiError };
-
-            {!this.state.isOnline && (
-              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                <WifiOff className="h-4 w-4" />
-                <span>Offline</span>
-              </div>
-            )}
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4 rounded border p-2 text-xs">
-                <summary className="cursor-pointer font-medium">
-                  Debug Info (Development Only)
-                </summary>
-                <pre className="mt-2 whitespace-pre-wrap break-all">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>;
-              </details>;
-            )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
           </div>;
         </div>;
       );
     }
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD
-;
-    return this.props.children;
-  }
-}
-;
-=======
-
-    return this && this.props.children;
-  }
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-// Hook for accessing query client in function components;
-export const useApiErrorHandler = () => {;
-  const handleApiError = (error: Error) => {;
-<<<<<<< HEAD
-    Sentry.withScope((scope) => {;
-      scope.setTag('sourceuseApiErrorHandler'),;
-      scope.setLevel('error'),;
-      Sentry.captureException(error);
-=======
-    return this && this.props.children;
-  }
-// Hook for accessing query client in function components;
-export const useApiErrorHandler = () => {;
-  const handleApiError = (error:,  Error) => {;,
-    Sentry && Sentry.withScope(scope => {;
-      scope && scope.setTag('source', 'useApiErrorHandler');
-      scope && scope.setLevel('error');
-      Sentry && Sentry.captureException(error);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
-    });
-  };
-<<<<<<< HEAD
-  return { handleApiError }
-=======
-  return { handleApiError };
-};
-  return { handleApiError }
-},
-  return { handleApiError }
-},
-};)
+:src_backup/components/ApiErrorBoundary.tsx
 ;
     return this.props.children;
   }
@@ -716,67 +553,16 @@ export const useApiErrorHandler = () => {;
 // Hook for accessing query client in function components;
 export const useApiErrorHandler = () => {;
   const handleApiError = (error: Error) => {;
-    Sentry.withScope((scope) => {;
+Sentry.withScope((scope) => {;
       scope.setTag('sourceuseApiErrorHandler'),;
       scope.setLevel('error'),;
       Sentry.captureException(error);
     });
   };
-  return { handleApiError }
+return { handleApiError }
 };
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-};
-=======
-    Sentry && Sentry.withScope(scope => {;
-      scope && scope.setTag('source', 'useApiErrorHandler');
-      scope && scope.setLevel('error');
-      Sentry && Sentry.captureException(error);
-    })
-};
-  return { handleApiError }
-};
-<<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-  return { handleApiError }
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ApiErrorBoundary.tsx
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-
-},
-  return { handleApiError }
-},
-
-
-};
-import React, { Component, ReactNode } from 'react';
-
-import { QueryClient  } from '@tanstack/react-query';
-import * as Sentry from '@sentry/nextjs';
-import { Button  } from '@/components/ui/button';
-import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
-import { RefreshCw, WifiOff } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface ApiErrorBoundaryProps {
-  children: ReactNode;
-  queryClient?: QueryClient;
-  fallback?: ReactNode
-}
-
-<<<<<<< HEAD:src_backup/components/ApiErrorBoundary.tsx
-  return { handleApiError };
-};
-<<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533

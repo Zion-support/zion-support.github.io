@@ -307,7 +307,7 @@ export function useWebhooks() {;
   //import.meta may be undefined when this hook is executed in a Node //environment (e.g. during server side rendering or tests) . Using optional //chaining avoids a TypeError in those cases and falls back to process.env. setLoading (true);
 setError (null);
 try {
-  
+
 }getWebhookUrl () 
 }/webhooks`, {
   method: 'GET', headers: {
@@ -325,7 +325,7 @@ try {
   if (!user) return;
 setError (null);
 try {
-  
+
 }getWebhookUrl () 
 }/create`, {
   method: 'POST', headers: {
@@ -340,7 +340,7 @@ return result.webhook
   console.error ('Error creating webhook:', err);
 setError (err instanceof Error ? err.message : 'An unknown error occurred');
 toast ({
-  
+
 }finally {
   setLoading (false) 
 }
@@ -349,7 +349,7 @@ toast ({
   if (!user) return;
 setError (null);
 try {
-  
+
 }getWebhookUrl () 
 }/toggle`, {
   method: 'POST', headers: {
@@ -363,7 +363,7 @@ return result;
   console.error ('Error toggling webhook:', err);
 setError (err instanceof Error ? err.message : 'An unknown error occurred');
 toast ({
-  
+
 }finally {
   setLoading (false) 
 }
@@ -372,7 +372,7 @@ toast ({
   if (!user) return;
 setError (null);
 try {
-  
+
 }getWebhookUrl () 
 }/delete`, {
   method: 'POST', headers: {
@@ -387,7 +387,7 @@ return result;
   console.error ('Error deleting webhook:', err);
 setError (err instanceof Error ? err.message : 'An unknown error occurred');
 toast ({
-  
+
 }finally {
   setLoading (false) 
 }
@@ -397,7 +397,7 @@ toast ({
 setError (null);
 setTestResult (null);
 try {
-  
+
 }getWebhookUrl () 
 }/test`, {
   method: 'POST', headers: {
@@ -411,7 +411,7 @@ return result;
   console.error ('Error testing webhook:', err);
 setError (err instanceof Error ? err.message : 'An unknown error occurred');
 toast ({
-  
+
 }finally {
   setLoading (false) 
 }
@@ -428,8 +428,5 @@ deleteWebhook;
 testWebhook;
 clearTestResult: () => setTestResult (null) 
 }
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }

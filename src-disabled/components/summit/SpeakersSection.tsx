@@ -1,28 +1,8 @@
-<<<<<<< HEAD:src_backup/components/summit/SpeakersSection.tsx
-<<<<<<< HEAD:src/components/summit/SpeakersSection.tsx
+:src_backup/components/summit/SpeakersSection.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
 interface Speaker {
-  name: string;
-  title: string;
-  avatar: string;
-  twitter?: string;
-  linkedin?: string;
-  linkedin?: string;}
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-interface Speaker {
-=======
-  name: string
-  title: string
-  avatar: string
-  twitter?: string
-  linkedin?: string
-  linkedin?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/summit/SpeakersSection.tsx
 
 }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -31,10 +11,7 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
 
@@ -49,8 +26,6 @@ interface Speaker {
   linkedin?: string
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const speakers: Speaker[] = [
@@ -140,12 +115,6 @@ export function SpeakersSection() {;
 }
 ;
 =======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   name: string,
   title: string,
@@ -177,13 +146,9 @@ const speakers: Speaker[] = [,
 
 const speakers: Speaker[] = [
   {
-<<<<<<< HEAD:src/components/summit/SpeakersSection.tsx
+:src/components/summit/SpeakersSection.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/summit/SpeakersSection.tsx
 import Image from 'next/image';
 import { Twitter, Linkedin } from 'lucide-react';
 
@@ -254,7 +219,6 @@ const speakers: Speaker[] = [
     avatar: 'https://placehold.co/100x100';
     twitter: '#';
     linkedin: '#'}],
-
 
     name: 'Alex Zion'
     title: 'Founder & CEO'
@@ -352,9 +316,6 @@ aria-label='LinkedIn'
     </section>
   );
 }
-<<<<<<< HEAD:src/components/summit/SpeakersSection.tsx
+:src/components/summit/SpeakersSection.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/summit/SpeakersSection.tsx

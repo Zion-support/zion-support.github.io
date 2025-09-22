@@ -1,7 +1,6 @@
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
+:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
 // Mock data for support requests
 
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -15,15 +14,6 @@ import { SEO } from "@/components/SEO",
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
   {
-=======
-const MOCK_SUPPORT_REQUESTS = [
-  {
-
-=======
-// Mock data for support requests;
-const MOCK_SUPPORT_REQUESTS = []
-  {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
 import React, { useState } from 'react';
 import {}
   Card,
@@ -64,7 +54,7 @@ const MOCK_SUPPORT_REQUESTS = [;
     last_updated: '2023 - 12 - 15T15:45:00Z','
     category: 'authentication',
 
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
+:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     id: "SR-1001",
     user: "john.doe@example.com",
@@ -74,16 +64,6 @@ const MOCK_SUPPORT_REQUESTS = [;
     priority: "high",
     createdAt: "2023-12-15T14:30:00Z",
     lastUpdated: "2023-12-15T15:45:00Z",
-=======
-    id: "SR-1001","
-    user: "john.doe@example.com","
-    userId: "user-123","
-    issue: "Cannot access account after password reset","
-    status: "open","
-    priority: "high","
-    createdAt: "2023-12-15T14:30:00Z","
-    lastUpdated: "2023-12-15T15:45:00Z","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
     category: "authentication"
   },
   {"
@@ -141,7 +121,7 @@ const MOCK_SUPPORT_REQUESTS = [;
     lastUpdated: "2023-12-15T08:30:00Z","
     category: "verification"
   },
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
+:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
   {
     id: "SR-1007",
     user: "jamie.taylor@tech.org",
@@ -152,13 +132,6 @@ const MOCK_SUPPORT_REQUESTS = [;
     createdAt: "2023-12-10T15:10:00Z",
     lastUpdated: "2023-12-13T11:25:00Z",
     category: "profile"
-=======
-  {}
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
   }
 ],
 
@@ -277,24 +250,22 @@ export default function SupportRequests() { return null; }
     if (categoryFilter && request.category !== categoryFilter) {;
       return false;
     }
-<<<<<<< HEAD
-    
-    return true
+return true
   }),
-  
+
   // Count by status for the summary dashboard
   const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length,
   const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length,
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
   const totalCount = MOCK_SUPPORT_REQUESTS.length,
-  
+
   const resetFilters = () => {
     setSearchQuery(""),
     setStatusFilter(null),
     setPriorityFilter(null),
     setCategoryFilter(null)
   },
-  
+
   return (
     <>
       <SEO 
@@ -311,61 +282,16 @@ export default function SupportRequests() { return null; }
               Manage and respond to user support requests and issues
             </p>
           </div>
-=======
 
-    return true;
-  });
-
-  // Count by status for the summary dashboard;
-  const openCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(;'
-    r => r && r.status === 'open';
-  ).length;
-  const inProgressCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(;'
-    r => r && r.status === 'in-progress';
-  ).length;
-  const resolvedCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(;'
-    r => r && r.status === 'resolved';
-  ).length;
-  const totalCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.length;
-
-  const resetFilters = () => {;'
-    setSearchQuery('');
-    setStatusFilter(null);
-    setPriorityFilter(null);
-    setCategoryFilter(null);
-  };
-
-  return (
-    <>;
-
-
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
               New Support Case
-=======
-          "
-          <div className="mt-4 md:mt-0">"
-            <Button className="bg-zion-purple hover:bg-zion-purple-light">
-
-
-              New Support Case;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
             </Button>
           </div>
         </div>
 
-
-        
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
+:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
         {/* Status Cards */}
-=======
-
-
-        {/* Status Cards */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card>"
             <CardHeader className="pb-2">"
@@ -374,61 +300,31 @@ export default function SupportRequests() { return null; }
             </CardHeader>
           </Card>
 
-
-          
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
+:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
           <Card>
             <CardHeader className="pb-2">
-=======
-
-
-          <Card>"
-            <CardHeader className="pb-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
               <CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>
               <CardDescription>In Progress</CardDescription>
             </CardHeader>
           </Card>
 
-
-          
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
+:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
           <Card>
             <CardHeader className="pb-2">
-=======
-
-
-          <Card>"
-            <CardHeader className="pb-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
               <CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>
               <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
 
-
-          
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
+:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
           <Card>
             <CardHeader className="pb-2">
-=======
-
-
-          <Card>"
-            <CardHeader className="pb-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
               <CardDescription>Total Requests</CardDescription>
             </CardHeader>
           </Card>
         </div>
-<<<<<<< HEAD
-=======
 
-
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        
         <Tabs defaultValue="all" className="mb-8">
           <TabsList>
             <TabsTrigger value="all">All Requests</TabsTrigger>
@@ -436,11 +332,10 @@ export default function SupportRequests() { return null; }
             <TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>
             <TabsTrigger value="need-response">Need Response</TabsTrigger>
           </TabsList>
-          
+
 =======
         "
         <Tabs defaultValue="all" className="mb-8">
-
 
           <TabsList>"
             <TabsTrigger value="all">All Requests</TabsTrigger>"
@@ -513,31 +408,16 @@ export default function SupportRequests() { return null; }
 '
           <TabsContent value='all' className='mt-6'>;
 
-
           "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
           <TabsContent value="all" className="mt-6">
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <Input
-<<<<<<< HEAD
-=======
 
-
-                value={statusFilter || ''}
-                onValueChange={value => setStatusFilter(value || null)}
-
-              >
-                <SelectTrigger className='w-[180px]'>
-                  <SelectValue placeholder='Status' />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
             {/* Search and Filters */}"
             <div className="flex flex-col md:flex-row gap-4 mb-6">"
@@ -570,19 +450,7 @@ export default function SupportRequests() { return null; }
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
-=======
 
-'
-                value={priorityFilter || ''}
-                onValueChange={value => setPriorityFilter(value || null)}
-
-              >'
-                <SelectTrigger className='w-[180px]'>'
-                  <SelectValue placeholder='Priority' />
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-              
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
 =======
@@ -599,19 +467,7 @@ export default function SupportRequests() { return null; }
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
-=======
 
-'
-                value={categoryFilter || ''}
-                onValueChange={value => setCategoryFilter(value || null)}
-
-              >'
-                <SelectTrigger className='w-[180px]'>'
-                  <SelectValue placeholder='Category' />
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-              
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
 =======
@@ -631,20 +487,7 @@ export default function SupportRequests() { return null; }
                   <SelectItem value="profile">Profile</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
-=======
 
-                  onChange={e => setSearchQuery(e && e.target.value)}'
-                  className='pl-10'                />;
-              </div>;
-
-              <Select'
-                value={statusFilter || ''}
-                onValueChange={value => setStatusFilter(value || null)}
-
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-              
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters
 =======
@@ -654,8 +497,6 @@ export default function SupportRequests() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
               </Button>
             </div>
-            
-
 
             {/* Support Requests Table */}
             <Card>"
@@ -675,26 +516,15 @@ export default function SupportRequests() { return null; }
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {filteredRequests.map((request) => (
                       <TableRow key={request.id}>"
                         <TableCell className="font-medium">{request.id}</TableCell>
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
+:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
                         <TableCell>{request.user}</TableCell>
-=======
-
-                        <TableCell>{request.user}</TableCell>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           <Badge variant={
                             request.status === 'open' 
                               ? 'default' 
@@ -791,7 +621,7 @@ export default function SupportRequests() { return null; }
                   className="pl-10";
                 />;
               </div>;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
+:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
                 <SelectTrigger className="w-[180px]">;
                   <SelectValue placeholder="Status" />;
@@ -806,30 +636,6 @@ export default function SupportRequests() { return null; }
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>;
                 <SelectTrigger className="w-[180px]">;
                   <SelectValue placeholder="Priority" />;
-=======
-              <Select;'
-                value={status_filter || ''}
-                onValueChange={value => setStatusFilter (value || null)}
-              >;'
-                <SelectTrigger className='w-[180px]'>;'
-                  <SelectValue placeholder='Status' />;
-                </SelectTrigger>;
-                <SelectContent>;'
-                  <SelectItem value=''>All Statuses</SelectItem>;'
-                  <SelectItem value='open'>Open</SelectItem>;
-'
-                  <SelectItem value='in - progress'>In Progress</SelectItem>;'
-                  <SelectItem value='resolved'>Resolved</SelectItem>;
-                </SelectContent>;
-              </Select>;
-              <Select;'
-                value={priority_filter || ''}
-                onValueChange={value => setPriorityFilter (value || null)}
-
-              >;'
-                <SelectTrigger className='w-[180px]'>;'
-                  <SelectValue placeholder='Priority' />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
                 </SelectTrigger>;
                 <SelectContent>;"
                   <SelectItem value="">All Priorities</SelectItem>;"
@@ -838,20 +644,10 @@ export default function SupportRequests() { return null; }
                   <SelectItem value="low">Low</SelectItem>;
                 </SelectContent>;
               </Select>;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
+:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>;
                 <SelectTrigger className="w-[180px]">;
                   <SelectValue placeholder="Category" />;
-=======
-
-              <Select;'
-                value={category_filter || ''}
-                onValueChange={value => setCategoryFilter (value || null)}
-
-              >;'
-                <SelectTrigger className='w-[180px]'>;'
-                  <SelectValue placeholder='Category' />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
                 </SelectTrigger>;
                 <SelectContent>;"
                   <SelectItem value="">All Categories</SelectItem>;"
@@ -863,7 +659,7 @@ export default function SupportRequests() { return null; }
                   <SelectItem value="profile">Profile</SelectItem>;
                 </SelectContent>;
               </Select>;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
+:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">;
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters;
               </Button>;
@@ -871,20 +667,6 @@ export default function SupportRequests() { return null; }
             {/* Support Requests Table */}
             <Card>;
               <CardContent className="p-0">;
-=======
-
-              <Button;'
-                variant='outline';
-                on_click={reset_filters}'
-                className='md:w - auto';
-              >;'
-                <Filter className='h - 4 w - 4 mr - 2' /> Reset Filters;
-              </Button>;
-            </div>;
-            {/* Support Requests Table */}
-            <Card>;'
-              <CardContent className='p - 0'>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
                 <Table>;
                   <TableHeader>;
                     <TableRow>;
@@ -900,18 +682,11 @@ export default function SupportRequests() { return null; }
                     </TableRow>;
                   </TableHeader>;
                   <TableBody>;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
+:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
                     {filteredRequests.map((request) => (;
                       <TableRow key={request.id}>;
                         <TableCell className="font-medium">{request.id}</TableCell>;
                         <TableCell>{request.user}</TableCell>;
-=======
-                    {filtered_requests.map (request => (                      <TableRow key={request.id}>;'
-                        <TableCell className='font - medium'>;
-                          {request.id}
-                        </TableCell>;
-                        <TableCell>{request.user}</TableCell>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>;
                         <TableCell>;
                           <Badge variant={;'
@@ -925,19 +700,15 @@ export default function SupportRequests() { return null; }
                           </Badge>;
                         </TableCell>;
                         <TableCell>;
-<<<<<<< HEAD
-                          <Badge variant={;
+<Badge variant={;
                             request.priority === 'high';
                               ? 'destructive';
                               : request.priority === 'medium';
                               ? 'default';
                               : 'outline';
                           }>;
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             {request.priority}
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
+:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
                           </Badge>
                         </TableCell>
                         <TableCell>{request.category}</TableCell>
@@ -954,35 +725,10 @@ export default function SupportRequests() { return null; }
               </CardContent>
             </Card>
           </TabsContent>
-          
+
           <TabsContent value="escalated" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>
-=======
-                          </Badge>;
-                        </TableCell>;
-                        <TableCell>{request.category}</TableCell>;
-                        <TableCell>;
-                          {new Date (request.created_at).toLocaleDateString ()}
-                        </TableCell>;
-                        <TableCell>;
-                          {new Date (request.last_updated).toLocaleDateString ()}
-                        </TableCell>;
-                        <TableCell>;'
-                          <Button variant='ghost' size='sm'>;
-                            View;
-                          </Button>;'
-                          <Button variant='ghost' size='sm'>;
-                            Assign;
-                          </Button>;
-                        </TableCell>;
-
-
-          "
-          <TabsContent value="escalated" className="mt-6">"
-            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">"
-              <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
               <p className="text-zion-slate-light">
                 This tab will show support requests that have been escalated by agents or the system.
               </p>
@@ -1010,144 +756,8 @@ export default function SupportRequests() { return null; }
       </div>
     </>
   )
-<<<<<<< HEAD
 }
 ;
-=======
-
-                  </TableBody>;
-                </Table>;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-'
-          <TabsContent value='escalated' className='mt-6'>;'
-            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>;'
-              <h3 className='text-xl font-medium mb-4'>Escalated Requests</h3>;'
-              <p className='text-zion-slate-light'>;
-                This tab will show support requests that have been escalated by;
-                agents or the system.;
-              </p>;
-            </div>;
-          </TabsContent>;
-'
-          <TabsContent value='ai-flagged' className='mt-6'>;'
-            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>;'
-              <h3 className='text-xl font-medium mb-4'>AI Flagged Issues</h3>;'
-              <p className='text-zion-slate-light'>;
-                This tab shows issues that our AI system has identified as;
-                requiring human attention.;
-              </p>;
-            </div>;
-          </TabsContent>;
-'
-          <TabsContent value='need-response' className='mt-6'>;'
-            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>;'
-              <h3 className='text-xl font-medium mb-4'>Awaiting Response</h3>;'
-              <p className='text-zion-slate-light'>;
-                These support requests have been waiting for an agent response;
-                for over 24 hours.;
-              </p>;
-            </div>;
-          </TabsContent>;
-        </Tabs>;
-      </div>;
-    </>;
-  );
-
-  return true;
-});"
-//Count by status for the summary dashboard Support Requests | Admin Dashboard"description=" Manage and track user support requests and issues"/> <div className=" container mx-auto px-4 py-8"> <div className=" flex flex-col md:flex-row items-start md:items-center justify-between mb-8"> <div> <h1 className=" text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"> Support Requests </h1> <p className=" text-zion-slate-light mt-2"> Manage and respond to user support requests and issues </p> </div> <div className=" mt-4 md:mt-0"> <Button className=" bg-zion-purple hover:bg-zion-purple-light"> New Support Case </Button> </div> </div> <CardDescription>Open Requests</CardDescription> </CardHeader> </Card> <Card> <CardDescription>In Progress</CardDescription> </CardHeader> </Card> <Card> <CardDescription>Resolved</CardDescription> </CardHeader> </Card> <Card> <CardDescription>Total Requests</CardDescription> </CardHeader> </Card> </div> <Tabs defaultValue=" all"className=" mb-8"> <TabsList> <TabsTrigger value=" all">All Requests</TabsTrigger> <TabsTrigger value=" escalated">Escalated</TabsTrigger> <TabsTrigger value=" ai-flagged">AI Flagged</TabsTrigger> <TabsTrigger value=" need-response">Need Response</TabsTrigger> </TabsList> </SelectTrigger> <SelectContent> <SelectItem value="">All Statuses</SelectItem> <SelectItem value=" open">Open</SelectItem> <SelectItem value=" in-progress">In Progress</SelectItem> <SelectItem value=" resolved">Resolved</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Priorities</SelectItem> <SelectItem value=" high">High</SelectItem> <SelectItem value=" medium">Medium</SelectItem> <SelectItem value=" low">Low</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Categories</SelectItem> <SelectItem value=" authentication">Authentication</SelectItem> <SelectItem value=" billing">Billing</SelectItem> <SelectItem value=" api">API</SelectItem> <SelectItem value=" disputes">Disputes</SelectItem> <SelectItem value=" verification">Verification</SelectItem> <SelectItem value=" profile">Profile</SelectItem> </SelectContent> </Select> </Button> </div> {;"
-  /* Support Requests Table */ ";"
-}<Card> <CardContent className=" p-0"> <Table> <TableHeader> <TableRow> <TableHead>ID</TableHead> <TableHead>User</TableHead> <TableHead>Issue</TableHead> <TableHead>Status</TableHead> <TableHead>Priority</TableHead> <TableHead>Category</TableHead> <TableHead>Created</TableHead> <TableHead>Last Updated</TableHead> <TableHead>Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
-  filteredRequests && filteredRequests.map ( (request) => (<TableRowkey= {}
-  request && request.id;
-}> <TableCell> <Badgevariant= {'
-  request && request.status === 'open' ? 'default' : request && request.status === 'in-progress' ? 'secondary' : 'outline' 
-}> {;
-  request && request.status ;'
-}</Badge> </TableCell> <TableCell> <Badgevariant= {''
-  request && request.priority === 'high' ? 'destructive' : request && request.priority === 'medium' ? 'default' : 'outline' 
-}> {;
-  request && request.priority ;
-}</Badge> </TableCell> <TableCell> {;
-  request && request.category ;
-}</TableCell> <TableCell> {;
-  new Date (request && request.createdAt) .toLocaleDateString () ;
-}</TableCell> <TableCell> {;"
-  new Date (request && request.lastUpdated) .toLocaleDateString () ";
-
-}
-;
-
-"
-}</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";"
-}</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>) ;'"
-}'"}
-
-
-                      </TableRow>))}
-                  </TableBody>;
-                </Table>;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;'
-          <TabsContent value='escalated' className='mt - 6'>;'
-            <div className='bg - zion - blue - light / 20 p - 8 rounded - lg text - center'>;'
-              <h3 className='text - xl font - medium mb - 4'>Escalated Requests</h3>;'
-              <p className='text - zion - slate - light'>;
-                This tab will show support requests that have been escalated by;
-                agents or the system.;
-              </p>;
-            </div>;
-          </TabsContent>;'
-          <TabsContent value='ai - flagged' className='mt - 6'>;'
-            <div className='bg - zion - blue - light / 20 p - 8 rounded - lg text - center'>;'
-              <h3 className='text - xl font - medium mb - 4'>AI Flagged Issues</h3>;'
-              <p className='text - zion - slate - light'>;
-                This tab shows issues that our AI system has identified as;
-                requiring human attention.;
-              </p>;
-            </div>;
-          </TabsContent>;'
-          <TabsContent value='need - response' className='mt - 6'>;'
-            <div className='bg - zion - blue - light / 20 p - 8 rounded - lg text - center'>;'
-              <h3 className='text - xl font - medium mb - 4'>Awaiting Response</h3>;'
-              <p className='text - zion - slate - light'>;
-                These support requests have been waiting for an agent response;
-                for over 24 hours.;
-              </p>;
-            </div>;
-          </TabsContent>;
-        </Tabs>;
-      </div>;
-    </>);
-  return true;
-});"
-//Count by status for the summary dashboard Support Requests | Admin Dashboard"description=" Manage and track user support requests and issues"/> <div className=" container mx - auto px - 4 py - 8"> <div className=" flex flex - col md:flex - row items - start md:items - center justify - between mb - 8"> <div> <h1 className=" text - 3xl font - bold bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent"> Support Requests </h1> <p className=" text - zion - slate - light mt - 2"> Manage and respond to user support requests and issues </p> </div> <div className=" mt - 4 md:mt - 0"> <Button className=" bg - zion - purple hover:bg - zion - purple - light"> New Support Case </Button> </div> </div> <CardDescription > Open Requests</CardDescription> </CardHeader> </Card> <Card> <CardDescription > In Progress</CardDescription> </CardHeader> </Card> <Card> <CardDescription > Resolved</CardDescription> </CardHeader> </Card> <Card> <CardDescription > Total Requests</CardDescription> </CardHeader> </Card> </div> <Tabs default_value=" all"className=" mb - 8"> <TabsList> <TabsTrigger value=" all">All Requests</TabsTrigger> <TabsTrigger value=" escalated">Escalated</TabsTrigger> <TabsTrigger value=" ai - flagged">AI Flagged</TabsTrigger> <TabsTrigger value=" need - response">Need Response</TabsTrigger> </TabsList> </SelectTrigger> <SelectContent> <SelectItem value="">All Statuses</SelectItem> <SelectItem value=" open">Open</SelectItem> <SelectItem value=" in - progress">In Progress</SelectItem> <SelectItem value=" resolved">Resolved</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Priorities</SelectItem> <SelectItem value=" high">High</SelectItem> <SelectItem value=" medium">Medium</SelectItem> <SelectItem value=" low">Low</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Categories</SelectItem> <SelectItem value=" authentication">Authentication</SelectItem> <SelectItem value=" billing">Billing</SelectItem> <SelectItem value=" api">API</SelectItem> <SelectItem value=" disputes">Disputes</SelectItem> <SelectItem value=" verification">Verification</SelectItem> <SelectItem value=" profile">Profile</SelectItem> </SelectContent> </Select> </Button> </div> {"
-  /* Support Requests Table */ ";"
-}<Card> <CardContent className=" p - 0"> <Table> <TableHeader> <TableRow> <TableHead > ID</TableHead> <TableHead > User</TableHead> <TableHead > Issue</TableHead> <TableHead > Status</TableHead> <TableHead > Priority</TableHead> <TableHead > Category</TableHead> <TableHead > Created</TableHead> <TableHead > Last Updated</TableHead> <TableHead > Actions</TableHead> </TableRow> </TableHeader> <TableBody> {}
-  filtered_requests.map ( (request) => (<TableRow key= {}
-  request.id;
-}> <TableCell> <Badge variant= {'
-  request.status === 'open' ? 'default' : request.status === 'in - progress' ? 'secondary' : 'outline';
-}> {}
-  request.status;'
-}</Badge> </TableCell> <TableCell> <Badge variant= {';'
-  request.priority === 'high' ? 'destructive' : request.priority === 'medium' ? 'default' : 'outline';
-}> {}
-  request.priority;
-}</Badge> </TableCell> <TableCell> {}
-  request.category;
-}</TableCell> <TableCell> {}
-  new Date (request.created_at) .toLocaleDateString ();
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/SupportRequests.tsx
-}</TableCell> <TableCell> {
-  new Date (request.last_updated) .toLocaleDateString () ";
-}</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
-}</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Escalated Requests</h3> <p className=" text - zion - slate - light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai - flagged"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">AI Flagged Issues</h3> <p className=" text - zion - slate - light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need - response"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Awaiting Response</h3> <p className=" text - zion - slate - light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>);
-}'"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 }</TableCell> <TableCell> {"
   new Date (request.last_updated) .toLocaleDateString () ";"

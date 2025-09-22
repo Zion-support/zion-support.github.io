@@ -28,4 +28,3 @@ export const NotificationHeader:React.FC<NotificationHeaderProps> = ({;
       )}
     </div>;
 <<<<<<< HEAD
-

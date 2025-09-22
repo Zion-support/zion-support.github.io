@@ -27,30 +27,16 @@ function resolveMergeConflictsInFile(filePath) {
 
     // Remove conflict markers;
     const originalContent = content;
-<<<<<<< HEAD
-    content = content
-<<<<<<< HEAD
-      .replace(/[^\n]+\n/g, '')
+content = content
+.replace(/[^\n]+\n/g, '')
       .replace(/<<<<<<< [^\n]+\n/g, '')
-      .replace(/=======\n/g, '')
-      .replace(/[^\n]+\n/g, '');
-=======
       .replace(/
-      .replace(/<<<<<<< [^\n]+\n/g, '')
-<<<<<<< HEAD
-      .replace(/\n/g, '')
-      .replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      .replace(/
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
-
 
 // Function to resolve all merge conflicts;
 function resolveAllMergeConflicts() {
@@ -76,7 +62,6 @@ function resolveAllMergeConflicts() {
   if (resolvedCount > 0) {
     // Add resolved files;
 
-
   return resolvedCount > 0;
 
 // Function to merge a specific PR;
@@ -85,10 +70,8 @@ function mergeSpecificPR(prNumber) {`;
 
     console.log(`❌ Failed to checkout PR #${prNumber} branch`);
 
-
     console.log(`⚠️  Merge conflicts detected in PR #${prNumber}. Resolving...`);
     resolveAllMergeConflicts();
-
 
     `Converting PR #${prNumber} to ready for review`)
   );
@@ -96,18 +79,14 @@ function mergeSpecificPR(prNumber) {`;
   // Try to merge the PR;`;
   console.log(`🔄 Attempting to merge PR #${prNumber}...`);
 
-
   if (mergePRResult) {
   // TODO: Implement
       const result = JSON.parse(mergePRResult);
-
-
 
 // Function to create a comprehensive merge commit;
 function createComprehensiveMerge() {
   console.log('\n🔄 Creating comprehensive merge...\n');
   // Ensure we're on main;
-
 
   // Create a PR for the comprehensive merge;`;
   const prBody = `# Comprehensive Fixes and Improvements;
@@ -141,8 +120,6 @@ This comprehensive merge ensures the codebase is in a stable, working state with
   if (prResult) {
   // TODO: Implement
 
-
-
 // Main execution;
 async function main() {
   console.log('📋 Starting comprehensive PR merge process...\n');
@@ -154,4 +131,3 @@ async function main() {
     if (mergeSpecificPR(prNumber)) {
       mergedCount++;
   console.log(`\n📊 Merged ${mergedCount} out of ${prs.length} existing PRs`);
-

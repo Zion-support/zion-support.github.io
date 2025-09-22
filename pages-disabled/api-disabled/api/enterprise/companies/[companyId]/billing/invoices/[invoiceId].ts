@@ -1,6 +1,4 @@
-<<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-<<<<<<< HEAD
-
+<:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 <<<<<<< HEAD:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -10,18 +8,11 @@ export const config = {
 <<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
   }
 }
-=======
-  },;
-};
-
-=======
-========
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 responseLimit: false,
   },
 };
 
-<<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+<:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 export default async function handler(
@@ -29,23 +20,6 @@ export default async function handler(
   res: NextApiResponse
 <<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 ) {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-========
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {;
-  const { companyId, invoiceId } = req.query;
-
-
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 import type { NextApiRequest, NextApiResponse } from "next";
 export const config = {
   api: {
@@ -67,13 +41,7 @@ export default async function handler(;
   res: NextApiResponse
 ) {;
   const { companyId, invoiceId } = req.query;
-<<<<<<< HEAD:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 
 =======
 ;
@@ -83,14 +51,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 export const config = {;
   api: {
 
-
-<<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-=======
-<<<<<<< HEAD:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-if (req && req.method !== "GET")
-    return res && res.status(405).json({ error: "method_not_allowed" });
-  const { companyId, invoiceId } = req.query;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -106,7 +67,6 @@ if (req && req.method !== "GET")
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 ========
 
-
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
   if (
     !companyId |;
@@ -118,8 +78,7 @@ if (req && req.method !== "GET")
   }
 ;
 
-<<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+<:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 <<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 <<<<<<< HEAD:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 
@@ -128,14 +87,6 @@ if (req && req.method !== "GET")
 <<<<<<< HEAD
   if (req && req.method !== "GET")
     return res && res.status(405).json({ error: "method_not_allowed" });
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-========
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
   if (req.method !== 'GET')
     return res.status(405).json({ error: 'method_not_allowed' });
 
@@ -148,25 +99,15 @@ res.setHeader('Content-Type', 'application/pdf');
   res.setHeader(
     "Content-Disposition"
     `attachment; filename="invoice-${invoiceId}.pdf"`
-<<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+<:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-========
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
   );
   res.status(200).send(pdfBuffer);
 
 }
-<<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+<:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 <<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-
-=======
-    responseLimit: false}};
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   res.setHeader("Content-Type", "application/pdf");
   res.setHeader(
     "Content-Disposition",
@@ -174,25 +115,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
   res && res.status(200).send(pdfBuffer);
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ invoice: 'PDF buffer' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export const config = {;
   api: {;
-=======
-<<<<<<< HEAD
-responseLimit: false}};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     responseLimit: false}};
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -211,16 +140,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 ;
   if (req.method !== 'GET') return res.status(405).json({ error: 'method_not_allowed' });
-<<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  // Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.;
-========
-
-
-  // Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+<:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+// Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.;
   const pdfBase64 =
     'JVBERi0xLjMKJcTl8uXrp/Og0MTGCjEgMCBvYmoKPDwKL1BhZ2VzIDIgMCBSCj4+CmVuZG9iagoKMiAwIG9iago8PAovS2lkcyBbMyAwIFJdCi9Db3VudCAxCj4+CmVuZG9iagoKMyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDIgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoKCjQgMCBvYmoKPDwKL0xlbmd0aCA1NQogPj4Kc3RyZWFtCkJUIC9GMSAyNCBUZgovVGYgMTIwIDEyMCBUZAooSW52b2ljZSAjKElELSB7aW52b2ljZUlkfSkpIFQKRVQKZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgNQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTYgMDAwMDAgbiAKMDAwMDAwMDA2NiAwMDAwMCBuIAowMDAwMDAwMTY0IDAwMDAwIG4gCjAwMDAwMDAyNjggMDAwMDAgbiAKdHJhaWxlcgo8PAovUm9vdCAxIDAgUgovU2l6ZSA1Cj4+CnN0YXJ0eHJlZgozNzIKJSVFT0Y=';
   const pdfBuffer = Buffer.from(pdfBase64, 'base64');
@@ -229,24 +150,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).send(pdfBuffer)
 
 }
-<<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+<:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 ;
-========
-
-
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 import type { NextApiRequest, NextApiResponse } from './next';
 export const config = {;
   api: {;
     response_limit: false
   }
 }
-<<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-<<<<<<< HEAD
+<:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-========
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 ;
 export default async /**
  * handler - Function description
@@ -292,10 +205,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 ;
   if (req.method !== 'GET') return res.status(405).json({ error: 'method_not_allowed' });
   // Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.;
-=======
-
-  // Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
   const pdfBase64 =
     'JVBERi0xLjMKJcTl8uXrp/Og0MTGCjEgMCBvYmoKPDwKL1BhZ2VzIDIgMCBSCj4+CmVuZG9iagoKMiAwIG9iago8PAovS2lkcyBbMyAwIFJdCi9Db3VudCAxCj4+CmVuZG9iagoKMyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDIgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoKCjQgMCBvYmoKPDwKL0xlbmd0aCA1NQogPj4Kc3RyZWFtCkJUIC9GMSAyNCBUZgovVGYgMTIwIDEyMCBUZAooSW52b2ljZSAjKElELSB7aW52b2ljZUlkfSkpIFQKRVQKZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgNQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTYgMDAwMDAgbiAKMDAwMDAwMDA2NiAwMDAwMCBuIAowMDAwMDAwMTY0IDAwMDAwIG4gCjAwMDAwMDAyNjggMDAwMDAgbiAKdHJhaWxlcgo8PAovUm9vdCAxIDAgUgovU2l6ZSA1Cj4+CnN0YXJ0eHJlZgozNzIKJSVFT0Y=';
   const pdfBuffer = Buffer.from(pdfBase64, 'base64');
@@ -306,15 +215,8 @@ export const config = {;
     response_limit: false
   }
 }
-<<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  } catch (error) {;
-=======
-========
-
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+<:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+} catch (error) {;
 
   } catch (error) {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
@@ -322,20 +224,10 @@ export const config = {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
+<:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-<<<<<<< HEAD:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
@@ -346,8 +238,6 @@ export const config = {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts
 ========
 ursor/fix-website-loading-errors-and-merge-6662
-
-
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/enterprise/companies/[companyId]/billing/invoices/[invoiceId].ts

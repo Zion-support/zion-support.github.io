@@ -101,7 +101,7 @@ body: JSON.stringify ({
 });
 const data = await response.json ();
 const filters: SearchFilters = data.filters || {
-  
+
 };
 const items: SearchResult[] = [];
 const matchSkill = (skills: string[] | undefined) => {
@@ -110,7 +110,7 @@ return skills?.some ( (s) => filters.skills!.some ( (f) => s.toLowerCase () .inc
 };
 if (!filters.type || filters.type === "talent" || filters.type === "all") {
   TALENT PROFILES.forEach ( (t) => {
-  
+
 });
 }
 });
@@ -124,8 +124,5 @@ if (!filters.type || filters.type === "talent" || filters.type === "all") {
 return {
   results, loading, search 
 }
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }

@@ -1,14 +1,6 @@
 
 export default function FeaturesPage() {;}
 
-<<<<<<< HEAD
-<<<<<<< HEAD:components/features.page.tsx
-
-=======
-export default function FeaturesPage() {;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/features.page.tsx
 =======
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
@@ -48,8 +40,7 @@ export default function FeaturesPage() {
           <MonitorSmartphone className='h - 6 w - 6 text - indigo - 500' />;
 
           <div className='mt - 3 text - lg font - semibold'>Mobile Milestones</div>;
-<<<<<<< HEAD
-          <p className='mt - 1 text - sm opacity - 80'>;
+<p className='mt - 1 text - sm opacity - 80'>;
             Track deliverables and approvals anywhere.;
           </p>        </div>;
       </div>;
@@ -60,12 +51,9 @@ export default function FeaturesPage() {
           <p className="mt - 1 text - sm opacity - 80">Track deliverables and approvals anywhere.</p>;
       </div>;
     </EnhancedLayout>);
-<<<<<<< HEAD:components/features.page.tsx
 }
 <<<<<<< HEAD
   return (
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/features.page.tsx
 
   return (
 
@@ -93,16 +81,6 @@ import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
 
 export default function FeaturesPage() {
   return (
-=======
-      </div>;)
-    );
-}        <div className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950">;"
-</div>"
-          <MonitorSmartphone className="h - 6 w - 6 text - indigo - 500" />;"
-"
-          <div className="mt - 3 text - lg font - semibold">Mobile Milestones</div>;""
-          <p className="mt - 1 text - sm opacity - 80">Track deliverables and approvals anywhere.</p>;"
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     <EnhancedLayout>
       <h1 className="text-2xl font-semibold">Features</h1>""
       <div className="mt-6 grid md: grid-cols-3 gap-6">"
@@ -155,8 +133,7 @@ export default function FeaturesPage() {
           </p>        </div>;
       </div>;
     </EnhancedLayout>;
-<<<<<<< HEAD
-  );
+);
 }        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <MonitorSmartphone className="h-6 w-6 text-indigo-500" />
           <div className="mt-3 text-lg font-semibold">Mobile Milestones</div>
@@ -165,13 +142,7 @@ export default function FeaturesPage() {
       </div>
     </EnhancedLayout>
   );
-<<<<<<< HEAD:components/features.page.tsx
 }
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/features.page.tsx
 }        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <MonitorSmartphone className="h-6 w-6 text-indigo-500" />
           <div className="mt-3 text-lg font-semibold">Mobile Milestones</div>

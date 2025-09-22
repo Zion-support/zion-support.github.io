@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD:backup-problematic-files/pages_backup/services/index.tsx
-=======
-=======
-import * as React from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
@@ -46,12 +40,7 @@ const ServicesIndex: NextPage = () => {
       ],
       pricing: 'Starting at $2,500/month',
 <<<<<<< HEAD
-<<<<<<< HEAD
       icon: '🧠',
-=======
-=======
-      icon: '🧠',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       icon: '',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/services/ai-development'
@@ -70,12 +59,7 @@ const ServicesIndex: NextPage = () => {
       ],
       pricing: 'Starting at $1,800/month',
 <<<<<<< HEAD
-<<<<<<< HEAD
       icon: '☁️',
-=======
-=======
-      icon: '☁️',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       icon: '',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/services/cloud-solutions'
@@ -94,12 +78,7 @@ const ServicesIndex: NextPage = () => {
       ],
       pricing: 'Starting at $3,500/month',
 <<<<<<< HEAD
-<<<<<<< HEAD
       icon: '🔗',
-=======
-=======
-      icon: '🔗',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       icon: '',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/services/blockchain'
@@ -118,12 +97,7 @@ const ServicesIndex: NextPage = () => {
       ],
       pricing: 'Starting at $2,200/month',
 <<<<<<< HEAD
-<<<<<<< HEAD
       icon: '🌐',
-=======
-=======
-      icon: '🌐',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       icon: '',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/services/iot-platforms'
@@ -142,12 +116,7 @@ const ServicesIndex: NextPage = () => {
       ],
       pricing: 'Starting at $1,500/month',
 <<<<<<< HEAD
-<<<<<<< HEAD
       icon: '⚡',
-=======
-=======
-      icon: '⚡',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       icon: '',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/products/micro-saas'
@@ -166,12 +135,7 @@ const ServicesIndex: NextPage = () => {
       ],
       pricing: 'Starting at $2,000/month',
 <<<<<<< HEAD
-<<<<<<< HEAD
       icon: '🔒',
-=======
-=======
-      icon: '🔒',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       icon: '',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/services/cybersecurity'
@@ -190,12 +154,7 @@ const ServicesIndex: NextPage = () => {
       ],
       pricing: 'Starting at $1,200/month',
 <<<<<<< HEAD
-<<<<<<< HEAD
       icon: '💻',
-=======
-=======
-      icon: '💻',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       icon: '',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/services/web-development'
@@ -214,12 +173,7 @@ const ServicesIndex: NextPage = () => {
       ],
       pricing: 'Starting at $1,800/month',
 <<<<<<< HEAD
-<<<<<<< HEAD
       icon: '📊',
-=======
-=======
-      icon: '📊',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       icon: '',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/services/data-analytics'
@@ -336,13 +290,8 @@ const ServicesIndex: NextPage = () => {;
   const services = [;
     {;
       id: 'ai-development',;
-<<<<<<< HEAD
-      title: 'AI Development & Machine Learning',;
+title: 'AI Development & Machine Learning',;
       description: 'Custom AI solutions, machine learning models, and intelligent automation systems tailored to your business needs.',;
-=======
-      title: 'AI Development & Machine Learning',,
-  description: 'Custom AI solutions, machine learning models, and intelligent automation systems tailored to your business needs.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: [;
         'Natural Language Processing (NLP)',;
         'Computer Vision & Image Recognition',;
@@ -357,13 +306,8 @@ const ServicesIndex: NextPage = () => {;
     },;
     {;
       id: 'cloud-solutions',;
-<<<<<<< HEAD
-      title: 'Cloud Solutions & Infrastructure',;
+title: 'Cloud Solutions & Infrastructure',;
       description: 'Scalable cloud infrastructure, migration services, and DevOps automation for modern applications.',;
-=======
-      title: 'Cloud Solutions & Infrastructure',,
-  description: 'Scalable cloud infrastructure, migration services, and DevOps automation for modern applications.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: [;
         'AWS, Azure, GCP Migration',;
         'Container Orchestration (Kubernetes)',;
@@ -378,13 +322,8 @@ const ServicesIndex: NextPage = () => {;
     },;
     {;
       id: 'blockchain',;
-<<<<<<< HEAD
-      title: 'Blockchain & Cryptocurrency Solutions',;
+title: 'Blockchain & Cryptocurrency Solutions',;
       description: 'Secure blockchain development, smart contracts, and DeFi applications for the decentralized future.',;
-=======
-      title: 'Blockchain & Cryptocurrency Solutions',,
-  description: 'Secure blockchain development, smart contracts, and DeFi applications for the decentralized future.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: [;
         'Smart Contract Development',;
         'DeFi Applications & Protocols',;
@@ -399,13 +338,8 @@ const ServicesIndex: NextPage = () => {;
     },;
     {;
       id: 'iot-platforms',;
-<<<<<<< HEAD
-      title: 'IoT Platforms & Connected Solutions',;
+title: 'IoT Platforms & Connected Solutions',;
       description: 'Connected device solutions, sensor networks, and real-time data processing for smart environments.',;
-=======
-      title: 'IoT Platforms & Connected Solutions',,
-  description: 'Connected device solutions, sensor networks, and real-time data processing for smart environments.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: [;
         'Device Management & Monitoring',;
         'Real-time Analytics & Dashboards',;
@@ -420,13 +354,8 @@ const ServicesIndex: NextPage = () => {;
     },;
     {;
       id: 'micro-saas',;
-<<<<<<< HEAD
-      title: 'Micro SAAS Solutions',;
+title: 'Micro SAAS Solutions',;
       description: 'Custom micro SAAS platforms and automation tools designed to streamline business processes.',;
-=======
-      title: 'Micro SAAS Solutions',,
-  description: 'Custom micro SAAS platforms and automation tools designed to streamline business processes.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: [;
         'Workflow Automation Tools',;
         'Data Processing & Analytics',;
@@ -441,13 +370,8 @@ const ServicesIndex: NextPage = () => {;
     },;
     {;
       id: 'cybersecurity',;
-<<<<<<< HEAD
-      title: 'Cybersecurity & Compliance',;
+title: 'Cybersecurity & Compliance',;
       description: 'Comprehensive security solutions and compliance services to protect your digital assets.',;
-=======
-      title: 'Cybersecurity & Compliance',,
-  description: 'Comprehensive security solutions and compliance services to protect your digital assets.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: [;
         'Security Audits & Assessments',;
         'Penetration Testing',;
@@ -462,13 +386,8 @@ const ServicesIndex: NextPage = () => {;
     },;
     {;
       id: 'web-development',;
-<<<<<<< HEAD
-      title: 'Web & Mobile Development',;
+title: 'Web & Mobile Development',;
       description: 'Modern web applications, mobile apps, and progressive web apps built with cutting-edge technologies.',;
-=======
-      title: 'Web & Mobile Development',,
-  description: 'Modern web applications, mobile apps, and progressive web apps built with cutting-edge technologies.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: [;
         'React, Vue && Vue.js, Angular Development',;
         'Native & Cross-platform Mobile Apps',;
@@ -483,13 +402,8 @@ const ServicesIndex: NextPage = () => {;
     },;
     {;
       id: 'data-analytics',;
-<<<<<<< HEAD
-      title: 'Data Analytics & Business Intelligence',;
+title: 'Data Analytics & Business Intelligence',;
       description: 'Transform your data into actionable insights with advanced analytics and business intelligence solutions.',;
-=======
-      title: 'Data Analytics & Business Intelligence',,
-  description: 'Transform your data into actionable insights with advanced analytics and business intelligence solutions.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: [;
         'Data Warehousing & ETL',;
         'Business Intelligence Dashboards',;
@@ -503,61 +417,36 @@ const ServicesIndex: NextPage = () => {;
       link: '/services/data-analytics';
   const microSaasServices = [;
     {;
-<<<<<<< HEAD
-      name: "AI-Powered Analytics Dashboard",;
+name: "AI-Powered Analytics Dashboard",;
       description: "Real-time business intelligence with predictive analytics and automated reporting",;
-=======
-      name: "AI-Powered Analytics Dashboard",,
-  description: "Real-time business intelligence with predictive analytics and automated reporting",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["Custom dashboards", "Predictive modeling", "Automated alerts", "Multi-platform integration"],;
       pricing: "Starting at $299/month",;
       link: "/services/ai-analytics-dashboard";
     },;
     {;
-<<<<<<< HEAD
-      name: "Smart Document Processor",;
+name: "Smart Document Processor",;
       description: "Automated document processing with OCR, classification, and data extraction",;
-=======
-      name: "Smart Document Processor",,
-  description: "Automated document processing with OCR, classification, and data extraction",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["OCR technology", "Document classification", "Data extraction", "API integration"],;
       pricing: "Starting at $199/month",;
       link: "/services/smart-document-processor";
     },;
     {;
-<<<<<<< HEAD
-      name: "Customer Experience Optimizer",;
+name: "Customer Experience Optimizer",;
       description: "AI-driven customer journey mapping and optimization platform",;
-=======
-      name: "Customer Experience Optimizer",,
-  description: "AI-driven customer journey mapping and optimization platform",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["Journey mapping", "Sentiment analysis", "A/B testing", "ROI tracking"],;
       pricing: "Starting at $399/month",;
       link: "/services/customer-experience-optimizer";
     },;
     {;
-<<<<<<< HEAD
-      name: "Automated Social Media Manager",;
+name: "Automated Social Media Manager",;
       description: "AI-powered social media scheduling, content creation, and engagement tracking",;
-=======
-      name: "Automated Social Media Manager",,
-  description: "AI-powered social media scheduling, content creation, and engagement tracking",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["Content generation", "Optimal timing", "Engagement tracking", "Multi-platform support"],;
       pricing: "Starting at $149/month",;
       link: "/services/automated-social-media-manager";
     },;
     {;
-<<<<<<< HEAD
-      name: "Intelligent Inventory Manager",;
+name: "Intelligent Inventory Manager",;
       description: "Smart inventory optimization with demand forecasting and automated reordering",;
-=======
-      name: "Intelligent Inventory Manager",,
-  description: "Smart inventory optimization with demand forecasting and automated reordering",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"],;
       pricing: "Starting at $249/month",;
       link: "/services/intelligent-inventory-manager";
@@ -565,61 +454,36 @@ const ServicesIndex: NextPage = () => {;
   ];
   const itServices = [;
     {;
-<<<<<<< HEAD
-      name: "Cloud Migration & Architecture",;
+name: "Cloud Migration & Architecture",;
       description: "Complete cloud transformation with AWS, Azure, and Google Cloud expertise",;
-=======
-      name: "Cloud Migration & Architecture",,
-  description: "Complete cloud transformation with AWS, Azure, and Google Cloud expertise",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["Multi-cloud strategy", "Security implementation", "Cost optimization", "24/7 monitoring"],;
       pricing: "Starting at $5,000/project",;
       link: "/services/cloud-migration";
     },;
     {;
-<<<<<<< HEAD
-      name: "Cybersecurity Solutions",;
+name: "Cybersecurity Solutions",;
       description: "Comprehensive security assessment, implementation, and ongoing protection",;
-=======
-      name: "Cybersecurity Solutions",,
-  description: "Comprehensive security assessment, implementation, and ongoing protection",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["Security audits", "Penetration testing", "Compliance management", "Incident response"],;
       pricing: "Starting at $3,000/month",;
       link: "/services/cybersecurity-solutions";
     },;
     {;
-<<<<<<< HEAD
-      name: "DevOps & CI/CD Implementation",;
+name: "DevOps & CI/CD Implementation",;
       description: "Automated deployment pipelines and infrastructure as code solutions",;
-=======
-      name: "DevOps & CI/CD Implementation",,
-  description: "Automated deployment pipelines and infrastructure as code solutions",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["CI/CD pipelines", "Infrastructure automation", "Monitoring setup", "Performance optimization"],;
       pricing: "Starting at $4,000/month",;
       link: "/services/devops-implementation";
     },;
     {;
-<<<<<<< HEAD
-      name: "Database Design & Optimization",;
+name: "Database Design & Optimization",;
       description: "High-performance database architecture and optimization services",;
-=======
-      name: "Database Design & Optimization",,
-  description: "High-performance database architecture and optimization services",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["Database design", "Performance tuning", "Backup strategies", "Scalability planning"],;
       pricing: "Starting at $2,500/project",;
       link: "/services/database-optimization";
     },;
     {;
-<<<<<<< HEAD
-      name: "API Development & Integration",;
+name: "API Development & Integration",;
       description: "Custom API development and third-party system integration",;
-=======
-      name: "API Development & Integration",,
-  description: "Custom API development and third-party system integration",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["RESTful APIs", "GraphQL", "Microservices", "Documentation"],;
       pricing: "Starting at $3,500/project",;
       link: "/services/api-development";
@@ -627,134 +491,54 @@ const ServicesIndex: NextPage = () => {;
   ];
   const aiServices = [;
     {;
-<<<<<<< HEAD
-      name: "Custom AI Model Development",;
+name: "Custom AI Model Development",;
       description: "Tailored machine learning models for your specific business needs",;
-=======
-      name: "Custom AI Model Development",,
-  description: "Tailored machine learning models for your specific business needs",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["Custom model training", "Data preprocessing", "Model deployment", "Performance monitoring"],;
       pricing: "Starting at $8,000/project",;
       link: "/services/custom-ai-models";
     },;
     {;
-<<<<<<< HEAD
-      name: "Natural Language Processing",;
+name: "Natural Language Processing",;
       description: "Advanced NLP solutions for text analysis, chatbots, and content generation",;
-=======
-      name: "Natural Language Processing",,
-  description: "Advanced NLP solutions for text analysis, chatbots, and content generation",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["Text analysis", "Chatbot development", "Content generation", "Sentiment analysis"],;
       pricing: "Starting at $4,500/project",;
       link: "/services/nlp-solutions";
     },;
     {;
-<<<<<<< HEAD
-      name: "Computer Vision Solutions",;
+name: "Computer Vision Solutions",;
       description: "Image and video analysis with object detection and recognition capabilities",;
-=======
-      name: "Computer Vision Solutions",,
-  description: "Image and video analysis with object detection and recognition capabilities",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["Object detection", "Image classification", "Video analysis", "Real-time processing"],;
       pricing: "Starting at $6,000/project",;
       link: "/services/computer-vision";
     },;
     {;
-<<<<<<< HEAD
-      name: "Predictive Analytics Platform",;
+name: "Predictive Analytics Platform",;
       description: "Advanced forecasting and predictive modeling for business intelligence",;
-=======
-      name: "Predictive Analytics Platform",,
-  description: "Advanced forecasting and predictive modeling for business intelligence",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["Time series forecasting", "Risk assessment", "Trend analysis", "Automated insights"],;
       pricing: "Starting at $5,500/month",;
       link: "/services/predictive-analytics";
     },;
     {;
-<<<<<<< HEAD
-      name: "AI-Powered Automation",;
+name: "AI-Powered Automation",;
       description: "Intelligent process automation to streamline business operations",;
-=======
-      name: "AI-Powered Automation",,
-  description: "Intelligent process automation to streamline business operations",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       features: ["Process mapping", "Workflow automation", "Decision trees", "Integration capabilities"],;
       pricing: "Starting at $3,000/month",;
       link: "/services/ai-automation";
     }
   ];
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/index.tsx
+
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-=======
-import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface IndexProps {
   className?: string;
 }
-=======
-const services = [
-  {
-    id: 'ai-development',
-    title: 'AI Development',
-    description: 'Custom AI solutions tailored to your business needs',
-    icon: Brain,
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-    pricing: 'Starting at $5,000/month',
-    icon: '🤖',
-    link: '/ai-services'
-  },
-  {
-    id: 'cloud-services',
-    title: 'Cloud Services',
-    description: 'Scalable cloud infrastructure and migration services',
-    icon: Cloud,
-    features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Cost Optimization'],
-    pricing: 'Starting at $2,000/month',
-    icon: '☁️',
-    link: '/services/cloud'
-  },
-  {
-    id: 'cybersecurity',
-    title: 'Cybersecurity',
-    description: 'Comprehensive security solutions to protect your business',
-    icon: Shield,
-    features: ['Threat Detection', 'Security Audits', 'Data Protection', 'Compliance'],
-    pricing: 'Starting at $1,500/month',
-    icon: '🔒',
-    link: '/services/cybersecurity'
-  },
-  {
-    id: 'data-analytics',
-    title: 'Data Analytics',
-    description: 'Transform data into actionable business insights',
-    icon: BarChart3,
-    features: ['Business Intelligence', 'Predictive Analytics', 'Data Visualization', 'Reporting'],
-    pricing: 'Starting at $1,800/month',
-    icon: '📊',
-    link: '/services/data-analytics'
-  }
-];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export default function ServicesIndex() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <title>Services - Zion Tech Group</title>
+<title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive technology services including AI development, cloud services, cybersecurity, and data analytics solutions." />
       </Head>
 <<<<<<< HEAD:backup-problematic-files/pages_backup/services/index.tsx
@@ -961,18 +745,8 @@ export default function ServicesIndex() {
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
                   <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/index.tsx
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-        <title>Our Services - Zion Tech Group | AI, Cloud, Blockchain & IT Solutions</title>
-        <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
-        <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
-=======
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology services including AI development, cloud services, cybersecurity, and data analytics solutions." />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </Head>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Hero Section */}
@@ -1149,8 +923,7 @@ export default function ServicesIndex() {
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="mb-1">• {feature}</li>
                   ))}
-<<<<<<< HEAD
-                </ul>;
+</ul>;
                 <div className="flex justify-between items-center">;
                   <span className="text-lg font-semibold text-green-600">{service && service.pricing}</span>;
                   <Link href={service && service.link} className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors">;
@@ -1175,11 +948,7 @@ export default function ServicesIndex() {
                   {service && service.features.map((feature, idx) => (;
                     <li key={idx} className="mb-1">• {feature}</li>;
                   ))}
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4">;
@@ -1222,8 +991,7 @@ export default function ServicesIndex() {
                     ))}
                   </div>;
                   <Link
-<<<<<<< HEAD
-                    href={service.link}
+href={service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     Learn More
@@ -1232,13 +1000,6 @@ export default function ServicesIndex() {
                 </motion.div>
               ))}
             </div>
-=======
-=======
-                </ul>
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
-                  <Link href={service.link} className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     Learn More
                   </Link>
                 </div>
@@ -1326,9 +1087,6 @@ export default function ServicesIndex() {
 
         {/* CTA Section */}
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -1358,8 +1116,7 @@ export default function ServicesIndex() {
                 </Link>
               </div>
             </motion.div>
-<<<<<<< HEAD
-          </div>
+</div>
         </section>
 <<<<<<< HEAD:backup-problematic-files/pages_backup/services/index.tsx
       </main>
@@ -1376,25 +1133,6 @@ export default ServicesIndex;
     </>
   );
 }
-=======
-      </div>
-    </>
-  );
-}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/index.tsx
-=======
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8">Let's discuss how our technology solutions can accelerate your growth</p>
-          <div className="flex justify-center gap-4">
-            <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Get Started Today
-            </Link>
-            <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Learn More About Us
-            </Link>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </section>
       </main>
@@ -1559,7 +1297,7 @@ pr-12325
 
                   <Link;
                     Learn More;
-                  
+
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">"
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>""
           <p className="text-xl mb-8">Let's discuss how our technology solutions can accelerate your growth</p>
@@ -1568,16 +1306,10 @@ pr-12325
 
             <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">"
 
-            
         </section>
       </main>
     </div>
   )
 };
 export default ServicesIndex;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      </main>
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

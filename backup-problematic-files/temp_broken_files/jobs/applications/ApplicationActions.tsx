@@ -59,4 +59,3 @@ export function ApplicationActions({;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
-

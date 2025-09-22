@@ -82,4 +82,3 @@ export function UpcomingInterviewsCard() {;
                   </div>;
                 </div>;
               </div>;
-

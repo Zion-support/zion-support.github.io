@@ -150,4 +150,3 @@ export function TeamActivity() {;
         </Button>;
       </div>;
 <<<<<<< HEAD
-

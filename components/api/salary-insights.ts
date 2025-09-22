@@ -9,7 +9,7 @@ type RequestBody = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.';
 type InsightResponse = {}
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
@@ -31,7 +31,7 @@ return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 function groupBy<T, K extends string | number>(
-  items: T[]
+  items: T[];
   getKey: (item: T) => K;
 ): Record<K, T[]> {}
     (acc, item) => {}
@@ -43,7 +43,7 @@ function groupBy<T, K extends string | number>(
   );
 function extractCountry(location: string): string {}
 function calculateSimilarityScore(
-  targetSkills: string[]
+  targetSkills: string[];
   profile: TalentProfile;
 ): number {}
   return () => {}
@@ -89,7 +89,7 @@ if (return undefined) {}
   }
   return series;
 async function maybeGetGptRecommendation(
-  input: RequestBody
+  input: RequestBody;
   stats: { median: number; min: number; max: number; country: string }
 ) {
   const apiKey = process.env.OPENAI_API_KEY;
@@ -99,17 +99,17 @@ async function maybeGetGptRecommendation(
 const skillsStr = input.skills.join(', ');
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
     const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini'
-      messages: [
+      model: 'gpt-4o-mini';
+      messages: [;
 {
           role: 'system',
           content:
-            'You are a compensation analyst. Be specific and concise. Use USD.'
+            'You are a compensation analyst. Be specific and concise. Use USD.';
         }
         { role: 'user', content: prompt }
       ]
-      temperature: 0.2
-      max_tokens: 300
+      temperature: 0.2;
+      max_tokens: 300;
 origin/cursor/automate-test-improve-and-merge-code-2533
     });
     return completion && completion.choices?.[0]?.message?.content || undefined;
@@ -126,7 +126,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const sample = scored.length > 0 ? scored.map((s) => s.profile) : TALENT_PROFILES;
   const rates = sample.map((p) => p.hourlyRateUsd);
 export default async function handler(
-  req: NextApiRequest
+  req: NextApiRequest;
   res: NextApiResponse<InsightResponse | { error: string }>
 ) {
   if (req.method !== 'POST') {
@@ -144,7 +144,7 @@ const scored = TALENT_PROFILES.map(p => ({
     profile: p,
     score:
       calculateSimilarityScore(skills |[], p) +
-      (extractCountry(p.location) === country ? 0.2 : 0)
+      (extractCountry(p.location) === country ? 0.2 : 0);
   }))
     .filter(s => s.score > 0)
     .sort((a, b) => b.score - a.score)
@@ -222,7 +222,7 @@ const scarceSkills = [
   if (undersupplied) tags.push('Undersupplied Skill')
 origin/cursor/automate-test-improve-and-merge-code-2533
   const gptRecommendation = await maybeGetGptRecommendation(body, {
-    median: baseMedian
+    median: baseMedian;
     min
     max
     country

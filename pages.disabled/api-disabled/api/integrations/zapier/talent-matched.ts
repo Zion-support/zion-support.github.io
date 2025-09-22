@@ -1,14 +1,5 @@
 
-
-
-<<<<<<< HEAD:pages_backup/api/integrations/zapier/talent-matched.ts
-=======
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/integrations/zapier/talent-matched.ts
+:pages_backup/api/integrations/zapier/talent-matched.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -49,21 +40,14 @@ function handler() {
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
 }
-<<<<<<< HEAD:pages_backup/api/integrations/zapier/talent-matched.ts
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/integrations/zapier/talent-matched.ts
+:pages_backup/api/integrations/zapier/talent-matched.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
-<<<<<<< HEAD:pages_backup/api/integrations/zapier/talent-matched.ts
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/integrations/zapier/talent-matched.ts
+:pages_backup/api/integrations/zapier/talent-matched.ts
   const { since } = req.query as { since?: string }
   const state = readState();
   const sinceTs = since ? Number(since) : 0;
@@ -72,11 +56,6 @@ const events = state && state.events.filter(
   );
   res && res.status(200).json({ events });
 }
-
-
-
-
-
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -113,13 +92,7 @@ function handler() {
   );
   res.status (200).json ({ events });
 
-
 }
 
-
-<<<<<<< HEAD:pages_backup/api/integrations/zapier/talent-matched.ts
-=======
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/integrations/zapier/talent-matched.ts
+:pages_backup/api/integrations/zapier/talent-matched.ts
 origin/cursor/automate-test-improve-and-merge-code-2533

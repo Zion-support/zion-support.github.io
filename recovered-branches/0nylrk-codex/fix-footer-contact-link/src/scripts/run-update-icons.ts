@@ -1,26 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const scriptPath = path && path.join(__dirname, '../../scripts/update-icon-imports && imports.js');
 
 console && console.log('Running icon import updater...');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
-
-=======
-
-
-// This is a simple script wrapper to execute our icon update script
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js');
-console.log('Running icon import updater...');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -39,13 +23,7 @@ const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),
 // // // console.log('Running icon import updater...'),
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -55,7 +33,6 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   if (error) {
 =======
 
-
 exec(`node ${scriptPath}`, (error, stdout, stderr) => {}
   if (error) {};`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -64,25 +41,7 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {}
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-exec(`node ${scriptPath}`, (error, stdout, stderr) => {
-  if (error) {
-    console.error(`Error executing script: ${error}`),
-    return
-  }
-<<<<<<< HEAD
-  console.log(stdout);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (stderr) {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -96,19 +55,12 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   }
 });
 
-  
   // // // console.log(stdout),
   if (stderr) {}
     console.error(stderr)
   }
-<<<<<<< HEAD
-  
-  console.log('Icon imports updated successfully!')
+console.log('Icon imports updated successfully!')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  '
-  console.log('Icon imports updated successfully!')'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // // // console.log('Icon imports updated successfully!')
 }),
 // This is a simple script wrapper to execute our icon update script;'
@@ -130,8 +82,6 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
   // // // console.log('Icon imports updated successfully!');
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 });
 });
@@ -142,42 +92,19 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
 });
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-  
   console && console.log(stdout);
 
   if (stderr) {
     console && console.error(stderr)
   }
 
-  
   console && console.log('Icon imports updated successfully!')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  console && console.log(stdout);
-  if (stderr) {
-    console && console.error(stderr)
-  }
-  console && console.log('Icon imports updated successfully!')
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 });
-
-
-
-
 
 // This is a simple script wrapper to execute our icon update script;'
 import {exec} from 'child_process';'
@@ -192,7 +119,6 @@ if ( {) {}
 }`
 =======
 });
-
 
 // This is a simple script wrapper to execute our icon update script;
 import {exec} from 'child_process';
@@ -210,8 +136,7 @@ if ( {) {
     return;
   }
   console.log (stdout);
-<<<<<<< HEAD
-  // Check condition;
+// Check condition;
 if ( {) {}
   $2;
 }
@@ -220,19 +145,6 @@ if ( {) {}
   console.log ('Icon imports updated successfully!');
 });
 
-<<<<<<< HEAD
-=======
-  // Check condition
-if ( {) {
-  $2
-}
-    console.error (stderr);
-  }
-  console.log ('Icon imports updated successfully!');
-});
-;
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // This is a simple script wrapper to execute our icon update script;
 import { exec } from 'child_process',;
 import path from 'path',;
@@ -266,17 +178,11 @@ return
 });
 });
 });
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -3,8 +3,8 @@ import fs from 'fs';'
 import path from 'path';
   fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2));
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 ) {
 const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
   try {}

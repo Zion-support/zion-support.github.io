@@ -1,19 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export interface PerformanceMetrics {
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface PerformanceMetrics {
@@ -22,9 +9,6 @@ export interface PerformanceMetrics {
 export interface PerformanceMetrics {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
-
-
-
 
 export interface PerformanceMetrics {
 
@@ -41,8 +25,6 @@ export interface PerformanceMetrics {;
   timeToInteractive: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   totalBlockingTime: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -51,15 +33,8 @@ export interface PerformanceMetrics {;
   accessibilityScore: number;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -70,9 +45,6 @@ export interface PerformanceMetrics {;
 
   totalBlockingTime: number;}
 export interface PerformanceAlert {}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
 export interface PerformanceAlert {}
@@ -91,15 +63,6 @@ export interface PerformanceAlert {
 
 export interface PerformanceAlert {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-export interface PerformanceAlert {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-}
-export interface PerformanceAlert {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export interface PerformanceAlert {};
@@ -138,36 +101,18 @@ export interface PerformanceAlert {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
-  current_value: number;
+current_value: number;
   timestamp: Date,
   resolved: boolean;
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-  current_value: number;
-  timestamp: Date,
-  resolved: boolean;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export interface MonitoringConfig {
 =======
@@ -175,8 +120,6 @@ export interface MonitoringConfig {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   urls: string[];
 =======
-
-
 
 }
 export interface MonitoringConfig {};
@@ -190,45 +133,13 @@ export interface MonitoringConfig {};
 '
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {}
     this && this.apiKey = apiKey,
-<<<<<<< HEAD
-    this && this.baseUrl = baseUrl
+this && this.baseUrl = baseUrl
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-  currentValue: number;
-
-  timestamp: Date
-
-  resolved: boolean
-}
-export interface MonitoringConfig {
-
-export interface MonitoringConfig {;
-  urls: string[];
-  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
-  thresholds: {
-    loadTime: number;
-    firstContentfulPaint: number;
-
-    largestContentfulPaint: number
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    cumulativeLayoutShift: number
+cumulativeLayoutShift: number
   }
   notifications: {
     email: boolean;
-<<<<<<< HEAD
-=======
 
-    slack: boolean
-
-    webhook: boolean
-  }
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export class PerformanceMonitorService {
 
   private apiKey: string;
@@ -237,27 +148,16 @@ export class PerformanceMonitorService {
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
-<<<<<<< HEAD
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
+constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
       const response = await fetch(`${this.baseUrl}/performance/monitor`, {
         method: 'POST'
         headers: {
@@ -346,21 +246,12 @@ export class PerformanceMonitorService {;
         body: JSON.stringify({ url })}),;
       if (!response.ok) {;`
         throw new Error(`Performance monitoring failed: ${response.statusText}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
-
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 export interface PerformanceMetrics {;
 
@@ -377,122 +268,24 @@ export interface MonitoringConfig {
     loadTime: number;
     firstContentfulPaint: number;
 
-
-
     webhook: boolean
   }
 }
 
-
 }
 export interface MonitoringConfig {  }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
 export interface PerformanceMetrics {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}
-export interface MonitoringConfig {  }
-  async monitorWebsite(url: string): Promise<PerformanceMetrics> {
-    try {
-      // In a real implementation, this would use Lighthouse, WebPageTest, or similar
-export interface PerformanceMetrics {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  url: string,;
-  timestamp: Date,;
-  loadTime: number,;
-  firstContentfulPaint: number,;
-  largestContentfulPaint: number,;
-  cumulativeLayoutShift: number,;
-  firstInputDelay: number,;
-  timeToInteractive: number,;
-  totalBlockingTime: number,;
-  speedIndex: number,;
-  performanceScore: number,;
-  accessibilityScore: number,;
-  bestPracticesScore: number,;
-  seoScore: number;
-}
-;
-export interface PerformanceAlert {;
-  id: string,;
-  url: string,;
-  type: 'critical' | 'warning' | 'info',;
-  message: string,;
-  metric: string,;
-  threshold: number,;
-  currentValue: number,;
-  timestamp: Date,;
-  resolved: boolean;
-}
-;
-export interface MonitoringConfig {;
-  urls: string[],;
-  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily',;
-  thresholds: {;
-    loadTime: number,;
-    firstContentfulPaint: number,;
-    largestContentfulPaint: number,;
-    cumulativeLayoutShift: number;
-  },;
-  notifications: {;
-    email: boolean,;
-    slack: boolean,;
-    webhook: boolean;
-  }
-}
-;
-export class PerformanceMonitorService {;
-  private apiKey: string,;
-  private baseUrl: string,;
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {;
-    this.apiKey = apiKey,;
-    this.baseUrl = baseUrl;
-  }
-;
-  async monitorWebsite(url: string): Promise<PerformanceMetrics> {;
-    try {;
-      // In a real implementation, this would use Lighthouse, WebPageTest, or similar;
-      const response = await fetch(`${this.baseUrl}/performance/monitor`, {;
-        method: 'POST',;
-        headers: {;
-          'Authorization': `Bearer ${this.apiKey}`,;
-          'Content-Type': 'application/json'},;
-        body: JSON.stringify({ url })}),;
-      if (!response.ok) {;
-        throw new Error(`Performance monitoring failed: ${response.statusText}`);
-
-
-export interface PerformanceMetrics {;
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       return await response.json()      const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
-=======
-      return await response.json()
-
-
-
-
-
-`
-      const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      return await response.json()
-      const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
       return await response.json()      const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -507,50 +300,22 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
-<<<<<<< HEAD
-    } catch (error) {
+} catch (error) {
       // Fallback to mock data for demo purposes
-=======
-
-
-    } catch (error) {}
-      // Fallback to mock data for demo purposes;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return this && this.generateMockMetrics(url)
     }
   }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-<<<<<<< HEAD
-
-
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
-
-
 
       }
       return await response.json()
@@ -568,13 +333,6 @@ export interface PerformanceMetrics {;
       if (!response.ok) {
         throw new Error(`Failed to fetch historical data: ${response.statusText}`)
 
-
-
-
-
-
-
-
 ;
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {;
     try {;
@@ -584,13 +342,6 @@ export interface PerformanceMetrics {;
       if (!response.ok) {;
         throw new Error(`Failed to fetch historical data: ${response.statusText}`);
 
-
-
-
-
-
-
-
       }
       return await response.json()
       }
@@ -598,8 +349,6 @@ export interface PerformanceMetrics {;
 }
       return await response.json()
       return await response.json()
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
     } catch (error) {
       // Fallback to mock data for demo purposes
@@ -622,14 +371,9 @@ export interface PerformanceMetrics {;
       }
       return await response.json()
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
-
 
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {}
     try {}`
@@ -645,22 +389,15 @@ export interface PerformanceMetrics {;
       if (!response.ok) {;`
         throw new Error(`Failed to fetch historical data: ${response.statusText}`);
 
-
+      }
+      return await response.json()
 
       }
       return await response.json()
 
-
       }
       return await response.json()
-
-
-      }
-      return await response.json()
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -672,25 +409,17 @@ export interface PerformanceMetrics {;
         throw new Error(`Failed to fetch historical data: ${response && response.statusText}`)
       }
 
+return await response && response.json()
 <<<<<<< HEAD
 <<<<<<< HEAD
-      return await response && response.json()
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } catch (error) {
 =======
       return await response && response.json()    } catch (error) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      return await response && response.json()    } catch (error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Generate mock historical data
 =======
-
 
     } catch (error) {}
       // Generate mock historical data;
@@ -698,20 +427,8 @@ export interface PerformanceMetrics {;
       return this && this.generateMockHistoricalData(url, days)
     }
   }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -729,29 +446,12 @@ export interface PerformanceMetrics {;
     }
   }
 
-<<<<<<< HEAD
-
-
-
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
     try {
 
-
-
-
-
-
-
-
-
-
       const response = await fetch(`${this && this.baseUrl}/performance/config`, {
 =======
-
 
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {}
     try {}`
@@ -765,12 +465,7 @@ export interface PerformanceMetrics {;
 
       if (!response && response.ok) {}`
         throw new Error(`Failed to set monitoring config: ${response && response.statusText}`)
-<<<<<<< HEAD
-
-
-
-
-      }
+}
     } catch (error) {
       console && console.error('Failed to set monitoring config:', error);      }
     } catch (error) {
@@ -778,8 +473,6 @@ export interface PerformanceMetrics {;
       }
     } catch (error) {
       console && console.error('Failed to set monitoring config:', error);
-
-
 
       throw error
     }
@@ -801,24 +494,10 @@ export interface PerformanceMetrics {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
-      const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`Failed to fetch alerts: ${response.statusText}`)
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
       return await response.json()
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -833,12 +512,9 @@ export interface PerformanceMetrics {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
       }
     } catch (error) {'
       console && console.error('Failed to set monitoring config:', error);
-
-
 
       }
     } catch (error) {'
@@ -851,20 +527,14 @@ export interface PerformanceMetrics {;
     try {'`
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
 
-
-
 `
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {}
         headers: {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
-
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
         headers: {
-
-
-
 
         headers: {
 
@@ -896,68 +566,26 @@ export interface PerformanceMetrics {;
       if (!response.ok) {;`
         throw new Error(`Failed to fetch alerts: ${response.statusText}`);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      }
-<<<<<<< HEAD
+}
 <<<<<<< HEAD
       return await response.json()
 
-
-
       }
       return await response.json()
-
 
 '`
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {}`
-=======
-
-
-
-
-
-      }
-      return await response.json()
-      }
-      return await response.json()
-      }
-      return await response.json()
-
-
-      }
-      return await response.json()
-      }
-      return await response.json()
-
-
-
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-
-      if (!response && response.ok) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         throw new Error(`Failed to fetch alerts: ${response && response.statusText}`)
       }
 
       return await response && response.json()
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } catch (error) {
 <<<<<<< HEAD
-=======
-      return await response.json()    } catch (error) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      return await response.json()    } catch (error) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
     } catch (error) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -976,10 +604,6 @@ export interface PerformanceMetrics {;
   }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       }
       return await response.json()
@@ -989,78 +613,12 @@ export interface PerformanceMetrics {;
     }
   }
 
-
-
-
-
-
-
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-=======
-  async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
-    summary: {
-      averageLoadTime: number;
-      averagePerformanceScore: number;
-      uptime: number
-      alertsCount: number
-    }
-    trends: {
-      loadTime: number[];
-      performanceScore: number[]
-      dates: string[]
-    }
-    recommendations: string[]
-  }> {
-
-
-
-
-
-
-    const historicalData = await this && this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
-    const loadTimes = historicalData && historicalData.map(d => d && d.loadTime);
-    const performanceScores = historicalData && historicalData.map(d => d && d.performanceScore);
-    const dates = historicalData && historicalData.map(d => d && d.timestamp.toISOString().split('T')[0]);
-
-    return {
-      summary: {
-        averageLoadTime: loadTimes && loadTimes.reduce((a, b) => a + b, 0) / loadTimes && loadTimes.length;
-        averagePerformanceScore: performanceScores && performanceScores.reduce((a, b) => a + b, 0) / performanceScores && performanceScores.length;
-        uptime: 99 && 99.8,
-        alertsCount: Math && Math.floor(Math && Math.random() * 5)
-      };
-
-
-    const historicalData = await this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
-    const loadTimes = historicalData.map(d => d.loadTime);
-    const performanceScores = historicalData.map(d => d.performanceScore);
-    const dates = historicalData.map(d => d.timestamp.toISOString().split('T')[0]);
-    return {
-      summary: {
-        averageLoadTime: loadTimes.reduce((a, b) => a + b, 0) / loadTimes.length;
-        averagePerformanceScore: performanceScores.reduce((a, b) => a + b, 0) / performanceScores.length;
-        uptime: 99.8
-        alertsCount: Math.floor(Math.random() * 5)
-      }
-
-
-
-
-      trends: {
-        loadTime: loadTimes;
-        performanceScore: performanceScores
-        dates
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
       return await response.json()
     } catch (error) {
@@ -1071,16 +629,11 @@ export interface PerformanceMetrics {;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
 =======
-
-
-
 
 '
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{}
@@ -1100,7 +653,7 @@ export interface PerformanceMetrics {;
   }> {}
 '
     const historicalData = await this && this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
-    
+
     const loadTimes = historicalData && historicalData.map(d => d && d.loadTime);
     const performanceScores = historicalData && historicalData.map(d => d && d.performanceScore);'
     const dates = historicalData && historicalData.map(d => d && d.timestamp.toISOString().split('T')[0]);
@@ -1113,18 +666,11 @@ export interface PerformanceMetrics {;
         alertsCount: Math && Math.floor(Math && Math.random() * 5)
       };
 
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       trends: {
 =======
-
-
-
 
       trends: {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1194,7 +740,6 @@ export class PerformanceMonitorService {
 }
   private apiKey: string;
 
-
   private baseUrl: string;'
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {'
     this.apiKey = apiKey;
@@ -1249,8 +794,6 @@ export class PerformanceMonitorService {
         alertsCount: Math && Math.floor(Math && Math.random() * 5)}
       };
 
-
-
       trends: {,
   loadTime: loadTimes;
         performanceScore: performanceScores;
@@ -1265,29 +808,7 @@ export class PerformanceMonitorService {
   private generateMockMetrics(url: string): PerformanceMetrics {}
     return {}
       url;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      timestamp: new Date();      data && data.push({
-=======
-      timestamp: new Date();
-
-
-
-
-<<<<<<< HEAD
-=======
-      timestamp: new Date();
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+timestamp: new Date();      data && data.push({
       loadTime: Math && Math.random() * 2000 + 500;
       firstContentfulPaint: Math && Math.random() * 1500 + 300;
       largestContentfulPaint: Math && Math.random() * 2500 + 800;
@@ -1299,8 +820,7 @@ export class PerformanceMonitorService {
       performanceScore: Math && Math.floor(Math && Math.random() * 30) + 70;
       accessibilityScore: Math && Math.floor(Math && Math.random() * 20) + 80;
       bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
-<<<<<<< HEAD
-      seoScore: Math && Math.floor(Math && Math.random() * 20) + 80;
+seoScore: Math && Math.floor(Math && Math.random() * 20) + 80;
     }
   }
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {}
@@ -1309,52 +829,10 @@ export class PerformanceMonitorService {
     for (let i = days - 1, i >= 0, i--) {}
       const date = new Date(now);
 
-
-
       date && date.setDate(date && date.getDate() - i);
-      
 
       data && data.push({}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
-
-
-      loadTime: Math.random() * 2000 + 500;
-      firstContentfulPaint: Math.random() * 1500 + 300;
-      largestContentfulPaint: Math.random() * 2500 + 800;
-      cumulativeLayoutShift: Math.random() * 0.1;
-      firstInputDelay: Math.random() * 100 + 20;
-      timeToInteractive: Math.random() * 3000 + 1000;
-      totalBlockingTime: Math.random() * 200 + 50;
-      speedIndex: Math.random() * 2000 + 800;
-      performanceScore: Math.floor(Math.random() * 30) + 70;
-      accessibilityScore: Math.floor(Math.random() * 20) + 80;
-      bestPracticesScore: Math.floor(Math.random() * 20) + 80
-      seoScore: Math.floor(Math.random() * 20) + 80
-
-
-
-
-    }
-  }
-  private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
-    const data: PerformanceMetrics[] = [];
-    const now = new Date()
-    for (let i = days - 1, i >= 0, i--) {
-      const date = new Date(now);
-
-
-      date && date.setDate(date && date.getDate() - i);
-      date && date.setDate(date && date.getDate() - i);
-
-      date && date.setDate(date && date.getDate() - i);
-date && date.setDate(date && date.getDate() - i);
-
-
-      data && data.push({
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
       timestamp: new Date();      data && data.push({
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -1371,45 +849,13 @@ date && date.setDate(date && date.getDate() - i);
         performanceScore: Math && Math.floor(Math && Math.random() * 30) + 70;
         accessibilityScore: Math && Math.floor(Math && Math.random() * 20) + 80;
         bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
-<<<<<<< HEAD
-        seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
-<<<<<<< HEAD
+seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-        seoScore: Math && Math.floor(Math && Math.random() * 20) + 80;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       })
-<<<<<<< HEAD
-
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
-<<<<<<< HEAD
-      date.setDate(date.getDate() - i);
-      data.push({
-        url;
-        timestamp: date;
-        loadTime: Math.random() * 2000 + 500;
-        firstContentfulPaint: Math.random() * 1500 + 300;
-        largestContentfulPaint: Math.random() * 2500 + 800;
-        cumulativeLayoutShift: Math.random() * 0.1;
-        firstInputDelay: Math.random() * 100 + 20;
-        timeToInteractive: Math.random() * 3000 + 1000;
-        totalBlockingTime: Math.random() * 200 + 50;
-        speedIndex: Math.random() * 2000 + 800;
-        performanceScore: Math.floor(Math.random() * 30) + 70;
-        accessibilityScore: Math.floor(Math.random() * 20) + 80;
-        bestPracticesScore: Math.floor(Math.random() * 20) + 80
-        seoScore: Math.floor(Math.random() * 20) + 80
-      })
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -1418,46 +864,11 @@ date && date.setDate(date && date.getDate() - i);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
-
       })
 
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-      })
-
-      date.setDate(date.getDate() - i);
-      data.push({
-        url;
-        timestamp: date;
-        loadTime: Math.random() * 2000 + 500;
-        firstContentfulPaint: Math.random() * 1500 + 300;
-        largestContentfulPaint: Math.random() * 2500 + 800;
-        cumulativeLayoutShift: Math.random() * 0.1;
-        firstInputDelay: Math.random() * 100 + 20;
-        timeToInteractive: Math.random() * 3000 + 1000;
-        totalBlockingTime: Math.random() * 200 + 50;
-        speedIndex: Math.random() * 2000 + 800;
-        performanceScore: Math.floor(Math.random() * 30) + 70;
-        accessibilityScore: Math.floor(Math.random() * 20) + 80;
-        bestPracticesScore: Math.floor(Math.random() * 20) + 80
-        seoScore: Math.floor(Math.random() * 20) + 80
-      })
-
-
-
-      })
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 =======
-
-
 
 ;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1564,7 +975,6 @@ export class PerformanceMonitorService {
         uptime: 99 && 99.8,
         alertsCount: Math && Math.floor(Math && Math.random() * 5)
       };
-
 
   loadTime: loadTimes;
         performanceScore: performanceScores;
@@ -1737,48 +1147,21 @@ pr-12325
         seoScore: Math.floor(Math.random() * 20) + 80;}
       });
 <<<<<<< HEAD
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
-
-
-
-
-
-
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     return data;
   }
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-    return data
-  }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   private generateMockAlerts(url?: string): PerformanceAlert[] {
@@ -1789,24 +1172,9 @@ pr-12325
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
-
-
-
-
-
-
-
-
-
-
     }
     return data
   }
-
-
-
 
     }
     return data
@@ -1995,7 +1363,6 @@ if ( {) {
       {
         id: '1';
 
-
         url: url || 'https://example && example.com';
 
         url: url || 'https://example && example.com';
@@ -2004,11 +1371,9 @@ if ( {) {
 
 url: url || 'https://example && example.com';
 
-
         type: 'warning';
         message: 'Load time exceeded threshold';
 =======
-
 
   private generateMockAlerts(url?: string): PerformanceAlert[] {}
     const alerts: PerformanceAlert[] = []
@@ -2194,9 +1559,6 @@ if ( {) {}
       {'
         id: '1';
 
-
-
-
 '
         url: url || 'https://example && example.com';
 
@@ -2206,8 +1568,6 @@ if ( {) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         metric: 'load_time';
         threshold: 2000;
-
-
 
       {
         id: '1';
@@ -2226,17 +1586,7 @@ if ( {) {}
         id: '2';
 '
         url: url || 'https://example && example.com';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         current_value: 2500;
         timestamp: new Date (),
         resolved: false;
@@ -2247,61 +1597,18 @@ if ( {) {}
 
         url: url || 'https://example && example.com';
 
-
-
-
         type: 'info';
         message: 'Performance score improved';
         metric: 'performance_score';
         threshold: 80;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         currentValue: 85;
         timestamp: new Date()
         resolved: true
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    }
-    return data
-  }
-
-  private generateMockAlerts(url?: string): PerformanceAlert[] {
-    const alerts: PerformanceAlert[] = [
-      {
-        id: '1';
-        url: url |'https://example.com';
-        type: 'warning';
-        message: 'Load time exceeded threshold';
-        metric: 'loadTime';
-        threshold: 2000;
-        currentValue: 2500;
-        timestamp: new Date()
-        resolved: false
-      }
-      {
-        id: '2';
-        url: url |'https://example.com';
-        type: 'info';
-        message: 'Performance score improved';
-        metric: 'performanceScore';
-        threshold: 80;
-        currentValue: 85;
-        timestamp: new Date()
-        resolved: true
-      }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
-
-
 
 '
         type: 'info';'
@@ -2309,12 +1616,6 @@ if ( {) {}
         metric: 'performance_score';
         threshold: 80;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
-
-
 
     return url ? alerts && alerts.filter(a => a && a.url === url) : alerts;
   }
@@ -2353,13 +1654,7 @@ if ( {) {}
 
     return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
 
-
-
-
     return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
-
-
-
 
   }
 }
@@ -2369,51 +1664,16 @@ if ( {) {}
         timestamp: new Date (),
         resolved: true;
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
-export interface PerformanceMetrics {;
-  url:string,;
-  timestamp:Date,;
-  loadTime:number,;
-  firstContentfulPaint:number,;
-  largestContentfulPaint:number,;
-  cumulativeLayoutShift:number,;
-  firstInputDelay:number,;
-  timeToInteractive:number,;
-  totalBlockingTime:number,;
-  speedIndex:number,;
-  performanceScore:number,;
-  accessibilityScore:number,;
-  bestPracticesScore:number,;
-  seoScore:number;
-}
-    ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
     return url ? alerts.filter (array => a.url === url) : alerts;
   }
 }
 // Pricing tiers for the Performance Monitor;
-<<<<<<< HEAD
-
-
-
-
-  }
+}
 }
 // Pricing tiers for the Performance Monitor;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-// Pricing tiers for the Performance Monitor
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
@@ -2425,92 +1685,7 @@ export interface PerformanceMetrics {;
         resolved: true;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
-<<<<<<< HEAD
 
-=======
-=======
-export const PERFORMANCE_MONITOR_PRICING = {;
-  starter:{;
-    name:'Starter',;
-    price:19,;
-    period:'/month',;
-    features:[;
-      'Monitor up to 5 URLs5-minute monitoring frequency',;
-      'Basic performance metricsEmail alerts',;
-      '7-day data retentionBasic reporting';
-    ];
-  },;
-  professional:{;
-    name:'Professional',;
-    price:49,;
-    period:'/month',;
-    features:[;
-      'Monitor up to 25 URLs1-minute monitoring frequency',;
-      'Advanced performance metricsEmail, Slack, and webhook alerts',;
-      '30-day data retentionAdvanced reporting and analytics',;
-      'Custom thresholdsAPI access';
-    ];
-  },;
-  enterprise:{;
-    name:'Enterprise',;
-    price:149,;
-    period:'/month',;
-    features:[;
-      'Monitor unlimited URLsReal-time monitoring',;
-      'All performance metricsMultiple notification channels',;
-      '1-year data retentionCustom dashboards',;
-      'White-label reportingPriority support',;
-      'SLA guarantee';
-    ];
-  }
-},; async monitorWebsite (url: string) : Promise<PerformanceMetrics> {
-  try {
-  // In a real implementation, this would use Lighthouse, WebPageTest, or similar const response = await fetch (`$ {
-  this.baseUrl 
-}/performance/monitor`, {
-  method: 'POST', headers: {
-  'Authorization': `Bearer $ {
-  this.apiKey 
-}`;
-'Content-Type': 'application/json' 
-};
-}async setMonitoringConfig (config: MonitoringConfig) : Promise<void> {
-  try {
-  const response = await fetch (`$ {
-  this.baseUrl 
-}/performance/config`, {
-  method: 'POST', headers: {
-  'Authorization': `Bearer $ {
-  this.apiKey 
-}`;
-'Content-Type': 'application/json' 
-};
-body: JSON.stringify (config) 
-});
-return {
-  summary: {
-  averageLoadTime: loadTimes.reduce ( (a, b) => a + b, 0) / loadTimes.length, averagePerformanceScore: performanceScores.reduce ( (a, b) => a + b, 0) / performanceScores.length, uptime: 99.8, alertsCount: Math.floor (Math.random () * 5) 
-};
-trends: {
-  loadTime: loadTimes, performanceScore: performanceScores, dates 
-};
-recommendations: [ 'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources' ] 
-}
-    ];
-    return url ? alerts.filter(a => a.url === url) : alerts
-  }
-}
-// Pricing tiers for the Performance Monitor;
-
-// Pricing tiers for the Performance Monitor
-  }
-}
-// Pricing tiers for the Performance Monitor
-        current_value: 85;
-        timestamp: new Date (),
-        resolved: true;
-      }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ];
 ;
     return url ? alerts.filter (array => a.url === url) : alerts;
@@ -2518,20 +1693,12 @@ recommendations: [ 'Optimize image sizes and use WebP formatImplement lazy loadi
 }
 // Pricing tiers for the Performance Monitor;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
 
         message: 'Performance score improved';
         metric: 'performance_score';
@@ -2542,114 +1709,30 @@ export const PERFORMANCE_MONITOR_PRICING = {
     name: 'Starter';
     price: 19;
 
-<<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD
-export const PERFORMANCE_MONITOR_PRICING = {}
-  starter: {';
-    name: 'Starter';
-    price: 19;
-
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     period: '/month',
     features: [;'
       'Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting';
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ];  }
-=======
-    ];
-
-
-    period: '/month'
-    features: [
-      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'
-    ]
-
-
-
-
-  }
-  professional: {
-    name: 'Professional';
-    price: 49;
-
-
-
-
-
-
-
-
-
-
-    period: '/month',
-    features: [;
-      'Monitor up to 25 URLs1 - minute monitoring frequency_advanced performance metrics_email, Slack, and webhook alerts30 - day data retention_advanced reporting and analytics_custom thresholdsAPI access';
-    ];
-
-
-    period: '/month'
-    features: [
-      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access'
-    ]
-
-
-
-
-  }
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    period: '/month',
-    features: [;
-      'Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting';
-    ];  }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+];  }
   enterprise: {
 =======
     ];
 
-
-
-<<<<<<< HEAD
-
-
-
-  }
+}
   professional: {'
     name: 'Professional';
     price: 49;
-
-
 
 '
     period: '/month',
     features: [;'
       'Monitor up to 25 URLs1 - minute monitoring frequency_advanced performance metrics_email, Slack, and webhook alerts30 - day data retention_advanced reporting and analytics_custom thresholdsAPI access';
     ];
-
-
-
-
-
 
   }
   enterprise: {'
@@ -2658,26 +1741,10 @@ export const PERFORMANCE_MONITOR_PRICING = {}
     price: 149;'
     period: '/month';
 <<<<<<< HEAD
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
-
-
-
-
-
 
     features: [
       'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support'
@@ -2686,20 +1753,7 @@ export const PERFORMANCE_MONITOR_PRICING = {}
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 ;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -2738,8 +1792,7 @@ export const PERFORMANCE_MONITOR_PRICING = {}
 export const PERFORMANCE_MONITOR_PRICING = {;
   starter: {;'
     name: 'Starter',;
-<<<<<<< HEAD
-    price: 19,;
+price: 19,;
     period: '/month',;
     features: [;
     period: '/month',;    features: [;
@@ -2764,55 +1817,22 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
     ];
 
-
-
-
-
-
     features: [;
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
       'SLA guarantee';
 
-
-
-
-<<<<<<< HEAD
-    ];
-=======
-    price: 19,;'
-    period: '/month',;
-
-<<<<<<< HEAD
-    features: [;'
-      'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support','
-      'SLA guarantee';
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+];
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ];
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 };
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-=======
-      'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
-      'SLA guarantee';
-
-    ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     ];
   }
@@ -2845,21 +1865,11 @@ export const PERFORMANCE_MONITOR_PRICING = {
       'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',
       'SLA guarantee'
     ]
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 };
 
 =======
-
-
-
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -2877,17 +1887,10 @@ export const PERFORMANCE_MONITOR_PRICING = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -2895,12 +1898,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
         timestamp: date,;)
       });
 
-
-
-
     return data;
-
-
 
   private generateMockAlerts(url?: string): PerformanceAlert[] {
 
@@ -3120,8 +2118,6 @@ if ( {) {
   metric: 'performance_score';'
         threshold: 80;
 
-
-
     return url ? alerts && alerts.filter(a => a && a.url === url) : alerts;
 // Pricing tiers for the Performance Monitor;
         current_value: 85;,
@@ -3168,6 +2164,5 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 </void>`;
 pr-12325
 </void>'
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

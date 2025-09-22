@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Download, FileText, Mail, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React from "react","
 import { Button } from "@/components/ui/button",";
@@ -14,23 +10,8 @@ import { Link } from "react-router-dom";"
 import { Download, FileText, Mail, BarChart3 } from "lucide-react","
 import { Link } from "react-router-dom",
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-
-
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-
-import { Download, FileText, Mail, BarChart3 } from "lucide-react";
-import { Link } from "react-router-dom";
-import { Download, FileText, Mail, BarChart3 } from "lucide-react",;
-import { Link } from "react-router-dom",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import React from "react",""
 import { Button } from "@/components/ui/button",""
@@ -105,8 +86,7 @@ function BillingHeader() {}
             <Mail className="h-4 w-4" />;
             Contact Billing Support;
           </Button>;
-<<<<<<< HEAD
-          <Button variant="outline" size="sm" className="gap-1" asChild>;
+<Button variant="outline" size="sm" className="gap-1" asChild>;
             <Link to="/dashboard/client/analytics">;
               <BarChart3 className="h-4 w-4" />;
               Analytics;
@@ -127,22 +107,6 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Download, FileText, Mail, BarChart3 } from "lucide-react";
 =======
-
-<<<<<<< HEAD
-              Analytics;
-            </Link>;
-          </Button>;
-        </div>;
-      </div>;
-
-
-
-"
-import React from "react";"
-import { Button } from "@/components/ui/button";"
-import { Download, FileText, Mail, BarChart3 } from "lucide-react";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Download, FileText, Mail, BarChart3 } from "lucide-react";
@@ -157,14 +121,8 @@ import { Download, FileText, Mail, BarChart3 } from "lucide-react","
 import { Link } from "react-router-dom",
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -183,8 +141,6 @@ export function BillingHeader() {
           </Button>
           <Button variant="outline" size="sm" className="gap-1">
 =======
-
-
 
 export function BillingHeader() {}
   return ("
@@ -215,25 +171,11 @@ export function BillingHeader() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>
   );
 }
-
 
     </div>;
 =======
@@ -261,24 +203,10 @@ export function BillingHeader() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-}
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -286,7 +214,6 @@ export function BillingHeader() { return null; }
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
-
 
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -360,7 +287,6 @@ function BillingHeader() {
       <p className="text-muted-foreground">"
 
         <h1 className="text-3xl font-bold tracking-tight">Billing & Invoices</h1>;""
-
 
       <p className="text-muted-foreground">;"
       </p>;

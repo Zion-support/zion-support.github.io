@@ -1,12 +1,7 @@
 #!/usr/bin/env node
 /**
  * Improved PM2 Sync Automation System;
-<<<<<<< HEAD
- *
-=======
- * 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+*
  * This system "provides": * - Real-time file watching and automatic Git synchronization;
 =======
  * This system "provides": * - Real-time file watching and automatic Git synchronization;"
@@ -60,8 +55,7 @@ class ImprovedPM2SyncAutomation {}
       this.errorCount++;
       this.restartAfterDelay()};
   isGitRepository() {}
-<<<<<<< HEAD
-    try {}
+try {}
       return fs.existsSync(path.join(this.config.projectRoot, '.git'))} catch {}
       return false};
   };
@@ -70,13 +64,8 @@ class ImprovedPM2SyncAutomation {}
       execSync('git init', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
       execSync('git remote add origin "https": //github.com/Zion-Holdings/zion.app.git', { })
-<<<<<<< HEAD
-        "cwd": this.config.projectRoot,
+"cwd": this.config.projectRoot,
         "stdio": 'pipe'
-=======
-        "cwd": this.config.projectRoot, 
-        "stdio": 'pipe' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
       this.log('Git repository initialized')} catch (error) {}
@@ -84,7 +73,7 @@ class ImprovedPM2SyncAutomation {}
   };
   setupFileWatcher() {}
     this.log('Setting up file watcher...');
-    
+
     this.watcher = chokidar.watch(this.config.watchPatterns, {})
       "ignored": this.config.ignorePatterns,
       "persistent": true,
@@ -95,8 +84,6 @@ class ImprovedPM2SyncAutomation {}
       };
     }
 });
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       return false};
   initializeGitRepository() {}
@@ -128,48 +115,28 @@ class ImprovedPM2SyncAutomation {}
     try {}`;
       this.log(`Processing ${this.pendingChanges.size} pending changes...`);
       // Add all changes to git;
-<<<<<<< HEAD
-      const addResult = execSync('git add -A', { })
-<<<<<<< HEAD
-        "cwd": this.config.projectRoot,
+const addResult = execSync('git add -A', { })
+"cwd": this.config.projectRoot,
         "stdio": 'pipe'
-=======
-        "cwd": this.config.projectRoot, 
-        "stdio": 'pipe' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
-      
+
       // Commit changes;
       const commitMessage = `Auto-"sync": ${this.pendingChanges.size} file changes - ${new Date().toISOString()}`;`
       const commitResult = execSync(`git commit -m "${commitMessage}"`, { `})
-<<<<<<< HEAD
-        "cwd": this.config.projectRoot,
+"cwd": this.config.projectRoot,
         "stdio": 'pipe'
-=======
-        "cwd": this.config.projectRoot, 
-        "stdio": 'pipe' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
-      
+
       this.log(`Committed ${this.pendingChanges.size} changes`);
-      
+
       // Push changes;
       const pushResult = execSync('git push origin main', { })
-<<<<<<< HEAD
-        "cwd": this.config.projectRoot,
+"cwd": this.config.projectRoot,
         "stdio": 'pipe'
-=======
-        "cwd": this.config.projectRoot, 
-        "stdio": 'pipe' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
-      
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log('Changes pushed to repository');
       this.lastSync = Date.now();
       this.successCount++;
@@ -177,29 +144,23 @@ class ImprovedPM2SyncAutomation {}
 
       this.errorCount++};
   async performFullSync() {}
-<<<<<<< HEAD
-    try {}
+try {}
       this.log('Performing full repository sync...');
-      
+
       // Fetch latest changes;
       execSync('git fetch origin', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
-      
+
       // Check for conflicts;
       const status = execSync('git status --porcelain', { })
-<<<<<<< HEAD
-        "cwd": this.config.projectRoot,
+"cwd": this.config.projectRoot,
         "encoding": 'utf8'
-=======
-        "cwd": this.config.projectRoot, 
-        "encoding": 'utf8' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 });
-      
+
       if (status.trim()) {}
         this.log(`Found ${status.trim().split('\n').length} changed files, handling sync...`);
-        
+
         // Add all changes;
         try {}
           execSync('git add -A', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
@@ -209,25 +170,15 @@ class ImprovedPM2SyncAutomation {}
         // Commit changes if there are any staged;
         try {}
           const stagedStatus = execSync('git diff --cached --name-only', { })
-<<<<<<< HEAD
-            "cwd": this.config.projectRoot,
+"cwd": this.config.projectRoot,
             "encoding": 'utf8'
-=======
-            "cwd": this.config.projectRoot, 
-            "encoding": 'utf8' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           }
 });
-          
+
           if (stagedStatus.trim()) {}
             execSync('git commit -m "Auto-"sync": comprehensive updates and improvements"', { })
-<<<<<<< HEAD
-              "cwd": this.config.projectRoot,
+"cwd": this.config.projectRoot,
               "stdio": 'pipe'
-=======
-              "cwd": this.config.projectRoot, 
-              "stdio": 'pipe' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             }
 });
             this.log('Committed staged changes')};
@@ -244,16 +195,11 @@ class ImprovedPM2SyncAutomation {}
       // Push changes if we have commits;
       try {}
         const aheadStatus = execSync('git status --porcelain -b', { })
-<<<<<<< HEAD
-          "cwd": this.config.projectRoot,
+"cwd": this.config.projectRoot,
           "encoding": 'utf8'
-=======
-          "cwd": this.config.projectRoot, 
-          "encoding": 'utf8' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
 });
-        
+
         if (aheadStatus.includes('ahead')) {}
           execSync('git push origin main', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
@@ -263,9 +209,6 @@ class ImprovedPM2SyncAutomation {}
         this.log(`Push "failed": ${error.message}`, 'WARN')};
     } catch (error) {}
       this.log(`Full sync "failed": ${error.message}`, 'ERROR');
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       throw error};
   async resolveConflicts() {}
 
@@ -309,26 +252,13 @@ class ImprovedPM2SyncAutomation {}
   getStatus() {}
     return {}
 
-<<<<<<< HEAD
 process.on('SIGTERM', async () => {}
   console.log('\nReceived SIGTERM, shutting down gracefully...');
   if (global.improvedPm2SyncAutomation) {}
     await global.improvedPm2SyncAutomation.stop()};
   process.exit(0)}
 });
-<<<<<<< HEAD
-=======
-=======
-      "uptime": this.isRunning ? Date.now() - this.startTime : 0;"
-    }};
-// Handle process signals;"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Start the automation system;
 if (require.main === module) {}
   global.improvedPm2SyncAutomation = new ImprovedPM2SyncAutomation();
@@ -339,17 +269,8 @@ if (require.main === module) {}
   }, 60000)};
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = ImprovedPM2SyncAutomation;
-module.exports = ImprovedPM2SyncAutomation;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 module.exports = ImprovedPM2SyncAutomation;
 `;

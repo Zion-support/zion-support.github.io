@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-import { Facebook, Twitter } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { useAuth } from "@/hooks/useAuth";
 import { Web3Login } from "./Web3Login";
 export function SocialLogin() {
@@ -14,16 +6,6 @@ export function SocialLogin() {
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -53,17 +35,8 @@ const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Button
@@ -118,23 +91,14 @@ const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => loginWithTwitter()}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           disabled={isLoading}
-
-
 
 <<<<<<< HEAD
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
-=======
-          disabled={isLoading}  )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
           disabled={isLoading}  )
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -151,11 +115,7 @@ const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
 );
 }
   )
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-          disabled={isLoading}  )
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Facebook, Twitter } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -167,39 +127,17 @@ import { useAuth } from "@/hooks/useAuth",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Web3Login } from "./Web3Login",;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (    <div className="mt-6">;
-=======
-  return (
-export function SocialLogin() {;
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth();
-  return (;
-    <div className="mt-6">;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  return (    <div className="mt-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+return (    <div className="mt-6">;
       <div className="relative">;
         <div className="absolute inset-0 flex items-center">;
           <div className="w-full border-t border-zion-blue-light" />;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="relative flex justify-center text-sm">;
 <<<<<<< HEAD
 <<<<<<< HEAD
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">;
 <<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Facebook, Twitter  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
 import { use_auth  } from '@/hooks / use_auth';
@@ -211,8 +149,6 @@ import { use_auth  } from '@/hooks / use_auth';
           <div className="w-full border-t border-zion-blue-light" />;
         </div>;"
         <div className="relative flex justify-center text-sm">;
-
-
 
 import { Facebook, Twitter  } from './lucide-react';'
 import { Button  } from '@/components / ui / button';'
@@ -273,54 +209,22 @@ function SocialLogin() {
         <Web3Login />;
       </div>;
     </div>;
-<<<<<<< HEAD
-  );"
+);"
       <div className="mt - 6 grid grid - cols - 4 gap - 3">;
         <Button;"
           type="button";"
           variant="outline";
-<<<<<<< HEAD
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
+className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
   );
 }
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  );
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-  );
-      <div className="mt - 6 grid grid - cols - 4 gap - 3">;
-        <Button;
-          type="button";
-          variant="outline";
-  );
-}
-;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>;
-=======
-<span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>;
       </div>;
       <div className="mt-6 grid grid-cols-4 gap-3">;
-<<<<<<< HEAD
-=======
-          className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan";
-          on_click={() => loginWithGoogle ()}
-<<<<<<< HEAD
-=======
-        <div className="relative flex justify-center text-sm">;          on_click={() => loginWithGoogle ()}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 =======
         <div className="relative flex justify-center text-sm">;          on_click={() => loginWithGoogle ()}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -375,36 +279,8 @@ function SocialLogin() {
           on_click={() => loginWithTwitter ()}
           disabled={is_loading}
         >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <span className="sr-only">Sign in with Twitter</span>;
+<span className="sr-only">Sign in with Twitter</span>;
           <Twitter className="h - 5 w-5" />;
-=======
-
-        <Button;"
-          type="button";"
-          variant="outline";"
-          className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan";
-          on_click={() => loginWithFacebook ()}
-          disabled={is_loading}
-        >;"
-          <span className="sr - only">Sign in with Facebook</span>;"
-          <Facebook className="h - 5 w - 5" />;
-        </Button>;
-        <Button;"
-          type="button";"
-          variant="outline";"
-          className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan";
-          on_click={() => loginWithTwitter ()}
-          disabled={is_loading}
-        >;"
-          <span className="sr - only">Sign in with Twitter</span>;"
-          <Twitter className="h - 5 w - 5" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          <span className="sr - only">Sign in with Twitter</span>;
-          <Twitter className="h - 5 w - 5" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
           <span className="sr-only">Sign in with Twitter</span>;
           <Twitter className="h - 5 w-5" />;
@@ -414,18 +290,12 @@ function SocialLogin() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

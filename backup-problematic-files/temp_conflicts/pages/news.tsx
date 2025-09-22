@@ -26,8 +26,7 @@ import React from 'react';
       <div className="min-h-screen">;"
 </div>
         <Head>;
-<<<<<<< HEAD
-          <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>;
+<title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>;
           <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />;
         </Head>;
 ;
@@ -119,22 +118,11 @@ export default function NewsPage() {;
       category:"Company News",;
       author:"Zion Tech Group",;
       readTime:"3 min read",;
-<<<<<<< HEAD
-      image:"🚀",;
-=======
-      image:"",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+image:"🚀",;
       featured:true;
     },;
     {;
       id:2,;
-=======
-
-          <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>;"
-          <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />;"
-</meta>
-        ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </motion.div>;
           </div>;
         </section>;"
@@ -347,20 +335,14 @@ export default function News() {;
       date: '2023-12-28';,;
       tags: ['Micro-SaaSStartups';, 'Software Industry'];
   const upcomingEvents = [;
-<<<<<<< HEAD
-    {;
+{;
       id:1,;
       title:'AI Consciousness Summit 2024',;
       type:'Conference',;
       date:'2024-02-15',;
       time:'9:00 AM - 6:00 PM',;
-<<<<<<< HEAD
-      location:'San Francisco, CA',;
+location:'San Francisco, CA',;
       description:'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',;
-=======
-      location:'San Francisco, CA',,
-  description:'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       registration:'https://ziontechgroup.com/events/ai-consciousness-summit-2024';
     },;
     {;
@@ -369,28 +351,8 @@ export default function News() {;
       type:'Workshop',;
       date:'2024-02-22',;
       time:'1:00 PM - 5:00 PM',;
-<<<<<<< HEAD
-      location:'Virtual',;
+location:'Virtual',;
       description:'Hands-on workshop covering quantum computing fundamentals and practical applications.',;
-=======
-      location:'Virtual',,
-  description:'Hands-on workshop covering quantum computing fundamentals and practical applications.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      title: 'AI Consciousness Summit 2024';,;
-      type: 'Conference';,;
-      date: '2024-02-15';,;
-      time: '9:00 AM - 6:00 PM';,;
-      location: 'San Francisco;, CA',,
-  description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.';,;
-      registration:'https://ziontechgroup.com/events/ai-consciousness-summit-2024';
-      title: 'Quantum Computing Workshop';,;
-      type: 'Workshop';,;
-      date: '2024-02-22';,;
-      time: '1:00 PM - 5:00 PM';,;
-      location: 'Virtual';,,
-  description: 'Hands-on workshop covering quantum computing fundamentals and practical applications.';,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       registration:'https://ziontechgroup.com/events/quantum-workshop';
     }]
   const filteredNews = [...featuredNews, ...latestNews, ...industryInsights].filter(article => {;
@@ -479,7 +441,6 @@ export default function News() {;
                 <h3 className="text-lg font-bold text-white mb-3 line-clamp-2">;"
                 <p className="text-gray-300 text-sm mb-4 line-clamp-2">;"
 
-
                     <span key={idx} className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">;"
 
       <section id="insights" className="py-20">;"
@@ -526,7 +487,6 @@ export default function News() {;
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed line-clamp-3">;"
                     <div className="flex items-center justify-between text-sm text-gray-400">;"
 
-
           <div className="grid md:grid-cols-2 gap-8">;"
                 key={event.id}
                 className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300";"
@@ -570,7 +530,6 @@ export default function News() {;
                   <p className="text-gray-400 mb-4 line-clamp-3">{article.excerpt}</p>;""
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">;"
 
-
                   <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2">;"
 </button>"
 
@@ -603,8 +562,7 @@ export default function News() {;
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;"
                   key={news.title}
-<<<<<<< HEAD
-                  initial={{ opacity:0, y:20 }}
+initial={{ opacity:0, y:20 }}
                   whileInView={{ opacity:1, y:0 }}
                   transition={{ duration:0.6, delay:index * 0.1 }}
                   viewport={{ once:true }}
@@ -747,11 +705,7 @@ export default function News() {;
       category:"Partnerships",;
       author:"Sarah Chen",;
       readTime:"2 min read",;
-<<<<<<< HEAD
-      image:"🤝";
-=======
-      image:"";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+image:"🤝";
     },;
     {;
       id:3,;
@@ -761,11 +715,7 @@ export default function News() {;
       category:"Innovation",;
       author:"Dr. Emily Watson",;
       readTime:"4 min read",;
-<<<<<<< HEAD
-      image:"⚖️";
-=======
-      image:"";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+image:"⚖️";
     },;
     {;
       id:4,;
@@ -775,11 +725,7 @@ export default function News() {;
       category:"Company News",;
       author:"Marcus Rodriguez",;
       readTime:"2 min read",;
-<<<<<<< HEAD
-      image:"🌏";
-=======
-      image:"";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+image:"🌏";
     },;
     {;
       id:5,;
@@ -789,11 +735,7 @@ export default function News() {;
       category:"Technology",;
       author:"Dr. James Wilson",;
       readTime:"5 min read",;
-<<<<<<< HEAD
-      image:"🧠";
-=======
-      image:"";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+image:"🧠";
     },;
     {;
       id:6,;
@@ -803,11 +745,7 @@ export default function News() {;
       category:"Sustainability",;
       author:"Lisa Park",;
       readTime:"6 min read",;
-<<<<<<< HEAD
-      image:"🌱";
-=======
-      image:"";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+image:"🌱";
     },;
     {;
       id:7,;
@@ -817,11 +755,7 @@ export default function News() {;
       category:"Case Studies",;
       author:"Alex Thompson",;
       readTime:"4 min read",;
-<<<<<<< HEAD
-      image:"📊";
-=======
-      image:"";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+image:"📊";
     },;
     {;
       id:8,;
@@ -831,42 +765,13 @@ export default function News() {;
       category:"Research",;
       author:"Prof. Maria Garcia",;
       readTime:"7 min read",;
-<<<<<<< HEAD
-      image:"📚";
-=======
-      image:"";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+image:"📚";
     }
   ],;
 ;
   const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"],;
 ;
   return (;
-=======
-                    <span className="text-gray-400 text-sm">{news.readTime}</span>;"
-                      <span className="text-gray-400 text-sm">{news.author}</span>;"
-                      <span className="text-gray-400 text-sm">{news.date}</span>;"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;"
-                <a;"
-                  href="/contact";""
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105";"
-                  <Mic className="ml-2 w-5 h-5" />;"
-
-                  href="/press";""
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300";"
-              <Link ;"
-                href="/blog";""
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105";"
-
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300";"
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;"
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;"
-              <a href="/contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">;"
-                <span>Contact Us</span>;"
-
-              <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>;
 
         <title>News | Zion Tech Group - Latest Updates & Insights</title>;"
@@ -896,16 +801,9 @@ export default function News() {;
                     <p className="text-white/80 mb-4 text-lg leading-relaxed">;"
                     <div className="flex items-center gap-4 text-sm text-white/60 mb-4">;"
                       <span>By {article.author}</span>;
-<<<<<<< HEAD
-                      <span>•</span>;
+<span>•</span>;
                       <span>{article.date}</span>;
                       <span>•</span>;
-=======
-                      <span></span>;
-                      <span>{article.date}</span>;
-<<<<<<< HEAD
-                      <span></span>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <span>{article.readTime}</span>;
@@ -929,20 +827,8 @@ export default function News() {;
         </main>;
     </>;
   );
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-:temp_conflicts/pages/news.tsx
-;
-}
-}
-:backup-problematic-files/temp_conflicts/pages/news.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 "`;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

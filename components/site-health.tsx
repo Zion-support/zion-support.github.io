@@ -3,7 +3,7 @@
 export default function SiteHealth() {
 
   return (
-          <div className="hidden gap-6 md:flex text-white/80">
+          <div className="hidden gap-6 md:flex text-white/80">;
             <Link href="/"><a>Home</a></Link>
             <Link href="/automation"><a>Automations</a></Link>
             <Link href="/reports/seo"><a>SEO Audit</a></Link>
@@ -14,11 +14,11 @@ export default function SiteHealth() {
       </header>
 
 <main className='relative z-10'>
-        <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center'>
+        <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center'>;
           <div className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'>
             <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />
           </div>
-          <h1 className='mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl'>
+          <h1 className='mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl'>;
             <span className='gradient-text'>Site Health</span>
           </h1>
           <p className='mx-auto mt-5 max-w-3xl text-lg text-white/80'>
@@ -31,7 +31,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='/site-health'
               target='_blank'
               rel='noopener'
-              className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'
+              className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10';
             >
               Live Pipelines
             </a>
@@ -46,28 +46,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Dashboards
           </h2>
-          <div className='mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
+          <div className='mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>;
             {[
               {
-                title: 'Accessibility'
-                desc: 'WCAG checks with actionable fixes and reports.'
-                href: '/reports/seo'
+                title: 'Accessibility';
+                desc: 'WCAG checks with actionable fixes and reports.';
+                href: '/reports/seo';
               }
               {
-                title: 'Performance'
-                desc: 'Core Web Vitals and performance budgets.'
-                href: '/reports/seo'
+                title: 'Performance';
+                desc: 'Core Web Vitals and performance budgets.';
+                href: '/reports/seo';
               }
               {
-                title: 'Link Integrity'
-                desc: 'Broken links identified and prevented.'
-                href: '/reports/links'
+                title: 'Link Integrity';
+                desc: 'Broken links identified and prevented.';
+                href: '/reports/links';
               }
             ].map(card => (
 
               <Link key={card.title} href={card.href}>
-                <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30'>
-                  <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
+                <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30'>;
+                  <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
                   <h3 className='text-lg font-semibold'>{card.title}</h3>
                   <p className='mt-1 text-sm text-white/75'>{card.desc}</p>
                   <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
@@ -84,16 +84,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Artifacts
           </h2>
-          <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm:grid-cols-2'>
+          <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm:grid-cols-2'>;
             <a
               href='/reports/seo/latest.json'
-              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30'
+              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30';
             >
               Latest SEO Report JSON ↗
             </a>
             <a
               href='/reports/seo/index.html'
-              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30'
+              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30';
             >
               SEO Audit Dashboard →
             </a>
@@ -110,7 +110,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
             <div className='mt-6 flex flex-wrap justify-center gap-3'>
               <Link href='/automation'>
-                <a className='rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white'>
+                <a className='rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white'>;
                   Get Started
                 </a>
               </Link>
@@ -152,7 +152,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </main>;
     </div>);
-                className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'
+                className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10';
               >
                 View Pipelines
               </a>

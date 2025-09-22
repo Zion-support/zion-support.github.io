@@ -20,15 +20,9 @@ const AdvancedModal: React.FC<AdvancedModalProps> = ({,
   size = 'md','
   showCloseButton = true,
   showMaximizeButton = false,
-<<<<<<< HEAD
-  className = '',
+className = '',
   overlayClassName = '',
 }) => {
-=======
-className = '','
-  overlayClassName = '''
-}) => {,
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   const [isMaximized, setIsMaximized] = React.useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
   const getSizeClasses = () => {
@@ -95,41 +89,25 @@ className = '','
               opacity: 1,
               scale: isMaximized ? 1 : 0.95,
               y: 0,
-<<<<<<< HEAD
-              width: isMaximized ? '100vw' : 'auto',
+width: isMaximized ? '100vw' : 'auto',
               height: isMaximized ? '100vh' : 'auto',
             }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
             className={`relative bg-gray-900/95 backdrop-blur-md rounded-2xl border border-gray-700/50 shadow-2xl w-full ${getSizeClasses()} ${className}`}
-=======
-width: isMaximized ? '100vw' : 'auto','
-              height: isMaximized ? '100vh' : 'auto''
-            }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}"
-            className={`relative bg-gray-900/95 backdrop-blur-md rounded-2xl border border-gray-700/50 shadow-2xl w-full ${getSizeClasses()} ${className}`}`
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           >
             {/* Header */}
             {(title || showCloseButton ||,  showMaximizeButton) && (
               <div className="flex items-center justify-between p-6 border-b border-gray-700/50">"
                 <div className="flex items-center space-x-3">"
                   {title && (
-<<<<<<< HEAD
-                    <h2 className="text-xl font-semibold text-white">
+<h2 className="text-xl font-semibold text-white">
                       {title}
                     </h2>
                   )}
                 </div>
 
                 <div className="flex items-center space-x-2">
-=======
-                    <h2 className="text-xl font-semibold text-white">{title}</h2>"
-                  )}
-                </div>
-<div className="flex items-center space-x-2">"
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
                   {showMaximizeButton && (
                     <button
                       onClick={() => setIsMaximized(!isMaximized)}
@@ -156,16 +134,8 @@ width: isMaximized ? '100vw' : 'auto','
                 </div>
               </div>
             )}
-<<<<<<< HEAD
-
-            {/* Content */}
+{/* Content */}
             <div className="p-6 overflow-y-auto max-h-[80vh]">{children}</div>
-=======
-            {/* Content */},
-            <div className="p-6 overflow-y-auto max-h-[80vh]">"
-              {children}
-            </div>
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           </motion.div>
         </motion.div>
       )}

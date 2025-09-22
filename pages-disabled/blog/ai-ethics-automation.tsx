@@ -1,32 +1,17 @@
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD
+:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD:pages/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import Head from 'next/head',
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
 import Link from 'next/link';
 
 import React from 'react',
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD
-=======
-=======
-import React from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+:pages_backup/blog/ai-ethics-automation.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import React from 'react';
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog/ai-ethics-automation.tsx
 =======
 import React from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -282,15 +267,9 @@ export default function AIEthicsAutomation() {
     </>
   )
 }
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD
+:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD:pages/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 };
@@ -305,15 +284,7 @@ import Link from 'next/link';
 
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-
-import Head from 'next/head';
-import Link from 'next/link';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react',;
 export default function AIEthicsAutomation() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -336,21 +307,14 @@ export default function AIEthicsAutomation() { return null; }
 function AIEthicsAutomation() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/ai-ethics-automation.tsx
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>;
       <Head>;
         <title>;
           Ethical Considerations in Autonomous AI Systems | Zion Tech Group;
         </title>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
         <meta;
@@ -364,14 +328,6 @@ function AIEthicsAutomation() {}
         <meta;
           property='og:description';
           content='Exploring the ethical implications and responsible development of autonomous technology.';
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -379,16 +335,11 @@ function AIEthicsAutomation() {}
         <main className='container mx-auto px-6 py-12'>;
           <div className='max-w-4xl mx-auto'>;
             <nav className='mb-8'>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
               <Link;
                 href='/blog';
                 className='text-cyan-400 hover:text-cyan-300 transition-colors';
               >;
-=======
-              <Link
-                href='/blog'
-                className='text-cyan-400 hover:text-cyan-300 transition-colors'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
                 ← Back to Blog;
               </Link>;
             </nav>;
@@ -450,14 +401,9 @@ function AIEthicsAutomation() {}
                 </h1>;
                 <p className='text - xl text - white / 80 max - w-3xl mx - auto'>;
 
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD
+:pages_backup/blog/ai-ethics-automation.tsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/ai-ethics-automation.tsx
@@ -468,19 +414,11 @@ function AIEthicsAutomation() {}
                   responsible development and deployment.;
                 </p>;
               </header>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               <section className='mb-12'>;
                 <h2 className='text-2xl font-semibold mb-6 text-cyan-400'>;
-=======
-<<<<<<< HEAD
-=======
-
-              <section className='mb - 12'>;
-                <h2 className='text - 2xl font - semibold mb - 6 text - cyan - 400'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   The Foundation of Ethical AI;
                 </h2>;
                 <p className='text-white/90 mb-4'>;
@@ -506,15 +444,8 @@ function AIEthicsAutomation() {}
                     decision-making;
                   </li>;
                   <li>;
-<<<<<<< HEAD
-                    • <strong>Justice:</strong> AI systems should treat all;
-=======
-                    • <strong > Justice:</strong> AI systems should treat all;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+• <strong>Justice:</strong> AI systems should treat all;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/ai-ethics-automation.tsx
@@ -554,8 +485,7 @@ function AIEthicsAutomation() {}
                   </li>;
                 </ul>;
               </section>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               <section className='mb-12'>;
@@ -563,11 +493,6 @@ function AIEthicsAutomation() {}
                   Transparency and Explainability;
                 </h2>;
                 <p className='text-white/90 mb-4'>;
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
 
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - fuchsia - 400'>;
@@ -575,14 +500,9 @@ function AIEthicsAutomation() {}
                 </h2>;
                 <p className='text - white / 90 mb - 4'>;
 
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/ai-ethics-automation.tsx
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
                   One of the most critical ethical considerations in autonomous;
@@ -590,28 +510,13 @@ function AIEthicsAutomation() {}
                   understand how AI systems make decisions, especially when;
                   those decisions have significant consequences.;
                 </p>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <p className='text-white/90 mb-4'>;
-=======
-<<<<<<< HEAD
-=======
-
-                <p className='text - white / 90 mb - 4'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   We implement several strategies to ensure transparency:;
                 </p>;
                 <ul className='space-y-2 text-white/80 mb-6'>;
-=======
-
-                <p className='text - white / 90 mb - 4'>;
-                  We implement several strategies to ensure transparency:;
-                </p>;
-                <ul className='space - y-2 text - white / 80 mb - 6'>;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
                   <li>;
                     • Clear documentation of AI system capabilities and;
                     limitations;
@@ -622,19 +527,12 @@ function AIEthicsAutomation() {}
                   </li>;
                   <li>• Regular audits and reporting on system performance</li>;
                   <li>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
                     • User-friendly interfaces that communicate AI system status;
                   </li>;
                 </ul>;
-<<<<<<< HEAD
-                <p className='text-white/90 mb-4'>;
-=======
-                <p className='text - white / 90 mb - 4'>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<p className='text-white/90 mb-4'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/ai-ethics-automation.tsx
@@ -650,19 +548,11 @@ function AIEthicsAutomation() {}
                   oversight of autonomous systems.;
                 </p>;
               </section>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               <section className='mb-12'>;
                 <h2 className='text-2xl font-semibold mb-6 text-green-400'>;
-=======
-<<<<<<< HEAD
-=======
-
-              <section className='mb - 12'>;
-                <h2 className='text - 2xl font - semibold mb - 6 text - green - 400'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Bias Detection and Mitigation;
                 </h2>;
                 <p className='text-white/90 mb-4'>;
@@ -671,20 +561,6 @@ function AIEthicsAutomation() {}
                   requires proactive measures:;
                 </p>;
                 <ul className='space-y-2 text-white/80 mb-6'>;
-=======
-
-              <section className='mb - 12'>;
-                <h2 className='text - 2xl font - semibold mb - 6 text - green - 400'>;
-                  Bias Detection and Mitigation;
-                </h2>;
-                <p className='text - white / 90 mb - 4'>;
-                  AI systems can inadvertently perpetuate or amplify existing;
-                  biases in data and decision - making processes. Addressing this;
-                  requires proactive measures:;
-                </p>;
-                <ul className='space - y-2 text - white / 80 mb - 6'>;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
                   <li>;
                     • Diverse training datasets that represent various;
                     populations;
@@ -698,17 +574,9 @@ function AIEthicsAutomation() {}
                     concerns;
                   </li>;
                 </ul>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD
-                <p className='text-white/90 mb-4'>;
-=======
-
-                <p className='text - white / 90 mb - 4'>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+:pages_backup/blog/ai-ethics-automation.tsx
+<p className='text-white/90 mb-4'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/ai-ethics-automation.tsx
@@ -722,8 +590,7 @@ function AIEthicsAutomation() {}
                   groups.;
                 </p>;
               </section>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               <section className='mb-12'>;
@@ -731,11 +598,6 @@ function AIEthicsAutomation() {}
                   Privacy and Data Protection;
                 </h2>;
                 <p className='text-white/90 mb-4'>;
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
 
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - blue - 400'>;
@@ -743,37 +605,19 @@ function AIEthicsAutomation() {}
                 </h2>;
                 <p className='text - white / 90 mb - 4'>;
 
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/ai-ethics-automation.tsx
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
                   Autonomous AI systems often require access to sensitive data;
                   to function effectively. Protecting this data while;
                   maintaining system performance is a delicate balance:;
                 </p>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <ul className='space-y-2 text-white/80 mb-6'>;
-=======
-<<<<<<< HEAD
-=======
-
-                <ul className='space - y-2 text - white / 80 mb - 6'>;
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-                <ul className='space - y-2 text - white / 80 mb - 6'>;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
                   <li>;
                     • Data minimization principles that limit data collection;
                   </li>;
@@ -783,17 +627,9 @@ function AIEthicsAutomation() {}
                   <li>• User consent mechanisms for data usage</li>;
                   <li>• Regular privacy impact assessments</li>;
                 </ul>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD
-                <p className='text-white/90 mb-4'>;
-=======
-
-                <p className='text - white / 90 mb - 4'>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+:pages_backup/blog/ai-ethics-automation.tsx
+<p className='text-white/90 mb-4'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/ai-ethics-automation.tsx
@@ -807,19 +643,11 @@ function AIEthicsAutomation() {}
                   individual privacy.;
                 </p>;
               </section>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               <section className='mb-12'>;
                 <h2 className='text-2xl font-semibold mb-6 text-purple-400'>;
-=======
-<<<<<<< HEAD
-=======
-
-              <section className='mb - 12'>;
-                <h2 className='text - 2xl font - semibold mb - 6 text - purple - 400'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Human Oversight and Control;
                 </h2>;
                 <p className='text-white/90 mb-4'>;
@@ -830,37 +658,13 @@ function AIEthicsAutomation() {}
                   <li>• Human-in-the-loop mechanisms for critical decisions</li>;
                   <li>;
                     • Emergency stop capabilities for safety-critical systems;
-=======
-
-              <section className='mb - 12'>;
-                <h2 className='text - 2xl font - semibold mb - 6 text - purple - 400'>;
-                  Human Oversight and Control;
-                </h2>;
-                <p className='text - white / 90 mb - 4'>;
-                  Even the most advanced autonomous systems should maintain;
-                  human oversight capabilities. This includes:;
-                </p>;
-                <ul className='space - y-2 text - white / 80 mb - 6'>;
-                  <li>• Human - in - the - loop mechanisms for critical decisions</li>;
-                  <li>;
-                    • Emergency stop capabilities for safety - critical systems;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
                   </li>;
                   <li>• Clear escalation paths for complex scenarios</li>;
                   <li>• Regular human review of AI system outputs</li>;
                 </ul>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD
-                <p className='text-white/90 mb-4'>;
-=======
-
-                <p className='text - white / 90 mb - 4'>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+:pages_backup/blog/ai-ethics-automation.tsx
+<p className='text-white/90 mb-4'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/ai-ethics-automation.tsx
@@ -874,58 +678,28 @@ function AIEthicsAutomation() {}
                   beyond human control.;
                 </p>;
               </section>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               <section className='mb-12'>;
                 <h2 className='text-2xl font-semibold mb-6 text-yellow-400'>;
-=======
-<<<<<<< HEAD
-=======
-
-              <section className='mb - 12'>;
-                <h2 className='text - 2xl font - semibold mb - 6 text - yellow - 400'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Continuous Ethical Evaluation;
                 </h2>;
                 <p className='text-white/90 mb-4'>;
-=======
-
-              <section className='mb - 12'>;
-                <h2 className='text - 2xl font - semibold mb - 6 text - yellow - 400'>;
-                  Continuous Ethical Evaluation;
-                </h2>;
-                <p className='text - white / 90 mb - 4'>;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
                   Ethical considerations in AI are not static—they evolve as;
                   technology advances and societal values change. We maintain;
                   ongoing ethical evaluation through:;
                 </p>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
                 <ul className='space-y-2 text-white/80 mb-6'>;
-=======
-
-                <ul className='space - y-2 text - white / 80 mb - 6'>;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
                   <li>• Regular ethical impact assessments</li>;
                   <li>• Stakeholder feedback and consultation</li>;
                   <li>• Industry collaboration on ethical standards</li>;
                   <li>• Continuous monitoring of societal impacts</li>;
                 </ul>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD
-                <p className='text-white/90 mb-4'>;
-=======
-
-                <p className='text - white / 90 mb - 4'>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+:pages_backup/blog/ai-ethics-automation.tsx
+<p className='text-white/90 mb-4'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/ai-ethics-automation.tsx
@@ -939,22 +713,16 @@ function AIEthicsAutomation() {}
                   expectations.;
                 </p>;
               </section>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               <div className='mt-12 p-6 bg-white/10 rounded-xl border border-white/20'>;
                 <h3 className='text-xl font-semibold mb-4 text-cyan-400'>;
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
 
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
               <div className='mt - 12 p - 6 bg - white / 10 rounded - xl border border - white / 20'>;
                 <h3 className='text - xl font - semibold mb - 4 text - cyan - 400'>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Commitment to Ethical AI;
                 </h3>;
@@ -967,34 +735,16 @@ function AIEthicsAutomation() {}
                   <Link;
                     href='/contact';
                     className='px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300';
-=======
-                  Commitment to Ethical AI;
-                </h3>;
-                <p className='text - white / 80 mb - 4'>;
-                  At Zion Tech Group, we believe that ethical AI development is;
-                  not just a responsibility—it & apos, s a competitive advantage;
-                  that builds trust and drives long - term success.;
-                </p>;
-                <div className='flex flex - wrap gap - 4'>;
-                  <Link;
-                    href='/contact';
-                    className='px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/ai-ethics-automation.tsx
                   >;
                     Learn More;
                   </Link>;
                   <Link;
                     href='/services';
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300';
                   >;
 <<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/ai-ethics-automation.tsx
@@ -1011,8 +761,7 @@ function AIEthicsAutomation() {}
           </div>;
         </main>;
       </div>;
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
-<<<<<<< HEAD:pages_backup/blog/ai-ethics-automation.tsx
+:pages_backup/blog/ai-ethics-automation.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
     </>;
@@ -1023,21 +772,8 @@ function AIEthicsAutomation() {}
   }
 }
 ;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1048,9 +784,6 @@ function AIEthicsAutomation() {}
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog/ai-ethics-automation.tsx
 =======
-
-
-
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/ai-ethics-automation.tsx

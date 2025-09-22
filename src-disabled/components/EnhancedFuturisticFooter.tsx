@@ -361,7 +361,6 @@ const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' }),
 };
 
-
   return (
     <footer className=\"bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50\" />
       {/* Main Footer Content */}
@@ -402,7 +401,7 @@ href={`tel: ${contactInfo.phone}`}
                 </div>
                 <span />{contactInfo.phone}</span>
               </a>
-              
+
               <a;
 href={`mailto:${contactInfo.email}`}
                 className=\"flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors group\"
@@ -412,7 +411,7 @@ href={`mailto:${contactInfo.email}`}
                 </div>
                 <span />{contactInfo.email}</span>
               </a>
-              
+
               <div className=\"flex items-start gap-3 text-gray-300\" />
                 <div className=\"p-2 bg-slate-700/50 rounded-lg mt-0.5\" />
                   <MapPin className=\"w-4 h-4\" />
@@ -459,7 +458,7 @@ key={section.title}
                     {section.featured && <Star className=\"w-4 h-4 text-cyan-400\" />}
                     {section.title}
                   </h4>
-                  
+
                   <ul className=\"space-y-2\" />
                     {section.links.map((link) => (}
                       <li key={link.name} />
@@ -493,7 +492,7 @@ href={link.href}
               Transform your business with our cutting-edge AI solutions. Get in touch today to learn how we can help you achieve your goals.
             </p>
           </div>
-          
+
           <div className=\"grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4\" />
             {quickActions.map((action) => (}
               <Link;}
@@ -558,7 +557,7 @@ key={action.name}
                 <p className=\"text-sm text-slate-400 mt-2\" />Global remote support available</p>
               </div>
             </div>
-            
+
             {/* Additional Contact Methods *,}
 }
             <div className=\"mt-12 pt-8 border-t border-slate-700\" />
@@ -592,17 +591,12 @@ key={action.name}
           <div className=\"flex flex-col md:flex-row items-center justify-between gap-4\" />
             <div className=\"flex items-center space-x-6 text-sm text-gray-400\" />
               <span />&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
-<<<<<<< HEAD;
+;
               <Link href=\"/privacy\" className=\"hover:text-cyan-400 transition-colors\" />Privacy Policy</Link>
               <Link href=\"/terms\" className=\"hover:text-cyan-400 transition-colors\" />Terms of Service</Link>
               <Link href=\"/cookies\" className=\"hover:text-cyan-400 transition-colors\" />Cookie Policy</Link>
-=======
-              <Link to=\"/privacy\" className=\"hover: text-cyan-400 transition-colors\" />Privacy Policy</Link>
-              <Link to=\"/terms\" className=\"hover:text-cyan-400 transition-colors\" />Terms of Service</Link>
-              <Link to=\"/cookies\" className=\"hover:text-cyan-400 transition-colors\" />Cookie Policy</Link>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7;
             </div>
-            
+
             <div className=\"flex items-center space-x-4\" />
               <button;
 onClick={scrollToTop}

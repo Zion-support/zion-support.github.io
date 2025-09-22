@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/community/ReplyForm.tsx
-<<<<<<< HEAD
+:src/components/community/ReplyForm.tsx
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -8,53 +7,24 @@ import { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-interface ReplyFormProps {;
-  onSubmit: (content: string) => Promise<void>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ReplyForm.tsx
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
-<<<<<<< HEAD:src/components/community/ReplyForm.tsx
+:src/components/community/ReplyForm.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ReplyForm.tsx
 import { useState } from 'react'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-<<<<<<< HEAD:src/components/community/ReplyForm.tsx
+:src/components/community/ReplyForm.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ReplyForm.tsx
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-import { useState } from 'react';
-import { useForm, ControllerRenderProps } from 'react-hook-form';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-<<<<<<< HEAD:src/components/community/ReplyForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ReplyForm.tsx
 import {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -62,20 +32,12 @@ import {
   FormControl,
   FormField,
   FormItem,
-<<<<<<< HEAD:src/components/community/ReplyForm.tsx
-<<<<<<< HEAD
+:src/components/community/ReplyForm.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   FormMessage
 } from "@/components/ui/form",
 import { Card, CardContent } from "@/components/ui/card",
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ReplyForm.tsx
   FormMessage,;
 } from '@/components/ui/form';
 import { Card, CardContent } from '@/components/ui/card';
@@ -98,25 +60,15 @@ interface ReplyFormProps {
   parentId?: string
 interface ReplyFormValues {
   content: string
-<<<<<<< HEAD:src/components/community/ReplyForm.tsx
+:src/components/community/ReplyForm.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ReplyForm.tsx
-
-<<<<<<< HEAD
-
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>,
   parentId?: string
-<<<<<<< HEAD:src/components/community/ReplyForm.tsx
+:src/components/community/ReplyForm.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react",;
@@ -154,32 +106,20 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
       form.reset();
     } finally {;
       setIsSubmitting(false);
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ReplyForm.tsx
 
       content: '',;
     },;
   });
   const handleSubmit = async (values: ReplyFormValues) => {;
 
-<<<<<<< HEAD:src/components/community/ReplyForm.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ReplyForm.tsx
+:src/components/community/ReplyForm.tsx
     setIsSubmitting(true);    try {
       await onSubmit(values.content)
       form.reset()
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD:src/components/community/ReplyForm.tsx
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ReplyForm.tsx
-  parentId?: string;
+:src/components/community/ReplyForm.tsx
+parentId?: string;
 interface ReplyFormValues {;
   content: string;
 
@@ -213,8 +153,6 @@ import { Card, CardContent } from '@/components / ui / card';
 interface ReplyFormProps {
   on_submit: (content: string) => Promise < void>;
   parent_id?: string;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ReplyFormValues {
   content: string
       content: '',;
@@ -222,8 +160,7 @@ interface ReplyFormValues {
   });
   const handleSubmit = async (values: ReplyFormValues) => {;
 
-<<<<<<< HEAD
-    }
+}
   }
   return (
     <Card>;
@@ -245,16 +182,6 @@ interface ReplyFormValues {
     }
   },
 
-
-
-
-<<<<<<< HEAD:src/components/community/ReplyForm.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ReplyForm.tsx
   return (
 =======
 interface ReplyFormProps {
@@ -267,14 +194,8 @@ interface ReplyFormProps {
           <form onSubmit={form.handleSubmit(handleSubmit)}>
             <FormField
 
-<<<<<<< HEAD:src/components/community/ReplyForm.tsx
-<<<<<<< HEAD
+:src/components/community/ReplyForm.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ReplyForm.tsx
               control={form.control}
               name="content"
               render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (
@@ -301,8 +222,7 @@ interface ReplyFormProps {
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
-<<<<<<< HEAD
-              )}
+)}
             />
             <div className="mt-4 flex justify-end">
               <Button type="submit" disabled={isSubmitting}>
@@ -316,12 +236,7 @@ interface ReplyFormProps {
   )
 },
 
-<<<<<<< HEAD
 export default ReplyForm,
-=======
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
             />;
             <div className='mt-4 flex justify-end'>;
@@ -356,16 +271,8 @@ export default ReplyForm,
     </Card>);
 }
 export default ReplyForm;
-<<<<<<< HEAD:src/components/community/ReplyForm.tsx
+:src/components/community/ReplyForm.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-}
-export default ReplyForm;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
   );
 };

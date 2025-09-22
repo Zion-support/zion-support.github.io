@@ -48,4 +48,3 @@ export default function CreatorDashboard() {;
               </p>;
               {/* Placeholder for more creator-specific content */}
 <<<<<<< HEAD
-

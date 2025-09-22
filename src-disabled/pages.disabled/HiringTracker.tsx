@@ -1,31 +1,9 @@
-<<<<<<< HEAD:src/pages/HiringTracker.tsx
+:src/pages/HiringTracker.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-return (
-    <>;
-      <SEO
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         title='Hiring Tracker | Zion AI Marketplace'
         description='Manage your candidate pipeline in the Zion AI Marketplace.'
-=======
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard';
-import { HiringAnalytics } from '@/components/hiring-tracker/HiringAnalytics';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { SEO } from '@/components/SEO';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { Briefcase } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import { useState } from "react",
 import { useRouter } from "next/router",
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
@@ -40,22 +18,12 @@ function HiringTrackerContent() {
   const router = useRouter(),
   const jobId = router.query.jobId as string,
   const [activeTab, setActiveTab] = useState<string>("kanban"),
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/HiringTracker.tsx
   return (
     <>
       <SEO 
         title="Hiring Tracker | Zion AI Marketplace" 
         description="Manage your candidate pipeline in the Zion AI Marketplace." 
-<<<<<<< HEAD:src/pages/HiringTracker.tsx
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/HiringTracker.tsx
+:src/pages/HiringTracker.tsx
 function HiringTrackerContent() {
             <p className='text-muted-foreground mt-1'>
   return (
@@ -63,11 +31,8 @@ function HiringTrackerContent() {
       <SEO
         title="Hiring Tracker | Zion AI Marketplace"
         description="Manage your candidate pipeline in the Zion AI Marketplace."
-<<<<<<< HEAD:src/pages/HiringTracker.tsx
+:src/pages/HiringTracker.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/HiringTracker.tsx
       />
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
@@ -76,16 +41,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Briefcase className="mr-2 h-6 w-6 text-primary" />
               Hiring Pipeline
             </h1>
-<<<<<<< HEAD:src/pages/HiringTracker.tsx
-=======
-return (
-    <>;
-      <SEO;
-        title='Hiring Tracker | Zion AI Marketplace''
-        description='Manage your candidate pipeline in the Zion AI Marketplace.'
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+:src/pages/HiringTracker.tsx
 =======
 
         title='Hiring Tracker | Zion AI Marketplace'
@@ -97,32 +53,11 @@ return (
             </p>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
 =======
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
             <p className="text-muted-foreground mt-1">
@@ -132,10 +67,7 @@ return (
         </div>
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">"
 
-
-
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/HiringTracker.tsx
 <Tabs
@@ -143,66 +75,29 @@ return (
           onValueChange={setActiveTab}
           className='mb-8'
         >
-<<<<<<< HEAD:src/pages/HiringTracker.tsx
+:src/pages/HiringTracker.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
-=======
-          <TabsList>"
-            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          
+
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId} />
           </TabsContent>
-          
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-"
-        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
-          <TabsList>
-<<<<<<< HEAD
-
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
-=======
-"
-            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>"
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId} />
           </TabsContent>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-          
-=======
-          "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-          <TabsContent value="kanban" className="mt-6">
+<TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId} />
           </TabsContent>
-          
-<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <TabsContent value="analytics" className="mt-6">
 =======
 =======
@@ -237,74 +132,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </TabsContent>
 
           <TabsContent value='analytics' className='mt-6'>
-<<<<<<< HEAD:src/pages/HiringTracker.tsx
+:src/pages/HiringTracker.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/HiringTracker.tsx
             <HiringAnalytics jobId={jobId} />
           </TabsContent>
         </Tabs>
       </main>
     </>
-<<<<<<< HEAD:src/pages/HiringTracker.tsx
-<<<<<<< HEAD
+:src/pages/HiringTracker.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-  );
-}
-
-
-export default function HiringTracker() {}
-  return (
-    <ProtectedRoute>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  );
-}
-export default function HiringTracker() {
-  return (
-    <ProtectedRoute>
-)
-  )
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/HiringTracker.tsx
-      <HiringTrackerContent />
-    </ProtectedRoute>
-
-
-      />;
-      <main className='container mx-auto px-4 py-8'>;
-        <div className='flex justify-between items-center mb-8'>;
-          <div>;
-            <h1 className='text-3xl font-bold flex items-center'>;
-              <Briefcase className='mr-2 h-6 w-6 text-primary' />;
-              Hiring Pipeline;
-            </h1>;
-            <p className='text-muted-foreground mt-1'>              Track and manage your candidates through the hiring process  const [activeTab, setActiveTab] = useState<string>("kanban");
-
-  return (
-  )
-<<<<<<< HEAD:src/pages/HiringTracker.tsx
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/HiringTracker.tsx
-      <HiringTrackerContent />;
-    </ProtectedRoute>;
-  );
-};
-
-<<<<<<< HEAD:src/pages/HiringTracker.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  )
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/HiringTracker.tsx
 import { useState } from "react",;
 import { useRouter } from "next/router",;
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",;
@@ -319,12 +157,10 @@ function HiringTrackerContent() {;
   const [activeTab, setActiveTab] = useState<string>("kanban");
   return (;
     <>;
-<<<<<<< HEAD:src/pages/HiringTracker.tsx
+:src/pages/HiringTracker.tsx
       <SEO;
         title="Hiring Tracker | Zion AI Marketplace";
         description="Manage your candidate pipeline in the Zion AI Marketplace.";
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/HiringTracker.tsx
       />;
       <main className="container mx-auto px-4 py-8">;
         <div className="flex justify-between items-center mb-8">;
@@ -338,7 +174,7 @@ function HiringTrackerContent() {;
             </p>;
           </div>;
         </div>;
-<<<<<<< HEAD:src/pages/HiringTracker.tsx
+:src/pages/HiringTracker.tsx
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">;
           <TabsList>;
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>;
@@ -347,8 +183,6 @@ function HiringTrackerContent() {;
           <TabsContent value="kanban" className="mt-6">;
             <KanbanBoard jobId={jobId} />;
           </TabsContent>;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/HiringTracker.tsx
           <TabsContent value="analytics" className="mt-6">;
             <HiringAnalytics jobId={jobId} />;
           </TabsContent>;
@@ -357,27 +191,19 @@ function HiringTrackerContent() {;
     </>;
   );
 }
-<<<<<<< HEAD:src/pages/HiringTracker.tsx
+:src/pages/HiringTracker.tsx
 ;
 export default function HiringTracker() {;
   return (;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/HiringTracker.tsx
     <ProtectedRoute>;
       <HiringTrackerContent />;
     </ProtectedRoute>;
   );
 }
-<<<<<<< HEAD:src/pages/HiringTracker.tsx
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-  );
+:src/pages/HiringTracker.tsx
+);
 }
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from 'react';
 import { use_router } from 'next / router';
@@ -463,16 +289,6 @@ function HiringTracker() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-import React from "react";
-import MainLayout from "../components/layout/MainLayout";
-=======
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const HiringTracker: React.FC = () => {
@@ -492,14 +308,7 @@ export default HiringTracker;
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
-<<<<<<< HEAD
-
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 =======
       <HiringTrackerContent />

@@ -1,24 +1,9 @@
-<<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
-<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
+<:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD
-
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/disputes/[id]/resolve.ts
-=======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/disputes/[id]/resolve.ts
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
@@ -29,16 +14,8 @@ export default async function handler(;
 ) {;
   const { id } = req && req.query;
 
-<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
-=======
-<<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+:pages/api-disabled/api/disputes/[id]/resolve.ts
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -49,31 +26,20 @@ export default async function handler(;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
 ========
 
-
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   const { id } = req && req.query;
 
-
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
 export default async function handler(
-<<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
-<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
+<:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
-========
-
-
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -82,42 +48,24 @@ export default async function handler(
 ) {;
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/disputes/[id]/resolve.ts
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
   req: NextApiRequest;
   res: NextApiResponse
 ) {;
-<<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
+:pages/api/disputes/[id]/resolve.ts
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/disputes/[id]/resolve.ts
   const { id } = req.query;
   if (typeof id !== "string");
     return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
-<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
+:pages/api-disabled/api/disputes/[id]/resolve.ts
 ;
 
   if (req && req.method === "POST") {
-<<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
-    try {;
-=======
-
-  if (req && req.method === "POST") {
-========
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts
+<try {;
 
     try {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
@@ -129,44 +77,16 @@ export default async function handler(
     if (!dispute) return res && res.status($1).json({ $2 });
     const { resolutionSummary, status } = req && req.body || {};
 
-<<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
-<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
+<:pages/api-disabled/api/disputes/[id]/resolve.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
-========
-
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts
     const now = new Date().toISOString();
 ;
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {;
       return res && res.status(400).json({ error: "Invalid status" });
     }
-<<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
-<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
+<:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-========
-    }
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts
-
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query;
-  if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
-  const user = parseUserFromRequest(req);
-  if (req.method === 'POST') {
-    try {
-      ensureAdmin(user)
-    } catch (e: any) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/disputes/[id]/resolve.ts
     }
@@ -174,8 +94,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     dispute.status = status || 'Resolved';
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
 ;
-
-
 
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
@@ -227,16 +145,10 @@ if ( {) {
   res.set_header ("Allow", "POST");
   return res.status (405).end ("Method Not Allowed");
 }
-<<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
-=======;
-    return res.status(200).json({ dispute });
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<:pages/api-disabled/api/disputes/[id]/resolve.ts
 =======;
 ========
     return res.status(200).json({ dispute });
-
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts
@@ -276,14 +188,11 @@ req: NextApiRequest;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ((dispute.status = status |"Resolved")
       (dispute.resolvedAt = dispute.status === "Resolved" ? now : undefined));
-<<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+<:pages/api-disabled/api/disputes/[id]/resolve.ts
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
 ========
-
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts
     dispute.resolutionSummary = resolutionSummary |dispute.resolutionSummary;
@@ -359,19 +268,7 @@ export default async function handler(req, res) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-    }
-;
-    dispute.status = status || 'Resolved';
-    dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
-;
-
-<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
@@ -388,11 +285,7 @@ export default async function handler(req, res) {;
 }
 ;
 
-<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
+:pages/api-disabled/api/disputes/[id]/resolve.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
 import { parseUserFromRequest, ensure_admin  } from '../../../../utils / auth';
@@ -413,15 +306,10 @@ function handler() {;
 if ( {) {
   $2
 }
-<<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
+<:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -458,23 +346,11 @@ if ( {) {
   res.set_header ("Allow", "POST");
   return res.status (405).end ("Method Not Allowed");
 }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-    return res.status(200).json({ dispute });
-
-
-<<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
-<<<<<<< HEAD:pages/api/disputes/[id]/resolve.ts
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+:pages/api-disabled/api/disputes/[id]/resolve.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/disputes/[id]/resolve.ts
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id]/resolve.ts
@@ -482,7 +358,6 @@ if ( {) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 ========
-
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -495,9 +370,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const user = null;
   return res.status(405).end('Method Not Allowed')
 }
-<<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/resolve.ts
+<:pages/api-disabled/api/disputes/[id]/resolve.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/disputes/[id]/resolve.ts
-========
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/resolve.ts

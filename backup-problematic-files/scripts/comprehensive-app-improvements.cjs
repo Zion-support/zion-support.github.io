@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -14,16 +12,6 @@ function log(message, level = 'INFO')
           <div key={message.id} className={\"}
             <div className={\"}
     log(` App improvements "failed"`)
-=======
-#!/usr/bin/env node
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-#!/usr/bin/env node
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -45,13 +33,8 @@ class ComprehensiveAppImprover {
   async runCommand(command, description) {
     try {
       console.log(`🔍 ${description}...`);
-<<<<<<< HEAD
-      const result = execSync(command, {
+const result = execSync(command, {
         encoding: 'utf8',
-=======
-      const result = execSync(command, { 
-        encoding: 'utf8', 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         stdio: 'pipe',
         cwd: path.join(__dirname, '..')
       });
@@ -121,13 +104,8 @@ class ComprehensiveAppImprover {
     maxScore += 100 * 0.1;
     const finalScore = Math.round((totalScore / maxScore) * 100);
     this.results.overall.score = finalScore;
-<<<<<<< HEAD
-    this.results.overall.status = finalScore >= 80 ? 'excellent' :
+this.results.overall.status = finalScore >= 80 ? 'excellent' :
                                  finalScore >= 60 ? 'good' :
-=======
-    this.results.overall.status = finalScore >= 80 ? 'excellent' : 
-                                 finalScore >= 60 ? 'good' : 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                                  finalScore >= 40 ? 'fair' : 'poor';
     return finalScore;
   }
@@ -157,10 +135,7 @@ class ComprehensiveAppImprover {
 // Run the comprehensive app improver
 const improver = new ComprehensiveAppImprover();
 improver.run().catch(console.error);
-<<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 const { execSync } = require('child_process');

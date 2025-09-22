@@ -44,9 +44,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       state && state.lastTriggers = triggers;
       writeState(state);
       appendLog({'
-        module: 'reflex''
-        type: 'metrics''
-        status: 'ok'
+        module: 'reflex'';
+        type: 'metrics'';
+        status: 'ok';
         latencyMs;
         payload: { metrics, triggers }
       const latencyMs = Date.now() - started;
@@ -62,9 +62,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       return res && res.status(200).json({ triggers });
     } catch (e: any) {}
       appendLog({'
-        module: 'reflex''
-        type: 'metrics''
-        status: 'error''
+        module: 'reflex'';
+        type: 'metrics'';
+        status: 'error'';
         payload: { error: e?.message |'unknown' }
       });'
   return res && res.status(405).json({ error: 'Method not allowed' });

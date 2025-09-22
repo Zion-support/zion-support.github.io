@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -26,58 +24,17 @@ export default function EnterpriseAIOpsPage() {
             <p className="mt-4 text-slate-300">Monitor, optimize, and manage all AI systems across your organization with quantum-enhanced window.window.window.performance.</p>
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">"
             <div className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">"
               <h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              <p className="text-slate-300">Centralized AI monitoring, performance optimization, resource and cost management, security, compliance, and analytics—designed for enterprise scale.</p>
-            </div>
-            <div className="p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
-              <div className="text-3xl font-bold text-white text-base font-medium text-gray-400">Starting at $35,999<span >/month</span></div>
-              <div className="text-sm text-gray-400 mt-2">Trial: 30 days • Setup: 1–2 weeks</div>
-              <div className="mt-6 flex gap-3">
-
-
-                <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Link>
-                <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-import React from 'react',
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
@@ -86,8 +43,7 @@ import Layout from '../components/layout/Layout';
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-  )
+)
 
     <Layout>;
       <Head>;
@@ -113,8 +69,6 @@ import Layout from '../components/layout/Layout';
                 <a href="/contact" className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white">Contact Sales</a>;"
                 <a href="/services" className="flex - 1 border border - gray - 600 text - gray - 200">Explore Services</a>;
 
-
-<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function EnterpriseAIOpsPage() {
@@ -184,18 +138,8 @@ export default function EnterpriseAIOpsPage(req, res) {
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-  )
+)
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>;
             </div>;
           </div>;
@@ -204,63 +148,19 @@ export default function EnterpriseAIOpsPage(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
-;
-;
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </Layout>);
 }
-<<<<<<< HEAD
-=======
 
-
-
-<<<<<<< HEAD
-=======
-    </Layout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ;
 ;
 
-
-
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-    </Layout>);
-}
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======

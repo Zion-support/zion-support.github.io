@@ -88,4 +88,3 @@ function InterviewsContent() {;
         </Tabs>;
       </main>;
       <Footer />;
-

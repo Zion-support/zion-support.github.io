@@ -49,4 +49,3 @@ export const MobileEmailCapture:React.FC = () => {;
           </p>;
         </div>;
       </div>;
-

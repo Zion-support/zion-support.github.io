@@ -1,5 +1,4 @@
-<<<<<<< HEAD:pages/api/proposals/translate.ts
-<<<<<<< HEAD
+:pages/api/proposals/translate.ts
 <<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -15,10 +14,6 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/translate.ts
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {;
     const { markdown, targetLanguage = "en" } = req.body |{}
@@ -41,10 +36,9 @@ export default async function handler(
     });
     const translated = completion.choices?.[0]?.message?.content |markdown;
     return res.status(200).json({ translated });
-<<<<<<< HEAD:pages/api/proposals/translate.ts
+:pages/api/proposals/translate.ts
 
-<<<<<<< HEAD
-  } catch (error: any) {
+} catch (error: any) {
     return res
       .status(500)
       .json({ error: error?.message |"Translation failed" });
@@ -65,30 +59,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { OpenAI } from 'openai';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status($1).json({$2});
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
     const { markdown, targetLanguage = 'en' } = req.body || {};
     if (!markdown) return res.status($1).json({$2});
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
-=======
-;
-  try {;
-
-
-    const { markdown, targetLanguage = "en" } = req && req.body || {};
-    if (!markdown) return res && res.status($1).json({ $2 });
-    const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
-    const completion = await openai && openai.chat.completions && completions.create({;
-      model: process && process.env.OPENAI_MODEL || "gpt-4o-mini";
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/translate.ts
       messages: [
-<<<<<<< HEAD
-        { role: 'system', content: 'You are a professional translator for policy and development documents.' },
+{ role: 'system', content: 'You are a professional translator for policy and development documents.' },
         { role: 'user', content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}` }],
       temperature: 0.2
     });
@@ -103,33 +81,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-}
-  } catch (error) {;
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {;
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {;
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {;
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD:pages/api/proposals/translate.ts
-=======
-
-
-
-
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======

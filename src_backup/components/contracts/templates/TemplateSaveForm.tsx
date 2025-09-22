@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
+:src_backup/components/contracts/templates/TemplateSaveForm.tsx
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",
 import { ContractTemplate } from "@/types/contracts",
 import { useContractTemplates } from "@/hooks/useContractTemplates",
@@ -41,55 +41,6 @@ export function TemplateSaveForm({
       title: editTemplate?.title |''
       isDefault: editTemplate?.is_default |false
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-import { Loader2 } from 'lucide-react';'
-import { ContractFormValues } from '@/components/contracts/components/ContractForm';'
-import { ContractTemplate } from '@/types/contracts';'
-import { useContractTemplates } from '@/hooks/useContractTemplates';'
-import { Button } from '@/components/ui/button';
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage,;'
-} from '@/components/ui/form';'
-import { Input } from '@/components/ui/input';'
-import { Switch } from '@/components/ui/switch';
-const formSchema = z && z.object({;'
-  title: z && z.string().min(1, 'Title is required'),;
-  isDefault: z && z.boolean(),;
-});
-
-type FormValues = z && z.infer<typeof formSchema>;
-
-interface TemplateSaveFormProps {;
-  onCancel: () => void;
-  onComplete: () => void;
-  editTemplate?: ContractTemplate | null;
-  currentValues?: ContractFormValues;
-
-export function TemplateSaveForm(): any ({;
-  onCancel,;
-  onComplete,;
-  editTemplate,;
-  currentValues,;
-}: TemplateSaveFormProps) {;
-  const [saving, setSaving] = useState(false);
-  const { createTemplate, updateTemplate } = useContractTemplates();
-
-  const form = useForm<FormValues>({;
-    resolver: zodResolver(formSchema),;
-    defaultValues: {;'
-      title: editTemplate?.title || '',;
-      isDefault: editTemplate?.is_default || false,;
-    },;
-  });
-
-  const onSubmit = async (values: FormValues) => {    if (!currentValues && !editTemplate) {;
-      return;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/contracts/templates/TemplateSaveForm.tsx
     }
 
     setSaving(true);
@@ -138,10 +89,9 @@ const form_schema = z.object ({'
   is_default: z.boolean (),
 });
 type FormValues = z.infer < typeof form_schema>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
+:src_backup/components/contracts/templates/TemplateSaveForm.tsx
 interface TemplateSaveFormProps {
-<<<<<<< HEAD
-  onCancel: () => void,
+onCancel: () => void,
   onComplete: () => void,
   editTemplate?: ContractTemplate | null,
   currentValues?: ContractFormValues
@@ -204,10 +154,6 @@ export function TemplateSaveForm({;
       onComplete();
     } finally {;
       setSaving(false);
-=======
-=======
-interface TemplateSaveFormProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/contracts/templates/TemplateSaveForm.tsx
   on_cancel: () => void;
   on_complete: () => void;
   edit_template?: ContractTemplate | null;
@@ -231,10 +177,8 @@ if ( {) {}
 }
       return;
     }
-<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
+:src/components/contracts/templates/TemplateSaveForm.tsx
 <<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
     set_saving (true);
     try {}
       // Check condition;
@@ -272,45 +216,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           control={form.control}'
           name='title';
 
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
+:src_backup/components/contracts/templates/TemplateSaveForm.tsx
           render={({
             field
           }: {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          render={({}
-            field;
-          }: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/contracts/templates/TemplateSaveForm.tsx
     }
   },
-  
-
-=======
-
-<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField;
           control={form.control}
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
-<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
+:src_backup/components/contracts/templates/TemplateSaveForm.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
           name="title"
 =======
 "
@@ -320,31 +241,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <FormItem>
 =======
 
-<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
+:src/components/contracts/templates/TemplateSaveForm.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
               <FormLabel>Template Name</FormLabel>
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:src_backup/components/contracts/templates/TemplateSaveForm.tsx
               <FormControl>
                 <Input {...field} placeholder="Enter template name" />
               </FormControl>
               <FormMessage />
             </FormItem>
-<<<<<<< HEAD
-=======
 
-=======
-              <FormControl>'
-                <Input {...field} placeholder='Enter template name' />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/contracts/templates/TemplateSaveForm.tsx
             field: ControllerRenderProps<FormValues, 'title'>;
           }) => (            <FormItem>;
               <FormLabel>Template Name</FormLabel>;'
@@ -378,19 +284,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Switch'
                   aria-label='Default template'
                   checked={field && field.value}
-<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
+:src/components/contracts/templates/TemplateSaveForm.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
                   onCheckedChange={field && field.onChange}                />;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   };
-=======
-                  onCheckedChange={field && field.onChange}                />
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (;
     <Form {...form}>;"
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
@@ -402,11 +301,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <FormLabel>Template Name</FormLabel>;
               <FormControl>;"
                 <Input {...field} placeholder="Enter template name" />;
-<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
-=======
-                  onCheckedChange={field && field.onChange}                />;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+:src/components/contracts/templates/TemplateSaveForm.tsx
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
@@ -414,11 +309,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <FormMessage />;
             </FormItem>;
           )}
-<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
+:src/components/contracts/templates/TemplateSaveForm.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
         />;
         <FormField;
           control={form.control}"
@@ -447,55 +339,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         "
         <div className="flex gap-2 justify-end">"
           <Button type="button" variant="outline" onClick={onCancel}>
-<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
+:src/components/contracts/templates/TemplateSaveForm.tsx
             Cancel
           </Button>
           <Button type="submit" disabled={saving}>
             {saving ? (
-=======
-=======
 
-
-
-            Cancel;
-          </Button>'
-          <Button type='submit' disabled={saving}>'
-            field: ControllerRenderProps < FormValues, 'is_default'>;
-          }) => ('
-            <FormItem className='flex items - center justify - between'>;'
-              <FormLabel className='cursor - pointer'>;
-                Set as default template;
-              </FormLabel>;
-              <FormControl>;
-                <Switch;'
-                  aria - label='Default template';
-                  checked={field.value}
-                  onCheckedChange={field.on_change}                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;'
-        <div className='flex gap - 2 justify - end'>;'
-          <Button type='button' variant='outline' on_click={on_cancel}>;
-            Cancel;
-          </Button>;'
-          <Button type='submit' disabled={saving}>;
-            {saving ? (
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
-
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
+:src_backup/components/contracts/templates/TemplateSaveForm.tsx
             Cancel
           </Button>
 
 <<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-        <div className='flex gap-2 justify-end'>;
-=======
-        />;
-'
-        <div className='flex gap-2 justify-end'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/contracts/templates/TemplateSaveForm.tsx
           <Button type='button' variant='outline' onClick={onCancel}>;
             Cancel;
           </Button>;'
@@ -507,30 +362,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </>;
             ) : (;'
               `${editTemplate ? 'Update' : 'Save'} Template`;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
+:src_backup/components/contracts/templates/TemplateSaveForm.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
               <>
-=======
-              <>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/contracts/templates/TemplateSaveForm.tsx
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
             ) : (
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
+:src_backup/components/contracts/templates/TemplateSaveForm.tsx
 <<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               `${editTemplate ? "Update" : "Save"} Template`
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
   editTemplate ? "Update" : "Save" 
 =======
 "
@@ -542,63 +386,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "`
               `${editTemplate ? "Update" : "Save"} Template`
 
-<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
-<<<<<<< HEAD
+:src/components/contracts/templates/TemplateSaveForm.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             )}
-<<<<<<< HEAD
-          </Button>;
+</Button>;
         </div>;
       </form>;
 <<<<<<< HEAD
-=======
-
-            )}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
     </Form>;
   );
-<<<<<<< HEAD
 }
-=======
-
-
-
-  // Check condition;
-if ( {) {}
-  $2;
-}
-  await update_template.mutate_async ({}
-  <FormItem> <FormLabel > Template Name</FormLabel> <FormControl> <Input {"
-  ...field ";"
-}placeholder="Enter template name" />;"
-}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";"`
-}/> <> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : (`$ {";"
-  edit_template ? "Update" : "Save";`
-}Template`);
-}</Button> </div> </form> </Form>);"
-}"}
-}
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
+:src/components/contracts/templates/TemplateSaveForm.tsx
 <<<<<<< HEAD
-=======
-
-            Cancel
-          </Button>
-          <Button type="submit" disabled={saving}>
-            {saving ? (              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Saving...
-              </>
-            ) : (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -624,12 +424,9 @@ try {;
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"
-<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
+:src/components/contracts/templates/TemplateSaveForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
 =======
 ;'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/contracts/templates/TemplateSaveForm.tsx

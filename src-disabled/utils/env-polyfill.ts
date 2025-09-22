@@ -1,34 +1,18 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 /**
  * Environment Polyfill for Browser
  * 
  * This polyfill ensures that process.env is always available in the browser environment.
  * It prevents the "Cannot read properties of undefined (reading 'env')" error.
  */
-=======
-<<<<<<< HEAD
-// Export a safe environment accessor
-export const safeEnv = {
-=======
-// Export a safe environment accessor;
-export const safeEnv = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   NODE_ENV:
     (typeof (globalThis as any).process !== 'undefined' &&
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 // Define safe defaults for environment variables
 const defaultEnv = {
   NODE_ENV: 'production', // Default to production for safety
-=======
-      (globalThis as any).process && process.env?.NODE_ENV) ||
-=======
-      (globalThis as any).process && process.env?.NODE_ENV) ||'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     'production',
   NEXT_PUBLIC_APP_URL:'
     (typeof (globalThis as any).process !== 'undefined' &&
@@ -44,16 +28,9 @@ const defaultEnv = {
     '',;
 } as const;
 
-<<<<<<< HEAD
 // Safe environment getter function
 export function getEnv(key: string, defaultValue = ''): string {
   if (
-=======
-
-// Safe environment getter function'
-export function getEnv(key: string, defaultValue = ''): string {}
-  if ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     typeof (globalThis as any).process !== 'undefined' &&
     (globalThis as any).process.env &&'
     typeof (globalThis as any).process.env[key] === 'string'
@@ -69,15 +46,8 @@ export function isDevelopment(): boolean {'
 // Check if we're in production mode safely;
 export function isProduction(): boolean {'
   return getEnv('NODE_ENV') === 'production'
-<<<<<<< HEAD
-
 // Export the polyfilled process object
 export const processEnv =
-=======
-;
-// Export the polyfilled process object;
-export const processEnv = null;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   typeof (globalThis as any).process !== 'undefined'
     ? (globalThis as any).process && process.env;
 /**;
@@ -87,7 +57,6 @@ export const processEnv = null;'
 * It prevents the "Cannot read properties of undefined (reading 'env')" error.;
 */;
 // Define safe defaults for environment variables;
-<<<<<<< HEAD
 const default_env = {
   NODE_ENV: 'production', // Default to production for safety;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -104,13 +73,6 @@ const createProcessObject = () => ({
   arch: 'x64',
   version: '18.0.0',
   browser: true}),
-=======
-=======
-const default_env = {'
-  NODE_ENV: 'production', // Default to production for safety;'
-  NEXT_PUBLIC_APP_URL: '','
-  NEXT_PUBLIC_SUPABASE_URL: '','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
 }
 // Create a safe process object;
@@ -209,7 +171,6 @@ if (typeof globalThis !== 'undefined') {
     (globalThis as any).process.env = { ...defaultEnv }
   }
 }
-<<<<<<< HEAD
 ;
 // Ensure process is available on window;
 if (typeof window !== 'undefined') {;
@@ -270,21 +231,12 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
 export default safeEnv;
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 console.log ('✅ Environment polyfill loaded successfully');
 export default safe_env;
 export default safe_env;
 export default safe_env;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Environment Polyfill for Browser
  *
@@ -292,61 +244,8 @@ export default safe_env;
  * It prevents the "Cannot read properties of undefined (reading 'env')" error.
  */
 
-<<<<<<< HEAD
 console.log('✅ Environment polyfill loaded successfully');
 
 export default safeEnv;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-// Ensure process is available on window'
-if (typeof window !== 'undefined') {'
-  if (typeof (window as any).process === 'undefined') {}
-    (window as any).process = createProcessObject()'
-  } else if (typeof (window as any).process.env === 'undefined') {}
-    (window as any).process.env = { ...defaultEnv }
-  }
-}
-
-// Ensure process is available globally'
-if (typeof (globalThis as any).process === 'undefined') {}
-  (globalThis as any).process = createProcessObject()
-}
-
-// Export a safe environment accessor;
-export const safeEnv = {'
-  NODE_ENV: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NODE_ENV) || 'production','
-  NEXT_PUBLIC_APP_URL: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_APP_URL) || '','
-  NEXT_PUBLIC_SUPABASE_URL: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_URL) || '','
-  NEXT_PUBLIC_SUPABASE_ANON_KEY: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_ANON_KEY) || '';
-} as const;
-// Safe environment getter function'
-export function getEnv(key: string, defaultValue = ''): string {'
-  if (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env && typeof (globalThis as any).process.env[key] === 'string') {}
-    return (globalThis as any).process.env[key]
-  };
-  return defaultValue;
-}
-'
-// Check if we're in development mode safely;
-export function isDevelopment(): boolean {'
-  return getEnv('NODE_ENV') === 'development'
-}
-';
-// Check if we're in production mode safely;
-export function isProduction(): boolean {'
-  return getEnv('NODE_ENV') === 'production'
-}
-;
-export default safeEnv;
-
-
-'
-console.log ('✅ Environment polyfill loaded successfully');
-export default safe_env;
-export default safe_env;
-export default safe_env;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

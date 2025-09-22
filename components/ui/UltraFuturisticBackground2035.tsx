@@ -359,7 +359,7 @@ ctx.fill();
         ref={canvasRef}
         className='w-full h-full'
         style={{
-          background: colors.background
+          background: colors.background;
         }}
       />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -369,7 +369,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div'
           className='absolute inset-0'
           animate={{}
-            background: []
+            background: [];
             ],          }}
           transition={{}
             duration: 8,
@@ -380,8 +380,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ];
           transition={{}
             duration: 8;
-            repeat: Infinity'
-            ease: 'easeInOut'
+            repeat: Infinity';
+            ease: 'easeInOut';
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
@@ -437,7 +437,7 @@ ease: 'easeInOut',
 
           ))}"
                 ease: "easeInOut"
-
+;
               }}
             />;
 

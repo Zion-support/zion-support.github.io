@@ -114,12 +114,12 @@ if (score -= 20) {}
   metrics.fcp > 2000 ? 'text - red - 400': 'text - green - 400';
 }`;
 }> {
-  isLoading ? 'animate-spin' : ''
+  isLoading ? 'animate-spin' : '';
 }`
-}/> </button> <button > <Settings className="w-4 h-4" /> </button> </div> </div> </div> performanceData.overallScore >= 70 ? 'Good': 'Needs Improvement'
+}/> </button> <button > <Settings className="w-4 h-4" /> </button> </div> </div> </div> performanceData.overallScore >= 70 ? 'Good': 'Needs Improvement';
 }</p> </div> <span className= {
   `font-mono $ {
-  metrics.fcp > 2000 ? 'text-red-400': 'text-green-400'
+  metrics.fcp > 2000 ? 'text-red-400': 'text-green-400';
 }`
 }> {
   metrics.fcp.toFixed (0)
@@ -129,7 +129,7 @@ if (score -= 20) {}
 }%`
 }/> </div> </div> </div>)
 }</span> </div> </div> </div>)
-}rec.priority === 'high'? 'bg-red-500/20 text-red-400': rec.priority === 'medium'? 'bg-yellow-500/20 text-yellow-400': 'bg-green-500/20 text-green-400'
+}rec.priority === 'high'? 'bg-red-500/20 text-red-400': rec.priority === 'medium'? 'bg-yellow-500/20 text-yellow-400': 'bg-green-500/20 text-green-400';
 }`
 }> {
   rec.priority
@@ -137,7 +137,7 @@ if (score -= 20) {}
 }</div> </div>)
 }) : (<BarChart3 className="w-4 h-4" />)
 }<span> {
-  isMonitoring ? 'Measuring...': 'Measure Performance' 
+  isMonitoring ? 'Measuring...': 'Measure Performance' ;
 }</span> </button> </div> </div> </motion.div>) 
 }</AnimatePresence> </>) 
 };

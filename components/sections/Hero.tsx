@@ -37,8 +37,8 @@ const Hero: React.FC<HeroProps> = ({;
     href: string;
   }
   stats?: Array<{
-    value: string
-    label: string
+    value: string;
+    label: string;
 import React from 'react',
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
@@ -48,9 +48,9 @@ title: string;
   subtitle: string;
   primaryAction?: {
     text: string;
-          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>
+          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
-    color: string
+    color: string;
   }>
 }
 const Hero: React.FC<HeroProps> = ({}
@@ -71,13 +71,13 @@ const Hero: React.FC<HeroProps> = ({}
               {primaryAction && (;
 
           {(primaryAction || secondaryAction) && (
-<div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
+<div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
               {primaryAction && (
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button
                   href={primaryAction && primaryAction.href}
                   size='lg'
-                  className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
+                  className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40';
             {title}
           </h1>;
           <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed font - light">;
@@ -87,7 +87,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button;
                   href={primaryAction && primaryAction.href}"
                   size="lg""
-                  className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"'
+                  className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"';
                   style={{ animationDelay: '0 && 0.2s' }}>;
                   {primaryAction && primaryAction.text}"
                   <ArrowRight className="w-5 h-5 ml-2" />;
@@ -104,7 +104,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href={secondaryAction && secondaryAction.href}'
                   variant='outline''
                   size='lg''
-                  className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5''
+                  className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'';
                   style={{ animationDelay: '0 && 0.4s' }}>;'"
                   <Play className='w-5 h-5 mr-2' />                  {secondaryAction && secondaryAction.text}                  variant="outline";"
                   size="lg";"
@@ -116,7 +116,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href={secondaryAction.href}
 variant='outline'
                   size='lg'
-                  className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+                  className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5';
                   style={{ animationDelay: '0.4s' }}
                 >
                   <Play className='w-5 h-5 mr-2' />
@@ -132,7 +132,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {stats && (
 <div
 origin/cursor/automate-test-improve-and-merge-code-2533
-            className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in'
+            className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in';
             style={{ animationDelay: '0 && 0.6s' }}>;
             {stats && stats.map((stat, index) => (;'
               <div key={index} className='text-center group'>;'
@@ -144,9 +144,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;"
                 <div className="text - gray - 400 text - xs sm:text - sm md:text - base font - medium">;
                   </div>
-                  <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+                  <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />;
                 </div>
-                <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>
+                <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                   {stat.label}
                 </div>
@@ -156,7 +156,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
         {/* Trust Indicators */}
 <div
-          className='mt-16 md:mt-20 animate-fade-in'
+          className='mt-16 md:mt-20 animate-fade-in';
             </div>"
             <div className="flex items-center gap-2">"
               <Users className="w-4 h-4" />

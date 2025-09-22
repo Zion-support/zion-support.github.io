@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { handleAction } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
 
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
@@ -15,7 +12,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     res.status(200).json({ tx: 'transaction-id' });
   } catch (err: any) {
-
 
   } catch (err: any) {
 
@@ -28,26 +24,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
 import type { NextApiRequest, NextApiResponse } from "next",
 import { handleAction } from "../../../utils/token/service",
-=======
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { handleAction } from "../../../utils/token/service",;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const { userId, action, metadata } = req.body || {}
   if (!userId || !action) return res.status(400).json({ error: "userId and action required" })
   try {
     const tx = handleAction(userId, action, metadata)
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
-  const { userId, action, metadata } = req.body || {},
-  if (!userId || !action) return res.status(400).json({ error: "userId and action required" });
-  try {
-    const tx = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> pr-12243
 =======
 import type { NextApiRequest, NextApiResponse } from "next",;"
@@ -62,8 +44,6 @@ export default function handler() { return null; }
     return res.status(200).json({ tx })
   } catch (err: any) {}
     return res.status(400).json({ error: err.message })
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { handleAction } from "../../../utils/token/service";
 export default function handler(req, res) {
@@ -107,13 +87,3 @@ export default function handler(req, res) {
 }
   }
 }
-
-
-=======
-  }
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  };
-};"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

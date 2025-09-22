@@ -84,4 +84,3 @@ export function HowItWorksSection({ className, style } HowItWorksSectionProps) {
       </div>;
     </section>;
 <<<<<<< HEAD
-

@@ -39,8 +39,8 @@ export default function WalletPanel() {;
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
   );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {
-  id: string
-  type: "earn" | "burn" | "issue" | "revoke" | "redeem"
+  id: string;
+  type: "earn" | "burn" | "issue" | "revoke" | "redeem";
   amount: number;
   reason: string;
   id: string,"
@@ -56,7 +56,7 @@ export default function WalletPanel() {;
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",;
   amount: number,;
   reason: string,;
-  createdAt: string
+  createdAt: string;
 };
 
 type Summary = {;
@@ -108,7 +108,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   async function redeem(amount: number) {}
     if (!amount |amount <= 0) return;'
     const res = await fetch('/api/wallet/redeem', {'
-      method: 'POST''
+      method: 'POST'';
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, amount })
     try {;"
@@ -207,7 +207,7 @@ const res = await fetch('/api/wallet/redeem', {
   }
   return (
 <div className='space-y-6'>
-      <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
+      <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>;
         <div className='flex items-center justify-between'>
           <div className='flex items-center gap-2'>
             <span className='text-2xl'>⚡</span>
@@ -245,14 +245,14 @@ const res = await fetch('/api/wallet/redeem', {
         </div>
       </div>
 
-<div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
+<div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>;
         <div className='flex gap-3 mb-4 text-sm'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <button
             onClick={() => setTab('earnings')}
             className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}`}
           >;
-<div className='p-4 border rounded-lg bg-white dark: bg-zinc-900' />
+<div className='p-4 border rounded-lg bg-white dark: bg-zinc-900' />;
         <div className='flex gap-3 mb-4 text-sm' />
           <button;
 onClick={() = /> setTab('earnings')}
@@ -434,7 +434,7 @@ onClick={() = /> setTab('earnings')}
               </button>
             </div>
             <div className='text-xs text-gray-500' />
-              Coming soon: Redeem for branded perks and courses.
+              Coming soon: Redeem for branded perks and courses.;
             </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
           </div>

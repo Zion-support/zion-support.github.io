@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-
-=======
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -14,14 +6,7 @@ import { z } from 'zod',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
 import { Textarea } from '@/components/ui/textarea',;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-=======
-import {logErrorToProduction} from '@/utils/productionLogger',;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
-=======
-import {logErrorToProduction} from '@/utils/productionLogger',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 =======
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -39,27 +24,14 @@ import {;
   FormItem,;
   FormLabel,;
   FormMessage} from '@/components/ui/form',;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
 import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react',;
-=======
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
-=======
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { PortfolioProject } from '@/types/resume',;
 import { usePortfolio } from '@/hooks/usePortfolio',;
 import { useAuth } from '@/hooks/useAuth',;
 ;
 // Define schema for form validation;
 const projectSchema = z.object({;
-<<<<<<< HEAD
-  title:z.string().min(1, 'Project title is required'),;
-=======
-  title:z.string().min(1, 'Project title is required'),,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+title:z.string().min(1, 'Project title is required'),;
   description:z.string().optional(),;
   technologies:z.string().optional(),;
   image_url:z.string().optional(),;
@@ -88,28 +60,13 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
   const form = useForm<ProjectFormValues>({;
     resolver: zodResolver(projectSchema);,;
     defaultValues:{;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title:project?.title || '',;
+title:project?.title || '',;
       description:project?.description || '',;
-=======
-      title:project?.title || '',,
-  description:project?.description || '',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       technologies:project?.technologies ? project.technologies.join() :'',;
       image_url:project?.image_url || '',;
       github_url:project?.github_url || '',;
       demo_url:project?.demo_url || '',;
       pdf_url:project?.pdf_url || ''}
-=======
-      title: project?.title || '';,,
-  description: project?.description || '';,;
-      technologies: project?.technologies ? project.technologies.join() :'';,;
-      image_url: project?.image_url || '';,;
-      github_url: project?.github_url || '';,;
-      demo_url: project?.demo_url || '';,;
-      pdf_url: project?.pdf_url || '';}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }),;
   ;
   const onSubmit = async (data:ProjectFormValues) => {;
@@ -119,18 +76,8 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
     ;
     try {;
       const projectData:PortfolioProject = {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        title:data.title,;
+title:data.title,;
         description:data.description,;
-=======
-        title:data.title,,
-  description:data.description,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        title: data.title;,,
-  description: data.description;,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         technologies:data.technologies ? ;
           data.technologies.split().map(tech => tech.trim()) :[],;
         image_url: data.image_url;,;
@@ -152,16 +99,8 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
         form.reset(),;
       }
     } catch (error) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
       console.error('Error saving project:', error),;
-=======
-      logErrorToProduction('Error saving project:', { data:error }),;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
-=======
-      logErrorToProduction('Error saving project:', { data:error }),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       logErrorToProduction('Error saving project: ';, { data: error ;}),;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -178,10 +117,8 @@ pr-12325
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;"
 </form>
         <FormField;
-<<<<<<< HEAD
-          control={form.control}
+control={form.control}
           name="title";
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           render={({ field }) => (;
@@ -198,15 +135,6 @@ pr-12325
             <FormItem>;
               <FormLabel>Technologies Used</FormLabel>;
               <FormControl>;
-
-=======
-          render={({ field } { field:any }) => (;
-=======
-          control={form.control}"
-          name="title";"
-          render={({ field } { field: any ;}) => (;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <FormItem>;
 
               <FormLabel>Project Title;
@@ -218,7 +146,6 @@ pr-12325
             ;          )}
           name="description";"
 
-
               <FormLabel>Project Description;
 
                 <Textarea ;"
@@ -226,8 +153,7 @@ pr-12325
                   className="min-h-[100px]";"
                   {...field} ;
                 />;
-<<<<<<< HEAD
-              </FormControl>;
+</FormControl>;
               <FormMessage />;
             </FormItem>;          )}
         />;
@@ -250,32 +176,22 @@ pr-12325
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
 
             render={({ field }) => (;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField;
             control={form.control}
             name="github_url";
             render={({ field } { field:any }) => (;
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <FormItem>;
                 <FormLabel className="flex items-center gap-2">;
                   <Github className="h-4 w-4" />;
                   GitHub URL;
                 </FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
 
             render={({ field }) => (;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <Input placeholder="https://github.com/yourusername/project" {...field} />;
                 </FormControl>;
                 <FormMessage />;
@@ -286,23 +202,16 @@ pr-12325
             control={form.control}
             name="demo_url";
             render={({ field } { field:any }) => (;
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <FormItem>;
                 <FormLabel className="flex items-center gap-2">;
                   <Link className="h-4 w-4" />;
                   Demo URL;
                 </FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
 
           render={({ field }) => (;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <Input placeholder="https://your-project-demo.com" {...field} />;
                 </FormControl>;
                 <FormMessage />;
@@ -314,68 +223,35 @@ pr-12325
           control={form.control}
           name="image_url";
           render={({ field } { field:any }) => (;
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <FormItem>;
               <FormLabel className="flex items-center gap-2">;
                 <FileImage className="h-4 w-4" />;
                 Screenshot URL;
               </FormLabel>;
               <FormControl>;
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-
-=======
-                <Input placeholder="https://example.com/screenshot.jpg" {...field} />;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
-=======
-                <Input placeholder="https://example.com/screenshot.jpg" {...field} />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
         />;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
 
-=======
-        ;
-        {/* Future file upload field would go here */}
-        ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
-=======
-        ;
-        {/* Future file upload field would go here */}
-        ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className="flex justify-end space-x-2 pt-4">;
           <Button type="button" variant="outline" onClick={onCancel}>;
             Cancel;
           </Button>;
           <Button type="submit" disabled={isLoading}>;
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
 
-=======
-            {isEditing ? 'Update' :'Add'} Project;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
-=======
-            {isEditing ? 'Update' :'Add'} Project;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Button>;
 =======
 
           name="technologies";"
 
-
               <FormLabel>Technologies Used;
 )"
                 <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />;"
-
 
             ;"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
@@ -402,7 +278,6 @@ pr-12325
 
                 <Input placeholder="https: //example.com/screenshot.jpg" {...field;} />;"
 
-
         <div className="flex justify-end space-x-2 pt-4">;"
 </div>"
           <Button type="button" variant="outline" onClick={onCancel}>;"
@@ -411,14 +286,8 @@ pr-12325
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
 </Loader2>
       </form>;
-<<<<<<< HEAD
-    </Form>;
-<<<<<<< HEAD
+</Form>;
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ),;}
  type ProjectFormValues = z.infer<typeof projectSchema>;
 setIsLoading (true);
@@ -437,21 +306,4 @@ try {;
 }</Button> </div> </form> </Form>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
- type ProjectFormValues = z.infer<typeof projectSchema>;
-</typeof>)
-   <FormMessage /> ) ;
-
-}/> <FormField <FormItem> <FormLabel>Project Description <FormControl> <Textarea />  <FormMessage /> ) ;
-
-}/> <FormField  <FormMessage /> ) ;
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField  <FormMessage /> ) ;"
-
-}/> </div> <FormField  <FormMessage /> ) ;
-} </div> </form> ) ;"}""
-} </div> </form> ) ;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

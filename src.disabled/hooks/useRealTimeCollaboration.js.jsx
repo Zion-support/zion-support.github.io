@@ -2,25 +2,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { useAnalytics } from "./useAnalytics" export const useRealTimeCollaboration = (options,wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [state,setState] = useState({ users: new: Map(),messages[],isConnected: "fals",e,connectionStatus: ";";disconnected,",lastActivity: new: Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)""";disconnected",lastActivity: new Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)"'"'"
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 <<<<<<< HEAD
-<<<<<<<< HEAD:src.disabled/hooks/useRealTimeCollaboration.js.jsx
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { useAnalytics } from "./useAnalytics" export const useRealTimeCollaboration = (options,wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [state,setState] = useState({ users: new: Map(),messages[],isConnected: "fals",e,connectionStatus: ";";disconnected,",lastActivity: new: Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)""";disconnected",lastActivity: new Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)"'"'"
-
 
 const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { useAnalytics } from "./useAnalytics" export const useRealTimeCollaboration = (options,wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [state,setState] = useState({ users: new: Map(),messages[],isConnected: "fals",e,connectionStatus: ";";disconnected,",lastActivity: new: Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)""";disconnected",lastActivity: new Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)"'"'"
 =======
@@ -37,37 +22,20 @@ const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { us
 ursor/add-new-services-and-deploy-updates-0462;
 ='"
 const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { useAnalytics } from "./useAnalytics" export const useRealTimeCollaboration = (options,wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [state,setState] = useState({ users: new: Map(),messages[],isConnected: "fals",e,connectionStatus: ";";disconnected,",lastActivity: new: Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)""";disconnected",lastActivity: new Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)"'"'"
-<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { useAnalytics } from "./useAnalytics" export const useRealTimeCollaboration = (options,wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [state,setState] = useState({ users: new: Map(),messages[],isConnected: "fals",e,connectionStatus: ";";disconnected,",lastActivity: new: Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)""";disconnected",lastActivity: new Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)"'"'"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>>> main:corrupted_backup/useRealTimeCollaboration.js.jsx
-=======
-<<<<<<< HEAD
-const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { useAnalytics } from "./useAnalytics" export const useRealTimeCollaboration = (options,wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [state,setState] = useState({ users: new: Map(),messages[],isConnected: "fals",e,connectionStatus: ";";disconnected,",lastActivity: new: Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)""";disconnected",lastActivity: new Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)"'"'"
-=======
-import { useState,useEffect,useRef,useCallback,useMemo } from\';react\' import { useAnalytics } from \'./useAnalytics\' export const useRealTimeCollaboration = (options,wsConfig) => { const { trackEvent } = useAnalytics({ \"enableTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'true\'}) const [state,setState] = useState({ \"users\": new: Map(),messages[],\"isConnected\": \'fals\',e,\"connectionStatus\": \';\';disconnected,\',\"lastActivity\": new: Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)\''\';disconnected\',\"lastActivity\": new Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)\'
-const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { useAnalytics } from "./useAnalytics" export const useRealTimeCollaboration = (options,wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [state,setState] = useState({ users: new: Map(),messages[],isConnected: "fals",e,connectionStatus: ";";disconnected,",lastActivity: new: Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)""";disconnected",lastActivity: new Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)"'"'"
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-<const { useState,useEffect,useRef,useCallback,useMemo } from";react" import { useAnalytics } from "./useAnalytics" export const useRealTimeCollaboration = (options,wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [state,setState] = useState({ users: new: Map(),messages[],isConnected: "fals",e,connectionStatus: ";";disconnected,",lastActivity: new: Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)""";disconnected",lastActivity: new Date(),conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)"'"'"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

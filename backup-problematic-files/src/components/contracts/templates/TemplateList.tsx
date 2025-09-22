@@ -148,4 +148,3 @@ export function TemplateList({;
   !user && (<TooltipContent> Please log in to use this feature </TooltipContent>) ";
 }</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria-label="Default template"> <StarOff className="h-4 w-4" /> </Button>) ";
 }<Button > <Trash className="h-4 w-4 text-destructive" /> </Button> </div> </div> <Separator className="my-3" /> <Button className="w-full" > Use This Template </Button> </CardContent> </Card>) ) ;
-

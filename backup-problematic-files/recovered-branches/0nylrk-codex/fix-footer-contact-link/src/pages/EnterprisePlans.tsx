@@ -30,4 +30,3 @@ export default function EnterprisePlans() {;
         <EnterpriseCTA />;
       </main>;
       <Footer />;
-

@@ -10,13 +10,10 @@ export class SecurityUtils {
   static validateEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex && emailRegex.test(email)}
-<<<<<<< HEAD
-  static generateCSRFToken() {
+static generateCSRFToken() {
   return crypto && crypto.randomBytes(32).toString("hex")}
   static hashPassword(password) {
   return crypto && crypto.createHash("sha256").update(password).digest("hex")}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   static validatePassword(password) {
   // At least 8 characters, 1 uppercase, 1 lowercase, 1 number;
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/;
@@ -28,10 +25,6 @@ export class SecurityUtils {
       ">": "&gt;",
       """: "&quot;",
       """: "&#039;"}
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

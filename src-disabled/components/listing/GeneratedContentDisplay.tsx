@@ -1,16 +1,8 @@
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
-<<<<<<< HEAD:src/components/listing/GeneratedContentDisplay.tsx
+:src_backup/components/listing/GeneratedContentDisplay.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ArrowRight } from 'lucide-react'
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/GeneratedContentDisplay.tsx
 
 import {
   Card
@@ -25,10 +17,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/GeneratedContentDisplay.tsx
+:src_backup/components/listing/GeneratedContentDisplay.tsx
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/GeneratedContentDisplay.tsx
 <Badge
@@ -37,27 +26,17 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
           <div className="flex flex-wrap gap-2">;
             {content && content.tags.map((tag, index) => (;
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
+:src_backup/components/listing/GeneratedContentDisplay.tsx
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD:src/components/listing/GeneratedContentDisplay.tsx
+:src/components/listing/GeneratedContentDisplay.tsx
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/GeneratedContentDisplay.tsx
 =======
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;",
 import React from "react","
@@ -82,13 +61,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/GeneratedContentDisplay.tsx
 
 interface GeneratedContent {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   description: string,
   tags: string[],
   suggestedPrice: {
@@ -121,24 +94,16 @@ interface GeneratedContentDisplayProps {;
   content: GeneratedContent;,
   onApply: () => void;
 }
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
+:src_backup/components/listing/GeneratedContentDisplay.tsx
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
 
-<<<<<<< HEAD:src/components/listing/GeneratedContentDisplay.tsx
 <<<<<<< HEAD
-
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/GeneratedContentDisplay.tsx
 =======
@@ -154,31 +119,15 @@ export function GeneratedContentDisplay({ content, onApply }:,  GeneratedContent
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>"
           <p className="text-white">{content.description}</p>"
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
-<<<<<<< HEAD
-
-<<<<<<< HEAD:src/components/listing/GeneratedContentDisplay.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        
         <div>
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/GeneratedContentDisplay.tsx
-        
+
         <div>
 
-
-<<<<<<< HEAD:src/components/listing/GeneratedContentDisplay.tsx
+:src/components/listing/GeneratedContentDisplay.tsx
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/GeneratedContentDisplay.tsx
@@ -247,8 +196,7 @@ interface GeneratedContentDisplayProps {
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {tag}
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
-<<<<<<< HEAD:src/components/listing/GeneratedContentDisplay.tsx
+:src_backup/components/listing/GeneratedContentDisplay.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -258,12 +206,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         <div>
@@ -271,31 +213,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
 
-<<<<<<< HEAD
-
-        <div>
-=======
-=======
-
-
-
-              </Badge>;
-            ))}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/GeneratedContentDisplay.tsx
-=======
-              </Badge>;
-            ))}
-
-        <div>
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>"
-          <p className="text-white">"
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
-          <p className="text-white">
-            ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
-
-
-        <div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/GeneratedContentDisplay.tsx
+<div>
           </div>
         </div>
 <div>
@@ -311,33 +229,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
 
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
+:src_backup/components/listing/GeneratedContentDisplay.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        
-        <div>
-<<<<<<< HEAD:src/components/listing/GeneratedContentDisplay.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         <div>
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/GeneratedContentDisplay.tsx
+<<<<<<< HEAD
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
-<<<<<<< HEAD
-        
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+:src_backup/components/listing/GeneratedContentDisplay.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
@@ -363,59 +266,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <ul className='list-disc pl-5 text-white space-y-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             {content.keyPoints.map((point, index) => (
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
-<<<<<<< HEAD:src/components/listing/GeneratedContentDisplay.tsx
+:src_backup/components/listing/GeneratedContentDisplay.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              <li key={index}>{point}</li>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/GeneratedContentDisplay.tsx
             {content.keyPoints.map((point, index,) => (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <li key={index}>{point}</li>
             ))}
-<<<<<<< HEAD:src/components/listing/GeneratedContentDisplay.tsx
+:src/components/listing/GeneratedContentDisplay.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-              <li key={index}>{point}</li>
-            {content.keyPoints.map((point, index,) => (
-              <li key={index}>{point}</li>
-          </div>;
-        </div>;
-        <div>;
-          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>;
-            Suggested Price Range;
-          </h3>;
-          <p className='text-white'>;
-            ${content && content.suggestedPrice.min && min.toFixed(2)} - $;
-            {content && content.suggestedPrice.max && max.toFixed(2)}
-          </p>;
-        </div>;
-        <div>;
-          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>;
-            Key Selling Points;
-          </h3>;
-          <ul className='list-disc pl-5 text-white space-y-1'>            {content && content.keyPoints.map((point, index) => (        <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>;
-          <p className="text-white">;
-            ${content && content.suggestedPrice.min && min.toFixed(2)} - ${content && content.suggestedPrice.max && max.toFixed(2)}
-          </p>;
-        </div>;
-        <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>;
-          <ul className="list-disc pl-5 text-white space-y-1">;
-            {content && content.keyPoints.map((point, index) => (;
-            {content && content.keyPoints.map((point, index,) => (;
-              <li key={index}>{point}</li>;
-            ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/GeneratedContentDisplay.tsx
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
@@ -497,12 +357,9 @@ function GeneratedContentDisplay() {
             {content.key_points.map ((point, index) => (
             {content.key_points.map ((point, index, ) => (
               <li key={index}>{point}</li>))}
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
+:src_backup/components/listing/GeneratedContentDisplay.tsx
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
   content: GeneratedContent;
   onApply: () => void;
@@ -546,24 +403,12 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         </div>;
       </CardContent>;
       <CardFooter>;
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
-<<<<<<< HEAD
+:src_backup/components/listing/GeneratedContentDisplay.tsx
 <<<<<<< HEAD
         <Button;
           onClick={onApply}
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/GeneratedContentDisplay.tsx
 =======
@@ -581,12 +426,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         </Button>
       </CardFooter>
     </Card>
-<<<<<<< HEAD:src/components/listing/GeneratedContentDisplay.tsx
+:src/components/listing/GeneratedContentDisplay.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/GeneratedContentDisplay.tsx
   )
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
         >;
@@ -597,12 +438,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
     </Card>;
   );
 }
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
+:src_backup/components/listing/GeneratedContentDisplay.tsx
 <<<<<<< HEAD
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/GeneratedContentDisplay.tsx
         <Button;
           on_click={on_apply}
           className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white';
@@ -618,30 +455,12 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
       </CardFooter>;
     </Card>);
 }
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
+:src_backup/components/listing/GeneratedContentDisplay.tsx
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 ;
-}}}}}}}}}))))))))))))))
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/GeneratedContentDisplay.tsx
-;
-=======
-;
-<<<<<<< HEAD:src/components/listing/GeneratedContentDisplay.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/GeneratedContentDisplay.tsx
 =======
 ;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/GeneratedContentDisplay.tsx
@@ -660,13 +479,9 @@ className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-z
     </Card>
   );
 }
-<<<<<<< HEAD:src/components/listing/GeneratedContentDisplay.tsx
+:src/components/listing/GeneratedContentDisplay.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD:src_backup/components/listing/GeneratedContentDisplay.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/GeneratedContentDisplay.tsx
 =======
 <Badge;
                 key={index}
@@ -686,8 +501,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>""
           <p className="text-white">{content.description}</p>"
         </div>
-
-
 
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>""
           <div className="flex flex-wrap gap-2">"

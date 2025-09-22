@@ -90,7 +90,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       default:
 
-'
+';
         return <Zap className='w-5 h-5' />;    }
 
     launchDate: string;
@@ -154,7 +154,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span className="text - xs font - medium text - gray - 400 uppercase tracking - wider">;
         <div className='absolute inset-0 opacity-5'>
           <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400'></div>
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]'></div>
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]'></div>;
         </div>
         {/* Header */}
         <div className='relative z-10 mb-6'>
@@ -207,7 +207,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {service.tagline}
 
 "
-          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300">
+          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300">;
             {service.name}
           </h3>"
           <p className="text-gray-300 text-sm leading-relaxed">
@@ -223,7 +223,7 @@ transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
             )}
           </div>
 
-<h3 className='text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300'>
+<h3 className='text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300'>;
             {service.name}
           </h3>
 
@@ -333,7 +333,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             {service.price.enterprise && (
               <div className='mt-2 pt-2 border-t border-gray-600/30'>
-                <span className='text-xs text-gray-500'>Enterprise: </span>
+                <span className='text-xs text-gray-500'>Enterprise: </span>;
                 <span className='text-sm text-purple-400 font-medium'>
                   ${service.price.enterprise}/mo
                 </span>
@@ -565,18 +565,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileTap={{ scale: 0.95 }}"
             <span className="relative z-10 flex items-center space-x-2">
               <span>Learn More</span>"
-              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
+              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />;
             </span>
             {/* Button glow effect */}"
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
-className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>;
+className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25';
           >
             <span className='relative z-10 flex items-center space-x-2'>
               <span>Learn More</span>
-              <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200' />
+              <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200' />;
             </span>
             {/* Button glow effect */}
-            <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'></div>
+            <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'></div>;
 origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.a>
         </div>'

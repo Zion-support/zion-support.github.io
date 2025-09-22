@@ -64,8 +64,7 @@ for (const filePath of filesToFix) {
           content = content.replace(/:\s*any/g, ": any");"
           // Fix missing semicolons and colons;"
           content = content.replace(/\(\s*\)\s*=>\s*{/g, "() => {");
-<<<<<<< HEAD
-          content = content.replace(/:\s*{\s*;/g, ": {");
+content = content.replace(/:\s*{\s*;/g, ": {");
           // Fix property signatures;
           content = content.replace(/action\?\s*:\s*{\s*;/g, "action?: {");
           content = content.replace(;
@@ -687,7 +686,7 @@ class ComprehensiveErrorFixer {
       const analyzer = new ErrorAnalyzer();
       this.errorReport = await analyzer.analyzeAllErrors();
       if (this.errorReport.totalErrors === 0) {
-        
+
         return this.fixReport}
       // Apply fixes based on error categories
       await this.fixTypeScriptErrors();
@@ -821,15 +820,11 @@ class ComprehensiveErrorFixer {
       return false;
     console.log('🔧 Fixing TypeScript errors...');
     // Check if we have TypeScript errors in the priority errors
-<<<<<<< HEAD
-    const tsErrors = this.errorReport.priorityErrors.filter(error =>
-=======
-    const tsErrors = this.errorReport.priorityErrors.filter(error => 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+const tsErrors = this.errorReport.priorityErrors.filter(error =>
       error.file && (error.file.endsWith('.ts') || error.file.endsWith('.tsx'))
     );
     if (!tsErrors || tsErrors.length === 0) {
-      
+
       return}
     console.log(`📝 Found ${tsErrors.length} TypeScript errors to fix`);
     for (const error of tsErrors) {
@@ -951,23 +946,15 @@ class ComprehensiveErrorFixer {
   async fixESLintErrors() {
     console.log('🔧 Fixing ESLint errors...');
     // Check if we have ESLint errors
-<<<<<<< HEAD
-    const eslintErrors = this.errorReport.priorityErrors.filter(error =>
-=======
-    const eslintErrors = this.errorReport.priorityErrors.filter(error => 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+const eslintErrors = this.errorReport.priorityErrors.filter(error =>
       error.message && error.message.includes('eslint')
     );
     if (!eslintErrors || eslintErrors.length === 0) {
-      
+
       return}
     try {
       // Try to auto-fix ESLint errors
-<<<<<<< HEAD
-      execSync('npx eslint . --fix', {
-=======
-      execSync('npx eslint . --fix', { 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+execSync('npx eslint . --fix', {
         "stdio": 'pipe',
         "cwd": process.cwd()
       });
@@ -977,7 +964,7 @@ class ComprehensiveErrorFixer {
         "action": 'Auto-fix applied',
         "count": eslintErrors.length
       })} catch (error) {
-      
+
       this.fixesApplied.push({
         "type": 'eslint',
         "action": 'Auto-fix applied with warnings',
@@ -1002,15 +989,11 @@ class ComprehensiveErrorFixer {
       return false;
     console.log('🔧 Fixing dependency issues...');
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.dependency || this.errorReport.errors.dependency.length === 0) {
-      
+
       return}
     try {
       // Try to fix security vulnerabilities
-<<<<<<< HEAD
-      execSync('npm audit fix', {
-=======
-      execSync('npm audit fix', { 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+execSync('npm audit fix', {
         "stdio": 'pipe',
         "cwd": process.cwd()
       });
@@ -1020,7 +1003,7 @@ class ComprehensiveErrorFixer {
         "action": 'Security vulnerabilities fixed',
         "count": this.errorReport.errors.dependency.length
       })} catch (error) {
-      
+
       this.fixesApplied.push({
         "type": 'dependency',
         "action": 'Security vulnerabilities fixed with warnings',
@@ -1030,15 +1013,11 @@ class ComprehensiveErrorFixer {
   async fixSecurityIssues() {
     console.log('🔧 Fixing security issues...');
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.security || this.errorReport.errors.security.length === 0) {
-      
+
       return}
     try {
       // Update dependencies to fix security issues
-<<<<<<< HEAD
-      execSync('npm update', {
-=======
-      execSync('npm update', { 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+execSync('npm update', {
         "stdio": 'pipe',
         "cwd": process.cwd()
       });
@@ -1048,7 +1027,7 @@ class ComprehensiveErrorFixer {
         "action": 'Dependencies updated for security',
         "count": this.errorReport.errors.security.length
       })} catch (error) {
-      
+
       this.fixesApplied.push({
         "type": 'security',
         "action": 'Dependencies updated with warnings',
@@ -1145,7 +1124,7 @@ if (require.main === module) {
 module.exports = ComprehensiveErrorFixer;
     console.log('🔧 Fixing build errors...');
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.build || this.errorReport.errors.build.length === 0) {
-      
+
       return}
     // Build errors are usually resolved by fixing TypeScript and ESLint errors
     // This method will be called after those fixes are applied
@@ -1172,7 +1151,7 @@ module.exports = ComprehensiveErrorFixer;
     this.fixesApplied.forEach((fix, index) => {
       console.log(`  ${index + 1}. [${fix.type.toUpperCase()}] ${fix.action || fix.file}`)});
     if (this.fixesFailed.length > 0) {
-      
+
       this.fixesFailed.forEach((fix, index) => {
         }] ${fix.error.file}: ${fix.reason}`)})}
   }
@@ -1192,15 +1171,8 @@ async function main() {
 module.exports = { ComprehensiveErrorFixer };
 // Run if called directly
 if (require.main === module) {
+main()}
 <<<<<<< HEAD
-  main()}
-<<<<<<< HEAD
-=======
-  main()}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
           content = content.replace(/:\s*{\s*;/g, ": {");"
           // Fix property signatures;"

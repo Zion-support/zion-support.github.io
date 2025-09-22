@@ -68,17 +68,17 @@ pr-12243
     switch (variant) {'
       case 'quantum':
         return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;'
-      case 'neon':`
+      case 'neon':`;
         return `${baseClasses} bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900`;'
       case 'cyber':
-
+;
         return `${baseClasses} bg-gradient-to-br from-green-900 via-slate-900 to-blue-900`;
 
 pr-12243
       default:
 
       default:`
-
+;
         return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
     }
   };

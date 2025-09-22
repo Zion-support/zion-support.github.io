@@ -12,4 +12,3 @@ export default function CreateTalentProfile() {;
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Join Our Talent Network</h1>;
           <p className="text-zion-slate-light max-w-2xl mx-auto">;
 <<<<<<< HEAD
-
