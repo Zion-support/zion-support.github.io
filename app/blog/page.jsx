@@ -4,7 +4,6 @@ import Link from 'next/link';
 const BlogPage = () => {
   const featuredPosts = [
     {
-<<<<<<< HEAD
       title: "AI 2025: Enterprise AI Security Blueprint",
       description: "Layered controls for model, data, runtime, and supply chain risk in enterprise AI systems.",
       slug: "ai-2025-enterprise-ai-security-blueprint",
@@ -34,18 +33,10 @@ const BlogPage = () => {
       date: "2025-01-01",
       featured: false,
       image: "/images/ai-trends-2025.jpg"
-=======
-      title: "Multimodal Agents in the Enterprise",
-      category: "Enterprise AI",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/multimodal-agents-2025.jpg"
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-5236
     }
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -124,18 +115,8 @@ const BlogPage = () => {
                 </div>
               </article>
             ))}
-=======
-    <div>
-      <h1>Blog</h1>
-      <div className="featured-posts">
-        {featuredPosts.map((post, index) => (
-          <div key={index} className="post-card">
-            <h2>{post.title}</h2>
-            <p>Category: {post.category}</p>
-            <p>Date: {post.date}</p>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-5236
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
