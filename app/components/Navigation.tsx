@@ -1,121 +1,93 @@
-'use client';
+'use client'
 
-import React, { useState } from 'react';
-import Link from 'next/link';
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import { Menu, X, Zap } from 'lucide-react'
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
-  const navigation = [
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const navigationItems = [
     { name: 'Home', href: '/' },
-    { name: 'AI 2025', href: '/ai-2025', featured: true },
-    { name: 'AI 2026', href: '/ai-2026', featured: true },
     { name: 'Services', href: '/services' },
-    { name: 'Analytics', href: '/analytics', new: true },
-    { name: 'Automation', href: '/automation', new: true },
-    { name: 'Neural Networks', href: '/neural-networks', new: true },
-    { name: 'Blog', href: '/blog', hot: true },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Resources', href: '/resources' },
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Resources', href: '/content' },
     { name: 'Contact', href: '/contact' },
-  ];
+  ]
+
   return (
-    <nav className="bg-white shadow-lg">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+    <nav className={`relative z-50 backdrop-blur-md border-b border-white/10 transition-all duration-300 ${
+      isScrolled ? 'bg-black/40 shadow-lg' : 'bg-black/20'
+    }`}>
+      <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <div className="text-2xl font-bold text-purple-600">
-              Zion Tech Group
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
             </div>
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors relative"
+                className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
               >
                 {item.name}
-                {item.featured && (
-                  <span className="absolute -top-1 -right-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full">
-                    Featured
-                  </span>
-                )}
-                {item.new && (
-                  <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
-                    New
-                  </span>
-                )}
-                {item.hot && (
-                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
-                    Hot
-                  </span>
-                )}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
-            >
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium">
               Get Started
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-purple-600 focus:outline-none"
-            >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                {isOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
             </button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-1"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
-              {navigation.map((item) => (
+        {isMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 border-t border-white/10 pt-4">
+            <div className="flex flex-col space-y-4">
+              {navigationItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium"
-                  onClick={() => setIsOpen(false)}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                  {item.featured && (
-                    <span className="ml-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full">
-                      Featured
-                    </span>
-                  )}
-                  {item.new && (
-                    <span className="ml-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
-                      New
-                    </span>
-                  )}
                 </Link>
               ))}
-              <Link 
-                href="/contact" 
-                className="block px-3 py-2 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center"
-                onClick={() => setIsOpen(false)}
-              >
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium w-full">
                 Get Started
-              </Link>
+              </button>
             </div>
           </div>
         )}
       </div>
     </nav>
-  );
+  )
 }
