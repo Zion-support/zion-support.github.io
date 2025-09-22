@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+User-agent: *
+Allow: /
+Sitemap: /publicsitemap.xml

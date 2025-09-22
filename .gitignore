@@ -1,14 +1,18 @@
+# Unified .gitignore
+
 # Dependencies
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Next.js
+# Build outputs
+dist/
+build/
 .next/
 out/
-build/
-dist/
 
 # Environment variables
 .env
@@ -16,17 +20,30 @@ dist/
 .env.development.local
 .env.test.local
 .env.production.local
+.env*
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
 # Logs
-logs/
+logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
 
 # Runtime data
-pids/
+pids
 *.pid
 *.seed
 *.pid.lock
@@ -34,8 +51,6 @@ pids/
 # Coverage directory used by tools like istanbul
 coverage/
 *.lcov
-
-# nyc test coverage
 .nyc_output
 
 # Dependency directories
@@ -68,18 +83,10 @@ jspm_packages/
 
 # Next.js build output
 .next
+zion-os/.next
 
 # Nuxt.js build / generate output
 .nuxt
-dist
-
-# Gatsby files
-.cache/
-# Allow favicon files in public directory
-public/*
-!public/favicon.ico
-!public/favicon.svg
-!public/site.webmanifest
 
 # Storybook build outputs
 .out
@@ -89,79 +96,22 @@ public/*
 tmp/
 temp/
 
-# Editor directories and files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# TypeScript cache
+*.tsbuildinfo
+tsconfig.tsbuildinfo
 
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# Vite
+.vite/
 
-# Automation logs
-automation/logs/*.log
-automation/logs/*.backup
-automation/logs/*.pid
-logs/*.log
-logs/*.backup
-logs/*.pid
+# Core files
+core
+*.core
 
-# Large files
-*.backup
-*.bak
-*.tmp
-*.temp
+# Git pack files
+*.pack
+*.pack.gz
 
-# Build artifacts
-*.tgz
-*.tar.gz
-*.zip
-*.rar
+# Ignore auto-merge backups
+*.backup.*
+comprehensive-pr-merge-results.json
 
-# Database
-*.db
-*.sqlite
-*.sqlite3
-
-# Backup files
-*.backup
-*.bak
-*.old
-*.orig
-
-# Cache directories
-.cache/
-.parcel-cache/
-.next/
-out/
-build/
-dist/
-
-# Test coverage
-coverage/
-.nyc_output/
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS files
-.DS_Store
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Large log files
-logs/enhanced-sync-manager.log
-logs/enhanced-sync-manager.log.backup
-automation/logs/autonomous-system.log .next/
