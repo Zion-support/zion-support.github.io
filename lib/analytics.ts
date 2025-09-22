@@ -11,7 +11,7 @@ export const trackPageView = (url: string) => {
   }
 
   // Custom analytics
-  // console.log('Page view tracked:', url)
+  // Page view tracked
 }
 
 export const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
@@ -23,7 +23,7 @@ export const trackEvent = (eventName: string, parameters?: Record<string, any>) 
   }
 
   // Custom event tracking
-  // console.log('Event tracked:', eventName, parameters)
+  // Event tracked
 }
 
 export const trackPerformance = () => {

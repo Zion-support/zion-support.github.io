@@ -80,7 +80,7 @@ export default function ContactForm() {
         throw new Error('Failed to submit form');
       }
     } catch (error) {
-      // console.error('Form submission error:', error);
+      // Form submission error
       setSubmitStatus('error');
       
       // Track form submission error
