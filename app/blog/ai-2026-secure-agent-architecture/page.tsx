@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI 2026: Secure Agent Architecture',
