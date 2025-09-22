@@ -67,7 +67,7 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
   }
 }
 
-export default ErrorBoundary
+export default ErrorBoundary;
 
 function DefaultErrorFallback({ error, resetError }: { error?: Error; resetError: () => void }) {
   return (
