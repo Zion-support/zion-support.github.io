@@ -16,7 +16,11 @@
     "dev:clean": "rm -rf .next && npm run dev",
     "lint:fix": "next lint --fix",
     "type-check": "tsc --noEmit",
+<<<<<<< HEAD
     "test": "echo 'Tests temporarily disabled due to corrupted suite' && exit 0",
+=======
+    
+>>>>>>> origin/main
     "test:watch": "jest --watch --runInBand",
     "preview": "npm run build && npm run start",
     "prepare": "husky install",

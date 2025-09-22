@@ -1,6 +1,7 @@
 // Integration connectors
-import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
+
+import { ProviderConnection, SyncLogEntry } from './types';
 
 async function mockProviderCall<T>(
   connection: ProviderConnection,

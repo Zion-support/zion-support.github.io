@@ -1,6 +1,7 @@
 // File storage for integrations
 import fs from 'fs';
 import path from 'path';
+
 import { IntegrationsState } from './types';
 
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
@@ -31,6 +32,7 @@ export function readState(): IntegrationsState {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {
   ensureDataDir();
   const current = readState();
