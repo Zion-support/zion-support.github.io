@@ -2,6 +2,7 @@
 
 import { Component, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw } from 'lucide-react'
+
 import Button from './Button'
 
 interface Props {
@@ -25,7 +26,11 @@ export default class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo)
+    // Log error for debugging
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
+    }
   }
 
   handleReset = () => {

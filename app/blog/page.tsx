@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Calendar, Clock, ArrowRight, Search, Filter } from 'lucide-react'
+
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import Card from '../components/Card'

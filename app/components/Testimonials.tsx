@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react'
+
 import Card from './Card'
 
 interface Testimonial {
@@ -100,7 +101,7 @@ export default function Testimonials() {
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Don't just take our word for it. Here's what our clients have to say about working with us.
+          Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
         </p>
       </div>
 
@@ -111,7 +112,7 @@ export default function Testimonials() {
             
             <div className="mb-6">
               <p className="text-xl text-gray-300 leading-relaxed italic">
-                "{testimonials[currentIndex].content}"
+                &ldquo;{testimonials[currentIndex].content}&rdquo;
               </p>
             </div>
 

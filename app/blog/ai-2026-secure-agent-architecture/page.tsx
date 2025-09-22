@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+
 import SEO from '../../../components/SEO';
 
 export const metadata = {
@@ -64,7 +65,7 @@ const SecureAgentArchitecturePage: React.FC = () => {
 
 export default SecureAgentArchitecturePage;
 
-const SecureAgentArchitecture2026: React.FC = () => {
+const _SecureAgentArchitecture2026: React.FC = () => {
   return (
     <div>
       <SEO

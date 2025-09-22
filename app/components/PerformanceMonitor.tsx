@@ -37,7 +37,7 @@ export default function PerformanceMonitor() {
     // First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        const fidEntry = entry as any
+        const fidEntry = entry as PerformanceEntry & { processingStart?: number }
         if (fidEntry.processingStart) {
           metrics.fid = fidEntry.processingStart - fidEntry.startTime
         }
@@ -49,8 +49,9 @@ export default function PerformanceMonitor() {
     let clsValue = 0
     const clsObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value
+        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number }
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value || 0
           metrics.cls = clsValue
         }
       }
@@ -65,13 +66,17 @@ export default function PerformanceMonitor() {
 
     // Log metrics after page load
     const logMetrics = () => {
-      console.log('Performance Metrics:', {
-        FCP: `${metrics.fcp?.toFixed(2)}ms`,
-        LCP: `${metrics.lcp?.toFixed(2)}ms`,
-        FID: `${metrics.fid?.toFixed(2)}ms`,
-        CLS: metrics.cls?.toFixed(4),
-        TTFB: `${metrics.ttfb?.toFixed(2)}ms`,
-      })
+      // Log metrics in development
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Performance Metrics:', {
+          FCP: `${metrics.fcp?.toFixed(2)}ms`,
+          LCP: `${metrics.lcp?.toFixed(2)}ms`,
+          FID: `${metrics.fid?.toFixed(2)}ms`,
+          CLS: metrics.cls?.toFixed(4),
+          TTFB: `${metrics.ttfb?.toFixed(2)}ms`,
+        })
+      }
 
       // Send to analytics service in production
       if (process.env.NODE_ENV === 'production') {

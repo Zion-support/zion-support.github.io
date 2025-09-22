@@ -1,4 +1,5 @@
 import { Users, Target, Award, Globe, TrendingUp, Shield, Lightbulb, Heart } from 'lucide-react'
+
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import Card from '../components/Card'
@@ -207,7 +208,7 @@ export default function AboutPage() {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our expertise can help transform your business with cutting-edge technology.
+              Let&apos;s discuss how our expertise can help transform your business with cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg">
