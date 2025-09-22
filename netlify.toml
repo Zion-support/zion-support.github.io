@@ -1,39 +1,39 @@
 [build]
-  command = "npm install --no-audit --no-fund && npm run build"
-  publish = "dist"
-  command_timeout = "30m"
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = "out"
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
 
 [build.environment]
-  NODE_VERSION = "22.12.0"
-  NODE_OPTIONS = "--max-old-space-size=6144"
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
-  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
-  # Skip Sharp postinstall to avoid NAPI issues
-  SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
-  SHARP_DIST_BASE_URL = "https://github.com/lovell/sharp-libvips/releases/download/v1.2.0/"
-  # Force Vite build
-  VITE_BUILD = "true"
-  # Ensure proper build environment
-  NODE_ENV = "production"
-  CI = "true"
-  # Disable linting during build to prevent failures
-  ESLINT_NO_DEV_ERRORS = "true"
-  # Optimize build performance
-  VITE_LEGACY_BUILD = "false"
-  # Disable Netlify's auto dependency installers; we handle installs in the build command
-  NETLIFY_SKIP_INSTALL = "true"
+  NODE_VERSION = "22.16.0"
+  NPM_FLAGS = "--legacy-peer-deps"
+  NODE_OPTIONS = "--openssl-legacy-provider"
 
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
-# API functions (disabled for Vite SPA)
-# [functions]
-# directory = "netlify/functions"
+# Performance optimizations - temporarily disabled for testing
+# [[plugins]]
+#   package = "@netlify/plugin-lighthouse"
 
-# Long-term caching for static assets
-[[headers]]
-  for = "/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+# Image optimization - temporarily disabled for testing
+# [[plugins]]
+#   package = "netlify-plugin-cloudinary"
+
+# Redirects for SPA - handled by _redirects file
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
