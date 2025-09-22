@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { AnimatedCard } from '../components/ui/AnimatedCard.jsx';
-import { GradientButton } from '../components/ui/GradientButton.jsx';
+import GradientButton from '../components/ui/GradientButton.jsx';
 import { SEOHead } from '../components/ui/SEOHead.jsx';
 
 export default function ServicesAdvertisingPage() {
