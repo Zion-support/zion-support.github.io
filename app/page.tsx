@@ -13,7 +13,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <main className="relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 blur-3xl" aria-hidden="true"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
           <div className="text-center">

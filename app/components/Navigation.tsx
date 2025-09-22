@@ -56,9 +56,9 @@ export default function Navigation() {
             ))}
             <div className="flex items-center space-x-4">
               <ThemeToggle />
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium">
+              <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium">
                 Get Started
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -89,9 +89,9 @@ export default function Navigation() {
               ))}
               <div className="flex flex-col gap-3">
                 <ThemeToggle />
-                <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium w-full">
+                <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium w-full text-center">
                   Get Started
-                </button>
+                </Link>
               </div>
             </div>
           </div>
