@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import SEO from '../../components/SEO';
-import { ErrorBoundary } from '../../../components/ErrorBoundary';
+import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Hyperautomation Blueprint 2026 | Zion Tech Group',

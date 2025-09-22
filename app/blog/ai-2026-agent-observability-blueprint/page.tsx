@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI 2026: Agent Observability Blueprint | Zion Tech Group',
