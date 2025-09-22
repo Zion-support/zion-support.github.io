@@ -1,138 +1,299 @@
-import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
-import Stripe from 'https://esm.sh/stripe@14.21.0';
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.45.0';
-import { createShippoShipment } from '../_shared/shippo.ts';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+;
+  return new Response('Not found', { "status": 404 })});    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
 
+          .eq('id', orderId)};
+};
+    return new Response(JSON.stringify({ "received":true }), { "status":200 })};
+;
+  return new Response('Not found', { "status":404 })}),;
+;
+    return new Response(JSON.stringify({ "received":true }), { "status":200 })};
+;          .eq('id', orderId)};
+};
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+  return new Response('Not found', { "status": 404 })});
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+;
+  return new Response('Not found', { "status": 404 })});    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+
+  return new Response('Not found', { &quot;status&quot;: 404 })}),
+    return new Response(JSON.stringify({ &quot;received&quot;: true }), { &quot;status&quot;: 200 })};
+import { serve } from https: import Stripe from';https: import { createClient} from https: const supabase = createClient( Deno.env.get( 'SUPABASE_URL') ?? ,','; Deno.env.get('SUPABASE_SERVICE_ROLE_KEY';';) ?? '','; { auth: { persistSession: false} }) const stripe = new Stripe(Deno.env.get( STRIPE_SECRET_KEY') || '';';,{'; apiVersion: '2023-10-1,6})'; const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';';) || ''';; serve(async: req => { if (req.method ===';POST') {'; const body = await req.text(); const signature = req.headers.get( 'stripe-signature') || '';';';; let: event; try: { event = stripe.webhooks.constructEvent(body,signature,webhookSecret)} catch (err) { return new Response(`Webhook Error: ${err.messag,e}`,{ status: '400'}) if: (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session';; const orderId = session.metadata?.orderId; if: (orderId) { await supabase; .from( orders';)';; .update({ status: 'paid})'; .eq('id';';,orderId)}'} return: new Response(JSON.stringify({ received: true}),{ status: '200'})} return: new Response('Not found',{ status: '404'})})'; apiVersion: '2023-10-16}) const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';) || ''; serve(async req => { if (req.method ===';POST') { const body = await req.text(); const signature = req.headers.get(','stripe-signature') || '';; let event; try { event = stripe.webhooks.constructEvent(body,signature,webhookSecret)} catch (err) {' return new Response(`Webhook Error: ${err.message}`,{ status: '400' })` if (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session; const orderId = session.metadata?.orderId; if (orderId) { await supabase; .from( orders';); .update({ status: 'paid }); .eq('id';,orderId)} } return new Response(JSON.stringify({ received: 'true' }),{ status: '200' })} return new Response('Not found',{ status: '404' })})
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+  return new Response('Not found', { "status": 404 })})
+import { serve } from https: import Stripe from';https: import { createClient} from https: const supabase = createClient( Deno.env.get( 'SUPABASE_URL') ?? ,','; Deno.env.get('SUPABASE_SERVICE_ROLE_KEY';';) ?? '','; { auth: { persistSession: false} }) const stripe = new Stripe(Deno.env.get( STRIPE_SECRET_KEY') || '';',{'; apiVersion: '2023-10-1,6})'; const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';';) || ''';; serve(async: req => { if (req.method ===';POST') {'; const body = await req.text(); const signature = req.headers.get( 'stripe-signature') || '';';';; let: event; try: { event = stripe.webhooks.constructEvent(body,signature,webhookSecret)} catch (err) { return new Response(`Webhook Error: ${err.messag,e}`,{ status: 400}) if: (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session';; const orderId = session.metadata?.orderId; if: (orderId) { await supabase; .from( orders';)';; .update({ status: 'paid})'; .eq('id';',orderId)}'} return: new Response(JSON.stringify({ received: true}),{ status: 200})} return: new Response('Not found',{ status: 404})})'; apiVersion: '2023-10-16}) const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';) || ''; serve(async req => { if (req.method ===';POST') { const body = await req.text(); const signature = req.headers.get(','stripe-signature') || '';; let event; try { event = stripe.webhooks.constructEvent(body,signature,webhookSecret)} catch (err) {' return new Response(`Webhook Error: ${err.message}`,{ status: 400 })` if (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session; const orderId = session.metadata?.orderId; if (orderId) { await supabase; .from( orders';); .update({ status: 'paid }); .eq('id',orderId)} } return new Response(JSON.stringify({ received: true }),{ status: 200 })} return new Response('Not found',{ status: 404 })})
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+          .eq('id', orderId)};
+    };
+=======
+          .eq('id', orderId)}
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+  return new Response('Not found', { "status": 404 })}),
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+ursor/integrate-build-improve-and-re-verify-8f7d
+import { serve } from
+  "https": //deno.land/std@0.190.0/http/server.ts'';
+import Stripe from';https://esm.sh/stripe@14.21.0';
+import { createClient} from
+  "https": //esm.sh/@supabase/supabase-js@2.45.0'';
 const supabase = createClient(
-  Deno.env.get('SUPABASE_URL') ?? '',
-  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '',
-  { auth: { persistSession: false } },
-);
-
-const useTest = Deno.env.get('STRIPE_TEST_MODE') === 'true';
-const stripeKey = useTest
-  ? Deno.env.get('STRIPE_TEST_SECRET_KEY') ||
-    Deno.env.get('STRIPE_SECRET_KEY') || ''
-  : Deno.env.get('STRIPE_SECRET_KEY') || '';
-const stripe = new Stripe(stripeKey, {
-  apiVersion: '2023-10-16',
-});
-
-const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET') || '';
-
-serve(async (req) => {
-  if (req.method === 'POST') {
+  Deno.env.get(
+  'SUPABASE_URL') ?? , ',';
+  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY';';) ?? '', ';
+  { "auth": { persistSession: false} })
+const stripe = new Stripe(Deno.env.get(
+  STRIPE_SECRET_KEY') || '';', {';
+  "apiVersion": '2023-10-1,6})';
+const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';';) || ''';
+serve("async": req => {
+  if (req.method ===';POST') {';
     const body = await req.text();
-    const signature = req.headers.get('stripe-signature') || '';
-
+    const signature = req.headers.get(
+  'stripe-signature') || '';';';
+    let: event;
+    try: {
+      event = stripe.webhooks.constructEvent(body, signature, webhookSecret)} catch (err) {
+      return new Response(`Webhook "Error": ${err.messag,e}`, { "status": 400})
+"if": (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session';
+      const orderId = session.metadata?.orderId;
+      if: (orderId) {
+        await supabase;
+          .from(
+  orders';)';
+          .update({ status: 'paid})';
+          .eq('id';', orderId)}'}
+    "return": new Response(JSON.stringify({ received: true}), { "status": 200})}
+  "return": new Response('Not found', { "status": 404})})';
+  "apiVersion": '2023-10-16})
+const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';) || '';
+serve(async req => {
+  if (req.method ===';POST') {
+    const body = await req.text();
+    const signature = req.headers.get(',
+      'stripe-signature') || '';
     let event;
     try {
-      event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
-    } catch (err) {
-      return new Response(`Webhook Error: ${err.message}`, { status: 400 });
-    }
-
-    if (event.type === 'checkout.session.completed') {
-      const session = event.data.object as Stripe.Checkout.Session;
+      event = stripe.webhooks.constructEvent(body, signature, webhookSecret)} catch (err) {'
+      return new Response(`Webhook "Error": ${err.message}`, { "status": 400 })`
+if (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session;
       const orderId = session.metadata?.orderId;
       if (orderId) {
-        await supabase
-          .from('orders')
-          .update({ status: 'paid' })
-          .eq('id', orderId);
-
-        const { data: order } = await supabase
-          .from('orders')
-          .select('shipping_address, items')
-          .eq('id', orderId)
-          .single();
-
-        if (order?.shipping_address) {
-          try {
-            const shipment = await createShippoShipment({
-              address_to: order.shipping_address,
-              parcels: order.items || [],
-            });
-
-            await supabase
-              .from('orders')
-              .update({
-                tracking_number: shipment.tracking_number,
-                tracking_status: shipment.tracking_status?.status,
-                tracking_events: shipment.tracking_history,
-              })
-              .eq('id', orderId);
-          } catch (err) {
-            console.error('Error creating shipment', err);
-          }
-        }
-      }
+        await supabase;
+          .from(
+  orders';);
+          .update({ "status": 'paid });
+          .eq('id', orderId)}
     }
+    return new Response(JSON.stringify({ received: true }), { status: 200 })}
+  return new Response('Not found', { status: 404 })})
+origin/automation-improvements-final
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+;
+  return new Response('Not found', { "status": 404 })});
 
-    if (event.type === 'payment_intent.succeeded') {
-      const intent = event.data.object as Stripe.PaymentIntent;
-      const userId = intent.metadata?.userId;
-      const orderId = intent.metadata?.orderId;
-      if (orderId) {
-        await supabase
-          .from('orders')
-          .update({ status: 'paid' })
-          .eq('id', orderId);
-      }
-      if (userId) {
-        const amount = intent.amount_received || 0;
-        const points = Math.floor(amount / 10000) * 10; // 10 pts per $100
+=======
+          .eq('id', orderId)};
+};
+    return new Response(JSON.stringify({ &quot;received&quot;: true }), { &quot;status&quot;: 200 })};
 
-        if (points > 0) {
-          await supabase.from('points_ledger').insert({
-            user_id: userId,
-            delta: points,
-            reason: 'purchase',
-            order_id: orderId ?? null,
-          });
+  return new Response('Not found', { "status": 404 })}),
 
-          const { data: profile } = await supabase
-            .from('profiles')
-            .select('points')
-            .eq('id', userId)
-            .single();
+ursor/fix-lint-push-and-merge-to-main-28da
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
 
-          const current = profile?.points ?? 0;
-          await supabase
-            .from('profiles')
-            .update({ points: current + points })
-            .eq('id', userId);
-        }
+  return new Response('Not found', { &quot;status&quot;: 404 })}),
+    return new Response(JSON.stringify({ &quot;received&quot;: true }), { &quot;status&quot;: 200 })};
+origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+;
+  return new Response('Not found', { "status": 404 })});
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
 
-        if (orderId) {
-          const { data: notificationId, error } = await supabase.rpc(
-            'create_notification',
-            {
-              _user_id: userId,
-              _title: 'Order Paid',
-              _message: `Your order #${orderId} has been paid.`,
-              _type: 'order_status',
-              _related_id: orderId,
-            },
-          );
+  return new Response('Not found', { "status": 404 })}),
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+          .eq('id', orderId)};
+    };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+  return new Response('Not found', { "status": 404 })}),
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+return new Response('Not found', { &quot;status&quot;: 404 })}),
 
-          if (error) {
-            console.error('Error creating order notification:', error.message);
-          } else if (notificationId) {
-            try {
-              await supabase.functions.invoke('send-notification-email', {
-                body: { user_id: userId, notification_id: notificationId },
-              });
-            } catch (err) {
-              console.error('Error invoking send-notification-email:', err);
-            }
-          }
-        }
-      }
-    }
+  return new Response('Not found', { &quot;status&quot;: 404 })}),
+    return new Response(JSON.stringify({ &quot;received&quot;: true }), { &quot;status&quot;: 200 })};
+import { serve } from https: import Stripe from';https: import { createClient} from https: const supabase = createClient( Deno.env.get( 'SUPABASE_URL') ?? ,','; Deno.env.get('SUPABASE_SERVICE_ROLE_KEY';';) ?? ,'; { auth: { persistSession: false} }) const stripe = new Stripe(Deno.env.get( STRIPE_SECRET_KEY') || ;';,{'; apiVersion: '2023-10-1,6})'; const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';';) || ';; serve(async: req => { if (req.method ===';POST') {'; const body = await req.text(); const signature = req.headers.get( 'stripe-signature') || ;';';; let: event; try: { event = stripe.webhooks.constructEvent(body,signature,webhookSecret)} catch (err) { return new Response(`Webhook Error: ${err.messag,e}`,{ status: '400'}) if: (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session';; const orderId = session.metadata?.orderId; if: (orderId) { await supabase; .from( orders';)';; .update({ status: 'paid})'; .eq('id';';,orderId)}'} return: new Response(JSON.stringify({ received: true}),{ status: '200'})} return: new Response('Not found',{ status: '404'})})'; apiVersion: '2023-10-16}) const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';) || ; serve(async req => { if (req.method ===';POST') { const body = await req.text(); const signature = req.headers.get(','stripe-signature') || ;; let event; try { event = stripe.webhooks.constructEvent(body,signature,webhookSecret)} catch (err) {' return new Response(`Webhook Error: ${err.message}`,{ status: '400' })` if (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session; const orderId = session.metadata?.orderId; if (orderId) { await supabase; .from( orders';); .update({ status: 'paid }); .eq('id';,orderId)} } return new Response(JSON.stringify({ received: 'true' }),{ status: '200' })} return new Response('Not found',{ status: '404' })})
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })}""
+  return new Response('Not found', { "status": 404 })})""`;
+import { serve } from https: import Stripe from';https: import { createClient} from https: const supabase = createClient( Deno.env.get( 'SUPABASE_URL') ?? ,','; Deno.env.get('SUPABASE_SERVICE_ROLE_KEY';';) ?? ,'; { auth: { persistSession: false} }) const stripe = new Stripe(Deno.env.get( STRIPE_SECRET_KEY') || ;',{'; apiVersion: '2023-10-1,6})'; const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';';) || ';; serve(async: req => { if (req.method ===';POST') {'; const body = await req.text(); const signature = req.headers.get( 'stripe-signature') || ;';';; let: event; try: { event = stripe.webhooks.constructEvent(body,signature,webhookSecret)} catch (err) { return new Response(`Webhook Error: ${err.messag,e}`,{ status: 400}) if: (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session';; const orderId = session.metadata?.orderId; if: (orderId) { await supabase; .from( orders';)';; .update({ status: 'paid})'; .eq('id';',orderId)}'} return: new Response(JSON.stringify({ received: true}),{ status: 200})} return: new Response('Not found',{ status: 404})})'; apiVersion: '2023-10-16}) const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';) || ; serve(async req => { if (req.method ===';POST') { const body = await req.text(); const signature = req.headers.get(','stripe-signature') || ;; let event; try { event = stripe.webhooks.constructEvent(body,signature,webhookSecret)} catch (err) {' return new Response(`Webhook Error: ${err.message}`,{ status: 400 })` if (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session; const orderId = session.metadata?.orderId; if (orderId) { await supabase; .from( orders';); .update({ status: 'paid }); .eq('id',orderId)} } return new Response(JSON.stringify({ received: true }),{ status: 200 })} return new Response('Not found',{ status: 404 })})
+          .eq('id', orderId)};
+    };
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};""
+  return new Response('Not found', { "status": 404 })}),""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+          .eq('id', orderId)}
+},;
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })},;
+  return new Response('Not found', { "status": 404 })}),;
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })},;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+  return new Response('Not found', { "status": 404 })});
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+origin/main
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
 
-    return new Response(JSON.stringify({ received: true }), { status: 200 });
-  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-  return new Response('Not found', { status: 404 });
-});
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+ursor/automate-test-improve-and-merge-code-4094
+import { serve } from https: import Stripe from';https: import { createClient} from https: const supabase = createClient( Deno.env.get( 'SUPABASE_URL') ?? ,','; Deno.env.get('SUPABASE_SERVICE_ROLE_KEY';';) ?? '','; { auth: { persistSession: false} }) const stripe = new Stripe(Deno.env.get( STRIPE_SECRET_KEY') || '';';,{'; apiVersion: '2023-10-1,6})'; const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';';) || ''';; serve(async: req => { if (req.method ===';POST') {'; const body = await req.text(); const signature = req.headers.get( 'stripe-signature') || '';';';; let: event; try: { event = stripe.webhooks.constructEvent(body,signature,webhookSecret)} catch (err) { return new Response(`Webhook Error: ${err.messag,e}`,{ status: '400'}) if: (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session';; const orderId = session.metadata?.orderId; if: (orderId) { await supabase; .from( orders';)';; .update({ status: 'paid})'; .eq('id';';,orderId)}'} return: new Response(JSON.stringify({ received: true}),{ status: '200'})} return: new Response('Not found',{ status: '404'})})'; apiVersion: '2023-10-16}) const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';) || ''; serve(async req => { if (req.method ===';POST') { const body = await req.text(); const signature = req.headers.get(','stripe-signature') || '';; let event; try { event = stripe.webhooks.constructEvent(body,signature,webhookSecret)} catch (err) {' return new Response(`Webhook Error: ${err.message}`,{ status: '400' })` if (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session; const orderId = session.metadata?.orderId; if (orderId) { await supabase; .from( orders';); .update({ status: 'paid }); .eq('id';,orderId)} } return new Response(JSON.stringify({ received: 'true' }),{ status: '200' })} return new Response('Not found',{ status: '404' })})
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+  return new Response('Not found', { "status": 404 })})
+import { serve } from https: import Stripe from';https: import { createClient} from https: const supabase = createClient( Deno.env.get( 'SUPABASE_URL') ?? ,','; Deno.env.get('SUPABASE_SERVICE_ROLE_KEY';';) ?? '','; { auth: { persistSession: false} }) const stripe = new Stripe(Deno.env.get( STRIPE_SECRET_KEY') || '';',{'; apiVersion: '2023-10-1,6})'; const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';';) || ''';; serve(async: req => { if (req.method ===';POST') {'; const body = await req.text(); const signature = req.headers.get( 'stripe-signature') || '';';';; let: event; try: { event = stripe.webhooks.constructEvent(body,signature,webhookSecret)} catch (err) { return new Response(`Webhook Error: ${err.messag,e}`,{ status: 400}) if: (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session';; const orderId = session.metadata?.orderId; if: (orderId) { await supabase; .from( orders';)';; .update({ status: 'paid})'; .eq('id';',orderId)}'} return: new Response(JSON.stringify({ received: true}),{ status: 200})} return: new Response('Not found',{ status: 404})})'; apiVersion: '2023-10-16}) const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';) || ''; serve(async req => { if (req.method ===';POST') { const body = await req.text(); const signature = req.headers.get(','stripe-signature') || '';; let event; try { event = stripe.webhooks.constructEvent(body,signature,webhookSecret)} catch (err) {' return new Response(`Webhook Error: ${err.message}`,{ status: 400 })` if (event.type === 'checkout.session.completed') {const session = event.data.object as Stripe.Checkout.Session; const orderId = session.metadata?.orderId; if (orderId) { await supabase; .from( orders';); .update({ status: 'paid }); .eq('id',orderId)} } return new Response(JSON.stringify({ received: true }),{ status: 200 })} return new Response('Not found',{ status: 404 })})
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+          .eq('id', orderId)};
+    };
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+  return new Response('Not found', { "status": 404 })}),
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+<<<<<<< HEAD
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  return new Response('Not found', { "status": 404 })});
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+
+.eq ('id', order_id)}} return new Response (JSON.stringify ({ "received": true }), { "status": 200 })} return new Response ('Not found', { "status": 404 })}); return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}
+;
+  return new Response ('Not found', { "status": 404 })});
+    return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+  return new Response('Not found', { "status": 404 })});
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+  return new Response('Not found', { "status": 404 })});
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+origin/main
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+
+
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+  return new Response('Not found', { "status": 404 })});
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+.eq ('id', order_id)}} return new Response (JSON.stringify ({ "received": true }), { "status": 200 })} return new Response ('Not found', { "status": 404 })}); return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}
+;
+  return new Response ('Not found', { "status": 404 })});
+    return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}
+;
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })},;""
+  return new Response('Not found', { "status": 404 })}),;""
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })},;"
+ursor/automate-test-improve-and-merge-code-4094;"`;
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })}""
+  return new Response('Not found', { "status": 404 })});""
+.eq ('id', order_id)}} return new Response (JSON.stringify ({ "received": true }), { "status": 200 })} return new Response ('Not found', { "status": 404 })}); return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}"
+;"
+  return new Response ('Not found', { "status": 404 })});""
+    return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}"
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })}"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+ursor/integrate-build-improve-and-re-verify-8f7d;
+origin/automation-improvements-final;"
+origin/main;"
+;
+
+origin/main;"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
