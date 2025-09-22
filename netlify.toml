@@ -1,39 +1,12 @@
 [build]
-  command = "npm install --legacy-peer-deps && npm run build"
-  publish = "out"
-
-[build.processing]
-  skip_processing = false
-
-[build.processing.css]
-  bundle = true
-  minify = true
-
-[build.processing.js]
-  bundle = true
-  minify = true
-
-[build.processing.html]
-  pretty_urls = true
-
-[build.processing.images]
-  compress = true
+  command = "npm ci && npm run build"
+  publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "22.16.0"
-  NPM_FLAGS = "--legacy-peer-deps"
-  NODE_OPTIONS = "--openssl-legacy-provider"
+  NODE_VERSION = "18"
 
-# Performance optimizations - temporarily disabled for testing
-# [[plugins]]
-#   package = "@netlify/plugin-lighthouse"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
-# Image optimization - temporarily disabled for testing
-# [[plugins]]
-#   package = "netlify-plugin-cloudinary"
-
-# Redirects for SPA - handled by _redirects file
-# [[redirects]]
-#   from = "/*"
-#   to = "/index.html"
-#   status = 200
+[[plugins]]
+  package = "netlify-plugin-cloudinary" 
