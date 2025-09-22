@@ -1,9 +1,11 @@
 {
   "build": {
     "command": "npm run build",
-    "publish": ".next",
+    "publish": "out",
     "environment": {
-      "NODE_OPTIONS": "--max-old-space-size=4096"
+      "NODE_OPTIONS": "--max-old-space-size=4096",
+      "NEXT_TELEMETRY_DISABLED": "1",
+      "NODE_VERSION": "20"
     }
   },
   "build_timeout": 1800,
