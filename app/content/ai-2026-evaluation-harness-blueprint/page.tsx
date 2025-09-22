@@ -84,16 +84,8 @@ const EvaluationHarnessBlueprint2026: React.FC = () => {
 
 export default EvaluationHarnessBlueprint2026;
 
-import React from 'react';
-import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI 2026: Evaluation Harness Blueprint - Zion Tech Group',
-  description:
-    'Build an evaluation harness for autonomous agents with scenario suites, metrics, and governance to ship reliable AI.',
-};
-
-export default function Page() {
+function Page() {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">

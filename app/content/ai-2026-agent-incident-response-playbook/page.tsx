@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Eval‑gated triage, mitigation, and escalation with autonomous agents.'
 };
 
-export default function AgentIncidentResponsePlaybookPage() {
+function AgentIncidentResponsePlaybookPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Agent Incident Response Playbook</h1>
@@ -49,16 +49,8 @@ export default function AgentIncidentResponsePlaybookPage() {
   );
 }
 
-import Link from 'next/link';
-import React from 'react';
 
-export const metadata = {
-  title: 'AI 2026: Agent Incident Response Playbook',
-  description:
-    'Eval‑gated triage, mitigation, and escalation playbooks for autonomous agents in production.',
-};
-
-export default function AgentIncidentResponsePlaybookPage() {
+function AgentIncidentResponsePlaybookPage() {
   return (
     <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <header className="mb-10">
@@ -67,7 +59,7 @@ export default function AgentIncidentResponsePlaybookPage() {
           AI 2026: Agent Incident Response Playbook
         </h1>
         <p className="text-gray-600 mt-3 max-w-2xl">
-          A practical, eval‑gated playbook for autonomous agent incidents: detect, triage, mitigate,
+          A practical, eval-gated playbook for autonomous agent incidents: detect, triage, mitigate,
           escalate, and learn — with clear roles, runbooks, and guardrails.
         </p>
       </header>
@@ -76,14 +68,14 @@ export default function AgentIncidentResponsePlaybookPage() {
         <article className="bg-white p-6 rounded-xl shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-3">1. Detection & Signal Quality</h2>
           <p className="text-gray-700">
-            Establish high‑quality signals from traces, evaluations, and safety telemetry. Define
-            event taxonomies (SEV levels), data retention, and alert routing to on‑call responder
+            Establish high-quality signals from traces, evaluations, and safety telemetry. Define
+            event taxonomies (SEV levels), data retention, and alert routing to on-call responder
             groups.
           </p>
           <ul className="list-disc pl-6 mt-4 text-gray-700 space-y-2">
-            <li>Scenario‑based evaluations as continuous canaries</li>
-            <li>Policy‑as‑code gates to suppress noisy alerts</li>
-            <li>Golden traces and SLOs for user‑visible reliability</li>
+            <li>Scenario-based evaluations as continuous canaries</li>
+            <li>Policy-as-code gates to suppress noisy alerts</li>
+            <li>Golden traces and SLOs for user-visible reliability</li>
           </ul>
         </article>
 
@@ -121,13 +113,13 @@ export default function AgentIncidentResponsePlaybookPage() {
           </p>
           <ul className="list-disc pl-6 mt-4 text-gray-700 space-y-2">
             <li>SEV ladder with responder roles and RACI</li>
-            <li>Customer‑facing status templates with timelines and impact</li>
+            <li>Customer-facing status templates with timelines and impact</li>
             <li>Regulatory/compliance notifications for material incidents</li>
           </ul>
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">5. Post‑Incident Reviews</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">5. Post-Incident Reviews</h2>
           <p className="text-gray-700">
             Turn incidents into durable improvements: learning reviews, control updates, and eval
             suite expansions linked to CI/CD.
@@ -152,61 +144,4 @@ export default function AgentIncidentResponsePlaybookPage() {
   );
 }
 
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-
-export const metadata = {
-	title: 'AI 2026: Agent Incident Response Playbook | Zion Tech Group',
-	description: 'Playbook for eval-gated incident response, mitigation, and escalation with autonomous agents.'
-};
-
-const AgentIncidentResponsePlaybook2026 = () => {
-	return (
-		<div className="min-h-screen bg-white">
-			<SEO
-				title="AI 2026: Agent Incident Response Playbook"
-				description="Playbook for eval-gated incident response, mitigation, and escalation with autonomous agents."
-				keywords="incident response, agents-on-call, eval gates, mitigation, escalation, RAG, observability"
-				url="/content/ai-2026-agent-incident-response-playbook"
-			/>
-
-			<article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-				<header className="mb-10">
-					<p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Operations</p>
-					<h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2026: Agent Incident Response Playbook</h1>
-					<p className="text-lg text-gray-600 mt-4">Design eval-gated incident handling: detect, triage, mitigate, and escalate using autonomous agents with policy-as-code and deep observability.</p>
-				</header>
-
-				<div className="prose prose-lg max-w-none">
-					<h2>Objectives</h2>
-					<ul>
-						<li>Reduce MTTR with autonomous triage and mitigation</li>
-						<li>Enforce safety via evaluations and risk tiers</li>
-						<li>Maintain auditability and human-in-the-loop controls</li>
-					</ul>
-
-					<h2>Core Components</h2>
-					<ol>
-						<li>Signals and Detection: traces, metrics, logs, user reports</li>
-						<li>Triage Agent: classify severity and blast radius</li>
-						<li>Mitigation Agent: run gated playbooks with rollbacks</li>
-						<li>Escalation Router: on-call rotation with context packs</li>
-						<li>Postmortem Generator: consolidate evidence and actions</li>
-					</ol>
-
-					<h2>Gates & Policies</h2>
-					<p>Use policy-as-code to require evaluation passes before any irreversible action. Embed error budgets and service SLOs to gate autonomy.</p>
-				</div>
-
-				<footer className="mt-12 flex items-center justify-between">
-					<Link href="/content" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Content</Link>
-					<Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Discuss Implementation</Link>
-				</footer>
-			</article>
-		</div>
-	);
-};
-
-export default AgentIncidentResponsePlaybook2026;
 
