@@ -1,5 +1,0 @@
-import {useState, useEffect, useCallback, useRef} from 'react',;',';';
-    ';';';';
-import {useAnalytics} from './useAnalytics'; export const useMachineLearning = (props: any) => {; const { trackEvent } = useAnalytics({; enableTracking: true, enableUserBehaviorTracking: true';}); const [models, setModels] = useState([]); const [trainingJobs, setTrainingJobs] = useState([]); const [predictions, setPredictions] = useState([]); const [metrics, setMetrics] = useState({; totalModels: 0 activeModels: 0 averageAccuracy: 0 totalPredictions: 0 successfulPredictions: 0 averageResponseTime: 0 trainingJobs: {, total 0,; running: 0 completed: 0 failed: 0';';
-  }';';';
-  }); const [isTraining, setIsTraining] = useState(false); const [isPredicting, setIsPredicting] = useState(false); const trainingIntervalsRef = useRef(new Map()); const predictionTimeoutsRef = useRef(new Map()); "';';';';
