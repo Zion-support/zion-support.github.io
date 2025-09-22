@@ -1,0 +1,401 @@
+[
+  {
+    "name": "origin/0nylrk-codex/fix-footer-contact-link",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:35:56.857Z",
+    "endTime": "2025-09-22T00:35:56.901Z"
+  }
+,
+  {
+    "name": "origin/0parff-codex/centralize-api-error-handling-and-add-errorboundary",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:35:57.907Z",
+    "endTime": "2025-09-22T00:35:58.066Z"
+  }
+,
+  {
+    "name": "origin/0smfo8-codex/fix-404-error-for-non-existent-route",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:35:59.072Z",
+    "endTime": "2025-09-22T00:35:59.158Z"
+  }
+,
+  {
+    "name": "origin/0t8m4m-codex/update-project-color-palette",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:00.164Z",
+    "endTime": "2025-09-22T00:36:00.438Z"
+  }
+,
+  {
+    "name": "origin/0une71-codex/fix-unsupported-shell-syntax-in-setup.sh",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:01.444Z",
+    "endTime": "2025-09-22T00:36:01.663Z"
+  }
+,
+  {
+    "name": "origin/14gqd5-codex/implement-checkout-flow-with-auth-redirect",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:02.669Z",
+    "endTime": "2025-09-22T00:36:02.709Z"
+  }
+,
+  {
+    "name": "origin/1dcwqi-codex/implement-global-pricing-with-currency-selection",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:03.714Z",
+    "endTime": "2025-09-22T00:36:03.935Z"
+  }
+,
+  {
+    "name": "origin/1fjs4s-codex/implement-instant-messaging-for-negotiations",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:04.941Z",
+    "endTime": "2025-09-22T00:36:05.164Z"
+  }
+,
+  {
+    "name": "origin/1m9jcs-codex/fix-client-side-rendering-and-javascript-errors",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:06.169Z",
+    "endTime": "2025-09-22T00:36:06.379Z"
+  }
+,
+  {
+    "name": "origin/1nc0kn-codex/fix-blank-screen-on-app-load",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:07.385Z",
+    "endTime": "2025-09-22T00:36:07.605Z"
+  }
+,
+  {
+    "name": "origin/1nq1ky-codex/render-talent-profiles-with-error-states",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:08.610Z",
+    "endTime": "2025-09-22T00:36:08.823Z"
+  }
+,
+  {
+    "name": "origin/1ry69n-codex/fix-npm-eio-error-during-install",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:09.828Z",
+    "endTime": "2025-09-22T00:36:10.035Z"
+  }
+,
+  {
+    "name": "origin/1sqc9r-codex/implement-light/dark-theme-with-persistence",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:11.041Z",
+    "endTime": "2025-09-22T00:36:11.119Z"
+  }
+,
+  {
+    "name": "origin/1tg4fy-codex/support-metric--imperial-units",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:12.124Z",
+    "endTime": "2025-09-22T00:36:12.205Z"
+  }
+,
+  {
+    "name": "origin/1wzbwr-codex/fix-typescript-errors-in-files",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:13.211Z",
+    "endTime": "2025-09-22T00:36:13.282Z"
+  }
+,
+  {
+    "name": "origin/2025-comprehensive-services-expansion",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:14.287Z",
+    "endTime": "2025-09-22T00:36:14.404Z"
+  }
+,
+  {
+    "name": "origin/22xuo1-codex/implement-wishlist-functionality",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:15.410Z",
+    "endTime": "2025-09-22T00:36:15.793Z"
+  }
+,
+  {
+    "name": "origin/24727i-codex/implement-stripe-checkout-flow",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:16.798Z",
+    "endTime": "2025-09-22T00:36:16.872Z"
+  }
+,
+  {
+    "name": "origin/2503nr-codex/fix-ts2614-error-with-suspense-import",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:17.878Z",
+    "endTime": "2025-09-22T00:36:17.950Z"
+  }
+,
+  {
+    "name": "origin/26ywwb-codex/fix-client-side-rendering-and-javascript-errors",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:18.955Z",
+    "endTime": "2025-09-22T00:36:19.034Z"
+  }
+,
+  {
+    "name": "origin/2enrzx-codex/implement-feature-flags-and-a/b-testing",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:20.040Z",
+    "endTime": "2025-09-22T00:36:20.113Z"
+  }
+,
+  {
+    "name": "origin/2k1ucv-codex/integrate-stripe-test-mode-checkout",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:21.117Z",
+    "endTime": "2025-09-22T00:36:21.189Z"
+  }
+,
+  {
+    "name": "origin/2qzh01-codex/fix-npm-eio-error-during-install",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:22.195Z",
+    "endTime": "2025-09-22T00:36:22.271Z"
+  }
+,
+  {
+    "name": "origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:23.276Z",
+    "endTime": "2025-09-22T00:36:23.723Z"
+  }
+,
+  {
+    "name": "origin/2zlocq-codex/fix-login-form-submission",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:24.728Z",
+    "endTime": "2025-09-22T00:36:24.803Z"
+  }
+,
+  {
+    "name": "origin/306ipd-codex/add-new-products-page-with-10-items",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:25.809Z",
+    "endTime": "2025-09-22T00:36:25.882Z"
+  }
+,
+  {
+    "name": "origin/306l03-codex/fix-blank-screen-issue",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:26.887Z",
+    "endTime": "2025-09-22T00:36:26.987Z"
+  }
+,
+  {
+    "name": "origin/3bk25l-codex/fix-test-expectation-for-fetch-rejection",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:27.992Z",
+    "endTime": "2025-09-22T00:36:28.062Z"
+  }
+,
+  {
+    "name": "origin/3bssgk-codex/disable-theme-toggle-and-set-default-dark-theme",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:29.068Z",
+    "endTime": "2025-09-22T00:36:29.140Z"
+  }
+,
+  {
+    "name": "origin/3c7ooo-codex/enable-offline-support-with-pwa",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:30.145Z",
+    "endTime": "2025-09-22T00:36:30.217Z"
+  }
+,
+  {
+    "name": "origin/3fnye9-codex/create-signup-component-and-route",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:31.223Z",
+    "endTime": "2025-09-22T00:36:31.298Z"
+  }
+,
+  {
+    "name": "origin/3ycx6d-codex/implement-global-error-boundary-with-toasts",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:32.303Z",
+    "endTime": "2025-09-22T00:36:32.380Z"
+  }
+,
+  {
+    "name": "origin/42l7l1-codex/check-logs-and-fix-errors",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:33.385Z",
+    "endTime": "2025-09-22T00:36:33.473Z"
+  }
+,
+  {
+    "name": "origin/42zrxf-codex/improve-discoverability-with-seo-features",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:34.478Z",
+    "endTime": "2025-09-22T00:36:34.556Z"
+  }
+,
+  {
+    "name": "origin/4b9zsu-codex/surface-api-errors-across-the-app",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:35.563Z",
+    "endTime": "2025-09-22T00:36:35.654Z"
+  }
+,
+  {
+    "name": "origin/4cssl2-codex/fix-typescript-errors-in-components",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:36.660Z",
+    "endTime": "2025-09-22T00:36:36.699Z"
+  }
+,
+  {
+    "name": "origin/4d93zy-codex/fix-npm-eio-error-during-install",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:37.705Z",
+    "endTime": "2025-09-22T00:36:37.780Z"
+  }
+,
+  {
+    "name": "origin/4fu9r9-codex/check-logs-and-fix-errors",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:38.785Z",
+    "endTime": "2025-09-22T00:36:38.887Z"
+  }
+,
+  {
+    "name": "origin/4o9pcp-codex/add-test-for-failed-login-toast",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:39.892Z",
+    "endTime": "2025-09-22T00:36:39.973Z"
+  }
+,
+  {
+    "name": "origin/4pkscj-codex/disable-theme-toggle-and-set-default-dark-theme",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:40.978Z",
+    "endTime": "2025-09-22T00:36:41.015Z"
+  }
+,
+  {
+    "name": "origin/4xe4ab-codex/fix--settheme--not-found-in-usetheme",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:42.021Z",
+    "endTime": "2025-09-22T00:36:42.094Z"
+  }
+,
+  {
+    "name": "origin/51ryr1-codex/implement-eprivacy-directive-consent-banner",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:43.099Z",
+    "endTime": "2025-09-22T00:36:43.133Z"
+  }
+,
+  {
+    "name": "origin/54lu0e-codex/fix-component-not-using-api-data",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:44.137Z",
+    "endTime": "2025-09-22T00:36:44.212Z"
+  }
+,
+  {
+    "name": "origin/591ea5-codex/fix-talent-profile-rendering-issues",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:45.218Z",
+    "endTime": "2025-09-22T00:36:45.292Z"
+  }
+,
+  {
+    "name": "origin/5dtq58-codex/implement-analytics-and-error-tracking",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:46.297Z",
+    "endTime": "2025-09-22T00:36:46.371Z"
+  }
+,
+  {
+    "name": "origin/5i6q3p-codex/add-i18n-support-with-next-i18next",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:47.377Z",
+    "endTime": "2025-09-22T00:36:47.452Z"
+  }
+,
+  {
+    "name": "origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:48.457Z",
+    "endTime": "2025-09-22T00:36:48.530Z"
+  }
+,
+  {
+    "name": "origin/5s5bm5-codex/introduce-automated-testing-with-jest-and-cypress",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:49.535Z",
+    "endTime": "2025-09-22T00:36:49.609Z"
+  }
+,
+  {
+    "name": "origin/5smo5s-codex/check-logs-and-fix-errors",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:50.614Z",
+    "endTime": "2025-09-22T00:36:50.708Z"
+  }
+,
+  {
+    "name": "origin/5usi8s-codex/debug-persistent-login-failure",
+    "result": "failed",
+    "error": "Could not checkout branch",
+    "startTime": "2025-09-22T00:36:51.713Z",
+    "endTime": "2025-09-22T00:36:51.749Z"
+  }
+]
