@@ -1,5 +1,12 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Add a small delay to ensure the build is complete
+await new Promise(resolve => setTimeout(resolve, 1000));
 
 // Create static HTML files from the server directory
 const serverDir = path.join(__dirname, 'out', 'server', 'pages');

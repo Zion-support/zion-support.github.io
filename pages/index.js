@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { TypewriterEffect } from '../components/ui/TypewriterEffect';
-import { GradientButton } from '../components/ui/GradientButton';
+import TypewriterEffect from '../components/ui/TypewriterEffect';
+import GradientButton from '../components/ui/GradientButton';
 import { LazyImage } from '../components/ui/LazyImage';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { MobileNavigation } from '../components/MobileNavigation';
@@ -12,18 +12,13 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import FAQSection from '../components/FAQSection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
-import { CookieConsent } from '../components/CookieConsent';
-import { NotificationSystem } from '../components/NotificationSystem';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import PerformanceMonitor from '../components/PerformanceMonitor';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import EnhancedAnalytics from '../components/EnhancedAnalytics';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-import AnimatedCounter from '../components/ui/AnimatedCounter';
-import ParallaxSection from '../components/ui/ParallaxSection';
-import ScrollProgress from '../components/ui/ScrollProgress';
-import InteractiveCard from '../components/ui/InteractiveCard';
-import PerformanceMetrics from '../components/PerformanceMetrics';
-import NewsletterSignup from '../components/NewsletterSignup';
+import EnhancedServiceCard from '../components/EnhancedServiceCard';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import AdvancedSEO from '../components/AdvancedSEO';
+import EnhancedSEO from '../components/EnhancedSEO';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -68,22 +63,26 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
-        <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="text-center">
+          <LoadingSpinner size="xl" color="gradient" text="Loading Zion Tech Group..." />
+          <div className="mt-8 space-y-2">
+            <div className="text-white text-lg font-semibold">Preparing your experience...</div>
+            <div className="text-gray-300 text-sm">Loading cutting-edge technology solutions</div>
+          </div>
+        </div>
       </div>
     );
   }
 
   return (
     <ErrorBoundary>
-      <PerformanceOptimizer>
-        <div>
-          <ScrollProgress />
-          <SEO 
-            title="Zion Tech Group - AI, IT & Micro SaaS Services"
-            description="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support."
-            keywords="AI services, IT solutions, micro SaaS, machine learning, cloud infrastructure, DevOps"
-          />
+      <div>
+        <EnhancedSEO 
+          title="Zion Tech Group - AI, IT & Micro SaaS Services"
+          description="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support."
+          keywords="AI services, IT solutions, micro SaaS, machine learning, cloud infrastructure, DevOps, enterprise technology, digital transformation"
+        />
         <main id="main-content" role="main" className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 bg-black/50 backdrop-blur-sm border-b border-white/10 z-50">
@@ -96,8 +95,6 @@ export default function Home() {
                 <Link href="/" className="text-white font-semibold">Home</Link>
                 <Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
                 <Link href="/services" className="text-gray-300 hover:text-white transition-colors">Services</Link>
-                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link>
-                <Link href="/client-portal" className="text-gray-300 hover:text-white transition-colors">Client Portal</Link>
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
                 <ThemeToggle />
               </div>
@@ -121,7 +118,7 @@ export default function Home() {
         </nav>
 
         {/* Hero Section */}
-        <ParallaxSection speed={0.3} className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className={`text-4xl md:text-6xl font-bold mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               Transform Your Business with
@@ -155,7 +152,7 @@ export default function Home() {
               </GradientButton>
             </div>
           </div>
-        </ParallaxSection>
+        </section>
 
         {/* Services Section */}
         <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
@@ -171,28 +168,15 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <InteractiveCard 
-                  key={index} 
-                  className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 delay-${index * 200} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                  hoverScale={1.05}
-                  tiltIntensity={10}
-                  role="article"
-                  aria-labelledby={`service-${index}-title`}
-                >
-                  <div className="text-4xl mb-4" aria-hidden="true">{service.icon}</div>
-                  <h3 id={`service-${index}-title`} className="text-2xl font-bold mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  <a 
-                    href="/services" 
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
-                    aria-label={`Learn more about ${service.title}`}
-                  >
-                    Learn More
-                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
-                </InteractiveCard>
+                <EnhancedServiceCard
+                  key={index}
+                  service={service}
+                  index={index}
+                  isVisible={isVisible}
+                  onHover={(hoveredIndex) => {
+                    // Optional: Add hover effects for other cards
+                  }}
+                />
               ))}
             </div>
           </div>
@@ -212,9 +196,9 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-4" role="listitem">
+                <div key={index} className="flex items-center space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center" aria-hidden="true">
+                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
                       <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
@@ -239,30 +223,24 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8" role="list">
-              <div className="text-center" role="listitem">
-                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2" aria-label="1000 percent">
-                  <AnimatedCounter end={1000} suffix="%" duration={2000} />
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">1000%</div>
                 <div className="text-lg text-gray-300 mb-2">Average ROI</div>
                 <div className="text-sm text-gray-400">Measured across all projects</div>
               </div>
-              <div className="text-center" role="listitem">
-                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2" aria-label="24/7">24/7</div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">24/7</div>
                 <div className="text-lg text-gray-300 mb-2">Support</div>
                 <div className="text-sm text-gray-400">Always available when you need us</div>
               </div>
-              <div className="text-center" role="listitem">
-                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2" aria-label="99.9 percent">
-                  <AnimatedCounter end={99.9} suffix="%" duration={2000} />
-                </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">99.9%</div>
                 <div className="text-lg text-gray-300 mb-2">Uptime</div>
                 <div className="text-sm text-gray-400">Enterprise-grade reliability</div>
               </div>
-              <div className="text-center" role="listitem">
-                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2" aria-label="500 plus">
-                  <AnimatedCounter end={500} suffix="+" duration={2000} />
-                </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">500+</div>
                 <div className="text-lg text-gray-300 mb-2">Projects</div>
                 <div className="text-sm text-gray-400">Successfully delivered worldwide</div>
               </div>
@@ -282,7 +260,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8" role="list">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
               {[
                 { name: 'React', icon: '⚛️', description: 'Modern UI Framework' },
                 { name: 'Node.js', icon: '🟢', description: 'Server-Side Runtime' },
@@ -291,8 +269,8 @@ export default function Home() {
                 { name: 'DevOps', icon: '🔧', description: 'Automation & CI/CD' },
                 { name: 'Security', icon: '🔒', description: 'Enterprise Security' },
               ].map((tech, index) => (
-                <div key={index} className="text-center group" role="listitem">
-                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
+                <div key={index} className="text-center group">
+                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
                     {tech.icon}
                   </div>
                   <h3 className="text-lg font-semibold mb-1">{tech.name}</h3>
@@ -306,14 +284,8 @@ export default function Home() {
         {/* Enhanced Testimonials Carousel */}
         <TestimonialsCarousel />
 
-        {/* Performance Metrics Section */}
-        <PerformanceMetrics />
-
         {/* FAQ Section */}
         <FAQSection />
-
-        {/* Newsletter Signup */}
-        <NewsletterSignup />
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
@@ -379,22 +351,18 @@ export default function Home() {
         {/* Search Modal */}
         <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
         
-        {/* Cookie Consent */}
-        <CookieConsent />
+        {/* Performance Monitor (Development Only) */}
+        <PerformanceMonitor />
         
-        {/* Notification System */}
-        <NotificationSystem />
-        
-        {/* Accessibility Enhancer */}
-        <AccessibilityEnhancer />
+        {/* Performance Optimizer */}
+        <PerformanceOptimizer />
         
         {/* Enhanced Analytics */}
         <EnhancedAnalytics />
         
-        {/* Performance Monitor */}
-        <PerformanceMonitor />
-        </div>
-      </PerformanceOptimizer>
+        {/* Accessibility Enhancer */}
+        <AccessibilityEnhancer />
+      </div>
     </ErrorBoundary>
   );
 }

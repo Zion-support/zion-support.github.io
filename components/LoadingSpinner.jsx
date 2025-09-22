@@ -19,7 +19,8 @@ const LoadingSpinner = ({
     secondary: 'text-gray-600',
     white: 'text-white',
     green: 'text-green-600',
-    red: 'text-red-600'
+    red: 'text-red-600',
+    gradient: 'text-transparent bg-gradient-to-r from-cyan-500 to-purple-500 bg-clip-text'
   };
 
   return (

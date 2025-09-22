@@ -1,282 +1,386 @@
 #!/usr/bin/env node
 
-/**
- * Security Audit Script
- * Performs comprehensive security analysis and recommendations
- */
-
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 class SecurityAuditor {
   constructor() {
-    this.securityIssues = [];
+    this.issues = [];
     this.recommendations = [];
-    this.checks = [];
+    this.score = 100;
+    this.reportPath = path.join(__dirname, '..', 'security-audit-report.json');
   }
 
-  async performSecurityAudit() {
-    console.log('🔒 Starting comprehensive security audit...');
+  async runAudit() {
+    console.log('🔒 Starting security audit...');
     
-    await this.checkPackageSecurity();
-    await this.checkConfigurationSecurity();
-    await this.checkCodeSecurity();
-    await this.checkFilePermissions();
-    await this.generateSecurityReport();
+    this.checkDependencies();
+    this.checkEnvironmentVariables();
+    this.checkFilePermissions();
+    this.checkSecurityHeaders();
+    this.checkInputValidation();
+    this.checkAuthentication();
+    this.checkDataProtection();
+    this.checkNetworkSecurity();
+    
+    this.generateReport();
+    this.displayResults();
   }
 
-  async checkPackageSecurity() {
-    console.log('📦 Checking package security...');
+  checkDependencies() {
+    console.log('📦 Checking dependencies...');
     
     try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const vulnerabilities = this.checkForVulnerabilities();
       
-      // Check for sensitive information in package.json (only actual values, not keys)
-      const packageString = JSON.stringify(packageJson);
-      
-      // Look for actual sensitive values, not just the words in package names
-      const sensitivePatterns = [
-        /"(password|secret|token|api[_-]?key|auth[_-]?token)":\s*"[^"]*"/i,
-        /"(private[_-]?key|access[_-]?token|bearer[_-]?token)":\s*"[^"]*"/i
-      ];
-      
-      for (const pattern of sensitivePatterns) {
-        if (pattern.test(packageString)) {
-          this.securityIssues.push({
-            type: 'package-security',
-            severity: 'high',
-            issue: 'Potential sensitive information in package.json',
-            recommendation: 'Remove any sensitive information from package.json'
-          });
-          break; // Only report once
-        }
+      if (vulnerabilities.length > 0) {
+        this.addIssue('dependencies', 'high', 'Vulnerable dependencies found', vulnerabilities);
+        this.score -= 20;
       }
       
-      // Check for outdated dependencies
-      this.checks.push({
-        type: 'dependencies',
-        status: 'checked',
-        recommendation: 'Run npm audit regularly and update dependencies'
-      });
+      // Check for outdated packages
+      const outdatedPackages = this.checkOutdatedPackages();
+      if (outdatedPackages.length > 0) {
+        this.addIssue('dependencies', 'medium', 'Outdated packages detected', outdatedPackages);
+        this.score -= 10;
+      }
       
     } catch (error) {
-      console.error('Error checking package security:', error.message);
+      this.addIssue('dependencies', 'high', 'Could not read package.json', [error.message]);
+      this.score -= 15;
     }
   }
 
-  async checkConfigurationSecurity() {
-    console.log('⚙️ Checking configuration security...');
-    
-    // Check next.config.js for security issues
-    if (fs.existsSync('next.config.js')) {
-      const config = fs.readFileSync('next.config.js', 'utf8');
+  checkForVulnerabilities() {
+    try {
+      const result = execSync('npm audit --json', { encoding: 'utf8' });
+      const audit = JSON.parse(result);
       
-      // Check for disabled security features
-      if (config.includes('ignoreBuildErrors: true')) {
-        this.securityIssues.push({
-          type: 'configuration',
-          severity: 'medium',
-          issue: 'TypeScript build errors are ignored',
-          recommendation: 'Enable TypeScript error checking in production'
-        });
+      if (audit.vulnerabilities) {
+        return Object.keys(audit.vulnerabilities).map(pkg => ({
+          package: pkg,
+          severity: audit.vulnerabilities[pkg].severity,
+          description: audit.vulnerabilities[pkg].description
+        }));
       }
       
-      if (config.includes('ignoreDuringBuilds: true')) {
-        this.securityIssues.push({
-          type: 'configuration',
-          severity: 'medium',
-          issue: 'ESLint errors are ignored during builds',
-          recommendation: 'Enable ESLint error checking in production'
-        });
-      }
-    }
-    
-    // Check _headers file
-    if (fs.existsSync('_headers')) {
-      const headers = fs.readFileSync('_headers', 'utf8');
-      
-      if (!headers.includes('X-Frame-Options')) {
-        this.securityIssues.push({
-          type: 'headers',
-          severity: 'high',
-          issue: 'Missing X-Frame-Options header',
-          recommendation: 'Add X-Frame-Options: DENY to prevent clickjacking'
-        });
-      }
-      
-      if (!headers.includes('X-Content-Type-Options')) {
-        this.securityIssues.push({
-          type: 'headers',
-          severity: 'medium',
-          issue: 'Missing X-Content-Type-Options header',
-          recommendation: 'Add X-Content-Type-Options: nosniff'
-        });
-      }
+      return [];
+    } catch (error) {
+      return [{ error: 'Could not run npm audit' }];
     }
   }
 
-  async checkCodeSecurity() {
-    console.log('💻 Checking code security...');
+  checkOutdatedPackages() {
+    try {
+      const result = execSync('npm outdated --json', { encoding: 'utf8' });
+      const outdated = JSON.parse(result);
+      return Object.keys(outdated);
+    } catch (error) {
+      return [];
+    }
+  }
+
+  checkEnvironmentVariables() {
+    console.log('🔐 Checking environment variables...');
     
-    // Check for common security issues in code files
-    const codeFiles = this.findCodeFiles('.');
+    const envFiles = ['.env', '.env.local', '.env.production'];
+    const sensitiveKeys = ['SECRET', 'PASSWORD', 'KEY', 'TOKEN', 'API_KEY'];
     
-    for (const file of codeFiles) {
-      try {
-        // Skip security audit script itself to avoid false positives
-        if (file.includes('security-audit.js')) {
-          continue;
-        }
+    envFiles.forEach(file => {
+      if (fs.existsSync(file)) {
+        const content = fs.readFileSync(file, 'utf8');
+        const lines = content.split('\n');
         
+        lines.forEach(line => {
+          if (line.includes('=') && !line.startsWith('#')) {
+            const [key, value] = line.split('=');
+            
+            // Check for hardcoded secrets
+            if (sensitiveKeys.some(sensitive => key.toUpperCase().includes(sensitive))) {
+              if (value && value.length > 0 && !value.includes('${')) {
+                this.addIssue('environment', 'high', `Hardcoded secret in ${file}: ${key}`);
+                this.score -= 15;
+              }
+            }
+          }
+        });
+      }
+    });
+  }
+
+  checkFilePermissions() {
+    console.log('📁 Checking file permissions...');
+    
+    const sensitiveFiles = [
+      'package.json',
+      'package-lock.json',
+      '.env',
+      '.env.local',
+      '.env.production'
+    ];
+    
+    sensitiveFiles.forEach(file => {
+      if (fs.existsSync(file)) {
+        try {
+          const stats = fs.statSync(file);
+          const mode = stats.mode.toString(8);
+          
+          // Check if file is world-readable (permission 644 or higher)
+          if (parseInt(mode.slice(-3)) >= 644) {
+            this.addIssue('permissions', 'medium', `File ${file} has overly permissive permissions`);
+            this.score -= 5;
+          }
+        } catch (error) {
+          // Ignore permission errors
+        }
+      }
+    });
+  }
+
+  checkSecurityHeaders() {
+    console.log('🛡️  Checking security headers...');
+    
+    const nextConfigPath = 'next.config.js';
+    if (fs.existsSync(nextConfigPath)) {
+      const content = fs.readFileSync(nextConfigPath, 'utf8');
+      
+      const requiredHeaders = [
+        'X-Frame-Options',
+        'X-Content-Type-Options',
+        'X-XSS-Protection',
+        'Strict-Transport-Security',
+        'Content-Security-Policy'
+      ];
+      
+      const missingHeaders = requiredHeaders.filter(header => 
+        !content.includes(header)
+      );
+      
+      if (missingHeaders.length > 0) {
+        this.addIssue('headers', 'medium', 'Missing security headers', missingHeaders);
+        this.score -= 10;
+      }
+    }
+  }
+
+  checkInputValidation() {
+    console.log('🔍 Checking input validation...');
+    
+    const pagesDir = 'pages';
+    if (fs.existsSync(pagesDir)) {
+      const files = this.getAllFiles(pagesDir, ['.js', '.jsx', '.ts', '.tsx']);
+      
+      files.forEach(file => {
         const content = fs.readFileSync(file, 'utf8');
         
         // Check for dangerous patterns
         const dangerousPatterns = [
-          { pattern: /eval\s*\(/, severity: 'critical', description: 'Use of eval() function' },
-          { pattern: /innerHTML\s*=/, severity: 'high', description: 'Direct innerHTML assignment' },
-          { pattern: /document\.write/, severity: 'medium', description: 'Use of document.write()' },
-          { pattern: /window\.location\s*=/, severity: 'medium', description: 'Direct window.location assignment' }
+          /innerHTML\s*=/,
+          /document\.write\s*\(/,
+          /eval\s*\(/,
+          /Function\s*\(/,
+          /setTimeout\s*\(\s*['"`][^'"`]*['"`]/,
+          /setInterval\s*\(\s*['"`][^'"`]*['"`]/
         ];
         
-        for (const { pattern, severity, description } of dangerousPatterns) {
+        dangerousPatterns.forEach(pattern => {
           if (pattern.test(content)) {
-            this.securityIssues.push({
-              type: 'code-security',
-              severity,
-              issue: `${description} found in ${file}`,
-              recommendation: 'Review and refactor to use safer alternatives'
-            });
+            this.addIssue('validation', 'high', `Potentially dangerous code in ${file}`);
+            this.score -= 15;
+          }
+        });
+        
+        // Check for input sanitization
+        if (content.includes('req.body') || content.includes('req.query') || content.includes('req.params')) {
+          if (!content.includes('sanitize') && !content.includes('validate') && !content.includes('escape')) {
+            this.addIssue('validation', 'medium', `Missing input validation in ${file}`);
+            this.score -= 5;
           }
         }
-        
-      } catch (error) {
-        // Skip files we can't read
-      }
+      });
     }
   }
 
-  async checkFilePermissions() {
-    console.log('📁 Checking file permissions...');
+  checkAuthentication() {
+    console.log('🔑 Checking authentication...');
     
-    // Check for sensitive files that should not be accessible
-    const sensitiveFiles = [
-      '.env',
-      '.env.local',
-      '.env.production',
-      'package-lock.json'
+    const authFiles = [
+      'pages/api/auth',
+      'utils/auth',
+      'middleware.ts',
+      'src/lib/auth.js',
+      'src/components/LoginForm.jsx',
+      'src/components/ProtectedRoute.jsx'
     ];
     
-    for (const file of sensitiveFiles) {
+    let hasAuth = false;
+    authFiles.forEach(file => {
       if (fs.existsSync(file)) {
-        try {
-          const stats = fs.statSync(file);
-          const mode = stats.mode & parseInt('777', 8);
-          
-          if (mode > parseInt('644', 8)) {
-            this.securityIssues.push({
-              type: 'permissions',
-              severity: 'medium',
-              issue: `File ${file} has overly permissive permissions (${mode.toString(8)})`,
-              recommendation: 'Set file permissions to 644 or more restrictive'
-            });
-          }
-        } catch (error) {
-          // Skip files we can't check
-        }
+        hasAuth = true;
       }
+    });
+    
+    if (!hasAuth) {
+      this.addIssue('authentication', 'high', 'No authentication system detected');
+      this.score -= 20;
     }
   }
 
-  findCodeFiles(dirPath) {
-    const codeFiles = [];
-    const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+  checkDataProtection() {
+    console.log('🔒 Checking data protection...');
     
-    try {
-      const files = fs.readdirSync(dirPath);
+    const pagesDir = 'pages';
+    if (fs.existsSync(pagesDir)) {
+      const files = this.getAllFiles(pagesDir, ['.js', '.jsx', '.ts', '.tsx']);
       
-      for (const file of files) {
-        // Skip certain directories
-        if (['node_modules', '.git', 'out', '.next', 'backup'].includes(file)) continue;
+      files.forEach(file => {
+        const content = fs.readFileSync(file, 'utf8');
         
-        const filePath = path.join(dirPath, file);
-        const stats = fs.statSync(filePath);
-        
-        if (stats.isDirectory()) {
-          codeFiles.push(...this.findCodeFiles(filePath));
-        } else {
-          const ext = path.extname(file);
-          if (extensions.includes(ext)) {
-            codeFiles.push(filePath);
-          }
+        // Check for sensitive data exposure
+        if (content.includes('console.log') && 
+            (content.includes('password') || content.includes('token') || content.includes('secret'))) {
+          this.addIssue('data-protection', 'high', `Potential sensitive data logging in ${file}`);
+          this.score -= 15;
         }
-      }
-    } catch (error) {
-      // Skip directories we can't read
+      });
     }
-    
-    return codeFiles;
   }
 
-  generateSecurityReport() {
+  checkNetworkSecurity() {
+    console.log('🌐 Checking network security...');
+    
+    const nextConfigPath = 'next.config.js';
+    if (fs.existsSync(nextConfigPath)) {
+      const content = fs.readFileSync(nextConfigPath, 'utf8');
+      
+      // Check for HTTPS enforcement
+      if (!content.includes('https') && !content.includes('secure')) {
+        this.addIssue('network', 'medium', 'HTTPS enforcement not configured');
+        this.score -= 10;
+      }
+    }
+  }
+
+  getAllFiles(dir, extensions) {
+    let files = [];
+    const items = fs.readdirSync(dir);
+    
+    items.forEach(item => {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        files = files.concat(this.getAllFiles(fullPath, extensions));
+      } else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
+    });
+    
+    return files;
+  }
+
+  addIssue(category, severity, message, details = []) {
+    this.issues.push({
+      category,
+      severity,
+      message,
+      details,
+      timestamp: new Date().toISOString()
+    });
+  }
+
+  generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      securityIssues: this.securityIssues,
-      recommendations: this.recommendations,
-      checks: this.checks,
-      summary: this.generateSecuritySummary()
+      score: Math.max(0, this.score),
+      issues: this.issues,
+      recommendations: this.generateRecommendations(),
+      summary: {
+        totalIssues: this.issues.length,
+        criticalIssues: this.issues.filter(i => i.severity === 'high').length,
+        mediumIssues: this.issues.filter(i => i.severity === 'medium').length,
+        lowIssues: this.issues.filter(i => i.severity === 'low').length
+      }
     };
 
-    fs.writeFileSync('security-audit-report.json', JSON.stringify(report, null, 2));
+    try {
+      fs.writeFileSync(this.reportPath, JSON.stringify(report, null, 2));
+      console.log(`📄 Security audit report saved to: ${this.reportPath}`);
+    } catch (error) {
+      console.log('❌ Could not save security audit report:', error.message);
+    }
+  }
+
+  generateRecommendations() {
+    const recommendations = [];
     
-    console.log('\n🔒 Security Audit Report');
-    console.log('========================');
-    
-    const criticalIssues = this.securityIssues.filter(issue => issue.severity === 'critical').length;
-    const highIssues = this.securityIssues.filter(issue => issue.severity === 'high').length;
-    const mediumIssues = this.securityIssues.filter(issue => issue.severity === 'medium').length;
-    
-    console.log(`\nIssues Found:`);
-    console.log(`  Critical: ${criticalIssues}`);
-    console.log(`  High: ${highIssues}`);
-    console.log(`  Medium: ${mediumIssues}`);
-    
-    if (this.securityIssues.length > 0) {
-      console.log('\n⚠️ Security Issues:');
-      this.securityIssues.forEach(issue => {
-        console.log(`\n[${issue.severity.toUpperCase()}] ${issue.issue}`);
-        console.log(`  Recommendation: ${issue.recommendation}`);
+    if (this.issues.some(i => i.category === 'dependencies' && i.severity === 'high')) {
+      recommendations.push({
+        priority: 'high',
+        action: 'Update vulnerable dependencies',
+        description: 'Run npm audit fix to update vulnerable packages'
       });
     }
     
-    console.log('\n✅ Security audit completed!');
-  }
-
-  generateSecuritySummary() {
-    const criticalIssues = this.securityIssues.filter(issue => issue.severity === 'critical').length;
-    const highIssues = this.securityIssues.filter(issue => issue.severity === 'high').length;
-    
-    let status = 'excellent';
-    if (criticalIssues > 0) {
-      status = 'critical';
-    } else if (highIssues > 2) {
-      status = 'needs-attention';
-    } else if (highIssues > 0 || this.securityIssues.length > 5) {
-      status = 'good';
+    if (this.issues.some(i => i.category === 'environment' && i.severity === 'high')) {
+      recommendations.push({
+        priority: 'high',
+        action: 'Secure environment variables',
+        description: 'Move secrets to environment variables and use proper secret management'
+      });
     }
     
-    return {
-      totalIssues: this.securityIssues.length,
-      criticalIssues,
-      highIssues,
-      status
-    };
+    if (this.issues.some(i => i.category === 'headers' && i.severity === 'medium')) {
+      recommendations.push({
+        priority: 'medium',
+        action: 'Add security headers',
+        description: 'Implement security headers in next.config.js'
+      });
+    }
+    
+    if (this.issues.some(i => i.category === 'validation' && i.severity === 'high')) {
+      recommendations.push({
+        priority: 'high',
+        action: 'Implement input validation',
+        description: 'Add proper input sanitization and validation'
+      });
+    }
+    
+    return recommendations;
+  }
+
+  displayResults() {
+    console.log('\n🔒 Security Audit Results:');
+    console.log(`Security Score: ${Math.max(0, this.score)}/100`);
+    console.log(`Total Issues: ${this.issues.length}`);
+    console.log(`Critical Issues: ${this.issues.filter(i => i.severity === 'high').length}`);
+    console.log(`Medium Issues: ${this.issues.filter(i => i.severity === 'medium').length}`);
+    console.log(`Low Issues: ${this.issues.filter(i => i.severity === 'low').length}`);
+    
+    if (this.issues.length > 0) {
+      console.log('\n🚨 Issues Found:');
+      this.issues.forEach((issue, index) => {
+        console.log(`${index + 1}. [${issue.severity.toUpperCase()}] ${issue.message}`);
+        if (issue.details.length > 0) {
+          issue.details.forEach(detail => {
+            console.log(`   - ${detail}`);
+          });
+        }
+      });
+    }
+    
+    if (this.recommendations.length > 0) {
+      console.log('\n💡 Recommendations:');
+      this.recommendations.forEach((rec, index) => {
+        console.log(`${index + 1}. [${rec.priority.toUpperCase()}] ${rec.action}`);
+        console.log(`   ${rec.description}`);
+      });
+    }
   }
 }
 
-// Run security audit if called directly
-if (require.main === module) {
-  const auditor = new SecurityAuditor();
-  auditor.performSecurityAudit().catch(console.error);
-}
-
-module.exports = SecurityAuditor;
+// Run the audit
+const auditor = new SecurityAuditor();
+auditor.runAudit().catch(console.error);

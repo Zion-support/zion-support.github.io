@@ -1,16 +1,12 @@
-const path = require('path');
+import path from 'path';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
-  swcMinify: true,
   trailingSlash: true,
-  distDir: 'out',
   
   // Static export configuration
   output: 'export',
-  skipTrailingSlashRedirect: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
   
   // Image optimization
   images: {
@@ -25,26 +21,22 @@ const nextConfig = {
   
   // Experimental features
   experimental: {
-    optimizeCss: false, // Disable CSS optimization to avoid critters dependency
+    optimizeCss: false,
     scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion', 'react-datepicker'],
-    esmExternals: false,
-    gzipSize: true,
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'react', 'react-dom'],
   },
   
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+    styledComponents: true,
   },
+  
+  // Performance optimizations
+  poweredByHeader: false,
+  compress: true,
+  generateEtags: true,
+  
   
   // Generate unique build ID for better caching
   generateBuildId: async () => {
@@ -52,7 +44,7 @@ const nextConfig = {
   },
   
   // Webpack configuration
-  webpack: (config, { isServer, dev }) => {
+  webpack: (config, { isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
@@ -61,25 +53,11 @@ const nextConfig = {
         net: false,
         tls: false,
         path: false,
-        crypto: require.resolve('crypto-browserify'),
-        stream: require.resolve('stream-browserify'),
+        crypto: 'crypto-browserify',
+        stream: 'stream-browserify',
         util: false,
-        buffer: require.resolve('buffer'),
-        process: require.resolve('process/browser'),
-      };
-    }
-    
-    // Performance optimizations
-    if (!dev) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
+        buffer: 'buffer',
+        process: 'process/browser',
       };
     }
     
@@ -87,4 +65,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
