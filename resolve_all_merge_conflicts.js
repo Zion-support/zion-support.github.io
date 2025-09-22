@@ -9,10 +9,10 @@ console.log('🚀 Starting comprehensive merge conflict resolution...');
 // Configuration
 const config = {
   maxRetries: 3,
-  batchSize: 10,
-  delayBetweenBatches: 2000,
-  delayBetweenOperations: 500,
-  maxBranches: 100
+  batchSize: 5,
+  delayBetweenBatches: 3000,
+  delayBetweenOperations: 1000,
+  maxBranches: 50
 };
 
 // Results tracking
@@ -184,7 +184,8 @@ async function mergeAllOpenPRs() {
     .split('\n')
     .map(line => line.trim())
     .filter(line => line && !line.includes('origin/HEAD') && line !== 'origin/main')
-    .filter(line => line.startsWith('origin/'));
+    .filter(line => line.startsWith('origin/'))
+    .slice(0, config.maxBranches); // Limit to prevent overwhelming
   
   console.log(`📋 Found ${allBranches.length} remote branches to process`);
   
