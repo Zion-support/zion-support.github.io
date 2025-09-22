@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Use static export so Netlify can serve from the `out` directory
+  // Use static export for Netlify (publishes to `out/`)
   output: 'export',
   images: {
-    // Required for static export
+    // Disable next/image optimization during static export
     unoptimized: true,
   },
 };
