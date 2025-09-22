@@ -1,18 +1,7 @@
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -39,23 +28,7 @@ const corsHeaders = {
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;"
-import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",";
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
-
-"
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts","
-import Stripe from "https://esm.sh/stripe@14.21.0","
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*""
@@ -63,35 +36,18 @@ const corsHeaders = {"
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";"
 import Stripe from "https://esm.sh/stripe@14.21.0"";
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-<<<<<<< HEAD
-=======
 
-
-<<<<<<< HEAD
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0",;
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const corsHeaders = {
-<<<<<<< HEAD
-  "Access-Control-Allow-Origin": "*",
+"Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 serve(async (req) => {
@@ -122,13 +78,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 serve(async (req) => {
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import Stripe from "https://esm.sh/stripe@14.21.0",;
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",serve(async (req) => {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (req && req.method === "OPTIONS") {
 =======
 "
@@ -150,9 +100,7 @@ serve(async (req) => {"
     Deno && Deno.env.get("SUPABASE_URL") ?? "";"
     Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
     { auth: { persistSession: false } }
-<<<<<<< HEAD
-
-    const authHeader = req && req.headers.get("Authorization")!;
+const authHeader = req && req.headers.get("Authorization")!;
     const token = authHeader && authHeader.replace("Bearer ", "");
     const { data: { user } } = await supabaseClient && supabaseClient.auth.getUser(token);
 
@@ -160,57 +108,21 @@ serve(async (req) => {"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  );
-=======
-);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   try {
     // Authenticate the user
     const authHeader = req && req.headers.get("Authorization")!;
     const token = authHeader && authHeader.replace("Bearer ", "");
     const { data: { user } } = await supabaseClient && supabaseClient.auth.getUser(token);
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (!user?.id) throw new Error("User not authenticated");
 
 <<<<<<< HEAD
-=======
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  const supabaseClient = createClient(
-    Deno.env.get("SUPABASE_URL") ?? "",
-    Deno.env.get("SUPABASE_ANON_KEY") ?? ""
-  );
-  ),
-  
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Create service client for admin operations
   const supabaseAdmin = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
     { auth: { persistSession: false } }
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  );
-  try {
-    // Authenticate the user
-    const authHeader = req.headers.get("Authorization")!;
-    const token = authHeader.replace("Bearer ", "");
-    const { data: { user } } = await supabaseClient.auth.getUser(token);
-    if (!user?.id) throw new Error("User not authenticated");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-"
-    if (!user?.id) throw new Error("User not authenticated");
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ),
 
   try {}
@@ -218,21 +130,10 @@ serve(async (req) => {
     const authHeader = req.headers.get("Authorization")!,"
     const token = authHeader.replace("Bearer ", ""),
     const { data: { user } } = await supabaseClient.auth.getUser(token),
-<<<<<<< HEAD
-=======
-      .single(),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    
+
     if (fetchError || !transaction) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
@@ -269,40 +170,15 @@ serve(async (req) => {
     const { data: { user } } = await supabaseClient.auth.getUser(token),
     if (!user?.id) throw new Error("User not authenticated"),
 
-<<<<<<< HEAD
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Get request data
     const {
       transactionId
       action, // 'releaserefundcancel'
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-    } = await req && req.json();
-
-
-
-    } = await req.json(),
-
-
-    } = await req.json();
-    } = await req.json(),
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
 =======
@@ -446,15 +322,7 @@ pr-12325
       .single(),
     if (fetchError || !transaction) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-} = await req.json(),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (!transactionId) {
       throw new Error("Transaction ID is required")
     }
@@ -463,59 +331,10 @@ pr-12325
       .from("transactions")
       .select("*")
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       .eq("id", transactionId)
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-    } = await req && req.json();
-    if (!transactionId) {
-      throw new Error("Transaction ID is required")
-
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
-import Stripe from "https://esm.sh/stripe@14.21.0",;
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0",;
-;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin":"*",;
-  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
-;
-serve(async (req) => {;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers:corsHeaders }),;
-  }
-;
-  const supabaseClient = createClient(;
-    Deno.env.get("SUPABASE_URL") ?? "",;
-    Deno.env.get("SUPABASE_ANON_KEY") ?? "";
-  ),;
-  ;
-  // Create service client for admin operations;
-  const supabaseAdmin = createClient(;
-    Deno.env.get("SUPABASE_URL") ?? "",;
-    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",;
-    { auth:{ persistSession:false } }
-  ),;
-;
-  try {;
-    // Authenticate the user;
-    const authHeader = req.headers.get("Authorization")!,;
-    const token = authHeader.replace("Bearer ", ""),;
-    const { data:{ user } } = await supabaseClient.auth.getUser(token),;
-    ;
-    if (!user?.id) throw new Error("User not authenticated"),;
-;
-=======
-    "
-    if (!user?.id) throw new Error("User not authenticated"),
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     // Get request data;
     const {}
       transactionId;
@@ -537,36 +356,20 @@ serve(async (req) => {;
     const { data: transaction, error: fetchError } = await supabaseAdmin"
       .from("transactions")"
       .select("*")"
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       .eq("id", transactionId)
 
     const isClient = transaction && transaction.user_id === user && user.id;
     const isProvider = transaction && transaction.provider_id === user && user.id;
 
+.single(),
 
-<<<<<<< HEAD
-
-      .single(),
-    
     if (fetchError || !transaction) {}
 "
       throw new Error("Transaction not found")
     }
     // Verify user is authorized to manage this transaction;
-=======
-      .single(),
-    if (fetchError || !transaction) {
-
-      throw new Error("Transaction not found")
-    }
-    // Verify user is authorized to manage this transaction
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const isClient = transaction.user_id === user.id,
     const isProvider = transaction.provider_id === user.id,
-
-<<<<<<< HEAD
 
 "
       throw new Error("Transaction not found")
@@ -575,24 +378,11 @@ serve(async (req) => {;
       .single();
     if (fetchError |!transaction) {}
       .single(),
-    
+
     if (fetchError || !transaction) {"
       throw new Error("Transaction not found")
     }
     // Verify user is authorized to manage this transaction;
-=======
-      throw new Error("Transaction not found")
-    }
-    // Verify user is authorized to manage this transaction
-
-      .single();
-    if (fetchError |!transaction) {
-      .single(),
-    if (fetchError || !transaction) {
-      throw new Error("Transaction not found")
-    }
-    // Verify user is authorized to manage this transaction
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const isClient = transaction.user_id === user.id;
     const isProvider = transaction.provider_id === user.id;
     const isClient = transaction.user_id === user.id,
@@ -600,17 +390,9 @@ serve(async (req) => {;
     const isClient = transaction.user_id === user.id,
     const isProvider = transaction.provider_id === user.id,
 <<<<<<< HEAD
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Clients can cancel or request refunds, providers can only release funds
-=======
-      .eq("id", transactionId)    // Clients can cancel or request refunds, providers can only release funds
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     // Clients can cancel or request refunds, providers can only release funds
       .eq("id", transactionId)    // Clients can cancel or request refunds, providers can only release funds
@@ -618,15 +400,7 @@ serve(async (req) => {;
     if (!isClient && !isProvider) {
       throw new Error("You are not authorized to manage this transaction")
     }
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-      .eq("id", transactionId)    // Clients can cancel or request refunds, providers can only release funds
-=======
-    // Clients can cancel or request refunds, providers can only release funds
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (!isClient && !isProvider) {
       throw new Error("You are not authorized to manage this transaction")
     }
@@ -641,20 +415,7 @@ const stripe = new Stripe(Deno && Deno.env.get("STRIPE_SECRET_KEY") || "", {
     let result;
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import Stripe from "https://esm.sh / stripe@14.21.0",
-<<<<<<< HEAD
-=======
 
-
-
-    // Clients can cancel or request refunds, providers can only release funds;
-    if (!isClient && !isProvider) {"
-      throw new Error("You are not authorized to manage this transaction")
-    }
-
-'
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';"
-import Stripe from "https://esm.sh / stripe@14.21.0",';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
     let result;import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import Stripe from "https://esm.sh / stripe@14.21.0",;
@@ -690,7 +451,6 @@ if ( {) {}
       .eq("id", transactionId)"
     const isClient = transaction && transaction.user_id === user && user.id;
     const isProvider = transaction && transaction.provider_id === user && user.id;
-
 
       .single(),
     if (fetchError || !transaction) {
@@ -844,35 +604,14 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
-=======
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") |"", {
       apiVersion: "2023-10-16"});
     let result;
 
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") |"", {
-      apiVersion: "2023-10-16"});
-    let result;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
-=======
-"
-    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -880,20 +619,13 @@ const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") |"", {
 
     let result,
 
-
-<<<<<<< HEAD
 "
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {"
       apiVersion: "2023-10-16"}),
 
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     switch (action) {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
     switch (action) {'
@@ -912,39 +644,12 @@ if ( {) {}
 }"
           throw new Error ("Only service providers can release funds from escrow");
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         }
 
 <<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-    switch (action) {
-      case 'release':
-        // Only providers or admins can release escrow funds
-        if (!isProvider) {
-          throw new Error("Only service providers can release funds from escrow")
-        }
-        // Update transaction status
-        await supabaseAdmin
-          .from("transactions")
-<<<<<<< HEAD
-
-=======
           .update({
-            status: "completed";
-            in_escrow: false
-            completed_at: new Date().toISOString()
-          })
-          .eq("id", transactionId);
-        result = { message: "Funds released from escrow" }
-        break;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          .update({ 
-=======
-          .update({ "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             status: "completed",
             in_escrow: false,
             completed_at: new Date().toISOString() 
@@ -953,111 +658,20 @@ if ( {) {}
         "
         result = { message: "Funds released from escrow" },
         break,
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       case 'refund':
         // Check if transaction can be refunded"
         if (transaction && transaction.status !== "completed" && transaction && transaction.status !== "pending") {"
           throw new Error("This transaction cannot be refunded")
         }
-<<<<<<< HEAD
-        // Process refund via Stripe
+// Process refund via Stripe
         if (transaction && transaction.stripe_session_id) {
           // Retrieve payment intent from session
-<<<<<<< HEAD
-=======
-        }
-
-switch (action) {
-      case 'release':
-        // Only providers or admins can release escrow funds
-        if (!isProvider) {
-          throw new Error("Only service providers can release funds from escrow")
-        }
-        // Update transaction status
-        await supabaseAdmin
-          .from("transactions")
-          .update({
-            status: "completed";
-            in_escrow: false
-            completed_at: new Date().toISOString()
-          })
-          .eq("id", transactionId);
-        result = { message: "Funds released from escrow" }
-        break;
-          .update({ 
-            status: "completed",
-            in_escrow: false,
-            completed_at: new Date().toISOString() 
-          })
-          .eq("id", transactionId),
-        result = { message: "Funds released from escrow" },
-        break,
-
-
-      case 'refund':
-        // Check if transaction can be refunded
-        if (transaction && transaction.status !== "completed" && transaction && transaction.status !== "pending") {
-          throw new Error("This transaction cannot be refunded")
-        }
-        // Process refund via Stripe
-        if (transaction && transaction.stripe_session_id) {
-          // Retrieve payment intent from session
-
-          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-          if (session.payment_intent) {
+if (session.payment_intent) {
             const refund = await stripe.refunds.create({
               payment_intent: session.payment_intent.toString()
-<<<<<<< HEAD
-              reason: "requested_by_customer"
-
-=======
-          const session = await stripe && stripe.checkout.sessions && sessions.retrieve(transaction && transaction.stripe_session_id);
-          if (session && session.payment_intent) {
-            const refund = await stripe && stripe.refunds.create({
-              payment_intent: session && session.payment_intent.toString(),
-              reason: "requested_by_customer"
-
-<<<<<<< HEAD
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-case 'refund':
-        // Check if transaction can be refunded
-        if (transaction.status !== "completed" && transaction.status !== "pending") {
-          throw new Error("This transaction cannot be refunded")
-        }
-        // Process refund via Stripe
-        if (transaction.stripe_session_id) {
-          // Retrieve payment intent from session
-          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id);
-          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
-          if (session.payment_intent) {
-            const refund = await stripe.refunds.create({
-              payment_intent: session.payment_intent.toString()
-            }),
-            // Update transaction status
-            await supabaseAdmin
-              .from("transactions")
-              .update({ 
-                status: "refunded",
-                refunded_at: new Date().toISOString(),
-                refund_id: refund.id
-                refunded_at: new Date().toISOString(),
-                refund_id: refund && refund.id
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+reason: "requested_by_customer"
               reason: "requested_by_customer"
             });
             // Update transaction status
@@ -1066,12 +680,6 @@ case 'refund':
               .update({
                 status: "refunded";
                 refunded_at: new Date().toISOString()
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
         // Process refund via Stripe;
@@ -1079,43 +687,19 @@ case 'refund':
           // Retrieve payment intent from session;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
-          
-
 
           if (session.payment_intent) {}
             const refund = await stripe.refunds.create({}
               payment_intent: session.payment_intent.toString()
 
           const session = await stripe && stripe.checkout.sessions && sessions.retrieve(transaction && transaction.stripe_session_id);
-          
+
           if (session && session.payment_intent) {}
             const refund = await stripe && stripe.refunds.create({}
               payment_intent: session && session.payment_intent.toString(),
 "
               reason: "requested_by_customer"
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      case 'refund':
-        // Check if transaction can be refunded
-        if (transaction.status !== "completed" && transaction.status !== "pending") {
-          throw new Error("This transaction cannot be refunded")
-        }
-        // Process refund via Stripe
-        if (transaction.stripe_session_id) {
-          // Retrieve payment intent from session
-          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id);
-          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
-          
-          if (session.payment_intent) {
-            const refund = await stripe.refunds.create({
-              payment_intent: session.payment_intent.toString()
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             }),
             // Update transaction status
             await supabaseAdmin
@@ -1123,19 +707,7 @@ case 'refund':
               .update({ 
                 status: "refunded",
                 refunded_at: new Date().toISOString(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-                refund_id: refund.id
-                refunded_at: new Date().toISOString(),
-                refund_id: refund && refund.id
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               reason: "requested_by_customer"
             });
             // Update transaction status;
@@ -1145,11 +717,8 @@ case 'refund':
                 status: "refunded";
 
                 refunded_at: new Date().toISOString(),
-<<<<<<< HEAD
-                refund_id: refund && refund.id
+refund_id: refund && refund.id
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               })
 =======
@@ -1221,27 +790,17 @@ if ( {) {
           // Retrieve payment intent from session;
           const session = await stripe.checkout.sessions.retrieve (transaction.stripe_session_id);
 ;
-<<<<<<< HEAD
-          // Check condition;
+// Check condition;
 if ( {) {}
   $2;
 }
             const refund = await stripe.refunds.create ({}
               payment_intent: session.payment_intent.to_string (),"
-=======
-          // Check condition
-if ( {) {
-  $2
-}
-            const refund = await stripe.refunds.create ({
-              payment_intent: session.payment_intent.to_string (),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               reason: "requested_by_customer";
             });
 ;
             // Update transaction status;
-<<<<<<< HEAD
-            await supabase_admin;"
+await supabase_admin;"
               .from ("transactions");
               .update ({"
                 status: "refunded";
@@ -1251,70 +810,19 @@ if ( {) {
               .eq ("id", transaction_id);
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-              .update({ 
-                status: "refunded",
-                refunded_at: new Date().toISOString(),
-                refund_id: refund.id
-              })
-              .eq("id", transactionId)
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
         }"
         result = { message: "Refund processed successfully" }
         break;
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-            await supabase_admin;
-              .from ("transactions");
-              .update ({
-                status: "refunded";
-                refunded_at: new Date ().toISOString (),
-                refund_id: refund.id;
-              });
-              .eq ("id", transaction_id);
-          }
-        }
 
-.update({ 
-                status: "refunded",
-                refunded_at: new Date().toISOString(),
-                refund_id: refund.id
-              })
-              .eq("id", transactionId)
-          }
-        }
-        result = { message: "Refund processed successfully" }
-        break;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-        
         result = { message: "Refund processed successfully" },
         break,
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-
-
-=======
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       case 'cancel':
         // Only allow cancellation for pending transactions"
         if (transaction && transaction.status !== "pending") {}
@@ -1333,43 +841,20 @@ if ( {) {
         "
         result = { message: "Transaction cancelled successfully" },
         break,
-        
+
 "
       headers: { ...corsHeaders, "Content-Type": "application/json" },
 
-
-
-
       status: 200})
-<<<<<<< HEAD
-  } catch (error) {
-=======
-        }  } catch (error) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+} catch (error) {
     console.error("Transaction management error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
 
-<<<<<<< HEAD
-
-=======
-      default: throw new Error("Invalid action")
-    }
-    return new Response(JSON.stringify(result), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       status: 200})
   } catch (error) {
     console.error("Transaction management error:", error.message),
     return new Response(JSON.stringify({ error: error.message }), {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
         }  } catch (error) {
     console.error("Transaction management error:", error.message);
@@ -1400,27 +885,11 @@ const corsHeaders = {;"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
 serve(async (req) => {;"
   if (req.method === "OPTIONS") {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return new Response(null, { headers: corsHeaders });
+return new Response(null, { headers: corsHeaders });
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-<<<<<<< HEAD
-=======
-=======
-        result = { message: "Refund processed successfully" },
-        break,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 
       case 'cancel':
         // Only allow cancellation for pending transactions
@@ -1447,7 +916,6 @@ case 'cancel':
           .eq("id", transactionId),
         result = { message: "Transaction cancelled successfully" },
         break,
-
 
       default: throw new Error("Invalid action")
     }
@@ -1478,16 +946,6 @@ default: throw new Error("Invalid action")
       status: 500})
   }
 });
-
-<<<<<<< HEAD
-=======
-=======
-      status: 500})
-  }
-});
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
@@ -1531,12 +989,7 @@ status: 500})
   }
 });
 ;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    return new Response(null, { headers: corsHeaders })
-};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       case 'cancel':;
         // Only allow cancellation for pending transactions;
         // Check condition;
@@ -1569,8 +1022,6 @@ if ( {) {}
       status: 500});
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   }
 });
@@ -1584,29 +1035,18 @@ if ( {) {}
 });
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-
 "
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
     // Check condition;
 
-<<<<<<< HEAD
-  }
+}
 });
 ;
 if ( {) {
@@ -1619,8 +1059,6 @@ if ( {) {
 ;
     let result;
 ;
-
-
 
 "
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") |"", {""
@@ -1643,7 +1081,6 @@ if ( {) {
           throw new Error ("Only service providers can release funds from escrow");"
         }
 
-
           .update({ "
             status: "completed","
             in_escrow: false,)
@@ -1663,7 +1100,6 @@ if ( {) {
         if (transaction && transaction.stripe_session_id) {
           // Retrieve payment intent from session;
           const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
-
 
           if (session.payment_intent) {
             const refund = await stripe.refunds.create({)
@@ -1688,7 +1124,6 @@ if ( {) {
               .update({ "
                 status: "refunded",")
                 refunded_at: new Date().toISOString(),
-
 
                 refund_id: refund.id;,
   refunded_at: new Date().toISOString(),
@@ -1745,7 +1180,6 @@ if ( {) {
           }
         }
 
-
           }
         }"
         result = { message: "Refund processed successfully" }"
@@ -1785,7 +1219,6 @@ if ( {) {
   } catch (error) {"
     console.error("Transaction management error:", error.message);"
     return new Response(JSON.stringify({ error: error.message }), {
-
 
       status: 500})
   }
@@ -2005,7 +1438,6 @@ if ( {) {
     const isClient = transaction && transaction.user_id === user && user.id;
     const isProvider = transaction && transaction.provider_id === user && user.id;
 
-
       throw new Error("Transaction not found")"
     // Verify user is authorized to manage this transaction;
     const isClient = transaction.user_id === user.id,
@@ -2075,8 +1507,6 @@ if ( {) {
       api_version: "2023 - 10 - 16"});"
     let result;
 
-
-
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") |"", {""
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {""
       apiVersion: "2023-10-16"}),"
@@ -2086,7 +1516,6 @@ if ( {) {
         // Only providers or admins can release escrow funds;
         // Check condition;
           throw new Error ("Only service providers can release funds from escrow");"
-
 
           .update({ "
             status: "completed","
@@ -2105,7 +1534,6 @@ if ( {) {
         if (transaction && transaction.stripe_session_id) {
           // Retrieve payment intent from session;
           const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
-
 
           if (session.payment_intent) {
             const refund = await stripe.refunds.create({)
@@ -2127,7 +1555,6 @@ if ( {) {
             // Update transaction status;
                 status: "refunded",")
                 refunded_at: new Date().toISOString(),
-
 
                 refund_id: refund.id;,
                 refund_id: refund && refund.id;
@@ -2156,7 +1583,6 @@ if ( {) {
   refunded_at: new Date ().toISOString (),
                 refund_id: refund.id;
 
-
         result = { message: "Refund processed successfully" }"
         result = { message: "Refund processed successfully" },"
 
@@ -2178,7 +1604,6 @@ if ( {) {
   } catch (error) {"
     console.error("Transaction management error:", error.message);"
     return new Response(JSON.stringify({ error: error.message }), {
-
 
       status: 500})
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;""
@@ -2304,20 +1729,11 @@ pr-12325
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  }
-});
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
   }
 });
@@ -2358,6 +1774,5 @@ pr-12325
   }
 });
 "
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -27,4 +27,3 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
         />;
       </div>;
 <<<<<<< HEAD
-

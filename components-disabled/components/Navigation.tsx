@@ -1,12 +1,6 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:components/Navigation.tsx
-<<<<<<< HEAD
 
 'use client';
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/Navigation.tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import React, { useState } from 'react';
 import Link from 'next/link';
 import {
@@ -39,7 +33,7 @@ const Navigation = () => {
                       <ChevronDown className="ml-1 h-4 w-4" />"
 
                     </button>
-                    
+
                     <AnimatePresence>
 
                         <motion.div;
@@ -86,16 +80,9 @@ const Navigation = (
  ;
   const [isOpen, setIsOpen] = useState(false);
 
-<<<<<<< HEAD
-  ];
-
-<<<<<<< HEAD:components/Navigation.tsx
-=======
-const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
 ];
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
-  return (
+return (
     <nav className=\"bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50\" />
       <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8\" />
         <div className=\"flex justify-between items-center h-16\" />) => {
@@ -146,25 +133,21 @@ const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
                               className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors""
                               onClick={() => setActiveDropdown(null)}
 
-                            
                         </motion.div>
                       )}
-                    
+
                     href={item.href}"
                     className="text-gray-300 hover:text-white transition-colors""
 
-                  
           <div className="hidden md:flex items-center space-x-4">"
             <Link;"
               href="/contact"""
               className="inline-flex items-center px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors""
               <ArrowRight className="ml-2 h-4 w-4" />"
 
-            
           <div className="md:hidden">"
               onClick={() => setIsOpen(!isOpen)}
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}"
-
 
               initial={{ opacity: 0;, height: 0 ;}}"
               animate={{ opacity: 1;, height: 'auto' ;}}
@@ -180,16 +163,12 @@ const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
                                 className="block px-4 py-2 text-gray-400 hover:text-white transition-colors""
                                 onClick={() => {
 
-                              
                         className="block px-4 py-2 text-gray-300 hover:text-white transition-colors""
                         onClick={() => setIsOpen(false)}
 
-                      
                 <div className="pt-4 border-t border-gray-800">"
                     className="block px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg text-center hover:bg-blue-700 transition-colors""
 
-                  
-        
     </nav>
     <>;
       {/* Top Bar */}"
@@ -233,7 +212,6 @@ const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
                   onMouseEnter={() => setIsServicesOpen (true)}
                   <ChevronDown className="w - 4 h - 4 ml - 1" />;"
 
-
                       initial={{ opacity: 0;, coordinate_y: 10 ;}}
                       animate={{ opacity: 1;, coordinate_y: 0 ;}}
                       exit={{ opacity: 0;, coordinate_y: 10 ;}}"
@@ -243,7 +221,6 @@ const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
               {/* Solutions Dropdown */}"
 
                   onMouseEnter={() => setIsSolutionsOpen(true)}
-
 
                               <div className="flex items - center mb - 2">;"
                                 <IconComponent className="w - 5 h - 5 text - blue - 600 mr - 2" />;"
@@ -259,11 +236,9 @@ const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
                     </motion.div>)}
                   onMouseEnter={() => setIsSolutionsOpen (true)}
 
-
               {/* Industries Dropdown */}"
 
                   onMouseEnter={() => setIsIndustriesOpen(true)}
-
 
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4""
                       <div className="px-6">;"
@@ -275,7 +250,6 @@ const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
               {/* Resources Dropdown */}"
                   onMouseEnter={() => setIsResourcesOpen(true)}
 
-
                             href={resource && resource.href}"
                 href="/pricing"""
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;"
@@ -286,7 +260,6 @@ const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
                 href=/contact"""
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors;"
 
-              
               <a;"
                 href="tel:+13024640950"""
                 className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg font-medium transition-colors""
@@ -295,7 +268,6 @@ const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
               onClick={() => setIsMenuOpen(!isMenuOpen)}
                 <X className="w-6 h-6" />;"
                 <Menu className="w-6 h-6" />;"
-
 
                 animate={{ opacity: 1;, height: "auto" ;}}"
                 exit={{ opacity: 0;, height: 0 ;}}"
@@ -312,9 +284,6 @@ const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
 
                           href={solution && solution.href}"
 
-
-
-
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center""
 
                       className="block bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium text-center""
@@ -323,14 +292,12 @@ const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
 
                   onMouseEnter={() => setIsIndustriesOpen (true)}
 
-
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";"
                       <div className="px - 6">;"
                             href={industry.href}"
                             className="block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";"
                           ))}
                   onMouseEnter={() => setIsResourcesOpen (true)}
-
 
                             href={resource.href}"
                 href="/pricing";""
@@ -350,7 +317,6 @@ const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
 )"
                 <Menu className="w - 6 h - 6" />)}"
 
-
                 className="lg:hidden border - t border - gray - 200";"
                 <div className="py - 4 space - y-2">;"
                     className="block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue - 600 rounded - lg";"
@@ -363,9 +329,6 @@ const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
                           className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600";"
 
                           href={solution.href}"
-
-
-
 
                   <div className="px - 4 py - 2 space - y-2">;"
                       className="block bg - blue - 600 hover:bg - blue - 700 text - white px - 4 py - 2 rounded - lg font - medium text - center";"
@@ -384,25 +347,6 @@ const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
 
   X, "
 
-                    
-
-
-                            
-                    
-
-                  
-
-            
-
-
-
-
-                              
-
-                      
-
-                  
-        
                               href={dropdownItem.href}
                               className=\"block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors\";
                               onClick={() = /> setActiveDropdown(null)}
@@ -1971,13 +1915,6 @@ const Navigation = (
 
 const [activeDropdown, setActiveDropdown] = useState<string | null />(null)
 ];
-
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/Navigation.tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   return (
     <nav className=\"bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50\" />
       <div className=\"max-w-7xl mx-auto px-4 sm: px-6 lg:px-8\" />
@@ -2006,7 +1943,7 @@ onClick={() = /> toggleDropdown(item.name)}
 }
                       <ChevronDown className=\"ml-1 h-4 w-4\" />
                     </button>
-                    
+
                     <AnimatePresence />
                       {activeDropdown === item.name && (
                         <motion.div;}
@@ -2144,4 +2081,3 @@ export default Navigation;
   )}
 
 export default Navigation;;
-

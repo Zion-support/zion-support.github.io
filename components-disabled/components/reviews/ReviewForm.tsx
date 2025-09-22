@@ -12,30 +12,16 @@
     qualityOfWork?: number;
     timeliness?: number;
 
-<<<<<<< HEAD
-<<<<<<< HEAD:components/reviews/ReviewForm.tsx
-
-
-=======
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 categories?: {
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
-<<<<<<< HEAD
 >>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/reviews/ReviewForm.tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-<<<<<<< HEAD
-<<<<<<< HEAD:components/reviews/ReviewForm.tsx
-  }
+}
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
@@ -52,18 +38,6 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD
  </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {submitting ? 'Submitting...' : 'Submit Review' ;
 }</button> </form>)}type Props = {type Props = {type Props = {initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;}import React, { useState } from 'react';
-=======
- </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;
-  submitting ? 'Submitting...' : 'Submit Review' ;
-}</button> </form>) 
-};
-type Props = {;
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
-};import React, { useState } from 'react';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -77,7 +51,6 @@ type Props = {;
   submitting ? 'Submitting...' : 'Submit Review' ;
 }</button> </form>) ;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
-<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/reviews/ReviewForm.tsx
 import StarRating from './StarRating';
 export type ReviewFormValues = {;
@@ -94,16 +67,8 @@ export type ReviewFormValues = {;
   };
   anonymous?: boolean;
 };
-<<<<<<< HEAD
-
 <<<<<<< HEAD:components/reviews/ReviewForm.tsx
 type Props = {
-=======
-type Props = {;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
-type Props = {;
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/reviews/ReviewForm.tsx
 =======
 
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
@@ -411,18 +376,10 @@ const data = await res.json ();
         <label className=\"block text-sm font-medium mb-2\" htmlFor=\"input-Overall Rating\" />Overall Rating</label>;
         <StarRating value={rating} onChange={setRating} />;
       </div>;
-<<<<<<< HEAD
-
-      <div>;
-<<<<<<< HEAD:components/reviews/ReviewForm.tsx
+<div>;
 <label className='block text-sm font-medium mb-2'>Your Review</label>;
         <textarea;
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500';
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
-        <label className='block text-sm font-medium mb-2'>Your Review</label>;
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/reviews/ReviewForm.tsx
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
 =======
@@ -457,45 +414,19 @@ className='w-full rounded-md border border-gray-300 p-3 focus: outline-none focu
         />;
       </div>;
 <<<<<<< HEAD
-<<<<<<< HEAD:components/reviews/ReviewForm.tsx
-<<<<<<< HEAD
           onChange={e => setText(e && e.target.value)}          required;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/reviews/ReviewForm.tsx
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
-<<<<<<< HEAD:components/reviews/ReviewForm.tsx
-<<<<<<< HEAD
+:components/reviews/ReviewForm.tsx
 
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/reviews/ReviewForm.tsx
         <input
           id='anonymous'
           type='checkbox'
           checked={anonymous}
-<<<<<<< HEAD:components/reviews/ReviewForm.tsx
-<<<<<<< HEAD
+:components/reviews/ReviewForm.tsx
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/reviews/ReviewForm.tsx
-=======
-          onChange={e => setText(e && e.target.value)}          required;
-</textarea>
-          className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500""
-          value={text}
-        <input;"
-          id='anonymous
-          type='checkbox
-          checked={anonymous}
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
           onChange={e => setAnonymous(e && e.target.checked)}
         <label htmlFor='anonymous'>Submit anonymously</label>;
       <div className='grid md:grid-cols-2 gap-4'>;
@@ -505,13 +436,7 @@ className='w-full rounded-md border border-gray-300 p-3 focus: outline-none focu
             <StarRating;
               value={communication |0}
               onChange={v => setCommunication(v)}
-<<<<<<< HEAD
-<<<<<<< HEAD:components/reviews/ReviewForm.tsx
-      set_submitting (false)}
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/reviews/ReviewForm.tsx
+set_submitting (false)}
       set_submitting (false);
 =======
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
@@ -635,13 +560,7 @@ id='anonymous'
           <span className='pill' />Optional</span>;
         </div>;<div className='enhanced - card' />;
               on_change={v => setQualityOfWork (v)}
-<<<<<<< HEAD
-<<<<<<< HEAD:components/reviews/ReviewForm.tsx
 
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/reviews/ReviewForm.tsx
 =======
 
             <span className='text - sm'>Timeliness</span>;
@@ -656,14 +575,8 @@ id='anonymous'
             <span className='text - sm' />Timeliness</span>;
             <StarRating;
               value={timeliness || 0}
-<<<<<<< HEAD
-              on_change={v => set_timeliness (v)}
-<<<<<<< HEAD:components/reviews/ReviewForm.tsx
+on_change={v => set_timeliness (v)}
 
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/reviews/ReviewForm.tsx
 =======
               on_change={v = /> set_timeliness (v)}/>;
           </div>;

@@ -4,8 +4,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 ) {
   if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');

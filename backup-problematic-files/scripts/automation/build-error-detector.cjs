@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
@@ -54,7 +52,7 @@ class BuildErrorDetector {
   parseBuildErrors(output) {
     const errors = [];
     const lines = output.split("\n");
-    
+
     for (const line of lines) {
       if (line.includes("error") || 
           line.includes("Error") || 
@@ -66,7 +64,7 @@ class BuildErrorDetector {
         });
       }
     }
-    
+
     return errors;
   }
 
@@ -104,7 +102,7 @@ class BuildErrorDetector {
   async fixBuildError(error) {
     // Common build error fixes
     const errorLine = error.line.toLowerCase();
-    
+
     if (errorLine.includes("memory") || errorLine.includes("heap")) {
       return await this.fixMemoryError();
     } else if (errorLine.includes("dependency") || errorLine.includes("module not found")) {
@@ -114,7 +112,7 @@ class BuildErrorDetector {
     } else if (errorLine.includes("type") || errorLine.includes("ts")) {
       return await this.fixTypeError();
     }
-    
+
     return false;
   }
 
@@ -222,7 +220,7 @@ class BuildErrorDetector {
     try {
       // Run build check
       const checkResult = await this.runBuildCheck();
-      
+
       if (checkResult.success) {
         this.log("Build check passed successfully!");
         return { success: true, errors: [], fixed: 0 };
@@ -257,9 +255,6 @@ if (require.main === module) {
 }
 
 module.exports = BuildErrorDetector;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -371,11 +366,4 @@ this.log("� Report "generated": ${reportFile}")
   this.log("� Build check passed successfully!")
         return { "success": true, "errors": [], "fixed"}
       this.log("� Build Error Detector completed!")
-<<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-      this.log("� Build Error Detector completed!")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

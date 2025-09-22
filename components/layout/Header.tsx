@@ -30,7 +30,7 @@ const Header: React.FC = () => {
       name: 'Services';,
       href: '/services';,
       hasDropdown: true;,
-      children: [
+      children: [;
         { name: 'AI Services';, href: '/ai-services';, icon: Brain ;},
         { name: 'IT Services';, href: '/it-services';, icon: Database ;},
         { name: 'Micro SaaS';, href: '/micro-saas';, icon: Cloud ;},
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
       name: 'Solutions';,
       href: '/solutions';,
       hasDropdown: true;,
-      children: [
+      children: [;
         { name: 'Enterprise Solutions';, href: '/enterprise-solutions';, icon: Building2 ;},
         { name: 'Startup Solutions';, href: '/startup-solutions';, icon: Rocket ;},
         { name: 'Digital Transformation';, href: '/solutions/digital-transformation';, icon: Workflow ;},
@@ -56,7 +56,7 @@ const Header: React.FC = () => {
       name: 'Industries';,
       href: '/industries';,
       hasDropdown: true;,
-      children: [
+      children: [;
         { name: 'Healthcare';, href: '/industries/healthcare';, icon: Heart ;},
         { name: 'Finance';, href: '/industries/finance';, icon: DollarSign ;},
         { name: 'Manufacturing';, href: '/industries/manufacturing';, icon: Factory ;},
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
     <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Contact Bar */}
       <div className="bg-gray-900 text-white py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center space-x-6">
               <div className="flex items-center">
@@ -87,7 +87,7 @@ const Header: React.FC = () => {
                 <span>info@ziontechgroup.com</span>
               </div>
             </div>
-            <div className="hidden md:flex items-center space-x-4">
+            <div className="hidden md:flex items-center space-x-4">;
               <span>Trusted by 500+ companies</span>
               <div className="flex items-center">
                 <Star className="h-4 w-4 text-yellow-400 mr-1" />
@@ -99,7 +99,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex justify-between items-center h-16">
 import { ;
   Menu,
@@ -179,9 +179,9 @@ const Header: React.FC = () => {
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' 
         : 'bg-transparent'
-
+;
 pr-12243
-                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium";
                     onClick={() => setIsMenuOpen(false)}
                   >;
                     {item && item.name}
@@ -296,19 +296,19 @@ pr-12243
     { name: 'Contact', href: '/contact', icon: Phone }
   ];
   const serviceCategories = [;
-    {name: 'Micro SaaS'
-      href: '/services/micro-saas'
-      description: 'Innovative focused software solutions'
+    {name: 'Micro SaaS';
+      href: '/services/micro-saas';
+      description: 'Innovative focused software solutions';
       popular: ['AI Content Generator';, 'Social Media Scheduler', 'Invoice Management', 'Time Tracking'];
 }
-    {name: 'IT Services'
-      href: '/services/it-services'
-      description: 'Enterprise infrastructure & security'
+    {name: 'IT Services';
+      href: '/services/it-services';
+      description: 'Enterprise infrastructure & security';
       popular: ['Cloud Migration';, 'Edge Computing', 'Zero Trust Security', '5G Networks'];
 }
-    {name: 'AI Services'
-      href: '/services/ai-services'
-      description: 'Cutting-edge AI & machine learning'
+    {name: 'AI Services';
+      href: '/services/ai-services';
+      description: 'Cutting-edge AI & machine learning';
       popular: ['Quantum ML';, 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
 }
   ];
@@ -357,13 +357,13 @@ pr-12243
             </Link>
           </div>
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          <div className="hidden md:block">;
             <div className="ml-10 flex items-baseline space-x-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors";
                 >
                   {item.name}
                 </Link>
@@ -372,9 +372,9 @@ pr-12243
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden">;
             <button              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 p-2"
+              className="text-gray-700 hover:text-blue-600 p-2";
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -434,7 +434,7 @@ const Header = () => {
       name: 'Services',
       href: '/services',
       hasDropdown: true,
-      children: [
+      children: [;
         { name: 'AI Services', href: '/ai-services', icon: Brain },
         { name: 'IT Services', href: '/it-services', icon: Server },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Zap },
@@ -447,7 +447,7 @@ const Header = () => {
       name: 'Solutions',
       href: '/solutions',
       hasDropdown: true,
-      children: [
+      children: [;
         { name: 'Enterprise Solutions', href: '/enterprise-solutions', icon: Building2 },
         { name: 'Startup Solutions', href: '/startup-solutions', icon: Rocket },
         { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Workflow },
@@ -460,7 +460,7 @@ const Header = () => {
       name: 'Industries',
       href: '/industries',
       hasDropdown: true,
-      children: [
+      children: [;
         { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
         { name: 'Finance', href: '/industries/finance', icon: DollarSign },
         { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
@@ -479,7 +479,7 @@ const Header = () => {
     <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Contact Bar */}
       <div className="bg-gray-900 text-white py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center space-x-6">
               <div className="flex items-center">
@@ -491,7 +491,7 @@ const Header = () => {
                 <span>info@ziontechgroup.com</span>
               </div>
             </div>
-            <div className="hidden md:flex items-center space-x-4">
+            <div className="hidden md:flex items-center space-x-4">;
               <span>Trusted by 500+ companies</span>
               <div className="flex items-center">
                 <Star className="h-4 w-4 text-yellow-400 mr-1" />
@@ -503,7 +503,7 @@ const Header = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
@@ -516,12 +516,12 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">;
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.hasDropdown ? (
                   <div
-                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200"
+                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200";
                     onMouseEnter={() => {
                       if (item.name === 'Services') setIsServicesOpen(true);
                       if (item.name === 'Solutions') setIsSolutionsOpen(true);
@@ -534,11 +534,11 @@ const Header = () => {
                     <span className="font-medium">{item.name}</span>
                     <ChevronDown className="h-4 w-4" />
                   </div>
-                ) : (
+                ) : (;
                   <Link
                     href={item.href}
                     className={`font-medium transition-colors duration-200 ${
-                      isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                      isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600';
                     }`}
                   >
                     {item.name}
@@ -562,7 +562,7 @@ const Header = () => {
                             <Link
                               key={child.name}
                               href={child.href}
-                              className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+                              className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200";
                             >
                               <child.icon className="h-5 w-5 mr-3 text-blue-500" />
                               <span className="text-sm font-medium">{child.name}</span>
@@ -591,7 +591,7 @@ const Header = () => {
                             <Link
                               key={child.name}
                               href={child.href}
-                              className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+                              className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200";
                             >
                               <child.icon className="h-5 w-5 mr-3 text-blue-500" />
                               <span className="text-sm font-medium">{child.name}</span>
@@ -607,10 +607,10 @@ const Header = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">;
             <Link
               href="/contact"
-              className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl";
   const service_categories = [;
     {
       name: 'Micro SaaS',
@@ -687,7 +687,7 @@ const Header = () => {
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' 
         : 'bg-transparent'
-
+;
   const service_categories = [;
     { name: 'AI Solutions', href: '/services / ai - solutions' },
     { name: 'Cloud & DevOps', href: '/services / cloud' },
@@ -821,36 +821,36 @@ import Link from 'next/link';
 const Header: React.FC = () => {
   return (
     <header className="bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">;
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="text-2xl font-bold text-blue-600">
               Zion Tech Group
             </Link>
           </div>
-          <nav className="hidden md:block">
+          <nav className="hidden md:block">;
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 href="/"
-                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium";
               >
                 Home
               </Link>
               <Link
                 href="/services"
-                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium";
               >
                 Services
               </Link>
               <Link
                 href="/about"
-                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium";
               >
                 About
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium";
               >
                 Contact
               </Link>{' '}
@@ -915,7 +915,7 @@ const Header = () => {
       name: 'Services',
       href: '/services',
       hasDropdown: true,
-      children: [
+      children: [;
         { name: 'AI Services', href: '/ai-services', icon: Brain },
         { name: 'IT Services', href: '/it-services', icon: Server },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Zap },
@@ -928,7 +928,7 @@ const Header = () => {
       name: 'Solutions',
       href: '/solutions',
       hasDropdown: true,
-      children: [
+      children: [;
         { name: 'Enterprise Solutions', href: '/enterprise-solutions', icon: Building2 },
         { name: 'Startup Solutions', href: '/startup-solutions', icon: Rocket },
         { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Workflow },
@@ -941,7 +941,7 @@ const Header = () => {
       name: 'Industries',
       href: '/industries',
       hasDropdown: true,
-      children: [
+      children: [;
         { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
         { name: 'Finance', href: '/industries/finance', icon: DollarSign },
         { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
@@ -960,7 +960,7 @@ const Header = () => {
     <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Contact Bar */}
       <div className="bg-gray-900 text-white py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center space-x-6">
               <div className="flex items-center">
@@ -972,7 +972,7 @@ const Header = () => {
                 <span>info@ziontechgroup.com</span>
               </div>
             </div>
-            <div className="hidden md:flex items-center space-x-4">
+            <div className="hidden md:flex items-center space-x-4">;
               <span>Trusted by 500+ companies</span>
               <div className="flex items-center">
                 <Star className="h-4 w-4 text-yellow-400 mr-1" />
@@ -984,7 +984,7 @@ const Header = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
@@ -997,12 +997,12 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">;
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.hasDropdown ? (
                   <div
-                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200"
+                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor-pointer transition-colors duration-200";
                     onMouseEnter={() => {
                       if (item.name === 'Services') setIsServicesOpen(true);
                       if (item.name === 'Solutions') setIsSolutionsOpen(true);
@@ -1015,11 +1015,11 @@ const Header = () => {
                     <span className="font-medium">{item.name}</span>
                     <ChevronDown className="h-4 w-4" />
                   </div>
-                ) : (
+                ) : (;
                   <Link
                     href={item.href}
                     className={`font-medium transition-colors duration-200 ${
-                      isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                      isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600';
                     }`}
                   >
                     {item.name}
@@ -1043,7 +1043,7 @@ const Header = () => {
                             <Link
                               key={child.name}
                               href={child.href}
-                              className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+                              className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200";
                             >
                               <child.icon className="h-5 w-5 mr-3 text-blue-500" />
                               <span className="text-sm font-medium">{child.name}</span>
@@ -1072,7 +1072,7 @@ const Header = () => {
                             <Link
                               key={child.name}
                               href={child.href}
-                              className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+                              className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200";
                             >
                               <child.icon className="h-5 w-5 mr-3 text-blue-500" />
                               <span className="text-sm font-medium">{child.name}</span>
@@ -1088,10 +1088,10 @@ const Header = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">;
             <Link
               href="/contact"
-              className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl";
             >
               Get Started
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -1099,10 +1099,10 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden">;
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-200";
 main
 
             >
@@ -1112,10 +1112,10 @@ main
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden">;
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-200";
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -1137,21 +1137,21 @@ main
               initial={{ opacity: 0, height: 0 }}'
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden"
+              className="md:hidden";
             >
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">;
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium";
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
                 ))}
 
-              className="lg:hidden border-t border-gray-200"
+              className="lg:hidden border-t border-gray-200";
             >
               <div className="py-4 space-y-4">
                 {navigation.map((item) => (
@@ -1167,7 +1167,7 @@ main
                             <Link
                               key={child.name}
                               href={child.href}
-                              className="flex items-center px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                              className="flex items-center px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200";
                             >
                               <child.icon className="h-4 w-4 mr-3 text-blue-500" />
                               <span className="text-sm">{child.name}</span>
@@ -1175,11 +1175,11 @@ main
                           ))}
                         </div>
                       </div>
-                    ) : (
+                    ) : (;
                       <Link
                         href={item.href}
                         className={`block px-4 py-2 font-medium transition-colors duration-200 ${
-                          isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                          isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600';
                         }`}
                       >
                         {item.name}
@@ -1191,19 +1191,19 @@ main
                 <div className="pt-4 border-t border-gray-200">
                   <Link
                     href="/contact"
-                    className="block mx-4 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                    className="block mx-4 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300";
                   >
                     Get Started
                   </Link>
                 </div>
-              className="md:hidden"
+              className="md:hidden";
             >
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">;
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium";
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}

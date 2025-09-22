@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,16 +119,6 @@ async function main() {
       console.log('\n✅ All conflicts resolved successfully!');
       console.log('📝 Ready to commit changes...');
 =======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-console.log('🔧 Resolving all merge conflicts...');
-=======
-console.log('🔧 Starting comprehensive merge conflict resolution...');
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 console.log('🔧 Starting comprehensive merge conflict resolution...');
@@ -146,7 +129,6 @@ console.log('🔧 Resolving all merge conflicts...');
 main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
@@ -159,17 +141,10 @@ function resolveMergeConflicts(filePath) {
   // TODO: Implement
 }
     if (!fs.existsSync(filePath)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      console.log(`⚠️  File not found: ${filePath}`);
+console.log(`⚠️  File not found: ${filePath}`);
 
       console.log(`⚠️  File not found: ${filePath}`);
 main
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -178,9 +153,7 @@ main
       return false;
 
     const content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-<<<<<<< HEAD
-      return false;
+return false;
     }
 
     console.log(`Resolving conflicts in: ${filePath}`);
@@ -219,27 +192,8 @@ main
   } catch (error) {
     console.error(`Error resolving ${filePath}:`, error.message);
 
-    
     // Check if file has merge conflicts
-        const parts = match.split('=======');
-        if (parts.length === 2) {
-        const parts = match.split('=======');
-        if (parts.length === 2) {
-        const parts = match.split('=======');
-        if (parts.length === 2) {
-=======
-
-        const parts = match.split('');
-        if (parts.length === 2) {
-          const headPart = parts[0].replace('
-        const parts = match.split('');
-        if (parts.length === 2) {
-          const headPart = parts[0].replace('
-        const parts = match.split('');
-        if (parts.length === 2) {
-          const headPart = parts[0].replace('
-    resolvedContent = resolvedContent.replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        const parts = match.split('
 
     // Write the resolved content
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
@@ -248,8 +202,7 @@ main
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
 
-<<<<<<< HEAD
-    // Check if file has merge conflicts
+// Check if file has merge conflicts
         conflictType = 'separator';
         continue;
       }
@@ -275,29 +228,16 @@ main
   } catch (error) {
     console.error(`Error resolving ${filePath}:`, error.message);
 main
-
-=======
-
-    // Check if file has merge conflicts
-    if (!content.includes('
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-        const parts = match.split('
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return false;
   }
 }
 
 // Function to find all files with merge conflicts
-<<<<<<< HEAD
 function findConflictedFiles() {
   try {
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     return result.trim().split('\n').filter(file => file.length > 0);
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
@@ -309,19 +249,12 @@ function findFilesWithConflicts() {
       .map(line => line.substring(3).trim())
       .filter(file => file.length > 0);
     return files;
-<<<<<<< HEAD
-<<<<<<< HEAD
 function findConflictedFiles() {
   try {
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     return result.trim().split('\n').filter(file => file.length > 0);
 
 main
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
@@ -331,15 +264,7 @@ main
     console.error('Error finding conflicted files:', error.message);
     return [];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Main resolution process
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function main() {
   console.log('🔍 Finding files with merge conflicts...');
   const conflictedFiles = findConflictedFiles();
@@ -361,19 +286,13 @@ function main() {
     } else {
   // TODO: Implement
       failedCount++;
-<<<<<<< HEAD
-    }
-<<<<<<< HEAD
-
-  } catch (error) {
+}
+} catch (error) {
     console.log(`❌ Error in main process: ${error.message}`);
   }
 }
 
 main();
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   });
 `;
   console.log(`\n📊 Resolution Summary:`);`;
@@ -394,14 +313,10 @@ main();
 // Run the resolution;
 main();
 <<<<<<< HEAD
-<<<<<<< HEAD
 // Main execution
 try {
   const conflictedFiles = findFilesWithConflicts();
   console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -470,27 +385,15 @@ try {
   process.exit(1);
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> main
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-main
-
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

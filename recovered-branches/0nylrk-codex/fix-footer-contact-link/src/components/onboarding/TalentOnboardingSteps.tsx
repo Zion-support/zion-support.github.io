@@ -1,17 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -22,17 +11,11 @@ import {UserCheck, Star, CalendarCheck, BriefcaseIcon} from "lucide-react";
 import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function TalentOnboardingSteps() {;
 <<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user } = useAuth();
 
   const onboardingStatus = useOnboardingStatus();
-<<<<<<< HEAD
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
@@ -40,39 +23,12 @@ import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function TalentOnboardingSteps() {
   const { user } = useAuth();
-=======
-export function TalentOnboardingSteps() {
-  const { user } = useAuth(),
-  const onboardingStatus = useOnboardingStatus(),
-  
-import React from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
-export function TalentOnboardingSteps() {
-  const { user } = useAuth();  const onboardingStatus = useOnboardingStatus();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-export function TalentOnboardingSteps() {;
-
-  const { user } = useAuth();
-
-  const onboardingStatus = useOnboardingStatus();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const onboardingStatus = useOnboardingStatus();
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react",
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
 =======
 
-<<<<<<< HEAD
-
-
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
@@ -80,25 +36,18 @@ import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
 export function TalentOnboardingSteps() {
   const { user } = useAuth(),
   const onboardingStatus = useOnboardingStatus(),
-  
+
 import React from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function TalentOnboardingSteps() {
-<<<<<<< HEAD
-  const { user } = useAuth();
+const { user } = useAuth();
   const onboardingStatus = useOnboardingStatus();
-=======
-  const { user } = useAuth();  const onboardingStatus = useOnboardingStatus();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const steps: OnboardingStep[] = [
@@ -124,28 +73,11 @@ export function TalentOnboardingSteps() {
       action: "Set",
     },
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 id: "match"
       id: "match"
-=======
-import React from "react";"
-import {useAuth} from "@/hooks/useAuth";"
-import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";"
-import {UserCheck, Star, CalendarCheck, BriefcaseIcon} from "lucide-react";"
-import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
-"
-id: "match""
-      id: "match""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       label: "Receive your first job match"
       completed: onboardingStatus.matchReceived"
       link: "/talent-dashboard""
@@ -154,12 +86,10 @@ id: "match""
   ];"
       id: "match","
       label: "Receive your first job match",
-<<<<<<< HEAD
-      completed: onboardingStatus.matchReceived,
+completed: onboardingStatus.matchReceived,
       link: "/talent-dashboard",
-<<<<<<< HEAD
-      action: "View Matches"}],
-  
+action: "View Matches"}],
+
   return <OnboardingTracker steps={steps} />
 import React from "react",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -172,103 +102,46 @@ export function TalentOnboardingSteps() {;
 <<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const steps: OnboardingStep[] = [;
     {;
       id: "profile",;
       label: "Complete your profile",;
+completed: onboardingStatus && onboardingStatus.profileCompleted,;
 <<<<<<< HEAD
-      completed: onboardingStatus && onboardingStatus.profileCompleted,;
-<<<<<<< HEAD
-=======
-      completed: onboardingStatus.profileCompleted,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       link: "/profile",;
       action: "Update"},;
     {;
       id: "skills",;
       label: "Add your top skills",;
-<<<<<<< HEAD
-      completed: onboardingStatus && onboardingStatus.skillsAdded,;
-<<<<<<< HEAD
-=======
-      completed: onboardingStatus.skillsAdded,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+completed: onboardingStatus && onboardingStatus.skillsAdded,;
+
       link: "/profile/skills",;
       action: "Add Skills"},;
     {;
       id: "availability",;
       label: "Set your availability",;
-<<<<<<< HEAD
-      completed: onboardingStatus && onboardingStatus.availabilitySet,;
-<<<<<<< HEAD
-=======
-      completed: onboardingStatus.availabilitySet,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+completed: onboardingStatus && onboardingStatus.availabilitySet,;
+
       link: "/profile/availability",;
       action: "Set"},;
     {;
       id: "match",;
       label: "Receive your first job match",;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      completed: onboardingStatus && onboardingStatus.matchReceived,;
+completed: onboardingStatus && onboardingStatus.matchReceived,;
       link: "/talent-dashboard",;
       action: "View Matches"}],;
-
-
-=======
-      completed: onboardingStatus.matchReceived,;
-      link: "/talent-dashboard";
-      action: "View Matches"}];
-      completed: onboardingStatus && onboardingStatus.matchReceived,;
-      link: "/talent-dashboard",;
-      action: "View Matches"}],;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return <OnboardingTracker steps={steps} />;
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
-
-=======
-
-=======
-    {
-
-
-id: "match"
-      id: "match"
-      label: "Receive your first job match"
-      completed: onboardingStatus.matchReceived
-      link: "/talent-dashboard"
-      action: "View Matches"
-    }
-  ];
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       id: "match",
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
       link: "/talent-dashboard",
 <<<<<<< HEAD
-<<<<<<< HEAD
       action: "View Matches"}],
-  
+
   return <OnboardingTracker steps={steps} />
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
-      completed: onboardingStatus.matchReceived,"
-      link: "/talent-dashboard","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       action: "View Matches",
     },
   ];
@@ -284,7 +157,6 @@ id: "match"
 
   const { user } = useAuth();
 
-<<<<<<< HEAD
 import React from './react';'
 import { use_auth  } from '@/hooks / use_auth';'
 import { useOnboardingStatus  } from '@/hooks / useOnboardingStatus';'
@@ -294,23 +166,11 @@ export /**;
  * TalentOnboardingSteps - Function description;
  */
 function TalentOnboardingSteps() {}
-=======
-import React from './react';
-import { use_auth  } from '@/hooks / use_auth';
-import { useOnboardingStatus  } from '@/hooks / useOnboardingStatus';
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon  } from './lucide-react';
-import { OnboardingTracker, OnboardingStep  } from './OnboardingTracker';
-export /**
- * TalentOnboardingSteps - Function description
- */
-function TalentOnboardingSteps() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user } = use_auth ();
   const onboarding_status = useOnboardingStatus ();
 ;
   const steps: OnboardingStep[] = [;
-<<<<<<< HEAD
-    {"
+{"
       id: "profile","
       label: "Complete your profile",
       completed: onboarding_status.profile_completed,"
@@ -336,34 +196,6 @@ function TalentOnboardingSteps() {
       label: "Receive your first job match",
       completed: onboarding_status.match_received,"
       link: "/talent - dashboard","
-=======
-    {
-      id: "profile",
-      label: "Complete your profile",
-      completed: onboarding_status.profile_completed,
-      link: "/profile",
-      action: "Update",
-    },
-    {
-      id: "skills",
-      label: "Add your top skills",
-      completed: onboarding_status.skills_added,
-      link: "/profile / skills",
-      action: "Add Skills",
-    },
-    {
-      id: "availability",
-      label: "Set your availability",
-      completed: onboarding_status.availability_set,
-      link: "/profile / availability",
-      action: "Set",
-    },
-    {
-      id: "match",
-      label: "Receive your first job match",
-      completed: onboarding_status.match_received,
-      link: "/talent - dashboard",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       action: "View Matches",
     },
   ];
@@ -371,20 +203,11 @@ function TalentOnboardingSteps() {
   return <OnboardingTracker steps={steps} />;
 }
 
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-  return <OnboardingTracker steps={steps} />;
+return <OnboardingTracker steps={steps} />;
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -474,6 +297,5 @@ return <OnboardingTracker steps= {
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

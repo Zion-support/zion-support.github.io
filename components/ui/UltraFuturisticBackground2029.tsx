@@ -32,7 +32,7 @@ export default function UltraFuturisticBackground2029(): any ({ children }: { ch
 
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
 
-  maxLife: number
+  maxLife: number;
 }
 
 interface EnergyField {
@@ -42,11 +42,11 @@ interface EnergyField {
   intensity: number;
   color: string;
 }) {
-  pulse: number
+  pulse: number;
 }
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
   const canvasRef = null;
-            ease: "easeInOut"
+            ease: "easeInOut";
 origin/cursor/automate-test-improve-and-merge-code-2533
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
@@ -94,7 +94,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const initParticles = () => {}
       const particles: Particle[] = [];
       const colors = {'
-        neon: ['#ff0066#00ffff#ffff00#ff00ff']
+        neon: ['#ff0066#00ffff#ffff00#ff00ff'];
       }
       for (let i = 0, i < 150, i++) {'
         const type = ['energydataquantumneon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
@@ -234,7 +234,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         switch (particle.type) {
           case 'energy':
-            // Energy particles with glow effect
+            // Energy particles with glow effect;
             ctx.shadowColor = particle.color;
             ctx.shadowBlur = 15;
             ctx.globalCompositeOperation = 'screen';
@@ -253,7 +253,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           case 'neon':;
             // Neon particles with bright glow;
           case 'neon':
-            // Neon particles with bright glow
+            // Neon particles with bright glow;
             ctx.shadowColor = particle.color;
             ctx.shadowBlur = 20;
             ctx.globalCompositeOperation = 'lighter';
@@ -382,7 +382,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         style={{ zIndex: -1 }}
           transition={{}
             duration: 8;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',      }
       {/* Animated background canvas */}
       <canvas;
@@ -391,13 +391,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         style={{ zIndex: -1 }}
           transition={{}
             duration: 6;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
           }}
           transition={{}
             duration: 8,
             repeat: Infinity,"
-            ease: "easeInOut"
+            ease: "easeInOut";
       />
       {/* Floating geometric shapes */}
       <div className='absolute inset-0 pointer-events-none'>
@@ -428,13 +428,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 12;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
           }}
           transition={{}
             duration: 6,
             repeat: Infinity,"
-            ease: "easeInOut"
+            ease: "easeInOut";
           }}"
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45"
         />;
@@ -453,7 +453,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
           transition={{}
             duration: 10;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}          }}
 
           }}

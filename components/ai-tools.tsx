@@ -52,7 +52,7 @@ export default function AiToolsPage() {
   const aiTools = null;
       description:
         'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.'
-      features: [
+      features: [;
 origin/cursor/automate-test-improve-and-merge-code-2533
         'Advanced reasoning & analysis',
         'Web browsing & real-time info',
@@ -61,19 +61,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Professional writing assistance',
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
       ];'
-      pricing: '$20/month''
-      marketPrice: '$20/month''
-      website: 'https://chat.openai.com''
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600''
-      textColor: 'text-green-400''
-      gradient: 'from-green-400 to-emerald-500'
-      popular: true'
+      pricing: '$20/month'';
+      marketPrice: '$20/month'';
+      website: 'https://chat.openai.com'';
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'';
+      textColor: 'text-green-400'';
+      gradient: 'from-green-400 to-emerald-500';
+      popular: true';
       website: 'https://chat.openai.com','
       color: 'bg - gradient - to - br from - green - 500 to - emerald - 600','
       text_color: 'text - green - 400','
       gradient: 'from - green - 400 to - emerald - 500',
       popular: true,'
-      category: 'Conversational AI'
+      category: 'Conversational AI';
     }
     {'
       website: 'https://midjourney.com','
@@ -81,7 +81,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       text_color: 'text - purple - 400','
       gradient: 'from - purple - 400 to - pink - 500',
       popular: true,'
-      category: 'Image Generation'
+      category: 'Image Generation';
     }
     {'
       description: 'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.';
@@ -103,7 +103,7 @@ category: 'Conversational AI',
       title: 'Midjourney',
       description:
         'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.',
-      features: [
+      features: [;
         'High-quality image generation',
         'Artistic style control',
         'Commercial usage rights',
@@ -124,7 +124,7 @@ category: 'Image Generation',
       title: 'GitHub Copilot',
       description:
         'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
-      features: [
+      features: [;
         'Intelligent code completion',
         'Multi-language support',
         'IDE integration',
@@ -145,7 +145,7 @@ category: 'Code Generation',
       title: 'Runway ML',
       description:
         'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.',
-      features: [
+      features: [;
         'AI video generation',
         'Video editing tools',
         'Motion tracking',
@@ -166,7 +166,7 @@ category: 'Video Generation',
       title: 'Claude Pro',
       description:
         'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.'
-      features: [
+      features: [;
 origin/cursor/automate-test-improve-and-merge-code-2533
         'Advanced reasoning abilities',
         'Document analysis',
@@ -318,7 +318,7 @@ category: 'Conversational AI',
       title: 'Jasper AI',
       description:
         'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.',
-      features: [
+      features: [;
         'Content generation',
         'Brand voice training',
         'SEO optimization',
@@ -404,11 +404,11 @@ avgPrice: '$82/month',
           content='Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links.'
         />
         <meta
-          property='og:title'
+          property='og:title';
           content='AI Tools & Services | Zion Tech Group'
         />
         <meta
-          property='og:description'
+          property='og:description';
           content='Real AI tools with pricing and direct links to help boost your productivity and creativity.'
         />
         <meta name='twitter:card' content='summary_large_image' />
@@ -444,7 +444,7 @@ avgPrice: '$82/month',
               about which tools to invest in.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>;
             {aiMarketStats.map((stat, index) => (
               <Card
                 key={index}
@@ -481,14 +481,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Each tool has been carefully selected based on performance, reliability, and real-world value.
             </p>
           </div>"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Each tool has been carefully selected based on performance
               reliability, and real-world value.
             </p>
           </div>
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {aiTools.map((tool, index) => (
       {/* AI Tools Grid */}'
@@ -512,7 +512,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card;
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${'
-                  tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''`
+                  tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''`;
                 }`}
                       <Button;
                         href={tool && tool.website}'
@@ -580,7 +580,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='flex items-center justify-between mb-3'>
                         <span className='text-sm text-gray-500'>
                           Service Price:
-                        </span>
+                        </span>;
                         <span className='text-lg font-semibold text-cursor-blue'>
                           {tool.pricing}
                         </span>
@@ -588,7 +588,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='flex items-center justify-between mb-3'>
                         <span className='text-sm text-gray-500'>
                           Market Average:
-                        </span>
+                        </span>;
                         <span className='text-sm text-gray-400'>
                           {tool.marketPrice}
                         </span>
@@ -608,7 +608,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </ul>"
                         variant="primary""
                         size="sm""
-                        className="bg-cursor-blue hover:bg-cursor-blue-dark"
+                        className="bg-cursor-blue hover:bg-cursor-blue-dark";
                       >
                         Try Tool"
                         <ExternalLink className="w-4 h-4 ml-2" />
@@ -622,7 +622,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         href={tool.website}
                         variant='primary'
                         size='sm'
-                        className='bg-cursor-blue hover:bg-cursor-blue-dark'
+                        className='bg-cursor-blue hover:bg-cursor-blue-dark';
                       >
                         Try Tool
                         <ExternalLink className='w-4 h-4 ml-2' />
@@ -656,7 +656,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               comprehensive toolkit for your needs.
             </p>
           </div>'
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {aiCategories.map((category, index) => (
           </div>;
         </div>;
@@ -772,7 +772,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Practical advice for implementing AI tools in your workflow and maximizing their value.
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
             <Card className="card-hover border-gradient-blue">"
               <div className="p-6">"
                 <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">"
@@ -788,7 +788,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               maximizing their value.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             <Card className='card-hover border-gradient-blue'>
               <div className='p-6'>
                 <div className='w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -851,7 +851,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/micro-saas""
               variant="primary""
               size="lg""
-              className="bg-cursor-blue hover:bg-cursor-blue-dark"
+              className="bg-cursor-blue hover:bg-cursor-blue-dark";
               Explore More Tools;
             </Button>
 

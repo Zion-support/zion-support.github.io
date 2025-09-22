@@ -1,17 +1,10 @@
-<<<<<<< HEAD:pages/api/integrations/connect.ts
-<<<<<<< HEAD
+:pages/api/integrations/connect.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState } from '[^']*';
 import { getProviderById } from '[^']*';
 import { ProviderConnection, SyncRules } from '[^']*';
 
-
   if (req.method !== "POST")
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/integrations/connect.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState } from "../../../lib/integrations/fileStore";
 import { getProviderById } from "../../../lib/integrations/registry";
@@ -22,14 +15,7 @@ export default function handler($2) {;
   const { providerId, syncRules } = req.body as {;
     providerId?: string;
     syncRules?: SyncRules;
-<<<<<<< HEAD:pages/api/integrations/connect.ts
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/integrations/connect.ts
-
+:pages/api/integrations/connect.ts
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
@@ -81,15 +67,10 @@ function handler() {;
       details: { sync_rules }
     });
   });
-<<<<<<< HEAD:pages/api/integrations/connect.ts
-<<<<<<< HEAD
-
+:pages/api/integrations/connect.ts
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const connection = {
     providerId: req.body?.providerId || 'unknown',
@@ -99,17 +80,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     expiresAt: Date.now() + 1000 * 60 * 60,
     connectedAt: Date.now(),
     syncRules: req.body?.syncRules || {},
-=======
-export default function handler($2) {;
-  const connection = {;
-    providerId: req.body?.providerId || 'unknown';
-    status: 'connected';
-    accessToken: 'mock access token';
-    refreshToken: 'mock refresh token';
-    expiresAt: Date.now() + 1000 * 60 * 60;
-    connectedAt: Date.now();
-    syncRules: req.body?.syncRules || {}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/integrations/connect.ts
     lastSyncAt: undefined
   };
   res.status(200).json({ connection });
@@ -129,19 +99,8 @@ export default function handler($2) {;
     } catch (error) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD:pages/api/integrations/connect.ts
-<<<<<<< HEAD
-=======
+:pages/api/integrations/connect.ts
 
-=======
-
-}
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/integrations/connect.ts
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules };
   if (!providerId || !getProviderById(providerId)) {;
@@ -162,20 +121,7 @@ export default function handler($2) {;
     state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })
   });
 
-
-<<<<<<< HEAD:pages/api/integrations/connect.ts
-=======
-  res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
-
-}
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+:pages/api/integrations/connect.ts
 =======
   res.status (200).json ({
     ok: true,
@@ -184,7 +130,6 @@ export default function handler($2) {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

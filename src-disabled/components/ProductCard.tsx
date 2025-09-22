@@ -1,7 +1,5 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link',;
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist',;
@@ -38,41 +36,21 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
   const [isRedirecting, setIsRedirecting] = useState(false), // Added for loading state;
   const router = useRouter(),;
   const stockStatus =;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-const stockStatus =;
-    product && product.stock === undefined;
-      : 'In stock';
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   const stockVariant =;
     product && product.stock === undefined;
   const productTitle = product && product.title;
-<<<<<<< HEAD
-
-  const imageUrl = Array && Array.isArray(product && product.images) && product && product.images.length > 0 ? product && product.images[0] : null;
+const imageUrl = Array && Array.isArray(product && product.images) && product && product.images.length > 0 ? product && product.images[0] : null;
   const imageAltText = productTitle;
 '
   const isMobile = useMediaQuery('(max-width: 768px)'),;'
   const isTablet = useMediaQuery('(max-width: 1200px)'),;
-<<<<<<< HEAD
 
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
 
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  );
+);
 }
 
   const stock_status =;
@@ -86,26 +64,7 @@ const stockStatus =;
       ? 'Low stock';
       : 'In stock',;
   const stockVariant =;
-=======
-    product.stock === undefined;'
-      : 'In stock';
-  const stock_variant =;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     product.stock === undefined;
-<<<<<<< HEAD
-=======
-    product.stock === undefined;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  const imageUrl = Array && Array.isArray(product && product.images) && product && product.images.length > 0 ? product && product.images[0] : null;,
-  const imageAltText = productTitle;
-  const isMobile = useMediaQuery('(max-width: 768px)'),;
-  const isTablet = useMediaQuery('(max-width: 1200px)'),;
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
-  );
-}
-    product.stock === undefined;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ? 'success';
       : product.stock <= 0;
       ? 'destructive';
@@ -138,36 +97,16 @@ const stockStatus =;
   const addToCart = () => {;
     if (!isAuthenticated) {;
       toast({;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        title: 'Login Required',;
+title: 'Login Required',;
         description: 'Please log in to add items to your cart.',;
-=======
-        title: 'Login Required',,
-  description: 'Please log in to add items to your cart.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        title: 'Login Required',;
-        description: 'Please log in to add items to your cart.',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant: 'destructive'}),;
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`),;
       return;
     }
     dispatch(addItem({ id: product.id, title: productTitle, price: product.price ?? 0 })),;
     toast({;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: 'Added to cart',;
+title: 'Added to cart',;
       description: `${productTitle} has been added to your cart`,;
-=======
-      title: 'Added to cart',,
-  description: `${productTitle} has been added to your cart`,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      title: 'Added to cart',;
-      description: `${productTitle} has been added to your cart`,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       action: {;
         label: 'View Cart',;
         onClick: () => router.push('/cart')}});
@@ -299,31 +238,13 @@ const stockStatus =;
             </Tooltip>;
           </TooltipProvider>;
         )}
-<<<<<<< HEAD
-      </div>;
+</div>;
     </div>;
-<<<<<<< HEAD
-=======
-  const product_title = product.title;
-  const image_url = Array.is_array (product.images) && product.images.length > 0 ? product.images[0] : null;
-  const imageAltText = product_title;'
-  const is_mobile = useMediaQuery ('(max - width: 768px)'),'
-  const is_tablet = useMediaQuery ('(max - width: 1200px)'),'
-  const image_sizes = is_mobile ? '100vw' : is_tablet ? '50vw' : '33vw');
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
   );
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 import Link from 'next/link';
 import { Heart } from 'lucide-react'
@@ -393,18 +314,13 @@ onBuy () > {'";
 }'"
 =======
 
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   )
 }
   )
 }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

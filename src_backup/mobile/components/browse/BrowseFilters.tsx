@@ -1,9 +1,5 @@
-<<<<<<< HEAD:src/mobile/components/browse/BrowseFilters.tsx
+:src/mobile/components/browse/BrowseFilters.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 return (
     <div className='space-y-3'>;'
       <div className='flex justify-between items-center px-4'>;'
@@ -197,7 +193,7 @@ function BrowseFilters() {}
                       </div>;
                     </div>;
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
+:src_backup/mobile/components/browse/BrowseFilters.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -210,16 +206,12 @@ import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/mobile/components/browse/BrowseFilters.tsx
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label";
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface BrowseFiltersProps {
-<<<<<<< HEAD
-  type: "jobs" | "talents"
+type: "jobs" | "talents"
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Slider } from "@/components/ui/slider",;
@@ -241,20 +233,10 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       setActiveFilters([...activeFilters, filter]);
     }
   },
-  
+
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
-  
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -269,7 +251,6 @@ import { Slider } from "@/components/ui/slider","
 import { Switch } from "@/components/ui/switch","
 import { Input } from "@/components/ui/input","
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-
 
 '
 import { X, Filter } from 'lucide-react'"
@@ -293,14 +274,7 @@ interface BrowseFiltersProps {}
               <SheetHeader>"
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-              
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -324,14 +298,7 @@ interface BrowseFiltersProps {}
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
                       </div>
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                    
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -365,14 +332,7 @@ interface BrowseFiltersProps {}
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>
                       </div>
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                    
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -396,14 +356,7 @@ interface BrowseFiltersProps {}
                     </div>
                   </>
                 )}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -414,7 +367,7 @@ interface BrowseFiltersProps {}
                 <div className="space-y-2">
                   <Label>Location</Label>
                   <Select>
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
+:src_backup/mobile/components/browse/BrowseFilters.tsx
                     <SelectTrigger>
                       <SelectValue placeholder='Select location' />
                     </SelectTrigger>
@@ -423,32 +376,13 @@ interface BrowseFiltersProps {}
                       <SelectItem value='us'>United States</SelectItem>
                       <SelectItem value='europe'>Europe</SelectItem>
                       <SelectItem value='asia'>Asia</SelectItem>
-=======
-                    <SelectTrigger>"
-                      <SelectValue placeholder="Select location" />
-                    </SelectTrigger>
-                    <SelectContent>"
-                      <SelectItem value="remote">Remote</SelectItem>"
-                      <SelectItem value="us">United States</SelectItem>"
-                      <SelectItem value="europe">Europe</SelectItem>"
-                      <SelectItem value="asia">Asia</SelectItem>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                     </SelectContent>
                   </Select>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                
                 <div className="space-y-2">
 =======
-                
+
 =======
                 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
@@ -463,19 +397,9 @@ interface BrowseFiltersProps {}
 =======
                 <div className="space-y-2">
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
+:src_backup/mobile/components/browse/BrowseFilters.tsx
                   <Label>Salary Range</Label>
-<<<<<<< HEAD:src/mobile/components/browse/BrowseFilters.tsx
-=======
-=======
-<<<<<<< HEAD:src/mobile/components/browse/BrowseFilters.tsx
-=======
-                  <div className="flex gap-4 items-center">
-=======
-                  <Label>Salary Range</Label>"
-                  <div className="flex gap-4 items-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
-                    <Input placeholder="Min" type="number" className="w-full" />
+<Input placeholder="Min" type="number" className="w-full" />
                     <span>to</span>"
                     <Input placeholder="Max" type="number" className="w-full" />
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/mobile/components/browse/BrowseFilters.tsx
@@ -486,7 +410,7 @@ interface BrowseFiltersProps {}
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/browse/BrowseFilters.tsx
                 <div className="space-y-2">
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
+:src_backup/mobile/components/browse/BrowseFilters.tsx
                   <Label>Salary Range</Label>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -494,35 +418,18 @@ interface BrowseFiltersProps {}
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </div>
 <<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                
                 <div className="space-y-2">
-=======
-                
-=======
-                "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                 <div className="space-y-2">
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                 <div className="space-y-2">
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
+:src_backup/mobile/components/browse/BrowseFilters.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-                <div className="space-y-2">
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <Label>Skills</Label>
-<<<<<<< HEAD
-                  <div className="grid grid-cols-2 gap-2">
+<div className="grid grid-cols-2 gap-2">
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">React</Badge>
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Python</Badge>
@@ -531,10 +438,6 @@ interface BrowseFiltersProps {}
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js</Badge>
                   </div>
                 </div>
-=======
-=======
-                  <Label>Skills</Label>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                   <div className='grid grid-cols-2 gap-2'>
 '
                 <div className='space-y-2'>;
@@ -569,25 +472,14 @@ interface BrowseFiltersProps {}
                 </div>;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                
+
                 <div className="flex items-center justify-between">
-=======
-                
-=======
-                "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                 <div className="flex items-center justify-between">
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                <div className="flex items-center justify-between">
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
                 <div className="flex items-center justify-between">
 
@@ -598,15 +490,6 @@ interface BrowseFiltersProps {}
               </div>
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-              
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <SheetFooter>
@@ -630,15 +513,6 @@ interface BrowseFiltersProps {}
           </Sheet>
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-          
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Select>
@@ -651,23 +525,7 @@ interface BrowseFiltersProps {}
               <SelectItem value='salary'>Highest Pay</SelectItem>
             </SelectContent>
           </Select>
-<<<<<<< HEAD
-=======
 
-=======
-
-          <Select>"
-            <SelectTrigger className="w-[120px] h-8">"
-              <SelectValue placeholder="Sort By" />
-            </SelectTrigger>
-            <SelectContent>"
-              <SelectItem value="newest">Newest</SelectItem>"
-              <SelectItem value="relevance">Best Match</SelectItem>"
-              <SelectItem value="salary">Highest Pay</SelectItem>
-            </SelectContent>
-          </Select>
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                       className='cursor-pointer hover:bg-primary/5 justify-start'>;
                       Node && Node.js;
                     </Badge>;
@@ -773,14 +631,7 @@ interface BrowseFiltersProps {}
   )
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {activeFilters.map((filter) => (
             <Badge;
               key={filter} "
@@ -794,25 +645,14 @@ interface BrowseFiltersProps {}
               />
             </Badge>
           ))}
-<<<<<<< HEAD:src/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-        </div>;
+:src/mobile/components/browse/BrowseFilters.tsx
+</div>;
       </div>;
     </div>;
   );
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           {active_filters.map (filter => (
             <Badge;
@@ -829,25 +669,13 @@ interface BrowseFiltersProps {}
       </div>;
     </div>);
 }
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD
+:src_backup/mobile/components/browse/BrowseFilters.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/mobile/components/browse/BrowseFilters.tsx
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD:src/mobile/components/browse/BrowseFilters.tsx
+:src/mobile/components/browse/BrowseFilters.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/browse/BrowseFilters.tsx
-=======
-;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx

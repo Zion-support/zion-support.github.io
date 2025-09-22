@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/mobile-app/DownloadSection.tsx
-<<<<<<< HEAD
+:src/components/mobile-app/DownloadSection.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -23,44 +22,20 @@ export const DownloadSection: React.FC = () => {
               <p className="text-lg text-gray-300 mb-8">
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.
               </p>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/DownloadSection.tsx
 appStoreUrl = {appStoreUrl,}
                 googlePlayUrl = {googlePlayUrl,}
                 onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
                 onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
-<<<<<<< HEAD:src/components/mobile-app/DownloadSection.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+:src/components/mobile-app/DownloadSection.tsx
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
-
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-              
+
 import React from "react",
 import { QrCodeIcon } from 'lucide-react'
-<<<<<<< HEAD
 import { AppStoreButtons } from "./AppStoreButtons",
 import { logInfo } from '@/utils/productionLogger',
-=======
-=======
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-
-              
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/DownloadSection.tsx
 import { AppStoreButtons } from "./AppStoreButtons";
 import { logInfo } from '@/utils/productionLogger';
 export const DownloadSection: React.FC;
@@ -83,13 +58,8 @@ export const DownloadSection: React.FC = () => {
               <p className="text-lg text-gray-300 mb-8">
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.
               </p>
-<<<<<<< HEAD:src/components/mobile-app/DownloadSection.tsx
-                            <AppStoreButtons 
-=======
-=======
-              
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/DownloadSection.tsx
-
+:src/components/mobile-app/DownloadSection.tsx
+                            <AppStoreButtons
 
               <AppStoreButtons 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -98,29 +68,17 @@ export const DownloadSection: React.FC = () => {
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => logInfo("App Store button clicked")}
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
-<<<<<<< HEAD:src/components/mobile-app/DownloadSection.tsx
+:src/components/mobile-app/DownloadSection.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
               />
-              
-=======
-              />
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-              />
-              
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/DownloadSection.tsx
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
                 <p>Free download, in-app purchases available</p>
               </div>
             </div>
-<<<<<<< HEAD:src/components/mobile-app/DownloadSection.tsx
+:src/components/mobile-app/DownloadSection.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-            
+
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                 <QrCodeIcon className="w-full h-full p-2" />
@@ -139,9 +97,6 @@ import { QrCodeIcon } from 'lucide-react';
 import { AppStoreButtons } from "./AppStoreButtons",;
 import { logInfo } from '@/utils/productionLogger',;
 export const DownloadSection: React.FC = () => {;
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // These would typically come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
@@ -153,9 +108,6 @@ export const DownloadSection: React.FC = () => {;
             <div className="flex-1">;
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Get The App Today</h2>;
               <p className="text-lg text-gray-300 mb-8">;
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
   // These would typically come from environment variables or a config;
@@ -180,13 +132,8 @@ export const DownloadSection: React.FC = () => {;
                 onAppStoreClick={() => logInfo("App Store button clicked")}
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />;
-<<<<<<< HEAD:src/components/mobile-app/DownloadSection.tsx
+:src/components/mobile-app/DownloadSection.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/DownloadSection.tsx
               <div className="text - sm text - gray - 400">;
                 <p > Compatible with iOS 14+ and Android 8.0+</p>;
                 <p > Free download, in - app purchases available</p>;
@@ -205,7 +152,7 @@ export const DownloadSection: React.FC = () => {;
       </div>;
     </section>);
 }
-<<<<<<< HEAD:src/components/mobile-app/DownloadSection.tsx
+:src/components/mobile-app/DownloadSection.tsx
 <<<<<<< HEAD
 
               />;
@@ -217,13 +164,7 @@ export const DownloadSection: React.FC = () => {;
               </div>;
             </div>;
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">;
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
-=======
-              />              <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <QrCodeIcon className="w-full h-full p-2" />;
                 {/* This would be replaced with an actual QR code in production */}
               </div>;
@@ -240,14 +181,6 @@ export const DownloadSection: React.FC = () => {;
 
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/DownloadSection.tsx
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                 <QrCodeIcon className="w-full h-full p-2" />
                 {/* This would be replaced with an actual QR code in production */}
@@ -262,9 +195,6 @@ export const DownloadSection: React.FC = () => {;
   )
 
 "
-<<<<<<< HEAD:src/components/mobile-app/DownloadSection.tsx
+:src/components/mobile-app/DownloadSection.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/DownloadSection.tsx

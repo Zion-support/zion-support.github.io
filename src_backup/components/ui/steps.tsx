@@ -1,12 +1,7 @@
-<<<<<<< HEAD:src/components/ui/steps.tsx
+:src/components/ui/steps.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { CheckIcon } from 'lucide-react';
@@ -19,11 +14,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   className?: string
 }
 export function Step({
-<<<<<<< HEAD:src/components/ui/steps.tsx
+:src/components/ui/steps.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
 status;
   label;
   description;
@@ -41,21 +33,13 @@ interface StepProps {"
   description?: string,;
   className?: string;
 }
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
+:src_backup/components/ui/steps.tsx
 
 export function Step({
 <<<<<<< HEAD
   status,
   label,
   description,
-=======
-
-
-<<<<<<< HEAD:src/components/ui/steps.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
@@ -67,46 +51,18 @@ export function Step({  className}: StepProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <li
-<<<<<<< HEAD:src/components/ui/steps.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+:src/components/ui/steps.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-export function Step({}
-  className}: StepProps) {}
-  return (;
-    <li;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
       className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "relative flex items-center",
+"relative flex items-center",
         {
           "opacity-60": status === "incomplete"},
-=======
-
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
         "relative flex items-center",
         {"
           "opacity-60": status === "incomplete"},
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 <<<<<<< HEAD:src/components/ui/steps.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
@@ -118,24 +74,10 @@ export function Step({}
     >
       <div;
         className={cn(
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
-<<<<<<< HEAD:src/components/ui/steps.tsx
+:src_backup/components/ui/steps.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium"          {
-
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium"          {
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -150,29 +92,9 @@ export function Step({}
             "bg-zion-blue border-zion-cyan text-white":
               status === "current",
             "bg-zion-purple border-zion-purple text-white":
-<<<<<<< HEAD:src/components/ui/steps.tsx
+:src/components/ui/steps.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
-=======
-"
-          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium"          {}
-"
-            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":"
-              status === "incomplete""
-            "bg-zion-blue border-zion-cyan text-white":"
-              status === "current""
-          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",
-          {"
-            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":"
-              status === "incomplete","
-            "bg-zion-blue border-zion-cyan text-white":"
-              status === "current","
-            "bg-zion-purple border-zion-purple text-white":"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
               status === "complete",}
         )}>;
 "
@@ -182,14 +104,8 @@ export function Step({}
               status === "incomplete","
             "bg-zion-blue border-zion-cyan text-white":"
               status === "current",
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
+:src_backup/components/ui/steps.tsx
 
-<<<<<<< HEAD:src/components/ui/steps.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
@@ -206,19 +122,10 @@ export function Step({}
           <CheckIcon className="h-5 w-5" />
         ) : (
           <span>
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
+:src_backup/components/ui/steps.tsx
 
-<<<<<<< HEAD:src/components/ui/steps.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
 import React from "react",;
 import { cn } from "@/lib/utils",;
-=======
-"
-import React from "react",;"
-import { cn } from "@/lib/utils",;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
 import { CheckIcon } from 'lucide-react';
 interface StepProps {;"
   status: "incomplete" | "current" | "complete",;
@@ -243,70 +150,36 @@ export function Step() { return null; }
             "bg-zion-purple border-zion-purple text-white":;"
               status === "complete"}
         )}
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
+:src_backup/components/ui/steps.tsx
       >;
-<<<<<<< HEAD:src/components/ui/steps.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
         {status === "complete" ? (;
-=======
-      >;"
-        {status === "complete" ? (;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
-<<<<<<< HEAD:src/components/ui/steps.tsx
+:src/components/ui/steps.tsx
             {/* Step number would go here */}
           </span>;
         )}
       </div>
-=======
 
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
-
-<<<<<<< HEAD
-      <div className="ml-4 min-w-0">
+<div className="ml-4 min-w-0">
         <h3
           className={cn("text-sm font-medium", {
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
         >
-=======
-=======
-
-            {/* Step number would go here */}
-<<<<<<< HEAD:src/components/ui/steps.tsx
-          </span>        )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
             "text-zion-slate-light": status === "incomplete",
             "text-zion-slate-light": status === "incomplete",
-
-<<<<<<< HEAD
-=======
-
-            {/* Step number would go here */}
-=======
-          </span>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
 
         )}
 
             "text-zion-slate-light": status === "incomplete",
             "text-zion-slate-light": status === "incomplete",
-<<<<<<< HEAD:src/components/ui/steps.tsx
+:src/components/ui/steps.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
 =======
 "
             "text-zion-slate-light": status === "incomplete","
@@ -325,59 +198,22 @@ export function Step() { return null; }
             "text-white": status === "current" || status === "complete"})}>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {label}
-<<<<<<< HEAD:src/components/ui/steps.tsx
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
-        </h3>
+:src/components/ui/steps.tsx
+</h3>
         {description && ("
           <p className="text-sm text-zion-slate-light">{description}</p>
         )}
-<<<<<<< HEAD
-      </div>;
+</div>;
     </li>;
   );
-=======
-      </div>
-    </li>
-  )
-}
-
-
-
-
-
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
-<<<<<<< HEAD:src/components/ui/steps.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
 interface StepsProps {
   currentStep: number
   className?: string
   children: React.ReactNode
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-<<<<<<< HEAD:src/components/ui/steps.tsx
-<<<<<<< HEAD
-=======
-export function Steps({ currentStep, className, children }: StepsProps) {
-  const childrenArray = React.Children.toArray(children)
+:src/components/ui/steps.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
-=======
-interface StepsProps {}
-  currentStep: number;
-  className?: string;
-  children: React.ReactNode;
-}
-export function Steps({ currentStep, className, children }: StepsProps) {}
-  const childrenArray = React.Children.toArray(children)
-;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
 ;
 interface StepsProps {;
   currentStep: number,;
@@ -387,18 +223,14 @@ interface StepsProps {;
 
 export function Steps({ currentStep, className, children }: StepsProps) {}
   const childrenArray = React.Children.toArray(children),
-  
-<<<<<<< HEAD:src/components/ui/steps.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+:src/components/ui/steps.tsx
 =======
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children)
 =======
 
-
-
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
+:src_backup/components/ui/steps.tsx
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -406,13 +238,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
   return ("
     <div className={cn("w-full", className)}>"
@@ -424,77 +250,38 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           let status: "incomplete" | "current" | "complete" = "incomplete","
           if (index < currentStep) status = "complete","
           if (index === currentStep) status = "current",
-<<<<<<< HEAD:src/components/ui/steps.tsx
-<<<<<<< HEAD
-          
-=======
-
-=======
-          
-
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
-          if (!React.isValidElement(child)) return null,
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
+:src/components/ui/steps.tsx
+if (!React.isValidElement(child)) return null,
+:src_backup/components/ui/steps.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-          
+
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
-          
+
       className;
 origin/cursor/automate-test-improve-and-merge-code-2533
           return React.cloneElement(child as React.ReactElement<StepProps>, {
-=======
-          "
-          let status: "incomplete" | "current" | "complete" = "incomplete","
-          if (index < currentStep) status = "complete","
-          if (index === currentStep) status = "current",
-          
-          return React.cloneElement(child as React.ReactElement<StepProps>, {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
             status})
         })}
       </ol>
 
-<<<<<<< HEAD:src/components/ui/steps.tsx
+:src/components/ui/steps.tsx
 <<<<<<< HEAD
-      
+
 <<<<<<< HEAD
 =======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-      
-
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
-
+:src_backup/components/ui/steps.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
       <div className="hidden md:flex md:mt-4">
-=======
-"
-      <div className="hidden md:flex md:mt-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div"
             className="h-full bg-zion-purple transition-all"
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
+:src_backup/components/ui/steps.tsx
             style={{
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-=======
-            style={{};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
 interface StepsProps {;
   currentStep: number,;
   className?: string;
@@ -509,31 +296,18 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
 }/> </div> </div> </div>) "
 }"};
 ;
-<<<<<<< HEAD:src/components/ui/steps.tsx
-<<<<<<< HEAD
+:src/components/ui/steps.tsx
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
 ;
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:src_backup/components/ui/steps.tsx
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
   return (;
 
-<<<<<<< HEAD:src/components/ui/steps.tsx
+:src/components/ui/steps.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
     <div className={cn("w-full", className)}>;
 =======
 export function Steps() { return null; }
@@ -555,9 +329,8 @@ export function Steps() { return null; }
             className="h-full bg-zion-purple transition-all";
             style={{;
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
-<<<<<<< HEAD:src/components/ui/steps.tsx
-<<<<<<< HEAD
-          />;
+:src/components/ui/steps.tsx
+/>;
         </div>;
       </div>;
     </div>;
@@ -566,25 +339,9 @@ export function Steps() { return null; }
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
-=======
-=======
-
-
-
-          // Check condition"
-if (status = "complete") {}
-  $2;
-}
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
           // Check condition
 if (status = "current") {
   $2
-=======
-          // Check condition"
-if (status = "current") {}
-  $2;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
 }
 interface StepProps {"
   status: "incomplete" | "current" | "complete",
@@ -679,16 +436,10 @@ if (status = "current") {}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
+:src_backup/components/ui/steps.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src/components/ui/steps.tsx
 <<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 
@@ -701,12 +452,9 @@ if (status = "current") {}
 
 }/> </div> </div> </div>) ;
 }"
-<<<<<<< HEAD:src/components/ui/steps.tsx
+:src/components/ui/steps.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
 =======
 ;'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx

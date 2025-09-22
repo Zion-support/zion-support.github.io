@@ -1,32 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -38,15 +10,9 @@ import { Shield, Lock, Eye, AlertTriangle, Zap, Cpu;}
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const features = [
     {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       icon: Shield
       title: "Quantum-Resistant Encryption"
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
@@ -55,17 +21,9 @@ import EnhancedFooter from '../components/EnhancedFooter';
       icon: Shield,
       title: "Quantum-Resistant Encryption",
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
-<<<<<<< HEAD
-<<<<<<< HEAD
-      color: "from-blue-500 to-cyan-500";
+color: "from-blue-500 to-cyan-500";
     };
 <<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
       color: "from-blue-500 to-cyan-500"
 };
@@ -106,9 +64,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
     }
   ];
   const benefits = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "Protect against quantum computing attacks with future-proof encryption";
+"Protect against quantum computing attacks with future-proof encryption";
     "Reduce security incidents by 90% with AI-powered threat detection";
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -121,26 +77,15 @@ export default function QuantumCybersecurityPage() {
 
   const features = [
     {
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function QuantumCybersecurityPage() {;
   const features = [;
     {;
       icon: Shield,;
 <<<<<<< HEAD
-<<<<<<< HEAD
       title: "Quantum-Resistant Encryption",;
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",;
       color: "from-blue-500 to-cyan-500";
     };
-=======
-      title: "Quantum-Resistant Encryption",,
-  description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",;
-      color: "from-blue-500 to-cyan-500"
-};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {;
       icon: Lock,;
       title: "Zero-Trust Architecture",,
@@ -167,47 +112,8 @@ export default function QuantumCybersecurityPage() {;
 };
     {;
       icon: Cpu,;
-<<<<<<< HEAD
-      title: "Secure Cloud Infrastructure",;
+title: "Secure Cloud Infrastructure",;
       description: "Enterprise-grade security for cloud deployments with end-to-end encryption.",;
-=======
-      title: "Quantum-Resistant Encryption",,
-  description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",;
-      color: "from-blue-500 to-cyan-500"
-};
-    {;
-      icon: Lock,;
-      title: "Zero-Trust Architecture",,
-  description: "Verify every user and device before granting access to any resource.",;
-      color: "from-purple-500 to-pink-500"
-};
-    {;
-      icon: Eye,;
-      title: "AI-Powered Threat Detection",,
-  description: "Machine learning algorithms that identify and respond to threats in real-time.",;
-      color: "from-green-500 to-emerald-500"
-};
-    {;
-      icon: AlertTriangle,;
-      title: "Advanced Threat Intelligence",,
-  description: "Real-time monitoring and analysis of global cyber threats and vulnerabilities.",;
-      color: "from-red-500 to-orange-500"
-};
-    {;
-      icon: Zap,;
-      title: "Automated Incident Response",,
-  description: "Instant response and mitigation of security incidents with minimal human intervention.",;
-      color: "from-yellow-500 to-orange-500"
-};
-    {;
-      icon: Cpu,;
-      title: "Secure Cloud Infrastructure",,
-  description: "Enterprise-grade security for cloud deployments with end-to-end encryption.",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      title: "Secure Cloud Infrastructure",,
-  description: "Enterprise-grade security for cloud deployments with end-to-end encryption.",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       color: "from-indigo-500 to-purple-500";
     }
   ];
@@ -230,10 +136,7 @@ function QuantumCybersecurityPage() {
       title: "Quantum - Resistant Encryption",
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
       color: "from - blue - 500 to - cyan - 500";
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       icon: Lock,
       title: "Zero - Trust Architecture",
@@ -351,9 +254,7 @@ function QuantumCybersecurityPage() {
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <>
+<>
       <Head>
         <title>Quantum Cybersecurity - Zion Tech Group</title>
         <meta name="description" content="Future-proof your security with quantum-resistant encryption and AI-powered threat detection. Protect your business against tomorrow's cyber threats today." />
@@ -370,9 +271,6 @@ function QuantumCybersecurityPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>;
       <Head />;
         <title />Quantum Cybersecurity - Zion Tech Group</title>;
@@ -386,15 +284,9 @@ function QuantumCybersecurityPage() {
       </Head>;
       <EnhancedNavigation />;
 <<<<<<< HEAD
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* Hero Section */}
@@ -408,10 +300,8 @@ href=\"/contact\"
                 className=\"bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105\" />;
                 Secure Your Business;
               </a>;
-<<<<<<< HEAD
-              <a
+<a
                 href="#demo"
-<<<<<<< HEAD
 <<<<<<< HEAD
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
@@ -428,10 +318,6 @@ href=\"/contact\"
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               <a;
 href=\"#demo\"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -442,8 +328,6 @@ href=\"#demo\"
 initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -452,25 +336,14 @@ initial={{ opacity: 0, y: 20 }}
               Comprehensive protection against current and future cyber threats.
             </p>
           </motion.div>
-
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\" />
             {features.map((feature, index) => (}
@@ -490,8 +363,6 @@ key={feature.title}
             ))}{/* Benefits */}
             ))}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -504,13 +375,7 @@ key={feature.title}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -525,34 +390,19 @@ key={feature.title}
             <motion&& motion.div;
 initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-              transition={{ duration: 0.6 }}
+transition={{ duration: 0.6 }}
              />
               <h2 className=\"text-4xl font-bold text-slate-900 mb-6\" />Why Choose Quantum Cybersecurity?</h2>
               <p className=\"text-lg text-slate-600 leading-relaxed mb-8\" />
                 Our advanced security platform provides comprehensive protection against both current and future threats.
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 Stay ahead of the curve with quantum-resistant technology.
               </p>
-<<<<<<< HEAD
-              <div className="space-y-4">
+<div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <motion.div
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     key={benefit}
 =======
               <div className=\"space-y-4\" />
@@ -569,16 +419,9 @@ key={benefit}
                   </motion && motion.div>;
                 ))}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               </div>
             </motion.div>
-
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <motion.div
@@ -611,18 +454,11 @@ initial={{ opacity: 0, x: 20 }}
         </div>
       </section>
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* Threat Landscape */}
@@ -631,8 +467,6 @@ initial={{ opacity: 0, x: 20 }}
           <motion&& motion.div;
 initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -646,21 +480,11 @@ initial={{ opacity: 0, y: 20 }}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {threats.map((threat, index) => (
               <motion.div
                 key={threat.type}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
           <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\" />
             {threats.map((threat, index) => (}
@@ -680,8 +504,6 @@ key={threat.type}
             ))}{/* Compliance */}
             ))}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -694,13 +516,7 @@ key={threat.type}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -715,8 +531,6 @@ key={threat.type}
 initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -729,10 +543,6 @@ initial={{ opacity: 0, y: 20 }}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -752,16 +562,10 @@ initial={{ opacity: 0, y: 20 }}
               <p className=\"text-white/70 text-sm\" />Service Organization Control compliance for security, availability, and confidentiality</p>
             </motion.div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <motion.div
               initial={{ opacity: 0, y: 20 }}
 =======
@@ -779,16 +583,10 @@ initial={{ opacity: 0, y: 20 }}
               <p className=\"text-white/70 text-sm\" />General Data Protection Regulation compliance for EU data privacy</p>
             </motion.div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <motion.div
               initial={{ opacity: 0, y: 20 }}
 =======
@@ -806,16 +604,10 @@ initial={{ opacity: 0, y: 20 }}
               <p className=\"text-white/70 text-sm\" />Information security management system certification</p>
             </motion.div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <motion.div
               initial={{ opacity: 0, y: 20 }}
 =======
@@ -835,26 +627,17 @@ initial={{ opacity: 0, y: 20 }}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Pricing */}
       <section className=\"py-20 bg-white\" />;
         <div className=\"max-w-7xl mx-auto px-6\" />;
           <motion&& motion.div;
 initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -868,21 +651,11 @@ initial={{ opacity: 0, y: 20 }}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
                 key={plan.plan}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
           <div className=\"grid grid-cols-1 md:grid-cols-3 gap-8\" />
             {pricing.map((plan, index) => (}
@@ -901,32 +674,18 @@ key={plan.plan}
                   </div>;}
                 )}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>
                   <div className="text-4xl font-bold text-slate-900 mb-2">
-=======
-                <div className=\"text-center mb-8\" />
-                  <h3 className=\"text-2xl font-bold text-slate-900 mb-2\" />{plan.plan}</h3>
-                  <div className=\"text-4xl font-bold text-slate-900 mb-2\" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {plan.price}
                     <span className=\"text-lg text-slate-600\" />{plan.period}</span>
                   </div>
                   <p className=\"text-slate-600\" />{plan.description}</p>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center space-x-3">
@@ -936,12 +695,7 @@ key={plan.plan}
                   ))}
                 </ul>
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan && plan.plan}</h3>;
                   <div className="text-4xl font-bold text-slate-900 mb-2">;
@@ -970,15 +724,7 @@ key={plan.plan}
                       <span className=\"text-slate-700\" />{feature}</span>;
                     </li>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-                
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <div className="text-center mb-8">
@@ -995,13 +741,6 @@ key={plan.plan}
                   <p className=\"text-slate-600\" />{plan.description}</p>
                 </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center space-x-3">
@@ -1015,13 +754,7 @@ key={plan.plan}
                       <span className=\"text-slate-700\" />{feature}</span>
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </li>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   ))}
                 </ul>;
                 <a;
@@ -1041,8 +774,6 @@ href=\"/contact\"
               </motion.div>
             ))}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -1053,15 +784,6 @@ href=\"/contact\"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -1083,10 +805,8 @@ href=\"/contact\"
                 className=\"bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105\" />;
                 Security Assessment;
               </a>;
-<<<<<<< HEAD
-              <a
+<a
                 href="/contact"
-<<<<<<< HEAD
 <<<<<<< HEAD
 
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200">;
@@ -1104,9 +824,6 @@ href=\"/contact\"
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>;
       <Head>;
         <title > Quantum Cybersecurity - Zion Tech Group</title>;
@@ -1120,17 +837,8 @@ href=\"/contact\"
       <EnhancedNavigation />;
       {/* Hero Section */}
 <<<<<<< HEAD
-<<<<<<< HEAD
       <section className="pt - 32 pb - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">;
         <div className="max - w-7xl mx - auto px - 6">;
-=======
-      <section className="pt - 32 pb - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate-900">;
-        <div className="max - w-7xl mx - auto px-6">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      <section className="pt - 32 pb - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate-900">;
-        <div className="max - w-7xl mx - auto px-6">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
               <a;
 href=\"/contact\"
@@ -1153,7 +861,4 @@ href=\"/contact\"
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

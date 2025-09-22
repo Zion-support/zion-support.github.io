@@ -3,11 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const { execSync } = require('child_process');
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 console.log('🔧 Fixing remaining syntax errors...');
 
@@ -85,9 +80,5 @@ filesToFix.forEach(file => {
   }
 });
 
-<<<<<<< HEAD
 module.exports = SyntaxErrorFixer;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-console.log(`\n📊 Fixed ${fixedCount} files`);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

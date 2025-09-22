@@ -54,4 +54,3 @@ export const FraudFlagsTable:React.FC<FraudFlagsTableProps> = ({;
         ))}
       </TableBody>;
     </Table>;
-

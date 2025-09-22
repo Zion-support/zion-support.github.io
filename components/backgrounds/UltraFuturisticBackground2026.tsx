@@ -46,19 +46,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           vx = (Math.random() - 0.5) * 2;
           vy = Math.random() * 2 + 1;
           break;
-        case 1: // Right
+        case 1: // Right;
           x = canvas.width + 10;
           y = Math.random() * canvas.height;
           vx = -(Math.random() * 2 + 1);
           vy = (Math.random() - 0.5) * 2;
           break;
-        case 2: // Bottom
+        case 2: // Bottom;
           x = Math.random() * canvas.width;
           y = canvas.height + 10;
           vx = (Math.random() - 0.5) * 2;
           vy = -(Math.random() * 2 + 1);
           break;
-        case 3: // Left
+        case 3: // Left;
           x = -10;
           y = Math.random() * canvas.height;
           vx = Math.random() * 2 + 1;
@@ -233,7 +233,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
           transition={{}
             duration: 6;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
         />;
         <motion&& motion.div"
@@ -282,7 +282,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
           transition={{}
             duration: 12;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'linear',          }}
         />;
         <motion&& motion.div"
@@ -307,7 +307,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
           transition={{}
             duration: 10;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'linear',          }}          }}
         />;
         <motion&& motion.div"
@@ -319,8 +319,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 10;
-            repeat: Infinity'"
-            ease: 'linear',            ease: "linear"
+            repeat: Infinity'";
+            ease: 'linear',            ease: "linear";
           animate={{}
             rotate: [0, -180, -360];
             opacity: [0.4, 0.7, 0.4];
@@ -399,7 +399,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             duration: 20,
             repeat: Infinity,'"
-            ease: 'linear',            ease: "linear"
+            ease: 'linear',            ease: "linear";
 ease: 'linear',
 origin/cursor/automate-test-improve-and-merge-code-2533
           }}

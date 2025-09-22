@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/header/AvatarMenu.tsx
-<<<<<<< HEAD
+:src/components/header/AvatarMenu.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react',
@@ -76,11 +75,6 @@ export const AvatarMenu: React.FC = () => {
 },
 
 export default AvatarMenu,
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/header/AvatarMenu.tsx
 import React from 'react';
 
 const AvatarMenu = () => {
@@ -92,15 +86,9 @@ const AvatarMenu = () => {
 };
 
 export default AvatarMenu;
-<<<<<<< HEAD:src/components/header/AvatarMenu.tsx
-<<<<<<< HEAD
+:src/components/header/AvatarMenu.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -192,9 +180,6 @@ export const AvatarMenu: React.FC = () => {
 };
 export default AvatarMenu;
 "
-<<<<<<< HEAD:src/components/header/AvatarMenu.tsx
+:src/components/header/AvatarMenu.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/header/AvatarMenu.tsx

@@ -108,8 +108,5 @@ yPos += 4
 }yPos += 10, // Add space between projects 
 }// If there are more projects than we're displaying 
 }return yPos + 5 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }

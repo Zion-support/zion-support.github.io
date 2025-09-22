@@ -55,7 +55,7 @@ import { Brain;
  } from 'lucide-react';
 export default function AIBusinessToolsPage() {
   const aiTools = null;
-      features: [
+      features: [;
         'Natural language processing'
         'Code generation & debugging'
         'Content creation'
@@ -63,10 +63,10 @@ export default function AIBusinessToolsPage() {
         'Creative writing'
         'Multi-language support'
       ]
-      website: 'https://chat.openai.com'
+      website: 'https://chat.openai.com';
       useCase:
         'Ideal for writers, developers, researchers, and anyone who needs AI assistance with complex tasks.'
-      pros: [
+      pros: [;
         'Powerful capabilities',
         'Easy to use',
         'Regular updates',
@@ -86,7 +86,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       users: '1M+',
       icon: <Image className='w-8 h-8 text-purple-400' />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
-      features: [
+      features: [;
         'Text-to-image generation',
         'High-resolution output',
         'Artistic styles',
@@ -97,13 +97,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       website: 'https://midjourney.com',
       useCase:
         'Perfect for designers, marketers, content creators, and businesses needing custom visual content.',
-      pros: [
+      pros: [;
         'High-quality output',
         'Creative control',
         'Commercial rights',
         'Active community',
       ],
-      cons: [
+      cons: [;
         'Discord-only interface',
         'Limited customization',
         'Monthly subscription',
@@ -120,7 +120,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       users: '100K+',
       icon: <FileText className='w-8 h-8 text-blue-400' />,
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
-      features: [
+      features: [;
         'Marketing copy generation',
         'Blog post writing',
         'Social media content',
@@ -131,7 +131,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       website: 'https://jasper.ai',
       useCase:
         'Essential for marketing teams, content creators, and businesses that need high-quality written content at scale.',
-      pros: [
+      pros: [;
         'Specialized for marketing',
         'Brand voice training',
         'SEO optimization',
@@ -340,7 +340,7 @@ function AIBusinessToolsPage() {}
       users: '50K+',
 icon: <Video className='w-8 h-8 text-red-400' />,
       color: 'bg-gradient-to-br from-red-500 to-pink-600',
-      features: [
+      features: [;
         'AI avatar generation'
         'Text-to-speech'
         'Video templates'
@@ -348,10 +348,10 @@ icon: <Video className='w-8 h-8 text-red-400' />,
         'Custom branding'
         'API access'
       ]
-      website: 'https://synthesia.io'
+      website: 'https://synthesia.io';
       useCase:
         'Perfect for creating training videos, marketing content, and presentations without hiring actors or video crews.'
-      pros: [
+      pros: [;
         'Professional quality',
         'Multiple languages',
         'Custom avatars',
@@ -370,7 +370,7 @@ icon: <Video className='w-8 h-8 text-red-400' />,
       users: '200K+',
       icon: <MessageSquare className='w-8 h-8 text-orange-400' />,
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      features: [
+      features: [;
         'Marketing copy generation',
         'Product descriptions',
         'Social media posts',
@@ -395,7 +395,7 @@ icon: <Video className='w-8 h-8 text-red-400' />,
       users: '30M+',
       icon: <Check className='w-8 h-8 text-green-400' />,
       color: 'bg-gradient-to-br from-green-500 to-teal-600',
-      features: [
+      features: [;
         'Grammar & spelling check',
         'Tone analysis',
         'Style suggestions',
@@ -406,7 +406,7 @@ icon: <Video className='w-8 h-8 text-red-400' />,
       website: 'https://grammarly.com',
       useCase:
         'Essential for anyone who writes professionally, including students, professionals, and content creators.',
-      pros: [
+      pros: [;
         'Excellent accuracy',
         'Multiple platforms',
         'Free tier',
@@ -425,7 +425,7 @@ icon: <Video className='w-8 h-8 text-red-400' />,
       users: '100K+',
 icon: <Video className='w-8 h-8 text-blue-400' />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      features: [
+      features: [;
         'Text-to-video conversion',
         'Video templates',
         'Music library',
@@ -450,7 +450,7 @@ icon: <Video className='w-8 h-8 text-blue-400' />,
       users: '25K+',
 icon: <TrendingUp className='w-8 h-8 text-green-400' />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      features: [
+      features: [;
         'Content optimization',
         'Keyword research',
         'Competitor analysis',
@@ -461,7 +461,7 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
       website: 'https://surferseo.com',
       useCase:
         'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.',
-      pros: [
+      pros: [;
 origin/cursor/automate-test-improve-and-merge-code-2533
         'Data-driven insights',
         'Content optimization',
@@ -510,21 +510,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           content='Discover the best AI-powered business tools for automation, content creation, and productivity. Expert-curated selection of AI SaaS services.'
         />;
         <meta'
-          property='og:title''
+          property='og:title'';
           content='AI Business Tools - Zion Tech Group'
         />;
         <meta'
-          property='og:description''
+          property='og:description'';
           content='Expert-curated selection of AI-powered business tools and SaaS services.'
               <Button'
                 href='#tools''
                 size='lg''
-                className='animate-scale-in shadow-2xl shadow-green-500/25 hover:shadow-green-500/40'
+                className='animate-scale-in shadow-2xl shadow-green-500/25 hover:shadow-green-500/40';
               <Button'
                 href='/contact''
                 variant='outline''
                 size='lg'
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5';
                 style={{ animationDelay: '0.4s' ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -538,46 +538,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-gray-400 text-sm">AI Tools</div>
             </div>"
             <div className="text-center group">"
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">;
                 7;
               </div>"
               <div className="text-gray-400 text-sm">Categories</div>
             </div>"
             <div className="text-center group">"
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">;
                 4.6+
               </div>"
               <div className="text-gray-400 text-sm">Avg Rating</div>
             </div>"
             <div className="text-center group">"
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">;
                 130M+
               </div>"
               <div className="text-gray-400 text-sm">Total Users</div>
 <div
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in';
             style={{ animationDelay: '0.6s' ;}}
           >
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>;
                 {aiTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>AI Tools</div>
             </div>
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
                 7
               </div>
               <div className='text-gray-400 text-sm'>Categories</div>
             </div>
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>;
                 4.6+
               </div>
               <div className='text-gray-400 text-sm'>Avg Rating</div>
             </div>
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>;
                 130M+
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>
@@ -592,7 +592,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
       {/* Category Filter */}
 <section className='py-16 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex flex-wrap justify-center gap-4'>
             {categories.map(category => (
               <button
@@ -608,9 +608,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {category}
       {/* Tools Grid */}
 <section id='tools' className='py-24 bg-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
               {selectedCategory === 'All'
                 ? 'All AI Tools'
                 : `${selectedCategory} Tools`}
@@ -621,11 +621,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 : `Explore the best ${selectedCategory.toLowerCase()} tools to enhance your business capabilities.`}
             </p>
           </div>'
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {filteredTools.map((tool, index) => (
               <Card;
                 key={index}'
-                className='group border border-gray-800 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'`
+                className='group border border-gray-800 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'`;
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;'
                 <div className='flex items-start space-x-6'>;'
                   <div className='relative'>;
@@ -635,7 +635,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>'
                   <div className='flex-1'>'
                     <div className='flex items-center justify-between mb-2'>'
-                      <h3 className='text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300'>
+                      <h3 className='text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300'>;
                         {tool.name}
                       </h3>'
                       <div className='flex items-center space-x-2'>'
@@ -659,7 +659,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
-                      </h4>'
+                      </h4>';
                       <div className='grid grid-cols-2 gap-2'>
                         {tool.features;
                           .slice(0, 4)
@@ -714,14 +714,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         size='sm'
 
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-
+;
               Why Choose AI Tools?
             </h2>"
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               AI-powered tools are revolutionizing how businesses operate, create content, and serve customers.
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
             <Card className="text-center">"
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">"
                 <Zap className="w-8 h-8 text-white" />
@@ -752,7 +752,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               create content, and serve customers.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             <Card className='text-center'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600'>
                 <Zap className='w-8 h-8 text-white' />

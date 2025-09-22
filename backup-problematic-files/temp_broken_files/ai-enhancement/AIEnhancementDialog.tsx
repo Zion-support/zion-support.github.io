@@ -47,4 +47,3 @@ export function AIEnhancementDialog({;
         />;
       </DialogContent>;
     </Dialog>;
-

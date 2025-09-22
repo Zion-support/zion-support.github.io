@@ -51,13 +51,13 @@ export async function normalizeSkillsWithAI(skills:string[]):Promise<string[]> {
     // If AI normalization fails, return the original skills;
     return skills;  }
     const data = await response.json();
-    
+
     if (!data.choices || !data.choices[0] || !data.choices[0].message) {throw new Error("Failed to normalize skills with AI")}
-    
+
     // Extract and clean the normalized skills,
 const normalizedSkillsText = data.choices[0].message.content.trim();
     const normalizedSkills = normalizedSkillsText.split(",").map(_(skill: string) => skill.trim()).filter(Boolean);
-    
+
     return normalizedSkills
   } catch (error) {_// If AI normalization fails, return the original skills,
 return skills}
@@ -155,15 +155,15 @@ export async function findBestMatches(jobDetails:any, talents:TalentProfile[]):P
     // If AI matching fails, perform a basic skill matching;
     return performBasicSkillMatching(jobDetails, talents);  }
     const data = await response.json();
-    
+
     if (!data.choices || !data.choices[0] || !data.choices[0].message) {throw new Error("Failed to match talents with AI")}
-    
+
     // Parse the AI response,
 const aiResponse = JSON.parse(data.choices[0].message.content);
-    
+
     // Check if the response is in the expected format,
 if (!Array.isArray(aiResponse)) {throw new Error("AI response format is invalid")}
-    
+
     return aiResponse
   } catch (error) {_// If AI matching fails, perform a basic skill matching,
 return performBasicSkillMatching(jobDetails, talents)}
@@ -212,7 +212,7 @@ headers: {
 body: JSON.stringify ({
   model: " gpt-4o-mini";
 messages: [ {
-  
+
 };
 {
   role: " user";
@@ -230,19 +230,16 @@ return normalizedSkills;
   jobDetails.title 
 }`;
 }) .join (" \n\n");
-  
+
 }) 
 });
 }//Parse the AI response const aiResponse = JSON.parse (data.choices[0].message.content);
 //Check if the response is in the expected format if (!Array.isArray (aiResponse) ) {
-  
+
 }return aiResponse;
 }catch (error) {
   //If AI matching fails, perform a basic skill matching return performBasicSkillMatching (jobDetails, talents) 
 }
 }/** * Fallback method that uses basic string matching to find talent matches * @param jobDetails The job to match * @param talents Array of talent profiles * @returns Array of matches with scores */ 
 }
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

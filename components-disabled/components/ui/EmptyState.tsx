@@ -3,7 +3,6 @@ import Link from 'next/link';
 import EnhancedButton from './EnhancedButton';
 
 export type EmptyStateProps = any;
-<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -65,14 +64,8 @@ function EmptyState() {}
         <div className='flex gap - 2 mt - 2'>;
           {primary_action && (
             <Link href={primary_action.href}>;
-<<<<<<< HEAD
-              <a>;
+<a>;
                 <EnhancedButton size='md'>{primary_action.label}</EnhancedButton>              </a > export type EmptyStateProps = {
-
-=======
-              <a>;'
-                <EnhancedButton size='md'>{primary_action.label}</EnhancedButton>              </a > export type EmptyStateProps = {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title: string,;
   title: string,
   description?: string;
@@ -81,28 +74,18 @@ function EmptyState() {}
 }
 
 export default function EmptyState(): any ({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {;
-<<<<<<< HEAD
-      {(primaryAction |secondaryAction) && (
+{(primaryAction |secondaryAction) && (
         <div className='flex gap-2 mt-2'>
           {primaryAction && (
             <Link href={primaryAction.href}>
               <a>
                 <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function EmptyState({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">;
       <div className="text-3xl opacity-70">{icon ?? '🧭'}</div>;
       <h3 className="text-lg font-semibold">{title}</h3>;
-=======
-  return ("
-    <div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">;'"
-      <div className="text-3xl opacity-70">{icon ?? '🧭'}</div>;"
-      <h3 className="text-lg font-semibold">{title}</h3>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       {description && <p className="text-sm opacity-80 max-w-prose">{description}</p>}
           )}
           {secondaryAction && (
@@ -132,20 +115,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Link>
 
           )}
-<<<<<<< HEAD
-          {secondaryAction && (;
+{secondaryAction && (;
             <Link href={secondaryAction && secondaryAction.href}>;
               <a>;'
                 <EnhancedButton variant='secondary' size='md'>;
                   {secondaryAction && secondaryAction.label}"
                 </EnhancedButton>              </a>                <EnhancedButton variant="secondary" size="md">{secondaryAction && secondaryAction.label}</EnhancedButton>;
-=======
-          {secondaryAction && (<Link href={secondaryAction && secondaryAction.href} />;
-              <a />;
-                <EnhancedButton variant='secondary' size='md' />;
-                  {secondaryAction && secondaryAction.label}"
-                </EnhancedButton>              </a>                <EnhancedButton variant=\"secondary\" size=\"md\" />{secondaryAction && secondaryAction.label}</EnhancedButton>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </a>;
             </Link>;
           )}
@@ -160,9 +135,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   );
 }
-<<<<<<< HEAD
 '"
-=======
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -37,4 +37,3 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
           {props.children}
         </div>;
       </div>;
-

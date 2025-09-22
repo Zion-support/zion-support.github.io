@@ -209,7 +209,7 @@ const SEO: React.FC<SEOProps> = ({'
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.''
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics''
   image = '/images/zion-tech-group-og-image.jpg''
-  url = 'https://ziontechgroup.com''
+  url = 'https://ziontechgroup.com'';
   type = 'website'
   publishedTime;
   modifiedTime'
@@ -322,21 +322,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         type='application / ld + json';
         dangerouslySetInnerHTML={{}
             contactPoint: {'
-              '@type': 'ContactPoint''
-              telephone: '+1-800-ZION-TECH''
-              contactType: 'customer service''
-              availableLanguage: 'English'
+              '@type': 'ContactPoint'';
+              telephone: '+1-800-ZION-TECH'';
+              contactType: 'customer service'';
+              availableLanguage: 'English';
             }
             address: {'
-              '@type': 'PostalAddress''
-              addressCountry: 'US'
+              '@type': 'PostalAddress'';
+              addressCountry: 'US';
             }
             hasOfferCatalog: {'
-              '@type': 'OfferCatalog''
-              name: 'Technology Services'
-              itemListElement: []
+              '@type': 'OfferCatalog'';
+              name: 'Technology Services';
+              itemListElement: [];
                 {'
-                  '@type': 'Offer'
+                  '@type': 'Offer';
                   itemOffered: {'
                     '@type': 'Service','
                     name: 'AI & Machine Learning Solutions',
@@ -354,17 +354,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   }
                 }
                 {'
-                  '@type': 'Offer'
+                  '@type': 'Offer';
                   itemOffered: {'
-                    '@type': 'Service''
-                    name: 'Quantum Computing Services'
+                    '@type': 'Service'';
+                    name: 'Quantum Computing Services';
                   }
                 }
                 {'
-                  '@type': 'Offer'
+                  '@type': 'Offer';
                   itemOffered: {'
-                    '@type': 'Service''
-                    name: 'Space Technology Solutions'
+                    '@type': 'Service'';
+                    name: 'Space Technology Solutions';
                   }
                 }
               ]
@@ -393,7 +393,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <link rel='preconnect' href='https://fonts && fonts.googleapis.com' />;
       <link'
         rel='preconnect''
-        href='https://fonts && fonts.gstatic.com''
+        href='https://fonts && fonts.gstatic.com'';
         crossOrigin='anonymous'
       {/* Additional Meta Tags for SEO */}'
       <meta name='google-site-verification' content='your-verification-code' />;'

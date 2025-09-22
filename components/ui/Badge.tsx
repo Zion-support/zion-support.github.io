@@ -161,7 +161,7 @@ export default function Badge({
     default: 'bg-blue-100 text-blue-800',
     secondary: 'bg-gray-100 text-gray-800',
     destructive: 'bg-red-100 text-red-800',
-    outline: 'border border-gray-300 text-gray-700'
+    outline: 'border border-gray-300 text-gray-700';
   };
   
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;

@@ -91,4 +91,3 @@ export default function RequestsPanel() {;
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {;
-

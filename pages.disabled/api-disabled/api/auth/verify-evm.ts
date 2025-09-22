@@ -1,42 +1,19 @@
-<<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
-<<<<<<< HEAD
+:pages_backup/api/auth/verify-evm.ts
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/auth/verify-evm.ts
 =======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/auth/verify-evm.ts
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/auth/verify-evm.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import { ethers } from "ethers";
 const JWT_SECRET = process.env.JWT_SECRET |"dev-secret-change-me";
-<<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
-<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
+:pages_backup/api/auth/verify-evm.ts
 export default async function handler(;
   req: NextApiRequest;
-=======
-=======
-========
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/auth/verify-evm.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -57,20 +34,12 @@ export default async function handler(
   const { message, signature, address, chainId } = req.body |{}
   if (!message |!signature |!address);
     return res.status(400).json({ error: "Missing fields" });
-<<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
-<<<<<<< HEAD
+:pages_backup/api/auth/verify-evm.ts
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -79,19 +48,11 @@ export default async function handler(
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/auth/verify-evm.ts
 ========
 
-
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
 =======
 
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/auth/verify-evm.ts
   try {
@@ -106,8 +67,7 @@ export default async function handler(
     if (recovered !== String(address).toLowerCase()) {;
       return res && res.status(401).json({ error: "Invalid signature" });
     }
-<<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
-<<<<<<< HEAD
+:pages_backup/api/auth/verify-evm.ts
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
@@ -118,29 +78,14 @@ export default async function handler(
   const { message, signature, address, chainId } = req.body |{}
   if (!message |!signature |!address)
     return res.status(400).json({ error: "Missing fields" });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/auth/verify-evm.ts
 
     const cookieHeader = req && req.headers.cookie || "";
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res && res.status(400).json({ error: "Missing nonce" });
-<<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
+:pages_backup/api/auth/verify-evm.ts
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
-=======
-=======
-=======;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/auth/verify-evm.ts
-========
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
+
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -164,15 +109,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const cookieHeader = req.headers.cookie || '';
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res.status(400).json({ error: 'Missing nonce' });
-<<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
-<<<<<<< HEAD
+:pages_backup/api/auth/verify-evm.ts
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD:pages/api/auth/verify-evm.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
@@ -183,15 +122,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
-
-
     const cookieHeader = req && req.headers.cookie || "";
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res && res.status(400).json({ error: "Missing nonce" });
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/auth/verify-evm.ts
-
-
 
     const nonce = match[1];
     if (!String(message).includes(`Nonce: ${nonce}`))
@@ -212,22 +147,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       "Set-Cookie"
       `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`
     );
-<<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
-<<<<<<< HEAD
+:pages_backup/api/auth/verify-evm.ts
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD
     return res && res.status(200).json({ ok: true });
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
-=======
-=======
-    return res.status(200).json({ ok: true });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/auth/verify-evm.ts
-========
-    return res.status(200).json({ ok: true });
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
 =======
     return res.status(200).json({ ok: true });
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -238,11 +164,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/auth/verify-evm.ts
   } catch (e: any) {
-<<<<<<< HEAD
-=======
-=======
-  } catch (e: any) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/auth/verify-evm.ts
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import jwt from 'jsonwebtoken';
 import { ethers } from 'ethers';
@@ -251,36 +173,22 @@ export default async function handler(req, res) {;
     return res && res.status(500).json({ error: e?.message || "Verify failed" });
 
   }
-<<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
-<<<<<<< HEAD
+:pages_backup/api/auth/verify-evm.ts
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/auth/verify-evm.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/auth/verify-evm.ts
 ========
 
-
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
 =======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
-
-
 }
-
-
-
 
 }
 
@@ -306,12 +214,9 @@ function handler() {;
     return res.status (400).json ({ error: "Missing fields" })) {
   $2
 }
-<<<<<<< HEAD:pages/api/auth/verify-evm.ts
+:pages/api/auth/verify-evm.ts
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
-=======
-  try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/auth/verify-evm.ts
     const recovered = ethers.utils;
       .verify_message (message, signature);
       .toLowerCase ();
@@ -343,41 +248,26 @@ function handler() {;
     return res.status (200).json ({ ok: true });
   } catch (e: any) {;
     return res.status (500).json ({ error: e?.message || "Verify failed" });
-<<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
-<<<<<<< HEAD
+:pages_backup/api/auth/verify-evm.ts
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/auth/verify-evm.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/auth/verify-evm.ts
 ========
 
-
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
 =======
 
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/auth/verify-evm.ts
   }
@@ -386,21 +276,14 @@ function handler() {;
   } catch (error) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
-<<<<<<< HEAD
+:pages_backup/api/auth/verify-evm.ts
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 <<<<<<< HEAD:pages/api/auth/verify-evm.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/auth/verify-evm.ts
   }
@@ -460,20 +343,10 @@ export default async function handler(req, res) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
-<<<<<<< HEAD
+:pages_backup/api/auth/verify-evm.ts
 <<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD:pages/api-disabled/api/auth/verify-evm.ts
-=======
-  }
-}
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/auth/verify-evm.ts
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+:pages/api-disabled/api/auth/verify-evm.ts
 =======
 
 }
@@ -483,23 +356,12 @@ export default async function handler(req, res) {;
 
 =======
 
-
 }
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/auth/verify-evm.ts
 
-
-
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
+:pages_backup/api/auth/verify-evm.ts
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-evm.ts
-=======
-
-
-
-
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/auth/verify-evm.ts

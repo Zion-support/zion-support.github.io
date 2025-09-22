@@ -72,4 +72,3 @@ export function ZapierIntegration() {;
           </div>;
         </CardContent>;
       </Card>;
-

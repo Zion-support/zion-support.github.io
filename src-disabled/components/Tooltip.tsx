@@ -13,17 +13,10 @@ const Tooltip: React.FC<TooltipProps> = ({,
   children,
   position = 'top','
   delay = 300,
-<<<<<<< HEAD
-  className = '',
+className = '',
   disabled = false,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
-=======
-className = '','
-  disabled = false
-}) => {,
-  const [isVisible, setIsVisible] = useState(false);,
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
   const triggerRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
@@ -95,13 +88,8 @@ className = '','
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.2, ease: 'easeOut' }}
+transition={{ duration: 0.2, ease: 'easeOut' }}
             className={`absolute z-50 ${getPositionClasses()} ${className}`}
-=======
-transition={{ duration: 0.2, ease: "easeOut" }}"
-            className={`absolute z-50 ${getPositionClasses()} ${className}`}`
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           >
             <div className="bg-gray-800 text-white text-sm px-3 py-2 rounded-lg shadow-lg max-w-xs">"
               {content}

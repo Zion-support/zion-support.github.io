@@ -1,5 +1,4 @@
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Tutorial.tsx
-<<<<<<< HEAD
+:temp_exclude/hooks.disabled/Tutorial.tsx
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { TUTORIALS } from "@/data/tutorials",
@@ -10,11 +9,6 @@ import ReactMarkdown from "react-markdown",
 import type { Tutorial as TutorialType } from "@/types/tutorial",
 interface TutorialPageProps {
   tutorial?: TutorialType
-=======
-tutorial?: TutorialType
-=======
-tutorial?: TutorialType;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Tutorial.tsx
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {}
   const router = useRouter();
@@ -26,20 +20,20 @@ class ErrorBoundary extends React.Component {}
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }'
@@ -71,15 +65,11 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
 
   if (!tutorial) {
     return (
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Tutorial.tsx
+:temp_exclude/hooks.disabled/Tutorial.tsx
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Tutorial not found.
       </div>
     )
-=======
-'
-      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Tutorial.tsx
   }
 
   return (
@@ -102,13 +92,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
             <ReactMarkdown>{tutorial.content}</ReactMarkdown>
           </div>
           {tutorial.author && (
-<<<<<<< HEAD
-=======
 
-}
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Tutorial.tsx
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <p className="mt-8 text-white font-semibold">
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -117,22 +101,11 @@ import { SEO } from "@/components/SEO",;
 import { Button } from "@/components/ui/button",;
 import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from "react-markdown",;
-=======
-"
-            <p className="mt-8 text-white font-semibold">"
-import Link from "next/link",;"
-import { useRouter } from "next/router",;"
-import { TUTORIALS } from "@/data/tutorials",;"
-import { SEO } from "@/components/SEO",;"
-import { Button } from "@/components/ui/button",;'
-import { ArrowLeft } from 'lucide-react';"
-import ReactMarkdown from "react-markdown",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Tutorial.tsx
 import type { Tutorial as TutorialType } from "@/types/tutorial",;
 interface TutorialPageProps {;
   tutorial?: TutorialType;
 }
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Tutorial.tsx
+:temp_exclude/hooks.disabled/Tutorial.tsx
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {;
   const router = useRouter(),;
   const slug = router.query.slug as string | undefined;
@@ -167,36 +140,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
           {tutorial.author && (;
             <p className="mt-8 text-white font-semibold">;
               — {typeof tutorial.author === 'string' ? tutorial.author : tutorial.author.name}
-=======
-export default function Tutorial() { return null; }
-  }
-  return (
-    <>
-      <SEO title={tutorial.title} description={tutorial.excerpt} />"
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">"
-        <div className="container mx-auto max-w-3xl">
-          <Button'
-            variant='outline''
-            className='mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
-            asChild>;'
-            <Link href='/tutorials'>;'
-              <ArrowLeft className='mr-2 h-4 w-4' /> Back to Tutorials;
-            </Link>;
-          </Button>;'
-          <h1 className='text-3xl font-bold text-white mb-4'>;
-            {tutorial && tutorial.title}
-          </h1>;'
-          <p className='text-zion-slate-light mb-8'>{tutorial && tutorial.excerpt}</p>;'
-          <div className='prose prose-invert'>;
-            <ReactMarkdown>{tutorial && tutorial.content}</ReactMarkdown>;
-          </div>;
-          {tutorial && tutorial.author && (;'
-            <p className='mt-8 text-white font-semibold'>;'
-              —{' '}'
-              {typeof tutorial && tutorial.author === 'string';
-                ? tutorial && tutorial.author;
-                : tutorial && tutorial.author.name}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Tutorial.tsx
             </p>;
           )}
         </div>;
@@ -204,27 +147,8 @@ export default function Tutorial() { return null; }
     </>;
   );
 }
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Tutorial.tsx
+:temp_exclude/hooks.disabled/Tutorial.tsx
 <<<<<<< HEAD
-=======
-
-import Link from 'next / link';
-import { use_router } from 'next / router';
-import { TUTORIALS } from '@/data / tutorials';
-import { SEO } from '@/components / SEO';
-import { Button } from '@/components / ui / button';
-import { ArrowLeft } from 'lucide-react';
-import ReactMarkdown from 'react - markdown';
-=======
-'
-import Link from 'next / link';'
-import { use_router } from 'next / router';'
-import { TUTORIALS } from '@/data / tutorials';'
-import { SEO } from '@/components / SEO';'
-import { Button } from '@/components / ui / button';'
-import { ArrowLeft } from 'lucide-react';'
-import ReactMarkdown from 'react - markdown';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Tutorial.tsx
 import type { Tutorial as TutorialType } from '@/types / tutorial';
 interface TutorialPageProps {}
   tutorial?: TutorialType;
@@ -285,9 +209,6 @@ if ( {) {}
       </div>;
     </>);
 }
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Tutorial.tsx
+:temp_exclude/hooks.disabled/Tutorial.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Tutorial.tsx

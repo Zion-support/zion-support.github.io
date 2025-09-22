@@ -85,7 +85,7 @@ if (preferred) return; // user has chosen
 localStorage.setItem('langPromptShown', '1');
     document.documentElement.setAttribute(
       "dir"
-      isRtl(suggested!) ? "rtl" : "ltr"
+      isRtl(suggested!) ? "rtl" : "ltr";
 origin/cursor/automate-test-improve-and-merge-code-2533
     );
     document && document.documentElement.setAttribute("lang", suggested!);
@@ -108,7 +108,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {t("lang && lang.switch_accept")}
           </button>;
           <button"
-            className="px-3 py-1 rounded border border-amber-300 dark:border-amber-700"
+            className="px-3 py-1 rounded border border-amber-300 dark:border-amber-700";
             onClick={decline}>;"
             {t("lang && lang.switch_decline")}
           </button>;

@@ -71,10 +71,8 @@ class ContinuousLinter {}
 // Run if called directly;
 if (require.main === module) {}
   const linter = new ContinuousLinter();
-<<<<<<< HEAD
-  
-  const command = process.argv[2];
-  
+const command = process.argv[2];
+
   if (command === 'watch') {}
     linter.run();
   } else if (command === 'fix') {}
@@ -88,16 +86,8 @@ if (require.main === module) {}
   };
 };
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = ContinuousLinter;
-module.exports = ContinuousLinter;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
   const command = process.argv[2];"
 

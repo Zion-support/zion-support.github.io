@@ -1,127 +1,48 @@
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
-<<<<<<< HEAD
+:pages_backup/dev/tree.tsx
 <<<<<<< HEAD:pages_backup/dev/tree.tsx
 <<<<<<< HEAD:pages/dev/tree.tsx
 <<<<<<< HEAD
-=======
-import React, { useEffect, useState } from "react";
-import Tree, { TreeNode } from "../../components/ui/Tree";
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dev/tree.tsx
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
   nodes: TreeNode[];
   status: { gitConnected: boolean, gitBranch?: string }
 }
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
+:pages_backup/dev/tree.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  nodes: TreeNode[];
-  status: { gitConnected: boolean, gitBranch?: string }
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dev/tree.tsx
-=======
-  nodes: TreeNode[];
-  status: { gitConnected: boolean, gitBranch?: string }
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   nodes: TreeNode[]
 status: {
   gitConnected: boolean, gitBranch?: string
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/dev/tree.tsx
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import Tree, { TreeNode } from '../../components/ui/Tree';
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dev/tree.tsx
-
-<<<<<<< HEAD
 export default function DevTreePage() {
   const [nodes, setNodes] = useState<TreeNode[] | null>(null),
   const [error, setError] = useState<string | null>(null),
   const [git, setGit] = useState<ApiResponse["status"] | null>(null),
   const [adminToken, setAdminToken] = useState<string>(""),
-=======
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import Tree, { TreeNode } from '../../components/ui/Tree';
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from 'react';
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dev/tree.tsx
-
-
 
   const [nodes, setNodes] = useState<TreeNode[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [git, setGit] = useState<ApiResponse['status'] | null>(null);
   const [adminToken, setAdminToken] = useState<string>('');
 
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
+:pages_backup/dev/tree.tsx
 '
 import Tree, { TreeNode } from '../../components / ui / Tree';
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
 interface ApiResponse {
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-  nodes: TreeNode[],
-status: {
-  git_connected: boolean, git_branch?: string;
-export default /**
- * DevTreePage - Function description
- */
-function DevTreePage() {
-  const [nodes, set_nodes] = useState < TreeNode[] | null>(null);
-  const [error, set_error] = useState < string | null>(null);
-  const [git, set_git] = useState < ApiResponse['status'] | null>(null);
-  const [admin_token, setAdminToken] = useState < string>('');
-;
-  const fetch_tree = async (token?: string) => {
-    try {
-      const resp = await fetch ('/api / dev / source - map', {
-        headers: token ? { 'x - admin - token': token } : undefined,
-      });
-      // Check condition
-if ( {) {
-  $2
-}
-        const inner_index = await resp.json ().catch (() => ({}));
-        throw new Error (j.error || `HTTP ${resp.status}`);
-
-      }
-      const data: ApiResponse = await resp.json();
-      setNodes(data.nodes);
-      setGit(data.status);
-    } catch (e: any) {
-
-import React, { useEffect, useState } from "react";
-import Tree, { TreeNode } from "../../components/ui/Tree";
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ApiResponse {
 =======
 interface ApiResponse {}
@@ -131,20 +52,13 @@ interface ApiResponse {}
   status: { gitConnected: boolean, gitBranch?: string }
 }
 
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
-<<<<<<< HEAD
+:pages_backup/dev/tree.tsx
 <<<<<<< HEAD
   const [nodes, setNodes] = useState<TreeNode[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [git, setGit] = useState<ApiResponse['status'] | null>(null);
   const [adminToken, setAdminToken] = useState<string>('');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dev/tree.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 import React, { useEffect, useState } from "react",
 import Tree, { TreeNode } from "../../components/ui/Tree",
@@ -155,8 +69,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [error, setError] = useState<string | null>(null);
 const [git, setGit] = useState<ApiResponse['status'] | null>(null);
   const [adminToken, setAdminToken] = useState<string>('');
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
-<<<<<<< HEAD
+:pages_backup/dev/tree.tsx
 <<<<<<< HEAD:pages/dev/tree.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -194,24 +107,9 @@ export default function DevTreePage() {
     localStorage.setItem("ADMIN_TOKEN", adminToken),
     fetchTree(adminToken)
   },
-=======
-=======
-export default function DevTreePage() {
-  const [nodes, setNodes] = useState<TreeNode[] | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [git, setGit] = useState<ApiResponse["status"] | null>(null);
-  const [adminToken, setAdminToken] = useState<string>("");
-
-  const fetchTree = async (token?: string) => {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     try {
       const resp = await fetch('/api/dev/source-map', {
         method: 'POST'
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dev/tree.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setError(e.message || 'Failed to load');
@@ -254,27 +152,17 @@ const resp = await fetch('/api/dev/source-map', {
         throw new Error(j.error |`HTTP ${resp.status}`);
       }
       await fetchTree(adminToken);
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
+:pages_backup/dev/tree.tsx
     } catch (e: any) {
-<<<<<<< HEAD
 <<<<<<< HEAD:pages/dev/tree.tsx
 <<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {error && <div className="mb-3 text-sm text-red-600">{error}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
     } catch (e: any) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dev/tree.tsx
@@ -322,16 +210,9 @@ const resp = await fetch('/api/dev/source-map', {
     } catch (e: any) {;'
       setError(e && e.message || 'Deploy failed');    }
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {nodes ? (
         <div className="rounded border p-3 bg-white">
-=======
-      {nodes ? (
-        <div className="rounded border p-3 bg-white">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dev/tree.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setError(e.message || 'Deploy failed');
@@ -341,7 +222,6 @@ const resp = await fetch('/api/dev/source-map', {
   return (
 <div className='p-6 max-w-5xl mx-auto'>
 =======
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dev/tree.tsx
   return (
@@ -376,17 +256,10 @@ const resp = await fetch('/api/dev/source-map', {
 
       {nodes ? (
         <div className='rounded border p-3 bg-white'>
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
-<<<<<<< HEAD
+:pages_backup/dev/tree.tsx
 <<<<<<< HEAD:pages/dev/tree.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dev/tree.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dev/tree.tsx
@@ -394,48 +267,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       ) : (
         <div>Loading...</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      )}
-    </div>
-);
-=======
 
-            onClick={handleSaveToken}>            Save Token;
-
-}
-}
-}
-
-
-            onClick={handleSaveToken}>            Save Token;
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
-            onClick={handleSaveToken}>            Save Token;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dev/tree.tsx
 
+}
+}
+}
+:pages_backup/dev/tree.tsx
 
-}
-}
-}
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from "react";
 =======
 "
@@ -552,39 +393,21 @@ export default function DevTreePage(req, res) {}
           />;"
           <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded" onClick={handleSaveToken}>;
             Save Token;
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
-<<<<<<< HEAD
+:pages_backup/dev/tree.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dev/tree.tsx
           </button>;
         </div>;
       </div>;'
       {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
 
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          </button>;
+:pages_backup/dev/tree.tsx
+</button>;
         </div>;
       </div>;
       {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
+:pages_backup/dev/tree.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-          </button>;
-        </div>;
-      </div>;
-      {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dev/tree.tsx
       {nodes ? (;
 =======
       {nodes ? (;'
@@ -594,31 +417,17 @@ export default function DevTreePage(req, res) {}
       ) : (;
         <div>Loading...</div>;
       )}
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
-<<<<<<< HEAD
+:pages_backup/dev/tree.tsx
 <<<<<<< HEAD:pages/dev/tree.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dev/tree.tsx
     </div>;
   );
 
   )
 }
 
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
+:pages_backup/dev/tree.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  )
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dev/tree.tsx
@@ -689,15 +498,10 @@ if ( {) {}
         <div > Loading...</div>)}
     </div>);
 ;
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
+:pages_backup/dev/tree.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
@@ -705,23 +509,10 @@ if ( {) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/dev/tree.tsx
-=======
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:pages_backup/dev/tree.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    </div>
-);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
     </div>
@@ -730,16 +521,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dev/tree.tsx
 =======
 
-
-
-
   } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dev/tree.tsx

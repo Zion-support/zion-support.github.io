@@ -185,10 +185,7 @@ export function sendMessage(input: NewMessageInput): { conversation: Conversatio
 
   let conversation: Conversation | undefined
   if (input.conversationId) {
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     conversation = conversations.find((c) => c.id === input.conversationId)
   }
   if (!conversation) {

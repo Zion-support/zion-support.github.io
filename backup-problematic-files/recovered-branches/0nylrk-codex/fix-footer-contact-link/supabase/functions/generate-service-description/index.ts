@@ -69,13 +69,13 @@ The description should:1. Be approximately 200-300 words;
       }
     );  }
 });
- 
+
 }try {
   const {
   title, keyFeatures, targetAudience 
 }= await req.json ();
 return new Response (JSON.stringify ({
-  
+
 }) 
 }const prompt = `Create a professional and detailed service description for the following service: The description should: 1. Be approximately 200-300 words 2. Highlight the key benefits and unique selling points 3. Use professional language suitable for a marketplace listing 4. Speak directly to the target audience 5. Include a compelling opening and closing statement`;
 temperature: 0.7 
@@ -91,7 +91,4 @@ headers: {
 }) 
 }
 });
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -20,7 +20,7 @@ export default function IAMAccessReviewPage() {}
 origin/cursor/automate-test-improve-and-merge-code-2533
         <link
           rel='canonical'
-          href='https://ziontechgroup && ziontechgroup.com/iam-access-review'
+          href='https://ziontechgroup && ziontechgroup.com/iam-access-review';
         />;'
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;'
         <div className='max-w-6xl mx-auto'>;'

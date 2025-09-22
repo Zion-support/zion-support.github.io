@@ -18,9 +18,5 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   store.set(key, timestamps),
   }
 
-<<<<<<< HEAD
-  return true
-=======
-  return true;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+return true
 }

@@ -1,14 +1,4 @@
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-main
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
 
   }
@@ -32,20 +22,6 @@ if (require.main === module) {;
   main()}
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -139,4 +115,3 @@ log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}
     log(\nℹ  No syntax issues found that could be automatically fixed.")
       "blue"
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", blue),"`}
-

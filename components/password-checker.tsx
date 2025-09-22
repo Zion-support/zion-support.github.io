@@ -236,7 +236,7 @@ return 'bg-red-400';
   const getCheckIcon = (passed: boolean) => {
     return passed ? (
 <CheckCircle className='w-5 h-5 text-green-400' />
-    ) : (
+    ) : (;
       <XCircle className='w-5 h-5 text-red-400' />
     );
   };
@@ -251,25 +251,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           content='Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords.'
         />
         <meta'
-          property='og:title''
+          property='og:title'';
           content='Password Strength Checker - Zion Tech Group'
         />
         <meta'
-          property='og:description''
+          property='og:description'';
           content='Advanced password strength analyzer with security recommendations.'
         />
       </Head>
 
       {/* Hero Section */}'
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>'
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>';
           <div className='mb-8'>'
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 text-sm font-medium mb-6'>'
               <Lock className='w-4 h-4 mr-2' />
               Password Security & Analysis;
             </div>
           </div>'
-          <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>
+          <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>;
             Password Strength Checker;
           </h1>'
           <p className='text-xl text-indigo-200 max-w-4xl mx-auto leading-relaxed'>
@@ -286,14 +286,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Hero Section */}"
       <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">"
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">";
           <div className="mb-8">"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 text-sm font-medium mb-6">"
               <Lock className="w-4 h-4 mr-2" />
               Password Security & Analysis;
             </div>
           </div>"
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">;
             Password Strength Checker;
           </h1>"
           <p className="text-xl text-indigo-200 max-w-4xl mx-auto leading-relaxed">
@@ -516,7 +516,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   )}
                 </div>
-              ) : (
+              ) : (;
 <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
                   <div className='text-6xl mb-4'>🔒</div>
                   <p className='text-gray-400'>
@@ -558,14 +558,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Features */}
 "
       <section className="py-20 bg-gray-800">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
           <div className="text-center mb-16">"
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">;
               Advanced Password Security Features
 <section className='py-20 bg-gray-800'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -573,7 +573,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">"
               <div className="text-4xl mb-4">🔍</div>"
               <h3 className="text-xl font-bold text-white mb-4">Real-time Analysis</h3>"
@@ -636,9 +636,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       {/* Security Tips */}
 <section className='py-20 bg-gray-900'>
-        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
               Password Security Best Practices
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -646,7 +646,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               passwords for all your accounts.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='text-4xl mb-4'>✅</div>
               <h3 className='text-2xl font-bold text-white mb-4'>Do's</h3>
@@ -737,7 +737,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Join thousands of users who trust our password strength checker to;
             improve their account security.
           </p>'
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
             <Button'
               href='/contact''
               size='lg'

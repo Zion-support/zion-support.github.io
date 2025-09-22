@@ -1,55 +1,13 @@
-<<<<<<< HEAD
-
 import Head from 'next/head';
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
 export default function IncidentAutomationSuitePage() {
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
   if (!service) return null;
 
   return (
-<<<<<<< HEAD
-    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:backup-problematic-files/components/incident-automation-suite.tsx.backup.1755991612
-import React from 'react'
-import Head from 'next/head'
-import { Activity, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground'
-import Button from '../components/ui/Button'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-export default function IncidentAutomationSuitePage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'))
-  if (!service) return null,
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
-========
-:pages-disabled/biotech-ai.tsx
-import React from 'react',
-import React from 'react';
-:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
-import Head from 'next/head';
-import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-:pages-disabled/biotech-ai.tsx
-import { Button  } from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import {Button} from '../components/ui/Button';
-import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
-:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
-export default function IncidentAutomationSuitePage() {
-
-:pages-disabled/biotech-ai.tsx
-export default function IncidentAutomationSuitePage() {;
-export default function IncidentAutomationSuitePage() {
-:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
-  if (!service) return null;
->>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
+<UltraFuturisticBackground variant="quantum" intensity={1.5}>
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -75,10 +33,7 @@ export default function IncidentAutomationSuitePage() {
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /><span>{feat}</span></li>
                 ))}
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>"
 

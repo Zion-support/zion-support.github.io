@@ -74,4 +74,3 @@ export function ContractPreview({ ;
         )}
       </div>;
     </div>;
-

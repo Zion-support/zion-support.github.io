@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/gallery/ProductGallery.tsx
-<<<<<<< HEAD
+:src/components/gallery/ProductGallery.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState, Suspense } from 'react',;
@@ -28,16 +27,6 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
   const [zoomOpen, setZoomOpen] = useState(false),
   const [zoomed, setZoomed] = useState(false),
   const poster = images[0],
-=======
-}
-});
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/gallery/ProductGallery.tsx
 }
 });
 
@@ -71,12 +60,9 @@ const ModelViewer = React.lazy(async () => {
     default: (props: any) => React.createElement('model-viewer', props)
   }
 })
-<<<<<<< HEAD:src/components/gallery/ProductGallery.tsx
+:src/components/gallery/ProductGallery.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/gallery/ProductGallery.tsx
 interface ProductGalleryProps {
 
 const ReactPlayer = React && React.lazy(() => import('react-player'));
@@ -186,20 +172,12 @@ export function ProductGallery(): any ({;
                   src={modelUrl}
                   alt='3d model'
                   camera-controls
-<<<<<<< HEAD:src/components/gallery/ProductGallery.tsx
-<<<<<<< HEAD
-          <div
+:src/components/gallery/ProductGallery.tsx
+<div
             className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
             onClick={() => setZoomed(!zoomed)}
           >
 <<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   images: string[];
@@ -298,7 +276,6 @@ function ProductGallery() {
 
           >;
 
-
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/gallery/ProductGallery.tsx
             <img
@@ -308,12 +285,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             />          </div>;
         </DialogContent>;
       )}
-<<<<<<< HEAD:src/components/gallery/ProductGallery.tsx
-<<<<<<< HEAD
+:src/components/gallery/ProductGallery.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
     <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>
@@ -324,8 +297,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {modelUrl && <TabsTrigger value="model">3D</TabsTrigger>}
       </TabsList>
 
-<<<<<<< HEAD
-      <TabsContent value="images" className="pt-4">
+<TabsContent value="images" className="pt-4">
         <div className="aspect-video w-full relative">
           <DialogTrigger asChild>
             <img
@@ -434,15 +406,6 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
   );
 <<<<<<< HEAD
 }
-=======
-=======
-
-    </Dialog>;
-  )
-};
-};
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState, Suspense } from 'react',;
 import {;
   Dialog,;
@@ -461,20 +424,7 @@ const ModelViewer = React.lazy(async () => {;
 interface ProductGalleryProps {;
   images: string[],;
   videoUrl?: string,;
-<<<<<<< HEAD
-  modelUrl?: string;          </TabsContent>)}
-=======
-  modelUrl?: string;
-
-=======
-
-}
-}
-
-}
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/gallery/ProductGallery.tsx
+modelUrl?: string;          </TabsContent>)}
           </TabsContent>)}
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </Tabs>;
@@ -492,28 +442,14 @@ interface ProductGalleryProps {;
         </DialogContent>)}
     </Dialog>);
 }
-<<<<<<< HEAD:src/components/gallery/ProductGallery.tsx
+:src/components/gallery/ProductGallery.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/gallery/ProductGallery.tsx
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-;
-
-    </Dialog>
-  );
-<<<<<<< HEAD:src/components/gallery/ProductGallery.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533

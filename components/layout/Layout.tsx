@@ -6,8 +6,8 @@ main
 import React, { ReactNode } from 'react';
 React from
   'react'
-import Header from 'react'
-  './Header';import Footer from 'react'
+import Header from 'react';
+  './Header';import Footer from 'react';
   './Footer'
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
@@ -31,8 +31,8 @@ main
 import React, { ReactNode } from 'react';
 React from
   'react'
-import Header from 'react'
-  './Header';import Footer from 'react'
+import Header from 'react';
+  './Header';import Footer from 'react';
   './Footer'
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
@@ -92,7 +92,7 @@ export default Layout;
 import React from 'react;
 import Header from './Header;
 import Footer from './Footer;
-export: default /**
+export: default /**;
  * Layout - Function description
  */
 function Layout() {

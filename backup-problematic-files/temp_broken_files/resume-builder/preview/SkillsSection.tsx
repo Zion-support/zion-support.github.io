@@ -35,4 +35,3 @@ export function SkillsSection({ skills } SkillsSectionProps) {;
       </div>;
     </div>;
 <<<<<<< HEAD
-

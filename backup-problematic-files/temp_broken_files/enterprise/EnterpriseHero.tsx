@@ -41,4 +41,3 @@ export function EnterpriseHero() {;
           </div>;
         </div>;
       </div>;
-

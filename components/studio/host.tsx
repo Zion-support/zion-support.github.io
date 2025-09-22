@@ -148,7 +148,7 @@ const res = await fetch('/api/podcast/rss', { method: 'POST' });
 
 <section className='space-y-3'>
         <h2 className='text-xl font-semibold'>Episode Generator</h2>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
           <div>
             <label className='block text-sm font-medium'>Invitee Name</label>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -156,7 +156,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='mt-1 w-full border rounded p-2'
 <section className='space-y-3' />
         <h2 className='text-xl font-semibold' />Episode Generator</h2>
-        <div className='grid grid-cols-1 md: grid-cols-3 gap-4' />
+        <div className='grid grid-cols-1 md: grid-cols-3 gap-4' />;
           <div />
             <label className='block text-sm font-medium' />Invitee Name</label>
             <input;
@@ -209,15 +209,15 @@ className='mt-1 w-full border rounded p-2'
             <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>"
             <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
           </div>"
-          <div className="md:col-span-2">"
+          <div className="md:col-span-2">";
             <label className="block text-sm font-medium" htmlFor="input-Invitee Bio">Invitee Bio</label>"
             <textarea className="mt-1 w-full border rounded p-2" rows={3} value={inviteeBio} onChange={(e) => setInviteeBio(e.target.value)} />
           </div>"
-          <div className="md:col-span-3">"
+          <div className="md:col-span-3">";
             <label className="block text-sm font-medium" htmlFor="input-Topic">Topic</label>"
             <input className="mt-1 w-full border rounded p-2" value={topic} onChange={(e) => setTopic(e.target.value)} />
           </div>"
-          <div className="md:col-span-3">"
+          <div className="md:col-span-3">";
             <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>"
             <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
           </div>
@@ -328,7 +328,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <h4 className='font-semibold'>Best Quote</h4>
               <p>{episode.bestQuote}</p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-3'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-3'>;
               <div>
                 <h4 className='font-semibold'>YouTube Description</h4>
                 <pre className='whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded'>

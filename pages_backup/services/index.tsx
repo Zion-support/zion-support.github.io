@@ -1,26 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextPage } from 'next';
-=======
-<<<<<<< HEAD
-import * as React from 'react';
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
-
 export default function ServicesIndex() {
-<<<<<<< HEAD
-
-    }
+}
   ];
   const itServices = [
     {
@@ -99,60 +86,6 @@ export default function ServicesIndex() {
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import * as React from 'react';'
-import Head from 'next/head';'
-import Link from 'next/link';'
-import { motion } from 'framer-motion';'
-import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
-
-const services = []
-  {'
-    id: 'ai-development','
-    title: 'AI Development','
-    description: 'Custom AI solutions tailored to your business needs',
-    icon: Brain,'
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],'
-    pricing: 'Starting at $5,000/month','
-    icon: '🤖','
-    link: '/ai-services'
-  },
-  {'
-    id: 'cloud-services','
-    title: 'Cloud Services','
-    description: 'Scalable cloud infrastructure and migration services',
-    icon: Cloud,'
-    features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Cost Optimization'],'
-    pricing: 'Starting at $2,000/month','
-    icon: '☁️','
-    link: '/services/cloud'
-  },
-  {'
-    id: 'cybersecurity','
-    title: 'Cybersecurity','
-    description: 'Comprehensive security solutions to protect your business',
-    icon: Shield,'
-    features: ['Threat Detection', 'Security Audits', 'Data Protection', 'Compliance'],'
-    pricing: 'Starting at $1,500/month','
-    icon: '🔒','
-    link: '/services/cybersecurity'
-  },
-  {'
-    id: 'data-analytics','
-    title: 'Data Analytics','
-    description: 'Transform data into actionable business insights',
-    icon: BarChart3,'
-    features: ['Business Intelligence', 'Predictive Analytics', 'Data Visualization', 'Reporting'],'
-    pricing: 'Starting at $1,800/month','
-    icon: '📊','
-    link: '/services/data-analytics'
-  }
-];
-
-export default function ServicesIndex() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
 =======
 =======
@@ -396,18 +329,13 @@ const ServicesIndex: NextPage = () => {
       link: "/services/ai-automation";
     }
   ];  return (
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>
       <Head>
         <title>Our Services - Zion Tech Group | AI, Cloud, Blockchain & IT Solutions</title>
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* Hero Section */}
@@ -614,14 +542,6 @@ const ServicesIndex: NextPage = () => {
                   <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
                   <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Learn More
@@ -644,17 +564,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </Link>
           </div>
         </section>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Learn More
                   </Link>
                 </div>
@@ -946,23 +856,13 @@ export default ServicesIndex;
                       </div>
                     ))}
                   </div>
-<<<<<<< HEAD
-                  <Link
-<<<<<<< HEAD
+<Link
 <<<<<<< HEAD
                     href={service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     Learn More
-=======
-                  <Link;
-                    href={service.link}"
-                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    Learn More"
-                    <ArrowRight className="ml-2 w-4 h-4" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </Link>
                 </div>
               </div>
@@ -970,8 +870,7 @@ export default ServicesIndex;
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
+{/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8">Let's discuss how our technology solutions can accelerate your growth</p>
@@ -1474,15 +1373,6 @@ export default ServicesIndex;
   );
 };
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-      </div>
-    </>
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </main>;
     </div>;
   ),
@@ -1492,371 +1382,13 @@ export default ServicesIndex;
       </div>;
     </>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',
-import Card from '../../components/ui/Card';
-import Link from 'next/link';
-import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices  } from '../../data/additional-real-services';
-import { extraServices  } from '../../data/extra-services';
-import { newlyAddedServices  } from '../../data/newly-added-services';
-import { curatedMarketServices  } from '../../data/curated-market-services';
-import { realMarketServices  } from '../../data/real-market-services';
-import { new2025Services  } from '../../data/new-2025-services';
-import { marketValidatedServices  } from '../../data/market-validated-services';
-import { moreRealServices2025  } from '../../data/more-real-services-2025';
-import { realOperationalServices  } from '../../data/real-operational-services';
-import { verified2025Additions  } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025'
-import { realEnterpriseServices2025  } from '../../data/real-enterprise-services-2025';
-import { realMarketAugmentations2025  } from '../../data/real-market-augmentations-2025';
-import { verifiedRealServices2025Batch2  } from '../../data/verified-real-services-2025-batch2';
-import { additionalLiveServices2025  } from '../../data/additional-live-services-2025';
-import { real2025Q2Additions  } from '../../data/real-2025-q2-additions';
-import { augmentedServicesBatch3  } from '../../data/real-augmented-services-2025-batch3';
-import { realServicesQ22025  } from '../../data/real-services-q2-2025';
-import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-import { realServicesQ42025 } from '../../data/real-services-q4-2025';
-// Define a common service interface
-interface Service {
-  id?: string;
-  name: string;
-  description?: string;
-  price?: string;
-  category?: string;
-  popular?: boolean;
-  launchDate?: string;
-  [key: string]: unknown, // Allow additional properties
-}
-// Define a unified service interface
-interface Service {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  price: string;
-  category: string;
-  features: string[];
-  popular?: boolean;
-  icon?: string;
-  link?: string
-}
-// Sample services for now
-const sampleServices: Service[] = [
-  {
-    id: 'ai-services';
-    name: 'AI & Machine Learning';
-    tagline: 'Advanced AI solutions for enterprise';
-    description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.',
-    price: '$2,999/month',
-    category: 'AI';
-    features: ['Custom AI ModelsMLOps PipelineReal-time Analytics24/7 Support'];
-    popular: true;
-    link: '/ai-services'
-  }
-  {
-    id: 'quantum-computing';
-    name: 'Quantum Computing';
-    tagline: 'Next-generation quantum solutions';
-    description: 'Revolutionary quantum computing services for complex optimization and cryptography challenges.';
-    price: '$9,999/month',
-    category: 'Quantum';
-    features: ['Quantum AlgorithmsCryptographyOptimizationResearch Support'];
-    link: '/quantum-computing'
-  }
-  {
-    id: 'cybersecurity';
-    name: 'Cybersecurity';
-    tagline: 'Enterprise security solutions';
-    description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.';
-    price: '$1,999/month',
-    category: 'Security';
-    features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'];
-    link: '/cybersecurity'
-  }
-  {
-    id: 'cloud-platform';
-    name: 'Cloud Platform';
-    tagline: 'Scalable cloud infrastructure';
-    description: 'Multi-cloud platform services with automated scaling and global deployment capabilities.';
-    price: '$1,499/month',
-    category: 'Cloud';
-    features: ['Multi-CloudAuto-scalingGlobal CDNDevOps Tools'];
-    link: '/cloud-platform'
-  }
-  {
-    id: 'space-technology';
-    name: 'Space Technology';
-    tagline: 'Innovative space solutions';
-    description: 'Cutting-edge space technology services for satellite operations and space missions.';
-    price: '$24,999/month',
-    category: 'Space';
-    features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'];
-    link: '/space-tech'
-  }
-]
-export default function ServicesIndexPage() {
-  const all = null;
-                return (
-                  <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
-                    <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
-                      <span className="text-3xl">
-                        {category === 'AI & Data' && '🧠'}
-                        {category === 'Developer Tools' && '⚙️'}
-                        {category === 'Cloud & FinOps' && '☁️'}
-                        {category === 'Observability' && '📊'}
-                        {category === 'Quality & Monitoring' && '🔍'}
-                        {category === 'Quantum Computing' && '⚛️'}
-                        {category === 'Space Technology' && '🚀'}
-                        {category === 'Metaverse' && '🌐'}
-                        {category === 'Cybersecurity' && '🛡️'}
-                        {category === 'Supply Chain' && '📦'}
-                        {category === 'Financial Services' && '💰'}
-                        {category === 'Healthcare' && '🏥'}
-                        {category === 'Manufacturing' && '🏭'}
-                        {category === 'Retail' && '🛍️'}
-                        {category === 'Education' && '🎓'}
-                        {category === 'Government' && '🏛️'}
-                        {category === 'Energy' && '⚡'}
-                        {category === 'Transportation' && '🚗'}
-                      </span>
-                      {category}
-origin/cursor/automate-test-improve-and-merge-code-2533
-                      <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
-                        {categoryServices.length} services
-                      </span>
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {categoryServices.slice(0, 6).map((service: Service, index: number) => (
-                        <UltraFuturisticServiceCard2026
-
-
-                          key={`${service.id || service.name}-${index}`}
-
-                          service={service}
-                          key={`${service.id || service.name}-${index}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          service={service  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          variant="default"
-                        />
-                      ))}
-                    </div>
-                    {categoryServices.length > 6 && (
-                      <div className="text-center mt-6">
-                        <Link
-                          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all"
-                        >
-                          View All {category} Services ({categoryServices.length})
-                        </Link>
-                      </div>
-
-
-
-
-                    )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="text-cyan-400 group-hover:text-blue-400 transition-colors duration-300">
-                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
-                          <span className="text-2xl font-bold">{service.name.charAt(0)}</span>
-                        </div>
-                      </div>
-                      <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-cyan-400 transition-colors duration-300" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                      {service.name}
-                    </h3>
-                    <p className="text-cyan-400 text-sm mb-4">
-                      {service.tagline}
-                    </p>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      {service.description}
-                      {service.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </h3>
-                    <p className="text-cyan-400 text-sm mb-4">
-                      {service.tagline  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </p>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      {service.description  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </p>
-                    <div className="space-y-2 mb-6">
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </div>))}
-                    </div>;
-                    <div className="flex items - center justify - between">;
-                      <div className="text - 2xl font - bold text - white">;
-
-                        {service.price}
-                      </div>;
-                          {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        </div>;
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="text-2xl font-bold text-white">
-                        {service.price  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </div>;
-                      {service.link && (;
-                        <a;
-                          href={service.link  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-                        >
-                          Learn More
-                        </Link>
-                      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </div>;
-                  </div>;
-                </motion.div>;
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>
-            {filteredServices.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
-              </div>
-        {/* Call to Action */}
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </section>;
-        {/* Call to Action */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-4xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact us today to discuss how our services can transform your business.
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-                >
-                  Contact Sales
-                </a>
-                <a
-                  href="/get-started"
-                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
-                >
-                  Get Started
-                </a>
-=======
-        {/* CTA Section */}"
-        <section className="py-20 bg-blue-600">"
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >"
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>"
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">'
-                Let's discuss how our services can help you achieve your goals.
-              </p>"
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link"
-                  href="/contact""
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Get Started"
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link"
-                  href="/about""
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                >
-                  Learn More;
-                </Link>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </UltraAdvancedFuturisticBackground>
+</UltraAdvancedFuturisticBackground>
   )
         <section className="py-20 px-4">;
           <div className="container mx-auto max-w-4xl text-center">;
@@ -1890,10 +1422,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </UltraAdvancedFuturisticBackground>);
 }
 
-
-
-
-
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -1906,8 +1434,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-    </>
-  );
-}'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

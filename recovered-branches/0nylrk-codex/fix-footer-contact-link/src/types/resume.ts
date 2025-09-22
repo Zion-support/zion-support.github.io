@@ -1,67 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-
-  headline?: string,
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ResumeBasicInfo {
-<<<<<<< HEAD
-=======
-export interface ResumeBasicInfo {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   id?: string;
   title: string;
   headline?: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   summary?: string;
-=======
-  // TODO: Implement
-}
-pr-12325
-  id?: string;
-  title: string;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 }
-<<<<<<< HEAD
 export interface WorkExperience {
 export interface ResumeBasicInfo {
-=======
-export interface WorkExperience {}
-export interface ResumeBasicInfo {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface ResumeBasicInfo {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id?: string;
 
-
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export interface WorkExperience {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-export interface WorkExperience {
-
-export interface WorkExperience {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export interface WorkExperience {};
@@ -77,29 +35,12 @@ export interface WorkExperience {};
   location?: string;
 }
 
-
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-export interface Education {
-=======
-export interface Education {
-  company_logo_url?: string
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-<<<<<<< HEAD
 export interface Education {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -150,33 +91,16 @@ pr-12325
 
 }
 
-<<<<<<< HEAD
-  institution_logo_url?: string,
+institution_logo_url?: string,
   location?: string;
 
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-export interface Skill {
-=======
-export interface Skill {
-  institution_logo_url?: string
-
-  location?: string
-}
-export interface Skill {
-
-export interface Skill {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
 =======
 export interface Skill {  id?: string;
@@ -196,58 +120,26 @@ export interface Skill {  id?: string;
 
 export interface Skill {;
   id?: string;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-export interface Education {
-  // TODO: Implement
-  institution: string;,
-  degree: string;
-  field_of_study?: string;
-  institution_logo_url?: string;
-
-  institution_logo_url?: string,
-
-export interface Skill {
-  // TODO: Implement
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
   proficiency?: number;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  category?: string,
+category?: string,
   years_experience?: number;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-export interface Certification {
-=======
-export interface Certification {
-  category?: string
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   id?: string;
   name: string;
   proficiency?: number;
 }
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
   name: string;
   issuing_organization: string;
@@ -257,29 +149,14 @@ export interface Certification {
   credential_url?: string;
 }
 
-
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-export interface PortfolioProject {
-=======
-export interface PortfolioProject {
-  credential_id?: string
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-<<<<<<< HEAD
 export interface PortfolioProject {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
   title: string;
   description?: string;
@@ -290,29 +167,12 @@ export interface PortfolioProject {;
   pdf_url?: string;
 }
 
-
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-export interface Resume {
-=======
-export interface Resume {
-  demo_url?: string
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-<<<<<<< HEAD
 export interface Resume {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
 =======
 export interface Certification {  id?: string;
@@ -394,11 +254,7 @@ export interface Resume {
 
 export interface Resume {;
   id?: string;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   user_id?: string;
   basic_info: ResumeBasicInfo;,
   work_experience: WorkExperience[];
@@ -406,29 +262,13 @@ export interface Resume {;
 pr-12325
   skills: Skill[];
   certifications: Certification[];
-<<<<<<< HEAD
-  portfolio_projects?: PortfolioProject[];
+portfolio_projects?: PortfolioProject[];
   is_active: boolean;
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
 
   portfolio_projects?: PortfolioProject[]
-=======
-
-  is_active: boolean;
-}
-export interface ResumeBasicInfo {;
-
-
-  id?: string,;
-=======
-}  id?: string,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}  id?: string,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 }
   portfolio_projects?: PortfolioProject[]
@@ -534,43 +374,23 @@ pr-12325
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   portfolio_projects?: PortfolioProject[],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   is_active: boolean;
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   is_active: boolean
 }
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-  portfolio_projects?: PortfolioProject[],  is_active: boolean;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   portfolio_projects?: PortfolioProject[],  is_active: boolean;
 =======
@@ -581,23 +401,12 @@ pr-12325
 
 export interface ResumeBasicInfo {;
 
-<<<<<<< HEAD
-  is_active: boolean;
+is_active: boolean;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-export interface ResumeBasicInfo {;
-
-
-
-}
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 is_active: boolean;
 }
@@ -608,8 +417,6 @@ is_active: boolean;
 ;
 }
   portfolio_projects?: PortfolioProject[],
-
-
 
 pr-12325
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

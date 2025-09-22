@@ -1,37 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
-import React from 'react',
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-  )
+)
 
-<<<<<<< HEAD
 }
 
       </Head>
@@ -40,13 +18,6 @@ import Layout from '../components/layout/Layout';
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-fuchsia-500 bg-clip-text text-transparent">Incident Postmortem Generator</h1>
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <Layout>;
       <Head>;
         <title > Incident Postmortem Generator | Zion Tech Group</title>;
@@ -54,9 +25,6 @@ import Layout from '../components/layout/Layout';
         <link rel="canonical" href="https://ziontechgroup.com / incident - postmortem - generator" />;
       </Head>;
 
-
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -89,16 +57,6 @@ export default function IncidentPostmortemGeneratorPage() {
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-700 text-white">Start from $79/mo</Link>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</Link>
-<<<<<<< HEAD
-=======
-=======
-          </div>
-        </div>
-      </div>
-    </Layout>
-  )
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -112,8 +70,6 @@ export default function IncidentPostmortemGeneratorPage(req, res) {
         <link rel="canonical" href="https://ziontechgroup.com/incident-postmortem-generator" />;
       </Head>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-fuchsia-500 bg-clip-text text-transparent">Incident Postmortem Generator</h1>;
@@ -134,16 +90,6 @@ export default function IncidentPostmortemGeneratorPage(req, res) {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
           <div className="flex gap-3">;
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-700 text-white">Start from $79/mo</a>;
@@ -157,45 +103,22 @@ export default function IncidentPostmortemGeneratorPage(req, res) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
-<<<<<<< HEAD
-  )
+)
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
-=======
-"
-    console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 
-
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-;
-
-=======
-);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 

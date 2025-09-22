@@ -55,4 +55,3 @@ export function RaiseDisputeButton({ ;
         <DialogContent className="sm:max-w-[550px]">;
           <DialogHeader>;
             <DialogTitle>Raise a Dispute</DialogTitle>;
-

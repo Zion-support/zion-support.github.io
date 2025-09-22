@@ -1,56 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  if (req && req.method !== "POST") {
+if (req && req.method !== "POST") {
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method not allowed" });
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   const { prompt, region, service } = req.body |{}
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import OpenAI from 'openai';
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {;
-    res.setHeader('AllowPOST');
-    return res.status(405).json({ error: 'Method not allowed' })
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from './next';
-import OpenAI from './openai';
-const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY || "" });
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ("AllowPOST");
-    return res.status (405).json ({ error: "Method not allowed" });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import OpenAI from "openai";
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || "" });
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  if (req.method !== "POST") {
-    res.setHeader("AllowPOST");
-    return res.status(405).json({ error: "Method not allowed" });
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   const { prompt, region, service } = req.body || {};
@@ -63,117 +15,14 @@ export default async function handler(
 - Short paragraphs, bullet lists;
 - Strong call - to - action for Zion Marketplace;
 Do not include <html>, <body>, or scripts.`;
-<<<<<<< HEAD
-      ],
+],
       temperature: 0.7,
     });
-=======
-
-        { role: "system", content: system }
-        { role: "user", content: user }
-      ]
-      temperature: 0.7
-    });
-    const content = response.choices?.[0]?.message?.content |"";
-=======
-=======
-    const user = `Topic: ${prompt}
-Region: ${region || "global"}
-Service focus: ${service || "general"}
-Audience: buyers looking to hire talent or rent equipment
-Tone: professional, modern, trustworthy`;
-
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { prompt, region, service } = req.body || {};
-  const user = `Topic: ${prompt || 'general'} Region: ${region || 'global'} Service focus: ${service || 'general'} Audience: buyers looking to hire talent or rent equipment Tone: professional, modern, trustworthy`;
-  res.status(200).json({
-    content: 'SEO content generated',
-    user
-  });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const { prompt, region, service } = req.body || {};
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    const system = `You generate conversion-focused, SEO-optimized landing pages in HTML. Include:;
-- A compelling H1;
-- 2-3 subsections with H2/H3;
-- Short paragraphs, bullet lists;
-- Strong call-to-action for Zion Marketplace;
-Do not include <html>, <body>, or scripts.`,;
-    const user = `Topic: ${prompt  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-Region: ${region || 'global'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-Service focus: ${service || 'general'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-Audience: buyers looking to hire talent or rent equipment
-Tone: professional, modern, trustworthy`,
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const response = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
-<<<<<<< HEAD
-        { role: 'system', content: system },
+{ role: 'system', content: system },
         { role: 'user', content: user }
-=======
-        { role: "system", content: system },
-        { role: "user", content: user },
->>>>>>> main
       ],
       temperature: 0.7,
     });
@@ -182,8 +31,7 @@ Tone: professional, modern, trustworthy`,
     const content = response.choices?.[0]?.message?.content || "";
     const title = `Zion Marketplace — ${prompt}`;
 
-<<<<<<< HEAD
-        { role: 'user', content: user }],
+{ role: 'user', content: user }],
       temperature: 0.7}),
     const content = response.choices?.[0]?.message?.content || '',
     const title = `Zion Marketplace — ${prompt}`,
@@ -197,27 +45,16 @@ Tone: professional, modern, trustworthy`,
 
         faq}})
   } catch (e) {
-
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error (e);
     return res.status (500).json ({ error: "Failed to generate landing page" });
   }
 }
-<<<<<<< HEAD
-
-        { role: 'user', content: user }
+{ role: 'user', content: user }
       ],
       temperature: 0.7,
     });
 const content = response.choices?.[0]?.message?.content || '';
     const title = `Zion Marketplace — ${prompt}`;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -227,54 +64,25 @@ const content = response.choices?.[0]?.message?.content || '';
     const faqResp = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
-<<<<<<< HEAD
-        { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
+{ role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       ],
       temperature: 0.5,
     });
-<<<<<<< HEAD
-    let faq: Array<{ q: string; a: string }> = [];
-=======
 let faq: Array<{ q: string; a: string }> = [];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     let faq: Array<{ q: string, a: string }> = [];
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }],
       temperature: 0.5}),
     let faq: Array<{ q: string, a: string }> = [],
 =======
-<<<<<<< HEAD
-        { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
-<<<<<<< HEAD
-        { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }
-=======
-        {
-          role: "system",
-          content:
-            'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.',
-        },
-        {
-          role: "user",
-          content: `Topic: ${prompt} in ${region || "global"} for ${service || "general"}`,
-        },
->>>>>>> main
+{ role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
+{ role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }
       ],
       temperature: 0.5,
     });
 
-<<<<<<< HEAD
-    let faq: Array<{ q: string, a: string }> = [];
-=======
-        { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }],
-      temperature: 0.5}),
-    let faq: Array<{ q: string, a: string }> = [],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+let faq: Array<{ q: string, a: string }> = [];
     let faq: Array<{ q: string; a: string }> = [];
     try {
       faq = JSON.parse(faqResp.choices?.[0]?.message?.content || "[]");
@@ -284,22 +92,7 @@ let faq: Array<{ q: string; a: string }> = [];
     return res.status(200).json({
       slug
       payload: {
-<<<<<<< HEAD
-=======
-        title,
-        h1,
-        bodyHtml: content,
-        region: region || undefined,
-        service: service || undefined,
-        faq,
-      },
-    });
-  } catch (e) {
-    console.error(e);
-<<<<<<< HEAD
-    return res.status(500).json({ error: 'Failed to generate landing page' })
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -315,26 +108,19 @@ let faq: Array<{ q: string; a: string }> = [];
     return res.status(500).json({ error: "Failed to generate landing page" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-  }
+}
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
   } catch (error) {

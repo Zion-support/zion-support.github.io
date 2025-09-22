@@ -34,4 +34,3 @@ export function MilestoneCreator({;
       projectType={projectType}
     />;
 <<<<<<< HEAD
-

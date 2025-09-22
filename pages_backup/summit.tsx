@@ -1,25 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const partners: Partner[] = [ {
   name: 'Gov Partner'
 }
-=======
-const partners: Partner[] = [ {
-  name: 'Gov Partner'
-}
-=======
-import Head from 'next/head';
-import React from 'react';
-type Speaker = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 import Head from 'next/head';
@@ -45,17 +29,7 @@ setSubmitting (true);
 setResult (null);
 try {
   const res = await fetch ('/api/summit/register', {
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
-  method: 'POST';
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   method: 'POST';
 
 headers: {;
@@ -67,11 +41,6 @@ body: JSON && JSON.stringify ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
-
-  method: 'POST';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
 });
 const data = await res && res.json ();
@@ -79,13 +48,8 @@ if (!res && res.ok) throw new Error (data?.error || 'Failed');
 setResult ({;
   ok: true ;
 });
-<<<<<<< HEAD:pages_backup/summit.tsx
+:pages_backup/summit.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 setForm ({;
   name: '', email: '', role: '', country: '' ;
 }) ;
@@ -95,77 +59,30 @@ setForm ({;
 }) ;
 }finally {;
   setSubmitting (false) ;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
 
 export default function SummitPage() {;
   const [platform, setPlatform] = React && React.useState<;
     'youtube' | 'twitch' | 'twitter';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   >('youtube');
   const [embedId, setEmbedId] = React && React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =;
     useCountdown(EVENT_START_ISO);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [form, setForm] = React.useState({
+const [form, setForm] = React.useState({
     name: ''
     email: ''
     role: ''
     country: ''
-=======
-<<<<<<< HEAD
-=======
-
-  const [form, setForm] = React && React.useState({;
-    name: '',;
-    email: '',;
-    role: '',;
-    country: '',;
-
-=======
-  const [form, setForm] = React.useState({
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     name: '',
     email: '',
     role: '',
     country: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
 
 export default function SummitPage() { return null; }
   const { isPast, days, hours, minutes, seconds } =;
@@ -176,7 +93,6 @@ export default function SummitPage() { return null; }
     role: '','
     country: '',
 
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
   });
   const [submitting, setSubmitting] = React && React.useState(false);
@@ -184,8 +100,6 @@ export default function SummitPage() { return null; }
     ok?: boolean;
     error?: string;
   } | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -210,35 +124,7 @@ export default function SummitPage() { return null; }
       bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.'
       twitter: 'https://twitter.com'
     }
-=======
-<<<<<<< HEAD
-=======
-
-  const speakers: Speaker[] = [;
-    {;
-      name: 'Featured Speaker: Your Name',;
-      title: 'Founder, Zion',;
-      avatarUrl: '/favicon && favicon.svg',;
-      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',;
-      twitter: 'https://twitter && twitter.com',;
-      linkedin: 'https://www && www.linkedin.com',;
-      highlight: true,;
-    },    {;
-      name: 'Alex Rivera',;
-      title: 'Head of Protocol Engineering',;
-      avatarUrl: '/favicon && favicon.svg',;
-      bio: 'Leading the architecture of ZionDAO and trust rails.',;
-    },    {;
-      name: 'Jordan Lee',;
-      title: 'Zion Alumni | AI Fellow',;
-      avatarUrl: '/favicon && favicon.svg',;
-      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',;
-      twitter: 'https://twitter && twitter.com',;
-    },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
@@ -250,9 +136,7 @@ export default function SummitPage() { return null; }
     { name: 'University Partner' },;
 
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const onSubmit = async (e: React.FormEvent) => {
+const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     setResult(null)
@@ -273,21 +157,7 @@ export default function SummitPage() { return null; }
   }
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
-=======
-  const onSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-
-<<<<<<< HEAD:pages_backup/summit.tsx
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  const onSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next/head';
 =======
 '
@@ -336,17 +206,8 @@ function useCountdown(targetIso: string) {}
 export default function SummitPage() { return null; }
   const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO);'
   const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
-<<<<<<< HEAD:pages_backup/summit.tsx
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+:pages_backup/summit.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
 =======
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -355,8 +216,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Featured Speaker: Your Name',
       title: 'Founder, Zion',
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
     avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
@@ -380,9 +239,6 @@ try {
   method: 'POST';
 headers: {
   'Content-Type': 'application/json'
-=======
-  'Content - Type': 'application / json';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 body: JSON.stringify ({
   ...form, source: 'summit-page'
@@ -404,20 +260,7 @@ setForm ({
   setSubmitting (false)
 
   >('youtube');
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-    avatarUrl: '/favicon.svg',
-      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
-=======
-  const speakers: Speaker[] = []
-    {'
-      name: 'Featured Speaker: Your Name','
-      title: 'Founder, Zion','
-    avatarUrl: '/favicon.svg','
-      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
+
   'Content - Type': 'application / json';
 }
 body: JSON.stringify ({'
@@ -443,7 +286,7 @@ set_form ({'
 export default /**;
  * SummitPage - Function description;
  */
-<<<<<<< HEAD:pages_backup/summit.tsx
+:pages_backup/summit.tsx
 function SummitPage() {
   const [platform, set_platform] = React.useState<;
     'youtube' | 'twitch' | 'twitter';
@@ -455,25 +298,7 @@ function SummitPage() {
   const [form, set_form] = React.useState ({
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const partners: Partner[] = [ {
-=======
-function SummitPage() {}
-  const [platform, set_platform] = React.useState<;'
-    'youtube' | 'twitch' | 'twitter';'
-  >('youtube');'
-  const [embed_id, setEmbedId] = React.useState < string>('dQw4w9WgXcQ');
-  const { is_past, days, hours, minutes, seconds } =;
-    use_countdown (EVENT_START_ISO);
-  const [form, set_form] = React.useState ({}
-const partners: Partner[] = [ {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
   name: 'Gov Partner'
 }
 {'
@@ -510,46 +335,23 @@ setForm ({'
 })
 }finally {}
   setSubmitting (false)
-<<<<<<< HEAD:pages_backup/summit.tsx
-<<<<<<< HEAD
+:pages_backup/summit.tsx
 export default function SummitPage() {
   const [platform, setPlatform] = React.useState<
     'youtube' | 'twitch' | 'twitter'
-=======
-
-export default function SummitPage() {
-  const [platform, setPlatform] = React.useState<
-    'youtube' | 'twitch' | 'twitter';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   >('youtube');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =
     useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-    name: ''
-    email: ''
-    role: ''
-    country: ''
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     name: '',
     email: '',
     role: '',
     country: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  });
+});
   const [submitting, setSubmitting] = React.useState(false);
   const [result, setResult] = React.useState<{
     ok?: boolean;
@@ -569,23 +371,6 @@ export default function SummitPage() {
     {
       name: 'Alex Rivera',
       title: 'Head of Protocol Engineering',
-
-<<<<<<< HEAD
-
-=======
-      avatar_url: '/favicon.svg',
-      bio: 'Leading the architecture of ZionDAO and trust rails.',
-    },    {
-
-      name: 'Jordan Lee',
-      title: 'Zion Alumni | AI Fellow',
-      avatar_url: '/favicon.svg',
-      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 '
   >('youtube');'
@@ -606,8 +391,7 @@ export default function SummitPage() {
         method: 'POST',;'
         headers: { 'Content-Type': 'application/json' },;'
         body: JSON && JSON.stringify({ ...form, source: 'summit-page' }),;
-<<<<<<< HEAD
-      });
+});
       const data = await res && res.json();'
       if (!res && res.ok) throw new Error(data?.error || 'Failed');
       setResult({ ok: true });'
@@ -617,28 +401,6 @@ export default function SummitPage() {
     } finally {;
       setSubmitting(false);    }
 
-<<<<<<< HEAD:pages_backup/summit.tsx
-=======
-
-=======
-
-
-
-=======
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, source: 'summit-page' })}),
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || 'Failed');
-=======
-      avatarUrl: '/favicon.svg',
-      bio: 'Leading the architecture of ZionDAO and trust rails.'},
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
       twitter: 'https://twitter.com',
@@ -657,8 +419,7 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
       title: 'Zion Alumni | AI Fellow',
       avatarUrl: '/favicon.svg',
       bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
-<<<<<<< HEAD
-      twitter: 'https://twitter.com'}],
+twitter: 'https://twitter.com'}],
   const partners: Partner[] = [
     { name: 'Gov Partner' },
     { name: 'Venture Partner' },
@@ -667,94 +428,32 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
     e.preventDefault(),
     setSubmitting(true),
     setResult(null),
-=======
-twitter: 'https://twitter.com',
-    },
-  ];
-  const partners: Partner[] = [
-    { name: 'Gov Partner' }
-    { name: 'Venture Partner' }
-    { name: 'University Partner' }
-  ];
-  const onSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
-    setResult(null)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {
       const res = await fetch('/api/summit/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-        body: JSON.stringify({ ...form, source: 'summit-page' })}),
+body: JSON.stringify({ ...form, source: 'summit-page' })}),
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.error || 'Failed'),
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       setResult({ ok: true }),
-=======
-      setResult({ ok: true }),'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
       setForm({ name: '', email: '', role: '', country: '' })
     } catch (err: any) {'
       setResult({ error: err?.message || 'Unexpected error' })
     } finally {}
       setSubmitting(false)
-<<<<<<< HEAD:pages_backup/summit.tsx
-<<<<<<< HEAD
-    }
-};
-=======
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+:pages_backup/summit.tsx
 }
-  },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+};
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-body: JSON.stringify({ ...form, source: 'summit-page' }),
-origin/cursor/automate-test-improve-and-merge-code-2533
-      });
-      const data = await res && res.json();
-      if (!res && res.ok) throw new Error(data?.error || 'Failed');
-      setResult({ ok: true });
-      setForm({ name: '', email: '', role: '', country: '' });
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/summit.tsx
-<<<<<<< HEAD
-    } catch (err: any) {;
-      setResult({ error: err?.message || 'Unexpected error' });
-    } finally {;
-      setSubmitting(false);    }
-  const livestreamEmbed = () => {;
-    if (platform === 'youtube') {;
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
-=======
-
-
-  const livestreamEmbed = () => {'
-    if (platform === 'youtube') {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
       return (
         <iframe;
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
-<<<<<<< HEAD:pages_backup/summit.tsx
+:pages_backup/summit.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } catch (err: any) {
       setResult({ error: err?.message |'Unexpected error' });
     } finally {
@@ -783,16 +482,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='Zion Global Summit: AI, Talent, Trust — Globalized'
         />
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/summit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </Head>
       <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
         <div className='max-w-4xl'>
@@ -802,20 +493,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h1 className='mt-2 text-3xl md:text-5xl font-extrabold'>
           </p>
           <div className='mt-6 flex flex-wrap gap-3'>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-  const _livestreamEmbed = () => {_if (platform === 'youtube') {
-      return (
-        <iframe
-          className=&quot;w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800&quot;
-
-          src={`https://www.youtube.com/embed/${embedId}`}
-          title="YouTube livestream"
-          allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
-          allowFullScreen
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         />
       )
       } catch (error) {
@@ -824,34 +502,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
     if (platform === 'twitch') {
-<<<<<<< HEAD
 
-=======
-
-
-      return (
-        <iframe
-          className="w-full aspect-video rounded-lg border border-gray-200 dark: border-gray-800"
-          src={`https://player.twitch.tv/?channel=${embedId}&parent=${typeof window !== 'undefined' ? window.location.hostname : 'localhost'}`}
-          title="Twitch livestream"
-          allowFullScreen
-        />
-      )
-    }
-    return (
-      <iframe
-className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
-        src={`https://twitter.com/i/broadcasts/${embedId}`}
-        title="Twitter livestream"
-        allowFullScreen
-      />
-    )
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -873,8 +525,6 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
             </a>;
             <a'
               href='#agenda'
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -899,17 +549,8 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
           <h2 className="text-2xl font-bold mb-4">Agenda</h2>
           <ol className="space-y-3 list-decimal list-inside">
             <li>Opening Keynote — Launching Zion Protocol</li>
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
@@ -928,16 +569,8 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
           <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
           <ol className='space-y-3 list-decimal list-inside'>
             <li>Opening Keynote — Launching Zion Protocol</li>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/summit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -947,18 +580,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <li>Featured Speaker — Founder</li>
           </ol>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-        <section className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -980,128 +604,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
           </ul>
 
-<<<<<<< HEAD
-        </section>
+</section>
       </div>
-<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
-              className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'>;
-      twitter: 'https://twitter.com',
-    },
-  ];
-;
-  const partners: Partner[] = [;
-    { name: 'Gov Partner' },
-    { name: 'Venture Partner' },
-    { name: 'University Partner' },
-  ];
-  const on_submit = async (e: React.FormEvent) => {
-    e.prevent_default ();
-    set_submitting (true);
-    set_result (null),
-    try {
-      const res = await fetch ('/api / summit / register', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ ...form, source: 'summit - page' }),
-      });
-      const data = await res.json ();
-      if (throw new Error (data?.error || 'Failed')) {
-  $2
-}
-      set_result ({ ok: true });
-      set_form ({ name: '', email: '', role: '', country: '' });
-    } catch (err: any) {
-      set_result ({ error: err?.message || 'Unexpected error' });
-    } finally {
-      set_submitting (false);    }
-  }
-;
-  const livestream_embed = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-        />);
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-        />);
-    }
-      />);  }
-;
-  return (
-    <>;
-      <Head>;
-        <title > Zion Global Summit 2025 — AI, Talent, Trust</title>;
-        <meta;
-          name='description';
-          content='Zion Global Summit: AI, Talent, Trust — Globalized';
-        />;
-      </Head>;
-      <section className='relative overflow - hidden rounded - xl bg - gradient - to - br from - cyber - dark to - cyber - blue text - white p - 8 md:p - 12 shadow - neon - blue'>;
-        <div className='max - w-4xl'>;
-          <p className='uppercase tracking - widest text - neon - blue'>;
-            Zion Global Summit 2025;
-          </p>;
-          <h1 className='mt - 2 text - 3xl md:text - 5xl font - extrabold'>;
-            AI, Talent, Trust — Globalized;
-          </h1>;
-          <p className='mt - 4 text - white / 80'>;
-            Date: Nov 12, 2025 • Time: 16:00 UTC • Location: Hybrid (Virtual +;
-            In‑Person);
-          </p>;
-          <div className='mt - 6 flex flex - wrap gap - 3'>;
-            <a;
-              href='#register';
-              className='inline - flex items - center px - 4 py - 2 rounded - md bg - neon - blue text - black font - semibold shadow - neon - blue';
-            >;
-              Register;
-            </a>;
-            <a;
-              href='#livestream';
-              className='inline - flex items - center px - 4 py - 2 rounded - md border border - white / 40 hover:bg - white / 10';
-            >;
-              Livestream;
-            </a>;
-            <a;
-              href='#agenda';
-              className='inline - flex items - center px - 4 py - 2 rounded - md border border - white / 40 hover:bg - white / 10';
-            >;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
               Agenda;
             </a>          </div>;
         </div>;
       </section>;
-
 
               Globalized;
             </li>          </ul>;
         </section>;
       </div>;
 
-
-<<<<<<< HEAD:pages_backup/summit.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      <section
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+:pages_backup/summit.tsx
+<section
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
@@ -1148,43 +666,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   src={s && s.avatarUrl}
                   alt={s && s.name}'
                   className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800'
-<<<<<<< HEAD:pages_backup/summit.tsx
+:pages_backup/summit.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                />;
-                <div>;
-                  <div className='font-semibold'>{s && s.name}</div>;
-                  <div className='text-sm opacity-70'>{s && s.title}</div>;
-                </div>;
-              </div>;
-              <p className='mt-3 text-sm'>{s && s.bio}</p>;
-              <div className='mt-3 flex gap-3 text-sm'>;
-                {s && s.twitter && (;
-                  <a
-                    className='underline'
-                    href={s && s.twitter}
-                    target='_blank'
-                    rel='noreferrer'>;
-                    Twitter;
-                  </a>;
-                )}
-                {s && s.linkedin && (;
-                  <a
-                    className='underline'
-                    href={s && s.linkedin}
-                    target='_blank'
-                    rel='noreferrer'>;
-                    LinkedIn;
-                  </a>;
-                )}              </div>;
-            </div>;
-
-=======
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section id="speakers" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-6">Speakers</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1192,77 +675,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div key={s.name} className={`p-4 rounded-lg border ${s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}>
               <div className="flex items-center gap-4">
                 <img src={s.avatarUrl} alt={s.name} className="w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800" />
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div>
                   <div className="font-semibold">{s.name}</div>
                   <div className="text-sm opacity-70">{s.title}</div>
                 </div>
               </div>
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/summit.tsx
-<<<<<<< HEAD
               <p className="mt-3 text-sm">{s.bio}</p>
 <<<<<<< HEAD
-=======
-              <div className="mt-3 flex gap-3 text-sm">
-<<<<<<< HEAD
-
-        </div>
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-          {partners.map((p) => (
-            <div key={p.name} className="h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70">
-              {p.logoUrl ? <img src={p.logoUrl} alt={p.name} className="max-h-12" /> : p.name  } catch (error) {
-=======
-<<<<<<< HEAD
-                {s.twitter && <a className="underline" href={s.twitter} target="_blank" rel="noreferrer">Twitter</a>}
-                {s.linkedin && <a className="underline" href={s.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>}
-              </div>
-            </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-                <div>"
-                  <div className="font-semibold">{s.name}</div>"
-                  <div className="text-sm opacity-70">{s.title}</div>
-                </div>
-              </div>"
-              <p className="mt-3 text-sm">{s.bio}</p>
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
           ))}
 
         </div>;
       </section>;
 
-
-<<<<<<< HEAD:pages_backup/summit.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+:pages_backup/summit.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section
-=======
-<<<<<<< HEAD
-              <p className="mt-3 text-sm">{s.bio}</p>
-      <section
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <p className='mt-3 text-sm'>{s.bio}</p>
               <div className='mt-3 flex gap-3 text-sm'>
                 {s.twitter && (
@@ -1292,16 +725,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
 
 <section
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/summit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
         <div className='flex items-center justify-between'>;
@@ -1315,13 +740,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className='text-2xl font-bold'>Partners</h2>;
           <a'
             href='#register'
-<<<<<<< HEAD:pages_backup/summit.tsx
+:pages_backup/summit.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className='px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800'>;
             Become a Sponsor;
           </a>;
@@ -1336,33 +756,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ) : (;
                 p && p.name;
               )}            </div>;
-<<<<<<< HEAD
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-=======
-      <section id="partners" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold">Partners</h2>
-          <a href="#register" className="px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800">Become a Sponsor</a>
-=======
-
-      <section id="partners" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold">Partners</h2>
-          <a href="#register" className="px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800">Become a Sponsor</Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>
 =======
-
 
         </div>"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
@@ -1371,21 +770,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div key={p.name} className="h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70">"
               {p.logoUrl ? <img src={p.logoUrl} alt={p.name} className="max-h-12" /> : p.name}
             </div>
-<<<<<<< HEAD:pages_backup/summit.tsx
+:pages_backup/summit.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
           ))}
 
         </div>;
       </section>;
-
 
       <section'
         id='livestream''
@@ -1394,18 +785,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className='text-2xl font-bold'>Livestream</h2>;'
           <div className='flex flex-wrap items-center gap-2'>;
 
-<<<<<<< HEAD:pages_backup/summit.tsx
+:pages_backup/summit.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
           <div className="flex flex-wrap items-center gap-2">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 =======
@@ -1417,21 +803,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="flex flex-wrap items-center gap-2">
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
 
-
             <select'
               aria-label='Platform''
               className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={platform}
               onChange={e => setPlatform(e && e.target.value as any)}
-<<<<<<< HEAD:pages_backup/summit.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+:pages_backup/summit.tsx
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section;
         id='speakers';
 =======
-
 
       <section;'
         id='speakers';'
@@ -1495,17 +877,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='mt - 6 grid grid - cols - 2 sm:grid - cols - 3 md:grid - cols - 6 gap - 4'>;
           {partners.map (p => (
             <div;
-<<<<<<< HEAD:pages_backup/summit.tsx
+:pages_backup/summit.tsx
               key={p.name}
-<<<<<<< HEAD
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-              key={p.name}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
               className='h - 16 rounded - md border border - dashed border - gray - 300 dark:border - gray - 700 flex items - center justify - center text - sm opacity - 70';
             >;
               {p.logo_url ? ('
@@ -1523,17 +898,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <select;'
               aria - label='Platform';'
               className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
-<<<<<<< HEAD
-              value={platform}
+value={platform}
               on_change={e => set_platform (e.target.value as any)}
-<<<<<<< HEAD:pages_backup/summit.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className='h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70'
             >
               {p.logoUrl ? (
@@ -1565,17 +932,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <option value='twitch'>Twitch</option>;
               <option value='twitter'>Twitter</option>;
             </select>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-            <input;
-              aria - label='Embed ID';
-              className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               placeholder={
                 platform === 'youtube';
                   ? 'YouTube Video ID';
@@ -1583,19 +940,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ? 'Twitch Channel';
                     : 'Twitter Broadcast ID';
               }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-          </div>;
-        </div>;
-        <div className='mt-4'>{livestreamEmbed()}</div>;
-      </section>;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section
         id='register'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
@@ -1623,37 +968,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <form onSubmit={onSubmit} className='grid md:grid-cols-2 gap-4'>;
           <div>;'
             <label className='block text-sm mb-1'>Name</label>;
-<<<<<<< HEAD:pages_backup/summit.tsx
+:pages_backup/summit.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
 
-
-<<<<<<< HEAD:pages_backup/summit.tsx
+:pages_backup/summit.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div>
             <label className="block text-sm mb-1">Name</label>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-          <div>
-            <label className="block text-sm mb-1">Name</label>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <input
               required
-=======
-          <div>"
-            <label className="block text-sm mb-1">Name</label>
-
-            <input;
-              required'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
               className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={form && form.name}
               onChange={e => setForm({ ...form, name: e && e.target.value })}
@@ -1699,31 +1025,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Thank you! You are registered.;
               </span>;
             )}
-<<<<<<< HEAD:pages_backup/summit.tsx
+:pages_backup/summit.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-            {result?.error && (;
-              <span className='text-red-600'>{result && result.error}</span>;
-            )}          </div>;
-        </form>;
-      </section>;
-      <section className='mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black'>;
-        <h2 className='text-xl font-semibold'>;
-          AI Session Summaries (Optional);
-        </h2>;
-        <p className='text-sm opacity-70 mt-2'>;
-          Auto-generated summaries and ZionGPT moderation prompts coming soon.;
-        </p>;
-      </section>;
-    </>;
-  );
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
@@ -1765,17 +1068,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">"
         <h2 className="text-2xl font-bold mb-4">Register</h2>"
         <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4">
-<<<<<<< HEAD:pages_backup/summit.tsx
+:pages_backup/summit.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div>
 =======
           <div>"
@@ -1823,26 +1119,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800 disabled:opacity-50"
             >'
               {submitting ? 'Submitting...' : 'Submit Registration'}
-<<<<<<< HEAD:pages_backup/summit.tsx
+:pages_backup/summit.tsx
             </button>
-<<<<<<< HEAD
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
             {result?.ok && <span className="text-green-600">Thank you! You are registered.</span>}
-=======
-            </button>"
-            {result?.ok && <span className="text-green-600">Thank you! You are registered.</span>}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
             {result?.error && <span className="text-red-600">{result.error}</span>}
-=======
-<<<<<<< HEAD
-            {result?.ok && <span className="text-green-600">Thank you! You are registered.</span>}
-            {result?.error && <span className="text-red-600">{result.error}</span>}
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {result?.ok && (
               <span className='text-green-600'>
                 Thank you! You are registered.
@@ -1851,26 +1133,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {result?.error && (
               <span className='text-red-600'>{result.error}</span>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/summit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>
         </form>
       </section>
 
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/summit.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 }
 }"
@@ -1881,10 +1150,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   )
 }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               value={embed_id}
               on_change={e => setEmbedId (e.target.value)}
             />;
@@ -1966,21 +1232,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Auto - generated summaries and ZionGPT moderation prompts coming soon.;
         </p>;
       </section>;
-<<<<<<< HEAD:pages_backup/summit.tsx
+:pages_backup/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-    </>;
-  );
-  } catch (error) {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-            </div>
+</div>
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1988,10 +1247,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
         </div>
       </section>
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
 
             <select
               aria-label="Platform"
@@ -2050,9 +1305,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
-<<<<<<< HEAD:pages_backup/summit.tsx
-<<<<<<< HEAD
-          <div>
+:pages_backup/summit.tsx
+<div>
             <label className="block text-sm mb-1">Name</label>
             <input
               required
@@ -2153,15 +1407,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
@@ -2174,16 +1421,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/summit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

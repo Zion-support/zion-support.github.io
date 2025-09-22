@@ -12,7 +12,7 @@ interface UltraAdvancedFuturisticBackgroundV2Props {
 const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props /> = ({ children;
   className;
 
-const UltraAdvancedFuturisticBackgroundV2: React.FC<
+const UltraAdvancedFuturisticBackgroundV2: React.FC<;
   UltraAdvancedFuturisticBackgroundV2Props
 > = ({ children, className = '' }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -151,8 +151,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink-400 opacity-20";
           animate={{
           transition={{
-            duration: 7
-            repeat: Infinity
+            duration: 7;
+            repeat: Infinity;
             ease: 'easeInOut',          }}          }}
 
         <motion&& motion.div"
@@ -172,9 +172,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div;
           className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green-400 opacity-20";
           animate={{
-            duration: 7
-            repeat: Infinity
-            ease: 'easeInOut',            ease: "easeInOut"
+            duration: 7;
+            repeat: Infinity;
+            ease: 'easeInOut',            ease: "easeInOut";
 ctx.stroke();
             }
           }
@@ -314,7 +314,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Quantum Energy Particles */}
             duration: 7,
             repeat: Infinity,'"
-            ease: 'easeInOut',            ease: "easeInOut"
+            ease: 'easeInOut',            ease: "easeInOut";
           }}
 
           }}
@@ -365,7 +365,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               delay: Math && Math.random() * 2,
 
             transition={{'"
-              ease: 'easeInOut',            }}              ease: "easeInOut"
+              ease: 'easeInOut',            }}              ease: "easeInOut";
               y: [0, -100, 0],
               opacity: [0, 1, 0],
               scale: [0, 1, 0],
@@ -444,8 +444,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 strokeDasharray: [0, 100, 0]
                 duration: 4 + Math.random() * 2;
                 repeat: Infinity;
-                delay: Math.random() * 2'"
-                ease: 'easeInOut',              }}                ease: "easeInOut"
+                delay: Math.random() * 2'";
+                ease: 'easeInOut',              }}                ease: "easeInOut";
                 opacity: [0.1, 0.3, 0.1],
                 strokeDasharray: [0, 100, 0],
               }}

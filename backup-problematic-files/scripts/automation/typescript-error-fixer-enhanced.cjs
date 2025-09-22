@@ -6,8 +6,7 @@
     const componentFixes = ["]
   "pattern": /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*null;\s*}/g", replacement": (match", "componentName) => {return "}
   )}"
-<<<<<<< HEAD
-          this.fixes.push({ file, "type": "export", "description": "Added missing default export" }
+this.fixes.push({ file, "type": "export", "description": "Added missing default export" }
 });await this.log("Added default export to ${file}")
       } catch (error) {  await this.log("Error fixing exports in ${file  }: ${error.message}", "ERROR")
   await this.log(" Fixing ServicesPage specific error...")
@@ -39,16 +38,8 @@
   const continuous = args.includes("--continuous") || args.includes("-c")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          this.fixes.push({ file, "type": "export", "description": "Added missing default export" }")"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  console.error(""Error": ")
-  console.error(""Error": ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

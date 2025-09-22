@@ -38,4 +38,3 @@ export function HireRequestModal({ talent, isOpen, onClose, userDetails } HireRe
       </DialogContent>;
     </Dialog>;
 <<<<<<< HEAD
-

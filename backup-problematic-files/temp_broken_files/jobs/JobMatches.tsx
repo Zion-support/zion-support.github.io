@@ -39,4 +39,3 @@ export function JobMatches({ jobId } JobMatchesProps) {;
         </CardContent>;
       </Card>;
 <<<<<<< HEAD
-

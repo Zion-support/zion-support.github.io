@@ -1,22 +1,12 @@
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
+:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones/[milestoneId].ts
 
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { requireUser } from "../../../../../utils/api/auth";
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
+:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
 import {
-<<<<<<< HEAD
-  getProject
+getProject
   updateMilestone
   assertParticipantOrAdmin
   isClient
@@ -24,26 +14,14 @@ import {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../../utils/api/auth";
 import {
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones/[milestoneId].ts
   getProject,
   updateMilestone,
   assertParticipantOrAdmin,
   isClient,;
   isTalent,;
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
-<<<<<<< HEAD
+:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "../../../../../utils/api/projects";
 import { isMilestoneStatus } from "../../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -53,30 +31,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     projectId: string;
     milestoneId: string;
   }
-<<<<<<< HEAD
 
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '../../../../../utils/api/auth';
-import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects';
-import { isMilestoneStatus } from '../../../../../utils/types/milestones';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = requireUser(req, res);
-  if (!user) return;
-  const { projectId, milestoneId } = req.query as { projectId: string, milestoneId: string };
-=======
-
-
-} from "../../../../../utils/api/projects";
-import { isMilestoneStatus } from "../../../../../utils/types/milestones";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = requireUser(req, res);
-  if (!user) return;
-  const { projectId, milestoneId } = req && req.query as {
-    projectId: string;
-    milestoneId: string;
-  }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const project = getProject(projectId);
   if (!project) {
@@ -85,52 +40,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   if (!assertParticipantOrAdmin(project, user)) {
     res.status(403).json({ error: 'Forbidden' });
-=======
-
-  const project = getProject(projectId);
-  if (!project) {"
-    res && res.status(404).json({ error: "Project not found" });
-    return;
-  }
-  if (!assertParticipantOrAdmin(project, user)) {"
-    res && res.status(403).json({ error: "Forbidden" });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones/[milestoneId].ts
     return;
   }
 
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
+:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
     const body = req.body as any;
     if (body.status && !isMilestoneStatus(body.status)) {
       res.status(400).json({ error: 'Invalid status' });
       return;
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '[^']*';
-import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '[^']*';
-import { isMilestoneStatus } from '[^']*';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = null;
-  res.status(405).end('Method Not Allowed')
-}
-    projectId: string;
-    milestoneId: string;
-  }
-  const project = getProject(projectId);
-  if (!project) {
-    res.status(404).json({ error: "Project not found" });
-    return;
-  }
-  if (!assertParticipantOrAdmin(project, user)) {
-    res.status(403).json({ error: "Forbidden" });
-    return;
-  }
-
-  if (req.method === 'PATCH') {
-    const body = req.body as any;
-    if (body.status && !isMilestoneStatus(body.status)) {
-      res.status(400).json({ error: 'Invalid status' });
-return;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     // Enforce status transition rules
     if (body.status) {
@@ -138,51 +55,21 @@ return;
       const isTalentUser = isTalent(project, user);
       const status: string = body.status;
       const allowed =
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-        (status === 'In Progress' && isClientUser) ||
+(status === 'In Progress' && isClientUser) ||
         (status === 'Submitted' && isTalentUser) ||
         (status === 'Approved' && isClientUser) ||
         (status === 'Paid' && isClientUser);
-<<<<<<< HEAD
-      if (!allowed && user.role !== 'admin') {
+if (!allowed && user.role !== 'admin') {
         res.status(403).json({ error: 'Not allowed to set this status' });
 <<<<<<< HEAD
-
 
       return;
-=======
-
-      if (!allowed && user.role !== 'admin') {
-        res.status(403).json({ error: 'Not allowed to set this status' });
-return;
-      }
-      // Add side-effects
-      if (status === 'Submitted') {
-body.submittedByUserId = user.userId;
-      }
-      if (status === "Approved") {
-        body.approvedByUserId = user.userId;
-      }
-      if (status === "Paid") {
-        body.paidAt = new Date().toISOString();
-      }
-    }
-    const updated = updateMilestone(project, milestoneId, body);
-    if (!updated) {
-      res.status(404).json({ error: 'Milestone not found' });
-return;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     res.status(200).json({ milestone: updated });
     return;
   }
 
-<<<<<<< HEAD
-  res.setHeader('AllowPATCH');
+res.setHeader('AllowPATCH');
   res.status(405).end('Method Not Allowed')
 }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -194,8 +81,6 @@ return;
   res.setHeader("AllowPATCH");
   res.status(405).end("Method Not Allowed");
 }
-
-
 
 res.setHeader("AllowPATCH");
   res.status(405).end("Method Not Allowed");
@@ -210,29 +95,8 @@ res.setHeader("AllowPATCH");
   res.setHeader('AllowPATCH');
   res.status(405).end('Method Not Allowed')
 }
-=======
-        return;
-      }
-      // Add side-effects
-      if (status === 'Submitted') {
-        body.submittedByUserId = user.userId
-      }
-      if (status === 'Approved') {
-        body.approvedByUserId = user.userId
-      }
-      if (status === 'Paid') {
-        body.paidAt = new Date().toISOString()
-=======
-
-
-    }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   if (req && req.method === "PATCH") {
-=======
-"
-  if (req && req.method === "PATCH") {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones/[milestoneId].ts
     const body = req && req.body as any;
     if (body && body.status && !isMilestoneStatus(body && body.status)) {"
       res && res.status(400).json({ error: "Invalid status" });
@@ -246,7 +110,6 @@ res.setHeader("AllowPATCH");
       const status: string = body && body.status;
       const allowed =
 
-
       }
     }
     const updated = updateMilestone(project, milestoneId, body);
@@ -259,38 +122,22 @@ res.setHeader("AllowPATCH");
 }
 ;
 
-
   res.setHeader('AllowPATCH');'
   res.status(405).end('Method Not Allowed')
 }
 
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  } catch (error) {
+:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
+} catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-  res.setHeader('Allow', 'PATCH');
-  res.status(405).end('Method Not Allowed');
-
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones/[milestoneId].ts

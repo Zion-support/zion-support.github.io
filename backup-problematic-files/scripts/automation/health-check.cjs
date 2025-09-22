@@ -22,24 +22,13 @@ class HealthChecker {}
         const logMessage = `[${timestamp}] ${message}\n`;`
         console.log(logMessage.trim());
         fs.appendFileSync(this.logFile, logMessage)};
-<<<<<<< HEAD
-    async checkSystemHealth() {}
+async checkSystemHealth() {}
         this.log('Starting health check...');
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        const healthReport = {}
+const healthReport = {}
             "timestamp": new Date().toISOString(),
             "status": 'healthy',
             "checks": {};
         };
-=======
-    async checkSystemHealth() {}"
-
-            "checks": {};"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         try {}
             // Check Node.js version;
@@ -51,8 +40,7 @@ class HealthChecker {}
                 const diskUsage = execSync('df -h ., { "encoding": utf8})
 });
                 healthReport.checks.diskSpace = {}
-<<<<<<< HEAD
-                    "status": 'pass',
+"status": 'pass',
                     "value": diskUsage.split('\n')[1] || 'Unknown'
                 };
                 this.log('Disk space check completed')} catch (error) {}
@@ -109,19 +97,7 @@ class HealthChecker {}
             healthReport.error = error.message};
         // Save report;
         fs.writeFileSync(this.reportFile, JSON.stringify(healthReport, null, 2));
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        this.log(`Health check completed. "Status": ${healthReport.status}`);
-=======
-
-                    "value": `${onlineProcesses} processes online;"
-                this.log(`PM2 "processes": ${onlineProcesses} online`)} catch (error) {`}"
-                healthReport.checks.pm2Processes = {}"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+this.log(`Health check completed. "Status": ${healthReport.status}`);
         return healthReport};
     async run() {}
             await this.checkSystemHealth();
@@ -134,17 +110,8 @@ if (require.main === module) {}
     const healthChecker = new HealthChecker();
     healthChecker.run()};
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = HealthChecker;
-module.exports = HealthChecker;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 module.exports = HealthChecker;
 "`;

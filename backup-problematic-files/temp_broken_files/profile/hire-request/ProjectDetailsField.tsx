@@ -28,4 +28,3 @@ export function ProjectDetailsField({ form } ProjectDetailsFieldProps) {;
         </FormItem>;
       )}
     />;
-

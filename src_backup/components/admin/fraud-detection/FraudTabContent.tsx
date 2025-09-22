@@ -1,12 +1,7 @@
-<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
+:src/components/admin/fraud-detection/FraudTabContent.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 
@@ -14,19 +9,8 @@ import React from "react";
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
-<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
+:src/components/admin/fraud-detection/FraudTabContent.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import React from 'react';
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-import React from 'react';
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
 interface FraudTabContentProps {
 =======
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
@@ -48,16 +32,8 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({
 
   switch (tabValue) {    case 'pending':
 
-<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
+:src/components/admin/fraud-detection/FraudTabContent.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
 interface FraudTabContentProps {
   tabValue: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -72,14 +48,10 @@ interface FraudTabContentProps {
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {
   switch(tabValue) {
     case 'pending':
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return (
-<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
-<<<<<<< HEAD
-        <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">
+:src/components/admin/fraud-detection/FraudTabContent.tsx
+<div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">
           <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />
           <h3 className="text-xl font-medium mb-4">Pending Review Flags</h3>
           <p className="text-muted-foreground">
@@ -89,17 +61,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 <<<<<<< HEAD
 <<<<<<< HEAD
       ),
-    
 =======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
     case 'dangerous':
@@ -114,11 +76,10 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows high-priority dangerous flags requiring immediate attention.
           </p>
         </div>
-<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
-<<<<<<< HEAD
+:src/components/admin/fraud-detection/FraudTabContent.tsx
 <<<<<<< HEAD
       ),
-    
+
     case 'actioned':
       return (
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">
@@ -128,22 +89,12 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows flags where action has already been taken.
           </p>
         </div>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
 
       ),
-    
 
     case 'actioned':
       return (
-<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
+:src/components/admin/fraud-detection/FraudTabContent.tsx
         <div className='bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text - center'>;
           <AlertCircle className='mx - auto h - 12 w - 12 text - red - 500 mb - 4' />;
           <h3 className='text - xl font - medium mb - 4'>Dangerous Flags</h3>;
@@ -155,9 +106,8 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
     case 'actioned':;
       return (
 
-<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
-<<<<<<< HEAD
-    case 'actioned':
+:src/components/admin/fraud-detection/FraudTabContent.tsx
+case 'actioned':
       return (
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">
           <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" />
@@ -169,30 +119,21 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           </p>;
         </div>;
       );
-=======
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
       return null;
   };
 };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       ),
-    
+
     default:
       return null
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 <<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
 <<<<<<< HEAD
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
 interface FraudTabContentProps {;
   tabValue: string;
 }
@@ -220,45 +161,22 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
         </div>;
       ),;
     case 'actioned':;
-<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
+:src/components/admin/fraud-detection/FraudTabContent.tsx
       return (;
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">;
           <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" />;
           <h3 className="text-xl font-medium mb-4">Actioned Flags</h3>;
           <p className="text-muted-foreground">;
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-      return (
-        <div className='bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center'>;
-          <CheckCircle className='mx-auto h-12 w-12 text-green-500 mb-4' />;
-          <h3 className='text-xl font-medium mb-4'>Actioned Flags</h3>;
-          <p className='text-muted-foreground'>;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
             This tab shows flags where action has already been taken.;
           </p>;
         </div>;
       );
-<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
-<<<<<<< HEAD
-    default:;
+:src/components/admin/fraud-detection/FraudTabContent.tsx
+default:;
       return null;
 <<<<<<< HEAD
-=======
-=======
-
-    default:;
-      return null;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
 
 }
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 }
@@ -278,16 +196,8 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
-<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
+:src/components/admin/fraud-detection/FraudTabContent.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
 };
 
       );
@@ -296,9 +206,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       return null;
   }
 };
-<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
+:src/components/admin/fraud-detection/FraudTabContent.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudTabContent.tsx

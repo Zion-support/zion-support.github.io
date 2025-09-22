@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
-=======
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -338,7 +322,7 @@ export default function MicroSaasPage() {
         <meta name="keywords" content="micro saas, business software, AI tools, CRM, analytics, automation, project management, email marketing" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
       </Head>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20">
@@ -409,7 +393,7 @@ export default function MicroSaasPage() {
                       Popular
                     </div>
                   )}
-                  
+
                   <div className="flex items-center mb-4">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                       <service.icon className="w-8 h-8 text-blue-600" />
@@ -422,9 +406,9 @@ export default function MicroSaasPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  
+
                   <div className="mb-4">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-2xl font-bold text-blue-600">{service.price}</span>
@@ -639,7 +623,7 @@ export default function MicroSaasPage() {
                   Call {contactInfo.phone}
                 </a>
               </div>
-              
+
               {/* Contact Information */}
               <div className="grid md:grid-cols-3 gap-8 mt-12">
                 <div className="flex items-center justify-center">
@@ -661,8 +645,7 @@ export default function MicroSaasPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
-  } catch (error) {
+} catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -674,27 +657,16 @@ export default function MicroSaasPage() {
   );
 }
 
-
 }
-
 
 }
 ursor/fix-lint-push-and-merge-to-main-ae4e
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
-=======
-}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======

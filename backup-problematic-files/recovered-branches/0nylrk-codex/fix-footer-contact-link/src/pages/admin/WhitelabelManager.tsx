@@ -62,4 +62,3 @@ export default function WhitelabelManager() {;
         </div>;
       </main>;
       <Footer />;
-

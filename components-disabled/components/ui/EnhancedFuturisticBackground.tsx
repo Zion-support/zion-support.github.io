@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -19,7 +15,6 @@ interface EnhancedFuturisticBackgroundProps {
 const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps /> = ({children;
   className;
 
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 }let particles: Particle[] = [];
 let connections: Connection[] = [];
@@ -62,8 +57,7 @@ const EnhancedFuturisticBackground: React.FC<;
   intensity = 'medium','
   color_scheme = 'quantum',
   particle_count = 100,
-<<<<<<< HEAD
-  animation_speed = 1, }) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({
+animation_speed = 1, }) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({
   fontSize 
 }px monospace`;
 
@@ -81,7 +75,7 @@ const EnhancedFuturisticBackground: React.FC<
   const animationRef = useRef<number | undefined>(undefined);
   const colorSchemes = {
     quantum: {
-      
+
       primary: '#00ffff',
       secondary: '#ff00ff',
       accent: '#ffff00',
@@ -183,9 +177,6 @@ canvas.height = window.innerHeight;
 x: number;
       y: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  animation_speed = 1, }) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       vx: number;
       vy: number;
       size: number;
@@ -198,8 +189,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       color: string,
       opacity: number,
       life: number,
-<<<<<<< HEAD
-      maxLife: number;
+maxLife: number;
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -215,9 +205,6 @@ this.color =
 
 origin/cursor/automate-test-improve-and-merge-code-2533
       update() {
-=======
-      update() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         this.x += this.vx;
         this.y += this.vy;
         this.life--;
@@ -226,18 +213,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         if (this.x > canvas.width) this.x = 0;
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
-<<<<<<< HEAD
-        // Fade out near end of life
+// Fade out near end of life
         if (this.life < 20) {
           this.opacity *= 0.95
 
 this.opacity *= 0.95;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        // Fade out near end of life;
-        if (this.life < 20) {}
-          this.opacity *= 0.95;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       }
 
@@ -250,10 +231,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx.save();
         ctx.globalAlpha = this.opacity;
 
-        
         // Create gradient for particle;
         const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
-<<<<<<< HEAD
 // Create gradient for particle
         const gradient = ctx.createRadialGradient(
           this.x
@@ -265,9 +244,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         );
 origin/cursor/automate-test-improve-and-merge-code-2533
         gradient.addColorStop(0, this.color);
-=======
-        gradient.addColorStop(0, this.color);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         gradient.addColorStop(1, 'transparent');
         ctx.fillStyle = gradient;
         ctx.beginPath();
@@ -292,19 +268,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx.restore()
         return this.life <= 0 || this.opacity < 0.01;      }
 
-
-
 ctx.restore();
       }
-<<<<<<< HEAD
-      isDead() {
+isDead() {
         return this.life <= 0 || this.opacity < 0.01;
 origin/cursor/automate-test-improve-and-merge-code-2533
       }
-=======
-      isDead() {}
-        return this.life <= 0 |this.opacity < 0.01;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
       max_life: number,
         this.coordinate_x = Math.random () * canvas.width;
@@ -420,8 +389,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
     let particles: Particle[] = [];
     let connections: Connection[] = [];
-<<<<<<< HEAD
-        drops[i] = 1
+drops[i] = 1
 // Initialize particles
     for (let i = 0; i < settings.particleCount; i++) {
       particles.push(new Particle());
@@ -437,9 +405,6 @@ const characters =
 for (let i = 0; i < columns; i++) {
         drops[i] = 1;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        drops[i] = 1;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
       const drawMatrix = () => {'
         ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
@@ -538,8 +503,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
 
-<<<<<<< HEAD
-      for (let i = 0; i < particles.length; i++) {
+for (let i = 0; i < particles.length; i++) {
 particles.push(new Particle());
       }
 
@@ -548,10 +512,6 @@ particles.push(new Particle());
 for (let i = 0; i < particles.length; i++) {
 origin/cursor/automate-test-improve-and-merge-code-2533
         for (let j = i + 1; j < particles.length; j++) {
-=======
-      for (let i = 0; i < particles.length; i++) {}
-        for (let j = i + 1; j < particles.length; j++) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           const distance = Math.sqrt(
             Math.pow(particles[i].x - particles[j].x, 2) +
               Math.pow(particles[i].y - particles[j].y, 2)
@@ -565,9 +525,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             connections.push(new Connection(particles[i], particles[j]))
 
       }
-
-
-
 
             connections.push(new Connection(particles[i], particles[j]));
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -587,26 +544,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx.globalAlpha = 0.1;
         ctx.strokeStyle = colors.accent;
         ctx.lineWidth = 1;
-<<<<<<< HEAD
-
-        if (Math.random() < 0.5) {
+if (Math.random() < 0.5) {
           // Draw triangle
-=======
-        if (Math.random() < 0.5) {}
-          // Draw triangle;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ctx.beginPath();
           ctx.moveTo(x, y - size);
           ctx.lineTo(x - size, y + size);
           ctx.lineTo(x + size, y + size);
           ctx.closePath();
-<<<<<<< HEAD
 ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
         } else {
-=======
-        } else {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           // Draw square;
           ctx.stroke_rect (x - size, y - size, size * 2, size * 2);
         }
@@ -620,8 +567,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }'
       window && window.removeEventListener('resize', resizeCanvas);
     }
-<<<<<<< HEAD
-        ctx.restore();
+ctx.restore();
       }
       // Respect reduced motion
       const prefersReduced = window.matchMedia(
@@ -652,12 +598,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ref={canvasRef}
 className='fixed inset-0 w-full h-full pointer-events-none z-0'
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  return (`
-    <div className={`relative min-h-screen ${className}`}>;
-      <canvas;
-        ref={canvasRef}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         style={{ background: 'transparent' }}
       />;
       {/* Overlay gradient */}
@@ -680,7 +620,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default EnhancedFuturisticBackground;
 
-
 export default EnhancedFuturisticBackground;
 `
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
@@ -693,10 +632,4 @@ export default EnhancedFuturisticBackground;
 ;
 export default EnhancedFuturisticBackground;
 ;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

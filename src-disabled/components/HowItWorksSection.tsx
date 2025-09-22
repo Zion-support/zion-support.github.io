@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { FileText, Search, Handshake, Check } from 'lucide-react';
 
@@ -88,18 +87,18 @@ const HowItWorksSection: React.FC = () => {
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-gray-300 to-transparent transform translate-x-4 z-0" />
               )}
-              
+
               <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 border border-gray-100">
                 {/* Step Number */}
                 <div className="absolute -top-4 left-8 bg-white border-2 border-gray-200 rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold text-gray-600">
                   {index + 1}
                 </div>
-                
+
                 {/* Icon */}
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${step.bgColor} flex items-center justify-center text-white mb-6`}>
                   {step.icon}
                 </div>
-                
+
                 {/* Content */}
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {step.title}
@@ -107,7 +106,7 @@ const HowItWorksSection: React.FC = () => {
                 <p className="text-gray-600 mb-4 leading-relaxed">
                   {step.description}
                 </p>
-                
+
                 {/* Details */}
                 <ul className="space-y-2 mb-4">
                   {step.details.map((detail, detailIndex) => (
@@ -117,7 +116,7 @@ const HowItWorksSection: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 {/* Stats */}
                 <div className="border-t border-gray-100 pt-4">
                   <div className="flex justify-between items-center text-sm">
@@ -149,101 +148,11 @@ const HowItWorksSection: React.FC = () => {
                 Learn More
               </button>
             </div>
-=======
-
-
-import React from 'react',
-import { GradientHeading } from "./GradientHeading",
-import { Check, Handshake, Search, Send } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
-interface HowItWorksSectionProps {
-  className?: string;
-  style?: React.CSSProperties
-}
-
-const getSteps = null;
-
-  return (
-    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-            {t('home.how_it_works_subtitle')}
-          </p>
-        </div>
-
-        <div className='relative'>
-          <div className='absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden'></div>
-
-          <div className='space-y-12 md:space-y-0'>
-            {steps.map((step, index) => (
-              <div
-                key={step.title}                className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                } relative`}
-              >
-                <div className='md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right'>
-                  {index % 2 === 0 ? (
-                    <div>
-                      <h3 className='text-2xl font-bold text-white mb-3'>
-                        {step.title}
-                      </h3>
-                      <p className='text-zion-slate-light'>
-                        {step.description}
-                      </p>
-                    </div>
-                  ) : null}
-                </div>
-                <div className='relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0'>
-                  <step.icon className='w-6 h-6 text-zion-cyan' />
-                </div>
-
-                <div className='md:w-1/2 md:px-12 text-center md:text-left'>
-                  {index % 2 !== 0 ? (
-                    <div>
-                      <h3 className='text-2xl font-bold text-white mb-3'>
-                        {step.title}
-                      </h3>
-                      <p className='text-zion-slate-light'>
-                        {step.description}
-                      </p>                    </div>                    </div>
-                  ) : null}
-                </div>
-                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
-                      <p className="text-zion-slate-light">{step.description}</p>
-                    </div>
-                  ) : null}
-                </div>
-                
-                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">
-                  <step.icon className="w-6 h-6 text-zion-cyan" />
-                </div>
-
-                <div className="md:w-1/2 md:px-12 text-center md:text-left">
-                  {index % 2 !== 0 ? (
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
-                      <p className="text-zion-slate-light">{step.description}</p>
-                    </div>
-                  ) : null}
-                </div>
-              </div>
-            ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </div>
       </div>
     </section>
   );
-<<<<<<< HEAD
 };
 
 export default HowItWorksSection;
-=======
-}
-}
-}
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

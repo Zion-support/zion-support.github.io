@@ -703,27 +703,27 @@ canvas.width / 2,
 
 origin/cursor/automate-test-improve-and-merge-code-2533
       const bgColors = {
-        'neural-network': [
+        'neural-network': [;
           'rgba(0, 0, 20, 0.8)',
           'rgba(0, 20, 40, 0.6)',
           'rgba(20, 0, 40, 0.4)',
         ],
-        'quantum-field': [
+        'quantum-field': [;
           'rgba(0, 20, 0, 0.8)',
           'rgba(20, 40, 0, 0.6)',
           'rgba(40, 0, 20, 0.4)',
         ],
-        cyberpunk: [
+        cyberpunk: [;
           'rgba(40, 0, 20, 0.8)',
           'rgba(20, 0, 40, 0.6)',
           'rgba(0, 20, 40, 0.4)',
         ],
-        holographic: [
+        holographic: [;
           'rgba(40, 0, 40, 0.8)',
           'rgba(0, 40, 40, 0.6)',
           'rgba(40, 40, 0, 0.4)',
         ],
-        multidimensional: [
+        multidimensional: [;
           'rgba(20, 0, 40, 0.8)',
           'rgba(0, 40, 20, 0.6)',
           'rgba(40, 20, 0, 0.4)',
@@ -1190,7 +1190,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{}
             transition={{}
               duration: 10;
-              repeat: Infinity'
+              repeat: Infinity';
               ease: 'easeInOut',            }}
           />;
         </div>;
@@ -1202,7 +1202,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{}
               duration: 8,
               repeat: Infinity,"
-              ease: "easeInOut"
+              ease: "easeInOut";
               scale: [1.2, 1, 1.2],
               rotate: [360, 180, 0],
               opacity: [0.1, 0.3, 0.1],

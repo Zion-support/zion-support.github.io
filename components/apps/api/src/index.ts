@@ -17,7 +17,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }'
     cb(new Error('Not allowed'), false)
   }'
-  methods: ['GETPOSTOPTIONS']
+  methods: ['GETPOSTOPTIONS'];
 });
   },
   methods: ['GET', 'POST', 'OPTIONS'],
@@ -91,7 +91,7 @@ const rows = await withUser(userId, async client => {
 origin/cursor/automate-test-improve-and-merge-code-2533
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1::text IS NULL OR country = $1)
-         AND ($2::text IS NULL OR EXISTS (
+         AND ($2::text IS NULL OR EXISTS (;
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' || $2 || '%'
            ))
        ORDER BY created_at DESC;`
@@ -143,7 +143,7 @@ app.get ('/talent / search', async (req, reply) => {}
   const rows = await with_user (user_id, async client => {}
     const res = await client.query (`
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile;
-      WHERE ($1::text IS NULL OR country = $1)         AND ($2::text IS NULL OR EXISTS ('
+      WHERE ($1::text IS NULL OR country = $1)         AND ($2::text IS NULL OR EXISTS (';
               SELECT 1 FROM unnest (skills) s WHERE s ILIKE '%' || $2 || '%'));
       ORDER BY created_at DESC;`
       LIMIT 25`,  const rows = await with_user (user_id, async (client) => {}

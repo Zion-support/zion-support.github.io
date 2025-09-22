@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -251,15 +250,8 @@ this.log(" Smart Dependency Optimization completed successfully")
       this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
         " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-        ` Smart Dependency Optimization "failed": ${error.message}"
-        ` Smart Dependency Optimization "failed": ${error.message}"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

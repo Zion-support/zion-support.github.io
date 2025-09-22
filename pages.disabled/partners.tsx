@@ -1,24 +1,11 @@
-<<<<<<< HEAD:pages_backup/partners.tsx
-<<<<<<< HEAD
+:pages_backup/partners.tsx
 <<<<<<< HEAD:pages/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-<<<<<<< HEAD:pages_backup/partners.tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/partners.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+:pages_backup/partners.tsx
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
 import Head from 'next/head';
@@ -194,14 +181,8 @@ const Page = () => {
 };
 
 export default Page;
-<<<<<<< HEAD:pages_backup/partners.tsx
-<<<<<<< HEAD
+:pages_backup/partners.tsx
 <<<<<<< HEAD:pages/partners.tsx
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/partners.tsx
@@ -284,44 +265,7 @@ export default function PartnersPage() {
       <Head>
         <title>Partners - Zion Tech Group</title>
         <meta
-<<<<<<< HEAD:pages_backup/partners.tsx
-=======
-          name='description'
-          content='Strategic partnerships and collaboration opportunities with Zion Tech Group. Join our ecosystem of technology leaders and innovators.'
-        />
-        <meta property='og:title' content='Partners - Zion Tech Group' />
-origin/cursor/automate-test-improve-and-merge-code-2533
-        <meta
-          property='og:description'
-          content='Strategic partnerships and collaboration opportunities.'
-        />
-        <link rel='canonical' href='https://ziontechgroup.com/partners' />
-      </Head>
-
-      <EnhancedNavigation />
-color: 'from - orange - 500 to - red - 500',
-    },
-  ];
-;
-  const stats = [;
-    { number: '50+', label: 'Strategic Partners', icon: Handshake },
-    { number: '100+', label: 'Joint Projects', icon: Rocket },
-    { number: '25+', label: 'Countries', icon: Globe },
-    { number: '300%', label: 'Growth Rate', icon: TrendingUp },
-  ];
-;
-  return (
-
-        />;
-        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/partners' />      </Head>;
-      <EnhancedNavigation />;
-      {/* Hero Section */}
-      <section className='relative pt-32 pb-20 px-6'>;
-        <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
+:pages_backup/partners.tsx
 <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
           <motion.div
@@ -392,12 +336,9 @@ className='mb-12'
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD:pages_backup/partners.tsx
-<<<<<<< HEAD
+:pages_backup/partners.tsx
 <<<<<<< HEAD:pages/partners.tsx
 <<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
             transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
@@ -468,16 +409,6 @@ Join our ecosystem of technology leaders, innovators, and industry experts
           </motion.div>
         </div>
       </section>
-
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:pages_backup/partners.tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/partners.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
       {/* Stats Section */}
@@ -739,17 +670,10 @@ className='text-center mb-16'
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300'
-<<<<<<< HEAD:pages_backup/partners.tsx
-<<<<<<< HEAD
+:pages_backup/partners.tsx
 <<<<<<< HEAD:pages/partners.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/partners.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
@@ -757,13 +681,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
-<<<<<<< HEAD:pages_backup/partners.tsx
-<<<<<<< HEAD
+:pages_backup/partners.tsx
 <<<<<<< HEAD:pages/partners.tsx
 <<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
@@ -773,15 +693,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 
-<<<<<<< HEAD:pages_backup/partners.tsx
+:pages_backup/partners.tsx
 <<<<<<< HEAD
-=======
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/partners.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 {/* Partnership Types */}
       <section className='py-20 px-6'>;
@@ -817,17 +730,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
-<<<<<<< HEAD:pages_backup/partners.tsx
-<<<<<<< HEAD
+:pages_backup/partners.tsx
 <<<<<<< HEAD:pages/partners.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/partners.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
@@ -835,10 +741,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD:pages_backup/partners.tsx
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
+:pages_backup/partners.tsx
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
@@ -847,11 +750,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               We offer various partnership models to meet your business objectives and growth goals
             </p>
           </motion.div>
-<<<<<<< HEAD:pages_backup/partners.tsx
-=======
-<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {partnershipTypes.map((type, index) => (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
+:pages_backup/partners.tsx
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {partners.map((partner, index) => (
@@ -876,24 +775,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD:pages_backup/partners.tsx
-<<<<<<< HEAD
+:pages_backup/partners.tsx
 <<<<<<< HEAD:pages/partners.tsx
 <<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
 
-<<<<<<< HEAD
-=======
-
-className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
-<<<<<<< HEAD:pages_backup/partners.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/partners.tsx
 =======
 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -969,14 +855,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className={`w-12 h-12 bg-gradient-to-br ${partner.color} rounded-xl flex items-center justify-center`}>
                       <partner.icon className="w-6 h-6 text-white" />
                     </div>
-<<<<<<< HEAD:pages_backup/partners.tsx
-=======
-<div className="flex items-center gap-2">
-                      <span className="text-xs text-white/60 bg-white/5 px-2 py-1 rounded-full">
-                        {partner.category}
-                      </span>
-                      <span className="text-xs text-white/40 bg-white/5 px-2 py-1 rounded">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
+:pages_backup/partners.tsx
                     <div className='flex items-center gap-2'>
                       <span className='text-xs text-white/60 bg-white/5 px-2 py-1 rounded-full'>
                         {partner.category}
@@ -1114,14 +993,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center gap-1"
                     >
                       Visit Website
-<<<<<<< HEAD:pages_backup/partners.tsx
-=======
-                      <ExternalLink className="w-3 h-3" />
-</a>
-                    <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105">
-                      Learn More
-                    <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105'>                      Learn More
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
+:pages_backup/partners.tsx
                       <ExternalLink className='w-3 h-3' />
                     </a>
                     <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105'>
@@ -1143,41 +1015,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
       {/* Become a Partner CTA */}
-<<<<<<< HEAD:pages_backup/partners.tsx
-=======
-      <section className='py-20 px-6'>;
-        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
-
-      {/* Become a Partner CTA */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-          >
-
-            <h2 className="text-4xl font-bold text-white mb-6">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
+:pages_backup/partners.tsx
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
@@ -1193,22 +1031,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth.
             </p>
-<<<<<<< HEAD:pages_backup/partners.tsx
-=======
-<div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-Partnership Inquiry
-              </button>
-              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
-                Partnership Inquiry
-              </button>
-              <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
-
-                Partnership Inquiry
-              </button>
-              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
-                Download Partnership Guide
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
+:pages_backup/partners.tsx
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
                 Partnership Inquiry
@@ -1223,12 +1046,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD:pages_backup/partners.tsx
-<<<<<<< HEAD
+:pages_backup/partners.tsx
 <<<<<<< HEAD:pages/partners.tsx
 <<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
 )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) )
 }</ul> </motion.div>) )
@@ -1236,12 +1056,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion.div>) )
 
 ),
-<<<<<<< HEAD:pages_backup/partners.tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/partners.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+:pages_backup/partners.tsx
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
 );
@@ -1299,59 +1114,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD:pages_backup/partners.tsx
-<<<<<<< HEAD
+:pages_backup/partners.tsx
 <<<<<<< HEAD:pages/partners.tsx
 <<<<<<< HEAD
-=======
-duration: 0 && 0.8 
-}viewport= {
-  {
-  once: true 
-
-}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
-
-                  </p>;
-                  <div className='mb - 4'>;
-                    <h4 className='text - sm font - semibold text - white / 60 mb - 2 uppercase tracking - wider'>;
-                      Benefits;
-                    </h4>;
-                    <ul className='space - y-1'>;
-                      {partner.benefits.map (benefit => (
-                        <li;
-                          key={benefit}
-                          className='text - xs text - white / 80 flex items - center';
-                        >;
-                          <div className='w - 1 h - 1 bg - cyan - 400 rounded - full mr - 2' />                          {benefit}
-                        </li>))}
-                    </ul>;
-                  </div>;
-                  <div className='flex items - center justify - between'>;
-                    <a;
-                      href={partner.website}
-                      target='_blank';
-                      rel='noopener noreferrer';
-                      className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 flex items - center gap - 1';
-                    >;
-                      Visit Website;
-                      <ExternalLink className='w - 3 h - 3' />;
-                    </a>;
-                    <button className='px - 4 py - 2 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - lg font - semibold text - white text - sm transition - all duration - 300 transform hover:scale - 105'>                      Learn More;
-                    </button>;
-                  </div>;
-                </div>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Become a Partner CTA */}
-      <section className='py - 20 px - 6'>;
-        <div className='max - w-4xl mx - auto text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
           >;
             <h2 className='text - 4xl font - bold text - white mb - 6'>;
               Ready to Partner with Us?;
@@ -1396,19 +1161,11 @@ once: true
   }
 }
 ;
-<<<<<<< HEAD:pages_backup/partners.tsx
+:pages_backup/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -1429,25 +1186,17 @@ const Page = () => {
 };
 
 export default Page;
-<<<<<<< HEAD:pages_backup/partners.tsx
+:pages_backup/partners.tsx
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 
-
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/partners.tsx
 =======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -1460,17 +1209,10 @@ export default Page;
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-<<<<<<< HEAD:pages_backup/partners.tsx
-<<<<<<< HEAD
+:pages_backup/partners.tsx
 <<<<<<< HEAD:pages/partners.tsx
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/partners.tsx
-=======
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx

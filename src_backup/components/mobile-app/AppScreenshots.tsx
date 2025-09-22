@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
-<<<<<<< HEAD
+:src/components/mobile-app/AppScreenshots.tsx
 <<<<<<< HEAD
 // These would be replaced with actual screenshots
 const mockScreenshots = [
@@ -30,18 +29,6 @@ const mockScreenshots = [
   { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },
   { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },
   { id: 5, alt: "Profile screen", src: "/placeholder.svg" }],
-=======
-=======
-if (scrollContainerRef.current) {
-
-      const scrollAmount = 300
-      scrollContainerRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount
-        behavior: "smooth"})
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppScreenshots.tsx
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -64,15 +51,7 @@ export const AppScreenshots: React.FC = () => {;
       scrollContainerRef && scrollContainerRef.current.scrollBy({;
         left: direction === "left" ? -scrollAmount : scrollAmount,;
         behavior: "smooth"});
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
-=======
-
-      const scrollAmount = 300
-      scrollContainerRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount
-        behavior: "smooth"})
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+:src/components/mobile-app/AppScreenshots.tsx
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppScreenshots.tsx
@@ -94,8 +73,6 @@ export const AppScreenshots: React.FC = () => {
   },
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
     <section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -105,12 +82,6 @@ export const AppScreenshots: React.FC = () => {
             Take a visual tour through the Zion app's intuitive interface.
           </p>
         </div>
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
 
     <section className="py-16 bg-zion-blue-dark">;
@@ -124,54 +95,27 @@ export const AppScreenshots: React.FC = () => {
 
         <div className="relative">;
 
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
-<<<<<<< HEAD
+:src/components/mobile-app/AppScreenshots.tsx
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-        
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppScreenshots.tsx
         <div className="relative">
           <Button
             variant="ghost"
             size="icon"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
-<<<<<<< HEAD
-            onClick={() => scroll("left")}
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-            onClick={() => scroll("left")}
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppScreenshots.tsx
+:src/components/mobile-app/AppScreenshots.tsx
+onClick={() => scroll("left")}
             aria-label="Scroll left"
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
 
-<<<<<<< HEAD
-            aria-label="Scroll left";
+aria-label="Scroll left";
           >;
             <ChevronLeft className="h-6 w-6" />;
           </Button>;
 
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppScreenshots.tsx
           <div
             ref = {scrollContainerRef,}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -190,20 +134,9 @@ export const AppScreenshots: React.FC = () => {
               </div>
             ))}
 
-<<<<<<< HEAD
-          </div>;
+</div>;
 
-
-
-
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppScreenshots.tsx
-          
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div 
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -224,35 +157,16 @@ export const AppScreenshots: React.FC = () => {
             ))}
           </div>
 
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
-<<<<<<< HEAD
-          
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-          
+:src/components/mobile-app/AppScreenshots.tsx
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppScreenshots.tsx
           <Button
             variant="ghost"
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
-<<<<<<< HEAD
-            onClick={() => scroll("right")}
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-            onClick={() => scroll("right")}
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppScreenshots.tsx
+:src/components/mobile-app/AppScreenshots.tsx
+onClick={() => scroll("right")}
             aria-label="Scroll right"
 =======
-        
 
   return (
     <section className="py-16 bg-zion-blue-dark">
@@ -276,13 +190,10 @@ export const AppScreenshots: React.FC = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
-<<<<<<< HEAD
+:src/components/mobile-app/AppScreenshots.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 },
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -317,8 +228,7 @@ export const AppScreenshots: React.FC = () => {;
           <Button;
             variant="ghost";
             size="icon";
-<<<<<<< HEAD
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
+className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
             onClick={() => scroll("left")}
             aria-label="Scroll left";
           >;
@@ -350,13 +260,6 @@ export const AppScreenshots: React.FC = () => {;
             onClick={() => scroll("right")}
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppScreenshots.tsx
             aria-label="Scroll right";
 =======
@@ -373,14 +276,6 @@ export const AppScreenshots: React.FC = () => {;
     </section>;
   )
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'"},;
-
-=======
-'"},
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 ;
@@ -462,14 +357,8 @@ if ( {) {
 }
 
   )
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
+:src/components/mobile-app/AppScreenshots.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-  )
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 
@@ -481,9 +370,6 @@ import { Button } from "@/components/ui/button";
   );
 };
 '"
-<<<<<<< HEAD:src/components/mobile-app/AppScreenshots.tsx
+:src/components/mobile-app/AppScreenshots.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppScreenshots.tsx

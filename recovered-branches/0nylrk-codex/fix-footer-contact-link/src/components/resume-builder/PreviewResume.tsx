@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import { Resume } from "@/types/resume";
 <<<<<<< HEAD
 import {
@@ -19,23 +16,9 @@ interface PreviewResumeProps {
   resume: Resume;
   onBack: () => void
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {Resume} from '@/types/resume';
 import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
-
-
-
-
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -54,48 +37,9 @@ import {;
 } from './preview',;
 interface PreviewResumeProps {;
   resume: Resume;
-<<<<<<< HEAD
-  onBack: () => void;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+onBack: () => void;
 
-
-
-=======
-import { Resume } from "@/types/resume";
-import {
-
-import { Resume } from "@/types/resume";"
-
-import {
-  // TODO: Implement
 }
-pr-12325
-  PreviewHeader,
-  ResumeBasicInfoSection,
-  WorkExperienceSection,
-  EducationSection,
-
-  SkillsSection,
-  CertificationsSection,
-} from "./preview";
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface PreviewResumeProps {
-  resume: Resume;
-  onBack: () => void;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-}
-=======
-import {Resume} from '@/types/resume';
-import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { Resume } from '@/types/resume',;
 import {;
@@ -159,12 +103,6 @@ interface PreviewResumeProps {}
   onBack: () => void;
 }
 
-
-
-
-
-
-
 "
 import { Resume } from "@/types/resume";
 import {}
@@ -183,7 +121,6 @@ interface PreviewResumeProps {}
 
 }
 
-
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {}
   return ("
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -198,29 +135,8 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {}
         <SkillsSection skills={resume.skills} />
         <CertificationsSection certifications={resume.certifications} />
       </div>
-<<<<<<< HEAD
-    </div>
-<<<<<<< HEAD
+</div>
 }  );
-=======
-    </div>;
-  );
-}
-
-
-
-  );
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  );
-}
-
-  );
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-}  );
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
     </div>;
@@ -241,22 +157,11 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 }
 
@@ -275,7 +180,6 @@ interface PreviewResumeProps {
 "
   // TODO: Implement
   // TODO: Implement
-
 
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return ("

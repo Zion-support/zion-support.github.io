@@ -1,13 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -16,8 +9,6 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Building, MapPin, Clock, DollarSign, Star} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 import {JobMatch} from "@/types/jobs";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -81,10 +72,6 @@ interface JobMatchProps {
 export function JobMatchCard({};
   matchId;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   talentId;
   name;
   title;
@@ -96,8 +83,7 @@ export function JobMatchCard({};
   skills;
   onApply;
   onViewDetails;
-<<<<<<< HEAD
-  onInvite;
+onInvite;
 }: JobMatchProps) {}
   const handleApply = () => {}
     if (onApply) {}
@@ -138,13 +124,7 @@ interface JobMatchProps {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
@@ -161,34 +141,21 @@ export function JobMatchCard({ ;
   skills;
   onApply, 
   onViewDetails, 
-<<<<<<< HEAD
-  onInvite;
+onInvite;
 }: JobMatchProps) {}
   const handleApply = () => {}
     if (onApply) {}
-=======
-  onInvite 
-}: JobMatchProps) {
-  const handleApply = () => {
-    if (onApply) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       onApply(matchId)
     }
   };
 
-<<<<<<< HEAD
-  const handleViewDetails = () => {}
+const handleViewDetails = () => {}
     if (onViewDetails) {}
-=======
-  const handleViewDetails = () => {
-    if (onViewDetails) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       onViewDetails(matchId)
     }
   };
 
-<<<<<<< HEAD
-  const handleInvite = () => {}
+const handleInvite = () => {}
     if (onInvite) {}
       onInvite(matchId)
     }
@@ -200,20 +167,6 @@ import { Card, CardContent } from "@/components/ui/card",;"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
 import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",;"
 import { formatDistanceToNow } from "date-fns",;"
-=======
-  const handleInvite = () => {
-    if (onInvite) {
-      onInvite(matchId)
-    }
-  };
-import React from 'react',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",;
-import { formatDistanceToNow } from "date-fns",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { JobMatch } from "@/types/jobs",;
 interface JobMatchProps {;
   matchId: string,;
@@ -234,28 +187,7 @@ interface JobMatchProps {;
     }
   }
 ;
-<<<<<<< HEAD
 export function JobMatchCard() { return null; }
-=======
-export function JobMatchCard({;
-  matchId,;
-  talentId,;
-  name,;
-  title,;
-  company,;
-  avatar,;
-  location,;
-  category,;
-  matchPercent,;
-  skills,;
-  onApply,;
-  onViewDetails,;
-  onInvite;
-}: JobMatchProps) {;
-  const handleApply = () => {;
-    if (onApply) {;
-      onApply(matchId);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   },;
   const handleViewDetails = () => {;
@@ -269,32 +201,13 @@ export function JobMatchCard({;
     }
   },
 
-<<<<<<< HEAD
-  // Generate a formatted date for display;
+// Generate a formatted date for display;
   const postedDate = new Date(),
-<<<<<<< HEAD
-  postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
+postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
-
-
-
-import React from 'react';
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <Card className="overflow-hidden">
-=======
-  postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks;
-'
-import React from 'react';
-
-  return ("
-    <Card className="overflow-hidden">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <CardContent className="p-0">
         {/* Match score indicator */}"
         <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-3 flex justify-between items-center">"
@@ -305,12 +218,7 @@ import React from 'react';
           <Badge variant="outline" className="bg-background">
             {formatDistanceToNow(postedDate, { addSuffix: true })}
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="flex flex-wrap gap-2 mb-3">;
+<div className="flex flex-wrap gap-2 mb-3">;
             <Badge variant="outline">{category}</Badge>;
           </div>;
 
@@ -360,36 +268,14 @@ import React from 'react';
               <Button onClick={handleApply} className="w-full">;
                 Apply Now;
               </Button>;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-<<<<<<< HEAD
-  // Generate a formatted date for display
+// Generate a formatted date for display
   const postedDate = new Date(),
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
-=======
-  // Generate a formatted date for display
-  const postedDate = new Date(),
-  postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
-
-
-
-
-
-import React from 'react';
-=======
-  onInvite;)
-pr-12325
-}: JobMatchProps) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
-<<<<<<< HEAD
-    <Card className="overflow-hidden">
+<Card className="overflow-hidden">
       <CardContent className="p-0">
         {/* Match score indicator */}
         <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-3 flex justify-between items-center">
@@ -463,11 +349,6 @@ pr-12325
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -478,61 +359,28 @@ pr-12325
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
-
-
-
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
-
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-}
-import React from 'react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
-
-
 
 }
 }
@@ -544,18 +392,7 @@ import { Card, CardContent } from '@/components / ui / card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { Building, MapPin, Clock, DollarSign, Star } from './lucide-react';
 import { formatDistanceToNow } from './date - fns';
-<<<<<<< HEAD
-=======
 
-
-'
-import { Badge } from '@/components / ui / badge';'
-import { Button } from '@/components / ui / button';'
-import { Card, CardContent } from '@/components / ui / card';'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';'
-import { Building, MapPin, Clock, DollarSign, Star } from './lucide-react';'
-import { formatDistanceToNow } from './date - fns';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { JobMatch } from '@/types / jobs';
 interface JobMatchProps {}
 =======
@@ -576,7 +413,6 @@ interface JobMatchProps {
   onViewDetails?: (match_id: string) => void,
   on_invite?: (match_id: string) => void;
 }
-<<<<<<< HEAD
 export /**;
  * JobMatchCard - Function description;
  */
@@ -585,64 +421,12 @@ function JobMatchCard() {}
     // Check condition;
 if ( {) {}
   $2;
-=======
-export /**
- * JobMatchCard - Function description
- */
-function JobMatchCard() {
-  const handle_apply = () =>: any {
-    // Check condition
-if ( {) {
-  $2
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       on_apply (match_id);
     }
   }
 ;
-<<<<<<< HEAD
 "
-=======
-  const handleViewDetails = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      onViewDetails (match_id);
-    }
-  }
-;
-  const handle_invite = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      on_invite (match_id);
-    }
-  }
-;
-  // Generate a formatted date for display;
-  const posted_date = new Date ();
-  posted_date.set_date (posted_date.get_date () - Math.floor (Math.random () * 14)), // Random date within last 2 weeks;
-  return (
-    <Card className="overflow - hidden">;
-      <CardContent className="p - 0">;
-        {/* Match score indicator */}
-        <div className="bg - gradient - to - r from - primary / 10 to - primary / 5 p - 3 flex justify - between items - center">;
-          <div className="flex items - center gap - 1">;
-            <Star className="h - 4 w - 4 text - yellow - 500 fill - yellow - 500" />;
-            <span className="font - medium">{match_percent}% Match</span>;
-=======
-    <Card className="overflow-hidden">"
-      <CardContent className="p-0">"
-        <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-3 flex justify-between items-center">"
-</div>"
-          <div className="flex items-center gap-1">"
-            <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />"
-            <span className="font-medium">{matchPercent}% Match</span>"
-          <Badge variant="outline" className="bg-background">"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>;
           <Badge variant="outline" className="bg - background">;
             {formatDistanceToNow (posted_date, { add_suffix: true })}
@@ -652,99 +436,12 @@ if ( {) {
         <div className="p - 4">;
           <div className="flex justify - between items - start gap - 2 mb - 3">;
             <h3 className="text - lg font - bold line - clamp - 2">{name}</h3>;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import React from 'react',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",;
-import { formatDistanceToNow } from "date-fns",;
-import { JobMatch } from "@/types/jobs",;
-;
-interface JobMatchProps {;
-  matchId:string,;
-  talentId:string,;
-  name:string,;
-  title:string,;
-  company:string,;
-  avatar:string,;
-  location:string,;
-  category:string,;
-  matchPercent:number,;
-  skills:string[],;
-  onApply?:(matchId:string) => void,;
-  onViewDetails?:(matchId:string) => void,;
-  onInvite?:(matchId:string) => void;
-}
-;
-export function JobMatchCard({ ;
-  matchId,;
-  talentId, ;
-  name, ;
-  title, ;
-  company, ;
-  avatar, ;
-  location, ;
-  category, ;
-  matchPercent, ;
-  skills,;
-  onApply, ;
-  onViewDetails, ;
-  onInvite ;
-} JobMatchProps) {;
-  const handleApply = () => {;
-    if (onApply) {;
-      onApply(matchId),;
-    }
-  },;
-;
-  const handleViewDetails = () => {;
-    if (onViewDetails) {;
-      onViewDetails(matchId),;
-    }
-  },;
-;
-  const handleInvite = () => {;
-    if (onInvite) {;
-      onInvite(matchId),;
-    }
-  },;
-;
-  // Generate a formatted date for display;
-  const postedDate = new Date(),;
-  postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks;
-  ;
-  return (;
-    <Card className="overflow-hidden">;
-      <CardContent className="p-0">;
-        {/* Match score indicator */}
-        <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-3 flex justify-between items-center">;
-          <div className="flex items-center gap-1">;
-            <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />;
-            <span className="font-medium">{matchPercent}% Match</span>;
-          </div>;
-          <Badge variant="outline" className="bg-background">;
-            {formatDistanceToNow(postedDate, { addSuffix:true })}
-          </Badge>;
-        </div>;
-        ;
-        {/* Talent details */}
-        <div className="p-4">;
-          <div className="flex justify-between items-start gap-2 mb-3">;
-            <h3 className="text-lg font-bold line-clamp-2">{name}</h3>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <Badge variant="default">;
               Available;
             </Badge>;
           </div>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className="text - lg font - medium mb - 2">{title}</div>;
           <div className="flex flex - wrap gap - 2 mb - 3">;
             <Badge variant="outline">{category}</Badge>;
@@ -808,11 +505,7 @@ export function JobMatchCard({ ;
       </CardContent>;
     </Card>);
 }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           ;
           <div className="text-lg font-medium mb-2">{title}</div>;
           ;
@@ -883,18 +576,11 @@ pr-12325
 }
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

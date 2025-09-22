@@ -22,4 +22,3 @@ export function ContractHeader({ onCreateClick } ContractHeaderProps) {;
         Create New Contract;
       </Button>;
     </div>;
-

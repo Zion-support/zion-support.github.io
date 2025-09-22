@@ -70,4 +70,3 @@ export function SocialLogin() {;
       </div>;
     </div>;
 <<<<<<< HEAD
-

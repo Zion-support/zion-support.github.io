@@ -45,4 +45,3 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
                     View;
                   </Button>;
                 </td>;
-

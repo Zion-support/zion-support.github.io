@@ -20,19 +20,14 @@ class ComprehensiveTestAutomation {}
     const logMessage = `[${timestamp}] [${level}] ${message};;`
     console.log(logMessage);
     try {}
-<<<<<<< HEAD
-      fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {}
+fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {}
       console.error('Failed to write to log "file": ', error.message)};
   };
   async runUnitTests() {}
     this.log('Running unit tests...');
     try {}
       execSync('npm test -- --coverage --watchAll=false', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 120000;
       }
@@ -50,11 +45,7 @@ class ComprehensiveTestAutomation {}
     this.log('Running TypeScript type checking...');
     try {}
       execSync('npx tsc --noEmit', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -72,11 +63,7 @@ class ComprehensiveTestAutomation {}
     this.log('Running ESLint...');
     try {}
       execSync('npx eslint . --max-warnings 0', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -94,11 +81,7 @@ class ComprehensiveTestAutomation {}
     this.log('Running build test...');
     try {}
       execSync('npm run build', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 300000;
       }
@@ -119,17 +102,10 @@ class ComprehensiveTestAutomation {}
     try {}
       // Check bundle size;
       const buildOutput = execSync('npm run build', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 300000;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       };);
 
       // Extract bundle size information;
@@ -157,8 +133,7 @@ class ComprehensiveTestAutomation {}
             const images = content.match(/<img[^>]*>/g) || [];
 </img>
             const headings = content.match(/<h[1-6][^>]*>/g) || [];
-<<<<<<< HEAD
-            headingStructure.push(...headings)})};
+headingStructure.push(...headings)})};
       }
 });
 
@@ -182,11 +157,7 @@ class ComprehensiveTestAutomation {}
       // Run npm audit;
       try {}
         execSync('npm audit --audit-level=moderate', { })
-<<<<<<< HEAD
-          "cwd": this.projectRoot,
-=======
-          "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
           "stdio": 'pipe',
           "timeout": 60000;
         }
@@ -216,19 +187,9 @@ class ComprehensiveTestAutomation {}
   findReactFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
-<<<<<<< HEAD
-
-    items.forEach(item => {})
+items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
-
-=======
-    
-    items.forEach(item => {})
-      const fullPath = path.join(dir, item;);
-      const stat = fs.statSync(fullPath;);
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if () {}
         files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {}
         files.push(fullPath)};
@@ -282,16 +243,8 @@ if ( {})
   const testAutomation = new ComprehensiveTestAutomation}(;);
   testAutomation.run().catch(console.error)};
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = ComprehensiveTestAutomation;
-module.exports = ComprehensiveTestAutomation;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 </h>`;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

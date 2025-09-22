@@ -1,21 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-  | 'cancelled';
-export type InterviewType = 'video' | 'phone' | 'in-person';
-export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export type InterviewStatus =
   | 'requested'
@@ -23,9 +10,7 @@ export type InterviewStatus =
   | 'declined'
   | 'rescheduled'
   | 'completed'
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 export type InterviewStatus =;
   | 'requested';
   | 'confirmed';
@@ -40,13 +25,7 @@ export type MeetingPlatform = 'zoom' | 'google - meet' | 'teams' | 'other' | 'in
 ;
 
 export interface Interview {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export type InterviewStatus = 
   | 'requested' 
@@ -54,12 +33,7 @@ export type InterviewStatus =
   | 'declined' 
   | 'rescheduled' 
   | 'completed' ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 =======
 export type InterviewStatus =
   | "requested""
@@ -75,7 +49,6 @@ export type InterviewType = "video" | "phone" | "in-person";
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
 export type InterviewStatus =
   | 'requested'
   | 'confirmed'
@@ -95,17 +68,6 @@ export type InterviewType = 'video' | 'phone' | 'in - person';
 export type MeetingPlatform = 'zoom' | 'google - meet' | 'teams' | 'other' | 'in - app';
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-export type InterviewStatus =
-  | "requested"
-  | "confirmed"
-  | "declined"
-  | "rescheduled"
-  | "completed"
-  | "cancelled";
-
-export type InterviewType = "video" | "phone" | "in-person";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export type MeetingPlatform =
   | "zoom"
@@ -121,21 +83,13 @@ export type MeetingPlatform ="
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   | "in-app";
 
-
 export interface Interview {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   | 'cancelled';
-=======
-export interface Interview {  | 'cancelled';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 export interface Interview {  | 'cancelled';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -148,15 +102,8 @@ export interface Interview {
 
 export interface Interview {;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export interface Interview {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export interface Interview {
@@ -165,7 +112,6 @@ export interface Interview {
 export interface Interview {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 export interface Interview {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -185,10 +131,7 @@ export interface Interview {};
   interview_type: InterviewType;
   client_name?: string;
   talent_name?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  client_avatar?: string,
+client_avatar?: string,
   talent_avatar?: string;
 
 }
@@ -200,30 +143,17 @@ export interface InterviewRequest {
 export interface InterviewRequest {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-export interface InterviewRequest {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   client_avatar?: string;
   talent_avatar?: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
-
 export interface InterviewRequest {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  client_avatar?: string
+client_avatar?: string
   talent_avatar?: string
 }
 export interface InterviewRequest {
@@ -234,13 +164,7 @@ export interface InterviewRequest {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-export interface InterviewRequest {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -265,32 +189,16 @@ export interface InterviewRequest {
   meeting_platform?: MeetingPlatform;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   interview_type: InterviewType,
   title?: string;
-
-=======
-  interview_type: InterviewType
-  title?: string
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export interface InterviewResponse {
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  interview_type: InterviewType;
-  title?: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
   interview_type: InterviewType
   title?: string
@@ -307,27 +215,15 @@ export interface InterviewRequest {
   scheduled_date: string;,
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
 export interface InterviewResponse {;
 
-<<<<<<< HEAD
-  interview_id: string;
+interview_id: string;
   status: InterviewStatus;
-<<<<<<< HEAD
-
-  alternative_date?: string,
+alternative_date?: string,
   message?: string;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  interview_id: string;
-=======
-export interface InterviewResponse {;  interview_id: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   status: InterviewStatus;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   interview_type: InterviewType
   title?: string
 }
@@ -336,7 +232,6 @@ export interface InterviewResponse {
 
 export interface InterviewResponse {;
 =======
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   interview_id: string;
@@ -392,51 +287,25 @@ export interface InterviewResponse {;
   alternative_date?: string;
   message?: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   interview_id: string;
   status: InterviewStatus;
 
   message?: string
 }
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-  interview_id: string;
-  status: InterviewStatus;
-
-  alternative_date?: string,
-  message?: string;
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 export interface InterviewResponse {
   interview_id: string;
   status: InterviewStatus;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  alternative_date?: string;
-  message?: string;
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======

@@ -1,7 +1,7 @@
   model: 'gpt-4o-mini';
 messages: [ {}
 '
-  role: 'system', content: 'You are a helpful assistant.' 
+  role: 'system', content: 'You are a helpful assistant.' ;
 // Create utility;
 export const Create = () => {};
   // Implementation here;
@@ -31,8 +31,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
     const response = await client.chat.completions.create({'
-      model: 'gpt-4o-mini'
-      messages: [
+      model: 'gpt-4o-mini';
+      messages: [;
 { role: 'system', content: 'You are a helpful assistant.' },
         { role: 'user', content: prompt },
       ],
@@ -41,8 +41,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const content = response.choices[0]?.message?.content |'';
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
     return {}
-      summary: content.trim()'
-      type: typeMatch ? typeMatch[1].trim() : 'unknown'
+      summary: content.trim()';
+      type: typeMatch ? typeMatch[1].trim() : 'unknown';
     }
   } catch (err) {'
     return { summary: description.slice(0, 280), type: 'unknown' }'
@@ -51,7 +51,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e && e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
     const response = await client && client.chat.completions && completions.create({'
       model: 'gpt-4o-mini',
-      messages: ['
+      messages: [';
         { role: 'system', content: 'You are a helpful assistant.' },'
         { role: 'user', content: prompt },
       ],
@@ -201,7 +201,7 @@ id,
   requests.push(record);
   await saveRequests(requests);
   // TODO: Integrate notifications (email/webhook) for admin and talent
-
+;
   return res.status(200).json({ id, status: 'ok' });
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

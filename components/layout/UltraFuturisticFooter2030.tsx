@@ -54,14 +54,14 @@ import { motion } from 'framer-motion';
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
 const contactInfo = {'
-  mobile: '+1 302 464 0950''
-  email: 'kleber@ziontechgroup.com''
-  address: '364 E Main St STE 1008 Middletown DE 19709''
-  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
+  mobile: '+1 302 464 0950'';
+  email: 'kleber@ziontechgroup.com'';
+  address: '364 E Main St STE 1008 Middletown DE 19709'';
+  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com';
 }
 const serviceCategories = []
   {'
-    title: '🚀 AI & Consciousness'
+    title: '🚀 AI & Consciousness';
 import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
@@ -69,18 +69,18 @@ import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
  } from 'lucide-react';
 const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-    services: [
+    services: [;
       {
-        name: 'AI Consciousness Evolution'
-        href: '/ai-consciousness-evolution-platform'
+        name: 'AI Consciousness Evolution';
+        href: '/ai-consciousness-evolution-platform';
       }
       {'
-        name: 'AI Emotional Intelligence''
-        href: '/ai-emotion-intelligence-platform'
+        name: 'AI Emotional Intelligence'';
+        href: '/ai-emotion-intelligence-platform';
       }
       {'
-        name: 'AI Creativity Orchestrator''
-        href: '/ai-creativity-orchestrator'
+        name: 'AI Creativity Orchestrator'';
+        href: '/ai-creativity-orchestrator';
       }
       {
         name: 'Quantum Cloud Infrastructure',
@@ -90,7 +90,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     title: '🧬 Biotech & DNA Computing',
-    services: [
+    services: [;
       {
         name: 'DNA Computing Platform',
         href: '/biotech-dna-computing-platform',
@@ -108,7 +108,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     title: '🏙️ Enterprise IT Solutions',
-    services: [
+    services: [;
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },
 {
         name: 'Autonomous IT Operations',
@@ -126,7 +126,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     title: '🌌 Space & Metaverse Tech',
-    services: [
+    services: [;
       {
         name: 'Space Mining Automation',
         href: '/space-mining-automation-platform',
@@ -141,14 +141,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     title: '🎯 2030 Innovative Micro SAAS',
-    services: [
+    services: [;
       {
         name: 'AI Business Intelligence Suite 2030',
         href: '/ai-business-intelligence-suite-2030',
       },
       {
-        name: 'AI HR Management Suite 2030'
-        href: '/ai-hr-management-suite-2030'
+        name: 'AI HR Management Suite 2030';
+        href: '/ai-hr-management-suite-2030';
       }
     ]'
   },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' }'
@@ -491,8 +491,8 @@ export default function UltraFuturisticFooter2030() {
       </div>
       <div className='relative z-10'>
         {/* Main Footer Content */}
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
             {/* Company Info */}
             <div className='space-y-6'>
               <div className='flex items-center space-x-3'>
@@ -520,7 +520,7 @@ export default function UltraFuturisticFooter2030() {
                   <a;
                     href={`tel: ${contactInfo.mobile;}`}
                     className='hover:text-purple-400 transition-colors' />
-
+;
                     {contactInfo.mobile}
 
                   </a>
@@ -529,7 +529,7 @@ export default function UltraFuturisticFooter2030() {
                   <Mail className='w-4 h-4 text-purple-400' />
                   <a;
 href={`mailto: ${contactInfo.email;}`}
-                    className='hover:text-purple-400 transition-colors'
+                    className='hover:text-purple-400 transition-colors';
                    />
                     {contactInfo.email}
                   </a>
@@ -543,7 +543,7 @@ href={`mailto: ${contactInfo.email;}`}
                   <a;
 href={contactInfo.websit}
 }
-                    className='hover:text-purple-400 transition-colors'
+                    className='hover:text-purple-400 transition-colors';
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
                     {contactInfo.website.replace('https://', '')}
@@ -599,7 +599,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 key={serviceIndex}
                           href={service.href}
 className='block text-xs text-gray-400 hover: text-purple-300 transition-colors' />
-
+;
                           {service.name}
 
                         </Link>
@@ -639,9 +639,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Link;}
 key={index}
                     href={link.href}
-className='block text-sm text-gray-400 hover: text-cyan-300 transition-colors flex items-center space-x-2 group'
+className='block text-sm text-gray-400 hover: text-cyan-300 transition-colors flex items-center space-x-2 group';
                    />
-                    <ArrowRight className='w-3 h-3 group-hover:translate-x-1 transition-transform' />
+                    <ArrowRight className='w-3 h-3 group-hover:translate-x-1 transition-transform' />;
                     <span />{link.name}</span>
                   </Link>
                 )
@@ -654,7 +654,7 @@ className='block text-sm text-gray-400 hover: text-cyan-300 transition-colors fl
                   <Link;}
 key={index}
                     href={link.href}
-className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors'
+className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors';
                    />
                     {link.name}
                   </Link>
@@ -673,7 +673,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     key={index}
                     href={link.href}
 className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors' />
-
+;
                     {link.nam}
 }
                   </Link>;
@@ -825,7 +825,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span>{cert}</span>;
                     </div>))}
 
-            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>;
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
                 <Link'
                   href='/privacy''
@@ -839,7 +839,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Heart className="w-4 h-4 text-red-400" />
                   <span>Made with passion for innovation</span>
                 </div>
-                  className='hover:text-purple-400 transition-colors'
+                  className='hover:text-purple-400 transition-colors';
                  />
                   Terms of Service;
                 </Link>

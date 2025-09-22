@@ -1,30 +1,14 @@
 
-
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useRef } from 'react';
-=======
-import React, { useRef } from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion, useInView } from 'framer-motion';
 interface LazySectionProps {}
   children: React.ReactNode,
   className?: string;
-=======
-import React, { useRef } from 'react';
-import { motion, useInView  } from 'framer-motion';
-
-interface LazySectionProps {
-  children: React.ReactNode,className?: string;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   threshold?: number;
   delay?: number;'
   direction?: 'up' | 'down' | 'left' | 'right'
 }
-<<<<<<< HEAD
 export const LazySection: React.FC<LazySectionProps> = ({}
   children'
   className = '';
@@ -50,14 +34,10 @@ export const LazySection: React.FC<LazySectionProps> = ({}
       case 'right':
         return { opacity: 0, x: -50 }
       default:
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export const LazySection: React.FC<LazySectionProps> = ({
   children;
   className;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
@@ -133,15 +113,7 @@ export const LazySection: React.FC<LazySectionProps> = ({;
       {children}
     </motion && motion.div>;
   );
-<<<<<<< HEAD
 };
 
 export default LazySection;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

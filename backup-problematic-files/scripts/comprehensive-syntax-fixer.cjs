@@ -38,19 +38,10 @@
   // Fix common syntax errors;
   fixSyntaxErrors(content) {
     let fixed = content;
-<<<<<<< HEAD
-    
-    // Fix merge conflicts by keeping the HEAD version
+// Fix merge conflicts by keeping the HEAD version
 <<<<<<< HEAD
     fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
     // Fix merge conflicts by keeping the HEAD version
-=======
-
-=======
-    // Fix merge conflicts by keeping the HEAD version;
-    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n;
-    // Fix merge conflicts by keeping the HEAD version;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     fixed = fixed.replace(/
     // Fix common syntax patterns;)"
 
@@ -120,13 +111,11 @@ class ComprehensiveSyntaxFixer {
 
       if (content !== originalContent) {
 
-
   fixSpecificPatterns(content) {
     // Fix specific malformed patterns;
     const specificFixes = [
       // Fix ecosystem.config.cjs structure;
       {]
-
 
     specificFixes.forEach(fix => {)
 
@@ -150,7 +139,6 @@ class ComprehensiveSyntaxFixer {
     if (this.errors.length > 0) {`;
       this.log(`❌ ${this.errors.length} errors encountered`)
 
-
   // TODO: Implement
       fixedFiles: this.fixedFiles,
       errors: this.errors;
@@ -167,7 +155,6 @@ class ComprehensiveSyntaxFixer {
 
   // Run TypeScript compiler to check for errors;
   async runTypeCheck() {
-
 
   // Generate report;
   generateReport() {
@@ -214,7 +201,6 @@ class ComprehensiveSyntaxFixer {
 
     this.log(`Found ${report.summary.syntaxErrorFiles} files with syntax errors`);
 
-
 // Handle command line arguments;
 if (require.main === module) {
   const fixer = new ComprehensiveSyntaxFixer();
@@ -231,7 +217,6 @@ if (require.main === module) {
       break;
     default:"
       console.log("Usage: node comprehensive-syntax-fixer.cjs [run|report]");"
-
 
 class ComprehensiveSyntaxFixer {}
   constructor() {}
@@ -296,8 +281,7 @@ class ComprehensiveSyntaxFixer {}
       fixedFileList: this.fixedFiles,
       errorList: this.errors;
 
-<<<<<<< HEAD
-    const reportPath = 'syntax-fix-report.json';
+const reportPath = 'syntax-fix-report.json';
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);
   };
@@ -313,5 +297,3 @@ if (require.main === module) {}
 };
 module.exports = ComprehensiveSyntaxFixer;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

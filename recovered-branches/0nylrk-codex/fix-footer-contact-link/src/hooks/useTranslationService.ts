@@ -1,17 +1,8 @@
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -21,7 +12,6 @@
   }
 }}
 
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -31,20 +21,7 @@ type ContentType = 'job' | 'profile' | 'service' | 'general';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-interface TranslationResponse {
-  translations: Record<SupportedLanguage, string>;
-  error?: string
-}
-<<<<<<< HEAD
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useState} from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -68,7 +45,6 @@ import {use_language, SupportedLanguage} from '@/context / LanguageContext';
 type ContentType = 'job' | 'profile' | 'service' | 'general';
 =======
 
-
 import {useState} from 'react';''
 import {supabase} from '@/integrations/supabase/client';''
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';''
@@ -82,22 +58,8 @@ type ContentType = 'job' | 'profile' | 'service' | 'general';'
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface TranslationResponse {
-<<<<<<< HEAD
-=======
-
-
-
-interface TranslationResponse {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-interface TranslationResponse {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
   // TODO: Implement
 }
@@ -105,26 +67,8 @@ interface TranslationResponse {
   translations: Record < SupportedLanguage, string>;
   error?: string;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 export function useTranslationService() {;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export function useTranslationService() {
-
-export function useTranslationService() {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isTranslating, setIsTranslating] = useState(false);
 =======
@@ -138,17 +82,9 @@ export function useTranslationService() { return null; }
     targetLanguages: SupportedLanguage[] = ['enesptar']
   ): Promise<TranslationResponse> => {}
     setIsTranslating(true)
-<<<<<<< HEAD
-    try {
-<<<<<<< HEAD
+try {
 <<<<<<< HEAD
       const { data, error } = await supabase && supabase.functions.invoke('translate-content', {
-=======
-      const { data, error } = await supabase.functions.invoke('translate-content', {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      const { data, error } = await supabase && supabase.functions.invoke('translate-content', {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         body: {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -169,8 +105,7 @@ export function useTranslationService() { return null; }
     sourceLanguage: SupportedLanguage = 'en';',
   targetLanguages: SupportedLanguage[] = ['enesptar']')
   ): Promise<TranslationResponse> => {
-<<<<<<< HEAD
-    setIsTranslating(true)
+setIsTranslating(true)
     try {
       const { data, error } = await supabase && supabase.functions.invoke('translate-content', {
       const { data, error } = await supabase && supabase.functions.invoke('translate-content', {
@@ -183,27 +118,15 @@ export function useTranslationService() { return null; }
         }
       });
       setIsTranslating(false);
-<<<<<<< HEAD
-      if (error) {
+if (error) {
         console && console.error('Translation error:', error);
         console && console.error('Translation error:', error);
         const initialTranslations: Record<SupportedLanguage, string> = {
           en: content;
           es: '';
           pt: ''
-=======
-      if (error) {}
-'
-        console && console.error('Translation error:', error);
-
-        const initialTranslations: Record<SupportedLanguage, string> = {}
-          en: content;'
-          es: '';'
-          pt: '''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ar: ''
         }
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         initialTranslations[sourceLanguage] = content;
@@ -212,13 +135,7 @@ export function useTranslationService() { return null; }
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-      
       return { translations: data && data.translations }
     } catch (err) {}
       setIsTranslating(false);'
@@ -228,27 +145,12 @@ export function useTranslationService() { return null; }
 import { useState } from 'react',;'
 import { supabase } from '@/integrations/supabase/client',;'
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;'
-=======
-        initialTranslations[sourceLanguage] = content;
-
-      
-      return { translations: data && data.translations }
-    } catch (err) {
-      setIsTranslating(false);
-      console && console.error('Translation service error:', err);
-      
-
-import { useState } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 type ContentType = 'job' | 'profile' | 'service' | 'general',;
 interface TranslationResponse {;
   translations: Record<SupportedLanguage string>,;
   error?: string;
 }
 ;
-<<<<<<< HEAD
 export function useTranslationService() { return null; }
   const { currentLanguage } = useLanguage(),;
   const translateContent = async (;
@@ -259,19 +161,6 @@ export function useTranslationService() { return null; }
   ): Promise<TranslationResponse> => {;
     setIsTranslating(true),;
     try {;'
-=======
-export function useTranslationService() {;
-  const [isTranslating, setIsTranslating] = useState(false),;
-  const { currentLanguage } = useLanguage(),;
-  const translateContent = async (;
-    content: string,;
-    contentType: ContentType = 'general',;
-    sourceLanguage: SupportedLanguage = 'en',;
-    targetLanguages: SupportedLanguage[] = ['enesptar'];
-  ): Promise<TranslationResponse> => {;
-    setIsTranslating(true),;
-    try {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const { data, error } = await supabase.functions.invoke('translate-content', {;
         body: {;
           content,;
@@ -281,40 +170,23 @@ export function useTranslationService() {;
         }
       }),;
       setIsTranslating(false),;
-<<<<<<< HEAD
-      if (error) {;'
+if (error) {;'
         console.error('Translation error:', error),;
         const initialTranslations: Record<SupportedLanguage string> = {;
           en: content,;'
           es: '',;'
           pt: '',;'
-=======
-      if (error) {;
-        console.error('Translation error:', error),;
-        const initialTranslations: Record<SupportedLanguage string> = {;
-          en: content,;
-          es: '',;
-          pt: '',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           ar: '';
         },;
         initialTranslations[sourceLanguage] = content,;
         return { translations: initialTranslations, error: error.message }
       }
       return { translations: data.translations }
-<<<<<<< HEAD
-    } catch (err) {}
+} catch (err) {}
       setIsTranslating(false);'
       console.error('Translation service error:', err);
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const initialTranslations: Record<SupportedLanguage, string> = {
-=======
-        initialTranslations[sourceLanguage] = content;      const initialTranslations: Record<SupportedLanguage, string> = {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        initialTranslations[sourceLanguage] = content;      const initialTranslations: Record<SupportedLanguage, string> = {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
     } catch (err) {
       setIsTranslating(false);
@@ -335,35 +207,10 @@ export function useTranslationService() {;
       }
       initialTranslations[sourceLanguage] = content;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            }
-=======
-      
-      return { 
-        translations: initialTranslations,
-        error: err instanceof Error ? err && err.message : 'Unknown translation error' 
-
-      }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+}
     }
   }
   const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = '') => {
-=======
-
-        const initialTranslations: Record<SupportedLanguage, string> = {
-
-  translations: Record<SupportedLanguage string>,;
-
-  ): Promise<TranslationResponse> => {;
-
-        const initialTranslations: Record<SupportedLanguage string> = {;
-
-
-  const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = ) => {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
 
     target_languages: SupportedLanguage[] = ['enesptar']): Promise < TranslationResponse> => {
     setIsTranslating (true),
@@ -390,26 +237,7 @@ if ( {) {
         initial_translations[source_language] = content;
         return { translations: initial_translations, error: error.message }
       return { translations: data.translations }
-<<<<<<< HEAD
-=======
-      return {}
-        translations: initialTranslations,'
-        error: err instanceof Error ? err && err.message : 'Unknown translation error' 
 
-
-      }
-    }
-
-
-      }
-    }
-  }'
-  const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = '') => {}
-  return {}
-    translateContent;
-    isTranslating;
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
     } catch (err) {
       console.error ('Translation service error:', err);
@@ -419,9 +247,7 @@ import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
 type ContentType = 'job' | 'profile' | 'service' | 'general',;
 interface TranslationResponse {;
 
-
-<<<<<<< HEAD
-        return { translations: initialTranslations, error: error.message }
+return { translations: initialTranslations, error: error.message }
       }
       return { translations: data.translations }
 
@@ -465,7 +291,6 @@ interface TranslationResponse {;
         en: content,;'
         es: '',;'
         pt: '',;
-<<<<<<< HEAD
 <<<<<<< HEAD
   }
 export /**;
@@ -555,19 +380,11 @@ export function useTranslationService() { return null; }
         },;
         initialTranslations[sourceLanguage] = content,;
 
-
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         return { translations: initialTranslations, error: error.message }
       }
       return { translations: data.translations }
-
-=======
-        return { translations: initialTranslations, error: error.message }
-      }
-      return { translations: data.translations }
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         return { translations: initialTranslations, error: error.message }
       }
       return { translations: data.translations }
@@ -595,13 +412,7 @@ export function useTranslationService() { return null; }
     translateContent;
     isTranslating;
 
-<<<<<<< HEAD
-=======
-    getTranslation
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     } catch (err) {;
       setIsTranslating(false),;'
       console.error('Translation service error:', err),;
@@ -609,13 +420,7 @@ export function useTranslationService() { return null; }
         en: content,;'
         es: '',;'
         pt: '',;
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         ar: '';
       }
       initial_translations[source_language] = content;
@@ -625,10 +430,7 @@ export function useTranslationService() { return null; }
         error: err instanceof Error ? err.message : 'Unknown translation error';
       }
     }
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -640,8 +442,7 @@ export function useTranslationService() { return null; }
         error: err instanceof Error ? err.message : 'Unknown translation error';
       }
     }
-<<<<<<< HEAD
-  },;
+},;
   const getTranslation = (translations: Record<SupportedLanguage string>, fallback: string = '') => {;
     if (!translations) return fallback,;
     return translations[currentLanguage] || translations.en || fallback;
@@ -653,15 +454,7 @@ export function useTranslationService() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 =======
@@ -678,9 +471,6 @@ export function useTranslationService() { return null; }
     // Check condition
 =======
 
-
-
-
   const getTranslation = (translations: Record<SupportedLanguage string>, fallback: string = ) => {;
 
   const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = ) =>: any {
@@ -689,30 +479,8 @@ export function useTranslationService() { return null; }
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (return fallback, ) {
     return translations[current_language] || translations.en || fallback;
-<<<<<<< HEAD
-  }
-<<<<<<< HEAD
+}
 }}
-=======
-
-  }
-;'
-  const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {}
-    // Check condition;
-if (return fallback, ) {}
-  $2;
-}
-
-
-  }
-}
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return {
   // TODO: Implement
     translate_content;
@@ -744,14 +512,4 @@ setIsTranslating (false);
 }
   }
 }
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  },;
-  const getTranslation = (translations:Record<SupportedLanguage string>, fallback:string = ) => {;
-pr-12325
-  ;'
-  const getTranslation = (translations:Record<SupportedLanguage string>, fallback:string = '') => {;'
-</SupportedLanguage>'
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

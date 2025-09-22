@@ -11,8 +11,8 @@ function getUserId(req: NextApiRequest): string {}
   if (match) return decodeURIComponent(match && match.split('=')[1]);'
   return 'demo-user-1';
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 ) {
       filter = 'all',
       countOnly,

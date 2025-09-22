@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-
-
-    });
-<<<<<<< HEAD:pages_backup/api/livekit/token.ts
-
+});
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 <<<<<<< HEAD
@@ -14,50 +9,18 @@ export default async function handler(
 
   }
   try {
-=======
-    at && at.addGrant({
-
-
-    const token = await at && at.toJwt();
-    return res && res.status(200).json({
-;
-    const token = await at.to_jwt ();
-;
-    return res.status (200).json ({
-      token,
-
-
-
-  }
-}
-    console.error ("Token error", err);
-    return res.status (500).json ({ error: "Failed to create token" });
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   try {
 
     const { roomName, identity, name, audioOnly } = req.body |{}
     if (!roomName |!identity) {
       return res.status(400).json({ error: "Missing roomName or identity" });
-=======
-import { AccessToken } from 'livekit-server-sdk';
-
-  }
-  try {
-    const { roomName, identity, name, audioOnly } = req.body || {};
-
-    if (!roomName || !identity) {
-return res.status(400).json({ error: 'Missing roomName or identity' });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
     if (!LIVEKIT_API_KEY |!LIVEKIT_API_SECRET |!LIVEKIT_HOST) {
       return res.status(500).json({ error: "LiveKit env vars not configured" });
     }
     const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
-<<<<<<< HEAD
-      identity: String(identity)
+identity: String(identity)
       name: name ? String(name) : String(identity)
       ttl: 60 * 60, // 1 hour
 
@@ -65,10 +28,6 @@ return res.status(400).json({ error: 'Missing roomName or identity' });
     });
     at.addGrant({
       roomJoin: true
-=======
-    at.addGrant({}
-      roomJoin: true;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/livekit/token.ts
       room: String(roomName)
       canPublish: audioOnly ? false : true;
       canPublishData: true;
@@ -83,9 +42,8 @@ return res.status(400).json({ error: 'Missing roomName or identity' });
     console.error("Token error", err);"
     return res.status(500).json({ error: "Failed to create token" });
 
-<<<<<<< HEAD:pages_backup/api/livekit/token.ts
-<<<<<<< HEAD
-    at.addGrant({
+:pages_backup/api/livekit/token.ts
+at.addGrant({
 
       roomJoin: true,
       room: String(roomName),
@@ -93,12 +51,6 @@ return res.status(400).json({ error: 'Missing roomName or identity' });
       canPublishData: true,
       canSubscribe: true
     });
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/livekit/token.ts
 
   }
 }
@@ -110,7 +62,7 @@ return res.status(400).json({ error: 'Missing roomName or identity' });
   }
 }
 
-<<<<<<< HEAD:pages_backup/api/livekit/token.ts
+:pages_backup/api/livekit/token.ts
 ;
   try {
     const { roomName, identity, name, audioOnly } = req.body || {};
@@ -129,7 +81,6 @@ return res.status(400).json({ error: 'Missing roomName or identity' });
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 ;
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || "";
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || "";
@@ -145,16 +96,6 @@ if ( {) {
 }
     res.set_header ("Allow", "POST");
     return res.status (405).json ({ error: "Method not allowed" });
-=======
-    if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {;
-      return res.status(500).json({ error: 'LiveKit env vars not configured' });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
   } catch (error) {
@@ -185,25 +126,13 @@ if ( {) {
     return res.status(500).json({ error: 'Failed to create token' });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-    const token = await at && at.toJwt();
+const token = await at && at.toJwt();
 
     return res && res.status(200).json({
 <<<<<<< HEAD
-=======
-;
-    const token = await at.to_jwt ();
-;
-    return res.status (200).json ({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       token,
-
-
 
   }
 
@@ -229,37 +158,16 @@ if ( {) {
     return res.status(200).json({
       token
       url: LIVEKIT_HOST
-=======
-      identity: String(identity),
-      name: name ? String(name) : String(identity),
-      ttl: 60 * 60, // 1 hour
-    });
-    at.addGrant({
-roomJoin: true,
-      room: String(roomName),
-      canPublish: audioOnly ? false : true,
-      canPublishData: true,
-      canSubscribe: true,
-    });
-
-    const token = await at.toJwt();
-    return res.status(200).json({
-      token,
-url: LIVEKIT_HOST,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     });
   } catch (err: any) {
     console.error("Token error", err);
     return res.status(500).json({ error: "Failed to create token" });
-<<<<<<< HEAD
-
-  } catch (error) {
+} catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-    if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {;
+if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {;
       return res.status(500).json({ error: 'LiveKit env vars not configured' });
       } catch (error) {
     console.error("Error:", error);
@@ -293,31 +201,19 @@ url: LIVEKIT_HOST,
   } catch (error) {
 
     console.error('Token error', err);
-=======
-
-    console.error('Token error', err);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/livekit/token.ts
     return res.status(500).json({ error: 'Failed to create token' });
 
   }
 
-<<<<<<< HEAD:pages_backup/api/livekit/token.ts
+:pages_backup/api/livekit/token.ts
   }
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/livekit/token.ts

@@ -46,11 +46,11 @@ interface FooterSection {;
   {}
 '
     title: 'Solutions'
-
+;
   links: FooterLink[];
 
   external?: boolean
-
+;
   links: FooterLink[];}
 }
 }
@@ -96,11 +96,11 @@ const footerSections: FooterSection[] = [;
   {
     title: 'Solutions';
 origin/cursor/automate-test-improve-and-merge-code-2533
-    links: [
+    links: [;
       {
-        label: 'Healthcare & Biotech'
-        href: '/healthcare-solutions'
-        description: 'Medical technology'
+        label: 'Healthcare & Biotech';
+        href: '/healthcare-solutions';
+        description: 'Medical technology';
 }
      }
 }
@@ -109,50 +109,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         description: 'Fintech solutions';}
       }
       {'
-        label: 'Financial Services''
+        label: 'Financial Services'';
         href: '/solutions?industry=financial''
-        description: 'Fintech solutions'
+        description: 'Fintech solutions';
       }
       {'
-        label: 'Manufacturing''
+        label: 'Manufacturing'';
         href: '/solutions?industry=manufacturing''
-        description: 'Industry 4.0'
+        description: 'Industry 4.0';
       }
       {'
-        label: 'Retail & E-commerce''
+        label: 'Retail & E-commerce'';
         href: '/solutions?industry=retail''
-        description: 'Digital commerce'
+        description: 'Digital commerce';
       }
       {'
-        label: 'Government''
+        label: 'Government'';
         href: '/solutions?industry=government''
-        description: 'Public sector'
+        description: 'Public sector';
       }
       {'
-        label: 'Education''
+        label: 'Education'';
         href: '/solutions?industry=education''
-        description: 'EdTech solutions'
+        description: 'EdTech solutions';
       }
   {'
-    title: 'Solutions'
-    links: [
+    title: 'Solutions';
+    links: [;
       { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' },
       { label: 'Financial Services', href: '/solutions?industry;
-    links: [
+    links: [;
       {
-        label: 'About Us'
-        href: '/about'
-        description: 'Our mission and values'
+        label: 'About Us';
+        href: '/about';
+        description: 'Our mission and values';
       }
       { label: 'Careers', href: '/careers', description: 'Join our team' }
       { label: 'Contact', href: '/contact', description: 'Get in touch' }
     ]
   },  {
-    title: 'Resources'
-    links: [
+    title: 'Resources';
+    links: [;
       { label: 'Blog', href: '/blog', description: 'Industry insights' },  {
-    title: 'Solutions'
-    links: [
+    title: 'Solutions';
+    links: [;
 origin/cursor/automate-test-improve-and-merge-code-2533
       { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' }
       { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' }
@@ -163,8 +163,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ]
   }
   {'
-    title: 'Company'
-    links: ['
+    title: 'Company';
+    links: [';
       { label: 'About Us', href: '/about', description: 'Our mission and values' }'
       { label: 'Careers', href: '/careers', description: 'Join our team' }'
       { label: 'Contact', href: '/contact', description: 'Get in touch' }
@@ -175,23 +175,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       { label: 'Blog', href: '/blog', description: 'Industry insights' },
   }
   {
-    title: 'Resources'
-    links: [
+    title: 'Resources';
+    links: [;
       { label: 'Blog', href: '/blog', description: 'Industry insights' }
       {
-        label: 'White Papers'
-        href: '/white-papers'
-        description: 'In-depth research'
+        label: 'White Papers';
+        href: '/white-papers';
+        description: 'In-depth research';
       }
       {
-        label: 'Webinars'
-        href: '/webinars'
-        description: 'Educational content'
+        label: 'Webinars';
+        href: '/webinars';
+        description: 'Educational content';
       }
       {
-        label: 'Documentation'
-        href: '/docs'
-        description: 'Technical guides'
+        label: 'Documentation';
+        href: '/docs';
+        description: 'Technical guides';
       }
       {
         label: 'Education',
@@ -248,8 +248,8 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
 origin/cursor/automate-test-improve-and-merge-code-2533
   const footerSections = [
     {
-      title: 'Services'
-      items: [
+      title: 'Services';
+      items: [;
         { label: 'AI & Machine Learning', href: '/ai-services' },
         { label: 'Quantum Computing', href: '/quantum-computing' },
         { label: 'Space Technology', href: '/space-tech' },
@@ -258,9 +258,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
     },
     {
-      title: 'Solutions'
+      title: 'Solutions';
 origin/cursor/automate-test-improve-and-merge-code-2533
-      items: [
+      items: [;
         { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
         { label: 'Micro SAAS', href: '/micro-saas' },
         { label: 'IT Services', href: '/it-services' },
@@ -269,8 +269,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
     },
     {
-      title: 'Company'
-      items: [
+      title: 'Company';
+      items: [;
 origin/cursor/automate-test-improve-and-merge-code-2533
         { label: 'About Us', href: '/about' },
         { label: 'Our Team', href: '/team' },
@@ -278,14 +278,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         { label: 'Investors', href: '/investors' },
   ];
     visible: {
-      opacity: 1
+      opacity: 1;
       transition: {
 { label: 'Press & Media', href: '/press' },
       ],
     },
     {
-      title: 'Resources'
-      items: [
+      title: 'Resources';
+      items: [;
         { label: 'Blog', href: '/blog' },
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'White Papers', href: '/white-papers' },
@@ -312,7 +312,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
-      opacity: 1
+      opacity: 1;
       transition: {
 staggerChildren: 0.1,
       },
@@ -623,16 +623,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             viewport={{ once: true }}"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">;
             {/* Company Info */}
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>;
           <motion.div
             variants={containerVariants}
             initial='hidden'
             whileInView='visible'
             viewport={{ once: true }}
-            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12'
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12';
           >
             {/* Company Info */}
-            <motion.div variants={itemVariants} className='lg:col-span-2'>
+            <motion.div variants={itemVariants} className='lg:col-span-2'>;
               <div className='flex items-center space-x-3 mb-6'>
                 <div className='relative'>
                   <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center'>
@@ -676,8 +676,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex items-center space-x-3 text-gray-300'>
                   <Globe className='w-4 h-4 text-blue-400' />
                   <a
-                    href='https://ziontechgroup.com'
-                    className='hover:text-white transition-colors duration-200'
+                    href='https://ziontechgroup.com';
+                    className='hover:text-white transition-colors duration-200';
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
                     ziontechgroup.com
@@ -835,7 +835,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <li key={item.label}>
                       <Link
                         href={item.href}
-                        className='text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'
+                        className='text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block';
                       >
 origin/cursor/automate-test-improve-and-merge-code-2533
                         {item.label}
@@ -887,7 +887,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='mt-16 pt-12 border-t border-gray-800/50'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
+            <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>;
               {/* Social Links */}'
               <div className='flex items-center space-x-6'>;'
                 <span className='text-gray-400 font-medium'>Follow Us:</span>;
@@ -897,7 +897,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href={social && social.href}'
                     target='_blank''
                     rel='noopener noreferrer''
-                    className='w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110'
+                    className='w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110';
                     whileHover={{ y: -2 }}
               {/* Social Links */}"
               <div className="flex items-center space-x-6">;"
@@ -908,12 +908,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href={social && social.href}"
                     target="_blank""
                     rel="noopener noreferrer""
-                    className="w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110"
+                    className="w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110";
                     whileHover={{ y: -2 }}
                   <input'
                     type='email''
                     placeholder='Enter your email''
-                    className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                    className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
                   />;
                   <motion&& motion.button
                     whileTap={{ scale: 0.95 }}
@@ -936,10 +936,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <input'
                     type='email''
                     placeholder='Enter your email''
-                    className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                    className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
                   />
                   <motion.button
-                    className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'
+                    className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200';
 origin/cursor/automate-test-improve-and-merge-code-2533
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -1053,8 +1053,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
-            <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
+            <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
               <div className='text-gray-400 text-sm'>
           className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
@@ -1068,7 +1068,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Rocket className="w-4 h-4 text-pink-400" />
                 <Link
                   href='/terms'
-                  className='hover:text-white transition-colors duration-200 ml-2'
+                  className='hover:text-white transition-colors duration-200 ml-2';
                 >
                   Terms of Service
                 </Link>
@@ -1155,7 +1155,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
-className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'
+className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50';
 origin/cursor/automate-test-improve-and-merge-code-2533
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}

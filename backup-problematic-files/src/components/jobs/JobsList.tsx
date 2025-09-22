@@ -122,4 +122,3 @@ export function JobsList({ filter, onSelectJob } JobsListProps) {;
         </Card>;
       ))}
     </div>;
-

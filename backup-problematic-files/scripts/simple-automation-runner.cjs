@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-=======
-totalSize = getDirectorySize(buildDir);
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')      return size}}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
@@ -28,8 +20,7 @@ class SimpleAutomationRunner {
         testsFailed: 0,
         buildSuccess: false,
         securityIssues: 0,
-<<<<<<< HEAD
-        improvementsApplied: 0
+improvementsApplied: 0
       }
     };
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process");async function runSimpleAutomation() {" console.log(" Starting Simple Automation Runner."); const report = { timestamp: new Date().toISOString()," tasks: [],"" overallStatus: "running" }; try {" / Task 1: Fix syntax errors" console.log("\n Task 1: Fixing Syntax Errors");" console.log("===="); " await runTask("Enhanced Syntax Fixing", async () => {" const syntaxFixer = require("./enhanced-syntax-fixer.cjs";); return await syntaxFixer.enhancedSyntaxFixer()});" / Task 2: Run TypeScript check" console.log("\n Task 2: TypeScript Type Check");" console.log("======"); " await runTask("TypeScript Compilation", async () => { try {"" execSync("npx tsc --noEmit", { stdio: "pipe" });"" return { status: "success", message: "No type errors found" }} catch (error) {" const output = error.stdout?.toString() | error.stderr?.toString() | ;";"; const errorCount = (output.match(/error TS/g) | []).lengt;h; console.log(` Found ${errorCount} TypeScript errors`);"" return { status: "partial", errors: errorCount, output: output.substring(0, 500) }} });" / Task 3: Run ESLint" console.log("\n Task 3: ESLint Code Quality");" console.log("==="); " await runTask("ESLint Fixing", async () => { try {"" execSync("npm run lint: fix", { stdio: "pipe" });"" return { status: "success", message: "Linting completed" }} catch (error) {" console.log(" ESLint completed with issues");"" return { status: "partial", error: error.message }} });" / Task 4: Build test" console.log("\n Task 4: Build Test");" console.log("="); " await runTask("Production Build", async () => { try {"" execSync("npm run build", { stdio: "inherit" });"" return { status: "success", message: "Build completed successfully" }} catch (error) {" console.log(" Build failed, but continuing.");"" return { status: "failed", error: error.message }} });" / Task 5: Run tests" console.log("\n Task 5: Test Suite");" console.log("="); " await runTask("Test Execution", async () => { try {"" execSync("npm test -- --passWithNoTests", { stdio: "pipe" });"" return { status: "success", message: "Tests completed" }} catch (error) {" console.log(" Tests completed with issues");"" return { status: "partial", error: error.message }} });" / Task 6: Security audit" console.log("\n Task 6: Security Audit");" console.log("====="); " await runTask("Security Audit", async () => { try {"" const result = execSync("npm audit --json", { encoding: "utf8", stdio: "pipe" };); const auditData = JSON.parse(result;); return { ;"" status: "success", " vulnerabilities: auditData.vulnerabilities | 0," advisories: auditData.advisories | 0 }} catch (error) {" console.log(" Security audit completed with issues");"" return { status: "partial", error: error.message }} });" / Task 7: Performance check" console.log("\n Task 7: Performance Check");" console.log("="); " await runTask("Performance Analysis", async () => {" const buildDir = ".next;"; if (true) { const stats = analyzeBuildSize(buildDi) { ) { const stats = analyzeBuildSize(buildDi}r;); return { ;"" status: "success", " totalSize: stats.totalSize," recommendations: stats.recommendations }} else {"" return { status: "skipped", message: "Build directory not found" }} }); / Finalize report" const successCount = report.tasks.filter(t => t.status === "success").lengt;h; const totalCount = report.tasks.lengt;h;" report.overallStatus = successCount === totalCount ? "success" : "partial"; " const reportPath = "simple-automation-report.json;"; fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)); " console.log("\n Simple Automation Runner Completed!");" console.log("====");" console.log(" Summary: ");` console.log(` - Total Tasks: ${totalCount}`);"` console.log(` - Successful: ${successCount}`);"` console.log(` - Success Rate: ${((successCount / totalCount); * 100).toFixed(1)}%`);"` console.log(` - Status: ${report.overallStatus.toUpperCase()}`);"` console.log(` Report saved to: ${reportPath}`); return report} catch (error) {"" console.error(" Simple automation failed: ", error.message);" report.overallStatus = "failed"; report.error = error.message throw error} async function runTask(taskName, taskFn) { const startTime = Date.now(;); try {"` console.log(` Running: ${taskName}`); const result = await taskFn;(;); const duration = Date.now() - startTi;m;e; const task = {" name: taskName," status: result.status,"` duration: `${duration}ms`," result: result," timestamp: new Date().toISOString() }; report.tasks.push(task); if ( {` console.log(` ${taskName} completed in ${duration}ms`)) { {` console.log(` ${taskName} completed in ${duration}ms`)}} else if ( {` console.log(` ${taskName} failed in ${duration}ms`)) { {` console.log(` ${taskName} failed in ${duration}ms`)}} else {` console.log(` ${taskName} completed with issues in ${duration}ms`)} return result} catch (error) { const duration = Date.now() - startTi;m;e; report.tasks.push({" name: taskName,"" status: "failed","` duration: `${duration}ms`," error: error.message," timestamp: new Date().toISOString() }); "` console.log(` ${taskName} failed: ${error.message}`); throw error} } function analyzeBuildSize(buildDir) { let totalSize = ;0; let jsSize = ;0; let cssSize = ;0; function getDirectorySize(dir) { let size = ;0; try { const items = fs.readdirSync(dir;); for (const item of items) { const fullPath = path.join(dir, item;); const stat = fs.statSync(fullPath;); if (true) { size += getDirectorySize(fullPath)} else { size += stat.size const ext = path.extname(item) { ) { size += getDirectorySize(fullPath)} else { size += stat.size const ext = path.extname(item}); if (jsSize += stat.size" if (ext === ".css") cssSize += stat.size} } } catch (error) {" / Skip directories that can"t be read } return size) { jsSize += stat.size" if (ext === ".css") cssSize += stat.size} } } catch (error) {" / Skip directories that can"t be read } return size}} totalSize = getDirectorySize(buildDir); const recommendations = []; if ( { / > 1MB" recommendations.push("Consider code splitting to reduce bundle size")} if (jsSize > 512 * 1024) { / > 512KB" recommendations.push("JavaScript bundle is large, consider optimization")} return {) { { / > 1MB" recommendations.push("Consider code splitting to reduce bundle size")} if (jsSize > 512 * 1024) { / > 512KB" recommendations.push("JavaScript bundle is large, consider optimization")} return {}" totalSize: totalSize," jsSize: jsSize," cssSize: cssSize," recommendations: recommendations }}}/ Run if called directlyif ( { runSimpleAutomation().catch(console.error)}module.exports = { runSimpleAutomation }) { { runSimpleAutomation().catch(console.error)}module.exports = { runSimpleAutomation }}""`"`
@@ -84,11 +75,7 @@ async function runSimpleAutomation() {
         const result = execSync('npm audit --json', { "encoding": 'utf8', "stdio": 'pipe' };);
         const auditData = JSON.parse(result;);
         return { ;
-<<<<<<< HEAD
-          "status": 'success',
-=======
-          "status": 'success', 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"status": 'success',
           "vulnerabilities": auditData.vulnerabilities || 0,
           "advisories": auditData.advisories || 0
         }} catch (error) {
@@ -97,27 +84,14 @@ async function runSimpleAutomation() {
     // Task "7": Performance check
     await runTask('Performance Analysis', async () => {
       const buildDir = '.next;';
-=======
-        improvementsApplied: 0;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if () {
         const stats = analyzeBuildSize(buildDi) {
     ) {
         const stats = analyzeBuildSize(buildDi}r;);
-<<<<<<< HEAD
-        return { ;
-<<<<<<< HEAD
-          "status": 'success',
-=======
-          "status": 'success', 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+return { ;
+"status": 'success',
           "totalSize": stats.totalSize,
           "recommendations": stats.recommendations
-=======
-
-          "recommendations": stats.recommendations;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }} else {
   // TODO: Implement
 }"
@@ -139,8 +113,7 @@ async function runSimpleAutomation() {
         }} else if ( {)
   // TODO: Implement
       return result} catch (error) {
-<<<<<<< HEAD
-      const duration = Date.now() - startTi;m;e;
+const duration = Date.now() - startTi;m;e;
       report.tasks.push({
         "name": taskName,
         "status": 'failed',
@@ -149,25 +122,11 @@ async function runSimpleAutomation() {
         "timestamp": new Date().toISOString()
       });
       throw error}
-<<<<<<< HEAD
-
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-  }
+}
   log(message) {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
   }
-=======
-      report.tasks.push({"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runCommand(command, description) {
   // TODO: Implement
 
@@ -188,10 +147,7 @@ const path = require('path')
       await this.runBuild();
       await this.runSecurityAudit();
       await this.applyImprovements();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      this.generateReport();
+this.generateReport();
       this.log('✅ Automation completed successfully');
     } catch (error) {
       this.log(`❌ Automation failed: ${error.message}`);
@@ -200,15 +156,10 @@ const path = require('path')
   }
 
       return size}}
-
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-      
+
       return size}}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     totalSize = getDirectorySize(buildDir);
@@ -230,30 +181,19 @@ if (require.main === module) {
   runner.run().catch(error => {)"
 
     process.exit(1);
-<<<<<<< HEAD
-  });
+});
 }
-<<<<<<< HEAD
-
-
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 module.exports = SimpleAutomationRunner;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-module.exports = SimpleAutomationRunner;
-
-
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = { runSimpleAutomation }) {
   runSimpleAutomation().catch(console.error)}
-<<<<<<< HEAD
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
@@ -290,16 +230,3 @@ const { execSync } = require('child_process')
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-        "status"
-        "status"
-        "status"
-        "status"
-        "status"
-        "status"
-        "status"
-        "status"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

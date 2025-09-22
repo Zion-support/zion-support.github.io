@@ -1,13 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import React, { useState, useEffect, useRef } from 'react',;
-import { useRouter } from 'next/router',;
-=======
-import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
@@ -45,7 +36,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
   const inputRef = useRef<HTMLInputElement>(null),;
 
   const containerRef = useRef<HTMLDivElement>(null),;
-<<<<<<< HEAD
 ;
   useEffect(() => {;
     if (!debounced) {;
@@ -90,30 +80,12 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
   },;
 ;
   return (;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <div;
       className="relative w-full";"
       ref={containerRef}"
       role="combobox";"
       aria-expanded={focused && suggestions.length > 0}
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      aria-haspopup="listbox";
-      aria-controls={listId}
-      data-testid="search-bar";
-    >;
-      <div className="relative">;
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />;
-=======
-</div>"
-      <div className="relative">;"
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />;"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Input;
           ref={inputRef}"
           type="text";""
@@ -155,9 +127,4 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
 }listId= {;
   listId ;
 }/> </div>) ;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

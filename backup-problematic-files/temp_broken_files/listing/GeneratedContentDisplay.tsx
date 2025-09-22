@@ -42,4 +42,3 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
       </CardContent>;
       <CardFooter>;
         <Button;
-

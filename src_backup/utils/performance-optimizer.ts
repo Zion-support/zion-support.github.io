@@ -2,24 +2,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Performance optimizer utilities
 export const optimizeImages = () => {
   console.log('Optimizing images...');
 };
-=======
-const images = document && document.querySelectorAll('img');
-  images && images.forEach(img => {
-    if (!img && img.loading) {
-      img && img.loading = 'lazy';
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Performance optimization utilities
 export const optimizeImages = () => {;
   const images = document.querySelectorAll('img');
@@ -30,13 +16,6 @@ export const optimizeImages = () => {;
     }
     if (!img.decoding) {
       img.decoding = "async";
-=======
-<<<<<<< HEAD
-// Performance optimization utilities
-export const preloadCriticalResources = () => {
-  const criticalResources = ['/fonts/main.woff2', '/css/critical.css'];
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -65,11 +44,9 @@ export const preloadCriticalResources = () => {
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
-  
+
   images.forEach(img => {
     if (!img.loading) {
       img.loading = 'lazy';
@@ -99,46 +76,6 @@ export const throttle = (func: Function, limit: number) => {
     }
   };
 };
-=======
-
-// Performance optimization utilities;
-export const optimize_images = () =>: any {
-  const images = document.querySelectorAll ('img');
-;
-  images.for_each (img => {
-    // Check condition
-if ( {) {
-  $2
-}
-      img.loading = 'lazy';
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      img.decoding = 'async';
-    }
-  });
-}
-export const preloadCriticalResources = () =>: any {
-  const critical_resources = ['/fonts / main.woff2 / css / critical.css'];
-  critical_resources.for_each (resource => {    const link = document.create_element ('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.ends_with ('.css') ? 'style' : 'font';
-    document.head.append_child (link);
-  });
-}
-export const optimizeBundleSize = () =>: any {
-  // Dynamic imports for non - critical components;
-  const load_component = component_name => {    return import (`./components/${component_name}`);
-
-  }
-  return { load_component }
-}
-
-  const loadComponent = componentName => {    return import(`./components/${componentName}`);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export const lazyLoadComponents = () => {
   console.log('Lazy loading components...');
@@ -154,23 +91,9 @@ export const optimizeBundleSize = () => {
 
   return { loadComponent };
 };
-<<<<<<< HEAD
-
-    link.rel = 'preload';
+link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
-=======
-<<<<<<< HEAD
-link.rel = "preload";
-((link.href = resource),
-  (link.as = resource.endsWith(".css") ? "style" : "font"));
-=======
-
-    link.rel = 'preload';
-    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

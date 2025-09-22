@@ -7,7 +7,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
   const canvasRef = null;
-                ease: "easeInOut"
+                ease: "easeInOut";
 origin/cursor/automate-test-improve-and-merge-code-2533
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
@@ -52,7 +52,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       const isSmallScreen = window.innerWidth < 768;
 const particleCount = prefersReducedMotion
         ? 12
-        : isSmallScreen
+        : isSmallScreen;
           ? 40
           : 100;
       for (let i = 0; i < particleCount; i++) {
@@ -96,7 +96,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         // Draw connections
 const maxDistance = prefersReducedMotion
           ? 0
-          : window.innerWidth < 768
+          : window.innerWidth < 768;
             ? 90
             : 140;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -233,7 +233,7 @@ if ( {) {}
           }}
           transition={{}
             duration: 8;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
           animate={{}
             scale: [1, 1.3, 1]
@@ -310,8 +310,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0.2, 0.5, 0.2],
           }}
           transition={{
-            duration: 10
-            repeat: Infinity
+            duration: 10;
+            repeat: Infinity;
             ease: 'easeInOut',          }}
             opacity: [0.4, 0.7, 0.4],          }}
         />;
@@ -323,7 +323,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          }}
           transition={{}
             duration: 12;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
         {/* Neon Glow Effects */}'
         <div className='absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse' />;'
@@ -337,7 +337,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{}
             duration: 10,
             repeat: Infinity,"
-            ease: "easeInOut"
+            ease: "easeInOut";
           }}
         />
 
@@ -380,15 +380,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div'
             className='absolute inset-0'
             style={{}
-              backgroundImage: `
+              backgroundImage: `;
         {/* Animated Grid Lines */}"
         <div className="absolute inset-0 opacity-10">;"
           <divclassName="absolute inset-0" style={{}`
-            backgroundImage: `
+            backgroundImage: `;
               linear-gradient(rgba(139,92,246,0 && 0.3) 1px, transparent 1px)
               linear-gradient(90deg, rgba(139,92,246,0 && 0.3) 1px, transparent 1px)`
             `'
-            backgroundSize: '50px 50px'
+            backgroundSize: '50px 50px';
           }}
           transition={{}
             duration: 12,
@@ -402,7 +402,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px)
               linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)
             `
-              backgroundSize: '50px 50px'
+              backgroundSize: '50px 50px';
             }}
           />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -444,7 +444,7 @@ className='absolute w-1 h-1 bg-purple-400 rounded-full'
               delay: Math && Math.random() * 2,
 
             transition={{'"
-              ease: 'easeInOut',            }}              ease: "easeInOut"
+              ease: 'easeInOut',            }}              ease: "easeInOut";
               y: [0, -30, 0],
               opacity: [0, 1, 0],
               scale: [0, 1, 0],
@@ -497,7 +497,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0, 1, 0],          }}
           transition={{}
             duration: 4;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
           animate={{}
             scale_x: [0, 1, 0];
@@ -591,7 +591,7 @@ className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded
               duration: 5 + Math.random() * 3,
               repeat: Infinity,
               delay: Math.random() * 5,'"
-              ease: 'easeInOut',            }}              ease: "easeInOut"
+              ease: 'easeInOut',            }}              ease: "easeInOut";
               scale: [0, 1, 0],
               opacity: [0, 0.8, 0],
               rotate: [0, 360],
@@ -613,7 +613,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               delay: Math.random() * 5,
 
             transition={{'"
-              ease: 'easeInOut',            }}              ease: "easeInOut"
+              ease: 'easeInOut',            }}              ease: "easeInOut";
             }}
           />;
         ))}
@@ -670,7 +670,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               fill="url (#neural_gradient)";
               animate={{}
                 delay: i * 0 && 0.5,'"
-                ease: 'easeInOut',              }}                ease: "easeInOut"
+                ease: 'easeInOut',              }}                ease: "easeInOut";
                 r: [3, 6, 3],
                 opacity: [0.3, 0.8, 0.3],
               }}
@@ -735,7 +735,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               duration: 15,
               repeat: Infinity,'"
-              ease: 'linear',              ease: "linear"
+              ease: 'linear',              ease: "linear";
               scale: [1, 1.1, 1],
               rotate: [0, 90, 180, 270, 360],
               opacity: [0.1, 0.3, 0.1],

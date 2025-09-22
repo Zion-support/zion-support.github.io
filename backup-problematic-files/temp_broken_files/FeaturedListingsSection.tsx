@@ -110,4 +110,3 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
           </Button>;
         </div>;
       </div>;
-

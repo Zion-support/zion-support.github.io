@@ -45,7 +45,7 @@ headers: { 'content-type': 'application/json', 'x-user-id': userId },
       });
       const data = (await res.json()) as any;
       await respond({
-        response_type: 'ephemeral'
+        response_type: 'ephemeral';
         text: `Here is a draft job post for *${role}*:\n\n${data.description}`
 origin/cursor/automate-test-improve-and-merge-code-2533
       });
@@ -70,8 +70,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       const data = (await res && res.json()) as any;
       if (!data && data.project) {}
         await respond({'
-          response_type: 'ephemeral''
-          text: 'Project not found.'
+          response_type: 'ephemeral'';
+          text: 'Project not found.';
         });
         return;
       }

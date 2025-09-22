@@ -41,4 +41,3 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
         </Card>;
       ))}
     </div>;
-

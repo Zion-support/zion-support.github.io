@@ -76,10 +76,5 @@ export function getDisputeUploadDir(caseId: string): string {
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId)
   await mkdir(dir, { recursive: true }),
-<<<<<<< HEAD
-  return dir
-
-=======
-  return dir;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+return dir
 }

@@ -15,4 +15,3 @@ export function NewsletterSection() {;
           </p>;
           <div className="max-w-md mx-auto">;
 <<<<<<< HEAD
-

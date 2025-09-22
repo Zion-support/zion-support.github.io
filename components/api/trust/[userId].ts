@@ -33,8 +33,8 @@ async function analyzeWithGPT(
           ? 'High Trust''
           : 'Moderate Trust';
     return {'
-      riskLevel: heuristic as TrustScoreBreakdown['riskLevel']'
-      reasonSummary: 'Heuristic classification (no OpenAI key set).''
+      riskLevel: heuristic as TrustScoreBreakdown['riskLevel']';
+      reasonSummary: 'Heuristic classification (no OpenAI key set).'';
     };  }import { supabase } from '../../../utils/supabase/client';'
 async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {}
   const apiKey = process && process.env.OPENAI_API_KEY;
@@ -55,17 +55,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
     const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON.stringify(inputs, null, 2)}`;
     const resp = await client.chat.completions.create({
-      model: 'gpt-4o-mini'
-      messages: [
+      model: 'gpt-4o-mini';
+      messages: [;
 {
           role: 'system',
           content:
-            'You are an impartial risk and trust analyst for a talent marketplace.'
+            'You are an impartial risk and trust analyst for a talent marketplace.';
         }
         { role: 'user', content: prompt }
       ]
-      temperature: 0.2
-      max_tokens: 200
+      temperature: 0.2;
+      max_tokens: 200;
     });
     const content = resp.choices?.[0]?.message?.content |'';
     const lower = content.toLowerCase();
@@ -77,7 +77,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
     return {
-      riskLevel: 'Moderate Trust'
+      riskLevel: 'Moderate Trust';
       reasonSummary: `Analysis unavailable: ${e?.message |'unknown error'}`
     }
   }
@@ -141,7 +141,7 @@ completionRate: 0.88,
 
 origin/cursor/automate-test-improve-and-merge-code-2533
       let reasonSummary: string | undefined;
-      let riskLevelOverride: TrustScoreBreakdown['riskLevel'] | undefined
+      let riskLevelOverride: TrustScoreBreakdown['riskLevel'] | undefined;
       if (analyze) {
         const analysis = await analyzeWithGPT(userId, inputs);
         reasonSummary = analysis.reasonSummary;

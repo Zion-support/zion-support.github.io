@@ -193,4 +193,3 @@ export function HireConfirmationModal({ ;
             </label>;
           </div>;
         </div>;
-

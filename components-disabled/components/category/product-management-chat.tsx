@@ -1,18 +1,8 @@
 import type { NextPage } from 'next';
 <<<<<<< HEAD
-<<<<<<< HEAD:components/category/product-management-chat.tsx
-<<<<<<< HEAD
   return (import Link from 'next/link';
 import Seo from '../../components/seo/Seo';
 const ProductManagementChat: NextPage = () => {return (return (<div>;
-
-
-
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/category/product-management-chat.tsx
-
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   return (
 )
 const ProductManagementChat: NextPage = () => {
@@ -25,20 +15,12 @@ const ProductManagementChat: NextPage = () => {
 </main>
         <h1>ProductManagementChat</h1>
         <p>Blog content coming soon...</p>
-<<<<<<< HEAD
-        <a href="/blog">Back to Blog</a>
+<a href="/blog">Back to Blog</a>
       </main>
     </div>
   )
-<<<<<<< HEAD:components/category/product-management-chat.tsx
 }
 <<<<<<< HEAD
-
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/category/product-management-chat.tsx
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 =======
         <a href="/blog">Back to Blog</a>"
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
@@ -52,18 +34,10 @@ const ProductManagementChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>;"
       </main>;
     </div>;
-<<<<<<< HEAD
-  );
+);
 };
 export default ProductManagementChat;
-<<<<<<< HEAD
-
 <<<<<<< HEAD:components/category/product-management-chat.tsx
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/category/product-management-chat.tsx
 import Link from 'next / link';
 import Seo from '../../components / seo / Seo';
   return (
@@ -76,16 +50,12 @@ import Seo from '../../components / seo / Seo';
         <p > Blog content coming soon...</p>;
       </main>;)
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD:components/category/product-management-chat.tsx
 }
 ;
 export default ProductManagementChat;
 <<<<<<< HEAD
 ;
 export default ProductManagementChat;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/category/product-management-chat.tsx
 
 ;
 export default ProductManagementChat;
@@ -99,8 +69,6 @@ export default ProductManagementChat;
       <main>
         <h1>ProductManagementChat</h1>
         <p>Blog content coming soon...</p>
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
         <a href=&quot;/blog&quot;>Back to Blog</a>
   return (import Link from 'next/link';
 import Seo from '../../components/seo/Seo';
@@ -214,4 +182,3 @@ export default ProductManagementChat;
 export default ProductManagementChat;
 ;
 ;
-

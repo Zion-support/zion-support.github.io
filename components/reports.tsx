@@ -21,7 +21,7 @@ import React from 'react';
   index;
 }className= {}
   `px-6 py-3 rounded-full font-medium transition-all duration-200 $ {'
-  category && category.active ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50' `
+  category && category.active ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50' `;
 }` 
 }> {;
   category && category.name ;
@@ -35,7 +35,7 @@ import React from 'react';
 }> {;
   report && report.icon ;
 }</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1" > <span>Download</span> <Download className="w-4 h-4" /> </button> </div> </motion && motion.article>) ) ;
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion && motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion && motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) ;
 };
 export default ReportsPage;import React from 'react';
 
@@ -46,7 +46,7 @@ import React from 'react';
 }> {
   report.icon 
 }</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1" > <span>Download</span> <Download className="w-4 h-4" /> </button> </div> </motion.article>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) ;
 };
 export default ReportsPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -117,11 +117,11 @@ const ReportsPage: React.FC = () => {}
 
     }
     {'
-      title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding''
+      title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding'';
       excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.';
     }
     {'
-      title: 'Sustainable Technology: Green Computing & Environmental Impact''
+      title: 'Sustainable Technology: Green Computing & Environmental Impact'';
       excerpt: 'Analysis of sustainable technology practices, environmental impact assessment, and green computing solutions.';"
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
@@ -129,7 +129,7 @@ const ReportsPage: React.FC = () => {}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >"
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 Featured Report;
               </h2>
             </motion.div>
@@ -142,7 +142,7 @@ const ReportsPage: React.FC = () => {}
               Research Reports;
             </motion && motion.h1>;
             <motion&& motion.p "
-              className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
+              className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12";
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
@@ -187,7 +187,7 @@ const ReportsPage: React.FC = () => {}
             {reports && reports.filter(report => report && report.featured).map((report, index) => (;
               <motion&& motion.div;
                 key={index}"
-                className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
+                className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300";
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -246,7 +246,7 @@ const ReportsPage: React.FC = () => {}
                           {tag}
 
         {/* Categories Filter */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;
           <div className="max-w-7xl mx-auto">
             <motion.div"
               className="text-center mb-16"
@@ -255,7 +255,7 @@ const ReportsPage: React.FC = () => {}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >"
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 All Reports;
               </h2>"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -274,7 +274,7 @@ const ReportsPage: React.FC = () => {}
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${}
                     category && category.active'
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white''
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'`
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'`;
                   }`}>;
                   {category && category.name} ({category && category.count});
                 </button>;
@@ -284,7 +284,7 @@ const ReportsPage: React.FC = () => {}
               {reports && reports.filter(report => !report && report.featured).map((report, index) => (;
                 <motion&& motion.article;
                   key={index}"
-                  className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
+                  className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30";
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}

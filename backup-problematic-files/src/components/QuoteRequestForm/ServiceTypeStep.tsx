@@ -1,17 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import { useEffect, useState } from "react",;
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
-import { Input } from "@/components/ui/input",;
-import { Card } from "@/components/ui/card",;
-=======
-import { useEffect, useState } from "react";""
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";""
-import { Input } from "@/components/ui/input";""
-import { Card } from "@/components/ui/card";""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Search } from 'lucide-react';
 import { ListingScoreCard } from "@/components/ListingScoreCard";""
 import { captureException } from "@/utils/sentry";""
@@ -155,9 +142,5 @@ return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold t
 )"
 }/> </div>) ) ) : (<div className="text-center py-8 text-zion-slate-light" > No items found. Please try a different search. </div>) ;"
 }</div> </div>) ;
-<<<<<<< HEAD
 }</div>) ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}</div>) ;"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

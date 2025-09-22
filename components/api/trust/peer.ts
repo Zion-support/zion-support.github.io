@@ -21,8 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('AllowPOST');
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 ) {
   }
   const review: TrustPeerReview = {}

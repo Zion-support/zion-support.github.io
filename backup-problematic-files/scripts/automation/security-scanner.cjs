@@ -22,12 +22,9 @@ class SecurityScanner {}
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
-<<<<<<< HEAD
-    scanForVulnerabilities() {}
+scanForVulnerabilities() {}
         this.log('Scanning for security vulnerabilities...');
-<<<<<<< HEAD
-
-        try {}
+try {}
             const auditResult = execSync('npm audit --json', { })
                 "cwd": this.projectRoot,
                 "encoding": 'utf8',
@@ -36,23 +33,9 @@ class SecurityScanner {}
 
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-
-=======
-        
-        try {}
-            const auditResult = execSync('npm audit --json', { })
-                "cwd": this.projectRoot, 
-                "encoding": 'utf8',
-                "stdio": 'pipe'
-=======
-    scanForVulnerabilities() {}"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             };);
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-<<<<<<< HEAD
-            
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             this.log(`Found ${vulnerabilities} security vulnerabilities`);
             return {;}
@@ -67,10 +50,6 @@ class SecurityScanner {}
     scanForSecrets() {}
         this.log('Scanning for exposed secrets...');
 <<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         const secretPatterns = [{ "name": 'API Keys', "pattern": /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi },
             { "name": 'Passwords', "pattern": /password\s*[:=]\s*['"][^'"]+['"]/gi },
             { "name": 'Secrets', "pattern": /secret\s*[:=]\s*['"][^'"]+['"]/gi },
@@ -80,36 +59,19 @@ class SecurityScanner {}
             { "name": 'AWS Keys', "pattern": /aws[_-]?access[_-]?key[_-]?id\s*[:=]\s*['"][^'"]+['"]/gi },
             { "name": 'GitHub Tokens', "pattern": /github[_-]?token\s*[:=]\s*['"][^'"]+['"]/gi };
        ];
-<<<<<<< HEAD
-
-        const files = this.findSourceFiles(;);
+const files = this.findSourceFiles(;);
         const foundSecrets = [];
 
         for (const file of files) {}
             try {}
                 const content = fs.readFileSync(file, 'utf8';);
-
-=======
-        
-=======
-            `;
-            this.log(`Found ${vulnerabilities} security vulnerabilities`);
-            return {;}
-
-       ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const files = this.findSourceFiles(;);
         const foundSecrets = [];
         for (const file of files) {}
-<<<<<<< HEAD
-            try {}
+try {}
                 const content = fs.readFileSync(file, 'utf8';);
-                
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            try {}"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 for (const secretType of secretPatterns) {}
                     const matches = content.match(secretType.pattern;);
                     if ( {})
@@ -117,35 +79,15 @@ class SecurityScanner {}
 
         const files = [];
 <<<<<<< HEAD
-<<<<<<< HEAD
 
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
-
-=======
-        
-        const scanDirectory = (dir) => {}
-            if () retu) {}
-    ) retu}r;n;
-            
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        const scanDirectory = (dir) => {}
-            if () retu) {}
-    ) retu}r;n;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-                
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                if (&& !item.startsWith('.') && item !== 'node_modules') {}
+if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
             };
@@ -154,40 +96,19 @@ class SecurityScanner {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
             };
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }};
         scanDirectory(this.projectRoot);
         return files};
     checkFilePermissions() {}
-<<<<<<< HEAD
-        this.log('Checking file permissions...');
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        const criticalFiles = ['package.json',]
+this.log('Checking file permissions...');
+const criticalFiles = ['package.json',]
             'package-lock.json',
             '.env',
             '.env.local',
             '.env.production',
             '.env.development'
         ];
-<<<<<<< HEAD
-
-        const permissionIssues = [];
-
-=======
-        
-        const permissionIssues = [];
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-        const permissionIssues = [];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const permissionIssues = [];
         for (const file of criticalFiles) {}
             const filePath = path.join(this.projectRoot, file;);
                 const stats = fs.statSync(filePath) {}
@@ -197,13 +118,7 @@ class SecurityScanner {}
                 const isReadableByOthers = (mode & 0o004) !==;0;
                 const isWritableByOthers = (mode & 0o002) !==;0;
                 const isExecutableByOthers = (mode & 0o001) !==;0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-                
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                if ( {})
+if ( {})
                     permissionIssues.push({})
                         "file": file,
                         "readableByOthers": isReadableByOthers,
@@ -228,46 +143,21 @@ class SecurityScanner {}
         return permissionIssues};
     checkDependencies() {}
         this.log('Checking dependencies for security issues...');
-<<<<<<< HEAD
-
-        try {}
+try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
-
-=======
-        
-        try {}
-            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
-            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
-            
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             const dependencies = {}
                 ...packageJson.dependencies || {},
                 ...packageJson.devDependencies || {};
            };
-<<<<<<< HEAD
-
-            const totalDeps = Object.keys(dependencies).lengt;h;
+const totalDeps = Object.keys(dependencies).lengt;h;
             this.log(`Analyzing ${totalDeps} dependencies`);
 
             // Check for known vulnerable packages;
             const vulnerablePackages = this.checkForVulnerablePackages(dependencies;);
-
-=======
-            
-            const totalDeps = Object.keys(dependencies).lengt;h;
-=======
-
-            const dependencies = {}
-                ...packageJson.dependencies || {},
-                ...packageJson.devDependencies || {};
-            const totalDeps = Object.keys(dependencies).lengt;h;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             this.log(`Analyzing ${totalDeps} dependencies`);
             // Check for known vulnerable packages;
             const vulnerablePackages = this.checkForVulnerablePackages(dependencies;);
-<<<<<<< HEAD
-            
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             return {;}
                 "status": 'success',
@@ -287,12 +177,6 @@ class SecurityScanner {}
 <<<<<<< HEAD
 
         const vulnerable = [];
-
-=======
-        
-        const vulnerable = [];
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         for (const [name, version] of Object.entries(dependencies)) {}
             const packageVersion = \`\${name}@\${version}\;`;`
             if ([0]))) {}
@@ -313,28 +197,10 @@ class SecurityScanner {}
         return vulnerable}};
     generateSecurityHeaders() {}
         this.log('Generating security headers configuration...');
-<<<<<<< HEAD
-
-        const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
+const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
         let nextConfig = ;';';
-
-=======
-        
-        const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
-        let nextConfig = ;';';
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         if () {}
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
-=======
-
-        const vulnerable = [];
-        for (const [name, version] of Object.entries(dependencies)) {}`;
-            const packageVersion = \`\${name}@\${version}\;`;`
-            if ([0]))) {}
-                vulnerable.push({})
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Add security headers if not already present;
         if (!nextConfig.includes('X-Frame-Options')) {}
             const securityHeaders = 
@@ -344,8 +210,7 @@ class SecurityScanner {}
 
   // Security headers;
     return }[;]
-<<<<<<< HEAD
-      {}
+{}
         "source": '/(.*)',
         "headers": []
           {}
@@ -366,39 +231,19 @@ class SecurityScanner {}
           {}
             "key": 'Content-Security-Policy',
             "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';"}]}]},";
-<<<<<<< HEAD
-
-=======
-            
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-            // Insert security headers before the closing brace;
+// Insert security headers before the closing brace;
             const updatedConfig = nextConfig.replace(/(\s*)(module\.exports\s*=\s*nextConf;i;g;)/, "$1${securityHeaders}$1$2");
             fs.writeFileSync(nextConfigPath, updatedConfig);
             this.log('Security headers added to Next.js config')};
         return { "status": 'success' }};
     generateSecurityReport() {}
         this.log('Generating security scan report...');
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
             "security": {}
                 vulnerabilities: this.scanForVulnerabilities(),
-=======
-
-            "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';"}]}]},";"
-            // Insert security headers before the closing brace;"
-            const updatedConfig = nextConfig.replace(/(\s*)(module\.exports\s*=\s*nextConf;i;g;)/, "$1${securityHeaders}$1$2");"
-            fs.writeFileSync(nextConfigPath, updatedConfig);"
-            this.log('Security headers added to Next.js config')};
-
-            "security": {}"
-                vulnerabilities: this.scanForVulnerabilities(),"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 "secrets": this.scanForSecrets(),
                 "permissions": this.checkFilePermissions(),
                 "dependencies": this.checkDependencies(),
@@ -406,15 +251,9 @@ class SecurityScanner {}
             },"
             "recommendations": this.generateSecurityRecommendations();"
 
-<<<<<<< HEAD
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Security scan report saved to ${this.reportFile}");
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        return report};
+return report};
     generateSecurityRecommendations() {}
         return [;]
             'Use environment variables for all sensitive configuration',
@@ -432,41 +271,20 @@ class SecurityScanner {}
         ]};
     async run() {}
         this.log('Security Scanner started');
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         try {}
             const report = this.generateSecurityReport(;);
             this.log('Security Scanner completed successfully');
             return report} catch (error) {}
             this.log("Security Scanner "failed": ${error.message}`);
-=======
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));"
-        this.log("Security scan report saved to ${this.reportFile}");"
-        return report};
-    generateSecurityRecommendations() {}
-        return [;]"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
 // Run the scanner if this script is executed directly;
     const scanner = new SecurityScanner) {}
     const scanner = new SecurityScanner}(;);
     scanner.run().catch(console.error)};
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = SecurityScanner;
-module.exports = SecurityScanner;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 module.exports = SecurityScanner;
 "`;

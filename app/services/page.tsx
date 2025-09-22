@@ -1,17 +1,15 @@
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { generateSEOMetadata } from "../../components/SEOEnhancer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateSEOMetadata({
   title: "AI & Technology Services - Zion Tech Group",
   description: "Comprehensive AI solutions, automation services, and technology consulting. From AI chatbots to enterprise automation platforms, we deliver cutting-edge solutions for modern businesses.",
-  keywords: ['AI services', 'automation solutions', 'technology consulting', 'AI chatbots', 'enterprise AI', 'business automation'],
-  openGraph: {
-    title: 'AI & Technology Services - Zion Tech Group',
-    description: 'Comprehensive AI solutions, automation services, and technology consulting for modern businesses.',
-    type: 'website',
-  },
-};
+  keywords: ['AI services', 'automation solutions', 'technology consulting', 'AI chatbots', 'enterprise AI', 'business automation', 'machine learning', 'cloud services', 'cybersecurity'],
+  canonicalUrl: '/services',
+  ogImage: '/images/og-services.jpg'
+});
 
 const serviceCategories = [
   {

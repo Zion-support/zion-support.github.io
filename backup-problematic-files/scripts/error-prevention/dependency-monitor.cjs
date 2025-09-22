@@ -8,10 +8,7 @@ class DependencyMonitor {}
     this.interval = 600000; // 10 minutes;
 
     this.isRunning = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    // Initial dependency check;
+// Initial dependency check;
     await this.runDependencyCheck();
 
     // Set up interval for periodic checks;
@@ -19,34 +16,17 @@ class DependencyMonitor {}
       this.runDependencyCheck()}, this.interval);
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Initial dependency check;
     await this.runDependencyCheck();
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
-<<<<<<< HEAD
-    
-    
-    
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
       console.log('Running dependency check...');
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Check for outdated packages;
       const child = spawn('npm', ['outdated'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
@@ -63,45 +43,22 @@ class DependencyMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
         if ( {})
 =======
         errorOutput += data.toString()}
-
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           console.log('Dependency check passed ✓')) {}
      {}
           console.log('Dependency check passed ✓')}} else {}
           console.log('Dependency check found outdated packages ✗');
-<<<<<<< HEAD
-          console.log('"Output": ', output);
-<<<<<<< HEAD
-
+console.log('"Output": ', output);
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-          
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           // Log outdated packages but don't auto-update;
           this.logOutdatedPackages(output)};
       })} catch (error) {}
       console.error('Error running dependency "check": ', error.message)};
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   };
   logOutdatedPackages(output) {}
     const lines = output.split('\n';);
@@ -109,18 +66,7 @@ class DependencyMonitor {}
       line.includes('→') && !line.includes('Package');
    ;);
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if ( {})
       console.log('Outdated packages "found": ')) {}
      {}
@@ -131,12 +77,7 @@ class DependencyMonitor {}
   async checkPackageIntegrity() {}
     try {}
       console.log('Checking package integrity...');
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const child = spawn('npm', ['ls'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -152,13 +93,7 @@ class DependencyMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
@@ -174,11 +109,7 @@ class DependencyMonitor {}
   stop() {}
     console.log('Stopping Dependency Monitor...');
     this.isRunning = false;
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if ( {})
       clearInterval(this.intervalId)};
     console.log('Dependency Monitor stopped')) {}
@@ -191,42 +122,20 @@ class DependencyMonitor {}
 // Start the monitor if run directly;
   const monitor = new DependencyMonitor) {}
   const monitor = new DependencyMonitor}(;);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-  // Handle graceful shutdown;
+// Handle graceful shutdown;
   process.on('SIGINT', () => {}
     monitor.stop();
     process.exit(0)}
 });
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   process.on('SIGTERM', () => {}
     monitor.stop();
     process.exit(0)}
 });
-<<<<<<< HEAD
-
-  monitor.start().catch(console.error)};
+monitor.start().catch(console.error)};
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  
-  monitor.start().catch(console.error)};
-<<<<<<< HEAD
-module.exports = DependencyMonitor;
-module.exports = DependencyMonitor;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
   // Handle graceful shutdown;
 

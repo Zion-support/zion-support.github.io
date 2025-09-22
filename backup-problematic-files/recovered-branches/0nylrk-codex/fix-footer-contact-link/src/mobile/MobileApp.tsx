@@ -31,4 +31,3 @@ export function MobileApp() {;
         <Route path="/inbox" element={<MobileMessages />} />;
         <Route path="/resume" element={<MobileResumeBuilder />} />;
 <<<<<<< HEAD
-

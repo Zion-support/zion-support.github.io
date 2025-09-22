@@ -124,7 +124,7 @@ const companyLinks = ["
             </div>
             <button;
               onClick={onClose}"
-              className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200";
             >"
               <X className="h-6 w-6 text-gray-600" />
             </button>
@@ -140,7 +140,7 @@ const companyLinks = ["
                 <Link;
                   key={link.name}
                   href={link.href}"
-                  className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+                  className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200";
                   onClick={onClose}
                 >"
                   <link.icon className="h-5 w-5 mr-3 text-blue-500" />"
@@ -160,7 +160,7 @@ const companyLinks = ["
                 <Link;
                   key={link.name}
                   href={link.href}"
-                  className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+                  className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200";
                   onClick={onClose}
                 >"
                   <link.icon className="h-5 w-5 mr-3 text-blue-500" />"
@@ -180,7 +180,7 @@ const companyLinks = ["
                 <Link;
                   key={link.name}
                   href={link.href}"
-                  className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+                  className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200";
                   onClick={onClose}
                 >"
                   <link.icon className="h-5 w-5 mr-3 text-blue-500" />"
@@ -200,7 +200,7 @@ const companyLinks = ["
                 <Link;
                   key={link.name}
                   href={link.href}"
-                  className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+                  className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-200";
                   onClick={onClose}
                 >"
                   <link.icon className="h-5 w-5 mr-3 text-blue-500" />"

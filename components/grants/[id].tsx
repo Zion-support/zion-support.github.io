@@ -127,7 +127,7 @@ const resp = await fetch(`/api/grants/${id}/updates`, {
         </div>
 
 <aside className='space-y-4'>
-          <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
+          <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>;
             <h3 className='font-medium mb-2'>Milestones</h3>
             <ul className='space-y-2'>
               {(item.milestones |[]).map(m => (
@@ -136,7 +136,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span
                     className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emerald-500' : 'bg-gray-400'}`}
 <aside className='space-y-4' />
-          <section className='border rounded p-4 bg-white/70 dark: bg-black/40' />
+          <section className='border rounded p-4 bg-white/70 dark: bg-black/40' />;
             <h3 className='font-medium mb-2' />Milestones</h3>
             <ul className='space-y-2' />
               {(item.milestones |[]).map(m => (}
@@ -175,7 +175,7 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
             </ul>"
             <div className="mt-3 text-sm">Funds Released: {item.fundsReleased |0}</div>
           </section>"
-          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">"
+          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">";
             <h3 className="font-medium mb-2">Team</h3>"
             <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>
               {(!item.milestones |item.milestones.length === 0) && (
@@ -190,11 +190,11 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
 
             </div>
           </section>
-          <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
+          <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>;
             <h3 className='font-medium mb-2'>Team</h3>
             <div className='text-sm whitespace-pre-wrap'>{item.teamInfo}</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
-          <section className='border rounded p-4 bg-white/70 dark:bg-black/40' />
+          <section className='border rounded p-4 bg-white/70 dark:bg-black/40' />;
             <h3 className='font-medium mb-2' />Team</h3>
             <div className='text-sm whitespace-pre-wrap' />{item.teamInf,}
 }</div>

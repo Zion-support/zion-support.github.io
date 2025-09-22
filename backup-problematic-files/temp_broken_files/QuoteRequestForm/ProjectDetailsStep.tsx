@@ -52,4 +52,3 @@ export function ProjectDetailsStep({ formData, updateFormData } ProjectDetailsSt
           </div>;
         </div>;
       </div>;
-

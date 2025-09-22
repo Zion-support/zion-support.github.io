@@ -1,79 +1,39 @@
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  User,
-  Settings,
-  LogOut,
-  Bell,
-  Globe,
-  Zap,
-  Brain,
-  Rocket,
-  Dna,
-  DollarSign,
-  Lock,
-  Wifi,
-  Truck,
-  Gamepad2,
-  Bot,
-  Factory,
-  Car,;
-} from "lucide-react";"
-import Link from "next/link";
-interface EnhancedNavigationProps {;
-  className?: string;
-ursor/automate-test-fix-improve-and-merge-code-48f3
-  const [servicesOpen, setServicesOpen] = useState(false)
-  const [solutionsOpen, setSolutionsOpen] = useState(false)
-import React, { useState } from 'react';
 import Link from 'next/link';
+import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-const EnhancedNavigation: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+export default function EnhancedNavigation() {
+  const [isOpen, setIsOpen] = useState(false);
 
-  const navigationItems = [
+  const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services', hasDropdown: true },
-    { name: 'Products', href: '/products' },
+    { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
-  ];
-
-  const services = [
-    { name: 'All Services', href: '/services' },
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Innovative Solutions', href: '/innovative-it-services' }
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' }
   ];
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
+    <nav className='bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50'>
+      <div className='container mx-auto px-4'>
+        <div className='flex justify-between items-center h-16'>
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
+          <Link href='/' className='flex items-center space-x-2'>
+            <div className='w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center'>
+              <span className='text-white font-bold text-sm'>Z</span>
             </div>
-            <div>
-              <div className="text-xl font-bold text-gray-800">Zion Tech Group</div>
-              <div className="text-xs text-gray-500">Technology Solutions</div>
-            </div>
+            <span className='text-white font-bold text-xl'>Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-8">
+<div className="hidden lg:flex space-x-8">;
             {navigationItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.hasDropdown ? (
                   <div className="relative group">
                     <button
                       onClick={() => setServicesOpen(!servicesOpen)}
-                      className="flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors font-medium"
+                      className="flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors font-medium";
                     >
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4" />
@@ -82,7 +42,7 @@ const EnhancedNavigation: React.FC = () => {
                       <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                         {services.map((service) => (
                           <Link key={service.name} href={service.href}>
-                            <span className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                            <span className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">;
                               {service.name}
                             </span>
                           </Link>
@@ -90,9 +50,9 @@ const EnhancedNavigation: React.FC = () => {
                       </div>
                     )}
                   </div>
-                ) : (
+                ) : (;
                   <Link href={item.href}>
-                    <span className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+                    <span className="text-gray-600 hover:text-blue-600 transition-colors font-medium">;
                       {item.name}
                     </span>
                   </Link>
@@ -102,16 +62,16 @@ const EnhancedNavigation: React.FC = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+          <div className="hidden lg:flex items-center space-x-4">;
+            <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">;
               Get Started
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+{/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors";
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -119,7 +79,7 @@ const EnhancedNavigation: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200">
+          <div className="lg:hidden py-4 border-t border-gray-200">;
             <div className="flex flex-col space-y-4">
               {navigationItems.map((item) => (
                 <div key={item.name}>
@@ -127,7 +87,7 @@ const EnhancedNavigation: React.FC = () => {
                     <div>
                       <button
                         onClick={() => setServicesOpen(!servicesOpen)}
-                        className="flex items-center justify-between w-full text-gray-600 hover:text-blue-600 transition-colors font-medium py-2"
+                        className="flex items-center justify-between w-full text-gray-600 hover:text-blue-600 transition-colors font-medium py-2";
                       >
                         <span>{item.name}</span>
                         <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
@@ -136,7 +96,7 @@ const EnhancedNavigation: React.FC = () => {
                         <div className="ml-4 mt-2 space-y-2">
                           {services.map((service) => (
                             <Link key={service.name} href={service.href} onClick={() => setIsMenuOpen(false)}>
-                              <span className="block text-gray-500 hover:text-blue-600 transition-colors py-1">
+                              <span className="block text-gray-500 hover:text-blue-600 transition-colors py-1">;
                                 {service.name}
                               </span>
                             </Link>
@@ -144,9 +104,9 @@ const EnhancedNavigation: React.FC = () => {
                         </div>
                       )}
                     </div>
-                  ) : (
+                  ) : (;
                     <Link href={item.href} onClick={() => setIsMenuOpen(false)}>
-                      <span className="block text-gray-600 hover:text-blue-600 transition-colors font-medium py-2">
+                      <span className="block text-gray-600 hover:text-blue-600 transition-colors font-medium py-2">;
                         {item.name}
                       </span>
                     </Link>
@@ -154,7 +114,7 @@ const EnhancedNavigation: React.FC = () => {
                 </div>
               ))}
               <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                <span className="block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center">
+                <span className="block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center">;
                   Get Started
                 </span>
               </Link>
@@ -163,7 +123,7 @@ const EnhancedNavigation: React.FC = () => {
         )}
       </div>
     </nav>
-  )
+)
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
@@ -182,78 +142,78 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
   }, []);
   const navigationItems = []
     {"
-      name: "Services""
-      href: "/services""
+      name: "Services"";
+      href: "/services"";
       icon: <Brain className="w-4 h-4" />
-      dropdown: []
+      dropdown: [];
         {"
-          name: "AI & Machine Learning""
+          name: "AI & Machine Learning"";
           href: "/services?category=ai-ml""
           icon: <Brain className="w-4 h-4" />
         }
         {"
-          name: "Quantum Computing""
+          name: "Quantum Computing"";
           href: "/services?category=quantum""
           icon: <Rocket className="w-4 h-4" />
         }
         {"
-          name: "Space Technology""
+          name: "Space Technology"";
           href: "/services?category=space""
           icon: <Globe className="w-4 h-4" />
         }
         {"
-          name: "Biotech & Healthcare""
+          name: "Biotech & Healthcare"";
           href: "/services?category=biotech""
           icon: <Dna className="w-4 h-4" />
         }
         {"
-          name: "Financial Services""
+          name: "Financial Services"";
           href: "/services?category=finance""
           icon: <DollarSign className="w-4 h-4" />
         }
         {"
-          name: "Cybersecurity""
+          name: "Cybersecurity"";
           href: "/services?category=security""
           icon: <Lock className="w-4 h-4" />
         }
         {"
-          name: "IoT & Smart Devices""
+          name: "IoT & Smart Devices"";
           href: "/services?category=iot""
           icon: <Wifi className="w-4 h-4" />
         }
         {"
-          name: "Logistics & Supply Chain""
+          name: "Logistics & Supply Chain"";
           href: "/services?category=logistics""
           icon: <Truck className="w-4 h-4" />
         }
         {"
-          name: "Metaverse & Gaming""
+          name: "Metaverse & Gaming"";
           href: "/services?category=metaverse""
           icon: <Gamepad2 className="w-4 h-4" />
         }
         {"
-          name: "Robotics & Automation""
+          name: "Robotics & Automation"";
           href: "/services?category=robotics""
           icon: <Bot className="w-4 h-4" />
         }
         {"
-          name: "Manufacturing""
+          name: "Manufacturing"";
           href: "/services?category=manufacturing""
           icon: <Factory className="w-4 h-4" />
         }
         {"
-          name: "Autonomous Vehicles""
+          name: "Autonomous Vehicles"";
           href: "/services?category=vehicles""
           icon: <Car className="w-4 h-4" />
         }
       ]
       hasDropdown: true;
-      dropdownItems: []
+      dropdownItems: [];
     {"
-      name: "Solutions""
-      href: "/solutions"
+      name: "Solutions"";
+      href: "/solutions";
       hasDropdown: true;
-      dropdownItems: ["
+      dropdownItems: [";
         { name: "Enterprise Solutions", href: "/solutions?type=enterprise" }"
         { name: "Startup Solutions", href: "/solutions?type=startup" }"
         { name: "Government Solutions", href: "/solutions?type=government" }"
@@ -267,10 +227,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
     { name: "Contact", href: "/contact" }
   ];
   const contactInfo = {"
-    mobile: "+1 302 464 0950""
-    email: "kleber@ziontechgroup.com""
-    address: "364 E Main St STE 1008 Middletown DE 19709""
-    website: "https://ziontechgroup.com"
+    mobile: "+1 302 464 0950"";
+    email: "kleber@ziontechgroup.com"";
+    address: "364 E Main St STE 1008 Middletown DE 19709"";
+    website: "https://ziontechgroup.com";
   }
   ];
 
@@ -280,7 +240,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${}
         isScrolled"
           ? "bg-black/80 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10""
-          : "bg-transparent"`
+          : "bg-transparent"`;
       } ${className}`}>;"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;"
         <div className="flex items-center justify-between h-20">;"
@@ -422,7 +382,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
                           </div>;
                         </motion.div>)}
                     </AnimatePresence>;
-                  </div>) : (
+                  </div>) : (;
                   <Link;
                     href={item.href}
                     className="text - gray - 300 hover:text - cyan - 400 transition - colors duration-300 py-2";
@@ -481,7 +441,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
                 <input"
                   type="text""
                   placeholder="Search services...""
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500";
               {/* Navigation Items */}
               {navigationItems && navigationItems.map((item) => (;"
                 <div key={item && item.name} className="space-y-2">;

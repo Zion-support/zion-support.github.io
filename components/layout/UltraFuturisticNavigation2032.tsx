@@ -187,11 +187,11 @@ const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 const serviceCategories = [
   {
-    title: '🧠 AI & Consciousness 2030'
-    icon: BrainIcon'
-    color: 'from-violet-600 via-purple-600 to-indigo-600''
-    description: 'Next-generation AI consciousness and emotional intelligence'
-    services: []
+    title: '🧠 AI & Consciousness 2030';
+    icon: BrainIcon';
+    color: 'from-violet-600 via-purple-600 to-indigo-600'';
+    description: 'Next-generation AI consciousness and emotional intelligence';
+    services: [];
 ];
 
 ];'
@@ -215,15 +215,15 @@ const mainNavigation = [
         price: '$19,999/month',
       },
       {
-        name: 'AI Emotional Intelligence Platform'
-        href: '/ai-emotional-intelligence-platform'
-        description: 'Real-time emotion analysis and response'
+        name: 'AI Emotional Intelligence Platform';
+        href: '/ai-emotional-intelligence-platform';
+        description: 'Real-time emotion analysis and response';
         price: '$3,999/month'
       }
       {
-        name: 'AI Creativity Orchestrator'
-        href: '/ai-creativity-orchestrator'
-        description: 'Multi-model creativity fusion'
+        name: 'AI Creativity Orchestrator';
+        href: '/ai-creativity-orchestrator';
+        description: 'Multi-model creativity fusion';
         price: '$5,999/month'
       }
       {
@@ -239,7 +239,7 @@ const mainNavigation = [
     icon: AtomIcon,
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     description: 'Quantum computing and beyond',
-    services: [
+    services: [;
 {
         name: 'Quantum Internet Security Gateway',
         href: '/quantum-internet-security-gateway',
@@ -247,16 +247,16 @@ const mainNavigation = [
         price: '$15,999/month',
       },
       {
-        name: 'Biotech DNA Computing Platform'
-        href: '/biotech-dna-computing-platform'
-        description: 'DNA-based computation'
+        name: 'Biotech DNA Computing Platform';
+        href: '/biotech-dna-computing-platform';
+        description: 'DNA-based computation';
         price: '$25,999/month'
       }
       {
-        name: 'Neuromorphic Computing Platform'
-        href: '/neuromorphic-computing-platform'
-        description: 'Brain-inspired computing'
-        price: '$899/month'
+        name: 'Neuromorphic Computing Platform';
+        href: '/neuromorphic-computing-platform';
+        description: 'Brain-inspired computing';
+        price: '$899/month';
       }
       {
         name: 'Photonic Computing Infrastructure',
@@ -271,7 +271,7 @@ const mainNavigation = [
     icon: Rocket,
     color: 'from-teal-600 via-emerald-600 to-green-600',
     description: 'Space exploration and digital reality',
-    services: [
+    services: [;
 {
         name: 'Space Mining Automation Platform',
         href: '/space-mining-automation-platform',
@@ -279,16 +279,16 @@ const mainNavigation = [
         price: '$45,999/month',
       },
       {
-        name: 'Metaverse Development Platform'
-        href: '/metaverse-development-platform'
-        description: 'Build immersive virtual worlds'
-        price: '$499/month'
+        name: 'Metaverse Development Platform';
+        href: '/metaverse-development-platform';
+        description: 'Build immersive virtual worlds';
+        price: '$499/month';
       }
       {
-        name: 'Virtual Event Hologram Platform'
-        href: '/virtual-event-hologram-platform'
-        description: 'Immersive holographic events'
-        price: '$799/month'
+        name: 'Virtual Event Hologram Platform';
+        href: '/virtual-event-hologram-platform';
+        description: 'Immersive holographic events';
+        price: '$799/month';
       }
       {
         name: 'AI Predictive Health Analytics',
@@ -303,7 +303,7 @@ const mainNavigation = [
     icon: CpuIcon,
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     description: 'Autonomous enterprise infrastructure',
-    services: [
+    services: [;
 {
         name: 'Autonomous DevOps Platform',
         href: '/autonomous-devops-platform',
@@ -311,16 +311,16 @@ const mainNavigation = [
         price: '$799/month',
       },
       {
-        name: 'Zero Trust Network Architecture'
-        href: '/zero-trust-network-architecture'
+        name: 'Zero Trust Network Architecture';
+        href: '/zero-trust-network-architecture';
         description: 'Never trust, always verify'
-        price: '$599/month'
+        price: '$599/month';
       }
       {
-        name: 'Edge Computing Orchestration'
-        href: '/edge-computing-orchestration'
-        description: 'Distributed edge computing'
-        price: '$449/month'
+        name: 'Edge Computing Orchestration';
+        href: '/edge-computing-orchestration';
+        description: 'Distributed edge computing';
+        price: '$449/month';
       }
       {
         name: 'AI-Powered IT Operations Center',
@@ -335,7 +335,7 @@ const mainNavigation = [
     icon: Target,
     color: 'from-green-600 via-yellow-600 to-orange-600',
     description: 'Practical business solutions with AI',
-    services: [
+    services: [;
 {
         name: 'AI Business Intelligence Suite',
         href: '/ai-business-intelligence-suite',
@@ -343,16 +343,16 @@ const mainNavigation = [
         price: '$299/month',
       },
       {
-        name: 'AI Customer Success Automation'
-        href: '/ai-customer-success-automation'
-        description: 'Automate customer success'
-        price: '$199/month'
+        name: 'AI Customer Success Automation';
+        href: '/ai-customer-success-automation';
+        description: 'Automate customer success';
+        price: '$199/month';
       }
       {
-        name: 'Blockchain Supply Chain Transparency'
-        href: '/blockchain-supply-chain-transparency'
-        description: 'End-to-end traceability'
-        price: '$399/month'
+        name: 'Blockchain Supply Chain Transparency';
+        href: '/blockchain-supply-chain-transparency';
+        description: 'End-to-end traceability';
+        price: '$399/month';
       }
       {
         name: 'AI Meeting Transcriber Pro',
@@ -367,7 +367,7 @@ const mainNavigation = [
     icon: Microscope,
     color: 'from-orange-600 via-red-600 to-pink-600',
     description: 'Breakthrough research solutions',
-    services: [
+    services: [;
 {
         name: 'Swarm Robotics Orchestration',
         href: '/swarm-robotics-orchestration',
@@ -375,15 +375,15 @@ const mainNavigation = [
         price: '$449/month',
       },
       {
-        name: 'Brain-Computer Interface Platform'
-        href: '/brain-computer-interface-platform'
-        description: 'Direct neural interface'
+        name: 'Brain-Computer Interface Platform';
+        href: '/brain-computer-interface-platform';
+        description: 'Direct neural interface';
         price: '$1,299/month'
       }
       {
-        name: 'Quantum Machine Learning Platform'
-        href: '/quantum-machine-learning-platform'
-        description: 'Quantum-enhanced ML'
+        name: 'Quantum Machine Learning Platform';
+        href: '/quantum-machine-learning-platform';
+        description: 'Quantum-enhanced ML';
         price: '$2,999/month'
       }
       {
@@ -469,14 +469,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <>;
       {/* Top Contact Bar */}
             <Link href="/" className="flex items-center space-x-3 group">"
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";
                 <Rocket className="w-7 h-7 text-white" />
               </div>
               <div>"
                 <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Zion Tech Group
 <div className='bg-gradient-to-r from-cyan-900/90 via-purple-900/90 to-pink-900/90 backdrop-blur-sm border-b border-cyan-500/20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex items-center justify-between py-2 text-sm'>
             <div className='flex items-center space-x-6 text-gray-300'>
               <div className='flex items-center space-x-2'>
@@ -488,7 +488,7 @@ const closeMenu = () => setIsOpen(false);
       {/* Top Contact Bar */}
 
 <div className='bg-gradient-to-r from-cyan-900/90 via-purple-900/90 to-pink-900/90 backdrop-blur-sm border-b border-cyan-500/20' />
-        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />;
           <div className='flex items-center justify-between py-2 text-sm' />
             <div className='flex items-center space-x-6 text-gray-300' />
               <div className='flex items-center space-x-2' />
@@ -496,7 +496,7 @@ const closeMenu = () => setIsOpen(false);
                 <a;
 href={`tel: ${contactInfo.mobile;}`}
                   className='hover:text-cyan-400 transition-colors' />
-
+;
                   {contactInfo.mobil}
 }
                 </a>;
@@ -506,7 +506,7 @@ href={`tel: ${contactInfo.mobile;}`}
                 <a;
                   href={`mailto: ${contactInfo.email;}`}
                   className='hover:text-purple-400 transition-colors' />
-
+;
                   {contactInfo.emai}
 }
                 </a>;
@@ -518,7 +518,7 @@ href={`tel: ${contactInfo.mobile;}`}
                 target='_blank';
                 rel='noopener noreferrer';
                 className='text-gray-400 hover:text-cyan-400 transition-colors' />
-
+;
                 <svg;
                   className='w-5 h-5';
                   fill='currentColor';
@@ -532,7 +532,7 @@ href={`tel: ${contactInfo.mobile;}`}
                 target='_blank';
                 rel='noopener noreferrer';
                 className='text-gray-400 hover:text-cyan-400 transition-colors' />
-
+;
                 <svg;
                   className='w-5 h-5';
                   fill='currentColor';
@@ -557,7 +557,7 @@ href={`tel: ${contactInfo.mobile;}`}
             {/* Logo */}
 
             <Link href='/' className='flex items-center space-x-3 group' />
-              <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover: scale-110 transition-transform duration-300' />
+              <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover: scale-110 transition-transform duration-300' />;
                 <Rocket className='w-7 h-7 text-white' />
               </div>
               <div />
@@ -628,19 +628,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <item && item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />;
                   <span>{item && item.name}</span>;
                 </Link>;"
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-8">;
               {mainNavigation.map((item) => (
                   key={item.name}
                   href={item.href}
               {/* Services Dropdown */}'
               <div className='relative group'>'
-                <button className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'>'
-                  <Briefcase className='w-4 h-4 group-hover:scale-110 transition-transform' />
+                <button className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'>';
+                  <Briefcase className='w-4 h-4 group-hover:scale-110 transition-transform' />;
                   <span>Services</span>'
-                  <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform' />
+                  <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform' />;
                 </button>
                 {/* Mega Menu */}'
-                <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4'>'
+                <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4'>';
                   <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20'>'
                     <div className='grid grid-cols-2 gap-8'>
                       {serviceCategories.map((category, index) => ('
@@ -670,14 +670,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'                <Link;
                   key={item.name}
                   href={item.href}"
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group";
                 >"
-                  <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                  <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />;
                   <span>{item.name}</span>
                 </Link>
               ))}
                 {/* Mega Menu */}"
-                <div className="absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">"
+                <div className="absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">";
                   <div className="bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20">"
                     <div className="grid grid-cols-2 gap-8">
                       {serviceCategories.map((category, index) => ("
@@ -698,11 +698,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               <Link;
                                 key={serviceIndex}
                                 href={service.href}
-className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'
+className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group';
                               >
                                 <div className='flex items-center justify-between'>
                                   <div>
-                                    <div className='text-white group-hover:text-cyan-400 transition-colors font-medium'>
+                                    <div className='text-white group-hover:text-cyan-400 transition-colors font-medium'>;
                                       {service.name}
                                     </div>
                                     <div className='text-sm text-gray-400'>
@@ -716,12 +716,12 @@ className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'
 key={serviceIndex}
                                 href={service.href}
 
-className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group'
+className='block p-3 rounded-lg hover: bg-gray-800/50 transition-colors group';
                                />
                                 <div className='flex items-center justify-between' />
                                   <div />
                                     <div className='text-white group-hover:text-cyan-400 transition-colors font-medium' />
-
+;
                                       {service.nam}
 }
                                     </div>;
@@ -746,9 +746,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
             {/* CTA Buttons */}
-<div className='hidden lg:flex items-center space-x-4'>
+<div className='hidden lg:flex items-center space-x-4'>;
               <Link href='/contact'>
-                <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>
+                <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Get Started
                 </button>
@@ -917,13 +917,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'
+className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors';
             >
               {isOpen ? ('
                 <X className='w-6 h-6' />
-              ) : ('
+              ) : (';
                 <Menu className='w-6 h-6' />"
-              )}            </button>              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
+              )}            </button>              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors";
             >
             {/* Mobile Menu Button */}
             <button;
@@ -959,7 +959,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             exit={{ opacity: 0, x: '100%' }}
 
             transition={{ duration: 0.3 }}
-className='fixed inset-0 z-50 lg:hidden'
+className='fixed inset-0 z-50 lg:hidden';
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <div'
@@ -1049,7 +1049,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 onClick={closeMen}
 }
                     className='p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50' />
-
+;
                     <X className='w-6 h-6' />;
                   </button>;
                 </div>;
@@ -1061,7 +1061,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       key={item && item.name}
                       href={item && item.href}
                       onClick={closeMenu}
-className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors p-3 rounded-lg hover:bg-gray-800/50'
+className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors p-3 rounded-lg hover:bg-gray-800/50';
                     >
 
 <div className='space-y-6' />
@@ -1071,7 +1071,7 @@ key={item && item.name}
                       href={item && item.href}
                       onClick={closeMenu}
 
-className='flex items-center space-x-3 text-gray-300 hover: text-cyan-400 transition-colors p-3 rounded-lg hover:bg-gray-800/50'
+className='flex items-center space-x-3 text-gray-300 hover: text-cyan-400 transition-colors p-3 rounded-lg hover:bg-gray-800/50';
                      />
                       <item.icon className='w-5 h-5' />
                       <span />{item.name}</span>
@@ -1101,7 +1101,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 onClick={() = />;}
                         setActiveCategory(activeCategory === 0 ? null : 0)}
                       className='w-full flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'>
-
+;
                     {activeCategory === 0 && (;'
                       <div className='pl-8 space-y-2'>;
                         {serviceCategories && serviceCategories.map((category, index) => (;'
@@ -1139,7 +1139,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 key={serviceIndex}
                                 href={service && service.href}
                                 onClick={closeMenu}
-className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1'
+className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1';
                               >
                                 {service.name}
                               </Link>
@@ -1151,7 +1151,7 @@ key={serviceIndex}
                                 href={service && service.href}
                                 onClick={closeMenu}
 
-className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors py-1'
+className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors py-1';
                                />
                                 {service.name}
                               </Link>
@@ -1179,7 +1179,7 @@ key={link.name}
                           href={link.href}
                           onClick={closeMenu}
 className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors py-1' />
-
+;
                           {link.name}
 
                         </Link>

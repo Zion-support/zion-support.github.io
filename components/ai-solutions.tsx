@@ -7,9 +7,9 @@ export default function AISolutionsPage() {}
         'Pattern Recognition''
         'Anomaly Detection''
         'Recommendation Systems''
-      ],      icon: '🧠''
-      category: 'Core AI''
-      complexity: 'Advanced'
+      ],      icon: '🧠'';
+      category: 'Core AI'';
+      complexity: 'Advanced';
     }
         'Predictive Analytics',
         'Pattern Recognition',
@@ -17,43 +17,43 @@ export default function AISolutionsPage() {}
         'Recommendation Systems',
       ],      icon: '🧠',
       category: 'Core AI',
-      complexity: 'Advanced'
+      complexity: 'Advanced';
 };
     {
-      id: 'natural-language-processing'
-      title: 'Natural Language Processing'
+      id: 'natural-language-processing';
+      title: 'Natural Language Processing';
       description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.';
-      features: ['Text AnalysisSentiment AnalysisLanguage TranslationChatbot Development']
-      icon: '💬'
-      category: 'Language AI'
-      complexity: 'Advanced'
+      features: ['Text AnalysisSentiment AnalysisLanguage TranslationChatbot Development'];
+      icon: '💬';
+      category: 'Language AI';
+      complexity: 'Advanced';
     }
     {'
-      id: 'computer-vision''
-      title: 'Computer Vision''
+      id: 'computer-vision'';
+      title: 'Computer Vision'';
       description: 'Computer vision solutions for image recognition, object detection, and visual analytics.';'
-      features: ['Image RecognitionObject DetectionFacial RecognitionQuality Control']'
-      icon: '👁️''
-      category: 'Visual AI''
-      complexity: 'Advanced'
+      features: ['Image RecognitionObject DetectionFacial RecognitionQuality Control']';
+      icon: '👁️'';
+      category: 'Visual AI'';
+      complexity: 'Advanced';
     }
     {'
-      id: 'autonomous-systems''
-      title: 'Autonomous Systems''
-      description: 'Self-operating systems that can make decisions and take actions independently.''
-      features: ['Decision MakingSelf-LearningAdaptive BehaviorContinuous Improvement']'
-      icon: '🤖''
-      category: 'Autonomy''
-      complexity: 'Expert'
+      id: 'autonomous-systems'';
+      title: 'Autonomous Systems'';
+      description: 'Self-operating systems that can make decisions and take actions independently.'';
+      features: ['Decision MakingSelf-LearningAdaptive BehaviorContinuous Improvement']';
+      icon: '🤖'';
+      category: 'Autonomy'';
+      complexity: 'Expert';
     }
     {'
-      id: 'predictive-analytics''
-      title: 'Predictive Analytics''
-      description: 'Data-driven insights that help predict future trends and behaviors.''
-      features: ['Trend AnalysisRisk AssessmentForecastingBehavioral Prediction']'
-      icon: '📊''
-      category: 'Analytics''
-      complexity: 'Intermediate'
+      id: 'predictive-analytics'';
+      title: 'Predictive Analytics'';
+      description: 'Data-driven insights that help predict future trends and behaviors.'';
+      features: ['Trend AnalysisRisk AssessmentForecastingBehavioral Prediction']';
+      icon: '📊'';
+      category: 'Analytics'';
+      complexity: 'Intermediate';
   const technologies = ['
     'TensorFlow''
     'PyTorch''
@@ -63,19 +63,19 @@ export default function AISolutionsPage() {}
     'YOLO''
     'Keras''
     'Pandas',  ];    {'
-      industry: 'Healthcare''
-      solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery']'
-      icon: '🏥'
+      industry: 'Healthcare'';
+      solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery']';
+      icon: '🏥';
     }
     {'
-      industry: 'Finance''
-      solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading']'
-      icon: '💳'
+      industry: 'Finance'';
+      solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading']';
+      icon: '💳';
     }
     {'
-      industry: 'Retail''
-      solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing']'
-      icon: '🛍️'
+      industry: 'Retail'';
+      solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing']';
+      icon: '🛍️';
     }
   ];
   const technologies = ['
@@ -164,7 +164,7 @@ export default function AISolutionsPage() {}
         />
         <meta property='og:title' content='AI Solutions | Zion Tech Group' />
         <meta
-          property='og:description'
+          property='og:description';
           content='Advanced AI solutions for machine learning, natural language processing, computer vision, and autonomous systems.'
         />
         <meta name='twitter:card' content='summary_large_image' />
@@ -253,7 +253,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <Link
 origin/cursor/automate-test-improve-and-merge-code-2533
                       href={`/services#${solution.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors';
                     >
                       Learn More <span className='ml-1'>→</span>
                     </Link>
@@ -300,7 +300,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Industry Applications;
               </h2>'
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-
+;
                 {useCases.map((useCase, index) => (
                 ))}
             {/* Industry Use Cases */}'
@@ -385,7 +385,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Link'
                     href='/case-studies#ai-automation-manufacturing'"
               <h2 className="text-3xl font-bold mb-8 text-center text-blue-400">AI Success Stories</h2>"
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">"
                   <h3 className="text-xl font-bold mb-3 text-cyan-400">Manufacturing Excellence</h3>"
                   <p className="text-white/70 mb-4">
@@ -404,18 +404,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>;
                   <Link"
                     href="/case-studies#ai-automation-manufacturing""
-                    className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
+                    className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors";
                   </Link>;
                 </div>;
               </div>;
             </div>;"
                   href="/contact""
-                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105";
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
                 AI Success Stories
               </h2>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
                 <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>
                   <h3 className='text-xl font-bold mb-3 text-cyan-400'>
                     Manufacturing Excellence
@@ -426,7 +426,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                   <Link
                     href='/case-studies#ai-automation-manufacturing'
-                    className='text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
+                    className='text-fuchsia-400 hover:text-fuchsia-300 transition-colors';
                   >
                     Read Case Study →
                   </Link>
@@ -441,7 +441,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                   <Link
                     href='/case-studies#content-generation-scale'
-                    className='text-cyan-400 hover:text-cyan-300 transition-colors'
+                    className='text-cyan-400 hover:text-cyan-300 transition-colors';
                   >
                     Read Case Study →
                   </Link>
@@ -460,7 +460,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex flex-wrap justify-center gap-4'>
                 <Link
                   href='/contact'
-                  className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'
+                  className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105';
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Start Your AI Journey;

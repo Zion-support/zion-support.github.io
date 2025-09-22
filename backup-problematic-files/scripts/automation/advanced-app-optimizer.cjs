@@ -22,20 +22,10 @@ class AdvancedAppOptimizer {}
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
-<<<<<<< HEAD
-    optimizeNextConfig() {}
+optimizeNextConfig() {}
         this.log('Optimizing Next.js configuration...');
-<<<<<<< HEAD
-
-        const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
+const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
         let nextConfig = ;';';
-
-=======
-        
-        const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
-        let nextConfig = ;';';
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         if () {}
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
         const optimizedConfig = "/** @type {import('next').NextConfig} */
@@ -44,11 +34,7 @@ const nextConfig = {}
   "compress": true,
   "poweredByHeader": false,
   "generateEtags": false,
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Image optimization;
   "images": {}
     domains: ['ziontechgroup.com'],
@@ -64,11 +50,7 @@ const nextConfig = {}
   "compress": true,
   "poweredByHeader": false,
   "generateEtags": false,
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Image optimization;
   "images": {}
     domains: ['ziontechgroup.com'],
@@ -76,39 +58,19 @@ const nextConfig = {}
     "minimumCacheTTL": 60,
     "dangerouslyAllowSVG": true,
     "contentSecurityPolicy": "default-src 'sel}f;'; script-src 'none'; sandbox;"},
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Bundle optimization;
   "webpack": (config, { dev, isServer }) => {}
-=======
-    optimizeNextConfig() {}"
-
-  // Bundle optimization;"
-  "webpack": (config, { dev, isServer }) => {}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Production optimizations;
     if ( {})
       config.optimization.splitChunks = {}"
 
     return config}},
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-  // Experimental features for performance;
+// Experimental features for performance;
   "experimental": {}
     optimizeCss: true,
     "optimizePackageImports": ['lucide-react', '@radix-ui/react-icons']},
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Headers for security and performance;
   async headers() {}
     return [;]
@@ -124,11 +86,7 @@ const nextConfig = {}
           {}
             "key": 'Referrer-Policy',
             "value": 'origin-when-cross-origin'}]}]},
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Redirects and rewrites;
   async redirects() {}
     return [;]
@@ -136,37 +94,18 @@ const nextConfig = {}
         "source": '/home',
         "destination": '/',
         "permanent": true}]}};
-=======
-  // Experimental features for performance;"
-  "experimental": {}"
-    optimizeCss: true,"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         "permanent": true}]}};"
 module.exports = nextConfig;"
 ";"
         fs.writeFileSync(nextConfigPath, optimizedConfig);"
         this.log('Next.js configuration optimized');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        return { "status": 'success', "message": 'Next.js config optimized' }};
+return { "status": 'success', "message": 'Next.js config optimized' }};
     optimizeTailwindConfig() {}
         this.log('Optimizing Tailwind CSS configuration...');
 
         const tailwindConfigPath = path.join(this.projectRoot, 'tailwind.config.js';);
         let tailwindConfig = ;';';
-
-=======
-        
-        return { "status": 'success', "message": 'Next.js config optimized' }};
-    optimizeTailwindConfig() {}
-        this.log('Optimizing Tailwind CSS configuration...');
-        
-        const tailwindConfigPath = path.join(this.projectRoot, 'tailwind.config.js';);
-        let tailwindConfig = ;';';
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         if () {}
             tailwindConfig = fs.readFileSync(tailwindConfigPath, 'utf8')};
         const optimizedConfig = "/** @type {import('tailwindcss').Config} */
@@ -278,35 +217,14 @@ module.exports = {}
 
         fs.writeFileSync(tailwindConfigPath, optimizedConfig);
         this.log('Tailwind CSS configuration optimized');
-<<<<<<< HEAD
-
-        return { "status": 'success', "message": 'Tailwind config optimized' }};
+return { "status": 'success', "message": 'Tailwind config optimized' }};
     createPerformanceMonitoring() {}
         this.log('Creating performance monitoring utilities...');
-
-=======
-        
-        return { "status": 'success', "message": 'Tailwind config optimized' }};
-    createPerformanceMonitoring() {}
-        this.log('Creating performance monitoring utilities...');
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         const utilsDir = path.join(this.projectRoot, 'utils';);
         if () {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
         // Performance monitoring utility;
         const performanceMonitor = "/**
-=======
-
-  "theme": {}"
-    extend: {}
-      colors: {}
-        primary: {}"
-
-            fs.mkdirSync(utilsDir, { "recursive": true })};"
-        // Performance monitoring utility;"
-        const performanceMonitor = "/**"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  * Performance Monitoring Utility;
  * Tracks and reports performance metrics;
 
@@ -325,25 +243,10 @@ export class PerformanceMonitor {}
      {}`;
       performance.mark(\`\${name}-end\`)};`;
       performance.measure(name, \`\${name}-start\`, \`\${name}-end\`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      const measure = performance.getEntriesByName(name)[0];
+const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-      
-      const measure = performance.getEntriesByName(name)[0];
-      this.metrics.set(name, measure.duration);
-<<<<<<< HEAD
-      
-      
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
@@ -362,15 +265,8 @@ export class PerformanceMonitor {}
       performance.clearMeasures()};
 export const performanceMonitor = new PerformanceMonitor;(;);"
 
-<<<<<<< HEAD
-        fs.writeFileSync(path.join(utilsDir, 'performance-monitor.js'), performanceMonitor);
-<<<<<<< HEAD
+fs.writeFileSync(path.join(utilsDir, 'performance-monitor.js'), performanceMonitor);
 
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Web Vitals utility;
         const webVitals = "/**"
  * Web Vitals Utility;
@@ -386,50 +282,25 @@ export function initWebVitals() {}
     getLCP(reportWebVitals);
     getTTFB(reportWebVitals)};
 
-<<<<<<< HEAD
-        fs.writeFileSync(path.join(utilsDir, 'web-vitals.js'), webVitals);
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        this.log('Performance monitoring utilities created');
+fs.writeFileSync(path.join(utilsDir, 'web-vitals.js'), webVitals);
+this.log('Performance monitoring utilities created');
         return { "status": 'success', "message": 'Performance monitoring created' }};
     optimizeImages() {}
         this.log('Optimizing images...');
-<<<<<<< HEAD
-
-        const publicDir = path.join(this.projectRoot, 'public';);
+const publicDir = path.join(this.projectRoot, 'public';);
         const imageFiles = this.findImageFiles(publicDir;);
 
         let optimizedCount = ;0;
         const optimizations = [];
-
-=======
-        
-        const publicDir = path.join(this.projectRoot, 'public';);
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const imageFiles = this.findImageFiles(publicDir;);
         let optimizedCount = ;0;
         const optimizations = [];
-<<<<<<< HEAD
-        
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         for (const file of imageFiles) {}
             try {}
                 const stats = fs.statSync(file;);
                 const sizeKB = Math.round(stats.size / 1024;);
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-                
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 if ( { // Only optimize large images;})
                     optimizations.push({})
 
@@ -442,72 +313,33 @@ export function initWebVitals() {}
                     optimizations.push({})"
 
         const files = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        if () return file) {}
+if () return file) {}
     ) return file}s;
-
-=======
-        
-        if () return file) {}
-    ) return file}s;
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        if () return file) {}
-    ) return file}s;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const items = fs.readdirSync(dir;);
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-            
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-            if () {}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+if () {}
                 files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {}
                 files.push(fullPath)};
         return files) {}
         return files}};
     generateOptimizationReport() {}
-<<<<<<< HEAD
-        this.log('Generating advanced app optimization report...');
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        const report = {}
+this.log('Generating advanced app optimization report...');
+const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
             "optimizations": {}
                 nextConfig: this.optimizeNextConfig(),
-=======
-
-            "optimizations": {}"
-                nextConfig: this.optimizeNextConfig(),"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 "tailwindConfig": this.optimizeTailwindConfig(),
                 "performanceMonitoring": this.createPerformanceMonitoring(),
                 "images": this.optimizeImages();"
             },"
             "recommendations": this.generateOptimizationRecommendations();"
 
-<<<<<<< HEAD
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Advanced app optimization report saved to ${this.reportFile}");
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        return report};
+return report};
     generateOptimizationRecommendations() {}
         return [;]
             'Implement code splitting for better loading performance',
@@ -523,41 +355,20 @@ export function initWebVitals() {}
         ]};
     async run() {}
         this.log('Advanced App Optimizer started');
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         try {}
             const report = this.generateOptimizationReport(;);
             this.log('Advanced App Optimizer completed successfully');
             return report} catch (error) {}
             this.log("Advanced App Optimizer "failed": ${error.message}`);
-=======
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));"
-        this.log("Advanced app optimization report saved to ${this.reportFile}");"
-        return report};
-    generateOptimizationRecommendations() {}
-        return [;]"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
 // Run the optimizer if this script is executed directly;
     const optimizer = new AdvancedAppOptimizer) {}
     const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)};
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = AdvancedAppOptimizer;
-module.exports = AdvancedAppOptimizer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 module.exports = AdvancedAppOptimizer;
 "`;

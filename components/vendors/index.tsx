@@ -102,7 +102,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {';
                     src={v.logo_url}
                     alt={v.name}'
                     className='w - 12 h - 12 rounded';
-                  />) : ('
+                  />) : (';
                   <div className='w - 12 h - 12 rounded bg - gray - 100 dark:bg - gray - 900' />)}
                 <div>;'
                   <div className='font - medium flex items - center gap - 2'>;
@@ -133,7 +133,7 @@ function VendorsPage() {}
               <div className="flex items - center gap - 3">;
                 {v.logo_url ? (
                   // eslint - disable - next - line @next / next / no - img - element;"
-                  <img src={v.logo_url} alt={v.name} className="w - 12 h - 12 rounded" />) : ("
+                  <img src={v.logo_url} alt={v.name} className="w - 12 h - 12 rounded" />) : (";
                   <div className="w - 12 h - 12 rounded bg - gray - 100 dark:bg - gray - 900" />)}
                 <div>;"
                   <div className="font - medium flex items - center gap - 2">;

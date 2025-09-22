@@ -79,9 +79,9 @@ name: 'Dr. Sarah Chen',
 origin/cursor/automate-test-improve-and-merge-code-2533
       role: 'Chief AI Officer, FutureTech Inc.',
       company: 'FutureTech Inc.',
-      content:'
+      content:';
         "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago."'
-      avatar: '👩‍💼'
+      avatar: '👩‍💼';
     }
 '
       name: 'Dr. Sarah Chen','
@@ -99,11 +99,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         "Their quantum bio - computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.",
 
       rating: 5,"
-      avatar: "👩‍💼"
+      avatar: "👩‍💼";
     };
     {}
       rating: 5,"
-      avatar: "👨‍💻"
+      avatar: "👨‍💻";
     };
     {"
       name: "Dr. Emily Watson","
@@ -111,12 +111,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       company: "SpaceLabs",'"
       content: "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.",
       rating: 5,"
-      avatar: "👩‍🔬"
+      avatar: "👩‍🔬";
     }
   ];
-      name: 'Dr. Emily Watson'
+      name: 'Dr. Emily Watson';
       role: 'Research Director, SpaceLabs'
-      company: 'SpaceLabs'
+      company: 'SpaceLabs';
       content:
         "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.",
       rating: 5,
@@ -157,8 +157,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     scale: [0.5, 1, 0.5]}}
                     duration: 5 + i * 0.3;
                     repeat: Infinity;
-                    delay: i * 0.2'
-                    ease: 'easeInOut'
+                    delay: i * 0.2';
+                    ease: 'easeInOut';
                   }}
                   style={{}
                     left: `${Math && Math.random() * 100}%`,`
@@ -231,7 +231,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h1 "
                 id="hero-heading""
-                className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight"
+                className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight";
               >'
                 <form onSubmit={handleSearch} className='relative'>              >"
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -242,7 +242,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Future is Now;
                 </span>
               </h1>"
-              <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">;
                 Experience the revolution of technology with our cutting-edge 2041 services.'
                 From AI consciousness evolution to quantum space mining, we're redefining what's possible.
               </p>
@@ -275,10 +275,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   />;
                   <button"
                     type="submit""
-                className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+                className="flex flex-col sm:flex-row gap-6 justify-center items-center";
 <h1
                 id='hero-heading'
-                className='text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight'
+                className='text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight';
               >
                 <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                   2041
@@ -286,7 +286,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <br />
                 <span className='text-white'>Future is Now</span>
               </h1>
-              <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed'>
+              <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed'>;
                 Experience the revolution of technology with our cutting-edge
                 2041 services. From AI consciousness evolution to quantum space
                 mining, we're redefining what's possible.
@@ -304,11 +304,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     placeholder='Search revolutionary 2041 services...'
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
-                    className='w-full px-8 py-6 bg-black/50 border border-cyan-500/50 rounded-3xl text-white placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-cyan-500/30 focus:border-transparent backdrop-blur-sm text-lg'
+                    className='w-full px-8 py-6 bg-black/50 border border-cyan-500/50 rounded-3xl text-white placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-cyan-500/30 focus:border-transparent backdrop-blur-sm text-lg';
                   />
                   <button
                     type='submit'
-                    className='absolute right-3 top-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold'
+                    className='absolute right-3 top-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 font-semibold';
                   >
                     Explore Future
                   </button>
@@ -316,7 +316,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
               {/* CTA Buttons */}
 <motion.div
-                className='flex flex-col sm:flex-row gap-6 justify-center items-center'
+                className='flex flex-col sm:flex-row gap-6 justify-center items-center';
 origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -325,7 +325,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 30 }}
 
 href='/2041-futuristic-services-showcase'
-                  className='px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3'
+                  className='px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3';
                 >
                   <Rocket className='w-6 h-6' />
                   Explore 2041 Services
@@ -333,7 +333,7 @@ href='/2041-futuristic-services-showcase'
                 </Link>
                 <Link
                   href='/contact'
-                  className='px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3'
+                  className='px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3';
                 >
                   <Users className='w-6 h-6' />
                   Start Your Journey
@@ -346,7 +346,7 @@ href='/2041-futuristic-services-showcase'
 <section className='py-20 px-4'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
-              className='grid grid-cols-2 md:grid-cols-4 gap-8'
+              className='grid grid-cols-2 md:grid-cols-4 gap-8';
               initial={{ opacity: 0, y: 30 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
@@ -367,7 +367,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                     <stat.icon className='w-8 h-8 text-white' />
                   </div>
-                  <div className='text-3xl md:text-4xl font-bold text-white mb-2'>
+                  <div className='text-3xl md:text-4xl font-bold text-white mb-2'>;
                     {stat.number}
                   </div>
                   <div className='text-gray-400'>{stat.label}</div>
@@ -442,11 +442,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>;
             </motion && motion.div>;"
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-
+;
             <motion.div'
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
 
-<h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
+<h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
                 Revolutionary 2041 Services
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -456,7 +456,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
             <motion.div
-              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
 origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -501,7 +501,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               viewport={{ once: true }}>;
               <Link
 href='/2041-futuristic-services-showcase'
-                className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'
+                className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105';
               >
                 <Eye className='w-5 h-5' />
                 View All 2041 Services
@@ -566,11 +566,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>;
             </motion && motion.div>;"
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
-
+;
             <motion.div'
               className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
 
-<h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
+<h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
                 Leading the Future
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -579,7 +579,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
             <motion.div
-              className='grid grid-cols-1 md:grid-cols-3 gap-8'
+              className='grid grid-cols-1 md:grid-cols-3 gap-8';
 origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -696,14 +696,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >"
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">;
                 Ready to Shape the Future?
               </h2>"
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
                 Join the technological revolution with our cutting-edge 2041 services.
                 Transform your business, accelerate innovation, and lead the future of technology.
               </p>"
-              <div className="flex flex-col sm: flex-row gap-6 justify-center">
+              <div className="flex flex-col sm: flex-row gap-6 justify-center">;
                 <Link"
                   href="/contact""
                   className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3">;"
@@ -713,7 +713,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Link"
                   href="/2041-futuristic-services-showcase"
 Math.random () * 100 
-<h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
+<h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>;
                 Ready to Shape the Future?
               </h2>
               <p className='text-xl text-gray-300 mb-12 leading-relaxed'>
@@ -721,17 +721,17 @@ Math.random () * 100
                 services. Transform your business, accelerate innovation, and
                 lead the future of technology.
               </p>
-              <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+              <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
                 <Link
                   href='/contact'
-                  className='px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3'
+                  className='px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3';
                 >
                   <Sparkles className='w-6 h-6' />
                   Start Your Journey
                 </Link>
                 <Link
                   href='/2041-futuristic-services-showcase'
-                  className='px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3'
+                  className='px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3';
                 >
                   <Target className='w-6 h-6' />
                   Explore Services

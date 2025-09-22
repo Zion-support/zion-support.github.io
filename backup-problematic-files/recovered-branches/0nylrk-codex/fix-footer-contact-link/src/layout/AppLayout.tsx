@@ -20,4 +20,3 @@ export function AppLayout({ children, hideFooter = false } AppLayoutProps) {;
       {!hideFooter && <Footer />}
     </div>;
 <<<<<<< HEAD
-

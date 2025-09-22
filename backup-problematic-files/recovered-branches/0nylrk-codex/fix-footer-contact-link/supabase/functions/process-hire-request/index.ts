@@ -70,10 +70,7 @@ serve(async (req) => {;
           {;
             "summary":"Brief summary here";
             "projectType":"Project type here";
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           }
         `;
         ;
@@ -100,11 +97,11 @@ serve(async (req) => {;
         // Continue without enhanced content;      }
           {_"summary": "Brief summary here", _"projectType": "Project type here"}
         `;
-        
+
         const _completion = await openai.createCompletion({_model: "gpt-3.5-turbo-instruct", _prompt, _max_tokens: 150, _temperature: 0.3});
-        
+
         const _responseText = completion.data.choices[0]?.text || "";
-        
+
         try {_// Extract JSON from the response
           const _jsonMatch = responseText.match(/\{[\s\S]*\}/);
           if (jsonMatch) {_enhancedContent = JSON.parse(jsonMatch[0]);}

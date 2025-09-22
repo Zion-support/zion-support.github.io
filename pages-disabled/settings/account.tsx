@@ -1,39 +1,5 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-export default function AccountSettingsPage() {
-  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null);
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -44,29 +10,8 @@ export default function AccountSettingsPage() {
     address: string;
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 
-=======
-
-
-
-
-
-
-export default function AccountSettingsPage(req, res) {}
-  try {';
-  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
-
-<<<<<<< HEAD
-=======
-export default function AccountSettingsPage() {
-  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-
-<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function AccountSettingsPage(req, res) {
   try {
@@ -75,33 +20,12 @@ export default function AccountSettingsPage(req, res) {
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-export default function AccountSettingsPage(req, res) {
-  try {
-  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-export default function AccountSettingsPage(req, res) {
-  try {
-  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
-=======
-import React, { useEffect, useMemo, useState } from 'react';
-import Head from 'next/head';
-export default function AccountSettingsPage() {
-  const [user, setUser] = useState<{
-    address: string;
-    chain: 'evm' | 'sol';
-  } | null>(null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [ens, setEns] = useState('');
@@ -109,9 +33,6 @@ export default function AccountSettingsPage() {
   const [ceramic, setCeramic] = useState('');
 =======
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-
-
-
 
 '
   const [ens, setEns] = useState('');'
@@ -123,19 +44,12 @@ export default function AccountSettingsPage() {
   const [backupCid, setBackupCid] = useState('');'
   const [restoreCid, setRestoreCid] = useState('');
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (!user) return;
     setLinking(true);
     setStatus(null);
     try {
       const nonceRes = await fetch('/api/auth/nonce');
       const { nonce } = await nonceRes.json();
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       const msg = `Link Web3 identities to Zion account\n${JSON.stringify(payload)}`;
       // Sign message with connected wallet if possible (best effort);
@@ -149,22 +63,10 @@ export default function AccountSettingsPage() {
         } else if (user.chain === 'sol' && (window as any).solana?.isPhantom) {;
           const enc = new TextEncoder().encode(msg);
 
-<<<<<<< HEAD
-      const data = await res.json();
+const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Backup failed');
       setBackupCid(data.cid);
       setStatus('Backup saved to decentralized storage');
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-
-=======
-const saved =
-      typeof window !== 'undefined'
-        ? window.localStorage.getItem('zion-web3-user')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -173,17 +75,9 @@ const saved =
     const pref =;'
       typeof window !== 'undefined';'
         ? window && window.localStorage.getItem('zion-web3-display');
+: null;
+setDisplayWeb3(pref === 'true');  }, []);
 <<<<<<< HEAD
-        : null;
-<<<<<<< HEAD
-    setDisplayWeb3(pref === 'true');  }, []);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-        : null;'
-    setDisplayWeb3(pref === 'true');  }, []);
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       const res = await fetch(`/api/backup/restore?cid=${encodeURIComponent(restoreCid || backupCid)}`);
       const data = await res.json();
@@ -192,22 +86,8 @@ const saved =
       if (u) setUser(u);
       if (preferences) saveDisplayPref(!!preferences.displayWeb3);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  const linkDID = async () => {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-    setDisplayWeb3(pref === 'true');  }, []);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const saveDisplayPref = (val: boolean) => {;
     setDisplayWeb3(val),;'
     if (typeof window !== 'undefined');'
@@ -215,26 +95,6 @@ const saved =
 
   const linkDID = async () => {;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
-    setDisplayWeb3(pref === 'true');
-  }, []);
-
-  const saveDisplayPref = (val: boolean) => {
-    setDisplayWeb3(val);
-if (typeof window !== 'undefined')
-      window.localStorage.setItem('zion-web3-display', String(val));
-  };
-
-  const linkDID = async () => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
@@ -244,19 +104,9 @@ if (typeof window !== 'undefined')
     setStatus(null);
     try {;'
       const nonceRes = await fetch('/api/auth/nonce');
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // Sign message with connected wallet if possible (best effort);
+// Sign message with connected wallet if possible (best effort);
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
-<<<<<<< HEAD
-      // Sign message with connected wallet if possible (best effort);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-      // Sign message with connected wallet if possible (best effort);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Head from 'next / head';
 export default /**;
  * AccountSettingsPage - Function description;
@@ -306,18 +156,8 @@ if (return) {}
     try {'
       const nonce_res = await fetch ('/api / auth / nonce');
       const { nonce } = await nonce_res.json ();
-<<<<<<< HEAD
-      const payload = {
-<<<<<<< HEAD
-=======
-=======
-      const { nonce } = await nonceRes.json();
 const payload = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-      const payload = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         ens,
         lens,
         ceramic,
@@ -325,23 +165,12 @@ const payload = {
         address: user.address,
         chain: user.chain,
         nonce,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
         ts: Date.now (),
       }
       const msg = `Link Web3 identities to Zion account\n${JSON.stringify (payload)}`;
       // Sign message with connected wallet if possible (best effort);
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-        ts: Date.now(),
-      };
-      const msg = `Link Web3 identities to Zion account\n${JSON.stringify(payload)}`;
-      // Sign message with connected wallet if possible (best effort)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       let signature: string | null = null;
       try {;'
@@ -355,11 +184,6 @@ const payload = {
         } else if (user && user.chain === 'sol' && (window as any).solana?.isPhantom) {;
           const enc = new TextEncoder().encode(msg);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
           );'
           const bs58 = (await import('bs58')).default;
@@ -369,107 +193,22 @@ const payload = {
       const { user: u, preferences, did } = data;
       if (u) setUser(u);
       if (preferences) saveDisplayPref(!!preferences.displayWeb3);
+if (did) {
 <<<<<<< HEAD
-      if (did) {
-<<<<<<< HEAD
-=======
-
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ payload, message: msg, signature }),
-      });
-      if (throw new Error ('Failed to link DIDs')) {
-  $2
-}
-      set_status ('Linked successfully');
-    } catch (e: any) {
-      set_status (e?.message || 'Linking failed');
-    } finally {
-      set_linking (false);    }
-  }
-;
-  const do_backup = async () => {
-    set_status (null);
-    try {
-      const profile = {
-        user,
-=======
-          );
-          const bs58 = (await import('bs58')).default;
-<<<<<<< HEAD
-          signature = bs58 && bs58.encode(sig);        }
-      } catch {}
-=======
-          signature = bs58.encode(sig);
-        }
-      } catch {}
-      const res = await fetch('/api/did/link', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ payload, message: msg, signature }),
-      });
-      if (!res.ok) throw new Error('Failed to link DIDs');
-      setStatus('Linked successfully');
-    } catch (e: any) {
-      setStatus(e?.message |'Linking failed');
-    } finally {
-      setLinking(false);
-    }
-  };
-
-  const doBackup = async () => {
-    setStatus(null);
-    try {
-      const profile = {
-user,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         preferences: { displayWeb3 },
         did: { ens, lens, ceramic, farcaster },
         resume: {},
         projects: [],
         reviews: [],
-<<<<<<< HEAD
-
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-      };
-      const res = await fetch('/api/backup/upload', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify(profile)
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error |'Backup failed');
-      setBackupCid(data.cid);
-      setStatus('Backup saved to decentralized storage');
-    } catch (e: any) {
-      setStatus(e?.message || 'Backup failed');
-    }
-  };
-
-  const doRestore = async () => {
-    setStatus(null);
-    try {
-const res = await fetch(
-        `/api/backup/restore?cid=${encodeURIComponent(restoreCid || backupCid)}`
-      );
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || 'Restore failed');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       const { user: u, preferences, did } = data;
       if (u) setUser(u);
       if (preferences) saveDisplayPref(!!preferences.displayWeb3);
       if (did) {
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
       const res = await fetch ('/api / backup / upload', {
         method: 'POST',
-=======
-      if (did) {}
-      }'
-      const res = await fetch ('/api / backup / upload', {'
-        method: 'POST','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify (profile),
       });
@@ -479,34 +218,14 @@ const res = await fetch(
 }
       setBackupCid (data.cid);'
       set_status ('Backup saved to decentralized storage');
+} catch (e: any) {
 <<<<<<< HEAD
-    } catch (e: any) {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (e: any) {;
       setStatus(e?.message || 'Linking failed');
     } finally {;
       setLinking(false);    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
-        setEns(did.ens || '');
-        setLens(did.lens || '');
-        setCeramic(did.ceramic || '');
-
-  };
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
     } catch (e: any) {}
     } catch (e: any) {;'
@@ -560,18 +279,6 @@ const res = await fetch(
       setStatus(e?.message || 'Restore failed');    }
   };
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 '
@@ -583,20 +290,8 @@ const res = await fetch(
   }
 }'
       setStatus('Profile restored from backup');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
 '`
@@ -638,25 +333,6 @@ const res = await fetch(
               disabled={linking}'
               className='rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2'>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              {linking ? 'Linking…' : 'Link & Verify'}
-
-            </button>;
-          </div>;
-        </section>;
-        <section className='rounded-xl border p-5'>;
-          <h2 className='font-semibold mb-2'>Decentralized Backup</h2>;
-          <p className='text-sm text-gray-500 mb-3'>;
-            Back up talent profiles, resume, and project reviews to IPFS/Arweave;
-            (via Web3 && Web3.Storage). Opt-in only.;
-          </p>;
-          <div className='flex flex-wrap items-center gap-3'>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <button
               onClick={doBackup}
 =======
@@ -680,20 +356,6 @@ const res = await fetch(
             <input;
               value={restoreCid}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-              onChange={e => setRestoreCid(e && e.target.value)}
-              placeholder='Enter CID to restore';
-              className='flex-1 rounded-md border px-3 py-2';
-            />;
-            <button onClick={doRestore} className='rounded-md border px-4 py-2'>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -708,15 +370,8 @@ const res = await fetch(
       if (throw new Error (data?.error || 'Restore failed')) {}
   $2;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (e: any) {
-=======
-    } catch (e: any) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       set_status (e?.message || 'Restore failed');    }
   }
 ;
@@ -824,50 +479,12 @@ const res = await fetch(
           </div>;
         </section>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
-=======
-      if (did) {;
-        setEns(did.ens || '');
-        setLens(did.lens || '');
-        setCeramic(did.ceramic || '');
-        setFarcaster(did.farcaster || '');
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      setStatus('Profile restored from backup');
-<<<<<<< HEAD
-
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    } catch (e: any) {
-      setStatus(e?.message || 'Restore failed');    }
-  };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (error) {
 =======
-
-
-
 
     } catch (error) {'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -879,17 +496,10 @@ const res = await fetch(
 }
   },
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -914,129 +524,34 @@ setFarcaster(did.farcaster || '');
       <Head>
         <title>Account Settings — Zion</title>
       </Head>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
       <div className="max-w-3xl mx-auto space-y-8">
         <section className="rounded-xl border p-5">
           <h1 className="text-xl font-semibold mb-2">Account</h1>
           <p className="text-sm text-gray-500">Manage your Web3 identity and backups. Email is optional when using wallets.</p>
           <div className="mt-4 flex items-center justify-between">
-<<<<<<< HEAD
-=======
-=======
-<div className='max-w-3xl mx-auto space-y-8'>
-        <section className='rounded-xl border p-5'>
-          <h1 className='text-xl font-semibold mb-2'>Account</h1>
-          <p className='text-sm text-gray-500'>
-            Manage your Web3 identity and backups. Email is optional when using
-            wallets.
-          </p>
-          <div className='mt-4 flex items-center justify-between'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div>
               <div className="text-sm font-medium">Display Web3 identity</div>
               <div className="text-xs text-gray-500">Show ENS/Lens name instead of email</div>
             </div>
-<<<<<<< HEAD
-            <label className="inline-flex items-center cursor-pointer">
+<label className="inline-flex items-center cursor-pointer">
               <input type="checkbox" checked={displayWeb3} onChange={(e) => saveDisplayPref(e.target.checked)} className="sr-only" />
               <span className="relative inline-block w-10 h-6 bg-gray-300 rounded-full shadow-inner">
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-  return (_<>
-      <Head>
-        <title>Account Settings — Zion</title>
-      </Head>
-      <div className=&quot;max-w-3xl mx-auto space-y-8&quot;>
-        <section className=&quot;rounded-xl border p-5&quot;>
-          <h1 className=&quot;text-xl font-semibold mb-2&quot;>Account</h1>
-          <p className=&quot;text-sm text-gray-500&quot;>Manage your Web3 identity and backups. Email is optional when using wallets.</p>
-          <div className=&quot;mt-4 flex items-center justify-between&quot;>
-            <div>
-              <div className=&quot;text-sm font-medium&quot;>Display Web3 identity</div>
-              <div className=&quot;text-xs text-gray-500&quot;>Show ENS/Lens name instead of email</div>
-            </div>
-            <label className=&quot;inline-flex items-center cursor-pointer&quot;>
-              <input type=&quot;checkbox&quot; checked={displayWeb3} onChange={(e) => saveDisplayPref(e.target.checked)} className=&quot;sr-only&quot; />
-              <span className=&quot;relative inline-block w-10 h-6 bg-gray-300 rounded-full shadow-inner&quot;>
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-
-
-  return (
-
-    <>
-      <Head>
-        <title>Account Settings — Zion</title>
-      </Head>"
-      <div className="max-w-3xl mx-auto space-y-8">"
-        <section className="rounded-xl border p-5">"
-          <h1 className="text-xl font-semibold mb-2">Account</h1>"
-          <p className="text-sm text-gray-500">Manage your Web3 identity and backups. Email is optional when using wallets.</p>"
-          <div className="mt-4 flex items-center justify-between">
-            <div>"
-              <div className="text-sm font-medium">Display Web3 identity</div>"
-              <div className="text-xs text-gray-500">Show ENS/Lens name instead of email</div>
-            </div>"
-            <label className="inline-flex items-center cursor-pointer">"
-              <input type="checkbox" checked={displayWeb3} onChange={(e) => saveDisplayPref(e.target.checked)} className="sr-only" />"
-              <span className="relative inline-block w-10 h-6 bg-gray-300 rounded-full shadow-inner">
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <span className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}></span>
 =======
-<<<<<<< HEAD
-            <label className="inline-flex items-center cursor-pointer">
+<label className="inline-flex items-center cursor-pointer">
               <input type="checkbox" checked={displayWeb3} onChange={(e) => saveDisplayPref(e.target.checked)} className="sr-only" />
               <span className="relative inline-block w-10 h-6 bg-gray-300 rounded-full shadow-inner">
                 <span className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}></span>
-=======
-            <label className='inline-flex items-center cursor-pointer'>
-              <input
-                type='checkbox'
-                checked={displayWeb3}
-                onChange={e => saveDisplayPref(e.target.checked)}
-                className='sr-only'
-              />
-              <span className='relative inline-block w-10 h-6 bg-gray-300 rounded-full shadow-inner'>
-                <span
-                  className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}
-                ></span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </span>
             </label>
           </div>
         </section>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<section className="rounded-xl border p-5">
-=======
-<<<<<<< HEAD
-        <section className='rounded-xl border p-5'>
-=======
-          <h2 className="font-semibold mb-2">Link Web3 identities</h2>
-          <div className="grid grid-cols-1 gap-3">
-            <input value={ens} onChange={(e) => setEns(e.target.value)} placeholder="ENS (e.g. vitalik.eth)" className="w-full rounded-md border px-3 py-2" />
-            <input value={lens} onChange={(e) => setLens(e.target.value)} placeholder="Lens handle (e.g. alice.lens)" className="w-full rounded-md border px-3 py-2" />
-            <input value={ceramic} onChange={(e) => setCeramic(e.target.value)} placeholder="Ceramic DID (did:3:...)" className="w-full rounded-md border px-3 py-2" />
-            <input value={farcaster} onChange={(e) => setFarcaster(e.target.value)} placeholder="Farcaster handle (e.g. @alice)" className="w-full rounded-md border px-3 py-2" />
-            <button onClick={linkDID} disabled={linking} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2">{linking ? 'Linking…' : 'Link & Verify'}</button>
-=======
-
-<section className='rounded-xl border p-5'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <h2 className='font-semibold mb-2'>Link Web3 identities</h2>
           <div className='grid grid-cols-1 gap-3'>
             <input
@@ -1070,8 +585,7 @@ setFarcaster(did.farcaster || '');
             >
               {linking ? 'Linking…' : 'Link & Verify'}
             </button>
-<<<<<<< HEAD
-          </div>
+</div>
         </section>
         <section className='rounded-xl border p-5'>
           <h2 className='font-semibold mb-2'>Decentralized Backup</h2>
@@ -1094,9 +608,6 @@ setFarcaster(did.farcaster || '');
                 </code>
               </span>
             )}
-=======
-        <section className="rounded-xl border p-5">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <h2 className="font-semibold mb-2">Link Web3 identities</h2>
@@ -1105,16 +616,6 @@ setFarcaster(did.farcaster || '');
             <input value={lens} onChange={(e) => setLens(e.target.value)} placeholder="Lens handle (e.g. alice.lens)" className="w-full rounded-md border px-3 py-2" />
             <input value={ceramic} onChange={(e) => setCeramic(e.target.value)} placeholder="Ceramic DID (did:3:...)" className="w-full rounded-md border px-3 py-2" />
             <input value={farcaster} onChange={(e) => setFarcaster(e.target.value)} placeholder="Farcaster handle (e.g. @alice)" className="w-full rounded-md border px-3 py-2" />
-=======
-
-"
-          <h2 className="font-semibold mb-2">Link Web3 identities</h2>"
-          <div className="grid grid-cols-1 gap-3">"
-            <input value={ens} onChange={(e) => setEns(e.target.value)} placeholder="ENS (e.g. vitalik.eth)" className="w-full rounded-md border px-3 py-2" />"
-            <input value={lens} onChange={(e) => setLens(e.target.value)} placeholder="Lens handle (e.g. alice.lens)" className="w-full rounded-md border px-3 py-2" />"
-            <input value={ceramic} onChange={(e) => setCeramic(e.target.value)} placeholder="Ceramic DID (did:3:...)" className="w-full rounded-md border px-3 py-2" />"
-            <input value={farcaster} onChange={(e) => setFarcaster(e.target.value)} placeholder="Farcaster handle (e.g. @alice)" className="w-full rounded-md border px-3 py-2" />'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <button onClick={linkDID} disabled={linking} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2">{linking ? 'Linking…' : 'Link & Verify'}</button>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1128,17 +629,8 @@ setFarcaster(did.farcaster || '');
           <div className="flex flex-wrap items-center gap-3">"
             <button onClick={doBackup} className="rounded-md bg-emerald-600 text-white px-4 py-2">Create Backup</button>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {backupCid && <span className="text-xs">CID: <code className="bg-gray-100 dark:bg-neutral-800 px-2 py-1 rounded">{backupCid}</code></span>  } catch (error) {
@@ -1146,16 +638,8 @@ setFarcaster(did.farcaster || '');
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
@@ -1167,7 +651,6 @@ setFarcaster(did.farcaster || '');
   }
 }
 
-
           </div>"
           <div className="mt-4 flex gap-2">"
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />"
@@ -1175,61 +658,26 @@ setFarcaster(did.farcaster || '');
             <button onClick={doRestore} className="rounded-md border px-4 py-2">Restore profile</button>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
 
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {status && <div className="text-sm text-gray-600">{status}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </div>
+</div>
     </>
-=======
-      </div>
-    </>
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
   } catch (error) {
     console.error("Error:", error);
-=======
-"
-        {status && <div className="text-sm text-gray-600">{status}</div>  } catch (error) {"
-    console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-      </div>
-    </>
-  )
-}
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -1242,7 +690,6 @@ setFarcaster(did.farcaster || '');
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1252,10 +699,6 @@ setFarcaster(did.farcaster || '');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

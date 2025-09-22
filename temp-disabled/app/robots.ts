@@ -15,13 +15,9 @@ export default function robots(): MetadataRoute.Robots {
         '/scripts/',
         '/automation/',
         '/backup/',
-<<<<<<< HEAD:app/robots.ts
+:app/robots.ts
         '/temp/',
       ],
-=======
-        '/temp/'
-      ]
->>>>>>> origin/main:temp-disabled/app/robots.ts
     },
     sitemap: 'https://ziontechgroup.com/sitemap.xml'
   }

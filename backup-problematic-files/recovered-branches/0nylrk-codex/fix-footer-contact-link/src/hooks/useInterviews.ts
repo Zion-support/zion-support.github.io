@@ -357,7 +357,7 @@ talent avatar: interview.talents?.profile picture url
 setInterviews (formattedInterviews);
 return formattedInterviews;
 }catch (err: any) {
-  
+
 }finally {
   setIsLoading (false) 
 }
@@ -401,7 +401,7 @@ interviewId);
 };
 try {
   await supabase.from ('notifications') .insert ({
-  
+
 }
 };
 //Cancel an interview (either client or talent can cancel) const cancelInterview = async (interviewId: string) : Promise<boolean> => {
@@ -429,8 +429,5 @@ fetchInterviews;
 respondToInterview;
 cancelInterview 
 }
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }

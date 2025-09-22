@@ -3,21 +3,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { EducationForm as EducationFormComponent  } from './education';
 import { EducationFormProps } from './education/types';
 export function EducationForm(props: EducationFormProps) {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -31,8 +20,6 @@ export /**
  */
 function EducationForm() {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return <EducationFormComponent {...props} />;
 }
@@ -44,37 +31,18 @@ export function EducationForm(): any (props: EducationFormProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {EducationForm, as, EducationFormComponent} from './education';
 import {EducationFormProps} from './education/types';
 export function EducationForm(props: EducationFormProps) {
   return <EducationFormComponent {...props} />
-<<<<<<< HEAD
-=======
-import { EducationForm as EducationFormComponent } from './education',;
-import { EducationFormProps } from './education/types';
-export function EducationForm(props: EducationFormProps) {;
-<<<<<<< HEAD
-  return <EducationFormComponent {...props} />;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
 import { EducationForm, as, EducationFormComponent } from "./education";
-=======
-import { EducationForm, as, EducationFormComponent } from "./education";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { EducationFormProps } from "./education/types";
 export function EducationForm(props: EducationFormProps) {};
   return <EducationFormComponent {...props} />;
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import { EducationForm as EducationFormComponent } from './education',;
 import { EducationFormProps } from './education/types',;
 ;
@@ -85,8 +53,6 @@ export function EducationForm(props:EducationFormProps) {;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { EducationForm as EducationFormComponent  } from './education';
 import { EducationFormProps } from './education/types';
@@ -98,39 +64,18 @@ import {EducationFormProps} from './education/types';
 export function EducationForm(props: EducationFormProps) {
   return <EducationFormComponent {...props} />
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { EducationForm as EducationFormComponent } from './education',;
 import { EducationFormProps } from './education/types';
 export function EducationForm(props: EducationFormProps) {;
   return <EducationFormComponent {...props} />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
   return <EducationFormComponent {...props} />;
 }
@@ -176,7 +121,6 @@ export function EducationForm(): any (props: EducationFormProps) {;
   return <EducationFormComponent {...props} />;
 }
 
-
 export function EducationForm(props: EducationFormProps) {
   return <EducationFormComponent {...props} />
 import { EducationForm as EducationFormComponent } from './education',;
@@ -186,16 +130,4 @@ export function EducationForm(props: EducationFormProps) {;
 ;
 }
 ;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-import { EducationForm, as, EducationFormComponent } from "./education";""
-import { EducationFormProps } from "./education/types";"
-export function EducationForm(props: EducationFormProps) {
-  return <EducationFormComponent {...props} />;
-"
-pr-12325
-</EducationFormComponent>"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

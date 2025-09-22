@@ -72,7 +72,7 @@ serve(async (req) => {;
     ;
     return new Response("Error processing event", { status:500 });  }
 });
- 
+
 }try {
   // Update the email campaign record based on event type if (type === "open") {
   await supabase .from ("email campaigns") .update ({
@@ -94,7 +94,4 @@ headers: {
 }
 }
 });
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

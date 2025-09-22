@@ -2,26 +2,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 :src.disabled/src/pages.disabled/MobileAppPage.jsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import _React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };
-<<<<<<< HEAD
-=======
-import React from \"react\"; import SEO from \"@/components/SEO\"; import { MobileAppHero } from \"@/components/mobile-app/MobileAppHero\"; import { AppFeatures } from \"@/components/mobile-app/AppFeatures\"; import { AppScreenshots } from \"@/components/mobile-app/AppScreenshots\"; import { AppTestimonials } from \"@/components/mobile-app/AppTestimonials\"; import { AppStoreBanner } from \"@/components/mobile-app/AppStoreBanner\"; import { DownloadSection } from \"@/components/mobile-app/DownloadSection\"; const MobileAppPage = () => {}}; return (<SEO title=\"Zion AI Marketplace App\" description=\"Hire top AI talent or find global IT jobs on the go. Download the Zion app now.\" keywords=\"AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs\"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };
-const React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };""
-import _React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 import _React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };
@@ -44,20 +26,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }
@@ -66,27 +48,10 @@ import _React from "react"; import SEO from "@/components/SEO"; import { MobileA
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import _React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-import React from \"react\"; import SEO from \"@/components/SEO\"; import { MobileAppHero } from \"@/components/mobile-app/MobileAppHero\"; import { AppFeatures } from \"@/components/mobile-app/AppFeatures\"; import { AppScreenshots } from \"@/components/mobile-app/AppScreenshots\"; import { AppTestimonials } from \"@/components/mobile-app/AppTestimonials\"; import { AppStoreBanner } from \"@/components/mobile-app/AppStoreBanner\"; import { DownloadSection } from \"@/components/mobile-app/DownloadSection\"; const MobileAppPage = () => {}}; return (<SEO title=\"Zion AI Marketplace App\" description=\"Hire top AI talent or find global IT jobs on the go. Download the Zion app now.\" keywords=\"AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs\"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };
-const React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/src/pages.disabled/MobileAppPage.jsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import _React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };
@@ -95,18 +60,9 @@ import _React from "react"; import SEO from "@/components/SEO"; import { MobileA
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
-<<<<<<< HEAD
 import _React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };
-=======
-import React from \"react\"; import SEO from \"@/components/SEO\"; import { MobileAppHero } from \"@/components/mobile-app/MobileAppHero\"; import { AppFeatures } from \"@/components/mobile-app/AppFeatures\"; import { AppScreenshots } from \"@/components/mobile-app/AppScreenshots\"; import { AppTestimonials } from \"@/components/mobile-app/AppTestimonials\"; import { AppStoreBanner } from \"@/components/mobile-app/AppStoreBanner\"; import { DownloadSection } from \"@/components/mobile-app/DownloadSection\"; const MobileAppPage = () => {}}; return (<SEO title=\"Zion AI Marketplace App\" description=\"Hire top AI talent or find global IT jobs on the go. Download the Zion app now.\" keywords=\"AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs\"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };
-const React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };""
-import _React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 import _React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };=======
@@ -116,7 +72,6 @@ import _React from "react"; import SEO from "@/components/SEO"; import { MobileA
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======

@@ -14,8 +14,8 @@ export default function handler() { return null; }
     title;
     network;
     utm;
-    ts: new Date().toISOString()'
-    ua: req.headers['user-agent'] |''
+    ts: new Date().toISOString()';
+    ua: req.headers['user-agent'] |'';
   }'
   const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   list.push(entry);'

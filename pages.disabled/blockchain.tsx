@@ -1,13 +1,7 @@
-<<<<<<< HEAD:pages/blockchain.tsx
+:pages/blockchain.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/blockchain.tsx
 import React from 'react';
 import Head from 'next / head';
 import ErrorBoundary from '../components / ErrorBoundary';
@@ -16,11 +10,9 @@ export default /**
  */
 function Blockchain() {
   return (
-<<<<<<< HEAD:pages/blockchain.tsx
+:pages/blockchain.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ;
         <meta;
@@ -35,36 +27,6 @@ function Blockchain() {
             <h1 className="text-4xl font-bold text-center mb-8">
               Blockchain Services;
             </h1>"
-=======
-
-    <>;
-      <Head>;
-    <>;
-      <Head>;
-        <title > Blockchain Services - Zion Tech Group</title>;
-import React from 'react'
-import Head from 'next/head'
-import ErrorBoundary from '../components/ErrorBoundary'
-export default function Blockchain() {
-  return (
-    <>
-      <Head>
-        <title>Blockchain Services - Zion Tech Group</title>
-        <title>Blockchain Services - Zion Tech Group</title>
-;
-        <meta
-          name="description"
-          content="Blockchain and Web3 solutions including smart contracts, _DeFi, _and cryptocurrency development."
-        />
-        <meta name="viewport" content="width=device-width, _initial-scale=1.0" />
-      </Head>
-      <ErrorBoundary level="page">
-        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-          <div className="container mx-auto px-4 py-16">
-            <h1 className="text-4xl font-bold text-center mb-8">
-              Blockchain Services
-            </h1>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/blockchain.tsx
             <p className="text-xl text-slate-300 text-center">
               Cutting-edge blockchain and Web3 solutions for the future.
             </p>
@@ -73,7 +35,7 @@ export default function Blockchain() {
       </ErrorBoundary>
     </>
   )
-<<<<<<< HEAD:pages/blockchain.tsx
+:pages/blockchain.tsx
   } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
@@ -88,24 +50,14 @@ export default /**;
 function Blockchain() {}
   return (
 
-
-
         <title > Blockchain Services - Zion Tech Group</title>;
-
 
         <title>Blockchain Services - Zion Tech Group</title>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
-=======
-}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -172,10 +124,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 =======
 
-
-
-
-
 '
 import Head from 'next/head';'
 import Link from 'next/link';'
@@ -192,54 +140,15 @@ import {}
   Award, 
   Phone, 
   Mail, 
-<<<<<<< HEAD
-  MapPin 
+MapPin 
 } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-
-<<<<<<< HEAD
 const services = [
   {
     title: 'Smart Contract Development',
     description: 'Custom smart contracts for various blockchain platforms including Ethereum, BSC, and Polygon.',
     features: ['Solidity Development', 'Gas Optimization', 'Multi-chain Support', 'Testing & Deployment'],
-=======
-  MapPin ';
-} from 'lucide-react';'
-import MainLayout from '../src/components/layout/MainLayout';
-
-const features = []
-  {}
-    icon: Shield,'
-    title: 'Smart Contracts','
-    description: 'Secure, self-executing contracts with automated enforcement and transparent terms.'
-  },
-  {}
-    icon: Zap,'
-    title: 'DeFi Solutions','
-    description: 'Decentralized finance applications including lending, borrowing, and trading platforms.'
-  },
-  {}
-    icon: Globe,'
-    title: 'NFT Marketplaces','
-    description: 'Custom NFT platforms for digital art, collectibles, and unique digital assets.'
-  },
-  {}
-    icon: Lock,'
-    title: 'Security Audits','
-    description: 'Comprehensive smart contract audits to ensure security and prevent vulnerabilities.'
-  }
-];
-
-const services = []
-  {'
-    title: 'Smart Contract Development','
-    description: 'Custom smart contracts for various blockchain platforms including Ethereum, BSC, and Polygon.','
-    features: ['Solidity Development', 'Gas Optimization', 'Multi-chain Support', 'Testing & Deployment'],'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     pricing: 'Starting at $5,000'
   },
   {'
@@ -456,42 +365,8 @@ export default function BlockchainPage() {}
     </MainLayout>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next / head';
-import ErrorBoundary from '../components / ErrorBoundary';
-export default /**
- * Blockchain - Function description
- */
-function Blockchain() {
-  return (
-<<<<<<< HEAD
-
-    <>;
-      <Head>;
-=======
-    <>;
-      <Head>;
-        <title > Blockchain Services - Zion Tech Group</title>;
-import React from 'react'
-import Head from 'next/head'
-import ErrorBoundary from '../components/ErrorBoundary'
-export default function Blockchain() {
-  return (
-    <>
-      <Head>
-        <title>Blockchain Services - Zion Tech Group</title>
-        <title>Blockchain Services - Zion Tech Group</title>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 import React from 'react';
 import Head from 'next/head';
@@ -548,10 +423,7 @@ export default /**
  */
 function Blockchain() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    <>;
+<>;
       <Head>;
 import React from 'react';
 import Head from 'next/head';
@@ -582,42 +454,15 @@ export default function Blockchain(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-<<<<<<< HEAD:pages/blockchain.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <title > Blockchain Services - Zion Tech Group</title>;
 
         <title>Blockchain Services - Zion Tech Group</title>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-=======
-}
-}
-
-
-
-
-        <title>Blockchain Services - Zion Tech Group</title>
-
-
-
-        </div>
-      </div>
-    </Layout>
-  );
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/blockchain.tsx
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======

@@ -17,10 +17,10 @@ import Button from '../components/ui/Button',
 import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
 export default function AboutPage() {}
 	const contactInfo = {'
-		mobile: '+1 302 464 0950''
-		email: 'kleber@ziontechgroup.com''
-		address: '364 E Main St STE 1008 Middletown DE 19709''
-		website: 'https://ziontechgroup.com'
+		mobile: '+1 302 464 0950'';
+		email: 'kleber@ziontechgroup.com'';
+		address: '364 E Main St STE 1008 Middletown DE 19709'';
+		website: 'https://ziontechgroup.com';
 	}';
 import Button from '../components/ui/Button',;'
 import Button from '../components/ui/Button',';
@@ -30,7 +30,7 @@ export default function AboutPage() {
 		mobile: '+1 302 464 0950',
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
-		website: 'https://ziontechgroup.com'
+		website: 'https://ziontechgroup.com';
 };
 
 	const pillars = ['"
@@ -46,7 +46,7 @@ export default function AboutPage() {;
 		mobile: '+1 302 464 0950',;
 		email: 'kleber@ziontechgroup && ziontechgroup.com',;
 		address: '364 E Main St STE 1008 Middletown DE 19709',;
-		website: 'https://ziontechgroup && ziontechgroup.com'
+		website: 'https://ziontechgroup && ziontechgroup.com';
 };
 
 	const pillars = [;'"
@@ -142,7 +142,7 @@ import Button from '../components/ui/Button';
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com';
 };
 
 import React from 'react',
@@ -163,7 +163,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <meta property="og:title" content="About Zion Tech Group" />'"
         <meta property="og:description" content="Learn about Zion Tech Group's mission and vision." />"
         <meta name="twitter:card" content="summary_large_image" />"
-        <link rel="canonical" href="https://ziontechgroup.com/about" />
+        <link rel="canonical" href="https://ziontechgroup.com/about" />;
       </Head>"
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">"
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />"
@@ -184,8 +184,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>"
       <section className="section-padding bg-gradient-cursor-accent">"
         <div className="container-cursor">"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">"
-            <Card className="card-hover group border-gradient-blue hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/20">"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">";
+            <Card className="card-hover group border-gradient-blue hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/20">";
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Our Mission</h2>"
               <p className="text-lg text-gray-300 mb-4 leading-relaxed">
                 To create a world where technology operates autonomously, continuously improving and innovating without human intervention.
@@ -194,7 +194,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 We believe in the power of AI to solve complex problems, automate routine tasks, and unlock new possibilities for humanity.
               </p>
             </Card>"
-            <Card className="card-hover group border-gradient-purple hover:border-fuchsia-400/40 hover:shadow-2xl hover:shadow-fuchsia-400/20">"
+            <Card className="card-hover group border-gradient-purple hover:border-fuchsia-400/40 hover:shadow-2xl hover:shadow-fuchsia-400/20">";
               <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Our Vision</h2>"
               <p className="text-lg text-gray-300 mb-4 leading-relaxed">
                 To be the leading force in autonomous technology, creating systems that think, learn, and evolve independently.
@@ -214,7 +214,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               The principles that guide our innovation and shape our future;
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {values.map((value, index) => ("`
               <Card key={index} className="card-hover text-center group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>"
                 <div className="relative">`
@@ -237,7 +237,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Comprehensive solutions that drive innovation and transformation;
             </p>
           </div>"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
             {services.map((service, index) => ("`
               <Card key={index} className="card-hover group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>"
                 <div className="flex items-start space-x-6">"
@@ -258,7 +258,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>"
       <section className="section-padding bg-gradient-cursor">"
         <div className="container-cursor">"
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
             {achievements.map((achievement, index) => ("
               <div key={index} className="text-center group">`
                 <div className={`text-4xl md:text-5xl font-bold mb-3 ${achievement.color} group-hover:scale-110 transition-transform duration-300`}>{achievement.number}</div>"
@@ -275,9 +275,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Let&apos,s work together to build the next generation of autonomous technology and shape the future of innovation.
           </p>"
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">"
-            <Button href="/contact" size="lg" className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow">Get in Touch</Button>"
-            <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg:white hover:text-cursor-blue shadow-2xl">Explore Services</Button>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">";
+            <Button href="/contact" size="lg" className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow">Get in Touch</Button>";
+            <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg:white hover:text-cursor-blue shadow-2xl">Explore Services</Button>;
           </div>
         </div>
         {/* Contact Section */}"
@@ -289,7 +289,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Get in touch with our experts today for a free consultation and discover how our 500+ revolutionary micro SaaS services can drive unprecedented growth;
               </p>
             </div>"
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">";
               <Card className="text-center p-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30">"
                 <div className="text-4xl mb-4">📞</div>"
                 <h3 className="text-2xl font-bold text-white mb-2">Call Us</h3>"
@@ -565,10 +565,10 @@ function AboutPage() {}
 import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
 export default function AboutPage() {}
 	const contactInfo = {'
-		mobile: '+1 302 464 0950''
-		email: 'kleber@ziontechgroup.com''
-		address: '364 E Main St STE 1008 Middletown DE 19709''
-		website: 'https://ziontechgroup.com'
+		mobile: '+1 302 464 0950'';
+		email: 'kleber@ziontechgroup.com'';
+		address: '364 E Main St STE 1008 Middletown DE 19709'';
+		website: 'https://ziontechgroup.com';
 	}';
 import Button from '../components/ui/Button',;'
 import Button from '../components/ui/Button',';
@@ -596,14 +596,14 @@ export default function AboutPage() {
 			<section className="relative py-24 px-4">"
 				<div className="max-w-6xl mx-auto">"
 					<div className="text-center mb-14">"
-						<h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-400 bg-clip-text text-transparent">
+						<h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-400 bg-clip-text text-transparent">;
 							We build practical AI and platform solutions;
 						</h1>"
 						<p className="mt-4 text-gray-300 max-w-3xl mx-auto">
 							From micro SaaS accelerators to enterprise AI services, we focus on measurable outcomes: faster delivery;, higher reliability, and lower cost.
 						</p>
 					</div>"
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">"
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">";
 						<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">"
 							<div className="flex items-center gap-3 mb-4">"
 								<Rocket className="w-6 h-6 text-cyan-400" />"

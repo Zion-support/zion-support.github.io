@@ -172,7 +172,7 @@ export default function EnhancedServicesShowcase() {;
               <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
                 From next-generation AI to cutting-edge infrastructure, discover solutions that deliver 1000% ROI and transform your business.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                 <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 border border-cyan-500/30">
                   <Users className="w-5 h-5 text-cyan-400" />
@@ -224,7 +224,7 @@ export default function EnhancedServicesShowcase() {;
                     <div className="relative z-10">
                       <h3 className="text-2xl font-bold mb-4">{category.title}</h3>
                       <p className="text-lg mb-6 opacity-90">{category.description}</p>
-                      
+
                       <div className="space-y-3">
                         {category.services.map((service, serviceIndex) => (
                           <div key={serviceIndex} className="flex items-center space-x-3 bg-white/10 rounded-lg p-3">
@@ -408,7 +408,7 @@ export default function EnhancedServicesShowcase() {;
                           {service.icon}
                         </div>
                       </div>
-                      
+
                       <div className="flex-1 min-w-0">
                         <div className="flex items-start justify-between">
                           <div>
@@ -502,7 +502,7 @@ export default function EnhancedServicesShowcase() {;
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of companies achieving breakthrough results with our revolutionary services
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center justify-center space-x-3">
                   <Phone className="w-6 h-6 text-cyan-400" />
@@ -563,12 +563,12 @@ const Button = ({
   onClick?: () => void
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900',
-  
+
   const variantClasses = {
     primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500',
     secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500'
   },
-  
+
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
@@ -668,21 +668,4 @@ const Button = ({;
     <button onClick={onClick} className={classes}>;
       {children}
     </button>;
-<<<<<<< HEAD:backup-problematic-files/temp_conflicts/pages/enhanced-services-showcase.tsx
-
-<<<<<<< HEAD
-=======
-:temp_conflicts/pages/enhanced-services-showcase.tsx
-  );
-};
-}
-}
-}
-  ),;
-},
 :backup-problematic-files/temp_conflicts/pages/enhanced-services-showcase.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  );
-};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/components/enhanced-services-showcase.tsx

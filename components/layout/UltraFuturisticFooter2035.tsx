@@ -177,7 +177,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div"
           className="absolute inset-0 opacity-5"
           style={{}
-            backgroundImage: `
+            backgroundImage: `;
               linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px)`
             `;
@@ -217,12 +217,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 20;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'linear',          }}
 
         />
       </div>'
-      <div className='relative z-10'>            ease: 'linear'
+      <div className='relative z-10'>            ease: 'linear';
           }}
           transition={{}
             duration: 20,
@@ -230,7 +230,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ease: 'linear',          }}
         />
       </div>'
-      <div className='relative z-10'>            ease: 'linear'
+      <div className='relative z-10'>            ease: 'linear';
           }}
         />
       </div>'
@@ -260,11 +260,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;"
                 <div className="space-y-3">"`
-                  <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200">"
+                  <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200">";
                     <Phone className="w-4 h-4" />
                     <span>{contactInfo.mobile}</span>
                   </a>"`
-                  <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors duration-200">"
+                  <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors duration-200">";
                     <Mail className="w-4 h-4" />
                     <span>{contactInfo.email}</span>
                   </a>"
@@ -302,7 +302,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       target="_blank""
                       rel="noopener noreferrer""
                       className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
-
+;
                       {social.icon}
                     </a>
                   ))}
@@ -320,7 +320,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               >'
                 <div className='flex items-center gap-4'>
-            <div className='lg:col-span-2'>
+            <div className='lg:col-span-2'>;
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -349,14 +349,14 @@ className='space-y-6'
                 <div className='space-y-3'>
                   <a
                     href={`tel:${contactInfo.mobile}`}
-                    className='flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200'
+                    className='flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200';
                   >
                     <Phone className='w-4 h-4' />
                     <span>{contactInfo.mobile}</span>
                   </a>
                   <a
                     href={`mailto:${contactInfo.email}`}
-                    className='flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors duration-200'
+                    className='flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors duration-200';
                   >
                     <Mail className='w-4 h-4' />
                     <span>{contactInfo.email}</span>
@@ -383,12 +383,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       target="_blank""
                       rel="noopener noreferrer""
                       className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
-
+;
                 {/* Social Links */}
 
                     >
 
-                      className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110'
+                      className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110';
                     >
 origin/cursor/automate-test-improve-and-merge-code-2533
                       {social.icon}
@@ -431,23 +431,23 @@ className='space-y-4'
                         href={link && link.href}`
                         className={`text-sm transition-colors duration-200 ${}
                           link && link.featured'
-                            ? 'text-cyan-400 hover:text-cyan-300'                          link && link.featured '
+                            ? 'text-cyan-400 hover:text-cyan-300'                          link && link.featured ';
                             ? 'text-cyan-400 hover:text-cyan-300' 
-
+;
                           link.featured 
-                            ? 'text-cyan-400 hover:text-cyan-300' 
+                            ? 'text-cyan-400 hover:text-cyan-300' ;
 link.featured
-                            ? 'text-cyan-400 hover:text-cyan-300'
+                            ? 'text-cyan-400 hover:text-cyan-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
                             : 'text-gray-400 hover:text-white'
-
+;
 `
                         }`}
                       >
                         {link.name}
                       </Link>
                     </li>'
-                            : 'text-gray-400 hover:text-white'`
+                            : 'text-gray-400 hover:text-white'`;
                         }`}>;
                         {link && link.name}
                       </Link>;
@@ -465,7 +465,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='mt-16 pt-8 border-t border-gray-800/50'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
+            <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
               <div className='text-sm text-gray-400'>
                 © 2025 Zion Tech Group. All rights reserved.
               </div>'
@@ -488,19 +488,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>;
                 <Link'
                   href='/cookies'"
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">"
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">";
               <div className="text-sm text-gray-400">
                 © 2025 Zion Tech Group. All rights reserved.
               </div>"
               <div className="flex items-center gap-6 text-sm text-gray-400">"
-                <Link href="/privacy" className="hover:text-white transition-colors duration-200">
+                <Link href="/privacy" className="hover:text-white transition-colors duration-200">;
                   Privacy Policy;
                 </Link>"
-                <Link href="/terms" className="hover:text-white transition-colors duration-200">
+                <Link href="/terms" className="hover:text-white transition-colors duration-200">;
                   Terms of Service;
                 </Link>"
-                <Link href="/cookies" className="hover:text-white transition-colors duration-200">
-                  className='hover:text-white transition-colors duration-200'
+                <Link href="/cookies" className="hover:text-white transition-colors duration-200">;
+                  className='hover:text-white transition-colors duration-200';
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Cookie Policy
@@ -527,7 +527,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 /* Animated grid */ 
   /* Animated grid */ 
 
-className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110'
+className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110';
                 aria-label='Scroll to top'
               >
                 <ArrowUp className='w-5 h-5' />
@@ -556,7 +556,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   link.href;
 }className= {}`
   `text-sm transition-colors duration-200 $ {'
-  link.featured ? 'text-cyan-400 hover:text-cyan-300' : 'text-gray-400 hover:text-white'`
+  link.featured ? 'text-cyan-400 hover:text-cyan-300' : 'text-gray-400 hover:text-white'`;
 }`
 }> </li>) )
 }</ul> </motion.div>) )

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function useCounter(target: number, durationMs: number) {}
   const [value, setValue] = useState(0);
   useEffect(() => {}
@@ -31,7 +30,6 @@ function useCounter(target: number, durationMs: number) {}
   return value;
 }
 
-<<<<<<< HEAD
 export default function InteractiveStats() {;
 
 export default function InteractiveStats() {;
@@ -46,9 +44,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <Stat label='AI Experts' value={experts} suffix='+' />;
       <Stat label='Partners' value={partners} suffix='+' />;
       <Stat label='Satisfaction' value={satisfaction} suffix='%' />;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
 <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4'>
   const hires = useCounter(1200, 1200);
@@ -113,49 +108,21 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 function Stat({
-<<<<<<< HEAD
-  label
+label
   value
-=======
-
-
-export default function InteractiveStats() { return null; }
-      <Stat label='Successful Hires' value={hires} suffix='+' />;'
-      <Stat label='AI Experts' value={experts} suffix='+' />;'
-      <Stat label='Partners' value={partners} suffix='+' />;'
-      <Stat label='Satisfaction' value={satisfaction} suffix='%' />;
-function Stat({}
-  label;
-  value'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   suffix = ''
 }: {}
     </div>);
     </div>);
-=======
-  label;
-value}
-suffix = ''}
-}: {
-    </div>);}
-    </div>);}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 /**
  * Stat - Function description;
  */
-<<<<<<< HEAD
 function Stat() {}
   return (
-<<<<<<< HEAD
-    <div className="p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg-black / 40 backdrop-blur">;
+<div className="p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg-black / 40 backdrop-blur">;
       <div className="text-3xl font-bold">{value}{suffix}</div>;
       <div className="text - sm text - gray - 600 dark:text-gray-300">{label}</div>;
-=======
-    <div className="p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg - black / 40 backdrop - blur">;"
-      <div className="text - 3xl font - bold">{value}{suffix}</div>;"
-      <div className="text - sm text - gray - 600 dark:text - gray - 300">{label}</div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>);
 /**
  * Stat - Function description;
@@ -174,40 +141,5 @@ function Stat() {}
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
 
-<<<<<<< HEAD
-  );
+);
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-function Stat() {
-  return ("
-    <div className=\"p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg-black / 40 backdrop-blur\" />;}
-}"
-      <div className=\"text-3xl font-bold\" />{value}{suffix}</div>;"
-      <div className=\"text - sm text - gray - 600 dark: text-gray-300\" />{labe}
-}</div>;
-    </div>)/**;
- * Stat - Function description;
- */;
-function Stat() {return (<div className='p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg - black / 40 backdrop - blur' />;}
-      <div className='text - 3xl font - bold' />;}
-        {value}
-        {suffix}
-      </div>;
-      <div className='text - sm text - gray - 600 dark: text - gray - 300' />{labe}
-}</div>;
-
-    </div>);
-}
-      </div>
-      <div className='text-sm text-gray-600 dark: text-gray-300' />{labe}
-}</div>
-    </div>
-
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

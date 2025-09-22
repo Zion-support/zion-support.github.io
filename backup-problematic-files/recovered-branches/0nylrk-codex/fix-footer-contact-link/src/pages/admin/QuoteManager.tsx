@@ -119,4 +119,3 @@ export default function QuoteManager() {;
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {;
-

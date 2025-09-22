@@ -1,26 +1,9 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 export default function WalletPage() {
   return (
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default function WalletPage() {_return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
 import dynamic from "next/dynamic";
@@ -28,27 +11,8 @@ const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"),
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
-
-
-
-
-import React from "react";"
-import EnhancedLayout from "../../components/layout/EnhancedLayout";"
-import dynamic from "next/dynamic";"
-const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false })
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import EnhancedLayout from "../../components/layout/EnhancedLayout",;
 import dynamic from "next/dynamic",;
@@ -57,55 +21,13 @@ const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"),
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
-
-"
-import React from "react",;"
-import EnhancedLayout from "../../components/layout/EnhancedLayout",;"
-import dynamic from "next/dynamic",;"
-const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import EnhancedLayout from "../../components/layout/EnhancedLayout",
 import dynamic from "next/dynamic",
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
-
-"
-import React from "react","
-import EnhancedLayout from "../../components/layout/EnhancedLayout","
-import dynamic from "next/dynamic","
-const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-export default function WalletPage() {
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -127,11 +49,6 @@ export default function WalletPage() {
     <EnhancedLayout title="Your ZION$ Wallet">
 =======
 
-
-
-
-
-
 export default function WalletPage() {}
   return ("
     <EnhancedLayout title="Your ZION$ Wallet">"
@@ -141,21 +58,9 @@ export default function WalletPage() {}
       </div>
     </EnhancedLayout>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
-=======
-  )
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
 import dynamic from "next/dynamic";
@@ -164,11 +69,6 @@ export default function WalletPage(req, res) {
   try {
   return (;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 
@@ -186,18 +86,7 @@ function WalletPage() {
         <WalletPanel />;
       </div>;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-
-  );
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };
 ;
 import React from './react';,"
@@ -214,13 +103,6 @@ function WalletPage() {}
         <WalletPanel />;
       </div>;
 
-
-
-
-
-
-
-
 }
 
 '
@@ -231,21 +113,14 @@ const WalletPanel = dynamic (() => import ("../../components / wallet / WalletPa
 export default /**;
  * WalletPage - Function description;
  */
-<<<<<<< HEAD
 function WalletPage() {
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <EnhancedLayout title="Your ZION$ Wallet">;
-=======
-function WalletPage() {}
-  return ("
-    <EnhancedLayout title="Your ZION$ Wallet">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="max - w-2xl mx - auto">;
         <WalletPanel />;
       </div>;
-<<<<<<< HEAD
-    </EnhancedLayout>;
+</EnhancedLayout>;
   );
   } catch (error) {
     console.error("Error:", error);
@@ -254,21 +129,9 @@ function WalletPage() {}
 }
 }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-    </EnhancedLayout>);
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
@@ -276,12 +139,6 @@ function WalletPage() {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
-
-
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

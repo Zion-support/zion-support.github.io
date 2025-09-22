@@ -54,7 +54,7 @@ if ( {) {}
   $2;
 }
     return res.status (200).json ({}
-      entries: entries.filter ('
+      entries: entries.filter (';
         e => e.status === 'stuck' || e.status === 'laggy'),'
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
 import { readLogs } from '@/utils/zionBrain';
@@ -67,7 +67,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const stuckOnly = req.query.stuck === '1' |req.query.stuck === 'true';
   if (stuckOnly) {
 return res.status(200).json({
-      entries: entries.filter(
+      entries: entries.filter(;
 return res.status(200).json({
     entries: entries.slice(-200),
     byModule,

@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-<<<<<<< HEAD
+:src/components/home/QuickAccess.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,8 +16,6 @@ interface QuickAccessProps {
 
 export function QuickAccess({ className, style }: QuickAccessProps) {
   const { t } = useTranslation(),
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const quickLinks = [
     {
       title: t('home.tool_ai_matcher'),
@@ -57,9 +54,6 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
       link: "/mobile-launch"
     }
   ],
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/home/QuickAccess.tsx
 {quickLinks.map((link, index) => (
             <Link;
 import React from 'react';'
@@ -84,12 +78,8 @@ export /**;
 function QuickAccess() {}
   const { t } = use_translation ();
   const quick_links = [;
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
-<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-=======
-  const quickLinks = [
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    {
+:src_backup/components/home/QuickAccess.tsx
+{
       title: t('home.tool_ai_matcher'),
       description: t('home.tool_ai_matcher_desc'),
       icon: <Search className="h-6 w-6 text-zion-cyan" />,
@@ -148,18 +138,6 @@ function QuickAccess() {}
         </div>
           {quickLinks.map((link, index) => (
             <Link              key={index}
-=======
-=======
-    {
-      title: t ('home.tool_ai_matcher'),
-      description: t ('home.tool_ai_matcher_desc'),
-      icon: <Search className='h - 6 w - 6 text - zion - cyan' />,
-=======
-    {'
-      title: t ('home.tool_ai_matcher'),'
-      description: t ('home.tool_ai_matcher_desc'),'
-      icon: <Search className='h - 6 w - 6 text - zion - cyan' />,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
       link: '/marketplace',
     },
     {'
@@ -231,18 +209,11 @@ function Page() { return null; }
     { name: "Innovation", count: 10, color: "from - green - 500 to - teal - 500" }, ";"
     { name: "Business", count: 14, color: "from - indigo - 500 to - purple - 500" }      scale: 1,
 
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
+:src_backup/components/home/QuickAccess.tsx
 import { motion  } from 'framer-motion';
 export default function Page() {";
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
-=======
-'
-import { motion  } from 'framer-motion';"
-export default function Page() { return null; }
-    { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";"
-    { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
 
       transition: {"
@@ -257,7 +228,7 @@ export default function Page() { return null; }
 }}}
 }
 }
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
+:src_backup/components/home/QuickAccess.tsx
 }
   return (    <section className="py - 20 bg - gradient - to - br from - zion - slate via - zion - slate - dark to - black relative overflow-hidden">;
       {/* Background Elements */}";
@@ -268,18 +239,6 @@ export default function Page() { return null; }
       </div>;
 ";
       <div className="container - responsive relative z-10">;
-=======
-}"
-  return (    <section className="py - 20 bg - gradient - to - br from - zion - slate via - zion - slate - dark to - black relative overflow - hidden">;"
-      {/* Background Elements */}";"
-      <div className="absolute inset - 0 opacity - 30">";"
-        <div className="absolute top - 20 left - 20 w - 64 h - 64 bg - zion - cyan / 10 rounded - full blur - 3xl"></div>";"
-        <div className="absolute bottom - 20 right - 20 w - 80 h - 80 bg - zion - purple / 10 rounded - full blur - 3xl"></div>";"
-        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 bg - zion - blue / 10 rounded - full blur - 3xl"></div>;
-      </div>;"
-";"
-      <div className="container - responsive relative z - 10">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
         {/* Header */}
         <motion.div;
           initial = {}
@@ -291,15 +250,10 @@ export default function Page() { return null; }
   coordinate_y: 0;
 
 }}
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
+:src_backup/components/home/QuickAccess.tsx
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}";
           className="text - center mb-16">;
-=======
-          transition={{ duration: 0.8 }}"
-          viewport={{ once: true }}";"
-          className="text - center mb - 16">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
           <motion.div;
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
@@ -307,15 +261,10 @@ export default function Page() { return null; }
   { duration: 0.6,
   delay: 0.2;
 
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
+:src_backup/components/home/QuickAccess.tsx
 }}
             viewport={{ once: true }}";
             className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - cyan / 10 border border - zion - cyan / 20 rounded - full text - zion - cyan mb-6">;
-=======
-}}"
-            viewport={{ once: true }}";"
-            className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - cyan / 10 border border - zion - cyan / 20 rounded - full text - zion - cyan mb - 6">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
             Quick Access to Our Services;
           </motion.h2>;
           <motion.p;
@@ -329,7 +278,7 @@ export default function Page() { return null; }
 }}
             transition = {}
   { duration: 0.6,
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
+:src_backup/components/home/QuickAccess.tsx
   delay: 0.2;
 }}";
             className="text - lg text - gray - 300 max - w-2xl mx-auto">;
@@ -338,16 +287,6 @@ export default function Page() { return null; }
         </div>;
         {/* Quick Links Grid */}";
         <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 6 mb-12">;
-=======
-  delay: 0.2;"
-}}";"
-            className="text - lg text - gray - 300 max - w-2xl mx - auto">;
-            Find the perfect solution for your business needs with our organized service categories;
-          </motion.p>;
-        </div>;"
-        {/* Quick Links Grid */}";"
-        <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 6 mb - 12">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
           {quick_links.map ((link, index <motion.div;
 
               key={link.title}"
@@ -357,7 +296,7 @@ export default function Page() { return null; }
               onHoverEnd={: unknown setHoveredCategory (null)}
               on_click={: unknown setSelectedCategory (selected_category === link.title ? null : link.title)}
               className={`group cursor - pointer ${link.bg_color} ${link.border_color} border rounded - 2xl p - 6 backdrop - blur - sm transition - all duration - 300 hover:shadow - 2xl hover:shadow - zion - cyan / 25`}
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
+:src_backup/components/home/QuickAccess.tsx
             >;
               {/* Icon and Header */}";
               <div className="flex items - start justify - between mb-4">;
@@ -386,36 +325,6 @@ export default function Page() { return null; }
               {/* Features Preview */}";
               <div className="mb-4">";
                 <div className="grid grid - cols - 2 gap-2">;
-=======
-            >;"
-              {/* Icon and Header */}";"
-              <div className="flex items - start justify - between mb - 4">;`
-                <motion.div`;`
-                  className={`p - 3 rounded - xl bg - gradient - to - r ${link.color} bg - opacity - 20`}
-                  while_hover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}"
-                >";"
-                  <link.icon className="w - 6 h - 6 text - white" />;
-                </motion.div>;
-                <motion.div;
-                  animate={{ rotate: hovered_category === link.title ? 90 : 0 }}
-                  transition={{ duration: 0.3 }}"
-                >";"
-                  <ChevronRight className="w - 5 h - 5 text - gray - 400 group - hover:text - zion - cyan transition - colors"  />                </motion.div>;
-              </div>;"
-              {/* Content */}";"
-              <div className="mb - 4">";"
-                <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - zion - cyan transition - colors">;
-                  {link.title}"
-                </h3>";"
-                <p className="text - gray - 300 text - sm leading - relaxed">;
-                  {link.description}
-                </p>;
-              </div>;"
-              {/* Features Preview */}";"
-              <div className="mb - 4">";"
-                <div className="grid grid - cols - 2 gap - 2">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
                   {link.features.slice (0, 2).map (feature: unknown, idx: unknown (
                     <motion.div;
                       key={feature}
@@ -431,7 +340,7 @@ export default function Page() { return null; }
   { duration: 0.4,
   delay: 0.1 + idx * 0.1;
 
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
+:src_backup/components/home/QuickAccess.tsx
 }}
                       viewport={{ once: true }}";
                       className="flex items - center gap - 2 text - xs text - gray-400">";
@@ -443,19 +352,6 @@ export default function Page() { return null; }
               {/* Stats */}";
               <div className="mb-4">";
                 <div className="flex items - center justify - between text-sm">;
-=======
-}}"
-                      viewport={{ once: true }}";"
-                      className="flex items - center gap - 2 text - xs text - gray - 400">";"
-                      <div className="w - 1.5 h - 1.5 bg - zion - cyan rounded - full"></div>";"
-                      <span className="truncate">{feature}</span>;
-                    </motion.div>))}
-                </div>;
-              </div>;"
-              {/* Stats */}";"
-              <div className="mb - 4">";"
-                <div className="flex items - center justify - between text - sm">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
                   {Object.entries (link.stats).slice (0, 2).map ([key: unknown, value]: unknown, idx: unknown (
                     <motion.div;
                       key={key}
@@ -465,7 +361,7 @@ export default function Page() { return null; }
 export function QuickAccess(): any ({ className, style }: QuickAccessProps) {;
   const { t } = useTranslation();
   const quickLinks = [;
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
+:src_backup/components/home/QuickAccess.tsx
     {;
       title: t('home && home.tool_ai_matcher'),,
   description: t('home && home.tool_ai_matcher_desc'),;
@@ -500,48 +396,12 @@ export function QuickAccess(): any ({ className, style }: QuickAccessProps) {;
       title: t('home && home.tool_mobile_app', 'Mobile App'),,
   description: t('home && home.tool_mobile_app_desc', 'Zion on the go'),;
       icon: <Smartphone className='h-6 w-6 text-zion-purple' />,;
-=======
-    {;'
-      title: t('home && home.tool_ai_matcher'),;'
-      description: t('home && home.tool_ai_matcher_desc'),;'
-      icon: <Search className='h-6 w-6 text-zion-cyan' />,;'
-      link: '/marketplace',;
-    },;
-    {;'
-      title: t('home && home.tool_talent'),;'
-      description: t('home && home.tool_talent_desc'),;'
-      icon: <Users className='h-6 w-6 text-zion-purple' />,;'
-      link: '/talent',;
-    },;
-    {;'
-      title: t('home && home.tool_services'),;'
-      description: t('home && home.tool_services_desc'),;'
-      icon: <Briefcase className='h-6 w-6 text-zion-cyan' />,;'
-      link: '/services',;
-    },;
-    {;'
-      title: t('home && home.tool_equipment'),;'
-      description: t('home && home.tool_equipment_desc'),;'
-      icon: <Settings className='h-6 w-6 text-zion-purple' />,;'
-      link: '/equipment',;
-    },;
-    {;'
-      title: t('nav && nav.community'),;'
-      description: t('home && home.tool_chat_desc'),;'
-      icon: <MessageSquare className='h-6 w-6 text-zion-cyan' />,;'
-      link: '/community',;
-    },;
-    {;'
-      title: t('home && home.tool_mobile_app', 'Mobile App'),;'
-      description: t('home && home.tool_mobile_app_desc', 'Zion on the go'),;'
-      icon: <Smartphone className='h-6 w-6 text-zion-purple' />,;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
       link: '/mobile-launch',;
     },;
   ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
+:src_backup/components/home/QuickAccess.tsx
   return (
     <section className={cn("py-12 bg-zion-blue-dark", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -561,43 +421,16 @@ export function QuickAccess(): any ({ className, style }: QuickAccessProps) {;
             {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
           </p>
         </div>
-        
+
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
           {quickLinks.map((link, index) => (
             <Link
               key={index}
-<<<<<<< HEAD
-              href={link.link}
+href={link.link}
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
                 {link.icon}
-=======
-              href={link && link.link}
-              className='group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20'>;
-=======
-  return ('
-    <section className={cn('py-12 bg-zion-blue-dark', className)} style={style}>;'
-      <div className='container mx-auto px-4'>;'
-        <div className='text-center mb-8'>;'
-          <h2 className='text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2'>;'
-            {t('home && home.quick_access_title', 'Quick Access')}
-          </h2>;'
-          <p className='text-zion-slate-light text-lg'>;
-            {t(;'
-              'home && home.quick_access_subtitle',;'
-              'Jump directly to our most popular features';
-            )}
-          </p>;
-        </div>;
-'
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>;
-          {quickLinks && quickLinks.map((link, index) => (;
-            <Link;
-              key={index}
-              href={link && link.link}'
-              className='group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
               <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110'>;
                 {link && link.icon}
               </div>;'
@@ -627,7 +460,7 @@ export default function Page() { return null; }
         duration: 0 && 0.3,"  ease: "easeOut";
 }}}
 };
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
+:src_backup/components/home/QuickAccess.tsx
 }
 };
   return (    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">;
@@ -635,14 +468,6 @@ export default function Page() { return null; }
       <div className="absolute inset-0 opacity-30">";
         <div className="absolute top-20 left-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl"></div>";
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-zion-purple/10 rounded-full blur-3xl"></div>";
-=======
-};"
-  return (    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">;"
-      {/* Background Elements */}";"
-      <div className="absolute inset-0 opacity-30">";"
-        <div className="absolute top-20 left-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl"></div>";"
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-zion-purple/10 rounded-full blur-3xl"></div>";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-zion-blue/10 rounded-full blur-3xl"></div>;
       </div>;"
 ";"
@@ -779,103 +604,33 @@ export default function Page() { return null; }
                 </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </div>
-<<<<<<< HEAD
-=======
-              {/* CTA */}
-
-              <motion&& motion.div;
-                whileHover={{ scale: 1 && 1.05 }}"
-                whileTap={{ scale: 0 && 0.95 }}""
-                className="mt-auto">;
-                <Link;`
-                  to={link && link.path}``
-                  className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link && link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}>;"
-                  Explore {link && link.title}";"
-                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>;
-              </motion && motion.div>;
-            </motion && motion.div>;
-
-export default QuickAccess;
-;
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
-
-<<<<<<< HEAD:src/components/home/QuickAccess.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/home/QuickAccess.tsx
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >"
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
                 {link.icon}
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
+:src_backup/components/home/QuickAccess.tsx
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h3 className="text-white font-medium mb-1">{link.title}</h3>
               <p className="text-zion-slate-light text-xs mb-2">{link.description}</p>
               <div className="flex items-center text-zion-cyan text-xs mt-auto">
                 <span>{t('general.explore')}</span>
-=======
-              </div>"
-              <h3 className="text-white font-medium mb-1">{link.title}</h3>"
-              <p className="text-zion-slate-light text-xs mb-2">{link.description}</p>"
-              <div className="flex items-center text-zion-cyan text-xs mt-auto">'
-                <span>{t('general.explore')}</span>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
                 <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
               </div>
             </Link>
-<<<<<<< HEAD
-          ))}
+))}
         </div>;
       </div>;
     </section>;
   );
 }
 ;
-=======
-
-          ))}
-        </div>;
-      </div>;
-    </section>;
-  );
-
-export default QuickAccess;}
-
-export default QuickAccess;
-
-  { opacity: 0,
-  scale: 0.8;
-}}
-                      whileInView = {}
-  { opacity: 1,
-  scale: 1;
-}}
-                      transition = {}
-  { duration: 0.4,
-  delay: 0.2 + idx * 0.1;
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
-}}
-                      viewport={{ once: true }}";
-                      className="text-center">";
-                      <div className="text - lg font - bold text - zion-cyan">{value}</div>";
-                      <div className="text - xs text - gray-500 capitalize">{key}</div>;
-=======
-}}"
-                      viewport={{ once: true }}";"
-                      className="text - center">";"
-                      <div className="text - lg font - bold text - zion - cyan">{value}</div>";"
-                      <div className="text - xs text - gray - 500 capitalize">{key}</div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
                     </motion.div>))}
                 </div>;
               </div>;
               {/* CTA */}
               <motion.div;
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
+:src_backup/components/home/QuickAccess.tsx
                 while_hover={{ scale: 1.05 }}
                 while_tap={{ scale: 0.95 }}";
                 className="mt-auto">;
@@ -885,36 +640,18 @@ export default QuickAccess;
                 >;
                   Explore {link.title}";
                   <ChevronRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition-transform"  />                </Link>;
-=======
-                while_hover={{ scale: 1.05 }}"
-                while_tap={{ scale: 0.95 }}";"
-                className="mt - auto">;
-                <Link;`
-                  to={link.path}`;`
-                  className={`inline - flex items - center justify - center w - full px - 4 py - 3 bg - gradient - to - r ${link.color} text - white font - semibold rounded - lg transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 25`}
-                >;"
-                  Explore {link.title}";"
-                  <ChevronRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform"  />                </Link>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx
               </motion.div>;
             </motion.div>))}
         </div>;
       </div>;
     </section>);
-<<<<<<< HEAD:src_backup/components/home/QuickAccess.tsx
+:src_backup/components/home/QuickAccess.tsx
 export default QuickAccess }
-<<<<<<< HEAD:src/components/home/QuickAccess.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default QuickAccess;
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -949,12 +686,9 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
   );
 
 export default QuickAccess;
-<<<<<<< HEAD:src/components/home/QuickAccess.tsx
+:src/components/home/QuickAccess.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/home/QuickAccess.tsx
 =======
 export default QuickAccess };
 export default QuickAccess;'"`

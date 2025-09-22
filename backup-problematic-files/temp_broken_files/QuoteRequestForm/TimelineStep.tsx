@@ -64,4 +64,3 @@ export function TimelineStep({ formData, updateFormData } TimelineStepProps) {;
                   </PopoverContent>;
                 </Popover>;
               </div>;
-

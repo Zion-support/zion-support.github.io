@@ -39,4 +39,3 @@ import {;
           </div>;
         </Carousel>;
       </div>;
-

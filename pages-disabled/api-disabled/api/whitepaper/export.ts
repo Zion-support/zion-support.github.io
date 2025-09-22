@@ -1,22 +1,5 @@
-<<<<<<< HEAD:pages/api/whitepaper/export.ts
+:pages/api/whitepaper/export.ts
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  const { markdown, tokenName } = req.body |{}
-  if (!markdown |!tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' })
-  // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
-  const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`
-  const base64 = Buffer.from(html, 'utf-8').toString('base64')
-  const url = `data: text/html,base64,${base64}`
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 function escapeHtml(str: string) {
@@ -26,8 +9,6 @@ function escapeHtml(str: string) {
     .replace(/>/g, '&gt,')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async /**
@@ -58,16 +39,6 @@ function escape_html() {
 }
 ;
 
-
-<<<<<<< HEAD
-=======
-}
-
-
-
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -101,10 +72,7 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   const { markdown, tokenName } = req.body || {},
   if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' }),
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -145,13 +113,10 @@ function escape_html() {;
     .replace (/>/g, '&gt, ');
 }
 ;
-<<<<<<< HEAD:pages/api/whitepaper/export.ts
+:pages/api/whitepaper/export.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/whitepaper/export.ts
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -160,18 +125,8 @@ function escape_html() {;
   const base64 = Buffer.from(html, 'utf-8').toString('base64');
   const url = `data: text/html,base64,${base64}`;
   res.status(200).json({ url })
-<<<<<<< HEAD:pages/api/whitepaper/export.ts
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+:pages/api/whitepaper/export.ts
 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 =======
@@ -223,7 +178,6 @@ function escape_html() {;
 }
 ;
 
-
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF);
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`;
   const base64 = Buffer.from(html, 'utf-8').toString('base64');
@@ -235,11 +189,8 @@ function escapeHtml(str: string) {;
   return String(str)
     .replace(/&/g, '&amp,')
     .replace(/</g, '&lt,')
-<<<<<<< HEAD
-    .replace(/>/g, '&gt,');
+.replace(/>/g, '&gt,');
 };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -287,26 +238,17 @@ function escapeHtml(str: string) {;
 }
 }
 
-
-<<<<<<< HEAD
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     .replace(/>/g, '&gt,')
 };
-<<<<<<< HEAD:pages/api/whitepaper/export.ts
+:pages/api/whitepaper/export.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/whitepaper/export.ts

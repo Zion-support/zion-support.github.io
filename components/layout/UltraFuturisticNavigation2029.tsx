@@ -134,11 +134,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const contactInfo = null;
 const serviceCategories = [
   {
-    title: '🧠 2029 AI Consciousness & Innovation'
-    icon: Brain
-    color: 'from-purple-600 to-pink-600'
-    description: 'Beyond human consciousness simulation'
-    services: [
+    title: '🧠 2029 AI Consciousness & Innovation';
+    icon: Brain;
+    color: 'from-purple-600 to-pink-600';
+    description: 'Beyond human consciousness simulation';
+    services: [;
 {
         name: 'AI Consciousness Simulation Platform',
         href: '/ai-consciousness-simulation-platform',
@@ -181,7 +181,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: Atom,
     color: 'from-indigo-600 to-purple-600',
     description: 'Quantum brain-computer interfaces',
-    services: [
+    services: [;
 {
         name: 'Quantum Brain-Computer Interface',
         href: '/quantum-brain-computer-interface',
@@ -201,7 +201,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: Rocket,
     color: 'from-red-600 to-orange-600',
     description: 'Interplanetary expansion and resource extraction',
-    services: [
+    services: [;
 {
         name: 'Mars Colonization Automation Platform',
         href: '/mars-colonization-automation-platform',
@@ -209,9 +209,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         price: '$99,999/month',
       },
       {
-        name: 'Interplanetary Communication Network'
-        href: '/interplanetary-communication-network'
-        description: 'Real-time solar system communication'
+        name: 'Interplanetary Communication Network';
+        href: '/interplanetary-communication-network';
+        description: 'Real-time solar system communication';
         price: '$75,999/month'
       }
       {
@@ -227,7 +227,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: Building,
     color: 'from-green-600 to-teal-600',
     description: 'Habitat design and space energy harvesting',
-    services: [
+    services: [;
 {
         name: 'Space Habitat Design Platform',
         href: '/space-habitat-design-platform',
@@ -247,7 +247,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: Brain,
     color: 'from-emerald-600 to-teal-600',
     description: 'Next-generation AI solutions',
-    services: [
+    services: [;
 {
         name: 'AI Emotional Intelligence Platform',
         href: '/ai-emotional-intelligence-platform',
@@ -255,21 +255,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         price: '$2,999/month',
       },
       {
-        name: 'AI Multimodal Fusion Platform'
-        href: '/ai-multimodal-fusion-platform'
+        name: 'AI Multimodal Fusion Platform';
+        href: '/ai-multimodal-fusion-platform';
         description: 'Unified text, image, audio, video AI'
         price: '$4,999/month'
       }
       {
-        name: 'AI Customer Service Automation'
-        href: '/ai-customer-service-automation'
-        description: 'Intelligent customer support'
-        price: '$899/month'
+        name: 'AI Customer Service Automation';
+        href: '/ai-customer-service-automation';
+        description: 'Intelligent customer support';
+        price: '$899/month';
       }
       {
-        name: 'AI Education Platform'
-        href: '/ai-education-platform'
-        description: 'Personalized learning with AI'
+        name: 'AI Education Platform';
+        href: '/ai-education-platform';
+        description: 'Personalized learning with AI';
         price: '$1,499/month'
       }
       {
@@ -285,7 +285,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: Layers,
     color: 'from-orange-600 to-red-600',
     description: 'Decentralized and blockchain solutions',
-    services: [
+    services: [;
 {
         name: 'Quantum Blockchain Platform',
         href: '/quantum-blockchain-platform',
@@ -293,15 +293,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         price: '$6,999/month',
       },
       {
-        name: 'Blockchain Supply Chain Transparency'
-        href: '/blockchain-supply-chain-transparency'
-        description: 'End-to-end supply chain visibility'
+        name: 'Blockchain Supply Chain Transparency';
+        href: '/blockchain-supply-chain-transparency';
+        description: 'End-to-end supply chain visibility';
         price: '$2,499/month'
       }
       {
-        name: 'Smart Contract Automation Platform'
-        href: '/smart-contract-automation'
-        description: 'Automated blockchain contracts'
+        name: 'Smart Contract Automation Platform';
+        href: '/smart-contract-automation';
+        description: 'Automated blockchain contracts';
         price: '$1,999/month'
       }
       {
@@ -317,7 +317,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: Heart,
     color: 'from-pink-600 to-rose-600',
     description: 'Advanced healthcare solutions',
-    services: [
+    services: [;
 {
         name: 'AI Personalized Medicine Platform',
         href: '/ai-personalized-medicine-platform',
@@ -325,9 +325,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         price: '$8,999/month',
       },
       {
-        name: 'AI Healthcare Diagnosis Platform'
-        href: '/ai-healthcare-diagnosis-platform'
-        description: 'Revolutionary medical diagnosis'
+        name: 'AI Healthcare Diagnosis Platform';
+        href: '/ai-healthcare-diagnosis-platform';
+        description: 'Revolutionary medical diagnosis';
         price: '$3,999/month'
       }
       {
@@ -343,7 +343,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: Building,
     color: 'from-slate-600 to-gray-600',
     description: 'Intelligent urban management',
-    services: [
+    services: [;
 {
         name: 'AI Smart City Orchestrator',
         href: '/ai-smart-city-orchestrator',
@@ -351,9 +351,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         price: '$12,999/month',
       },
       {
-        name: 'Smart Traffic Management'
-        href: '/smart-traffic-management'
-        description: 'AI-powered traffic optimization'
+        name: 'Smart Traffic Management';
+        href: '/smart-traffic-management';
+        description: 'AI-powered traffic optimization';
         price: '$3,999/month'
       }
       {
@@ -369,7 +369,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: Microscope,
     color: 'from-blue-600 to-indigo-600',
     description: 'Advanced research tools and platforms',
-    services: [
+    services: [;
 {
         name: 'AI Research Assistant',
         href: '/ai-research-assistant',
@@ -377,9 +377,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         price: '$1,999/month',
       },
       {
-        name: 'Data Analysis Platform'
-        href: '/data-analysis-platform'
-        description: 'Advanced data analytics'
+        name: 'Data Analysis Platform';
+        href: '/data-analysis-platform';
+        description: 'Advanced data analytics';
         price: '$2,499/month'
       }
       {
@@ -395,7 +395,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: Briefcase,
     color: 'from-emerald-600 to-blue-600',
     description: 'Corporate and business automation',
-    services: [
+    services: [;
 {
         name: 'Enterprise AI Operations Center',
         href: '/enterprise-ai-operations-center',
@@ -403,9 +403,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         price: '$15,999/month',
       },
       {
-        name: 'Business Process Automation'
-        href: '/business-process-automation'
-        description: 'End-to-end process automation'
+        name: 'Business Process Automation';
+        href: '/business-process-automation';
+        description: 'End-to-end process automation';
         price: '$4,999/month'
       }
       {
@@ -610,7 +610,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='flex items-center space-x-6'>
             <a;
               href={`tel:${contactInfo.mobile}`}'
-              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors';
             >
 
               <Phone size={14} />
@@ -621,14 +621,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='flex items-center space-x-6'>
             <a;`
               href={`tel:${contactInfo.mobile}`}'
-              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors';
             >
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
             <a;`
               href={`mailto:${contactInfo.email}`}'
-              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors';
             >
               <Mail size={14} />
               <span>{contactInfo.email}</span>
@@ -646,7 +646,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <a;
 href={contactInfo.websit}
 }
-              className='hover:text-cyan-300 transition-colors'
+              className='hover:text-cyan-300 transition-colors';
              />
               {contactInfo.website.replace('https: //';, '')}
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -717,13 +717,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion && motion.div>;
                 >"
                   <div className="flex items-center space-x-2">"
-                    <item.icon size={16} className="group-hover:text-cyan-400 transition-colors" />
+                    <item.icon size={16} className="group-hover:text-cyan-400 transition-colors" />;
                     <span>{item.name}</span>
                   </div>
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></div>;
               <div className='relative group'>
             {/* Desktop Navigation */}
-<div className='hidden lg:flex items-center space-x-8'>
+<div className='hidden lg:flex items-center space-x-8'>;
               {mainNavItems.map(item => (
                 <Link
                 <span className='text-xs text-gray-400' />
@@ -739,7 +739,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   key={item.name}
                   href={item.href}
                   className='group relative text-gray-300 hover:text-white transition-colors duration-200' />
-
+;
                   <div className='flex items-center space-x-2' />;
                     <item.icon;
                       size={16}
@@ -753,14 +753,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Services Dropdown */}
 <div className='relative group'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-                <button className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>
+                <button className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>;
                   <Briefcase;
                     size={16}'
-                    className='group-hover:text-cyan-400 transition-colors'
+                    className='group-hover:text-cyan-400 transition-colors';
                   />
                   <ChevronDown;
                     size={14}'
-                    className='group-hover:rotate-180 transition-transform duration-200'
+                    className='group-hover:rotate-180 transition-transform duration-200';
                   />
                 </button>
                 {/* Mega Menu */}
@@ -770,8 +770,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             {/* Desktop Navigation */}
 
-                <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
-                  <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>
+                <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>;
+                  <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                     {serviceCategories.map((category, index) => (
                       <motion.div;
@@ -852,7 +852,7 @@ key={service.name}
 
                                 href={service.href}
                                 className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200 group' />
-
+;
                                 <div className='flex items-center justify-between' />;
                                   <span className='text-sm text-gray-300 group-hover:text-white transition-colors' />;
                                     {service.name}
@@ -877,21 +877,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.button;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'
+className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get Started;
               </motion.button>
             </div>
             {/* Mobile Menu Button */}
-<div className='lg:hidden'>
+<div className='lg:hidden'>;
               <button
                 onClick={toggleMenu}
-                className='text-gray-300 hover:text-white transition-colors'
+                className='text-gray-300 hover:text-white transition-colors';
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'
+className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40';
                />
                 Get Started;
               </motion.button>
@@ -903,7 +903,7 @@ className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rou
               <button;
                 onClick={toggleMenu}
 
-                className='text-gray-300 hover: text-white transition-colors'
+                className='text-gray-300 hover: text-white transition-colors';
                />
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -946,7 +946,7 @@ className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rou
                     </div>"
                     <span className="text-lg font-bold text-white">Zion Tech</span>
                   </div>"
-                  <button onClick={closeMenu} className="text-gray-400 hover:text-white">
+                  <button onClick={closeMenu} className="text-gray-400 hover:text-white">;
                     <X size={24} />
                   </button>
                 </div>'
@@ -965,7 +965,7 @@ className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rou
                     <X size={24} />;
                   </button>;
                 </div>;
-                    className='text-gray-400 hover:text-white'
+                    className='text-gray-400 hover:text-white';
                    />
                     <X size={24} />
                   </button>
@@ -985,7 +985,7 @@ key={item.name}
                       href={item.href}
                       onClick={closeMenu}
 
-className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/20 transition-all duration-200'
+className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/20 transition-all duration-200';
                      />
                       <item.icon size={20} className='text-cyan-400' />
                       <span />{item.name}</span>
@@ -1016,7 +1016,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               key={service.name}
                               href={service.href}
                               onClick={closeMenu}
-className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200'
+className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200';
                             >
                               <div className='flex items-center justify-between'>
                                 <span className='text-sm text-gray-300'>
@@ -1024,7 +1024,7 @@ className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all dur
                                 </span>'
                                 <span className='text-xs text-cyan-400 font-mono'>
                                   {service.price}"
-                                </span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200"
+                                </span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200";
                             >"
                               <div className="flex items-center justify-between">"
                                 <span className="text-sm text-gray-300">{service.name}</span>"
@@ -1098,7 +1098,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <motion&& motion.button;
                     whileHover={{ scale: 1 && 1.02 }}
                     whileTap={{ scale: 0 && 0.98 }}"
-                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
                     Get Started;
                   </motion && motion.button>;
                 </div>;
@@ -1111,12 +1111,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <motion.button;
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}"
-                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
 <div className='mt-8'>
                   <motion.button
                     whileHover={{ scale: 1.02 ;}}
                     whileTap={{ scale: 0.98 ;}}
-                    className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
+                    className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
 
@@ -1126,7 +1126,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <motion.button;
 whileHover={{ scale: 1.02 ;}}
                     whileTap={{ scale: 0.98 ;}}
-                    className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
+                    className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300';
                    />
 
                     Get Started;

@@ -126,7 +126,7 @@ const handleHireClick = (application: JobApplication) => {
 setHireModalOpen (true) 
 };
 //This will be called after the hire confirmation is completed toast ({
-  
+
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application),
     setHireModalOpen(true)
@@ -141,18 +141,18 @@ interface ApplicationsTableProps {applications: JobApplication[];
 
 export function ApplicationsTable(_{applications, processingId, onViewApplication, onStatusChange, onViewScore}: ApplicationsTableProps) {const [hireModalOpen, setHireModalOpen] = useState(false);
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
-  
+
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application);
     setHireModalOpen(true)};
-  
+
   const handleHireConfirmed = () => {_// This will be called after the hire confirmation is completed,
 toast({
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
     })
   }  };
-  
+
   return (
     <>
       <div className=&quot;rounded-md border&quot;>        <Table>
@@ -233,4 +233,3 @@ application={application}
         onConfirm={handleHireConfirmed}
       />;
     </>;
-

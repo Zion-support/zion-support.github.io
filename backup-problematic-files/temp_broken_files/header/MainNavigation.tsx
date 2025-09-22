@@ -43,4 +43,3 @@ export function MainNavigation({ className } MainNavigationProps) {;
         Register;
       </NavLink>;
     </nav>;
-

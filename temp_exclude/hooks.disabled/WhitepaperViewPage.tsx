@@ -1,11 +1,5 @@
-<<<<<<< HEAD:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
-<<<<<<< HEAD
+:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
 import React, { useState, useEffect } from 'react',;
-=======
-const WhitepaperViewPage: React.FC = () => {
-=======
-const WhitepaperViewPage: React.FC = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/WhitepaperViewPage.tsx
   const router = useRouter()
   const { id: rawId } = router.query;
   const id = typeof rawId === 'string' ? rawId : undefined;
@@ -87,31 +81,29 @@ if (.whitepaper_data) {) {}
         setLoading(false)
       }
 
-
-
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {'
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }
-<<<<<<< HEAD:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
+:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
 
 export default WhitepaperViewPage;import React, { useState, useEffect } from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -121,16 +113,6 @@ import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link', // For a back button, changed from react-router-dom;
-=======
-'
-export default WhitepaperViewPage;import React, { useState, useEffect } from 'react';'
-import { useRouter } from 'next/router', // Changed from useParams;'
-import { supabase } from '@/integrations/supabase/client';'
-import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel;'
-import { Button } from '@/components/ui/button';'
-import { ArrowLeft } from 'lucide-react';'
-import Link from 'next/link', // For a back button, changed from react-router-dom;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/WhitepaperViewPage.tsx
 import {logErrorToProduction} from '@/utils/productionLogger';
 // Placeholder for user context/role checking;
 // In a real app, this would come from an auth context;
@@ -152,7 +134,6 @@ interface SharedWhitepaper {;
   is_public: boolean;
 }
 
-<<<<<<< HEAD
 const WhitepaperViewPage: React.FC = () => {
   const router = useRouter(),
   const { id: rawId } = router.query,
@@ -169,15 +150,10 @@ const WhitepaperViewPage: React.FC = () => {
         setLoading(false),
         return
 ;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const WhitepaperViewPage: React.FC = () => {;
   const router = useRouter(),;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
+:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
   const { id: rawId } = router.query,;
-=======
-  const { id: rawId } = router && router.query,;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/WhitepaperViewPage.tsx
   const id = typeof rawId === 'string' ? rawId : undefined,;
   const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null),;
   const [loading, setLoading] = useState(true),;
@@ -192,16 +168,12 @@ const WhitepaperViewPage: React.FC = () => {;
       }
       setLoading(true),;
       setError(null),;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
+:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
       try {;
 <<<<<<< HEAD
         const { data: responseData, error: funcError } = await supabase.functions.invoke('get-shared-whitepaper', {;
           body: { id }}),;
         if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),;
-=======
-=======
-      try {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/WhitepaperViewPage.tsx
         const { data: responseData, error: funcError } = await supabase && supabase.functions.invoke('get-shared-whitepaper', {;
           body: { id }}),;
 `
@@ -211,7 +183,6 @@ const WhitepaperViewPage: React.FC = () => {;
         if (!responseData || !(responseData as any).whitepaper_data) {;'
           throw new Error('Shared whitepaper not found or data is invalid.');
         }
-<<<<<<< HEAD
 ;
         setSharedData(responseData as SharedWhitepaper);
       } catch (e: any) {;
@@ -277,17 +248,6 @@ const WhitepaperViewPage: React.FC = () => {;
                 <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">
                     Private (Admin View)
                 </span>
-=======
-
-        setSharedData(responseData as SharedWhitepaper);
-
-      } catch (e: any) {;'
-        logErrorToProduction('Error fetching shared whitepaper:', { data:  e }),;'
-        setError(e && e.message || 'An unexpected error occurred.');
-      } finally {;
-        setLoading(false);
-      }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },;
     fetchWhitepaper();
   }, [id]),;
@@ -296,11 +256,8 @@ const WhitepaperViewPage: React.FC = () => {;
   }
 ;
   if (error) {;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
+:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
     return (;
-=======
-    return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/WhitepaperViewPage.tsx
       <div className="flex flex-col justify-center items-center h-screen text-red-600">;
         <p>Error: {error}</p>;"
         <Button asChild variant="link" className="mt-4">;"
@@ -311,12 +268,8 @@ const WhitepaperViewPage: React.FC = () => {;
   }
 ;
   if (!sharedData) { // Check sharedData which includes the is_public flag;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
+:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
     return (;
-=======
-
-    return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/WhitepaperViewPage.tsx
          <div className="flex flex-col justify-center items-center h-screen">;
             <p>Whitepaper not found.</p> {/* This can be a generic message */}"
             <Button asChild variant="link" className="mt-4">;"
@@ -327,22 +280,13 @@ const WhitepaperViewPage: React.FC = () => {;
   }
 ;
   // Access control based on is_public and admin role;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
+:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
   if (!sharedData.is_public && !isAdmin) {;
     return (;
       <div className="flex flex-col justify-center items-center h-screen">;
         <h2 className="text-2xl font-semibold mb-4">Access Denied</h2>;
         <p className="mb-4">This whitepaper is not public and you do not have permission to view it.</p>;
         <Button asChild variant="link">;
-=======
-  if (!sharedData && sharedData.is_public && !isAdmin) {;
-
-    return ("
-      <div className="flex flex-col justify-center items-center h-screen">;"
-        <h2 className="text-2xl font-semibold mb-4">Access Denied</h2>;"
-        <p className="mb-4">This whitepaper is not public and you do not have permission to view it.</p>;"
-        <Button asChild variant="link">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/WhitepaperViewPage.tsx
           <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>;
         </Button>;
       </div>;
@@ -350,21 +294,12 @@ const WhitepaperViewPage: React.FC = () => {;
   }
 ;
   const { whitepaper_data: whitepaper } = sharedData,;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
+:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
   return (;
     <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">;
         <div className="mb-6 flex justify-between items-center">;
             <Button asChild variant="outline">;
                  <Link href={isAdmin ? "/admin/whitepaper-generator" : "/"}> {/* Sensible back link */}
-=======
-
-
-  return ("
-    <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">;"
-        <div className="mb-6 flex justify-between items-center">;"
-            <Button asChild variant="outline">;"
-                 <Link href={isAdmin ? "/admin/whitepaper-generator" : "/"}> {/* Sensible back link */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/WhitepaperViewPage.tsx
                     <ArrowLeft className="mr-2 h-4 w-4" /> Back;
                  </Link>;
             </Button>;
@@ -375,103 +310,13 @@ const WhitepaperViewPage: React.FC = () => {;
             )}
         </div>;
       <WhitepaperPreviewPanel;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
+:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
         sections={whitepaper.sections}
         distributionChartData={whitepaper.distributionChartData}
         tokenName={whitepaper.tokenName}
         tokenSupply={whitepaper.tokenSupply}
-=======
-        sections = {whitepaper && whitepaper.sections,}
-        distributionChartData = {whitepaper && whitepaper.distributionChartData,}
-        tokenName = {whitepaper && whitepaper.tokenName,}
-        tokenSupply = {whitepaper && whitepaper.tokenSupply,}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/WhitepaperViewPage.tsx
       />;
     </div>;
   );
 },;
-<<<<<<< HEAD
 export default WhitepaperViewPage;
-=======
-
-export default WhitepaperViewPage,;
-
-    },
-    fetch_whitepaper ();
-  }, [id]),
-  // Check condition;
-if ( {) {}
-  $2;
-}"
-    return <div className="flex justify - center items - center h - screen"><p > Loading whitepaper...</p></div>;
-  }
-  // Check condition;
-if ( {) {}
-  $2;
-}
-    return ("
-      <div className="flex flex - col justify - center items - center h - screen text - red - 600">;
-        <p > Error: {error}</p>;"
-        <Button as_child variant="link" className="mt - 4">;"
-          <Link href="/"><ArrowLeft className="mr - 2 h - 4 w - 4" /> Back to Home</Link>;
-        </Button>;
-      </div>);
-  }
-  // Check condition;
-if ( { // Check shared_data which includes the is_public flag) {}
-  $2;
-}
-    return ("
-        <div className="flex flex - col justify - center items - center h - screen">;
-            <p > Whitepaper not found.</p> {/* This can be a generic message */}"
-            <Button as_child variant="link" className="mt - 4">;"
-              <Link href="/"><ArrowLeft className="mr - 2 h - 4 w - 4" /> Back to Home</Link>;
-            </Button>;
-        </div>);
-  }
-  // Access control based on is_public and admin role;
-  // Check condition;
-if ( {) {}
-  $2;
-}
-    return ("
-      <div className="flex flex - col justify - center items - center h - screen">;"
-        <h2 className="text - 2xl font - semibold mb - 4">Access Denied</h2>;"
-        <p className="mb - 4">This whitepaper is not public and you do not have permission to view it.</p>;"
-        <Button as_child variant="link">;"
-          <Link href="/"><ArrowLeft className="mr - 2 h - 4 w - 4" /> Back to Home</Link>;
-        </Button>;
-      </div>);
-  }
-  const { whitepaper_data: whitepaper } = shared_data,
-  return ("
-    <div className="container mx - auto p - 4 md:p - 8 bg - gray - 50 min - h-screen">;"
-        <div className="mb - 6 flex justify - between items - center">;"
-            <Button as_child variant="outline">;"
-                <Link href={is_admin ? "/admin / whitepaper - generator" : "/"}> {/* Sensible back link */}"
-                    <ArrowLeft className="mr - 2 h - 4 w - 4" /> Back;
-                </Link>;
-            </Button>;
-            {!shared_data.is_public && is_admin && ("
-                <span className="px - 3 py - 1 text - xs font - semibold text - yellow - 800 bg - yellow - 200 rounded - full">;
-                    Private (Admin View);
-                </span>)}
-        </div>;
-      <WhitepaperPreviewPanel;
-        sections = {whitepaper.sections, }
-        distributionChartData = {whitepaper.distributionChartData, }
-        token_name = {whitepaper.token_name, }
-        token_supply = {whitepaper.token_supply, }
-      />;
-    </div>);
-},
-export default WhitepaperViewPage,;
-;
-"
-        setError("No whitepaper ID provided."),
-<<<<<<< HEAD:temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
-        setLoading(false),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-        setLoading(false),'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/WhitepaperViewPage.tsx

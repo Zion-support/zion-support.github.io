@@ -28,4 +28,3 @@ export const NotificationCenter:React.FC = () => {;
     if (open) {;
       const loadNotifications = async () => {;
         try {;
-

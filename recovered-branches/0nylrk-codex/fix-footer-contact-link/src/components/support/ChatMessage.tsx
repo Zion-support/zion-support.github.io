@@ -1,16 +1,6 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {cn} from "@/lib/utils";
@@ -22,14 +12,7 @@ import {useTheme} from "@/hooks/useTheme";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {cn} from "@/lib/utils";
@@ -45,37 +28,11 @@ import { format } from "date-fns",
 import { useTheme } from "@/hooks/useTheme",
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-=======
-interface ChatMessageProps {
-
-  message: string
-  isUser: boolean
-
-  timestamp: Date
-}
-
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
-  const { theme } = useTheme();
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
-  const { theme } = useTheme();
-  const { theme } = useTheme(),
-
-
-
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ChatMessageProps {
 =======
@@ -93,12 +50,7 @@ interface ChatMessageProps {};
   isUser: boolean;
   timestamp: Date;
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -107,19 +59,7 @@ export function ChatMessage() { return null; }
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {};
   const { theme } = useTheme();
   const { theme } = useTheme(),
-  
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -141,87 +81,21 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {}
           </>
         ) : (
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-import React from "react";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {cn} from "@/lib/utils";
-import {format} from "date-fns";
-import {useTheme} from "@/hooks/useTheme";
-interface ChatMessageProps {;
-  message: string,;
-  isUser: boolean,;
-  timestamp: Date;
-}
-
-export function ChatMessage(): any ({ message, isUser, timestamp }: ChatMessageProps) {;
-  const { theme } = useTheme();
-
-  return (
-=======
-            <AvatarImage
-              src="https://placehold.co/40x40?text=AI"
-              alt="Zion Support"
-            />
-            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
-          </>
-        )}
-      </Avatar>
-      <div className={cn(
-
-<<<<<<< HEAD
-=======
-import React from "react",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { cn } from "@/lib/utils",;
-import { format } from "date-fns",;
-import { useTheme } from "@/hooks/useTheme",;
-;
-interface ChatMessageProps {;
-  message:string,;
-  isUser:boolean,;
-  timestamp:Date;
-}
-;
-export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
-  const { theme } = useTheme(),;
-  ;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          <>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>;
       <Avatar className="h-8 w-8">;
         {isUser ? (;
           <>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-            <AvatarImage src="https://i && i.pravatar.cc/40?img=1" alt="User" />;
+<AvatarImage src="https://i && i.pravatar.cc/40?img=1" alt="User" />;
             <AvatarFallback>U</AvatarFallback>;
           </>;
         ) : (;
           <>;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <AvatarImage
-=======
-          <>            <AvatarImage
-              src="https://placehold && placehold.co/40x40?text=AI"
-              alt="Zion Support"            <AvatarImage
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-          <>            <AvatarImage
-              src="https://placehold && placehold.co/40x40?text=AI"
-              alt="Zion Support"            <AvatarImage
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
             <AvatarImage
               src="https://placehold && placehold.co/40x40?text=AI"
@@ -243,11 +117,9 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
           </>;
         )}
 
-
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
         isUser 
           ? "bg-zion-purple text-white" 
-
 
           : theme === "dark"
             ? "bg-zion-blue-light text-white"
@@ -258,7 +130,6 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
         {isUser ? (;
           <>;
 
-
             <AvatarImage"
               src="https://placehold && placehold.co/40x40?text=AI""
               alt="Zion Support"
@@ -267,7 +138,6 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>;
           </>;
         )}
-
 
 "
           : theme === "dark""
@@ -278,8 +148,7 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
 
-<<<<<<< HEAD
-      </Avatar>;
+</Avatar>;
 
       <divclassName={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm"
@@ -295,28 +164,15 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
           isUser 
             ? "text-white/70" 
 
-<<<<<<< HEAD
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           "text-xs mt-1",
           isUser "
             ? "text-white/70" 
 
-<<<<<<< HEAD
-            : theme === "dark"
+: theme === "dark"
               ? "text-gray-300"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
               : "text-gray-500"
-=======
-=======
-              : "text-gray-500"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
@@ -337,54 +193,26 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
             :theme === "dark";
               ? "text-gray-300";
               :"text-gray-500";
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         )}>;
           {format(timestamp, "h:mm a")}
-=======
-
-        )}>;"
-          {format(timestamp, "h:mm a")}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           "text-xs mt-1";
           isUser"
             ? "text-white/70""
           "text-xs mt-1",
-<<<<<<< HEAD
-          isUser 
+isUser 
             ? "text-white/70" 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             : theme === "dark"
               ? "text-gray-300"
-=======
-          isUser "
-            ? "text-white/70" "
-            : theme === "dark""
-              ? "text-gray-300""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               : "text-gray-500"
         )}>"
-=======
-        )}>;
-          {format(timestamp, "h:mm a")}
-          "text-xs mt-1";
-          isUser
-            ? "text-white/70"
-          "text-xs mt-1",
-          isUser 
-            ? "text-white/70" 
-            : theme === "dark"
-              ? "text-gray-300"
-              : "text-gray-500"
-        )}>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {format(timestamp, "h:mm a")}
         </div>
       </div>
     </div>
   )
 }
-<<<<<<< HEAD
 // Function to convert URLs and help links to actual clickable links;
 function formatMessageWithLinks(message: string): string {}
   // Replace URLs;
@@ -392,30 +220,13 @@ function formatMessageWithLinks(message: string): string {}
   let formattedMessage = message.replace(
     urlRegex"
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
-<<<<<<< HEAD
-
-=======
-=======
-// Function to convert URLs and help links to actual clickable links
-function formatMessageWithLinks(message: string): string {
-  // Replace URLs
-  const urlRegex = /(https?:\/\/[^\s]+)/g
-  let formattedMessage = message.replace(
-    urlRegex
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-        </div>;
+</div>;
       </div>;
     </div>;
   );
 }
 
-
   ),
-  
-
-
-<<<<<<< HEAD
 
 "
             : theme === "dark""
@@ -426,9 +237,6 @@ function formatMessageWithLinks(message: string): string {
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // Replace help center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g;
   formattedMessage = formattedMessage.replace(
@@ -436,27 +244,9 @@ function formatMessageWithLinks(message: string): string {
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   )
 
-<<<<<<< HEAD
-  return formattedMessage
+return formattedMessage
 <<<<<<< HEAD
 }
-=======
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
-=======
-
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 =======
@@ -481,9 +271,6 @@ import React from "react",;
   )
 
   return formattedMessage
-
-
-
 
 import React from "react",;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -554,8 +341,6 @@ export function ChatMessage() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 // Function to convert URLs and help links to actual clickable links;
 function formatMessageWithLinks(): any (message: string): string {;
@@ -577,45 +362,21 @@ function formatMessageWithLinks(): any (message: string): string {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-        </div>;
-      </div>;
-    </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-
-
-
-=======
-</div>;
-      </div>;
-    </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
@@ -624,9 +385,6 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar'
 import { cn } from '@/lib / utils';
 import { format } from './date - fns';
 =======
-
-
-
 
 }'
 import React from './react';'
@@ -646,8 +404,7 @@ export /**;
 function ChatMessage() {}
   const { theme } = use_theme ();
 ;
-<<<<<<< HEAD
-  return (
+return (
     <div className={cn ("flex items - start gap - 3", is_user && "flex - row - reverse")}>;
       <Avatar className="h - 8 w-8">;
         {is_user ? (
@@ -701,13 +458,8 @@ function formatMessageWithLinks (message: string): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;
-
 
 import React from "react";""
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";""
@@ -728,18 +480,10 @@ interface ChatMessageProps {
   isUser: boolean;
   timestamp: Date;
 
-
-
-
-
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
   const { theme } = useTheme();
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
   const { theme } = useTheme(),
-
-
-
-
 
   return (
 )"
@@ -824,7 +568,6 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
         </div>;
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>
 
-
           ? "bg-zion-purple text-white";""
           : theme === "dark";""
             : "bg-gray-100 text-gray-800";")
@@ -838,18 +581,11 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
 }
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

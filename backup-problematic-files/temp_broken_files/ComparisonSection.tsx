@@ -43,4 +43,3 @@ export function ComparisonSection() {;
           </div>;
         </div>;
       </div>;
-

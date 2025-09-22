@@ -1,17 +1,8 @@
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useCallback, useMemo, useState } from 'react',
@@ -23,17 +14,10 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps  } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 export type Slide = any;
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react';
 import Head from 'next/head';
 interface Slide {
@@ -65,41 +49,17 @@ function SlidePreview({
 export const getServerSideProps: GetServerSideProps = async ctx => {
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const result = await requireAdminRole(ctx);
   // @ts-ignore
   if ('redirect' in result) return result;
   return result;
-<<<<<<< HEAD
 }
 export default function PitchGenerator() {
   const [builder, setBuilder] = useState<BuilderState>({
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-
-
-  const result = await requireAdminRole(ctx);
-  // @ts-ignore;
-  if ('redirect' in result) return result;
-  return result;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD:pages/admin/pitch-generator.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     mission: ''
     fundingStage: ''
     vision: ''
@@ -118,10 +78,7 @@ export default function PitchGenerator() {;
     targetRaise: '',;
     assets: [],;
 
-
 =======
-<<<<<<< HEAD
-
 };
 export default function PitchGenerator() {;
   const [builder, setBuilder] = useState<BuilderState>({;
@@ -131,10 +88,6 @@ export default function PitchGenerator() {;
     roundType: '',;
     targetRaise: '',;
     assets: [],;
-
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 }
@@ -167,55 +120,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
     targetRaise: '',
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/pitch-generator.tsx
-<<<<<<< HEAD
     assets: [],;
 <<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-    assets: [],;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-    setLoading(true);
-    try {
-      const res = await fetch('/api/admin/pitch/metrics');
-      const data = await res.json();
-      return data;
-    } catch (e) {
-      return {}
-    } finally {
-      setLoading(false);    }
-=======
-<<<<<<< HEAD
-  const [history, setHistory] = useState<;
-    { id: string; createdAt: string, version: string }[];
-  >([]);
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -230,11 +147,6 @@ function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: bo
     <button onClick={onClick} className={`w-56 shrink-0 border rounded-md p-3 text-left bg-white/70 dark:bg-gray-900 ${isActive ? 'ring-2 ring-blue-500' : 'border-gray-200 dark:border-gray-800'}`}>
       <div className="font-semibold text-sm line-clamp-2">{slide.title || 'Untitled'}</div>
       <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap">{slide.content || '—'}</div>
-
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     assets: [],
@@ -244,41 +156,8 @@ function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: bo
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-const [history, setHistory] = useState<
-    { id: string; createdAt: string; version: string }[]
-  >([]);
-
-  const activeSlide = slides[activeIndex];
-  const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    const files = Array.from(e.dataTransfer.files || []);
-setBuilder(b => ({ ...b, assets: [...b.assets, ...files] }));
-  }, []);
-
-  const prevent = (e: React.DragEvent) => {
-    e.preventDefault();
-e.stopPropagation();
-  };
-
-  const operatorPrompt = useMemo(
-    () =>
-      `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`
-    []
-  );
-
-  const autoFetchMetrics = useCallback(async () => {
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/pitch-generator.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -286,32 +165,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     try {
       const res = await fetch('/api/admin/pitch/metrics');
       const data = await res.json();
-<<<<<<< HEAD
-      return data;
-
-=======
-
-  const activeSlide = slides[activeIndex];
-
-
-
-  const onAssetDrop = useCallback((e: React && React.DragEvent<HTMLDivElement>) => {;
-    e && e.preventDefault();
-    const files = Array && Array.from(e && e.dataTransfer.files || []);
-    setBuilder(b => ({ ...b, assets: [...b && b.assets, ...files] }));  }, []);
-  const prevent = (e: React && React.DragEvent) => {;
-    e && e.preventDefault();
-    e && e.stopPropagation(),;
-  };
-  const operatorPrompt = useMemo(;
-    () =>;
-      `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`,;
-    [];
-
-
-  );
-  const autoFetchMetrics = useCallback(async () => {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+return data;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
@@ -325,16 +179,8 @@ return data;
     } finally {
       setLoading(false);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }, []);
 
   const prevent = (e: React.DragEvent) => {}
@@ -348,14 +194,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setLoading(true);
     try {;'
       const res = await fetch('/api/admin/pitch/metrics');
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     >;
       <div className='font - semibold text - sm line - clamp - 2'>;
 =======
@@ -385,19 +225,8 @@ if (return result) {}
       const res = await fetch ('/api / admin / pitch / metrics');
       const data = await res.json ();
       return data;
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-    } catch (e) {;
-      return {};
-    } finally {;
-      setLoading(false);    }
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
@@ -407,18 +236,8 @@ if (return result) {}
     setLoading(true);
     try {;
       const metrics = await autoFetchMetrics();
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const res = await fetch('/api/admin/pitch/generate', {
@@ -439,16 +258,8 @@ operatorPrompt,
 setHistory(h => [
         { id: uid(), createdAt: new Date().toISOString(), version: v },
         ...h,
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -459,15 +270,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setLoading(false);
     }
   }, [autoFetchMetrics, builder, operatorPrompt]);
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
 
-
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
         });
         const json = await res.json ();
         set_slides (arr =>;
@@ -475,28 +281,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             index === idx;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-  const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),;
-  const activeSlide = slides[activeIndex];
-  const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {;
-    e.preventDefault();
-    const files = Array.from(e.dataTransfer.files || []);
-    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }));
-  }, []),;
-  const prevent = (e: React.DragEvent) => {;
-    e.preventDefault();
-    e.stopPropagation();
-  };
-  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []),;
-  const autoFetchMetrics = useCallback(async () => {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
     setLoading(true);
@@ -504,9 +290,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       const res = await fetch('/api/admin/pitch/metrics');
       const data = await res.json();
       return data;
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD
-    } catch (e) {
+:pages_backup/admin/pitch-generator.tsx
+} catch (e) {
       return {}
     } finally {
       setLoading(false);    }
@@ -556,21 +341,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ? {
                   ...s
                   title: json.title |s.title
                   content: json.content |s.content
-<<<<<<< HEAD
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const rephraseSlide = useCallback(;
     async (idx: number) => {;
       if (!slides[idx]) return;
@@ -589,24 +366,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ...s,;
                   title: json && json.title || s && s.title,;
                   content: json && json.content || s && s.content,;
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  const addSlide = useCallback(async () => {
-=======
-                }
-
-    },;
-    [slides];
-
-  );
-  const addSlide = useCallback(async () => {;
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (error) {
       return {  } catch (error) {
     console.error("Error:", error);
@@ -675,32 +436,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   }, [slides]),;
   const addSlide = useCallback(async () => {;
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    setLoading(true);
-    try {;
-      const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
       const json = await res.json();
-
-=======
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
     setLoading(true);
     try {;'
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
@@ -720,17 +464,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } finally {;
       setLoading(false);    }
 
-
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    setLoading(true);
-    try {;
-      const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 }
@@ -773,16 +509,8 @@ const res = await fetch('/api/admin/pitch/export', {
         body: JSON.stringify({ slides, format: 'pdf', version: versionTag }),
       });
       const blob = await res.blob();
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const url = URL.createObjectURL(blob);
 =======
 
@@ -793,8 +521,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       a.download = `pitch-deck-${versionTag |'draft'}.pdf`;
       a.click();
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/pitch-generator.tsx
-<<<<<<< HEAD
 
 <<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
@@ -804,13 +530,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       if (json && json.url) {;
         window.open(json.url, '_blank');
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -825,7 +544,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   }, [slides, versionTag]),
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
@@ -838,23 +556,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-      URL.revokeObjectURL(url)
-    } catch (e) {
-    } finally {
-      setLoading(false)
-    }
-
-=======
-  const updateActiveSlide = (updates: Partial<Slide>) => {
-    setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
-  },
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 URL.revokeObjectURL(url);
     } catch (e) {
     } finally {
@@ -865,10 +566,7 @@ URL.revokeObjectURL(url);
   const exportGoogleSlides = useCallback(async () => {
     setLoading(true);
     try {
-<<<<<<< HEAD
-
-
-  }, [slides && slides.length]);
+}, [slides && slides.length]);
   const exportPdf = useCallback(async () => {;
     setLoading(true);
     try {;
@@ -900,36 +598,6 @@ URL.revokeObjectURL(url);
         }),;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
-const res = await fetch('/api/admin/pitch/export', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          slides
-          format: 'gslides'
-          version: versionTag
-        })
-      });
-      const json = await res.json();
-      if (json && json.url) {
-        window.open(json.url, '_blank');
-      }
-    } catch (e) {
-    } finally {
-      setLoading(false);
-    }
-  }, [slides, versionTag]);
-  const updateActiveSlide = (updates: Partial<Slide>) => {
-setSlides(arr =>
-      arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
-    );
-  };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const renderChartPreview = (slide: Slide) => {
-    if (!slide.chart) return null,
-    const { type, data } = slide.chart,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
       });
@@ -942,8 +610,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setLoading(false);    }
   }, [slides, versionTag]);
 
-
-
   const updateActiveSlide = (updates: Partial<Slide>) => {;
     setSlides(arr =>;
       arr && arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s));
@@ -952,52 +618,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const renderChartPreview = (slide: Slide) => {;
     if (!slide && slide.chart) return null,;
     const { type, data } = slide && slide.chart;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
-<<<<<<< HEAD
-
-
-    return (
+return (
 <<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-    return (
-<<<<<<< HEAD:pages/admin/pitch-generator.tsx
-<<<<<<< HEAD
-
-
-    return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
         <div className="flex gap-2 items-end h-24 mt-2">
           {type === 'bar' && data.map((d) => (
             <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          ))}
-=======
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='mt-3'>
@@ -1014,22 +648,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 title={`${d.label}: ${d.value}`}
               />
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {type === 'funnel' && (
             <div className="w-full">
               <div className="flex flex-col gap-1">
                 {data.map((d, idx) => (
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1047,14 +671,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {type === 'timeline' && (
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 "
@@ -1085,12 +701,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {type === 'timeline' && (
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
@@ -1101,223 +713,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="font-medium">{d.label}</div>
                   <div>{d.value}</div>
                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-              disabled={loading || slides && slides.length === 0}
-              className='px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50'>;
-              Download PDF;
-            </button>;
-            <button
-              onClick={exportGoogleSlides}
-              disabled={loading || slides && slides.length === 0}
-              className='px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50'>;
-              : s));
-      } catch (e) {
-      } finally {
-        set_loading (false);
-      }
-    },
-    [slides]);
-  const add_slide = useCallback (async () => {
-    set_loading (true);
-    try {
-      const res = await fetch ('/api / admin / pitch / add - slide', { method: 'POST' });
-      const json = await res.json ();
-      set_slides (arr => [;
-        ...arr,
-        {
-          id: uid (),
-          title: json.title || 'New Slide',
-          content: json.content || '',
-        },
-      ]);
-      setActiveIndex (slides.length);
-    } catch (e) {
-    } finally {
-      set_loading (false);    }
-  }, [slides.length]);
-;
-  const export_pdf = useCallback (async () => {
-    set_loading (true);
-    try {
-      const res = await fetch ('/api / admin / pitch / export', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ slides, format: 'pdf', version: version_tag }),
-      });      const blob = await res.blob ();
-      const url = URL.createObjectURL (blob);
-      const array = document.create_element ('a');
-      a.href = url;
-      a.download = `pitch - deck-${version_tag || 'draft'}.pdf`;
-      a.click ();
-      URL.revokeObjectURL (url);
-    } catch (e) {
-    } finally {
-      set_loading (false);    }
-  }, [slides, version_tag]);
-;
-  const exportGoogleSlides = useCallback (async () => {
-    set_loading (true);
-    try {
-      const res = await fetch ('/api / admin / pitch / export', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({
-          slides,
-          format: 'gslides',
-          version: version_tag,
-        }),
-      });
-      const json = await res.json ();
-      // Check condition
-if ( {) {
-  $2
-}
-        window.open (json.url, '_blank');
-      }
-    } catch (e) {
-    } finally {
-      set_loading (false);    }
-  }, [slides, version_tag]);
-;
-  const updateActiveSlide = (updates: Partial < Slide>) =>: any {
-    set_slides (arr =>;
-      arr.map ((s, i) => (index === active_index ? { ...s, ...updates } : s)));  }
-;
-  const renderChartPreview = (slide: Slide) =>: any {
-    // Check condition
-if (return null, ) {
-  $2
-}
-    const { type, data } = slide.chart;
-    return (
-      <div className='mt - 3'>;
-        <div className='text - xs text - gray - 500 dark:text - gray - 400'>;
-          Chart preview: {type}
-        </div>;
-        <div className='flex gap - 2 items - end h - 24 mt - 2'>;
-          {type === 'bar' &&;
-            data.map (d => (
-              <div;
-                key={d.label}
-                className='bg - blue - 500 w - 6';
-                style={{ height: `${Math.max (4, d.value)}px` }}
-                title={`${d.label}: ${d.value}`}
-              />))}
-          {type === 'funnel' && (
-            <div className='w - full'>;
-              <div className='flex flex - col gap - 1'>;
-                {data.map ((d, idx) => (
-                  <div;
-                    key={d.label}
-                    className='bg - purple - 500 text - white text - xs px - 2 py - 1';
-                    style={{ width: `${100 - idx * 12}%` }}
-                  >;
-                    {d.label}: {d.value}
-                  </div>                ))}
-              </div>;
-            </div>)}
-          {type === 'timeline' && (
-            <div className='text - xs grid grid - cols - 4 gap - 2 w - full'>;
-              {data.map (d => (
-                <div key={d.label} className='border p - 1 rounded'>;
-                  <div className='font - medium'>{d.label}</div>                  <div>{d.value}</div>;
-                </div>))}
-            </div>)}
-        </div>;
-      </div>);
-  }
-;
-  return (
-    <>;
-      <Head>;
-        <title > Pitch Generator - Admin</title>;
-        <meta name="description" content="Generate pitch decks and presentations" />;
-      </Head>;
-      <div className='space - y-6'>;
-        <div className='flex items - center justify - between'>;
-          <h1 className='text - 2xl font - semibold'>Pitch Generator</h1>;
-          <div className='flex gap - 2'>;
-            <button;
-              on_click={build_deck}
-              disabled={loading}
-              className='px - 3 py - 2 rounded bg - blue - 600 text - white disabled:opacity - 50';
-            >;
-              Generate Deck;
-            </button>;
-            <button;
-              on_click={export_pdf}
-              disabled={loading || slides.length === 0}
-              className='px - 3 py - 2 rounded bg - gray - 900 text - white disabled:opacity - 50';
-            >;
-              Download PDF;
-            </button>;
-            <button;
-              on_click={exportGoogleSlides}
-              disabled={loading || slides.length === 0}
-              className='px - 3 py - 2 rounded bg - green - 600 text - white disabled:opacity - 50';
-            >;
-
-              Export to Google Slides;
-            </button>;
-          </div>;
-        </div>;
-
-                className='w-full border rounded px-2 py-1 bg-transparent';
-              />;
-
-
-              <div
-                onDrop={onAssetDrop}
-                onDragOver={prevent}
-                onDragEnter={prevent}
-
-                className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'
-              >
-                Refresh
-              </button>
-              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-'
-          {type === 'timeline' && ("
-            <div className="text-xs grid grid-cols-4 gap-2 w-full">
-
-              {data.map((d) => ("
-                <div key={d.label} className="border p-1 rounded">"
-                  <div className="font-medium">{d.label}</div>
-                  <div>{d.value}</div>
-                </div>
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
         </div>
       </div>
     )
   };
 
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+:pages_backup/admin/pitch-generator.tsx
   return (
 =======
-<<<<<<< HEAD
 
-=======
-=======
-<<<<<<< HEAD
-        </div>
-      </div>
-    );
-  }
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ))  } catch (error) {
@@ -1336,12 +742,9 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+:pages_backup/admin/pitch-generator.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
         </div>
@@ -1349,21 +752,9 @@ if (return null, ) {
     )
   },
 
-
   return (
 
-
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-=======
-=======
-          {type === 'timeline' && (
-            <div className="text-xs grid grid-cols-4 gap-2 w-full">
-              {data.map((d) => (
-                <div key={d.label} className="border p-1 rounded">
-                  <div className="font-medium">{d.label}</div>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <div
@@ -1388,23 +779,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/pitch-generator.tsx
-<<<<<<< HEAD
     )
   };
-
-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))  } catch (error) {
     console.error("Error:", error);
-=======
-
-
-
-              ))  } catch (error) {"
-    console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1415,24 +795,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-
-
         </div>
       </div>
     )
   },
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 );
@@ -1446,7 +818,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
   return (
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
@@ -1454,21 +825,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <Head>
         <title>Pitch Generator - Admin</title>
       </Head>
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
@@ -1481,8 +841,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <button onClick={exportGoogleSlides} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50">Export to Google Slides</button>
           </div>
         </div>
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1501,19 +860,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <select value={builder.roundType} onChange={(e) => setBuilder({ ...builder, roundType: e.target.value as any })} className="w-full border rounded px-2 py-1 bg-transparent">
                 <option value="">Select</option>
                 <option>Seed</option>
-
-=======
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -1579,17 +926,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 onDragEnter={prevent}
                 className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'
               >
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
@@ -1597,30 +937,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
               </div>
             </div>
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">Auto Data</div>
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -1633,26 +958,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Refresh
               </button>
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
               <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">Auto Data</div>
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-=======
-              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+:pages_backup/admin/pitch-generator.tsx
 =======
                 <li>Active users (30d)</li>
 
@@ -1686,15 +1001,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li>Active users (30d)</li>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1711,8 +1020,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
@@ -1726,23 +1034,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
 
               </div>'
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+:pages_backup/admin/pitch-generator.tsx
 =======
 
                 Version: {versionTag || '—'}
@@ -1770,17 +1066,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;'
               <div className='font-medium mb-2'>Auto Data</div>;
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
               <button
                 onClick={autoFetchMetrics}
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-              <button;
-                onClick={autoFetchMetrics}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
                 className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'>;
                 Refresh;
               </button>;'
@@ -1801,27 +1090,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <ul className='mt-2 space-y-1 text-sm'>;
                 {history && history.map(h => (;
 
-
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <li
-=======
-                  <li
-<<<<<<< HEAD:pages/admin/pitch-generator.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                  <li
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
                     key={h && h.id}
 =======
-
 
                   <li;
                     key={h && h.id}'
@@ -1831,17 +1107,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className='text-gray-500 dark:text-gray-400'>;
                       {new Date(h && h.createdAt).toLocaleString()}
                     </span>                  </li>;
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
 
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
@@ -1853,16 +1121,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
                   </li>
 
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
                 ))}
@@ -1882,16 +1144,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='mt-3 flex gap-3 overflow-x-auto py-2'>;
                 {slides && slides.map((s, i) => (;
 
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
-=======
-                  <li
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
                     key={h.id}
@@ -1917,17 +1171,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <div className='mt-3 flex gap-3 overflow-x-auto py-2'>
                 {slides.map((s, i) => (
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
@@ -1941,15 +1188,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     onClick={() => setActiveIndex(i)}
                   />;
                 ))}
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
                 <button
                   onClick={addSlide}
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
 
                   className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'>;
         <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6'>;
@@ -2067,18 +1310,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     is_active={index === active_index}
                     on_click={() => setActiveIndex (i)}
                   />))}
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
                 <button;
                   onClick={addSlide}
 
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
 =======
                 <button;
                   on_click={add_slide}
@@ -2090,15 +1327,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>;
               </div>;
             </div>;
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
@@ -2119,15 +1350,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       on_click={() => rephrase_slide (active_index)}
                       disabled={loading}'
                       className='px - 2 py - 1 rounded bg - blue - 600 text - white text - sm disabled:opacity - 50';
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
@@ -2139,13 +1364,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </button>;
                   </div>;
                 </div>;
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
 
                 />;
                 <div className='mt-4 grid grid-cols-3 gap-2 text-sm'>;
@@ -2163,12 +1384,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         },;
                       });
 
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
                     }
 =======
 
@@ -2178,14 +1395,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >;
                     Bar Chart;
                   </button>;
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
                   <button
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
 
                     onClick={() =>;
                       updateActiveSlide({;
@@ -2199,12 +1412,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         },;
                       });
 
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
                     }
 =======
                   <button;
@@ -2214,14 +1423,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >;
                     Funnel;
                   </button>;
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
                   <button
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
 
                     onClick={() =>;
                       updateActiveSlide({;
@@ -2235,12 +1440,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         },;
                       });
 
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
                     }
 =======
                   <button;
@@ -2251,61 +1452,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Timeline;
                   </button>;
                 </div>              </div>;
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 }
 }
 }
-=======
-
-=======
-
-          <div className="lg:col-span-2 space-y-4">
-            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
-              <div className="flex items-center justify-between">
-                <div className="font-medium">Slides</div>
-<div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>
-              </div>
-              <div className="mt-3 flex gap-3 overflow-x-auto py-2">
-                {slides.map((s, i) => (
-                  <SlidePreview key={s.id} slide={s} isActive={i === activeIndex} onClick={() => setActiveIndex(i)} />
-                ))}
-                <button onClick={addSlide} className="w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500">+ Add Slide</button>
-              </div>
-            </div>
-            {activeSlide && (
-              <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
-                <div className="flex items-center justify-between">
-                  <input value={activeSlide.title} onChange={(e) => updateActiveSlide({ title: e.target.value })} className="font-semibold text-lg bg-transparent border-b focus:outline-none" />
-                  <div className="flex gap-2">
-                    <button onClick={() => rephraseSlide(activeIndex)} disabled={loading} className="px-2 py-1 rounded bg-blue-600 text-white text-sm disabled:opacity-50">Rephrase</button>
-                  </div>
-                </div>
-                <textarea value={activeSlide.content} onChange={(e) => updateActiveSlide({ content: e.target.value })} className="w-full mt-3 border rounded px-2 py-1 bg-transparent" rows={10} />
-                <div className="mt-4 grid grid-cols-3 gap-2 text-sm">
-                  <button onClick={() => updateActiveSlide({ chart: { type: 'bar', data: [{ label: 'Q1', value: 20 }, { label: 'Q2', value: 40 }, { label: 'Q3', value: 60 }, { label: 'Q4', value: 80 }] } })} className="border rounded px-2 py-1">Bar Chart</button>
-                  <button onClick={() => updateActiveSlide({ chart: { type: 'funnel', data: [{ label: 'Visitors', value: 100 }, { label: 'Signups', value: 40 }, { label: 'Projects', value: 15 }] } })} className="border rounded px-2 py-1">Funnel</button>
-                  <button onClick={() => updateActiveSlide({ chart: { type: 'timeline', data: [{ label: 'MVP', value: 2023 }, { label: 'Seed', value: 2024 }, { label: 'Series A', value: 2025 }] } })} className="border rounded px-2 py-1">Timeline</button>
-                </div>
-                {renderChartPreview(activeSlide)}
-              </div>
-
-            )}
-<<<<<<< HEAD
-          </div>
-        </div>
-</main>
-    </>
-  );
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
@@ -2316,58 +1467,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-          <div className="lg:col-span-2 space-y-4">
-            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
-              <div className="flex items-center justify-between">
-                <div className="font-medium">Slides</div>
-<div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>
-              </div>
-              <div className="mt-3 flex gap-3 overflow-x-auto py-2">
-                {slides.map((s, i) => (
-                  <SlidePreview key={s.id} slide={s} isActive={i === activeIndex} onClick={() => setActiveIndex(i)} />
-                ))}
-                <button onClick={addSlide} className="w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500">+ Add Slide</button>
-              </div>
-            </div>
-            {activeSlide && (
-              <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
-                <div className="flex items-center justify-between">
-                  <input value={activeSlide.title} onChange={(e) => updateActiveSlide({ title: e.target.value })} className="font-semibold text-lg bg-transparent border-b focus:outline-none" />
-                  <div className="flex gap-2">
-                    <button onClick={() => rephraseSlide(activeIndex)} disabled={loading} className="px-2 py-1 rounded bg-blue-600 text-white text-sm disabled:opacity-50">Rephrase</button>
-                  </div>
-                </div>
-                <textarea value={activeSlide.content} onChange={(e) => updateActiveSlide({ content: e.target.value })} className="w-full mt-3 border rounded px-2 py-1 bg-transparent" rows={10} />
-                <div className="mt-4 grid grid-cols-3 gap-2 text-sm">
-                  <button onClick={() => updateActiveSlide({ chart: { type: 'bar', data: [{ label: 'Q1', value: 20 }, { label: 'Q2', value: 40 }, { label: 'Q3', value: 60 }, { label: 'Q4', value: 80 }] } })} className="border rounded px-2 py-1">Bar Chart</button>
-                  <button onClick={() => updateActiveSlide({ chart: { type: 'funnel', data: [{ label: 'Visitors', value: 100 }, { label: 'Signups', value: 40 }, { label: 'Projects', value: 15 }] } })} className="border rounded px-2 py-1">Funnel</button>
-                  <button onClick={() => updateActiveSlide({ chart: { type: 'timeline', data: [{ label: 'MVP', value: 2023 }, { label: 'Seed', value: 2024 }, { label: 'Series A', value: 2025 }] } })} className="border rounded px-2 py-1">Timeline</button>
-                </div>
-                {renderChartPreview(activeSlide)}
-              </div>
-
-            )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
 
 }
 }
 }
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
@@ -2436,16 +1545,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
           </div>;
@@ -2453,17 +1556,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>;
     </>;
   );
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
@@ -2478,28 +1573,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   value={active_slide.content}
                   on_change={e => updateActiveSlide ({ content: e.target.value })}'
                   className='w - full mt - 3 border rounded px - 2 py - 1 bg - transparent';
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
-              <div className='font-medium mb-2'>History</div>
-              <div className='text-xs text-gray-500 dark:text-gray-400'>
-<<<<<<< HEAD
-                Version: {versionTag |'—'}
-=======
-                Version: {versionTag || '—'}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
-=======
-
-              </div>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
                   <li;
@@ -2528,7 +1605,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
               </ul>
             </div>
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
           </div>'
           <div className='lg:col-span-2 space-y-4'>'
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>'
@@ -2541,44 +1618,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='mt-3 flex gap-3 overflow-x-auto py-2'>
                 {slides.map((s, i) => (
                   <SlidePreview;
-=======
-          </div>
-          <div className='lg:col-span-2 space-y-4'>
-            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
-              <div className='flex items-center justify-between'>
-                <div className='font-medium'>Slides</div>
-                <div className='text-sm text-gray-500 dark:text-gray-400'>
-                  {slides.length} total
-                </div>
-              </div>
-              <div className='mt-3 flex gap-3 overflow-x-auto py-2'>
-                {slides.map((s, i) => (
-                  <SlidePreview
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
                     key={s.id}
                     slide={s}
                     isActive={i === activeIndex}
                     onClick={() => setActiveIndex(i)}
                   />
                 ))}
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
                 <button;
                   onClick={addSlide}'
                   className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'
                 >
                   + Add Slide;
-=======
-                <button
-                  onClick={addSlide}
-                  className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'
-                >
-                  + Add Slide
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
                 </button>
               </div>
             </div>
             {/* Active Slide Editor */}
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
             {activeSlide && ('
               <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>'
                 <div className='flex items-center justify-between'>
@@ -2601,15 +1657,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   value={activeSlide.content}
                   onChange={e => updateActiveSlide({ content: e.target.value })}'
                   className='w-full mt-3 border rounded px-2 py-1 bg-transparent'
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
 =======
             {activeSlide && (
               <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
@@ -2685,27 +1734,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         },
                       });
                     }
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
                     className='border rounded px - 2 py - 1';
                   >;
                     Timeline;
                   </button>;
                 </div>              </div>)}
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/pitch-generator.tsx
           </div>;
@@ -2713,14 +1753,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 </main>;
     </>);
 ;
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
@@ -2728,16 +1763,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
-              <div className='font-medium mb-2'>History</div>
-              <div className='text-xs text-gray-500 dark:text-gray-400'>
-                Version: {versionTag |'—'}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
@@ -2805,16 +1833,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -2832,29 +1853,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 </main>
     </>
   );
-<<<<<<< HEAD:pages_backup/admin/pitch-generator.tsx
-<<<<<<< HEAD
+:pages_backup/admin/pitch-generator.tsx
 <<<<<<< HEAD:pages/admin/pitch-generator.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/pitch-generator.tsx
-=======
-
-
-
-
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/pitch-generator.tsx
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

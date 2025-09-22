@@ -1,22 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-            // Simple conflict resolution - take the incoming change
-
-
-            // Simple conflict resolution - take the incoming change
-            const resolved = content.replace(/\n<<<<<<<[\s\S]*?=======[\s\S]*?>>>>>>>\n/g, '\n');
+[\s\S]*?>>>>>>>\n/g, '\n');
             // Simple conflict resolution - take the incoming change
 
 main
-=======
 
             // Simple conflict resolution - take the incoming change
             const resolved = content.replace(/\n<<<<<<<[\s\S]*?[\s\S]*?>>>>>>>\n/g, '\n');
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
             // Simple conflict resolution - take the incoming change;
             const resolved = content.replace(/\n<<<<<<<[\s\S]*?
@@ -28,7 +16,6 @@ main
         // Commit the resolution;
         try {
   // TODO: Implement
-
 
   async generateWorkflowReport() {
     const report = {
@@ -49,7 +36,6 @@ main
 
     if (report.branchStatus && report.branchStatus.hasChanges) {
 
-
     const oldBranches = report.localBranches.filter(branch =>)
       !this.config.protectedBranches.includes(branch) &&
       branch !== report.currentBranch;
@@ -66,7 +52,6 @@ main
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
 
-
       // Generate workflow report;
       const report = await this.generateWorkflowReport();
       await this.saveReport(report);
@@ -78,37 +63,14 @@ main
       // Resolve any merge conflicts;
       await this.resolveMergeConflicts();
 
-
       process.exit(1);
 
 // Run if called directly;
 if (require.main === module) {
   const automator = new GitWorkflowAutomator();
   automator.run();
-<<<<<<< HEAD
-}
-
-<<<<<<< HEAD
-module.exports = GitWorkflowAutomator;'
-
-module.exports = GitWorkflowAutomator;
-
 
 '
-module.exports = GitWorkflowAutomator;'
-
-main
-=======
-
-
-
-
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
@@ -177,4 +139,3 @@ execSync(`"git": add ${file}, { "cwd": this.projectRoo,t, "stdio"`})
           this.log(' "Merge")
 execSync(`git add ${file}, { "cwd": this.projectRoot, "stdio"`})
   git commit -m '"fix"
-

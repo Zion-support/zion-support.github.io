@@ -51,4 +51,3 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           Cancel;
         </Button>;
         <Button onClick={onConfirm} disabled={isLoading}>;
-

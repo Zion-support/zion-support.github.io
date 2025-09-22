@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,19 +9,11 @@ import { ProductListingCard } from "@/components/ProductListingCard",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
 export function DynamicListingPage({
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
+:src/components/DynamicListingPage.tsx
 =======
 export function DynamicListingPage({}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
@@ -37,36 +28,23 @@ export function DynamicListingPage({}
         ? prev.filter(c => c !== category)
         : [...prev, category]
     )
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
-
 
   },
   const clearCategories = () => setSelectedCategories([]),
   const [view, setView] = useState<ListingView>("grid"),"
   const isGrid = view === "grid",
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 
 <<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
   // Swap icons to match action
-=======
-;
-  // Swap icons to match action;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
   const ToggleViewIcon = isGrid ? (
     <List className='h-4 w-4' />
   ) : (
 
-
     if (min == null || max == null || isNaN(min) || isNaN(max)) return;
-
 
     setCurrentPriceFilter([min, max])'
 import { useState, useEffect } from 'react';'
@@ -80,13 +58,8 @@ import { ProductListingCard  } from '@/components / ProductListingCard';'
 import { Button  } from '@/components / ui / button';'
 import { Input  } from '@/components / ui / input';'
 import { log_info, logErrorToProduction } from '@/utils / production_logger';
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
 import {
 =======
 import {}
@@ -95,8 +68,7 @@ import {}
   SelectValue,
   SelectTrigger,
   SelectContent,
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 <<<<<<< HEAD
   SelectItem} from "@/components/ui/select",
 import { Checkbox } from "@/components/ui/checkbox",
@@ -109,8 +81,6 @@ import { toast } from "@/hooks/use-toast",
 import { captureException } from "@/utils/sentry",
 interface PriceRange {
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   min: number,
   max: number
 import { useState, useEffect } from "react",;
@@ -137,7 +107,6 @@ import { captureException } from "@/utils/sentry",;
 interface PriceRange {;
   min: number,;
   max: number;
-<<<<<<< HEAD
 }
 ;
 interface DynamicListingPageProps {;
@@ -184,34 +153,6 @@ export function DynamicListingPage({
   const [priceRange, setPriceRange] = useState<PriceRange>({
     min: 0,
     max: 10000}),
-
-=======
-=======
-  SelectItem,
-} from '@/components / ui / select';
-import { Checkbox } from '@/components / ui / checkbox';
-import Skeleton from 'react - loading - skeleton';
-import 'react - loading - skeleton / dist / skeleton.css';
-import { Slider } from '@/components / ui / slider';
-import { ProductListing, ListingView } from '@/types / listings';
-import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react';
-import { toast } from '@/hooks / use - toast';
-import { capture_exception } from '@/utils / sentry';
-interface PriceRange {
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
-=======
-  SelectItem,';
-} from '@/components / ui / select';'
-import { Checkbox } from '@/components / ui / checkbox';'
-import Skeleton from 'react - loading - skeleton';'
-import 'react-loading-skeleton/dist/skeleton.css';
-import { Slider } from '@/components / ui / slider';'
-import { ProductListing, ListingView } from '@/types / listings';'
-import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react';'
-import { toast } from '@/hooks / use - toast';'
-import { capture_exception } from '@/utils / sentry';
-interface PriceRange {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
   min: number;
 max: number;
 }interface DynamicListingPageProps {}
@@ -262,12 +203,10 @@ function DynamicListingPage() {}
     new Set (all_listings.map (l => l.availability).filter (Boolean)));
   useEffect (() => {}
     const listingsWithPrice = all_listings.filter (l => l.price !== null);
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
     // Check condition
 if ( {) {
   $2
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
 interface DynamicListingPageProps {;
@@ -306,8 +245,7 @@ export function DynamicListingPage({
     if (min == null || max == null || isNaN(min) || isNaN(max)) return;
 
     setCurrentPriceFilter([min, max])
-<<<<<<< HEAD
-  }
+}
   },
   const clearCategories = () => setSelectedCategories([]),
   const [view, setView] = useState<ListingView>("grid"),
@@ -321,15 +259,6 @@ export function DynamicListingPage({
   let filteredListings: ProductListing[] = []
   try {
     filteredListings = allListings.filter(listing => {      const matchesSearch = null;    <LayoutGrid className="h-4 w-4" />
-=======
-
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
-
-    filteredListings = allListings.filter(listing => {      const matchesSearch = null;
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
 =======
     // Check condition;
 if ( {) {}
@@ -362,18 +291,12 @@ if ( {) {}
     min: 0,
     max: 10000}),
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
   const [selectedBrand, setSelectedBrand] = useState("all"),
   const [specQuery, setSpecQuery] = useState(""),
   const [selectedAvailability, setSelectedAvailability] = useState("all"),
-=======
-  const [selectedRating, setSelectedRating] = useState<number | null>(null),"
-  const [selectedBrand, setSelectedBrand] = useState("all"),"
-  const [specQuery, setSpecQuery] = useState(""),"
-  const [selectedAvailability, setSelectedAvailability] = useState("all"),"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
   const [sortOption, setSortOption] = useState("newest"),
 
   const brandOptions = Array.from(
@@ -401,28 +324,16 @@ if ( {) {}
   },
 
   let filteredListings: ProductListing[] = [],
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
   try {
     filteredListings = allListings.filter((listing) => {
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
       const matchesSearch =
 
 <<<<<<< HEAD
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-  try {}
-    filteredListings = allListings.filter((listing) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
       const matchesSearch =
-
-
-
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
         !searchQuery ||
@@ -430,29 +341,18 @@ if ( {) {}
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (listing.tags &&
           listing.tags.some((tag: string) =>
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-<<<<<<< HEAD
-            tag.toLowerCase().includes(searchQuery.toLowerCase()))),
+:src/components/DynamicListingPage.tsx
+tag.toLowerCase().includes(searchQuery.toLowerCase()))),
 
       const matchesBrand =
         selectedBrand === "all" ||
         (listing.brand && listing.brand === selectedBrand),
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
 
       const matchesSpecs =
         !specQuery ||
         (listing.specifications &&
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           listing.specifications.some((s) =>
@@ -469,24 +369,12 @@ if ( {) {}
         selectedCategories.length === 0 ||
         selectedCategories.includes(listing.category),
 
-
       const matchesPrice =
         listing.price === null ||
         (listing.price >= currentPriceFilter[0] &&
-<<<<<<< HEAD
-          listing.price <= currentPriceFilter[1]),
+listing.price <= currentPriceFilter[1]),
 
       const matchesRating =
-=======
-
-          listing.price <= currentPriceFilter[1]),
-
-
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
@@ -502,8 +390,7 @@ if ( {) {}
         matchesSpecs &&
         matchesAvailability;
       )
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-<<<<<<< HEAD
+:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
     }),
     filteredListings.sort((a, b) => {
@@ -515,9 +402,6 @@ if ( {) {}
           return (b.rating || 0) - (a.rating || 0),
         case "newest":
         default:
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
 
     filtered_listings = all_listings.filter (listing => {      const matches_search =;
         !search_query ||;
@@ -569,14 +453,8 @@ if ( {) {}
         case 'newest':;
         default:;
 
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src/components/DynamicListingPage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
           return (
             new Date(b.createdAt).getTime() -
             new Date(a.createdAt).getTime()
@@ -701,19 +579,13 @@ export function DynamicListingPage({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
     });
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
   } catch (error) {;
     captureException(error),;
     logErrorToProduction('Listing filter error:', { data: error });
-=======
-  } catch (error) {}
-    capture_exception (error);'
-    logErrorToProduction ('Listing filter error:', { data: error });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
   }
 
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-<<<<<<< HEAD
+:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   const handleRequestQuote = (listingId: string) => {
@@ -727,17 +599,6 @@ export function DynamicListingPage({;
         toast({
           title: "Quote Requested",
           description: `Your quote request for ${listing.title} has been sent.`}),
-
-=======
-
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
   const handleRequestQuote = (listingId: string) => {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -745,32 +606,21 @@ export function DynamicListingPage({;
     const listing = allListings.find(item => item.id === listingId);
     setTimeout(() => {;
 
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
-
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
+:src/components/DynamicListingPage.tsx
       setIsLoading(false);      if (listing) {
         toast({
           title: 'Quote Requested'
           description: `Your quote request for ${listing.title} has been sent.`
         })
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-<<<<<<< HEAD
+:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         router.push ('/request - quote');
 
       }
     }, 500);
   }
-<<<<<<< HEAD
-    const listing = allListings.find((item) => item.id === listingId),
+const listing = allListings.find((item) => item.id === listingId),
 
     setTimeout(() => {
       setIsLoading(false),
@@ -779,103 +629,20 @@ export function DynamicListingPage({;
           title: "Quote Requested",
           description: `Your quote request for ${listing.title} has been sent.`}),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
           serviceType: categorySlug,
           specificItem: {
-<<<<<<< HEAD
-            id: listing.id,
+id: listing.id,
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0]}},
-        
+
         if (typeof window !== 'undefined') {
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
         }
 
         router.push("/request-quote")
-=======
-            id: listing.id
-            title: listing.title
-            category: listing.category
-            image: listing.images?.[0]
-          }
-        if (typeof window !== 'undefined') {
-          sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
-        }
-
-<<<<<<< HEAD
-
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { GradientHeading } from '@/components/GradientHeading';
-import { ProductListingCard } from '@/components/ProductListingCard';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';import { useRouter } from 'next/router';
-import { GradientHeading } from "@/components/GradientHeading";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-=======
-      setIsLoading(false);      if (listing) {}
-        toast({'
-          title: 'Quote Requested'
-          description: `Your quote request for ${listing.title} has been sent.`
-        })
-        // Store quote data in sessionStorage for the request-quote page;
-        const quoteData = {}
-          serviceType: categorySlug;
-          specificItem: {}
-            id: listing.id;
-            title: listing.title;
-            category: listing.category;
-            image: listing.images?.[0]
-          }
-  const handleRequestQuote = (listing_id: string) =>: any {}
-    setIsLoading (true);
-    const listing = all_listings.find (item => item.id === listing_id);
-    set_timeout (() => {}
-      setIsLoading (false);      // Check condition;
-if ( {) {}
-  $2;
-}
-        toast ({'
-          title: 'Quote Requested',`
-          description: `Your quote request for ${listing.title} has been sent.`,
-        });
-        // Store quote data in session_storage for the request - quote page;
-        const quote_data = {}
-          service_type: category_slug,
-          specific_item: {}
-            id: listing.id,
-            title: listing.title,
-            category: listing.category,
-            image: listing.images?.[0],
-          },
-        }
-        // Check condition;
-if ( {) {}
-  $2;
-}'
-          session_storage.set_item ('quoteRequestData', JSON.stringify (quote_data));
-        }
-
-'
-import React from 'react';'
-import { useState, useEffect } from 'react';'
-import { useRouter } from 'next/router';'
-import { GradientHeading } from '@/components/GradientHeading';'
-import { ProductListingCard } from '@/components/ProductListingCard';'
-import { Button } from '@/components/ui/button';'
-import { Input } from '@/components/ui/input';import { useRouter } from 'next/router';"
-import { GradientHeading } from "@/components/GradientHeading";"
-import { ProductListingCard } from "@/components/ProductListingCard";"
-import { Button } from "@/components/ui/button";"
-import { Input } from "@/components/ui/input";'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {;
   Select,;
@@ -1037,7 +804,7 @@ export function DynamicListingPage(): any ({;
           );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
     }, 500)
   },
 
@@ -1048,16 +815,6 @@ export function DynamicListingPage(): any ({;
 <<<<<<< HEAD:src/components/DynamicListingPage.tsx
   return (
 <<<<<<< HEAD
-=======
-        router.push('/request-quote')
-      }
-    }, 500)
-=======
-    });
-  } catch (error) {;
-    captureException(error);'
-    logErrorToProduction('Listing filter error:', { data: error });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
   }
         router.push("/request-quote")
       }
@@ -1074,56 +831,24 @@ export function DynamicListingPage(): any ({;
             {description}
           </p>
         </div>
-<<<<<<< HEAD
-=======
-=======
-    const listing = allListings && allListings.find(item => item && item.id === listingId);
 
-    setTimeout(() => {;
-      setIsLoading(false);      if (listing) {;
-        toast({;'
-          title: 'Quote Requested',;`
-          description: `Your quote request for ${listing && listing.title} has been sent.`,;
-        });
-
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-
-
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
         router.push ('/request - quote');
 
       }
     }, 500);
   }
 
-
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
           serviceType: categorySlug
           specificItem: {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-        // Store quote data in sessionStorage for the request-quote page
-        const quoteData = {
-          serviceType: categorySlug
-          specificItem: {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
+:src/components/DynamicListingPage.tsx
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="lg:col-span-1">
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">
@@ -1140,7 +865,6 @@ export function DynamicListingPage(): any ({;
 
   return (
 
-
 "
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">"
           <div className="lg:col-span-1">"
@@ -1152,53 +876,26 @@ export function DynamicListingPage(): any ({;
 "
               <div className="mb-6">"
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-                  Categories
+Categories
                 </label>
                 <div className="space-y-2">
                   {categoryFilters.map(filter => (
 
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src/components/DynamicListingPage.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
-=======
-
-                  Categories;
-                </label>'
-                <div className='space-y-2'>
-                  {categoryFilters.map(filter => (
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                     <div key={filter.value} className="flex items-center">
                       <Checkbox;`
                         id={`cat-${filter.value}`}
                         checked={selectedCategories.includes(filter.value)}
                         onCheckedChange={() => toggleCategory(filter.value)}
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                         className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
                       />
 
-
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 <<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
                       <label
                         htmlFor={`cat-${filter.value}`}
 =======
@@ -1207,22 +904,11 @@ export function DynamicListingPage(): any ({;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer"
                       >
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src/components/DynamicListingPage.tsx
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 =======
-
-                  Categories
-                </label>
-                <div className='space-y-2'>
-                  {categoryFilters.map(filter => (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
 
 ;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
@@ -1232,15 +918,10 @@ export function DynamicListingPage(): any ({;
     setTimeout(() => {;
       setIsLoading(false),;
       if (listing) {;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
         toast({;
           title: "Quote Requested",,
   description: `Your quote request for ${listing.title} has been sent.`}),;
-=======
-        toast({;"
-          title: "Quote Requested",;`
-          description: `Your quote request for ${listing.title} has been sent.`}),;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
         // Store quote data in sessionStorage for the request-quote page;
         const quoteData = {;
           serviceType: categorySlug,;
@@ -1266,7 +947,7 @@ export function DynamicListingPage(): any ({;
             {description}
           </p>;
         </div>;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
           <div className="lg:col-span-1">;
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">;
@@ -1277,21 +958,6 @@ export function DynamicListingPage(): any ({;
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">;
                   Categories;
                 </label>;
-=======
-'
-        <div className='grid grid-cols-1 lg:grid-cols-4 gap-6'>;'
-          <div className='lg:col-span-1'>;'
-            <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6'>;'
-              <h3 className='text-lg font-medium text-white mb-4 flex items-center'>;'
-                <Filter className='mr-2 h-5 w-5' /> Filters;
-              </h3>;
-'
-              <div className='mb-6'>;'
-                <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
-                  Categories;
-                </label>;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                 <div className="space-y-2">;
                   {categoryFilters.map(filter => (;"
                     <div key={filter.value} className="flex items-center">;
@@ -1305,19 +971,8 @@ export function DynamicListingPage(): any ({;
                         htmlFor={`cat-${filter.value}`}"
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer";
                       >;
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
                         {filter.label}
                       </label>;
                     </div>;
@@ -1329,44 +984,19 @@ export function DynamicListingPage(): any ({;
                 </div>
               </div>
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
               {brandOptions.length > 0 && (
                 <div className="mb-6">
                   <label className="text-sm font-medium text-zion-slate-light block mb-2">
                     Brand
                   </label>
                   <Select
-<<<<<<< HEAD
-=======
-
-                          key={b || 'unknown-brand'}
-                          value={b || ''}
-=======
-                </div>;
-              </div>;
-
-              {brandOptions && brandOptions.length > 0 && (;'
-                <div className='mb-6'>;'
-                  <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
-                    Brand;
-                  </label>;
-
-                  <Select;
-'
-                          key={b || 'unknown-brand'}'
-                          value={b || ''}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
-                          className='text-white'>                          {b || 'N/A'}
+className='text-white'>                          {b || 'N/A'}
                         </SelectItem>;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     value={selectedBrand}
                     onValueChange={(value: string) => setSelectedBrand(value)}
                   >"
@@ -1387,48 +1017,25 @@ export function DynamicListingPage(): any ({;
                 </div>;
               )}
 
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-<<<<<<< HEAD
+:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Specifications
                 </label>
-=======
-=======
-
-
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
               <div className='mb-6'>;
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
                   Specifications;
                 </label>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <Input
-<<<<<<< HEAD
-                  type="text"
+type="text"
                   placeholder="Search specifications..."
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   value={specQuery}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>;
                     setSpecQuery(e.target.value);
                   }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
 =======
@@ -1448,44 +1055,23 @@ export function DynamicListingPage(): any ({;
                     setSpecQuery(e && e.target.value);
                   }
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
 
-
-
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
               </div>
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:src_backup/components/DynamicListingPage.tsx
               {availabilityOptions.length > 0 && (
                 <div className="mb-6">
                   <label className="text-sm font-medium text-zion-slate-light block mb-2">
                     Availability
                   </label>
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
-=======
-              {availabilityOptions.length > 0 && ('
-                <div className='mb-6'>'
-                  <label className='text-sm font-medium text-zion-slate-light block mb-2'>
-                    Availability;
-                  </label>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                   className='bg-zion-blue border border-zion-blue-light text-white'                />;
               </div>;
 
@@ -1494,29 +1080,14 @@ export function DynamicListingPage(): any ({;
                   <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
                     Availability;
                   </label>;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Select
-=======
-                  <Select;
-'
-                          key={a || 'unknown-availability'}'
-                          value={a || ''}'
-                          className='text-white'>                          {a || 'N/A'}
-                        </SelectItem>;
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                     value={selectedAvailability}
                     onValueChange={(value: string) =>;
                       setSelectedAvailability(value);
                     }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -1538,15 +1109,9 @@ export function DynamicListingPage(): any ({;
                         All;
                       </SelectItem>
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
                       {availabilityOptions.map((a) => (
                         <SelectItem key={a || 'unknown-availability'} value={a || ''} className="text-white">
 =======
@@ -1556,80 +1121,35 @@ export function DynamicListingPage(): any ({;
                           {a || 'N/A'}
                         </SelectItem>;
                       ))}
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-<<<<<<< HEAD
-                    </SelectContent>
+:src/components/DynamicListingPage.tsx
+</SelectContent>
                   </Select>
                 </div>
               )}
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-                    </SelectContent>;
-                  </Select>;
-                </div>;
-              )}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
 
-
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   Price Range
                 </label>
                 <div className="mt-6 px-2">
                   <Slider
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-"
-              <div className="mb-6">"
-                <label className="text-sm font-medium text-zion-slate-light block mb-2">
-
-
-                  Price Range;
-                </label>'
-                <div className='mt-6 px-2'>
-'
-              <div className='mb-6'>;'
-                <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
-                  Price Range;
-                </label>;'
-                <div className='mt-6 px-2'>;
-                  <Slider;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                     aria-label="Price range"
-
 
                     defaultValue={[0, priceRange.max]}
                     min={0}
-<<<<<<< HEAD
-                    max={priceRange.max}
+max={priceRange.max}
                     step={priceRange.max / 100}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
-=======
-                    max={priceRange && priceRange.max}
-                    step={priceRange && priceRange.max / 100}
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
 
@@ -1638,15 +1158,8 @@ export function DynamicListingPage(): any ({;
                   />"
                   <div className="flex justify-between text-sm text-zion-slate-light">
 
-
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src/components/DynamicListingPage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-                    value={currentPriceFilter}
-                    onValueChange={handleSliderChange}
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
@@ -1655,14 +1168,9 @@ export function DynamicListingPage(): any ({;
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 
-<<<<<<< HEAD
-                    className='mb-4'                  />;
-=======
-'
-                    className='mb-4'                  />;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
+className='mb-4'                  />;
                   <div className='flex justify-between text-sm text-zion-slate-light'>;
                     <span>${currentPriceFilter[0].toLocaleString()}</span>;
                     <span>${currentPriceFilter[1].toLocaleString()}</span>;
@@ -1677,34 +1185,17 @@ export function DynamicListingPage(): any ({;
                 <div className='flex flex-wrap gap-2'>;
                   {[null, 3, 4, 5].map(rating => (;
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 <<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
                     <Button
                       key={rating === null ? 'any' : rating}
                       variant='outline'
                       size='sm'
 
-<<<<<<< HEAD
-                      onClick={() => {;
+onClick={() => {;
                         logInfo('Rating selected:', { data: rating });
                         setSelectedRating(rating);                      }}
 
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
-                    defaultValue={[0, priceRange.max]}
-                    min={0}
-                    max={priceRange.max}
-                    step={priceRange.max / 100}                    value={currentPriceFilter}
-                    onValueChange={handleSliderChange}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
@@ -1736,19 +1227,12 @@ export function DynamicListingPage(): any ({;
                               key={i}'
                               className='h-3 w-3 fill-zion-cyan text-zion-cyan'                            />;
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
 
               <div className="mb-6">
-=======
-"
-              <div className="mb-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Minimum Rating;
                 </label>"
@@ -1763,14 +1247,8 @@ export function DynamicListingPage(): any ({;
                         setSelectedRating(rating)
                       }}
                       aria-pressed={selectedRating === rating}
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-<<<<<<< HEAD
-=======
+:src_backup/components/DynamicListingPage.tsx
 
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
@@ -1792,16 +1270,10 @@ export function DynamicListingPage(): any ({;
                       {rating === null ? ("
                         "Any"
                       ) : (
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
@@ -1811,9 +1283,8 @@ export function DynamicListingPage(): any ({;
                               key={i}"
                               className="h-3 w-3 fill-zion-cyan text-zion-cyan"
                             />
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
                           ))}
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
                           <span className="ml-1">& Up</span>
                         </div>
@@ -1830,13 +1301,6 @@ export function DynamicListingPage(): any ({;
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
 =======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 =======
 
                           ))}'
@@ -1847,19 +1311,10 @@ export function DynamicListingPage(): any ({;
                     </Button>;
                   ))}
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-
+:src_backup/components/DynamicListingPage.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
                   logInfo("Clearing filters"),
-=======
-                </div>
-              </div>
-              <Button
-                variant="outline"
-                className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
-                onClick={() => {                  logInfo("Clearing filters"),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 "
                   logInfo("Clearing filters"),"
@@ -1871,11 +1326,7 @@ export function DynamicListingPage(): any ({;
                   setSelectedBrand("all"),"
                   setSpecQuery(""),"
                   setSelectedAvailability("all")
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 }}
@@ -1883,14 +1334,10 @@ export function DynamicListingPage(): any ({;
                 Clear All;
               </Button>
             </div>
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
-          </div>
+:src/components/DynamicListingPage.tsx
+</div>
 
-<<<<<<< HEAD
-                </div>;
+</div>;
               </div>;
 
               <Button'
@@ -2074,7 +1521,6 @@ export function DynamicListingPage(): any ({;
                   setSelectedAvailability ('all');
                 }}
 
-
 <<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -2082,13 +1528,6 @@ export function DynamicListingPage(): any ({;
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-grow">
-=======
-"
-          <div className="lg:col-span-3">"
-            <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">"
-              <div className="flex flex-col md:flex-row gap-4">"
-                <div className="relative flex-grow">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                   <Input"
                     type="text""
@@ -2108,24 +1547,15 @@ export function DynamicListingPage(): any ({;
                   setSpecQuery(""),;"
                   setSelectedAvailability("all");
                 }}
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
+:src/components/DynamicListingPage.tsx
               >;
                 Clear All;
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="lg:col-span-3">;
@@ -2133,20 +1563,7 @@ export function DynamicListingPage(): any ({;
               <div className="flex flex-col md:flex-row gap-4">;
                 <div className="relative flex-grow">;
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
-<<<<<<< HEAD
-=======
-                  <Input;
-                    type="text";
-=======
-"
-          <div className="lg:col-span-3">;"
-            <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">;"
-              <div className="flex flex-col md:flex-row gap-4">;"
-                <div className="relative flex-grow">;"
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
-                  <Input;"
-                    type="text";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
+
                     placeholder="Search listings...";
                     value={searchQuery}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {;'
@@ -2158,13 +1575,7 @@ export function DynamicListingPage(): any ({;
                 </div>
 "
                 <div className="flex items-center gap-2 ml-auto">
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+:src/components/DynamicListingPage.tsx
 
                   <Select value={sortOption} onValueChange={setSortOption}>'
                     <SelectTrigger className='w-[150px] bg-zion-blue border border-zion-blue-light text-white'>'
@@ -2186,12 +1597,8 @@ export function DynamicListingPage(): any ({;
                     </SelectContent>
                   </Select>
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-<<<<<<< HEAD
-                    onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => {;
-=======
-                    onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
+onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => {;
                       logInfo('Search query:', { data: e && e.target.value });
                       setSearchQuery(e && e.target.value);                    }}'
                     className='pl-10 bg-zion-blue border border-zion-blue-light text-white';
@@ -2219,7 +1626,7 @@ export function DynamicListingPage(): any ({;
               <div className='flex flex - col md:flex - row gap - 4'>;'
                 <div className='relative flex - grow'>;'
                   <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Input;
                     type="text";
@@ -2247,12 +1654,6 @@ export function DynamicListingPage(): any ({;
                   </Select>
                   <Button
 <<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
@@ -2307,8 +1708,7 @@ export function DynamicListingPage(): any ({;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                     className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple"
                   >
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-<<<<<<< HEAD
+:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
                     {ToggleViewIcon}
                     <span className="sr-only">
@@ -2318,48 +1718,16 @@ export function DynamicListingPage(): any ({;
                 </div>
               </div>
             </div>
-=======
-
-                    {ToggleViewIcon}
-<<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-                    {ToggleViewIcon}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
                     <span className='sr-only'>;
                       {isGrid ? 'List view' : 'Grid view'}
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
             <div className="mb-6">
-=======
-                    {ToggleViewIcon}'
-                    <span className='sr-only'>;'
-                      {isGrid ? 'List view' : 'Grid view'}
-
-
-"
-            <div className="mb-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
               <p className="text-zion-slate-light">
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
-                    <span className="sr-only">
-                      {isGrid ? "List view" : "Grid view"}
-                    </span>
-                  </Button>
-                </div>
-              </div>
-            </div>
-=======
-=======
+:src/components/DynamicListingPage.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
-
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
                     {ToggleViewIcon}
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
@@ -2367,40 +1735,21 @@ export function DynamicListingPage(): any ({;
                 Showing {filteredListings.length} results
                 {selectedCategories.length > 0 &&
                   ` in ${selectedCategories.join(', ')}`}
-=======
-                Showing {filteredListings.length} results;
-                {selectedCategories.length > 0 &&'`
-                  ` in ${selectedCategories.join(', ')}`}"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
-<<<<<<< HEAD
-
-            {isLoading ? (
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+{isLoading ? (
 <<<<<<< HEAD:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               <div
                 className={
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
                   <Button;
                     variant='outline';
                     size='icon';
                     on_click={() => set_view (is_grid ? 'list' : 'grid')}
                     aria - label={is_grid ? 'List view' : 'Grid view'}
                     title={is_grid ? 'List view' : 'Grid view'}
-=======
-                  <Button;'
-                    variant='outline';'
-                    size='icon';'
-                    on_click={() => set_view (is_grid ? 'list' : 'grid')}'
-                    aria - label={is_grid ? 'List view' : 'Grid view'}'
-                    title={is_grid ? 'List view' : 'Grid view'}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                     className='border - zion - blue - light text - zion - slate - light focus - visible:ring - zion - purple'                  >;
                     {ToggleViewIcon}'
                     <span className='sr - only'>;'
@@ -2444,33 +1793,21 @@ export function DynamicListingPage(): any ({;
                       </div>;
                     </div>;
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   view === "grid"
                     ? "grid grid-cols-1 md:grid-cols-2 gap-6"
-=======
-"
-                  view === "grid""
-                    ? "grid grid-cols-1 md:grid-cols-2 gap-6""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                     : "flex flex-col gap-6"
 
-
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+:src/components/DynamicListingPage.tsx
                 }
               >;
                 {[1, 2, 3, 4].map((i) => (;
                   <div;
                     key={i}
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
                 }
@@ -2478,13 +1815,9 @@ export function DynamicListingPage(): any ({;
                 {[1, 2, 3, 4].map(i => (
                   <div;
                     key={i}
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-
+:src_backup/components/DynamicListingPage.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                     className="rounded-lg overflow-hidden border border-zion-blue-light"
                   >"
                     <Skeleton height={192} width="100%" />"
@@ -2496,41 +1829,21 @@ export function DynamicListingPage(): any ({;
                       <div className="flex justify-between items-center pt-4">"
                         <Skeleton height={24} width="25%" />"
                         <Skeleton height={32} width="25%" />
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       </div>
                     </div>
                   </div>
                 ))}
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-<<<<<<< HEAD
-              </div>
+:src/components/DynamicListingPage.tsx
+</div>
             ) : filteredListings.length > 0 ? (
               <div
                 className={
 <<<<<<< HEAD
-=======
-=======
-              </div>;
-            ) : filteredListings && filteredListings.length > 0 ? (;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-              <div
-                className={
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   view === "grid"
                     ? "grid grid-cols-1 md:grid-cols-2 gap-6"
-=======
-              <div;
-                className={}
-"
-                  view === "grid""
-                    ? "grid grid-cols-1 md:grid-cols-2 gap-6""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
                     : "flex flex-col gap-6"
                 }
               >;
@@ -2542,8 +1855,7 @@ export function DynamicListingPage(): any ({;
                     onRequestQuote={handleRequestQuote}
                     detailBasePath={detailBasePath}
                   />;
-<<<<<<< HEAD
-                ))}
+))}
               </div>
             ) : (
               <div className="text-center py-20">
@@ -2554,27 +1866,7 @@ export function DynamicListingPage(): any ({;
                   Try adjusting your filters or search query
                 </p>
                 <Button
-=======
-
-
-                ))}
-              </div>;
-            ) : (;'
-              <div className='text-center py-20'>;'
-                <h3 className='text-xl font-bold text-white mb-2'>;
-                  No listings found;
-                </h3>;'
-                <p className='text-zion-slate-light mb-6'>;
-                  Try adjusting your filters or search query;
-                </p>;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
                 <Button
-
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -2597,13 +1889,8 @@ export function DynamicListingPage(): any ({;
                     setSelectedAvailability("all")
                   }}"
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
-
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -2654,18 +1941,14 @@ export function DynamicListingPage({
                     setSelectedAvailability("all")
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src/components/DynamicListingPage.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
                 >
                   Clear All;
                 </Button>
               </div>
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-<<<<<<< HEAD
+:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
               </div>;
             ) : (;
@@ -2688,9 +1971,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     setSelectedAvailability("all");
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
 
                   onClick={() => {;'
                     setSearchQuery('');
@@ -2706,18 +1986,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Clear All;
                 </Button>;
               </div>;
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+:src/components/DynamicListingPage.tsx
             )}
-<<<<<<< HEAD
-=======
-            {isLoading ? (            )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
         </div>;
       </div>;
@@ -2725,13 +1995,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-=======
-
-            )}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
 
 };'
 if (typeof window !== 'undefined') {';'
@@ -2753,7 +2017,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <div className="lg:col-span-1" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6" > <h3 className="text-lg font-medium text-white mb-4 flex items-center" > <Filter className="mr-2 h-5 w-5" /> Filters </h3> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Categories </label> > {;
   filter.label ;
 }</label> </div>) ) ;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 }</div> </div> Brand </label> <Select value= {;
   selectedBrand ;
 }onValueChange= {;
@@ -2767,37 +2031,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   (value: string) => setSelectedAvailability (value) ";
 }> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) ) ;
 }</SelectContent> </Select> </div>) ";
-=======
-}</div> </div> Brand </label> <Selectvalue= {}
-  selectedBrand;
-}onValueChange= {"
-  (value: string) => setSelectedBrand (value) ";"
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Brand" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All Brands </SelectItem> </SelectItem>) ) ;"
-}</SelectContent> </Select> </div>) ";"
-}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Selectvalue= {}
-  selectedAvailability;
-}onValueChange= {"
-  (value: string) => setSelectedAvailability (value) ";"
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) ) ;"
-}</SelectContent> </Select> </div>) ";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
 }<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label> ;
 
 }aria-pressed= {;
   selectedRating === rating ;
 }className= {;`
   ` {;
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 <<<<<<< HEAD:src/components/DynamicListingPage.tsx
 <<<<<<< HEAD
   selectedRating === rating <Starkey= {
   i "
 }className="h-3 w-3 fill-zion-cyan text-zion-cyan" />) ) ";
-=======
-  selectedRating === rating <Starkey= {"
-  i ""
-}className="h-3 w-3 fill-zion-cyan text-zion-cyan" />) ) ";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx
 }<span className="ml-1" >& Up</span> </div>) ;
 }</Button>) ) ;
 }</div> </div> <ButtonclearCategories ()
@@ -2971,8 +2216,6 @@ setSelectedRating (null)
 }'"  )
 }
 
-
-
 ;
 
   detailBasePath;"
@@ -2985,18 +2228,9 @@ setSelectedRating (null);
 }'"  );
 }
 
-<<<<<<< HEAD:src_backup/components/DynamicListingPage.tsx
+:src_backup/components/DynamicListingPage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
@@ -3034,12 +2268,9 @@ setSelectedRating (null);
 > Clear All </Button> </div>) ;
 }</div> </div> </div> </div>) ;
 }'"
-<<<<<<< HEAD:src/components/DynamicListingPage.tsx
+:src/components/DynamicListingPage.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/DynamicListingPage.tsx
 =======
 ;'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/DynamicListingPage.tsx

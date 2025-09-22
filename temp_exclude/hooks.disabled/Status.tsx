@@ -1,5 +1,4 @@
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Status.tsx
-<<<<<<< HEAD
+:temp_exclude/hooks.disabled/Status.tsx
 import { SEO } from "@/components/SEO",
 import { useState, useEffect } from "react",
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
@@ -12,28 +11,15 @@ interface ServiceStatus {
   status: 'operational' | 'degraded' | 'outage' | 'maintenance',
   description: string,
   lastChecked: string
-=======
-interface ServiceStatus {
-
-  name: string
-=======
-interface ServiceStatus {}
-  name: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Status.tsx
   status: 'operational' | 'degraded' | 'outage' | 'maintenance'
   description: string;
   lastChecked: string;
 }
 
-
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
     this.state = { hasError: false };
-
-
-
-
 
 ;
 
@@ -63,40 +49,30 @@ const FALLBACK_SERVICES: ServiceStatus[] = []
     lastChecked: new Date().toISOString()
 
   }
-  
+
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {'
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Status.tsx
+:temp_exclude/hooks.disabled/Status.tsx
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
     name: "Marketplace API",
     status: "operational",
-=======
-  )
-}
-
-;
-const FALLBACK_SERVICES: ServiceStatus[] = []
-  {"
-    name: "Marketplace API","
-    status: "operational","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Status.tsx
     description: "Product listings and search functionality",
     lastChecked: new Date().toISOString()
   },
@@ -210,7 +186,7 @@ export default function Status() { return null; }
         return <AlertCircle className="h-5 w-5 text-red-500" />,;'
       case 'maintenance':;"
         return <Clock className="h-5 w-5 text-blue-500" />,;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Status.tsx
+:temp_exclude/hooks.disabled/Status.tsx
       default:;
         return <AlertCircle className="h-5 w-5 text-gray-500" />;
     }
@@ -243,12 +219,6 @@ export default function Status() { return null; }
         return 'text-gray-500';
     }
   },
-=======
-      default:;"
-        return <AlertCircle className="h-5 w-5 text-gray-500" />}'
-import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { return null; }
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Status.tsx
 
   const formatUptime = (seconds: number) => {}
     const days = Math.floor(seconds / 86400),
@@ -406,7 +376,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
       </main>
     </>
   )
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Status.tsx
+:temp_exclude/hooks.disabled/Status.tsx
                   </CardContent>;
                 </Card>;
               </div>;
@@ -466,35 +436,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
         </div>;
       </main>;
     </>;
-=======
-}
-'
-import { log_warn } from '@/utils / production_logger';
-interface ServiceStatus {}
-  name: string,'
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance',
-  description: string,
-  last_checked: string;
-}"
-        return <CheckCircle className="h - 5 w - 5 text - green - 500" />;"
-        return <Clock className="h - 5 w - 5 text - blue - 500" />;
-      default:;"
-        return <AlertCircle className="h - 5 w - 5 text - gray - 500" />}'
-import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components / SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default /**;
- * Status - Function description;
- */
-function Status() { return null; }
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Status.tsx
   );
 }
-<<<<<<< HEAD
-=======
 
-
-<<<<<<< HEAD:temp_exclude/hooks.disabled/Status.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Status.tsx

@@ -40,7 +40,7 @@ if (!activeVendor)
 ...activeVendor,
       name: String(formData.get('name') || activeVendor.name),
       about: String(formData.get('about') || activeVendor.about || ''),
-      servicesOffered: String(
+      servicesOffered: String(;
         formData.get('servicesOffered') |
           activeVendor.servicesOffered?.join(',') |
           ''
@@ -61,7 +61,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         id: `pkg_${Date.now()}`
         title: pkgTitle;
         description: pkgDesc;
-        priceUsd: Number(pkgPrice)
+        priceUsd: Number(pkgPrice);
       }
 
   function addPackage() { return null; }`
@@ -123,8 +123,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='w-full border rounded px-3 py-2 bg-transparent'
             />
           </div>
-          <div className='md:col-span-2'>
-            <button className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>
+          <div className='md:col-span-2'>;
+            <button className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
               Save
             </button>
           </div>
@@ -135,7 +135,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-
+;
     <div className="space-y-8">;"
       <div className="flex items-center justify-between">;"
         <h1 className="text-2xl font-semibold">Agency Dashboard</h1>;"
@@ -200,7 +200,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             />
             <button
               onClick={addPackage}
-              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
+              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black';
             >
               Add
             </button>

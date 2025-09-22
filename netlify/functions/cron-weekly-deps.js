@@ -1,38 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const resp = await fetch(;
-      `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 const resp = await fetch(;
       `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
 async function getLatest(pkg) {
 
-<<<<<<< HEAD
-    const resp = await fetch(
+const resp = await fetch(
       `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`
 ursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 const resp = await fetch(;
       `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`;
@@ -46,11 +24,8 @@ const resp = await fetch(;
   } catch (_) {}
     return null;
   }
-<<<<<<< HEAD
 exports && exports.handler = async function () {
-<<<<<<< HEAD
-
-  try {
+try {
     const pkgPath = path && path.join(process && process.cwd(), 'package && package.json');
     const pkg = JSON && JSON.parse(fs && fs.readFileSync(pkgPath, 'utf-8'));
     const deps = {
@@ -86,18 +61,8 @@ exports && exports.handler = async function () {
         content: JSON && JSON.stringify(report, null, 2),
 <<<<<<< HEAD
         message: 'chore(automation): weekly dependency insights',        token,
-=======
-        message: 'chore(automation): weekly dependency insights',
-ursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const { upsert_file } = require ('./_lib / github');
 const fs = require ('fs');
-=======
-exports && exports.handler = async function () {}
-const { upsert_file } = require ('./_lib / github');'
-const fs = require ('fs');'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const path = require ('path');
 ;
 async /**
@@ -156,10 +121,7 @@ if ( {) {}
         content: JSON.stringify (report, null, 2),'
         message: 'chore (automation): weekly dependency insights',
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
@@ -186,7 +148,6 @@ if (return null, ) {}
 }
     const json = await resp.json (),
     return json.version || null;
-<<<<<<< HEAD
 const { upsertFile } = require('./_lib/github');
 const fs = require('fs');
 const path = require('path');
@@ -197,8 +158,6 @@ async function getLatest(pkg) {
     const json = await resp.json();
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   } catch (_) {
 =======
   } catch (_) {}
@@ -244,11 +203,6 @@ exports.handler = async function () {try {const pkg_path = path.join (process.cw
   const latest = await get_latest (name),// Check condition;
 if (continue, ) {$2;}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 exports.handler = async function() {
   try {
     const pkgPath = path.join(process.cwd(), 'package.json'),
@@ -260,26 +214,19 @@ exports.handler = async function() {
       if (!== latest })
     }
 
-<<<<<<< HEAD
-    const report = { updatedAt: Date.now(), entries },
+const report = { updatedAt: Date.now(), entries },
 
     const owner = process.env.GITHUB_OWNER);
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN);
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
-=======
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (owner && repo && token) {
 =======
     if (owner && repo && token) {'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies && dependencies.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
       entries.push ({ name, current, latest, outOfDate: current.replace (/^[^0 - 9]*/, '') !== latest })}
-
 
     if (owner && repo && token) {'
       await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies && dependencies.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })'
@@ -291,16 +238,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 exports.handler = async function () {
   try {
     const pkg_path = path.join (process.cwd (), 'package.json'),
-=======
-exports.handler = async function () {}
-  try {'
-    const pkg_path = path.join (process.cwd (), 'package.json'),'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const pkg = JSON.parse (fs.readFileSync (pkg_path, 'utf - 8')),
     const deps = { ...(pkg.dependencies || {}), ...(pkg.dev_dependencies || {}) },
     const entries = [],
@@ -328,43 +268,9 @@ if ( {) {}
   }
 },
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  try {
-    const pkgPath = path && path.join(process && process.cwd(), 'package && package.json';
-    const pkg = JSON && JSON.parse(fs && fs.readFileSync(pkgPath, 'utf-8';
-        outOfDate: current && current.replace(/^[^0-9]*/, '';
-        path: 'data/reports/deps/weekly-dependencies && dependencies.json';
-        message: 'chore(automation): weekly dependency insights';
-const { upsert_file } = require ('./_lib / github';
-const fs = require ('fs';
-const path = require ('path';
-    const pkg_path = path.join (process.cwd (), 'package.json';
-    const pkg = JSON.parse (fs.readFileSync (pkg_path, 'utf - 8';
-        outOfDate: current.replace (/^[^0 - 9]*/, '';
-        path: 'data / reports / deps / weekly - dependencies.json';
-        message: 'chore (automation): weekly dependency insights';
-    const pkgPath = path && path.join(process && process.cwd(), 'package && package.json';
-    const pkg = JSON && JSON.parse(fs && fs.readFileSync(pkgPath, 'utf-8';
-      entries && entries.push({ name, current, latest, outOfDate: current && current.replace(/^[^0-9]*/, '';
-      await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies && dependencies.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights';
-    const pkg_path = path.join (process.cwd (), 'package.json';
-    const pkg = JSON.parse (fs.readFileSync (pkg_path, 'utf - 8';
-      entries.push ({ name, current, latest, outOfDate: current.replace (/^[^0 - 9]*/, '';
-      await upsert_file ({ owner, repo, path: 'data / reports / deps / weekly - dependencies.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly dependency insights';
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 =======
@@ -375,14 +281,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-
-
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
 =======
@@ -481,8 +380,7 @@ if ( {) {
 }'
       await upsert_file ({ owner, repo, path: 'data / reports / deps / weekly - dependencies.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly dependency insights', token });'
     }
-<<<<<<< HEAD
-    return { status_code: 200, body: JSON.stringify ({ ok: true, count: entries.length }) }
+return { status_code: 200, body: JSON.stringify ({ ok: true, count: entries.length }) }
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
@@ -511,8 +409,3 @@ const path = require ('path';
       await upsert_file ({ owner, repo, path: 'data / reports / deps / weekly - dependencies.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly dependency insights';
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

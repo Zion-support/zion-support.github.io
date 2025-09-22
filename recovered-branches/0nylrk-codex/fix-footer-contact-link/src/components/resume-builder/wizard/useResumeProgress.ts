@@ -3,47 +3,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { useState, useEffect } from "react";
 import { Resume } from "@/types/resume";
 export const useResumeProgress = (resume: Resume | null) => {
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
-<<<<<<< HEAD
 export const useResumeProgress = (resume: Resume | null) => {;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-import { useState, useEffect } from "react";"
-import { Resume } from "@/types/resume";
-export const useResumeProgress = (resume: Resume | null) => {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  const [progress, setProgress] = useState(0);
-=======
-=======
-import { useState, useEffect } from "react";
-import { Resume } from "@/types/resume";
-export const useResumeProgress = (resume: Resume | null) => {
->>>>>>> main
+const [progress, setProgress] = useState(0);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { useState, useEffect } from "react";
@@ -73,8 +44,6 @@ export const useResumeProgress = (resume: Resume | null) => {
       setProgress(0);
       return;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
 export const useResumeProgress = (resume: Resume | null) => {;
@@ -103,15 +72,7 @@ if ( {) {
 <<<<<<< HEAD
       completed += 1
 <<<<<<< HEAD
-=======
-
-    if (resume.work_experience && resume.work_experience.length > 0) {
-      completed += 1
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
 export const useResumeProgress = (resume: Resume | null) => {;
@@ -122,45 +83,18 @@ export const useResumeProgress = (resume: Resume | null) => {;
 
     let completed = 0;
 
-<<<<<<< HEAD
-    completed += 1,;
+completed += 1,;
     // Work experience (1 point if at least one entry);
     if (resume.work_experience && resume.work_experience.length > 0) {;
-<<<<<<< HEAD
-=======
-    if (resume.work_experience && resume.work_experience.length > 0) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      completed += 1;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
+completed += 1;
 
     }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
-<<<<<<< HEAD
-    // Education (1 point if at least one entry);
+// Education (1 point if at least one entry);
     if (resume.education && resume.education.length > 0) {;
       completed += 1;
-=======
-    completed += 1,;
-    // Work experience (1 point if at least one entry);
-    if (resume.work_experience && resume.work_experience.length > 0) {;
-      completed += 1;      completed += 1;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
-=======
-    // Work experience (1 point if at least one entry);
-    // Check condition
-if ( {) {
-  $2
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       completed += 1;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -186,13 +120,6 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -219,14 +146,6 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -241,18 +160,12 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
+
     const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage);
   }, [resume]);
   return progress;
 }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return progress
 ;
@@ -263,38 +176,18 @@ if ( {) {
   return progress;
 =======
 =======
-<<<<<<< HEAD
-
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage);
   }, [resume]);
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   return progress
-=======
-;
-    // Education (1 point if at least one entry);
-    if (resume.education && resume.education.length > 0) {;
-      completed += 1;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    if (resume && resume.work_experience && resume && resume.work_experience.length > 0) {
-      completed += 1
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Education (1 point if at least one entry);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -307,75 +200,36 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       completed += 1;
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (resume && resume.education && resume && resume.education.length > 0) {
       completed += 1
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    // Skills (1 point if at least one entry);
+// Skills (1 point if at least one entry);
     // Check condition
 if ( {) {
   $2
 }
 <<<<<<< HEAD
-
-<<<<<<< HEAD
       completed += 1;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       completed += 1;
     if (resume && resume.skills && resume && resume.skills.length > 0) {
       completed += 1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    // Certifications (1 point if at least one entry);
+// Certifications (1 point if at least one entry);
     // Check condition
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       completed += 1;
     if (resume && resume.certifications && resume && resume.certifications.length > 0) {
       completed += 1
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    const progress_percentage = (completed / 5) * 100;
+const progress_percentage = (completed / 5) * 100;
     set_progress (progress_percentage);
   }, [resume]);
 ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return progress;
-
 
   return progress;
 
@@ -392,10 +246,7 @@ if ( {) {
     if (resume && resume.certifications && resume && resume.certifications.length > 0) {
       completed += 1
     }};
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
     const progressPercentage = (completed / 5) * 100;
@@ -462,16 +313,7 @@ export const useResumeProgress = (resume:Resume | null) => {;
 };
 
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

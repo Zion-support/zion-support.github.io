@@ -35,4 +35,3 @@ export function EmptyMatchesCard({ onRefresh, isProcessing } EmptyMatchesCardPro
         )}
       </Button>;
     </Card>;
-

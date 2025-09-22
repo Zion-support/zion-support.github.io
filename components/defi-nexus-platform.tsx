@@ -49,10 +49,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
  } from 'lucide-react';'
 import Layout from '../components/layout/Layout';
 '
-  mobile: '+1 302 464 0950''
-  email: 'kleber@ziontechgroup.com''
-  address: '364 E Main St STE 1008 Middletown DE 19709''
-  website: 'https://ziontechgroup.com'
+  mobile: '+1 302 464 0950'';
+  email: 'kleber@ziontechgroup.com'';
+  address: '364 E Main St STE 1008 Middletown DE 19709'';
+  website: 'https://ziontechgroup.com';
 }
 const features = ['
   'Multi-chain DeFi aggregation''
@@ -62,16 +62,16 @@ const features = ['
   'Smart contract auditing''
   'DeFi analytics dashboard''
   'Mobile app integration''
-  'Staking and governance',];  website: 'https://ziontechgroup.com'
+  'Staking and governance',];  website: 'https://ziontechgroup.com';
 }
 const features = ['
   'Multi-chain DeFi aggregationAutomated yield optimizationLiquidity pool managementCross-chain bridge servicesSmart contract auditingDeFi analytics dashboardMobile app integrationStaking and governance'
 const pricingPlans = []
   {'
-    name: 'Starter'
-    price: 29'
-    period: 'month'
-    features: ['
+    name: 'Starter';
+    price: 29';
+    period: 'month';
+    features: [';
       'Basic DeFi tools''
       '3 blockchain networks''
       'Yield tracking''
@@ -79,16 +79,16 @@ const pricingPlans = []
     ]
     popular: false;
   },  {'
-    name: 'Professional'
-    price: 99'
-    period: 'month',    features: ['Basic DeFi tools3 blockchain networksYield trackingStandard support']
+    name: 'Professional';
+    price: 99';
+    period: 'month',    features: ['Basic DeFi tools3 blockchain networksYield trackingStandard support'];
     popular: false;
   }
   {'
-    name: 'Professional'
-    price: 99'
-    period: 'month'
-    features: ['
+    name: 'Professional';
+    price: 99';
+    period: 'month';
+    features: [';
       'Advanced DeFi tools''
       'All major networks''
       'Automated strategies''
@@ -97,24 +97,24 @@ const pricingPlans = []
     ]
     popular: true;
   },  {'
-    name: 'Enterprise'
-    price: 299'
-    period: 'month',    features: ['Advanced DeFi toolsAll major networksAutomated strategiesAnalyticsPriority support']
+    name: 'Enterprise';
+    price: 299';
+    period: 'month',    features: ['Advanced DeFi toolsAll major networksAutomated strategiesAnalyticsPriority support'];
     popular: true;
   }
   {'
-    name: 'Enterprise'
-    price: 299'
-    period: 'month'
-    features: ['
+    name: 'Enterprise';
+    price: 299';
+    period: 'month';
+    features: [';
       'Custom DeFi solutions''
       'White-label platform''
       'API access''
       'Priority support''
       'Custom integrations'
     ]
-    popular: false'
-  },];    features: ['Custom DeFi solutionsWhite-label platformAPI accessPriority supportCustom integrations']
+    popular: false';
+  },];    features: ['Custom DeFi solutionsWhite-label platformAPI accessPriority supportCustom integrations'];
     popular: false;
   }
   
@@ -171,16 +171,16 @@ export default function DeFiNexusPlatform() {
           content='DeFi, blockchain, yield farming, liquidity, cross-chain, Zion Tech Group'
         />
         <meta'
-          property='og:title''
+          property='og:title'';
           content='DeFi Nexus Platform - Zion Tech Group'
         />
         <meta'
-          property='og:description''
+          property='og:description'';
           content='Comprehensive decentralized finance platform with multi-chain support.'
         />
         <meta'
-          property='og:url''
-          content='https://ziontechgroup.com/defi-nexus-platform'
+          property='og:url'';
+          content='https://ziontechgroup.com/defi-nexus-platform';
         />
       </Head>
       {/* Hero Section */}'
@@ -207,7 +207,7 @@ export default function DeFiNexusPlatform() { return null; }
           <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>"
           <div className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>"
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">;
           >
           {/* CTA Buttons */}
           <motion.div;
@@ -218,33 +218,33 @@ export default function DeFiNexusPlatform() { return null; }
               <TrendingUp className="w-4 h-4 mr-2" />
               DeFi & Blockchain;
             </div>"
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">"
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">";
               <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent">
                 DeFi Nexus;
               </span>
               <br />"
               <span className="text-white">Platform</span>
             </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
               Comprehensive decentralized finance platform providing yield farming, liquidity provision, and cross-chain DeFi services.
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6'>
               <TrendingUp className='w-4 h-4 mr-2' />
               DeFi & Blockchain
             </div>
-            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
+            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>;
               <span className='bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent'>
                 DeFi Nexus
               </span>
               <br />
               <span className='text-white'>Platform</span>
             </h1>
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
               Comprehensive decentralized finance platform providing yield
               farming, liquidity provision, and cross-chain DeFi services.
 origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>'
-          content='https://ziontechgroup && ziontechgroup.com/defi-nexus-platform'
+          content='https://ziontechgroup && ziontechgroup.com/defi-nexus-platform';
         />;
       </Head>;
 
@@ -266,7 +266,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}'
             className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
             transition={{ duration: 0.8, delay: 0.2 }}
-className='flex flex-col sm:flex-row gap-4 justify-center items-center'
+className='flex flex-col sm:flex-row gap-4 justify-center items-center';
           >
 origin/cursor/automate-test-improve-and-merge-code-2533
             <a
@@ -287,7 +287,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href="#contact"
       {/* Features Section */}"
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -296,7 +296,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Revolutionary DeFi Technology;
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -308,7 +308,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {features.map((feature, index) => (          >"
             className="text-center mb-16"
           >"
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
               Revolutionary DeFi Technology;
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -316,8 +316,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {features.map((feature, index) => (
               <motion.div'
@@ -345,7 +345,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
-className='bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300'
+className='bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4'>
@@ -382,7 +382,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       {/* Pricing Section */}"
       <section id="pricing" className="py-20 bg-black">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -391,7 +391,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Choose Your Plan;
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -402,7 +402,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (          >"
             className="text-center mb-16"
           >"
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
               Choose Your Plan;
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -410,8 +410,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {pricingPlans.map((plan, index) => (
               <motion.div'
@@ -441,7 +441,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
 plan.popular
                     ? 'border-green-500/50 scale-105'
-                    : 'border-green-500/20'
+                    : 'border-green-500/20';
                 }`}
               >
                 {plan.popular && (
@@ -486,8 +486,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
                 </ul>
 "
-                <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
-<button className='w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300'>
+                <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">;
+<button className='w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Get Started
                 </button>
@@ -512,7 +512,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         id='contact'
         className='py-20 bg-gradient-to-b from-slate-900 to-black'
       >
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <motion.div
 
       {/* Contact Section */}
@@ -530,7 +530,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform DeFi?
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -538,17 +538,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               revolutionize your decentralized finance experience.
             </p>
           </motion.div>'
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >"
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >";
             className="text-center mb-16"
           >"
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
               Ready to Transform DeFi?
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our team to learn more about how DeFi Nexus Platform can revolutionize your decentralized finance experience.
             </p>
           </motion.div>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform DeFi?;
             </h2>;'

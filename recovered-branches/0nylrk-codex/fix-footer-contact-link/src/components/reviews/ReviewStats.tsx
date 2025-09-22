@@ -1,22 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -28,15 +13,6 @@ import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-import { Star } from "lucide-react";"
-import { Progress } from "@/components/ui/progress";
-interface ReviewStatsProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ratingDistribution?: Record<number, number>
 "
 import { Star } from "lucide-react","
@@ -45,25 +21,13 @@ import {Star} from "lucide-react";"
 import {Progress} from "@/components/ui/progress";"
 import { Star } from "lucide-react","
 import { Progress } from "@/components/ui/progress",
-<<<<<<< HEAD
-=======
 
-  ratingDistribution?: Record<number, number>
-import { Star } from "lucide-react",
-import { Progress } from "@/components/ui/progress",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Star} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ";
 import {Star} from "lucide-react";"
@@ -71,29 +35,19 @@ import {Progress} from "@/components/ui/progress";"
 import { Star } from "lucide-react","
 import { Progress } from "@/components/ui/progress",
 
-
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ReviewStatsProps {
-=======
-  ratingDistribution?: Record<number, number>interface ReviewStatsProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  ratingDistribution?: Record<number, number>interface ReviewStatsProps {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 interface ReviewStatsProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
-
 import {Star} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
-
 
 interface ReviewStatsProps {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -102,7 +56,6 @@ import { Star } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 
 interface ReviewStatsProps {
-
 
   ratingDistribution?: Record<number, number>interface ReviewStatsProps {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -112,75 +65,23 @@ interface ReviewStatsProps {
 
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-}
-<<<<<<< HEAD
-export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  // Format the average rating to one decimal place
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
-
-  // Format the average rating to one decimal place
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Format the average rating to one decimal place;
-=======
-// Format the average rating to one decimal place;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const formattedRating = averageRating.toFixed(1);
   // Format the average rating to one decimal place
 
   const formattedRating = averageRating.toFixed(1);
   const formattedRating = averageRating.toFixed(1),
 <<<<<<< HEAD
-  
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Calculate percentages for distribution if available
   const getPercentage = (count: number) => {
     if (totalReviews === 0) return 0
     return (count / totalReviews) * 100
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {Star} from "lucide-react";
-import {Progress} from "@/components/ui/progress";
-=======
-
-  },
-  
-
-=======
-
-  },
-  
-
-  }
-
-  },
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="bg-card border rounded-lg p-4">
@@ -194,13 +95,6 @@ import {Progress} from "@/components/ui/progress";
                   key={i}
                   className={`h-4 w-4 ${
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-import { Star } from "lucide-react",;
-import { Progress } from "@/components/ui/progress",;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -260,8 +154,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                   className={`h-4 w-4 ${"
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
 
-
-
   return (
 "
     <div className="bg-card border rounded-lg p-4">;"
@@ -271,85 +163,31 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
           <div className="flex items-center">;"
             <div className="flex mr-2">;
               {[1, 2, 3, 4, 5].map((i) => (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <Star
+<Star
                   key={i}
 
                   className={`h-4 w-4 ${;
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Star
                   key={i}
                   className={`h-4 w-4 ${
                     i <= Math && Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   }`}
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Star;
                   key={i}`
                   className={`h-4 w-4 ${"
                     i <= Math && Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"`
                   }`}
 
-
-
                 />;
               ))}
             </div>;"
             <span className="text-sm text-muted-foreground">;
 
-<<<<<<< HEAD
-=======
-=======
-                <Star;
-                  key={i}
-                  className={`h-4 w-4 ${;
-                    i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
-                  }`}
-                />
-              ))}
-            </div>
-            <span className="text-sm text-muted-foreground">
-              {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
-            </span>
-          </div>
-        </div>
-      </div>
-      {ratingDistribution && (
-        <div className="space-y-2">
-          {[5, 4, 3, 2, 1].map((rating) => (
-            <div key={rating} className="flex items-center gap-2">
-              <div className="w-6 text-sm text-right">{rating}</div>
-              <Star className="h-3 w-3 text-yellow-400" />
-              <Progress
-                value={getPercentage(ratingDistribution[rating] |0)}
-                className="h-2"
-              />
-              <div className="w-8 text-xs text-muted-foreground">
-
-<<<<<<< HEAD
-=======
-              {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Star } from './lucide-react';
-=======
-import { Star } from './lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Progress } from '@/components / ui / progress';
 interface ReviewStatsProps {}
   average_rating: number,
@@ -402,87 +240,7 @@ if (return 0, ) {}
           ))}
         </div>
       )}
-<<<<<<< HEAD
-=======
-    </div>
-  )
-}
-    </div>;
-  );
-}
 
-      {rating_distribution && ("
-        <div className="space - y-2">;
-          {[5, 4, 3, 2, 1].map ((rating) => ("
-            <div key={rating} className="flex items - center gap - 2">;"
-              <div className="w - 6 text - sm text - right">{rating}</div>;"
-              <Star className="h - 3 w - 3 text - yellow - 400" />;
-              <Progress;
-                value={get_percentage (rating_distribution[rating] || 0)}"
-                className="h - 2";
-              />;"
-              <div className="w - 8 text - xs text - muted - foreground">;
-                {rating_distribution[rating] || 0}
-              </div>;
-            </div>))}
-        </div>)}
-    </div>);
-}
-
-
-      ;
-      {ratingDistribution && (;"
-        <div className="space-y-2">;
-          {[5, 4, 3, 2, 1].map((rating) => (;"
-            <div key={rating} className="flex items-center gap-2">;"
-              <div className="w-6 text-sm text-right">{rating}</div>;"
-              <Star className="h-3 w-3 text-yellow-400" />;
-              <Progress ;
-                value={getPercentage(ratingDistribution[rating] || 0)} ;"
-                className="h-2" ;
-              />;"
-              <div className="w-8 text-xs text-muted-foreground">;
-                {ratingDistribution[rating] || 0}
-              </div>;
-            </div>;          ))}
-        </div>;
-      )}
-    </div>;
-  ),; interface ReviewStatsProps {}
-  averageRating: number;
-totalReviews: number;
-ratingDistribution?: Record<number number> 
-}export function ReviewStats ({};
-  averageRating, totalReviews, ratingDistribution;
-}: ReviewStatsProps) {}
-  //Format the average rating to one decimal place const formattedRating = averageRating.toFixed (1);
-//Calculate percentages for distribution if available const getPercentage = (count: number) => {}
-  if (totalReviews === 0) return 0;
-return (count / totalReviews) * 100;
-};"
-return (<div className="bg-card border rounded-lg p-4" > <div className="flex items-center justify-between mb-4" > <div> <h3 className="text-xl font-bold" > {}
-  formattedRating "
-}</h3> <div className="flex items-center" > <div className="flex mr-2" > {}
-  [1, 2, 3, 4, 5].map ( (i) => (<Star key= {}
-  i;
-}className= {}`
-  `h-4 w-4 $ {"
-  i <= Math.round (averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300" `
-}` 
-}/>) ) "
-}</div> <span className="text-sm text-muted-foreground" > {}
-  totalReviews;
-}{"
-  totalReviews === 1 ? "review" : "reviews" 
-}
-;
-
-}</div>) 
-}</div>) 
-}
-;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -499,8 +257,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
     return (count / totalReviews) * 100
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -772,9 +528,4 @@ return (<div className="bg-card border rounded-lg p-4" > <div className="flex it
 }</div>) 
 }
 ;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-}</div>) "`;
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

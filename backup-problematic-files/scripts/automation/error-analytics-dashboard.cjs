@@ -387,12 +387,7 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
         ...counts;)
     return trends}
   analyzeFixSuccessRates(reports) {
-<<<<<<< HEAD
-    const fixReports = reports.filter(report =>
-=======
-    const fixReports = reports.filter(report => 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+const fixReports = reports.filter(report =>
       report.fixesApplied !== undefined || report.resolutionsApplied !== undefined
     );
 =======
@@ -458,8 +453,7 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
 </div>
             <h1>🚨 Error Analytics Dashboard</h1>
             <p>Real-time insights into project error patterns and automation effectiveness</p>
-<<<<<<< HEAD
-        </div>
+</div>
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-number">${analyticsData.totalErrors}</div>
@@ -583,11 +577,7 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
       const fileDistribution = this.analyzeFileDistribution(reports);
       // Calculate summary statistics
       const totalErrors = Object.values(errorTypes).reduce((sum, count) => sum + count, 0);
-<<<<<<< HEAD
-      const avgSuccessRate = fixSuccessRates.length > 0
-=======
-      const avgSuccessRate = fixSuccessRates.length > 0 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+const avgSuccessRate = fixSuccessRates.length > 0
         ? fixSuccessRates.reduce((sum, rate) => sum + parseFloat(rate.successRate), 0) / fixSuccessRates.length
         : 0;
       const analyticsData = {
@@ -650,15 +640,8 @@ if (require.main === module) {
     dashboard.log(`Failed to start "dashboard": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
-<<<<<<< HEAD
 module.exports = ErrorAnalyticsDashboard
 <<<<<<< HEAD
-=======
-module.exports = ErrorAnalyticsDashboard
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
         <div class="stats-grid">"
             <div class="stat-card">"

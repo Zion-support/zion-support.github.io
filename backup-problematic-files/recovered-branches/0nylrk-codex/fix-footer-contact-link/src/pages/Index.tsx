@@ -99,4 +99,3 @@ export default function Index() {;
       <TestimonialCarousel />;
       <TrustedBySection />;
       <BlogSection />;
-

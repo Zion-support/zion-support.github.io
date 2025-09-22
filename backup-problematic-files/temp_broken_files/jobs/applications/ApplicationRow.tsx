@@ -66,4 +66,3 @@ export function ApplicationRow({;
         )}
       </TableCell>;
       <TableCell className="text-right">;
-

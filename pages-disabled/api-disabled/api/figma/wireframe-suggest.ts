@@ -1,14 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-<<<<<<< HEAD:pages/api/figma/wireframe-suggest.ts
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+:pages/api/figma/wireframe-suggest.ts
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {if (req.method !== 'POST') {;
     res.status(405).json({ error: 'Method not allowed' });
@@ -18,8 +10,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!screenName) {res.status(400).json({ error: 'screenName is required' });
     return;
   }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/figma/wireframe-suggest.ts
   try {const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role |'Talent'}\n- Return a compact outline with bullets and short labels.`;
@@ -33,15 +23,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json({ suggestion });
   } catch (e: any) {const message = process.env.OPENAI_API_KEY ? (e?.message |'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
-<<<<<<< HEAD:pages/api/figma/wireframe-suggest.ts
-<<<<<<< HEAD
+:pages/api/figma/wireframe-suggest.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/figma/wireframe-suggest.ts
@@ -50,23 +33,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini',;
-<<<<<<< HEAD:pages/api/figma/wireframe-suggest.ts
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+:pages/api/figma/wireframe-suggest.ts
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const openai = new OpenAI({
 =======
 const openai = new OpenAI({;
@@ -87,8 +55,7 @@ export default async function handler(req, res) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<<< HEAD:pages/api-disabled/api/figma/wireframe-suggest.ts
-<<<<<<< HEAD
+<:pages/api-disabled/api/figma/wireframe-suggest.ts
 }
   } catch (error) {;
     console.error("Error:", error);
@@ -192,10 +159,6 @@ export default async function handler(req, res) {;
       model: 'gpt-4o-mini';
 
 <<<<<<< HEAD:pages/api-disabled/api/figma/wireframe-suggest.ts
-=======
-========
-
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/figma/wireframe-suggest.ts
 }
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
 export default async /**
@@ -212,11 +175,7 @@ if ( {) {
     res.status(200).json({ suggestion });
   } catch (e: any) {const message = process.env.OPENAI_API_KEY ? (e?.message |'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
-<<<<<<<< HEAD:pages/api-disabled/api/figma/wireframe-suggest.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/figma/wireframe-suggest.ts
+<:pages/api-disabled/api/figma/wireframe-suggest.ts
 ========
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/figma/wireframe-suggest.ts
@@ -344,11 +303,8 @@ export default async function handler(req, res) {;
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini';
 =======
-<<<<<<< HEAD:pages/api/figma/wireframe-suggest.ts
+:pages/api/figma/wireframe-suggest.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -359,14 +315,10 @@ export default async function handler(req, res) {;
         { role: 'user', content: prompt }];
       temperature: 0.4;
       max_tokens: 400});
-<<<<<<< HEAD:pages/api/figma/wireframe-suggest.ts
+:pages/api/figma/wireframe-suggest.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-    const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
+const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
     res.status(200).json({ suggestion });
 <<<<<<< HEAD
   } catch (e: any) {;
@@ -403,43 +355,16 @@ export default async function handler(req, res) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-=======
-=======;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/figma/wireframe-suggest.ts
-========
-;
-  try {
-    const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
-    const completion = await openai.chat.completions.create({;
-      model: 'gpt-4o-mini';
-
-
-      messages: [;
-        { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },;
-        { role: 'user', content: prompt }];
-      temperature: 0.4;
-      max_tokens: 400});
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/figma/wireframe-suggest.ts
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
     res.status(200).json({ suggestion });
   } catch (e: any) {;
     const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
-<<<<<<<< HEAD:pages/api-disabled/api/figma/wireframe-suggest.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<:pages/api-disabled/api/figma/wireframe-suggest.ts
   } catch (error) {;
 =======
 ;
@@ -487,26 +412,14 @@ export default async function handler(req, res) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<<< HEAD:pages/api-disabled/api/figma/wireframe-suggest.ts
-<<<<<<< HEAD:pages/api-disabled/api/figma/wireframe-suggest.ts
-=======
-========
+<:pages/api-disabled/api/figma/wireframe-suggest.ts
+}
 
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/figma/wireframe-suggest.ts
-
-
-  }
-
-
-<<<<<<<< HEAD:pages/api-disabled/api/figma/wireframe-suggest.ts
+<:pages/api-disabled/api/figma/wireframe-suggest.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD:pages/api-disabled/api/figma/wireframe-suggest.ts
 <<<<<<< HEAD:pages/api/figma/wireframe-suggest.ts
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/figma/wireframe-suggest.ts
 =======
 
   }
@@ -520,8 +433,6 @@ export default async function handler(req, res) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/figma/wireframe-suggest.ts
 ========
-
-
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

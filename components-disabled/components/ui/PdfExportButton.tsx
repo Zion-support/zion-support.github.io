@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-    const opt = {}
+const opt = {}
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
 
 class ErrorBoundary extends React.Component {}
@@ -38,19 +37,13 @@ export type PdfExportButtonProps = {};
   fileName?: string;'
   theme?: 'light' | 'dark'
 };
-<<<<<<< HEAD
-
 export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 
 export type PdfExportButtonProps = any;
   return (
 
-<<<<<<< HEAD
-    const html2pdf = (await import('html2pdf.js')).default;
+const html2pdf = (await import('html2pdf.js')).default;
 
     const opt = {
       margin: [10, 10, 10, 10],
@@ -58,14 +51,6 @@ export type PdfExportButtonProps = any;
 margin: [10, 10, 10, 10],
 origin/cursor/automate-test-improve-and-merge-code-2533
       filename: fileName,
-=======
-'
-export default function PdfExportButton() { return null; }
-    const opt = {}
-      margin: [10, 10, 10, 10],
-
-      filename: fileName,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2, useCORS: true },'
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
@@ -74,16 +59,10 @@ export default function PdfExportButton() { return null; }
     html2pdf().set(opt).from(element).save();
   };
 
-
-
       >
-<<<<<<< HEAD
-    >
+>
 origin/cursor/automate-test-improve-and-merge-code-2533
       Download as PDF
-=======
-      Download as PDF;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </button>
   };
       >;
@@ -91,15 +70,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </button>;
   );
 }  return (
-<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <button
-=======
-    <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       onClick={onClick}
       className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none""
       aria-label="Download as PDF"
@@ -114,34 +87,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
     <button;
-<<<<<<< HEAD
-      on_click={on_click}"
+on_click={on_click}"
       className="no - print fixed right - 4 top - 20 z - 50 inline - flex items - center gap - 2 rounded - md bg - blue - 600 text - white px - 4 py - 2 shadow hover: bg - blue - 700 focus:outline - none";"
       aria - label="Download as PDF";
       Download as PDF;
     </button>);
-<<<<<<< HEAD
-=======
-onClick={onClick}
-      className=\"no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none\"
-      aria-label=\"Download as PDF\"
-
-      Download as PDF;
-    </button>);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      Download as PDF
+Download as PDF
     </button>
 );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    </button />
-);
-}
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

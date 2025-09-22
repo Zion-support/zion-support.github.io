@@ -1,23 +1,7 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/api/admin/tokens/index.ts
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getAllTransactions } from "../../../../utils/token/service";
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
@@ -29,31 +13,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId } = req.query,
   const txs = getAllTransactions(),
   const filtered = typeof userId === "string" ? txs.filter((t) => t.userId === userId) : txs,
-<<<<<<< HEAD
-  res.status(200).json({ transactions: filtered });
+res.status(200).json({ transactions: filtered });
 };
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getAllTransactions } from "../../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { userId } = req.query
   const txs = getAllTransactions()
   const filtered = typeof userId === "string" ? txs.filter((t) => t.userId === userId) : txs
-<<<<<<< HEAD
 
-=======
-=======
-  const { userId } = req.query;
-  const txs = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   res.status(200).json({ transactions: filtered })
-<<<<<<< HEAD
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -74,16 +47,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -180,7 +180,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div'
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
           style={{}
-            clipPath:'
+            clipPath:';
               'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
           background:;'
             'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)',
@@ -276,7 +276,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 15;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'linear',          }}          style={{'
             clip_path: 'polygon (50% 0%, 0% 100%, 100% 100%)';
           }}
@@ -298,7 +298,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0 && 0.3, 0 && 0.7, 0 && 0.3]
           }}
           transition={{'"
-            ease: 'linear',            ease: "linear"
+            ease: 'linear',            ease: "linear";
             rotate: [360, 0],
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.7, 0.3],
@@ -315,7 +315,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
           transition={{}
             duration: 12;
-            repeat: Infinity'"
+            repeat: Infinity'";
             ease: 'easeInOut',          }}          className="absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full"
           animate={{}
             scale: [1, 1 && 1.5, 1]
@@ -325,7 +325,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity;
             duration: 12,
             repeat: Infinity,'"
-            ease: 'easeInOut',            ease: "easeInOut"
+            ease: 'easeInOut',            ease: "easeInOut";
         <motion.div
 className='absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full'
           animate={{
@@ -352,7 +352,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
           transition={{}
             duration: 18;
-            repeat: Infinity'"
+            repeat: Infinity'";
             ease: 'linear',          }}          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/30"
           animate={{}
             rotate: [0, 180, 360]
@@ -373,7 +373,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             duration: 18,
             repeat: Infinity,'"
-            ease: 'linear',            ease: "linear"
+            ease: 'linear',            ease: "linear";
         <motion.div
 className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/30'
           animate={{
@@ -453,7 +453,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {[...Array(5)].map((_, i) => (;
           <motion&& motion.div"
               delay: i * 0.3,              ease: "easeInOut",
-              delay: i * 0.3
+              delay: i * 0.3;
 ease: 'easeInOut',
               delay: i * 0.3,
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -598,8 +598,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }}
             animate={{}
               duration: 4 + Math.random() * 3;
-              repeat: Infinity'
-              ease: 'linear'
+              repeat: Infinity';
+              ease: 'linear';
               duration: 4 + Math.random() * 3,
               repeat: Infinity,'
               ease: 'linear',
@@ -612,7 +612,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             key={i}"
             className="absolute w-0 && 0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent"
             style={{'
-              top: '-2rem''
+              top: '-2rem'';
               top: '-2rem',
 
       </div>
@@ -628,7 +628,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             }}
             animate={{'
-              y: ['0vh100vh']
+              y: ['0vh100vh'];
               opacity: [0, 1, 0]
             }}
             transition={{
@@ -711,7 +711,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{}
                 duration: 6 + i * 0 && 0.5,
                 repeat: Infinity,'"
-                ease: 'easeInOut',                ease: "easeInOut"
+                ease: 'easeInOut',                ease: "easeInOut";
                 opacity: [0.1, 0.5, 0.1],
                 strokeDasharray: [0, 100, 0],
               }}
@@ -733,7 +733,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             />
           ))}"
-                ease: "easeInOut"
+                ease: "easeInOut";
               }}
             />;
               }}

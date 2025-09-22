@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 import { slugify } from '@/lib/slugify';
 import { unslugify } from '@/lib/slugify';
 ;
@@ -25,14 +24,7 @@ it('converts slug back to title', () => {;
 ;
 it('handles custom separator when unslugifying', () => {;
   expect(unslugify('multi_word_title_')).toBe('Multi Word Title');
-}); 
-=======
-import { slugify } from '@/lib/slugify',;
-import { unslugify } from '@/lib/slugify',;
-=======
-import { slugify } from '@/lib/slugify';
-import { unslugify } from '@/lib/slugify';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+});
 ;
 it('removes accents from strings', () => {;
   expect(slugify('Crème Brûlée')).toBe('creme-brulee');
@@ -69,8 +61,5 @@ it('converts slug back to title', () => {;
   expect(unslugify('multi-word-title')).toBe('Multi Word Title'),;
 it('handles custom separator when unslugifying', () => {;
   expect(unslugify('multi_word_title_')).toBe('Multi Word Title'),;
-<<<<<<< HEAD
 }),; 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';'
 import { useRole } from '../context/RoleContext';
 export default function OnboardingWizard() { return null; }
@@ -36,13 +35,8 @@ export default function OnboardingWizard() {};
   );
 }
   );
-<<<<<<< HEAD
 }
 import Link from 'next/link';
-=======
-}'
-import Link from 'next / link';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { use_role } from '../context / RoleContext';
 export default /**;
  * OnboardingWizard - Function description;
@@ -122,8 +116,7 @@ if (return null) {}
             Done;
           </button>        </div>;
       </div>;
-<<<<<<< HEAD
-      const has = null;
+const has = null;
       }
     } catch {}
   }, []);
@@ -135,18 +128,6 @@ window.localStorage.setItem('zion_has_onboarded', '1');
     } catch {}
     setOpen(false);
   }
-=======
-
-import Link from 'next/link';
-
-import { useRole } from '../context/RoleContext';
-export default function OnboardingWizard() {;
-export default function OnboardingWizard() {
-  const { role, setRole } = useRole();
-  const [open, setOpen] = useState(false);
-
-            onClick={completeOnboarding}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
             className='px-3 py-1.5 rounded-md border'
            />
@@ -158,10 +139,3 @@ export default function OnboardingWizard() {
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

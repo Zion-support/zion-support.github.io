@@ -63,8 +63,8 @@ if (
 }
         return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }
     const response = await client.chat.completions.create({
-      model: 'gpt-4o-mini'
-      messages: [
+      model: 'gpt-4o-mini';
+      messages: [;
 { role: 'system', content: 'You are an expert technical recruiter.' },
         { role: 'user', content: prompt },
       ],
@@ -92,8 +92,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 ) {
 
   const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`;
@@ -336,7 +336,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
     aggregate.push(record);
     await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 });
-    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
+    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup);
     // For now, just return success with AI data
 
         const content = await fse.readJSON(aggregatePath);}
@@ -349,7 +349,7 @@ if (Array.isArray(content)) aggregate = content;}
     aggregate.push(record);
     await fse.writeJSON(aggregatePath, aggregate, { spaces: 2;,}
 });
-    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
+    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup);
     // For now, just return success with AI data;
 return res.status(200).json({ ok: true;, id, summary, tags });
   } catch (error) {}

@@ -1,54 +1,19 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { createNotification  } from './createNotification';
 import { OnboardingNotificationParams } from './types';
 import {createNotification} from './createNotification';
-=======
-
-
-
-import {createNotification} from './createNotification';'
 import {OnboardingNotificationParams} from './types';
-
-
-/**
- * Creates an onboarding notification for a user;
- */
-export async function createOnboardingNotification({}
-';
-import { createNotification  } from './createNotification';'
-import { OnboardingNotificationParams } from './types';'
-import {createNotification} from './createNotification';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import {OnboardingNotificationParams} from './types';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
-<<<<<<< HEAD
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
@@ -56,24 +21,7 @@ import {OnboardingNotificationParams} from './types';
 /**
  * Creates an onboarding notification for a user;
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 export async function createOnboardingNotification({  missingMilestone;
-=======
-export async function createOnboardingNotification({
-
-import { createNotification  } from './createNotification';
-import { OnboardingNotificationParams } from './types';
-import {createNotification} from './createNotification';
-import {OnboardingNotificationParams} from './types';
-/**
- * Creates an onboarding notification for a user
- */
-export async function createOnboardingNotification({;
-  userId;
-  missingMilestone;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   userRole
 }: OnboardingNotificationParams) {
 
@@ -87,36 +35,8 @@ export async function createOnboardingNotification({;
     switch (missingMilestone) {
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
       case 'profile_completed':
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import {create_notification} from './create_notification';
-import {OnboardingNotificationParams} from './types';
-/**;
-* Creates an onboarding notification for a user;
-*/;
-export async /**
- * createOnboardingNotification - Function description
- */
-function createOnboardingNotification() {
-  let title = '';
-  let message = '';
-  let action_url = '';
-  let action_text = '';
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    switch (missing_milestone) {
-      case 'profile_completed':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         title = 'Complete your profile';
         message = 'Complete your profile to get discovered by clients';
@@ -136,7 +56,6 @@ export async function createOnboardingNotification({;
   if (userRole === 'talent') {}
     switch (missingMilestone) {'
       case 'profile_completed':
-
 
 '
         title = 'Complete your profile';'
@@ -220,24 +139,15 @@ export async function createOnboardingNotification({;
     }
   }
 
-<<<<<<< HEAD
-  return create_notification ({}
+return create_notification ({}
     user_id;
     title;
     message;'
-=======
-  return create_notification ({
-    user_id;
-    title;
-    message;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     type: 'onboarding';
     send_email: false;
     action_url,
     action_text;
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 
     actionText
@@ -250,79 +160,6 @@ export async function createOnboardingNotification({;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-
-}
-=======
-
-
-=======
-=======
-}
-
-
-import { createNotification } from './createNotification',;
-import { OnboardingNotificationParams } from './types',;
-}
-
-import { createNotification } from './createNotification',;
-import { OnboardingNotificationParams } from './types',;
-;
-        title = 'Complete your profile';
-        message = 'Complete your profile to get discovered by clients';
-        actionUrl = '/profile';
-        actionText = 'Complete Profile';
-        break;
-      case 'skills_added':
-        title = 'Add your skills';
-        message = 'Add your skills to get better job matches';
-        actionUrl = '/profile/skills';
-        actionText = 'Add Skills';
-        break;
-      case 'availability_set':
-        title = 'Set your availability';
-        message = 'Set your availability to help clients know when you can work';
-        actionUrl = '/profile/settings';
-        actionText = 'Set Availability';
-        break
-    }
-  } else {
-    switch (missingMilestone) {
-      case 'job_posted':
-        title = 'Post your first job';
-        message = 'Post your first job to start finding talent';
-        actionUrl = '/post-job';
-        actionText = 'Post Job';
-        break;
-      case 'match_viewed':
-        title = 'View your AI matches';
-        message = 'Check out your AI-matched talent suggestions';
-        actionUrl = '/client-dashboard';
-        actionText = 'View Matches';
-        break;
-      case 'talent_invited':
-        title = 'Invite talent';
-        message = 'Invite talent to speed up your hiring process';
-        actionUrl = '/talent';
-        actionText = 'Find Talent';
-        break
-    }
-  }
-  return createNotification({
-    userId;
-    title;
-    message;
-    type: 'onboarding';
-    sendEmail: false;
-    actionUrl
-
-    actionText
-  })
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { createNotification } from './createNotification',;
 =======
@@ -332,7 +169,6 @@ import { createNotification } from './createNotification',;
       case 'profile_completed':import { createNotification } from './createNotification',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 '
 import { createNotification } from './createNotification',;'
@@ -346,7 +182,6 @@ import { OnboardingNotificationParams } from './types',;
 /**;
  * Creates an onboarding notification for a user;
  */;
-<<<<<<< HEAD
 export async function createOnboardingNotification({;
   userId,;
   missingMilestone,;
@@ -358,18 +193,6 @@ export async function createOnboardingNotification({;
   let actionUrl = '',;
   let actionText = '',;
   ;
-=======
-export async function createOnboardingNotification() { return null; }
-}: OnboardingNotificationParams) {;'
-  let title = '',;'
-  let message = '',;'
-  let actionUrl = '',;'
-  let actionText = '',;
-
-
-  ;
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   if (userRole === 'talent') {;
     switch (missingMilestone) {;'
       case 'profile_completed':;'
@@ -389,14 +212,7 @@ export async function createOnboardingNotification() { return null; }
         message = 'Set your availability to help clients know when you can work',;'
         actionUrl = '/profile/settings',;'
         actionText = 'Set Availability',;
-<<<<<<< HEAD
-        break,;
-=======
-
-
-        break,;
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+break,;
         break;
     }
   } else {;
@@ -422,9 +238,7 @@ export async function createOnboardingNotification() { return null; }
     }
   }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
+}
   }
   ;
 <<<<<<< HEAD
@@ -432,24 +246,7 @@ export async function createOnboardingNotification() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-        break,;
-    }
-  }
-  ;
-=======
-export async function createOnboardingNotification({  missingMilestone;
-  userRole
-}: OnboardingNotificationParams) {
-
-
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return createNotification({;
     title,;
     message,;
@@ -465,15 +262,11 @@ export async function createOnboardingNotification({  missingMilestone;
 ;
     actionText;)
 
-
-<<<<<<< HEAD
 }
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     type:'onboarding',;
     sendEmail:false,;
     actionUrl,;
@@ -522,14 +315,7 @@ case 'talent invited':'
 }
 }
 ;
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-;
-}
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 ;
@@ -559,7 +345,6 @@ case 'talent invited':'
     actionUrl;
     actionText;
   });
-
 
 }
 ;

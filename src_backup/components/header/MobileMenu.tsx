@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/header/MobileMenu.tsx
-<<<<<<< HEAD
+:src/components/header/MobileMenu.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import Link from 'next/link',;
@@ -138,15 +137,6 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       <div className="mt-6 px-6">
         <ModeToggle />
       </div>
-=======
-}
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-}
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/header/MobileMenu.tsx
               onClose(), // Close mobile menu on any click
 =======
               }              onClose(), // Close mobile menu on any click
@@ -170,34 +160,13 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>
-<<<<<<< HEAD:src/components/header/MobileMenu.tsx
-<<<<<<< HEAD
-  )
+:src/components/header/MobileMenu.tsx
+)
 
     name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );
 }
 <<<<<<< HEAD
-=======
-  );
-}
-
-name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
-}
-  );
-}
-
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -215,9 +184,6 @@ name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),
 }</Link>) ) ";
 }</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
 }'"
-<<<<<<< HEAD:src/components/header/MobileMenu.tsx
+:src/components/header/MobileMenu.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/header/MobileMenu.tsx

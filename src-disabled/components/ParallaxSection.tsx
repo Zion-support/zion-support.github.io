@@ -9,29 +9,19 @@ interface ParallaxSectionProps {
 const ParallaxSection: React.FC<ParallaxSectionProps> = ({,
   children,
   speed = 0.5,
-<<<<<<< HEAD
-  className = '',
+className = '',
   direction = 'up',
-=======
-className = '','
-  direction = 'up''
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-<<<<<<< HEAD
-    offset: ['start end', 'end start'],
-=======
-offset: ["start end", "end start"]"
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+offset: ['start end', 'end start'],
   });
   const getTransform = () => {
     const baseTransform = scrollYProgress.get() * 100 * speed;
 
     switch (direction) {
-<<<<<<< HEAD
-      case 'up':
+case 'up':
         return useTransform(
           scrollYProgress,
           [0, 1],
@@ -55,16 +45,6 @@ offset: ["start end", "end start"]"
           [0, 1],
           [-100 * speed, 100 * speed],
         );
-=======
-      case 'up':'
-        return useTransform(scrollYProgress, [0, 1], [100 * speed, -100 * speed]);
-      case 'down':'
-        return useTransform(scrollYProgress, [0, 1], [-100 * speed, 100 * speed]);
-      case 'left':'
-        return useTransform(scrollYProgress, [0, 1], [100 * speed, -100 * speed]);
-      case 'right':'
-        return useTransform(scrollYProgress, [0, 1], [-100 * speed, 100 * speed]);
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       default:
         return useTransform(
           scrollYProgress,

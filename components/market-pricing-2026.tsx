@@ -98,48 +98,48 @@ const matchesCategory =
   });
   const categories = [
     {
-      id: 'all'
-      name: 'All Categories'
-      icon: BarChart3
-      count: allServices.length
+      id: 'all';
+      name: 'All Categories';
+      icon: BarChart3;
+      count: allServices.length;
     }
     {
-      id: 'AI'
-      name: 'AI & Machine Learning'
-      icon: Brain
+      id: 'AI';
+      name: 'AI & Machine Learning';
+      icon: Brain;
       count: allServices.filter(s => s.category.includes('AI')).length
     }
     {
-      id: 'Quantum'
-      name: 'Quantum Computing'
-      icon: Atom
+      id: 'Quantum';
+      name: 'Quantum Computing';
+      icon: Atom;
       count: allServices.filter(s => s.category.includes('Quantum')).length
     }
     {
-      id: 'Emerging'
-      name: 'Emerging Technology'
-      icon: Sparkles
+      id: 'Emerging';
+      name: 'Emerging Technology';
+      icon: Sparkles;
       count: allServices.filter(s => s.category.includes('Emerging')).length
     }
     {
-      id: 'IT'
-      name: 'IT & Infrastructure'
-      icon: Shield
-      count: allServices.filter(
+      id: 'IT';
+      name: 'IT & Infrastructure';
+      icon: Shield;
+      count: allServices.filter(;
         s => s.category.includes('IT') |s.category.includes('Infrastructure')
       ).length
     }
     {
-      id: 'Autonomous'
-      name: 'Autonomous Systems'
-      icon: Target
+      id: 'Autonomous';
+      name: 'Autonomous Systems';
+      icon: Target;
       count: allServices.filter(s => s.category.includes('Autonomous')).length
     }
     {
-      id: 'Cloud'
-      name: 'Cloud & DevOps'
-      icon: Cloud
-      count: allServices.filter(
+      id: 'Cloud';
+      name: 'Cloud & DevOps';
+      icon: Cloud;
+      count: allServices.filter(;
         s => s.category.includes('Cloud') || s.category.includes('DevOps')
       ).length,
     },
@@ -153,9 +153,9 @@ const matchesCategory =
       range: 'Affordable solutions for startups and small businesses',
     },
     {
-      id: 'mid'
-      name: 'Mid-Range ($5K - $15K)'
-      range: 'Professional solutions for growing companies'
+      id: 'mid';
+      name: 'Mid-Range ($5K - $15K)';
+      range: 'Professional solutions for growing companies';
     }
     {
       id: 'premium',
@@ -174,18 +174,18 @@ website: 'https://ziontechgroup.com',
   const pricingStats = {
     totalServices: allServices.length,
 averagePrice:
-      allServices.reduce(
+      allServices.reduce(;
         (sum, service) =>
           sum + parseFloat(service.price.replace(/[^0-9.]/g, ''))
         0
       ) / allServices.length
-    lowestPrice: Math.min(
+    lowestPrice: Math.min(;
       ...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))
     )
-    highestPrice: Math.max(
+    highestPrice: Math.max(;
       ...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))
     )
-    totalCustomers: allServices.reduce(
+    totalCustomers: allServices.reduce(;
       (sum, service) => sum + service.customers
       0
     )
@@ -221,12 +221,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               animate={{ opacity: 1, y: 0 }}
                 </span>
               </h1>"
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
                 Comprehensive pricing analysis and competitive positioning for our revolutionary AI
 
           <meta
             name='description'
-            content="Comprehensive market pricing analysis for Zion Tech Group's revolutionary 2026 services. Compare prices, ROI, and competitive positioning. Contact: +1 302 464 0950"
+            content="Comprehensive market pricing analysis for Zion Tech Group's revolutionary 2026 services. Compare prices, ROI, and competitive positioning. Contact: +1 302 464 0950";
           />
           <meta
             name='keywords'
@@ -235,46 +235,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <meta name='author' content='Zion Tech Group' />
           <meta name='robots' content='index, follow' />
           <meta
-            property='og:title'
+            property='og:title';
             content='Zion Tech Group - 2026 Market Pricing & Competitive Analysis'
           />
           <meta
-            property='og:description'
-            content='1500+ cutting-edge services with competitive pricing and 1000% ROI guarantee. Contact: +1 302 464 0950'
+            property='og:description';
+            content='1500+ cutting-edge services with competitive pricing and 1000% ROI guarantee. Contact: +1 302 464 0950';
           />
           <meta
-            property='og:url'
-            content='https://ziontechgroup.com/market-pricing-2026'
+            property='og:url';
+            content='https://ziontechgroup.com/market-pricing-2026';
           />
           <meta property='og:type' content='website' />
           <link
             rel='canonical'
-            href='https://ziontechgroup.com/market-pricing-2026'
+            href='https://ziontechgroup.com/market-pricing-2026';
           />
         </Head>
 
         {/* Navigation */}
         <UltraAdvancedNavigation />
         {/* Hero Section */}
-<section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
+<section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<h1 className='text-5xl md:text-7xl font-bold mb-6'>
+<h1 className='text-5xl md:text-7xl font-bold mb-6'>;
                 <span className='bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
                   2026 Market Pricing
                 </span>
               </h1>
-              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>;
                 Comprehensive pricing analysis and competitive positioning for
                 our revolutionary AI, quantum computing, and emerging technology
                 services
               </p>
               {/* Pricing Statistics */}
-              <div className='grid grid-cols-2 md:grid-cols-5 gap-6 mb-12'>
+              <div className='grid grid-cols-2 md:grid-cols-5 gap-6 mb-12'>;
                 <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>
                   <div className='text-3xl font-bold text-cyan-400 mb-2'>
                     {pricingStats.totalServices}
@@ -308,7 +308,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 quantum computing, and emerging technology services
               </p>
               {/* Pricing Statistics */}"
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">"
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">";
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">"
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{pricingStats.totalServices}</div>"
                   <div className="text-gray-400 text-sm">Total Services</div>
@@ -333,13 +333,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </section>
-        <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
+        <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>;
         {/* Filters Section */}
-<section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
+<section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto'>
             <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
                 {/* Category Filter */}
                 <div>'
                   <label className='block text-white font-semibold mb-3'>
@@ -548,7 +548,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
 
         {/* Market Analysis Section */}
-<section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
+<section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>
             <motion.div
 
@@ -609,7 +609,7 @@ className='text-center mb-12'
               </p>
             </motion.div>
             {/* Market Insights Grid */}
-<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>
+<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>;
               <motion.div
                 initial={{ opacity: 0;, y: 30 ;}}
                 whileInView={{ opacity: 1;, y: 0 ;}}
@@ -770,7 +770,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
-<section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
+<section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>
             <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -794,7 +794,7 @@ className='text-center mb-12'
               </p>
             </motion.div>
 
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
               {filteredServices.map((service, index) => (
                 <motion.div;
@@ -823,7 +823,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='group'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
-                  <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>
+                  <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>;
                     {/* Service Header */}'
                     <div className='flex items-start justify-between mb-4'>'
                       <div className='text-4xl'>{service.icon}</div>
@@ -842,14 +842,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {/* Pricing Section */}'
                     <div className='bg-gray-700/30 rounded-xl p-4 mb-4'>'
                       <div className='text-center'>'"
-                        <div className='text-3xl font-bold text-cyan-400 mb-1'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                        <div className='text-3xl font-bold text-cyan-400 mb-1'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">;
                 >'
-                  <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>
+                  <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>;
                     {/* Service Header */}'
                     <div className='flex items-start justify-between mb-4'>'
                       <div className='text-4xl'>{service.icon}</div>
                       {service.popular && ("
-                  <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">'
+                  <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">';
               className='text - center mb - 12';
             >;'
               <h2 className='text - 4xl font - bold text - white mb - 4'>;
@@ -907,7 +907,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                     {/* Market Position */}
 
-<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>;
                       {service.name}
                     </h3>
                     {/* Tagline */}
@@ -1097,7 +1097,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {/* CTA Button */}
                     <a
                       href={service.link}
-className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'
+className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block';
 origin/cursor/automate-test-improve-and-merge-code-2533
                     >
                       View Details;
@@ -1166,7 +1166,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
         {/* Contact Section */}
-<section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
+<section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
 
@@ -1321,7 +1321,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 revolutionary 2026 services can transform your business with;
                 exceptional ROI;
               </p>'
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>'
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>';
                 <div className='flex items-center justify-center space-x-3 text-cyan-300'>'
                   <span className='text-2xl'>📱</span>'
                   <span className='font-semibold'>{contactInfo.mobile}</span>
@@ -1337,7 +1337,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </span>
                 </div>
               </div>'
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
                 Contact our team to discuss pricing, implementation, and how our;
                 revolutionary 2026 services can transform your business with;
                 exceptional ROI;

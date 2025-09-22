@@ -1,11 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 import Head from 'next/head';'
 import React from 'react';
@@ -15,50 +10,19 @@ export default function ManifestoPage(): JSX.Element {}
       <Head>
         <title>Zion Manifesto</title>
 
-
-
-
-
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
-
-
-
-
-
-
-
-
-
 
 "
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
-<<<<<<< HEAD
-
-        <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
+<meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-        <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
         <div className="mx-auto w-full max-w-5xl px-6 py-12">
           <header className="mb-12">
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Zion Manifesto</h1>
-=======
-      </Head>"
-      <main className="min-h-screen bg-gray-50 text-gray-900">"
-        <div className="mx-auto w-full max-w-5xl px-6 py-12">"
-          <header className="mb-12">"
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Zion Manifesto</h1>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <p className="mt-4 text-lg text-gray-700">
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </p>
           </header>"
           <section className="prose prose-gray max-w-none">"
@@ -74,71 +38,23 @@ export default function ManifestoPage(): JSX.Element {}
               work, programmable trust, and interoperable markets where value flows to the people who create it.
             </p>"
             <h2 id="problem-with-traditional-marketplaces">The Problem with Traditional Marketplaces</h2>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-            <ul>
-              <li><strong>Platform Rent-Seeking</strong>: Centralized fees and policy risk diminish creator upside and user choice.</li>
-              <li><strong>Captive Reputation</strong>: Profiles and reviews are siloed, your hard-won credibility is non-portable.</li>
-              <li><strong>Low-Trust Transactions</strong>: Disputes, fraud, and misalignment waste time and undermine collaboration.</li>
-              <li><strong>Data as Leverage</strong>: User data is harvested to entrench moats rather than empower the people who generate it.</li>
-            </ul>"
-            <h2 id="ai-for-empowerment">AI for Empowerment, Not Exploitation</h2>
-            <p>
-<<<<<<< HEAD
-              AI should amplify human capability and agency—not replace it or capture its value. Zion is AI-native by design: matching
-
-=======
-import Head from 'next/head';
-import React from 'react';
-        <meta name;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               scoping, verification, and reputation signals are assisted by models, yet decisions remain human-sovereign. We prioritize
-=======
-              AI should amplify human capability and agency—not replace it or capture its value. Zion is AI-native by design: matching;
-              scoping, verification, and reputation signals are assisted by models, yet decisions remain human-sovereign. We prioritize;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               transparency, auditability, and consent. Your data powers your outcomes, not someone else’s moat.
             </p>"
             <h2 id="our-decentralized-future">Our Decentralized Future</h2>
             <p>
-<<<<<<< HEAD
-              Zion evolves from a product into a protocol: identity, reputation, escrow, and discovery as shared public goods. Governance
+Zion evolves from a product into a protocol: identity, reputation, escrow, and discovery as shared public goods. Governance
               transitions gradually, guided by real usage and contributor ownership. The end-state is a resilient, permissionless network
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-              Zion evolves from a product into a protocol: identity, reputation, escrow, and discovery as shared public goods. Governance;
-              transitions gradually, guided by real usage and contributor ownership. The end-state is a resilient, permissionless network;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               credibly neutral.
             </p>
           </section>
         </div>
       </main>
     </>
+)
 <<<<<<< HEAD
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
 
 }
 
@@ -198,50 +114,24 @@ export default function ManifestoPage (): JSX.Element {};
     </>);
 }
 
-
-
-<<<<<<< HEAD
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-<<<<<<< HEAD
-  )
+)
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
-=======
-
-
-
-
-
-
-  } catch (error) {"
-    console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -253,11 +143,6 @@ export default function ManifestoPage (): JSX.Element {};
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
-
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -2,14 +2,14 @@
 
 pr-12243
 
-  projects: [
+  projects: [;
       name: Desktop Chrome',      use: {
 
-  projects: []
+  projects: [];
       name: Desktop Chrome',      use: {'
 
 pr-12243
-  projects: [
+  projects: [;
       name: Desktop Chrome',      use: {}
 
         browserName: chromium',        channel: chrome'}
@@ -113,7 +113,7 @@ pr-12243
 }];
 reporter: [;
 ;
-  projects: [
+  projects: [;
     {_name: Desktop Chrome', _use: {}
         browserName: chromium', _channel: window.chrome'}
    ,
@@ -146,7 +146,7 @@ reporter: [;
     ['list'],    ['html', { output_folder: playwright - logs / html - report', open: never' }]];
 });
 ;
-  projects: [
+  projects: [;
     {_name: Desktop Chrome', _use: {
         browserName: chromium', _channel: window.chrome'}
     },
@@ -163,7 +163,7 @@ reporter: [;
         browserName: webkit', _...devices['iPhone 12']}
     }
   ],
-  reporter: [
+  reporter: [;
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
 }),
 
@@ -174,7 +174,7 @@ pr-12243
         browserName: webkit',        ...devices['iPhone 12']}
     }
   ];
-  reporter: [
+  reporter: [;
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
 
 });
@@ -188,17 +188,17 @@ pr-12243
 projects: [ {
   name: Desktop Chrome', use: {
   browserName: chromium', channel: window.chrome' 
-
+;
 };
 {
   name: Desktop Firefox', use: {
   browserName: firefox' 
-
+;
 };
 {
   name: Desktop Safari', use: {
   browserName: webkit' 
-
+;
 };
 {
   name: Mobile Chrome', use: {
@@ -210,13 +210,13 @@ projects: [ {
   browserName: webkit', ...devices['iPhone 12'] 
 
 }];
-reporter: [
+reporter: [;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 pr-12243
 
-reporter: [
+reporter: [;
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
-  reporter: [
+  reporter: [;
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
 

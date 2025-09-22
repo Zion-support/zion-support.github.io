@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/messaging/resume-selector/UploadSection.tsx
-<<<<<<< HEAD
+:src/components/messaging/resume-selector/UploadSection.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -24,23 +23,15 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
         <Button variant="outline" className="relative">
           Browse Files
           <input
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/resume-selector/UploadSection.tsx
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Upload, FileText } from 'lucide-react';
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD:src/components/messaging/resume-selector/UploadSection.tsx
+:src/components/messaging/resume-selector/UploadSection.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/resume-selector/UploadSection.tsx
 import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
@@ -54,7 +45,7 @@ interface UploadSectionProps {
           {custom_file;
             ? custom_file.name;
             : 'Drag & drop your PDF or click to browse'}
-<<<<<<< HEAD:src/components/messaging/resume-selector/UploadSection.tsx
+:src/components/messaging/resume-selector/UploadSection.tsx
 <<<<<<< HEAD
         </p>;
         <Button variant='outline' className='relative'>;
@@ -64,9 +55,6 @@ interface UploadSectionProps {
             type="file"
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             accept=".pdf"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/resume-selector/UploadSection.tsx
         </p>
         <Button variant='outline' className='relative'>
           Browse Files
@@ -79,17 +67,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           />
         </Button>
       </div>
-<<<<<<< HEAD:src/components/messaging/resume-selector/UploadSection.tsx
+:src/components/messaging/resume-selector/UploadSection.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-      
+
       {customFile && (
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-      
       {customFile && (
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -100,9 +83,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span className="text-white">{customFile.name}</span>
             </div>
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/resume-selector/UploadSection.tsx
 {customFile && (
         <div className='p-3 bg-zion-blue-dark/30 rounded-md'>
           <div className='flex items-center justify-between'>
@@ -116,13 +96,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
-<<<<<<< HEAD
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Upload, FileText } from 'lucide-react';
 interface UploadSectionProps {;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -156,14 +133,10 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-    </div>;
+</div>;
   );
 }
 ;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -173,27 +146,14 @@ interface UploadSectionProps {;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
       )}
-<<<<<<< HEAD:src/components/messaging/resume-selector/UploadSection.tsx
-<<<<<<< HEAD
-    </div>
+:src/components/messaging/resume-selector/UploadSection.tsx
+</div>
   );
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-    </div>;
-  )
-};
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
     </div>;

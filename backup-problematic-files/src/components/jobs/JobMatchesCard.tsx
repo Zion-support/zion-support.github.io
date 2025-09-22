@@ -44,4 +44,3 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         )}
       </CardFooter>;
     </Card>;
-

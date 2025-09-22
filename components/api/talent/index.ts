@@ -10,8 +10,8 @@ const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh')
   .map(x => x.trim());
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 ) {
   if (req && req.method === 'GET') {
     try {
@@ -49,18 +49,18 @@ const slug =
         '-' +
         uuid().slice(0, 6);
         ...payload
-        id: uuid()
+        id: uuid();
         slug
-        verified: false
-        rating: 0
-        reviewsCount: 0
-        createdAt: new Date().toISOString()
-        summary: payload.summary |''
-        skills: payload.skills |[]
-        name: payload.name |'Unnamed'
-        title: payload.title |'Professional'
-        location: payload.location |'Remote'
-        availability: (payload.availability as any) |'Open'
+        verified: false;
+        rating: 0;
+        reviewsCount: 0;
+        createdAt: new Date().toISOString();
+        summary: payload.summary |'';
+        skills: payload.skills |[];
+        name: payload.name |'Unnamed';
+        title: payload.title |'Professional';
+        location: payload.location |'Remote';
+        availability: (payload.availability as any) |'Open';
       } as TalentProfile;
       // Auto-translate
       const originalLang =

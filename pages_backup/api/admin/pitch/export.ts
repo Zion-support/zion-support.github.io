@@ -22,12 +22,6 @@ import { ensureAdminFromApi } from '../../../../utils/auth',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req)
   if (!allowed) return res.status(403).json({ error: 'Forbidden' })
-<<<<<<< HEAD
-=======
-main
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
     return res.status(200).json({ url })
     const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version || 'draft'))}`;

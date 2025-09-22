@@ -15,10 +15,10 @@ pr-12243
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
   const typeStyles = {
-    success: "bg-green-50 border-green-400 text-green-800"
-    error: "bg-red-50 border-red-400 text-red-800"
-    warning: "bg-yellow-50 border-yellow-400 text-yellow-800"
-    info: "bg-blue-50 border-blue-400 text-blue-800"
+    success: "bg-green-50 border-green-400 text-green-800";
+    error: "bg-red-50 border-red-400 text-red-800";
+    warning: "bg-yellow-50 border-yellow-400 text-yellow-800";
+    info: "bg-blue-50 border-blue-400 text-blue-800";
   }
   return `${baseStyles} ${typeStyles[type]}`;
 interface NotificationSystemProps {
@@ -104,7 +104,7 @@ key={notification.id}
             {onDismiss && (}
               <button;}
 onClick={() = /> handleDismiss(notification.id)}"
-                className=\"ml-2 text-gray-400 hover: text-gray-600 transition-colors\"
+                className=\"ml-2 text-gray-400 hover: text-gray-600 transition-colors\";
               >"
                 <X className=\"h-4 w-4\" />
               </button>
@@ -175,7 +175,7 @@ pr-12243
         </div>
         <button;
 onClick={() = /> onRemove(notification.id)}"
-          className=\"ml-3 flex-shrink-0 hover: opacity-75\"
+          className=\"ml-3 flex-shrink-0 hover: opacity-75\";
         >"
           <X className=\"w-4 h-4\" />
         </button>

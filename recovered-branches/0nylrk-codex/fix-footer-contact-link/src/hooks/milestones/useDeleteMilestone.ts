@@ -1,21 +1,8 @@
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -24,30 +11,16 @@ import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 =======
 
-
-
 import {useState} from 'react';'
 import {supabase} from '@/integrations / supabase / client';'
 import {use_auth} from '@/hooks / use_auth';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {toast} from 'sonner';
-<<<<<<< HEAD
-=======
-=======
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {use_auth} from '@/hooks / use_auth';
-import {toast} from 'sonner';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
 export const useDeleteMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
@@ -64,22 +37,11 @@ export const useDeleteMilestone = () => {;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
-export const useDeleteMilestone = () => {;
-  const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -102,24 +64,13 @@ export const useDeleteMilestone = () => {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  
   const deleteMilestone = async (milestoneId: string) => {}
     if (!user) return false,
-    
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -130,48 +81,24 @@ export const useDeleteMilestone = () => {}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
     try {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
-  
   const deleteMilestone = async (milestoneId: string) => {
     if (!user) return false,
-    
+
     try {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsSubmitting(true)
       const { error } = await supabase'
         .from('project_milestones')
-<<<<<<< HEAD
-        .delete()
-<<<<<<< HEAD
+.delete()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        .eq('id', milestoneId);
-      if (error) throw error;
-      toast.success("Milestone deleted successfully");
-      return true
-    } catch (err: any) {
-      console.error("Error deleting milestone:", err);
-      toast.error("Failed to delete milestone: " + err.message)
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return false
 export const useDeleteMilestone = () =>: any {
-=======
-        .delete();
-;
-      return false;
-export const useDeleteMilestone = () =>: any {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = use_auth ();
   const [is_submitting, setIsSubmitting] = useState (false);
 ;
@@ -212,26 +139,15 @@ export const useDeleteMilestone = () => {;
     if (!user) return false,;
     try {;
       setIsSubmitting(true),;
-<<<<<<< HEAD
-      const { error } = await supabase;'
+const { error } = await supabase;'
         .from('project_milestones');
         .delete();'
-=======
-      const { error } = await supabase;
-        .from('project_milestones');
-        .delete();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .eq('id', milestoneId),;
       if (error) throw error,;
       toast.success("Milestone deleted successfully"),;
       return true;
-<<<<<<< HEAD
-    } catch (err: any) {;"
+} catch (err: any) {;"
       console.error("Error deleting milestone:", err),;"
-=======
-    } catch (err: any) {;
-      console.error("Error deleting milestone:", err),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.error("Failed to delete milestone: " + err.message),;
       return false;
     } finally {;
@@ -242,25 +158,17 @@ export const useDeleteMilestone = () => {;
     deleteMilestone;
     isSubmitting;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      
+
       toast && toast.success("Milestone deleted successfully");
-      
+
       return true
     } catch (err: any) {
       console && console.error("Error deleting milestone:", err);
       toast && toast.error("Failed to delete milestone: " + err && err.message),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -295,12 +203,6 @@ export const useDeleteMilestone = () => {;
   }
 };
     } finally {
-=======
-      return false    } finally {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      return false    } finally {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setIsSubmitting (false);
     }
 
@@ -344,14 +246,13 @@ if (throw error) {
       setIsSubmitting (false);
     }
 
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .eq('id', milestoneId),
-      
+
       if (error) throw error,
       "
       toast.success("Milestone deleted successfully"),
-      
+
       return true;
     } catch (err: any) {"
       console.error("Error deleting milestone:", err),"
@@ -359,11 +260,9 @@ if (throw error) {
       return false;
     } finally {}
       setIsSubmitting(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
+}
   };
-  
+
   return {
     deleteMilestone;
     isSubmitting
@@ -401,10 +300,6 @@ export const useDeleteMilestone = () => {;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
 
   }
 ;
@@ -414,34 +309,16 @@ export const useDeleteMilestone = () => {;
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-;
-  }
 };
-  }
-};
-  }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-};
-<<<<<<< HEAD
 <<<<<<< HEAD
   }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  }
-};
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 ;
-
 
   }
 };
@@ -449,6 +326,5 @@ export const useDeleteMilestone = () => {;
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

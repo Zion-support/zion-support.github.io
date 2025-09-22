@@ -47,4 +47,3 @@ function ApplicationStatusTrackerContent() {;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
-

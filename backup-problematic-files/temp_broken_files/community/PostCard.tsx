@@ -74,4 +74,3 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
         )}
       </CardFooter>;
     </Card>;
-

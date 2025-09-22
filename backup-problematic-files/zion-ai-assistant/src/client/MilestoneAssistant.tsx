@@ -1,13 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import React, { useMemo, useState } from "react",;
-import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",;
-=======
-import React, { useMemo, useState } from "react";""
-import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 export interface MilestoneAssistantProps {;
   scopeOfWork: string;,;
@@ -63,28 +54,19 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
                   <label>Description</label>;
                   <textarea;
                     value={item.description}
-<<<<<<< HEAD
-                    onChange={(e) => updateItem(idx, { description:e.target.value })}
+onChange={(e) => updateItem(idx, { description:e.target.value })}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     rows={3}
                     placeholder="Description";
                   />;
                 </div>;
 <<<<<<< HEAD
-
-=======
-                <div style={{ display:"grid", gap:6 }}>;
-=======
-                    onChange={(e) => updateItem(idx, { description: e.target.value ;})}
-</textarea>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <label>Suggested due date</label>;
                   <input;"
                     type="date";"
                     value={item.suggestedDueDateIso.slice(0, 10)}
                     onChange={(e) => updateItem(idx, { suggestedDueDateIso: new Date(e.target.value).toISOString() ;})}
                   <label>Estimated effort (hours)</label>;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <input;
                     type="number";
@@ -118,20 +100,6 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 }<div style= {
   {
   marginTop: 12
-=======
-                    onChange={(e) => updateItem(idx, { estimatedEffortHours:Math.max(1, parseInt(e.target.value || "0", 10)) })}
-                  />;
-                </div>;
-                <div style={{ display:"flex", justifyContent:"space-between", marginTop:8 }}>;
-                  <button onClick={() => removeItem(idx)} style={{ color:"#b00" }}>Remove</button>;
-=======
-                    type="number";"
-                    min={1}
-                    value={item.estimatedEffortHours}"
-                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1;, parseInt(e.target.value || "0", 10)) })}"
-                <div style={{ display: "flex";, justifyContent: "space-between";, marginTop: 8 ;}}>;"
-                  <button onClick={() => removeItem(idx)} style={{ color: "#b00" ;}}>Remove</button>;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <button onClick={accept}>Accept</button>;
               </div>;            )}
  return (<div className="milestone-assistant"> <div className="assistant-header" style= {"
@@ -152,8 +120,7 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 }</div> 
 }<div style= {
   {
-<<<<<<< HEAD
-  marginTop: 12 
+marginTop: 12 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 }> {
@@ -264,18 +231,6 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 }>Accept</button> </div> </div>)
 }</div>) )
 }</div> </div>)
-=======
-  color: "#666" 
-}
-}>No suggestions yet. Click "Generate" above.</div>) 
-}{
-=======
-  marginTop: 12;
-  items.length === 0 && !loading && (<div style= {
-  color: "#666"";
-})"
-}>No suggestions yet. Click "Generate" above.</div>)"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   items.map ( (item, idx) => (<div key= {
   idx;"
 }className="milestone-item" style= {"
@@ -313,10 +268,6 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
   accept;
 }>Accept</button> </div> </div>) 
 }</div>) ) 
-<<<<<<< HEAD
 }</div> </div>) 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }export default MilestoneAssistant;
-=======
-}</div> </div>) "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

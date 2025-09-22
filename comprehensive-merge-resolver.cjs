@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
@@ -47,7 +40,6 @@ function resolveConflicts() {
           this.mergeReport.failedMerges.push({ branch, "error": error.message })}"
       // Generate final report;
 
-
 // Function to commit the merge;
 function commitMerge() {
   // TODO: Implement
@@ -68,20 +60,14 @@ function pushChanges() {
       this.mergeReport.resolvedConflicts.push(branchName);
       this.mergeReport.summary.conflictsResolved++;
       this.mergeReport.mergedBranches.push(branchName);
-<<<<<<< HEAD
-      this.mergeReport.summary.successfulMerges++} catch (error) {
+this.mergeReport.summary.successfulMerges++} catch (error) {
       this.log(`❌ Failed to resolve conflicts for ${branchName}: ${error.message}`, 'ERROR');
       throw error}
   }
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const { execSync } = require('child_process')
 console.log('� Starting Comprehensive Merge Conflict Resolver...')
@@ -104,18 +90,8 @@ console.log('� Starting Comprehensive Merge Conflict Resolver...')
   console.error(' Merge conflict resolution "failed")"
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
-
-
 if (require.main === module) {
   main();
 
 module.exports = { resolveConflicts, commitMerge, pushChanges };
-<<<<<<< HEAD
-<<<<<<< HEAD
 main
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-

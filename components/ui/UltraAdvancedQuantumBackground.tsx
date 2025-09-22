@@ -34,7 +34,7 @@ this.phase = Math.random () * Math.PI * 2;
 this.color = `hsl ($ {
   200 + Math.random () * 60
 }, 80%, 60%) `
-const UltraAdvancedQuantumBackground: React.FC<
+const UltraAdvancedQuantumBackground: React.FC<;
   UltraAdvancedQuantumBackgroundProps
 > = ({ children, className = '' }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -284,9 +284,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               for (let j = 0; j < layers[layerIndex - 1]; j++) {
 origin/cursor/automate-test-improve-and-merge-code-2533
                 this.connections.push({
-                  from: prevLayerStart + j
-                  to: nodeIndex
-                  weight: Math.random()
+                  from: prevLayerStart + j;
+                  to: nodeIndex;
+                  weight: Math.random();
                 })
                 });
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -431,12 +431,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }}
         transition={{}
           duration: 4;
-          repeat: Infinity'
+          repeat: Infinity';
           ease: 'easeInOut',        animate={{}
         transition={{}
           duration: 4;
           repeat: Infinity;
-          ease: "easeInOut"
+          ease: "easeInOut";
         }}"
         className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl"
         animate={{}
@@ -444,8 +444,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]}}
         transition={{}
           duration: 5;
-          repeat: Infinity"
-          ease: "easeInOut"
+          repeat: Infinity";
+          ease: "easeInOut";
           delay: 1;
         }}
 <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'>
@@ -455,8 +455,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
       {/* Animated Quantum Grid */}
       <div className='absolute inset-0 opacity-20'>
-        <div className='absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]' />
-        <div className='absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]' />
+        <div className='absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]' />;
+        <div className='absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]' />;
       </div>
 
       {/* Floating Quantum Elements */}
@@ -501,8 +501,8 @@ className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400
         }}
         transition={{}
           duration: 5;
-          repeat: Infinity'
-          ease: 'easeInOut'
+          repeat: Infinity';
+          ease: 'easeInOut';
           delay: 1,        }}
       <motion&& motion.div'
         className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-20 blur-xl'
@@ -512,8 +512,8 @@ className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400
         }}
         transition={{}
           duration: 6;
-          repeat: Infinity'
-          ease: 'easeInOut'
+          repeat: Infinity';
+          ease: 'easeInOut';
           delay: 2,        }}
       {/* Quantum Canvas */}
       <canvas;
@@ -548,7 +548,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 8;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'linear',          }}
         />;
         <motion&& motion.div'
@@ -558,14 +558,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 10;
-            repeat: Infinity'
-            ease: 'linear'
+            repeat: Infinity';
+            ease: 'linear';
             delay: 2,          }}
         />;
       </div>;
     </div>;
   );
-            delay: 2
+            delay: 2;
             duration: 10,
             repeat: Infinity,
             ease: 'linear',

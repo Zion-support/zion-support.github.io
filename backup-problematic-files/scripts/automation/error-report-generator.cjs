@@ -63,8 +63,7 @@ class ErrorReportGenerator {}
 
   generateRecommendations(report) {}
   const recommendations = [];
-<<<<<<< HEAD
-    if (report.projectStatus.typescript?.errorCount > 0) {}
+if (report.projectStatus.typescript?.errorCount > 0) {}
   recommendations.push("Run TypeScript error fixer to address type issues")};
 ;
     if (report.projectStatus.eslint?.errorCount > 0) {}
@@ -79,16 +78,8 @@ class ErrorReportGenerator {}
 ;
 const generator = new ErrorReportGenerator();
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-generator.run().catch(console.error);
-generator.run().catch(console.error);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
     if (report.projectStatus.typescript?.errorCount > 0) {}"
   recommendations.push("Run TypeScript error fixer to address type issues")};"

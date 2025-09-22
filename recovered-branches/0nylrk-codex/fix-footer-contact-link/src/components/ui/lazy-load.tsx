@@ -1,37 +1,16 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
 
 import {useEffect, useState, useRef, ReactNode} from "react";
 import {cn} from "@/lib/utils";
 import {Skeleton} from "@/components/ui/skeleton";
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useEffect, useState, useRef, ReactNode } from "react",
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
 interface LazyLoadProps {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {useEffect, useState, useRef, ReactNode} from "react";
 import {cn} from "@/lib/utils";
-=======
-import { useEffect, useState, useRef, ReactNode } from "react",";
-import { cn } from "@/lib/utils";"
-import { Skeleton } from "@/components/ui/skeleton";
-interface LazyLoadProps {}
-"
-import {useEffect, useState, useRef, ReactNode} from "react";"
-import {cn} from "@/lib/utils";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Skeleton} from "@/components/ui/skeleton";
 interface LazyLoadProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -40,26 +19,8 @@ interface LazyLoadProps {;
   children: ReactNode,;
 
   loadingComponent?: ReactNode;
-<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import { Skeleton } from "@/components/ui/skeleton",
-=======
-  className?: string;
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-"
-  height = "200px";"
-=======
-
-=======
-
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function LazyLoad(): any ({;
 
 loadingComponent?: ReactNode;
@@ -76,25 +37,13 @@ export function LazyLoad(): any ({;
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-
-<<<<<<< HEAD
-  loadingComponent?: ReactNode;
+loadingComponent?: ReactNode;
 import { cn } from "@/lib/utils",
 import { Skeleton } from "@/components/ui/skeleton",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface LazyLoadProps {
-=======
-export function LazyLoad(): any ({;interface LazyLoadProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 export function LazyLoad(): any ({;interface LazyLoadProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -133,97 +82,29 @@ export function LazyLoad(): any ({;interface LazyLoadProps {
   loadingComponent?: ReactNode,  className?: string
 }
 
-<<<<<<< HEAD
-=======
-export function LazyLoad({;
-  height = "200px";
-  width = "100%";
-  children;
-  loadingComponent;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function LazyLoad({
 
-<<<<<<< HEAD
-  className}: LazyLoadProps) {
-=======
-interface LazyLoadProps {}
-  height?: string | number,
-  width?: string | number,
-  children: ReactNode,
-  loadingComponent?: ReactNode,
-
-  className?: string;
-}
-
-export function LazyLoad({;"
-  height = "200px";"
-  width = "100%";
-  children;
-  loadingComponent;
-export function LazyLoad({}
-";
-  height = "200px";"
-  width = "100%";
-  children;
-  loadingComponent;
-  className}: LazyLoadProps) {}
-  const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);"
-  height = "200px","
-  width = "100%",
-  children,
-  loadingComponent,
-  className}: LazyLoadProps) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+className}: LazyLoadProps) {
   const [isVisible, setIsVisible] = useState(false),
   const [isLoaded, setIsLoaded] = useState(false),
   const containerRef = useRef<HTMLDivElement>(null),
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          setIsVisible(true),
+setIsVisible(true),
           observer.disconnect()
         }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-          setIsVisible(true),
-          observer.disconnect()
-        }
-      }
-      {
-        rootMargin: "200px", // Start loading when element is within 200px of viewport
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         threshold: 0.1}
     );
     if (containerRef.current) {
@@ -231,8 +112,6 @@ export function LazyLoad({}
       },
       {
         rootMargin: "200px", // Start loading when element is within 200px of viewport
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -263,7 +142,6 @@ interface LazyLoadProps {;
   className?: string;
 }
 ;
-<<<<<<< HEAD
 export function LazyLoad({;
   height = "200px",;
   width = "100%",;
@@ -274,13 +152,7 @@ export function LazyLoad({;
   const [isLoaded, setIsLoaded] = useState(false),;
   const containerRef = useRef<HTMLDivElement>(null),;
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
 
 import { useEffect, useState, useRef, ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
@@ -306,22 +178,13 @@ export function LazyLoad({;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {;
     const observer = new IntersectionObserver(;
       (entries) => {;
         if (entries[0].isIntersecting) {;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           setIsVisible(true);
           observer && observer.disconnect();
@@ -359,11 +222,6 @@ if ( {) {
       }
       {
         root_margin: "200px", // Start loading when element is within 200px of viewport;
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         threshold: 0.1}
@@ -373,48 +231,12 @@ if ( {) {
         }
       },;
       {;
-<<<<<<< HEAD
-        rootMargin: "200px", // Start loading when element is within 200px of viewport;
+rootMargin: "200px", // Start loading when element is within 200px of viewport;
         threshold: 0.1}
-=======
-        rootMargin:"200px", // Start loading when element is within 200px of viewport;
-        threshold:0.1}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ),;
 ;
     if (containerRef.current) {;
-<<<<<<< HEAD
-      observer.observe(containerRef.current);
-
-=======
-      observer.observe(containerRef.current),;
-    }
-;
-    return () => {;
-      if (containerRef.current) {;
-        observer.unobserve(containerRef.current),;
-      }
-    );
-
-    );
-=======
-export function LazyLoad() { return null; }
-        threshold: 0.1}
-
-
-
-
-;
-    // Check condition;
-if ( {) {}
-  $2;
-}
-      observer.observe (container_ref.current);
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+observer.observe(containerRef.current);
 =======
         threshold: 0.1}
 
@@ -425,27 +247,20 @@ if ( {) {
 }
       observer.observe (container_ref.current);
 
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           setIsVisible(true),
           observer.disconnect()
         }
 
       },
-<<<<<<< HEAD
-      {
+{
         rootMargin: "200px", // Start loading when element is within 200px of viewport
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 =======
@@ -461,23 +276,6 @@ if ( {) {
       }
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      {"
-        rootMargin: "200px", // Start loading when element is within 200px of viewport;
-    }
-    return () => {}
-      if (containerRef.current) {}
-        observer.unobserve(containerRef.current)
-      }
-    }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
       style={{ height, width }}"
       className="rounded-md bg-zion-blue-light/20"
@@ -488,8 +286,6 @@ if ( {) {
       ref={containerRef}"
       className={cn("transition-opacity duration-500""
         isLoaded ? "opacity-100" : "opacity-0";
-
-
 
       };
       {;"
@@ -508,11 +304,6 @@ if ( {) {
     }
   }, []);
 
-
-
-
-
-
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"
     />
@@ -522,7 +313,6 @@ if ( {) {
       ref={containerRef}
       className={cn("transition-opacity duration-500"
         isLoaded ? "opacity-100" : "opacity-0";
-
 
       };
       {;
@@ -541,26 +331,10 @@ if ( {) {
     }
   }, []);
 
-
-
-
   }, []),;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          setIsVisible(true),;
-          observer.disconnect();
-        }
-      },;
-      {;
-        rootMargin: "200px", // Start loading when element is within 200px of viewport;
-        threshold: 0.1}
-    ),;
-    if (containerRef.current) {;
-      observer.observe(containerRef.current);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     return () => {
       if (containerRef.current) {
@@ -592,8 +366,6 @@ if ( {) {
   }, []),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
   }, []),;
 
@@ -605,8 +377,6 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   useEffect(() => {;
     if (isVisible) {;
@@ -617,13 +387,6 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }, 500);
@@ -631,46 +394,21 @@ if ( {) {
     }
   }, [isVisible]);
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    <Skeleton;
+<Skeleton;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
   const defaultLoadingComponent = (;
 
     <Skeleton;
 
-
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
   }, []);
     <Skeleton
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       style={{ height, width }}
-=======
-
-
-  }, []);
-    <Skeleton;
-      style={{ height, width }}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
       style={{ height, width }}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -678,25 +416,14 @@ if ( {) {
     />;
   );
   return (
-<<<<<<< HEAD
-    <div;
+<div;
       ref={containerRef}
-<<<<<<< HEAD
 <<<<<<< HEAD
       className={cn("transition-opacity duration-500",
         isLoaded ? "opacity-100" : "opacity-0",
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       className={cn("transition-opacity duration-500", 
         isLoaded ? "opacity-100" : "opacity-0"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -725,72 +452,10 @@ if ( {) {
       ) : (;
         loadingComponent || defaultLoadingComponent;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    </div>
-  )
-}
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    </div>;
+</div>;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-<<<<<<< HEAD
-=======
-=======
-;
-
-
-
-=======
-      }, 500),;
-      return () => clearTimeout(timer);
-    }
-  }, [isVisible]),;
-  const defaultLoadingComponent = (;
-    <Skeleton;
-      style={{ height, width }}
-      className="rounded-md bg-zion-blue-light/20"
-    />
-  ),
-
-  return (
-    <div
-      ref={containerRef}
-      className={cn("transition-opacity duration-500", 
-        isLoaded ? "opacity-100" : "opacity-0",
-        className
-      )}
-    >
-      {isVisible ? (
-        <>
-          {!isLoaded && (loadingComponent |defaultLoadingComponent)}
-          {isLoaded && children}
-        </>
-      ) : (
-        loadingComponent |defaultLoadingComponent
-      )}
-    </div>
-  )
-}
-    </div>;
-  );
-}
-=======
-;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-    </div>;
-  );
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
     </div>;
@@ -858,18 +523,9 @@ if ( {) {}
 ;
   const defaultLoadingComponent = (
     <Skeleton;
-<<<<<<< HEAD
-      style={{ height, width }}
-<<<<<<< HEAD
+style={{ height, width }}
 <<<<<<< HEAD
       className="rounded - md bg - zion - blue-light / 20";
-=======
-      style={{ height, width }}"
-      className="rounded - md bg - zion - blue - light / 20";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      className="rounded - md bg - zion - blue - light / 20";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
       className="rounded - md bg - zion - blue-light / 20";
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -890,7 +546,6 @@ if ( {) {}
         loading_component || defaultLoadingComponent)}
     </div>);
 }
-<<<<<<< HEAD
 }, [isVisible]);
 const defaultLoadingComponent = (<Skeleton />);
 return (<div) 
@@ -905,13 +560,8 @@ return (<div)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

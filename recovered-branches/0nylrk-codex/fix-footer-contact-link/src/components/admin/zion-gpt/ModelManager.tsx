@@ -1,63 +1,26 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { useState, useEffect } from 'react',
 import { useState, useEffect } from 'react',
-<<<<<<< HEAD
-
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { useState, useEffect  } from 'react';
 import { useState, useEffect } from 'react',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-import { useState, useEffect } from 'react',
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
 import { supabase } from '@/integrations/supabase/client',
 import { ModelConfig } from '@/utils/zion-gpt',
 
-
-<<<<<<< HEAD
-=======
-=======
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react";
-import { supabase  } from '@/integrations/supabase/client';
-import { ModelConfig } from '@/utils/zion-gpt';
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
-import { supabase } from '@/integrations/supabase/client',
-import { ModelConfig } from '@/utils/zion-gpt',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -83,25 +46,8 @@ import { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge",import {useState, useEffect} from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import { Badge } from "@/components/ui/badge",
-
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
-import { supabase } from '@/integrations/supabase/client',
-import { ModelConfig } from '@/utils/zion-gpt',
-
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react";
-import { supabase  } from '@/integrations/supabase/client';
-import { ModelConfig } from '@/utils/zion-gpt';
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
-import { supabase } from '@/integrations/supabase/client',
-import { ModelConfig } from '@/utils/zion-gpt',
-import {useState, useEffect} from 'react';
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
@@ -109,58 +55,11 @@ import {Badge} from "@/components/ui/badge";
 import {Loader2, RefreshCw, Play, CheckCircle, AlertCircle} from "lucide-react";
 import {supabase} from '@/integrations/supabase/client';
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {ModelConfig} from '@/utils/zion-gpt';
 <<<<<<< HEAD
-=======
-=======
-import {ModelConfig} from '@/utils/zion-gpt';
-
-
-interface ModelVersionData extends ModelConfig {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
-
-
-import { useState, useEffect } from 'react',
-
-import { Button } from "@/components/ui/button","
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table","
-import { Badge } from "@/components/ui/badge",
-"
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",'
-import { supabase } from '@/integrations/supabase/client','
-import { ModelConfig } from '@/utils/zion-gpt',
-
-
-
-
-';
-import {useState, useEffect} from 'react';"
-import {Button} from "@/components/ui/button";"
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";"
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";"
-import {Badge} from "@/components/ui/badge";"
-import {Loader2, RefreshCw, Play, CheckCircle, AlertCircle} from "lucide-react";'
-import {supabase} from '@/integrations/supabase/client';'
-import {ModelConfig} from '@/utils/zion-gpt';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ModelVersionData extends ModelConfig {
 =======
@@ -176,40 +75,21 @@ interface ModelVersionData extends ModelConfig {}
 '
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   errorMessage?: string
-<<<<<<< HEAD
 }
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]),
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]);
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]);
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]);
 
@@ -225,15 +105,7 @@ export function ZionGPTModelManager() {;
   const fetchModels = async () => {;
     try {;
       setIsLoading(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-interface ModelVersionData extends ModelConfig {;
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  errorMessage?: string;
+errorMessage?: string;
 export function ZionGPTModelManager() { return null; }
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
 
@@ -245,16 +117,10 @@ export function ZionGPTModelManager() { return null; }
   const fetchModels = async () => {;
     try {;
       setIsLoading(true);
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useState, useEffect} from 'react';
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-<<<<<<< HEAD
 import {useState, useEffect} from 'react';
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from '@/components / ui / button';
@@ -263,16 +129,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Badge } from '@/components / ui / badge';
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from './lucide-react';
 import {supabase} from '@/integrations / supabase / client';
-=======
-'
-import {useState, useEffect} from 'react';'
-import { Button } from '@/components / ui / button';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';'
-import { Badge } from '@/components / ui / badge';'
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from './lucide-react';'
-import {supabase} from '@/integrations / supabase / client';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {ModelConfig} from '@/utils / zion - gpt';
 interface ModelVersionData extends ModelConfig {'
   training_status: 'queued' | 'running' | 'succeeded' | 'failed',
@@ -312,58 +168,12 @@ if (throw error) {}
         training_status: model.training_status,
         error_message: model.error_message;
       })));
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    } catch (error) {
-=======
-
-
-
-    } catch (error) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+} catch (error) {
       console.error ('Error fetching models:', error);
     } finally {}
       setIsLoading (false);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }    } catch (error) {
-=======
-  }
-
-;
-  const checkTrainingStatus = async (model_id: string) => {}
-    try {}
-      setActiveJobs (prev => ({ ...prev, [model_id]: true }));
-;
-      // Call an edge function that checks the OpenAI fine - tuning job status;'
-      const { data, error } = await supabase.functions.invoke ('check - training - status', {}
-        body: { model_id }
-      });
-;
-      // Check condition;
-if (throw error) {}
-  $2;
-=======
-  }
-
-;
-  const checkTrainingStatus = async (model_id: string) => {
-    try {
-      setActiveJobs (prev => ({ ...prev, [model_id]: true }));
-;
-      // Call an edge function that checks the OpenAI fine - tuning job status;
-      const { data, error } = await supabase.functions.invoke ('check - training - status', {
-        body: { model_id }
-      });
-;
-      // Check condition
-if (throw error) {
-  $2
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+}    } catch (error) {
 }
       // Update the local model status;
       set_models (prev =>;
@@ -373,8 +183,7 @@ if (throw error) {
             : model));
 ;
       // Also update in the database;
-<<<<<<< HEAD
-      await supabase;'
+await supabase;'
         .from ('model_versions');
         .update ({}
           training_status: data.status,
@@ -384,23 +193,8 @@ if (throw error) {
         });'
         .eq ('id', model_id);
 
-
-
     } catch (error) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      await supabase;
-        .from ('model_versions');
-        .update ({
-          training_status: data.status,
-          error_message: data.error || null,
-          // If training succeeded, automatically set to active;
-          ...(data.status === 'succeeded' ? { active: true } : {});
-        });
-        .eq ('id', model_id);
-
-    } catch (error) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error (`Error checking status for model ${model_id}:`, error);
     } finally {}
       setActiveJobs (prev => ({ ...prev, [model_id]: false }));
@@ -411,13 +205,7 @@ if (throw error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-
-<<<<<<< HEAD
 }
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]),
@@ -509,10 +297,6 @@ export function ZionGPTModelManager() {;
     }
   }
 <<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -529,20 +313,7 @@ import { ModelConfig } from '@/utils/zion-gpt',
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from 'react',;
 =======
@@ -605,48 +376,12 @@ export function ZionGPTModelManager() {;
   }, []);
   const fetchModels = async () => {;
     try {;
+setIsLoading(true),;
 <<<<<<< HEAD
-      setIsLoading(true),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const { data, error } = await supabase;
         .from('model_versions');
         .select('*');
         .order('createdAt', { ascending: false }),;
-=======
-      setIsLoading(true);
-import { useState, useEffect } from 'react',;
-
-
-import { useState, useEffect } from 'react',''
-import { useState, useEffect } from 'react',''
-import { Button } from "@/components/ui/button",""
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",""
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",""
-import { Badge } from "@/components/ui/badge",""
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",""
-import { supabase } from '@/integrations/supabase/client',;
-import { ModelConfig } from '@/utils/zion-gpt',;
-import {useState, useEffect} from 'react';
-import { supabase } from '@/integrations/supabase/client',''
-import { ModelConfig } from '@/utils/zion-gpt',''
-import {useState, useEffect} from 'react';''
-import {Button} from "@/components/ui/button";""
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";""
-import {Badge} from "@/components/ui/badge";""
-import {Loader2, RefreshCw, Play, CheckCircle, AlertCircle} from "lucide-react";""
-import {supabase} from '@/integrations/supabase/client';
-import {ModelConfig} from '@/utils/zion-gpt';
-interface ModelVersionData extends ModelConfig {
-  // TODO: Implement
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
 
@@ -654,7 +389,6 @@ interface ModelVersionData extends ModelConfig {
   useEffect(() => {;
     fetchModels();
   }, []);
-
 
   return (
     <Card className="w-full">;
@@ -678,8 +412,7 @@ interface ModelVersionData extends ModelConfig {
             <TableHeader>;
               <TableRow>;
 
-<<<<<<< HEAD
-      // Update the local model status;
+// Update the local model status;
       setModels(prev => ;
         prev && prev.map(model => ;
           model && model.id === modelId ;
@@ -706,46 +439,7 @@ interface ModelVersionData extends ModelConfig {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   };
-=======
-
-
-
-
-      const { data, error } = await supabase;'
-        .from('model_versions');'
-        .select('*');'
-        .order('createdAt', { ascending: false }),;
-
-
-      // Map the data to our component state;
-      setModels(data && data.map(model => ({;
-        id: model && model.id,;
-        version: model && model.version,;
-        createdAt: model && model.created_at,;
-        baseModel: model && model.base_model,;
-        purpose: model && model.purpose,;
-        active: model && model.active,;
-        trainingStatus: model && model.training_status,;
-        errorMessage: model && model.error_message;
-      })));
-    } catch (error) {;'
-      console && console.error('Error fetching models:', error);
-    } finally {;
-      setIsLoading(false);
-    }
-
-
-
-      // Also update in the database;
-      await supabase;'
-        .from('model_versions');
-        .update({;
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
   };
@@ -755,35 +449,21 @@ interface ModelVersionData extends ModelConfig {
     try {;
       // If activating, deactivate all other models with the same purpose;
       if (!currentActive) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        await supabase;'
+await supabase;'
           .from('model_versions');
           .update({ active: false });'
-=======
-        await supabase;
-          .from('model_versions');
-          .update({ active: false });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           .eq('purpose', purpose);
       }
 
       // Update this model;
-<<<<<<< HEAD
-      await supabase;'
+await supabase;'
         .from('model_versions');
         .update({ active: !currentActive });'
-=======
-      await supabase;
-        .from('model_versions');
-        .update({ active: !currentActive });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .eq('id', modelId);
 
       // Refresh the model list;
       fetchModels();
     } catch (error) {;
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       console && console.error('Error toggling model active state:', error);
@@ -795,46 +475,15 @@ interface ModelVersionData extends ModelConfig {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
-=======
-=======
-      console && console.error('Error toggling model active state:', error);
-=======
-        await supabase;'
-          .from('model_versions');'
-          .update({ active: false });'
-          .eq('purpose', purpose);'
-      }
-
-      // Update this model;
-      await supabase;'
-        .from('model_versions');'
-        .update({ active: !currentActive });'
-        .eq('id', modelId);'
-      // Refresh the model list;
-      fetchModels();
-    } catch (error) {;'
-      console && console.error('Error toggling model active state:', error);'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
 
   },
 
-
-
-
   return (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
-
 
   }
   return ()
@@ -856,15 +505,7 @@ interface ModelVersionData extends ModelConfig {
   },;
 ;
   return (;
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -874,73 +515,28 @@ interface ModelVersionData extends ModelConfig {
     }
   }
 
-<<<<<<< HEAD
-  return (
-<<<<<<< HEAD
+return (
 "
     <Card className="w-full">;"
-=======
-    <Card className="w-full">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <CardHeader className="flex flex-row items-center justify-between">;
-=======
-  return ('
-    <Card className="w-full">;"
-</Card>"
-      <CardHeader className="flex flex-row items-center justify-between">;"
-</CardHeader>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div>;
 </div>
           <CardTitle>ZionGPT Models</CardTitle>;
           <CardDescription>;
 </CardDescription>
           </CardDescription>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </div>;"
+</div>;"
         <Button onClick={fetchModels} variant="outline" size="sm">;"
-=======
-        </div>;
-        <Button onClick={fetchModels} variant="outline" size="sm">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <RefreshCw className="h-4 w-4 mr-2" /> Refresh;
         </Button>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
-        {isLoading ? (;"
+{isLoading ? (;"
           <div className="flex items-center justify-center h-24">;"
             <Loader2 className="h-8 w-8 animate-spin text-primary" />;
           </div>;
 
-
         ) : (;
-
-=======
-        {isLoading ? (;
-          <div className="flex items-center justify-center h-24">;
-            <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-          </div>;
-        ) : (;
-        ) : (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-        </div>;"
-        <Button onClick={fetchModels} variant="outline" size="sm">;"
-</Button>"
-          <RefreshCw className="h-4 w-4 mr-2" /> Refresh;"
-</RefreshCw>
-        </Button>;
-      </CardHeader>;
-      <CardContent>;
-</CardContent>"
-          <div className="flex items-center justify-center h-24">;"
-</div>"
-            <Loader2 className="h-8 w-8 animate-spin text-primary" />;"
-</Loader2>
-          </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <Table>;
 </Table>
             <TableHeader>;
@@ -952,41 +548,18 @@ interface ModelVersionData extends ModelConfig {
                 <TableHead>Purpose</TableHead>;
                 <TableHead>Base Model</TableHead>;
                 <TableHead>Status</TableHead>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <TableHead>Created</TableHead>;"
-=======
-                <TableHead>Created</TableHead>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+<TableHead>Created</TableHead>;"
                 <TableHead className="text-right">Actions</TableHead>;
               </TableRow>;
             </TableHeader>;
             <TableBody>;
-<<<<<<< HEAD
-
-              {models && models.map((model) => (;
+{models && models.map((model) => (;
                 <TableRow key={model && model.id}>;"
-=======
-              {models && models.map((model) => (;
-                <TableRow key={model && model.id}>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <TableCell className="font-medium">{model && model.id}</TableCell>;
-=======
-                <TableHead>Created</TableHead>;"
-                <TableHead className="text-right">Actions</TableHead>;"
-              </TableRow>;
-            </TableHeader>;
-            <TableBody>;
-</TableBody>
-                <TableRow key={model && model.id}>;
-</TableRow>"
-                  <TableCell className="font-medium">{model && model.id}</TableCell>;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <TableCell>v{model && model.version}</TableCell>;
                   <TableCell>{model && model.purpose}</TableCell>;
                   <TableCell>{model && model.baseModel}</TableCell>;
-<<<<<<< HEAD
-                  <TableCell>;'
+<TableCell>;'
                     {model && model.trainingStatus === 'succeeded' ? (;"
                       <Badge className="bg-green-500">Ready</Badge>;'
                     ) : model && model.trainingStatus === 'failed' ? (;"
@@ -1003,41 +576,15 @@ interface ModelVersionData extends ModelConfig {
                   <TableCell className="text-right">;'
                     {model && model.trainingStatus === 'queued' || model && model.trainingStatus === 'running' ? (;
 
-
-
                       <Button"
                         variant="ghost""
-=======
-                  <TableCell>;
-<<<<<<< HEAD
-                    {model && model.trainingStatus === 'succeeded' ? (;
-                      <Badge className="bg-green-500">Ready</Badge>;
-                    ) : model && model.trainingStatus === 'failed' ? (;
-                      <Badge className="bg-red-500">Failed</Badge>;
-                    ) : model && model.trainingStatus === 'running' ? (;
-                      <Badge className="bg-blue-500">Training</Badge>;
-                    ) : (;
-                      <Badge className="bg-yellow-500">Queued</Badge>;
-                    )}
-
-                    {model && model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
-                  </TableCell>;
-                  <TableCell>{new Date(model && model.createdAt).toLocaleDateString()}</TableCell>;
-                  <TableCell className="text-right">;
-                    {model && model.trainingStatus === 'queued' || model && model.trainingStatus === 'running' ? (;
-
-                      <Button
-                        variant="ghost"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         size="sm"
                         onClick={() => checkTrainingStatus(model && model.id)}
                         disabled={activeJobs[model && model.id]}
                       >;
-<<<<<<< HEAD
-                        {activeJobs[model && model.id] ? (;"
+{activeJobs[model && model.id] ? (;"
                           <Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (;
-
 
 "
                           <RefreshCw className="h-4 w-4" />;
@@ -1048,91 +595,36 @@ interface ModelVersionData extends ModelConfig {
                     ) : model && model.trainingStatus === 'succeeded' ? (;
                       <Button"
                         variant={model && model.active ? "outline" : "default"}"
-=======
-                        {activeJobs[model && model.id] ? (;
-                          <Loader2 className="h-4 w-4 animate-spin" />;
-                        ) : (;
-                          <RefreshCw className="h-4 w-4" />;
-                        )}
-                        <span className="ml-1">Check</span>;
-                      </Button>;
-                    ) : model && model.trainingStatus === 'succeeded' ? (;
-                      <Button
-                        variant={model && model.active ? "outline" : "default"}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         size="sm"
                         onClick={() => toggleModelActive(model && model.id, model && model.active, model && model.purpose)}
                       >;
                         {model && model.active ? (;
-<<<<<<< HEAD
-                          <>;"
+<>;"
                             <CheckCircle className="h-4 w-4 mr-1" /> Active;
                           </>;
                         ) : (;
 
-
-
                           <>;"
-=======
-                          <>;
-                            <CheckCircle className="h-4 w-4 mr-1" /> Active;
-                          </>;
-                        ) : (;
-                          <>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             <Play className="h-4 w-4 mr-1" /> Activate;
                           </>;
                         )}
                       </Button>;
-<<<<<<< HEAD
-
-
-                    ) : (;
+) : (;
 
                       <Button"
                         variant="ghost""
                         size="sm""
                         className="text-red-500"
 
-<<<<<<< HEAD
-=======
-                    ) : (;
-                    ) : (;
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="text-red-500"
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                        title={model && model.errorMessage || "Training failed"}>;
+title={model && model.errorMessage || "Training failed"}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
                       </Button>;
 
                     )}
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-                        title={model && model.errorMessage || "Training failed"}>;
-                        <AlertCircle className="h-4 w-4 mr-1" /> Error;
-                      </Button>;
-                    )}
-                    ) :(;
-                      <Button;
-                        variant="ghost";
-                        size="sm";
-                        className="text-red-500";
-                        title={model.errorMessage || "Training failed"}
-                      >;
-                        <AlertCircle className="h-4 w-4 mr-1" /> Error;
-                      </Button>;                    )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </TableCell>;
                 </TableRow>;
-
 
                     )}
 =======
@@ -1155,43 +647,16 @@ interface ModelVersionData extends ModelConfig {
             </TableBody>;
           </Table>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       </CardContent>;
     </Card>;
   );
 }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
-
-
-
-<<<<<<< HEAD
-=======
-      </CardContent>;
-    </Card>;
-=======
-;
-;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-        )};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
         )};
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1231,20 +696,9 @@ if ( {) {}
     }
   }
 ;
-<<<<<<< HEAD
-  return (
-<<<<<<< HEAD
-    <Card className="w-full">;
+return (
+<Card className="w-full">;
       <CardHeader className="flex flex - row items - center justify-between">;
-=======
-  return ("
-    <Card className="w - full">;"
-      <CardHeader className="flex flex - row items - center justify - between">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    <Card className="w - full">;
-      <CardHeader className="flex flex - row items - center justify - between">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 </TableCell>"
                       <Badge className="bg-green-500">Ready</Badge>;""
@@ -1313,9 +767,7 @@ if ( {) {}
           <CardDescription>;
 </CardDescription>
           </CardDescription>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </div>;
+</div>;
         <Button on_click={fetch_models} variant="outline" size="sm">;
           <RefreshCw className="h - 4 w - 4 mr - 2" /> Refresh;
         </Button>;
@@ -1325,21 +777,6 @@ if ( {) {}
 <<<<<<< HEAD
           <div className="flex items - center justify - center h-24">;
             <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;
-=======
-        </div>;"
-        <Button on_click={fetch_models} variant="outline" size="sm">;"
-          <RefreshCw className="h - 4 w - 4 mr - 2" /> Refresh;
-        </Button>;
-      </CardHeader>;
-      <CardContent>;
-        {is_loading ? ("
-          <div className="flex items - center justify - center h - 24">;"
-            <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          <div className="flex items - center justify - center h - 24">;
-            <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
         </div>;"
         <Button on_click={fetch_models} variant="outline" size="sm">;"
@@ -1367,18 +804,9 @@ if ( {) {}
                 <TableHead > Purpose</TableHead>;
                 <TableHead > Base Model</TableHead>;
                 <TableHead > Status</TableHead>;
-<<<<<<< HEAD
-                <TableHead > Created</TableHead>;
-<<<<<<< HEAD
+<TableHead > Created</TableHead>;
 <<<<<<< HEAD
                 <TableHead className="text-right">Actions</TableHead>;
-=======
-                <TableHead > Created</TableHead>;"
-                <TableHead className="text - right">Actions</TableHead>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                <TableHead className="text - right">Actions</TableHead>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
                 <TableHead className="text-right">Actions</TableHead>;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -1386,8 +814,7 @@ if ( {) {}
             </TableHeader>;
             <TableBody>;
               {models.map ((model) => (
-<<<<<<< HEAD
-                <TableRow key={model.id}>;
+<TableRow key={model.id}>;
                   <TableCell className="font-medium">{model.id}</TableCell>;
                 <TableHead > Created</TableHead>;"
                 <TableHead className="text - right">Actions</TableHead>;"
@@ -1411,28 +838,7 @@ if ( {) {}
                   </TableCell>;
                   <TableCell>{new Date (model.created_at).toLocaleDateString ()}</TableCell>;
 <<<<<<< HEAD
-<<<<<<< HEAD
                   <TableCell className="text-right">;
-=======
-                <TableRow key={model.id}>;"
-                  <TableCell className="font - medium">{model.id}</TableCell>;
-                  <TableCell > v{model.version}</TableCell>;
-                  <TableCell>{model.purpose}</TableCell>;
-                  <TableCell>{model.base_model}</TableCell>;
-                  <TableCell>;'
-                    {model.training_status === 'succeeded' ? ('"
-                      <Badge className="bg - green - 500">Ready</Badge>) : model.training_status === 'failed' ? ('"
-                      <Badge className="bg - red - 500">Failed</Badge>) : model.training_status === 'running' ? ("
-                      <Badge className="bg - blue - 500">Training</Badge>) : ("
-                      <Badge className="bg - yellow - 500">Queued</Badge>)}"
-                    {model.active && <Badge className="ml - 2 bg - purple - 500">Active</Badge>}
-                  </TableCell>;
-                  <TableCell>{new Date (model.created_at).toLocaleDateString ()}</TableCell>;"
-                  <TableCell className="text - right">;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                  <TableCell className="text - right">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
                   <TableCell className="text-right">;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -1443,24 +849,11 @@ if ( {) {}
                         on_click={() => checkTrainingStatus (model.id)}
                         disabled={active_jobs[model.id]}
                       >;
-<<<<<<< HEAD
-                        {active_jobs[model.id] ? (
-<<<<<<< HEAD
+{active_jobs[model.id] ? (
 <<<<<<< HEAD
                           <Loader2 className="h - 4 w - 4 animate-spin" />) : (
                           <RefreshCw className="h - 4 w-4" />)}
                         <span className="ml-1">Check</span>;
-=======
-                        {active_jobs[model.id] ? ("
-                          <Loader2 className="h - 4 w - 4 animate - spin" />) : ("
-                          <RefreshCw className="h - 4 w - 4" />)}"
-                        <span className="ml - 1">Check</span>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                          <Loader2 className="h - 4 w - 4 animate - spin" />) : (
-                          <RefreshCw className="h - 4 w - 4" />)}
-                        <span className="ml - 1">Check</span>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
                           <Loader2 className="h - 4 w - 4 animate-spin" />) : (
                           <RefreshCw className="h - 4 w-4" />)}
@@ -1473,8 +866,7 @@ if ( {) {}
                         on_click={() => toggleModelActive (model.id, model.active, model.purpose)}
                       >;
                         {model.active ? (
-<<<<<<< HEAD
-                          <>;
+<>;
                             <CheckCircle className="h - 4 w - 4 mr-1" /> Active;
                           </>) : (
                           <>;
@@ -1488,27 +880,7 @@ if ( {) {}
                         title={model.error_message || "Training failed"}
                       >;
 <<<<<<< HEAD
-<<<<<<< HEAD
                         <AlertCircle className="h - 4 w - 4 mr-1" /> Error;
-=======
-                          <>;"
-                            <CheckCircle className="h - 4 w - 4 mr - 1" /> Active;
-                          </>) : (
-                          <>;"
-                            <Play className="h - 4 w - 4 mr - 1" /> Activate;
-                          </>)}
-                      </Button>) : (
-                      <Button;"
-                        variant="ghost";"
-                        size="sm";"
-                        className="text - red - 500";"
-                        title={model.error_message || "Training failed"}
-                      >;"
-                        <AlertCircle className="h - 4 w - 4 mr - 1" /> Error;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                        <AlertCircle className="h - 4 w - 4 mr - 1" /> Error;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
                         <AlertCircle className="h - 4 w - 4 mr-1" /> Error;
 </TableCell>)"
@@ -1565,7 +937,6 @@ if ( {) {}
       </CardContent>;
     </Card>);
 }
-<<<<<<< HEAD
 };
 const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
   try {
@@ -1620,28 +991,15 @@ const toggleModelActive = async (modelId: string, currentActive: boolean, purpos
               ))}
             </TableBody>
           </Table>
-<<<<<<< HEAD
-        )}
+)}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </CardContent>
     </Card>
       </CardContent>;
     </Card>;
   );
 }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1661,7 +1019,6 @@ const toggleModelActive = async (modelId: string, currentActive: boolean, purpos
   // Fetch model data on component mount;
   }, []),;
       setIsLoading(true),;
-
 
         .from('model_versions');
         .select('*');
@@ -1689,7 +1046,6 @@ const toggleModelActive = async (modelId: string, currentActive: boolean, purpos
       // Call an edge function that checks the OpenAI fine-tuning job status;
       const { data, error } = await supabase && supabase.functions.invoke('check-training-status', {;
         body: { modelId })
-
 
       // Update the local model status;
       setModels(prev => ;
@@ -1723,13 +1079,7 @@ const toggleModelActive = async (modelId: string, currentActive: boolean, purpos
 
   },
 
-
-
-
   return (
-
-
-
 
   return ()
           .update({ active:false });
@@ -1742,8 +1092,6 @@ const toggleModelActive = async (modelId: string, currentActive: boolean, purpos
       console.error('Error toggling model active state:', error),;
   },;
   return (;
-
-
 
     <Card className="w-full">;"
 "
@@ -1831,8 +1179,6 @@ const toggleModelActive = async (modelId: string, currentActive: boolean, purpos
           <div className="flex items - center justify - center h - 24">;"
             <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;"
           </div>) : (
-
-
 
                 <TableHead > Model ID;
                 <TableHead > Version;

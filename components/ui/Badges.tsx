@@ -323,11 +323,11 @@ export function TrustBadge({
   type: 'Verified' | 'Pro' | 'Top Rated';
 }) {}
   const colorMap = {}
-    Verified:'
-      'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200''
-    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200''
-    'Top Rated':'
-      'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'
+    Verified:';
+      'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200'';
+    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200'';
+    'Top Rated':';
+      'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200';
   } as const;
     >'
       <span className='leading-none'>{type}</span>

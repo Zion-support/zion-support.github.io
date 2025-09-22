@@ -1,20 +1,5 @@
-<<<<<<< HEAD:src/components/PwaInstallButton.tsx
+:src/components/PwaInstallButton.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-const in_standalone = window.match_media ('(display - mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
-
-    const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PwaInstallButton.tsx
 import React, { useEffect, useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Loader2 } from 'lucide-react';
@@ -124,16 +109,9 @@ export const PwaInstallButton: React.FC = () => {;
   )
 },
 
-<<<<<<< HEAD:src/components/PwaInstallButton.tsx
-<<<<<<< HEAD
+:src/components/PwaInstallButton.tsx
 <<<<<<< HEAD
 export default PwaInstallButton,
-=======
-export default PwaInstallButton,
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -220,9 +198,6 @@ export const PwaInstallButton: React.FC = () => {
 };
 export default PwaInstallButton;
 '
-<<<<<<< HEAD:src/components/PwaInstallButton.tsx
+:src/components/PwaInstallButton.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PwaInstallButton.tsx

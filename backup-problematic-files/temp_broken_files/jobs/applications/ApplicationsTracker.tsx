@@ -84,4 +84,3 @@ export function ApplicationsTracker() {;
         </Button>;
       </div>;
 <<<<<<< HEAD
-

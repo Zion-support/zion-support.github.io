@@ -95,10 +95,7 @@ export * from './useResumeUtils'; // Determine overall loading state const isLoa
 // Determine overall error state (use first non-null error) const error = fetchResumeOperations.error || resumeActions.error || workOperations.error || educationOperations.error || skillsOperations.isLoading || certOperations.error || resumeListOperations.error;
 // Override the fetch resume function to update local state 
 }// Export all hooks export * from './useFetchResume';
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export * from './useResumeActions';
 export * from './useWorkExperience';
 export * from './useEducation';
@@ -106,10 +103,3 @@ export * from './useSkills';
 export * from './useCertifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

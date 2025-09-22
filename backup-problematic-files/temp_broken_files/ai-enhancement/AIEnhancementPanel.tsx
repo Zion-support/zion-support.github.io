@@ -123,4 +123,3 @@ export function AIEnhancementPanel({;
         </CardFooter>;
       )}
     </Card>;
-

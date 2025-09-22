@@ -3,27 +3,27 @@ import Link from 'next/link';
 export default function TechnologyInsightsPage() {}
   const technologyTrends = []
     {'
-      id: 'quantum-computing''
-      title: 'Quantum Computing in 2025'
+      id: 'quantum-computing'';
+      title: 'Quantum Computing in 2025';
       description:
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
-      featured: true
+      featured: true;
 };
     {
-      id: 'edge-ai'
-      title: 'Edge AI Revolution'
-      description: 'How edge computing is transforming AI deployment and enabling real-time intelligent applications.'
-      category: 'AI/ML'
-      readTime: '12 min read'
+      id: 'edge-ai';
+      title: 'Edge AI Revolution';
+      description: 'How edge computing is transforming AI deployment and enabling real-time intelligent applications.';
+      category: 'AI/ML';
+      readTime: '12 min read';
       featured: false;
     }
     {'
-      id: 'autonomous-vehicles''
-      title: 'Autonomous Vehicle Technology''
-      description: 'The current state and future of autonomous vehicle technology and its broader applications.''
-      category: 'Autonomy''
-      readTime: '18 min read'
+      id: 'autonomous-vehicles'';
+      title: 'Autonomous Vehicle Technology'';
+      description: 'The current state and future of autonomous vehicle technology and its broader applications.'';
+      category: 'Autonomy'';
+      readTime: '18 min read';
       featured: false;
     },      featured: false;
     }
@@ -105,7 +105,7 @@ export default function TechnologyInsightsPage() {}
       title: 'Autonomous Systems Research',
 description:
         'Pioneering research in building truly autonomous systems that can operate independently.',
-      focus: [
+      focus: [;
         'Decision Making',
         'Self-Learning',
         'Adaptive Behavior',
@@ -124,7 +124,7 @@ description:
       title: 'Human-AI Collaboration',
       description:
         'Exploring how humans and AI can work together effectively and safely.',
-      focus: [
+      focus: [;
         'Human-AI Interface',
         'Collaborative Decision Making',
         'Safety Protocols',
@@ -174,11 +174,11 @@ description:
           content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies."
         />
         <meta
-          property='og:title'
+          property='og:title';
           content='Technology Insights | Zion Tech Group'
         />
         <meta
-          property='og:description'
+          property='og:description';
           content='Research insights, technology trends, and thought leadership in AI and automation.'
         />
         <meta name='twitter:card' content='summary_large_image' />
@@ -200,11 +200,11 @@ description:
               <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>
                 Latest Technology Trends
               </h2>
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
                 {technologyTrends.map((trend, index) => (
                   <div
                     key={index}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300';
                   >
                     <div className='flex items-center justify-between mb-4'>
                       <span className='px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full'>
@@ -220,7 +220,7 @@ description:
                     <p className='text-white/70 mb-4'>{trend.description}</p>
                     <Link
                       href={`/blog/${trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors';
                     >
                       Read More <span className='ml-1'>→</span>
                     </Link>
@@ -272,7 +272,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Research Focus Areas;
               </h2>'
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
                 {researchAreas.map((area, index) => ('
             <div className='mb-16'>;'
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>;
@@ -313,7 +313,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
                 Research Whitepapers;
               </h2>'
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
                 {whitepapers.map((paper, index) => (
                   <div;
                     key={index}'
@@ -341,11 +341,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p className="text-white/70 mb-4">{paper.description}</p>
                     <Link;
                       href={paper.downloadUrl}"
-                      className="inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
+                      className="inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors";
                     >"
                       Download PDF <span className="ml-1">→</span>
                       href={paper.downloadUrl}
-                      className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
+                      className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors';
                     >
                       Download PDF <span className='ml-1'>→</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -366,7 +366,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h2>'
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>'
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
-
+;
                   <div>'
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
                       Cutting-Edge Research;
@@ -406,7 +406,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
                 <Link"
                   href="/contact""
-                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105";
             {/* Call to Action */}
 <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -419,7 +419,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex flex-wrap justify-center gap-4'>
                 <Link
                   href='/contact'
-                  className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'
+                  className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105';
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Get in Touch;
