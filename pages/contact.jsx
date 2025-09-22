@@ -108,8 +108,8 @@ function Contact() {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Contact <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Us</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready to transform your business with cutting-edge technology? Let's discuss your project and how we can help you achieve your goals.
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Ready to transform your business with cutting-edge technology? Let&apos;s discuss your project and how we can help you achieve your goals.
             </p>
           </div>
 
@@ -204,7 +204,7 @@ function Contact() {
 
                 {submitSuccess && (
                   <div className="bg-green-600/20 border border-green-500/50 text-green-400 px-4 py-3 rounded-lg">
-                    Thank you for your message! We'll get back to you soon.
+                    Thank you for your message! We&apos;ll get back to you soon.
                   </div>
                 )}
                 
