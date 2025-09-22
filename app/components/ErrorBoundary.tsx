@@ -1,10 +1,42 @@
 'use client'
 
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-=======
-import { ErrorBoundary as ErrorBoundaryClass } from '../../components/ErrorBoundary'
->>>>>>> da3c549c14ad0d2a580007f3c8b06256cb24f4aa
 
-export default ErrorBoundaryClass
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
+export default class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="error-boundary">
+          <h2>Something went wrong.</h2>
+          <p>An error occurred while rendering this component.</p>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
 

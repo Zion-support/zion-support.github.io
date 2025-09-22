@@ -8,13 +8,6 @@ interface SEOProps {
   url?: string
 }
 
-<<<<<<< HEAD
-const SEO: React.FC
-      <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
-      {/* Open Graph */}
-=======
 export default function SEO({ title, description, keywords, canonical, url }: SEOProps) {
   return (
     <Head>
@@ -22,10 +15,15 @@ export default function SEO({ title, description, keywords, canonical, url }: SE
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       {canonical && <link rel="canonical" href={canonical} />}
->>>>>>> da3c549c14ad0d2a580007f3c8b06256cb24f4aa
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      
+      {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="article" />
+      {url && <meta property="og:url" content={url} />}
+      
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
