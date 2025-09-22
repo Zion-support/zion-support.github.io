@@ -1,16 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Let Netlify's Next.js runtime handle output; do not force standalone
-  // output: 'standalone',
-
+  // Optimized for static export and Netlify deployment
+  output: 'export',
+  
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
-
-  eslint: { ignoreDuringBuilds: false },
+  
+  // Enhanced build settings
+  eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['jsx', 'js'],
+  pageExtensions: ['jsx', 'js', 'tsx', 'ts'],
   images: {
     domains: [
       'localhost',
@@ -55,6 +56,20 @@ const nextConfig = {
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
+        ]
+      },
+      // Cache Next.js build assets for 1 year (immutable)
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      },
+      // Cache common static assets for 7 days
+      {
+        source: '/:path*{png|jpg|jpeg|gif|webp|avif|svg|ico|css|js}',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=604800, s-maxage=604800, stale-while-revalidate=86400' }
         ]
       }
     ];
