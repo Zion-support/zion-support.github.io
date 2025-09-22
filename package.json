@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build --no-lint",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider next build --no-lint",
     "start": "next start",
     "lint": "next lint",
     "build:analyze": "ANALYZE=true npm run build",
@@ -22,7 +22,7 @@
     "prepare": "husky install",
     "test:coverage": "jest --coverage",
     "clean": "rm -rf .next node_modules/.cache",
-    "export": "next build && next export",
+    "export": "npm run build && next export",
     "deploy": "npm run build && npm run export",
     "postinstall": "npm run type-check || echo 'Type-check skipped (non-blocking)'"
   },
