@@ -13,8 +13,11 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     }
   });
 
@@ -43,6 +46,9 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 };
 };
 };
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
