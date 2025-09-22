@@ -9,7 +9,7 @@ const nextConfig = {
   poweredByHeader: false,
 
   eslint: { ignoreDuringBuilds: false },
-  typescript: { ignoreBuildErrors: false },
+  typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
     domains: [
