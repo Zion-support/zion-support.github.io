@@ -108,7 +108,11 @@ function Contact() {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Contact <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Us</span>
             </h1>
+<<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+=======
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+>>>>>>> 8db9e4c4e068 (chore: fix page lint issues, scope ESLint and TS to pages, and validate Next.js production build)
               Ready to transform your business with cutting-edge technology? Let&apos;s discuss your project and how we can help you achieve your goals.
             </p>
           </div>

@@ -46,9 +46,10 @@ module.exports = {
     'automation/',
     'netlify/',
     'apps/',
-    // Ignore large directories with known experimental or archived files that break parsing
+    // Consolidated ignores from both sides
     'components/**',
     'components.disabled/**',
+    'components.browserstack.config.ts',
     'pages.disabled/**',
     'pages_backup/**',
     'pages.bak/**',
