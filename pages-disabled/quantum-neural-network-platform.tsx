@@ -1,4 +1,3 @@
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import React from 'react',;'
 import Head from 'next/head',;'
@@ -17,7 +16,6 @@ import {}
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign'
 } from 'lucide-react',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const QuantumNeuralNetworkPlatform = () => {
   const features = [
     {
@@ -53,14 +51,11 @@ import { motion } from 'framer-motion',
 import {
   Atom, Brain, Cpu, Zap, Shield, Globe,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign
 } from 'lucide-react',
 const QuantumNeuralNetworkPlatform = () => {
   const features = [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       icon: Brain,
       title: "Quantum Consciousness Integration",
@@ -93,7 +88,6 @@ const QuantumNeuralNetworkPlatform = () => {
 title: "Financial Modeling"
       description: "Advanced risk assessment and market prediction algorithms"
     }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -115,10 +109,6 @@ const QuantumNeuralNetworkPlatform = () => {
       icon: Brain,
       title: "Quantum Consciousness Integration",
       description: "Advanced AI consciousness with quantum processing capabilities",
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 const QuantumNeuralNetworkPlatform = () => {}
   const features = []
     {}
@@ -126,7 +116,6 @@ const QuantumNeuralNetworkPlatform = () => {}
       title: "Quantum Consciousness Integration","
       description: "Advanced AI consciousness with quantum processing capabilities",
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       color: "from-purple-500 to-pink-500"
     },
     {}
@@ -152,11 +141,7 @@ const QuantumNeuralNetworkPlatform = () => {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ],
   const benefits = ["
     "1000x faster neural network training","
@@ -167,18 +152,13 @@ const QuantumNeuralNetworkPlatform = () => {}
     "Future-proof technology foundation"
   ],
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const useCases = [
     {
       title: "AI Research & Development",
-=======
 
   const useCases = []
     {"
       title: "AI Research & Development","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: "Accelerate AI breakthroughs with quantum processing power"
     },
     {"
@@ -198,14 +178,8 @@ const QuantumNeuralNetworkPlatform = () => {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
   ],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
@@ -219,9 +193,7 @@ const QuantumNeuralNetworkPlatform = () => {}
       </Head>"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Hero Section */  } catch (error) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -249,10 +221,6 @@ animate={{ opacity: 1, y: 0 }  } catch (error) {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
@@ -297,7 +265,6 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       color: "from - purple - 500 to - pink - 500";
     },
     {}
@@ -357,7 +324,6 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
         <meta property="og:url" content="https://ziontechgroup.com / quantum - neural - network - platform" />;
       </Head>;"
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Hero Section */}
         <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 / 20 to - blue - 600 / 20"></div>;
@@ -366,9 +332,7 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 performance, security, and capabilities in neural network operations.
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -377,7 +341,6 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>"
                 <Link href="/services" className="inline-flex items-center px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-200">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link
@@ -391,14 +354,12 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
                   href='/services'
                   className='inline-flex items-center px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-200'
                 >
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Learn More
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Features Section */}
 
 {/* Features Section */  } catch (error) {
@@ -544,9 +505,6 @@ const QuantumNeuralNetworkPlatform = () => {;
             </motion.div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -572,10 +530,6 @@ const QuantumNeuralNetworkPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -589,9 +543,6 @@ Revolutionary Features
 {features.map((feature, index) => (
                 <motion.div
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 Revolutionary Features;
               </h2>"
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -606,9 +557,6 @@ Revolutionary Features
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>"
@@ -616,7 +564,6 @@ Revolutionary Features
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
                   <p className="text-gray-400">{feature.description}</p>
-<<<<<<< HEAD
 
                 </motion.div>
             <motion.div
@@ -624,9 +571,6 @@ Revolutionary Features
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Revolutionary Features
@@ -651,7 +595,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
                   </div>
 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -688,9 +631,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -703,11 +643,8 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
                 Unprecedented Benefits
               </h2>
               <p className='text-xl text-gray-400 max-w-2xl mx-auto'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Transform your operations with quantum-powered AI capabilities
-=======
                 Transform your operations with quantum-powered AI capabilities;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </motion.div>
 
@@ -715,22 +652,12 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
 
               {benefits.map((benefit, index) => (
                 <motion.div
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="flex items-center space-x-3"
                 >"
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />"
@@ -743,7 +670,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -758,7 +684,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
               {useCases.map((useCase, index) => (
                 <motion.div
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
@@ -778,7 +703,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -802,11 +726,7 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Experience the Future?
@@ -831,7 +751,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
     </>
   )
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Discover how our quantum neural network platform transforms industries;
               </p>
             </motion.div>"
@@ -843,9 +762,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >"
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>"
@@ -856,7 +772,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
             </div>;
           </div>;
@@ -866,9 +781,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -915,7 +827,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
     </>
   )
 }
-=======
 }
             </div>;
           </div>;
@@ -926,12 +837,9 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-=======
               className="text-center mb-16"
-=======
                   <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
                   <span className='text-gray-300'>{benefit}</span>
                 </motion.div>
@@ -942,14 +850,11 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
         {/* Use Cases Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <motion.div
-=======
 "
         <section className="py-20 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -976,14 +881,11 @@ className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50
 
 export default QuantumNeuralNetworkPlatform;
 
-<<<<<<< HEAD
 },
 
 export default QuantumNeuralNetworkPlatform,;
 ;
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Real-World Applications
@@ -1077,7 +979,6 @@ export default QuantumNeuralNetworkPlatform;
 
 export default QuantumNeuralNetworkPlatform,;
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default QuantumNeuralNetworkPlatform,
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
@@ -1098,21 +999,11 @@ export default QuantumNeuralNetworkPlatform,
           </div>;
         </section>;
       </div>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     </>);
 },
 export default QuantumNeuralNetworkPlatform,;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

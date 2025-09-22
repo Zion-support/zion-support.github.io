@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { CheckIcon } from "lucide-react",;
@@ -51,7 +50,6 @@ export function Step({;
             "text-zion-slate-light":status === "incomplete",;
             "text-white":status === "current" || status === "complete"})}
         >;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {label}
         </h3>;
         {description && (;
@@ -59,7 +57,6 @@ export function Step({;
         )}
       </div>;
     </li>;
-<<<<<<< HEAD
 
           />;
         </div>;

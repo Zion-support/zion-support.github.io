@@ -34,9 +34,7 @@ export default function CaseStudy() {
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto max-w-3xl">
           <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
-=======
           <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/CaseStudy.tsx
           <Breadcrumb className="mb-4 text-sm text-muted-foreground">
             <BreadcrumbList>
               <BreadcrumbItem>
@@ -49,18 +47,14 @@ export default function CaseStudy() {
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/CaseStudy.tsx
                   <Link href="/case-studies">Case Studies</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/CaseStudy.tsx
                 <BreadcrumbLink asChild aria-current="page">
                   <span>{study.title}</span>
                 </BreadcrumbLink>
@@ -75,11 +69,9 @@ export default function CaseStudy() {
 
             <Link href="/case-studies">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
-=======
 "
             <Link href="/case-studies">"
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/CaseStudy.tsx
             </Link>
           </Button>
           <img;
@@ -90,22 +82,18 @@ export default function CaseStudy() {
             loading="lazy"
           />
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
-=======
 "
             className="h-12 mb-4""
             loading="lazy"
 
           />"
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/CaseStudy.tsx
           <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
           {study.pdf && (
 
             <Button variant="secondary" className="mb-6" asChild>
-=======
 "
             <Button variant="secondary" className="mb-6" asChild>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/CaseStudy.tsx
               <a href={study.pdf} target="_blank" rel="noopener noreferrer">
                 Download PDF;
               </Link>
@@ -125,6 +113,4 @@ export default function CaseStudy() {
 }
 
 ;
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/CaseStudy.tsx

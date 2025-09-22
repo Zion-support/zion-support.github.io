@@ -1,8 +1,5 @@
 :src/components/ui/breadcrumb.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 }
 >(({ className, separator, ...props }, ref,) => (;
 
@@ -39,11 +36,8 @@ const Breadcrumb = React.forward_ref<;
     {...props}
 :src/components/ui/breadcrumb.tsx
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from 'lucide-react'
@@ -77,7 +71,6 @@ Breadcrumb.display_name = 'Breadcrumb';
   />));
 Breadcrumb.display_name = 'Breadcrumb';
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 Breadcrumb.displayName = "Breadcrumb"
 
 const BreadcrumbList = React.forwardRef<
@@ -85,7 +78,6 @@ const BreadcrumbList = React.forwardRef<
 React.ComponentPropsWithoutRef<"ol">
 >(({ className, ...props }, ref) => (
   <ol
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ref={ref}
     className={cn("flex items-center gap-1.5", className)}
     {...props}
@@ -111,13 +103,8 @@ const BreadcrumbLink = React.forwardRef<
     asChild?: boolean
   }
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/breadcrumb.tsx
 >(({ className, asChild = false, ...props }, ref) => {
   const Comp = asChild ? Slot : "a"
 
@@ -131,12 +118,10 @@ const BreadcrumbLink = React.forwardRef<
 })
 BreadcrumbLink.displayName = "BreadcrumbLink"
 const BreadcrumbSeparator = ({
-<<<<<<< HEAD
   children,
   className,
   ...props
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }: React.ComponentProps<"li">) => (
   <li
     role="presentation"
@@ -144,10 +129,7 @@ const BreadcrumbSeparator = ({
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
     {...props}
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/breadcrumb.tsx
   >
     {children || <ChevronRight className="h-4 w-4" />}
   </li>
@@ -205,9 +187,6 @@ export {
 
 export {
 :src/components/ui/breadcrumb.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   Breadcrumb
   BreadcrumbList
   BreadcrumbItem
@@ -233,7 +212,6 @@ export {;
 
   BreadcrumbSeparator;
   BreadcrumbEllipsis};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
 
 const BreadcrumbEllipsis = ({
@@ -258,21 +236,11 @@ export {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-<<<<<<< HEAD
   BreadcrumbEllipsis}
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
   BreadcrumbEllipsis,
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   BreadcrumbEllipsis,
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/breadcrumb.tsx

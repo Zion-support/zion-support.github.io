@@ -39,7 +39,6 @@
   fixSyntaxErrors(content) {
     let fixed = content;
 // Fix merge conflicts by keeping the HEAD version
-<<<<<<< HEAD
     fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
     // Fix merge conflicts by keeping the HEAD version
     fixed = fixed.replace(/
@@ -296,4 +295,3 @@ if (require.main === module) {}
 });
 };
 module.exports = ComprehensiveSyntaxFixer;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

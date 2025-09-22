@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React,{ useEffect } from 'react''';' import { supabase,getFromProfiles } from '../../integrations/supabase/client''';' import { useAuthOperations } from '../../hooks/useAuthOperations''';' import { AuthContext } from './AuthContext''';' import { cleanupAuthState } from '../../utils/authUtils'''; import { useNavigate,useLocation } from';';react-router-dom''';' import { useAuthState } from './useAuthState''';' import { useAuthEventHandlers } from './useAuthEventHandlers''';' import { mapProfileToUser } from './profileMapper''';' import { loginUser,registerUser } from '@/services/authService''';' import { safeStorage } from '@/utils/safeStorage''';' import { toast } from '@/hooks/use-toast''';';''
 const AuthProvider = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const AuthProvider = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

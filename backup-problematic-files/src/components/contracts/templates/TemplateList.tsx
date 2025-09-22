@@ -1,5 +1,4 @@
 
-=======
 import { ContractTemplate } from "@/types/contracts",;
 import { Button } from "@/components/ui/button",;
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
@@ -80,12 +79,10 @@ export function TemplateList({;
     <div className="space-y-3">;
       {templates.map((template) => (;
         <Card key={template.id} className={template.is_default ? "border-zion-purple" :""}>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <CardContent className="p-4">;
             <div className="flex items-center justify-between">;
               <div className="space-y-1">;
                 <div className="flex items-center gap-2">;
-<<<<<<< HEAD
 
                   aria-label="Edit template";
                 >;

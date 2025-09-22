@@ -106,7 +106,6 @@ class ErrorBoundary extends React.Component {}
 :temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
 
 export default WhitepaperViewPage;import React, { useState, useEffect } from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useRouter } from 'next/router', // Changed from useParams;
 import { supabase } from '@/integrations/supabase/client';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel;
@@ -170,7 +169,6 @@ const WhitepaperViewPage: React.FC = () => {;
       setError(null),;
 :temp_exclude/hooks.disabled/WhitepaperViewPage.tsx
       try {;
-<<<<<<< HEAD
         const { data: responseData, error: funcError } = await supabase.functions.invoke('get-shared-whitepaper', {;
           body: { id }}),;
         if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),;
@@ -178,7 +176,6 @@ const WhitepaperViewPage: React.FC = () => {;
           body: { id }}),;
 `
         if (funcError) throw new Error(`Supabase function error: ${funcError && funcError.message}`),;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         if (responseData && (responseData as any).error) throw new Error((responseData as any).error),;
         if (!responseData || !(responseData as any).whitepaper_data) {;'
           throw new Error('Shared whitepaper not found or data is invalid.');

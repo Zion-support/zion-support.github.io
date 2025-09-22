@@ -1,5 +1,4 @@
 
-=======
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;
@@ -42,12 +41,10 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
               <Pin className="h-4 w-4 text-amber-500 ml-2" />;
             )}
             {post.isLocked && (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <Lock className="h-4 w-4 text-red-500 ml-2" />;
             )}
           </div>;
           <div className="text-sm text-muted-foreground">;
-<<<<<<< HEAD
 
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
                 {tag}

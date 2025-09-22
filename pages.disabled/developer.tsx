@@ -1,8 +1,5 @@
 :pages_backup/developer.tsx
-<<<<<<< HEAD:pages/developer.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
 import React from 'react',;
@@ -13,11 +10,7 @@ import React from 'react'
 import Head from 'next/head'
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground'
 import Link from 'next/link'
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function DeveloperPage() {
   return (
     <>
@@ -60,7 +53,6 @@ export default function DeveloperPage() {_return (
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Developer Portal</h1>
         <p className="text-gray-300 mb-6">Access docs, _SDKs, _and quickstarts for all services. Contact us for enterprise onboarding.</p>
               <div className="space-x-4">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <a href="/api-docs" className="text-cyan-400 underline">API Docs</a>
         <a href="/docs" className="text-cyan-400 underline">Guides</a>
         <a href="/support" className="text-cyan-400 underline">Support</a>
@@ -69,33 +61,18 @@ export default function DeveloperPage() {_return (
     </>
   )
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/developer.tsx
 import React from 'react',
 import Head from 'next/head',
 origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
 :pages/developer.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import Head from 'next/head',;
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
@@ -111,7 +88,6 @@ export default function DeveloperPage() {
       <Head>
         <title>Developer Portal | Zion Tech Group</title>
 :pages_backup/developer.tsx
-<<<<<<< HEAD
         <meta name="description" content="Developer resources, API keys, examples, and SDKs." />
         <link rel="canonical" href="https://ziontechgroup.com/developer" />
       </Head>
@@ -122,8 +98,6 @@ export default function DeveloperPage() {
         <link rel='canonical' href='https://ziontechgroup.com/developer' />
       </Head>
 :pages_backup/developer.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Developer Portal</h1>
         <p className="text-gray-300 mb-6">Access docs, SDKs, and quickstarts for all services. Contact us for enterprise onboarding.</p>
@@ -160,29 +134,17 @@ export default function DeveloperPage() {_return (
     </>
   )
 :pages_backup/developer.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/developer.tsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/developer.tsx
-=======
 import React from 'react',
 import Head from 'next/head',
 origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/developer.tsx
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>
           Developer Portal
@@ -677,9 +639,4 @@ export default function DeveloperPortal() {
   );
 }
 :pages_backup/developer.tsx
-<<<<<<< HEAD:pages/developer.tsx
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/developer.tsx

@@ -1,5 +1,4 @@
 :pages/api/auth/verify-sol.ts
-<<<<<<< HEAD
 const cookieHeader = req.headers.cookie || '';
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res.status(400).json({ error: 'Missing nonce' });
@@ -59,24 +58,19 @@ function handler() {
   }
 }
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import nacl from 'tweetnacl',;
 import bs58 from 'bs58',;
 import jwt from 'jsonwebtoken',;
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me',
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nacl from 'tweetnacl';
 import bs58 from 'bs58';
 import jwt from 'jsonwebtoken';
 :pages/api/auth/verify-sol.ts
-<<<<<<< HEAD
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).end();
@@ -155,16 +149,6 @@ export default async function handler(req, res) {
 }
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

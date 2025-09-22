@@ -29,9 +29,7 @@ function fixUnusedVariables(content) {};
       errorCount++,
 
 };
-=======
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };  try {};
     const result = execSync('npm run lint 2>&1', { encoding: 'utf8' }),',
     const lines = result.split('\n'),',
@@ -50,9 +48,7 @@ _console.log(`📈 Lint result: ${lastLine}`)
 };
         fixedCount++}
 } catch (error) {_;
-=======
     _;
     _,
         fixedCount++}
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

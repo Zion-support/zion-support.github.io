@@ -1,5 +1,4 @@
 :src/mobile/components/projects/MobileProjectView.tsx
-<<<<<<< HEAD
 id: string;
 
 id: string;,
@@ -24,7 +23,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   totalAmount: string;
     progress: number;
 :src_backup/mobile/components/projects/MobileProjectView.tsx
-<<<<<<< HEAD
 
 import React from 'react';'
 import { Card, CardContent } from '@/components / ui / card';'
@@ -44,11 +42,8 @@ import { SeverityIndicator } from '../common / SeverityIndicator';'
 import { use_router } from 'next / router';'
 import { toast } from 'sonner';
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -76,7 +71,6 @@ import { Progress } from "@/components/ui/progress",;"
 import { SeverityIndicator } from "../common/SeverityIndicator",;'
 import { useRouter } from 'next/router',;"
 import { toast } from "sonner",;
-=======
   Video,'
 } from 'lucide-react';''
 import { Progress } from '@/components/ui/ progress';''
@@ -112,7 +106,6 @@ import { Progress } from "@/components/ui/progress",;""
 import { SeverityIndicator } from "../common/SeverityIndicator",;""
 import { useRouter } from 'next/router',;''
 import { toast } from "sonner",;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/mobile/components/projects/MobileProjectView.tsx
 interface Milestone {;
   id: string,;
   title: string,;
@@ -139,7 +132,6 @@ interface ProjectViewProps {;
     description: string;
   },;
 :src_backup/mobile/components/projects/MobileProjectView.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/projects/MobileProjectView.tsx
 
   milestones: Milestone[];
 };
@@ -167,7 +159,6 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
   };
 
 :src_backup/mobile/components/projects/MobileProjectView.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {}
@@ -189,14 +180,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {}
     }),;
     // Navigate to messaging with this client;
   },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export function MobileProjectView(): any ({ project, milestones }: ProjectViewProps) {const router = useRouter()const startProjectCall = () => ;}
   const roomId = `project-${project && project.id}`;
     toast && toast.success('Starting project call', {description: 'Initializing video connection...'})router && router.push(`/call/${roomId}`
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/mobile/components/projects/MobileProjectView.tsx
   return (
 <div className="space-y-6 px-4 pb-24">
       <Card>
@@ -217,22 +205,17 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
             </div>
 
             <div className="space-y-1">
-=======
             "
             <div className="space-y-1">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
               <div className="flex justify-between items-center text-sm">
 :src/mobile/components/projects/MobileProjectView.tsx
                 <span>Progress</span>
-=======
 
                 <span>Progress</span>"
                 <span className="font-medium">{project.progress}%</span>
               </div>"
               <Progress value={project.progress} className="h-2" />
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/projects/MobileProjectView.tsx
 
-=======
             "
             <div className="space-y-1">"
 </div>"
@@ -243,34 +226,24 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
               </div>"
               <Progress value={project.progress} className="h-2" />"
 </Progress>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/mobile/components/projects/MobileProjectView.tsx
             </div>
 
-=======
             "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
             <div className="grid grid-cols-2 gap-3 text-sm">
-=======
             <div className="grid grid-cols-2 gap-3 text-sm">
 
 :src_backup/mobile/components/projects/MobileProjectView.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div>
                 <p className='text-muted-foreground'>Start Date</p>
                 <p className='font-medium'>{project.startDate}</p>
               </div>
               <div>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <p className="text-muted-foreground">End Date</p>
-=======
 "
                 <p className="text-muted-foreground">End Date</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
                 <p className="font-medium">{project.endDate || "Not set"}</p>
 
-=======
             "
             <div className="grid grid-cols-2 gap-3 text-sm">"
 </div>
@@ -285,7 +258,6 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
 "
                 <p className="text-muted-foreground">End Date</p>""
                 <p className="font-medium">{project.endDate || "Not set"}</p>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/mobile/components/projects/MobileProjectView.tsx
               </div>
 :src_backup/mobile/components/projects/MobileProjectView.tsx
               <div>
@@ -306,12 +278,10 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
             <div className="flex gap-2">
               <Button size="sm" variant="outline" className="gap-1 flex-1">
                 <FileText className="h-4 w-4" /> Contract
-=======
             "
             <div className="flex gap-2">"
               <Button size="sm" variant="outline" className="gap-1 flex-1">"
                 <FileText className="h-4 w-4" /> Contract;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
               </Button>
               <Button "
                 size="sm" "
@@ -324,7 +294,6 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
               <Button "
                 size="sm" "
                 className="gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light"
-=======
 </div>"
               <p className="text-sm text-muted-foreground mb-1">Description</p>""
               <p className="text-sm">{project.description}</p>"
@@ -413,17 +382,13 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
               <Button;"
                 size="sm"""
                 className="gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/mobile/components/projects/MobileProjectView.tsx
                 onClick={startProjectCall}
 :src_backup/mobile/components/projects/MobileProjectView.tsx
               >
 <Video className="h-4 w-4" /> Call
-<<<<<<< HEAD
-=======
 </Button>"
                 <Video className="h-4 w-4" /> Call;"
 </Video>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/mobile/components/projects/MobileProjectView.tsx
               </Button>
             </div>
           </div>
@@ -446,13 +411,11 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
                     ) : (
                       <div className="h-5 w-5 rounded-full border-2 border-muted-foreground"></div>
                     )}
-=======
 
                     ) : ('
                       <div className='h-5 w-5 rounded-full border-2 border-muted-foreground'></div>
                 onClick={startProjectCall}>;'
                 <Video className='h-4 w-4' /> Call;
-=======
 </section>"
         <h2 className="text-lg font-medium mb-4">Milestones</h2>""
         <div className="space-y-3">"
@@ -471,7 +434,6 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
                 <Video className='h-4 w-4' /> Call;'
 </Video>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/mobile/components/projects/MobileProjectView.tsx
               </Button>;
             </div>;
           </div>;
@@ -540,18 +502,15 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
 }
 '
     <div className='space - y-6 px - 4 pb - 24'>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
                     <h3 className="font-medium">{milestone.title}</h3>
                   </div>
 
                   <Badge 
                     variant={
                       milestone.paymentStatus === "paid" ? "default" : 
-=======
                   <Badge;
                     variant={"
                       milestone.paymentStatus === "paid" ? "default" : "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline"
 ;
 export function MobileProjectView() { return null; }`
@@ -582,13 +541,11 @@ export function MobileProjectView() { return null; }`
                   </Avatar>;"
 :src_backup/mobile/components/projects/MobileProjectView.tsx
                   <span className="text-sm">{project.client.name}</span>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/projects/MobileProjectView.tsx
 
                 </div>;
               </div>;
               <Badge>{project.status}</Badge>;
 </div>;
-<<<<<<< HEAD:src/mobile/components/projects/MobileProjectView.tsx
               <div className="flex justify-between items-center text-sm">;
                 <span>Progress</span>;"
                 <span className="font-medium">{project.progress}%</span>;
@@ -635,7 +592,6 @@ export function MobileProjectView() { return null; }`
                 onClick={startProjectCall}
               >;"
                 <Video className="h-4 w-4" /> Call;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/projects/MobileProjectView.tsx
               </Button>;
 
             </div>;
@@ -644,7 +600,6 @@ export function MobileProjectView() { return null; }`
       </Card>;
 :src_backup/mobile/components/projects/MobileProjectView.tsx
 <section>;
-<<<<<<< HEAD:src/mobile/components/projects/MobileProjectView.tsx
         <div className="space-y-3">;
           {milestones.map((milestone) => (;
             <Card key={milestone.id}>;"
@@ -657,7 +612,6 @@ export function MobileProjectView() { return null; }`
                       <div className="h-5 w-5 rounded-full border-2 border-muted-foreground"></div>;
                     )}"
                     <h3 className="font-medium">{milestone.title}</h3>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/projects/MobileProjectView.tsx
 
       <section>;
 </section>"
@@ -740,11 +694,7 @@ variant={;
             </Card>;
 :src_backup/mobile/components/projects/MobileProjectView.tsx
           ))}
-<<<<<<< HEAD:src/mobile/components/projects/MobileProjectView.tsx
-<<<<<<< HEAD
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
       </section>;
     </div>;
   );
@@ -753,23 +703,16 @@ variant={;
     </div>;
   );
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 :src_backup/mobile/components/projects/MobileProjectView.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
         </div>
       </section>
     </div>
   );
 :src/mobile/components/projects/MobileProjectView.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
-=======
 
         </div>;
       </section>;"
@@ -801,4 +744,3 @@ variant={;
 
     </div>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/mobile/components/projects/MobileProjectView.tsx

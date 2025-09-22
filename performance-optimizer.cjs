@@ -1,23 +1,13 @@
-<<<<<<< HEAD:backup-problematic-files/performance-optimizer.cjs
 
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:performance-optimizer.cjs
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process");class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { try { / Find image files const imageFiles = this.findImageFiles(;); for (const file of imageFiles) { / Add image optimization logic here this.optimizations.push({" type: "image", file,"" action: "optimized"," timestamp: new Date().toISOString() })} return this.optimizations} catch (error) {"" console.error("Error optimizing images: ", error); return []} } findImageFiles() { const files = [];" const extensions = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"]; function traverse(dir) { const items = fs.readdirSync(dir;); for (const item of items) { const fullPath = path.join(dir, item;); const stat = fs.statSync(fullPath;); " if (&& !item.startsWith(".") && item !== "node_modules") { traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } " traverse(".")) {" && !item.startsWith(".") && item !== "node_modules") { traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } " traverse(".")} return files} async optimizeBundle() { try { / Analyze bundle size const bundleAnalysis = this.analyzeBundleSize(;); this.optimizations.push({"" type: "bundle","" action: "analyzed"," size: bundleAnalysis.size," timestamp: new Date().toISOString() }); return this.optimizations} catch (error) {"" console.error("Error optimizing bundle: ", error); return []} } analyzeBundleSize() { / Simple bundle size analysis" const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8";);); const dependencies = Object.keys(packageJson.dependencies | {}); return {;" size: dependencies.length * 1000, / Estimated size" dependencies: dependencies.length }} async generateOptimizationReport() { await this.optimizeImages(); await this.optimizeBundle(); const report = {" timestamp: new Date().toISOString()," optimizations: this.optimizations," recommendations: this.generateOptimizationRecommendations() }; " fs.writeFileSync("performance-optimization-report.json", JSON.stringify(report, null, 2)); return report} generateOptimizationRecommendations() { const recommendations = []; if ( { recommendations.push({"" type: "general","" priority: "medium","" message: "Consider implementing lazy loading for better performance." })} return recommendations) { { recommendations.push({"" type: "general","" priority: "medium","" message: "Consider implementing lazy loading for better performance." })} return recommendations}}}/ Run optimizationconst optimizer = new PerformanceOptimizer;(;);optimizer.generateOptimizationReport().then(report => {"" console.log(" Performance optimization report generated: ", report)}).catch(error => {"" console.error(" Optimization failed: ", error)});"""
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -118,10 +108,6 @@ optimizer.generateOptimizationReport().then(report => {
   }).catch(error => {
   console.error('❌ Optimization "failed": ', error)});
 :backup-problematic-files/performance-optimizer.cjs
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const { execSync } = require('child_process')
           "type"
           "action"
@@ -141,12 +127,8 @@ const { execSync } = require('child_process')
 console.error(' Optimization "failed")
 
   console.error(' Optimization "failed")
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   console.error(' Optimization "failed")
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   console.error(' Optimization "failed")
 #!/usr/bin/env node
 const fs = require('fs');
@@ -239,9 +221,6 @@ function optimizePerformance() {
 }
 // Run performance optimization
 :backup-problematic-files/performance-optimizer.cjs
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 class PerformanceOptimizer {
   constructor() {
@@ -253,4 +232,3 @@ class PerformanceOptimizer {
 
 const optimizer = new PerformanceOptimizer();
 optimizer.run().catch(console.error);
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

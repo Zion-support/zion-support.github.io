@@ -1,6 +1,4 @@
 :src/pages/Dashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import dynamic from 'next/dynamic',
 import { useAuth } from "@/hooks/useAuth",
@@ -112,7 +110,6 @@ const GuidedTour = dynamic(
     'talent'
   const roleForTour = null;
     userType === 'client' || userType === 'admin' ? 'client' : 'talent'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
 import dynamic from 'next/dynamic',
 import { useAuth } from "@/hooks/useAuth",
@@ -391,7 +388,6 @@ export default function Dashboard() {;
                       Send Onboarding Nudge
                     </Button>
 :src/pages/Dashboard.tsx
-<<<<<<< HEAD
 
                     <Button 
                       className="w-full flex items-center justify-center gap-2"
@@ -568,8 +564,6 @@ export default function Dashboard() {;
                 <h3 className='text-lg font-bold text-white mb-4 flex items-center'>
                   <Bell size={18} className='mr-2 text-zion-cyan' />
 :src/pages/Dashboard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Recent Notifications
                 </h3>
                 <div className="space-y-4">
@@ -726,11 +720,7 @@ const Dashboard: React.FC = () => {
 
 export default Dashboard;
 :src/pages/Dashboard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Dashboard.tsx
   createSystemNotification
 }= await loadNotificationFunctions ()
 await createSystemNotification ({'"
@@ -798,5 +788,3 @@ toast ({"
 }/> </>)
 }'"
 :src/pages/Dashboard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

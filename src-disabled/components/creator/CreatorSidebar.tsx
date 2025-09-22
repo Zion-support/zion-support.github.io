@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 } from 'lucide-react'; import {
   Sidebar
   SidebarContent
   SidebarGroup
   SidebarMenuItem
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 } from "@/components/ui/sidebar";
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
@@ -15,17 +12,11 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarMenuItem,
-=======
-=======
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Sidebar;
   SidebarContent;
   SidebarGroup;
   SidebarMenuItem;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
@@ -39,22 +30,18 @@ export function AppSidebar() {
 <SidebarGroup title="Dashboard">
           <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
             <span>Home</span>
-=======
 
 export function AppSidebar() {}
   return (
     <Sidebar>
       <SidebarContent>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </SidebarMenuItem>
-=======
 "
         <SidebarGroup title="Dashboard">"
           <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
             <span>Home</span>
 
           </SidebarMenuItem>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
           </SidebarMenuItem>"
@@ -62,12 +49,9 @@ export function AppSidebar() {}
             <span>Notifications</span>
           </SidebarMenuItem>
 </SidebarGroup>
-<<<<<<< HEAD
         <SidebarGroup title="Content">
-=======
         </SidebarGroup>"
         <SidebarGroup title="Content">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <SidebarMenuItem href="/publish" icon={<FileText size={16} />}>
             <span>My Content</span>
           </SidebarMenuItem>"
@@ -75,12 +59,9 @@ export function AppSidebar() {}
             <span>Analytics</span>
           </SidebarMenuItem>
 </SidebarGroup>
-<<<<<<< HEAD
         <SidebarGroup title="Settings">
-=======
         </SidebarGroup>"
         <SidebarGroup title="Settings">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <SidebarMenuItem href="/profile" icon={<Users size={16} />}>
             <span>Profile</span>
           </SidebarMenuItem>"
@@ -114,20 +95,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
-<<<<<<< HEAD
     </Sidebar>
   )
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {;
-=======
 ;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   Bell,;
   FileText,;
@@ -137,7 +111,6 @@ import {;
   Settings,;
   Users,;'
 } from 'lucide-react';import {;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Sidebar,;
   SidebarContent,;
   SidebarGroup,;
@@ -181,7 +154,6 @@ export function AppSidebar() {;
           </SidebarMenuItem>;'
           <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>            <span>Settings</span>            <span>Home</span>;
 </SidebarMenuItem>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>;
             <span>Messages</span>;
           </SidebarMenuItem>;"
@@ -211,20 +183,10 @@ export function AppSidebar() {;
   );
 }
 ;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     </Sidebar>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
     </Sidebar>;
   );
@@ -336,4 +298,3 @@ export function AppSidebar() {
       ;)
     );"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

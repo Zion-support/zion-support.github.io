@@ -1,7 +1,5 @@
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function Status() {
   return (
     <Layout
@@ -12,8 +10,6 @@ export default function Status() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               All systems are operational.
             </p>
@@ -24,7 +20,6 @@ export default function Status() {
         </div>
       </div>
 </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 import React from './react';
 import Layout from "../components / Layout";
@@ -54,5 +49,4 @@ function Status() {
         </div>;
       </div>;
     </Layout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

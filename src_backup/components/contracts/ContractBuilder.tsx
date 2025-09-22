@@ -1,5 +1,4 @@
 :src/components/contracts/ContractBuilder.tsx
-<<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -130,11 +129,7 @@ const handleLoadTemplate = (templateData: ContractFormValues,) => {;
         onClose={() => {;
           setShowSmartContractBuilder(false);          onClose();
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/ContractBuilder.tsx
 import { useState } from 'react';
 import {
   Dialog,
@@ -175,20 +170,15 @@ export function ContractBuilder({
   const handleLoadTemplate = null;
           onClose()
 :src/components/contracts/ContractBuilder.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         }}
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
 :src/components/contracts/ContractBuilder.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       />;
     );
   }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
   return (
@@ -218,7 +208,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
 :src/components/contracts/ContractBuilder.tsx
-=======
       />;
     );
   }
@@ -227,9 +216,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/ContractBuilder.tsx
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <div className="flex gap-2">
               <Button 
                 variant="outline" 
@@ -240,8 +227,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Save className="h-4 w-4" />
                 Templates
 </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <Button
                 variant="secondary"
@@ -296,9 +281,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
 :src/components/contracts/ContractBuilder.tsx
                 variant="outline" 
-=======
               </Button>                variant="outline" 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 size="sm"
                 onClick = {(,) => setTemplateManagerOpen(true),}
                 className="flex gap-1";
@@ -323,13 +306,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             <ContractForm               talent = {talent,}
               talent = {talent,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               clientName = {clientName,}
               initialValues = {formValues,}
               onFormValuesChange = {setFormValues,}
               onContractGenerated = {handleContractGenerated,}
 :src/components/contracts/ContractBuilder.tsx
-<<<<<<< HEAD
             />
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
@@ -350,21 +331,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 status="ready"
 :src/components/contracts/ContractBuilder.tsx
         <TemplateManager
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}
           currentValues = {formValues,}
 :src/components/contracts/ContractBuilder.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         />;
       </DialogContent>;
     </Dialog>;
   );
-<<<<<<< HEAD
 }
 ;
 
@@ -373,8 +349,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Dialog>;
   );
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/ContractBuilder.tsx

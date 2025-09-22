@@ -24,12 +24,10 @@ name:string,;
   title:string,;
   bio:string,;
   skills:string[],;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   location?:string;
 }
 ;
 interface EnhancedProfile {;
-<<<<<<< HEAD
   summary:string;
   categorizedSkills:{;
     programming:string[];
@@ -45,13 +43,11 @@ interface EnhancedProfile {;
     softSkills:string[];
     other:string[];
 },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
 serve(async (req) => {;
   // Handle CORS preflight requests;
   if (req.method === 'OPTIONS') {;
-<<<<<<< HEAD
     return new Response(null, { headers:corsHeaders });
   }
 ;
@@ -73,12 +69,10 @@ serve(async (req) => {;
         JSON.stringify({ error:"Bio must be at least 20 characters long" });
         { status:400, headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
 ),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
 ;
     // Create a request to OpenAI API;
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
-<<<<<<< HEAD
       method:'POST';
       headers:{;
         'Authorization':`Bearer ${OPENAI_API_KEY}`;
@@ -104,7 +98,6 @@ serve(async (req) => {;
           };
           {;
 role:'user',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             content:`Create a professional profile summary and categorize skills based on this information:;
             Name:${talentData.name}
             Title:${talentData.title}
@@ -114,7 +107,6 @@ role:'user',;
             ;
             Return the result as a JSON object with these keys:;
             {;
-<<<<<<< HEAD
               "summary":"The professional summary text (100-150 words)";
               "categorizedSkills":{;
                 "programming":["skill1", "skill2"];
@@ -195,7 +187,6 @@ role:'user',;
       JSON.stringify({ error:error.message });
       { status:500, headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
 ),;interface TalentProfileData {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string;
 title: string;
 bio: string;
@@ -229,7 +220,6 @@ const _corsHeaders = {_'Access-Control-Allow-Origin': '*', _'Access-Control-Allo
 interface TalentProfileData {_name: string;
   title: string;
   bio: string;
-<<<<<<< HEAD
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )    }
 
@@ -270,7 +260,6 @@ try {
       {_status: 500, _headers: { ...corsHeaders, _'Content-Type': 'application/json'} }
     );
   }
-<<<<<<< HEAD
 });}//Extract the generated content from the response const responseContent = openAIData.choices[0].message.content;
 //Parse the JSON response let enhancedProfile: EnhancedProfile;
 try {

@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from 'react',;
 import {;
   Dialog,;
@@ -159,7 +158,6 @@ export function HireConfirmationModal({ ;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-[425px]">;
         <DialogHeader>;
@@ -173,7 +171,6 @@ export function HireConfirmationModal({ ;
             <Label htmlFor="projectName" className="text-right">;
               Project Name;
             </Label>;
-<<<<<<< HEAD
 
               className="col-span-3";
             />;

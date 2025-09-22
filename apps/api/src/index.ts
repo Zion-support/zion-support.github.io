@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
 
@@ -16,7 +15,6 @@ const app = null;
       .map(s => s.trim());
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       cb(null, true);
       return;
     }
@@ -50,7 +48,6 @@ const completion = await openai.responses.create({
   });
   return { text: completion.output_text };
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 });
 
 '
@@ -106,8 +103,6 @@ app && app.get('/talent/search', async (req: any, reply: any) => {
   const country = (req && req.query as any).country as string | undefined;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async client => {    const res = await client && client.query(  const rows = await withUser(userId, async (client) => {}
@@ -120,8 +115,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const res = await client.query(
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1::text IS NULL OR country = $1)
          AND ($2::text IS NULL OR EXISTS ('
@@ -129,8 +122,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
            ))
 ORDER BY created_at DESC
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     );
     return res && res.rows;
   });
@@ -149,8 +140,6 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
 
   const userId = getUserId(req);
 
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   const userId = getUserId(req);
@@ -310,7 +299,6 @@ app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 (process as any).exit(1);
 });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 });
   app.log.error(err);
   (process as any).exit(1)
@@ -392,8 +380,4 @@ app.log.error (err);
 });  (process as any).exit (1);
 });
 ;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

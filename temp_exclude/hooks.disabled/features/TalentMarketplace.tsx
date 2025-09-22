@@ -46,7 +46,6 @@ import { GradientHeading } from "@/components/GradientHeading";"
 import { Button } from "@/components/ui/button";'
 import Link from 'next/link';
 :temp_exclude/hooks.disabled/features/TalentMarketplace.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function TalentMarketplace() {
   const schema = {
     "@context": "https://schema.org",
@@ -56,10 +55,8 @@ export default function TalentMarketplace() {
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
   },
 
-<<<<<<< HEAD
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 :temp_exclude/hooks.disabled/features/TalentMarketplace.tsx
     <>
@@ -181,6 +178,4 @@ export default function TalentMarketplace() { return null; }
   );
 }
 ;
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/TalentMarketplace.tsx

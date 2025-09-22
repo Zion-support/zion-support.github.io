@@ -15,9 +15,7 @@ import { supabase } from "@/integrations/supabase/client",
 import { logErrorToProduction } from '@/utils/productionLogger',
 import { EmptyState } from "@/components/ui/empty-state",
 interface PartnerProfile {
-=======
 interface PartnerProfile {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/PartnerManager.tsx
   id: string,
   user_id: string,
   name: string,'

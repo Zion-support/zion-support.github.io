@@ -22,7 +22,6 @@ function cleanupMergeConflicts(filePath) {
       } else if (line.includes('')) {
         keepLines = false;
         continue;
-      } else if (line.includes('>>>>>>>')) {
         inConflict = false;
         keepLines = false;
         continue;

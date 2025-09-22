@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 import Head from 'next / head';
@@ -89,10 +88,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
     (window as any).trackEvent = trackEvent;
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
   useEffect (() => {
-=======
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {}
   useEffect (() => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     // Google Analytics 4;
     // Check condition;
 if ( {) {}
@@ -205,7 +202,6 @@ if ( {) {}
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
 if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       });
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart;
                     if (window && window.gtag) {'
@@ -222,8 +218,5 @@ if (window.gtag) {
 
 export default Analytics;
 export default Analytics;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
 export default Analytics;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/components/Analytics.tsx

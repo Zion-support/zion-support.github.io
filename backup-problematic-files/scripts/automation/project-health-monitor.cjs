@@ -165,7 +165,6 @@ try {}
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
             const score = Math.max(0, 20 - (vulnerabilities * 5;););
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             return {;}
                 "status": 'success',
                 "vulnerabilities": vulnerabilities,
@@ -179,7 +178,6 @@ try {}
     };
     generateHealthReport() {}
         this.log('Generating project health report...');
-<<<<<<< HEAD
         const structure = this.checkProjectStructure(;);
         const codeQuality = this.checkCodeQuality(;);
         const typeScript = this.checkTypeScript(;);
@@ -237,10 +235,6 @@ return recommendations};
     const monitor = new ProjectHealthMonitor) {}
     const monitor = new ProjectHealthMonitor}(;);
     monitor.run().catch(console.error)};
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 module.exports = ProjectHealthMonitor;
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

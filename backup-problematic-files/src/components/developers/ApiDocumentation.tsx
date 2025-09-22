@@ -630,14 +630,11 @@ app.post('/webhook', express.raw({type: 'application/json';}), (req, res) => {;
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Limit</code>:Number of requests allowed in the time window</li>;
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Remaining</code>:Number of requests remaining in the current window</li>;
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>:Unix timestamp when the rate limit resets</li>;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </ul>;
             </div>;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
-<<<<<<< HEAD
               method === 'GET' ;
                 ? "border-green-500 text-green-400 font-mono" ;""
                 :method === 'POST' ;
@@ -667,12 +664,10 @@ app.post('/webhook', express.raw({type: 'application/json';}), (req, res) => {;
                   <td className="py-2 text-sm text-zinc-400">{param.type}</td>;""
                   <td className="py-2 text-sm text-zinc-400">{param.description}</td>;"
                 </tr>;              ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </tbody>;
           </table>;
         </div>;
       )}
-<<<<<<< HEAD
                 <button;
                   key={lang}`;
                   className={`px-3 py-1 text-xs font-medium ${;
@@ -750,4 +745,3 @@ headers=headers) data = response.json () print (data) ` ;
 }language=" json" /> </div>) ;
 }</div>) ;
 }'"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

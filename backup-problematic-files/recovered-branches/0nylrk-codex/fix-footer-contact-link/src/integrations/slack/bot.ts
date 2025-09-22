@@ -49,13 +49,11 @@ class MockApp {;
 ;
   command(commandName:string, handler:Function) {;
 this.commandHandlers[commandName] = handler,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return this;
   }
 ;
   async start(port?:number):Promise<void> {;
     // Safely log without direct console reference;
-<<<<<<< HEAD
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console :undefined;
     if (safeConsole && safeConsole.log) {;
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
@@ -65,12 +63,10 @@ this.commandHandlers[commandName] = handler,;
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
     }
 return Promise.resolve(),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 }
 ;
 // Create a mock app instance;
-<<<<<<< HEAD
 const app = new MockApp();
 ;
 async function askZionGPT(prompt:string):Promise<string> {;
@@ -128,14 +124,12 @@ app.command('/zion', async ({ command, ack, respond } { command:SlackCommand, ac
 const project = args.join(' '),;
       await respond(`Tracking project **${project}** - feature coming soon.`),;
       break,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     case 'help':;
     default:await respond(;
         'Commands:\n''`/zion post-job` - post a new job\n''`/zion suggest-talent [skills]` - AI talent suggestions\n''`/zion track-project [name]` - project status\n''`/zion help` - show this list';
       );
   }
-<<<<<<< HEAD
 });
 ;
 // Mock startup with safer environment access;
@@ -168,7 +162,6 @@ export default app; // Mock implementation of Slack bot that doesn't require ext
   safeConsole.log (`ZionGPT was asked: $ {
   prompt 
 }`) 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }switch (action) {
   case 'post-job': await respond ('Please provide job details via the web interface.');
 break;

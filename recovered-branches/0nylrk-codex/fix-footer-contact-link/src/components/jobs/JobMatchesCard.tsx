@@ -1,8 +1,4 @@
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {;
   Card,;
@@ -11,9 +7,7 @@ import {;
   CardTitle,;
   CardDescription,;
   CardFooter,;
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useState } from "react";
 import {};
   Card;
@@ -29,10 +23,7 @@ import {}
   CardHeader,
   CardTitle,
 CardDescription,
-<<<<<<< HEAD
   CardFooter,;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -46,26 +37,17 @@ import { JobMatch } from "@/types/jobs";
 import { format } from "date-fns";
 import { JobMatch } from "@/types/jobs";
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean;
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   if (!job) return null;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface JobMatchCardProps {
-=======
 
 interface JobMatchCardProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   match: JobMatch,
   onApply: (matchId: string, jobId: string) => void,
   onDecline: (matchId: string) => void,
@@ -77,11 +59,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 
   if (!job) return null,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 
   return (
@@ -90,7 +67,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
       <CardHeader className="p-4 pb-2">;"
         <div className="flex justify-between items-start">;
           <div>;
-<<<<<<< HEAD
             <CardTitle className="text-lg">{job && job.title}</CardTitle>;
             <CardDescription>;
               Posted {format(new Date(job && job.created_at), "MMM d")}
@@ -99,17 +75,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
                   (Viewed {format(new Date(match && match.viewed_at), "MMM d")});
                 </span>;
               )}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {match.matched_skills?.length > 0 && (
-=======
   CardFooter,;  onApply: (matchId: string, jobId: string) => void;
-=======
 import { useState } from "react";
 import {
   Card
@@ -166,7 +135,6 @@ import { JobMatch } from "@/types/jobs";
 interface JobMatchCardProps {
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onDecline: (matchId: string) => void;
   showApplied?: boolean
 }
@@ -256,8 +224,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
       <CardHeader className="p-4 pb-2">;
         <div className="flex justify-between items-start">;
 <div>;        {match.matched_skills?.length > 0 && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           <div>;
             <CardTitle className="text-lg">{job && job.title}</CardTitle>;
             <CardDescription>;
@@ -301,13 +267,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         </p>
 
         {match.matched_skills?.length > 0 && (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className="mb-3">
-=======
 
         {match.matched_skills?.length > 0 && ("
           <div className="mb-3">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <p className="text-xs text-muted-foreground mb-1">
               Matched skills:
             </p>"
@@ -326,20 +289,13 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             </div>
           </div>
         )}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react",;
 import { format } from "date-fns",;
-=======
 "
 import { useState } from "react",;"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;"
@@ -347,7 +303,6 @@ import { Badge } from "@/components/ui/badge",;"
 import { Button } from "@/components/ui/button",;"
 import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react",;"
 import { format } from "date-fns",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { JobMatch } from "@/types/jobs",;
 interface JobMatchCardProps {;
   match: JobMatch,;
@@ -370,7 +325,6 @@ export function JobMatchesCard() { return null; }
         </div>;
       </CardHeader>;
       <CardContent className="p-4 pt-0">;
-<<<<<<< HEAD
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;
 
         {match && match.matched_skills?.length > 0 && (;
@@ -382,21 +336,14 @@ export function JobMatchesCard() { return null; }
               {match && match.matched_skills.slice(0, 5).map((skill, i) => (;
                 <Badge key={i} variant="secondary" className="text-xs">;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {skill}
                 </Badge>;
               ))}
               {match && match.matched_skills.length > 5 && (;"
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   {skill}
                 </Badge>;
               ))}
               {match && match.matched_skills.length > 5 && (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <Badge variant="secondary" className="text-xs">;
                   +{match && match.matched_skills.length - 5}
                 </Badge>;
@@ -446,66 +393,41 @@ export function JobMatchesCard() { return null; }
             </div>;
           </div>;
         )}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />$
             {job.budget.min} - ${job.budget.max}
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-        <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
-          <div className="flex items-center text-sm">
-=======
 
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+        <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
+          <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          </div>
-=======
-        <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;          </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;          </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-          </div>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
           </div>
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;          </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;          </div>
+          </div>
+          </div>
+        <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;          </div>
           <div className="flex items-center text-sm">
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
-=======
 
           </div>"
           <div className="flex items-center text-sm">"
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             Due: {format(new Date(job.deadline), "MMM d, yyyy")}
           </div>
         </div>
       </CardContent>"
       <CardFooter className="p-4 pt-0">
 {match.status === 'applied' || showApplied ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
-=======
 
 "
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <CheckCircle className="h-4 w-4 mr-2" />
             Applied;
           </div>
@@ -543,17 +465,9 @@ export function JobMatchesCard() { return null; }
             Declined;
           </div>;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <Button
-=======
 
             <Button"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="flex-1"
               onClick={() => onApply(match && match.id, job && job.id)}
             >;
@@ -562,24 +476,14 @@ export function JobMatchesCard() { return null; }
 <Button
 variant="outline"            <Button
               className="flex-1" 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               onClick={() => onApply(match.id, job.id)}
             >
 Apply Now
-<<<<<<< HEAD
-<<<<<<< HEAD
             </Button>
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <Button 
               variant="outline" 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="flex-1"
               onClick={() => onDecline(match && match.id)}
 
@@ -601,18 +505,13 @@ Apply Now
             </Button>;
           </div>;
         )}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   );
 }
   );
-=======
       </CardFooter>;
     </Card>;
 
   );'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useState  } from './react';
 import {}
   Card,
@@ -732,13 +631,7 @@ if (return null) {}
     </Card>;
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             </Button>              Decline;
-=======
             </Button>
 
             <Button 
@@ -762,14 +655,12 @@ if (return null) {}
               onClick={() => onDecline(match && match.id)}
             >;
               Decline;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </Button>;
           </div>;
         )}
       </CardFooter>;
     </Card>;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 import { useState  } from './react';
 import {
@@ -975,4 +866,3 @@ pr-12325
       </CardFooter>;
     </Card>);
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

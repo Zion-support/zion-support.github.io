@@ -1,5 +1,4 @@
 :src/pages/EnhancedServicesPage.tsx
-<<<<<<< HEAD
 import React from "react";
 import MainLayout from "../components/layout/MainLayout";
 
@@ -446,4 +445,3 @@ export default function EnhancedServicesPage() {};
   );
 :src/pages/EnhancedServicesPage.tsx
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

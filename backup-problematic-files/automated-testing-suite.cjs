@@ -63,7 +63,6 @@ const reportPath = path.join(this.reportsDir, 'test-report.json');
   };
   async run() {}
     this.log('🚀 Starting Automated Testing Suite...');
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     try {}
       const testResults = await this.runTests();
       const buildResults = await this.runBuild();
@@ -72,7 +71,6 @@ const reportPath = path.join(this.reportsDir, 'test-report.json');
       const testResults = await this.runTests();
       const buildResults = await this.runBuild();
       this.generateReport(testResults, buildResults);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if (testResults.success && buildResults.success) {}
 
 // Run the testing suite if this file is executed directly;
@@ -80,6 +78,4 @@ if (require.main === module) {}
   const suite = new AutomatedTestingSuite();
   suite.run();
 };
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

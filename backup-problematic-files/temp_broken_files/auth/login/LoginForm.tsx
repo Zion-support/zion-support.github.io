@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -57,13 +56,11 @@ export function LoginForm() {;
         <FormField;
           control={form.control}
           name="email";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           render={({ field }) => (;
             <FormItem>;
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>;
               <FormControl>;
                 <div className="relative">;
-<<<<<<< HEAD
 
                   />;
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;

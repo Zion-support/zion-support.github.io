@@ -5,7 +5,6 @@ import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, Fil
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -16,10 +15,6 @@ import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {
   // TODO: Implement;
 }
@@ -33,7 +28,6 @@ import {
   FileText,
   Lock,
   Database,
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   Mail;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
@@ -65,7 +59,6 @@ pr-12325
   {;
 title: 'Citizen Service Portals',,
   description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: Globe,;
     features: [,;
       'Online service applications,',;
@@ -75,7 +68,6 @@ title: 'Citizen Service Portals',,
     ];
   },;
   {}
-<<<<<<< HEAD
     title: 'Secure Data Management,',;
     description: 'Government-grade data security and management systems for sensitive information.,',;
     icon: Shield,;
@@ -130,7 +122,6 @@ title: 'Compliance Management,',;
       'Audit automation'';
     ];
   }
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/government.tsx
 ;];
 const benefits = [;
   {}
@@ -188,7 +179,6 @@ const benefits = [;
   description: 'Digital systems provide transparency and enable better accountability.;,',;
     icon: Globe;,;
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;];
     title: 'Enhanced Security;,',;
     description: 'Government-grade security measures protect sensitive citizen and government data.;,',;
@@ -305,7 +295,6 @@ keywords="government technology, citizen services, digital government, public sa
 initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/government.tsx
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -322,8 +311,6 @@ transition={{ duration: 0.8 }}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -341,7 +328,6 @@ transition={{ duration: 0.8 }}
 initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/government.tsx
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">";
@@ -380,8 +366,6 @@ initial={{ opacity: 0, y: 20 }}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
@@ -435,7 +419,6 @@ initial={{ opacity: 0, y: 20 }}
 initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/government.tsx
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -452,8 +435,6 @@ transition={{ duration: 0.8 }}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -521,7 +502,6 @@ transition={{ duration: 0.8 }}
 initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/government.tsx
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Government?;
@@ -544,8 +524,6 @@ transition={{ duration: 0.8 }}
       </div>;
     </Layout>;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Government?
@@ -568,7 +546,6 @@ transition={{ duration: 0.8 }}
       </div>
     </Layout>
 );
-=======
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">";"
 </p>
               </p>;"
@@ -576,7 +553,6 @@ transition={{ duration: 0.8 }}
                 ;"
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">";, View Government Case Studies,;"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                 ;
               </div>;

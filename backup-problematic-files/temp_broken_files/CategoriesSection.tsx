@@ -1,5 +1,4 @@
 
-=======
 import { GradientHeading } from "./GradientHeading",;
 import { Link } from "react-router-dom",;
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
@@ -43,7 +42,6 @@ interface CategoriesSectionProps {;
 ;
 export function CategoriesSection({ showTitle = true } CategoriesSectionProps) {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         {showTitle && (;
@@ -54,7 +52,6 @@ export function CategoriesSection({ showTitle = true } CategoriesSectionProps) {
             </p>;
           </div>;
         )}
-<<<<<<< HEAD
 
               </Link>;
             ))}

@@ -1,6 +1,4 @@
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -12,7 +10,6 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
   Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
@@ -22,7 +19,6 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon
  } from 'lucide-react';
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
 
@@ -57,7 +53,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Layout from '../components/layout/Layout';
 import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
 
@@ -71,25 +66,19 @@ class ErrorBoundary extends React.Component {}
       return <div>Something went wrong.</div>;
     }
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
     return this.props.children;
   }
 }'
 import React from 'react';
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions',
-<<<<<<< HEAD
 const serviceCategories = [
   {
     title: 'Business Intelligence & Analytics',
     description: 'AI-powered business intelligence and data analytics solutions',
-=======
   Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon'
 } from 'lucide-react','
 import Layout from '../components/layout/Layout','
@@ -99,7 +88,6 @@ const serviceCategories = []
   {'
     title: 'Business Intelligence & Analytics','
     description: 'AI-powered business intelligence and data analytics solutions','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'Business Intelligence & Analytics'),
     icon: ChartIcon,'
     color: 'from-blue-500 to-cyan-600','
@@ -115,16 +103,12 @@ const contactInfo = null;
     color: 'from-blue-500 to-cyan-600'
     features: ['Data Analysis', 'Predictive Analytics', 'Real-time Insights']
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {
     title: 'Marketing Automation',
     description: 'Intelligent marketing automation with AI-driven optimization',
-=======
   {'
     title: 'Marketing Automation','
     description: 'Intelligent marketing automation with AI-driven optimization','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'Marketing Automation'),
     icon: Megaphone,'
     color: 'from-purple-500 to-pink-600','
@@ -148,14 +132,11 @@ const contactInfo = null;
   };
 :pages_backup/innovative-business-solutions.tsx
   {
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
-<<<<<<< HEAD
     title: 'HR Management',
     description: 'AI-powered HR automation and management solutions',
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'HR Management'),
     icon: TeamIcon,'
     color: 'from-teal-500 to-cyan-600',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const heroFeatures = []
   {'
@@ -173,15 +154,7 @@ const contactInfo = {;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
 const serviceCategories = [
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovative-business-solutions.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     title: 'HR Management'
     description: 'AI-powered HR automation and management solutions'
     services: innovativeBusinessSolutions2025.filter(
@@ -207,8 +180,6 @@ description:
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600',
   },
   {
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Business Intelligence & Analytics',
     description: 'AI-powered business intelligence and data analytics solutions',
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'Business Intelligence & Analytics'),
@@ -235,17 +206,14 @@ description:
       string => s.category === 'Sales Intelligence'),
 :pages_backup/innovative-business-solutions.tsx
     icon: TrendingUp,
-<<<<<<< HEAD
     color: 'from-green-500 to-emerald-600',
     features: ['Lead ScoringSales ForecastingPipeline Optimization']
     features: ['Lead Scoring', 'Sales Forecasting', 'Pipeline Optimization'],
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
   {'
     title: 'Customer Service','
     description: 'Intelligent customer service with AI automation',
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
 
       'Recruitment Automation',
       'Performance Analytics',
@@ -257,7 +225,6 @@ description:
     role: 'CEO, GrowthTech Solutions',
     company: 'GrowthTech Solutions',
 
-<<<<<<< HEAD
       string => s.category === 'Customer Service'),
     icon: HeadphonesIcon,'
     color: 'from - orange - 500 to - red - 600','
@@ -271,7 +238,6 @@ description:
     icon: TeamIcon,
 
 :pages_backup/innovative-business-solutions.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     content:;
       "Zion Tech Group's business intelligence platform has transformed our decision - making process. We now have real - time insights that have increased our revenue by 300%.",
 
@@ -304,9 +270,6 @@ export default function InnovativeBusinessSolutions() {}
       {/* Hero Section */}
 
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     features: ['Recruitment AutomationPerformance AnalyticsEmployee Engagement']
 import React from 'react';
 import Head from 'next/head';
@@ -472,11 +435,9 @@ export default function InnovativeBusinessSolutions() {
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600',
   },
 ];
-=======
 
 import Layout from '../components/layout/Layout';
 import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
 
 import Layout from '../components/layout/Layout';
 import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
@@ -489,9 +450,6 @@ export default function InnovativeBusinessSolutions() {
       <Head>
         <title>Innovative Business Solutions - Zion Tech Group</title>
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <meta name="description" content="Revolutionary AI-powered business solutions including business intelligence, marketing automation, sales intelligence, customer service, and HR management. Transform your business operations with intelligent automation." />
         <meta name="keywords" content="business solutions, AI automation, business intelligence, marketing automation, sales intelligence, customer service, HR management" />
         <meta property="og:title" content="Innovative Business Solutions - Zion Tech Group" />
@@ -500,17 +458,9 @@ export default function InnovativeBusinessSolutions() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/innovative-business-solutions" />
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
       </Head>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
 <meta
           name='description'
           content='Revolutionary AI-powered business solutions including business intelligence, marketing automation, sales intelligence, customer service, and HR management. Transform your business operations with intelligent automation.'
@@ -548,26 +498,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
-=======
 
       {/* Hero Section */  } catch (error) {"
     console.error("Error:", error);"
@@ -581,7 +525,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div;
             initial={{ opacity: 0, y: 20 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -597,10 +540,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 :pages_backup/innovative-business-solutions.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
 "
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6">
@@ -612,12 +551,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               automation, and analytics that drive growth and efficiency
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business operations with AI-powered intelligence, automation, and analytics that drive growth and efficiency
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
                 <motion.div
-<<<<<<< HEAD
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -644,16 +581,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <motion.div
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             transition={{ duration: 0 && 0.8 }}>;
-=======
 
                 <motion.div;
             transition={{ duration: 0 && 0.8 }}>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
             <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6'>;
               Innovative Business Solutions;
             </h1>;'
@@ -665,12 +598,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/innovative-business-solutions.tsx
                 <motion&& motion.div
 
-<<<<<<< HEAD
     content:;
-=======
                 <motion&& motion.div;
     content:;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
       'Their sales intelligence platform has increased our sales productivity by 200%. The AI - powered lead scoring and forecasting are game - changers.',
     rating: 5,'
     avatar: '👨‍💻',
@@ -728,20 +658,16 @@ function InnovativeBusinessSolutions() {}
             <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {hero_stats.map ((stat, index) => (
                 <motion.div;
 :pages_backup/innovative-business-solutions.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
 
-=======
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30'
 :pages/innovative-business-solutions.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   {stat.icon  } catch (error) {"
     console.error("Error:", error);"
@@ -752,9 +678,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
                   <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >
                   {stat.icon  } catch (error) {
     console.error("Error:", error);
@@ -770,15 +693,8 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
   }
 }
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
               ))  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
@@ -787,32 +703,24 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
 
             </div>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
               <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
                 Explore Solutions"
                 <ArrowRight className="ml-2 w-5 h-5" />
 :pages_backup/innovative-business-solutions.tsx
               </Link>
-<<<<<<< HEAD
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
                 Get Started
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
               </Link>"
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300">"
                 <Phone className="mr-2 w-5 h-5" />
                 Get Started;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -834,20 +742,13 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
   }
 }
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
             viewport={{ once: true }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             className="text-center mb-16"
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           >
-=======
 
           >
 
@@ -855,7 +756,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
           >
 
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
 <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               Innovative Business Solutions
@@ -1008,53 +908,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 :pages_backup/innovative-business-solutions.tsx
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Features Section */}
 <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovative-business-solutions.tsx
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
           >
-=======
 
           >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our Business Solutions?
             </h2>"
@@ -1063,14 +939,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <motion.div
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
               Why Choose Our Business Solutions?;
@@ -1084,34 +955,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion&& motion.div
 :pages_backup/innovative-business-solutions.tsx
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {heroFeatures.map((feature, index) => (
               <motion.div
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='relative group'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {heroFeatures.map((feature, index) => (
@@ -1142,16 +998,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
                 className="relative group"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
 className='relative group'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='relative group'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovative-business-solutions.tsx
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -1162,28 +1011,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages/innovative-business-solutions.tsx
 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>
                   </div>
                 </div>
               </motion.div>
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
             ))  } catch (error) {
     console.error("Error:", error);
-=======
 
             ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
           </div>;
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
@@ -1192,9 +1035,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       {/* Services Section */}'
       <section id='services' className='py-20 bg-black'>;'
@@ -1203,19 +1043,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section id="services" className="py-20 bg-black">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 :pages/innovative-business-solutions.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
-=======
           >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Business Solution Categories;
             </h2>"
@@ -1224,8 +1058,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <motion.div
             className='text-center mb-16'>;
@@ -1240,20 +1072,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='space-y-16'>            {serviceCategories && serviceCategories.map((category, categoryIndex) => (;
               <motion&& motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
           <div className='space-y-16'>
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
 :pages/innovative-business-solutions.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
-=======
 className='relative group'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -1303,27 +1128,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <motion.div
                 key={categoryIndex  } catch (error) {
     console.error("Error:", error);
-=======
 
               <motion.div;
                 key={categoryIndex  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1350,42 +1167,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="relative"
 
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='relative'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovative-business-solutions.tsx
-=======
 className='relative'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 className='relative'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
-=======
 
               >"
                 <div className="text-center mb-12">`
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
                     <category.icon className="w-10 h-10 text-white" />
                   </div>"
                   <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>"
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     <motion.div
                       key={service.id}
@@ -1394,14 +1194,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 transition={{ duration: 0.5, delay: service_index * 0.1 }}
                       viewport={{ once: true }}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <motion.div
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
 
                     <motion.div;
                       key={service.id  } catch (error) {"
@@ -1432,14 +1225,6 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                       className="relative group"
 
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
 
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
                   {category.services.map((service, serviceIndex) => (
@@ -1451,12 +1236,7 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                       viewport={{ once: true }}
 className='relative group'
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -1464,28 +1244,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <span className="text-3xl">{service.icon}</span>
                             {service.popular && (
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
-<<<<<<< HEAD
                               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                                 Popular;
                               </span>
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
-=======
                               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
                               <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                                 Popular
                               </span>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
                           </div>
                           <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
@@ -1494,16 +1267,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/innovative-business-solutions.tsx
                             <span className="text-gray-400">{service.period}</span>
 </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                           </div>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                             <span className="text-gray-400">{service.period}</span>
                           </div>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
 <h4 className='text-xl font-semibold text-white mb-2'>
                             {service.name}
                           </h4>
@@ -1519,29 +1286,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-=======
 "
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
                           <div className="space-y-2 mb-6">
                             {service.features.slice(0, 3).map((feature, featureIndex) => ("
                               <div key={featureIndex} className="flex items-center text-sm text-gray-300">"
                                 <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
                                 {feature  } catch (error) {
     console.error("Error:", error);
-=======
 
                                 {feature  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1552,25 +1310,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           </div>
                           <div className="flex items-center justify-between">
                             <Link;
                               href={service.link}
 :pages_backup/innovative-business-solutions.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
-=======
 
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
                               href={service.link}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
                               className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors duration-300"
                             >
                               Learn More"
@@ -1578,30 +1328,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </Link>
 :pages_backup/innovative-business-solutions.tsx
                             <Link
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500 to-green-600 text-white text-sm font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300"
-=======
-=======
                               href={`tel:${contactInfo.mobile}`}
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500 to-green-600 text-white text-sm font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500 to-green-600 text-white text-sm font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300"
                               href={`tel:${contactInfo.mobile}`}
                               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500 to-green-600 text-white text-sm font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300'
 :pages_backup/innovative-business-solutions.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                               href={`tel:${contactInfo.mobile}`}
                               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500 to-green-600 text-white text-sm font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
                             >
                               Get Started;
                             </Link>
@@ -1610,9 +1347,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </motion.div>
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
@@ -1640,9 +1374,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Testimonials Section */}
 
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1691,8 +1423,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Link
 
           >
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -1817,39 +1547,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
             className="text-center mb-16"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       {/* Testimonials Section */}
 <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
 className='text-center mb-16'
 :pages_backup/innovative-business-solutions.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -1859,24 +1573,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {testimonials.map((testimonial, index) => (
               <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
-<<<<<<< HEAD
 
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1910,25 +1618,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20"
 
 :pages_backup/innovative-business-solutions.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovative-business-solutions.tsx
-=======
 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -1943,10 +1639,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -1973,7 +1666,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/innovative-business-solutions.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovative-business-solutions.tsx
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -2045,9 +1737,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           >
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -2057,7 +1746,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -2075,7 +1763,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
 
           >
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </div>
                 </div>
               </motion.div>
@@ -2083,16 +1770,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-teal-900/20 via-green-900/20 to-emerald-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>;
@@ -2109,27 +1793,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Phone className='mr-2 w-5 h-5' />                Call Now: {contactInfo && contactInfo.mobile}
               </Link>;
               <Link
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-=======
           >
 
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
 <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
 :pages_backup/innovative-business-solutions.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -2137,14 +1810,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
-=======
 
           >"
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -2186,7 +1852,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
               >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us;
               </Link>
@@ -2195,11 +1860,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>"
               <p className="text-gray-300">🌐 {contactInfo.website}</p>
 </div>
-<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
     </Layout>
     </Layout>;
 );
@@ -2210,11 +1873,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
         </div>
       </section>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
               >
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
               <Link;
                 href={`mailto:${contactInfo.email}`  } catch (error) {
     console.error("Error:", error);
@@ -2231,7 +1890,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="mt-8 text-center">
               <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
               <p className="text-gray-300">🌐 {contactInfo.website}</p>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
                 <Phone className='mr-2 w-5 h-5' />
                 Call Now: {contactInfo.mobile}
               </Link>
@@ -2262,9 +1920,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (<Layout> <Head> <title>Innovative Business Solutions - Zion Tech Group</title> </Head> {
   /* Hero Section */
 }<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion.div initial= {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
 
           </motion.div>
         </div>
@@ -2290,7 +1945,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/innovative-business-solutions.tsx
   /* Hero Section */ ;
 }<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion&& motion.div initial= {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   {
   opacity: 0, y: 20
@@ -2300,19 +1954,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }transition= {
   {
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   duration: 0 && 0.8
   duration: 0 && 0.8 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   duration: 0 && 0.8 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }> <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6" > Innovative Business Solutions </h1> </motion && motion.div>) ) ;
 }</div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > Explore Solutions <ArrowRight className="ml-2 w-5 h-5" /> </Link> Get Started </Link> </div> </motion && motion.div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Why Choose Our Business Solutions? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results </p> </motion && motion.div> </div> </div> </div> </motion && motion.div>) ) ;
-=======
   /* Hero Section */ ;"
 }<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion&& motion.div initial= {}
   {}
@@ -2326,7 +1974,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
 }> <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6" > Innovative Business Solutions </h1> </motion && motion.div>) ) ;"
 }</div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > Explore Solutions <ArrowRight className="ml-2 w-5 h-5" /> </Link> Get Started </Link> </div> </motion && motion.div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Why Choose Our Business Solutions? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results </p> </motion && motion.div> </div> </div> </div> </motion && motion.div>) ) ;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
 }</div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Business Solution Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive business solutions covering every aspect of modern business operations </p> </motion && motion.div> Popular </span>) ;
 }</div> </div>) ) ;"
 }</div> <div className="flex items-center justify-between" > <Link > Learn More <ArrowRight className="ml-1 w-4 h-4" /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion && motion.div>) ) ;
@@ -2335,11 +1982,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> </motion && motion.div>) ) ;
 :pages_backup/innovative-business-solutions.tsx
 }</div> </div> </section> <motion&& motion.div initial= {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -2348,7 +1991,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }transition= {
   {
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
   duration: 0 && 0.8
 }viewport= {
   {
@@ -2364,8 +2006,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }viewport= {
   {
 :pages_backup/innovative-business-solutions.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   once: true 
 
 }> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion && motion.div> </div> </section> </Layout>) ;
@@ -2373,7 +2013,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
 
-=======
 }</div> </div> </section> <motion&& motion.div initial= {}
   {}
   opacity: 0, y: 20;
@@ -2387,7 +2026,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion && motion.div> </div> </section> </Layout>) ;
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
                       className='relative group';
                     >;`
                       <div className={`${service.color} p - 1 rounded - xl`}>;'
@@ -2567,18 +2205,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/innovative-business-solutions.tsx
 }viewport= {
   {
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/innovative-business-solutions.tsx
-<<<<<<< HEAD
   once: true;
 }> <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI - powered solutions </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link > <Mail className="mr - 2 w - 5 h - 5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>);
 
 :pages_backup/innovative-business-solutions.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
   once: true;
 }> <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI - powered solutions </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link > <Mail className="mr - 2 w - 5 h - 5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>);
@@ -2587,18 +2217,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>)
 :pages_backup/innovative-business-solutions.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovative-business-solutions.tsx
-=======
   once: true 
 
 }> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>)
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/innovative-business-solutions.tsx

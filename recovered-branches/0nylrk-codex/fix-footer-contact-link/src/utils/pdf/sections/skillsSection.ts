@@ -1,22 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addSkillsSection(
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addSkillsSection(;
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { jsPDF  } from 'jspdf';'
 import { Skill  } from '@/types/resume';'
 import { PdfThemeColors } from '../themeConfig';
@@ -27,23 +19,16 @@ import {Skill} from '@/types/resume';'
 import {PdfThemeColors} from '../themeConfig';
 export function addSkillsSection(;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   doc: jsPDF;
-=======
 import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addSkillsSection(  doc: jsPDF;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addSkillsSection(  doc: jsPDF;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   skills: Skill[];
   colors: PdfThemeColors;
 startY: number
@@ -79,16 +64,10 @@ const skillsByCategory = skills && skills.reduce((acc, skill) => {
     }
     acc[category].push(skill);
     return acc
-<<<<<<< HEAD
-<<<<<<< HEAD
   }, {} as Record<string, typeof skills>);
-<<<<<<< HEAD
 
     yPos += (skillLines.length * 5) + 10
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   return yPos + 5
 }
@@ -134,10 +113,7 @@ export function addSkillsSection(;
 
   }
 
-=======
   }, {} as Record<string, typeof skills>);  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     return acc;
   }, {} as Record<string typeof skills>),;
   doc.setFontSize(11),;
@@ -162,15 +138,12 @@ export function addSkillsSection(;
     doc && doc.text(skillLines, 30, yPos + 5);
     yPos += (skillLines && skillLines.length * 5) + 10
   }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return yPos + 5
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types / resume';
-=======
   return yPos + 5'
 import {jsPDF} from 'jspdf';'
 import {Skill} from '@/types / resume';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {PdfThemeColors} from '../theme_config';
 export function addSkillsSection (;
   doc: jsPDF;
@@ -258,11 +231,6 @@ for (const [category, category_skills] of Object.entries (skillsByCategory)) {'
     y_pos += (skill_lines.length * 5) + 10;
   }
   return y_pos + 5;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 }
 }}
@@ -320,20 +288,10 @@ return yPos + 5
   }
   return yPos + 5
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

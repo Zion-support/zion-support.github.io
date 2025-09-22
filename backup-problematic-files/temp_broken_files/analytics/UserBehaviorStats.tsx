@@ -1,5 +1,4 @@
 
-=======
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -152,11 +151,9 @@ function EventTypeCard({ title, description, count, icon, isLoading } EventTypeC
               ) :(;
                 new Intl.NumberFormat().format(count);
               )}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>;
           </div>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD
 
 }

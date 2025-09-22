@@ -1,7 +1,6 @@
 /*;
   Minimal React type declarations.;
   ---------------------------------------------------------------------------;
-<<<<<<< HEAD
   These definitions are **not** a replacement for `@types/react` – they only;
   exist so that isolated compilation of individual files (e.g., in CI or code;
   review bots) will not fail when full React type declarations are not;
@@ -40,7 +39,6 @@ declare module "react" {;
   // Common hooks we rely on.;
   export function useMemo<T>(factory:() => T, deps:readonly unknown[]):T;
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   export type Key = string | number;
 ;
   // Default export so `import React from 'react'` keeps working even without;

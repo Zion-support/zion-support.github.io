@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
 import React from 'react',;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -9,7 +8,6 @@ import { Check, ArrowDown, X } from "lucide-react",;
 import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
-=======
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""
 import { Badge } from "@/components/ui/badge";""
@@ -19,7 +17,6 @@ import { Check, ArrowDown, X } from 'lucide-react';
 import { useDisputeCheck } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 interface MilestoneCardProps {;
   id: string;,;
@@ -37,8 +34,6 @@ interface MilestoneCardProps {;
 export function MilestoneCard({ ;
   id,;
   projectId,;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   title, ;
   description, ;
   amount, ;
@@ -54,7 +49,6 @@ export function MilestoneCard({ ;
 <CardTitle className="text-xl">{title}</CardTitle>;
             {dueDate && (;
               <p className="text-sm text-muted-foreground">;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
               </p>;
             )}
           </div>;
@@ -62,7 +56,6 @@ export function MilestoneCard({ ;
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
 
             {isUnderDispute && disputeStatus && (;
-=======
 </div>"
             <CardTitle className="text-xl">{title};""
               <p className="text-sm text-muted-foreground">;"
@@ -72,13 +65,11 @@ export function MilestoneCard({ ;
           <div className="flex gap-2">;"
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <DisputeStatusBadge status={disputeStatus} />;
 
           </div>;
 </div>;
       </CardHeader>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
       <CardContent className="pb-2">;
         {description && (;
           <p className="text-muted-foreground">{description}</p>;
@@ -100,14 +91,12 @@ export function MilestoneCard({ ;
 )}
         </div>;
         ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx
         <div className="flex gap-2">;
           {status === 'pending' && onReject && !isUnderDispute && (;
             <Button variant="outline" size="sm" onClick={() => onReject(id)}>;
               <X className="h-4 w-4 mr-1" /> Reject;
             </Button>;
           )}
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
           {status === 'pending' && onApprove && !isUnderDispute && (;
             <Button variant="default" size="sm" onClick={() => onApprove(id)}>;
               <Check className="h-4 w-4 mr-1" /> Approve;
@@ -168,4 +157,3 @@ case 'rejected': ;"}return (<Card> <CardHeader className="pb-2" > <div className
 }</div> </CardFooter> </Card>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/MilestoneCard.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx

@@ -1,5 +1,4 @@
 
-=======
 import { useState } from 'react',;
 import { Check, Copy } from 'lucide-react',;
 import { cn } from "@/lib/utils",;
@@ -40,14 +39,12 @@ export function CodeBlock({ ;
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">;
             {code.split('\n').map((_, i) => (;
               <div key={i} className="h-6 leading-6">;                {i + 1}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>;
             ))}
           </div>;
         )}
         <code className="language-javascript">{code}</code>;
       </pre>;
-<<<<<<< HEAD
 
       </button>;
       {language && (;

@@ -1,6 +1,5 @@
 ;
 interface PerformanceMetrics {
-<<<<<<< HEAD
   loadTime: number, firstContentfulPaint: number
   largestContentfulPaint: number, firstInputDelay: number
   cumulativeLayoutShift: number
@@ -22,7 +21,6 @@ export function usePerformanceMonitor() {;
 const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           const navEntry = entry as PerformanceNavigationTiming;
           setMetrics(prev => ({
             ...prev,
@@ -183,5 +181,4 @@ if ( {) {
   }, []);
 
   return metrics;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }

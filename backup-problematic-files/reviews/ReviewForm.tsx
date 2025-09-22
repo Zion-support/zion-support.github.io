@@ -1,4 +1,3 @@
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
   submitting ? 'Submitting...' : 'Submit Review'
 }</button> </form>)
@@ -17,7 +16,6 @@ export type ReviewFormValues = {
   rating: number;,
   text: string;,
   categories?: {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
@@ -28,7 +26,6 @@ export type ReviewFormValues = {
 type Props = {
 initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
 const ReviewForm: React.FC<Props> = ({ initial }) => {
-<<<<<<< HEAD
       return <div>Something went wrong.</div>;
  </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;""
   submitting ? 'Submitting...' : 'Submit Review' ;
@@ -54,7 +51,6 @@ export type ReviewFormValues = {;
 type Props = {;
 initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
   const [anonymous, setAnonymous] = useState(false);
@@ -65,7 +61,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
   const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
 </boolean>
   const [message, setMessage] = useState<string | null>(null);
-<<<<<<< HEAD
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSubmitting(true);
@@ -141,7 +136,6 @@ const data = await res.json();
   )
 },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   return (
@@ -150,8 +144,6 @@ const data = await res.json();
       </div>
       <div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <form onSubmit={handleSubmit} className='space-y-6'>
 </form>
       <div>
@@ -159,12 +151,10 @@ const data = await res.json();
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />
 </div>
       <div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>
       {message && <p className='text-sm'>{message}</p>}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     </form>
   );
 }
@@ -173,9 +163,6 @@ export default ReviewForm;    </form>
 }
 export default ReviewForm;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
       </button>
       {message && <p className='text-sm'>{message}</p>}
 export default ReviewForm;    </form>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

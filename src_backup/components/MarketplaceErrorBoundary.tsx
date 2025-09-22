@@ -1,6 +1,4 @@
 :src/components/MarketplaceErrorBoundary.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',;
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary',;
 import * as Sentry from '@sentry/nextjs',;
@@ -12,8 +10,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 :src/components/MarketplaceErrorBoundary.tsx
 import { RefreshCcw, AlertCircle } from 'lucide-react'
@@ -24,7 +20,6 @@ interface MarketplaceErrorFallbackProps extends FallbackProps {
 } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError })
       Sentry.captureException(retryError)
-<<<<<<< HEAD
 import React from 'react';
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
@@ -34,8 +29,6 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
   return (
     <ErrorBoundary 
 :src/components/MarketplaceErrorBoundary.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }
   return (
@@ -57,7 +50,6 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
             onClick={() => window.location.reload()}
             variant='outline'
 :src/components/MarketplaceErrorBoundary.tsx
-<<<<<<< HEAD
             className='w-full'          >
             Reload Page
           </Button>
@@ -70,7 +62,6 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCcw, AlertCircle } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface MarketplaceErrorFallbackProps extends FallbackProps {;
   // Additional props if needed;
 }
@@ -83,7 +74,6 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCcw, AlertCircle } from 'lucide-react';
 :src/components/MarketplaceErrorBoundary.tsx
   return (function MarketplaceErrorFallback(): any ({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleRetry = async () => {;
     try {;
       // Re-call SWR mutate('*') to refresh all cached data;
@@ -92,14 +82,11 @@ import { RefreshCcw, AlertCircle } from 'lucide-react';
     } catch (retryError) {;
       logErrorToProduction('Error during retry:', { data: retryError }),;
 :src/components/MarketplaceErrorBoundary.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       Sentry.captureException(retryError);
     }
   },
 
   return (
-<<<<<<< HEAD
     <div className="flex items-center justify-center min-h-[400px] p-6">
       <div className="max-w-md w-full space-y-4">
         <Alert variant="destructive">
@@ -122,11 +109,8 @@ import { RefreshCcw, AlertCircle } from 'lucide-react';
 
 <Button
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             onClick={() => window.location.reload()}
-=======
           <Button             onClick={() => window.location.reload()}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             variant="outline"
             className="w-full"
             className='w-full'
@@ -135,16 +119,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Reload Page
           </Button>
 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/MarketplaceErrorBoundary.tsx
         <div className="text-center text-sm text-muted-foreground">
-=======
         </div>        <div className="text-center text-sm text-muted-foreground">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           If the problem persists, please{' '}
           <a
             href="mailto: support@example.com"
@@ -152,16 +129,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           >
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a 
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
 >
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
 <div className='text-center text-sm text-muted-foreground'>
           If the problem persists, please{' '}
@@ -170,8 +143,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='text-primary hover:underline'
           >
 :src/components/MarketplaceErrorBoundary.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             contact support
           </Link>
         </div>
@@ -217,7 +188,6 @@ onClick={() => window.location.reload()}
           </a>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </div>;
   );
 }
@@ -234,11 +204,8 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
       scope.setTag('errorBoundarymarketplace'),;
       scope.setContext('errorInfo', {;
         componentStack: errorInfo.componentStack || undefined}),;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/MarketplaceErrorBoundary.tsx
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode
 export function MarketplaceErrorBoundary({
@@ -261,7 +228,6 @@ componentStack: errorInfo.componentStack |undefined
   }
     <ErrorBoundary   },;
   },;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (;
     <div className="flex items-center justify-center min-h-[400px] p-6">;
       <div className="max-w-md w-full space-y-4">;
@@ -273,7 +239,6 @@ componentStack: errorInfo.componentStack |undefined
           </AlertDescription>;
         </Alert>;
 :src/components/MarketplaceErrorBoundary.tsx
-<<<<<<< HEAD
         <div className="flex flex-col space-y-2">;
           <Button;
             onClick={handleRetry}
@@ -286,14 +251,12 @@ componentStack: errorInfo.componentStack |undefined
           <Button;
             onClick={() => window.location.reload()}            variant="outline";
             variant="outline";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             className="w-full";
           >;
             Reload Page;
           </Button>;
         </div>;
 :src/components/MarketplaceErrorBoundary.tsx
-<<<<<<< HEAD
         <div className="text-center text-sm text-muted-foreground">;
           If the problem persists, please{' '}
           <a;
@@ -302,15 +265,12 @@ componentStack: errorInfo.componentStack |undefined
           >;
             contact support;          </a>;
           </a>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </div>;
     </div>;
   );
 :src/components/MarketplaceErrorBoundary.tsx
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 
 interface MarketplaceErrorBoundaryProps {;
   children: React && React.ReactNode;
@@ -357,7 +317,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       onError={handleError}>;
       {children}
 :src/components/MarketplaceErrorBoundary.tsx
-<<<<<<< HEAD
 
     </ErrorBoundary>;
   );
@@ -365,7 +324,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode,
@@ -379,12 +337,10 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
       scope.setTag('errorBoundarymarketplace');
       scope.setContext('errorInfo', {
         componentStack: errorInfo.componentStack || undefined});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       scope.setLevel('error');
       Sentry.captureException(error);
     });
   };
-<<<<<<< HEAD
   return (;
     <ErrorBoundary;
       FallbackComponent={MarketplaceErrorFallback}
@@ -394,21 +350,12 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
 </ErrorBoundary>;
   );
 } ;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     </ErrorBoundary>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     </ErrorBoundary>
   )
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/MarketplaceErrorBoundary.tsx

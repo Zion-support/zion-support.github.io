@@ -1,5 +1,4 @@
 
-=======
 import { useState } from 'react',;
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",;
 import { Button } from "@/components/ui/button",;
@@ -110,7 +109,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">;
         <DialogHeader>;
@@ -118,7 +116,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
             Request Service Quote;
           </DialogTitle>;
         </DialogHeader>;
-<<<<<<< HEAD
 
           {currentStep === 'details' && (;
             <div className="space-y-4">;

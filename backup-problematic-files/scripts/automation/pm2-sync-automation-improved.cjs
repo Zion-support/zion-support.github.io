@@ -3,9 +3,7 @@
  * Improved PM2 Sync Automation System;
 *
  * This system "provides": * - Real-time file watching and automatic Git synchronization;
-=======
  * This system "provides": * - Real-time file watching and automatic Git synchronization;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  * - Intelligent build triggering based on file changes;
  * - Automated testing and security scanning;
  * - Conflict resolution and error recovery;
@@ -258,7 +256,6 @@ process.on('SIGTERM', async () => {}
     await global.improvedPm2SyncAutomation.stop()};
   process.exit(0)}
 });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Start the automation system;
 if (require.main === module) {}
   global.improvedPm2SyncAutomation = new ImprovedPM2SyncAutomation();
@@ -267,11 +264,6 @@ if (require.main === module) {}
     if (global.improvedPm2SyncAutomation && global.improvedPm2SyncAutomation.isRunning) {}
       // Process is healthy;
   }, 60000)};
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 module.exports = ImprovedPM2SyncAutomation;
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

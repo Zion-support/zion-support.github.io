@@ -1,6 +1,4 @@
 :pages_backup/api/deploy/genesis.ts
-<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
@@ -11,9 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
 :pages_backup/api/deploy/genesis.ts
-=======
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/deploy/genesis.ts
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 function summarizeModules(
@@ -27,14 +23,12 @@ function summarizeModules(
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`)
   ];
-=======
 .map(([k]) => `/${k}`),
     ...Object && Object.entries(bonus)
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`)
   ];
   return active && active.length ? active && active.sort().join(", ") : "None";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/deploy/genesis.ts
   return active.length ? active.sort().join(', ') : 'None';
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
@@ -58,9 +52,6 @@ export default async function handler(
 ) {
 if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
 
@@ -81,15 +72,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/deploy/genesis.ts
   }
   try {}
     const body = req && req.body || {};
 
 :pages_backup/api/deploy/genesis.ts
     const {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       instanceName
       defaultLanguage = "en"
@@ -116,11 +104,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (!instanceName || !deploymentRegion) {
       return res && res.status(400).json({
         error: "Missing required fields: instanceName, deploymentRegion"
-=======
     if (!instanceName || !deploymentRegion) {}
       return res && res.status(400).json({"
         error: "Missing required fields: instanceName, deploymentRegion",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/deploy/genesis.ts
 
       });
     }
@@ -318,7 +304,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/api/deploy/genesis.ts
-<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
   try {
     const body = req.body || {};
     const {
@@ -392,7 +377,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           pdf: '/book/manifesto.pdf'
           trailerScript: '/trailer/script'
         }
-=======
 
   try {}
     const body = req.body || {};
@@ -417,13 +401,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           pdf: '/book/manifesto.pdf','
           trailerScript: '/trailer/script'
         },'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/deploy/genesis.ts
         summit: '/summit'
       }
       publicPages: []
     };
 :pages_backup/api/deploy/genesis.ts
-<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
     res.status(200).json({
       success: true
       provisionId
@@ -578,5 +560,3 @@ export default async function handler(req, res) {
 }
 :pages_backup/api/deploy/genesis.ts
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/deploy/genesis.ts

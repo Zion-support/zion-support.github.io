@@ -1,6 +1,4 @@
 :src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ResourceItem {;
   Card,
   CardContent,
@@ -18,8 +16,6 @@ import { Button } from '@/components / ui / button';
   Link,
 } from 'lucide-react';
 import { toast } from '@/hooks / use - toast';
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ResourceItem {
   id: string;
   title: string;
@@ -34,14 +30,11 @@ export /**
 function PartnerResources() {
   const resources: ResourceItem[] = [;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
 import { toast } from "@/hooks/use-toast";
 :src/components/partners/PartnerResources.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Card
   CardContent
@@ -60,8 +53,6 @@ import { Button } from '@/components/ui/button'
 } from 'lucide-react'
 import { toast } from '@/hooks/use-toast'
 :src/components/partners/PartnerResources.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ResourceItem {
   id: string;,
   title: string;,
@@ -77,8 +68,6 @@ interface ResourceItem {
 
 :src_backup/components/partners/PartnerResources.tsx
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
@@ -91,10 +80,6 @@ interface ResourceItem {
   icon: JSX.Element,
 
 :src/components/partners/PartnerResources.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
@@ -142,7 +127,6 @@ id: 'logo-pack',
       title: 'Talking Points',
       description: 'Key messages and benefits to highlight',
       type: 'document',
-<<<<<<< HEAD
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,
       url: '#'
     }
@@ -150,32 +134,22 @@ id: 'logo-pack',
 
   const handleDownload = (resource: ResourceItem) => {
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // In a real app, this would download the actual resource
     toast({
       title: "Download started",
       description: `Downloading ${resource.title}`,
 :src/components/partners/PartnerResources.tsx
-<<<<<<< HEAD
       variant: "default"})
   },
 
 :src/components/partners/PartnerResources.tsx
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerResources.tsx
       id: 'logo-pack';
       title: 'Zion AI Logo Pack';
       description: 'Official logos in various formats (PNG, SVG, JPG)',
       type: 'image';
       icon: <FileImage className;
 :src/components/partners/PartnerResources.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerResources.tsx
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -188,7 +162,6 @@ id: 'logo-pack',
         <CardContent>
 :src_backup/components/partners/PartnerResources.tsx
 
-<<<<<<< HEAD
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {resources.map((resource) => (
               <Card key={resource.id} className="bg-zion-blue border-zion-blue-light overflow-hidden">"
@@ -217,11 +190,8 @@ interface ResourceItem {;
   icon: JSX.Element,;
 :src_backup/components/partners/PartnerResources.tsx
   url: string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
   url: string;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerResources.tsx
   return (
     <div className="space-y-6">"
       <Card className="bg-zion-blue-dark border-zion-blue-light">"
@@ -356,15 +326,12 @@ export function PartnerResources() {;
         <CardHeader>;
           <CardTitle>Marketing Resources</CardTitle>;
 :src_backup/components/partners/PartnerResources.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerResources.tsx
           <CardDescription>;
             Download brand assets and marketing materials to promote Zion AI;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
 :src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">;
             {resources.map((resource) => (;
               <Card key={resource.id} className="bg-zion-blue border-zion-blue-light overflow-hidden">;
@@ -400,16 +367,11 @@ export function PartnerResources() {;
             ))}
 :src_backup/components/partners/PartnerResources.tsx
 
-<<<<<<< HEAD
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">
 
 :src/components/partners/PartnerResources.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerResources.tsx
-=======
       <Card className="bg-zion-blue-dark border-zion-blue-light">"
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>;
@@ -421,7 +383,6 @@ export function PartnerResources() {;
       </Card>
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerResources.tsx
         <CardHeader>
           <CardTitle>Marketing Resources</CardTitle>
           <CardDescription>
@@ -487,13 +448,10 @@ interface ResourceItem {;
             </ul>
           </div>
 :src/components/partners/PartnerResources.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="space-y-2">
             <h3 className="text-lg font-semibold text-white">Don'ts</h3>
             <ul className="list-disc pl-5 space-y-1 text-zion-slate-light">
-=======
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,"
 "
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,"
@@ -558,10 +516,7 @@ interface ResourceItem {;
 
             <h3 className="text-lg font-semibold text-white">Don'ts</h3>
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerResources.tsx
               <li>Make unrealistic promises about earnings or results</li>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <li>Use manipulative or misleading marketing tactics</li>
               <li>Spam your referral link across unrelated content</li>
               <li>Modify or alter our brand assets in unauthorized ways</li>
@@ -571,17 +526,12 @@ pr-12325
         </CardContent>
       </Card>
 :src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">
-=======
       <Card className="bg-zion-blue-dark border-zion-blue-light">"
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerResources.tsx
         <CardHeader>
           <CardTitle>Partner Support</CardTitle>
           <CardDescription>
@@ -606,23 +556,11 @@ pr-12325
       </Card>
     </div>
 :src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerResources.tsx
-=======
   )
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerResources.tsx
           </div>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </CardContent>;
       </Card>;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
@@ -635,8 +573,6 @@ pr-12325
           </CardDescription>;
         </CardHeader>;
 :src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         <CardContent className="space-y-4">;
           <div className="space-y-2">;
             <h3 className="text-lg font-semibold text-white">Do's</h3>;
@@ -666,7 +602,6 @@ pr-12325
                 Focus on how the platform can help your audience solve their AI;
                 talent needs;
               </li>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerResources.tsx
             </ul>;
           </div>;
 :src_backup/components/partners/PartnerResources.tsx
@@ -694,18 +629,13 @@ pr-12325
               <li > Create fake accounts or use bots to generate referrals</li>;
 :src_backup/components/partners/PartnerResources.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerResources.tsx
             </ul>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>;
         </CardContent>;
       </Card>;
 :src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <Card className='bg - zion - blue - dark border - zion - blue - light'>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerResources.tsx
         <CardHeader>;
 :src_backup/components/partners/PartnerResources.tsx
           <CardTitle>Partner Support</CardTitle>;
@@ -720,7 +650,6 @@ pr-12325
             Feel free to reach out if you have questions about promotions, resources, or payment.;
           </p>;
           <Button className="bg-zion-purple hover: bg-zion-purple-dark">;
-=======
         <CardContent className='flex flex - col items - center text - center py - 6'>;
           <p className='text - zion - slate - light mb - 4'>;
             Our partner success team is available to help you maximize your;
@@ -734,13 +663,11 @@ pr-12325
             Feel free to reach out if you have questions about promotions, resources, or payment.;
           </p>;
           <Button className="bg-zion-purple hover: bg-zion-purple-dark">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerResources.tsx
             Contact Partner Support;
           </Button>;
         </CardContent>;
       </Card>;
 :src_backup/components/partners/PartnerResources.tsx
-<<<<<<< HEAD
     </div>;
   );
 }
@@ -755,12 +682,9 @@ pr-12325
 }'"}
 
 :src_backup/components/partners/PartnerResources.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   )
   );
 
 }</div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Promotion Guidelines</CardTitle> <CardDescription> Best practices for promoting the Zion AI Marketplace </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Do's</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Use our official brand assets from the resources provided</li> <li>Share your unique referral link in your content</li> <li>Highlight the benefits of the Zion AI Marketplace for both talent and clients</li> <li>Be transparent that you're a partner and may earn from referrals</li> <li>Focus on how the platform can help your audience solve their AI talent needs</li> </ul> </div> <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Don'ts</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Make unrealistic promises about earnings or results</li> <li>Use manipulative or misleading marketing tactics</li> <li>Spam your referral link across unrelated content</li> <li>Modify or alter our brand assets in unauthorized ways</li> <li>Create fake accounts or use bots to generate referrals</li> </ul> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Partner Support</CardTitle> <CardDescription> Need help with your affiliate marketing? Contact our partner support team. </CardDescription> </CardHeader> <CardContent className="flex flex-col items-center text-center py-6" > <p className="text-zion-slate-light mb-4" > Our partner success team is available to help you maximize your partnership with Zion AI Marketplace. Feel free to reach out if you have questions about promotions, resources, or payment. </p> Contact Partner Support </Button> </CardContent> </Card> </div>) ;
 }'"
 :src/components/partners/PartnerResources.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

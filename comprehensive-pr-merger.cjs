@@ -251,7 +251,6 @@ class ComprehensivePRMerger {
 async function main() {
   try {
     console.log('🎯 Comprehensive PR Merger');
-    console.log('==========================\n');
     
     // Ensure we're on main branch
     const merger = new ComprehensivePRMerger();

@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -24,7 +23,6 @@ export default function EnterpriseAdmin() {;
       <SEO ;
         title="Enterprise Admin - Zion AI Marketplace";
         description="Manage your team's access, roles, and usage on the Zion AI Marketplace.";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       />;
       <Header />;
       <main className="min-h-screen bg-background">;
@@ -32,4 +30,3 @@ export default function EnterpriseAdmin() {;
       </main>;
       <Footer />;
     </ProtectedRoute>;
-<<<<<<< HEAD

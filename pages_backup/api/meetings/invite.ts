@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 const url = process && process.env.NEXT_PUBLIC_SUPABASE_URL || "";
 const key = process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -35,7 +33,6 @@ const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   }
   try {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const { projectId, roomName, inviterName } = req.body || {};
     if (!projectId || !roomName) return res.status(400).json({ error: 'Missing projectId or roomName' });'
     if (!url || !key) return res.status(500).json({ error: 'Supabase configuration missing' });
@@ -53,7 +50,6 @@ console.error(e);
 }
 }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   } catch (error) {
     console.error("Error:", error);
@@ -68,18 +64,10 @@ console.error(e);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 
 }
 
 :pages_backup/api/meetings/invite.ts
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/meetings/invite.ts

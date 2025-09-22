@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -31,12 +30,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               {match.status === 'viewed' && match.viewed_at && (;
                 <span className="ml-2 text-xs text-muted-foreground">;
                   (Viewed {format(new Date(match.viewed_at), "MMM d")});
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </span>;
               )}
             </CardDescription>;
           </div>;
-<<<<<<< HEAD
 
               Decline;
             </Button>;

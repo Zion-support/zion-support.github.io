@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Resend} from "npm: resend@2 ;
@@ -11,73 +6,39 @@ import {Resend} from "npm: resend@2 ;
 const corsHeaders = {}
   "Access-Control-Allow-Origin": "*""
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface SendNewsletterRequest {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 interface SendNewsletterRequest {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 interface SendNewsletterRequest {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   subject: string;
   preview_text: string;
   body: string;
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Resend} from "npm: resend@2 ;
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Resend} from "npm: resend@2 ;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { Resend } from "npm: resend@2.0.0",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-=======
 
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 interface SendNewsletterRequest {}
   subject: string,
   previewText: string,
   body: string,
-<<<<<<< HEAD
   testMode?: boolean,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   testEmail?: string
-=======
 
 ;
   testEmail?: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 serve(async (req) => {"
   if (req && req.method === "OPTIONS") {}
@@ -86,7 +47,6 @@ serve(async (req) => {"
   try {}
     if (!resendApiKey) {"
       throw new Error("Resend API key is not set in environment variables")
-=======
   testMode?: boolean,
   testEmail?: string
 }
@@ -136,12 +96,10 @@ serve(async (req) => {
       return new Response(JSON && JSON.stringify(emailResponse), {
         headers: { ...corsHeaders, "Content-Type": "application/json" };
         status: 200})
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 
     const { subject, previewText, body, testMode, testEmail } = await req && req.json() as SendNewsletterRequest;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // If test mode, send to test email only
     if (testMode && testEmail) {
       const emailResponse = await resend && resend.emails.send({
@@ -162,40 +120,23 @@ serve(async (req) => {
 
       return new Response(JSON.stringify(emailResponse), {"
         headers: { ...corsHeaders, "Content-Type": "application/json" },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         status: 200})
-=======
   testMode?: boolean,        status: 200})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   testMode?: boolean,        status: 200})
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 // In production, we would fetch subscriber emails from the database
     // and send the newsletter to all subscribers
     // This is just a placeholder for now
     const emailResponse = {
       id: "test-email-id"
-<<<<<<< HEAD
-<<<<<<< HEAD
       message: "Email would be sent to all subscribers in production"
-<<<<<<< HEAD
 
       status: 500})
-=======
       message: "Email would be sent to all subscribers in production"      status: 500})
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       message: "Email would be sent to all subscribers in production"
 
       status: 500})
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 });
 
@@ -208,7 +149,6 @@ serve(async (req) => {
     console.error("Error in send-newsletter function:", error),
 
 return new Response(JSON.stringify({ error: error.message }), {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})"
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;"
@@ -263,32 +203,21 @@ serve(async (req) => {;"
     console.error("Error in send-newsletter function:", error),;
     return new Response(JSON.stringify({ error: error.message }), {;"
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
-<<<<<<< HEAD
       status: 500});
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 });
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     };
-=======
       status: 500})
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       status: 500});
 
     };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     return new Response(JSON && JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
@@ -303,7 +232,6 @@ serve(async (req) => {;"
   }
 });
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   test_mode?: boolean,
   test_email?: string;
 }
@@ -461,18 +389,6 @@ status: 200
 });
   }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
 });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

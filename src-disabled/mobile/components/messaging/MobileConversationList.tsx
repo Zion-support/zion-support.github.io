@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import { Card } from "@/components/ui/card",
@@ -75,7 +73,6 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar'
 import { Search } from 'lucide-react';'
 import { Input } from '@/components / ui / input';'
 import { cn } from '@/lib / utils';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface Conversation {
   id: string;
 name: string;
@@ -176,16 +173,11 @@ export function MobileConversationList({
   return (
     <div className;
               activeConversation === conversation.id && "bg-primary/5"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
             onClick={() => onSelectConversation(conversation.id)}
           >
             <div className="flex items-center gap-3 py-3 cursor-pointer">
               <Avatar>
-<<<<<<< HEAD
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
                 <AvatarImage
 }: MobileConversationListProps) {
@@ -221,24 +213,17 @@ export function MobileConversationList({
             <div className="flex items-center gap-3 py-3 cursor-pointer">
               <Avatar>
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
-=======
 
 <AvatarImage
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   src={conversation.avatar}
                   alt={conversation.name}
                 />
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
-<<<<<<< HEAD
                   src={conversation && conversation.avatar}
                   alt={conversation && conversation.name}
                 />                <AvatarFallback>;
@@ -276,21 +261,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>;
           </div>;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="flex-1 min-w-0">
                 <div className="flex justify-between items-baseline">
                   <h3 className="font-medium truncate">{conversation.name}</h3>
-=======
               "
               <div className="flex-1 min-w-0">"
                 <div className="flex justify-between items-baseline">"
                   <h3 className="font-medium truncate">{conversation.name}</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
                     {conversation.timestamp}
 <div className='flex-1 min-w-0'>
@@ -307,44 +285,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </p>
 
                   {conversation.unreadCount > 0 && (
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                       {conversation.unreadCount}
                     </Badge>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   )}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
             <div className="border-t border-border ml-12"></div>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className="border-t border-border ml-12"></div>
           </div>
         ))}
@@ -352,7 +313,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   );
 }
-<<<<<<< HEAD
       <div className='space - y-2 pb - 24'>;
         {conversations.map (conversation => (
           <div;
@@ -398,10 +358,7 @@ className={cn ('
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex justify - between items - center'>;
                   <p className='text - sm text - muted - foreground truncate'>;
@@ -413,4 +370,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>))}
     </div>);"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

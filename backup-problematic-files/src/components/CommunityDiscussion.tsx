@@ -87,12 +87,10 @@ export const CommunityDiscussion:React.FC = () => {;
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale";"
                 onClick={handleAddPost}
                 disabled={!newTitle.trim() || !newBody.trim()}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               >;
 
             </div>;
 </CardContent>;
-<<<<<<< HEAD
               <Avatar>;
 
                 <AvatarFallback>;
@@ -147,7 +145,6 @@ setShowNew (false)
   newTitle ;
 }onChange= {;
   (e: React.ChangeEvent<HTMLInputElement>) => setNewTitle (e.target.value) ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }maxLength= {;
   80 ";
 }/> <Textarea /> <div className=" flex gap-3 justify-end"> <Button > Cancel </Button> <Button > Post </Button> </div> </CardContent> </Card>) ";

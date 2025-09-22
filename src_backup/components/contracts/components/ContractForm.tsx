@@ -1,5 +1,4 @@
 :src/components/contracts/components/ContractForm.tsx
-<<<<<<< HEAD
 import { Form } from "@/components/ui/form";
 import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
@@ -10,7 +9,6 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields";
 import { PaymentTermsFields } from "./PaymentTermsFields";
 import { AdditionalClausesFields } from "./AdditionalClausesFields";
 import {logErrorToProduction} from '@/utils/productionLogger';
-<<<<<<< HEAD
 const formSchema = z && z.object({;
   projectName: z && z.string().min(1, "Project name is required");
   scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");
@@ -23,7 +21,6 @@ const formSchema = z && z.object({;
 
 export type ContractFormValues = z && z.infer<typeof formSchema>;
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -63,8 +60,6 @@ interface ContractFormProps {
         clientName, ;
 
 :src/components/contracts/components/ContractForm.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export type ContractFormValues = z.infer<typeof formSchema" > interface ContractFormProps {"
   talent: TalentProfile;
    clientName: string;
@@ -74,8 +69,6 @@ export type ContractFormValues = z.infer<typeof formSchema" > interface Contract
    deployOptions?: DeploymentOptions
    onDeployOptionsChange?: (options: DeploymentOptions) => void} export function ContractForm({ talent, clientName, initialValues, onFormValuesChange, onContractGenerated, deployOptions, onDeployOptionsChange }: ContractFormProps) {
 :src/components/contracts/components/ContractForm.tsx
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
   );
 }
@@ -298,13 +291,7 @@ export function ContractForm({;
 }
 ;
 :src/components/contracts/components/ContractForm.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/components/ContractForm.tsx
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -396,5 +383,3 @@ talent.full name ;
   )
 }
 :src/components/contracts/components/ContractForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

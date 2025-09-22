@@ -176,12 +176,10 @@ interface Milestone {title: string,
 
 serve(async (req) => {_// Handle CORS preflight requests,
 if (req.method === 'OPTIONS') {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return new Response(null, { headers: corsHeaders })
   }
 
   try {
-<<<<<<< HEAD
     if (!apiKey) {
       throw new Error('OPENAIAPI_KEY is not set')
     }

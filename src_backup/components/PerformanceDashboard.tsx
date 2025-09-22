@@ -1,5 +1,4 @@
 :src/components/PerformanceDashboard.tsx
-<<<<<<< HEAD
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -25,8 +24,6 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
 
 :src/components/PerformanceDashboard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react'
 import {
   Card
@@ -99,7 +96,6 @@ interface PerformanceMetrics {;
   healthStatus: 'healthy' | 'warning' | 'error';
 
 interface Improvement {;
-<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
   id: string;
   title: string,
   description: string;
@@ -107,8 +103,6 @@ interface Improvement {;
   impact: 'high' | 'medium' | 'low';
   category: 'performance' | 'security' | 'ux' | 'build'
 :src/components/PerformanceDashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import {
@@ -139,7 +133,6 @@ interface Improvement {
   status: 'completed' | 'in - progress' | 'planned';
   impact: 'high' | 'medium' | 'low';
 :src/components/PerformanceDashboard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   category: 'performance' | 'security' | 'ux' | 'build';
 }
 ;
@@ -238,9 +231,7 @@ const getCategoryIcon = (category: string) => {
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
 
 :src/components/PerformanceDashboard.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PerformanceDashboard.tsx
   return (
     <div className="space-y-6 p-6">
       <div className="flex items-center justify-between">
@@ -286,13 +277,11 @@ const getCategoryIcon = (category: string) => {
 :src/components/PerformanceDashboard.tsx
 
             </div>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </CardContent>
         </Card>
       </div>
 
 :src/components/PerformanceDashboard.tsx
-<<<<<<< HEAD
   }
   const completedImprovements = improvements.filter(
     imp => imp.status === 'completed'
@@ -363,7 +352,6 @@ interface Improvement {;
     }
   ],
 
-<<<<<<< HEAD
 
         <Card>
           <CardHeader className="pb-2">
@@ -379,7 +367,6 @@ interface Improvement {;
             <CardTitle className="text-sm font-medium text-gray-600">Load Time</CardTitle>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
             <div className="text-2xl font-bold">{metrics.loadTime}s</div>
             <p className="text-xs text-gray-500">Average page load</p>
           </CardContent>
@@ -398,7 +385,6 @@ interface Improvement {;
           </CardContent>
         </Card>
       </div>
-=======
 
 const PerformanceDashboard: React.FC = () => {;
   const [metrics] = useState<PerformanceMetrics>({;
@@ -481,14 +467,11 @@ const PerformanceDashboard: React.FC = () => {;
       default:;
         return <AlertCircle className='h-4 w-4 text-gray-500' />;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PerformanceDashboard.tsx
       {/* Completed Improvements */}
-=======
             </div>
           </CardContent>
         </Card>
       </div>      {/* Completed Improvements */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
@@ -502,8 +485,6 @@ const PerformanceDashboard: React.FC = () => {;
 :src/components/PerformanceDashboard.tsx
 <CardContent>
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="space-y-4">
             {completedImprovements.map((improvement) => (
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
@@ -527,11 +508,8 @@ const PerformanceDashboard: React.FC = () => {;
                   </div>
 
 :src/components/PerformanceDashboard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <p className="text-sm text-gray-600 mt-1">
-=======
         <CardContent>                  <p className="text-sm text-gray-600 mt-1">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },;
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
@@ -542,7 +520,6 @@ const PerformanceDashboard: React.FC = () => {;
       default: return <CheckCircle className="h-4 w-4" />;
     }
 :src/components/PerformanceDashboard.tsx
-<<<<<<< HEAD
   },;
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),;
   return (;
@@ -591,14 +568,11 @@ const PerformanceDashboard: React.FC = () => {;
               <CheckCircle className="h-5 w-5 text-green-500" />;
               <span className="text-sm font-semibold text-green-600">Healthy</span>;
             </div>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </CardContent>;
         </Card>;
       </div>;
 
 :src/components/PerformanceDashboard.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Completed Improvements */}
       <Card>;
         <CardHeader>;
@@ -612,7 +586,6 @@ const PerformanceDashboard: React.FC = () => {;
         </CardHeader>;
         <CardContent>;
 :src/components/PerformanceDashboard.tsx
-<<<<<<< HEAD
           <div className="space-y-4">;
             {completedImprovements.map((improvement) => (;
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">;
@@ -635,14 +608,12 @@ const PerformanceDashboard: React.FC = () => {;
 
 :src/components/PerformanceDashboard.tsx
                   <p className='text-sm text-gray-600 mt-1'>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {improvement.description}
                   </p>;
                 </div>;
               </div>;
             ))}
 :src/components/PerformanceDashboard.tsx
-<<<<<<< HEAD
           </div>;
         </CardContent>;
       </Card>;
@@ -654,12 +625,10 @@ const PerformanceDashboard: React.FC = () => {;
 
 :src/components/PerformanceDashboard.tsx
           Check Health Status
-=======
           </div>
         </CardContent>
       </Card>
       {/* Action Buttons */}          Check Health Status
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
           <TrendingUp className="h-4 w-4 mr-2" />
@@ -717,7 +686,6 @@ export default PerformanceDashboard,
           variant='outline';
         >;
           <Shield className='h - 4 w - 4 mr - 2' />;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           Check Health Status;
         </Button>;
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">;
@@ -730,19 +698,11 @@ export default PerformanceDashboard,
 },;
 export default PerformanceDashboard;
 :src/components/PerformanceDashboard.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 export default PerformanceDashboard,
 export default PerformanceDashboard,
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PerformanceDashboard.tsx
   );
 };
 
 export default PerformanceDashboard;
 :src/components/PerformanceDashboard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,4 @@
 
-=======
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
@@ -19,9 +18,7 @@ export function ConversationItem({ conversation, isActive, onClick } Conversatio
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",;
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" :"hover:bg-zion-blue-dark/30",;
         conversation.unread_count > 0 && "bg-zion-blue-dark/20";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       )}
       onClick={onClick}
     >;
       <Avatar className="h-12 w-12 border border-zion-purple/20">;
-<<<<<<< HEAD

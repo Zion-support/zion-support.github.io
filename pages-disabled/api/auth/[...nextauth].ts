@@ -50,7 +50,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Implement authentication logic here'
   res.status(200).json({ message: 'Auth endpoint placeholder' })
 } 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 } '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

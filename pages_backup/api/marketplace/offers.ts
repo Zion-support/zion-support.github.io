@@ -1,6 +1,4 @@
 :pages_backup/api/marketplace/offers.ts
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   assertClient
   assertTalentOrClientForOffer
   getDemoUser
@@ -48,7 +46,6 @@ import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / ty
  */
 function bad() {}
   return res.status (code).json ({ ok: false, error: message });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export default /**;
  * handler - Function description;
@@ -66,7 +63,6 @@ if (req.method === "GET") {
 if ( {) {}
   $2;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
       // Check condition;
 if ( {) {}
@@ -77,7 +73,6 @@ if ( {) {}
 
       }
 :pages_backup/api/marketplace/offers.ts
-<<<<<<< HEAD
       return bad(res, "Unknown role", 403);
     }
     if (req.method === "POST") {
@@ -325,7 +320,6 @@ import {
 
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
@@ -453,7 +447,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         const offers = listOffers({ talentSlug: user.talentSlug });
         return res.json({ ok: true, offers });
       }
@@ -468,7 +461,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         return bad(res, "Missing required fields")
       }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const offer: Offer = {
         id: uuidv4(),
         createdAtIso: new Date().toISOString(),
@@ -496,12 +488,9 @@ import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../.
 import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function bad(res: NextApiResponse, message: string, code = 400) {
-=======
 
 function bad(res: NextApiResponse, message: string, code = 400) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/marketplace/offers.ts
   return res.status(code).json({ ok: false, error: message })
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
@@ -688,7 +677,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
         status: "SENT"
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       };
       saveOffer(offer);
       return res.status(201).json({ ok: true, offer });
@@ -833,7 +821,6 @@ if ( {) {}
 :pages_backup/api/marketplace/offers.ts
 return bad(res, "Unknown action");
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return bad(res, "Method not allowed", 405);
   } catch (e: any) {}
     const status = e?.statusCode |500;
@@ -896,8 +883,6 @@ return bad(res, "Unknown action");
   }
 
 :pages_backup/api/marketplace/offers.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
   } catch (error) {"
@@ -913,11 +898,5 @@ return bad(res, "Unknown action");
     return res.status(500).json({ error: "Internal server error" });
 
 :pages_backup/api/marketplace/offers.ts
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 :pages_backup/api/marketplace/offers.ts
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,5 +1,4 @@
 
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { UseFormReturn } from "react-hook-form",;
@@ -41,9 +40,7 @@ export function TimelineField({ form } TimelineFieldProps) {;
                   <SelectItem key={option.value} value={option.value}>;
                     {option.label}
                   </SelectItem>;                ))}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </SelectContent>;
             </Select>;
           </FormControl>;
           <FormMessage />;
-<<<<<<< HEAD

@@ -45,13 +45,9 @@ function processFile(filePath) {
     return 0}
 }
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   let results = [];
   const list = fs.readdirSync(dir);
   list.forEach(file => {)
@@ -68,21 +64,13 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
 }
 
 function main() {
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/remove-console-logs.cjs
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/remove-console-logs.cjs
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
 
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
     `${pagesDir}/**/*.{js,jsx,ts,tsx}`
   ];
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     `${pagesDir}/**/*.{js,jsx,ts,tsx}`]
   let totalRemoved = 0;
@@ -100,10 +88,6 @@ function main() {
 }`;
     console.log(`\n✨ No console statements found to remove.`);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/remove-console-logs.cjs
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/remove-console-logs.cjs
 }
 if (require.main === module) {
   main().catch(console.error)}
@@ -113,5 +97,4 @@ if (require.main === module) {
 if (require.main === module) {
   main().catch(console.error)}
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = { removeConsoleStatements, processFile };

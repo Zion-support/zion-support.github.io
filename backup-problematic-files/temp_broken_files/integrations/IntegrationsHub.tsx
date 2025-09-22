@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -14,7 +13,6 @@ export function IntegrationsHub() {;
   const [activeTab, setActiveTab] = useState("marketplace"),;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-6">;
       <div className="flex justify-between items-center">;
         <div>;
@@ -23,7 +21,6 @@ export function IntegrationsHub() {;
             Connect your platform with the tools and services you use every day;
           </p>;
         </div>;
-<<<<<<< HEAD
 
         <div className="flex gap-2">;
           <Button variant="outline">View Documentation</Button>;

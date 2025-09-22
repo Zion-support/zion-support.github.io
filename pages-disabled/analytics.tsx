@@ -1,22 +1,16 @@
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next / head';
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {
   BarChart3,
   TrendingUp,
   PieChart,
   Activity,
   ArrowRight,
-<<<<<<< HEAD
   Check,;
   Eye,;
 } from 'lucide-react';
 import React from 'react',
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ';
 } from 'lucide-react';
@@ -26,11 +20,8 @@ export default /**;
 function AnalyticsPage() {}
   const features = [;
 {
-<<<<<<< HEAD
-=======
     {}
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: 'Live monitoring and visualization of your key metrics'
     }
     {'
@@ -100,21 +91,17 @@ export default function AnalyticsPage() { return null; }
       title: 'Performance Monitoring',;'
       description: 'Track system performance and user behavior',;
     },;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function AnalyticsPage() {
   const features = [
     {
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'Real-time Dashboards',
-=======
 
 export default function AnalyticsPage() {}
   const features = []
     {}
       icon: <BarChart3 className="w-8 h-8 text-white" />,'
       title: 'Real-time Dashboards','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: 'Live monitoring and visualization of your key metrics'
     },
     {"
@@ -130,7 +117,6 @@ export default function AnalyticsPage() {}
     {"
       icon: <Activity className="w-8 h-8 text-white" />,'
       title: 'Performance Monitoring',
-<<<<<<< HEAD
   const benefits = [
     'Make data-driven decisionsIdentify growth opportunitiesOptimize user experienceMonitor system healthTrack business metricsGenerate actionable insights'
   ],
@@ -139,7 +125,6 @@ export default function AnalyticsPage() {}
 
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       description: 'Track system performance and user behavior'
       } catch (error) {";
     console.error("Error:", error);"
@@ -147,8 +132,6 @@ export default function AnalyticsPage() {}
   }
 }
   ],
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Analytics Platform
             </h1>
             <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
@@ -163,18 +146,14 @@ export default function AnalyticsPage() {}
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="pt-32 pb-20 relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
-=======
 
 "
         <section className="pt-32 pb-20 relative overflow-hidden">"
           <div className="absolute inset-0">"
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
           </div>
           "
@@ -187,17 +166,11 @@ export default function AnalyticsPage() {}
             </div>
             "
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               Analytics Platform
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
               Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities.
             </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <a
                 href="/contact" className="shadow-2xl shadow-blue-500/25">
                 Start Analyzing"
@@ -207,11 +180,8 @@ export default function AnalyticsPage() {}
               <a"
                 href="/contact" className="border-white/20 hover:border-white/40">
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 View Demo
-=======
                 View Demo;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </a>
             </div>
           </div>
@@ -237,16 +207,11 @@ Analytics Features;
                   </p>;
                 </div>;
 
-<<<<<<< HEAD
 
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Analytics Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -254,22 +219,12 @@ Analytics Features;
               </p>
             </div>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {features.map((feature, index) => (
                 <div"
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">"
                   <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <p className="text-gray-400 leading-relaxed">
                     {feature.description  } catch (error) {"
     console.error("Error:", error);"
@@ -288,7 +243,6 @@ Analytics Features;
           </div>;
         </section>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Benefits Section */}
         <section className='py-24 bg-gray-900'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -310,10 +264,6 @@ Analytics Features;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               {features.map((feature, index) => (
                 <div
@@ -338,13 +288,9 @@ Analytics Features;
 <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div>
-=======
 
               <div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Transform Data into Action;
                 </h2>"
@@ -356,24 +302,15 @@ Analytics Features;
 </div>
 <span className="text-gray-300 text-lg">{benefit}</span>
                     </div>
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   ))}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
                   <div className="text-center">
                     <Eye className="w-24 h-24 mx-auto mb-6 text-blue-400" />
                     <h3 className="text-2xl font-bold text-white mb-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       Visual Insights
                     </h3>
-=======
 
 "
               <div className="relative">"
@@ -384,15 +321,10 @@ Analytics Features;
 
                       Visual Insights;
                     </h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <p className="text-gray-300 mb-6">
                       Beautiful charts and graphs that make complex data easy to understand;
                     </p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </div>
                   </div>
                 </div>
@@ -400,14 +332,11 @@ Analytics Features;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
-=======
 
         {/* CTA Section */  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
@@ -415,8 +344,6 @@ Analytics Features;
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Ready to Unlock Your Data?
             </h2>"
             <p className="text-xl text-blue-100 mb-8">
@@ -442,16 +369,13 @@ href="/contact" className="border-white text-white hover:bg-white hover:text-blu
 
 }
 
-<<<<<<< HEAD
   )
         <section className="py-24 bg-gray-900">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-=======
 
   )"
         <section className="py-24 bg-gray-900">;"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">;
               <div>;"
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">;
@@ -470,8 +394,6 @@ href="/contact" className="border-white text-white hover:bg-white hover:text-blu
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>;
               </div>;
 '
@@ -588,7 +510,6 @@ href="/contact" className="border-white text-white hover:bg-white hover:text-blu
                     </p>;'
                     <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - blue - 500 / 20 text - blue - 400 text - sm'>;'
                       <TrendingUp className='w - 4 h - 4 mr - 2' />                      Interactive dashboards;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </div>;
                   </div>;
                 </div>;
@@ -597,8 +518,6 @@ href="/contact" className="border-white text-white hover:bg-white hover:text-blu
           </div>;
         </section>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
               Ready to Unlock Your Data?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -606,16 +525,13 @@ href="/contact" className="border-white text-white hover:bg-white hover:text-blu
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <a
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href='/contact'
                 className='bg-white text-blue-600 hover:bg-gray-100'>;
                 Start Free Trial;
               </a>;
               <a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             </div>
           </div>
@@ -628,24 +544,12 @@ href="/contact" className="border-white text-white hover:bg-white hover:text-blu
           </div>;
         </section>;
       </div>;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
               <a;
   } catch (error) {"
@@ -655,4 +559,3 @@ href="/contact" className="border-white text-white hover:bg-white hover:text-blu
 }
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/notifications/NotificationItem.tsx
 import { Button } from '@/components/ui/button',;
 import { Badge } from '@/components/ui/badge',;
 import { formatDistanceToNow } from 'date-fns',;
@@ -11,7 +10,6 @@ import {;
   TooltipProvider,;
   TooltipTrigger} from '@/components/ui/tooltip',;
 import { useRouter } from 'next/router',;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/notifications/NotificationItem.tsx
 import { Notification, NotificationType } from '@/context/notifications',;
 ;
 export const getTypeIcon = (type:NotificationType) => {;
@@ -26,8 +24,6 @@ return <span className="text-blue-500">💬</span>,;
       return <span className="text-zion-purple">🤝</span>,;
     case 'onboarding':;
       return <span className="text-zion-cyan">🚀</span>,;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/notifications/NotificationItem.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     case 'system':;
       return <span className="text-yellow-500">⚠️</span>,;
     default:;
@@ -89,7 +85,6 @@ e.stopPropagation(),;
                 aria-label="Mark as read";
               >;
                 <Check className="h-3.5 w-3.5 text-green-400" />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </Button>;
             </TooltipTrigger>;
             <TooltipContent>;
@@ -98,8 +93,6 @@ e.stopPropagation(),;
 </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/notifications/NotificationItem.tsx
 ;
         <TooltipProvider>;
           <Tooltip>;
@@ -115,12 +108,10 @@ e.stopPropagation(),;
                 aria-label="Dismiss notification";
               >;
                 <Trash2 className="h-3.5 w-3.5 text-red-400" />;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/notifications/NotificationItem.tsx
               </Button>;
             </TooltipTrigger>;
             <TooltipContent>;
               <p>Dismiss</p>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/notifications/NotificationItem.tsx
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
@@ -156,4 +147,3 @@ onDismiss ;
 };
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/notifications/NotificationItem.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/notifications/NotificationItem.tsx

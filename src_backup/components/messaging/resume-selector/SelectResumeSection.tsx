@@ -1,7 +1,4 @@
 :src/components/messaging/resume-selector/SelectResumeSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react',;
 import { FileText } from 'lucide-react';
@@ -56,9 +53,6 @@ export function SelectResumeSection({
         </>;
 
 export function SelectResumeSection({
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/resume-selector/SelectResumeSection.tsx
 import React from 'react';
 import { FileText } from 'lucide-react';
 import { ResumeOption } from '../resume-selector/types';
@@ -180,22 +174,12 @@ export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({
             />
           ))}
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       )}
     </div>;
   );
 }
 ;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/resume-selector/SelectResumeSection.tsx

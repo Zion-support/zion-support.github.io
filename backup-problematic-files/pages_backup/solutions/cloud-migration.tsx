@@ -29,7 +29,6 @@ const phases = [;
   {}
     title: 'Assessment & Planning,',,
   description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: BarChart3,;
     steps: [,;
       'Infrastructure audit,',;
@@ -61,12 +60,10 @@ title: 'Migration Execution,',;
   {}
 title: 'Optimization,',;
     description: 'Continuous monitoring and optimization for peak performance.,',;
-=======
       'Go-live support;']
     title: 'Optimization,',;
     description: 'Continuous monitoring and optimization for peak performance.,',;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     icon: Zap,;
       'Performance monitoring,',;
       'Cost optimization',',;
@@ -93,12 +90,10 @@ pr-12325
   {}
 title: 'Azure Migration,',;
     description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',;
-=======
       'Lambda serverless functions;']
     title: 'Azure Migration,',;
     description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     icon: Shield,;
       'Azure Virtual Machines,',;
       'Azure SQL Database',',;
@@ -109,12 +104,10 @@ pr-12325
   {}
 title: 'Google Cloud Migration,',;
     description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',;
-=======
       'Azure Functions deployment;']
     title: 'Google Cloud Migration,',;
     description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     icon: Brain,;
       'Compute Engine migration,',;
       'Cloud SQL migration',',;
@@ -125,12 +118,10 @@ pr-12325
   {}
 title: 'Multi-Cloud Strategy,',;
     description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',;
-=======
       'Cloud Functions deployment;']
     title: 'Multi-Cloud Strategy,',;
     description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     icon: Globe,;
       'Cross-cloud integration,',;
       'Disaster recovery',',;
@@ -162,7 +153,6 @@ export default function CloudMigrationPage() {;
   return (
     <Layout)
       title="Cloud Migration Solutions - Zion Tech Group""
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       description="Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with our comprehensive cloud migration services.""
       keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration"">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
@@ -176,7 +166,6 @@ export default function CloudMigrationPage() {;
 
           <div className="container mx-auto px-4 relative z-10">";
             <motion&& motion.div
-=======
   }]
       description="Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with our comprehensive cloud migration services.""""
       keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration"">;""
@@ -192,7 +181,6 @@ export default function CloudMigrationPage() {;
           <div className="container mx-auto px-4 relative z-10">";"
 </div>
             <motion&& motion.div;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}"
@@ -235,7 +223,6 @@ initial={{ opacity: 0, y: 20 }}
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">";
                     <phase && phase.icon className="w-8 h-8 text-white" />";
                   </div>;
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                   <ul className="space-y-2 text-left">";
                     {phase && phase.steps.map((step, stepIndex) => (,;
                       <li key={stepIndex} className="flex items-center text-sm text-gray-600">";
@@ -277,8 +264,6 @@ initial={{ opacity: 0, y: 20 }}
                     </div>,;
                     <h3 className="text-2xl font-bold text-gray-900">{service && service.title}</h3>";
                   </div>;
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
         <section className="py-20 bg-gray-50">";"
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Cloud Migration Services,;"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";"
@@ -290,7 +275,6 @@ initial={{ opacity: 0, y: 20 }}
 </service>
                     </div>,;"
                     <h3 className="text-2xl font-bold text-gray-900">{service && service.title}</h3>";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div>;
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features: </h4>", <ul className="space-y-2">",;"
                       {service && service.features.map((feature, featureIndex) => (,;"
@@ -321,7 +305,6 @@ initial={{ opacity: 0, y: 20 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/cloud-migration.tsx
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;
@@ -344,8 +327,6 @@ transition={{ duration: 0.8 }}
       </div>;
     </Layout>;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?
@@ -368,14 +349,12 @@ Let our cloud migration experts help you seamlessly transition to the cloud
       </div>
     </Layout>
 );
-=======
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";"
 </h2>"
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Move to the Cloud?,;"
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";"
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         </section>;
               <h2 className="text-4xl md:text-5xl font-bold mb-6">"

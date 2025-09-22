@@ -1,21 +1,13 @@
 #!/usr/bin/env node
 /**
 /**
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
  * Syntax Error Fixer;
  * Automatically fixes common syntax errors in the codebase;
  */
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/fix-syntax-errors.cjs
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/fix-syntax-errors.cjs
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   fixFile(filePath) {
     try {
@@ -57,19 +49,12 @@ const path = require('path')
     content = content.replace(/([^;}])\n/g, '$1;\n');
 
     // Fix merge conflict markers
-<<<<<<< HEAD:backup-problematic-files/scripts/fix-syntax-errors.cjs
     content = content.replace(/[\s\S]*?[\s\S]*?
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/fix-syntax-errors.cjs
-=======
 
     // Fix missing semicolons
     content = content.replace(/([^;}])\n/g, '$1;\n');
     // Fix merge conflict markers
-content = content.replace(/>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     // Fix missing commas in objects
@@ -107,7 +92,6 @@ content = content.replace(/>>>>>>> origin/cursor/fix-website-loading-errors-and-
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))}
     this.log(`📄 Report saved "to": ${reportPath}`);
     return report}
-<<<<<<< HEAD
 
   async run() {
     this.log('🚀 Starting syntax error fixing...');
@@ -136,8 +120,6 @@ if (require.main === module) {
   });
 }
 module.exports = SyntaxErrorFixer;
-<<<<<<< HEAD:backup-problematic-files/scripts/fix-syntax-errors.cjs
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/fix-syntax-errors.cjs
   log(message, level = 'INFO')
     this.log(' Starting syntax error fixing...')
       this.log('Running ESLint auto-fix...')
@@ -147,9 +129,6 @@ module.exports = SyntaxErrorFixer;
       this.log(` Syntax fixing "failed"`)
       this.log(`� Syntax error fixing "failed"`)
 
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
   generateReport() {
     const report = {
 
@@ -164,4 +143,3 @@ if (require.main === module) {
   const fixer = new SyntaxErrorFixer();
   fixer.run().catch(error => {)
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

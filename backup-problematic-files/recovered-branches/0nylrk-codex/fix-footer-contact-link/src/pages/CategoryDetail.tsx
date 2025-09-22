@@ -137,7 +137,6 @@ title:"Services",;
     'business-solutions':{;
 title:"Business Solutions",,
   description:"Enterprise AI integrations and services",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       icon:<Briefcase className="w-6 h-6" />;
     }
   },;
@@ -147,7 +146,6 @@ title:"Business Solutions",,
     ;
     // Find the category data based on slug;
     const currentCategory = categoryData[slug as keyof typeof categoryData] || {;
-<<<<<<< HEAD
       title:slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') || "Category",;
       description:"Explore our collection in this category",;
       icon:<Bot className="w-6 h-6" />;
@@ -249,22 +247,17 @@ pr-12325
             </p>;
 </div>;
           ;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {isLoading ? (;
             <div className="flex justify-center items-center h-64">;
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-purple"></div>;
             </div>;
-<<<<<<< HEAD
                 <ProductListingCard ;
                   key={listing.id} ;                  listing={listing}
                   onRequestQuote={handleRequestQuote} ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 />;
 
       <Footer />;
 </>;
-<<<<<<< HEAD
   ),; export default function CategoryDetail () {
   //Cast to specify the expected route param type since useParams may be untyped const {
   // TODO: Implement;
@@ -401,5 +394,4 @@ pr-12325
 
 }</div>) 
 }</div> </div> <Footer /> </>) 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }

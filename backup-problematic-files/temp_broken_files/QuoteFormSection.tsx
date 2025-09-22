@@ -1,5 +1,4 @@
 
-=======
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
 import { GradientHeading } from "./GradientHeading",;
@@ -13,12 +12,10 @@ export function QuoteFormSection() {;
     e.preventDefault(),;
     setIsSubmitting(true),;
     ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Simulate form submission;
     setTimeout(() => {;
       setIsSubmitting(false),;
       setIsSubmitted(true);
-<<<<<<< HEAD
 
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;

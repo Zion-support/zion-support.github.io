@@ -1,6 +1,4 @@
 :src_backup/components/interviews/InterviewCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -386,17 +384,8 @@ function InterviewCard() {
 }
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 }
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/InterviewCard.tsx
-=======
 export /**
  * InterviewCard - Function description;
 pr-12325
@@ -435,7 +424,6 @@ import { InterviewResponseForm } from "./InterviewResponseForm",
 interface InterviewCardProps {
   interview: Interview,
   onRefresh: () => Promise<void>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/interviews/InterviewCard.tsx
 import React, { useState } from 'react';
 import {
   Card,
@@ -508,10 +496,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   )
 }
 :src/components/interviews/InterviewCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         return <Badge variant="outline" className="border - destructive text - destructive">Cancelled;"
         return <Badge>{interview.status};"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/interviews/InterviewCard.tsx

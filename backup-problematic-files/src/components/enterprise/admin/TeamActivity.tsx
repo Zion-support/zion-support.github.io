@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import {;
   Table,;
@@ -142,11 +141,9 @@ export function TeamActivity() {;
           Previous;
         </Button>;
         <div className="text-sm text-muted-foreground">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           Page 1 of 10;
         </div>;
         <Button variant="outline" size="sm">;
           Next;
         </Button>;
       </div>;
-<<<<<<< HEAD

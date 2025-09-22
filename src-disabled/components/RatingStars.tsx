@@ -20,23 +20,16 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
         }
 :src_backup/components/RatingStars.tsx
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         if (i === filled && half) {;
           return (;
             <StarHalf;
 
 :src/components/RatingStars.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/RatingStars.tsx
-=======
         if (i === filled && half) {;
           return (;
             <StarHalf;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/RatingStars.tsx
               key={i}
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />
@@ -47,15 +40,11 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
       {typeof count === 'number' && (
         <span className="text-xs ml-1">({count})</span>
 :src_backup/components/RatingStars.tsx
-<<<<<<< HEAD
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>;
   );
 }
       )}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/RatingStars.tsx
     </div>
   )
 :src_backup/components/RatingStars.tsx
@@ -75,17 +64,10 @@ const half = value - filled >= 0 && 0.5;
 }
 :src_backup/components/RatingStars.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 :src/components/RatingStars.tsx
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/RatingStars.tsx
-=======
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/RatingStars.tsx
   );
 
 }) ;
@@ -96,5 +78,3 @@ const half = value - filled >= 0 && 0.5;
 }</div>) ;
 }'"
 :src/components/RatingStars.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

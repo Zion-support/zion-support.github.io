@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link';
 import CharterGenerator from '../components/foundation/CharterGenerator';
@@ -26,7 +25,6 @@ export default function FoundationPage() {
             <a className="underline" href="#mou">Partnership MOUs</a>
           </div>
         </section>
-<<<<<<< HEAD
         <section className="space-y-4" id="reports">
           <h2 className="text-2xl font-semibold">Transparency Reports</h2>
           <p className="text-gray-600 dark:text-gray-300">Quarterly financials, grants, and impact metrics. Initial placeholders shown until reports are published.</p>
@@ -36,7 +34,6 @@ export default function FoundationPage() {
                 <div className="font-medium">Report Q{q} 2025</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Status: Draft</div>
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             <Link href="/governance/trust"><a className="underline">Governance & Trust</Link></Link>
             <a className="underline" href="#reports">Transparency Reports</Link>
@@ -50,28 +47,19 @@ export default function FoundationPage() {
           <CharterGenerator />
         </section>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
             ))}
           </div>
         </section>
-<<<<<<< HEAD
 
         <section className="space-y-4" id="grants">
           <h2 className="text-2xl font-semibold">Grants Issued</h2>
           <p className="text-gray-600 dark:text-gray-300">Cross-multiverse grants across chains, rollups, and alternate compute realms.</p>
           <ul className="list-disc list-inside space-y-2 text-sm">
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <li>Seed safety tooling and evals R&D — Milestone 1 (Pending)</li>
             <li>
               Open dataset creation for multilingual benchmarks — Milestone 0;
@@ -105,14 +93,11 @@ export default function FoundationPage() {
             apply where legally required.;
           </p>;'
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 text-sm text-gray-600 dark:text-gray-400'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next / head';
 import Link from 'next / link';
-=======
 '
 import Head from 'next / head';'
 import Link from 'next / link';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import CharterGenerator from '../components / foundation / CharterGenerator';
               </div>))}
           </div>;
@@ -138,14 +123,11 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
             apply where legally required.;
           </p>;'
           <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4 text - sm text - gray - 600 dark:text - gray - 400'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             No MOUs published yet.;
           </div>;
         </section>;
       </div>;
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <h2 className='text-2xl font-semibold'>Grants Issued</h2>
           <p className='text-gray-600 dark:text-gray-300'>
             Cross-multiverse grants across chains, rollups, and alternate
@@ -153,29 +135,21 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
           </p>
           <ul className='list-disc list-inside space-y-2 text-sm'>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="space-y-4" id="grants">
           <h2 className="text-2xl font-semibold">Grants Issued</h2>
           <p className="text-gray-600 dark:text-gray-300">Cross-multiverse grants across chains, rollups, and alternate compute realms.</p>
           <ul className="list-disc list-inside space-y-2 text-sm">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
         <section className="space-y-4" id="grants">"
           <h2 className="text-2xl font-semibold">Grants Issued</h2>"
           <p className="text-gray-600 dark:text-gray-300">Cross-multiverse grants across chains, rollups, and alternate compute realms.</p>"
           <ul className="list-disc list-inside space-y-2 text-sm">
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <li>Seed safety tooling and evals R&D — Milestone 1 (Pending)</li>
             <li>Open dataset creation for multilingual benchmarks — Milestone 0 (Planned)</li>
             <li>Agent interoperability standards and sandbox — RFP (Open)</li>
           </ul>
         </section>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <h2 className='text-2xl font-semibold'>Partnership MOU Archive</h2>
           <p className='text-gray-600 dark: text-gray-300'>
             Public archive of Memoranda of Understanding (MOUs). Redactions may
@@ -189,9 +163,6 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
     </>
   );
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className="space-y-4" id="mou">
           <h2 className="text-2xl font-semibold">Partnership MOU Archive</h2>
           <p className="text-gray-600 dark: text-gray-300">Public archive of Memoranda of Understanding (MOUs). Redactions may apply where legally required.</p>
@@ -199,12 +170,8 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
         </section>
       </div>
     </>
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>;
         </section>;"
         <section className="space-y-4" id="grants">;"
@@ -229,17 +196,5 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

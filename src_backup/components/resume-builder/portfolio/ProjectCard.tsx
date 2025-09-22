@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';'
 import { Badge } from '@/components/ui/badge';
 
 :src_backup/components/resume-builder/portfolio/ProjectCard.tsx
-<<<<<<< HEAD
 import { useState } from 'react',;
 import { Card, CardContent, CardFooter } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -35,7 +34,6 @@ interface ProjectCardProps {
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 '
 import Image from 'next/image';'
 import { PortfolioProject } from '@/types/resume';
@@ -49,7 +47,6 @@ interface ProjectCardProps {};
   project: PortfolioProject;
   onEdit: (project: PortfolioProject,) => void;
   onDelete: (projectId: string,) => void;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
 }
 
 }
@@ -111,7 +108,6 @@ import {}
 :src_backup/components/resume-builder/portfolio/ProjectCard.tsx
   AlertDialogTitle,
 } from '@/components / ui / alert - dialog';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
 import Image from 'next/image',;
 import { PortfolioProject } from '@/types/resume',;
@@ -193,8 +189,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {}
     setDeleteDialogOpen(false);
   };
 
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -203,12 +197,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {}
             src={project.image_url}
             alt={project.title}
 :src/components/resume-builder/portfolio/ProjectCard.tsx
-<<<<<<< HEAD
 
 :src_backup/components/resume-builder/portfolio/ProjectCard.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className="object-cover"
             loading="lazy"
           />
@@ -257,8 +248,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           )}
 :src/components/resume-builder/portfolio/ProjectCard.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           {project && project.technologies && project && project.technologies.length > 0 && (;'
             <div className='flex flex-wrap gap-1 mt-2'>;
@@ -285,13 +274,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {project && project.technologies.map((tech, index) => (;"
                 <Badge key={index} variant="secondary" className="text-xs">;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {tech}
                 </Badge>;
               ))}
             </div>;
           )}
-<<<<<<< HEAD
         </div>
       </CardContent>
         </div>
@@ -308,7 +295,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               title='GitHub'
               href = {project && project.github_url,}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
         <div className="flex gap-2">
@@ -327,7 +313,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Link>
           )}
 :src/components/resume-builder/portfolio/ProjectCard.tsx
-<<<<<<< HEAD
 ;
           {project.demo_url && (;
             <a;
@@ -372,7 +357,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={() => setDeleteDialogOpen(true)}
 
 :src_backup/components/resume-builder/portfolio/ProjectCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <Link className="h-4 w-4" />
               </Button>
             </Link>
@@ -396,7 +380,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
             <AlertDialogDescription>
 :src/components/resume-builder/portfolio/ProjectCard.tsx
-<<<<<<< HEAD
               Are you sure you want to delete this project? This action cannot be undone.
             aria-label='Delete project';
           >;'
@@ -510,35 +493,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDialogAction;
               onClick={handleDelete}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 Are you sure you want to delete this project? This action cannot
               be undone.
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
 :src/components/resume-builder/portfolio/ProjectCard.tsx
-<<<<<<< HEAD
 
 :src_backup/components/resume-builder/portfolio/ProjectCard.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 <AlertDialogAction
               onClick={handleDelete}
               className='bg-destructive text-destructive-foreground'
             >
 :src/components/resume-builder/portfolio/ProjectCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>
@@ -576,8 +549,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>);
 :src_backup/components/resume-builder/portfolio/ProjectCard.tsx
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx

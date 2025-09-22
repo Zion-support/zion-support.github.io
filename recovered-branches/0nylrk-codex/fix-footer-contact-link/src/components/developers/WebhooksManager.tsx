@@ -1,14 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";
@@ -25,15 +17,10 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function WebhooksManager() {
-=======
 export function WebhooksManager() {
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 import {useState, useEffect} from "react";"
 import {format} from "date-fns";"
 import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";"
@@ -52,7 +39,6 @@ import {ScrollArea} from "@/components/ui/scroll-area";"
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 
 export function WebhooksManager() {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const {;
     webhooks;
     loading;
@@ -84,25 +70,17 @@ export function WebhooksManager() {};
     fetchWebhooks();
   }, []);
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
-=======
 
 export function WebhooksManager() {import { useState, useEffect } from "react",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 export function WebhooksManager() {import { useState, useEffect } from "react",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",
-=======
 "
 import { useState, useEffect } from "react","
 import { format } from "date-fns","
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",
 "
 import { Button } from "@/components/ui/button","
@@ -127,7 +105,6 @@ export function WebhooksManager() {}
     createWebhook,
     toggleWebhook,
     deleteWebhook,
-<<<<<<< HEAD
     testWebhook,
 
   } = useWebhooks(),
@@ -151,42 +128,32 @@ export function WebhooksManager() {}
     fetchWebhooks()
   }, []),
 
-<<<<<<< HEAD
   const handleCreateWebhook = async () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
 
     if (webhookName.trim() === "" |webhookUrl.trim() === "" |selectedEvents.length === 0) return;
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     await createWebhook(
       webhookName
       webhookUrl
       selectedEvents
       webhookSecret.trim() === "" ? undefined : webhookSecret
-=======
   const handleCreateWebhook = async () => {}
     await createWebhook(
       webhookName;
       webhookUrl;
       selectedEvents"
       webhookSecret.trim() === "" ? undefined : webhookSecret;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     resetWebhookForm()
   }
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {}
     await toggleWebhook(webhookId, !currentStatus)
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     ),
-=======
     await createWebhook(
       webhookName
       webhookUrl
@@ -199,7 +166,6 @@ export function WebhooksManager() {}
     await toggleWebhook(webhookId, !currentStatus)
   }
     ),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     setShowCreateDialog(false),
     resetWebhookForm()
@@ -208,7 +174,6 @@ export function WebhooksManager() {}
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus)
   },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const handleDeleteWebhook = async (webhookId: string) => {
     await deleteWebhook(webhookId)
@@ -225,26 +190,19 @@ export function WebhooksManager() {}
   const resetWebhookForm = () => {
     setWebhookName("");
     setWebhookUrl("");
-=======
 
   },
 
   const resetWebhookForm = () => {"
     setWebhookName("");"
     setWebhookUrl("");"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setWebhookSecret("");
-<<<<<<< HEAD
     setSelectedEvents([])
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     setSelectedEvents([])
 
   },
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Event type options
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [
     { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' }
@@ -254,37 +212,24 @@ export function WebhooksManager() {}
     { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }]
   // Toggle an event selection;
   const toggleEvent = (event: WebhookEventType) => {}
-=======
     { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }]
   // Toggle an event selection
   const toggleEvent = (event: WebhookEventType) => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setSelectedEvents(prev =>
       prev.includes(event)
         ? prev.filter(e => e !== event)
         : [...prev, event]
     )
-<<<<<<< HEAD
 
   },
 
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
-=======
     setSelectedEvents([])  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     setSelectedEvents([])  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>"
         <CardTitle className="text-xl flex items-center">"
@@ -338,8 +283,6 @@ export function WebhooksManager() {}
                 </div>"
                 <div className="space-y-2">"
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <Input
                     id="webhook-secret"
                     type="password"
@@ -358,9 +301,6 @@ export function WebhooksManager() {}
                     {eventOptions.map((event) => (
                       <div key={event.value} className="flex items-center space-x-2">
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;
@@ -376,7 +316,6 @@ import { Switch } from "@/components/ui/switch",;
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
 import { ScrollArea } from "@/components/ui/scroll-area",;
-=======
 "
 import { useState, useEffect } from "react",;"
 import { format } from "date-fns",;"
@@ -393,7 +332,6 @@ import { Switch } from "@/components/ui/switch",;"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;"
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;"
 import { ScrollArea } from "@/components/ui/scroll-area",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 export function WebhooksManager() { return null; }
   } = useWebhooks(),;
@@ -410,27 +348,18 @@ export function WebhooksManager() { return null; }
   // Load webhooks on mount;
   useEffect(() => {;
     fetchWebhooks();
-<<<<<<< HEAD
   }, []),;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleCreateWebhook = async () => {;
-=======
 
   const handleCreateWebhook = async () => {;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (webhookName && webhookName.trim() === "" || webhookUrl && webhookUrl.trim() === "" || selectedEvents && selectedEvents.length === 0) return;
 
-=======
   }, []),;
 
   const handleCreateWebhook = async () => {;
     if (webhookName && webhookName.trim() === "" || webhookUrl && webhookUrl.trim() === "" || selectedEvents && selectedEvents.length === 0) return;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     await createWebhook(;
       webhookName, ;
       webhookUrl, ;
@@ -546,23 +475,13 @@ const resetWebhookForm = () => {;"
                 <div className="space-y-2">;"
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>;
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Input
-=======
   }, []),;                  <Input
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   }, []),;                  <Input
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 <div className="space-y-2">;
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>;
 
                   <Input
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     id="webhook-secret"
                     type="password"
                     value={webhookSecret}
@@ -583,7 +502,6 @@ const resetWebhookForm = () => {;"
 
                     onChange={(e) => setWebhookSecret(e && e.target.value)}
                     placeholder="••••••••••••••••";
-=======
 
                   <Input"
                     id="webhook-secret""
@@ -608,7 +526,6 @@ const resetWebhookForm = () => {;"
 
 "
                     placeholder="••••••••••••••••";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className="bg-zinc-800 border-zinc-700";
                   />;"
                   <p className="text-xs text-zinc-500">;
@@ -622,10 +539,6 @@ const resetWebhookForm = () => {;"
                           checked={selectedEvents && selectedEvents.includes(event && event.value)}
                           onCheckedChange={() => toggleEvent(event && event.value)}
                         />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                         <Checkbox;
                           id={event.value} 
@@ -633,14 +546,10 @@ const resetWebhookForm = () => {;"
                           checked={selectedEvents.includes(event.value)}
                           onCheckedChange={() => toggleEvent(event.value)}
                         />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Label
                           checked={selectedEvents.includes(event.value)}
                           onCheckedChange={() => toggleEvent(event.value)}
                         />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <Label
                           htmlFor={event.value}
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -672,7 +581,6 @@ const resetWebhookForm = () => {;"
             </DialogContent>
           </Dialog>
         </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         <Label
                           htmlFor={event && event.value}
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">;
@@ -866,9 +774,7 @@ return ("
 html_for={event.value}"
                           className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70";
                         >;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           {event.label}
-<<<<<<< HEAD
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
                         </Label>
                       </div>
@@ -895,9 +801,6 @@ html_for={event.value}"
           </Dialog>
         </div>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           <span className="block text - xs text - zinc - 400 mt - 1">{event.description}</span>;
 
         "
@@ -927,8 +830,6 @@ html_for={event.value}"
           </Dialog>;
         </div>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Webhooks List */}
         <div className="space - y-4">;
           {loading ? (
@@ -943,7 +844,6 @@ html_for={event.value}"
               </div>
             ))
           )}
-<<<<<<< HEAD
         </div>
       </CardContent>
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
@@ -955,7 +855,6 @@ html_for={event.value}"
         </Button>
       </CardFooter>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         onOpenChange={(open) => {
           if (!open) {
             setShowTestDialog(null);
@@ -963,11 +862,7 @@ html_for={event.value}"
             if (showTestResult) {}
               setShowTestResult(false);
               clearTestResult()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
         onOpenChange={(open) => {
           if (!open) {
             setShowTestDialog(null);
@@ -976,7 +871,6 @@ html_for={event.value}"
               setShowTestResult(false);
               clearTestResult()
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   </div>;
                 </div>;
               </div>;
@@ -1035,7 +929,6 @@ html_for={event.value}"
 
                     <DropdownMenu>;
 <DropdownMenuTrigger asChild>;                        <Button variant="ghost" size="icon">;
-=======
                       <DropdownMenuTrigger asChild>;
                       </span>;
                     </div>;
@@ -1043,7 +936,6 @@ html_for={event.value}"
                       <DropdownMenuTrigger as_child>;
 
                         <Button variant="ghost" size="icon">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           <MoreVertical size={16} />;
                         </Button>;
                       </DropdownMenuTrigger>;
@@ -1087,23 +979,15 @@ if (!open) {      <CardFooter className="justify-between border-t border-zinc-80
         open={showTestDialog !== null} 
         onOpenChange={(open) => {;
           if (!open) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             setShowTestDialog(null);
             setTestEventType('new_application');
             if (showTestResult) {;
               setShowTestResult(false);
               clearTestResult();
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-            }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
             }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+            }
           }
         }}
 
@@ -1133,9 +1017,6 @@ if (!open) {      <CardFooter className="justify-between border-t border-zinc-80
                       <SelectValue placeholder="Select an event type" />;
                     </SelectTrigger>;"
                     <SelectContent className="bg-zinc-900 border-zinc-800">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                       {eventOptions && eventOptions.map((option) => (;
                         <SelectItem key={option && option.value} value={option && option.value}>;
                           {option && option.label}
@@ -1145,21 +1026,14 @@ if (!open) {      <CardFooter className="justify-between border-t border-zinc-80
 </SelectContent>;
                   </Select>;
                   <p className="text-xs text-zinc-500">;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     The event type will determine the structure of the test payload.;
                   </p>;
                 </div>;
               </div>;                  clearTestResult()
-=======
 
                     The event type will determine the structure of the test payload.;
                   </p>;
                 </div>;
-=======
                     <SelectContent className="bg-zinc-900 border-zinc-800">;
                       {eventOptions && eventOptions.map((option) => (;
                         <SelectItem key={option && option.value} value={option && option.value}>;
@@ -1173,12 +1047,9 @@ if (!open) {      <CardFooter className="justify-between border-t border-zinc-80
                     The event type will determine the structure of the test payload.;
                   </p>;
                 </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>;
 
-=======
                 <Button variant="default" onClick={() => {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   setShowTestDialog(null),
                   setShowTestResult(false),
                   clearTestResult()
@@ -1188,14 +1059,12 @@ if (!open) {      <CardFooter className="justify-between border-t border-zinc-80
                 </Button>"
                 <Button variant="outline" onClick={() => {}
                   clearTestResult()
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 }}>
                   Test Another Event;
                 </Button>
               </DialogFooter>
             </>
 
-<<<<<<< HEAD
                       className={
                         test_result && test_result.status >= 200 && test_result.status < 300;
                           ? "bg - green - 700";
@@ -1242,7 +1111,6 @@ if (!open) {      <CardFooter className="justify-between border-t border-zinc-80
                       <pre className="text - xs font - mono text - zinc - 300 whitespace - pre - wrap break - all">;
                         {test_result?.response_body || "No response body"}
               ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <DialogFooter>;
                 <Button variant="outline" onClick={() => setShowTestDialog(null)}>;
                   Cancel;
@@ -1278,7 +1146,6 @@ if (!open) {      <CardFooter className="justify-between border-t border-zinc-80
                     <Label>Response Status</Label>;
                     <Badge;
                       className={;
-<<<<<<< HEAD
                         testResult && testResult.status >= 200 && testResult.status < 300;
 
                       className={}
@@ -1289,8 +1156,6 @@ if (!open) {      <CardFooter className="justify-between border-t border-zinc-80
                       }
                     >;
                       {testResult?.status} {testResult?.statusText}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     </Badge>;
                   </div>;
                   ;
@@ -1299,10 +1164,6 @@ if (!open) {      <CardFooter className="justify-between border-t border-zinc-80
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">;
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;
                         {testResult?.responseBody || "No response body"}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       </pre>;
                     </ScrollArea>;
                   </div>;
@@ -1334,35 +1195,22 @@ Test Another Event;
                 </Button>;
               </DialogFooter>;
             </>;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           )}
-=======
                         testResult && testResult.status >= 200 && testResult.status < 300;                  Test Another Event;
                 </Button>;
               </DialogFooter>;
             </>;          )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                         testResult && testResult.status >= 200 && testResult.status < 300;                  Test Another Event;
                 </Button>;
               </DialogFooter>;
             </>;          )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   Test Another Event;
                 </Button>;
               </DialogFooter>;
             </>;
 
           )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </DialogContent>
       </Dialog>
       {/* Delete Webhook Confirmation Dialog */}
@@ -1383,11 +1231,7 @@ Test Another Event;
               Cancel;
             </AlertDialogCancel>
 <AlertDialogAction
-<<<<<<< HEAD
-<<<<<<< HEAD
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 }}>;
                   Test Another Event;
                 </Button>;
@@ -1410,10 +1254,7 @@ onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
                   setShowTestResult(false);
 
               This action will permanently remove this webhook.;
-=======
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}              This action will permanently remove this webhook.;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       {/* Delete Webhook Confirmation Dialog */}
       <AlertDialog
         open={showDeleteConfirm !== null} 
@@ -1459,13 +1300,11 @@ onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
                 <Button variant="outline" onClick={() => {;
                   setShowTestResult(false);
               This action will permanently remove this webhook.;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               You will no longer receive events at this endpoint.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
 
-<<<<<<< HEAD
               className="bg-red-600 hover: bg-red-700";            <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
               className="bg-red-600 hover: bg-red-700";
 <AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700">;
@@ -1475,7 +1314,6 @@ onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
               on_click={() => showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm)}
               className="bg - red - 600 hover: bg - red - 700";
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction ;
@@ -1492,12 +1330,6 @@ Delete;
   )
 }"
               className="bg-red-600 hover: bg-red-700";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             >;
               Delete;
 
@@ -1537,11 +1369,9 @@ export function WebhooksManager() {
         </AlertDialogContent>;
       </AlertDialog>;
 
-<<<<<<< HEAD
     </Card>;
   ); export function WebhooksManager () {}
   const {};
-=======
     </Card>);
 }
 
@@ -1550,7 +1380,6 @@ export function WebhooksManager() {
     </Card>;
 ); export function WebhooksManager () {
   const {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   webhooks;
 loading;
 testResult;
@@ -1606,11 +1435,9 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
 }className="flex items-center space-x-2"> <Checkbox id= {"
 }/> <Label htmlFor= {
 event.value 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" > </Label> </div>) )
 }</div> </div> </div> <DialogFooter> 
 
-<<<<<<< HEAD
 }> Cancel </Button> <Button onClick= {}
   handleCreateWebhook;
 }disabled= {"
@@ -1707,13 +1534,11 @@ option.label
   testResult?.status 
 }{
   testResult?.statusText 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }</Badge> </div> <div className="space-y-2 mt-4"> <Label>Response Body</Label> <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4"> </pre> </ScrollArea> </div> </div> </div> <DialogFooter> setShowTestDialog (null);
 setShowTestResult (false);
 clearTestResult ();
 }
 }> Close </Button> Test Another Event </Button> </DialogFooter> </>) 
-<<<<<<< HEAD
 }</DialogContent> </Dialog> {}
   /* Delete Webhook Confirmation Dialog */ 
 }<AlertDialog open= {}
@@ -1723,30 +1548,17 @@ clearTestResult ();
 }<AlertDialog open= {
   showDeleteConfirm !== null;
   (open) => !open && setShowDeleteConfirm (null) 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) 
 }
     </Card>;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook? <AlertDialogDescription className="text-zinc-400"> This action will permanently remove this webhook. You will no longer receive events at this endpoint.   <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel  <AlertDialogAction > Delete     )"
 pr-12325
 </AlertDialog>"
 }> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>)"
     </Card>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

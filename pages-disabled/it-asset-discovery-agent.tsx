@@ -28,9 +28,7 @@ class ErrorBoundary extends React.Component {}
   }
 }'
 import React from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <UltraFuturisticBackground variant='space' intensity='high'>
       <Head>
@@ -70,7 +68,6 @@ import React from 'react';
                   className='text-cyan-300 underline'
                   href='https://aws.amazon.com/config/pricing/'
                   target='_blank'
-<<<<<<< HEAD
                   rel='noopener noreferrer'
                 >
                   AWS Config
@@ -117,10 +114,8 @@ import Card from '../components/ui/Card',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Card from '../components/ui/Card',
                   rel='noopener noreferrer'>;
-<<<<<<< HEAD
 import Head from 'next / head';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
-=======
 '
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground','
 import Card from '../components/ui/Card',';
@@ -128,7 +123,6 @@ import Card from '../components/ui/Card',';
 '
 import Head from 'next / head';'
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Card from '../components / ui / Card';
 ;
 export default /**;
@@ -176,7 +170,6 @@ function ITAssetDiscoveryAgentPage() {}
                   target='_blank';'
                   rel='noopener noreferrer';
                 >;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   AWS Config;
                 </a>;
               </li>;
@@ -188,49 +181,31 @@ function ITAssetDiscoveryAgentPage() {}
                   target='_blank';'
                   rel='noopener noreferrer';
                 >;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   Azure Monitor;
                 </a>;
               </li>;
               <li>;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   GCP Asset Inventory;
                 </a>;
               </li>;
             </ul>;
           </Card>;
         </div>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             Contact Sales;
           </a>;
         </div>;
       </div>;
-<<<<<<< HEAD
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Card from '../components/ui/Card',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function ITAssetDiscoveryAgentPage() {
-=======
 '
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground','
 import Card from '../components/ui/Card',
 
 export default function ITAssetDiscoveryAgentPage() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	return (
 		<UltraFuturisticBackground variant="space" intensity="high">
 			<Head>
@@ -245,17 +220,13 @@ export default function ITAssetDiscoveryAgentPage() {}
 					<Card className="p-6 bg-black/40 border border-gray-800">"
 						<h2 className="font-semibold mb-2">Features</h2>"
 						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 							<li>Agentless cloud inventory</li>
 							<li>Network scan integrations</li>
 							<li>Export to CMDB/ITSM</li>
 							<li>Drift and anomaly alerts</li>
 						</ul>
 					</Card>
-<<<<<<< HEAD
     </UltraFuturisticBackground>);
 ;
 
@@ -271,18 +242,7 @@ export default function ITAssetDiscoveryAgentPage() {}
 			</div>
 		</UltraFuturisticBackground>
 	)
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 ;
 '";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

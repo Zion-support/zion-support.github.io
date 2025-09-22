@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Download, FileText, Mail, BarChart3 } from "lucide-react",;
@@ -22,10 +21,8 @@ export function BillingHeader() {;
           <Button variant="outline" size="sm" className="gap-1" asChild>;
             <Link to="/dashboard/client/analytics">;
               <BarChart3 className="h-4 w-4" />;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               Analytics;
             </Link>;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD

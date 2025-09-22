@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Project } from '@/types/projects',
 import { useState } from "react",
 import { Star } from 'lucide-react'
@@ -30,14 +28,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     ? talentProfile?.full_name || "Talent" "
     : clientProfile?.full_name || "Client",
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {}
   const { user } = useAuth(),
@@ -97,8 +89,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           submit feedback
         </CardDescription>
       </CardHeader>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <CardContent>
         {isCompleted ? ("
           <div className="space-y-6">
@@ -120,7 +110,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                     <p className="text-sm text-muted-foreground mb-3">
                       Your review is {userReview.status === "approved" ? "published" : "pending approval"}
                     </p>
-<<<<<<< HEAD
                     {userReview.status === "pending" && (
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>
                         Edit Review;
@@ -232,12 +221,8 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
                       Your review will help build a trustworthy community;
                     </p>;
                     <Button onClick={(,) => setIsReviewModalOpen(true)}>;                      Leave Review;
-=======
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       Leave Review;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </Button>;
                   </div>;
 ) : hasLeftReview ? (;
@@ -250,7 +235,6 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
                         Edit Review;
                       </Button>;
-<<<<<<< HEAD
                     )}
                   </div>;
                 ) : null}
@@ -265,7 +249,6 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
 
 <ReviewsList
 <ReviewsList;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               reviews = {reviews,}
               isLoading = {isLoading,}
               onReportReview = {reportReview,}
@@ -273,9 +256,7 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
       {/* Review Modal */}
 {(isClient || isTalent) && (;
 
-<<<<<<< HEAD
         <LeaveReviewModal
-<<<<<<< HEAD
           projectId = {project && project.id,}          revieweeId = {revieweeId,}
           revieweeName = {revieweeName,}
           isOpen = {isReviewModalOpen,}
@@ -287,12 +268,10 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
           onClose = {(,) => setIsReviewModalOpen(false),}
 
       )}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </Card>;
   );
 }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
             <ReviewsList;
 pr-12325
@@ -443,7 +422,6 @@ pr-12325
               able to leave reviews;
             </p>;
           </div>)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </CardContent>;
       {/* Review Modal */}
       {(isClient ||,  isTalent) && (;
@@ -467,13 +445,7 @@ pr-12325
     </Card>;
   );
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

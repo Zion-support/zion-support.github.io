@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import React from 'react'
@@ -7,16 +6,10 @@ import React from 'react',;
 import Head from 'next/head',;
 import React from 'react'
 import Head from 'next/head'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function TransportationLogisticsSolutions() {
-=======
 
 export default function TransportationLogisticsSolutions() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
       <Head>
@@ -61,9 +54,6 @@ function TransportationLogisticsSolutions() {}
       </div>;
     </>);
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Head from 'next/head';
 import React from 'react'
 import Head from 'next/head'
@@ -72,7 +62,6 @@ import Head from 'next/head',;
 import React from 'react'
 import Head from 'next/head'
 export default function TransportationLogisticsSolutions() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
@@ -110,7 +99,6 @@ function TransportationLogisticsSolutions() {}
       </div>;
     </>);
 }
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 export default function TransportationLogisticsSolutions() {_return (
@@ -133,14 +121,6 @@ export default function TransportationLogisticsSolutions() {_return (
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

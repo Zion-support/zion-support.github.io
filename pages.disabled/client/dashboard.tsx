@@ -1,27 +1,15 @@
 :pages_backup/client/dashboard.tsx
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
-<<<<<<< HEAD:pages/client/dashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   if (error) return <div className='text-red-600'>Failed to load</div>;  if (!data) return <div>Loading…</div>;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import useSWR from 'swr';
 import Link from 'next/link';
 const fetcher = null;
     mutate()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const jobs = data.jobs as any[];
-=======
 
   if (error) return <div className='text-red-600'>Failed to load</div>;  if (!data) return <div>Loading…</div>;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
 
   const jobs = data.jobs as any[];
 '
@@ -40,34 +28,22 @@ export default function ClientDashboard() { return null; }
     await fetch(`/api/jobs/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD:pages/client/dashboard.tsx
-<<<<<<< HEAD
       body: JSON.stringify({ status: 'Closed' })}),
     mutate();
     } catch (error) {";
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 :pages_backup/client/dashboard.tsx
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 body: JSON.stringify({ status: 'Closed' }),
     });
     mutate();
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/dashboard.tsx
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
-=======
 body: JSON.stringify({ status: 'Closed' }),
     });
     mutate();
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/client/dashboard.tsx
   }
 }
   return ("
@@ -140,8 +116,6 @@ export default function ClientDashboard(req, res) {}
                 </button>
               </div>
 :pages/client/dashboard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </div>
         ))}
@@ -149,22 +123,13 @@ export default function ClientDashboard(req, res) {}
     </div>
 );
 :pages/client/dashboard.tsx
-<<<<<<< HEAD
 
       </div>;
     </div>;
   );
 
 :pages_backup/client/dashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
   )
 }'
     <div className='space - y-4'>;'
@@ -222,7 +187,6 @@ export default function ClientDashboard(req, res) {}
     </div>);
 ;
 :pages_backup/client/dashboard.tsx
-<<<<<<< HEAD
 
               </div>
             </div>
@@ -231,10 +195,8 @@ export default function ClientDashboard(req, res) {}
 }
 
 :pages_backup/client/dashboard.tsx
-<<<<<<< HEAD
 
 :pages_backup/client/dashboard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const jobs = data.jobs as any[];
 ;
   async /**
@@ -260,22 +222,18 @@ function close_job() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
   return (
 
               </div>
             </div>
           </div>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               </div>
             </div>
           </div>
 
 }
 
-=======
   return (
 
     <div className="space-y-4">
@@ -390,7 +348,6 @@ export default function ClientDashboard(req, res) {
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/client/dashboard.tsx
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>
           </div>
         ))}
@@ -400,11 +357,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 :pages_backup/client/dashboard.tsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     <div className='space - y-4'>;
       <div className='flex items - center justify - between'>;
         <h1 className='text - 2xl font - semibold'>Your Jobs</h1>;
@@ -636,14 +588,11 @@ export default function ClientDashboard(req, res) {
 
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/client/dashboard.tsx
         ))  } catch (error) {
     console.error("Error:", error);
-=======
 
         ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -656,34 +605,11 @@ export default function ClientDashboard(req, res) {
   }
 }
 :pages_backup/client/dashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :pages_backup/client/dashboard.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/dashboard.tsx
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/client/dashboard.tsx

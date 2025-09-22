@@ -54,7 +54,6 @@ description: 'Secure document management and workflow automation',
     benefits: ['Document storage', 'Workflow automation', 'Version control', 'Collaboration']
   },
   {
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/government.tsx
   },
   {
     icon: CheckCircle,
@@ -334,7 +333,6 @@ const benefits = [;
   'Reduced operational costs',;
   'Increased government efficiency';
 ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: CheckCircle,
     title: 'Workflow Automation',
     description: 'Automated government processes and approvals'
@@ -421,7 +419,6 @@ const benefits = [
   'Increased government efficiency'
 ];
 export default function GovernmentSolutions() {
-<<<<<<< HEAD
     icon: Database,
     title: 'Data Management',
     description: 'Secure data management and analytics for government data',
@@ -484,7 +481,6 @@ return (
                 </button>
               </div>
             </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>
         </section>
 
@@ -501,9 +497,7 @@ return (
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our government solutions are built with security and compliance in mind.
 </p>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/government.tsx
               </p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
@@ -514,7 +508,6 @@ return (
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -534,7 +527,6 @@ return (
                     {feature.description}
                   </p>
                 </div>
-<<<<<<< HEAD
         <section className="bg-gradient-to-r from-gray-700 to-blue-800 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center">;
@@ -717,19 +709,16 @@ All our government solutions are built with security and compliance in mind, ;
                   </div>;
                 </motion && motion.div>;
               ))}
-=======
                       </div>
                     ))}
                   </div>
                 </motion.div>
               ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -762,7 +751,6 @@ All our government solutions are built with security and compliance in mind, ;
 </div>
         </section>
       </div>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/government.tsx
     </Layout>
     </Layout>
     </>
@@ -774,4 +762,3 @@ All our government solutions are built with security and compliance in mind, ;
     </Layout>
     </Layout>
     </>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

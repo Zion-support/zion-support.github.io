@@ -1,32 +1,20 @@
 :pages_backup/api/deploy/export.ts
-<<<<<<< HEAD:pages/api/deploy/export.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/deploy/export.ts
 
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 
 :pages_backup/api/deploy/export.ts
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query
   if (!id |typeof id !== 'string') {
     return res.status(400).json({ error: 'Missing id' })
 :pages_backup/api/deploy/export.ts
-<<<<<<< HEAD:pages/api/deploy/export.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default /**
@@ -60,30 +48,25 @@ id,
   res.setHeader('Content-Typeapplication/json'),
   return res.status(200).json(fake);
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     id
 
     note: 'This is a stub export. Connect to persistence to return real deployment state.'}
   res.setHeader('Content-Typeapplication/json')
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/deploy/export.ts
   return res.status(200).json(fake);
 };
 
     id
-=======
   return res.status(200).json(fake);
 };
 
     id,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/deploy/export.ts
 
     note: 'This is a stub export. Connect to persistence to return real deployment state.'}
   res.setHeader('Content-Typeapplication/json')
   return res.status(200).json(fake);
 };
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Export endpoint' });
@@ -120,9 +103,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/api/deploy/export.ts
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/deploy/export.ts
-<<<<<<< HEAD
   // In a real system, look up persisted deployment by id;
   const fake = {;
     id;
@@ -138,28 +118,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
-=======
 pr-12243
 
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/deploy/export.ts
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -168,26 +141,13 @@ pr-12243
 }
 
 :pages_backup/api/deploy/export.ts
-<<<<<<< HEAD:pages/api/deploy/export.ts
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/deploy/export.ts
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/deploy/export.ts

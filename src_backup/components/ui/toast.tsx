@@ -1,6 +1,4 @@
 :src/components/ui/toast.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -14,8 +12,6 @@ import { cn } from '@/lib/utils'
 import { logInfo } from '@/utils/productionLogger'
 const ToastProvider = ToastPrimitives.Provider; import { logInfo } from '@/utils/productionLogger'
 :src/components/ui/toast.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const ToastProvider = ToastPrimitives.Provider
 
 const ToastViewport = React.forwardRef<
@@ -24,8 +20,6 @@ const ToastViewport = React.forwardRef<
 >(({ className, ...props }, ref) => (
 :src_backup/components/ui/toast.tsx
   <ToastPrimitives.Viewport
-<<<<<<< HEAD
-<<<<<<< HEAD
     ref={ref}
     className={cn(
       "fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]",
@@ -75,14 +69,11 @@ const ToastViewport = React.forward_ref<;
 
     {...props}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 :src_backup/components/ui/toast.tsx
 
 const toastVariants = cva(
-=======
 const toastVariants = cva("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/toast.tsx
   "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full",
   {}
     variants: {}
@@ -95,8 +86,6 @@ const toastVariants = cva("
         info: "border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100"}},
 :src_backup/components/ui/toast.tsx
     defaultVariants: {
-<<<<<<< HEAD
-<<<<<<< HEAD
       variant: "default"}}
 )
 const Toast = React.forwardRef<
@@ -104,12 +93,9 @@ const Toast = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
     VariantProps<typeof toastVariants>
 >(({ className, variant, ...props }, ref) => {
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/toast.tsx
 
 const Toast = React.forwardRef<
-=======
 const ToastProvider = ToastPrimitives.Provider
 
     {...props}
@@ -118,7 +104,6 @@ const ToastProvider = ToastPrimitives.Provider
   />
 ))
 ToastViewport.displayName = ToastPrimitives.Viewport.displayNameconst Toast = React.forwardRef<
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   React.ElementRef<typeof ToastPrimitives.Root>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
     VariantProps<typeof toastVariants>
@@ -167,10 +152,7 @@ const ToastAction = React && React.forwardRef<;
 :src_backup/components/ui/toast.tsx
   <ToastPrimitives&& ToastPrimitives.Action
 
-<<<<<<< HEAD:src/components/ui/toast.tsx
-=======
   <ToastPrimitives&& ToastPrimitives.Action;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/toast.tsx
   />));
 ToastViewport.display_name = ToastPrimitives.Viewport.display_name;
 const toast_variants = cva ('
@@ -214,13 +196,10 @@ const ToastAction = React.forward_ref<;
 
 :src/components/ui/toast.tsx
     ref={ref}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     className={cn(
-=======
   <ToastPrimitives&& ToastPrimitives.Close;
     ref={ref}
     className={cn('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/toast.tsx
       'absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600'
       className;
     )}
@@ -262,7 +241,6 @@ const ToastDescription = React.forward_ref<;
 ToastDescription.display_name = ToastPrimitives.Description.display_name;
 type ToastProps = React.ComponentPropsWithoutRef < typeof Toast>;
 type ToastActionElement = React.ReactElement < typeof ToastAction>;
-<<<<<<< HEAD:src/components/ui/toast.tsx
 export {
   type ToastProps
   type ToastActionElement
@@ -278,7 +256,6 @@ export {
 // export function useToast() {
 //   return {
 
-=======
 export {};
   type ToastProps;
   type ToastActionElement;
@@ -299,7 +276,6 @@ export {};
   </ToastPrimitives && ToastPrimitives.Close>;
 ));
 ToastClose && ToastClose.displayName = ToastPrimitives && ToastPrimitives.Close.displayName;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/toast.tsx
 
 :src/components/ui/toast.tsx
 const ToastTitle = React && React.forwardRef<;
@@ -310,9 +286,7 @@ const ToastTitle = React && React.forwardRef<;
 //     },;
 //   };
 // };
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 :src_backup/components/ui/toast.tsx
     <ToastPrimitives.Root
@@ -321,14 +295,12 @@ import * as ToastPrimitives from "@radix-ui/react-toast";
 import { cva, type VariantProps } from "class-variance-authority";
 import { X } from 'lucide-react';
 import { cn } from "@/lib/utils";
-=======
     <ToastPrimitives.Root"
 import * as React from "react";"
 import * as ToastPrimitives from "@radix-ui/react-toast";"
 import { cva, type VariantProps } from "class-variance-authority";'
 import { X } from 'lucide-react';"
 import { cn } from "@/lib/utils";'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/toast.tsx
 import { logInfo } from '@/utils/productionLogger',;
 const ToastProvider = ToastPrimitives.Provider;
 const ToastViewport = React.forwardRef<;
@@ -338,7 +310,6 @@ const ToastViewport = React.forwardRef<;
   <ToastPrimitives.Viewport;
 
 :src/components/ui/toast.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ref={ref}
     className={cn(;"
       "fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]",;
@@ -446,8 +417,6 @@ export {;
 // export function useToast() { return null; }
 //       logInfo('Toast:', { data: props });
 :src/components/ui/toast.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 //     };
 //   }
 
@@ -460,13 +429,8 @@ export {;
 // }
 :src/components/ui/toast.tsx
 //   }
-<<<<<<< HEAD:src_backup/components/ui/toast.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // }
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/toast.tsx
 //     // Accept a loosely typed props object to allow custom fields like `description`
 //     toast: (props: any,) => {
 //       // Implementation of toast functionality
@@ -475,8 +439,4 @@ export {;
 //   }
 // }
 :src/components/ui/toast.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 // }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/toast.tsx

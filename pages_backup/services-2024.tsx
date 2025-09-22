@@ -1,6 +1,3 @@
-<<<<<<< HEAD:pages/services-2024.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Search,
   Filter,
@@ -17,26 +14,18 @@ import {
   CheckCircle,
   Zap,;
   Sparkles,;} from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {;
   Search, Filter, Star, Users, TrendingUp,;
   Brain, Atom, Cpu, Shield, Database, Cloud,;
   ArrowRight, CheckCircle, Zap, Sparkles;
 } from 'lucide-react',;
-<<<<<<< HEAD
 
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 import Link from 'next/link';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 :pages_backup/services-2024.tsx
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -49,16 +38,12 @@ import { innovativeITServices2024  } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 import Link from 'next/link';
 const Services2024Page: React.FC;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
-=======
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';'
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';'
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
 import Link from 'next/link';
 const Services2024Page: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -67,8 +52,6 @@ const Services2024Page: React.FC = () => {
     'name' | 'price' | 'rating' | 'customers';
   >('name');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
   // Combine all services;
   const allServices = [;
     ...realMicroSaasServices2024,;
@@ -84,7 +67,6 @@ const Services2024Page: React.FC = () => {
         service && service.features.some(feature =>;
           feature && feature.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
         );
-<<<<<<< HEAD
 
       const matchesCategory =;'
         selectedCategory === 'all' ||;'
@@ -113,7 +95,6 @@ const Services2024Page: React.FC = () => {
           bValue = parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
 
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
       const matchesCategory =
         selectedCategory === 'all' |
         (selectedCategory === 'ai' && service.variant.includes('ai')) |
@@ -139,12 +120,8 @@ let aValue: any, bValue: any;
         case 'price':
           aValue = parseFloat(a.price.replace(/[^0-9.]/g, ''));
           bValue = parseFloat(b.price.replace(/[^0-9.]/g, ''));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           break;
-=======
           break;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
         case 'rating':;
           aValue = a && a.rating;
           bValue = b && b.rating;
@@ -153,19 +130,15 @@ let aValue: any, bValue: any;
           aValue = parseInt(a && a.customers.replace(/[^0-9]/g, ''));'
           bValue = parseInt(b && b.customers.replace(/[^0-9]/g, ''));
           break;
-<<<<<<< HEAD
         default:;
           aValue = a && a.name.toLowerCase();
           bValue = b && b.name.toLowerCase();
       }
-<<<<<<< HEAD:pages_backup/services-2024.tsx
-<<<<<<< HEAD
 default:
           aValue = a.name.toLowerCase();
           bValue = b.name.toLowerCase();
 origin/cursor/automate-test-improve-and-merge-code-2533
       }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     });
     return filtered;
@@ -225,8 +198,6 @@ id: 'customer'
       icon: CheckCircle
       count: allServices.filter(s => s.variant.includes('customer')).length
     },  ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       id: 'customer',
       name: 'Customer Success',
       icon: CheckCircle,
@@ -234,7 +205,6 @@ id: 'customer'
     },
   ];
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain;
     if (variant.includes('security')) return Shield;
@@ -250,15 +220,11 @@ return Sparkles;
   };
 
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     if (variant.includes('customer')) return CheckCircle;
 return Sparkles;
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const getVariantColor = (variant: string) => {
     if (variant.includes('ai')) return 'from-blue-500 to-cyan-500';
     if (variant.includes('security')) return 'from-red-500 to-pink-500';
@@ -268,11 +234,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
-<<<<<<< HEAD
-<<<<<<< HEAD
     return 'from-gray-500 to-slate-500';  }
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const Services2024Page: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -369,13 +332,9 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500',
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500',
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return 'from-gray-500 to-slate-500'
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const Services2024Page: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -471,15 +430,9 @@ const getVariantIcon = (variant: string) => {
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500',
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500',
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return 'from-gray-500 to-slate-500'
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain,
     if (variant.includes('security')) return Shield,
@@ -504,29 +457,21 @@ const getVariantIcon = (variant: string) => {
   },
 :pages_backup/services-2024.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 return 'from-gray-500 to-slate-500';
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services-2024.tsx
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
-=======
 return 'from-gray-500 to-slate-500';
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 
         />;'
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/services-2024' />;
       </Head>;
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
     <>
       <Head>
         <title>2024 Revolutionary Services - Zion Tech Group</title>"
@@ -536,8 +481,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
 
 :pages_backup/services-2024.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Hero Section */}
 
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -547,8 +490,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
             <motion.div
@@ -556,9 +497,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <UltraFuturisticBackground2034 intensity={0.8} theme="quantum" />
-=======
         {/* Hero Section */}
 "
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">"
@@ -568,7 +507,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               animate={{ opacity: 1, y: 0 }}
 "
       <UltraFuturisticBackground2034 intensity={0.8} theme="quantum" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
       <div className="relative z-10 min-h-screen">
         {/* Hero Section */  } catch (error) {"
     console.error("Error:", error);"
@@ -593,34 +531,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
                 <Sparkles className="w-5 h-5 text-cyan-400" />
                 <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
               </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 :pages_backup/services-2024.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Future-Ready
-=======
                   Future-Ready;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
                 </span>
                 <br />'
                 <span className='text-white'>Solutions</span>
@@ -631,11 +556,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Sparkles className="w-5 h-5 text-cyan-400" />
                 <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
               </div>
-<<<<<<< HEAD
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-=======
 "
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">"
                 <Sparkles className="w-5 h-5 text-cyan-400" />"
@@ -643,7 +566,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
 "
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
 
                   Future-Ready;
@@ -655,10 +577,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="text-white">Solutions</span>
               </h1>
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
                 Experience the next generation of AI, quantum security, and enterprise IT solutions. 
                 Transform your business with our revolutionary 2024 service portfolio.
@@ -668,21 +587,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>"
                   <div className="text-gray-400">Revolutionary Services</div>
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">17</div>
                   <div className="text-gray-400">Service Categories</div>
                 </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className='text-center'>
                   <div className='text-3xl font-bold text-pink-400 mb-2'>
                     4.8
@@ -695,25 +604,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <div className='text-gray-400'>Happy Customers</div>
                 </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD:pages/services-2024.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
         <section className="px-4 sm:px-6 lg:px-8 mb-16">
           <div className="max-w-7xl mx-auto">
             <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm">
               <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     <input
                       type="text"
                       placeholder="Search services by name, features, or description..."
@@ -729,14 +630,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='lg:col-span-2'>
                   <div className='relative'>
                     <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <input
                       type="text"
                       placeholder="Search services by name, features, or description..."
                       value={searchQuery}
-<<<<<<< HEAD
-<<<<<<< HEAD
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -745,14 +642,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       type="text"
                       placeholder="Search services by name, features, or description..."
                       value={searchQuery}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <input
                       type="text"
-=======
                     <input"
                       type="text""
                       placeholder="Search services by name, features, or description..."
@@ -760,7 +651,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     <input"
                       type="text""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
                       placeholder="Search services by name, features, or description..."
                       value={searchQuery  } catch (error) {"
     console.error("Error:", error);"
@@ -768,8 +658,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/services-2024.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200"
                     />
                   </div>
@@ -783,19 +671,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     />
                   </div>
                 </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
                 {/* Category Filter */}
                 <div>;
                   <select;
                     value={selectedCategory}
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages_backup/services-2024.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 onChange={e => setSelectedCategory(e.target.value)}
                     className='w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'
                   >
@@ -803,13 +684,10 @@ onChange={e => setSelectedCategory(e.target.value)}
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     ))}
                   </select>
                 </div>
                 {/* Sort */}
-<<<<<<< HEAD
                 <div className='flex space-x-2'>
                 {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
@@ -842,10 +720,7 @@ onChange={e => setSelectedCategory(e.target.value)}
 
 :pages_backup/services-2024.tsx
                 {/* Sort */  } catch (error) {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
                 {/* Sort */  } catch (error) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -858,10 +733,7 @@ onChange={(e) => setSortBy(e.target.value as any)} className="flex-1 px-4 py-3 b
                   </select>
                   <button
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <select
-=======
 
                 {/* Sort */  } catch (error) {"
     console.error("Error:", error);"
@@ -871,7 +743,6 @@ onChange={(e) => setSortBy(e.target.value as any)} className="flex-1 px-4 py-3 b
                 <div className="flex space-x-2">
 
                   <select;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
                     value={sortBy}
                     onChange={e => setSortBy(e && e.target.value as any)}'
                     className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200';
@@ -884,9 +755,6 @@ if ( {) {}
   $2;
 }
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='flex space-x-2'>
                   <select
                     value={sortBy}
@@ -905,11 +773,7 @@ if ( {) {}
                     className='px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200'
                   >
                     {sortOrder === 'asc' ? '↑' : '↓'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   </button>
                 </div>
               </div>
@@ -917,13 +781,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
 
 :pages_backup/services-2024.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
                   </button>;
                 </div>;
               </div>;
@@ -937,7 +796,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <div className='max - w-7xl mx - auto'>;
             {filtered_services.length === 0 ? ('
               <div className='text - center py - 20'>;'
@@ -983,14 +841,10 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                     className='group'
                   >
                     <div className='bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {/* Service Header */}
                       <div className='flex items - start justify - between mb - 4'>;
-=======
                       {/* Service Header */}'
                       <div className='flex items - start justify - between mb - 4'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
                         <div className='w - 12 h - 12 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 rounded - lg flex items - center justify - center'>;
                           {React.create_element (
                             getVariantIcon (service.variant),
@@ -1004,10 +858,7 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                         <div className='text - right'>;'
                           <div className='text - 2xl font - bold text - cyan - 400'>;
                             {service.price}
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages_backup/services-2024.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {filteredServices.length === 0 ? (
               <div className="text-center py-20">
                 <div className="text-6xl mb-4">🔍</div>
@@ -1019,14 +870,11 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                 {filteredServices.map((service, index) => (
 :pages_backup/services-2024.tsx
                   <motion.div
-<<<<<<< HEAD
                     key={service.id  } catch (error) {
     console.error("Error:", error);
-=======
                   <motion.div;
                     key={service.id  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1041,7 +889,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
   }
 }
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
                     transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                     <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
                       {/* Service Header */  } catch (error) {
@@ -1062,13 +909,8 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                         <div className="text-right">
                           <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                           <div className="text-sm text-gray-400">per month</div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         </div>
                       </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           </div>
                           <div className='text-sm text-gray-400'>per month</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1081,8 +923,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <p className='text-gray-300 mb-4 leading-relaxed'>
                         {service.tagline}
                       </p>
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </p>
                       <div className='flex items-start justify-between mb-4'>;
                         <div className='w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center'>;
@@ -1094,23 +934,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           )}
                         </div>;
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <div className='text-right'>;
-=======
 
 '
                         <div className='text-right'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
                           <div className='text-2xl font-bold text-cyan-400'>;
                             {service && service.price}
                           </div>;'
                           <div className='text-sm text-gray-400'>per month</div>                        </div>;
                       </div>;
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
 
                       {/* Service Info */}
                       <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>;
@@ -1121,18 +954,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       {/* Features */}
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <div className="mb-6">
                         <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Features</h4>
-=======
 
 "
                       <div className="mb-6">"
                         <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Features</h4>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
                         <div className="space-y-2">
                           {service.features.slice(0, 3).map((feature, featureIndex) => ("
                             <div key={featureIndex} className="flex items-center space-x-2">"
@@ -1143,7 +970,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {service.features.length > 3 && (
                             <div className="text-sm text-cyan-400">
                               +{service.features.length - 3} more features
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                             </div>
 
 :pages_backup/services-2024.tsx
@@ -1186,19 +1012,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <div className="text-sm text-cyan-400">
                               +{service.features.length - 3} more features
                             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                             </div>
 
                           {service.features.length > 3 && (
                             <div className="text-sm text-cyan-400">
                               +{service.features.length - 3} more features
                             </div>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services-2024.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       {/* Features */}
 <div className='mb-6'>
                         <h4 className='text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider'>
@@ -1231,11 +1050,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className='flex items-center justify-center space-x-1 mb-1'>
                             <Star className='w-4 h-4 text-yellow-400 fill-current' />
                             <span className='text-sm font-semibold text-white'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                               {service.rating}
                             </span>;
                           </div>;'
@@ -1245,21 +1060,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className='text - sm font - semibold text - white mb - 1'>;
                             {service.customers}
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <div className="grid grid-cols-3 gap-4 mb-6">
                         <div className="text-center">
                           <div className="flex items-center justify-center space-x-1 mb-1">
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-=======
 "
                       <div className="grid grid-cols-3 gap-4 mb-6">"
                         <div className="text-center">"
                           <div className="flex items-center justify-center space-x-1 mb-1">"
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
                             <span className="text-sm font-semibold text-white">{service.rating}</span>
 
                           </div>"
@@ -1273,13 +1083,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className="text-sm font-semibold text-white mb-1">{service.launchDate}</div>"
                           <div className="text-xs text-gray-400">Launched</div>
                         </div>
-<<<<<<< HEAD
                       </div>
-<<<<<<< HEAD:pages_backup/services-2024.tsx
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       {/* CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1288,11 +1093,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className="flex items-center justify-between">
 
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <div className='text-center'>
                           <div className='text-sm font-semibold text-white mb-1'>
                             {service.launchDate}
@@ -1302,25 +1102,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                       {/* CTA */}
 <div className='flex items-center justify-between'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         <Link
                           href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">
                           <span className="font-medium">Learn More</span>
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </Link>
-<<<<<<< HEAD
                         <div className="text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded">
-<<<<<<< HEAD
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                         <Link"
                           href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">"
@@ -1329,16 +1120,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </Link>"
                         <div className="text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded">
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
                         </div>
                       </div>
                     </div>
                   </motion.div>
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -1347,13 +1134,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="text-center">;
                           <div className="flex items-center justify-center space-x-1 mb-1">;
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />;
-=======
 "
                       <div className="grid grid-cols-3 gap-4 mb-6">;"
                         <div className="text-center">;"
                           <div className="flex items-center justify-center space-x-1 mb-1">;"
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
                             <span className="text-sm font-semibold text-white">{service.rating}</span>;
                           </div>;"
                           <div className="text-xs text-gray-400">Rating</div>;
@@ -1400,8 +1185,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
@@ -1409,11 +1192,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1423,14 +1202,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Ready to Transform Your Business?;
               </h2>;'
               <p className='text-xl text-gray-300 mb-8 leading-relaxed'>;
-<<<<<<< HEAD:pages/services-2024.tsx
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           </div>;
-=======
                           </div>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
                           <div className='text - xs text - gray - 400'>Customers</div>;
                         </div>;'
                         <div className='text - center'>;'
@@ -1464,8 +1237,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, coordinate_y: 20 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD:pages/services-2024.tsx
-<<<<<<< HEAD
               viewport={{ once: true }}
               className='bg - gradient - to - r from - cyan - 500 / 10 to - purple - 600 / 10 border border - cyan - 500 / 30 rounded - 2xl p - 12 backdrop - blur - sm';
             >;'
@@ -1473,26 +1244,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Ready to Transform Your Business?;
               </h2>;'
               <p className='text - xl text - gray - 300 mb - 8 leading - relaxed'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Join thousands of businesses already leveraging our;
                 revolutionary 2024 services. Get started today and experience;
                 the future of technology.;
               </p>;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 viewport={{ once: true }}
               className='bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm'
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Ready to Transform Your Business?
               </h2>"
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Join thousands of businesses already leveraging our revolutionary 2024 services. 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 Get started today and experience the future of technology.
               </p>"
               <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -1504,16 +1268,12 @@ viewport={{ once: true }}
                 Get started today and experience the future of technology.
               </p>"
               <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <Link
-<<<<<<< HEAD
                   href="/contact" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold">
-=======
 
                 <Link;
 "
                   href="/contact" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
                   <Zap className="w-5 h-5" />
                   <span>Get Started Today</span>
                 </Link>
@@ -1521,37 +1281,26 @@ viewport={{ once: true }}
                   href="/pricing-2033" className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold">
 :pages_backup/services-2024.tsx
                   <span>View Pricing Plans</span>
-<<<<<<< HEAD:pages/services-2024.tsx
-<<<<<<< HEAD
                   <ArrowRight className="w-4 h-4" />
 
 :pages_backup/services-2024.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <ArrowRight className='w-4 h-4' />
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 </Link>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),
 };
 
   )
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 '
                   className='flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold'>;
@@ -1565,12 +1314,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   ),;
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default Services2024Page;
 
-<<<<<<< HEAD:pages_backup/services-2024.tsx
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
 },
 export default Services2024Page,";
         <section className="px-4 sm:px-6 lg:px-8 mb-20">;"
@@ -1609,46 +1354,29 @@ export default Services2024Page,";
                 </Link>;
                 <Link;
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
                   href='/pricing - 2033';
                   className='flex items - center space - x-2 border border - cyan - 500 / 30 text - cyan - 400 px - 8 py - 4 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 200 font - semibold';
                 >;
                   <span > View Pricing Plans</span>;
                   <ArrowRight className='w - 4 h - 4' />                </Link>;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx
               </div>;
             </motion.div>;
           </div>;
         </section>;
 :pages_backup/services-2024.tsx
-<<<<<<< HEAD
 
 export default Services2024Page;
 export default Services2024Page;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default Services2024Page;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export default Services2024Page;
 :pages_backup/services-2024.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 );
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default Services2024Page;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services-2024.tsx

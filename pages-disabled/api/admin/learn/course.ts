@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
->>>>>>> pr-12243
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -24,7 +22,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const courses = JSON.parse(raw),
 
     const existingIndex = courses.findIndex((c: any) => c.id === body.id),
-<<<<<<< HEAD
     if (req.method !== 'POST') {
       res.setHeader('Allow', 'POST');
       return res.status(405).end('Method Not Allowed');
@@ -58,7 +55,6 @@ fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2)),
     }
 
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2))
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     res.status(200).json({ ok: true, course: body })
   } catch (e: any) {'
     res.status(500).json({ error: e?.message ?? 'Failed to save course' });
@@ -80,6 +76,4 @@ fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2)),
     res.status (500).json ({ error: e?.message ?? 'Failed to save course' });
   }
 }
-=======
 };'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

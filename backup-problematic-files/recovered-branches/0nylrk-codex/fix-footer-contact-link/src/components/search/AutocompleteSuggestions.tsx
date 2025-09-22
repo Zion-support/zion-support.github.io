@@ -51,7 +51,6 @@ export function AutocompleteSuggestions({ ;
 </li>;
           ),;
         })}
-<<<<<<< HEAD
       </ul>;
     </div>;
   ),;  if (!searchTerm || searchTerm.length === 0) {
@@ -127,13 +126,11 @@ export function AutocompleteSuggestions(_{suggestions, searchTerm, onSelectSugge
                   <span>{highlight.after}</span>
                 </div>
                 <span className="text-xs text-zion-slate-light capitalize">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   {suggestion.type}
                 </span>
               </div>
             </li>
           )
         })}
-<<<<<<< HEAD
 
 }

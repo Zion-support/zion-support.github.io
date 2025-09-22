@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -33,12 +32,10 @@ export function ContractPreview({ ;
   const displayContent = contractContent || generatedContract || "",;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-4">;
       <div className="flex justify-between items-center mb-4">;
         <h2 className="text-2xl font-bold">Contract Preview</h2>;
         {status === 'ready' ? (;
-<<<<<<< HEAD
 
       {/* Contract content */}
       <div className="border rounded-lg p-6 bg-muted/50">;

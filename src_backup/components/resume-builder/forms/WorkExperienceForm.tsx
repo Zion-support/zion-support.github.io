@@ -1,5 +1,4 @@
 :src/components/resume-builder/forms/WorkExperienceForm.tsx
-<<<<<<< HEAD
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -95,8 +94,6 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
 
   const handleEdit = (work: WorkExperience) => {
 :src/components/resume-builder/forms/WorkExperienceForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -112,7 +109,6 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
       // Check condition
 if ( {) {
   $2
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
@@ -192,8 +188,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         </p>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       {workExperiences.length > 0 && (
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -362,7 +356,6 @@ export function WorkExperienceForm(): any ({;
                             ? work.end_date
                             : format(work.end_date, 'MMM yyyy')
                           : ''}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="space-y-4">
           <h3 className="text-md font-medium">Added Experience</h3>
           {workExperiences.map((work) => (
@@ -385,7 +378,6 @@ export function WorkExperienceForm(): any ({;
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
 :src/components/resume-builder/forms/WorkExperienceForm.tsx
-<<<<<<< HEAD
                   </div>
                   <div className="flex gap-2">
                     <Button
@@ -557,7 +549,6 @@ variant="ghost"
                 onClick={() => {
                   if (editingId) {
                     setEditingId(null),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     setEditingId(null),
                     form.reset({
                       company_name: '',
@@ -569,10 +560,6 @@ variant="ghost"
                   } else {
                     onBack()
 
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
                 onClick={() => {
                   if (editingId) {
                     setEditingId(null)
@@ -587,15 +574,12 @@ variant="ghost"
                   } else {
                     onBack()
 :src/components/resume-builder/forms/WorkExperienceForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   }
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
 
-<<<<<<< HEAD
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -607,15 +591,12 @@ variant="ghost"
 
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {!editingId && workExperiences.length > 0 && (
                   <Button type='button' onClick={onComplete}>
                     Next
                   </Button>
                 )}
 :src/components/resume-builder/forms/WorkExperienceForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               </div>;
             </div>;
           </form>;
@@ -702,7 +683,6 @@ if ( {) {
 }</div> </div> </form> </Form> </div> </div>);
 }'"  );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
               </div>
             </div>
@@ -718,5 +698,3 @@ if ( {) {
 }</div> </div> </form> </Form> </div> </div>) ;
 }'"
 :src/components/resume-builder/forms/WorkExperienceForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

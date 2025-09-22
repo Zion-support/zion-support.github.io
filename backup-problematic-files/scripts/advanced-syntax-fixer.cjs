@@ -1,17 +1,8 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/advanced-syntax-fixer.cjs
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/advanced-syntax-fixer.cjs
-=======
 #!/usr/bin/env node;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
   processDirectory(dirPath)
   return { totalFiles, fixedFiles }}
@@ -34,16 +25,7 @@ log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProces
 if (require.main === module) {;
   main(),}
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/advanced-syntax-fixer.cjs
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/advanced-syntax-fixer.cjs
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -137,13 +119,8 @@ log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}
     log(\nℹ  No syntax issues found that could be automatically fixed.")
       "blue"
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow")} else {;
     log(\nℹ️  No syntax issues found that could be automatically fixed.",")"
 
@@ -151,4 +128,3 @@ if (require.main === module) {;
   main()}
 module.exports = { fixFile, scanAndFixDirectory }}}}}}"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

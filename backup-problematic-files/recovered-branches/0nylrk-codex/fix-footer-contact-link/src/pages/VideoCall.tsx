@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -74,7 +73,6 @@ export default function VideoCall() {;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />;
       <Header />;
@@ -82,7 +80,6 @@ export default function VideoCall() {;
         {!hasJoined ? (;
           <div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">;
             <h1 className="text-3xl font-bold mb-6 text-white">Join Video Call</h1>;
-<<<<<<< HEAD
 
             {/* This button is just for demo/testing purposes */}
             <div className="flex justify-center mt-4">;

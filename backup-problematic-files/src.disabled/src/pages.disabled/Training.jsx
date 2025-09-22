@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import _React from 'react'; import { Link } from 'react-router-dom'; export default function Training() {}; return null} }; export default Training; export { Training }; export { Training }; export { Training }; export { Training }; export { Training };
 const Training = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const Training = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

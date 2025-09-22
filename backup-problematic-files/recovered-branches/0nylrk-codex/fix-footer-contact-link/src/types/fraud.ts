@@ -29,4 +29,3 @@ export interface FraudStats {;
   false_positives:number;
   actioned_count:number;
 } export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

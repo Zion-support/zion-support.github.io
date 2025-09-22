@@ -1,7 +1,4 @@
 :src/components/partners/PartnerLeaderboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
@@ -45,16 +42,12 @@ export function PartnerLeaderboard() {
       id: "1",
       rank: 1,
       name: "AI Tech Guru",
-=======
 badges: string[]
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerLeaderboard.tsx
 }
-=======
   referrals: number,
   earnings: number,
   badges: string[]}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [
@@ -63,21 +56,15 @@ export function PartnerLeaderboard() {
 id: "1"
       rank: 1
       name: "AI Tech Guru"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       avatar: "", // URL would be here
       referrals: 178,
       earnings: 4500,
       badges: ["gold", "trending"]
-<<<<<<< HEAD
-<<<<<<< HEAD
     },
     },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 :src/components/partners/PartnerLeaderboard.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       id: "2",
       rank: 2,
@@ -87,12 +74,9 @@ id: "1"
       earnings: 3625,
       badges: ["silver"]
 :src/components/partners/PartnerLeaderboard.tsx
-<<<<<<< HEAD
     },
-=======
 
 :src/components/partners/PartnerLeaderboard.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       id: "3",
       rank: 3,
@@ -100,23 +84,18 @@ id: "1"
       avatar: "",
       referrals: 124,
       earnings: 3100,
-=======
       id: "3"
       rank: 3
       name: "Neural Networks Pro"
       avatar: ""
       referrals: 124
       earnings: 3100
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       badges: ["bronze"]
 },
     },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 :src/components/partners/PartnerLeaderboard.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       id: "4",
       rank: 4,
@@ -126,8 +105,6 @@ id: "1"
       earnings: 2450,
       badges: []
 :src/components/partners/PartnerLeaderboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     },
     {
       id: "5",
@@ -141,13 +118,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
 import { Crown, Medal, Trophy } from 'lucide-react';
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerLeaderboard.tsx
 interface LeaderboardEntry {;
-=======
 import { Crown, Medal, Trophy } from 'lucide-react';interface LeaderboardEntry {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string,;
   rank: number,;
   name: string,;
@@ -217,7 +190,6 @@ export function PartnerLeaderboard() {;
         return <Medal className="h-5 w-5 text-amber-700" />;
       default:;
 :src/components/partners/PartnerLeaderboard.tsx
-<<<<<<< HEAD
         return <span className="text-sm font-semibold">{rank}</span>;
     }
   };
@@ -347,12 +319,7 @@ export function PartnerLeaderboard() {;
   )
 }
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerLeaderboard.tsx
       id: "1";
       rank: 1;
       name: "AI Tech Guru";
@@ -430,5 +397,3 @@ return (<div className="space-y-6"> <Card className="bg-zion-blue-dark border-zi
   )
 }
 :src/components/partners/PartnerLeaderboard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

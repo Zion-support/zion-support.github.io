@@ -1,6 +1,5 @@
 import React from 'react',
 import React from 'react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -67,7 +66,6 @@ import ServiceLanding from '../components/sections/ServiceLanding';
       />;
     </>;
   );
-<<<<<<< HEAD
 }
 import React from 'react',
 import Head from 'next/head',
@@ -76,17 +74,12 @@ import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function QuantumCloudInfrastructurePlatformPage() {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function QuantumCloudInfrastructurePlatformPage() {
-=======
 
 export default function QuantumCloudInfrastructurePlatformPage() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	return (
 		<>
 			<Head>
@@ -115,13 +108,9 @@ export default function QuantumCloudInfrastructurePlatformPage() {}
 		</>
 	)
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-=======
 export default function QuantumCloudInfrastructurePlatformPage() {}
   return (;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <>;
       <Head>;
         <title > Quantum Cloud Infrastructure Platform | Zion Tech Group</title>;
@@ -156,7 +145,6 @@ export default function QuantumCloudInfrastructurePlatformPage() {}
           'Energy','
           'Media',
 ]}
-<<<<<<< HEAD
 
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
@@ -209,18 +197,10 @@ export default function QuantumCloudInfrastructurePlatformPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         canonical='https: //ziontechgroup.com / quantum - cloud - infrastructure - platform';
       />;
     </>);
 ;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

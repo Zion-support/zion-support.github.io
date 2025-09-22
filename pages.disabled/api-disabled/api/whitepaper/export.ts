@@ -1,14 +1,10 @@
 :pages_backup/api/whitepaper/export.ts
-<<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next'
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next';
 pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/whitepaper/export.ts
 ;
 export default async /**
  * handler - Function description
@@ -56,7 +52,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ url })
 :pages_backup/api/whitepaper/export.ts
-<<<<<<< HEAD
 }
 function escapeHtml(str: string) {
   return String(str)
@@ -73,21 +68,15 @@ export default async function handler(req, res) {
   const { markdown, tokenName } = req.body || {},
   if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' }),
 :pages_backup/api/whitepaper/export.ts
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 }
 
->>>>>>> pr-12243
-=======
 
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/whitepaper/export.ts
 import type { NextApiRequest, NextApiResponse } from 'next',
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { markdown, tokenName } = req.body || {};
@@ -101,12 +90,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 ;
 export default async /**
  * handler - Function description
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 export default async /**;
  * handler - Function description;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/whitepaper/export.ts
  */
 function handler() { return null; }
   if (return res.status (405).json ({ error: 'Method not allowed' }), ) {}
@@ -134,28 +121,19 @@ function escape_html() {}
 }
 ;
 :pages_backup/api/whitepaper/export.ts
-<<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> pr-12243
 
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/whitepaper/export.ts
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`;
   const base64 = Buffer.from(html, 'utf-8').toString('base64');
   const url = `data: text/html,base64,${base64}`;
   res.status(200).json({ url })
 :pages_backup/api/whitepaper/export.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -243,7 +221,6 @@ function escape_html() {}
   const base64 = Buffer.from(html, 'utf-8').toString('base64'),`
   const url = `data: text/html,base64,${base64}`,
   res.status(200).json({ url })
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/whitepaper/export.ts
 
 function escapeHtml(str: string) {}
   return String(str)'
@@ -254,10 +231,5 @@ function escapeHtml(str: string) {}
 };
 main
 }
-<<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/whitepaper/export.ts

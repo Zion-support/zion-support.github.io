@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Save } from 'lucide-react';
 import { TalentProfile } from "@/types/talent";""
 import { ContractForm, ContractFormValues } from "./components/ContractForm";""
@@ -39,7 +38,6 @@ setShowSmartContractBuilder(false),;
   }
 ;
   return (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Dialog open={isOpen} onOpenChange={onClose}>;
 "
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;"
@@ -53,7 +51,6 @@ setShowSmartContractBuilder(false),;
               <TabsTrigger value="form">Contract Details</TabsTrigger>;
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
             </TabsList>;
-<<<<<<< HEAD
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
@@ -80,12 +77,10 @@ setShowSmartContractBuilder(false),;
                 talent={talent}
 onClose={onClose}
                 status="ready";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               />;
             )}
           </TabsContent>;
         </Tabs>;
-<<<<<<< HEAD
         <TemplateManager;
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
@@ -126,4 +121,3 @@ return (<SmartContractBuilder isOpen= {;
 }currentValues= {;
   formValues ;
 }/> </DialogContent> </Dialog>) ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

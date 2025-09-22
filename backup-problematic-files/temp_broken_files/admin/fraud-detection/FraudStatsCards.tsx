@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",;
@@ -33,13 +32,11 @@ export const FraudStatsCards:React.FC<FraudStatsCardsProps> = ({ stats }) => {;
         <CardHeader className="pb-2 flex flex-row items-center justify-between">;
           <div>;
             <CardTitle className="text-2xl font-bold text-amber-500">{stats.suspicious_count}</CardTitle>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <CardDescription>Suspicious</CardDescription>;
           </div>;
           <AlertTriangle className="h-5 w-5 text-amber-500" />;
         </CardHeader>;
       </Card>;
-<<<<<<< HEAD
 
             <CardDescription>Dangerous</CardDescription>;
           </div>;

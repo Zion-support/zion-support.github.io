@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -20,12 +18,10 @@ export const CreateResumeForm = ({}
   const [newResumeTitle, setNewResumeTitle] = useState('')
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return
-=======
 }: CreateResumeFormProps) => {'
   const [newResumeTitle, setNewResumeTitle] = useState('');
   const handleSubmit = async () => {};
     if (!newResumeTitle.trim()) return;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     await onCreateResume(newResumeTitle)
   }
   return (
@@ -54,13 +50,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from 'lucide-react'
 import { CreateResumeFormProps } from "./types";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const CreateResumeForm = ({ 
   onCreateResume,
   onCancel,
   isLoading 
 }: CreateResumeFormProps) => {
-<<<<<<< HEAD
   const [newResumeTitle, setNewResumeTitle] = useState(''),
 
   const handleSubmit = async () => {
@@ -98,7 +92,6 @@ export const CreateResumeForm = ({;
 '
           <Button variant='ghost' onClick={onCancel} className='mt-4'>            Cancel;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleSubmit = async () => {;
 if (!newResumeTitle.trim()) return,;
     await onCreateResume(newResumeTitle);
@@ -128,8 +121,6 @@ if (!newResumeTitle.trim()) return,;
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
               value={newResumeTitle}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Button
             variant="ghost"
             onClick = {onCancel,}
@@ -137,8 +128,6 @@ if (!newResumeTitle.trim()) return,;
           >
 
             Cancel
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           <Button"
             variant="ghost"
             onClick={onCancel}"
@@ -146,7 +135,6 @@ if (!newResumeTitle.trim()) return,;
           >
 
             Cancel;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </Button>
         </div>
       </CardContent>
@@ -250,9 +238,4 @@ w - full max - w-2xl mx - auto"> <CardContent className=" py-8"> <div className=
 '"},
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

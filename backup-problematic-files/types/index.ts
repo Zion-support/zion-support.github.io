@@ -114,7 +114,6 @@ export interface PerformanceMetrics {
   ttfb?: number;
 
 // Loading and error states
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface LoadingState {
   // TODO: Implement
   isLoading: boolean;
@@ -129,8 +128,6 @@ export interface ErrorInfo {
   timestamp: string;
   userAgent?: string;
   url?: string;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 
 // Form interfaces;
@@ -242,4 +239,3 @@ export interface Environment {
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
-<<<<<<< HEAD

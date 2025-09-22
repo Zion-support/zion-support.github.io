@@ -6,7 +6,6 @@ const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',;'
 import fs from 'fs',;'
 import path from 'path',;'
@@ -14,7 +13,6 @@ const usersPath = path.join(process.cwd(), 'datalearnusers.json'),'
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 '
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 function readJson() { return null; }
 }
@@ -144,7 +142,6 @@ if ( {) {
   }
 
 }
-=======
 function handler() {}
   // Check condition;
 if ( {) {}
@@ -154,4 +151,3 @@ res.set_header ('AllowPOST'),'
     return res.status (405).end ('Method Not Allowed');
   }
 };'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

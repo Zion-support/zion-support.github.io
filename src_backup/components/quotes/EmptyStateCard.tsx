@@ -9,7 +9,6 @@ type EmptyStateCardProps = {
 },
 
 :src/components/quotes/EmptyStateCard.tsx
-<<<<<<< HEAD
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === 'active',
 
@@ -46,7 +45,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { MessageSquare, ArchiveIcon } from 'lucide-react';
 :src_backup/components/quotes/EmptyStateCard.tsx
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { MessageSquare, ArchiveIcon } from 'lucide-react';
 type EmptyStateCardProps = {;
   type: 'active' | 'archived';
@@ -93,13 +91,11 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
 }
 
 :src_backup/components/quotes/EmptyStateCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </h3>;
         <p className="text-zion-slate-light max-w-md mx-auto">;
           {isActive;'"
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients.";'"
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized.";
-<<<<<<< HEAD
           }
         </p>;
       </CardContent>;
@@ -136,9 +132,5 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
 }
 
 :src_backup/components/quotes/EmptyStateCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 };'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/quotes/EmptyStateCard.tsx

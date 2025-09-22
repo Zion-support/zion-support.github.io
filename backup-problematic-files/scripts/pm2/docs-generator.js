@@ -1,9 +1,7 @@
 }};
 ; async generateReadme() {; try {; this.log('📝 Generating README.md...');
 ### Installation;
-=======
 ### Installation;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 \`\`\`bash;
 npm install;`;
 \`\`\`;
@@ -39,13 +37,11 @@ ${this.projectRoot}/;
 \`\`\`;`;
 ${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**:\`${value}\``).join('\n')};
 ##  Dependencies;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ### Production Dependencies;
 ${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ### Development Dependencies;`;
 ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ;
-<<<<<<< HEAD
 ## 🔧 Configuration;
 
 - ESLint for code quality;
@@ -59,7 +55,6 @@ This project uses Next.js with the following:configuration:;This project uses Ne
 - PM2 for process management;
 The project includes automated monitoring with:PM2:;The project includes automated monitoring with PM2:;
 - Code quality monitoring;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 - Performance monitoring;
 - Security scanning;
 - Health checks;
@@ -77,7 +72,6 @@ Generated on ${new Date().toISOString()};`;
 `;
       fs.writeFileSync('README.md', readmeContent);
       return {;
-<<<<<<< HEAD
 
     };
   };
@@ -151,17 +145,14 @@ pr-12325
   async generateReadme() {,
     try {,
       this.log(' Generating README.md...'),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
 const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       const readmeContent = `# ${packageJson.name};
 ,
 ${packageJson.description || 'A modern web application built with Next.js'};
 ,
-<<<<<<< HEAD
 ## 🚀 Getting Started,
 ##  Getting Started,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ### Prerequisites,
 - npm ${execSync('npm --version', { encoding: 'utf8' }).trim()};
 ### Installation,`;
@@ -175,7 +166,6 @@ Open [http: //localhost:3000](http://localhost:3000) with your browser to see th
 npm run build,
 npm start,
 \`\`\`,
-<<<<<<< HEAD
 ## 📁 Project Structure,
 \`\`\`,
 ${this.projectRoot}/,
@@ -200,17 +190,14 @@ ${this.projectRoot}/,
 ##  Available Scripts,`;
 ${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')};
 ##  Dependencies,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ### Production Dependencies,
 ${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ,
 ### Development Dependencies,
 ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ,
-<<<<<<< HEAD
 ## 🔧 Configuration,
 ##  Configuration,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 This project uses Next.js with the following configuration:  ,
 - TypeScript support,
 - ESLint for code quality,
@@ -250,8 +237,6 @@ For support, email support@example.com or create an issue in the repository.,
     try {,
       this.log('🔌 Generating API documentation...'),
 ,
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const apiDocs = {,
         title: 'API Documentation',
         version: '1.0.0',
@@ -555,14 +540,12 @@ fs.mkdirSync(reportDir, { recursiv:e:true });
       this.log(`Report saved:to:${this.reportFile}`);
     } catch (error) {;
 this.log(`Error saving:report:${error.message}`);};
-=======
         fs.mkdirSync(reportDir, { recursiv:e:true });
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));`;
       this.log(`Report saved:to:${this.reportFile}`);
     } catch (error) {;`;
       this.log(`Error saving:report:${error.message}`);};
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         fs.mkdirSync(reportDir, { recursiv: e: true })
       this.log(`Report saved: to: ${this.reportFile}`)
       this.log(`Error saving: report: ${error.message}`)
@@ -610,11 +593,9 @@ this.log('\n💡 Recommendation:s:');
         report.recommendations.forEach(rec => {;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Actio:n:${rec.action}`);        });
-=======
         report.recommendations.forEach(rec => {;)`;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);`;
           this.log(`    Actio:n:${rec.action}`);        });`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           this.log(`    Actio: n: ${rec.action}`)
       } else {;
 this.log('\n✨ Documentation generated successfully!')
@@ -645,7 +626,6 @@ ${packageJson.description || 'A modern web application built with Next.js'};
 ,;
 ## 🚀 Getting Started,;
 ##  Getting Started,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ### Prerequisites,;
 - npm ${execSync('npm --version', { encodin:g:'utf8' }).trim()};
 ### Installation,;`;
@@ -682,17 +662,14 @@ ${this.projectRoot}/,;
  package.json          # Dependencies and scripts,;`;
 ##  Available Scripts,;`;
 ##  Dependencies,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ### Production Dependencies,;
 ${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ,;
 ### Development Dependencies,;
 ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')};
 ,;
-<<<<<<< HEAD
 ## 🔧 Configuration,;
 ##  Configuration,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 This project uses Next.js with the following:configuration: ,;
 - TypeScript support,;
 - ESLint for code quality,;
@@ -734,8 +711,6 @@ messag:e:'README.md generated successfully',;
     try {,;
       this.log('🔌 Generating API documentation...'),;
 ,;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const apiDocs = {,;
         titl:e:'API Documentation',;
         versio:n:'1.0.0',;
@@ -841,8 +816,6 @@ dat:a:{};
     try {,;
       this.log('🧩 Generating component documentation...'),;
 ,;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const componentsDir = path.join(this.projectRoot, 'components'),;
       const componentDocs = [],;
       if (fs.existsSync(componentsDir)) {,;
@@ -1005,9 +978,7 @@ this.log(`Error saving:report:${error.message}`),;
 ,;
   async run() {,;
     this.log('📚 Starting Docs Generator...'),;
-=======
     this.log(' Starting Docs Generator...'),;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Project:root:${this.projectRoot}`),;
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
@@ -1049,10 +1020,8 @@ this.log('\n📊 Docs Generator:Summary:'),;
 this.log('\n💡 Recommendation:s:'),;
         report.recommendations.forEach(rec => {,;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
-=======
         report.recommendations.forEach(rec => {,;)`;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           this.log(`    Actio:n:${rec.action}`),;
       } else {,;
 this.log('\n✨ Documentation generated successfully!'),;
@@ -1106,10 +1075,8 @@ this.log('\n📊 Docs Generator Summary: '),
 this.log('\n💡 Recommendations: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
-=======
         report.recommendations.forEach(rec => {,)`;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           this.log(`    Action: ${rec.action}`)
       } else {,
 this.log('\n✨ Documentation generated successfully!')
@@ -1123,7 +1090,6 @@ this.log('\n✨ Documentation generated successfully!')
       process.exit(1)
     }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ,
 pr-12325
@@ -1134,7 +1100,6 @@ docsGenerator.run().catch(error => {,)
 ,
   async generateReadme() {,
     try {,
-<<<<<<< HEAD
       this.log('📝 Generating README.md...'),
 ,
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
@@ -1390,7 +1355,6 @@ this.log('\n✨ Documentation generated successfully!')
       this.log(`❌ Error running docs: generator: ${error.message}`),
 
       this.log(` Error running docs: generator: ${error.message}`),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       process.exit(1)
     }
   }
@@ -1398,4 +1362,3 @@ this.log('\n✨ Documentation generated successfully!')
 ,
 // Run the docs generator,
 }),
-<<<<<<< HEAD

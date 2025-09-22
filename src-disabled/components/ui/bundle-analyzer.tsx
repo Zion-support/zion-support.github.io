@@ -1,8 +1,4 @@
 :src_backup/components/ui/bundle-analyzer.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 totalSize: number;
   gzippedSize: number;
   chunkCount: number;
@@ -31,19 +27,14 @@ pr-12325
   const [shouldShow, setShouldShow] = useState(false)
   useEffect((,) => {
     // Only show in development or when explicitly enabled      localStorage.getItem('bundle-analyzer') === 'true'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-=======
 
     const show = null;
       process.env.NODE_ENV === 'development' ||
 
 :src_backup/components/ui/bundle-analyzer.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/bundle-analyzer.tsx
       localStorage.getItem('bundle-analyzer') === 'true'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     setShouldShow(show)
     if (!show) return;
     setIsVisible(true)
@@ -174,7 +165,6 @@ totalSize += size;
         chunkData.filter(chunk => chunk.cached).length / chunkData.length
 setBundleInfo({        totalSize,
         totalSize,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
@@ -183,9 +173,7 @@ setBundleInfo({        totalSize,
 
 :src/components/ui/bundle-analyzer.tsx
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
-=======
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/bundle-analyzer.tsx
       logErrorToProduction('Failed to collect bundle info:', { data: error })
       // Get performance entries for script resources;
       const resource_entries = performance.getEntriesByType ('
@@ -249,10 +237,7 @@ setBundleInfo({        totalSize,
     }
   }
 :src/components/ui/bundle-analyzer.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -260,7 +245,6 @@ import { Badge } from '@/components/ui/badge',;
 import { Button } from '@/components/ui/button',;
 import { Progress } from '@/components/ui/progress',;
 import { AlertTriangle, Package, Zap } from 'lucide-react';
-=======
 '
 import React, { useState, useEffect } from 'react',;'
 import { useAuth } from '@/hooks/useAuth',;'
@@ -269,7 +253,6 @@ import { Badge } from '@/components/ui/badge',;'
 import { Button } from '@/components/ui/button',;'
 import { Progress } from '@/components/ui/progress',;'
 import { AlertTriangle, Package, Zap } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/bundle-analyzer.tsx
 import {logErrorToProduction} from '@/utils/productionLogger',;
 interface BundleInfo {;
   totalSize: number,;
@@ -291,9 +274,7 @@ export function BundleAnalyzer() { return null; }
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',;'
   const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,;
   if (!isAllowed) {;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/bundle-analyzer.tsx
     return null;
   }
 :src_backup/components/ui/bundle-analyzer.tsx
@@ -379,33 +360,21 @@ export function BundleAnalyzer() { return null; }
     return null;
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :src_backup/components/ui/bundle-analyzer.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/bundle-analyzer.tsx
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button
 :src_backup/components/ui/bundle-analyzer.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/bundle-analyzer.tsx
           variant="outline"
-=======
   if (!isVisible) {}
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button;
 "
           variant="outline""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/bundle-analyzer.tsx
           size="sm"
           onClick={toggleAnalyzer}"
           className="bg-background/80 backdrop-blur-sm"
@@ -413,24 +382,18 @@ export function BundleAnalyzer() { return null; }
           <Package className="w-4 h-4 mr-2" />
 :src_backup/components/ui/bundle-analyzer.tsx
 
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/bundle-analyzer.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/bundle-analyzer.tsx
           Bundle Analyzer
         </Button>
       </div>
     )
 :src_backup/components/ui/bundle-analyzer.tsx
-<<<<<<< HEAD
           className='bg-background/80 backdrop-blur-sm'>;
           <Package className='w-4 h-4 mr-2' />;
           Bundle Analyzer;
         </Button>;
       </div>;
     );
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/bundle-analyzer.tsx
   }
 :src_backup/components/ui/bundle-analyzer.tsx
 
@@ -472,19 +435,14 @@ export function BundleAnalyzer() { return null; }
             <div className="flex gap-2">
 :src_backup/components/ui/bundle-analyzer.tsx
               <Button
-<<<<<<< HEAD
                 variant="ghost"
-=======
               <Button;
 "
                 variant="ghost""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/bundle-analyzer.tsx
                 size="sm"
-=======
         </Button>
       </div>
     )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 onClick={collectBundleInfo}
 :src_backup/components/ui/bundle-analyzer.tsx
                 disabled={isCollecting}
@@ -498,14 +456,7 @@ export function BundleAnalyzer() { return null; }
 className="h-6 w-6 p-0"
               >
 :src_backup/components/ui/bundle-analyzer.tsx
-<<<<<<< HEAD:src/components/ui/bundle-analyzer.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/bundle-analyzer.tsx
                 ✕
               </Button>
             </div>
@@ -604,19 +555,14 @@ if ( {) {}
                 ✕;
 :src_backup/components/ui/bundle-analyzer.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/bundle-analyzer.tsx
               </Button>;
             </div>;
           </div>;
         </CardHeader>;
 :src_backup/components/ui/bundle-analyzer.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :src_backup/components/ui/bundle-analyzer.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className="text-xs font-medium mb-2">Largest Chunks:</div>
                 <div className="space-y-1">
                   {chunks.map((chunk, index) => ("
@@ -627,40 +573,25 @@ if ( {) {}
                           {chunk.name}
 :src_backup/components/ui/bundle-analyzer.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/bundle-analyzer.tsx
                         </span>
 :src_backup/components/ui/bundle-analyzer.tsx
                         {chunk.cached && (
-=======
                         {chunk.cached && ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/bundle-analyzer.tsx
                           <Badge variant="outline" className="text-xs px-1 py-0">
                             cached;
                           </Badge>
                         )}
                       </div>
 :src_backup/components/ui/bundle-analyzer.tsx
-<<<<<<< HEAD:src/components/ui/bundle-analyzer.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/bundle-analyzer.tsx
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
 
 :src_backup/components/ui/bundle-analyzer.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/bundle-analyzer.tsx
                         {formatSize(chunk.size)}
                       </Badge>;
                     </div>;
@@ -678,45 +609,33 @@ if ( {) {}
             </>
           ) : (
 :src/components/ui/bundle-analyzer.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="text-xs text-muted-foreground">
               {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
             </div>;
           )}
-<<<<<<< HEAD
 
 } 
 
 }
 :src/components/ui/bundle-analyzer.tsx
-<<<<<<< HEAD
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
             <div className="text-xs text-muted-foreground">
               {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
             </div>;
           )}
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </CardContent>;
-=======
             <div className="text-xs text-muted-foreground">
               {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
             </div>;
           )}        </CardContent>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </Card>;
     </div>;
   );
 } ;
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/bundle-analyzer.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/bundle-analyzer.tsx
         <CardContent className='pt - 0 space - y-3'>;
           {bundle_info ? (
             <>;'
@@ -818,30 +737,15 @@ pr-12325
       </Card>;
     </div>);
 :src_backup/components/ui/bundle-analyzer.tsx
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 }
 :src_backup/components/ui/bundle-analyzer.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/bundle-analyzer.tsx
         </CardContent>
       </Card>
     </div>
   );
 :src/components/ui/bundle-analyzer.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/bundle-analyzer.tsx
-=======
 </div>)
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/bundle-analyzer.tsx

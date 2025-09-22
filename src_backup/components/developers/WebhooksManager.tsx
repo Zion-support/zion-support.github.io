@@ -1,10 +1,7 @@
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
 loading,
-=======
 loading,
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
     testResult,
     fetchWebhooks,
     createWebhook,
@@ -12,7 +9,6 @@ loading,
     deleteWebhook,
     testWebhook,
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lucide-react'
@@ -73,7 +69,6 @@ import {
   RefreshCw,
   Webhook,
 :src_backup/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
 } from 'lucide-react'
 import { useWebhooks, type WebhookEventType } from '@/hooks/useWebhooks'
 import { Button } from '@/components/ui/button'
@@ -131,7 +126,6 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 export function WebhooksManager() {
-<<<<<<< HEAD
   X,;
 } from 'lucide-react';
 import { useWebhooks, type WebhookEventType } from '@/hooks/useWebhooks';
@@ -258,11 +252,9 @@ if (=== '' ||) {}
     resetWebhookForm ();
   }
   const handleToggleStatus = async (
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
 
     webhook_id: string,
 :src_backup/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     current_status: boolean) => {
     await toggle_webhook (webhook_id, !current_status) }
   const handleDeleteWebhook = async (webhook_id: string) => {}
@@ -278,7 +270,6 @@ if (=== '' ||) {}
     await delete_webhook (webhook_id);
     setShowDeleteConfirm (null);    setShowDeleteConfirm (null);
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const handleTestWebhook = async (webhook_id: string) => {}
     await test_webhook (webhook_id, testEventType);
@@ -301,8 +292,6 @@ if (=== '' ||) {}
     setSelectedEvents ([]);
 
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function WebhooksManager() {
   const {
     webhooks,
@@ -348,7 +337,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }[] = [    {
 
     {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       value: 'new_application'
       label: 'New Application'
       description: 'When a talent applies to a job'
@@ -364,8 +352,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description: 'When a project milestone is approved'
     }
 :src_backup/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     {
   }, []),
 
@@ -373,7 +359,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/developers/WebhooksManager.tsx
   const handleCreateWebhook = async () => {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     clearTestResult
   } = useWebhooks(),
 
@@ -382,9 +367,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [showTestDialog, setShowTestDialog] = useState<string | null>(null),
   const [showTestResult, setShowTestResult] = useState(false),
 :src/components/developers/WebhooksManager.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
 
   // Create webhook form state;
   const [webhookName, setWebhookName] = useState(""),"
@@ -401,12 +384,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/developers/WebhooksManager.tsx
   const handleCreateWebhook = async () => {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   const handleCreateWebhook = async () => {}
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
 
     await createWebhook(
@@ -432,29 +411,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
 
 :src_backup/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleTestWebhook = async (webhookId: string) => {
 
-<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
-=======
   const handleTestWebhook = async (webhookId: string) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
     await testWebhook(webhookId, testEventType),
-=======
     {    await deleteWebhook(webhookId),
     setShowDeleteConfirm(null)
   },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     setShowTestResult(true)
   },
 
 :src_backup/components/developers/WebhooksManager.tsx
   const resetWebhookForm = () => {
-<<<<<<< HEAD
     setWebhookName(""),
     setWebhookUrl(""),
     setWebhookSecret(""),
@@ -483,7 +454,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src/components/developers/WebhooksManager.tsx
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
 :src_backup/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <DialogTrigger asChild>
               <Button variant='default'>
                 <Plus size={16} className='mr-1' /> Add Webhook
@@ -580,7 +550,6 @@ export function WebhooksManager() {;
     toggleWebhook,;
     deleteWebhook,;
     testWebhook,;
-<<<<<<< HEAD
     clearTestResult,;
 
   const [showCreateDialog, setShowCreateDialog] = useState(false);
@@ -761,14 +730,12 @@ export function WebhooksManager() {;
 
       value: 'talent_hired',
       label: 'Talent Hired',
-=======
                     onChange={e => setWebhookUrl(e && e.target.value)}'
                     placeholder='https://example && example.com/webhook';'
                     className='bg-zinc-800 border-zinc-700'                  />;'
                   <p className='text-xs text-zinc-500'>;'
       value: 'talent_hired','
       label: 'Talent Hired','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
       description: 'When talent is hired for a project',
     },
   ];
@@ -831,7 +798,6 @@ export function WebhooksManager() {;
                   </p>;
                 </div>;
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
 
                     onChange={e => setWebhookSecret(e && e.target.value)}'
                     placeholder='Enter secret key';'
@@ -894,7 +860,6 @@ export function WebhooksManager() {;
     setWebhookName("");"
     setWebhookUrl("");"
     setWebhookSecret("");
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     setSelectedEvents([])
 :src/components/developers/WebhooksManager.tsx
   },
@@ -907,7 +872,6 @@ export function WebhooksManager() {;
 
   // Toggle an event selection
   const toggleEvent = (event: WebhookEventType) => {
-=======
   // Event type options;
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = ['
     { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },'
@@ -916,7 +880,6 @@ export function WebhooksManager() {;
     { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }],
   // Toggle an event selection;
   const toggleEvent = (event: WebhookEventType) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
     setSelectedEvents(prev => 
       prev.includes(event) 
         ? prev.filter(e => e !== event) 
@@ -924,12 +887,10 @@ export function WebhooksManager() {;
     )
 :src/components/developers/WebhooksManager.tsx
 },
-=======
   };
 
 :src_backup/components/developers/WebhooksManager.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>"
@@ -940,18 +901,14 @@ export function WebhooksManager() {;
           Set up webhooks to get notified when events happen in your Zion account.
         </CardDescription>
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
       </CardHeader>
 
-<<<<<<< HEAD:src_backup/components/developers/WebhooksManager.tsx
       <CardContent>
         <div className="flex justify-between items-center mb-6">
           <p className="text-sm text-zinc-400">
-=======
       <CardContent>"
         <div className="flex justify-between items-center mb-6">"
           <p className="text-sm text-zinc-400">'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
             You have {webhooks.length} {webhooks.length === 1 ? 'webhook' : 'webhooks'}
           </p>
 :src/components/developers/WebhooksManager.tsx
@@ -971,11 +928,9 @@ export function WebhooksManager() {;
               </DialogHeader>
 :src/components/developers/WebhooksManager.tsx
 
-=======
 
 :src_backup/components/developers/WebhooksManager.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <Label htmlFor="webhook-name">Webhook Name</Label>
@@ -995,19 +950,13 @@ export function WebhooksManager() {;
                     value={webhookUrl}
 :src_backup/components/developers/WebhooksManager.tsx
                     onChange={(e) => setWebhookUrl(e.target.value)}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     placeholder="https://example.com/webhook"
                     className="bg-zinc-800 border-zinc-700"
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   />
-=======
                     onChange={(e) => setWebhookUrl(e.target.value)}"
                     placeholder="https: //example.com/webhook""
                     className="bg-zinc-800 border-zinc-700"
                   />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                   <p className="text-xs text-zinc-500">
                     The URL where webhook payloads will be sent when events occur.
                   </p>
@@ -1031,15 +980,11 @@ export function WebhooksManager() {;
                 "
                 <div className="space-y-2">
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <Label>Event Types</Label>
 :src/components/developers/WebhooksManager.tsx
 <div className="grid gap-2 pt-2">
                     {eventOptions.map((event) => ("
                       <div key={event.value} className="flex items-center space-x-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <Checkbox 
                           id={event.value}
 import { useState, useEffect } from "react",;
@@ -1206,12 +1151,7 @@ checked={selectedEvents.includes(event.value)}
                           id={event.value} 
 
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
                   <div className='grid gap-2 pt-2'>
                     {eventOptions.map(event => (
                       <div
@@ -1222,30 +1162,21 @@ checked={selectedEvents.includes(event.value)}
                           id={event.value}
                           checked={selectedEvents.includes(event.value)}
 :src/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           onCheckedChange={() => toggleEvent(event.value)}
                         />;
                         <Label;
-=======
                           checked={selectedEvents.includes(event.value)}                          onCheckedChange={() => toggleEvent(event.value)}
                         />
 :src_backup/components/developers/WebhooksManager.tsx
                         <Label
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           htmlFor={event.value}
-<<<<<<< HEAD
-<<<<<<< HEAD
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70";
                         >;
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           {event.label}
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
                         </Label>
 :src/components/developers/WebhooksManager.tsx
@@ -1258,14 +1189,11 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                           </span>
                         </Label>
 :src/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </div>
                     ))}
 </div>
                 </div>
               </div>
-<<<<<<< HEAD
 
               <DialogFooter>
                 <Button variant="outline" onClick={() => {
@@ -1333,38 +1261,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 setShowCreateDialog(false),                  resetWebhookForm()
                 }}>
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   setShowCreateDialog(false);
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
 
                   resetWebhookForm()
                 }}>
 
 :src_backup/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Cancel
                 </Button>
-<<<<<<< HEAD
                 <Button onClick={handleCreateWebhook} disabled={
                   webhookName.trim() === "" || 
-<<<<<<< HEAD
-<<<<<<< HEAD
                   webhookUrl.trim() === "" || 
                   selectedEvents.length === 0
                 }>
 Create Webhook
-=======
                   webhookUrl.trim() === "" || 
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
                 <Button
                   onClick={handleCreateWebhook}
                   disabled={
@@ -1375,23 +1289,16 @@ Create Webhook
                 >
                   Create Webhook
 :src/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
         </div>
 :src_backup/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     webhookName && webhookName.trim() === '' ||
-=======
 '
                     webhookName && webhookName.trim() === '' ||'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                     webhookUrl && webhookUrl.trim() === '' ||
                     selectedEvents && selectedEvents.length === 0;
                   }>                  Create Webhook                <ButtononClick={handleCreateWebhook} disabled={"
@@ -1507,12 +1414,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/developers/WebhooksManager.tsx
                         <DropdownMenuItem
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Webhooks List */}
-=======
                         <DropdownMenuItem;
         {/* Webhooks List */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
         <div className="space-y-4">
           {loading ? ("
             <div className="text-center py-8 text-zinc-500">Loading webhooks...</div>
@@ -1524,37 +1428,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           ) : (
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
             webhooks.map((webhook) => (
-=======
             webhooks.map((webhook) => ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
               <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
-=======
 
 :src/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <div className="flex items-center justify-between">
-=======
                   webhookUrl.trim() === "" ||                 <div className="flex items-center justify-between">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <div>
                     <h3 className="font-medium">{webhook.name}</h3>
                     <div className="flex items-center text-sm text-zinc-400 mt-1">
                       <Globe size={14} className="mr-1" />
-=======
 "
                 <div className="flex items-center justify-between">
                   <div>"
                     <h3 className="font-medium">{webhook.name}</h3>"
                     <div className="flex items-center text-sm text-zinc-400 mt-1">"
                       <Globe size={14} className="mr-1" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                       <span className="max-w-md truncate">{webhook.url}</span>
                     </div>
                   </div>
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
 
                   <div className="flex items-center space-x-2">
                     <div className="flex items-center mr-2">
@@ -1569,16 +1463,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
 
                       <DropdownMenu>
-=======
 
 :src/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <DropdownMenuTrigger asChild>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                       <DropdownMenuTrigger asChild>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                         <Button variant="ghost" size="icon" aria-label="More options">
                           <MoreVertical size={16} />
                         </Button>
@@ -1587,17 +1475,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/developers/WebhooksManager.tsx
                         <DropdownMenuItem
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
-=======
                         <DropdownMenuItem;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
                         </Label>;
                       </div>;
@@ -1624,13 +1505,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Dialog>;
         </div>;
 :src_backup/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Webhooks List */}
-=======
         {/* Webhooks List */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
         <div className="space-y-4">;
           {loading ? (;"
             <div className="text-center py-8 text-zinc-500">Loading webhooks...</div>;
@@ -1681,50 +1557,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           className="cursor-pointer text-red-500"
                         >
                           <X size={14} className="mr-2" /> Delete
-<<<<<<< HEAD
-=======
                           className='cursor-pointer text-red-500'
                         >
                           <X size={14} className='mr-2' /> Delete
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                           className='cursor-pointer text-red-500'
                         >
                           <X size={14} className='mr-2' /> Delete
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
-=======
 
                           onClick={() => setShowDeleteConfirm(webhook.id)}"
                           className="cursor-pointer text-red-500"
                         >"
                           <X size={14} className="mr-2" /> Delete;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                         </DropdownMenuItem>
-=======
                           onClick={() => setShowDeleteConfirm(webhook.id)}
                           className='cursor-pointer text-red-500'                        >
                           <X size={14} className='mr-2' /> Delete                        </DropdownMenuItem>                          <X size={14} className="mr-2" /> Delete                        </DropdownMenuItem>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       </DropdownMenuContent>
                     </DropdownMenu>
                   </div>
                 </div>
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
                 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                 <div className="mt-3 flex flex-wrap gap-2">
                   {webhook.event_types.map((event: WebhookEventType) => (
                     <Badge;
@@ -1736,26 +1595,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </Badge>;
                   ))}
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
                 </div>
 <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>
                   <span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                 </div>
 <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>
                   <span>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
                     Created:{' '}
-=======
                   <span>;'
                     Created:{' '}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                     {format(new Date(webhook && webhook.created_at), 'MMM d, yyyy')}
                   </span>;
                   {webhook && webhook.last_triggered_at && (;
@@ -1765,25 +1615,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 </div>
 
-<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
-=======
 "
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
                   {webhook.last_triggered_at && ('
                     <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH: mm')}</span>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
                 </div>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>
             ))
           )}
@@ -1867,18 +1708,11 @@ on_click={() => setShowDeleteConfirm (webhook.id)}
       <Dialog;
         open={showTestDialog !== null}
 
-<<<<<<< HEAD:src_backup/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
                 </div>;
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;
-=======
                 </div>;"
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>;
                   {webhook.last_triggered_at && (;'
                     <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>;
@@ -1897,8 +1731,6 @@ on_click={() => setShowDeleteConfirm (webhook.id)}
         </div>
         <Button variant="outline" size="sm" onClick={fetchWebhooks}>
           <RefreshCw size={14} className="mr-1" /> Refresh
-<<<<<<< HEAD
-<<<<<<< HEAD
         </Button>
       </CardFooter>
 
@@ -1973,8 +1805,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             setShowTestDialog(null)
             setTestEventType('new_application')
             if (showTestResult) {
-<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
               setShowTestResult(false)
               clearTestResult() }
         onOpenChange = {(open,) => {;
@@ -1983,14 +1813,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Button>
       </CardFooter>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Test Webhook Dialog */}
       <Dialog;
         open={showTestDialog !== null} ;
         onOpenChange={(open) => {;
           if (!open) {;
 :src_backup/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
             setShowTestDialog(null),;
             setTestEventType('new_application'),;
             if (showTestResult) {;
@@ -2032,18 +1860,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :src_backup/components/developers/WebhooksManager.tsx
       >
-<<<<<<< HEAD
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 <DialogContent className='bg-zinc-900 border-zinc-800 text-white'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 <DialogContent className='bg-zinc-900 border-zinc-800 text-white'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
           <DialogHeader>
             <DialogTitle>Test Webhook</DialogTitle>'
             <DialogDescription className='text-zinc-400'>
@@ -2054,7 +1874,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <>
 
 :src_backup/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
                   <Select
                     value={testEventType}
                     onValueChange={value =>
@@ -2062,8 +1881,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     }
                     value = {testEventType,}
                     onValueChange = {(value,) => setTestEventType(value as WebhookEventType),}
-<<<<<<< HEAD
-<<<<<<< HEAD
       >;
         <DialogContent className='bg-zinc-900 border-zinc-800 text-white'>;
           <DialogHeader>;
@@ -2091,10 +1908,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     }
                     value = {testEventType,}
                     onValueChange = {(value,) => setTestEventType(value as WebhookEventType),}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               clearTestResult()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             }
           }
         }}
@@ -2119,18 +1934,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <SelectTrigger className="bg-zinc-800 border-zinc-700">"
                       <SelectValue placeholder="Select an event type" />
 
-=======
                   >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     </SelectTrigger>
 :src/components/developers/WebhooksManager.tsx
                     <SelectContent className='bg-zinc-900 border-zinc-800'>
                       {eventOptions.map(option => (                        <SelectItem key={option.value} value={option.value}>                      {eventOptions.map((option,) => (                    <SelectContent className="bg-zinc-900 border-zinc-800">
-=======
                     </SelectTrigger>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                     <SelectContent className="bg-zinc-900 border-zinc-800">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {eventOptions.map((option) => (
                       {eventOptions.map(option => (
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -2169,12 +1979,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <DialogFooter>
 :src/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <Button
-=======
                 <Button'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                   variant='outline'
                   onClick={() => setShowTestDialog(null)}
                 >;
@@ -2185,39 +1991,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     showTestDialog && handleTestWebhook(showTestDialog);
                   }
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <DialogFooter>
-=======
               <DialogFooter>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                 <Button variant="outline" onClick={() => setShowTestDialog(null)}>
                   Cancel;
                 </Button>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button onClick={() => showTestDialog && handleTestWebhook(showTestDialog)}>
 :src_backup/components/developers/WebhooksManager.tsx
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Send Test
-=======
                   Send Test;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                 </Button>
               </DialogFooter>
             </>
           ) : (
             <>
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 >                  Send Test                  </p>;
                 </div>;
@@ -2258,14 +2050,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >;
 :src_backup/components/developers/WebhooksManager.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <Label>Response Status</Label>
                     <Badge
                       className={
-<<<<<<< HEAD
                         testResult && testResult.status >= 200 && testResult.status < 300
                           ? "bg-green-700"
                           : "bg-red-700"
@@ -2274,7 +2064,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {testResult?.status} {testResult?.statusText}
                     </Badge>
                   </div>
-=======
                     <Badge
                       className={
                         testResult &&
@@ -2282,28 +2071,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>                  
 
 :src/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 :src_backup/components/developers/WebhooksManager.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div className="space-y-2 mt-4">
                     <Label>Response Body</Label>"
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">"
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">
 :src_backup/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                         {testResult?.responseBody || "No response body"}
                       </pre>
                         {testResult?.responseBody || "No response body"}
 
 :src/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
 <div className='space-y-4 py-4'>
                 <div className='space-y-2'>
                   <div className='flex items-center justify-between'>
@@ -2327,15 +2108,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {testResult?.responseBody || 'No response body'}
                       </pre>
 :src/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </ScrollArea>
                   </div>
                 </div>
               </div>
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <DialogFooter>
                 <Button variant="default" onClick={() => {
@@ -2353,9 +2130,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
               </DialogFooter>
             </>
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
                     </Badge>;
                   </div>;
 '
@@ -2435,11 +2210,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
 
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
 <DialogFooter>
                 <Button
                   variant='default'
@@ -2448,22 +2219,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     setShowTestResult(false)
                     clearTestResult()
 :src/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   }}
-=======
                   <div className="space-y-2 mt-4">
                     <Label>Response Body</Label>
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">                  }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 >                  Close;
                 </Button>;
                 <Button'
                   variant='outline'
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   onClick={() => {
                     setShowTestResult(false)
@@ -2479,16 +2244,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </>
 
 :src/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
                     </Badge>;
 :src_backup/components/developers/WebhooksManager.tsx
                   </div>;
-=======
                   </div>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
                   <div className="space-y-2 mt-4">;
                     <Label>Response Body</Label>;"
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">;"
@@ -2519,9 +2279,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </DialogContent>
       </Dialog>
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   onClick={() => {;
                     setShowTestResult(false);
                     clearTestResult();
@@ -2533,7 +2290,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>;
               </DialogFooter>;
             </>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           )}
         </DialogContent>;
       </Dialog>;
@@ -2549,10 +2305,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         open={showDeleteConfirm !== null} 
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
 :src_backup/components/developers/WebhooksManager.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
 
       >
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Webhook?</AlertDialogTitle>"
@@ -2600,15 +2354,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>
 :src/components/developers/WebhooksManager.tsx
 )
-<<<<<<< HEAD:src_backup/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='bg-red-600 hover:bg-red-700'            >;
             <AlertDialogAction;
               onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm),}"
               className="bg-red-600 hover: bg-red-700";
 :src_backup/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
@@ -2635,9 +2385,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>;
   );
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   value: WebhookEventType,  label: string, description: string ;
 }[] = [ {;'
   value: 'new application',  label: 'New Application', description: 'When a talent applies to a job' ;
@@ -2754,7 +2502,6 @@ clearTestResult ();
 }</DialogContent> </Dialog> {;
   /* Delete Webhook Confirmation Dialog */ ;
 :src_backup/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
 }<AlertDialogopen= {
   showDeleteConfirm !== null 
 }onOpenChange= {
@@ -2763,7 +2510,6 @@ clearTestResult ();
 }'"  );
 }
 {'
-=======
 }<AlertDialogopen= {}
   showDeleteConfirm !== null;
 }onOpenChange= {"
@@ -2773,7 +2519,6 @@ clearTestResult ();
 
 }'
 {''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
   value: 'quote received',  label: 'Quote Received', description: 'When a quote is received from talent'
 }'
 {''
@@ -2781,8 +2526,6 @@ clearTestResult ();
 }'
 {''
   value: 'talent hired',  label: 'Talent Hired', description: 'When talent is hired for a project'
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
 
 :src_backup/components/developers/WebhooksManager.tsx
 value: WebhookEventType,  label: string, description: string 
@@ -2799,7 +2542,6 @@ value: WebhookEventType,  label: string, description: string
   value: 'talent hired',  label: 'Talent Hired', description: 'When talent is hired for a project' 
 
 :src_backup/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 }]
 setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event) return (<Card className="bg-zinc-900 border-zinc-800 text-white"> <CardHeader> <CardTitle className="text-xl flex items-center"> <Webhook className="mr-2" size= {
   20 "
@@ -2807,7 +2549,6 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
 
 :src/components/developers/WebhooksManager.tsx
 }onOpenChange= {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   setShowCreateDialog "
 }> <DialogTrigger asChild> </Button> </DialogTrigger> <DialogContent className="bg-zinc-900 border-zinc-800 text-white"> <DialogHeader> <DialogTitle>Create Webhook</DialogTitle> <DialogDescription className="text-zinc-400"> Add a webhook endpoint to receive event notifications. </DialogDescription> </DialogHeader> <div className="space-y-4 py-4"> <div className="space-y-2" > <Label htmlFor="webhook-name" >Webhook Name</Label> <Input className="bg-zinc-800 border-zinc-700" /> </div> className="bg-zinc-800 border-zinc-700" /> <p className="text-xs text-zinc-500"> The window.URL where webhook payloads will be sent when events occur. </p> </div> <div className="space-y-2" > <Label htmlFor="webhook-secret" >Secret Key (Optional) </Label> <Input className="bg-zinc-800 border-zinc-700" /> <p className="text-xs text-zinc-500"> Used to verify webhook payload signatures. Keep it secret and secure. </p> </div> <div className="space-y-2"> <Label>Event Types</Label> <div className="grid gap-2 pt-2"> {
   eventOptions.map ( (event) => (<div key= {
@@ -2817,7 +2558,6 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
 :src/components/developers/WebhooksManager.tsx
   event.value 
 }checked= {
-=======
 }]"
 setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event) return (<Card className="bg-zinc-900 border-zinc-800 text-white"> <CardHeader> <CardTitle className="text-xl flex items-center"> <Webhook className="mr-2" size= {"
   20 ""
@@ -2831,7 +2571,6 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
 }className="flex items-center space-x-2"> <Checkbox id= {}
   event.value;
 }checked= {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
   selectedEvents.includes (event.value) 
 }onCheckedChange= {}
   () => toggleEvent (event.value) 
@@ -2846,7 +2585,6 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
 
 :src/components/developers/WebhooksManager.tsx
 }> Create Webhook </Button> </DialogFooter> </DialogContent> </Dialog> </div> {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   /* Webhooks List */ "
 }<div className="space-y-4"> {"
   loading ? (<div className="text-center py-8 text-zinc-500">Loading webhooks...</div>) : webhooks.length === 0 ? (<div className="text-center py-8 text-zinc-500"> <Webhook className="mx-auto mb-2 opacity-30"size= {
@@ -2875,7 +2613,6 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
   event 
 }</Badge>) ) "
 }</div> <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4"> <span>Created: {'
-=======
 }> Create Webhook </Button> </DialogFooter> </DialogContent> </Dialog> </div> {"
   /* Webhooks List */ ""
 }<div className="space-y-4"> {""
@@ -2903,7 +2640,6 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
   event "
 }</Badge>) ) "'"
 }</div> <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4"> <span>Created: {''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
   format (new Date (webhook.created at),  'MMM d, yyyy') 
 }</span> {'
   webhook.last triggered at && (<span>Last triggered: {''
@@ -2917,7 +2653,6 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
   showTestDialog !== null 
 
 }onOpenChange= {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   (open) => {
   if (!open) {
   setShowTestDialog (null);'
@@ -2928,7 +2663,6 @@ if (showTestResult) {
   !showTestResult ? (<> <div className="space-y-4 py-4"> <div className="space-y-2"> <Label htmlFor=" test-event-type">Event Type</Label> <Select value= {
 
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
   testEventType
 }onValueChange= {
   (value) => setTestEventType (value as WebhookEventType) "
@@ -2937,7 +2671,6 @@ if (showTestResult) {
 
 :src/components/developers/WebhooksManager.tsx
   option.value 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }value= {
   option.value 
 }> {
@@ -2951,9 +2684,7 @@ if (showTestResult) {
 
 :src/components/developers/WebhooksManager.tsx
 }{
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   testResult?.statusText "
-=======
 }<Dialog open= {}
   showTestDialog !== null;
 }onOpenChange= {}
@@ -2983,7 +2714,6 @@ if (showTestResult) {"
   testResult?.status;
 }{"
   testResult?.statusText ""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx
 }</Badge> </div> <div className="space-y-2 mt-4"> <Label>Response Body</Label> <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4"> </pre> </ScrollArea> </div> </div> </div> <DialogFooter> setShowTestDialog (null)
 setShowTestResult (false)
 clearTestResult ()
@@ -3014,7 +2744,6 @@ clearTestResult ()
             <AlertDialogAction;
 :src_backup/components/developers/WebhooksManager.tsx
               on_click = {() => showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm), }
-<<<<<<< HEAD
               className="bg - red - 600 hover: bg - red-700";
       <AlertDialog;
         open={showDeleteConfirm !== null} ;
@@ -3028,30 +2757,23 @@ clearTestResult ()
           <AlertDialogHeader>;
             <AlertDialogTitle > Delete Webhook?</AlertDialogTitle>;"
             <AlertDialogDescription className="text - zinc - 400">;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
 
               This action will permanently remove this webhook.;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               You will no longer receive events at this endpoint.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
 :src_backup/components/developers/WebhooksManager.tsx
           <AlertDialogFooter>;
-<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
             <AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc-700">;
             <AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700">;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction;
 :src_backup/components/developers/WebhooksManager.tsx
               on_click={() => showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm)}
-<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
               className="bg - red - 600 hover: bg - red-700";
               className="bg - red - 600 hover: bg - red - 700";
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
             >;
               Delete;
             </AlertDialogAction>;
@@ -3059,7 +2781,6 @@ clearTestResult ()
         </AlertDialogContent>;
       </AlertDialog>;
 :src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
     </Card>);
   value: WebhookEventType,  label: string, description: string;
 }[] = [ {'
@@ -3067,16 +2788,8 @@ clearTestResult ()
 }
 
 :src_backup/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/WebhooksManager.tsx
 }<AlertDialog open= {;
   showDeleteConfirm !== null ;
 }onOpenChange= {;
@@ -3084,8 +2797,4 @@ clearTestResult ()
 }> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;
 }'"
 :src/components/developers/WebhooksManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/WebhooksManager.tsx

@@ -9,8 +9,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' })
   return res.status(200).json({ notes: getAllNotes() })
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   return res.status(200).json({ notes: getAllNotes() });
 };'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

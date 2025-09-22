@@ -51,9 +51,7 @@ export function ApiDocsHub() {
           Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.
         </p>
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ApiDocsHub.tsx
         <div className="grid gap-6 md:grid-cols-2">
           {sections.map((section) => (
             <Link;
@@ -78,12 +76,10 @@ export function ApiDocsHub() {
         <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">
           <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
           <p className="text-zinc-400 mb-6">
-=======
 "
         <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">"
           <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>"
           <p className="text-zinc-400 mb-6">'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ApiDocsHub.tsx
             To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
           </p>
           <Link"
@@ -100,12 +96,10 @@ export function ApiDocsHub() {
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react';
-=======
 "
 import React from "react",;"
 import Link from "next/link",;'
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react';"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ApiDocsHub.tsx
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
 export function ApiDocsHub() { return null; }
       color: "from-blue-500 to-cyan-500"},;
@@ -178,6 +172,4 @@ export function ApiDocsHub() { return null; }
 }
 ;
 export default ApiDocsHub;
-=======
   )'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ApiDocsHub.tsx

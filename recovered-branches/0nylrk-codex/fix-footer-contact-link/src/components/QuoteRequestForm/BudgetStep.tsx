@@ -1,37 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {QuoteFormData} from "@/types/quotes";
 import {Label} from "@/components/ui/label";
 import {Slider} from "@/components/ui/slider";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {QuoteFormData} from "@/types/quotes";
 import {Label} from "@/components/ui/label";
 import {Slider} from "@/components/ui/slider";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { QuoteFormData } from "@/types/quotes",
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label",
-<<<<<<< HEAD
 import { Slider } from "@/components/ui/slider",
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface BudgetStepProps {
 
   formData: QuoteFormData
@@ -83,7 +64,6 @@ import {Slider} from "@/components/ui/slider";
           ...formData.budget,
           type,
 max_amount: form_data.budget.amount + 5000;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface BudgetStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
@@ -97,37 +77,24 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
           ...formData && formData.budget;
           type,;
           maxAmount: formData && formData.budget.amount + 5000;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
-=======
 import { Slider } from "@/components/ui/slider",        }
-=======
 import { Slider } from "@/components/ui/slider",        }
       })
 } else {
       updateFormData({
         budget: {        }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       })
     } else {
       updateFormData({
         budget: {        }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       })
     } else {
       updateFormData({
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         budget: {
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
       });
     } else {;
@@ -138,57 +105,33 @@ import { Slider } from "@/components/ui/slider",        }
         }
       });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   };
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   },
   };
   },  },
   };
   },
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
   };
   },
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
       currency: 'USD'
       maximumFractionDigits: 0
-<<<<<<< HEAD
     }).format(value)
-<<<<<<< HEAD
 
   },
 
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
-=======
 
   const formatCurrency = (value: number) => {}
     return new Intl.NumberFormat('en-US', {'
@@ -198,7 +141,6 @@ import { Slider } from "@/components/ui/slider",        }
     }).format(value)
 
   return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="space-y-6">
       <div>'"
         <h3 className="text-xl font-semibold text-white mb-4">What's your budget?</h3>"
@@ -217,10 +159,6 @@ import { Slider } from "@/components/ui/slider",        }
             </div>
 <div
             <div
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   return (
     <div className="space-y-6">
       <div>
@@ -241,7 +179,6 @@ import { Slider } from "@/components/ui/slider",        }
 
             <div 
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "hourly"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -255,11 +192,6 @@ import { Slider } from "@/components/ui/slider",        }
             </div>
 <div
             <div 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               onClick={() => handleBudgetTypeSelect("hourly")}
             >
               <h4 className="font-medium text-white">Hourly Rate</h4>
@@ -268,7 +200,6 @@ import { Slider } from "@/components/ui/slider",        }
 
             <div 
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "range"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -281,34 +212,16 @@ import { Slider } from "@/components/ui/slider",        }
               <p className="text-sm text-zion-slate-light">I have a min and max</p>
             </div>
           </div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          {formData.budget.type === "fixed" && (
-=======
-    }).format(value)          {formData.budget.type === "fixed" && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    }).format(value)          {formData.budget.type === "fixed" && (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
           {formData.budget.type === "fixed" && (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    }).format(value)          {formData.budget.type === "fixed" && (
+    }).format(value)          {formData.budget.type === "fixed" && (
+
+          {formData.budget.type === "fixed" && (
             <div className="mt-6">
               <Label className="text-zion-slate-light mb-4 block">
                 Fixed Budget: {formatCurrency(formData.budget.amount)}
               </Label>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
           {formData.budget.type === "fixed" && ("
@@ -317,7 +230,6 @@ import { Slider } from "@/components/ui/slider",        }
                 Fixed Budget: {formatCurrency(formData.budget.amount)}
               </Label>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
   const formatCurrency = (value: number) => {;'
     return new Intl && Intl.NumberFormat('en-US', {;'
@@ -372,22 +284,12 @@ import { Slider } from "@/components/ui/slider",        }
               <Label className="text-zion-slate-light mb-4 block">;
                 Fixed Budget: {formatCurrency(formData && formData.budget.amount)}
               </Label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Slider
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               <Slider;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         }
       });
     }
               <Slider
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 defaultValue={[formData && formData.budget.amount]}
                 max={50000}
                 step={500}
@@ -428,18 +330,14 @@ budget: { ...formData && formData.budget, amount: value[0] }                    
                     const maxAmount = formData.budget.maxAmount || 50000,;
 
 updateFormData({;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       budget: { ;
                         ...formData && formData.budget, ;
                         amount: newAmount,;
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount;
 
-<<<<<<< HEAD
                       }
                     });
                   }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Slider
                 defaultValue={[formData.budget.amount]}
                 max={50000}
@@ -493,9 +391,6 @@ updateFormData({;
                         ...formData.budget
                         amount: newAmount
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount
                   onValueChange={(value) => {;
                     const newAmount = value[0],;
@@ -505,15 +400,12 @@ updateFormData({;
                         ...formData.budget;
                         amount: newAmount;
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       }
                     })
                   }}
                   className="py-4"
                 />
                 <div className="flex justify-between text-sm text-zion-slate-light mt-2">
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <span>$0</span>
                   <span>$50,000</span>
                 </div>
@@ -521,7 +413,6 @@ updateFormData({;
               <div>
                 <Label className="text-zion-slate-light mb-4 block">
 
-<<<<<<< HEAD
                   Maximum Budget: {formatCurrency(formData.budget.maxAmount |0)}
 </div>"
                 <Label className="text-zion-slate-light mb-4 block">"
@@ -529,40 +420,23 @@ updateFormData({;
                 </Label>
                 <Slider;
                   defaultValue={[formData.budget.maxAmount |formData.budget.amount + 5000]}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   Maximum Budget: {formatCurrency(formData.budget.maxAmount || 0)}
                 </Label>;
 </Slider>
                 <Slider;
                   defaultValue={[formData.budget.maxAmount || formData.budget.amount + 5000]}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   min={formData.budget.amount}
-<<<<<<< HEAD
-=======
                   min={formData.budget.amount}                  min={formData.budget.amount}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   min={formData.budget.amount}                  min={formData.budget.amount}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   min={formData.budget.amount}
 }
                     });
                   }}
                   min={formData.budget.amount}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   className="py-4";
 />;"
                 <div className="flex justify-between text-sm text-zion-slate-light mt-2">;
@@ -643,13 +517,10 @@ return (
               }`}
               on_click={() => handleBudgetTypeSelect ("fixed")}
             >;
-<<<<<<< HEAD
               <h4 className="font - medium text-white">Fixed Budget</h4>;
               <p className="text - sm text - zion - slate-light">I have a set amount</p>;
-=======
               <h4 className="font - medium text-white">Fixed Budget</h4>;
               <p className="text - sm text - zion - slate-light">I have a set amount</p>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
             <div;`
               className={`p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${"
@@ -659,13 +530,10 @@ return (
               }`}"
               on_click={() => handleBudgetTypeSelect ("hourly")}
 >;
-<<<<<<< HEAD
               <h4 className="font - medium text-white">Hourly Rate</h4>;
               <p className="text - sm text - zion - slate-light">Pay per hour of work</p>;
-=======
               <h4 className="font - medium text-white">Hourly Rate</h4>;
               <p className="text - sm text - zion - slate-light">Pay per hour of work</p>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
             <div;`
               className={`p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${"
@@ -680,13 +548,10 @@ return (
             </div>;
           </div>;
           {form_data.budget.type === "fixed" && (
-<<<<<<< HEAD
             <div className="mt-6">;
               <Label className="text - zion - slate - light mb-4 block">;
-=======
             <div className="mt-6">;
               <Label className="text - zion - slate - light mb-4 block">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 Fixed Budget: {format_currency (form_data.budget.amount)}
         </div>;
       </div>;
@@ -756,13 +621,10 @@ onValueChange={(value) => updateFormData ({}
               </div>;
             </div>)}
           {form_data.budget.type === "hourly" && (
-<<<<<<< HEAD
             <div className="mt-6">;
               <Label className="text - zion - slate - light mb-4 block">;
-=======
             <div className="mt-6">;
               <Label className="text - zion - slate - light mb-4 block">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 Hourly Rate: {format_currency (form_data.budget.amount)}/hour;
 </Slider>"
               <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;"
@@ -794,11 +656,8 @@ onValueChange={(value) => updateFormData ({}
           {form_data.budget.type === "range" && (
             <div className="mt - 6 space-y-8">;
               <div>;
-<<<<<<< HEAD
                 <Label className="text - zion - slate - light mb-4 block">;
-=======
                 <Label className="text - zion - slate - light mb-4 block">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   Minimum Budget: {format_currency (form_data.budget.amount)}
 </Slider>"
               <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;"
@@ -833,24 +692,18 @@ onValueChange={(value) => {}
 }}
                   className="py-4";
                 />;
-<<<<<<< HEAD
                 <div className="flex justify - between text - sm text - zion - slate - light mt-2">;
-=======
                 <div className="flex justify - between text - sm text - zion - slate - light mt-2">;
 </Slider>"
                 <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;"
 </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <span>$0</span>;
                   <span>$50, 000</span>;
                 </div>;
               </div>;
 <div>;
-<<<<<<< HEAD
                 <Label className="text - zion - slate - light mb-4 block">;
-=======
                 <Label className="text - zion - slate - light mb-4 block">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   Maximum Budget: {format_currency (form_data.budget.max_amount || 0)}
 </div>"
                 <Label className="text - zion - slate - light mb - 4 block">;"
@@ -867,14 +720,11 @@ onValueChange={(value) => updateFormData ({}
 })}
                   className="py-4";
                 />;
-<<<<<<< HEAD
                 <div className="flex justify - between text - sm text - zion - slate - light mt-2">;
-=======
                 <div className="flex justify - between text - sm text - zion - slate - light mt-2">;
 </Slider>"
                 <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;"
 </div>)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <span>{format_currency (form_data.budget.amount)}</span>;
                   <span>$100, 000+</span>;
 

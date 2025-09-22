@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
@@ -97,12 +96,10 @@ export function AIEnhancementPanel({;
               value={options.instructions}
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </div>;
         )}
 ;
         {/* Generate button */}
-<<<<<<< HEAD
 
             </div>;
           </div>;

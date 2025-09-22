@@ -41,4 +41,3 @@ export interface ReferralStats {;
   completedReferrals:number;
   totalRewards:number;
 } export type ReferralStatus = 'pending' | 'completed' | 'expired';
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

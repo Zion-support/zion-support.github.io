@@ -1,6 +1,4 @@
 :src/components/mobile-app/DownloadSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import { QrCodeIcon } from 'lucide-react'
@@ -28,9 +26,7 @@ appStoreUrl = {appStoreUrl,}
                 onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
 :src/components/mobile-app/DownloadSection.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React from "react",
 import { QrCodeIcon } from 'lucide-react'
@@ -62,14 +58,12 @@ export const DownloadSection: React.FC = () => {
                             <AppStoreButtons
 
               <AppStoreButtons 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => logInfo("App Store button clicked")}
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
 :src/components/mobile-app/DownloadSection.tsx
-<<<<<<< HEAD
               />
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
@@ -77,7 +71,6 @@ export const DownloadSection: React.FC = () => {
               </div>
             </div>
 :src/components/mobile-app/DownloadSection.tsx
-<<<<<<< HEAD
 
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
@@ -108,7 +101,6 @@ export const DownloadSection: React.FC = () => {;
             <div className="flex-1">;
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Get The App Today</h2>;
               <p className="text-lg text-gray-300 mb-8">;
-=======
 
   // These would typically come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
@@ -122,7 +114,6 @@ export const DownloadSection: React.FC = () => {;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">Get The App Today</h2>;
               <p className="text - lg text - gray - 300 mb - 8">;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/DownloadSection.tsx
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
               </p>;
               <AppStoreButtons;
@@ -133,7 +124,6 @@ export const DownloadSection: React.FC = () => {;
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />;
 :src/components/mobile-app/DownloadSection.tsx
-<<<<<<< HEAD
               <div className="text - sm text - gray - 400">;
                 <p > Compatible with iOS 14+ and Android 8.0+</p>;
                 <p > Free download, in - app purchases available</p>;
@@ -153,11 +143,9 @@ export const DownloadSection: React.FC = () => {;
     </section>);
 }
 :src/components/mobile-app/DownloadSection.tsx
-<<<<<<< HEAD
 
               />;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="text-sm text-gray-400">;
                 <p>Compatible with iOS 14+ and Android 8.0+</p>;
                 <p>Free download, in-app purchases available</p>;
@@ -196,5 +184,3 @@ export const DownloadSection: React.FC = () => {;
 
 "
 :src/components/mobile-app/DownloadSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

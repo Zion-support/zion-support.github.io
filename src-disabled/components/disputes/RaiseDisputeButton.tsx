@@ -1,7 +1,4 @@
 :src/components/disputes/RaiseDisputeButton.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -29,8 +26,6 @@ import {
 import { DisputeForm } from "./DisputeForm";
 import { useRouter } from 'next/router';
 :src/components/disputes/RaiseDisputeButton.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {  Dialog
@@ -57,7 +52,6 @@ interface RaiseDisputeButtonProps {
   size?: "default" | "sm" | "lg" | "icon";
   className?: string
 :src_backup/components/disputes/RaiseDisputeButton.tsx
-<<<<<<< HEAD
 
 export function RaiseDisputeButton({
 Dialog,
@@ -80,9 +74,7 @@ import { useRouter } from 'next/router',
 import { ShieldAlert } from 'lucide-react'
 
 interface RaiseDisputeButtonProps {  projectId: string,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   projectId: string,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   milestoneId?: string,
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link","
   size?: "default" | "sm" | "lg" | "icon","
@@ -101,7 +93,6 @@ export function RaiseDisputeButton({
   className 
 }: RaiseDisputeButtonProps) {
 :src/components/disputes/RaiseDisputeButton.tsx
-<<<<<<< HEAD
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
 
@@ -138,8 +129,6 @@ export function RaiseDisputeButton({
             </DialogDescription>
           </DialogHeader>
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/RaiseDisputeButton.tsx
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>',
           <DialogHeader>
@@ -185,20 +174,15 @@ export function RaiseDisputeButton({
             milestone_id={milestone_id}
             onDisputeCreated={handleDisputeCreated}
 :src_backup/components/disputes/RaiseDisputeButton.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             onCancel={() => setIsDialogOpen(false)}          />
         </DialogContent>
       </Dialog>
     </>
 :src_backup/components/disputes/RaiseDisputeButton.tsx
-<<<<<<< HEAD
   )
 }
-=======
   )
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/RaiseDisputeButton.tsx
             on_cancel={() => setIsDialogOpen (false)}          />;
         </DialogContent>;
       </Dialog>;
@@ -219,12 +203,7 @@ import { useRouter } from 'next/router',
 import { ShieldAlert } from 'lucide-react'
 
 :src_backup/components/disputes/RaiseDisputeButton.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/RaiseDisputeButton.tsx
           <DisputeForm 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -296,28 +275,14 @@ export function RaiseDisputeButton({;
     </>;
   );
 :src_backup/components/disputes/RaiseDisputeButton.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 :src/components/disputes/RaiseDisputeButton.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-=======
 }
 ;
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/RaiseDisputeButton.tsx
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/RaiseDisputeButton.tsx

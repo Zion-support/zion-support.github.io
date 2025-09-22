@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -26,10 +22,6 @@ import {HELP_CATEGORIES} from "./help-content";
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HELP_CATEGORIES } from "./help-content",
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HELP_CATEGORIES} from "./help-content";
@@ -38,7 +30,6 @@ import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HELP_CATEGORIES } from "./help-content",
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
@@ -47,8 +38,6 @@ interface HelpArticleListProps {
 
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HELP_CATEGORIES } from "./help-content",;
@@ -62,7 +51,6 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
   if (!category) {;
 return <div>Category not found</div>;
-<<<<<<< HEAD
 import React from "react";
 import {}
   Card,
@@ -94,7 +82,6 @@ export function HelpArticleList({}
 
   if (!category) {}
     return <div>Category not found</div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
   // Filter articles based on search query;
@@ -132,7 +119,6 @@ export function HelpArticleList({
 
   // Filter articles based on search query
   const filteredArticles = searchQuery
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ? category.articles.filter(
         (article) =>
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -145,23 +131,18 @@ article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       )
 
   return (
-<<<<<<< HEAD
-=======
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           article.content.toLowerCase().includes(searchQuery.toLowerCase()),
       )
     : category.articles,
 
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div>
       <div className="mb-6">
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
-=======
     <div>"
       <div className="mb-6">"
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-zion-slate-light">{category.description}</p>
       </div>
 
@@ -214,7 +195,6 @@ article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     </div>
   );
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
   const category = HELP_CATEGORIES && HELP_CATEGORIES.find(cat => cat && cat.id === categoryId);
 
@@ -255,7 +235,6 @@ export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQue
                 <CardTitle className="text-lg">{article && article.title}</CardTitle>;"
                 <CardDescription className="text-zion-slate-light text-sm">;
                   Last updated: {formatDate(article && article.lastUpdated)}
-<<<<<<< HEAD
       ) :(;
         <div className="space-y-4">;
           {filteredArticles.map(article => (;
@@ -279,10 +258,7 @@ function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
-<<<<<<< HEAD
-<<<<<<< HEAD
     day: "numeric"
-<<<<<<< HEAD
   });
 }
 
@@ -315,7 +291,6 @@ interface HelpArticleListProps {}
   category_id: string;
   onArticleSelect: (article_id: string) => void;
   search_query: string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
   // Check condition;
@@ -374,13 +349,9 @@ function format_date (date: string): string {"
     month: "long","
     day: "numeric",
   });
-<<<<<<< HEAD
 }
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   {article.content.substring(0, 120)}...;
                 </p>;
               </CardContent>;
@@ -398,8 +369,6 @@ function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
 year: "numeric"
     month: "long"
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     day: "numeric"
 
     </div>;
@@ -462,7 +431,6 @@ if ( {) {
         </div>) : (
         <div className="space - y-4">;
           {filtered_articles.map ((article) => (
-=======
     <div>
 </div>"
       <div className="mb-6">"
@@ -474,7 +442,6 @@ if ( {) {
 </p>
         <div className="space-y-4">"
 </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <Card;
               key={article.id}"
               className="cursor-pointer hover:border-zion-purple/50 transition-colors""
@@ -577,8 +544,6 @@ function format_date (date: string): string {
   })
   })
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 function formatDate(date: string): string {;
@@ -589,13 +554,5 @@ function formatDate(date: string): string {;
   });
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

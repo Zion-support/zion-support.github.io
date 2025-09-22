@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
       icon: Brain
       title: "AI-Powered Asset Discovery"
       description: "Intelligent detection and cataloging of all IT assets across your network"
@@ -111,7 +110,6 @@ title: 'Cost Optimization',
       description: 'Better security compliance',
     },
     {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       icon: TrendingUp
       title: "Efficiency Boost"
       value: "200%"
@@ -154,18 +152,12 @@ import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   Monitor, Brain, Cpu, Zap, Shield, Globe,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
     {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: Brain,
 
       title: "AI - Powered Asset Discovery","
       description: "Intelligent detection and cataloging of all IT assets across your network",
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Database, Network, Server, Laptop, Smartphone;
@@ -183,9 +175,6 @@ const AIPoweredITAssetManagement = () => {}
       title: "Real-Time Monitoring","
       description: "Continuous monitoring and health assessment of all IT assets","
       color: "from-blue-500 to-cyan-500"
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
     {
       icon: Shield,
@@ -194,17 +183,14 @@ const AIPoweredITAssetManagement = () => {}
 
       color: "from-emerald-500 to-teal-500"
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     },
     {}
       icon: TrendingUp,"
       title: "Predictive Analytics",
 
-=======
   ],
   const asset_types = [;
     }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -219,15 +205,8 @@ const AIPoweredITAssetManagement = () => {}
   }
 }
 
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ],
   const assetTypes = []
 "
@@ -240,15 +219,11 @@ const AIPoweredITAssetManagement = () => {}
     "Peripheral devices and accessories"
   ],
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const benefits = [
 
     {
       icon: DollarSign,
       title: "Cost Optimization",
-=======
 "
     "Peripheral devices and accessories","
     "Peripheral devices and accessories"
@@ -258,14 +233,9 @@ const AIPoweredITAssetManagement = () => {}
     {}
       icon: DollarSign,"
       title: "Cost Optimization","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       value: "35%",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: "Reduction in IT asset costs"
     },
     {}
@@ -285,7 +255,6 @@ const AIPoweredITAssetManagement = () => {}
       title: "Efficiency Boost","
       value: "200%","
       description: "Increased operational efficiency"
-<<<<<<< HEAD
 
   return (
 "
@@ -312,11 +281,9 @@ const AIPoweredITAssetManagement = () => {}
     }
       } catch (error) {
     console.error("Error:", error);
-=======
 
       } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {"
     console.error("Error:", error);"
@@ -328,13 +295,7 @@ const AIPoweredITAssetManagement = () => {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ],
   const capabilities = ["
     "Automated asset discovery and inventory""
@@ -345,14 +306,8 @@ const AIPoweredITAssetManagement = () => {}
     "Asset lifecycle optimization""
     "Cost allocation and tracking""
     "Integration with existing IT tools"
-<<<<<<< HEAD
   ],
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
   return ("
     <div className="min-h-screen bg-gray-50">"
@@ -385,14 +340,7 @@ const AIPoweredITAssetManagement = () => {}
 };
 export default AIPoweredITAssetManagement;
   ],
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
 
     <>
@@ -407,7 +355,6 @@ export default AIPoweredITAssetManagement;
       </Head>"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   return (
     <>
@@ -436,7 +383,6 @@ export default AIPoweredITAssetManagement;
         />
       </Head>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -450,10 +396,6 @@ export default AIPoweredITAssetManagement;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
@@ -513,16 +455,12 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
                 Transform your IT operations with intelligent asset management that discovers
                 Transform your IT operations with intelligent asset management that discovers,
             <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Transform your IT operations with intelligent asset management that discovers
                 Transform your IT operations with intelligent asset management that discovers,
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: "Reduction in IT asset costs";
     },
     {}
@@ -566,7 +504,6 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
         <meta property="og:url" content="https://ziontechgroup.com / ai - powered - it - asset - management" />;
       </Head>;"
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - indigo - 900 to - slate - 900">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Hero Section */}
         <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="absolute inset - 0 bg - gradient - to - r from - indigo - 600 / 20 to - purple - 600 / 20"></div>;
@@ -578,13 +515,6 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
 
                 Transform your IT operations with intelligent asset management that discovers,
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 monitors, and optimizes every piece of your technology infrastructure.
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -593,7 +523,6 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>"
                 <Link href="/services" className="inline-flex items-center px-8 py-3 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-200">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link
@@ -607,16 +536,13 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
                   href='/services'
                   className='inline-flex items-center px-8 py-3 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-200'
                 >
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Learn More
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Features Section */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -674,11 +600,6 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -692,9 +613,6 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
 
               {features.map((feature, index) => (
 <motion.div
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <motion.div;
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
@@ -702,9 +620,6 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>"
@@ -714,15 +629,11 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
                   <p className="text-gray-400">{feature.description}</p>
 
                 </motion.div>
-<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Revolutionary Features
@@ -753,7 +664,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
                   </h3>
                   <p className='text-gray-400'>{feature.description}</p>
                 </motion.div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -838,9 +748,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -853,11 +760,8 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
                 Comprehensive Asset Coverage
               </h2>
               <p className='text-xl text-gray-400 max-w-2xl mx-auto'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Manage every type of IT asset across your entire infrastructure
-=======
                 Manage every type of IT asset across your entire infrastructure;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </motion.div>
 
@@ -865,22 +769,12 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
 
               {assetTypes.map((assetType, index) => (
                 <motion.div
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="flex items-center space-x-3"
                 >"
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />"
@@ -893,9 +787,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -980,9 +871,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -996,9 +884,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
 
               {benefits.map((benefit, index) => (
 <motion.div
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <motion.div;
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
@@ -1006,9 +891,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="text-center"
                 >"
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">"
@@ -1021,13 +903,11 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
 
                   </div>
                 </motion.div>
-<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1042,7 +922,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
               {capabilities.map((capability, index) => (
                 <motion.div
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
@@ -1087,7 +966,6 @@ className='text-center'
                     </p>
                   </div>
                 </motion.div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1119,7 +997,6 @@ className='text-center'
 }"
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">"
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <motion.div
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -1173,11 +1050,7 @@ className='text-center'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Transform Your IT Asset Management?
@@ -1203,11 +1076,9 @@ className='text-center'
   )
 
 export default AIPoweredITAssetManagement,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {capabilities.map((capability, index) => (
                 <motion.div;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Advanced Capabilities
@@ -1221,28 +1092,21 @@ export default AIPoweredITAssetManagement,
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
               {capabilities.map((capability, index) => (
                 <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="flex items-center space-x-3"
                 >"
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />"
                   <span className="text-gray-300">{capability}</span>
                 </motion.div>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               ))  } catch (error) {
     console.error("Error:", error);
-=======
               ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {"
     console.error("Error:", error);"
@@ -1270,12 +1134,8 @@ export default AIPoweredITAssetManagement,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <motion.div
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -1353,8 +1213,6 @@ export default AIPoweredITAssetManagement,
 )
 }
 export default AIPoweredITAssetManagement;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export default AIPoweredITAssetManagement,;
 ;
@@ -1389,13 +1247,9 @@ export default AIPoweredITAssetManagement,
 };
 
 export default AIPoweredITAssetManagement;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >;
-=======
 
             >;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Transform Your IT Asset Management?;
               </h2>;"
@@ -1419,21 +1273,11 @@ export default AIPoweredITAssetManagement;
   );
 },;
 export default AIPoweredITAssetManagement;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     </>);
 },
 export default AIPoweredITAssetManagement,;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
 ;
@@ -54,9 +53,7 @@ export function EnterpriseFeatures() {;
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>;
               <p className="text-muted-foreground">{feature.description}</p>;
             </div>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           ))}
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD

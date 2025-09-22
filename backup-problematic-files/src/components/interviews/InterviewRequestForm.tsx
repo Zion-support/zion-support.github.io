@@ -161,12 +161,10 @@ pr-12325
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
                       className="p-3 pointer-events-auto";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     />;
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
-<<<<<<< HEAD
                 <Select onValueChange={field.onChange} defaultValue={field.value}>;
 
                     <SelectTrigger>;
@@ -210,12 +208,10 @@ pr-12325
 
                   <Input;"
                     placeholder={`Add your ${form.watch('platform')} link here`}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {...field}
 />;
                 </FormControl>;
                 <FormMessage />;
-<<<<<<< HEAD
                   {...field}
                 />;
               </FormControl>;
@@ -231,14 +227,12 @@ async function onSubmit (values: z.infer<typeof formSchema>) {;
 if (!userDetails?.id) {;
   toast ({;
   return;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }setIsSubmitting (true);
 }catch (error) {;
   logErrorToProduction ('Failed to schedule interview:', {;
   data: error ;
 });
 toast ({;
-<<<<<<< HEAD
 }finally {;
   setIsSubmitting (false) ;
 }";

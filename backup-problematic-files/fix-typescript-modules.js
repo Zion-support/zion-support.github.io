@@ -13,11 +13,9 @@ const apiDisabledDir = path.join(__dirname, 'api-disabled');
       } catch (error) {,;
 ;
 console.log(`Error processing ${fullPath} ${error.message}`)};
-=======
 ;`;
         console.log(`Error processing ${fullPath} ${error.message}`)};
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
   })};
 // Fix all TypeScript files in api-disabled directory,;
@@ -36,6 +34,4 @@ console && console.log('✅ Fixed all empty TypeScript files in api-disabled dir
 const apiDisabledDir = path && path.join(__dirname, 'api-disabled'),
 if (fs && fs.existsSync(apiDisabledDir)) {,
   fixTypeScriptFiles(apiDisabledDir),
-=======
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

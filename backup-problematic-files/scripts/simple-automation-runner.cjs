@@ -1,6 +1,4 @@
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 /**
  * Simple Automation Runner;
@@ -156,16 +154,10 @@ this.generateReport();
   }
 
       return size}}
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
       return size}}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     totalSize = getDirectorySize(buildDir);
-=======
       return size}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const recommendations = [];
 
       recommendations.push('Consider code splitting to reduce bundle size')}
@@ -183,15 +175,12 @@ if (require.main === module) {
     process.exit(1);
 });
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 module.exports = SimpleAutomationRunner;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = { runSimpleAutomation }) {
   runSimpleAutomation().catch(console.error)}
 module.exports = { runSimpleAutomation }) {
@@ -219,14 +208,6 @@ const { execSync } = require('child_process')
           "status"
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
-<<<<<<< HEAD
 
         "status"
         "status"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

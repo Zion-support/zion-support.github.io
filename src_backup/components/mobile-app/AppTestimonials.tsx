@@ -1,7 +1,4 @@
 :src/components/mobile-app/AppTestimonials.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import { Star } from 'lucide-react'
@@ -30,16 +27,10 @@ const testimonials = [
     avatar: "/placeholder.svg"
   }
 ],
-=======
-{
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 {
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppTestimonials.tsx
+{
+
     name: 'Sarah Williams'
     role: 'Tech Recruiter'
     text: 'As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.'
@@ -74,13 +65,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-400'}`}                    />
 :src/components/mobile-app/AppTestimonials.tsx
-<<<<<<< HEAD
     avatar: "/placeholder.svg"
   }
 ],
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
 export const AppTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -231,9 +219,6 @@ rating: 4;";
     text: 'I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.',
     rating: 4,
 :src/components/mobile-app/AppTestimonials.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     avatar: '/placeholder.svg',
   }, ];
 
@@ -299,7 +284,6 @@ export const AppTestimonials: React.FC = () => {;
         </div>;
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export const AppTestimonials: React.FC = () => {
   return (
@@ -338,7 +322,6 @@ export const AppTestimonials: React.FC = () => {
                 </div>
               </CardFooter>
             </Card>
-<<<<<<< HEAD
 import React from "react",;
 import { Star } from 'lucide-react';
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -407,14 +390,7 @@ export const AppTestimonials: React.FC = () => {;
     </section>;
   );
 };
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppTestimonials.tsx
 avatar: "/placeholder.svg" ;
 }];
 export const AppTestimonials: React.FC = () => {";
@@ -423,5 +399,3 @@ export const AppTestimonials: React.FC = () => {";
 };
 '"
 :src/components/mobile-app/AppTestimonials.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

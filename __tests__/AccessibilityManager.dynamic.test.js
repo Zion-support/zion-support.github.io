@@ -4,8 +4,6 @@ describe('AccessibilityManager.dynamic', () => {
   it('should work', () => {
     expect(true).toBe(true);
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityManagerdynamic from '../components/AccessibilityManager.dynamic'; describe('AccessibilityManagerdynamic',() => { test('renders without crashing',() => { render(<AccessibilityManagerdynamic />); expect( screen.getByTestId('accessibilitymanager.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityManagerdynamic />)}); test('handles user interactions',() => { render(<AccessibilityManagerdynamic />)}); test('applies correct styling',() => { render(<AccessibilityManagerdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
 main
@@ -22,9 +20,7 @@ describe('AccessibilityManagerdynamic', () => {
     expect(
       screen.getByTestId('accessibilitymanager.dynamic')
     ).toBeInTheDocument();
->>>>>>> origin/main
   });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 });
 
 });
@@ -62,7 +58,6 @@ describe('AccessibilityManagerdynamic'
 });
 
 import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityManagerdynamic from '../components/AccessibilityManager.dynamic'; describe('AccessibilityManagerdynamic',() => { test('renders without crashing',() => { render(<AccessibilityManagerdynamic />); expect( screen.getByTestId('accessibilitymanager.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityManagerdynamic />)}); test('handles user interactions',() => { render(<AccessibilityManagerdynamic />)}); test('applies correct styling',() => { render(<AccessibilityManagerdynamic />)})});
-<<<<<<< HEAD
 main
 
   test('displays correct content', () => {
@@ -81,5 +76,3 @@ main
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/main

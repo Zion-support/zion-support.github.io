@@ -1,8 +1,4 @@
 :pages_backup/press.tsx
-<<<<<<< HEAD:pages/press.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -18,33 +14,16 @@ return (
   </div>;
   </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/press.tsx
 import * as React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -118,13 +97,9 @@ const contactInfo = {
 };
 
 :pages_backup/press.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/press.tsx
 export default function Press() {
   const pressReleases = [
     {
@@ -199,25 +174,16 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 }
 :pages_backup/press.tsx
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/press.tsx
-=======
 
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',
 import SEO from '../components / SEO',
-=======
 
 }
 import React from 'react',;
 import SEO from '../components / SEO',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/press.tsx
 export default /**
  * PressPage - Function description
  */
@@ -233,7 +199,6 @@ return (
 }
 :pages_backup/press.tsx
 
-<<<<<<< HEAD:pages/press.tsx
 export default function PressPage() {
 	return (
 		<>
@@ -246,27 +211,19 @@ export default function PressPage() {
 	)
 }
 :pages_backup/press.tsx
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 import React from 'react';
 import SEO from '../components/SEO';
 
 export default function PressPage() {
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/press.tsx
-=======
 
 import React from 'react';
 import SEO from '../components/SEO';
 
 export default function PressPage() {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/press.tsx
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -274,25 +231,11 @@ export default function PressPage() {
 }
 ;
 :pages_backup/press.tsx
-<<<<<<< HEAD:pages/press.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/press.tsx
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
-=======
 
 ursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -309,7 +252,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         </p>
       </div>
     </>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/press.tsx
       <Head>
         <title>Press - Zion Tech Group</title>
         <meta name="description" content="Latest news, press releases, and media coverage about Zion Tech Group. Stay updated on our innovations and achievements." />
@@ -517,9 +459,4 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
 :pages_backup/press.tsx
-<<<<<<< HEAD:pages/press.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/press.tsx

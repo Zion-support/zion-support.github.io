@@ -1,11 +1,8 @@
 :src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 
 :src_backup/components/FloatingCTA.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -13,7 +10,6 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
-<<<<<<< HEAD:src/components/FloatingCTA.tsx
 import { X } from 'lucide-react'
 
   const [isVisible, setIsVisible] = useState(false)
@@ -21,9 +17,7 @@ import { X } from 'lucide-react'
   // TODO: Add dependencies if needed
 :src/components/FloatingCTA.tsx
 
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
 export function FloatingCTA() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
@@ -33,11 +27,8 @@ import { X } from 'lucide-react'
 export function FloatingCTA() {}
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
-=======
 }
-=======
 import { Button } from '@/components / ui / button';
-=======
 import { Button } from '@/components/ui/button''
 import Link from 'next/link''
 import { useState, useEffect } from 'react''
@@ -59,7 +50,6 @@ import { X } from 'lucide-react
   // TODO: Add dependencies if needed;
 import { Button } from '@/components/ui/ button';
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FloatingCTA.tsx
 import Link from 'next / link';
 import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
@@ -72,7 +62,6 @@ import { X } from 'lucide-react';
 }
 
 :src_backup/components/FloatingCTA.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FloatingCTA.tsx
 export function FloatingCTA() {
 
 import { Button } from "@/components/ui/button",;
@@ -81,8 +70,6 @@ import { useState, useEffect } from "react",;
 import { X } from 'lucide-react'
 
 :src/components/FloatingCTA.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FloatingCTA.tsx
 export function FloatingCTA() {
 import { Button } from "@/components/ui/button","
 import Link from "next/link","
@@ -93,30 +80,24 @@ export function FloatingCTA() {,
   const [isClosed, setIsClosed] = useState(false),
 :src_backup/components/FloatingCTA.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
 
 :src/components/FloatingCTA.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)
       } else {
         setIsVisible (false);
       }
-=======
 
       if (scrollPosition > threshold && !isClosed) {
-=======
   useEffect(() => {}
     const handleScroll = () => {};
       const scrollPosition = window.scrollY,;
       const threshold = 600, // Show CTA after scrolling 600px;
       if (scrollPosition > threshold && !isClosed) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FloatingCTA.tsx
         setIsVisible(true)
 export function FloatingCTA() {
 
@@ -185,7 +166,6 @@ if ( {) {}
 import { X } from 'lucide-react';
 :src_backup/components/FloatingCTA.tsx
 export function FloatingCTA() {;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FloatingCTA.tsx
     },
 
 window.addEventListener("scroll", handleScroll),
@@ -216,10 +196,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         setIsVisible(false);
       }
     };
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
 
-<<<<<<< HEAD:src/components/FloatingCTA.tsx
-<<<<<<< HEAD
     window && window.addEventListener('scroll', handleScroll);
     return () => {;'
       window && window.removeEventListener('scroll', handleScroll);
@@ -237,17 +214,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     window && window.addEventListener("scroll", handleScroll);
     return () => {;"
       window && window.removeEventListener("scroll", handleScroll);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }, [isClosed]),
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FloatingCTA.tsx
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -263,21 +233,17 @@ setIsVisible(false);
 
 :src_backup/components/FloatingCTA.tsx
 return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">
         <div className="mr-4">
           <p className="text-white font-medium">Ready to explore Zion?</p>
-=======
 
   return ("
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">"
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">"
         <div className="mr-4">"
           <p className="text-white font-medium">Ready to explore Zion?</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FloatingCTA.tsx
           <p className="text-zion-slate-light text-sm">Register today to access all features!</p>
         </div>"
         <div className="flex items-center gap-2">
@@ -291,22 +257,18 @@ return (
           </Button>
 :src_backup/components/FloatingCTA.tsx
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <button 
             onClick={handleClose}
 className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
           >
-<<<<<<< HEAD
             <X className="w-5 h-5" />
             className='text-zion-slate hover:text-white p-1'
             aria-label='Close'
           >
             <X className='w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           <button 
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1"
@@ -318,21 +280,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <X className='w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FloatingCTA.tsx
           </button>
         </div>
       </div>
     </div>
 :src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD
   )
-<<<<<<< HEAD:src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :src/components/FloatingCTA.tsx
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from "@/components/ui/button",;
 import Link from "next/link",;
 import { useState, useEffect } from "react",;
@@ -374,13 +330,11 @@ export function FloatingCTA() { return null; }
             aria-label="Close";
           >;
 :src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD
             <X className="w-5 h-5" />;
             <X className="w-5 h-5" />;
 
 ;
 
-=======
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)      } else {
         setIsVisible (false);
@@ -388,10 +342,7 @@ export function FloatingCTA() { return null; }
 
 import { X } from 'lucide-react';
 export function FloatingCTA() {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   )
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FloatingCTA.tsx
 import { Button } from "@/components/ui/button",;
 import Link from "next/link",;
 import { useState, useEffect } from "react",;
@@ -443,18 +394,12 @@ export function FloatingCTA() {;
 :src_backup/components/FloatingCTA.tsx
 
             <X className="w-5 h-5" />;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </button>;
         </div>;
       </div>;
     </div>;
   );
 :src_backup/components/FloatingCTA.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
   }, [is_closed]);
@@ -531,37 +476,21 @@ pr-12325
     </>)}'"
 '";
 }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 :src_backup/components/FloatingCTA.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src/components/FloatingCTA.tsx
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FloatingCTA.tsx
-=======
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FloatingCTA.tsx
   );
 };
 }, [isClosed]);
 return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>) ;
 }'"
 :src/components/FloatingCTA.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FloatingCTA.tsx
-=======
 </motion>
     </>)}
           />) }
     </>)}"
 ";"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FloatingCTA.tsx

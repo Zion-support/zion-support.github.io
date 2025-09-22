@@ -1,12 +1,7 @@
 :pages_backup/api/docs/openapi.ts
-<<<<<<< HEAD:pages/api/docs/openapi.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
 import { EndpointSpec } from '[^']*';
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/openapi.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import v1 from "../../../data/api-docs/v1";
 import { EndpointSpec } from "../../../data/api-docs/types";
@@ -16,10 +11,6 @@ function toOpenApi() {
     section.endpoints.forEach((ep: EndpointSpec) => {
 
 :pages_backup/api/docs/openapi.ts
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/openapi.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
       paths[ep.path] = paths[ep.path] || {};
@@ -81,9 +72,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               description: "OK"
               content: {
 :pages_backup/api/docs/openapi.ts
-<<<<<<< HEAD:pages/api/docs/openapi.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
                 },
               },
             },
@@ -94,12 +82,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ? [{ bearer_auth: [] }];
               : [],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                 };
               };
             };
@@ -108,7 +90,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
               ? [{ bearer_auth: [] }];
               : [];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/openapi.ts
                 }
               }
             }
@@ -119,7 +100,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               : []
 :pages_backup/api/docs/openapi.ts
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/openapi.ts
   });
 
 ;
@@ -137,8 +117,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     components: {
 :pages_backup/api/docs/openapi.ts
-<<<<<<< HEAD:pages/api/docs/openapi.ts
-<<<<<<< HEAD
 
         bearerAuth: { type: "http", scheme: "bearer", bearerFormat: "JWT" }
       }
@@ -151,14 +129,10 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
 res.setHeader("Content-Type", "application/json");
-=======
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Content-Type", "application/json");
->>>>>>> main
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   res.status(200).json(toOpenApi());
 }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const openapi = {
@@ -264,14 +238,11 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
       security_schemes: {
         bearer_auth: { type: "http", scheme: "bearer", bearer_format: "JWT" },
       },
     },
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export default /**
  * handler - Function description
@@ -280,17 +251,6 @@ function handler() {
   res.set_header ("Content - Type", "application / json");
   res.status (200).json (toOpenApi ());
 }
-<<<<<<< HEAD:pages_backup/api/docs/openapi.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/openapi.ts
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/openapi.ts
       securitySchemes: {
         bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' };
       };
@@ -308,9 +268,4 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json(toOpenApi())
 }
 :pages_backup/api/docs/openapi.ts
-<<<<<<< HEAD:pages/api/docs/openapi.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/openapi.ts

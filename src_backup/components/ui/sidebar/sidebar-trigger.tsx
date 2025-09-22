@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import * as React from "react"
 import { PanelLeft } from 'lucide-react'
@@ -6,21 +5,15 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context"
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>,
   React.ComponentProps<typeof Button>
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   return (
       ref={ref}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       data - sidebar=&quot;trigger & quot;
       variant=&quot;ghost & quot;
       size=&quot;icon & quot;
@@ -30,7 +23,6 @@ export const SidebarTrigger = React.forwardRef<
         toggle_sidebar ();
 return (
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Button
       ref={ref}
       data-sidebar="trigger"
@@ -42,8 +34,6 @@ return (
         toggleSidebar()
       }}
       {...props}
-<<<<<<< HEAD
-<<<<<<< HEAD
     >
       <PanelLeft />
       <span className="sr-only">Toggle Sidebar</span>
@@ -51,9 +41,5 @@ return (
   )
 })
 SidebarTrigger.displayName = "SidebarTrigger"
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import {;
   TooltipProvider,;
@@ -15,7 +14,6 @@ interface PricingSuggestionBoxProps {;
   isLoading: boolean;
   onApplySuggestion: () => void;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
@@ -31,11 +29,7 @@ interface PricingSuggestionBoxProps {
   rateType: "hourly" | "fixed"
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
-=======
   suggestion: PricingSuggestion | null;
   isLoading: boolean;
   onApplySuggestion: () => void;
@@ -46,8 +40,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   if (isLoading) {
     return (
       <Card className;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Card className='border border-dashed border-muted'>
         <CardContent className='flex items-center justify-center p-6'>
           <div className='text-center'>
@@ -70,7 +62,6 @@ interface PricingSuggestionBoxProps {}
 }
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({};
-=======
 
   suggestion: PricingSuggestion | null;
   isLoading: boolean;
@@ -78,7 +69,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({};
 
 }
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   suggestion;
   isLoading;
   onApplySuggestion;
@@ -87,7 +77,6 @@ rateType}) => {
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   suggestion,
   isLoading,
   onApplySuggestion,
@@ -100,14 +89,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />
             <p className="text-sm text-muted-foreground">
 Generating optimal pricing suggestion...
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
             <p className='text-sm text-muted-foreground'>
               Generating optimal pricing suggestion...
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </p>
           </div>
         </CardContent>
@@ -118,10 +101,7 @@ Generating optimal pricing suggestion...
     return null;
   }
 const confidenceColor = {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -129,7 +109,6 @@ import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/comp
 import { Card, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { Loader2, Info, ThumbsUp } from 'lucide-react';
-=======
   const confidenceColor = {}
     )"
 import React from "react",;"
@@ -138,7 +117,6 @@ import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/comp
 import { Card, CardContent } from "@/components/ui/card",;"
 import { Badge } from "@/components/ui/badge",;'
 import { Loader2, Info, ThumbsUp } from 'lucide-react';"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { PricingSuggestion } from "@/services/pricingSuggestionService",;
 interface PricingSuggestionBoxProps {;
   suggestion: PricingSuggestion | null,;
@@ -188,12 +166,10 @@ const confidenceColor = {
       <CardContent className="p-5 space-y-4">
         <div className="flex items-center justify-between">
           <h4 className="font-semibold">AI Suggested Price</h4>
-=======
 "
       <CardContent className="p-5 space-y-4">"
         <div className="flex items-center justify-between">"
           <h4 className="font-semibold">AI Suggested Price</h4>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Badge variant="outline" className={confidenceColor}>
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
@@ -274,11 +250,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           </Badge>
         </div>
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="bg-muted/50 rounded-md p-3 text-center">
           <span className="text-2xl font-bold">
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
@@ -291,13 +263,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           <span className="text-sm text-muted-foreground ml-1">
             {rateType === "hourly" ? "/hour" : " total"}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
-=======
 "
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
           <p>{suggestion.explanation}</p>
         </div>
@@ -315,10 +283,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
                 </Button>
         <div className="flex items-center justify-between">
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 <div className='bg-muted/50 rounded-md p-3 text-center'>
           <span className='text-2xl font-bold'>
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
@@ -343,8 +307,6 @@ variant='default'
                 >
                   <ThumbsUp className='h-4 w-4 mr-2' /> Apply Suggestion
                 </Button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </TooltipTrigger>
               <TooltipContent>
                 <p>Apply this suggestion to your pricing field</p>
@@ -352,14 +314,10 @@ variant='default'
             </Tooltip>
           </TooltipProvider>
         </div>
-<<<<<<< HEAD
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
-=======
 
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
 
@@ -369,11 +327,8 @@ variant='default'
   )
 
         <p className="text-xs text-center text-muted-foreground pt-2">
-=======
 <p className='text-xs text-center text-muted-foreground pt-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           Based on market data & trends. You can adjust as needed.
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </p>
       </CardContent>
     </Card>
@@ -382,7 +337,6 @@ variant='default'
 "  )
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },
 ;
   const confidenceColor = {;"
@@ -576,8 +530,3 @@ on_click={onApplySuggestion}
 }"
 "  );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

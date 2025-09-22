@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from 'react',;
 import { useParams } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -69,13 +68,11 @@ export default function ProjectRoom() {;
   },;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
       <Header />;
       <main className="container mx-auto py-8">;
         <div className="flex justify-between items-center mb-6">;
-<<<<<<< HEAD
 
           <div className="flex gap-2">;
             {isInCall && (;

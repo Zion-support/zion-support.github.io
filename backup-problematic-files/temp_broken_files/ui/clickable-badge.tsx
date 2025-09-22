@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { X } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -36,11 +35,9 @@ export function ClickableBadge({;
             onRemove(),;
           }}
           className="ml-1 rounded-full p-0.5 hover:bg-background/20";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           aria-label="Remove";
         >;
           <X className="h-3 w-3" />;
         </button>;
       )}
     </div>;
-<<<<<<< HEAD

@@ -1,13 +1,5 @@
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
   },  {
     name: 'Professional'
     price: '$5,000'
@@ -109,15 +101,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const useCases = [
   {
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Content Marketing Optimization'
     description:'
       'Optimize your content strategy based on real-time performance data and AI insights'
 :pages_backup/ai-content-intelligence-platform.tsx
     icon: Target
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {motion} from 'framer-motion';
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award, Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code, ShoppingCart,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -184,15 +172,12 @@ const pricingPlans = [
 
       'Real-time content analyticsAI optimization suggestionsBasic performance trackingSEO content insightsEmail supportUp to 100 content pieces/month'
     ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     popular: false,
-=======
     icon: Target;
 '
       'Real-time content analyticsAI optimization suggestionsBasic performance trackingSEO content insightsEmail supportUp to 100 content pieces/month'
     ];
     popular: false,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
     color: 'from-gray-500 to-gray-600'
   };
   {'
@@ -219,7 +204,6 @@ const pricingPlans = [
     period: '/month','
     description: 'For large organizations with complex content needs',
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
 
 const useCases = [
   {
@@ -252,7 +236,6 @@ const useCases = [
   },
 ];
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { motion } from 'framer-motion';
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
@@ -261,8 +244,6 @@ import {;
   ShoppingCart;
 } from 'lucide-react',;
 import Layout from '../components/layout/Layout';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const contactInfo = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -354,7 +335,6 @@ const features = [;
     description: 'AI-powered SEO optimization and keyword gap identification',;
 :pages_backup/ai-content-intelligence-platform.tsx
     icon: Zap,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     color: 'from-yellow-500 to-orange-500',;
   },];
 
@@ -366,8 +346,6 @@ const pricingPlans = [;
     description: 'Perfect for small businesses and content creators',;
     features: [;
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     name: 'Professional',;
     price: '$5,000',;
     period: '/month',;
@@ -380,7 +358,6 @@ const pricingPlans = [;
     description: 'For large organizations with complex content needs',;
     features: [;
 
-=======
 '
     name: 'Professional',;'
     price: '$5,000',;'
@@ -394,7 +371,6 @@ const pricingPlans = [;
     description: 'For large organizations with complex content needs',;
     features: [;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
 const useCases = [;
   {;'
     title: 'Content Marketing Optimization',;
@@ -425,7 +401,6 @@ const useCases = [;
     color: 'from-orange-500 to-red-500',;
   },;
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
 
     price: '$2,500',;
     period: '/month',;
@@ -445,7 +420,6 @@ name: 'Professional',;
     features: [;
 ];
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const integrations = [;
   'WordPress',;
   'Shopify',;
@@ -461,10 +435,8 @@ const integrations = [;
   'TikTok',;
   'Slack',;
   'Zapier',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   'API Access',];
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const integrations = [
   'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
 ],
@@ -489,12 +461,9 @@ const integrations = [;
   'TikTok',;
   'Slack',;
   'Zapier',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   'API Access',];
 
 export default function AIContentIntelligencePlatform() {;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     title: 'Content Marketing Optimization',
 description:
       'Optimize your content strategy based on real-time performance data and AI insights',
@@ -543,7 +512,6 @@ const integrations = [
 ];
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       'Custom integrations'
     ]
     popular: true
@@ -573,10 +541,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 const contactInfo = null;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
 export default function AIContentIntelligencePlatform() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 ];
 
@@ -604,7 +569,6 @@ const integrations = []
   'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
 ],
 export default function AIContentIntelligencePlatform() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
   return (
 '
           href='https://ziontechgroup && ziontechgroup.com/ai-content-intelligence-platform';
@@ -618,8 +582,6 @@ export default function AIContentIntelligencePlatform() {}
           </p>;
         </div>;
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Layout>
       <Head>
         <title>AI Content Intelligence Platform | Zion Tech Group</title>
@@ -635,14 +597,11 @@ export default function AIContentIntelligencePlatform() {}
       </Head>
 
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
     <Layout>
       <Head>
@@ -656,20 +615,17 @@ export default function AIContentIntelligencePlatform() {}
         <link rel="canonical" href="https://ziontechgroup.com/ai-content-intelligence-platform" />
       </Head>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
 
             >"
               <div className="flex items-center space-x-2 mb-6">"
                 <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
 :pages_backup/ai-content-intelligence-platform.tsx
 
-=======
       {/* Hero Section */}
 
             >
               <div className="flex items-center space-x-2 mb-6">
                 <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
 <meta
           name='description'
           content='Transform your content creation with AI-powered intelligence and analytics. Get real-time insights, optimization suggestions, and predictive performance modeling.'
@@ -716,18 +672,11 @@ export default function AIContentIntelligencePlatform() {}
 <div className='flex items-center space-x-2 mb-6'>
                 <span className='bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full'>
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
                   NEW SERVICE
                 </span>
-=======
                   NEW SERVICE;
                 </span>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
                 <span className="text-gray-400 text-sm">Launch Date: January 15, 2025</span>
               </div>"
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
@@ -739,9 +688,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="flex flex-col sm:flex-row gap-4">
 :pages_backup/ai-content-intelligence-platform.tsx
                 <Link
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
                 >
@@ -751,11 +697,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200">
                   <Play className="w-5 h-5 mr-2" />
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'
                 >
@@ -764,7 +706,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
                 <button className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'>
                   <Play className='w-5 h-5 mr-2' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Watch Demo
                 </button>
               </div>
@@ -781,9 +722,6 @@ className="relative"
                 <div className="space-y-3">
                   <div className="flex items-center text-green-400">
                     <CheckCircle className="w-5 h-5 mr-3" />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 <Link;
             >"
               <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">"
@@ -793,13 +731,8 @@ className="relative"
                   <div className="flex items-center text-green-400">"
                     <CheckCircle className="w-5 h-5 mr-3" />
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
                     <span>300%+ ROI improvement</span>
                   </div>"
                   <div className="flex items-center text-green-400">"
@@ -807,28 +740,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>80% faster content optimization</span>
                   </div>
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   <div className='flex items-center text-green-400'>
                     <CheckCircle className='w-5 h-5 mr-3' />
                     <span>Real-time performance insights</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-content-intelligence-platform.tsx
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
-=======
                   <div className='flex items-center text-green-400'>
                     <CheckCircle className='w-5 h-5 mr-3' />
                     <span>Real-time performance insights</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                   <div className="flex items-center text-green-400">
                     <CheckCircle className="w-5 h-5 mr-3" />
                     <span>Real-time performance insights</span>
@@ -836,7 +756,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <CheckCircle className='w-5 h-5 mr-3' />
                     <span>Real-time performance insights</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
                   </div>
                 </div>
               </div>
@@ -844,23 +763,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
 
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Features Section */}
 "
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 :pages_backup/ai-content-intelligence-platform.tsx
           <motion.div
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -882,55 +793,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
             className="text-center mb-16"
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
 {/* Features Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-content-intelligence-platform.tsx
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
           >
-=======
 
           >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Powerful Features for Content Success;
             </h2>"
@@ -939,22 +824,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
 :pages_backup/ai-content-intelligence-platform.tsx
           </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-<<<<<<< HEAD
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -970,13 +848,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
             ))  } catch (error) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -998,27 +874,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
                 className="group relative"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
-=======
           </motion.div>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div;
               >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>"
                     <feature.icon className="w-6 h-6 text-white" />
 :pages_backup/ai-content-intelligence-platform.tsx
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
                 </div>
               </motion.div>
-<<<<<<< HEAD
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {feature.title}
                   </h3>
@@ -1026,7 +896,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1034,8 +903,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
@@ -1065,36 +932,23 @@ initial={{ opacity: 0, y: 30 }  } catch (error) {
   }
 }
             className="text-center mb-16"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       {/* Use Cases Section */}
 <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 className='text-center mb-16'
 :pages_backup/ai-content-intelligence-platform.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Perfect For Every Content Need
@@ -1104,21 +958,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
-<<<<<<< HEAD
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -1151,33 +999,21 @@ className='group'
   }
 }
                 className="group"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 className='group'
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
               >
                 <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
                   <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
                 </div>
               </motion.div>
-<<<<<<< HEAD
-=======
                   <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {useCase.title}
                   </h3>
@@ -1185,16 +1021,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       {/* Pricing Section */}
-<<<<<<< HEAD
       <section className='py-20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
@@ -1223,34 +1056,21 @@ initial={{ opacity: 0, y: 30 }  } catch (error) {
   }
 }
             className="text-center mb-16"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 className='text-center mb-16'
 :pages_backup/ai-content-intelligence-platform.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Flexible Pricing Plans
@@ -1260,12 +1080,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
-<<<<<<< HEAD
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1302,12 +1119,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 {plan.popular && (
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             {pricingPlans.map((plan, index) => (
@@ -1315,23 +1129,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 {plan.popular && (
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold px-4 py-2 rounded-full">
                       MOST POPULAR
                     </span>
                   </div>
-<<<<<<< HEAD
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>
                     <div className="text-gray-400 mb-4">{plan.period}</div>
                     <p className="text-gray-300">{plan.description}</p>
 :pages_backup/ai-content-intelligence-platform.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                     <span className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold px-4 py-2 rounded-full'>
                       MOST POPULAR
@@ -1351,18 +1159,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='text-gray-400 mb-4'>{plan.period}</div>
                     <p className='text-gray-300'>{plan.description}</p>
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </div>
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   <Link
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </ul>
                   <Link
                     href="/contact"
@@ -1370,7 +1172,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature  } catch (error) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -1381,7 +1182,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </ul>
                   <Link
 
@@ -1390,25 +1190,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     href="/contact"
                     className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200`}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
               </motion.div>
-<<<<<<< HEAD
 
       {/* Integrations Section */}
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
                       <li
                         key={featureIndex}
                         className='flex items-center text-gray-300'
@@ -1428,7 +1223,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Link>
                 </div>
               </motion.div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
             ))  } catch (error) {
     console.error("Error:", error);
@@ -1440,35 +1234,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Integrations Section */}
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
 
 <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 :pages_backup/ai-content-intelligence-platform.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 className='text-center mb-16'
 :pages_backup/ai-content-intelligence-platform.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Seamless Integrations
@@ -1478,17 +1259,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {integrations.map((integration, index) => (
               <motion.div
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             {integrations.map((integration, index) => (
               <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -1502,20 +1279,17 @@ className='bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg p-4 te
               >
                 <span className='text-white font-medium'>{integration}</span>
               </motion.div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
           </div>
         </div>
       </section>
       {/* Contact Section */}
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
 <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1547,31 +1321,25 @@ className='bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg p-4 te
 }
                 className="bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg p-4 text-center hover:bg-white/20 transition-colors duration-300"
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
               >
                 <span className="text-white font-medium">{integration}</span>
               </motion.div>
 
 :pages_backup/ai-content-intelligence-platform.tsx
-=======
-=======
 
               >
                 <span className="text-white font-medium">{integration}</span>
               </motion.div>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
               >
                 <span className="text-white font-medium">{integration}</span>
               </motion.div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -1853,10 +1621,7 @@ function AIContentIntelligencePlatform() {}
                   <p className='text - gray - 400'>{feature.description}</p>                </div>;
               </motion.div>))}
 :pages_backup/ai-content-intelligence-platform.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
           </div>;
         </div>;
       </section>;
@@ -1985,27 +1750,15 @@ function AIContentIntelligencePlatform() {}
               <motion.div;
 
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
             ))}
 
           </div>;
@@ -2066,9 +1819,6 @@ function AIContentIntelligencePlatform() {}
               <Link'
                 href='/2025-innovative-new-services-showcase'
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD:pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -2084,21 +1834,11 @@ function AIContentIntelligencePlatform() {}
           >"
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
 :pages_backup/ai-content-intelligence-platform.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-content-intelligence-platform.tsx
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
-=======
           >
 <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -2241,7 +1981,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
 <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
               Ready to Transform Your Content Strategy?
             </h2>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -2278,20 +2017,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>"
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 <Link
               <Link
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
                 href="/contact"
-=======
 
 "
                 href="/contact""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
               >
                 Start Your Free Trial"
@@ -2299,19 +2030,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>
 :pages_backup/ai-content-intelligence-platform.tsx
               <Link
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
                 href="/2025-innovative-new-services-showcase"
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
-<<<<<<< HEAD
 
               >
 :pages_backup/ai-content-intelligence-platform.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                 href="/2025-innovative-new-services-showcase"
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
               <Link
@@ -2325,37 +2048,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href=&quot;/2025-innovative-new-services-showcase&quot;
                 className=&quot;inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200&quot;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
                 href='/2025-innovative-new-services-showcase'
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 View All Services
-=======
 
                 View All Services;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     </Layout>;
 );
 
 }
     </Layout>
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
 
 '
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'>;
@@ -2369,11 +2080,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
   )
 }'
                 className='bg - white / 10 backdrop - blur - sm border border - gray - 600 rounded - lg p - 4 text - center hover:bg - white / 20 transition - colors duration - 300';
@@ -2439,8 +2146,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/2025 - innovative - new - services - showcase';'
                 className='inline - flex items - center px - 8 py - 4 bg - white / 10 backdrop - blur - sm border border - gray - 600 text - white font - semibold rounded - lg hover:bg - white / 20 transition - all duration - 200'              >;
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   )
           >;"
@@ -2492,9 +2197,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200";
               >;
 :pages_backup/ai-content-intelligence-platform.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 );
     </Layout>;
 );
@@ -2550,31 +2252,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href="/2025-innovative-new-services-showcase";
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200";
               >;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx
                 View All Services;
               </Link>;
             </div>;
           </motion.div>;
         </div>;
 :pages_backup/ai-content-intelligence-platform.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 :pages_backup/ai-content-intelligence-platform.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-intelligence-platform.tsx
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-intelligence-platform.tsx

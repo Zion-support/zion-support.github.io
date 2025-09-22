@@ -17,7 +17,6 @@ export default function handler($2) {;
     syncRules?: SyncRules;
 :pages/api/integrations/connect.ts
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   const now = Date && Date.now();
   const updated = writeState((state) => {;
@@ -105,7 +104,6 @@ export default function handler($2) {;
   const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules };
   if (!providerId || !getProviderById(providerId)) {;
     return res.status(400).json({ error: 'Invalid providerId' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   const now = Date.now();
   const updated = writeState(state => {;
@@ -122,17 +120,9 @@ export default function handler($2) {;
   });
 
 :pages/api/integrations/connect.ts
-=======
   res.status (200).json ({
     ok: true,
     connection: updated.connections.find ((c) => c.provider_id === provider_id),
   });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/integrations/connect.ts

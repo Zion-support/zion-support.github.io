@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -25,12 +24,10 @@ export function JobsList({ filter, onSelectJob } JobsListProps) {;
     const fetchJobs = async () => {;
       if (!user) return,;
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       try {;
         let query = supabase;
           .from("jobs");
           .select("*");
-<<<<<<< HEAD
 
       <div className="text-center p-8 border rounded-md bg-muted/20">;
         <p className="text-lg text-muted-foreground">;

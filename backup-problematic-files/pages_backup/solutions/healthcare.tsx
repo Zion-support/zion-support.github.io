@@ -55,7 +55,6 @@ description: 'Advanced analytics and reporting for healthcare insights',
   },
   {
     icon: Users,
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/healthcare.tsx
   },
   {
     icon: Users,
@@ -344,7 +343,6 @@ const benefits = [;
   'Better resource utilization',;
   'Real-time health monitoring and alerts';
 ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     title: 'Provider Portal',
     description: 'Streamlined workflows for healthcare providers and staff'
   },
@@ -435,7 +433,6 @@ const benefits = [
   'Real-time health monitoring and alerts'
 ];
 export default function HealthcareSolutions() {
-<<<<<<< HEAD
     title: 'Provider Management',
     description: 'Comprehensive provider and staff management solutions',
     benefits: ['Provider profiles', 'Scheduling', 'Communication', 'Performance tracking']
@@ -497,7 +494,6 @@ return (
                 </button>
               </div>
             </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>
         </section>
 
@@ -514,9 +510,7 @@ return (
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our healthcare solutions are built with security and compliance in mind.
 </p>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/healthcare.tsx
               </p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
@@ -527,7 +521,6 @@ return (
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -547,7 +540,6 @@ return (
                     {feature.description}
                   </p>
                 </div>
-<<<<<<< HEAD
         <section className="bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center">;
@@ -729,19 +721,16 @@ All our healthcare solutions are built with security and compliance in mind, ;
                   </div>;
                 </motion && motion.div>;
               ))}
-=======
                       </div>
                     ))}
                   </div>
                 </motion.div>
               ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -774,7 +763,6 @@ All our healthcare solutions are built with security and compliance in mind, ;
 </div>
         </section>
       </div>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/healthcare.tsx
     </Layout>
     </Layout>
     </>
@@ -786,4 +774,3 @@ All our healthcare solutions are built with security and compliance in mind, ;
     </Layout>
     </Layout>
     </>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

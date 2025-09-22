@@ -109,7 +109,6 @@ const [isLoading, setIsLoading] = useState(true),;
       console.error("Error sending message:", error),;
     } finally {;
       setIsSending(false),;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   },;
 ;
@@ -148,7 +147,6 @@ const [isLoading, setIsLoading] = useState(true),;
         </Alert>;
       )}
       ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
         <div className="lg:col-span-2">;
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
@@ -158,7 +156,6 @@ const [isLoading, setIsLoading] = useState(true),;
               <TabsTrigger value="attachments">Attachments</TabsTrigger>;
               {isAdmin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
             </TabsList>;
-<<<<<<< HEAD
             <TabsContent value="overview" className="space-y-6">;
               <Card>;
 
@@ -179,15 +176,11 @@ const [isLoading, setIsLoading] = useState(true),;
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>;
                           <span>Under review</span>;
                         </li>;
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                     </ul>;
 </div>;
                 </CardContent>;
               </Card>;
-<<<<<<< HEAD
                 <Card>;
                   <CardHeader>;
                     <CardTitle>Resolution</CardTitle>;
@@ -202,7 +195,6 @@ const [isLoading, setIsLoading] = useState(true),;
               )}
             </TabsContent>;
             ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <TabsContent value="messages" className="space-y-6">;
               <Card>;
                 <CardHeader>;
@@ -211,7 +203,6 @@ const [isLoading, setIsLoading] = useState(true),;
                 </CardHeader>;
                 <CardContent>;
                   <div className="space-y-6 max-h-[600px] overflow-y-auto p-2">;
-<<<<<<< HEAD
                       <div className="text-center py-12">;
                         <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" />;
                         <p className="text-muted-foreground">No messages yet</p>;
@@ -247,27 +238,23 @@ const [isLoading, setIsLoading] = useState(true),;
                               </div>;
                             </div>;
                           ),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         });
                     )}
                   </div>;
                 </CardContent>;
                 <CardFooter>;
                   <div className="w-full space-y-4">;
-<<<<<<< HEAD
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                     <div className="flex justify-end">;"
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>;
 {isSending ? "Sending..." :"Send Message"}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       </Button>;
                     </div>;
                   </div>;
                 </CardFooter>;
               </Card>;
             </TabsContent>;
-<<<<<<< HEAD
                   </div>;
                 </CardContent>;
               </Card>;
@@ -298,7 +285,6 @@ const [isLoading, setIsLoading] = useState(true),;
                                 className="w-full p-2 border rounded";"
                                 value={resolution.resolution_type}
 onChange={(e) => setResolution({ ...resolution, resolution_type:e.target.value })}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                               >;
                                 <option value="client_favor">In Client's Favor</option>;
                                 <option value="talent_favor">In Talent's Favor</option>;
@@ -307,7 +293,6 @@ onChange={(e) => setResolution({ ...resolution, resolution_type:e.target.value }
                               </select>;
 </div>;
                           </div>;
-<<<<<<< HEAD
                           <Button onClick={handleResolveDispute}>Resolve Dispute</Button>;
                         </div>;
                       </div>;
@@ -398,5 +383,4 @@ msg.id
 }
 }> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) 
 }</Tabs> </div> <div className="space-y-6" > <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> </p> </div> </div> <div className="flex justify-center" > <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> </div> </CardContent> </Card> </div> </div> </div>) 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }

@@ -1,6 +1,4 @@
 :src_backup/components/resume-builder/wizard/ResumeWizard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -77,11 +75,9 @@ if (isLoading) {
     );
   }
 
-<<<<<<< HEAD
   if (error) {
 
   if (error) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
@@ -119,15 +115,12 @@ export function ResumeWizard() {
 
   if (isLoading) {
 :src/components/resume-builder/wizard/ResumeWizard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className="flex justify-center items-center h-64">"
         <Loader2 className="h-8 w-8 animate-spin text-primary" />"
       </div>
     )
   }
-<<<<<<< HEAD
 
   if (error) {
     return (
@@ -140,7 +133,6 @@ export function ResumeWizard() {
 
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
 ;
@@ -158,7 +150,6 @@ export function ResumeWizard() {
     );
   }
 :src_backup/components/resume-builder/wizard/ResumeWizard.tsx
-<<<<<<< HEAD
 
 ;
   if (!resume && !showNewResumeForm) {;
@@ -174,16 +165,13 @@ export function ResumeWizard() {
       />;
     );
   }
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <h1 className="text-2xl font-bold">Resume Builder</h1>
         <div className="flex gap-4 flex-wrap items-center">
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
-<<<<<<< HEAD
   return (
     <div className="space-y-6">"
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">"
@@ -209,14 +197,11 @@ export function ResumeWizard() {
   return (
 
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
 
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Button;
             onClick={() => setShowNewResumeForm(true)}
 
@@ -230,9 +215,6 @@ export function ResumeWizard() {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Card>
 :src_backup/components/resume-builder/wizard/ResumeWizard.tsx
         <CardContent className="pt-6">
@@ -240,10 +222,7 @@ export function ResumeWizard() {
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Tabs value={activeTab} onValueChange={setActiveTab}>
 <ResumeSteps 
               steps={RESUME_STEPS} 
@@ -260,20 +239,16 @@ export function ResumeWizard() {
               />;
             )}
 :src_backup/components/resume-builder/wizard/ResumeWizard.tsx
-<<<<<<< HEAD
           </Tabs>;
         </CardContent>;
       </Card>;
     </div>;
 :src_backup/components/resume-builder/wizard/ResumeWizard.tsx
-<<<<<<< HEAD
           </Tabs>
         </CardContent>
       </Card>
     </div>
 :src/components/resume-builder/wizard/ResumeWizard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 :src_backup/components/resume-builder/wizard/ResumeWizard.tsx
 }
@@ -364,7 +339,6 @@ if ( {) {
 }</Tabs> </CardContent> </Card> </div>);
 }'"}
 :src_backup/components/resume-builder/wizard/ResumeWizard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {;
   activeTab ;
 }onValueChange= {;
@@ -388,5 +362,3 @@ if ( {) {
 }</Tabs> </CardContent> </Card> </div>) ;
 }'"
 :src/components/resume-builder/wizard/ResumeWizard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

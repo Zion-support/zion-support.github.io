@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
@@ -11,7 +10,6 @@ export function AdminHeader() {;
   const { company } = useCompanyWorkspace(),;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <div>;
@@ -27,4 +25,3 @@ export function AdminHeader() {;
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
             <Download className="h-4 w-4" />;
-<<<<<<< HEAD

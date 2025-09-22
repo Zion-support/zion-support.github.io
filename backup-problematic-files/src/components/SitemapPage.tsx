@@ -1,5 +1,4 @@
 
-=======
 import React from 'react',;
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',;
 import Link from 'next/link',;
@@ -25,14 +24,12 @@ export const SitemapPage:React.FC = () => {;
       <div className="container mx-auto px-4 py-12">;
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>;
         ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>;
             <ul className="space-y-2">;
               {completeSitemap;
-<<<<<<< HEAD
 
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;

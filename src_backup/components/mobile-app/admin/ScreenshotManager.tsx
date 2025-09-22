@@ -1,7 +1,4 @@
 :src/components/mobile-app/admin/ScreenshotManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -108,17 +105,11 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   },
 
 return (
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 return (
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/admin/ScreenshotManager.tsx
     <Card className="bg-zion-blue border-zion-purple/30">
-=======
   return (    <Card className="bg-zion-blue border-zion-purple/30">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <CardHeader>
         <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
@@ -218,7 +209,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
           onDragOver = {handleDragOver,}
           onDragLeave = {handleDragLeave,}
           onDrop = {handleDrop,}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div 
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
             isDragging 
@@ -229,8 +219,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 >
           <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <input
             ref={fileInputRef}
             type="file"
@@ -278,13 +266,7 @@ onClick={() => removeScreenshot(screenshot.id)}
     </Card>;
 );
 };
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
@@ -293,7 +275,6 @@ onClick={() => removeScreenshot(screenshot.id)}
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
           <input
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/admin/ScreenshotManager.tsx
 import React, { useState, useRef } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -324,5 +305,3 @@ return filtered;
 };
 "
 :src/components/mobile-app/admin/ScreenshotManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

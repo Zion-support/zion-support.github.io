@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
       <button;
@@ -77,8 +76,6 @@ function ExperienceFilter() {}
         <div className="mt-6">;"
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Slider } from "@/components/ui/slider",
 import { ExperienceFilterProps } from "@/types/filters",
@@ -87,17 +84,12 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
     setExperienceRange([values[0] || 0, values[1] || 15])
   },
 
-=======
         <div className='mt-6'>
           <div className='flex justify-between text-sm text-zion-slate-light mb-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { Slider } from "@/components/ui/slider",;
 import { ExperienceFilterProps } from "@/types/filters",;
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -107,7 +99,6 @@ className="flex w-full items-center justify-between text-white font-medium"
         className="flex w-full items-center justify-between text-white font-medium"
       >
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <span>Years of Experience</span>
         {expanded ? ("
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -116,24 +107,17 @@ className="flex w-full items-center justify-between text-white font-medium"
         )}
       </button>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {expanded && (
 
         <div className="mt-6">
-=======
 "
         <div className="mt-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
             <span>{experienceRange[0]} years</span>
             <span>{experienceRange[1]} years</span>
           </div>
 <Slider
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             aria-label="Experience range"
 import { ChevronDown, ChevronUp } from 'lucide-react';
   const handleChange = (values: number[]) => {;
@@ -146,7 +130,6 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
         onClick={toggleSection}"
         className="flex w-full items-center justify-between text-white font-medium";
       >;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <span>Years of Experience</span>;
         {expanded ? (;"
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
@@ -161,14 +144,10 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
             <span>{experienceRange[1]} years</span>;
           </div>;
           <Slider;
-=======
 
           <Slider;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             aria-label="Experience range";
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="mt - 6">;"
 "
@@ -212,13 +191,11 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 
             aria-label="Experience range";"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
             step={1}
             onValueChange={handleChange}
-<<<<<<< HEAD
 
     </div>;
   );
@@ -255,33 +232,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 };
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className="mt-6"
           />
         </div>
       )}
-<<<<<<< HEAD
     </div>;
   );
 }
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     </div>;
   );
 }
@@ -289,4 +250,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

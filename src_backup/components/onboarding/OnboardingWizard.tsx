@@ -1,7 +1,5 @@
 :src_backup/components/onboarding/OnboardingWizard.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 import { useState, useEffect  } from 'react';
 import { useRouter  } from 'next/router';
@@ -34,7 +32,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils';
 :src/components/onboarding/OnboardingWizard.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface WizardStep {;
   title: string,
   description: string;
@@ -83,7 +80,6 @@ interface OnboardingWizardProps {
 
 interface OnboardingWizardProps {;
 
-<<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
   type: 'client' | 'talent';
   onComplete: () => void;
   onSkip: () => void;
@@ -110,17 +106,13 @@ export function OnboardingWizard(): any ({;
           <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;
 
 :src_backup/components/onboarding/OnboardingWizard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
-=======
 '
 import { useState, useEffect } from 'react',;'
 import { useRouter } from 'next/router',;'
@@ -128,7 +120,6 @@ import { useAuth } from '@/hooks/useAuth',;'
 import { Button } from '@/components/ui/button',;'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;'
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/OnboardingWizard.tsx
 import { cn } from '@/lib/utils',;
 interface WizardStep {;
   title: string,,
@@ -153,7 +144,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const router = useRouter(), // Changed from useNavigate to useRouter;
   const { user } = useAuth(),
 :src_backup/components/onboarding/OnboardingWizard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -187,19 +177,15 @@ text: "Browse Talent",
       }
     }
   ],
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile",
       description: "Add your skills, experience, and preferences",
-=======
       action: {}
   const talentSteps: WizardStep[] = []
     {"
       title: "Complete your profile","
       description: "Add your skills, experience, and preferences","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/OnboardingWizard.tsx
       icon: <FileText className="h-6 w-6 text-zion-purple" />,
       action: {"
         text: "Edit Profile","
@@ -233,8 +219,6 @@ text: "Browse Talent",
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
 :src_backup/components/onboarding/OnboardingWizard.tsx
       action: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         text: "Enable Matchmaking",
         url: "/talent-dashboard"
       }
@@ -276,14 +260,9 @@ text: "Browse Talent",
       <CardContent>;
         <div className='flex items-center mb-6'>;
           {/* Step dots */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="flex items-center justify-center flex-1">
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 :src/components/onboarding/OnboardingWizard.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {steps.map((_, index) => (
               <div;
                 key={index}
@@ -298,11 +277,9 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const router = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
                   index === currentStep
-=======
 "
                   "h-2 w-2 rounded-full mx-1",
                   index === currentStep"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/OnboardingWizard.tsx
                     ? "bg-zion-purple scale-125"
                     : index < currentStep"
                     ? "bg-zion-cyan""
@@ -315,8 +292,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
         <div className="flex flex-col items-center text-center p-4">"
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {steps[currentStep]?.icon}
 :src_backup/components/onboarding/OnboardingWizard.tsx
           </div>
@@ -326,7 +301,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </CardContent>
       <CardFooter className="flex flex-col space-y-2">
 <Button
-<<<<<<< HEAD
           onClick={handleAction}>;
           {steps[currentStep]?.action && action.text}
         </Button>;
@@ -334,14 +308,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {steps[currentStep]?.skipText && (;
 
 :src_backup/components/onboarding/OnboardingWizard.tsx
-<<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
           <Button
             variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}>;
 
 :src/components/onboarding/OnboardingWizard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
           onClick={handleAction}
         >;
@@ -366,7 +338,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </CardFooter>;
     </Card>;
   );
@@ -540,25 +511,13 @@ if ( {) {}
       </CardFooter>;
     </Card>);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src/components/onboarding/OnboardingWizard.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
       </CardFooter>
     </Card>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       </CardFooter>
     </Card>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingWizard.tsx
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/OnboardingWizard.tsx

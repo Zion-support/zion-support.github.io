@@ -8,7 +8,6 @@ import { format } from "date-fns";
  */;
 export const formatDate = (dateString:string):string => {;
   try {;
-<<<<<<< HEAD
     return format(new Date(dateString), 'PP');
   } catch (e) {;
     return dateString;
@@ -19,4 +18,3 @@ export const formatDate = (dateString:string):string => {;
   } catch (e) {;
     return dateString,;
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

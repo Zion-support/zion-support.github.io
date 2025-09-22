@@ -77,8 +77,6 @@ class ComprehensiveAutomationFixer {
         this.log('✅ Fixed index.html', 'SUCCESS');
         this.fixes.push('index.html');
       }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -115,7 +113,6 @@ const automationFiles = ['automation/dependency-fixer.cjs']
       .replace(/:\s*\{\},/g, ': {};')
       .replace(/\(\s*\[\],/g, '([];')
       .replace(/\(\s*\{\},/g, '({};')
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       .replace(/script1\."async")
       .replace(/script1\."src")
       .replace(/['"]react;['"]/g, ")
@@ -189,7 +186,6 @@ const automationFiles = ['automation/dependency-fixer.cjs']
         this.log('✅ Fixed index.html', 'SUCCESS');
         this.fixes.push('index.html');
       }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {
       this.log(`❌ Error fixing index.html: ${error.message}`, 'ERROR');
     }
@@ -200,7 +196,6 @@ const automationFiles = ['automation/dependency-fixer.cjs']
       const mainPath = path.join(this.projectRoot, 'src/main.tsx');
       if (fs.existsSync(mainPath)) {
         let content = fs.readFileSync(mainPath, 'utf8');
-<<<<<<< HEAD
         // Remove merge conflict markers and fix syntax
         content = content.replace(/[\s\S]*?
         content = content.replace(/
@@ -738,8 +733,6 @@ if (require.main === module) {
 }
 
 module.exports = ComprehensiveAutomationFixer;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 // Fix all automation files
 automationFiles.forEach(fixAutomationFile);
       .replace(/script1\."async")
@@ -747,17 +740,10 @@ automationFiles.forEach(fixAutomationFile);
       .replace(/['"]react;['"]/g, ")
       .replace(/['"]framer-motion;['"]/g, ")
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
       .replace(/['"]lucide-react;['"]/g, ")
       .replace(/['"]lucide-react;['"]/g, ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         fs.writeFileSync(mainPath, content);"
 
   fixJestConfig() {
   // TODO: Implement
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

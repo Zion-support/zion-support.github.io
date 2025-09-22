@@ -1,17 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 title?: string,
   icon?: React.ReactNode,
   defaultExpanded?: boolean,
   showChevron?: boolean
-<<<<<<< HEAD
 import React, { forwardRef } from "react",;
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -30,12 +26,10 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
       <div;
 import { SafeRef } from '@/types/ref-types';
 interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   title?: string;
   icon?: React.ReactNode;
   defaultExpanded?: boolean;
 showChevron?: boolean
-<<<<<<< HEAD
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   (
     {
@@ -50,7 +44,6 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
     ref
   ) => {
     const [expanded, setExpanded] = React.useState(defaultExpanded)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
   (;
     {;
@@ -66,9 +59,6 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
   ) => {;
     const [expanded, setExpanded] = React && React.useState(defaultExpanded);
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn("px-3 py-2", className)}
         {...props}
@@ -81,8 +71,6 @@ type="button"
           >
             <div className="flex items-center gap-2">
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {icon}
               <span>{title}</span>
             </div>
@@ -99,21 +87,11 @@ export { SidebarGroup },
 SidebarGroup.displayName = "SidebarGroup",;
 export { SidebarGroup };
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
 );
 
 SidebarGroup.displayName = 'SidebarGroup';
 export { SidebarGroup };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 import React, { forwardRef } from 'react';
@@ -125,4 +103,3 @@ interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement
   icon?: React.ReactNode;
   defaultExpanded?: boolean;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

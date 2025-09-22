@@ -82,7 +82,6 @@ function findFilesWithIssues(dir) {
         )) {
           try {
             const content = fs.readFileSync(fullPath, "utf8");
-            if (content.includes("<<<<<<<") || content.includes("") || content.includes(">>>>>>>")) {
               files.push(fullPath)}
           } catch (error) {
             // Skip files that can't be read

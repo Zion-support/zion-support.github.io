@@ -1,5 +1,4 @@
 :pages_backup/api/feedback.ts
-<<<<<<< HEAD:pages_backup/api/feedback.ts
 import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store";
 function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok: true, ...data }) }
 function bad(res: NextApiResponse, msg: string, code;
@@ -7,7 +6,6 @@ function bad(res: NextApiResponse, msg: string, code;
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 function ok(res: NextApiResponse, data: any) {
-=======
 
 import {}
   saveFeedbackFallback,
@@ -19,7 +17,6 @@ import {};
   FeedbackRecord"
 } from "../../utils/feedback/store";
 function ok(res: NextApiResponse, data: any) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/feedback.ts
   return res && res.status(200).json({ ok: true, ...data });
 }
 function bad(res: NextApiResponse, msg: string, code = 400) {}
@@ -28,7 +25,6 @@ function bad(res: NextApiResponse, msg: string, code = 400) {}
 async function tryWriteToFirestore(doc: FeedbackRecord) {}
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
 :pages_backup/api/feedback.ts
-<<<<<<< HEAD:pages_backup/api/feedback.ts
     process.env as Record<string, string | undefined>;
   if (!FIREBASE_PROJECT_ID |!FIREBASE_CLIENT_EMAIL |!FIREBASE_PRIVATE_KEY)
     return false;
@@ -107,7 +103,6 @@ if ( {) {
     await db.collection('interaction_feedback').doc(doc.id).set(doc);
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
 
     const db = admin.firestore ();
     await db.collection ("interaction_feedback").doc (doc.id).set (doc);
@@ -115,7 +110,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const db = admin.firestore();
     await db.collection('interaction_feedback').doc(doc.id).set(doc);
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/feedback.ts
     return true;
   } catch (e) {}
     return false;
@@ -155,8 +149,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const wrote = await tryWriteToFirestore(doc);
   if (!wrote) saveFeedbackFallback(doc);
 :pages_backup/api/feedback.ts
-<<<<<<< HEAD:pages/api/feedback.ts
-<<<<<<< HEAD
   return ok(res, { id: doc && doc.id });
 }
 
@@ -266,7 +258,6 @@ async function tryWriteToFirestore(req, res) {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } = process.env as Record<string string | undefined>
   if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) return false
   try {
-<<<<<<< HEAD:pages_backup/api/feedback.ts
     const admin = require("firebase-admin")
     if (admin.apps.length === 0) {
       admin.initializeApp({
@@ -274,7 +265,6 @@ async function tryWriteToFirestore(req, res) {
 :pages_backup/api/feedback.ts
           projectId: FIREBASE_PROJECT_ID
           clientEmail: FIREBASE_CLIENT_EMAIL
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/feedback.ts
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")})})
       } catch (error) {
     console.error("Error:", error);
@@ -441,7 +431,6 @@ export default async function handler(req, res) {
   const r = Number(rating);
   if (!r || r < 1 || r > 5) return bad(res, "rating must be 1-5");
 :pages_backup/api/feedback.ts
-=======
 context: context || undefined,
   };
 
@@ -449,7 +438,6 @@ context: context || undefined,
   if (!wrote) saveFeedbackFallback(doc);
   return ok(res, { id: doc.id });
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/feedback.ts
   const k: FeedbackRecord["kind"] = kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
   const user = {;"
     id: (req.headers["x-demo-user-id"] as string) || undefined;"
@@ -480,12 +468,9 @@ context: context || undefined,
   }
 }
 :pages_backup/api/feedback.ts
-<<<<<<< HEAD:pages_backup/api/feedback.ts
   return ok(res, { id: doc.id });
 
 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/api/feedback.ts
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/feedback.ts

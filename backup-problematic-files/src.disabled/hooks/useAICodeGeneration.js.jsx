@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const { useState,useCallback,useRef,useEffect } from";react" import { useAnalytics } from";";./useAnalytics" export: const useAICodeGeneration = () => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [isGenerating,setIsGenerating] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [generatedCode,setGeneratedCode] = useState("";";) const [codeAnalysis,setCodeAnalysis] = useState(null) const [suggestions,setSuggestions] = useState([]) const [history,setHistory] = useState([]) const generationTimeoutRef = useRef(null)"";'"'"
 const UseAICodeGeneration.js = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const UseAICodeGeneration.js = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

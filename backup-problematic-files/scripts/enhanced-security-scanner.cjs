@@ -1,8 +1,4 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-security-scanner.cjs
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/enhanced-security-scanner.cjs
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
@@ -37,22 +33,13 @@ if (securityReport.vulnerabilities.length > 0) {
     log('error', 'Fatal error in enhanced security scanner', error.message);
     process.exit(1)}
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-security-scanner.cjs
 main();#!/usr/bin/env node;
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/enhanced-security-scanner.cjs
-=======
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 main();
 
 #!/usr/bin/env node;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -83,14 +70,8 @@ console.log('======')
     "action"
       log('warn', 'Vulnerabilities "found")
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
       log('info', 'Security "Recommendations")
 log('info', 'Security "Recommendations")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     process.exit(1)}
 main();
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

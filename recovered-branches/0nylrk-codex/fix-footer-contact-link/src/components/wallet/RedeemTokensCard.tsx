@@ -1,20 +1,11 @@
 
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Gift, ArrowRight, ExternalLink} from "lucide-react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type RewardOption = {
   id: string
   title: string
@@ -22,8 +13,6 @@ type RewardOption = {
   cost: number
   type: 'credit' | 'feature' | 'course'
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const REWARD_OPTIONS: RewardOption[] = [
   {
     id: 'premium-week'
@@ -52,8 +41,6 @@ const REWARD_OPTIONS: RewardOption[] = [
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <Card />
       <CardHeader />
@@ -87,10 +74,7 @@ const REWARD_OPTIONS: RewardOption[] = [
 size=\"sm\"
                       variant={wallet && wallet.balance  />= option.cost ? \"default\" : \"outline\"}
                       disabled={!wallet |wallet.balance < option.cost}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
             <div className=\"space-y-4 py-4\" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       onClick={() => handleRedeem(option)}
                     >;
                       Redeem <ArrowRight className=\"ml-1 h-3 w-3\" />;
@@ -108,22 +92,15 @@ size=\"sm\"
           </DialogContent>;
         </Dialog>;
       </CardContent>;
-<<<<<<< HEAD
     </Card>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 }
 ;
     </Card>);
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }
 ;
     </Card>);
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

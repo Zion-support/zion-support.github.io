@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
@@ -19,8 +18,6 @@ export default function AdminKycPage() {
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import React, { useEffect, useState } from 'react';'
 import Head from 'next/head';'
@@ -57,14 +54,9 @@ export default function AdminKycPage() {
 
 if (data.ok) load()
   }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AdminKycPage() {
 
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next/head',
 import type { KycProfile } from '../../utils/kyc';
@@ -73,12 +65,9 @@ export default function AdminKycPage() {
   const [reason, setReason] = useState<string>('');
   async function load() {
     const res = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     if (data.ok) load()
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [queue, setQueue] = useState<KycProfile[]>([]);
-=======
 '
 import React, { useEffect, useState } from 'react';'
 import Head from 'next/head';'
@@ -86,7 +75,6 @@ import type { KycProfile } from '../../utils/kyc';
 
 export default function AdminKycPage() {};
   const [queue, setQueue] = useState<KycProfile[]>([]);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [reason, setReason] = useState<string>('');
   async function load() { return null; }
     } catch (error) {}
@@ -97,7 +85,6 @@ export default function AdminKycPage() {};
   useEffect(() => {}
     load();
 }, []);
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   async function act(userId: string, action: 'approve' | 'reject' | 'needs_more_info') {
     const res = await fetch('/api/admin/kyc-queue', {
       method: 'POST',
@@ -106,25 +93,19 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
     const data = await res.json();
     if (data.ok) load()
   }
-<<<<<<< HEAD
     if (data.ok) load()
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, action, reason: reason || undefined })}),
     const data = await res.json();
     if (data.ok) load()
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     if (data.ok) load()
   }
 
 }
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <>
       <Head>
@@ -134,7 +115,6 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
       </Head>"
       <main className="max-w-5xl mx-auto px-4 py-8">"
         <h1 className="text-2xl font-bold mb-4">KYC Review Queue</h1>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="mb-4">
           <label className="block text-sm font-medium">Reason/Note (optional)</label>
           <input className="mt-1 w-full border rounded px-3 py-2" value={reason} onChange={(e) => setReason(e.target.value)} />
@@ -144,7 +124,6 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
             <div key={p.userId} className="border rounded p-4">"
               <div className="flex items-center justify-between">
                 <div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   )}
                   )  } catch (error) {
     console.error("Error:", error);
@@ -163,14 +142,11 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
                 <div className="font-medium text-sm mb-1">Documents</div>"
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div key={d.id} className="border rounded p-2 text-xs">
                       <div>Kind: {d.kind}</div>
                       <div>Filename: {d.filename}</div>
                       <div>Uploaded: {new Date(d.uploadedAt).toLocaleString()}</div>
-=======
                 </div>
                 <div className='flex gap-2'>
                   <button
@@ -202,7 +178,6 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
                       <div>
                         Uploaded: {new Date(d.uploadedAt).toLocaleString()}
                       </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>
                   ))}
                 </div>
@@ -212,7 +187,6 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
         </div>
       </main>
     </>
-<<<<<<< HEAD
   );
 };
   ),
@@ -222,12 +196,7 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
   }
 }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 }
 '
@@ -308,11 +277,5 @@ function act() { return null; }
     </>);
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

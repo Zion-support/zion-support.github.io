@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lucide-react';
@@ -21,7 +20,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 export function WebhooksManager() {;
   const {;
     webhooks,;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     loading,;
     testResult,;
     fetchWebhooks,;
@@ -29,7 +27,6 @@ export function WebhooksManager() {;
     toggleWebhook,;
     deleteWebhook,;
     testWebhook,;
-<<<<<<< HEAD
 
                           checked={selectedEvents.includes(event.value)}
                           onCheckedChange={() => toggleEvent(event.value)}

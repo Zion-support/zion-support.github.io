@@ -3,8 +3,6 @@ import React from 'react';
 interface ServiceCardProps {
   title: string,
   description: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
   icon: string;
   features: string[];
   className?: string;
@@ -59,12 +57,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <p className="text-gray-300 mb-4 text-center">{description}</p>
       {features.length > 0 && (
 :src/components/ServiceCard.tsx
-<<<<<<< HEAD
         <ul className="space-y-2">
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ServiceCard.tsx
         <ul className="space-y-2">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {features.map((feature, index) => (
             <li key={index} className="flex items-center text-sm text-gray-300">
               <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>
@@ -73,16 +67,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           ))}
         </ul>
 :src/components/ServiceCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       )}
     </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   );
-=======
       </div>
 
       <div className="mt-6 pt-6 border-t border-gray-100">
@@ -91,20 +78,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </button>
       </div>
     </div>  )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-=======
-      )}
-    </motion.div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-  );
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
       )}
     </motion.div>
   );
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ServiceCard.tsx
+      )}
+    </motion.div>
+  );
 };
 
 export default ServiceCard;

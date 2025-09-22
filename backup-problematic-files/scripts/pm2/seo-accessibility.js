@@ -59,10 +59,8 @@ files.push(fullPath),;
         };
       }),;
     };
-=======
           files.push(fullPath),;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -75,11 +73,8 @@ class SEOAccessibility {;
 this.startTime = Date.now();
 };
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
     this.startTime = Date.now();
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs'),
 const path = require('path'),
 const { execSync } = require('child_process'),
@@ -104,8 +99,6 @@ class SEOAccessibility {,
     try {,
       this.log('🔍 Checking SEO...'),
 ,
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const seoIssues = [],
       const pagesDir = path.join(this.projectRoot, 'pages'),
       if (fs.existsSync(pagesDir)) {,
@@ -134,7 +127,4 @@ pr-12325
 };
       })
     };
-<<<<<<< HEAD
-=======
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

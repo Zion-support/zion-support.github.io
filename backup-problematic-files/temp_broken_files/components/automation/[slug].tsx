@@ -25,8 +25,6 @@ if ( {) {
     data = null;
 
   }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <EnhancedLayout>
 
       <Head>
@@ -34,10 +32,6 @@ if ( {) {
         <title>{_title} - Zion Tech Solutions</title>
 
       <h1 className=&quot;text-xl font-semibold mb-4&quot;>{title}</h1>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {!data ? (
-<<<<<<< HEAD
         <div className=&quot;opacity-70&quot;>No report found.</div>
       ) : (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

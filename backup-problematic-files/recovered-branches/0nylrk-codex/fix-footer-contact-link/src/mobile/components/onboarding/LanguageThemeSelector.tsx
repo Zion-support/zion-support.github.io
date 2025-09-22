@@ -23,12 +23,10 @@ export function LanguageThemeSelector() {;
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-8 px-4">;
       <div className="space-y-2">;
         <h2 className="text-xl font-medium">Select your language</h2>;
         <p className="text-muted-foreground">Choose your preferred language</p>;
-<<<<<<< HEAD
             <Card ;
               key={language.code}
               className={`cursor-pointer transition-all ${;
@@ -44,7 +42,6 @@ export function LanguageThemeSelector() {;
                   <span>{language.name}</span>;
 </div>;
                 {selectedLanguage === language.code && (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <Check className="h-4 w-4 text-primary" />;
                 )}
               </CardContent>;
@@ -52,7 +49,6 @@ export function LanguageThemeSelector() {;
           ))}
         </div>;
       </div>;
-<<<<<<< HEAD
             }`}
             onClick={() => setTheme('light')}
           >;

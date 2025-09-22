@@ -45,7 +45,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .filter((p) => !p.paused)
       .map(async (peer) => {
 :pages_backup/api/sync/leaderboard.ts
-<<<<<<< HEAD
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
@@ -85,15 +84,11 @@ export default async function handler(req, res) {
         const url = new URL("/api/sync/publish", peer.baseUrl).toString();
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
 :pages_backup/api/sync/leaderboard.ts
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {}
       })
 :pages_backup/api/sync/leaderboard.ts
-<<<<<<< HEAD
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
   const state = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -196,10 +191,8 @@ export default async function handler(req, res) {
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };
 
-=======
 pr-12243
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/leaderboard.ts

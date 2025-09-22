@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export interface TalentProfile {;
   id:string;
   user_id:string;
@@ -52,4 +51,3 @@ export interface HireRequest {;
   createdAt:string;
 } 
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

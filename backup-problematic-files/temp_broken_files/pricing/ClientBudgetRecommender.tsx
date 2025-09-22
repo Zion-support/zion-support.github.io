@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 import { ;
   getClientBudgetSuggestion,;
   PricingSuggestion,;
@@ -8,10 +7,8 @@ import { ;
 } from "@/services/pricingSuggestionService",;
 import { PricingSuggestionBox } from "./PricingSuggestionBox",;
 import { useAuth } from "@/hooks/useAuth",;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 import { Sparkles } from "lucide-react",;
 import { Sparkles } from 'lucide-react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/pricing/ClientBudgetRecommender.tsx
 ;
 interface ClientBudgetRecommenderProps {;
   jobTitle: string;,;
@@ -44,7 +41,6 @@ const { user } = useAuth(),;
       const result = await getClientBudgetSuggestion(params),;
       setSuggestion(result),;
     } catch (error) {;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
       console.error("Error generating budget suggestion:", error),;
     } finally {;
       setIsLoading(false),;
@@ -64,7 +60,6 @@ if (user) {;
         trackPricingSuggestion({;
           userId:user.id,;
           suggestionType:"client",;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/pricing/ClientBudgetRecommender.tsx
           suggestedMin:suggestion.minRate,;
           suggestedMax:suggestion.maxRate,;
           accepted:true;
@@ -96,7 +91,6 @@ if (user) {;
       </div>;
 </div>;
   ),;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 },; import {
   getClientBudgetSuggestion;
 PricingSuggestion;
@@ -111,13 +105,11 @@ ClientBudgetParams;
 trackPricingSuggestion import {;
   Sparkles ;
 }from 'lucide-react' interface ClientBudgetRecommenderProps {;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/pricing/ClientBudgetRecommender.tsx
   jobTitle: string;
 category: string;
 timeline?: string;
 scope?: string;
 experienceLevel?: string;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 onSuggestionApplied: (minValue: number, maxValue: number) => void 
 }export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
   jobTitle;
@@ -161,7 +153,6 @@ return (<div className="space-y-4" > <div> {
 }> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) 
 }</div> </div>) 
 };
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 onSuggestionApplied ;
 }) => {;
   const [isLoading,  setIsLoading] = useState (false);
@@ -193,4 +184,3 @@ return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<B
 };
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/pricing/ClientBudgetRecommender.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/pricing/ClientBudgetRecommender.tsx

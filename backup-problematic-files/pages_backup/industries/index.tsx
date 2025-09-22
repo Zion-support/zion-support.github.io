@@ -5,7 +5,6 @@ import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRig
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 
 import React from 'react';
 import Link from 'next/link';';
@@ -56,7 +55,6 @@ import { ;
   Shield,;
   Cloud,;
   Brain;
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 } from 'lucide-react';
 import SimpleLayout from '../../components/SimpleLayout';
   Brain;
@@ -90,7 +88,6 @@ Brain;
 } from 'lucide-react';
   Brain;
 } from 'lucide-react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     href: '/industries/finance,',
     features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',
     color: 'from-green-500 to-emerald-500'';
@@ -162,7 +159,6 @@ import SimpleLayout from '../../components/SimpleLayout';
 import Layout from '../../components/Layout';';
 const industries = [;
   {;
-<<<<<<< HEAD
     name: 'Healthcare',;
     description: 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',;
     icon: Heart,;
@@ -257,8 +253,6 @@ const stats = [
   { number: '24/7', label: 'Industry Support' }
 ];
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     href: '/industries/government,',
     features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
     color: 'from-gray-500 to-slate-500'';
@@ -271,7 +265,6 @@ const stats = [;
   { number: '99.9%, label: 'Uptime Guarantee' },',
   { number: '24/7, label: 'Industry Support' }',
 ;];
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function IndustriesPage() {
   return (;
     <Layout);
@@ -334,7 +327,6 @@ export default function Industries() {
 keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/index.tsx
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -342,11 +334,9 @@ keywords="industry solutions, healthcare technology, fintech, manufacturing IoT,
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-=======
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -427,7 +417,6 @@ We understand the unique challenges and requirements of different industries. Ou
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Industries Grid */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -437,7 +426,6 @@ We understand the unique challenges and requirements of different industries. Ou
               whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/index.tsx
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Industries We Serve
@@ -461,11 +449,8 @@ className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all dura
                 Our deep industry expertise allows us to deliver tailored solutions that address specific sector challenges;
                 and drive measurable business outcomes.;
               </p>;
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             </motion.div>;
-=======
             </motion.div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Industries We Serve
@@ -480,18 +465,14 @@ className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all dura
                 return (;
                   <motion.div);
                     key={index}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/index.tsx
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
-=======
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className="bg-white/10 backdrop-blur-md rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
 whileHover={{ y: -5 }}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/index.tsx
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                       <IconComponent className="w-8 h-8 text-white" />
@@ -505,8 +486,6 @@ whileHover={{ y: -5 }}
                     </h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <p className="text-gray-600 mb-6 leading-relaxed">";
                   >
                     <div className="text-blue-400 mb-6 group-hover:text-blue-300 transition-colors">
@@ -555,7 +534,6 @@ whileHover={{ y: -5 }}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
                       </div>,
                     </div>;
@@ -563,8 +541,6 @@ whileHover={{ y: -5 }}
                     <Link
                       href={industry.href}
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
                     >;
                       <span>Learn More</span>;
@@ -593,7 +569,6 @@ whileHover={{ y: -5 }}
           </div>;
         </section>;
 {/* Why Choose Us Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
@@ -603,13 +578,11 @@ whileHover={{ y: -5 }}
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-=======
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
             <motion.div;
@@ -618,7 +591,6 @@ whileHover={{ y: -5 }}
               whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/index.tsx
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Why Choose Our Industry Solutions?
@@ -628,8 +600,6 @@ transition={{ duration: 0.8 }}
               </p>
             </motion.div>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >,
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
                 Why Choose Our Industry Solutions?;
@@ -664,7 +634,6 @@ transition={{ duration: 0.8 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/index.tsx
               >
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Shield className="w-8 h-8 text-green-600" />
@@ -675,12 +644,10 @@ We ensure all solutions meet industry-specific regulatory requirements and
                   maintain the highest security standards.
                 </p>
               </motion.div>
-=======
                   We ensure all solutions meet industry-specific regulatory requirements and 
                   maintain the highest security standards.
                 </p>
               </motion.div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               >,
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Shield className="w-8 h-8 text-green-600" />";
@@ -720,8 +687,6 @@ We ensure all solutions meet industry-specific regulatory requirements and
                   key={index}
                   className="text-center"
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
@@ -733,7 +698,6 @@ We ensure all solutions meet industry-specific regulatory requirements and
                   whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/index.tsx
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
@@ -749,8 +713,6 @@ transition={{ duration: 0.8, delay: index * 0.1 }}
           <div className="container mx-auto px-4 text-center">
             <motion.div
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 >,
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">";
                     {stat.number}
@@ -787,7 +749,6 @@ transition={{ duration: 0.8, delay: index * 0.1 }}
               whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/index.tsx
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Transform Your Industry?
@@ -824,8 +785,6 @@ transition={{ duration: 0.8 }}
       </div>;
     </Layout>;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Don't See Your Industry?
@@ -843,12 +802,10 @@ transition={{ duration: 0.8 }}
           </div>
         </section>
       </div>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/index.tsx
     </SimpleLayout>
     </Layout>
   );
 }
-=======
     </SimpleLayout>
     </Layout>
   );
@@ -1241,4 +1198,3 @@ export default function IndustriesPage() {;
                 <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";"
 
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

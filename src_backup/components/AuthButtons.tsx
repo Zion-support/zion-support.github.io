@@ -1,8 +1,4 @@
 :src_backup/components/AuthButtons.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Facebook } from 'lucide-react';
@@ -24,9 +20,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     await signIn(provider)
   }
 :src/components/AuthButtons.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Facebook } from 'lucide-react';
@@ -47,7 +41,6 @@ function AuthButtons() {}
   }
 
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface AuthButtonsProps {;
   providers?: Provider[];
 }
@@ -67,33 +60,25 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
 :src_backup/components/AuthButtons.tsx
 
   const gridCols = `grid-cols-${providers.length}`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>
       {providers.includes('google') && (
         <Button
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('google')}
 :src/components/AuthButtons.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthButtons.tsx
           disabled={loadingProvider !== null}
 :src_backup/components/AuthButtons.tsx
         >
           <span className="sr-only">Sign in with Google</span>
           {loadingProvider === 'google' ? (
-=======
         >"
           <span className="sr-only">Sign in with Google</span>'
           {loadingProvider === 'google' ? ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/AuthButtons.tsx
             <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
           ) : ("
             <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">"
@@ -110,29 +95,21 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
       )}
       {providers.includes('github') && (
         <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('github')}
 :src/components/AuthButtons.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthButtons.tsx
           disabled={loadingProvider !== null}
 :src_backup/components/AuthButtons.tsx
         >
           <span className="sr-only">Sign in with GitHub</span>
           {loadingProvider === 'github' ? (
-=======
         >"
           <span className="sr-only">Sign in with GitHub</span>'
           {loadingProvider === 'github' ? ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/AuthButtons.tsx
             <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
           ) : ("
             <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">"
@@ -146,20 +123,12 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
       )}
       {providers.includes('facebook') && (
         <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           type="button"
-=======
 
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthButtons.tsx
           type="button"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-=======
       )}'
       {providers && providers.includes('facebook') && (;
         <Button;
@@ -167,7 +136,6 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
           type="button""
           variant="outline""
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/AuthButtons.tsx
           onClick={() => handleSignIn('facebook')}
           disabled={loadingProvider !== null}
         >"
@@ -177,8 +145,6 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
           ) : ("
             <Facebook className="h-5 w-5" />
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           )}
         </Button>;
 :src_backup/components/AuthButtons.tsx
@@ -273,10 +239,8 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
         </Button>)}
     </div>);
 :src/components/AuthButtons.tsx
-<<<<<<< HEAD
 }          ) : (
           ) : (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <>Email Login</>
           )}
         </Button>
@@ -287,19 +251,13 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
 }
 :src_backup/components/AuthButtons.tsx
 
-<<<<<<< HEAD:src/components/AuthButtons.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           type="button"
           variant="outline"
           className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-=======
 "
           type="button""
           variant="outline""
           className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/AuthButtons.tsx
           onClick={() => handleSignIn('credentials')}
           disabled={loadingProvider !== null}
         >'
@@ -309,34 +267,23 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
 :src/components/AuthButtons.tsx
 ) : (
           ) : (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <>Email Login</>
           )}
         </Button>;
       )}
 :src/components/AuthButtons.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>;
   );
 }
 :src_backup/components/AuthButtons.tsx
 ;
-=======
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;
 
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthButtons.tsx
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/AuthButtons.tsx

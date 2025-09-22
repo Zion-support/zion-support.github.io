@@ -9,12 +9,10 @@ interface WorkspaceHeaderProps {;
 }
 export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <div className="flex items-center gap-4">;
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
-<<<<<<< HEAD
             />;
 </img>
           </div>;
@@ -30,7 +28,6 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
           <Button variant="outline" size="icon" aria-label="Notifications">;
             <Bell className="h-4 w-4" />;
           </Button>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <Button variant="outline" size="icon" aria-label="Team members">;
             <Users className="h-4 w-4" />;
           </Button>;
@@ -39,7 +36,6 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
         <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Active Job Listings</div>;
           <div className="text-2xl font-medium">8</div>;

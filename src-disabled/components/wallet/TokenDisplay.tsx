@@ -1,11 +1,7 @@
 :src_backup/components/wallet/TokenDisplay.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 const { wallet, loading } = useWallet();
   return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
 import React from "react",
 import { BadgeDollarSign } from 'lucide-react'
 import { useWallet } from "@/hooks/useWallet",
@@ -14,14 +10,9 @@ import { Button } from "@/components/ui/button",
 import Skeleton from "@/components/ui/skeleton",
 export function TokenDisplay() {
   const { wallet, loading } = useWallet(),
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/wallet/TokenDisplay.tsx
-=======
 
 import React from "react",
 import { BadgeDollarSign } from 'lucide-react'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/wallet/TokenDisplay.tsx
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -45,8 +36,6 @@ import Skeleton from '@/components/ui/skeleton'
 export function TokenDisplay() {
   const { wallet, loading } = useWallet();
 :src_backup/components/wallet/TokenDisplay.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -60,8 +49,6 @@ export function TokenDisplay() {
         {loading ? (
           <Skeleton className="h-12 w-28" />
         ) : (
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="flex flex-col gap-2">
             <div className="flex items-end">
               <span className="text-3xl font-bold">{wallet?.balance || 0}</span>
@@ -72,16 +59,10 @@ export function TokenDisplay() {
               Use your tokens to boost visibility, access premium features, or convert to credits.
             </p>
 :src/components/wallet/TokenDisplay.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="mt-2">
               <Button variant="outline" size="sm">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/wallet/TokenDisplay.tsx
             <div className='mt-2'>
               <Button variant='outline' size='sm'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -90,9 +71,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
 :src/components/wallet/TokenDisplay.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",;
 import { BadgeDollarSign } from 'lucide-react';
 import { useWallet } from "@/hooks/useWallet",;
@@ -119,7 +98,6 @@ export function TokenDisplay() {;
               <span className='text-3xl font-bold'>{wallet?.balance || 0}</span>;
               <span className='ml-1 text-muted-foreground'>ZION$</span>;
             </div>;
-<<<<<<< HEAD
             <p className="text-sm text-muted-foreground">;
               Use your tokens to boost visibility, access premium features, or convert to credits.;
             </p>;
@@ -127,7 +105,6 @@ export function TokenDisplay() {;
               <Button variant="outline" size="sm">;
                 View Wallet;
               </Button>;
-=======
             <p className='text-sm text-muted-foreground'>;
               Use your tokens to boost visibility, access premium features, or;
               convert to credits.;            </p>;
@@ -151,9 +128,7 @@ export /**
  */
 function TokenDisplay() {
   const { wallet, loading } = use_wallet ();
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/wallet/TokenDisplay.tsx
   return (
     <Card>;
       <CardHeader className='flex flex - row items - center justify - between pb - 2'>;
@@ -227,7 +202,6 @@ pr-12325
             <div className='flex items - end'>;
               <span className='text - 3xl font - bold'>{wallet?.balance || 0}</span>;
               <span className='ml - 1 text - muted - foreground'>ZION$</span>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>;
 </div>;
         )}
@@ -240,10 +214,7 @@ pr-12325
             </div>;
 :src_backup/components/wallet/TokenDisplay.tsx
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
 ;
 }}}})))))))
@@ -252,7 +223,6 @@ pr-12325
       </CardContent>;
     </Card>;
   );
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/wallet/TokenDisplay.tsx
 }
 ;
         )}

@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from 'react',;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -93,12 +92,10 @@ const NotificationCard:React.FC<{;
       <div className="flex items-start gap-4">;
         <div className="mt-1">;
           {getNotificationIcon(notification.type, "h-6 w-6")}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         </div>;
         <div className="flex-1">;
           <div className="flex justify-between">;
             <div className="flex flex-col">;
-<<<<<<< HEAD
 
                   <Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>;
                 )}

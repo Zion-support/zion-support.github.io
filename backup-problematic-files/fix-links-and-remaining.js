@@ -1,6 +1,5 @@
 
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ,;
 // Function to extract display name from service name,;
 function getDisplayName(serviceName) {,;
@@ -10,7 +9,6 @@ function getDisplayName(serviceName) {,;
     .replace(/([A-Z])/g, " $1"),;"
     .trim()};
 // Fix remaining corrupted files,;
-<<<<<<< HEAD
 ;  // Remove common prefixes and convert to readable format;
   return serviceName;
     .replace(/^AI/, "");
@@ -30,12 +28,10 @@ remainingCorruptedFiles.forEach(filePath => {;
     const dir = path.dirname(filePath);
 if (!fs.existsSync(dir)) {;
   fs.mkdirSync(dir, { "recursive": true })};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ;
     // Write the fixed content;
     const content = servicePageTemplate(serviceName, displayName);
     fs.writeFileSync(filePath, content, "utf8");
-<<<<<<< HEAD
 
 function getDisplayName(serviceName) {,
     .join ("")}
@@ -75,4 +71,3 @@ remainingCorruptedFiles.forEach(filePath => {,
 
     } catch (error) {_
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

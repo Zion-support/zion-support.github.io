@@ -1,8 +1,5 @@
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -16,13 +13,7 @@ import {DisputeReason, disputeReasonLabels} from "@/types/disputes";
 import {useDisputes} from "@/hooks/useDisputes";
 import {toast} from "sonner";
 import {FileText} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 "
 import React, { useState } from "react","
@@ -50,31 +41,16 @@ import { useDisputes } from "@/hooks/useDisputes","
 import { toast } from "sonner","
 import { FileText } from "lucide-react",
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const formSchema = z.object({
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 const formSchema = z.object({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   reason_code: z.string()
-=======
 const formSchema = z.object({}
   reason_code: z.string()"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     .min(1, { message: "Please select a reason for the dispute" })
   description: z.string()"
     .min(20, { message: "Description must be at least 20 characters" })
   attachments: z.array(z.any()).optional()})
 type DisputeFormProps = {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 projectId: string
   milestoneId?: string;
@@ -155,12 +131,7 @@ export function DisputeForm({
   milestoneId, 
   onDisputeCreated, 
   onCancel 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -213,13 +184,7 @@ const removeFile = (index: number) => {}
     setFiles(newFiles),"
     form.setValue("attachments", newFiles)
   },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const removeFile = (index: number) => {
     const newFiles = [...files],
     newFiles.splice(index, 1),
@@ -227,14 +192,11 @@ const removeFile = (index: number) => {}
     form.setValue("attachments", newFiles)
   },
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-=======
 
   async function onSubmit(values: z.infer<typeof formSchema>) {}
     try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setIsSubmitting(true)
       const dispute = await createDispute({}
         project_id: projectId;
@@ -246,28 +208,16 @@ if (dispute && dispute.id) {
         // For now we just log the files that would be uploaded
         if (files.length > 0) {
           console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
-<<<<<<< HEAD
-<<<<<<< HEAD
         }
 
-<<<<<<< HEAD
-=======
         }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         toast.success("Your dispute has been submitted"),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 // // // console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
         toast.success("Your dispute has been submitted");
         toast.success("Your dispute has been submitted"),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
@@ -289,38 +239,27 @@ toast.error("Failed to submit dispute. Please try again.")
       setIsSubmitting(false)
 
   };
-=======
         }  };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         }  };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
       toast.error("Failed to submit dispute. Please try again.")
     } finally {
       setIsSubmitting(false)
 setFiles(prev => [...prev, ...newFiles]);
       form && form.setValue("attachments", [...files, ...newFiles]);
     }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       toast.error("Failed to submit dispute. Please try again.")
     } finally {
       setIsSubmitting(false)
   };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const removeFile = (index: number) => {;
     const newFiles = [...files],;
     newFiles && newFiles.splice(index, 1);
 setFiles(newFiles);
-<<<<<<< HEAD
     form && form.setValue("attachments", newFiles)
 };
-=======
     form && form.setValue("attachments", newFiles)
 };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
     try {;
@@ -350,17 +289,12 @@ setFiles(newFiles);
       toast && toast.error("Failed to submit dispute. Please try again.");
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   }
-<<<<<<< HEAD
   return (
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           <FormField
             control={form.control}
-=======
   return (
 
 console.error("Error submitting dispute:", error);
@@ -381,7 +315,6 @@ console.error("Error submitting dispute:", error);
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
             control={form.control}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             name="reason_code"
             render={({ field }) => (
               <FormItem>
@@ -466,13 +399,8 @@ setFiles(prev => [...prev, ...newFiles]),;"
 
 <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <FormField
-=======
   return (          <FormField
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       setFiles(prev => [...prev, ...newFiles]),;
       form.setValue("attachments", [...files, ...newFiles]);
           <FormField
@@ -557,12 +485,9 @@ setFiles(prev => [...prev, ...newFiles]),;"
         <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
 return (
           <FormField
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             control={form && form.control}
-=======
           <FormField;
             control={form && form.control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             name="reason_code"
             render={({ field }) => (;
               <FormItem>;
@@ -753,24 +678,15 @@ return (
         <h2 className="text - xl font-semibold">Report an Issue</h2>;
       </div>;
       <Form {...form}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
-=======
         <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <FormField;
             control={form.control}"
             name="reason_code";
             render={({ field }) => (
               <FormItem>;
                 <FormLabel > Reason for dispute</FormLabel>;
-<<<<<<< HEAD
                 <Select onValueChange={field.on_change} default_value={field.value}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           />;
           <FormField
             control={form && form.control}
@@ -785,17 +701,11 @@ return (
               <FormItem>;
                 <FormLabel>Reason for dispute</FormLabel>;
                 <Select onValueChange={field.onChange} defaultValue={field.value}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <FormControl>;
                     <SelectTrigger>;"
-=======
                   <FormControl>;
                     <SelectTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <SelectValue placeholder="Select a reason" />;
                     </SelectTrigger>;
                   </FormControl>;
@@ -803,28 +713,15 @@ return (
 
 {Object.entries(disputeReasonLabels).map(([value, label]) => (;
                       <SelectItem key={value} value={value}>{label}</SelectItem>;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     ))}
                   </SelectContent>;
-=======
                 <Select onValueChange={field.on_change} default_value={field.value}>;                  </SelectContent>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                 <Select onValueChange={field.on_change} default_value={field.value}>;                  </SelectContent>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (;
                       <SelectItem key={value} value={value}>{label}</SelectItem>;
 
                     ))}
                   </SelectContent>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </Select>;
                 <FormMessage />;
               </FormItem>;
@@ -832,7 +729,6 @@ return (
 
           />;
 
-<<<<<<< HEAD
           <FormField
             control={form && form.control}
             name="description"
@@ -849,7 +745,6 @@ return (
                 <FormControl>;
                   <Textarea
                     placeholder="Please provide specific details about the issue..."
-=======
 
           <FormField;
             control={form && form.control}"
@@ -862,22 +757,12 @@ return (
 
                   <Textarea"
                     placeholder="Please provide specific details about the issue...""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className="min-h-[150px]"
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   <Textarea;"
                     placeholder="Please provide specific details about the issue...";"
                     className="min - h-[150px]";
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     {...field}
                   />;
                 </FormControl>;
@@ -893,23 +778,12 @@ return (
                   type="file" 
                   multiple 
                   onChange={handleFileChange}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="cursor-pointer"
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 />;
-=======
                   className="cursor-pointer"                />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   className="cursor-pointer"                />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 {files && files.length > 0 && (;"
                   <div className="space-y-2">;"
@@ -927,17 +801,11 @@ return (
                             variant="ghost" "
                             size="sm" 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>;
                           <Button ;
                             type="button" ;
                             variant="ghost" ;
                             size="sm" ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             onClick={() => removeFile(index)}
                           >;
                             Remove;
@@ -985,14 +853,7 @@ return (
             <FormMessage />;
           </FormItem>;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
           <div className="flex justify - end space - x-2">;
             {on_cancel && (
               <Button type="button" variant="outline" on_click={on_cancel}>;
@@ -1001,7 +862,6 @@ return (
             <Button type="submit" disabled={is_submitting}>;
               {is_submitting ? "Submitting..." : "Submit Dispute"}
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </Button>;
           </div>;
         </form>;
@@ -1016,14 +876,7 @@ return (
         </form>
       </Form>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
   )
 
         reason_code: values.reason_code,)
@@ -1052,7 +905,6 @@ return (
         <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;"
             name="reason_code";"
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             onClick={() => removeFile(index)}
 
                         </li>;
@@ -1172,21 +1024,11 @@ pr-12325
 }
 };
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 }
 
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 </FormMessage>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

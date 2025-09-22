@@ -1,5 +1,4 @@
 
-=======
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -80,7 +79,6 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
 ;
   if (isLoading) {;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
           <Card key={i}>;
@@ -96,7 +94,6 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
           </Card>;
         ))}
       </div>;
-<<<<<<< HEAD
 
       <Card>;
         <CardContent className="p-6 text-center">;

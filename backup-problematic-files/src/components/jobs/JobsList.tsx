@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -44,7 +43,6 @@ export function JobsList({ filter, onSelectJob } JobsListProps) {;
         logErrorToProduction('Error fetching jobs:', { data:error }),;
       } finally {;
         setIsLoading(false),;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
     },;
 ;
@@ -87,7 +85,6 @@ export function JobsList({ filter, onSelectJob } JobsListProps) {;
       default:;
         return "bg-gray-100 text-gray-800";
     }
-<<<<<<< HEAD
 
         >;
           <CardHeader className="p-4">;

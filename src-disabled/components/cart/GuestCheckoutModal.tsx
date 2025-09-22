@@ -1,8 +1,4 @@
 :src_backup/components/cart/GuestCheckoutModal.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -41,14 +37,9 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 :src/components/cart/GuestCheckoutModal.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/cart/GuestCheckoutModal.tsx
 import {;
-=======
 import { Textarea } from '@/components/ui/textarea',;import {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Dialog,;
   DialogContent,;
   DialogDescription,;
@@ -117,7 +108,6 @@ export default function GuestCheckoutModal(): any ({;
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -126,17 +116,14 @@ export default function GuestCheckoutModal(): any ({;
       return;
     }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     setIsSubmitting(true);
     try {;
       onSubmit({ email, address });
     } finally {;
       setIsSubmitting(false);
-<<<<<<< HEAD
     }
   },
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-cyan/20 max-w-md">
@@ -154,19 +141,14 @@ export default function GuestCheckoutModal(): any ({;
             Pay with test data – use card 4242 4242 4242 4242 and any future date.
           </div>
 )}
-<<<<<<< HEAD
         <form onSubmit={handleSubmit} className='space-y-4'>;
           <div className='space-y-2'>;
             <Label
 :src_backup/components/cart/GuestCheckoutModal.tsx
 
               htmlFor='guest-email'
-=======
         )}              htmlFor='guest-email'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               htmlFor='guest-email''
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/cart/GuestCheckoutModal.tsx
               className='text-white flex items-center gap-2'>;
               <Mail className='h-4 w-4 text-zion-cyan' />;
               Email Address;
@@ -179,7 +161,6 @@ export default function GuestCheckoutModal(): any ({;
               id='guest-email'
               type='email'
 :src_backup/components/cart/GuestCheckoutModal.tsx
-<<<<<<< HEAD
               value={email || ''}
               onChange={(e) => setEmail(e.target.value || '')}
               placeholder="your.email@example.com"
@@ -189,7 +170,6 @@ export default function GuestCheckoutModal(): any ({;
           </div>
 
 :src_backup/components/cart/GuestCheckoutModal.tsx
-<<<<<<< HEAD
 
               value={email || ''}
               onChange={e => setEmail(e && e.target.value || '')}
@@ -199,7 +179,6 @@ export default function GuestCheckoutModal(): any ({;
           </div>;
 :src_backup/components/cart/GuestCheckoutModal.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/cart/GuestCheckoutModal.tsx
           <div className='space-y-2'>;
             <Label
               htmlFor='guest-address''
@@ -333,7 +312,6 @@ export default function GuestCheckoutModal(): any ({;
         </DialogHeader>
 
 :src_backup/components/cart/GuestCheckoutModal.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
@@ -342,7 +320,6 @@ export default function GuestCheckoutModal(): any ({;
               Shipping Address
             </Label>
 <Input
-<<<<<<< HEAD
               id="guest-email"
               type="email"
               value={email || ''}
@@ -369,7 +346,6 @@ export default function GuestCheckoutModal(): any ({;
           </div>
 
 :src_backup/components/cart/GuestCheckoutModal.tsx
-<<<<<<< HEAD:src/components/cart/GuestCheckoutModal.tsx
           <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
             <p className="text-yellow-400 text-sm">
               💡 Creating an account allows you to track your order and checkout faster next time.
@@ -398,11 +374,7 @@ export default function GuestCheckoutModal(): any ({;
             </p>
           </div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/cart/GuestCheckoutModal.tsx
               {isSubmitting ? (
-=======
           <DialogFooter className="space-x-2">
             <Button
               type="button"
@@ -417,7 +389,6 @@ export default function GuestCheckoutModal(): any ({;
               disabled={isSubmitting || !email || !address}
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
             >              {isSubmitting ? (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 'Processing...'
               ) : (
                 <>
@@ -426,8 +397,6 @@ export default function GuestCheckoutModal(): any ({;
                 </>
               )}
 :src_backup/components/cart/GuestCheckoutModal.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             </Button>;
           </DialogFooter>;
         </form>;
@@ -455,7 +424,6 @@ export default function GuestCheckoutModal(): any ({;
     </Dialog>;
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
             </Button>;
           </DialogFooter>;
@@ -466,8 +434,4 @@ export default function GuestCheckoutModal(): any ({;
 }
 ;
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/cart/GuestCheckoutModal.tsx

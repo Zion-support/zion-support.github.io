@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from "react";
 import Link from "next/link";
@@ -21,24 +20,17 @@ import {
   Instagram,
   Github,;
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
-=======
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     super(props);
     this.state = { hasError: false };
   }
@@ -71,13 +63,10 @@ import {;
   Linkedin,;
   Instagram,;
   Github,;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "lucide-react";
 const Footer = () => {}
   const currentYear = new Date().getFullYear();
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link';
 
 import { motion } from 'framer-motion';
@@ -134,16 +123,8 @@ import {
   Layers;
 } from 'lucide-react';
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -153,14 +134,12 @@ import {
       { name: "Cybersecurity", href: "/cybersecurity" }
       { name: "Database Solutions", href: "/database-solutions" }
     ]
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     solutions: [
       { name: "Enterprise Solutions", href: "/enterprise-solutions" }
       { name: "Startup Solutions", href: "/startup-solutions" }
       { name: "Industries", href: "/industries" }
       { name: "Custom Development", href: "/custom-development" }
       { name: "Digital Transformation", href: "/digital-transformation" }
-=======
 
   const footerLinks = {}
     services: ["
@@ -178,7 +157,6 @@ import {
       { name: "Industries", href: "/industries" }"
       { name: "Custom Development", href: "/custom-development" }"
       { name: "Digital Transformation", href: "/digital-transformation" }"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       { name: "Consulting", href: "/consulting" }
     ]
     company: ["
@@ -206,10 +184,7 @@ import {
       { name: "Accessibility", href: "/accessibility" }
     ]
   }
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
@@ -258,7 +233,6 @@ const footerLinks = {;
       { name: "Accessibility", href: "/accessibility" },;
     ],;
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const socialLinks = [;
     { name: "Facebook", href: "#", icon: Facebook },;
@@ -268,17 +242,9 @@ const footerLinks = {;
     { name: "GitHub", href: "#", icon: Github },;
   ];
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
-=======
 
   const socialLinks = ["
     { name: "Facebook", href: "#", icon: Facebook }"
@@ -298,7 +264,6 @@ const footerLinks = {;
   return ("
     <footer className="bg-gray-900 text-white">;"
       <div className="container mx-auto px-4 py-16">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-8">;
           {/* Company Info */}"
           <div className="lg:col-span-1">;
@@ -362,15 +327,10 @@ const footerLinks = {;
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-=======
 ursor/integrate-build-improve-and-re-verify-8f7d;
 origin/main;
 origin/automation-improvements-final;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </ul>;
 "
               <h3 className="text-lg font-semibold mb-6">Legal</h3>;"
@@ -384,28 +344,16 @@ origin/automation-improvements-final;
                     </Link>;
                   </li>;
                 ))}
-<<<<<<< HEAD
               </ul>;
             </motion && motion.div>;
           </div>;
         </div>;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
-=======
 
         {/* Bottom Section */}"
         <div className="border-t border-gray-800 mt-12 pt-8">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <motion&& motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -416,32 +364,18 @@ transition={{ duration: 0.8 }}
               © {currentYear} Zion Tech Group. All rights reserved.
             </motion.div>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <motion.div
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <motion.div
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <motion.div
               transition={{ duration: 0 && 0.8 }}
-=======
             <motion.div;
             <motion.div;
               transition={{ duration: 0 && 0.8 }}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="text-gray-400 text-sm mb-4 md:mb-0">;
               © {currentYear} Zion Tech Group. All rights reserved.;
             </motion && motion.div>;
 
 <motion&& motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}"
@@ -455,16 +389,11 @@ transition={{ duration: 0.8 }}
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
               ))}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
-=======
 
         {/* Service Categories */}"
         <div className="mt-16 pt-8 border-t border-gray-800">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Micro SaaS Categories */}
             <div>"
@@ -542,18 +471,13 @@ transition={{ duration: 0.8 }}
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> |
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             <motion.div
-=======
               © 2025 Zion Tech Group. All rights reserved. | "
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | "
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
 
             <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
@@ -570,12 +494,9 @@ transition={{ duration: 0.8 }}
                 </a>
               ))}
             </motion.div>
-<<<<<<< HEAD
             <div className="flex items-center space-x-6">
-=======
 "
             <div className="flex items-center space-x-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Sitemap;
               </Link>"
@@ -586,21 +507,13 @@ transition={{ duration: 0.8 }}
                 Cookie Policy;
               </Link>
             </div>
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </div>
     </footer>
 
   );
-<<<<<<< HEAD
 import MainLayout from '../../src/components/layout/MainLayout';
 
 const Page = () => {}
@@ -620,13 +533,6 @@ const Page = () => {}
 };
 
 export default Page;
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,7 +1,4 @@
 :src/components/CategoriesSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",
 import Link from "next/link",
@@ -43,14 +40,11 @@ interface CategoryType {
   name: string
   description?: string
 :src/components/CategoriesSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   iconName?: string, // Example field if categories have icons
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
   link?: string
 :src_backup/components/CategoriesSection.tsx
-<<<<<<< HEAD:src/components/CategoriesSection.tsx
 }
 
 // Default static categories with translation keys
@@ -62,7 +56,6 @@ interface CategoryType {
   {"
     title: "Services Comparison""
     link: "/services - comparison"
-=======
 }
   {
     title: "Comprehensive Services"",
@@ -71,16 +64,11 @@ interface CategoryType {
   {
     title: "Services Comparison"",
     link: "/services - comparison""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/CategoriesSection.tsx
 }
 :src_backup/components/CategoriesSection.tsx
 // Default static categories with translation keys
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/CategoriesSection.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const getDefaultCategories = (t: any) => [
 
 :src/components/CategoriesSection.tsx
@@ -88,7 +76,6 @@ const getDefaultCategories = (t: any) => [
     id: "services",
     name: t('categories.services'),
     description: t('categories.services_desc'),
-=======
   iconName?: string, // Example field if categories have icons
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
@@ -96,12 +83,10 @@ const getDefaultCategories = (t: any) => [
     id: "services"
     name: t('categories.services')
     description: t('categories.services_desc')
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     iconName: "Briefcase", // Corresponds to lucide icon name
     link: "/services",
     color: "from-purple-500 to-indigo-600", // Keep color for styling
 },
-=======
 // Default static categories with translation keys;
 const getDefaultCategories = (t: any) => []
   {"
@@ -111,14 +96,10 @@ const getDefaultCategories = (t: any) => []
     iconName: "Briefcase", // Corresponds to lucide icon name"
     link: "/services""
     color: "from-purple-500 to-indigo-600", // Keep color for styling;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/CategoriesSection.tsx
   },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 :src_backup/components/CategoriesSection.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     id: "talents",
     name: t('categories.talents'),
@@ -135,11 +116,7 @@ const getDefaultCategories = (t: any) => []
     color: "from-amber-500 to-orange-600"},
   {
 :src/components/CategoriesSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     id: "innovation",
     name: t('categories.innovation'),
     description: t('categories.innovation_desc'),
@@ -247,7 +224,6 @@ interface CategoriesSectionProps {}
 
 :src_backup/components/CategoriesSection.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     case "Briefcase": return <Briefcase className="w-10 h-10" />,
     case "Users": return <Users className="w-10 h-10" />,
     case "HardDrive": return <HardDrive className="w-10 h-10" />,
@@ -341,12 +317,9 @@ export function CategoriesSection({}
   const { t } = useTranslation(),
   const defaultCategories = getDefaultCategories(t),
 
-=======
 
 :src_backup/components/CategoriesSection.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/CategoriesSection.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
     ? fetchedCategories.map(cat => ({
@@ -358,17 +331,12 @@ export function CategoriesSection({}
         // Assign a default color or implement logic to assign colors
 color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
-<<<<<<< HEAD
-<<<<<<< HEAD
         ...cat,
         ...cat,
         ...cat,
 
 :src/components/CategoriesSection.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/CategoriesSection.tsx
         title: cat.name,
         icon: getIcon(cat.iconName)})),
 
@@ -548,14 +516,9 @@ export function CategoriesSection(): any ({;
             {t('home && home.no_categories_desc')}
 </p>;
           <p className="text-zion-slate-light text-md">;
-<<<<<<< HEAD:src/components/CategoriesSection.tsx
-<<<<<<< HEAD
             {t('home && home.no_categories_support')}
-=======
             {t('home && home.no_categories_support')}
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/CategoriesSection.tsx
-=======
     return (
       <section className={cn("py-20 bg-zion-blue text-center", className)} style={style}>;
         <div className="container mx-auto px-4">;
@@ -565,16 +528,13 @@ export function CategoriesSection(): any ({;
           </p>;
           <p className="text-zion-slate-light text-md">;
             {t('home && home.no_categories_support')}'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/CategoriesSection.tsx
           </p>;
         </div>;
       </section>;
     );
 :src_backup/components/CategoriesSection.tsx
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   return (
 :src_backup/components/CategoriesSection.tsx
@@ -588,7 +548,6 @@ export function CategoriesSection(): any ({;
             </p>;
           </div>;
         )}
-<<<<<<< HEAD
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {displayCategories.map((category) => (
@@ -612,11 +571,9 @@ export function CategoriesSection(): any ({;
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Link
               key={category.id}
               href={category.link || '#'}
-=======
   }
   return ("
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>;"
@@ -631,12 +588,7 @@ export function CategoriesSection(): any ({;
         )}
 
 :src/components/CategoriesSection.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/CategoriesSection.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/CategoriesSection.tsx
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >"
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">`
@@ -651,14 +603,9 @@ export function CategoriesSection(): any ({;
               </div>
             </Link>
           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
         </div>;
-=======
 
 :src/components/CategoriesSection.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
                 </div>
                 <h3 className="text-white text-xl font-bold mb-2">{category.title}</h3>"
                 <p className="text-zion-slate-light">{category.description}</p>"
@@ -666,24 +613,18 @@ export function CategoriesSection(): any ({;
             </Link>
           ))}
         </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/CategoriesSection.tsx
         {/* Special services section with translations */}
         <div className="mt-8">"
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>'
           <div className="flex flex-wrap justify-center gap-4">"
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
-=======
         {/* Special services section with translations */}"
         <div className="mt-8">'"
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/CategoriesSection.tsx
           <div className="flex flex-wrap justify-center gap-4">
 :src_backup/components/CategoriesSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {getSpecialServices(t).map((service) => (
               <Link key={service.title}
                 href={service.link}
@@ -695,7 +636,6 @@ export function CategoriesSection(): any ({;
           </div>
         </div>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {service.title}
               </Link>;
             ))}
@@ -704,7 +644,6 @@ export function CategoriesSection(): any ({;
 
 :src_backup/components/CategoriesSection.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/CategoriesSection.tsx
         <div className="mt-12 flex justify-center">
           <Link 
             href="/categories/all"
@@ -712,9 +651,6 @@ export function CategoriesSection(): any ({;
           >
 {t('home.view_all_categories')}
 :src/components/CategoriesSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           </Link>;
         </div>;
       </div>;
@@ -748,31 +684,22 @@ categories: fetchedCategories, //Rename prop for clarity ;
 }: CategoriesSectionProps) {;
   const {;
 :src/components/CategoriesSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   t ;
 }= useTranslation ();
 const defaultCategories = getDefaultCategories (t);
 //Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
 :src_backup/components/CategoriesSection.tsx
 
-<<<<<<< HEAD:src/components/CategoriesSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/CategoriesSection.tsx
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description |"No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
   cat.id "
-=======
 "
   id: cat.id;""
 title: cat.name,  //Map name to title description: cat.description |"No description available."`
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {"
   cat.id ""`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/CategoriesSection.tsx
 }`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: defaultCategories.find (dc => dc.id === cat.id) ?.color |"from-gray-500 to-gray-600"
 }) ) : defaultCategories.map (cat => ({}
   ...cat;
@@ -994,19 +921,9 @@ if ( {) {}
 }'"}
 }
 :src_backup/components/CategoriesSection.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src/components/CategoriesSection.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/CategoriesSection.tsx
-=======
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/CategoriesSection.tsx
   id: cat.id;";
 title: cat.name,  //Map name to title description: cat.description || "No description available.";
 icon: getIcon (cat.iconName), //Get icon component link: cat.link || `/category/$ {;
@@ -1035,8 +952,4 @@ icon: getIcon (cat.iconName) ;
 }</Link> </div> </div> </section>) ;
 }'"
 :src/components/CategoriesSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/CategoriesSection.tsx

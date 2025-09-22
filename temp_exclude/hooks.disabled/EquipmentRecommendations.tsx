@@ -55,7 +55,6 @@ export default function EquipmentRecommendations() { return null; }
   const [error, setError] = useState<boolean>(false);
   useEffect(() => {;
 :temp_exclude/hooks.disabled/EquipmentRecommendations.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function EquipmentRecommendations() {;
   const { isAuthenticated, user } = useAuth(),;
   const [listings, setListings] = useState<ProductListing[]>([]),;

@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) )
 }</select> </>)
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
 }</select> </>)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }</div> </div> <PdfExportButton targetRef= {
   targetRef
 }fileName= {
@@ -32,10 +30,7 @@ import React, { useMemo, useRef, useState } from 'react',
 import PdfExportButton from '../../components/ui/PdfExportButton',
 import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview',
 import { createServerClient } from '../../utils/supabase/server',
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   }, [selectedVersionId, initialData, versions]);
   return (
@@ -46,20 +41,16 @@ import { createServerClient } from '../../utils/supabase/server',
           <select;
             value={theme}
 
-<<<<<<< HEAD
             onChange={e => setTheme(e && e.target.value as 'light' | 'dark')}
             className='border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black';
           >;
             <option value='light'>Light</option>;
             <option value='dark'>Dark</option>          </select>;
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
           {versions && versions.length > 0 && (;
             <>;'
               <label className='text-sm ml-4'>Version</label>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <select
                 value={selectedVersionId}
                 onChange={e => setSelectedVersionId(e && e.target.value)}'
@@ -73,13 +64,11 @@ import { createServerClient } from '../../utils/supabase/server',
               </select>;
             </>;
 
-<<<<<<< HEAD
 export type ResumePreviewPageProps = {
   initialData: ResumeData,
   versions?: Array<{ id: string, label: string, data: ResumeData }>
 },
 export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
@@ -87,30 +76,24 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
   const targetRef = useRef<HTMLDivElement>(null),
 export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData;
     const found = versions.find(v => v.id === selectedVersionId);
     return found?.data || initialData;
   }, [selectedVersionId, initialData, versions]),
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData;
     const found = versions.find(v => v.id === selectedVersionId);
 return found?.data || initialData
   }, [selectedVersionId, initialData, versions]),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div className="relative">"
       <div className="flex items-center justify-between mb-4">"
         <div className="flex items-center gap-3">"
           <label className="text-sm">Theme</label>
 <select
-<<<<<<< HEAD
             onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
             className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
           >
@@ -119,18 +102,11 @@ return found?.data || initialData
             <option value="dark">Dark</option>
           </select>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           <select;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           {versions.length > 0 && (
             <>"
               <label className="text-sm ml-4">Version</label>
 <select
-<<<<<<< HEAD
 
                 {versions.map(v => (
                   <option value={v.id} key={v.id}>
@@ -147,14 +123,11 @@ return found?.data || initialData
       />
       <div className='mx-auto'>
 
-=======
               <select;
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
 "
       <div className="mx-auto">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
@@ -189,7 +162,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {};
         end: 'Present''
         location: 'Remote'
 bullets: [
-<<<<<<< HEAD
 
 </div>;
       </div>;
@@ -201,7 +173,6 @@ bullets: [
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />;
       </div>;
     </div>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {"
     console.error("Error:", error);"
@@ -215,8 +186,6 @@ bullets: [
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
       </div>
       <PdfExportButton
@@ -224,15 +193,12 @@ bullets: [
       </div>
 
 <PdfExportButton
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         targetRef={targetRef}
-=======
 
         </div>
       </div>
       <PdfExportButton;
         targetRef={targetRef}'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
       />'
       <div className='mx-auto'>
@@ -314,7 +280,6 @@ return { props: { initialData, versions } };
 };
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
   } catch (error) {"
     console.error("Error:", error);"
@@ -394,14 +359,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 return { props: { initialData, versions } }
 }
-<<<<<<< HEAD
 };
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 };
-=======
 
 };"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) );
 }</select> </>);
 }</div> </div> <PdfExportButton target_ref= {}
@@ -473,13 +434,9 @@ if (return initial_data) {}
       </div>;
     </div>);
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const getServerSideProps: GetServerSideProps = async ctx => {
-=======
 
 export const getServerSideProps: GetServerSideProps = async ctx => {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient ();
   const user = await (supabase as any).auth.get_user?.();
 ;
@@ -505,7 +462,6 @@ if ( {) {}
     summary:;'
       'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud - native systems.',
 skills: [;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'AI Engineering',
       'Prompt Design',
       'TypeScript',
@@ -543,7 +499,6 @@ skills: [;
           'Automated resume generation using LLMs and vector search.','
         link: 'https://example.com',
       },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {
         title: 'AI Marketplace',
         description: 'Talent dashboard with export features.',
@@ -555,23 +510,14 @@ skills: [;
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 ;
 return { props: { initial_data, versions } }
-<<<<<<< HEAD
 };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   };
 
   const versions = [] as Array<{ id: string; label: string; data: ResumeData }>;
 
   return { props: { initialData, versions } };
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 };
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

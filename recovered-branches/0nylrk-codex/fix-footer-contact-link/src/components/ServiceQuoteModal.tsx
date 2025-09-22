@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";"
 import {Button} from "@/components/ui/button";"
@@ -25,17 +17,8 @@ import {ProductListing} from "@/types/listings";'
 import {toast} from '@/hooks/use-toast';"
 import {supabase} from "@/integrations/supabase/client";
 import { useState } from 'react',
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-=======
 import { useState  } from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -59,7 +42,6 @@ import { useState } from 'react',
 import { useState } from 'react',
 import { useState } from 'react',
 import { useState } from 'react',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -72,23 +54,15 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
 
 import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ServiceQuoteModalProps {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
@@ -119,10 +93,6 @@ const TIMELINE_OPTIONS = [
   { label: "6+ months", value: "6+months" }]
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface ServiceQuoteModalProps {
   // TODO: Implement
@@ -155,10 +125,7 @@ const [formData, setFormData] = useState({;
     description: '',;
     email: '',;
     budget: BUDGET_RANGES[0].value,;
-<<<<<<< HEAD
-<<<<<<< HEAD
     timeframe: TIMELINE_OPTIONS[0].value}),;
-=======
 "
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog","
 import { Button } from "@/components/ui/button","
@@ -195,7 +162,6 @@ const TIMELINE_OPTIONS = ["
   { label: "6+ months", value: "6+months" }]
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {}
   const [formData, setFormData] = useState({};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);'
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
@@ -218,13 +184,10 @@ import { ProductListing } from '@/types / listings';'
 import {toast} from '@/hooks / use - toast';'
 import { supabase } from '@/integrations / supabase / client';
 interface ServiceQuoteModalProps {}
-=======
-=======
   const [formData, setFormData] = useState({;"
     description: '',;''
     email: '',;'
     budget: BUDGET_RANGES[0].value,;)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     timeframe: TIMELINE_OPTIONS[0].value}),;
 
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
@@ -251,7 +214,6 @@ import { ProductListing } from '@/types / listings';''
 import {toast} from '@/hooks / use - toast';''
 import { supabase } from '@/integrations / supabase / client';'
 interface ServiceQuoteModalProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   open: boolean,
   onOpenChange: (open: boolean) => void,
   service: ProductListing | null;
@@ -279,12 +241,10 @@ export /**
 function ServiceQuoteModal() {
 const [form_data, setFormData] = useState ({
     description: '',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     email: '',
     budget: BUDGET_RANGES[0].value,
     timeframe: TIMELINE_OPTIONS[0].value}),
   const [start_date, setStartDate] = useState < Date | undefined>(new Date ());
-<<<<<<< HEAD
   const [end_date, setEndDate] = useState < Date | undefined>(undefined);'
   const [current_step, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -316,21 +276,17 @@ const [endDate, setEndDate] = useState<Date | undefined>(undefined);'
 const [endDate, setEndDate] = useState<Date | undefined>(undefined),'
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),
   const [isSubmitting, setIsSubmitting] = useState(false),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {}
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   },
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {}
     e.preventDefault(),
     setIsSubmitting(true),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {
       // Call Supabase function to process the quote;
       const { data, error } = await supabase.functions.invoke ('process - quote', {
@@ -364,18 +320,15 @@ try {}
       }),
 
       if (error) throw error,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       // Show success message;
       toast({"
         title: "Quote Request Submitted!"'"
         description: "We've sent your request to the service provider. They will contact you soon."})
 // Close the modal and reset form
-<<<<<<< HEAD
       onOpenChange(false);
       setFormData({
 
-<<<<<<< HEAD
         description: '',
         email: '',
         budget: BUDGET_RANGES[0].value,
@@ -383,13 +336,9 @@ try {}
       setStartDate(new Date()),
       setEndDate(undefined),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setCurrentStep('details')
     } catch (error) {
       console.error("Error submitting quote:", error);
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       onOpenChange(false),
       setFormData({'
@@ -404,10 +353,7 @@ try {}
 } finally {
       setIsSubmitting (false);
     }
-=======
     timeframe: TIMELINE_OPTIONS[0].value}),;    try {
-=======
-=======
 '
     description: '',''
     email: '','
@@ -422,7 +368,6 @@ try {}
     timeframe: TIMELINE_OPTIONS[0].value}),
   const [startDate, setStartDate] = useState<Date | undefined>(new Date()),
 </Date>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
 </Date>'
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),'
@@ -439,7 +384,6 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaE
     setIsSubmitting(true),
 
     try {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Call Supabase function to process the quote;
       const { data, error } = await supabase.functions.invoke ('process - quote', {
         body: {
@@ -501,10 +445,7 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaE
         title: "Error"
         description: "There was an error submitting your quote request. Please try again."
         variant: "destructive"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             id: service.id,
             title: service.title,
             category: service.category} : null,
@@ -557,10 +498,7 @@ if (throw error) {
 
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
   const nextStep = () => {
     if (currentStep === 'details') setCurrentStep('timeline'),
@@ -570,17 +508,8 @@ if (throw error) {
     if (currentStep === 'timeline') setCurrentStep('details'),
     else if (currentStep === 'contact') setCurrentStep('timeline')
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>"
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -599,29 +528,18 @@ if (throw error) {
                 <p className="text-zion-slate-light text-sm mt-1">{service?.category}</p>
 </div>
               <div className="space-y-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <Label htmlFor="description" className="text-white">Project Description</Label>
-
-<<<<<<< HEAD
-                <Textarea
-=======
-                <Label htmlFor="description" className="text-white">Project Description</Label>                <Textarea
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                <Label htmlFor="description" className="text-white">Project Description</Label>                <Textarea
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 <Label htmlFor="description" className="text-white">Project Description</Label>
 
                 <Textarea
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+                <Label htmlFor="description" className="text-white">Project Description</Label>                <Textarea
+                <Label htmlFor="description" className="text-white">Project Description</Label>                <Textarea
+                <Label htmlFor="description" className="text-white">Project Description</Label>
+
+                <Textarea
                   id="description"
-=======
 
                 <Textarea"
                   id="description""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   name="description"
                   value={formData.description}
                   onChange={handleInputChange}"
@@ -642,10 +560,6 @@ if (throw error) {
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
                     {BUDGET_RANGES.map((range) => (
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react',;
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",;
 import { Button } from "@/components/ui/button",;
@@ -662,8 +576,6 @@ import { cn } from "@/lib/utils",;
 import { ProductListing } from "@/types/listings",;
 import { toast } from '@/hooks/use-toast',;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from "@/integrations/supabase/client",;
 interface ServiceQuoteModalProps {;
   open: boolean,;
@@ -711,10 +623,6 @@ export function ServiceQuoteModal() { return null; }
       }),;
       if (error) throw error,;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Show success message;
       toast({;
         title: "Quote Request Submitted!",;
@@ -734,12 +642,10 @@ export function ServiceQuoteModal() { return null; }
 console && console.error("Error submitting quote:", error);      toast({;
         title: "Error",,
   description: "There was an error submitting your quote request. Please try again.",;
-=======
       console && console.error("Error submitting quote:", error);
       toast({;
         title: "Error",;
         description: "There was an error submitting your quote request. Please try again.",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
@@ -787,31 +693,21 @@ required                  onValueChange={(value) => setFormData(prev => ({ ...pr
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
                     <SelectValue placeholder="Select your budget range" />;
                   </SelectTrigger>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
 
 {BUDGET_RANGES.map((range) => (;
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         {range.label}
                       </SelectItem>
                     {BUDGET_RANGES && BUDGET_RANGES.map((range) => (;"
-=======
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
 
                     {BUDGET_RANGES.map((range) => (;
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         {range.label}
                       </SelectItem>
                     {BUDGET_RANGES && BUDGET_RANGES.map((range) => (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <SelectItem key={range && range.value} value={range && range.value} className="text-white hover:bg-zion-blue-light">;
                         {range && range.label}
                       </SelectItem>;
@@ -866,9 +762,7 @@ required                  onValueChange={(value) => setFormData(prev => ({ ...pr
                       <Button;"
                         variant={"outline"}
 className={cn(
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       <Button;
                         variant={"outline"}
                         className={cn(;
@@ -887,7 +781,6 @@ className={cn(
                         selected={startDate}
                         onSelect={setStartDate}
                         initialFocus;"
-=======
                           "bg-zion-blue-dark border-zion-blue-light text-white";
 </PopoverTrigger>
                       <Button;"
@@ -914,7 +807,6 @@ className={cn(
                         selected={startDate}
                         onSelect={setStartDate}
 initialFocus;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white";
                       />;
 </Calendar>
@@ -942,23 +834,15 @@ initialFocus;
 "
                           "justify-start text-left font-normal w-full",
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           "bg-zion-blue-dark border-zion-blue-light text-white"
-=======
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;                          "bg-zion-blue-dark border-zion-blue-light text-white"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 </div>
                 <div className="space-y-2">
                   <Label className="text-white">Expected End Date</Label>
-=======
                 </div>"
                 <div className="space-y-2">"
 </div>"
                   <Label className="text-white">Expected End Date</Label>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <Popover>
 </Popover>
                     <PopoverTrigger asChild>
@@ -970,11 +854,9 @@ initialFocus;
                           "justify-start text-left font-normal w-full",
 
                           "bg-zion-blue-dark border-zion-blue-light text-white"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         )}>;
                         <CalendarIcon className="mr-2 h-4 w-4" />;
                         {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}
-=======
 </PopoverTrigger>
                       <Button;"
                         variant={"outline"}"
@@ -987,7 +869,6 @@ initialFocus;
                         <CalendarIcon className="mr-2 h-4 w-4" />;"
 </CalendarIcon>"
                         {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </Button>;
                     </PopoverTrigger>;"
                     <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">;
@@ -1079,10 +960,6 @@ initialFocus;
                   id="email"
                   name="email"
                   type="email"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   value={formData && formData.email}
                   onChange={handleInputChange}
                   placeholder="your@email && email.com"
@@ -1102,19 +979,15 @@ value={formData && formData.email}
                       <span className="text-white">{format(endDate, "PPP")}</span>
                     </div>
                   )}
-<<<<<<< HEAD
 
               </div>;
-=======
                   {endDate && (              </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
 
                 <h3 className="font-medium text-zion-cyan mb-2">Quote Summary</h3>;
                 <div className="space-y-2 text-sm">;
                   <div className="flex justify-between">;
                     <span className="text-zion-slate-light">Service:</span>;
-=======
 
                 />;
               </div>;
@@ -1136,7 +1009,6 @@ value={formData && formData.email}
                 <div className="space-y-2 text-sm">;"
                   <div className="flex justify-between">;"
                     <span className="text-zion-slate-light">Service:</span>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <span className="text-white">{service?.title || "Custom Service"}</span>;
 </div>;"
                   <div className="flex justify-between">;"
@@ -1156,14 +1028,11 @@ value={formData && formData.email}
             </div>;
 
           )}
-<<<<<<< HEAD
 
 "
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">;'
             {currentStep !== 'details' && (;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </div>
               </div>
             </div>
@@ -1171,29 +1040,22 @@ value={formData && formData.email}
                 </div>;
               </div>;
             </div>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           )}
 
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">;
             {currentStep !== 'details' && (;
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           )}
 
           )}
 "
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">'
             {currentStep !== 'details' && (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Button
                 type="button"
                 variant="outline"
                 onClick={prevStep}
 "
-=======
-=======
 <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">;
             {currentStep !== 'details' && (;
                 </div>
@@ -1203,7 +1065,6 @@ value={formData && formData.email}
                 </div>;
               </div>;
             </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           )}
 
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
@@ -1213,7 +1074,6 @@ value={formData && formData.email}
                 type="button"
                 variant="outline"
                 onClick={prevStep}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 className="border-zion-blue-light text-white hover:bg-zion-blue-light">;
                 Previous;
               </Button>;
@@ -1237,18 +1097,11 @@ className="border-zion-blue-light text-white hover:bg-zion-blue-light"
                 variant="outline"
                 onClick={() => onOpenChange(false)}
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 className="border-zion-blue-light text-white hover:bg-zion-blue-light";
               >;
                 Cancel;
               </Button>;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               {currentStep !== 'contact' ? (;
                 <Button
                   type="button" 
@@ -1258,30 +1111,17 @@ className="border-zion-blue-light text-white hover:bg-zion-blue-light"
                 </Button>;
               ) : (;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <Button
-=======
 
                 <Button"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   type="submit"
 disabled={isSubmitting}"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;"
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 const next_step = () =>: any {'
     if (setCurrentStep ('timeline')) {}
@@ -1497,10 +1337,8 @@ const next_step = () =>: any {'
                   </SelectTrigger>;
                   <SelectContent className="bg - zion - blue - dark border - zion - blue - light">;
                     {BUDGET_RANGES.map ((range) => (
-<<<<<<< HEAD
                       <SelectItem key={range.value} value={range.value} className="text - white hover:bg - zion - blue-light">;
                         {range.label}
-=======
 </Select>"
                   <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white">;"
 </SelectTrigger>"
@@ -1512,7 +1350,6 @@ const next_step = () =>: any {'
                       <SelectItem key={range.value} value={range.value} className="text - white hover:bg - zion - blue - light">;"
 </SelectItem>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </SelectItem>))}
                   </SelectContent>;
                 </Select>;
@@ -1532,25 +1369,19 @@ const next_step = () =>: any {'
                   </SelectTrigger>;
                   <SelectContent className="bg - zion - blue - dark border - zion - blue-light">;
                     {TIMELINE_OPTIONS.map ((option) => (
-<<<<<<< HEAD
                       <SelectItem key={option.value} value={option.value} className="text - white hover:bg - zion - blue-light">;
-=======
                       <SelectItem key={option.value} value={option.value} className="text - white hover:bg - zion - blue-light">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         {option.label}
                       </SelectItem>))}
                   </SelectContent>;
                 </Select>;
 </div>;
-<<<<<<< HEAD
               <div className="grid grid - cols - 2 gap-4">;
                 <div className="space-y-2">;
                   <Label className="text-white">Expected Start Date</Label>;
-=======
               <div className="grid grid - cols - 2 gap-4">;
                 <div className="space-y-2">;
                   <Label className="text-white">Expected Start Date</Label>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <Popover>;
                     <PopoverTrigger as_child>;
                       <Button;"
@@ -1574,13 +1405,10 @@ const next_step = () =>: any {'
                     </PopoverContent>;
                   </Popover>;
                 </div>;
-<<<<<<< HEAD
                 <div className="space-y-2">;
                   <Label className="text-white">Expected End Date</Label>;
-=======
                 <div className="space-y-2">;
                   <Label className="text-white">Expected End Date</Label>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <Popover>;
                     <PopoverTrigger as_child>;
                       <Button;"
@@ -1600,11 +1428,8 @@ const next_step = () =>: any {'
                         on_select={setEndDate}
                         disabled={(date) => !start_date || date < start_date}
 initial_focus;
-<<<<<<< HEAD
                         className="p - 3 pointer - events - auto bg - zion - blue - dark text-white";
-=======
                         className="p - 3 pointer - events - auto bg - zion - blue - dark text-white";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       />;
 
             </div>)}"
@@ -1743,21 +1568,15 @@ initial_focus;
                 </div>;
               </div>;
             </div>)}
-<<<<<<< HEAD
           <DialogFooter className="flex - col sm:flex - row sm:justify - between sm:space-x-2">;
-=======
           <DialogFooter className="flex - col sm:flex - row sm:justify - between sm:space-x-2">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {current_step !== 'details' && (
               <Button;"
                 type="button";"
                 variant="outline";
 on_click={prev_step}
-<<<<<<< HEAD
                 className="border - zion - blue - light text - white hover:bg - zion - blue-light";
-=======
                 className="border - zion - blue - light text - white hover:bg - zion - blue-light";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               >;
                 Previous;
               </Button>)}'"
@@ -1766,11 +1585,8 @@ on_click={prev_step}
                 type="button";"
                 variant="outline";
 on_click={() => onOpenChange (false)}
-<<<<<<< HEAD
                 className="border - zion - blue - light text - white hover:bg - zion - blue-light";
-=======
                 className="border - zion - blue - light text - white hover:bg - zion - blue-light";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               >;
                 Cancel;
               </Button>;'
@@ -1778,11 +1594,8 @@ on_click={() => onOpenChange (false)}
                 <Button;"
                   type="button";
 on_click={next_step}
-<<<<<<< HEAD
                   className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion-purple";
-=======
                   className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion-purple";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >;
                   Next;
                 </Button>) : (
@@ -1792,7 +1605,6 @@ disabled={is_submitting}
                   className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion-purple";
                 >;
                   {is_submitting ? "Submitting..." : "Submit Request"}
-<<<<<<< HEAD
                 </Button>)}
 
               ;'
@@ -1846,7 +1658,6 @@ disabled={is_submitting}
           </DialogFooter>;
         </form>;
       </DialogContent>;
-<<<<<<< HEAD
 
     </Dialog>;
   ),; interface ServiceQuoteModalProps {}
@@ -2337,7 +2148,6 @@ setIsSubmitting (true);
   service: service ? {
   id: service.id, title: service.title, category: service.category 
 }: null, quoteDetails: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ...formData, startDate: startDate?.toISOString (), endDate: endDate?.toISOString () 
 }
 ;
@@ -2346,7 +2156,6 @@ setIsSubmitting (true);
 });
 if (error) throw error;
 //Show success message //Close the modal and reset form onOpenChange (false);
-<<<<<<< HEAD
 setFormData ({'
   description: '';'
 email: '';
@@ -2423,7 +2232,6 @@ return (<Dialog open= {
 }> Cancel </Button> {
   currentStep !== 'contact' ? (<Button type=" button"onClick= {
   nextStep 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" > Next </Button>) : (<Button </Button>)
 }</div> </DialogFooter> </form> </DialogContent> </Dialog>) 
 }
@@ -2431,20 +2239,8 @@ return (<Dialog open= {
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                 </Button>)}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </Dialog>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/HireRequestForm.tsx
 import React from "react",;
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",;
 import { Button } from "@/components/ui/button",;
@@ -11,7 +10,6 @@ import { PersonalInfoFields } from "./PersonalInfoFields",;
 import { ProjectDetailsField } from "./ProjectDetailsField",;
 import { TimelineField } from "./TimelineField",;
 import { BudgetFields } from "./BudgetFields",;
-=======
 import React from "react";""
 import { useHireRequestForm, FormValues } from "./useHireRequestForm";""
 import { Button } from "@/components/ui/button";""
@@ -23,7 +21,6 @@ import { PersonalInfoFields } from "./PersonalInfoFields";""
 import { ProjectDetailsField } from "./ProjectDetailsField";""
 import { TimelineField } from "./TimelineField";""
 import { BudgetFields } from "./BudgetFields";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 export interface HireRequestFormProps {;
   talent: TalentProfile;,;
@@ -76,8 +73,6 @@ Cancel;
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
             disabled={isSubmitting}
           >;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/HireRequestForm.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {isSubmitting ? (;
               <>;
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
@@ -126,5 +121,3 @@ return (<Form {;
 }</Button> </DialogFooter> </form> </Form>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/hire-request/HireRequestForm.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/hire-request/HireRequestForm.tsx

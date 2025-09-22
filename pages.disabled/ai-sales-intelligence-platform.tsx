@@ -1,18 +1,10 @@
 :pages_backup/ai-sales-intelligence-platform.tsx
-<<<<<<< HEAD:pages_backup/ai-sales-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-sales-intelligence-platform.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function AISalesIntelligencePlatform() {
 	return (
 		<ServiceLanding
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 			title="AI Sales Intelligence Platform"
 			slug="ai-sales-intelligence-platform"
 			description="Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows."
-=======
 
 export default function AISalesIntelligencePlatform() {}
 	return (;
@@ -20,7 +12,6 @@ export default function AISalesIntelligencePlatform() {}
 			title="AI Sales Intelligence Platform""
 			slug="ai-sales-intelligence-platform""
 			description="Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows.""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
 			subtitle="Lift conversion rates 15–35% and shorten sales cycles with AI-first workflows."
 pricePerMonthUSD={1499}
 			implementationWeeks="Implementation: 1–3 weeks"
@@ -60,11 +51,9 @@ export default function AISalesIntelligencePlatform() {_return (
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 			title;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
 			]}
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
 export default /**
  * AISalesIntelligencePlatform - Function description
@@ -91,19 +80,12 @@ return (
     canonical="https: //ziontechgroup.com / ai - sales - intelligence - platform";
   />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export default function AISalesIntelligencePlatform() {
 	return (
 		<ServiceLanding
 
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
 export default /**;
@@ -197,13 +179,11 @@ export default function AISalesIntelligencePlatform() {_return (
 			]}
 		/>
 	)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 			title;
 origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
 			]}
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 ';
@@ -235,15 +215,11 @@ return (
   />);
 
 :pages_backup/ai-sales-intelligence-platform.tsx
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			pricePerMonthUSD={1499  } catch (error) {
     console.error("Error:", error);
-=======
 
 			pricePerMonthUSD={1499  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {"
     console.error("Error:", error);"
@@ -256,28 +232,14 @@ return (
   }
 }
 :pages_backup/ai-sales-intelligence-platform.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :pages_backup/ai-sales-intelligence-platform.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-sales-intelligence-platform.tsx
 			implementationWeeks="Implementation: 1–3 weeks"
-=======
 
 "
 			implementationWeeks="Implementation: 1–3 weeks""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
 			roiNote="Average ROI 3–8x within 60 days"
 			features={["
 				"AI lead scoring using firmographics, intent, and engagement","
@@ -287,23 +249,15 @@ return (
 				"CRM automations for notes, tasks, and next steps","
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
 :pages_backup/ai-sales-intelligence-platform.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 			]}
-=======
 
 ]}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-sales-intelligence-platform.tsx
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
 			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"
 		/>
 	)
 };
 :pages_backup/ai-sales-intelligence-platform.tsx
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-sales-intelligence-platform.tsx
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -334,10 +288,6 @@ return (
 		/>
 	)
 :pages_backup/ai-sales-intelligence-platform.tsx
-<<<<<<< HEAD:pages/ai-sales-intelligence-platform.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-sales-intelligence-platform.tsx
 			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform";
 		/>;
 	);
@@ -354,18 +304,8 @@ return (
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
-=======
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-sales-intelligence-platform.tsx

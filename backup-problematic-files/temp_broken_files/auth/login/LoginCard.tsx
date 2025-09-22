@@ -1,5 +1,4 @@
 
-=======
 import { Link } from "react-router-dom",;
 import { LoginForm } from "./LoginForm",;
 import { SocialLogin } from "./SocialLogin",;
@@ -14,9 +13,7 @@ export function LoginCard() {;
         <p className="mt-2 text-sm text-zion-slate-light">;
           Don't have an account?{" "}
           <Link to="/signup" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             Sign up;
           </Link>;
         </p>;
       </div>;
-<<<<<<< HEAD

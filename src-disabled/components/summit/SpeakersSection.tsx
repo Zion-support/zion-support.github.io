@@ -1,17 +1,12 @@
 :src_backup/components/summit/SpeakersSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface Speaker {
 
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface Speaker {
   name: string,
   title: string,
   avatar: string,
   twitter?: string
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
 
@@ -20,14 +15,10 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string,
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/summit/SpeakersSection.tsx
   linkedin?: string
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const speakers: Speaker[] = [
   {
     name: 'Alex Zion',
@@ -114,8 +105,6 @@ export function SpeakersSection() {;
   );
 }
 ;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   name: string,
   title: string,
   avatar: string,
@@ -147,8 +136,6 @@ const speakers: Speaker[] = [,
 const speakers: Speaker[] = [
   {
 :src/components/summit/SpeakersSection.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Image from 'next/image';
 import { Twitter, Linkedin } from 'lucide-react';
 
@@ -317,5 +304,3 @@ aria-label='LinkedIn'
   );
 }
 :src/components/summit/SpeakersSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

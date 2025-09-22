@@ -1,7 +1,6 @@
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -19,9 +18,7 @@ import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react";
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {
   Tooltip;
   TooltipContent;}
@@ -52,7 +49,6 @@ export function OnChainExport() {
   const { toast } = useToast(),
   const { user } = useAuth(),
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available;
@@ -102,9 +98,6 @@ const handleConnectWallet = async () => {;
 } finally {
       setIsExporting(false)
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <Card />;
       <CardHeader />;
@@ -114,18 +107,14 @@ const handleConnectWallet = async () => {;
           ) : (;}
             <Wallet className=\"h-5 w-5\" />;}
           )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react",;
-=======
 import React, { useState } from \"react\";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\";
 import { Button } from \"@/components/ui/button\",;
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from \"lucide-react\",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   Tooltip,;
   TooltipContent,;}
@@ -145,15 +134,12 @@ export function OnChainExport() {;
       const ethereum = (window as any).ethereum,;
       if (!ethereum) {;
         toast({;
-<<<<<<< HEAD
           title: "Wallet not detected",;
           description: "Please install MetaMask or another Ethereum wallet to use this feature",;
           variant: "destructive";
-=======
           title: \"Wallet not detected\",,
   description: \"Please install MetaMask or another Ethereum wallet to use this feature\",;}
           variant: \"destructive\";}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }),;
         return;
       }
@@ -169,7 +155,6 @@ export function OnChainExport() {;
       }),;
       setIsConnected(true),;
 toast({;
-<<<<<<< HEAD
         title: "Wallet connected",;
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`});
     } catch (error: any) {;
@@ -177,7 +162,6 @@ toast({;
         title: "Connection failed",;
         description: error.message || "Could not connect to wallet",;
         variant: "destructive";
-=======
       toast({;}
         title: \"Wallet connected\",,}
   description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`});
@@ -186,7 +170,6 @@ toast({;
         title: \"Connection failed\",,
   description: error.message || \"Could not connect to wallet\",;}
         variant: \"destructive\";}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       });
     }
   },;
@@ -198,7 +181,6 @@ toast({;
       await new Promise(resolve => setTimeout(resolve, 2000)),;
       setExportStatus('success'),;
 toast({;
-<<<<<<< HEAD
         title: "Tokens exported",;
         description: "Your ZION$ tokens have been exported to your wallet"});
     } catch (error: any) {;
@@ -207,7 +189,6 @@ toast({;
         title: "Export failed",;
         description: error.message || "Could not export tokens";
         variant: "destructive";
-=======
       toast({;}
         title: \"Tokens exported\",,}
   description: \"Your ZION$ tokens have been exported to your wallet\"});
@@ -217,7 +198,6 @@ toast({;
         title: \"Export failed\",,
   description: error.message || \"Could not export tokens\";}
         variant: \"destructive\";}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       });
     } finally {;}
       setIsExporting(false);}
@@ -241,10 +221,8 @@ toast({;
 <TooltipContent>;
                 <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
 
-=======
               <TooltipContent />;
                 <p className=\"max-w-xs\" />Export your ZION$ tokens to an external blockchain wallet</p>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </TooltipContent>;
             </Tooltip>;
           </TooltipProvider>;
@@ -254,10 +232,6 @@ toast({;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </Button>;
             )}
           </div>;
@@ -305,4 +279,3 @@ toast({;
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

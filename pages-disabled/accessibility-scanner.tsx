@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import React from 'react',;
@@ -6,14 +5,11 @@ import SEO from '../components/SEO',;
 import React from 'react';
 import SEO from '../components/SEO';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import React from 'react',;
 import SEO from '../components/SEO',;
 import React from 'react';
 import SEO from '../components/SEO';
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function AccessibilityScannerPage() {
 	return (
 		<>
@@ -30,7 +26,6 @@ export default function AccessibilityScannerPage() {
 			</section>
 		</>
 	)
-<<<<<<< HEAD
 }
 
 import React from 'react','
@@ -57,38 +52,22 @@ return (
 
 }
 ;
-<<<<<<< HEAD
 
 }
 ;
 
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
 
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 import Head from 'next/head';
 
 export default function AccessibilityScannerPage() {
@@ -126,9 +105,5 @@ export default function AccessibilityScannerPage() {
       </section>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

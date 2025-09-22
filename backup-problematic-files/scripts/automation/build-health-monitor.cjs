@@ -87,10 +87,7 @@ if (!fs.existsSync(dir)) {}
 };
 ;
 const monitor = new BuildHealthMonitor();
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
       if (!fs.existsSync(dir)) {}"
   fs.mkdirSync(dir, { "recursive": true })};"
 
@@ -104,4 +101,3 @@ const monitor = new BuildHealthMonitor();
 const monitor = new BuildHealthMonitor();
 monitor.run().catch(console.error);
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

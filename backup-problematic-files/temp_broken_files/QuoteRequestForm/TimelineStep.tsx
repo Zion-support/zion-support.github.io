@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { format } from "date-fns",;
 import { Calendar } from "@/components/ui/calendar",;
@@ -30,12 +29,10 @@ export function TimelineStep({ formData, updateFormData } TimelineStepProps) {;
                   :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
               }`}
               onClick={() => updateFormData({ timeline:"fixed" })}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             >;
               <h4 className="font-medium text-white">Fixed Dates</h4>;
               <p className="text-sm text-zion-slate-light">I have specific start and end dates</p>;
             </div>;
-<<<<<<< HEAD
 
             >;
               <h4 className="font-medium text-white">Flexible Timeline</h4>;

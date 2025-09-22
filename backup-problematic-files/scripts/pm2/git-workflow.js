@@ -30,8 +30,6 @@ console.error('Error writing to log:file:', error.message),;
     try {,;
       this.log('📋 Checking git status...'),;
 ,;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const status = execSync('git status --porcelain', {,;
         cw:d:this.projectRoot,;
         encodin:g:'utf8',;')
@@ -64,8 +62,6 @@ currentBranc:h:null,;
     try {,;
       this.log('🌿 Checking branch health...'),;
 ,;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const branches = execSync('git branch -r', {,;
       }).trim().split('\n'),;
       const branchInfo = [],;
@@ -111,8 +107,6 @@ branche:s:[],;
         encodin:g:'utf8',;
       }),;
 ,;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const conflictFiles = status,;
         .split('\n'),;
         .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD')),;
@@ -139,8 +133,6 @@ conflictFile:s:[],;
         encodin:g:'utf8',;
       }).trim().split('\n'),;
 ,;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const staleBranches = [],;
       const mainBranch = 'main',;
         if (branchName && !branchName.includes('HEAD') && branchName !== mainBranch) {,;
@@ -260,9 +252,7 @@ this.log(`Error saving:report:${error.message}`),;
 ,;
   async run() {,;
     this.log('🌿 Starting Git Workflow Monitor...'),;
-=======
     this.log(' Starting Git Workflow Monitor...'),;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Project:root:${this.projectRoot}`),;
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
@@ -296,10 +286,8 @@ this.log('\n📊 Git Workflow:Summary:'),;
 this.log('\n💡 Recommendation:s:'),;
         report.recommendations.forEach(rec => {,;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
-=======
         report.recommendations.forEach(rec => {,;)`;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           this.log(`    Actio:n:${rec.action}`),;
       } else {,;
 this.log('\n✨ Git workflow is healthy!'),;
@@ -593,9 +581,7 @@ this.log(`Error saving report: ${error.message}`);
 ;
   async run() {;
     this.log('🌿 Starting Git Workflow Monitor...');
-=======
     this.log(' Starting Git Workflow Monitor...');`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Project root: ${this.projectRoot}`);
       // Create logs directory if it doesn't exist;
       const logsDir = path.dirname(this.logFile);
@@ -629,10 +615,8 @@ this.log('\n📊 Git Workflow Summary: ');
 this.log('\n💡 Recommendations: ');
         report.recommendations.forEach(rec => {;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
-=======
         report.recommendations.forEach(rec => {;)`;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           this.log(`    Action: ${rec.action}`);
       } else {;
 this.log('\n✨ Git workflow is healthy!');
@@ -655,14 +639,12 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,`;
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
               cwd: this.projectRoot,
 encoding: 'utf8'
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             }).trim(),
 ,
             branchInfo.push({,
               name: branchName,
               lastCommit: lastCommit,)
               commitCount: parseInt(commitCount),
-<<<<<<< HEAD
 
           };
         };
@@ -682,7 +664,6 @@ pr-12325
       return {,
         success: true,
 branches: branchInfo
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       };
     } catch (error) {,
       return {,
@@ -720,8 +701,6 @@ branches: branchInfo
 ,
       const branches = execSync('git branch -r', {,
         cwd: this.projectRoot,
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }).trim().split('\n'),
       const staleBranches = [],
       const mainBranch = 'main',
@@ -731,14 +710,12 @@ branches: branchInfo
 try {,
             const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {,
 encodin: g: 'utf8'            }).trim(),,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             const lastCommitDate = new Date(lastCommit),
             const daysSinceLastCommit = (Date.now() - lastCommitDate.getTime()) / (1000 * 60 * 60 * 24),
             if (daysSinceLastCommit > 30) {,
               staleBranches.push({,
 name: branchName,
                 lastCommit: lastCommit,
-<<<<<<< HEAD
 
           };
         };
@@ -758,7 +735,6 @@ name: branchName,
       return {,
         success: true,
         staleBranches: staleBranches
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       };
     } catch (error) {,
       return {,
@@ -780,7 +756,6 @@ pr-12325
         totalBranches: branchInfo.branches?.length || 0,
         hasConflicts: conflictInfo.hasConflicts,
         staleBranches: staleInfo.staleBranches?.length || 0,
-<<<<<<< HEAD
       },
       details: {,
         status: statusInfo,
@@ -825,9 +800,7 @@ pr-12325
 ,
   async run() {,
     this.log('🌿 Starting Git Workflow Monitor...'),
-=======
     this.log(' Starting Git Workflow Monitor...'),`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Project root: ${this.projectRoot}`),
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
@@ -835,8 +808,6 @@ pr-12325
 
       };
 ,
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Run all git checks,
       const statusInfo = await this.checkGitStatus(),
       const branchInfo = await this.checkBranchHealth(),

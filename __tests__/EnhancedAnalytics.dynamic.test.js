@@ -4,8 +4,6 @@ describe('EnhancedAnalytics.dynamic', () => {
   it('should work', () => {
     expect(true).toBe(true);
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic'; describe('EnhancedAnalyticsdynamic',() => { test('renders without crashing',() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedAnalyticsdynamic />)}); test('handles user interactions',() => { render(<EnhancedAnalyticsdynamic />)}); test('applies correct styling',() => { render(<EnhancedAnalyticsdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
 main
@@ -20,9 +18,7 @@ describe('EnhancedAnalyticsdynamic', () => {
   test('renders without crashing', () => {
     render(<EnhancedAnalyticsdynamic />);
     expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument();
->>>>>>> origin/main
   });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 });
 
 });
@@ -60,7 +56,6 @@ describe('EnhancedAnalyticsdynamic'
 });
 
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic'; describe('EnhancedAnalyticsdynamic',() => { test('renders without crashing',() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedAnalyticsdynamic />)}); test('handles user interactions',() => { render(<EnhancedAnalyticsdynamic />)}); test('applies correct styling',() => { render(<EnhancedAnalyticsdynamic />)})});
-<<<<<<< HEAD
 main
 
   test('displays correct content', () => {
@@ -79,5 +74,3 @@ main
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/main

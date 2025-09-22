@@ -9,7 +9,6 @@ import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator",
 import ReactMarkdown from 'react-markdown',
-=======
 "
 import { useState, useEffect } from "react",'
 import { useRouter } from 'next/router','
@@ -22,7 +21,6 @@ import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook
 import type { BlogPost as BlogPostType } from "@/types/blog","
 import { Separator } from "@/components/ui/separator",'
 import ReactMarkdown from 'react-markdown','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/BlogPost.tsx
 import {logErrorToProduction} from '@/utils/productionLogger',
 // Importing the sample blog posts - in a real app, you would fetch this from an API"
 import { BLOG_POSTS } from "@/data/blog-posts",'
@@ -147,7 +145,6 @@ if ( {) {}
 }
 
 :temp_exclude/hooks.disabled/BlogPost.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
         <p>Article not found.</p>'
@@ -236,19 +233,15 @@ if ( {) {}
 
           {/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">
-=======
           {/* Article header */}"
           <div className="mb-8 max-w-4xl mx-auto">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/BlogPost.tsx
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
               {post.category}
             </span>"
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {post.title}
 </h1>
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/BlogPost.tsx
             <p className="text-xl text-zion-slate-light mb-8">
               {post.excerpt}
             </p>;
@@ -392,7 +385,6 @@ if ( {) {}
             )}
 
 :temp_exclude/hooks.disabled/BlogPost.tsx
-<<<<<<< HEAD
             <div className="mt-12 text-center">
               <p className="text-zion-slate-light">
                 Ready to put these ideas into action? Explore our{' '}
@@ -415,7 +407,6 @@ if ( {) {}
                 or browse expert{' '}
 :temp_exclude/hooks.disabled/BlogPost.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
               </p>
             </div>
@@ -424,7 +415,6 @@ if ( {) {}
             <div className="flex justify-between items-center mt-12">
 :temp_exclude/hooks.disabled/BlogPost.tsx
               <Button
-<<<<<<< HEAD
                 variant="outline"
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
                 asChild
@@ -528,7 +518,6 @@ if ( {) {}
 };
 :temp_exclude/hooks.disabled/BlogPost.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
               </p>;
             </div>;

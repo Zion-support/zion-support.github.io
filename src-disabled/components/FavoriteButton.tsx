@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',;
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils',;
@@ -18,7 +17,6 @@ return (
     <>;
       <TooltipProvider>;
         <Tooltip>;
-<<<<<<< HEAD
 
                 )}              />;
             </button>;
@@ -29,7 +27,6 @@ return (
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
       return;
@@ -59,9 +56,7 @@ import {;
 interface FavoriteButtonProps {;
   itemId: string,;
   className?: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
-<<<<<<< HEAD
 ;
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
   const { isWishlisted, toggle } = useWishlist(),;
@@ -127,12 +122,10 @@ import { Tooltip;
   TooltipContent;
   TooltipProvider;
   TooltipTrigger } from '@/components/ui/tooltip';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface FavoriteButtonProps {
   itemId: string;
   className?: string
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
-<<<<<<< HEAD
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
       return;
@@ -263,7 +256,6 @@ className: {`w-4 h-4 transition-all duration-300 ${'`
 '`
 }
 <TooltipTrigger as_child>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <button;
 
               className={cn(;
@@ -286,7 +278,6 @@ className: {`w-4 h-4 transition-all duration-300 ${'`
       </TooltipProvider>;
 <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
-<<<<<<< HEAD
   );
 }
 ;
@@ -314,7 +305,6 @@ class_name: {`w - 4 h - 4 transition - all duration - 300 ${'`
 '`;
 }
 
-=======
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
@@ -428,29 +418,15 @@ class_name: {`w - 4 h - 4 transition - all duration - 300 ${`,
     </button>) }
 '`;`
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <button
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             <button'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
             <button
 ;
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import {;
   Table,;
@@ -18,12 +17,10 @@ import {;
   TooltipProvider,;
   TooltipTrigger} from "@/components/ui/tooltip",;
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function RoleManagement() {;
   // Mock team members data;
   const teamMembers = [;
     {;
-<<<<<<< HEAD
 
     <div className="space-y-6">;
       <div>;

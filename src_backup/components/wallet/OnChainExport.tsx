@@ -46,7 +46,6 @@ if ( {) {
   $2
 }
         toast ({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           title: "Wallet not detected",
           description: "Please install MetaMask or another Ethereum wallet to use this feature",
           variant: "destructive"
@@ -289,5 +288,4 @@ export function OnChainExport() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
 ;

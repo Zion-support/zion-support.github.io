@@ -36,7 +36,6 @@ function fixSyntaxErrors(filePath) {
     // Fix TypeScript interface syntax
     content = content.replace(/interface\s+(\w+)\s*\{\s*\}/g, 'interface $1 {}');
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Fix missing closing braces
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
@@ -45,7 +44,6 @@ function fixSyntaxErrors(filePath) {
       return true;
     return false;
 } catch (error) {
-<<<<<<< HEAD
     return false;
   }
 }
@@ -60,4 +58,3 @@ traverse(dir);
 }
 
 console.log(`🎉 Fixed ${fixedCount} files with syntax errors`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

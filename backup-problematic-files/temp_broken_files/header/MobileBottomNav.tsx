@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",;
@@ -79,9 +78,7 @@ export function MobileBottomNav({ unreadCount = 0 } MobileBottomNavProps) {;
               )}
             </div>;
             <span className="text-xs font-medium">{item.name}</span>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </Link>;
         ))}
       </div>;
     </nav>;
-<<<<<<< HEAD

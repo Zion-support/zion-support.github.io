@@ -1,5 +1,4 @@
 :src/components/support/HelpCenter.tsx
-<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Input } from "@/components/ui/input",
@@ -10,7 +9,6 @@ import { HelpArticleList } from "./HelpArticleList",
 import { HelpArticleView } from "./HelpArticleView",
 import { HELP_CATEGORIES } from "./help-content",
 import { Search } from 'lucide-react'
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
 
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
@@ -37,9 +35,7 @@ import { Search } from 'lucide-react';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function HelpCenter() {
-=======
 export default function HelpCenter() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/HelpCenter.tsx
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null)'
   const [searchQuery, setSearchQuery] = useState('')
@@ -81,7 +77,6 @@ function HelpCenter() {}
   const handleCategorySelect = (category_id: string, ) =>: any {}
     setSelectedCategory (category_id),
     setSelectedArticle (null);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
 :src_backup/components/support/HelpCenter.tsx
 
@@ -89,7 +84,6 @@ function HelpCenter() {}
     setSelectedCategory(null),
     setSelectedArticle(null)
   },
-<<<<<<< HEAD
 
   const handleBackToArticles = () => {
     setSelectedArticle(null)
@@ -102,9 +96,7 @@ function HelpCenter() {}
     setSelectedArticle (null);
   }
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <>
       <div className="container mx-auto px-4 py-8">
@@ -149,8 +141,6 @@ import { HelpArticleView } from './HelpArticleView';'
 import { HELP_CATEGORIES } from './help-content';
 
 :src_backup/components/support/HelpCenter.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="relative mb-8">
             <Input"
               placeholder="Search for help articles..."
@@ -194,8 +184,6 @@ const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 };
 
   const handleArticleSelect = (articleId: string) => {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
@@ -217,7 +205,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setSelectedArticle(null);
   },;
   const handleArticleSelect = (articleId: string) => {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setSelectedArticle(articleId);
   },;
   const handleBackToCategories = () => {;
@@ -237,9 +224,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-zion-slate-light mb-6">;
             Find answers to common questions or get in touch with our support team.;
 :src/components/support/HelpCenter.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/support/HelpCenter.tsx
           </p>;
 :src_backup/components/support/HelpCenter.tsx
           <div className="relative mb-8">;
@@ -264,7 +249,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>;'
           <div className='relative mb - 8'>;
 :src_backup/components/support/HelpCenter.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <Input;
               placeholder='Search for help articles...';
               value={search_query}
@@ -307,9 +291,7 @@ onCategorySelect={handleCategorySelect}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}                  />
                 </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               )}
-<<<<<<< HEAD
 
               {selectedArticle && (;
                 <>;
@@ -318,7 +300,6 @@ onCategorySelect={handleCategorySelect}
                     variant='ghost'
                     onClick={handleBackToArticles}'
                     className='mb-4'                  >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
               {selectedCategory && !selectedArticle && (
                 <>
@@ -354,18 +335,15 @@ onCategorySelect={handleCategorySelect}
             </TabsContent>
             <TabsContent value="faq">
               <div className="bg-zion-blue-light/20 rounded-lg p-6">
-=======
 
             "
             <TabsContent value="faq">"
               <div className="bg-zion-blue-light/20 rounded-lg p-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/HelpCenter.tsx
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
                 "
                 <div className="space-y-6">
 :src_backup/components/support/HelpCenter.tsx
                   <div>
-<<<<<<< HEAD
                     <h3 className='font-medium text-zion-cyan mb-2'>
                       How do I hire someone on Zion?
                     </h3>
@@ -378,11 +356,9 @@ onCategorySelect={handleCategorySelect}
                       Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results.
 
                     </p>
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/support/HelpCenter.tsx
                   </div>
 
 :src/components/support/HelpCenter.tsx
-<<<<<<< HEAD
                   <div>
                     <h3 className='font-medium text-zion-cyan mb-2'>
                       What are the payment terms?
@@ -394,7 +370,6 @@ onCategorySelect={handleCategorySelect}
                       approved, ensuring security for both clients and talent.                    </p>
                   </div>
 
-=======
 
 :src_backup/components/support/HelpCenter.tsx
                     </p>
@@ -405,7 +380,6 @@ onCategorySelect={handleCategorySelect}
                     </p>
                   </div>
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">What are the payment terms?</h3>
                     <p className="text-zion-slate-light">
@@ -423,22 +397,16 @@ onCategorySelect={handleCategorySelect}
               </div>
             </TabsContent>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <TabsContent value="contact">
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">Contact Support</h2>
-=======
             "
             <TabsContent value="contact">"
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">"
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">"
                   <h2 className="text-xl font-semibold mb-4">Contact Support</h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/HelpCenter.tsx
                   <p className="text-zion-slate-light mb-4">
                     Our support team is available 24/7 to assist you with any questions or issues.
                   </p>
@@ -455,13 +423,9 @@ onCategorySelect={handleCategorySelect}
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
 :src_backup/components/support/HelpCenter.tsx
                         support@ziontechgroup.com
-<<<<<<< HEAD
-<<<<<<< HEAD
                       </Link>
-=======
                       </Link>
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/support/HelpCenter.tsx
                     </div>
 :src_backup/components/support/HelpCenter.tsx
 href='mailto:support@ziontechgroup && ziontechgroup.com'
@@ -478,23 +442,15 @@ href='mailto:support@ziontechgroup && ziontechgroup.com'
                           className='h-5 w-5 text-zion-purple''
                           viewBox='0 0 20 20'
 
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
-=======
                     "
                     <div className="flex items-center">"
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">"
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/HelpCenter.tsx
                           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         </svg>
 :src_backup/components/support/HelpCenter.tsx
                       </div>
@@ -504,14 +460,8 @@ href='mailto:support@ziontechgroup && ziontechgroup.com'
                     </div>
                   </div>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
                   "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/HelpCenter.tsx
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
                     Open Live Chat;
                   </Button>
@@ -525,8 +475,6 @@ href='mailto:support@ziontechgroup && ziontechgroup.com'
                   "
                   <form className="space-y-4">
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <div>
 :src_backup/components/support/HelpCenter.tsx
                       <Input placeholder='Your email' />
@@ -542,19 +490,13 @@ href='mailto:support@ziontechgroup && ziontechgroup.com'
                     </div>
 
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
-=======
 
-=======
                     "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/HelpCenter.tsx
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
 
 :src_backup/components/support/HelpCenter.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       Submit Feedback
                     </Button>
                   </form>
@@ -632,7 +574,6 @@ href='mailto:support@ziontechgroup && ziontechgroup.com'
                     Our support team is available 24 / 7 to assist you with any;
                     questions or issues.;
 :src_backup/components/support/HelpCenter.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </p>;
                   <div className="space-y-4">;
                     <div className="flex items-center">;
@@ -692,7 +633,6 @@ href='mailto:support@ziontechgroup && ziontechgroup.com'
           </Tabs>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </>;
   );
 }
@@ -704,11 +644,5 @@ href='mailto:support@ziontechgroup && ziontechgroup.com'
       </div>
     </>
 :src_backup/components/support/HelpCenter.tsx
-<<<<<<< HEAD:src/components/support/HelpCenter.tsx
-<<<<<<< HEAD
   )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   )'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/HelpCenter.tsx

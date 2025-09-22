@@ -3,13 +3,11 @@
  * Generate Search Index;
  * Creates a search index for the website content;
  */;
-<<<<<<< HEAD
 const fs = require('fs'),;
 const path = require('path'),;
 const PAGES_DIR = path.join(__dirname, '..pages'),;
 const OUTPUT_DIR = path.join(__dirname, '..public', 'search'),;
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Content types to index;
 const CONTENT_TYPES = {;
   'pages':{;
@@ -33,6 +31,5 @@ const CONTENT_TYPES = {;
 if (require.main === module) {;
   generateSearchIndex(),;
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 module.exports = { generateSearchIndex },

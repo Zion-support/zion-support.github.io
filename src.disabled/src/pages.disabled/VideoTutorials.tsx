@@ -1,4 +1,3 @@
-=======
 export default function AddToCart.test({ }: AddToCart.testProps) {
 
 return (
@@ -7,12 +6,9 @@ return (
       <p>This component is under development.</p>
     </div>
 );
-<<<<<<< HEAD:backup-problematic-files/tests/AddToCart.test.tsx
 }
 }
 }
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 };
 
 export default VideoTutorials;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:src.disabled/src/pages.disabled/VideoTutorials.tsx

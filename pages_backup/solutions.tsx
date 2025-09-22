@@ -1,8 +1,3 @@
-<<<<<<< HEAD:pages/solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function Solutions() {
   const solutions = [
@@ -123,7 +118,6 @@ export default function Solutions() {
   }
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -173,7 +167,6 @@ export default function Solutions() {
                 <a
                   href="/contact"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -192,8 +185,6 @@ import {
   CheckCircle, 
   ArrowRight 
 } from 'lucide-react';
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const solutions = [
   {
     title: 'Enterprise Solutions',
@@ -368,13 +359,10 @@ export default function SolutionsPage() {
                 solutions that drive growth, efficiency, and innovation.
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Solutions Grid */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4">
@@ -395,8 +383,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   </div>
                   <p className="text-gray-600 mb-4">{solution.description}</p>
                   <ul className="space-y-2">
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Solutions Overview */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -451,9 +437,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
         </section>
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -1010,8 +994,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   Schedule Consultation
 
                 </a>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
@@ -1036,19 +1018,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 <button className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200">
                   Learn More
                 </button>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/solutions.tsx
               </div>
             ))}
           </div>
 :pages_backup/solutions.tsx
         </section>
       </div>
-<<<<<<< HEAD:pages/solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </UltraAdvancedFuturisticBackground>
   )
 
@@ -1087,26 +1062,11 @@ export default Solutions,
 
 },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     </Layout>
   );
 }
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/solutions.tsx
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO';
@@ -1124,9 +1084,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
 const Solutions: NextPage;
 export default Solutions;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         </div>
 
         <div className="bg-gray-800/30 border-t border-gray-800">
@@ -1144,8 +1101,5 @@ export default Solutions;
     </>
   );
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/solutions.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

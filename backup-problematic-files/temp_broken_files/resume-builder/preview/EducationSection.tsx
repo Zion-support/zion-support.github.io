@@ -1,5 +1,4 @@
 
-=======
 import { Education } from '@/types/resume',;
 import { format } from 'date-fns',;
 ;
@@ -48,10 +47,8 @@ export function EducationSection({ education } EducationSectionProps) {;
             </div>;
             {edu.description && (;
               <p className="text-sm mt-2">{edu.description}</p>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             )}
           </div>;
         ))}
       </div>;
     </div>;
-<<<<<<< HEAD

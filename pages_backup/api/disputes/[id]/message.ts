@@ -1,8 +1,5 @@
 :pages_backup/api/disputes/[id]/message.ts
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/message.ts
 
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
@@ -24,9 +21,7 @@ export default async function handler(;
   res: NextApiResponse,
 ) {;
 
-=======
 export default async function handler() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/message.ts
   const { id } = req.query;
 "
   if (typeof id !== "string")"
@@ -61,7 +56,6 @@ export default async function handler(
     try {
 ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
     } catch (e: any) {
-=======
   const user = parseUserFromRequest(req);"
   if (req.method === "POST") {}
     const dispute = await getDisputeById(id);
@@ -69,15 +63,12 @@ ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
     try {}
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
     } catch (e: any) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/message.ts
       return res.status(e.statusCode |403).json({ error: "Forbidden" });
     }
     const { body } = req.body |{}"
     if (!body |typeof body !== "string")"
       return res.status(400).json({ error: "Message body required" });
 :pages_backup/api/disputes/[id]/message.ts
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const now = new Date().toISOString();
     dispute && dispute.messages.push({}
       id: `${Date && Date.now()}`,
@@ -109,10 +100,7 @@ const { id } = req.query;
     if (!body |typeof body !== "string")
       return res.status(400).json({ error: "Message body required" });
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/message.ts
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
@@ -122,9 +110,6 @@ const { id } = req.query;
 res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler() { return null; }
 import type { NextApiRequest, NextApiResponse } from 'next';'
@@ -192,11 +177,5 @@ export default async function handler(req, res) {}
 }
 
 :pages_backup/api/disputes/[id]/message.ts
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/message.ts

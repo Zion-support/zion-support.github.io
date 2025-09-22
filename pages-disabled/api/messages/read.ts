@@ -30,11 +30,7 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> pr-12243
   res.status(200).json({ success: true })
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   res.status(200).json({ success: true });
 };'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

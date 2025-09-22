@@ -5,7 +5,6 @@ import { signPayload } from "../../../utils/sync/signature",;
 import axios from "axios",;
 import { v4 as uuidv4 } from "uuid",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -114,7 +113,6 @@ export default async function handler(req, res) {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {
           // ignore
-=======
 
   await Promise.all(
     state.config.peers;
@@ -252,7 +250,6 @@ export default async function handler(req, res) {}
   return res.status (200).json ({ status: "created", merkle_root, version, event_id: event.event_id });
 }
 ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
           // ignore;
           } catch (error) {"

@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -62,12 +61,10 @@ export function SmartContractDeployment({ ;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
-<<<<<<< HEAD
 
                   })}
                   className="flex flex-col space-y-1";

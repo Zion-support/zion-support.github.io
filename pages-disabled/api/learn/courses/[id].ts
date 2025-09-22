@@ -28,9 +28,6 @@ export default function handler(req, res) {
 }
 ;
 
-=======
-=======
->>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs',;
 import path from 'path',;
@@ -61,5 +58,3 @@ function handler() {
     res.status (500).json ({ error: e?.message ?? 'Failed to load course' });
   }
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243

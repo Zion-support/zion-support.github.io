@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -74,7 +70,6 @@ const [email, setEmail] = useState('')
   }
       >'
       <label htmlFor='newsletter-email' className='sr-only'>
-=======
 import React, { useState, useRef } from 'react';
 
 import { Input  } from '@/components/ui/input';
@@ -99,12 +94,9 @@ export function FooterNewsletter(): React.ReactElement {
       className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
     >
       <label htmlFor="newsletter-email" className="sr-only">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         Email address for newsletter subscription
-=======
         Email address for newsletter subscription;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </label>
       <Input'
         type='email''
@@ -208,13 +200,11 @@ const handleSubmit = async (e: React.FormEvent) => {
         aria-label='Subscribe to newsletter'
         disabled={isSubmitting}'
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'      >
-=======
       <Button
         type="submit"
         disabled={isSubmitting}
         className="w-full bg-blue-600 hover:bg-blue-700 text-white"
       >
->>>>>>> pr-12243
         {isSubmitting ? (
 <>
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -225,26 +215,16 @@ const handleSubmit = async (e: React.FormEvent) => {
         )}
       </Button>
     </form>
-<<<<<<< HEAD
   )
 }
 }
 }
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
-<<<<<<< HEAD
         tabIndex={-1}
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
         autoComplete="off"
-=======
         tabIndex={-1}"
         autoComplete="off"'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         style={{ display: 'none' }}
       />
       <Button"
@@ -256,11 +236,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         {isSubmitting ? (;
           <>;
 
-=======
 
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
             Subscribing...;
           </>;
         ) : (;'
@@ -373,13 +349,6 @@ export function FooterNewsletter():React.ReactElement {;'
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;"
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
             Subscribing...;
           </>;
         ) : (;'
@@ -390,17 +359,9 @@ export function FooterNewsletter():React.ReactElement {;'
   );
 } ;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
 } ;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
 } ;
 '
 import React, { useState, useRef } from 'react';'
@@ -526,11 +487,7 @@ if ( {) {}
 }
 }
 
-=======
 
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
 
 };"
 return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubmit= {;"
@@ -546,23 +503,9 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 
 }
 
-=======
 
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   );
 }
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
->>>>>>> pr-12243
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

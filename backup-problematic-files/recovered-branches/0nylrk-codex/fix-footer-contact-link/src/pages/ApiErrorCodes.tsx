@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
 import { CodeBlock } from "@/components/developers/CodeBlock",;
@@ -126,7 +125,6 @@ export function ApiErrorCodes() {;
       <div className="max-w-3xl prose prose-invert">;
         <h1>Error Codes & Rate Limits</h1>;
         ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <h2>Error Format</h2>;
         <p>;
           When an error occurs, the API will return an appropriate HTTP status code along with ;
@@ -154,4 +152,3 @@ export function ApiErrorCodes() {;
           To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.;
           The limits are based on the number of requests per minute per API key.;
         </p>;
-<<<<<<< HEAD

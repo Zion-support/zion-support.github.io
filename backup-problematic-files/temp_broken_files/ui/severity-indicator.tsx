@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
@@ -40,11 +39,9 @@ export function SeverityIndicator({ ;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className={cn("flex items-center gap-1", className)}>;
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>;
-<<<<<<< HEAD
 
 }

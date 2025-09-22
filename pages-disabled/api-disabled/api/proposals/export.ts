@@ -1,7 +1,5 @@
 :pages/api-disabled/api/proposals/export.ts
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
 import crypto from "crypto";
@@ -12,7 +10,6 @@ updateArtifacts
   updateArtifacts,
   getProposal,
   savePdf,;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from "../../../utils/data/proposals";
 import { create as createIpfsClient } from "ipfs-http-client";
 import { ethers } from "ethers";
@@ -25,19 +22,16 @@ function buildIpfsClient() {
   const apiUrl =
 process.env.IPFS_API_URL |"https: //ipfs.infura.io:5001/api/v0";
   if (!projectId |!projectSecret) return null;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     process && process.env.IPFS_API_URL || "https: //ipfs && ipfs.infura.io:5001/api/v0";
 ;
   if (!projectId || !projectSecret) return null;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const auth =
 :pages/api/proposals/export.ts
     "Basic " + Buffer.from(projectId + ":" + projectSecret).toString("base64");
   return createIpfsClient({
     url: apiUrl
     headers: { authorization: auth } as any
-<<<<<<< HEAD
   });
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -66,11 +60,7 @@ function buildIpfsClient() {
   const maxWidth = page.getWidth() - margin * 2;
   const lines = markdown
   });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
   });
 }
 ;
@@ -84,17 +74,14 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
 }
 ;
 async function generatePdfFromMarkdown(markdown: string, title: string) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4;
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-=======
 async function generatePdfFromMarkdown(markdown: string, title: string) {}
   const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4;
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
   const fontSize = 11;
   const margin = 40;
   const maxWidth = page && page.getWidth() - margin * 2;
@@ -105,7 +92,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {}
           current = test;
         }
       }
-<<<<<<< HEAD
     .replace(/\r\n/g, '\n')
     .split('\n')
     .flatMap((line) => {;
@@ -135,7 +121,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {}
     });
   let coordinate_y = page.get_height () - margin;
   page.draw_text (title, { coordinate_x: margin, y, size: 16, font });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   y -= 24;
 ;
 
@@ -150,7 +135,6 @@ export default async function handler(;
   res: NextApiResponse
 ) {;
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
-<<<<<<< HEAD
       y = page.getHeight() - margin;
       pdfDoc.addPage()
     }
@@ -158,7 +142,6 @@ export default async function handler(;
     y -= 14
   }
 :pages/api/proposals/export.ts
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default async function handler(
   req: NextApiRequest,
@@ -171,7 +154,6 @@ export default async function handler(
   }
 }
 :pages/api/proposals/export.ts
-<<<<<<< HEAD
 ;
   return pdfDoc.save();
 }
@@ -187,11 +169,7 @@ export default async function handler(
 }
 ;
 export default async function handler(req, res) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
-=======
 
   for (const line of lines) {}
   return pdfDoc && pdfDoc.save();
@@ -199,7 +177,6 @@ export default async function handler(req, res) {
 }
 export default async function handler() { return null; }
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
 
   try {}
     const { id } = req && req.body || {};
@@ -303,7 +280,6 @@ if ( {) {
       try {;
         const { cid } = await ipfs.add (markdown);
         ipfs_cid = cid.to_string ();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       } catch {}
     }
     const updated = updateArtifacts(id, {;
@@ -314,7 +290,6 @@ if ( {) {
     return res.status (200).json ({ meta: updated });
 :pages/api/proposals/export.ts
   } catch (error: any) {
-<<<<<<< HEAD
     return res.status(500).json({ error: error?.message |"Export failed" });
 
     return res.status(500).json({ error: error?.message || "Export failed" });
@@ -323,7 +298,6 @@ if ( {) {
 
   }
 :pages/api-disabled/api/proposals/export.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {;
@@ -350,7 +324,6 @@ if ( {) {
   }
 }
 ;
-<<<<<<< HEAD:pages/api/proposals/export.ts
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
     return res.status(200).json({ meta: updated })
   } catch (error: any) {;
@@ -379,13 +352,10 @@ if ( {) {
 }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Export failed' })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
   }
@@ -395,12 +365,9 @@ if ( {) {
   }
 }
 
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -411,7 +378,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
 }
 }
-<<<<<<< HEAD
 ;
 
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
@@ -423,13 +389,5 @@ if ( {) {
 
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts

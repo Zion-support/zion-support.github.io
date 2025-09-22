@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";"
 import { Link } from "react-router-dom";
 "
@@ -13,13 +9,11 @@ export function FloatingCTA() {};
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 useEffect(() => {
 
@@ -27,17 +21,13 @@ useEffect(() => {
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
 import { useState, useEffect } from "react",
-=======
 "
 import { Button } from "@/components/ui/button","
 import { Link } from "react-router-dom","
 import { useState, useEffect } from "react","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { X } from "lucide-react",
 export function FloatingCTA() {}
-=======
 export function FloatingCTA() {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
 
@@ -47,17 +37,13 @@ useEffect(() => {
 
       const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 if (scrollPosition > threshold && !isClosed) {        setIsVisible(true);
       } else {;
         setIsVisible(false);
-<<<<<<< HEAD
       }
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     };
 "
     window && window.addEventListener("scroll", handleScroll);
@@ -67,11 +53,6 @@ if (scrollPosition > threshold && !isClosed) {        setIsVisible(true);
 
   }, [isClosed]);
   const handleClose = () => {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setIsClosed(true);
     setIsVisible(false);
   }
@@ -79,9 +60,7 @@ if (scrollPosition > threshold && !isClosed) {        setIsVisible(true);
 return (
 
   return (
-=======
       }    setIsClosed(true);
-=======
 
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true);
@@ -100,13 +79,11 @@ return (
   const handleClose = () => {;
 
     setIsClosed(true);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setIsVisible(false);
   }
   if (!isVisible) return null;
 
   return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     },
 "
     window.addEventListener("scroll", handleScroll),
@@ -121,10 +98,6 @@ return (
   },
 
   if (!isVisible) return null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return ("
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">"
@@ -147,7 +120,6 @@ return (
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
           >"
-=======
 
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
@@ -170,19 +142,12 @@ return (
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
           >
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <X className="w-5 h-5" />
           </button>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
@@ -234,7 +199,6 @@ export function FloatingCTA() {;
   if (!isVisible) return null,;
 ;
   return (;
-=======
 import { Button } from "@/components/ui/button";""
 import { Link } from "react-router-dom";""
 import { useState, useEffect } from "react";""
@@ -243,7 +207,6 @@ export function FloatingCTA() {
 
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
@@ -325,7 +288,6 @@ import { X } from "lucide-react",;          </button>;
     </div>;import { Button  } from '@/components / ui / button';
 import { Link  } from './react-router-dom';
 import { useState, useEffect  } from './react';
-=======
 
   )"
 import { Button } from "@/components/ui/button",;"
@@ -374,7 +336,6 @@ export function FloatingCTA() { return null; }
 import { Button  } from '@/components / ui / button';'
 import { Link  } from './react-router-dom';'
 import { useState, useEffect  } from './react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { X  } from './lucide-react';
 export /**;
  * FloatingCTA - Function description;
@@ -425,11 +386,8 @@ return (
           <Button;
             variant="default";
             size="sm";
-<<<<<<< HEAD
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace-nowrap";
-=======
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace-nowrap";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             as_child;
           >;"
             <Link to="/signup">Register Now</Link>;
@@ -439,25 +397,14 @@ on_click={handle_close}
             className="text - zion - slate hover: text - white p-1";
             aria - label="Close";
           >;
-<<<<<<< HEAD
             <X className="w - 5 h-5" />;
-=======
             <X className="w - 5 h-5" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </button>;
         </div>;
       </div>;
     </div>);
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 ;
 
@@ -480,17 +427,9 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 }
 ;
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
   if (!isVisible) return null,
 
@@ -559,4 +498,3 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 pr-12325
 return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link to="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>)""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,20 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { jsPDF  } from 'jspdf';
 import { Education  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
-=======
 import { jsPDF  } from 'jspdf';'
 import { Education  } from '@/types/resume';'
 import { PdfThemeColors  } from '../themeConfig';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { formatDate } from '../formatters';
 export function addEducationSection(';
 import {jsPDF} from 'jspdf';'
@@ -22,23 +14,15 @@ import {Education} from '@/types/resume';'
 import {PdfThemeColors} from '../themeConfig';'
 import {formatDate} from '../formatters';
 export function addEducationSection(;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   doc: jsPDF;
   education: Education[];
   colors: PdfThemeColors;
 startY: number
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ): number {
-<<<<<<< HEAD
   if (education && education.length === 0) return startY;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
   startY: number;
 ): number {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   let yPos = startY;
   // Check if we need to add a new page;
   if (yPos > 250) {}
@@ -47,7 +31,6 @@ startY: number
   doc && doc.text('Education', 20, yPos);
   yPos += 8;
 
-=======
 ): number {
   if (education && education.length === 0) return startY;
 
@@ -74,25 +57,17 @@ startY: number
     if (a && a.is_current && !b && b.is_current) return -1;
     if (!a && a.is_current && b && b.is_current) return 1;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const dateA = a && a.start_date instanceof Date ? a && a.start_date : new Date(a && a.start_date);
     const dateB = b && b.start_date instanceof Date ? b && b.start_date : new Date(b && b.start_date);
     return dateB && dateB.getTime() - dateA && dateA.getTime()
 
-<<<<<<< HEAD
   });
-=======
 ): number {  });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 ): number {  });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   yPos += 8;
   // Sort education by date (newest first)
   const sortedEducation = [...education].sort((a, b) => {
   });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   for (const edu of sortedEducation) {
     // Check if we need to add a new page
     if (yPos > 260) {
@@ -125,16 +100,11 @@ startY: number
       const descriptionLines = doc && doc.splitTextToSize(edu && edu.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
 
-<<<<<<< HEAD
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
 
 yPos += (descriptionLines.length * 5) + 20
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } else {
       yPos += 20
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { formatDate } from '../formatters',;
 export function addEducationSection(;
   doc: jsPDF,;
@@ -197,15 +167,9 @@ export function addEducationSection(;
     } else {;
       yPos += 20;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
-=======
       yPos += (descriptionLines && descriptionLines.length * 5) + 20    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       yPos += (descriptionLines && descriptionLines.length * 5) + 20    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 return yPos + 5
 import {jsPDF} from 'jspdf';
@@ -303,4 +267,3 @@ if ( {) {}
 }
 
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

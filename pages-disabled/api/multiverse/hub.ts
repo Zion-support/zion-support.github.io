@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
 import type { NextApiRequest, NextApiResponse } from "next",;
@@ -48,10 +46,8 @@ export default async function handler(req, res) {}
     } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-=======
   const state = null;
       lastSyncedAt: state.lastSyncedAt})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   } catch (error) {"
@@ -81,8 +77,6 @@ export default async function handler(req, res) {
       opt_in: state.config.opt_in
       paused: state.config.paused
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
       lastSyncedAt: state.lastSyncedAt})
   }
 return res.status(405).json({ error: "Method not allowed" })
@@ -129,7 +123,6 @@ export default async function handler(req, res) {
   }
 }
 }
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState } from '../../../utils/sync/storage';
@@ -160,7 +153,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.status(405).json({ error: "Method not allowed" })
 };
-=======
       lastSyncedAt: state.lastSyncedAt,
     });
   }
@@ -168,5 +160,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(405).json({ error: 'Method not allowed' });
 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

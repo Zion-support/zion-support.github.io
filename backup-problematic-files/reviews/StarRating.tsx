@@ -6,8 +6,6 @@
 })
 }</div>)
 export const StarRating: React.FC<Props> = ({
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 type Props = {
   value: number,
   onChange: (val: number) => void,
@@ -41,7 +39,6 @@ type Props = {
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover:scale-110'}`}
             onMouseEnter={() => !readOnly && setHovered(star)}
 :backup-problematic-files/reviews/StarRating.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   size?: number;
   readOnly?: boolean
 }
@@ -56,7 +53,6 @@ const stars = [1, 2, 3, 4, 5];
             key={star}
             type="button"""
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
@@ -78,11 +74,5 @@ export default StarRating;              width={size}
   )
 }
 export default StarRating;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/StarRating.tsx
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/StarRating.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
               <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" />"
     </div>"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

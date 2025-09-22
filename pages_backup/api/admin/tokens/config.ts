@@ -1,49 +1,30 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { getConfig } from "../../../../utils/token/service",;
 import { tokenStore } from "../../../../utils/token/storage",;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/tokens/config.ts
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     return res.status(200).json(getConfig())
   }
-<<<<<<< HEAD
   if (req.method === "POST") {
-<<<<<<< HEAD
     const body = req.body || {},
     const current = tokenStore.getConfig(),
     const updated = { ...current, ...body },
     tokenStore.setConfig(updated),
     return res.status(200).json(updated)
   }
-<<<<<<< HEAD
   return res.status(405).json({ error: "Method not allowed" });
 };
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getConfig } from "../../../../utils/token/service";
 import { tokenStore } from "../../../../utils/token/storage";
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return res.status(200).json(updated)
   }
   return res.status(405).json({ error: "Method not allowed" })
 }
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (req.method === 'GET') {
       const config = getConfig();
       res.json({ config });
@@ -60,29 +41,10 @@ import { tokenStore } from "../../../../utils/token/storage";
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   return res.status(405).json({ error: "Method not allowed" })
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const body = req.body || {}
     const current = tokenStore.getConfig()
     const updated = { ...current, ...body }
@@ -93,7 +55,6 @@ main
   return res.status(405).json({ error: "Method not allowed" })
 };
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/tokens/config.ts
 
   if (req.method === 'POST') {
     const { updated } = req.body || {};
@@ -105,5 +66,3 @@ main
 
   return res.status(405).json({ error: "Method not allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,12 +1,10 @@
 
-=======
 import { Trophy } from "lucide-react",;
 import { Progress } from "@/components/ui/progress",;
 ;
 interface ReputationDisplayProps {;
   reputation:number,;
   size?:'sm' | 'md' | 'lg';
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 ;
 export const ReputationDisplay = ({ ;
@@ -57,4 +55,3 @@ export default ReputationDisplay,; interface ReputationDisplayProps {
 size?: 'sm' | 'md' | 'lg'
 }export const ReputationDisplay = ({
   reputation;
-<<<<<<< HEAD

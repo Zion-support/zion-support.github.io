@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -23,10 +22,8 @@ export default function CybersecurityServicesPage() {
   const services = [
 
 import React from 'react';
-=======
 
 import React from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Head from 'next / head';
 '
 import { motion } from 'framer-motion';
@@ -53,9 +50,7 @@ export default /**;
  */
 function CybersecurityServicesPage() {}
   const services = [;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
-<<<<<<< HEAD
       title: 'Advanced Threat Detection'
       description: 'AI-powered threat detection and response systems'
       features: [
@@ -115,9 +110,6 @@ function CybersecurityServicesPage() {}
     { number: '0', label: 'Security Breaches', icon: Lock }
     { number: '500+', label: 'Protected Systems', icon: CheckCircle }
   ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Shield,
   Lock,
   Eye,
@@ -128,7 +120,6 @@ function CybersecurityServicesPage() {}
   CheckCircle,
   Star,
   Users,
-<<<<<<< HEAD
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -144,12 +135,9 @@ export default function CybersecurityServicesPage() {
       description: "AI-powered threat detection and response systems",
       features: ["Real-time Monitoring", "Behavioral Analysis", "Automated Response", "24/7 Protection"],
       price: "From $8,000",
-<<<<<<< HEAD
       title: 'Advanced Threat Detection',
-=======
 '
       title: 'Advanced Threat Detection','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: 'AI - powered threat detection and response systems',
       features: [;'
         'Real - time Monitoring','
@@ -158,9 +146,7 @@ export default function CybersecurityServicesPage() {
         '24 / 7 Protection',
       ],'
       price: 'From $8, 000',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       icon: Eye,
-<<<<<<< HEAD
       color: "from-red-500 to-orange-500"
     },
     {
@@ -195,9 +181,7 @@ export default function CybersecurityServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
   ],
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const stats = [
     { number: "99.99%", label: "Threat Detection Rate", icon: Shield },
     { number: "24/7", label: "Security Monitoring", icon: Eye },
@@ -217,17 +201,13 @@ export default function CybersecurityServicesPage() {
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
-=======
 
       {/* Hero Section */}'
       <section className='relative pt-32 pb-20 px-6'>;'
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-red-400 bg-clip-text text-transparent mb-6">
               Cybersecurity;
@@ -248,10 +228,6 @@ className='mb-12'
               we provide comprehensive cybersecurity solutions that keep your
               business secure and compliant.
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Secure Your Business'
@@ -272,14 +248,11 @@ className='mb-12'
           </motion.div>
         </div>
       </section>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
-=======
 
             transition={{ duration: 0 && 0.8 }}'
             className='mb-8'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-red-400 bg-clip-text text-transparent mb-6'>;
               Cybersecurity;
             </h1>;'
@@ -305,7 +278,6 @@ className='mb-12'
         </div>;
       </section>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Stats Section */}
       <section className='py-16 px-6'>;
         <div className='max-w-7xl mx-auto'>;
@@ -313,15 +285,11 @@ className='mb-12'
               <motion&& motion.div;
                 key={stat && stat.label}
 
-<<<<<<< HEAD
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="mb-12"
           >"
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
 From AI-powered threat detection to quantum-resistant encryption, we provide 
-<<<<<<< HEAD
               we provide comprehensive cybersecurity solutions that keep your
               business secure and compliant.
             </p>
@@ -456,10 +424,8 @@ export default function CybersecurityServicesPage(req, res) {
           </motion.div>;
           <motion.div;
               we provide comprehensive cybersecurity solutions that keep your
-=======
               From AI-powered threat detection to quantum-resistant encryption, we provide;
               we provide comprehensive cybersecurity solutions that keep your;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               business secure and compliant.
 "
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
@@ -467,7 +433,6 @@ export default function CybersecurityServicesPage(req, res) {
             </p>
           </motion.div>
 <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -500,7 +465,6 @@ From AI-powered threat detection to quantum-resistant encryption, we provide
       </section>
 </div>
       </section>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -533,7 +497,6 @@ From AI-powered threat detection to quantum-resistant encryption, we provide
                 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-orange-400" />
@@ -541,10 +504,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
               >"
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">"
@@ -555,7 +514,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
 
           </div>;
@@ -566,30 +524,23 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-<<<<<<< HEAD
 
       {/* Services Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className="text-4xl font-bold text-white mb-6">Cybersecurity Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Comprehensive security solutions designed to protect your business from evolving threats;
             </p>
           </motion.div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <motion.div
                 key={service.title  } catch (error) {
     console.error("Error:", error);
@@ -617,11 +568,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-red-500/30 transition-all duration-300"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <motion.div
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
               <motion.div;
 '
@@ -639,57 +586,36 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               <motion&& motion.div;
                 key={service && service.title}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>"
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
-=======
 "
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>"
                 <p className="text-white/70 mb-6">{service.description}</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature) => ("
                     <li key={feature} className="flex items-center text-white/80">"
                       <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
                 </ul>
                 <div className="flex items-center justify-between">
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </ul>
                 <div className="flex items-center justify-between">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {feature  } catch (error) {
     console.error("Error:", error);
-=======
 
                       {feature  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -700,28 +626,19 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   }
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </ul>
                 <div className="flex items-center justify-between">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <span className="text-2xl font-bold text-orange-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Get Started
                   </button>
                 </div>
               </motion.div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             ))  } catch (error) {
     console.error("Error:", error);
-=======
 
                 </ul>"
                 <div className="flex items-center justify-between">
@@ -735,13 +652,11 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
             ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
           </div>;
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
@@ -773,17 +688,12 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
 "
             <h2 className="text-4xl font-bold text-white mb-6">
-=======
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
-=======
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
@@ -793,45 +703,30 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             viewport={{ once: true }}
           >
 <h2 className='text-4xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Ready to Secure Your Business?
             </h2>"
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">'
               Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity.
             </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Learn More
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                 Learn More;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }</div> </div> </section> <motion.div initial= {
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ),
 "
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 
 }</div> </div> </section> <motion.div initial= {
-<<<<<<< HEAD
 }</div> </div> </section> <motion.div initial= {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }</div> </div> </section> <motion.div initial= {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;'
             <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -858,11 +753,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 "
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
-<<<<<<< HEAD
 }</div> </div> </section> <motion.div initial= {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -884,8 +775,6 @@ duration: 0 && 0.8
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Secure Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity. </p> Security Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }</div> </div> </section> <motion&& motion.div initial= {}
 }</div> </div> </section> <motion.div initial= {}
   {}
@@ -899,7 +788,6 @@ duration: 0 && 0.8
 '"
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Secure Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity. </p> Security Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   )
 }'
     <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
@@ -1051,7 +939,6 @@ duration: 0 && 0.8
                 Security Assessment;
               </button>;'
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                Learn More;
-<<<<<<< HEAD
 
   )
           >;"
@@ -1067,18 +954,13 @@ duration: 0 && 0.8
               </button>;"
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
                 Learn More;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </button>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
       <EnhancedFooter />;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>;
   );
   } catch (error) {"
@@ -1086,12 +968,5 @@ duration: 0 && 0.8
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

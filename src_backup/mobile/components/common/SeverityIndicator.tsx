@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react",
 import { cn } from "@/lib/utils",
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
@@ -10,10 +9,8 @@ interface SeverityIndicatorProps {"
   size?: "sm" | "md" | "lg",
 
   className?: string
-=======
 ;
   className?: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/common/SeverityIndicator.tsx
 }
 
 export function SeverityIndicator({}
@@ -45,7 +42,6 @@ return <AlertCircle className={cn(
 
   return (
     <div className={cn("flex items-center gap-1", className)}>
-=======
 
           />
         );
@@ -72,7 +68,6 @@ return (</div>) ;
 }'"
   return (
     <div className={cn("flex items-center gap-1", className)}>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
@@ -127,5 +122,4 @@ export function SeverityIndicator() { return null; }
 
 }
 :src_backup/mobile/components/common/SeverityIndicator.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

@@ -7,8 +7,6 @@ const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class TypeScriptErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -28,7 +26,6 @@ class TypeScriptErrorFixer {}
       data,
 service: 'typescript-error-fixer'
     };
-<<<<<<< HEAD
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
@@ -44,18 +41,14 @@ service: 'typescript-error-fixer'
   async start() {}
     this.log('info', 'Starting TypeScript Error Fixer Service...');
 
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {}
       this.ensureDirectories();
       await this.performTypeScriptFixes();
       this.startContinuousFixing();
       this.setupSignalHandlers();
 this.log('info', 'TypeScript Error Fixer Service started successfully');
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       setInterval(async () => {}
         await this.performTypeScriptFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start TypeScript Error Fixer Service', error);
@@ -63,9 +56,7 @@ this.log('info', 'TypeScript Error Fixer Service started successfully');
   };
   ensureDirectories() {}
     const dirs = ['logs/pm2', 'backups/typescript-fixes', 'temp', 'fixed-files'];
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -123,8 +114,6 @@ cwd: this.projectRoot,
 
         this.fixesApplied++;
         this.fixedFiles.add(error.file);
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
     } catch (error) {}
@@ -137,8 +126,6 @@ return !trimmed ||
            trimmed.startsWith('//') ||
            trimmed.startsWith('/*') ||
            trimmed.startsWith('*') ||
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
            trimmed.startsWith('import') ||
            trimmed.startsWith('export')};
   async fixTypeScriptLine(line, error, allLines, lineIndex) {}
@@ -155,12 +142,8 @@ return !trimmed ||
 
     if (!nameMatch) return line;
     const undefinedName = nameMatch[1];
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     // Try to find the name in the file;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const matches = line.match(namePattern);
     if (matches) {}
       // Check if it should be imported;
@@ -180,9 +163,7 @@ return !trimmed ||
 
     if (!moduleMatch) return line;
     const moduleName = moduleMatch[1];
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     // Try to fix common module issues;
     if (moduleName.startsWith('@/')) {}
       const fixedModule = moduleName.replace('@/', './src/');
@@ -195,13 +176,10 @@ return !trimmed ||
     if (!propertyMatch) return line;
 
     const propertyName = propertyMatch[1];
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
     // Try to fix common module issues;
 
     if (!propertyMatch) return line;
     const propertyName = propertyMatch[1];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Add type assertion;
 
       if (paramMatch) {}
@@ -210,11 +188,7 @@ return !trimmed ||
 
     let firstUsage = -1;
     let declaration = -1;
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
         if (firstUsage === -1) firstUsage = index;
@@ -284,9 +258,5 @@ process.on('unhandledRejection', (reason, promise) => {}
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

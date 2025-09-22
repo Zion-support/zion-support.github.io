@@ -28,11 +28,9 @@ import React from 'react';
 interface MainNavigationProps {
   // Add props here as needed
 
-=======
 }
 
 export default function MainNavigation({ }: MainNavigationProps) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div>
       <h1>MainNavigation</h1>
@@ -59,7 +57,6 @@ export default function MainNavigation({ }: MainNavigationProps) {
       <p>This component is under development.</p>
     </div>
 );
-<<<<<<< HEAD
 
     </div>'
 pr-12325

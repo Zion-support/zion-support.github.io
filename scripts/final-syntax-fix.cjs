@@ -2,14 +2,12 @@
 #!/usr/bin/env node
 
 console.log('🔧 Final Syntax Fix');
-console.log('==================');
 
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 console.log('🔧 Final Syntax Fix');
-===========');
 
 console.log('
 

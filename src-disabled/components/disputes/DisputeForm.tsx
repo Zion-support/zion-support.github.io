@@ -1,8 +1,4 @@
 :src_backup/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -14,9 +10,7 @@ import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputeForm.tsx
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form;
@@ -27,8 +21,6 @@ import {
   FormMessage} from "@/components/ui/form",
 import { Textarea } from "@/components/ui/textarea";
 :src_backup/components/disputes/DisputeForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Form,
   FormControl,
@@ -111,18 +103,14 @@ description: values.description}),
 toast.success("Your dispute has been submitted"),
 
         if (onDisputeCreated) {
-=======
 if (onDisputeCreated) {
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeForm.tsx
           onDisputeCreated(dispute.id)
-=======
         toast.success('Your dispute has been submitted')
 
         toast.success("Your dispute has been submitted"),
 
         if (onDisputeCreated) {          onDisputeCreated(dispute.id)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
       }
     } catch (error) {
@@ -136,9 +124,6 @@ logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
 
 :src/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } finally {
       setIsSubmitting(false)
     }
@@ -146,29 +131,23 @@ logErrorToProduction('Error submitting dispute:', { data: error }),
 
   return (
 :src/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD
     <div className="space-y-6">
       <div className="flex items-center space-x-2">
         <FileText className="h-5 w-5 text-primary" />
         <h2 className="text-xl font-semibold">Report an Issue</h2>
       </div>
-=======
 
 :src/components/disputes/DisputeForm.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
             control={form.control}
 :src/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD
             name="reason_code"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
               <FormItem>
-=======
 
 :src/components/disputes/DisputeForm.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -178,14 +157,8 @@ logErrorToProduction('Error submitting dispute:', { data: error }),
                   </FormControl>
                   <SelectContent>
 :src/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeForm.tsx
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <SelectItem key={value} value={value}>{label}</SelectItem>
 import React, { useState } from "react",;
 import { useForm, ControllerRenderProps } from "react-hook-form",;
@@ -208,7 +181,6 @@ import {;
   SelectItem,;
   SelectTrigger,;
 :src/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD
   SelectValue} from "@/components/ui/select",;
 import { Input } from "@/components/ui/input",;
 import { disputeReasonLabels } from "@/types/disputes",;
@@ -289,7 +261,6 @@ export function DisputeForm({;
         <FileText className="h-5 w-5 text-primary" />;
         <h2 className="text-xl font-semibold">Report an Issue</h2>;
     <div className='space-y-6'>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className='flex items-center space-x-2'>;
         <FileText className='h-5 w-5 text-primary' />;
         <h2 className='text-xl font-semibold'>Report an Issue</h2>;
@@ -338,7 +309,6 @@ if ( {) {
       <div className='flex items - center space - x-2'>;
         <FileText className='h - 5 w - 5 text - primary' />;
         <h2 className='text - xl font - semibold'>Report an Issue</h2>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </div>;
       <Form {...form}>;
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
@@ -414,13 +384,11 @@ if ( {) {
                     placeholder='Please provide specific details about the issue...';,
                     className='min - h-[150px]';
 :src_backup/components/disputes/DisputeForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
 :src_backup/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD
               </FormItem>;
             )}
           />
@@ -502,8 +470,6 @@ if ( {) {
                             type='button'
                             variant='ghost'
                             size='sm'
-<<<<<<< HEAD:src/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD
                             onClick={() => removeFile(index)}                          >;
                             Remove;
                           </Button>;
@@ -513,10 +479,8 @@ if ( {) {
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
 
-=======
                     placeholder="Please provide specific details about the issue..."",
                     className="min-h-[150px]""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputeForm.tsx
                     {...field}
                   />
                 </FormControl>
@@ -548,7 +512,6 @@ if ( {) {
                   on_change={handleFileChange}
                   className='cursor - pointer'                />;
 :src_backup/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD
               <div className='space-y-4'>
                 <Input
                   type='file'
@@ -607,7 +570,6 @@ if ( {) {
               <Button type='button' variant='outline' onClick={onCancel}>
                 Cancel
 :src_backup/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD
               </Button>}value= {
                 {files.length > 0 && (
                   <div className='space - y-2'>;
@@ -636,7 +598,6 @@ if ( {) {
             <FormMessage />;
           </FormItem>;
 :src_backup/components/disputes/DisputeForm.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeForm.tsx
 
 <div className='flex justify - end space - x-2'>;
             {on_cancel && (
@@ -697,8 +658,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   setIsSubmitting (false) ;
 }";
 :src_backup/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD:src/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD
 }return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <SelectonValueChange= {
   field && field.onChange 
 }defaultValue= {
@@ -706,10 +665,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {;
   Object && Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItemkey= {
   value 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }value= {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   value
 }return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {;
   field.onChange ;
@@ -731,7 +687,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) ;
 :src/components/disputes/DisputeForm.tsx
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
-<<<<<<< HEAD
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
 
@@ -761,7 +716,6 @@ if ( {) {
   value;
 }> {
 :src/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD
   label;
 }</SelectItem>) );
 }</SelectContent> </Select> <FormMessage /> </FormItem>);
@@ -771,20 +725,10 @@ if ( {) {
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>);
 }'"}
 :src_backup/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD:src/components/disputes/DisputeForm.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-=======
               </div>
             </FormControl>
             <FormMessage />
@@ -804,9 +748,7 @@ if ( {) {
     </div>
   )
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputeForm.tsx
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeForm.tsx

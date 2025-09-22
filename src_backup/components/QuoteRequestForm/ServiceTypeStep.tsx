@@ -1,7 +1,4 @@
 :src/components/QuoteRequestForm/ServiceTypeStep.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
@@ -28,8 +25,6 @@ import { z } from 'zod';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 :src/components/QuoteRequestForm/ServiceTypeStep.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
@@ -42,7 +37,6 @@ const listingsSchema = z.array(listingSchema),
 interface ServiceTypeStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
-<<<<<<< HEAD
 }
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
@@ -87,7 +81,6 @@ const listing_schema = z.object ({
   image: z.string ().optional ()}),
       const max_retries = 3;
   const source_listings = listings;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
@@ -122,7 +115,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {
     if (!formData.serviceType) {
 :src/components/QuoteRequestForm/ServiceTypeStep.tsx
-<<<<<<< HEAD
       setListings([]),
       return
 import { useEffect, useState } from "react",;
@@ -434,7 +426,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
 :src/components/QuoteRequestForm/ServiceTypeStep.tsx
-<<<<<<< HEAD
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple";
             />;
           </div>;
@@ -480,7 +471,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   );
 }
-<<<<<<< HEAD
     }
 ;
 const fetchServices = async () => {;
@@ -586,7 +576,6 @@ const fetchServices = async () => {;
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
-<<<<<<< HEAD
             onClick={() => handleTypeSelect("equipment")}
           >;
             <h4 className="font-medium text-white">Equipment</h4>;
@@ -648,13 +637,7 @@ const fetchServices = async () => {;
     </div>;
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm/ServiceTypeStep.tsx
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
             />
           </div>
@@ -693,5 +676,3 @@ return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold t
   )
 }
 :src/components/QuoteRequestForm/ServiceTypeStep.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

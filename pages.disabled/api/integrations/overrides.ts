@@ -1,5 +1,4 @@
 :pages_backup/api/integrations/overrides.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -10,7 +9,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   }
 
-=======
   }
 }
   } catch (error) {
@@ -23,13 +21,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       const entry = { jobId, disableCrmSync: !!disableCrmSync, disableAtsSync: !!disableAtsSync };
       if (idx >= 0) state.overrides[idx] = entry, else state.overrides.push(entry);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/integrations/overrides.ts
     });
 :pages_backup/api/integrations/overrides.ts
     return res && res.status(200).json({
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/integrations/overrides.ts
-<<<<<<< HEAD
       ok: true,
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId),
 "
@@ -43,13 +37,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   return res.status(405).json({ error: 'Method not allowed' });
   } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
       ok: true
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId)
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
       ok: true,
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId),
 
@@ -70,7 +60,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId);
       ok: true
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/integrations/overrides.ts
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -78,11 +67,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/overrides.ts
   return res && res.status(405).json({ error: "Method not allowed" });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 }
 
@@ -130,9 +116,6 @@ if (state.overrides[idx] = entry) {}
     });
 :pages_backup/api/integrations/overrides.ts
   }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/integrations/overrides.ts
-<<<<<<< HEAD
   return res.status (405).json ({ error: "Method not allowed" });
 }
 
@@ -145,20 +128,15 @@ if (state.overrides[idx] = entry) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
-=======
 
   }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
   } catch (error) {
     console.error("Error:", error);
-=======
   } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/overrides.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -179,40 +157,21 @@ if (state.overrides[idx] = entry) {}
 return res.status(405).json({ error: "Method not allowed" });
 }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD:pages_backup/api/integrations/overrides.ts
-<<<<<<< HEAD:pages_backup/api/integrations/overrides.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
   return res.status(405).json({ error: 'Method not allowed' });
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   return res.status(405).json({ error: 'Method not allowed' });
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/overrides.ts
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/overrides.ts
-=======
   return res.status(405).json({ error: 'Method not allowed' });
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   return res.status(405).json({ error: 'Method not allowed' });
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/integrations/overrides.ts

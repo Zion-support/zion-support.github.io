@@ -1,5 +1,4 @@
 
-=======
 import { GradientHeading } from "./GradientHeading",;
 import Link from "next/link",;
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
@@ -59,7 +58,6 @@ const getIcon = (iconName?:string) => {;
     case "HardDrive":return <HardDrive className="w-10 h-10" />,;
     case "Lightbulb":return <Lightbulb className="w-10 h-10" />,;
     default:return <HelpCircle className="w-10 h-10" />, // Default icon;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 },;
 ;
@@ -75,7 +73,6 @@ interface CategoriesSectionProps {;
   style?:React.CSSProperties,;
   categories?:CategoryType[], // Accept categories as a prop;
 }
-<<<<<<< HEAD
 
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
       <div className="container mx-auto px-4">;

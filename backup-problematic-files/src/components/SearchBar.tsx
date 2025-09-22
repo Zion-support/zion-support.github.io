@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
@@ -54,7 +53,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
           setSuggestions(data.slice(0, 5)),;
         } else {;
           setSuggestions([]),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
         setHighlightedIndex(-1),;
       });
@@ -85,7 +83,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
       ref={containerRef}"
       role="combobox";"
       aria-expanded={focused && suggestions.length > 0}
-<<<<<<< HEAD
         <Input;
           ref={inputRef}"
           type="text";""
@@ -127,4 +124,3 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
 }listId= {;
   listId ;
 }/> </div>) ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

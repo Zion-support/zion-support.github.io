@@ -19,7 +19,6 @@ export default function AITalentMatchingPage() {;
   ];
 
 :src_backup/pages/AITalentMatchingPage.tsx
-<<<<<<< HEAD
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Bot, Users, TrendingUp } from 'lucide-react'
@@ -29,7 +28,6 @@ const benefits = [
     {
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
@@ -49,21 +47,12 @@ title: "Scalable Talent Pools",
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className = "h-8 w-8" />}],
 
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
   const testimonials = [
     {
       name: "Emily Stone",
       role: "HR Director",
 text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
-=======
 text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
       avatar: "/placeholder.svg"},
     {
       name: "Raj Patel",
@@ -94,18 +83,12 @@ function AITalentMatchingPage() {}
       description:
         "Advanced algorithms match the right talent with the right opportunities",
 
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
     },
     {
       icon: Users,
       title: "Verified Professionals",
       description: "All candidates are pre-screened and verified for quality",
 
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
     },
     {
       icon: TrendingUp,
@@ -113,10 +96,6 @@ function AITalentMatchingPage() {}
       description: "Monitor performance and success rates of placements",
     },
 
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
   ];
   const features = [;
     "Machine learning - based candidate matching",
@@ -126,10 +105,6 @@ function AITalentMatchingPage() {}
     "Performance analytics dashboard",
     "Custom matching criteria",
 
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
   ];
   const stats = [;
     { label: "Successful Placements", value: "95%" },
@@ -138,8 +113,6 @@ function AITalentMatchingPage() {}
     { label: "Time to Hire", value: "50% faster" }
   ];
 
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
       title: 'Scalable Talent Pools',
       description:
         'Access a global network of vetted professionals ready for your projects.',
@@ -164,7 +137,6 @@ function AITalentMatchingPage() {}
 
     />
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <ServiceLandingTemplate"
       title="AI Talent Matching""
@@ -208,8 +180,6 @@ export default function AITalentMatchingPage() { return null; }
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=AI+Talent+Matching";"
       description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
 
-=======
->>>>>>> pr-12243
     { label: "Time to Hire", value: "50% faster" },
   ];
   return (
@@ -218,17 +188,11 @@ export default function AITalentMatchingPage() { return null; }
       subtitle="Find the perfect talent with our AI - powered matching system";
       description="Our advanced AI technology analyzes skills, experience, and cultural fit to match the right candidates with the right opportunities, ensuring successful placements and satisfied clients.";
 
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
       benefits={benefits}
       features={features}
       stats={stats}
 />;
   );
-<<<<<<< HEAD
       cta_link="/contact";
     />);
 }
@@ -236,4 +200,3 @@ export default function AITalentMatchingPage() { return null; }
 }
 :src_backup/pages/AITalentMatchingPage.tsx
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

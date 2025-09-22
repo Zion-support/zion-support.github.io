@@ -7,8 +7,6 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from 'lucide-react'
@@ -17,8 +15,6 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters,
   onResetFilters 
 :src/components/admin/fraud-detection/EmptyFraudState.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },) => {
   return (
     <div className="text-center py-12">
@@ -40,9 +36,7 @@ import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
 :src/components/admin/fraud-detection/EmptyFraudState.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { ShieldAlert } from 'lucide-react'
@@ -68,22 +62,14 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       {hasFilters && (
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 :src/components/admin/fraud-detection/EmptyFraudState.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/EmptyFraudState.tsx
 import React from "react",;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from 'lucide-react';
 interface EmptyFraudStateProps {;
   hasFilters: boolean,;
   onResetFilters: () => void;
 :src/components/admin/fraud-detection/EmptyFraudState.tsx
-<<<<<<< HEAD
 }
 ;
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
@@ -130,7 +116,6 @@ interface EmptyFraudStateProps {
 }
 export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
   has_filters,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onResetFilters;
 }) => {;
   return (;
@@ -169,18 +154,9 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
         <Button variant="outline" on_click={onResetFilters}>Clear Filters</Button>)}
     </div>);
 :src/components/admin/fraud-detection/EmptyFraudState.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 }
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/EmptyFraudState.tsx
 interface EmptyFraudStateProps {
   hasFilters: boolean;
   onResetFilters: () => void
@@ -193,5 +169,3 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   return (
     <div className;
 :src/components/admin/fraud-detection/EmptyFraudState.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

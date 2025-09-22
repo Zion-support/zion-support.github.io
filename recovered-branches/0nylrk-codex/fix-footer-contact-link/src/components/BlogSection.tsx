@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "./ui/button";
@@ -10,13 +6,9 @@ import { Button } from "./ui/button";
 import { GradientHeading } from "./GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "./ui/button";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Link } from "react-router-dom";
 import { BLOG_POSTS } from "@/data/blog-posts";
 // Get the 3 most recent blog posts
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
 import { Link } from "react-router-dom";"
@@ -24,16 +16,8 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 // Get the 3 most recent blog posts;
 const recentPosts = [...BLOG_POSTS];
   .sort((a, b) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 const recentPosts = [...BLOG_POSTS]
   .sort((a, b) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 import { Link } from "react-router-dom";
 import { BLOG_POSTS } from "@/data/blog-posts";
@@ -41,19 +25,13 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 
 const recentPosts = [...BLOG_POSTS]
   .sort((a, b) => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return (
       new Date(b && b.publishedDate).getTime() - new Date(a && a.publishedDate).getTime();
     );
   });
   .slice(0, 3);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
 import { GradientHeading } from "./GradientHeading","
@@ -63,7 +41,6 @@ import { Link } from "react-router-dom","
 import { BLOG_POSTS } from "@/data/blog-posts",;
 // Get the 3 most recent blog posts;
 const recentPosts = [...BLOG_POSTS].sort((a, b) => {}
-=======
 
 import { GradientHeading } from "./GradientHeading",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
@@ -72,20 +49,10 @@ import { Link } from "react-router-dom",
 import { BLOG_POSTS } from "@/data/blog-posts",
 // Get the 3 most recent blog posts
 const recentPosts = [...BLOG_POSTS].sort((a, b) => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
 }).slice(0, 3),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             className="mt-4 md:mt-0 border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
             asChild;
           >"
@@ -94,19 +61,10 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
         </div>"
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {recentPosts.map((post, index) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Card key={post.id} className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">
-=======
 
 "
             <Card key={post.id} className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="h-48 bg-zion-blue-dark relative overflow-hidden">
                 <img;
                   src={post.featuredImage}
@@ -116,13 +74,6 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
 
 onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
             <Card key={post.id} className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">
               <div className="h-48 bg-zion-blue-dark relative overflow-hidden">
@@ -135,14 +86,11 @@ onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     e: React.SyntheticEvent<HTMLImageElement, Event>
                   ) => {}
                     const target = e.currentTarget as HTMLImageElement;
 
 onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     const target = e.currentTarget as HTMLImageElement,
 
                     e: React.SyntheticEvent<HTMLImageElement, Event>,
@@ -157,8 +105,6 @@ onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {}
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {}
                     const target = e.currentTarget as HTMLImageElement,
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     target.src =
                       "https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                   }}
@@ -183,30 +129,20 @@ onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {}
                 </Button>
               </CardFooter>
             </Card>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { GradientHeading } from "./GradientHeading",;
-=======
                     const target = e.currentTarget as HTMLImageElement,import { GradientHeading } from "./GradientHeading",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                     const target = e.currentTarget as HTMLImageElement,import { GradientHeading } from "./GradientHeading",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import { GradientHeading } from "./GradientHeading",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 import { Button } from "./ui/button",;
 import { Link } from "react-router-dom",;
-=======
 
 "
 import { GradientHeading } from "./GradientHeading",;"
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;"
 import { Button } from "./ui/button",;"
 import { Link } from "react-router-dom",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { BLOG_POSTS } from "@/data/blog-posts",;
 // Get the 3 most recent blog posts;
 const recentPosts = [...BLOG_POSTS].sort((a, b) => {;
@@ -300,7 +236,6 @@ function BlogSection() {
             </p>;
           </div>;
           <Button;
-<<<<<<< HEAD
             variant="outline";
             className="mt - 4 md:mt - 0 border - zion - purple text - zion - cyan hover:bg - zion - purple / 10";
             as_child;
@@ -364,12 +299,6 @@ function BlogSection() {
     </section>);
 
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 ;
 
@@ -397,17 +326,9 @@ function BlogSection() {
 }
 ;
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                 <div className="absolute bottom - 4 left - 4 text - zion - purple / 70 text - 4xl font - bold">;"
               <CardContent className="p - 6">;"
                 <div className="flex items - center justify - between mb - 3">;"
@@ -437,4 +358,3 @@ pr-12325
 }>Read More →</Link> </Button> </CardFooter> </Card>) ) 
 }</div> </div> </section>) "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

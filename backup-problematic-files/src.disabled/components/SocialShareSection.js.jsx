@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export: function SocialShareSection () { const socialPlatforms = [" { name: "Twitter,",icon: ",url: ",https: """";",;'"'"
 const SocialShareSection.js = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const SocialShareSection.js = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

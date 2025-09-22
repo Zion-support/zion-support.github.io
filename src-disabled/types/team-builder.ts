@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface ProjectBrief {
   projectName: string;
   goals: string;
@@ -165,4 +164,3 @@ export interface ProjectBrief {;
 
   talentFilters?: { verifiedOnly?: boolean, regions?: string[] }
 
->>>>>>> pr-12243

@@ -1,7 +1,4 @@
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
@@ -30,9 +27,6 @@ export function ApiKeysManager() {
     createApiKey, 
     regenerateApiKey, 
     revokeApiKey,
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiKeysManager.tsx
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
 
@@ -70,9 +64,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   // Load keys on mount
   useState(() => {
 fetchApiKeys()    await createApiKey(keyName, selectedScopes)
-=======
 
-=======
 keys,
 
     loading, 
@@ -91,9 +83,7 @@ keys,
 
     if (keyName.trim() === '' || selectedScopes.length === 0) return;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiKeysManager.tsx
     await createApiKey(keyName, selectedScopes)
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     setShowCreateDialog(false)
     setKeyName('')
     setSelectedScopes([]) }
@@ -162,7 +152,6 @@ function ApiKeysManager() {
   const {
     keys,
     loading,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     newApiKey,
     fetchApiKeys, 
     createApiKey, 
@@ -170,7 +159,6 @@ function ApiKeysManager() {
     revokeApiKey,
 
     {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       value: 'jobs:read'
       label: 'Read Jobs'
       description: 'Access to view job listings'
@@ -191,7 +179,6 @@ function ApiKeysManager() {
       description: 'Create and manage quotes'
     }
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
     {
 
     if (keyName.trim() === "" || selectedScopes.length === 0) return;
@@ -222,7 +209,6 @@ function ApiKeysManager() {
   // Toggle a scope selection
   const toggleScope = (scope: ApiKeyScope) => {
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
     setSelectedScopes(prev => 
       prev.includes(scope) 
         ? prev.filter(s => s !== scope) 
@@ -506,7 +492,6 @@ clearNewApiKey,;
                         className='flex items-center space-x-2'>;
                         <Checkbox
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
 
                           id={scope && scope.value}                          checked={selectedScopes && selectedScopes.includes(scope && scope.value)}                  <div className="grid gap-2 pt-2">;
                     {scopeOptions && scopeOptions.map((scope,) => (;
@@ -540,7 +525,6 @@ clearNewApiKey,;
   }
   const handleRegenerateKey = async (keyId: string,) => {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     clearNewApiKey
   } = useApiKeys(),
 
@@ -569,7 +553,6 @@ clearNewApiKey,;
 
   const handleRegenerateKey = async (keyId: string) => {
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
     await regenerateApiKey(keyId),
     setShowRegenerateConfirm(null)
   },
@@ -662,13 +645,11 @@ const handleRevokeKey = async (keyId: string) => {
 
 :src/components/developers/ApiKeysManager.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Label>Scopes</Label>
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
                         <Checkbox 
                           id={scope.value} 
 import { useState } from "react",;
@@ -798,41 +779,29 @@ export function ApiKeysManager() {;
                           id={scope.value} 
 
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                           id={scope.value}
                           checked={selectedScopes.includes(scope.value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                           id={scope.value}
                           checked={selectedScopes.includes(scope.value)}
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiKeysManager.tsx
                           onCheckedChange={() => toggleScope(scope.value)}
                         />;
                         <Label;
                           htmlFor={scope.value}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-=======
     {                          onCheckedChange={() => toggleScope(scope.value)}
                         />
                         <Label
                           htmlFor={scope.value}
 :src/components/developers/ApiKeysManager.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         >
                           {scope.label}
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
                         </Label>
-<<<<<<< HEAD
                       </div>
                     ))}
 
@@ -840,7 +809,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
 
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
 className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
                         >
                           {scope.label}
@@ -851,22 +819,16 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
 origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </div>
                 </div>
               </div>
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
 
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
                 <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>
-<<<<<<< HEAD
                   Create Key
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiKeysManager.tsx
 <DialogFooter>
                 <Button variant='outline' onClick={handleDialogClose}>
                   Cancel
@@ -879,16 +841,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Create Key
 :src/components/developers/ApiKeysManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
         </div>
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         {/* New API Key Alert */}
 
@@ -989,13 +947,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button on_click={handleCreateKey} disabled={key_name.trim () === "" || selected_scopes.length === 0}>;
 
 :src/components/developers/ApiKeysManager.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiKeysManager.tsx
                 </Button>;
-=======
                   Create Key                </Button>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </DialogFooter>;
             </DialogContent>;
           </Dialog>;
@@ -1014,7 +968,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
 :src/components/developers/ApiKeysManager.tsx
 {/* New API Key Alert */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {newApiKey && (
           <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">
             <div className="flex justify-between items-start mb-2">
@@ -1022,13 +975,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated
               </span>
               <Button
-<<<<<<< HEAD
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiKeysManager.tsx
                 variant='ghost'
                 size='icon'
                 className='h-6 w-6'
@@ -1061,16 +1010,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
             </div>
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
 
             <p className="text-sm text-zinc-300 mb-2">
-=======
             <p className="text-sm text-zinc-300 mb-2">
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiKeysManager.tsx
               This key will only be displayed once. Please save it securely.
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </p>
             <CodeBlock code={newApiKey} className="mb-3" />
             <div className="text-sm text-zinc-400">
@@ -1080,7 +1024,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         )}
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
 ;
         {/* API Keys List */}
         <div className="space-y-4">
@@ -1090,7 +1033,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* API Keys List */}
         <div className="space-y-4">
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {loading ? (
             <div className="text-center py-8 text-zinc-500">Loading API keys...</div>
           ) : keys.length === 0 ? (
@@ -1101,16 +1043,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           ) : (
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             keys.map((key) => (
-=======
 
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiKeysManager.tsx
             keys.map((key) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div key={key.id} className="p-4 border border-zinc-800 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
@@ -1122,14 +1058,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         ) : (
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
-=======
 {key.is_active ? (
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         ) : (                          <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 <p className='text-sm text-zinc-300 mb-2'>
               This key will only be displayed once. Please save it securely.
             </p>
@@ -1179,16 +1111,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             Revoked
                           </Badge>
 :src/components/developers/ApiKeysManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         )}
                       </div>
                     </div>
                   </div>
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
@@ -1212,8 +1139,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='bg-zinc-900 border-zinc-800 text-white'
                     >
 :src/components/developers/ApiKeysManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <DropdownMenuItem
                         onClick={() => setShowRegenerateConfirm(key.id)}
                         className="cursor-pointer";
@@ -1290,24 +1215,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 onClick={() => setShowRegenerateConfirm(key.id)}
                         className='cursor-pointer'
                         disabled={!key.is_active}                      <DropdownMenuItem
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <DropdownMenuItem
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         onClick={() => setShowDeleteConfirm(key.id)}
                         className='cursor-pointer text-red-500'
                         disabled={!key.is_active}
                       >
                         <X size={14} className='mr-2' /> Revoke
 :src/components/developers/ApiKeysManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </div>
 
 <div className="mt-3 flex flex-wrap gap-2">
@@ -1339,9 +1257,7 @@ onClick={() => setShowRegenerateConfirm(key.id)}
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
 
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <div className='mt-3 flex flex-wrap gap-2'>
                   {key.scopes.map(scope => (
                     <Badge
@@ -1401,16 +1317,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <p className="text-xs text-zinc-400">
                         {key.last_used_at
                           ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss')
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiKeysManager.tsx
 
 : 'This API key has never been used'}
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiKeysManager.tsx
                     <PopoverContent className='bg-zinc-900 border-zinc-800 text-white w-64 p-3'>
                       <p className='text-sm mb-1'>Last Used</p>
                       <p className='text-xs text-zinc-400'>
@@ -1421,8 +1331,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             )
                           : 'This API key has never been used'}
 :src/components/developers/ApiKeysManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </p>
                     </PopoverContent>
                   </Popover>
@@ -1450,33 +1358,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       Expires: {format(new Date(key && key.expires_at), 'MMM d, yyyy')}
                     </span>                  )}                    <span>Expires: {format(new Date(key && key.expires_at), 'MMM d, yyyy')}</span>;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   )}
                 </div>;
               </div>;
             ));
           )}
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
         </div>
       </CardContent>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
-=======
                 </div>                      </p>
                     </PopoverContent>
                   </Popover>
                   {key.expires_at && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className="text-xs text-zinc-500">
           Keep your API keys secure. They have the same permissions as your account.
         </div>
         <Button variant="outline" size="sm" onClick={fetchApiKeys}>
-<<<<<<< HEAD
-<<<<<<< HEAD
           Refresh
         </div>
       </CardContent>
@@ -1488,8 +1387,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Button variant='outline' size='sm' onClick={fetchApiKeys}>
           Refresh
 :src/components/developers/ApiKeysManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </Button>
       </CardFooter>
 
@@ -1501,11 +1398,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Refresh
         </Button>
       </CardFooter>      >
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       >
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>
             <AlertDialogTitle>Regenerate API Key?</AlertDialogTitle>
@@ -1521,9 +1415,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDialogAction
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiKeysManager.tsx
 <AlertDialog
         open={showRegenerateConfirm !== null}
         onOpenChange={open => !open && setShowRegenerateConfirm(null)}
@@ -1553,23 +1444,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </AlertDialogContent>
       </AlertDialog>
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
               onClick={() =>
                 showDeleteConfirm && handleRevokeKey(showDeleteConfirm)
               }
               className='bg-red-600 hover:bg-red-700'            >
             <AlertDialogAction
-<<<<<<< HEAD
               onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm),}
               className="bg-blue-600 hover:bg-blue-700";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       >;
       {/* Delete Key Confirmation Dialog */}
 <AlertDialog
         open={showDeleteConfirm !== null}
         onOpenChange={open => !open && setShowDeleteConfirm(null)}
         <AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <AlertDialogHeader>
             <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>
             <AlertDialogDescription className='text-zinc-400'>
@@ -1595,7 +1482,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </AlertDialog>
     </Card>
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
   )
 }
                 </div>;
@@ -1618,16 +1504,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <AlertDialog;
         open={showRegenerateConfirm !== null} ;
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}      >;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       >;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Regenerate API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
               This action will invalidate the existing key and generate a new one.;
               Any applications using this key will need to be updated.;
             </AlertDialogDescription>;
@@ -1647,20 +1530,14 @@ onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfir
           </AlertDialogHeader>;
           <AlertDialogFooter>;
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >;
             >;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Regenerate;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
 </AlertDialog>;
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Delete Key Confirmation Dialog */}
       <AlertDialog;
         open={showDeleteConfirm !== null} ;
@@ -1673,7 +1550,6 @@ onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfir
           <AlertDialogFooter>;
 
 :src/components/developers/ApiKeysManager.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
@@ -1697,7 +1573,6 @@ onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfir
             <AlertDialogTitle > Revoke API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text - zinc - 400">;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               This action will revoke the API key and it can no longer be used to access the API.;
               This action cannot be undone.;
             </AlertDialogDescription>;
@@ -1711,35 +1586,22 @@ onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfir
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700";
             >;
-=======
       </AlertDialog>;            >;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Revoke;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Card>;
   );
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 :src/components/developers/ApiKeysManager.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiKeysManager.tsx

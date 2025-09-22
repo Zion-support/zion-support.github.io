@@ -1,10 +1,4 @@
 :pages_backup/products/index.tsx
-<<<<<<< HEAD:pages_backup/products/index.tsx
-<<<<<<< HEAD:pages/products/index.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../../components/layout/MainLayout';
 
@@ -26,12 +20,6 @@ const Page = () => {
 
 export default Page;
 :pages_backup/products/index.tsx
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/products/index.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/products/index.tsx
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -59,9 +47,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
 origin/automation-improvements-final
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/products/index.tsx
 
 import Link from 'next/link';'
 import { motion } from 'framer-motion';'
@@ -517,10 +503,6 @@ export default Index;
     </Layout>);
 }
 :pages_backup/products/index.tsx
-<<<<<<< HEAD:pages_backup/products/index.tsx
-<<<<<<< HEAD:pages/products/index.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 '
 import React from 'react';'
@@ -544,37 +526,23 @@ const Page = () => {}
 
 export default Page;
 :pages_backup/products/index.tsx
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 const Index: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import type { NextPage } from 'next';
 import Head from 'next/head';
 const Index: NextPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/products/index.tsx
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/products/index.tsx
-=======
 
 import type { NextPage } from 'next';
 import Head from 'next/head';
 const Index: NextPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 const Index: NextPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/products/index.tsx

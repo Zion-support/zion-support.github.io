@@ -1,27 +1,17 @@
 :src_backup/components/enterprise/workspace/WorkspaceHeader.tsx
 import { Bell, Users, Settings } from 'lucide-react';
 :src/components/enterprise/workspace/WorkspaceHeader.tsx
-<<<<<<< HEAD
 interface WorkspaceHeaderProps {;
   company: Company;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 :src_backup/components/enterprise/workspace/WorkspaceHeader.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { type Company } from "./CompanyDashboard",
-=======
 import React from "react","
 import { Button } from "@/components/ui/button","
 import { type Company } from "./CompanyDashboard",'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/workspace/WorkspaceHeader.tsx
 import { Bell, Users, Settings } from 'lucide-react'
 
 interface WorkspaceHeaderProps {};
@@ -36,7 +26,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
             <img
-<<<<<<< HEAD
 
               src={company.logoUrl || '/placeholder.svg'}
 
@@ -49,7 +38,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
 :src_backup/components/enterprise/workspace/WorkspaceHeader.tsx
               {company.name} Workspace
             </h1>
-<<<<<<< HEAD
             <p className='text-muted-foreground'>              {company.plan} Plan · {company.teamSize} team members
             </p>
           </div>
@@ -129,12 +117,8 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
 :src_backup/components/enterprise/workspace/WorkspaceHeader.tsx
             <img
 
-<<<<<<< HEAD:src/components/enterprise/workspace/WorkspaceHeader.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
             <img;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/workspace/WorkspaceHeader.tsx
               src={company.logoUrl || "/placeholder.svg"}
               alt={company.name}"
               className="max-h-10 max-w-10""
@@ -151,57 +135,38 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
           </div>
           <div>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
             <p className='text-muted-foreground'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               {company.plan} Plan · {company.teamSize} team members
-=======
 "
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>"
             <p className="text-muted-foreground">
               {company.plan} Plan · {company.teamSize} team members;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/workspace/WorkspaceHeader.tsx
             </p>
           </div>
         </div>
 :src/components/enterprise/workspace/WorkspaceHeader.tsx
-<<<<<<< HEAD
 
 :src_backup/components/enterprise/workspace/WorkspaceHeader.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
-=======
 
         "
         <div className="flex items-center gap-2">"
           <Button variant="outline" size="icon" aria-label="Notifications">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/workspace/WorkspaceHeader.tsx
             <Bell className="h-4 w-4" />
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/workspace/WorkspaceHeader.tsx
 <div className='flex items-center gap-2'>
           <Button variant='outline' size='icon' aria-label='Notifications'>
             <Bell className='h-4 w-4' />
 origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button variant="outline" size="icon" aria-label="Team members">
-=======
 
 "
           <Button variant="outline" size="icon" aria-label="Team members">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/workspace/WorkspaceHeader.tsx
             <Users className="h-4 w-4" />
           </Button>"
           <Button variant="outline" size="icon" aria-label="Workspace settings">"
@@ -210,18 +175,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
 
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Active Job Listings</div>
-=======
 "
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">"
         <div className="bg-card rounded-lg p-4 border border-border">"
           <div className="text-sm text-muted-foreground">Active Job Listings</div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/workspace/WorkspaceHeader.tsx
           <div className="text-2xl font-medium">8</div>
         </div>"
         <div className="bg-card rounded-lg p-4 border border-border">"
@@ -235,8 +196,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src/components/enterprise/workspace/WorkspaceHeader.tsx
 </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -350,7 +309,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
   );
 :src_backup/components/enterprise/workspace/WorkspaceHeader.tsx
 }          </Button>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Button variant="outline" size="icon" aria-label="Team members">;
             <Users className="h-4 w-4" />;
           </Button>;"
@@ -360,7 +318,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
         </div>;
       </div>;
 :src_backup/components/enterprise/workspace/WorkspaceHeader.tsx
-<<<<<<< HEAD
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">;
         <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Active Job Listings</div>;
@@ -378,7 +335,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
 
   );
 }
@@ -464,16 +420,8 @@ function WorkspaceHeader() {}
     </div>);
 }
 :src_backup/components/enterprise/workspace/WorkspaceHeader.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src/components/enterprise/workspace/WorkspaceHeader.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/workspace/WorkspaceHeader.tsx
         <div className='bg-card rounded-lg p-4 border border-border'>
           <div className='text-sm text-muted-foreground'>
             Interviews Scheduled
@@ -485,8 +433,4 @@ function WorkspaceHeader() {}
   );
 }
 :src/components/enterprise/workspace/WorkspaceHeader.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/workspace/WorkspaceHeader.tsx

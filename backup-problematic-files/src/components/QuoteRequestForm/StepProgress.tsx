@@ -18,13 +18,10 @@ export function StepProgress({ currentStep } StepProgressProps) {;
     const stepOrder = steps.findIndex(s => s.id === stepId),;
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),;
 ;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (stepOrder < currentStepOrder) return "complete",;
     if (stepOrder === currentStepOrder) return "current",;
     return "upcoming";
   },;
-<<<<<<< HEAD
               <div ;
                 className={cn(;"
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",;""
@@ -54,4 +51,3 @@ export function StepProgress({ currentStep } StepProgressProps) {;
 }</span> </div>) ;
 }) ;
 }</div> </div>) ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

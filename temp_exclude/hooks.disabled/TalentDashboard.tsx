@@ -64,7 +64,6 @@ function TalentDashboardContent() { return null; }
     onboardingStatus && onboardingStatus.skillsAdded &&;
     onboardingStatus && onboardingStatus.availabilitySet &&;
     onboardingStatus && onboardingStatus.matchReceived;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
 <>
@@ -116,10 +115,8 @@ function TalentDashboardContent() { return null; }
                     <div>
 
                       <CardTitle>{user?.displayName || "User"}</CardTitle>
-=======
 "
                       <CardTitle>{user?.displayName || "User"}</CardTitle>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/TalentDashboard.tsx
                       <CardDescription>{user?.headline || "AI Professional"}</CardDescription>
 
                     </div>
@@ -147,7 +144,6 @@ function TalentDashboardContent() { return null; }
                     <Link href="/messages">
                       <MessageSquare className="h-4 w-4 mr-2" />
                       Messages
-=======
                 "
                 <div className="mt-4">"
                   <Button className="w-full" asChild>"
@@ -155,7 +151,6 @@ function TalentDashboardContent() { return null; }
                       <MessageSquare className="h-4 w-4 mr-2" />
 
                       Messages;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/TalentDashboard.tsx
                     </Link>
                   </Button>
                 </div>
@@ -322,7 +317,6 @@ function TalentDashboardContent() { return null; }
                   AI Job Matches
                 </TabsTrigger>
                 <TabsTrigger value="applications">My Applications</TabsTrigger>
-=======
           "
           <div className="lg:col-span-2">"
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>"
@@ -333,13 +327,10 @@ function TalentDashboardContent() { return null; }
                   AI Job Matches;
                 </TabsTrigger>"
                 <TabsTrigger value="applications">My Applications</TabsTrigger>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/TalentDashboard.tsx
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
               </TabsList>
 
-=======
               "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/TalentDashboard.tsx
               <TabsContent value="job-matches" className="mt-0">
                 <SuggestedJobs />
               </TabsContent>
@@ -360,7 +351,6 @@ function TalentDashboardContent() { return null; }
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">
                     <p className="text-muted-foreground">
-=======
               "
               <TabsContent value="saved" className="mt-0">"
                 <Card className="bg-muted/30">"
@@ -368,7 +358,6 @@ function TalentDashboardContent() { return null; }
                     <p className="text-muted-foreground">
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/TalentDashboard.tsx
                       You haven't saved any jobs yet.
                     </p>"
                     <Button className="mt-4" asChild>"
@@ -480,6 +469,4 @@ export default function TalentDashboard() {;
 }
 
 ;
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/TalentDashboard.tsx

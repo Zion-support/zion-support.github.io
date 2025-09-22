@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
-<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
 #!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 const fs = require('fs');
 const path = require('path');
@@ -22,8 +17,6 @@ const { execSync } = require('child_process');
 
 class PerformanceOptimizer {
   constructor() {
->>>>>>> origin/automation-improvements-final
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     this.optimizations = [];
     this.logFile = path.join(__dirname, '..', 'logs', 'performance-optimizer.log');
     this.ensureLogDirectory();
@@ -39,21 +32,13 @@ class PerformanceOptimizer {
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   }
   async optimizePerformance() {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {
       this.log('Starting performance optimization...');
       // Analyze bundle size
-=======
 
       // Analyze bundle size;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const bundleAnalysis = this.analyzeBundleSize();
       // Optimize images;
       const imageOptimization = this.optimizeImages();
@@ -105,10 +90,7 @@ class PerformanceOptimizer {
         files.push(fullPath);
     return files;
 }
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
@@ -117,7 +99,6 @@ const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
   }
 this.projectRoot = process.cwd();
     this.reportFile = path.join(__dirname, '../logs/performance-optimization-report.json');
@@ -217,8 +198,6 @@ if (require.main === module) {
 }
 
 module.exports = PerformanceOptimizer;
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -228,9 +207,7 @@ const path = require('path')
         const content = fs.readFileSync(file, 'utf8')
     optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+['"]([^'')]
 :backup-problematic-files/scripts/performance-optimizer.cjs
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/performance-optimizer.cjs
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -408,16 +385,10 @@ class PerformanceOptimizer {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/performance-optimizer.cjs
-=======
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   getBundleRecommendations(totalSize, fileCount) {
     const recommendations = [];
     if (totalSize > 1024 * 1024) { // > 1MB;
@@ -493,9 +464,6 @@ const unoptimizedImages = imageFiles.filter(file =>
 
 // Run the optimizer;
 const optimizer = new PerformanceOptimizer();
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/performance-optimizer.cjs
 optimizer.optimizePerformance().then(report => {
   if (report) {
     console.log('\n📊 Performance Optimization Report');
@@ -513,7 +481,6 @@ optimizer.optimizePerformance().then(report => {
 }).catch(error => {
   console.error('Error running performance optimizer:', error.message);
   process.exit(1);
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 const fs = require("fs")
 const path = require("path")
 #!/usr/bin/env node;
@@ -522,14 +489,12 @@ const path = require("fs")
 const { execSync } = require("child_process")
 class PerformanceOptimizer {
   constructor() {
-=======
 optimizer.optimizePerformance().then(report => {)
   if (report) {
     console.log('\n📊 Performance Optimization Report');
 
 const { execSync } = require("child_process")"
   // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.projectRoot = process.cwd()
     this.optimizations = [],,
 
@@ -732,26 +697,13 @@ const report = {
 }
 const optimizer = new PerformanceOptimizer()
 optimizer.run().catch(console.error)
-<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
->>>>>>> origin/main
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:scripts/performance-optimizer.cjs
-========
 
 const optimizer = new PerformanceOptimizer();
 optimizer.run().catch(console.error);
 
 module.exports = PerformanceOptimizer;
->>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:scripts/performance-optimizer.cjs
-=======
     const report = {
       timestamp: new Date().toISOString(),
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       metrics: this.metrics,
       optimizations: this.optimizations,
       recommendations: this.generateRecommendations(),,
@@ -774,7 +726,4 @@ module.exports = PerformanceOptimizer;
 
 const optimizer = new PerformanceOptimizer()
 optimizer.run().catch(console.error)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

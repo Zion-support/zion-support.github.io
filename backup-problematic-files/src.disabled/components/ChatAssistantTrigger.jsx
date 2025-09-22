@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
 const ChatAssistantTrigger = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const ChatAssistantTrigger = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

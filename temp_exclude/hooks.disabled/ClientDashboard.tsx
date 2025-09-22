@@ -79,7 +79,6 @@ function ClientDashboardContent() {
     onboardingStatus && onboardingStatus.inviteSent &&;
     onboardingStatus && onboardingStatus.responseReceived;
 :temp_exclude/hooks.disabled/ClientDashboard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { useState, useEffect } from "react",;
 import { JobsList } from "@/components/jobs/JobsList",;

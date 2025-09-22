@@ -529,7 +529,6 @@ export function ChatBotPanel() {;
   );
 }
 :src_backup/components/support/ChatBotPanel.tsx
-<<<<<<< HEAD
 ;
         method: "POST",
         headers: {"
@@ -600,4 +599,3 @@ export function ChatBotPanel() {;
 :src_backup/components/support/ChatBotPanel.tsx
   const handleQuickReply = (text: string) => {
     handleSendMessage(text)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

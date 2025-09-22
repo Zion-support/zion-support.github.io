@@ -61,7 +61,6 @@ function resolveMergeConflict(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
 
     // Check if file has conflict markers
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
       return false; // No conflicts
     }
 

@@ -1,5 +1,4 @@
 :pages_backup/api/search.ts
-<<<<<<< HEAD
 
     const q = (req.query.q as string) || '';'
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
@@ -10,7 +9,6 @@ import { searchAll, suggestDidYouMean } from "../../utils/search/filter";
 
 :pages_backup/api/search.ts
   try {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -66,16 +64,12 @@ function handler() {}
       didYouMean,
 :pages_backup/api/search.ts
       counts: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       },
       results
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     });
 
   } catch (e: any) {
-<<<<<<< HEAD
     res.status(500).json({ ok: false, error: e?.message |"Search failed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 '
@@ -100,11 +94,7 @@ export default async function handler(
   }
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/search.ts
     res.status (500).json ({ ok: false, error: e?.message || "Search failed" });
   }
 }
@@ -121,7 +111,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   }
 }
 :pages_backup/api/search.ts
-<<<<<<< HEAD
 
     const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])]));
     const didYouMean = results.all.length === 0 ? suggestDidYouMean(q) : null;
@@ -181,14 +170,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
-=======
 
   } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/search.ts
     return res.status(500).json({ error: "Internal server error" });
 
 "
@@ -196,10 +182,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   }
 }
 :pages_backup/api/search.ts
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -212,8 +194,5 @@ export default async function handler(
   }
 
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/search.ts

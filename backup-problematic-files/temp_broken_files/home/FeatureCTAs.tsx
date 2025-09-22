@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -137,7 +136,6 @@ export function FeatureCTAs() {;
                 <Button asChild className="w-full gap-1">;
                   <Link to={feature.link}>;
                     <span>Explore {feature.title}</span>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     <ArrowRight className="h-4 w-4" />;
                   </Link>;
                 </Button>;
@@ -147,4 +145,3 @@ export function FeatureCTAs() {;
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD

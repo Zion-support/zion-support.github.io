@@ -1,7 +1,4 @@
 :src_backup/components/jobs/ApplyToJobForm.tsx
-<<<<<<< HEAD:src/components/jobs/ApplyToJobForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { useRouter } from 'next/router',
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -11,7 +8,6 @@ import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import { Label } from "@/components/ui/label",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-=======
 import { useJobApplications } from "@/hooks/useJobApplications","
 import { useResume } from "@/hooks/useResume","
 import { useAuth } from "@/hooks/useAuth","
@@ -19,38 +15,29 @@ import { Button } from "@/components/ui/button","
 import { Textarea } from "@/components/ui/textarea","
 import { Label } from "@/components/ui/label","
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplyToJobForm.tsx
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'"
 import { formatDistanceToNow } from "date-fns",
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
 import { Job } from "@/types/jobs",
-=======
 "
 import { Job } from "@/types/jobs","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplyToJobForm.tsx
 import { toast } from "sonner",
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 :src_backup/components/jobs/ApplyToJobForm.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ApplyToJobFormProps {
   job: Job,
   onSuccess?: () => void
 }
 
-<<<<<<< HEAD
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
-=======
 interface ApplyToJobFormProps {};
   job: Job;
   onSuccess?: () => void;
 }
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplyToJobForm.tsx
   const { user } = useAuth()
   const { applyToJob } = useJobApplications()
   const { resumes, isLoading: isResumesLoading } = useResume()
@@ -88,7 +75,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {}
       )
       if (success) {"
         toast.success("Your application has been submitted!")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user } = useAuth(),
   const { applyToJob } = useJobApplications(),
   const { resumes, isLoading: isResumesLoading } = useResume(),
@@ -128,8 +114,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {}
       if (success) {"
         toast.success("Your application has been submitted!"),
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (onSuccess) {
           onSuccess()
         }
@@ -138,8 +122,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {}
       setError(err.message || "Failed to submit application"),
       toast.error("Failed to submit application")
 :src/components/jobs/ApplyToJobForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     import { use_router } from 'next / router';
 import { useJobApplications  } from '@/hooks / useJobApplications';
 import { use_resume  } from '@/hooks / use_resume';
@@ -209,13 +191,11 @@ if ( {) {}
       set_error (err.message || "Failed to submit application"),"
       toast.error ("Failed to submit application");
 :src_backup/components/jobs/ApplyToJobForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } finally {
       setIsSubmitting(false)
     }
   },
 
-=======
   },
 
 import { useState } from 'react';
@@ -249,23 +229,16 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const { resumes, isLoading: isResumesLoading } = useResume();
   const router = null;
 :src/components/jobs/ApplyToJobForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 :src/components/jobs/ApplyToJobForm.tsx
   return (
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {error && (
         <Alert variant="destructive">
-=======
       {error && ("
         <Alert variant="destructive">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplyToJobForm.tsx
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>{error}</AlertDescription>
         </Alert>
@@ -354,7 +327,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }:,  ApplyToJobFormProps
           <Label htmlFor="coverLetter">Cover Letter</Label>;
 :src_backup/components/jobs/ApplyToJobForm.tsx
           <Textarea"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplyToJobForm.tsx
             id="coverLetter"
 value={coverLetter}
             onChange={(e) => setCoverLetter(e.target.value)}
@@ -371,17 +343,9 @@ value={coverLetter}
             rows = {6,}
 
 :src_backup/components/jobs/ApplyToJobForm.tsx
-<<<<<<< HEAD:src/components/jobs/ApplyToJobForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         <div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplyToJobForm.tsx
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? ("
             <div className="flex items-center gap-2 mt-2">"
@@ -391,12 +355,8 @@ value={coverLetter}
           ) : resumes && resumes.length > 0 ? (
 :src_backup/components/jobs/ApplyToJobForm.tsx
 
-<<<<<<< HEAD:src/components/jobs/ApplyToJobForm.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Select
-=======
             <Select;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplyToJobForm.tsx
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
 :src_backup/components/jobs/ApplyToJobForm.tsx
@@ -414,7 +374,6 @@ value={coverLetter}
 {resume.basic_info.title || "Untitled Resume"}
                       </SelectItem>
                     )
-<<<<<<< HEAD
 import { useState } from "react",;
 import { useRouter } from 'next/router',;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -428,7 +387,6 @@ import { Alert, AlertDescription } from "@/components/ui/alert",;
 import { AlertCircle, FileText, Loader2 } from 'lucide-react';
 import { formatDistanceToNow } from "date-fns",;
 import { Job } from "@/types/jobs",;
-=======
                       <SelectItem key={resume.id} value={resume.id}>"
                         {resume.basic_info.title |"Untitled Resume"}
                       </SelectItem>
@@ -447,7 +405,6 @@ import { Alert, AlertDescription } from "@/components/ui/alert",;'
 import { AlertCircle, FileText, Loader2 } from 'lucide-react';"
 import { formatDistanceToNow } from "date-fns",;"
 import { Job } from "@/types/jobs",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplyToJobForm.tsx
 import { toast } from "sonner",;
 interface ApplyToJobFormProps {;
   job: Job,;
@@ -564,7 +521,6 @@ placeholder="Introduce yourself and explain why you are a good fit for this job.
               <Loader2 className="h - 4 w - 4 animate-spin" />;
               <span > Loading your resumes...</span>;
             </div>) : resumes && resumes.length > 0 ? (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <Select;
 :src_backup/components/jobs/ApplyToJobForm.tsx
               value={selectedResumeId}
@@ -625,12 +581,10 @@ placeholder="Introduce yourself and explain why you are a good fit for this job.
                 Create Resume;
               </Button>;
             </div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplyToJobForm.tsx
           )}
 :src_backup/components/jobs/ApplyToJobForm.tsx
         </div>
 
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
         <div>
           <Label htmlFor="cvUpload">Or Upload CV (PDF)</Label>
           <input
@@ -640,17 +594,11 @@ placeholder="Introduce yourself and explain why you are a good fit for this job.
             className="mt-1"
 :src_backup/components/jobs/ApplyToJobForm.tsx
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/ApplyToJobForm.tsx
             onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
           />
         </div>
       </div>
 :src_backup/components/jobs/ApplyToJobForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <div className="flex justify-end gap-2">
         <Button
@@ -663,20 +611,16 @@ placeholder="Introduce yourself and explain why you are a good fit for this job.
           onClick={() => {;
             if (onSuccess) onSuccess();
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
         <Button
           type="button"
-=======
         <Button"
           type="button""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplyToJobForm.tsx
           variant="outline"
 :src_backup/components/jobs/ApplyToJobForm.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }}
         >
           Cancel
@@ -690,8 +634,6 @@ placeholder="Introduce yourself and explain why you are a good fit for this job.
           ) : (
             "Submit Application"
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
           onClick={() => {;
             if (onSuccess) onSuccess();
 
@@ -699,11 +641,9 @@ placeholder="Introduce yourself and explain why you are a good fit for this job.
           onClick={() => {;
             if (onSuccess) onSuccess();
 
-=======
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/ApplyToJobForm.tsx
           }}
         >;
           Cancel;
@@ -718,19 +658,13 @@ placeholder="Introduce yourself and explain why you are a good fit for this job.
             "Submit Application";
           )}
 :src_backup/components/jobs/ApplyToJobForm.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/jobs/ApplyToJobForm.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;"
 }"};
 :src_backup/components/jobs/ApplyToJobForm.tsx
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         >
           Cancel
         </Button>
@@ -743,13 +677,11 @@ placeholder="Introduce yourself and explain why you are a good fit for this job.
           ) : (
             "Submit Application"
           )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/ApplyToJobForm.tsx
         </Button>;
       </div>;
     </form>;
   );
 :src_backup/components/jobs/ApplyToJobForm.tsx
-<<<<<<< HEAD
 }
 
                 {resumes.map ((resume, ) => {}
@@ -757,7 +689,6 @@ placeholder="Introduce yourself and explain why you are a good fit for this job.
 if ( {) {}
   $2;
 }
-<<<<<<< HEAD
                     return (
                       <SelectItem key={resume.id} value={resume.id}>;"
                         {resume.basic_info.title || "Untitled Resume"}
@@ -848,24 +779,14 @@ handle_submit;"
 }</Button> </div> </form>);"
 }"}
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src/components/jobs/ApplyToJobForm.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/ApplyToJobForm.tsx
-=======
 }</Button> </div> </form>);
 }"}"
 }
 ;
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/ApplyToJobForm.tsx
         </Button>
       </div>
     </form>
@@ -895,12 +816,7 @@ handleSubmit ;
 }</Button> </div> </form>) ;
 }"
 :src/components/jobs/ApplyToJobForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplyToJobForm.tsx
-=======
 
   return (
 
@@ -1083,4 +999,3 @@ handleSubmit ;
 }</div> <div> <Label html_for="cv_upload" >Or Upload CV (PDF)  <input /> </div> </div> <div className="flex justify - end gap - 2" > <Button <> <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" /> Submitting... </>) : ("Submit Application");"
 } </div> </form>);"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/ApplyToJobForm.tsx

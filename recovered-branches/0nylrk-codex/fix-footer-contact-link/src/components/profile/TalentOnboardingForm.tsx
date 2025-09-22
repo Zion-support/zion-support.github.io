@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
@@ -30,8 +28,6 @@ const talentSchema = z.object({
   // Step 1: Basic Info
   basicInfo: z.object({
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     fullName: z.string().min(2, "Name must be at least 2 characters"),
     professionalTitle: z.string().min(2, "Professional title is required"),
     profilePicture: z.any().optional()}),
@@ -102,7 +98,6 @@ const talentSchema = z.object({
     fullName: z.string().min(2, "Name must be at least 2 characters"),
     professionalTitle: z.string().min(2, "Professional title is required"),
     profilePicture: z.any().optional()}),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Step 2: Experience
   experience: z.object({
     bio: z.string().min(50, "Bio must be at least 50 characters"),
@@ -114,28 +109,19 @@ const talentSchema = z.object({
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),
 
   const totalSteps = 4,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Define the form schema with validation
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const talentSchema = z.object({
   // Step 1: Basic Info
   basicInfo: z.object({
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     fullName: z.string().min(2, "Name must be at least 2 characters"),
-=======
 
 // Define the form schema with validation;
 const talentSchema = z.object({}
   // Step 1: Basic Info;
   basicInfo: z.object({}
     fullName: z.string().min(2, "Name must be at least 2 characters"),"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     professionalTitle: z.string().min(2, "Professional title is required"),
     profilePicture: z.any().optional()}),
 
@@ -144,7 +130,6 @@ const talentSchema = z.object({}
     bio: z.string().min(50, "Bio must be at least 50 characters");
     keyProjects: z.array(
       z.object({
-<<<<<<< HEAD
         title: z.string().min(2, "Project title is required");
         description: z.string().min(10, "Project description is required")})
 
@@ -166,7 +151,6 @@ import {User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Uplo
 import {useAuth} from "@/hooks/useAuth";"
 import {useTalentProfileEnhancer} from "@/hooks/useTalentProfileEnhancer";"
 import {supabase} from "@/integrations/supabase/client";
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -194,13 +178,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
 // Define the form schema with validation
-=======
         title: z.string().min(2, "Project title is required"),
   description: z.string().min(10, "Project description is required")})
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Define the form schema with validation;
 const talentSchema = z && z.object({;
   // Step 1: Basic Info;
@@ -208,7 +188,6 @@ const talentSchema = z && z.object({;
     fullName: z && z.string().min(2, "Name must be at least 2 characters");"
     professionalTitle: z && z.string().min(2, "Professional title is required");
     profilePicture: z && z.any().optional()}),;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const talentSchema = z.object({}
   // Step 1: Basic Info;
@@ -406,15 +385,12 @@ const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
     hourlyRate: z.string().optional()
     portfolioLinks: z.array(
       z.object({
-<<<<<<< HEAD
-<<<<<<< HEAD
         url: z.string().url("Must be a valid URL").min(5, "URL is required")})
     ).optional().default([]),
     cv: z.any().optional()})}),
 
 type TalentFormValues = z.infer<typeof talentSchema>,
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function TalentOnboardingForm() {;
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -435,26 +411,16 @@ const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),
 
   const totalSteps = 4,
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const form = useForm<TalentFormValues>({
-=======
         url: z.string().url("Must be a valid URL").min(5, "URL is required")})  const form = useForm<TalentFormValues>({
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   const form = useForm<TalentFormValues>({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   const form = useForm<TalentFormValues>({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),
   const totalSteps = 4,
   const form = useForm<TalentFormValues>({
         url: z.string().url("Must be a valid URL").min(5, "URL is required")})  const form = useForm<TalentFormValues>({
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     resolver: zodResolver(talentSchema)
     defaultValues: {}
       basicInfo: {"
@@ -484,39 +450,26 @@ const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),
       name: "availability.portfolioLinks"
       control: form.control})
 // Handle profile picture upload
-<<<<<<< HEAD
-<<<<<<< HEAD
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-<<<<<<< HEAD
-=======
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const file = e.target.files?.[0],
     if (!file) return,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Preview the image
-=======
 
     // Preview the image;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const reader = new FileReader()
     reader.onloadend = () => {}
       setProfilePictureUrl(reader.result as string)
 
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     reader.readAsDataURL(file),
 
     // Store the file in the form data"
     form.setValue("basicInfo.profilePicture", file)
   },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 // Handle CV upload
   const handleCvUpload = async (file: File) => {
@@ -527,29 +480,21 @@ const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),
 if (cvError) {
       console.error("Error uploading CV:", cvError),
       throw new Error("Failed to upload CV")
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       .upload(fileName, file),
 
     if (cvError) {
-=======
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {    // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)    if (cvError) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {    // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)    if (cvError) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 const file = e.target.files?.[0];
     if (!file) return;
     const file = e.target.files?.[0],
     if (!file) return,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
@@ -575,28 +520,19 @@ const file = e.target.files?.[0];
       .upload(fileName, file),
 
     if (cvError) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error("Error uploading CV:", cvError);
-=======
 
     if (cvError) {"
       console.error("Error uploading CV:", cvError);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       throw new Error("Failed to upload CV")
 
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
 
   const totalSteps = 4;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 };
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react",;
 import { useForm, useFieldArray } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -621,7 +557,6 @@ import {;
 } from "lucide-react",;"
 import { useAuth } from "@/hooks/useAuth",;"
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",;"
-=======
 import { useNavigate } from "react-router-dom",;
 import {;
   Form, FormControl, FormField, FormItem, FormLabel, FormMessage;
@@ -641,7 +576,6 @@ import {;
 } from "lucide-react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from "@/integrations/supabase/client",;
 // Define the form schema with validation;
 const talentSchema = z.object({;
@@ -685,20 +619,9 @@ export function TalentOnboardingForm() { return null; }
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),;
   const totalSteps = 4,;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
   const totalSteps = 4;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const form = useForm<TalentFormValues>({;
     resolver: zodResolver(talentSchema),;
     defaultValues: {;
@@ -757,15 +680,7 @@ if (!file) return,;
   // [Previous implementation continues...];
 
   return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from './react';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { use_form, useFieldArray } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from './zod';
@@ -781,7 +696,6 @@ import { toast } from '@/components / ui / use - toast';
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from './lucide-react';
 import { use_auth } from '@/hooks / use_auth';
 import { useTalentProfileEnhancer } from '@/hooks / useTalentProfileEnhancer';
-=======
 '
 import React, { useState } from './react';'
 import { use_form, useFieldArray } from './react - hook - form';'
@@ -799,7 +713,6 @@ import { toast } from '@/components / ui / use - toast';'
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from './lucide-react';'
 import { use_auth } from '@/hooks / use_auth';'
 import { useTalentProfileEnhancer } from '@/hooks / useTalentProfileEnhancer';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { supabase } from '@/integrations / supabase / client';
 // Define the form schema with validation;
 const talent_schema = z.object ({}
@@ -922,7 +835,6 @@ if ( {) {}
   return null;
 }
 
-<<<<<<< HEAD
 }
 
 import React, { useState } from "react",;
@@ -1097,7 +1009,6 @@ reader.readAsDataURL (file);
 return publicUrl;
 };
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
-=======
   const { enhance_profile, is_generating } = useTalentProfileEnhancer ();
   const total_steps = 4;
   const form = use_form < TalentFormValues>({)
@@ -1165,22 +1076,12 @@ pr-12325
     // Check condition
 if ( {) {
   $2
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       console.error ("Error uploading CV:", cv_error);
       throw new Error ("Failed to upload CV");
     }
@@ -1432,4 +1333,3 @@ return publicUrl;
 }
 }
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

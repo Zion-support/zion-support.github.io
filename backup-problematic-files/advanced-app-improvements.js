@@ -9,8 +9,6 @@ function createAdvancedMonitoring() {
 
   const monitoringFiles = {
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   addCheck(name, checkFunction) {
     this && this.checks.set(name, checkFunction);
   }
@@ -50,7 +48,6 @@ const results = {}
     }
     this && this.results = results;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
 
@@ -59,10 +56,7 @@ export const healthChecker = new HealthChecker();`,
 
 export class PerformanceMonitor {
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   startMonitoring() {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       // Monitor Core Web Vitals;
@@ -297,7 +291,6 @@ if (typeof window !== 'undefined') {
     };
 this && this.events.push(eventData);
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     // Send to analytics service (implement as needed)
     this && this.sendToAnalytics(eventData);
@@ -309,18 +302,15 @@ this && this.events.push(eventData);
   getSessionEvents() {
     return this && this.events.filter(event => event && event.sessionId === this && this.sessionId);
 }
-<<<<<<< HEAD
 
     'monitoring / analytics.js': `// Analytics tracking system;
 export class AnalyticsTracker {
   constructor () {
     this.events = [];
     this.session_id = this.generateSessionId ();
-<<<<<<< HEAD
     this.connections = [];
     this.availableConnections = [];
     this.usedConnections = new Set();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     this.connections = [];
     this.availableConnections = [];
     this.usedConnections = new Set();
@@ -340,7 +330,6 @@ export class ConnectionPool {
 this.connections = [];
     this.availableConnections = [];
     this.usedConnections = new Set();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   async getConnection() {
     if (this && this.availableConnections.length > 0) {
@@ -351,7 +340,6 @@ this.connections = [];
       const connection = await this && this.createConnection();
       this && this.connections.push(connection);
 this && this.usedConnections.add(connection);
-<<<<<<< HEAD
       return connection;
     }
     // Wait for a connection to become available
@@ -467,4 +455,3 @@ if ( {) {
 }
 }
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

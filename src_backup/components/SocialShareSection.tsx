@@ -1,7 +1,4 @@
 :src/components/SocialShareSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { Button } from "./ui/button",
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
@@ -79,16 +76,11 @@ export function SocialShareSection() {
   // Current URL is not available during SSR, guard with typeof check
   const shareUrl = null;
 :src/components/SocialShareSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 return (
 :src/components/SocialShareSection.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <section className="py-12 bg-zion-blue">
-=======
   return (    <section className="py-12 bg-zion-blue">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
           <div>
@@ -102,7 +94,6 @@ return (
 }'"
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="flex flex-wrap gap-3">
             {shareLinks.map((link, index) => (
               <Button
@@ -243,7 +234,6 @@ export function SocialShareSection() {;
     <section className='py - 12 bg - zion - blue'>;
       <div className='container mx - auto px - 4 sm:px - 6 lg:px - 8'>;
         <div className='max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div>;
 :src/components/SocialShareSection.tsx
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>;
@@ -273,7 +263,6 @@ export function SocialShareSection() {;
 ;
 
               Share Zion with Your Network;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </h3>;
             <p className='text - zion - slate - light'>;
               Help others discover the future of AI & tech marketplace;
@@ -293,7 +282,6 @@ export function SocialShareSection() {;
                 <span aria-hidden='true'>{link && link.name}</span>;
               </Button>;
             ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className='flex flex - wrap gap - 3'>;
             {share_links.map ((link, index) => (              <Button;
                 key = {index, }
@@ -320,5 +308,3 @@ export function SocialShareSection() {;
 }</div> </div> </div> </section>)
 }'"
 :src/components/SocialShareSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

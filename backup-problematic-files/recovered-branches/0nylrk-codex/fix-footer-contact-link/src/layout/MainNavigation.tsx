@@ -1,5 +1,4 @@
 
-=======
 import { Link, useLocation } from "react-router-dom",;
 import { cn } from "@/lib/utils",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -81,7 +80,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                   :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";              )}
             >;
               {link.name}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </Link>;
           </li>;
         ))}
@@ -89,7 +87,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
         {/* Messages link with unread counter */}
         {isAuthenticated && (;
           <li>;
-<<<<<<< HEAD
 
               <MessageSquare className="w-4 h-4 mr-1" />;
               Messages;

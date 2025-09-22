@@ -3,7 +3,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
-<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -13,7 +12,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status(400).json({ error: "Missing code" });
 ;
@@ -97,8 +95,6 @@ if ( {) {
     return res.status (200).send (csv);
   } catch (e: any) {;
     return res.status (500).json ({ error: e?.message });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
 
@@ -121,8 +117,6 @@ if ( {) {
   }
 }
 :pages/api/partners/export.ts
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 
 }
@@ -131,9 +125,4 @@ if ( {) {
 }
 
 :pages/api-disabled/api/partners/export.ts
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/export.ts

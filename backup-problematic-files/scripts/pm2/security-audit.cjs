@@ -121,9 +121,7 @@ vulnerabilities: (results.npmAudit.vulnerabilities || 0) +
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   log(`Security report saved to ${reportPath}`);
 
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return report;
 
 const main = async () => {}
@@ -151,17 +149,11 @@ const report = generateSecurityReport(results);
   // Handle security issues;
 
     log(`Security audit failed: ${report.overall.vulnerabilities} issues found`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Attempt to fix issues;
     if (npmAuditResults.vulnerabilities > 0) {}
       log('Attempting to fix npm vulnerabilities');
 
   process.exit(1);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

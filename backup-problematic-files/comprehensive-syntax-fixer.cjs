@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;
 function fixSyntaxErrors(filePath) {;
   try {;
@@ -100,7 +99,6 @@ console.log(' Starting comprehensive syntax fixer...')
   fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1 } from "$2"
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class ComprehensiveSyntaxFixer {
   // TODO: Implement
 }
@@ -119,8 +117,6 @@ class ComprehensiveSyntaxFixer {
         await this.fixFileSyntax(file);
 
       throw error;
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   }
 
@@ -137,7 +133,6 @@ const scanDirectory = (dir) => {
       for (const item of items) {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         if (stat.isDirectory()) {
           // Skip node_modules and other irrelevant directories;
 
@@ -145,7 +140,6 @@ const scanDirectory = (dir) => {
         } else if (this.isCodeFile(item)) {
           files.push(fullPath);
     };
-<<<<<<< HEAD
     scanDirectory(this.projectRoot);
     return files;
 
@@ -215,12 +209,10 @@ this.totalErrors += errorCount;
     return fixed;
 }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 // Run the fixer;
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.fixAllSyntaxErrors().catch(console.error);
-<<<<<<< HEAD
 }
     this.log(`📋 Found ${problematicFiles.length} files with syntax issues`);
     for (const file of problematicFiles) {;
@@ -295,9 +287,4 @@ if (require.main === module) {;
       process.exit(1);,
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

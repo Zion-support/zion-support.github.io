@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',;
 import type { NextPage, GetServerSideProps } from 'next',;
 import ReviewSummary from '../../components/reviews/ReviewSummary',;
@@ -11,8 +10,6 @@ import React, { useEffect, useState } from 'react';
 import React, { useEffect, useState } from 'react';
 
 import React, { useEffect, useState } from 'react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 import React, { useEffect, useState } from 'react',;'
 import type { NextPage, GetServerSideProps } from 'next',;'
 import ReviewSummary from '../../components/reviews/ReviewSummary',;'
@@ -21,28 +18,18 @@ import type { PublicReview, ReviewsSummary } from '../../types/reviews',;
 ;
 type Props = { clientId: string },
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React, { useEffect, useState } from 'react';
 
 '
 import React, { useEffect, useState } from 'react';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 import React, { useEffect, useState } from 'react',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextPage, GetServerSideProps } from 'next';
 import ReviewSummary from '../../components/reviews/ReviewSummary';
 import ReviewCard from '../../components/reviews/ReviewCard';
 import type { PublicReview, ReviewsSummary } from '../../types/reviews';
 
-=======
 type Props = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const ClientPage: NextPage<Props> = ({ clientId }) => {
   const [summary, setSummary] = useState<ReviewsSummary | null>(null)
   const [reviews, setReviews] = useState<PublicReview[]>([])
@@ -69,9 +56,6 @@ const ClientPage: NextPage < Props> = ({ client_id }) => {
     })()) {
   $2
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 '
 import type { NextPage, GetServerSideProps } from 'next';'
@@ -84,7 +68,6 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {}
   const [reviews, setReviews] = useState<PublicReview[]>([])
   useEffect(() => {}
     (async () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 type Props = { clientId: string };
 const ClientPage: NextPage<Props> = ({ clientId }) => {;
   const [summary, setSummary] = useState<ReviewsSummary | null>(null);
@@ -96,13 +79,8 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {;
       if (res.ok) { setSummary(data.summary), setReviews(data.reviews)   } catch (error) {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
   }, [client_id]),
   async /**
@@ -111,7 +89,6 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {;
 function handle_report() { return null; }
       method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ review_id: id, reason: 'Inappropriate content' })});
   }
-<<<<<<< HEAD
 
   }
 }
@@ -143,8 +120,6 @@ function handle_report() {
   }
   return (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       </section>
     </main>
   )
@@ -171,9 +146,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 }
 export default ClientPage;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {summary && <ReviewSummary summary={summary} />  } catch (error) {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       </section>
     </main>
   );
@@ -186,16 +159,12 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
 
 export default ClientPage;
 {summary && <ReviewSummary summary={summary} />  } catch (error) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 };
 export default ClientPage;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <section className="grid gap-4">
         {reviews.map((r) => (<ReviewCard key={r.id} review={r} onReport={handleReport} />))  } catch (error) {"
     console.error("Error:", error);"
@@ -212,19 +181,13 @@ export default ClientPage;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </section>
     </main>
   )
 },
 export const getServerSideProps: GetServerSideProps = async (ctx) => {}
   const { slug } = ctx.query as { slug: string },
-<<<<<<< HEAD
   return { props: { clientId: slug } }
 },
 ;
@@ -255,15 +218,12 @@ export default ClientPage,;
   }
 }
 {!reviews.length && (<div className="enhanced-card">No public reviews yet.</div>)  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 };
 export default ClientPage;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       </section>
     </main>
@@ -272,7 +232,3 @@ export default ClientPage;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {}
   const { slug } = ctx.query as { slug: string },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

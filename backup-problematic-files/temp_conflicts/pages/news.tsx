@@ -804,8 +804,6 @@ image:"📚";
 <span>•</span>;
                       <span>{article.date}</span>;
                       <span>•</span>;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <span>{article.readTime}</span>;
                     <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">;"
                 <article key={article.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105">;"
@@ -828,7 +826,4 @@ image:"📚";
     </>;
   );
 }
-<<<<<<< HEAD
-=======
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

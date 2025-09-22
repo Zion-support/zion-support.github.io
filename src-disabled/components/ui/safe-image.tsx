@@ -1,17 +1,10 @@
 :src_backup/components/ui/safe-image.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   src: string;
-=======
 import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {;
 import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {;  src: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   alt: string;  width?: number;interface SafeImageProps {
 
     }
@@ -34,7 +27,6 @@ interface SafeImageProps {;  src: string;
     />;
 
   );        aria-label={alt}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 'use client',;
 import Image from 'next/image',;
 import { useState } from 'react',;
@@ -65,7 +57,6 @@ width?: number,;
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {;
 
 :src_backup/components/ui/safe-image.tsx
-<<<<<<< HEAD
   src: string
   alt: string
 interface SafeImageProps {
@@ -79,8 +70,6 @@ interface SafeImageProps {
   priority?: boolean
   sizes?: string
   quality?: number
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 export function SafeImage({;
@@ -145,9 +134,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   // If we have an error and no fallback, show a placeholder
 :src/components/ui/safe-image.tsx
   if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {        className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/safe-image.tsx
         return (
       <div
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}`
@@ -167,10 +153,7 @@ import { ImageIcon } from 'lucide-react';
 
 :src/components/ui/safe-image.tsx
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}`
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/safe-image.tsx
         style={{ width, height }}
         role="img""
         aria-label={alt}
@@ -180,15 +163,11 @@ import { ImageIcon } from 'lucide-react';
     )
   }
 :src_backup/components/ui/safe-image.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
   return (;
 
     />
   ); return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Image
       src = {currentSrc,}
       alt = {alt,}
@@ -201,7 +180,6 @@ import { ImageIcon } from 'lucide-react';
       unoptimized = {hasError,}
 :src_backup/components/ui/safe-image.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
     />;
   );
@@ -270,7 +248,6 @@ if ( {) {
     />); return (
 :src_backup/components/ui/safe-image.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/safe-image.tsx
     <Image;
       src={currentSrc}
       alt={alt}
@@ -281,39 +258,26 @@ if ( {) {
       priority={priority}
       // Add unoptimized as fallback for problematic images;
 :src_backup/components/ui/safe-image.tsx
-<<<<<<< HEAD:src/components/ui/safe-image.tsx
-<<<<<<< HEAD
       unoptimized={hasError}
     />;
   );
       unoptimized = {has_error, }
     />);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       unoptimized={hasError}
     />;
   );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } ;
 :src_backup/components/ui/safe-image.tsx
-<<<<<<< HEAD
-=======
 
 />
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-=======
       unoptimized={hasError}
     />;
   );
 } ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/safe-image.tsx
 
 />
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/safe-image.tsx

@@ -1,5 +1,4 @@
 
-=======
 import { Link } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
 import { useToast } from "@/hooks/use-toast",;
@@ -36,13 +35,11 @@ export function UserMenu() {;
           to="/signup" ;
           className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-zion-purple text-white hover:bg-zion-purple-light h-10 px-4 py-2";
         >;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           Register;
         </Link>;
       </div>;
     );
   }
-<<<<<<< HEAD
 
     <DropdownMenu>;
       <DropdownMenuTrigger asChild>;

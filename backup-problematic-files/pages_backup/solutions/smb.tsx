@@ -57,7 +57,6 @@ return (
       <div className="min-h-screen bg-gray-50">";
   ];
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -156,7 +155,6 @@ Technology solutions designed specifically for small and medium businesses.
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
-=======
   return ()
     <Layout)"
       title="SMB Solutions - Zion Tech Group""""
@@ -196,7 +194,6 @@ Technology solutions designed specifically for small and medium businesses.
             </motion.div>
         <section className="py-16 px-4">;"
           <div className="max-w-7xl mx-auto">;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}"
@@ -215,7 +212,6 @@ Technology solutions designed specifically for small and medium businesses.
                   <h3 className="text-xl font-semibold mb-2">{service && service.title}</h3>;""
                   <p className="text-gray-600">{service && service.description}</p>;"
               ))}
-<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
@@ -261,7 +257,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
         </section>;
         {/* Services Section */}
         <section className="py-20">"
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
               {smbServices && smbServices.map((service, index) => {}
@@ -300,7 +295,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className="py-20 bg-purple-600">
@@ -345,4 +339,3 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
 </div>;
         </section>;
       </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

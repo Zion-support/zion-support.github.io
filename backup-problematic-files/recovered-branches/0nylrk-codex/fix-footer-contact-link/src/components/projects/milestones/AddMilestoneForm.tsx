@@ -1,5 +1,4 @@
 
-=======
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -102,7 +101,6 @@ export function AddMilestoneForm({;
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           scope={projectScope}
           startDate={projectStartDate}
           endDate={projectEndDate}
@@ -143,10 +141,7 @@ export function AddMilestoneForm({;
                 <FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                     <Input;
                       type="number";
                       min="0";

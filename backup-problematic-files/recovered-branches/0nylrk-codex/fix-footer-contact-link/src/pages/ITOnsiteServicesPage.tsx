@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { useSearchParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -24,12 +23,10 @@ export default function ITOnsiteServicesPage() {;
   // Check for success parameter in URL;
   const success = searchParams.get("success"),;
   ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Show success toast if redirected from successful payment;
   useEffect(() => {;
     if (success === "true") {;
       toast({;
-<<<<<<< HEAD
 
     <AppLayout>;
       <section className="py-16 bg-zion-blue">;

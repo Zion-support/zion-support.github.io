@@ -1,5 +1,4 @@
 :src/components/resume-builder/forms/skills/BulkAddSkills.tsx
-<<<<<<< HEAD
 
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -143,7 +142,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value = {bulkSkills,}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           className="gap-2"
         >
           {isEnhancing ? (
@@ -162,10 +160,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   )
 },
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/skills/BulkAddSkills.tsx

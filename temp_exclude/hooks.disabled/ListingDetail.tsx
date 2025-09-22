@@ -53,7 +53,6 @@ import { useCurrency } from '@/hooks/useCurrency',
 export default function ListingDetail() {};
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const router = useRouter(),
   const id = router.query.id as string,
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),
@@ -69,7 +68,6 @@ export default function ListingDetail() {};
 :temp_exclude/hooks.disabled/ListingDetail.tsx
   if (!listing) {
     return (
-<<<<<<< HEAD
 import { ProfileContact } from '@/components / profile / ProfileContact';
 import {}
   Dialog,
@@ -121,7 +119,6 @@ if ( {) {}
       <div className="min-h-screen bg-zion-blue py-12 px-4">
 :temp_exclude/hooks.disabled/ListingDetail.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="text-center py-20">
@@ -200,10 +197,8 @@ export default function ListingDetail() { return null; }
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
-=======
                   ) : ("
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ListingDetail.tsx
                       <span className="text-zion-slate-light">No image available</span>
                     </div>
                   )}
@@ -242,7 +237,6 @@ export default function ListingDetail() { return null; }
                           alt={`${listing.title} - image ${index + 1}`}
                           className='object-cover'
                           fallbackSrc='/placeholder.svg'                        />                          className="object-cover"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         )}
@@ -266,7 +260,6 @@ export default function ListingDetail() { return null; }
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
 
                 {/* Features */}
-<<<<<<< HEAD
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -378,7 +371,6 @@ export default function ListingDetail() { return null; }
 
 :temp_exclude/hooks.disabled/ListingDetail.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
                       </div>
@@ -406,7 +398,6 @@ export default function ListingDetail() { return null; }
                   <div className="flex flex-wrap gap-2">
 :temp_exclude/hooks.disabled/ListingDetail.tsx
                     {listing.tags.map((tag, i) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
                         {tag}
                       </Badge>;
@@ -458,9 +449,7 @@ export default function ListingDetail() { return null; }
 ;
                 {/* Price */}
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ListingDetail.tsx
                 <div className="mb-6">
                   {listing.price !== null ? ("
                     <div className="text-3xl font-bold text-white">
@@ -549,10 +538,8 @@ export default function ListingDetail() { return null; }
                     ) : (
 
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
-=======
 "
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ListingDetail.tsx
                         <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>
                       </div>
                     )}

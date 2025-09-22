@@ -1,5 +1,4 @@
 
-=======
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -19,12 +18,10 @@ export function ConversationsList({ ;
   markAsRead ;
 } ConversationsListProps) {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">;
       <div className="p-3 border-b border-zion-purple/20">;
         <h3 className="font-medium text-white">Conversations</h3>;
       </div>;
-<<<<<<< HEAD
 
         <div className="p-8 text-center text-zion-slate">;
           <User className="h-10 w-10 mx-auto mb-2 text-zion-purple/40" />;

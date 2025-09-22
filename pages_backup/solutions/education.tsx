@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
 import React from 'react';
@@ -181,7 +179,6 @@ const benefits = [
   'Accessible learning for all students'
 ];
 export default function EducationSolutions() {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     benefits: ['Course creation', 'Student management', 'Progress tracking', 'Assessments']
   },
   {}
@@ -198,7 +195,6 @@ export default function EducationSolutions() {
   },
 {
     icon: Laptop,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     title: 'Virtual Classrooms',
     description: 'Online learning platform with video conferencing and collaboration',
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording']
@@ -286,7 +282,6 @@ export default function EducationSolutionsPage() {;
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto text-center">";
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">";
@@ -344,7 +339,6 @@ const benefits = [
 export default function EducationSolutions() {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Layout
       title="Education Solutions - Zion Tech Group"
@@ -357,7 +351,6 @@ keywords="education solutions, learning management system, student information s
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <section className="bg-gradient-to-r from-indigo-600 to-blue-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -366,7 +359,6 @@ keywords="education solutions, learning management system, student information s
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform education with innovative technology solutions designed
-<<<<<<< HEAD
                 for schools, universities, and educational institutions.
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -377,7 +369,6 @@ keywords="education solutions, learning management system, student information s
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Transform education with our comprehensive technology solutions. 
                 From learning management systems to virtual classrooms.
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -390,7 +381,6 @@ keywords="education solutions, learning management system, student information s
             </div>
                 for schools, universities, and educational institutions.              </p>
             </motion.div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>
         </section>
 
@@ -409,14 +399,12 @@ keywords="education solutions, learning management system, student information s
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-indigo-600" />
                   </div>
 
-<<<<<<< HEAD
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -441,9 +429,6 @@ keywords="education solutions, learning management system, student information s
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">"
                     <feature.icon className="w-6 h-6 text-blue-600" />
 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -656,7 +641,6 @@ export default function EducationSolutionsPage() {;
         </section>;
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto">";
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
@@ -768,15 +752,10 @@ Our education solutions are built with accessibility in mind,
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de            </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </section>
 
@@ -801,13 +780,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de            </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
 
     </>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;

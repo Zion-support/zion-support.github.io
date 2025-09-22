@@ -1,16 +1,12 @@
-<<<<<<< HEAD:pages/api-disabled/api/kyc/status.ts
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { KycProfile } from "../../../utils/kyc";
 import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc";
 import fs from "fs";
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";"
 import type { KycProfile } from "../../../utils/kyc";"
 import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc";"
 import fs from "fs";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/kyc/status.ts
 import path from "path";
 ;
 
@@ -122,20 +118,11 @@ function load (): Record < string, KycProfile> {;
 }
 
 :pages/api/kyc/status.ts
-<<<<<<< HEAD
   });
 
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/kyc/status.ts
-=======
   res.status (200).json ({}
     ok: true,
     profile,
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/kyc/status.ts

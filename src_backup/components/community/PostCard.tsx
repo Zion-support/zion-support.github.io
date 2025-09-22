@@ -9,7 +9,6 @@ interface PostCardProps {
   post: ForumPost,
   compact?: boolean
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React from 'react',
 import { formatDistanceToNow } from "date-fns",
@@ -17,13 +16,8 @@ import Link from "next/link",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
 :src/components/community/PostCard.tsx
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/PostCard.tsx
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
@@ -32,23 +26,15 @@ import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community",
 import { logInfo } from '@/utils/productionLogger',
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface PostCardProps {
   post: ForumPost,
   compact?: boolean
 }
 
-<<<<<<< HEAD
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
   logInfo('PostCardComponent rendering with post:', { data: post ? post.id : 'NO POST' }),
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
 
-<<<<<<< HEAD
   return (
     <Card data-testid="post-card" className={cn(
       "transition-shadow hover:shadow-md",
@@ -198,11 +184,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) =>: any {
   const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
   return (
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default PostCard;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/PostCard.tsx
     <Card data - testid="post - card" className={cn (
       "transition - shadow hover:shadow - md";
 export const PostCard = React.memo (PostCardComponent);
@@ -326,5 +308,3 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 export default PostCard;
 '"
 :src/components/community/PostCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

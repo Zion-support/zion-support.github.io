@@ -1,20 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const ReleaseNotesAgent: NextPage = () => {
-=======
 
 const ReleaseNotesAgent: NextPage = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div>
       <Head>
@@ -24,7 +13,6 @@ const ReleaseNotesAgent: NextPage = () => {}
       <main className="space-y-4">"
         <h1 className="text-2xl font-bold">AI Release Notes Agent</h1>
         <p>Summarizes the last 24 hours of commits into human-friendly release notes.</p>
-<<<<<<< HEAD
 
 "
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
@@ -37,52 +25,28 @@ const ReleaseNotesAgent: NextPage = () => {}
   )
 },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</a></Link>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </main>
     </div>
   )
 }
 export default ReleaseNotesAgent;
 <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 "
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </main>
     </div>
   )
 },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 export default ReleaseNotesAgent,;
 export default ReleaseNotesAgent,
 
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 const ReleaseNotesAgent: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 ";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

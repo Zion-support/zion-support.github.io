@@ -1,24 +1,16 @@
 :pages/api-disabled/api/autoheal/webhook.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { Octokit } from '@octokit/rest',;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '',
 const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app',
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Octokit } from '@octokit/rest';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/autoheal/webhook.ts
-=======
 
 import { Octokit } from '@octokit/rest',;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || ''
 const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/autoheal/webhook.ts
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') {;
@@ -99,37 +91,22 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
         ref: 'dev';
         inputs: { issue_number: String(issue.data.number) }} as any);
     } catch (error) {
-<<<<<<< HEAD
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     // trigger workflow dispatch
     try {
       await octokit.actions.createWorkflowDispatch({
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/autoheal/webhook.ts
     } catch (e) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // ignore if missing;
     }
 
 :pages/api-disabled/api/autoheal/webhook.ts
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
 }
 ;
 
-=======
       // ignore if missing;
       } catch (error) {
     console.error("Error:", error);
@@ -137,7 +114,6 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
   }
 }
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return res.status(200).json({ ok: true, issue: issue.data.number });
   } catch (error) {
     console.error(e);
@@ -156,8 +132,6 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
 }
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
   }
 }
   }
@@ -168,15 +142,6 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
 }
   try {
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
   try {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/autoheal/webhook.ts

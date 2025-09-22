@@ -1,17 +1,8 @@
 :src_backup/components/enterprise/EnterpriseFeatures.tsx
-<<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import React from 'react'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterpriseFeatures.tsx
 
 :src/components/enterprise/EnterpriseFeatures.tsx
 const features = [
@@ -55,7 +46,6 @@ const features = [
 ]
 :src/components/enterprise/EnterpriseFeatures.tsx
 :src_backup/components/enterprise/EnterpriseFeatures.tsx
-<<<<<<< HEAD
 import React from "react";
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
@@ -132,11 +122,7 @@ function EnterpriseFeatures() {}
           {features && features.map(feature => (;
 :src_backup/components/enterprise/EnterpriseFeatures.tsx
             <div
-<<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               key={feature.title}
               className='bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md'            >'
               <div className='h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5'>'
@@ -144,7 +130,6 @@ function EnterpriseFeatures() {}
               </div>
 :src_backup/components/enterprise/EnterpriseFeatures.tsx
               <h3 className='font-bold text-xl mb-3'>{feature.title}</h3>
-<<<<<<< HEAD
               <p className='text-muted-foreground'>{feature.description}</p>            </div>
 
             </div>
@@ -155,7 +140,6 @@ import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 :src_backup/components/enterprise/EnterpriseFeatures.tsx
 const features = [
   {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     title: "Private Hiring Portal",
     description: "Create a secure, private hiring portal accessible only to your team members.",
     icon: Shield},
@@ -267,7 +251,6 @@ export function EnterpriseFeatures() {;
     </section>;
   );
 }
-=======
           </p>
         </div>
 "
@@ -312,12 +295,9 @@ const features = [;
     description: "Connect with talent across multiple regions with localized interfaces.",;
     icon: Globe}];
 export function EnterpriseFeatures() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/EnterpriseFeatures.tsx
 }
 '
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterpriseFeatures.tsx
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
           {features.map (feature => (
             <div;
@@ -327,13 +307,9 @@ export function EnterpriseFeatures() { return null; }
                 <feature.icon className='h - 6 w - 6 text - primary' />;
 :src_backup/components/enterprise/EnterpriseFeatures.tsx
               </div>;
-<<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
-<<<<<<< HEAD
           ))}
         </div>
-<<<<<<< HEAD
       </div>;
-<<<<<<< HEAD
               <h3 className='font - bold text - xl mb - 3'>{feature.title}</h3>;
               <p className='text - muted - foreground'>{feature.description}</p>            </div>;
               <h3 className="font - bold text - xl mb - 3">{feature.title}</h3>;
@@ -352,22 +328,12 @@ export function EnterpriseFeatures() { return null; }
             </div>))}
         </div>;
       </div>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterpriseFeatures.tsx
     </section>);
 }
 }
 :src_backup/components/enterprise/EnterpriseFeatures.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterpriseFeatures.tsx
-=======
 }}}})))))))
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {features.map((feature) => (;
@@ -388,14 +354,9 @@ export function EnterpriseFeatures() { return null; }
   );
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterpriseFeatures.tsx
       </div>
     </section>
   );
 }
 :src/components/enterprise/EnterpriseFeatures.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/EnterpriseFeatures.tsx

@@ -1,5 +1,4 @@
 
-=======
 import { LoginCard } from "./LoginCard",;
 ;
 export function LoginContent() {;
@@ -15,10 +14,8 @@ export function LoginContent() {;
               <h3 className="text-3xl font-bold text-white mb-4">Join the Zion Community</h3>;
               <p className="text-lg text-white/80">;
                 Connect with thousands of AI professionals, discover new opportunities, and showcase your services to a global audience.;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </p>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD

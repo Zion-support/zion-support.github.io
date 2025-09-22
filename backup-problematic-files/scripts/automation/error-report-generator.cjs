@@ -77,10 +77,7 @@ if (report.projectStatus.typescript?.errorCount > 0) {}
 };
 ;
 const generator = new ErrorReportGenerator();
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
     if (report.projectStatus.typescript?.errorCount > 0) {}"
   recommendations.push("Run TypeScript error fixer to address type issues")};"
     if (report.projectStatus.eslint?.errorCount > 0) {}"
@@ -91,4 +88,3 @@ const generator = new ErrorReportGenerator();
 const generator = new ErrorReportGenerator();
 generator.run().catch(console.error);
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

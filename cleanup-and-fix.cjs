@@ -40,9 +40,6 @@ try {
     });
 // Clean up any remaining conflict markers
     content = content.replace(/
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     fs.writeFileSync(filePath, content);
     return true;
   } catch (error) {`;
@@ -101,6 +98,3 @@ function scanDirectory(currentDir) {
   console.error('❌ Error during cleanup:', error);
   process.exit(1);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

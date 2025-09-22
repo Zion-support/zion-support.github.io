@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react',;
 import { Search } from 'lucide-react';
-<<<<<<< HEAD
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';import {;
 import { Input  } from '@/components/ui/input';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Button } from '@/components/ui/button';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Pagination,;
   PaginationContent,;
   PaginationItem,;
@@ -28,14 +24,10 @@ interface CountryTabsProps {;
 import { CountryPricing } from '@/data/onsiteServicePricing';
   setSearchQuery: (query:,  string) => void;,
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   setSearchQuery: (query: string) => void;
 }
 
-=======
 pr-12325
   setSearchQuery: (query: string) => void;
 export function CountryTabs(): any ({;
@@ -51,7 +43,6 @@ pr-12325
 }: CountryTabsProps) {;
   const [currentPage, setCurrentPage] = useState(1);
   const countriesPerPage = 50;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   useEffect(() => {;
     setCurrentPage(1);
   }, [searchQuery]);,
@@ -78,8 +69,6 @@ popularCountries,
     currentPage * countriesPerPage;
   )
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -109,15 +98,11 @@ value="featured"
 
           value='featured'
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       <TabsContent value="featured" className="mt-0">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white text-center">
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             Featured Service Locations
           </h2>
           <p className='text-zion-slate-light text-center mt-2'>
@@ -183,7 +168,6 @@ value="featured"
               onQuote = {onQuote,}
               isPopular = {popularCountries.includes(country.country),}
             />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries;
             .filter((country) => popularCountries.includes(country.country))
@@ -225,8 +209,6 @@ value="featured"
 ))}
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {totalPages > 1 && (
           <div className="mt-8">
             <Pagination className="justify-center">
@@ -240,10 +222,8 @@ value="featured"
                     }}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries;
-=======
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">"
           {filteredCountries
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             .filter((country) => popularCountries.includes(country.country))
             .map((country) => (
               <CountryServiceCard;
@@ -538,7 +518,6 @@ onClick={(e) => {;
                       e.preventDefault(),;
                       setCurrentPage(Math.max(1, currentPage - 1));
                     }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   />;
                 </PaginationItem>;
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map(;
@@ -575,7 +554,6 @@ onClick={(e) => {;
 
 pr-12325
                         isActive={page === currentPage}
-<<<<<<< HEAD
                         onClick={(e) => {;
                           e.preventDefault();
                           setCurrentPage(page);
@@ -608,10 +586,6 @@ pr-12325
                 <PaginationItem>;
 <PaginationNext;
                     href={`?page=${currentPage + 1}`}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       </TabsContent>
     </Tabs>
   );
@@ -619,4 +593,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     href={`?page=${currentPage + 1}`}`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,4 @@
 
-=======
 import { Resume } from '@/types/resume',;
 import {;
   PreviewHeader,;
@@ -24,9 +23,7 @@ export function PreviewResume({ resume, onBack } PreviewResumeProps) {;
       <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">;
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />;
         <WorkExperienceSection workExperience={resume.work_experience} />;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <EducationSection education={resume.education} />;
         <SkillsSection skills={resume.skills} />;
         <CertificationsSection certifications={resume.certifications} />;
       </div>;
-<<<<<<< HEAD

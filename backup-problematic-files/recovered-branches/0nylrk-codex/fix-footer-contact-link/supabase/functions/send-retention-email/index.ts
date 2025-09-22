@@ -44,14 +44,12 @@ user_id:string,;
   days_inactive?:number,;
   onboarding_status?:any,;
   job_id?:string,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   job_title?:string;
 }
 ;
 serve(async (req) => {;
   // Handle CORS preflight requests;
   if (req.method === "OPTIONS") {;
-<<<<<<< HEAD
     return new Response(null, { headers:corsHeaders });
   }
 ;
@@ -121,14 +119,12 @@ const jobData = await req.json();
 ;
     if (emailResponse.error) {;
 throw new Error(`Failed to send email:${emailResponse.error.message}`),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
 ;
     // Update job status;
     await supabase;
       .from("scheduled_jobs");
       .update({;
-<<<<<<< HEAD
         status:"completed";
         completed_at:new Date().toISOString()});
       .eq("id", jobId);
@@ -216,13 +212,11 @@ async function generateEmail(emailData:EmailData, userData:any):Promise<{ subjec
 let nextAction = "",;
   let ctaLink = "/dashboard",;
   let ctaText = "Go to Dashboard",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
   if (email_type === "welcome_series") {;
     // Customize based on user type;
     if (user_type === "jobSeeker" || user_type === "creator") {;
       return {;
-<<<<<<< HEAD
         subject:`Welcome to Zion AI Marketplace, ${firstName}!`;
         html:`;
           <div style="font-family:sans-serif, max-width:600px, margin:0 auto,">;
@@ -383,12 +377,10 @@ const onboarding = emailData.onboarding_status;
 nextAction = "set your availability to help clients find you",;
           ctaLink = "/profile/settings",;
           ctaText = "Set Your Availability",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
       } else {;
         // For clients;
         if (!onboarding.job_posted) {;
-<<<<<<< HEAD
           nextAction = "post your first job to start finding talent";
           ctaLink = "/post-job";
           ctaText = "Post a Job";
@@ -706,5 +698,4 @@ html: ` <h2>We've missed you!</h2> <p>Hi $ {
   firstName 
 }, </p> <p>We noticed you haven't been active on Zion AI Marketplace recently.</p> 
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }

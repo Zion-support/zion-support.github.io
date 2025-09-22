@@ -181,4 +181,3 @@ if (notificationError) {
   console.error ("Failed to create notification:", notificationError) 
 }
 });
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

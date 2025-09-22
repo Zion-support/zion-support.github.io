@@ -22,9 +22,6 @@ const contactInfo = {
 
 const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const _allServices = [
   ...advancedEnterpriseServices2025,
@@ -116,9 +113,6 @@ export default function AdvancedServicesShowcase() {
         return false
       })
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
 
     // Filter by search term
@@ -131,9 +125,6 @@ export default function AdvancedServicesShowcase() {
     }
       );}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     setFilteredServices(filtered)
   }, [selectedCategory, searchTerm]),
@@ -160,14 +151,12 @@ export default function AdvancedServicesShowcase() {
         <span className="text-4xl">{_service.icon}</span>
       </div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
             {_service.name}
           </h3>
         </div>
-<<<<<<< HEAD
 
         <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
           {_service.tagline}
@@ -177,7 +166,6 @@ export default function AdvancedServicesShowcase() {
           {_service.tagline}
         </p>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="flex items-center justify-between mb-4">
           <span className="text-2xl font-bold text-gray-900 dark:text-white">
             {_getServicePricing(service)}
@@ -186,7 +174,6 @@ export default function AdvancedServicesShowcase() {
             {_service.trialDays} day trial
           </span>
         </div>
-<<<<<<< HEAD
         <div className="space-y-3 mb-6">
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-500" />
@@ -402,7 +389,6 @@ Discover our comprehensive portfolio of real, _innovative, _and market-ready sol
               From AI-powered enterprise services to cutting-edge quantum computing platforms.
             </motion.p>
             <motion.div 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               initial={_{ opacity: 0, _y: 20}}
               animate={_{ opacity: 1, _y: 0}}
               transition={_{ duration: 0.8, _delay: 0.4}}
@@ -481,7 +467,6 @@ Discover our comprehensive portfolio of real, _innovative, _and market-ready sol
                 />
               </div>
             </div>
-<<<<<<< HEAD
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <button
@@ -541,7 +526,6 @@ viewMode === 'list'
                 </p>
               </div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-green-500" />
@@ -561,7 +545,6 @@ viewMode === 'list'
           {_filteredServices.length === 0 ? (
             <div className="text-center py-12">
 <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 No services found
               </h3>

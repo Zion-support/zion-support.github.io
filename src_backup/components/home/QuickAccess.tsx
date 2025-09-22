@@ -1,7 +1,4 @@
 :src/components/home/QuickAccess.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import Link from "next/link",
@@ -187,10 +184,8 @@ function QuickAccess() {}
         <div className='grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 4 max - w-6xl mx - auto'>;
           {quick_links.map ((link, index) => (
             <Link;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/home/QuickAccess.tsx
 
               key={index}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               href={link.link}
 
               </p>;'
@@ -399,7 +394,6 @@ export function QuickAccess(): any ({ className, style }: QuickAccessProps) {;
       link: '/mobile-launch',;
     },;
   ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 :src_backup/components/home/QuickAccess.tsx
   return (
@@ -602,7 +596,6 @@ export default function Page() { return null; }
 
                   ))}
                 </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </div>
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >"
@@ -610,7 +603,6 @@ export default function Page() { return null; }
                 {link.icon}
 :src_backup/components/home/QuickAccess.tsx
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h3 className="text-white font-medium mb-1">{link.title}</h3>
               <p className="text-zion-slate-light text-xs mb-2">{link.description}</p>
               <div className="flex items-center text-zion-cyan text-xs mt-auto">
@@ -647,18 +639,9 @@ export default function Page() { return null; }
     </section>);
 :src_backup/components/home/QuickAccess.tsx
 export default QuickAccess }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default QuickAccess;
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 export default QuickAccess;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/home/QuickAccess.tsx
 
 import React from "react",
 import Link from "next/link",
@@ -687,9 +670,5 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
 
 export default QuickAccess;
 :src/components/home/QuickAccess.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export default QuickAccess };
 export default QuickAccess;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/QuickAccess.tsx

@@ -1,8 +1,5 @@
 :pages_backup/blog/index.tsx
-<<<<<<< HEAD:pages/blog/index.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages_backup/blog/index.tsx
   { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
   { slug: 'cloud-native-automation', title: 'Cloud-Native Automation', excerpt: 'GitOps, SLOs, and platform engineering patterns that scale.' },
   { slug: 'future-of-work', title: 'Future of Work', excerpt: 'Autonomous agents, copilots, and the new operating model.' },
@@ -11,20 +8,8 @@
   { slug: 'autonomous-content-generation', title: 'Autonomous Content Generation', excerpt: 'Ship content faster with quality and factuality checks.' }],
 
 :pages_backup/blog/index.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/blog/index.tsx
   {
     slug: 'ai-automation-trends-2025',
     title: 'AI Automation Trends 2025',
@@ -99,18 +84,11 @@ export default function BlogIndexPage() {
                 Read →
               </Link>
 :pages_backup/blog/index.tsx
-<<<<<<< HEAD:pages/blog/index.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/blog/index.tsx
 export default function BlogIndexPage() {
-=======
 
 export default function BlogIndexPage() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/index.tsx
   return (
     <UltraFuturisticBackground  intensity="medium">
       <Head>
@@ -131,12 +109,7 @@ export default function BlogIndexPage() {}
               <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>"
               <p className="text-gray-400 mb-4">{p.excerpt}</p>
 :pages_backup/blog/index.tsx
-<<<<<<< HEAD:pages_backup/blog/index.tsx
-<<<<<<< HEAD:pages/blog/index.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
-<<<<<<< HEAD
 
             </div>
           ))  } catch (error) {
@@ -145,7 +118,6 @@ export default function BlogIndexPage() {}
   }
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>;
       </div>;
     </UltraFuturisticBackground>;
@@ -158,24 +130,16 @@ export default function BlogIndexPage() {}
 }
 
 :pages_backup/blog/index.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
               <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog/index.tsx
-=======
               <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>
           ))}
         </div>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           ))  } catch (error) {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -193,27 +157,14 @@ export default function BlogIndexPage() {}
 ;
 ;
 :pages_backup/blog/index.tsx
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 :pages_backup/blog/index.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog/index.tsx
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/index.tsx
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ;
 
               <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
@@ -224,4 +175,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </UltraFuturisticBackground>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/blog/index.tsx

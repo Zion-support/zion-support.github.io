@@ -1,7 +1,4 @@
 :src/components/admin/fraud-detection/FraudTabContent.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 
@@ -10,12 +7,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 :src/components/admin/fraud-detection/FraudTabContent.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface FraudTabContentProps {
-=======
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'interface FraudTabContentProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   tab_value: string;
 export const FraudTabContent: React.FC < FraudTabContentProps> = ({
   tab_value,
@@ -33,10 +27,8 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({
   switch (tabValue) {    case 'pending':
 
 :src/components/admin/fraud-detection/FraudTabContent.tsx
-<<<<<<< HEAD
 interface FraudTabContentProps {
   tabValue: string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React from "react",
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
@@ -58,16 +50,10 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab will show fraud flags that are still pending admin review.
           </p>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
       ),
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudTabContent.tsx
     case 'dangerous':
-=======
   switch (tabValue) {    case 'pending':    case 'dangerous':
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return (
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">
           <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />
@@ -77,7 +63,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           </p>
         </div>
 :src/components/admin/fraud-detection/FraudTabContent.tsx
-<<<<<<< HEAD
       ),
 
     case 'actioned':
@@ -122,18 +107,14 @@ case 'actioned':
       return null;
   };
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       ),
 
     default:
       return null
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
-<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
-<<<<<<< HEAD
 interface FraudTabContentProps {;
   tabValue: string;
 }
@@ -174,14 +155,11 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 :src/components/admin/fraud-detection/FraudTabContent.tsx
 default:;
       return null;
-<<<<<<< HEAD
-
-}
-=======
 
 }
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+}
+
         <div className='bg - green - 50 dark:bg - green - 950 / 20 p - 8 rounded - lg text - center'>;
           <CheckCircle className='mx - auto h - 12 w - 12 text - green - 500 mb - 4' />;
           <h3 className='text - xl font - medium mb - 4'>Actioned Flags</h3>;
@@ -194,10 +172,8 @@ default:;
   }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 :src/components/admin/fraud-detection/FraudTabContent.tsx
-<<<<<<< HEAD
 };
 
       );
@@ -207,5 +183,3 @@ default:;
   }
 };
 :src/components/admin/fraud-detection/FraudTabContent.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

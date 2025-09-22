@@ -162,7 +162,6 @@ export default function IntegrationsFeature() {;
 
 :temp_exclude/hooks.disabled/features/Integrations.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Link href="/developers">Learn More</Link>;
             </Button>;
           </div>;

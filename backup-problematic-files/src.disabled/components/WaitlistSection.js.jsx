@@ -3,4 +3,3 @@
 
 export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = (e) => { e.preventDefault () "";"";"""
 
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:src.disabled/components/WaitlistSection.js.jsx

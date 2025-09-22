@@ -1,10 +1,4 @@
 :pages_backup/team.tsx
-<<<<<<< HEAD:pages_backup/team.tsx
-<<<<<<< HEAD:pages/team.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const Page = () => {
   return (
@@ -25,15 +19,9 @@ const Page = () => {
 export default Page;
 :pages_backup/team.tsx
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/team.tsx
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
 
 import React from "react";"
 import Head from "next/head";"
@@ -353,7 +341,6 @@ const teamMembers = [;
   },;
 ];
 :pages_backup/team.tsx
-<<<<<<< HEAD:pages_backup/team.tsx
 export default function TeamPage() {
   return (
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -361,13 +348,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
       keywords="team, experts, engineers, data scientists, AI specialists, cybersecurity experts, technology professionals"
-=======
 
     <Layout"
       title="Our Team - Zion Tech Group""
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results.""
       keywords="team, experts, engineers, data scientists, AI specialists, cybersecurity experts, technology professionals""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
       canonical="https://ziontechgroup && ziontechgroup.com/team">;
       {/* Hero Section */}"
       <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">;"
@@ -863,18 +848,11 @@ export default /**;
 function TeamPage() {}
   return (
 :pages_backup/team.tsx
-<<<<<<< HEAD:pages_backup/team.tsx
 
-<<<<<<< HEAD:pages/team.tsx
 }
 
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <>;
       <SEO;"
         title="Our Team | Zion Tech Group";"
@@ -913,7 +891,6 @@ function TeamPage() {}
 
 '
 import React from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
 import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {}
@@ -933,16 +910,8 @@ const Page = () => {}
 };
 
 export default Page;
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/team.tsx
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>
       <SEO
         title="Our Team | Zion Tech Group"
@@ -1120,12 +1089,7 @@ export default function Team() {
 </>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -1147,4 +1111,3 @@ const Page = () => {
 
 export default Page;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx

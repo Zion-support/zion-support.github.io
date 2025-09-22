@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerResources.tsx
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react';
@@ -86,11 +85,9 @@ title:"Download started",;
 pr-12325
         <CardHeader>;
 <CardTitle>Marketing Resources</CardTitle>;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/partners/PartnerResources.tsx
           <CardDescription>;
 
         <CardContent>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerResources.tsx
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">;
             {resources.map((resource) => (;
               <Card key={resource.id} className="bg-zion-blue border-zion-blue-light overflow-hidden">;
@@ -101,14 +98,12 @@ pr-12325
                   <h3 className="font-semibold text-white mb-1">{resource.title}</h3>;
                   <p className="text-xs text-zion-slate-light mb-4">{resource.description}</p>;
                   <Button ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/partners/PartnerResources.tsx
                     onClick={() => handleDownload(resource)}
 size="sm";
                     variant="outline";
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerResources.tsx
                   </Button>;
                 </CardContent>;
               </Card>;
@@ -120,12 +115,10 @@ size="sm";
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
           <CardTitle>Promotion Guidelines</CardTitle>;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/partners/PartnerResources.tsx
           <CardDescription>;
             Best practices for promoting the Zion AI Marketplace;
           </CardDescription>;
         </CardHeader>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerResources.tsx
         <CardContent className="space-y-4">;
           <div className="space-y-2">;
             <h3 className="text-lg font-semibold text-white">Do's</h3>;
@@ -143,7 +136,6 @@ size="sm";
               <li>Spam your referral link across unrelated content</li>;
               <li>Modify or alter our brand assets in unauthorized ways</li>;
               <li>Create fake accounts or use bots to generate referrals</li>;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/partners/PartnerResources.tsx
             </ul>;
           </div>;
         </CardContent>;
@@ -152,35 +144,29 @@ size="sm";
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
           <CardTitle>Partner Support</CardTitle>;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/partners/PartnerResources.tsx
           <CardDescription>;
             Need help with your affiliate marketing? Contact our partner support team.;
           </CardDescription>;
         </CardHeader>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerResources.tsx
         <CardContent className="flex flex-col items-center text-center py-6">;
           <p className="text-zion-slate-light mb-4">;
             Our partner success team is available to help you maximize your partnership with Zion AI Marketplace.;
             Feel free to reach out if you have questions about promotions, resources, or payment.;
           </p>;
           <Button className="bg-zion-purple hover:bg-zion-purple-dark">;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/partners/PartnerResources.tsx
             Contact Partner Support;
           </Button>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerResources.tsx
 
 }
     </div>;
   );}
  interface ResourceItem {;
   id: string;
-<<<<<<< HEAD
 title: string;
 description: string;
   description: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 type: 'image' | 'video' | 'document' | 'link';
 icon: JSX.Element;
 url: string ;
@@ -196,5 +182,3 @@ pr-12325
 }</div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Promotion Guidelines</CardTitle> <CardDescription> Best practices for promoting the Zion AI Marketplace </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Do's</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Use our official brand assets from the resources provided</li> <li>Share your unique referral link in your content</li> <li>Highlight the benefits of the Zion AI Marketplace for both talent and clients</li> <li>Be transparent that you're a partner and may earn from referrals</li> <li>Focus on how the platform can help your audience solve their AI talent needs</li> </ul> </div> <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Don'ts</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Make unrealistic promises about earnings or results</li> <li>Use manipulative or misleading marketing tactics</li> <li>Spam your referral link across unrelated content</li> <li>Modify or alter our brand assets in unauthorized ways</li> <li>Create fake accounts or use bots to generate referrals</li> </ul> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Partner Support</CardTitle> <CardDescription> Need help with your affiliate marketing? Contact our partner support team. </CardDescription> </CardHeader> <CardContent className="flex flex-col items-center text-center py-6" > <p className="text-zion-slate-light mb-4" > Our partner success team is available to help you maximize your partnership with Zion AI Marketplace. Feel free to reach out if you have questions about promotions, resources, or payment. </p> Contact Partner Support </Button> </CardContent> </Card> </div>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/partners/PartnerResources.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/partners/PartnerResources.tsx

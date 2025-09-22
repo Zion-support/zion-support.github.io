@@ -1,5 +1,4 @@
 
-=======
 import { TabsContent } from "@/components/ui/tabs",;
 import { Resume } from "@/types/resume",;
 import { BasicInfoForm } from '../forms/basic-info',;
@@ -31,12 +30,10 @@ export const ResumeStepContent = ({ ;
           onSave={(data) => {;
             // Here you would typically save the data to your backend;
             // // // console.log("Saving basic info:", data),;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           }}
           onComplete={onNextStep} ;
         />;
       </TabsContent>;
-<<<<<<< HEAD
 
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience || []}

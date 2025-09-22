@@ -34,7 +34,6 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     let cleaned = cleanMergeConflicts(content);
     cleaned = cleanSyntaxErrors(cleaned);
-<<<<<<< HEAD
 
     if (cleaned !== content) {
       fs.writeFileSync(filePath, cleaned);
@@ -72,7 +71,6 @@ function findConflictedFiles(dir, conflictedFiles = []) {
 
   content = content.replace(/
 content = content.replace(/
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   // Clean up any remaining artifacts
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');

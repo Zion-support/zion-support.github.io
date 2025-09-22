@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
@@ -25,7 +22,6 @@ const ServicesPage = () => {
 export default ServicesPage;
 import Head from 'next/head';
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services.tsx
 export default function Services() {
   const services = [
     {
@@ -2038,8 +2034,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 </a>
               </div>
 </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </section>
 
@@ -2206,21 +2200,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       </div>
     </>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ursor/fix-netlify-build-and-merge-to-main-9571
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services.tsx
           </div>
         </section>
 
@@ -2265,5 +2248,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Layout>
   );
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
 constructor(props) {
     super(props);
@@ -23,19 +21,8 @@ constructor(props) {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useEffect } from 'react';
 import {Header} from "@/components/Header";"
 import {Footer} from "@/components/Footer";"
@@ -51,23 +38,14 @@ import {AlertTriangle, Check, Globe, Search, Loader2} from "lucide-react";"
 import {useIsMobile} from "@/hooks/use-mobile";"
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";"
 import {useTranslationService} from "@/hooks/useTranslationService";
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function TranslationManager() {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export default function TranslationManager() {;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { t, i18n } = useTranslation();
 
   const isMobile = useIsMobile();
   const { supportedLanguages } = useLanguage();
   const { translateContent, isTranslating } = useTranslationService();
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -82,11 +60,9 @@ import { useTranslation } from "react-i18next",
 import { AlertTriangle, Check, Globe, Search, Loader2 } from "lucide-react",
 import { useIsMobile } from "@/hooks/use-mobile",
 
-=======
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
 export default function TranslationManager() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { t, i18n } = useTranslation();
 
   const isMobile = useIsMobile();
@@ -95,22 +71,14 @@ export default function TranslationManager() {
 "
   const [selectedNamespace, setSelectedNamespace] = useState("translation");"
   const [searchQuery, setSearchQuery] = useState("");
-=======
 export default function TranslationManager() {;  const [searchQuery, setSearchQuery] = useState("");
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const [selectedNamespace, setSelectedNamespace] = useState("translation");
   const [searchQuery, setSearchQuery] = useState("");
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [translations, setTranslations] = useState<Record<string, any>>({});
   const [filteredKeys, setFilteredKeys] = useState<string[]>([]);
   const [editingKey, setEditingKey] = useState<string | null>(null);
   const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
   const [isSaving, setIsSaving] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     supportedLanguages.forEach(lang => {
       const res = i18n.getResourceBundle(lang.code, selectedNamespace);
@@ -127,19 +95,12 @@ export default function TranslationManager() {;  const [searchQuery, setSearchQu
   useEffect(() => {
     // For demo purposes, we're using the loaded translations from i18next
     const currentTranslations: Record<string any> = {},
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     supportedLanguages.forEach(lang => {
       const res = i18n.getResourceBundle(lang.code, selectedNamespace),
       if (res) {
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
-<<<<<<< HEAD
           return Object.keys(obj).reduce((acc, key) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -160,13 +121,11 @@ export default /**;
  * TranslationManager - Function description;
  */
 function TranslationManager() {}
-=======
 import { useTranslationService } from '@/hooks / useTranslationService';
 export default /**
  * TranslationManager - Function description
  */
 function TranslationManager() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { t, i18n } = use_translation ();
   const is_mobile = useIsMobile ();
   const { supported_languages } = use_language ();
@@ -204,7 +163,6 @@ if ( {) {}
             } else {}
   // Simulated translation data - in a real app, this would come from your backend;
 useEffect(() => {;
-=======
   useEffect (() => {
     // For demo purposes, we're using the loaded translations from i18next;
     const current_translations: Record < string, any> = {}
@@ -228,7 +186,6 @@ if ( {) {
 
   // Simulated translation data - in a real app, this would come from your backend;
   useEffect(() => {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // For demo purposes, we're using the loaded translations from i18next;
     const currentTranslations: Record<string, any> = {};
 
@@ -282,7 +239,6 @@ setFilteredKeys(Array.from(allKeys));
       // Update translations with edited values
       const updatedTranslations = { ...translations }
       supportedLanguages.forEach(lang => {
-<<<<<<< HEAD
         if (!updatedTranslations[lang.code]) {
           updatedTranslations[lang.code] = {}
         }
@@ -291,8 +247,6 @@ setFilteredKeys(Array.from(allKeys));
       setTranslations(updatedTranslations);
       setEditingKey(null);
       setIsSaving(false);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -315,7 +269,6 @@ export default function TranslationManager() { return null; }
   const { supportedLanguages } = useLanguage(),;
   const { translateContent, isTranslating } = useTranslationService(),;"
   const [selectedNamespace, setSelectedNamespace] = useState("translation"),;"
-=======
 import { useTranslationService } from "@/hooks/useTranslationService",;
 export default function TranslationManager() {;
   const { t, i18n } = useTranslation(),;
@@ -323,7 +276,6 @@ export default function TranslationManager() {;
   const { supportedLanguages } = useLanguage(),;
   const { translateContent, isTranslating } = useTranslationService(),;
   const [selectedNamespace, setSelectedNamespace] = useState("translation"),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [searchQuery, setSearchQuery] = useState(""),;
   const [translations, setTranslations] = useState<Record<string any>>({}),;
   const [filteredKeys, setFilteredKeys] = useState<string[]>([]),;
@@ -356,10 +308,7 @@ if ( {) {}
             }
 
     const allKeys = new Set<string>();
-=======
         if (!updatedTranslations[lang.code]) {    const allKeys = new Set<string>();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         // Flatten nested objects for easier management;
         const flattenObject = (obj: any, prefix = '') => {;
           return Object.keys(obj).reduce((acc, key) => {;
@@ -380,7 +329,6 @@ if ( {) {
             return acc;
 
     const allKeys = new Set<string>();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     Object && Object.values(currentTranslations).forEach(langTranslations => {;
       Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
     });
@@ -435,14 +383,11 @@ setFilteredKeys(Array && Array.from(allKeys));
           key.toLowerCase().includes(query) ||;'
           (typeof value === 'string' && value.toLowerCase().includes(query));
         ) {;
-<<<<<<< HEAD
           filtered.push(key);
 
         }
       })
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
   },;
   const handleSave = (key: string) => {;
     setIsSaving(true),;
@@ -452,13 +397,7 @@ setFilteredKeys(Array && Array.from(allKeys));
       const updatedTranslations = { ...translations },;
       supportedLanguages.forEach(lang => {;
         if (!updatedTranslations[lang.code]) {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           updatedTranslations[lang.code] = {}
         }
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
@@ -466,25 +405,14 @@ setFilteredKeys(Array && Array.from(allKeys));
 setTranslations(updatedTranslations),
       setEditingKey(null),
       setIsSaving(false),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       toast({
         title: t("translation.saved")
-=======
 
       toast({"
         title: t("translation.saved")"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: t("translation.changes_saved")})
     }, 1000)
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
   const handleTranslateKey = async (key: string) => {}
@@ -492,26 +420,17 @@ setTranslations(updatedTranslations),
     let sourceLanguage: SupportedLanguage = 'en','
     let sourceText = '',
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       if (error) {
         toast({
           title: t('translation.translation_failed')
-=======
           filtered.push(key);      toast({
         title: t("translation.saved")
         description: t("translation.changes_saved")})
     }, 1000)          title: t('translation.translation_failed')
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           filtered.push(key);      toast({
         title: t("translation.saved")
         description: t("translation.changes_saved")})
     }, 1000)          title: t('translation.translation_failed')
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       setTranslations(updatedTranslations),
       setEditingKey(null),
@@ -607,34 +526,27 @@ setTranslations(updatedTranslations),
       if (error) {
         toast({
           title: t('translation.translation_failed')
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           description: error
-=======
 
       if (error) {}
         toast({'
           title: t('translation.translation_failed')
           description: error"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           variant: "destructive"})
         return;
       }
 // Update edited translations with auto-translated content
       setEditedTranslations({
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (!sourceText) {;
       toast({;'
         title: t('translation && translation.no_content'),;'
         description: t('translation && translation.add_content_first'),;"
-=======
 
     if (!sourceText) {;
       toast({;
         title: t('translation && translation.no_content'),;
         description: t('translation && translation.add_content_first'),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive"}),;
       return;
     }
@@ -663,18 +575,13 @@ toast({;'
 
         ...editedTranslations,
         [key]: translatedText
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       toast({
         title: t('translation.translation_success')
-=======
 
       toast({'
         title: t('translation.translation_success')'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: t('translation.content_translated')})
     } catch (error) {}`
       console.error(`Error translating key ${key}:`, error),
@@ -687,15 +594,11 @@ toast({;'
 <SEO 
         title={t('translation.manager_title')}
       <SEO
-=======
       <SEO'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         title={t('translation.manager_title')}
       <SEO '
         title={t('translation.manager_title')} 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
       }),;
       setTranslations(updatedTranslations),;
@@ -739,15 +642,8 @@ toast({;'
     <>;
       <SEO;
         title={t('translation.manager_title')} ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description={t('translation.manager_description')}
       />
       <Header />'`
@@ -798,8 +694,6 @@ toast({;'
           </CardHeader>;
           <CardContent>;"
             <div className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Search and filter */}
       }),
 
@@ -821,11 +715,9 @@ toast({;'
         title={t('translation.manager_title')}
       <SEO 
 title={t('translation.manager_title')}               {/* Search and filter */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <div className="flex flex-col sm:flex-row gap-4">;
                 <div className="relative flex-1">;
                   <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;        ...editedTranslations;
-=======
         title={t('translation.manager_title')} 
 
       <SEO 
@@ -957,15 +849,12 @@ title={t('translation.manager_title')}               {/* Search and filter */}
                 <div className="relative flex-1">;
                   <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
         ...editedTranslations;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
       <SEO 
         title={t('translation.manager_title')}               {/* Search and filter */}
               <div className="flex flex-col sm:flex-row gap-4">;
                 <div className="relative flex-1">;
                   <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;        ...editedTranslations;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         [key]: translatedText;
       });
               {/* Search and filter */}"
@@ -976,11 +865,7 @@ title={t('translation.manager_title')}               {/* Search and filter */}
                     type="search"
                     placeholder={t('translation && translation.search_placeholder')}
                     className="pl-8"
-<<<<<<< HEAD
                     value={searchQuery}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   value={selectedNamespace}
                     value={searchQuery}                  value={selectedNamespace}
                   onValueChange={(value) => setSelectedNamespace(value)}
@@ -992,28 +877,19 @@ title={t('translation.manager_title')}               {/* Search and filter */}
                   </TabsList>
                 </Tabs>
               </div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
                   <div className="p-3 font-medium">{t('translation.key')}</div>
                   <div className="p-3 font-medium">{t('translation.translations')}</div>
-=======
 
               {/* Translations table */}"
               <div className="border rounded-md">"
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">'"
                   <div className="p-3 font-medium">{t('translation.key')}</div>'"
                   <div className="p-3 font-medium">{t('translation.translations')}</div>'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="hidden sm:block p-3 font-medium">{t('translation.actions')}</div>
                 </div>
                 {filteredKeys.length === 0 ? ("
@@ -1048,10 +924,7 @@ title={t('translation.manager_title')}               {/* Search and filter */}
                                       onChange={(e) => handleChange(lang.code, key, e.target.value)}'
                                       dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                                     />
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     onChange={(e) => setSearchQuery(e && e.target.value)}
                   />;
                 </div>;
@@ -1060,13 +933,9 @@ title={t('translation.manager_title')}               {/* Search and filter */}
 
                   value={selectedNamespace}
 
-=======
                     value={searchQuery}                  value={selectedNamespace}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   onValueChange={(value) => setSelectedNamespace(value)}
-=======
                   onValueChange={(value) => setSelectedNamespace(value)}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="w-full sm:w-auto";
                 >;
                   <TabsList>;"
@@ -1121,7 +990,6 @@ title={t('translation.manager_title')}               {/* Search and filter */}
                               <Button "
                                 size="sm" 
 
-<<<<<<< HEAD
                                 <div key={lang.code}>;
                                   <div className="flex items-center gap-2 mb-1">;
                                     <span>{lang.flag}</span>;
@@ -1146,7 +1014,6 @@ title={t('translation.manager_title')}               {/* Search and filter */}
                             </div>;
                             <div className="flex gap-2 mt-4">;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                               <Button 
                                 size="sm"
 
@@ -1161,7 +1028,6 @@ title={t('translation.manager_title')}               {/* Search and filter */}
                               <Button"
                                 size="sm" 
 
-<<<<<<< HEAD
                               <Button 
                                 size="sm"                                 disabled={isTranslating}
                               <Button 
@@ -1220,7 +1086,6 @@ title={t('translation.manager_title')}               {/* Search and filter */}
                                 variant="secondary"
                                 onClick={() => handleTranslateKey(key)}
                                 disabled={isTranslating}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                               >;
                                 {isSaving ? (;
                                   <>;"
@@ -1255,14 +1120,12 @@ title={t('translation.manager_title')}               {/* Search and filter */}
 
                                 onClick={() => handleTranslateKey(key)}
                                 disabled={isTranslating}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                               >;
                                 {isTranslating ? (;"
                                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
 ) : (;
                                   <Globe className="mr-2 h-4 w-4" />;
                                 )}
-<<<<<<< HEAD
                               </Button>;
                             </div>;
                           </div>;
@@ -1279,7 +1142,6 @@ title={t('translation.manager_title')}               {/* Search and filter */}
 </span>;
                                 </div>;
 
-=======
 ) :(;
                                   <Globe className="mr-2 h-4 w-4" />;
                                 )}
@@ -1299,7 +1161,6 @@ title={t('translation.manager_title')}               {/* Search and filter */}
                                   >;                                    {translations[lang.code]?.[key] || t('translation.missing')}
                                   </span>;
                                 </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                               ))}
                               {getMissingLanguages(key).length > 0 && (;"
                                 <div className="flex items-center gap-2 text-sm text-zion-purple">;"
@@ -1670,17 +1531,11 @@ const getMissingLanguages = (key: string): SupportedLanguage[] => {}
   )
 }
 >;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                               {t('translation && translation.edit')}
                             </Button>;
                           )}
                         </div>;
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>;
             </div>;
           </CardContent>;
@@ -1689,17 +1544,9 @@ const getMissingLanguages = (key: string): SupportedLanguage[] => {}
       <Footer />;
 
 </>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>;
   ),; export default function TranslationManager () {}
   const {};
@@ -1714,7 +1561,6 @@ const {}
 }= useTranslationService ();
 }return acc;
 }, {}
-=======
 }
   const [translations, setTranslations] = useState<Record<string, any>>({});
 
@@ -2139,7 +1985,6 @@ const isMobile = useIsMobile ();
 }= useTranslationService ();
 }return acc;
 }, {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }as Record<string string>) 
 };
 currentTranslations[lang.code] = flattenObject (res) 
@@ -2320,7 +2165,6 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {}
 }onClick= {
   () => handleEdit (key) 
 }> {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   t ('translation.edit') 
 }</Button>)
 }</div> </div>) ) 
@@ -2331,20 +2175,8 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {}
 pr-12325
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

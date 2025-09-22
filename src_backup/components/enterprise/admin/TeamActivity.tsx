@@ -1,7 +1,4 @@
 :src/components/enterprise/admin/TeamActivity.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
 
   Table
@@ -20,7 +17,6 @@ import { CalendarIcon, Search } from 'lucide-react'
   TableRow} from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
 import React from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -40,7 +36,6 @@ export function TeamActivity() {
   // Mock activity data
   const activities = [
     {
-<<<<<<< HEAD
       id: 1,
       user: "Alex Johnson",
       action: "Posted a job",
@@ -105,10 +100,8 @@ export function TeamActivity() {
   const getCategoryBadge = (category: string) => {
     const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {
 jobs: { variant: "default" },
-=======
 jobs: { variant: "default" },
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/TeamActivity.tsx
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
@@ -222,19 +215,13 @@ export function TeamActivity() {;
       team: { variant: "secondary" },;
       billing: { variant: "destructive" }},;
     const style = categoryStyles[category] || { variant: "default" as const },;
-<<<<<<< HEAD
     return <Badge variant={style && style.variant}>{category}</Badge>
 };
 
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/TeamActivity.tsx
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { CalendarIcon, Search } from 'lucide-react'
@@ -244,8 +231,6 @@ export function TeamActivity() {
   // Mock activity data
   const activities = null;
 :src/components/enterprise/admin/TeamActivity.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -417,8 +402,6 @@ export function TeamActivity() {;
         </Table>
       </div>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -430,18 +413,12 @@ export function TeamActivity() {;
           Next
         </Button>
 :src/components/enterprise/admin/TeamActivity.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       </div>
     </div>
   )
 }
 ;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </div>
   );
 
@@ -455,5 +432,3 @@ const getCategoryBadge = (category: string) => {;
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
 }"
 :src/components/enterprise/admin/TeamActivity.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

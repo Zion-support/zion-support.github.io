@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import Link from "next/link",;
 import { useTranslation } from "react-i18next",;
@@ -80,9 +79,7 @@ export function QuickAccess({ className, style } QuickAccessProps) {;
                 <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />;
               </div>;
             </Link>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           ))}
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD

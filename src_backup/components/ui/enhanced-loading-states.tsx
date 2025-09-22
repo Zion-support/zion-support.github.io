@@ -1,8 +1,4 @@
 :src_backup/components/ui/enhanced-loading-states.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react'
@@ -30,7 +26,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl',
 :src/components/ui/enhanced-loading-states.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
@@ -52,11 +47,8 @@ interface LoadingSpinnerProps {;'
   className?: string;
   showText?: boolean;
 :src/components/ui/enhanced-loading-states.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/enhanced-loading-states.tsx
   text?: string;
-=======
 } from 'lucide-react'; import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -65,7 +57,6 @@ import { cn } from '@/lib/utils'
 // Enhanced loading spinner with different variants
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl',  text?: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;'
   size = 'md',;'
@@ -90,22 +81,15 @@ error: 'text-red-500',;
   };
 
 :src/components/ui/enhanced-loading-states.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/ui/enhanced-loading-states.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/enhanced-loading-states.tsx
 import React, { useState, useEffect } from 'react',;
 import { motion, AnimatePresence } from 'framer-motion',;
 import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
-=======
 '
 import React, { useState, useEffect } from 'react',;'
 import { motion, AnimatePresence } from 'framer-motion',;'
@@ -113,7 +97,6 @@ import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lu
 import { Button } from '@/components/ui/button',;'
 import { Card, CardContent } from '@/components/ui/card',;'
 import { Badge } from '@/components/ui/badge',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/enhanced-loading-states.tsx
 import { cn } from '@/lib/utils',;
 // Enhanced loading spinner with different variants;
 interface LoadingSpinnerProps {;'
@@ -131,7 +114,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   className,
   showText = false,
 :src/components/ui/enhanced-loading-states.tsx
-<<<<<<< HEAD
   text = 'Loading...'
 }) => {
   const sizeClasses = {
@@ -142,11 +124,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   },
 
 :src/components/ui/enhanced-loading-states.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 :src_backup/components/ui/enhanced-loading-states.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/enhanced-loading-states.tsx
 
   variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
   className?: string;
@@ -157,8 +136,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     primary: 'text-primary',
     success: 'text-green-500',
     warning: 'text-yellow-500',
-<<<<<<< HEAD
-<<<<<<< HEAD
     error: 'text-red-500'
   },
 
@@ -179,18 +156,15 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </div>);
 :src/components/ui/enhanced-loading-states.tsx
 }) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [activeStep, setActiveStep] = useState(0)
   const progress = ((activeStep + 1) / steps.length) * 100
   useEffect((,) => {
     if (currentStep !== undefined) {
-=======
 }) => {}
   const [activeStep, setActiveStep] = useState(0);
   const progress = ((activeStep + 1) / steps.length) * 100;
   useEffect((,) => {}
     if (currentStep !== undefined) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/enhanced-loading-states.tsx
       setActiveStep(currentStep)
     }
   }, [currentStep])
@@ -199,7 +173,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       setTimeout(onComplete, 500)
     }
 :src/components/ui/enhanced-loading-states.tsx
-<<<<<<< HEAD
 
     </div>;
   );
@@ -216,7 +189,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   {
   opacity: 0, x: -20 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className={cn('flex items-center gap-2', className)}>
       <Loader2 className={cn('animate-spin', sizeClasses[size], variantClasses[variant])} />
@@ -225,9 +197,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   )
 :src/components/ui/enhanced-loading-states.tsx
 },
-=======
   }, [activeStep, steps.length, onComplete])},
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 // Progressive loading component;
 interface ProgressiveLoadingProps {}
@@ -256,20 +226,13 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
     }
   }, [activeStep, steps.length, onComplete]),
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
-=======
   return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/enhanced-loading-states.tsx
     <div className="space-y-4">
       {showProgress && ("
         <div className="w-full bg-muted rounded-full h-2">
 :src_backup/components/ui/enhanced-loading-states.tsx
           <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
             className="bg-primary h-2 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
@@ -357,7 +320,6 @@ interface SkeletonProps {;
             <span className='text-sm font-medium'>{step && step.label}</span>;
           </motion && motion.div>;
         ))}
-=======
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.3 }}
@@ -389,34 +351,27 @@ interface SkeletonProps {;
 // Enhanced skeleton loader
 interface SkeletonProps {
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/enhanced-loading-states.tsx
       </div>;
     </div>;
   );
 
 :src/components/ui/enhanced-loading-states.tsx
-<<<<<<< HEAD
               baseClasses,
               variantClasses && variantClasses.text,
               animationClasses[animation],'
               i === lines - 1 ? 'w-3/4' : 'w-full',
 
 :src_backup/components/ui/enhanced-loading-states.tsx
-<<<<<<< HEAD:src/components/ui/enhanced-loading-states.tsx
               className
-=======
               className;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/enhanced-loading-states.tsx
             ),}
           />
         ))}
 
 :src_backup/components/ui/enhanced-loading-states.tsx
-<<<<<<< HEAD
   class_name?: string;
   variant?: 'text' | 'circular' | 'rectangular' | 'card';
   animation?: 'pulse' | 'wave' | 'none';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   lines?: number;
 :src_backup/components/ui/enhanced-loading-states.tsx
 }
@@ -457,9 +412,7 @@ lines = 1
             )}
           />;
         ))}
-=======
         return {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/enhanced-loading-states.tsx
       </div>;
     );
   }
@@ -568,7 +521,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   const variantClasses = {
     text: 'h-4 w-full',
     circular: 'h-12 w-12 rounded-full',
-=======
 export const Skeleton: React.FC<SkeletonProps> = ({}
   className,'
   variant = 'rectangular','
@@ -581,7 +533,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({}
   const variantClasses = {'
     text: 'h-4 w-full','
     circular: 'h-12 w-12 rounded-full','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/enhanced-loading-states.tsx
     rectangular: 'h-6 w-full',
   }
   const animationClasses = {
@@ -620,7 +571,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const config = getErrorConfig(),
   const Icon = config.icon,
@@ -640,14 +590,12 @@ const config = getErrorConfig(),
             {config.description}
           </p>
 {error && process.env.NODE_ENV === 'development' && (
-<<<<<<< HEAD:src/components/ui/enhanced-loading-states.tsx
             <details className="mb-4 text-left">
               <summary className="text-sm text-muted-foreground cursor-pointer">
                 Error Details (Development)
               </summary>
 :src/components/ui/enhanced-loading-states.tsx
 <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
-<<<<<<< HEAD
                 {typeof error === 'string' ? error : error.message}
               <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
 
@@ -668,7 +616,6 @@ const config = getErrorConfig(),
               </summary>;'
               <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-auto'>;'
                 {typeof error === 'string' ? error : error && error.message}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/enhanced-loading-states.tsx
               </pre>;
             </details>;
           )}
@@ -676,7 +623,6 @@ const config = getErrorConfig(),
 
 <div className="flex flex-col sm:flex-row gap-2 justify-center">
             {canRetry && (
-<<<<<<< HEAD
               <Button onClick={onRetry} variant="default">
                 <RefreshCw className="h-4 w-4 mr-2" />
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
@@ -691,21 +637,18 @@ const config = getErrorConfig(),
           <div className="flex flex-col sm:flex-row gap-2 justify-center">
             {canRetry && (
 :src_backup/components/ui/enhanced-loading-states.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/enhanced-loading-states.tsx
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
               </Button>
             )}
 
 :src/components/ui/enhanced-loading-states.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {action && (;
 
               <Button;
                 onClick={action.onClick}'
                 variant={canRetry ? 'outline' : 'default'}
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
             {action && ("
               <Button onClick={action.onClick} variant={canRetry ? "outline" : "default"}>
@@ -713,7 +656,6 @@ const config = getErrorConfig(),
               </Button>;
             )}
 :src/components/ui/enhanced-loading-states.tsx
-<<<<<<< HEAD
 
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
               </Button>
@@ -735,15 +677,11 @@ const config = getErrorConfig(),
               </Button>
             )}            {secondaryAction && (
             {secondaryAction && (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Button onClick={secondaryAction.onClick} variant='ghost'>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
             {secondaryAction && ("
               <Button onClick={secondaryAction.onClick} variant="ghost">
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {secondaryAction.label}
               </Button>;
             )}
@@ -831,11 +769,9 @@ const config = getErrorConfig(),
               <WifiOff className='h - 4 w - 4' />;
               <span > Offline</span>;
             </div>)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </motion.div>;
       </CardContent>;
 :src/components/ui/enhanced-loading-states.tsx
-<<<<<<< HEAD
     </Card>;
   );
 },;
@@ -851,15 +787,11 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
   columns = 4,'
   variant = 'card',
 :src/components/ui/enhanced-loading-states.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
   columns = 4,
   variant = 'card',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   className
 }) => {
   const gridClasses = {
@@ -906,15 +838,12 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
   },
 
 :src/components/ui/enhanced-loading-states.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {variant === 'card' && (
-=======
   return (
     <div className={cn(gridClasses[variant], className)}>
       {Array.from({ length: count }).map((_, i) => (
         <Card key={i} className="animate-pulse">
           <CardContent className={itemClasses[variant]}>            {variant === 'card' && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <>
                 <Skeleton variant="rectangular" className="h-32" />
                 <div className="space-y-2">
@@ -922,7 +851,6 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
                   <Skeleton variant="text" lines={2} />
                   <div className="flex gap-2">
                     <Skeleton variant="text" className="h-4 w-16" />
-=======
 '
             {variant === 'card' && (
               <>"
@@ -932,27 +860,23 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
                   <Skeleton variant="text" lines={2} />"
                   <div className="flex gap-2">"
                     <Skeleton variant="text" className="h-4 w-16" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/enhanced-loading-states.tsx
                     <Skeleton variant="text" className="h-4 w-20" />
                   </div>
                 </div>
               </>
             )}
 
-<<<<<<< HEAD:src/components/ui/enhanced-loading-states.tsx
             {variant === 'list' && (
               <div className="flex gap-4">
                 <Skeleton variant="circular" />
                 <div className="flex-1 space-y-2">
                   <Skeleton variant="text" className="h-5 w-1/2" />
-=======
 '
             {variant === 'list' && ("
               <div className="flex gap-4">"
                 <Skeleton variant="circular" />"
                 <div className="flex-1 space-y-2">"
                   <Skeleton variant="text" className="h-5 w-1/2" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/enhanced-loading-states.tsx
                   <Skeleton variant="text" lines={2} />
                 </div>
               </div>
@@ -960,30 +884,21 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
 
 :src/components/ui/enhanced-loading-states.tsx
             {variant === 'table' && (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="flex items-center gap-4">
                 <Skeleton variant="text" className="h-4 w-1/4" />
                 <Skeleton variant="text" className="h-4 w-1/3" />
                 <Skeleton variant="text" className="h-4 w-1/6" />
-=======
 '
             {variant === 'table' && ("
               <div className="flex items-center gap-4">"
                 <Skeleton variant="text" className="h-4 w-1/4" />"
                 <Skeleton variant="text" className="h-4 w-1/3" />"
                 <Skeleton variant="text" className="h-4 w-1/6" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/enhanced-loading-states.tsx
                 <Skeleton variant="text" className="h-4 w-1/4" />
               </div>
             )}
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/enhanced-loading-states.tsx
           </CardContent>;
         </Card>;
       ))}
@@ -1004,8 +919,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   loadTime,
   itemCount,
 :src/components/ui/enhanced-loading-states.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   className
 }) => {
   const getPerformanceColor = (time: number) => {
@@ -1013,9 +926,7 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     if (time < 300) return 'text-yellow-500',
     return 'text-red-500'
   },
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/enhanced-loading-states.tsx
 
   if (isLoading) {}
     return ('"
@@ -1027,7 +938,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   }
 
 :src/components/ui/enhanced-loading-states.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return ('
     <div className={cn('flex items-center gap-2 text-xs text-muted-foreground', className)}>
@@ -1038,16 +948,13 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
         <Badge variant="outline" className={getPerformanceColor(loadTime)}>
           <Zap className="h-3 w-3 mr-1" />
           {loadTime}ms
-=======
       {loadTime && ("
         <Badge variant="outline" className={getPerformanceColor(loadTime)}>"
           <Zap className="h-3 w-3 mr-1" />;
           {loadTime}ms;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/enhanced-loading-states.tsx
         </Badge>
       )}
 :src/components/ui/enhanced-loading-states.tsx
-<<<<<<< HEAD
       {itemCount && (;
         <span>{itemCount} items loaded</span>;
       )}
@@ -1058,19 +965,10 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 }
 }
 }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 }
@@ -1082,4 +980,3 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   );
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/enhanced-loading-states.tsx

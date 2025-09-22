@@ -1,5 +1,4 @@
 
-=======
 import React from 'react',;
 import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;
@@ -63,7 +62,6 @@ export function MilestoneManager({;
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
       <div className="lg:col-span-2">;
         <MilestonesList ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           milestones={milestones}
           activities={activities}
           isLoading={isLoading}
@@ -72,7 +70,6 @@ export function MilestoneManager({;
           onUpdateStatus={onUpdateStatus}
           onDeleteMilestone={onDeleteMilestone}
           onUploadDeliverable={onUploadDeliverable}
-<<<<<<< HEAD
 
           paymentTerms={paymentTerms}
         />;

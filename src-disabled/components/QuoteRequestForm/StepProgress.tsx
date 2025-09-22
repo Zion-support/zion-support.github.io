@@ -1,14 +1,10 @@
 :src_backup/components/QuoteRequestForm/StepProgress.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 return (
     <div className='relative'>;
       <div className='absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light'>;
-=======
 return (
     <div className='relative'>;
       <div className='absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/QuoteRequestForm/StepProgress.tsx
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
@@ -49,8 +45,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: 'budget', label: 'Budget' },
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -63,7 +57,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 
 :src/components/QuoteRequestForm/StepProgress.tsx
     { id: "service", label: "Service" },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
@@ -79,7 +72,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     if (stepOrder < currentStepOrder) return "complete",
     if (stepOrder === currentStepOrder) return "current",
     return "upcoming"
-=======
   currentStep: QuoteRequestSteps;,
 export function StepProgress({ currentStep }:,  StepProgressProps) {;,
   const steps: { id: QuoteRequestSteps; label: string }[] = [,
@@ -108,7 +100,6 @@ export function StepProgress({ currentStep }:,  StepProgressProps) {
     if (stepOrder <,  currentStepOrder) return "complete","
     if (stepOrder ===,  currentStepOrder) return "current","
     return "upcoming""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/QuoteRequestForm/StepProgress.tsx
   },
   return (
     <div className="relative">"
@@ -121,9 +112,6 @@ export function StepProgress({ currentStep }:,  StepProgressProps) {
         />
       </div>
 :src_backup/components/QuoteRequestForm/StepProgress.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <div className="flex justify-between relative">
         {steps.map((step) => {
@@ -152,11 +140,7 @@ export function StepProgress({ currentStep }:,  StepProgressProps) {
           const status = getStepStatus(step && step.id);
 :src_backup/components/QuoteRequestForm/StepProgress.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/QuoteRequestForm/StepProgress.tsx
           return (
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <div key={step && step.id} className='flex flex-col items-center relative'>;
               <div
                 className={cn(
@@ -167,7 +151,6 @@ export function StepProgress({ currentStep }:,  StepProgressProps) {
                     : status === 'current'
                       ? 'bg-zion-cyan border-2 border-zion-purple'
                       : 'bg-zion-blue-light text-zion-slate-light'
-<<<<<<< HEAD
                 )}>;
                 {status === 'complete' ? (;
                   <CheckIcon className='h-4 w-4' />;
@@ -188,12 +171,9 @@ export function StepProgress({ currentStep }:,  StepProgressProps) {
                       ? 'text-white'
 :src/components/QuoteRequestForm/StepProgress.tsx
 : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/StepProgress.tsx
                   "text-zion-slate-light"
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 )}
               </div>
               <span 
@@ -202,7 +182,6 @@ export function StepProgress({ currentStep }:,  StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
                   "text-zion-slate-light"
-<<<<<<< HEAD
 import { QuoteRequestSteps } from "../QuoteRequestForm",;
 import { CheckIcon } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -212,18 +191,12 @@ interface StepProgressProps {;
 ;
 
 }/> </div>
-=======
 
 :src/components/QuoteRequestForm/StepProgress.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                       : 'text-zion-slate-light'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm/StepProgress.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/QuoteRequestForm/StepProgress.tsx
                   "text-zion-slate-light"
 
                 )}
@@ -234,16 +207,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   status === "current" ? "text-white" :
                   "text-zion-slate-light"
 :src_backup/components/QuoteRequestForm/StepProgress.tsx
-<<<<<<< HEAD
                 ) : (
                   <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
                 )}
               </div>
 :src_backup/components/QuoteRequestForm/StepProgress.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm/StepProgress.tsx
 }/> </div>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
   steps.findIndex (s => s.id === step.id) + 1
 }</span>)
@@ -281,7 +251,6 @@ interface StepProgressProps {;
 }
 ;
 :src_backup/components/QuoteRequestForm/StepProgress.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function StepProgress({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps, label: string }[] = [;
     { id: "service", label: "Service" },;
@@ -303,11 +272,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     if (stepOrder < currentStepOrder) return "complete",;
     if (stepOrder === currentStepOrder) return "current",;
 
-=======
   (steps && steps.findIndex (s => s && s.id ===,  currentStep) / (steps && steps.length - 1) ) * 100 ;
 }%` ;`
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/QuoteRequestForm/StepProgress.tsx
   (steps && steps.findIndex (s => s && s.id === currentStep) / (steps && steps.length - 1) ) * 100 ;
 }%` ;
 
@@ -350,7 +317,6 @@ if (return "complete", ) {"
 if (return "current", ) {"
   $2
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return "upcoming";
   },;
   return (;
@@ -407,15 +373,7 @@ if (return "current", ) {"
 ;
 ;
 :src_backup/components/QuoteRequestForm/StepProgress.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm/StepProgress.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/QuoteRequestForm/StepProgress.tsx
                 ),}
               >
                 {step.label}
@@ -441,5 +399,3 @@ if (return "current", ) {"
 }</div> </div>) ;
 }"
 :src/components/QuoteRequestForm/StepProgress.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

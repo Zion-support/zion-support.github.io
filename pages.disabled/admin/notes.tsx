@@ -1,24 +1,16 @@
 :pages_backup/admin/notes.tsx
-<<<<<<< HEAD:pages/admin/notes.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 
   const [isAdmin, setIsAdmin] = useState(true);
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 type Note = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {
     async function load() {
       setLoading(true)
       try {
-<<<<<<< HEAD
-<<<<<<< HEAD
   id: string,
   target_type: string,
   target_id: string,
@@ -47,7 +39,6 @@ function load() {
       } finally {;
         setLoading(false);
         } catch (error) {
-=======
 
   return (
     <div className="space-y-4">
@@ -75,13 +66,11 @@ function load() {
 }
         </div>;
       )  } catch (error) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/notes.tsx
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/admin/notes.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       } finally {
         setLoading(false)
       }
@@ -91,12 +80,9 @@ function load() {
 
 :pages_backup/admin/notes.tsx
 
-<<<<<<< HEAD
-=======
 import { useEffect, useState } from 'react',;
 ;
 import { useEffect, useState } from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/notes.tsx
 type Note = {
   id: string;
   targetType: string;
@@ -126,15 +112,6 @@ export default function AdminNotesConsole(req, res) {
   }
 }
 :pages_backup/admin/notes.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/notes.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const res = await fetch('/api/admin/notes-all', {
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
         });
@@ -158,8 +135,6 @@ const res = await fetch('/api/admin/notes-all', {
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
           />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -191,7 +166,6 @@ const res = await fetch('/api/admin/notes-all', {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
 
         </div>;
@@ -200,7 +174,6 @@ const res = await fetch('/api/admin/notes-all', {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
     </div>;
   );
   } catch (error) {
@@ -237,8 +210,6 @@ export default function AdminNotesConsole(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
   }, [is_admin]),
   return (
@@ -290,7 +261,6 @@ export default function AdminNotesConsole(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
       } catch (error) {
     console.error("Error:", error);
@@ -340,19 +310,8 @@ export default function AdminNotesConsole(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/notes.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/notes.tsx
         <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
           {notes.map(n => (
             <div key={n.id} className='rounded border p-3 text-sm'>
@@ -466,9 +425,4 @@ export default function AdminNotesConsole(req, res) {
     </>
   );
 :pages_backup/admin/notes.tsx
-<<<<<<< HEAD:pages/admin/notes.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/notes.tsx

@@ -1,6 +1,4 @@
 :src/components/mobile-app/AppStoreBanner.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
@@ -26,8 +24,6 @@ export const AppStoreBanner: React.FC = () => {
   const isMobile = useIsMobile()
   useEffect((,) => {
 :src/components/mobile-app/AppStoreBanner.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Only show banner on mobile devices and if it hasn't been dismissed before
     if (isMobile && !safeStorage.getItem("appBannerDismissed")) {
       // Delay showing the banner by 2 seconds
@@ -51,9 +47,7 @@ export const AppStoreBanner: React.FC = () => {
 return (
 
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
-=======
   return (    <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="flex items-center">
         <div className="w-12 h-12 bg-zion-cyan rounded-lg mr-3 flex-shrink-0"></div>
         <div className="flex-1">
@@ -78,9 +72,6 @@ return (
       </div>
     </div>
 :src/components/mobile-app/AppStoreBanner.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 },
 import React, { useState, useEffect } from "react",;
@@ -92,7 +83,6 @@ import { useIsMobile } from "@/hooks/use-mobile",;
 import React, { useState, useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage";
 import { X } from 'lucide-react'import { useIsMobile } from "@/hooks/use-mobile";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const AppStoreBanner: React.FC = () => {;
   const [isVisible, setIsVisible] = useState(false),;
   const isMobile = useIsMobile(),;
@@ -115,13 +105,9 @@ export const AppStoreBanner: React.FC = () => {;
   if (!isMobile || !isVisible) return null;
   return (;
 :src/components/mobile-app/AppStoreBanner.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppStoreBanner.tsx
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">;
-=======
 export const AppStoreBanner: React.FC = () => {;    <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="flex items-center">;
         <div className="w-12 h-12 bg-zion-cyan rounded-lg mr-3 flex-shrink-0"></div>;
         <div className="flex-1">;
@@ -186,7 +172,4 @@ if (return null) {
 '"},
 }
 :src/components/mobile-app/AppStoreBanner.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

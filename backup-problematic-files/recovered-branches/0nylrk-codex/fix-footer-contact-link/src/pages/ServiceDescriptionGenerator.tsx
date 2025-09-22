@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -16,13 +15,11 @@ export default function ServiceDescriptionGenerator() {;
   // Show loading while checking authentication;
   if (isLoading) {;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
         <div className="animate-pulse text-zion-purple text-lg">;
           Loading...;
         </div>;
       </div>;
-<<<<<<< HEAD
 
       />;
       <Header />;

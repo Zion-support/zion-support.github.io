@@ -43,18 +43,14 @@ class $1 {}
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
   async analyzeCodeQuality() {}
   this.log("🤖 Starting AI-powered code quality analysis...");
-=======
 
   async analyzeCodeQuality() {}"
   this.log("🤖 Starting AI-powered code quality analysis...");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const improvements = [];
     const patterns = [];
     try {}
@@ -399,10 +395,5 @@ if (require.main === module) {}
   const enhancer = new AICodeQualityEnhancer();
   enhancer.run()};
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 </div>"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

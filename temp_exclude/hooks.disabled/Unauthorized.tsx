@@ -23,9 +23,7 @@ export default function Unauthorized() {
           <div className="flex flex-col gap-3">
             <Link
               href="/"
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Unauthorized.tsx
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
             >'
               {t('errors.return_home')}
@@ -50,7 +48,6 @@ import { Header } from "@/components/Header",;
 import Link from 'next / link';
 import { Button } from '@/components / ui / button';
 import { Header } from '@/components / Header';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { ShieldAlert } from 'lucide-react';
 import { useTranslation } from "react-i18next",;
 export default function Unauthorized() { return null; }
@@ -81,7 +78,6 @@ export default function Unauthorized() { return null; }
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center";
 :temp_exclude/hooks.disabled/Unauthorized.tsx
             >;
-<<<<<<< HEAD
               {t('errors.login_different_account')}
               {t ('errors.return_home')}
             </Link>;
@@ -91,7 +87,6 @@ export default function Unauthorized() { return null; }
               className="w - full border border - zion - blue - light text - zion - slate - light hover:bg - zion - blue hover:text - white px - 4 py - 2 rounded inline - flex items - center justify - center";
             >;'
               {t ('errors.login_different_account')}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </Link>;
           </div>;
         </div>;

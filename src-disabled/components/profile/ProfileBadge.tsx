@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -13,30 +11,22 @@ interface ProfileBadgeProps {;
 interface ProfileBadgeProps {
   type: BadgeType,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React from "react",
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
 import { cn } from "@/lib/utils",
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 
-<<<<<<< HEAD
 interface ProfileBadgeProps {
   type: BadgeType,
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   className?: string
-=======
   className?: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {}
   const badgeConfig = {}
     verified: {}
       icon: BadgeCheck,
-<<<<<<< HEAD
       text: "Verified",
       colors: "bg-blue-500/20 text-blue-400"},
     featured: {
@@ -51,8 +41,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {}
       icon: Award,
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       icon: Star,
       text: "Featured","
@@ -65,7 +53,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {}
       icon: Award,
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
-<<<<<<< HEAD
 import { cn } from '@/lib / utils';
 type BadgeType = 'verified' | 'featured' | 'new' | 'top - rated';
 interface ProfileBadgeProps {
@@ -124,15 +111,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   icon: Icon,  text, colors;,
 }= badge_config[type];
 }> <Icon className="w - 3 h-3" /> <span> {
-=======
 }> <Icon className="w - 3 h - 3" /> <span> {"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   text;
 }</span>;'"
 }'"  );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   icon: Icon,  text, colors
 }= badgeConfig[type]
 }> <Icon className="w-3 h-3" /> <span> {
@@ -140,5 +123,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</span>
 }'"  )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

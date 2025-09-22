@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -15,12 +13,10 @@ interface CertificationsListProps {
   certifications: Certification[]
   onEdit: (cert: Certification) => void
   onDelete: (id: string) => void
-=======
 interface CertificationsListProps {}
   certifications: Certification[]
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {}
   if (certifications.length === 0) {};
@@ -58,16 +54,12 @@ interface CertificationsListProps {}
   certifications: Certification[],
   on_edit: (cert: Certification) => void,
   on_delete: (id: string) => void;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {;
   if (certifications.length === 0) {;
     return null;
   }
-<<<<<<< HEAD
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Certifications</h3>
@@ -102,17 +94,14 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                 <Button
                 <Button
                   variant='ghost'
-=======
                 <Button'
                   variant='ghost''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   size='icon'
                   onClick={() => onEdit(cert)}
 '
                   className='text-primary hover:underline'>              <p className="text-xs mt-2">;
                 <a;
                   href = {cert && cert.credential_url,}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   variant="ghost"
                   size="icon"
                   onClick={() => onDelete(cert.id!)}
@@ -137,13 +126,10 @@ aria-label="Delete certification"
                   rel='noopener noreferrer'
                   className='text-primary hover:underline'
                 >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   View credential
 </a>;
               </p>;            )}
             )}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </CardContent>;
         </Card>;
       ))}
@@ -205,11 +191,7 @@ className="text-primary hover:underline";
         </Card>))}
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;
 }}}}}}
 ;
@@ -217,4 +199,3 @@ className="text-primary hover:underline";
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,50 +1,36 @@
-<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-=======
 import React from 'react',;'
 import Head from 'next/head',;'
 import Link from 'next/link',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useRouter } from 'next/router',;
 export default function CaseStudyResourcePage() {}
   const router = useRouter(),
   const { id } = router.query,
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         delivering significant improvements in efficiency, quality, and cost reduction.</p>
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
         High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line;
         and preventing them from meeting growing customer demands.</p>
-<<<<<<< HEAD
 
         <h2>Solution</h2>
         <p>We implemented a comprehensive AI automation system that included:</p>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <ul>
           <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
           <li><strong>Real-time Production Optimization:</strong> Dynamic scheduling and resource allocation</li>
           <li><strong>Automated Quality Control:</strong> Computer vision systems for defect detection</li>
           <li><strong>Intelligent Scheduling:</strong> AI-powered production planning and optimization</li>
         </ul>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <h2>Implementation</h2>
         <p>The system was deployed in phases over 6 months:</p>
         <ul>
@@ -53,11 +39,7 @@ import { useRouter } from 'next/router';
           <li><strong>Phase 3:</strong> Integration with existing systems</li>
           <li><strong>Phase 4:</strong> Training and optimization</li>
         </ul>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <h2>Results</h2>
         <p>The implementation delivered exceptional results:</p>
         <ul>
@@ -66,10 +48,7 @@ import { useRouter } from 'next/router';
           <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
           <li><strong>30% reduction in operational costs</strong> - Optimized resource allocation and reduced waste</li>
         </ul>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <h2>Key Learnings</h2>
         <p>This project revealed several important insights:</p>
         <ul>
@@ -78,9 +57,6 @@ import { useRouter } from 'next/router';
           <li>Gradual implementation reduces resistance and improves adoption</li>
           <li>Continuous monitoring and optimization is essential for long-term success</li>
         </ul>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <p>The AI automation implementation at Global Manufacturing Corp demonstrates the transformative potential
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company
         as a leader in smart manufacturing.</p>
@@ -106,10 +82,6 @@ function CaseStudyResourcePage() {
       industry: 'Technology',
       results: '50% reduction in cloud costs, 99.9% uptime achieved',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically;
         reduce costs while improving performance and reliability for high-traffic applications.</p>
@@ -159,19 +131,14 @@ The self-healing, auto-scaling infrastructure now supports continued business gr
         optimal performance and cost efficiency.</p>
 `
     }
-<<<<<<< HEAD
   ]
   const caseStudy = caseStudies.find(study => study.id === id)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function CaseStudyResourcePage(req, res) {
   try {
-=======
         The self-healing, auto-scaling infrastructure now supports continued business growth while maintaining;
         optimal performance and cost efficiency.</p>`
       `
@@ -184,7 +151,6 @@ import { useRouter } from 'next/router';
 
 export default function CaseStudyResourcePage(req, res) {}
   try {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const router = useRouter();
   const { id } = router.query;
   // Case studies data - this should match the data in resources.tsx;
@@ -364,33 +330,20 @@ export default function CaseStudyResourcePage(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!caseStudy) {
     return (
       <>
         <Head>
           <title>Case Study Resource Not Found | Zion Tech Group</title>
 </Head>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <main className="container mx-auto px-6 py-12">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>
@@ -400,9 +353,6 @@ export default function CaseStudyResourcePage(req, res) {}
 <Link
               <Link 
               <Link
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
 <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
           <main className='container mx-auto px-6 py-12'>
             <div className='max-w-4xl mx-auto text-center'>
@@ -412,13 +362,9 @@ export default function CaseStudyResourcePage(req, res) {}
               <p className='text-xl text-white/80 mb-8'>
                 The case study resource you're looking for doesn't exist.
               </p>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 ← Back to Resources;
               </Link>
@@ -428,14 +374,10 @@ export default function CaseStudyResourcePage(req, res) {}
       </>
 )
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <>
       <Head>
         <title>{caseStudy.title} | Zion Tech Group - Case Study Resource</title>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />
         <meta property="og:description" content={caseStudy.description} />
       </Head>"
@@ -450,11 +392,6 @@ export default function CaseStudyResourcePage(req, res) {}
             <header className="mb-12">"
               <div className="mb-6">"
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </span>
               </div>"
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>"
@@ -485,17 +422,12 @@ export default function CaseStudyResourcePage(req, res) {}
             </div>
 <div className="text-center">
               <Link
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
                 href='/contact'
                 className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 Get Started with Your Project;
               </Link>
@@ -504,7 +436,6 @@ export default function CaseStudyResourcePage(req, res) {}
         </main>
       </div>
     </>
-<<<<<<< HEAD
   );
 };
   )
@@ -515,20 +446,15 @@ export default function CaseStudyResourcePage(req, res) {}
 
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       description: 'Building self - healing, auto - scaling cloud infrastructure.',
-=======
 
 }
 
 '
       description: 'Building self - healing, auto - scaling cloud infrastructure.',`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       full_content: `;
         <h2 > Executive Summary</h2>;
         <p > This case study demonstrates how intelligent cloud infrastructure optimization can dramatically;
@@ -595,59 +521,30 @@ if ( {) {}
             <div className="max - w-4xl mx - auto text - center">;"
               <h1 className="text - 4xl font - bold mb - 6 text - white">Case Study Resource Not Found</h1>;"
               <p className="text - xl text - white / 80 mb - 8">;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 The case study resource you're looking for doesn't exist.;
               </p>;
               <Link;"
                 href="/resources";
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >;
                 ← Back to Resources;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
               >;
                 ← Back to Resources;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </Link>;
             </div>;
           </main>;
         </div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >;
                 Get Started with Your Project;
               </Link>;
             </div>;
           </div>;
         </main>;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

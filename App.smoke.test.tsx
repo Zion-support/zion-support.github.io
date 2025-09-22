@@ -5,11 +5,6 @@ describe('App.smoke', () => {
     expect(true).toBe(true);
   });
 });
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
 import React from 'react';
 import { render } from '@testing-library/react';
@@ -20,7 +15,6 @@ describe('App Smoke Tests', () => {
 
     const { container } = render(<App />);
     expect(container.firstChild).toBeTruthy();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
@@ -38,29 +32,15 @@ describe('App Smoke Test', () => {
   });
 it('should render a basic structure', () => {
     const { container } = render(<App />);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    expect(container.firstChild).toBeTruthy();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  });
-});
-=======
-  });
-});
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
     expect(container.firstChild).toBeTruthy();
   });
 });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
+  });
 });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
+    expect(container.firstChild).toBeTruthy();
+  });
+});
+});
 });
 
   });
@@ -73,5 +53,3 @@ it('renders without crashing', () => {
   expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
 });
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/main

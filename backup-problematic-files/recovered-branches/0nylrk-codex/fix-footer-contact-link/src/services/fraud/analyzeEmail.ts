@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 // Email analysis functionality;
 import { suspiciousEmailDomains } from './constants';
 import { EmailAnalysisResult } from './types';

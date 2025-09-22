@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HelpCategory } from "./types",;
@@ -27,14 +26,12 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
 ;
   if (filteredCategories.length === 0) {;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="text-center py-8">;
         <h3 className="text-lg font-medium mb-2">No results found</h3>;
         <p className="text-zion-slate-light">;
           Try adjusting your search query or browse all categories.;
         </p>;
       </div>;
-<<<<<<< HEAD
 
             </p>;
           </CardContent>;

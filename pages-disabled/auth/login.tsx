@@ -6,15 +6,11 @@ import {useRouter} from 'next/router';
 import {useEffect, useState, FormEvent} from 'react';
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
 
 import Link from 'next/link';'
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 
 '
@@ -28,7 +24,6 @@ import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   AuthError
   User
   AuthChangeEvent
@@ -42,13 +37,8 @@ import {};
 import type {;
   AuthError,;
   User,;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   AuthError,
   User,
 
@@ -59,7 +49,6 @@ import {;
   logInfo,;
   logWarn,;
   logErrorToProduction,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
@@ -77,15 +66,11 @@ import Head from 'next/head';'
 import { signIn } from 'next-auth/react';'
 import { supabase } from '@/utils/supabase/client';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from '@/components/ui/card';
 const LoginPage = () => {
   Card,
@@ -93,32 +78,18 @@ const LoginPage = () => {
   CardDescription,
   CardHeader,;
   CardTitle,;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '@/components/ui/card';
 const LoginPage = () => {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from '@/components/ui/card';
 const LoginPage = () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 } from '@/components/ui/card';
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 const LoginPage = () => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
 import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 import {}
 ';
@@ -132,7 +103,6 @@ import { Button } from '@/components/ui/button';'
 import { Input } from '@/components/ui/input';'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const router = useRouter();
   const { t } = useTranslation();'
   const [email, setEmail] = useState('');'
@@ -142,7 +112,6 @@ const [sessionCheckTimedOut, setSessionCheckTimedOut] = useState(false);
   const [isEmailUnverified, setIsEmailUnverified] = useState(false);
   const [verificationEmailSent, setVerificationEmailSent] = useState(false);
   const [isResendingVerification, setIsResendingVerification] = useState(false);
-<<<<<<< HEAD
   const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
   const [proactiveResendEmail, setProactiveResendEmail] = useState('');
   const [isProactivelyResending, setIsProactivelyResending] = useState(false);
@@ -151,15 +120,11 @@ const [sessionCheckTimedOut, setSessionCheckTimedOut] = useState(false);
 
   const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Using centralized Supabase client (imported at top)
   // Effect for initial session check and auth state changes
   useEffect(() => {
     let mounted = true;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } finally {
         if (mounted) {
           setIsCheckingSession(false);
@@ -188,9 +153,6 @@ logWarn('LoginPage: Session check timeout after 5 seconds');
           setSessionChecked(true);
           logInfo(;
             'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           );        }
       }
 
@@ -203,7 +165,6 @@ logWarn('LoginPage: Session check timeout after 5 seconds');
             event,;
             userId: session?.user?.id,;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           });
           setUser(session?.user ?? null);
           // If auth state changes after initial check, ensure sessionChecked is true;
@@ -220,14 +181,12 @@ logWarn('LoginPage: Session check timeout after 5 seconds');
 
       return () => {;
         // Cleanup for listener;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
         authListener?.subscription?.unsubscribe();
 
       };    }
     const unsubscribePromise = checkSessionAndListen();
 
-<<<<<<< HEAD
           });
           returnTo = '/dashboard';
         }
@@ -354,8 +313,6 @@ logWarn('LoginPage: Session check timeout after 5 seconds');
         '/login',;'
         '/signup',;'
         '/auth/forgot-password',;
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ];
       if (authPages && authPages.includes(returnTo) || returnTo && returnTo.startsWith('/auth/')) {;
         returnTo = '/dashboard';
@@ -367,7 +324,6 @@ logWarn('LoginPage: Session check timeout after 5 seconds');
       }
 
       }, 100); // Small delay to let session stabilize;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       return () => clearTimeout(redirectTimer);
     }
@@ -472,11 +428,8 @@ logWarn('LoginPage: Session check timeout after 5 seconds');
       const redirectTimer = setTimeout(() => {
         // Double-check that we're still logged in before redirecting
         if (user && router.pathname === '/auth/login') {
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`),
           router.replace(returnTo), // Use replace to avoid back button issues
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         }
       }, 100), // Small delay to let session stabilize;
       return () => clearTimeout(redirectTimer)
@@ -499,20 +452,15 @@ logWarn('LoginPage: Session check timeout after 5 seconds');
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email }),;
 
-<<<<<<< HEAD
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '
         method: 'POST','
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       });
 
       if (response && response.ok) {;
@@ -535,12 +483,9 @@ logWarn('LoginPage: Session check timeout after 5 seconds');
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email: proactiveResendEmail }),      });
 
-<<<<<<< HEAD
         method: 'POST',
-=======
 '
         method: 'POST','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: proactiveResendEmail })
       });
@@ -556,10 +501,7 @@ logWarn('LoginPage: Session check timeout after 5 seconds');
     } finally {}
       setIsProactivelyResending(false)
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       const data = await response && response.json();
       if (response && response.ok) {;
@@ -751,15 +693,10 @@ logWarn('LoginPage: Session check timeout after 5 seconds');
 
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   };
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
           } catch (error) {"
     console.error("Error:", error);"
@@ -970,7 +907,6 @@ logWarn('LoginPage: Session check timeout after 5 seconds');
   }
 }
   },
-<<<<<<< HEAD
 
             handleResendVerification();
           }, 1000);
@@ -1005,18 +941,14 @@ logWarn('LoginPage: Session check timeout after 5 seconds');
             name: signInError && signInError.name || 'AuthApiError',;
             message: displayMessage,;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     try {
       logInfo('Attempting Supabase login with email:', { data: email }),
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
         email,
         password}),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleLogin = async (e: FormEvent) => {
-=======
 
   const handleLogin = async (e: FormEvent) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     e.preventDefault(),
     setIsLoading(true),
     setError(null),
@@ -1025,21 +957,14 @@ logWarn('LoginPage: Session check timeout after 5 seconds');
     try {'
       logInfo('Attempting Supabase login with email:', { data: email }),
 const { data, error: signInError } = await supabase.auth.signInWithPassword({
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (signInError) {
-=======
       const { data, error: signInError } = await supabase.auth.signInWithPassword({}
       if (signInError) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         logErrorToProduction('Supabase sign-in error:', { data: signInError }),
         // Check if error is related to email verification'
         const messageIncludesEmailNotConfirmed = signInError.message?.toLowerCase().includes('email not confirmed') ||'
                                                  signInError.message?.toLowerCase().includes('email_not_confirmed') ||'
                                                  signInError.message?.toLowerCase().includes('verify') ||
-<<<<<<< HEAD
 
       });
       // Check if the caught error is a network error;'
@@ -1056,8 +981,6 @@ const { data, error: signInError } = await supabase.auth.signInWithPassword({
         exceptionMessage = catchedError && catchedError.message;
       }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           // Auto-resend verification email
           setTimeout(() => {
             handleResendVerification()
@@ -1066,7 +989,6 @@ const { data, error: signInError } = await supabase.auth.signInWithPassword({
           // MODIFIED SECTION FOR BETTER ERROR MESSAGES
           let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
           if (signInError.message) {
-<<<<<<< HEAD
   // Auto-redirect to verification status page for unverified users after showing message
   useEffect(() => {
     if (isEmailUnverified && verificationEmailSent && email) {
@@ -1170,11 +1092,8 @@ router.push(`/verify-status?email=${encodeURIComponent(email)}`);
                   displayMessage = 'Network error. Please check your internet connection and try again.'
               } else if (signInError.message.toLowerCase().includes('user disabled')) {
                   displayMessage = 'Your account has been disabled. Please contact support.'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   };
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
@@ -1201,18 +1120,13 @@ router.push(`/verify-status?email=${encodeURIComponent(email)}`);
     if (isEmailUnverified && verificationEmailSent && email) {;
       const timer = setTimeout(() => {;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }, 3000);
       return () => clear_timeout (timer);
     }
-=======
 router.push(`/verify-status?email=${encodeURIComponent(email)}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       }, 3000);
       return () => clear_timeout (timer);
     }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
 `
         router.push(`/verify-status?email=${encodeURIComponent(email)}`)
@@ -1221,11 +1135,7 @@ router.push(`/verify-status?email=${encodeURIComponent(email)}`);
     }
     return undefined, // Explicitly return undefined if condition is not met;
   }, [isEmailUnverified, verificationEmailSent, email, router]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 `
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         router.push(`/verify-status?email=${encodeURIComponent(email)}`);
       }, 3000),;
       return () => clearTimeout(timer);
@@ -1237,11 +1147,6 @@ router.push(`/verify-status?email=${encodeURIComponent(email)}`);
     return undefined, // Explicitly return undefined if condition is not met;
   }, [isEmailUnverified, verificationEmailSent, email, router]),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
@@ -1251,15 +1156,11 @@ router.push(`/verify-status?email=${encodeURIComponent(email)}`);
   // 1. Primary Loading State: During initial session check;
   if (isCheckingSession) {;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check;
   if (isCheckingSession) {}
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     logInfo('LoginPage: Rendering "Checking authentication..."');
     return ('
       <div className='min-h-screen flex items-center justify-center'>;'
@@ -1272,10 +1173,7 @@ router.push(`/verify-status?email=${encodeURIComponent(email)}`);
         </div>;
       </div>;
     );  }
-<<<<<<< HEAD
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."');
     return ('
       <div className='min-h-screen flex items-center justify-center'>;'
@@ -1286,15 +1184,9 @@ router.push(`/verify-status?email=${encodeURIComponent(email)}`);
         </div>;
       </div>;
     );  }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     logInfo('LoginPage: Rendering "Checking authentication..."'),
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -1354,7 +1246,6 @@ router.push(`/verify-status?email=${encodeURIComponent(email)}`);
   logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`);
   // Defensive check: If router.pathname is not /auth/login, do not render the login form.;
 // Defensive check: If router && router.pathname is not /auth/login, do not render the login form.;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // This is a safeguard against the component's content persisting on other auth routes.;
   if (router && router.pathname !== '/auth/login' && router && router.pathname !== '/login') {;
     logWarn(;
@@ -1362,7 +1253,6 @@ router.push(`/verify-status?email=${encodeURIComponent(email)}`);
     );
     return null; // Or a minimal loader/empty div  }
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {;
-=======
 
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check;
@@ -1379,7 +1269,6 @@ router.push(`/verify-status?email=${encodeURIComponent(email)}`);
   // This is a safeguard against the component's content persisting on other auth routes.;
 '
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     logWarn(`LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`);
     return null, // Or a minimal loader/empty div;
     } catch (error) {"
@@ -1387,13 +1276,10 @@ router.push(`/verify-status?email=${encodeURIComponent(email)}`);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
-<<<<<<< HEAD
         <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
@@ -1405,54 +1291,33 @@ router.push(`/verify-status?email=${encodeURIComponent(email)}`);
   return (
 
   return (
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
   return (
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     );
     return null; // Or a minimal loader/empty div  }
   return (
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account;
             </CardDescription>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <Input
                   id='email'
-=======
                 <Input'
                   id='email''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   type='email'
                   value={email}
                   onChange={e => setEmail(e && e.target.value)}                  required;
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
             <form onSubmit={handleLogin} className="space-y-4">
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {error && (
                 <div className="p-3 bg-red-50 border border-red-200 rounded-md">
                   <p className="text-sm text-red-600">{error.message}</p>
@@ -1460,8 +1325,6 @@ router.push(`/verify-status?email=${encodeURIComponent(email)}`);
 Email
                 </label>
                 <Input
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <Input
                   id='password'
                   type='password'
@@ -1559,9 +1422,7 @@ onChange={e => setPassword(e.target.value)}                  required
 }
                 />
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="space-y-2">
-=======
               {error && ("
                 <div className="p-3 bg-red-50 border border-red-200 rounded-md">"
                   <p className="text-sm text-red-600">{error.message}</p>
@@ -1574,7 +1435,6 @@ onChange={e => setPassword(e.target.value)}                  required
 
               "
               <div className="space-y-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <label htmlFor="password" className="text-sm font-medium">
                   Password;
                 </label>
@@ -1593,7 +1453,6 @@ onChange={e => setPassword(e.target.value)}                  required
               <p className="text-sm text-gray-600">
                 Don't have an account?{' '}
 
-<<<<<<< HEAD
                   id="email"
                   type="email"
                   value={email  } catch (error) {
@@ -1650,13 +1509,6 @@ onChange={e => setPassword(e.target.value)}                  required
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </Link>
               </p>
             </div>
@@ -1666,19 +1518,14 @@ onChange={e => setPassword(e.target.value)}                  required
     </>
 );
 };export default LoginPage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 },
 export default LoginPage,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
   )
 },
 export default LoginPage,
 ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 />;
               </div>;
 
@@ -1701,10 +1548,7 @@ export default LoginPage,
                   href='/auth/register''
                   className='text-blue-600 hover:underline'>                  Sign up;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
   // --- Rendering Logic ---;
   // 1. Primary Loading State: During initial session check;
@@ -1818,12 +1662,7 @@ if ( {) {}
                   className='text - blue - 600 hover:underline';
                 >                  Sign up;
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </Link>;
               </p>;
             </div>;
@@ -1831,21 +1670,10 @@ if ( {) {}
         </Card>;
       </div>;
 
-=======
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 },;
 export default LoginPage;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default LoginPage;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

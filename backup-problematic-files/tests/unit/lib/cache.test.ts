@@ -1,4 +1,3 @@
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 interface Cache.testProps {
   // Add props here as needed
@@ -17,7 +16,6 @@ interface Cache.testProps {
 }
   // Add props here as needed;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function Cache.test({ }: Cache.testProps) {
   return (
     <div>

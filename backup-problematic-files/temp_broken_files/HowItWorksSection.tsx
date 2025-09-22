@@ -1,5 +1,4 @@
 
-=======
 import { GradientHeading } from "./GradientHeading",;
 import { Check, Handshake, Search, Send } from "lucide-react",;
 ;
@@ -23,7 +22,6 @@ const steps = [;
 ;
 export function HowItWorksSection() {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;
@@ -32,7 +30,6 @@ export function HowItWorksSection() {;
             A simple four-step process to connect technology providers with clients;
           </p>;
         </div>;
-<<<<<<< HEAD
 
                 </div>;
               </div>;

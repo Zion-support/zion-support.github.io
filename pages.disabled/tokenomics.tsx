@@ -1,32 +1,22 @@
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
 export default function TokenomicsWhitepaperBuilder(req, res) {
   try {
 
 export default function TokenomicsWhitepaperBuilder() {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
-<<<<<<< HEAD
 
   const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation'),;
   const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access'),;
@@ -57,7 +47,6 @@ export default function TokenomicsWhitepaperBuilder() {;
       setGeneratedMarkdown(data.markdown |'');
     } catch (e) {
       console.error(e);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -71,7 +60,6 @@ export default function TokenomicsWhitepaperBuilder() {;
     }
     return this.props.children;
   }
-<<<<<<< HEAD
 }
 import React, { useMemo, useState } from 'react';
 
@@ -82,26 +70,15 @@ const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepape
 export default function TokenomicsWhitepaperBuilder(req, res) {
   try {
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
 
 export default function TokenomicsWhitepaperBuilder() {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 type DistributionItem = any;
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
 export default function TokenomicsWhitepaperBuilder() {
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
@@ -110,13 +87,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/tokenomics.tsx
 const [useCases, setUseCases] = useState<string>(
 const [useCases, setUseCases] = useState<string>(
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     'Access to premium AI agents, marketplace discounts, reputation staking, governance participation'
   );
   const [rewardsLogic, setRewardsLogic] = useState<string>(
     'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access'
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
   );  const [distribution, setDistribution] = useState<DistributionItem[]>([
     { label: 'Ecosystem & Rewards', percent: 35 }
     { label: 'Community Treasury', percent: 20 }
@@ -133,7 +108,6 @@ const [useCases, setUseCases] = useState<string>(
     { label: 'Investors', percent: 15 },
     { label: 'Liquidity & Market Making', percent: 10 },
 { label: 'Advisors & Partnerships', percent: 5 },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ]);
   const [governance, setGovernance] = useState<string>(
     'One-token-one-vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported'
@@ -151,7 +125,6 @@ const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
 
   const [activeSection, setActiveSection] =;
     useState<string>('Executive Summary');
-<<<<<<< HEAD
   const previewMarkdown = useMemo(() => {
     return (
 const [activeSection, setActiveSection] =
@@ -189,9 +162,6 @@ export default function TokenomicsWhitepaperBuilder() {;
   const previewMarkdown = useMemo(() => {;
     return (
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
       generatedMarkdown ||;
       buildLocalMarkdown({;
         tokenName,;
@@ -203,10 +173,6 @@ export default function TokenomicsWhitepaperBuilder() {;
         jurisdiction,;
         legalReview,;
 :pages_backup/tokenomics.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
       generatedMarkdown |
       buildLocalMarkdown({
         tokenName
@@ -252,8 +218,6 @@ method: 'POST'
           legalReview
         })
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
       });
       if (!res.ok) throw new Error('Failed to generate');
       const data = await res.json();
@@ -296,13 +260,10 @@ method: 'POST'
   ) {
     setDistribution(prev => {      const copy = [...prev];
       const item = { ...copy[index] }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
 export default function TokenomicsWhitepaperBuilder(req, res) {
   try {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
@@ -311,18 +272,15 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
 const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation'),;
   const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access'),;
   const [distribution, setDistribution] = useState<DistributionItem[]>([;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     { label: 'Ecosystem & Rewards', percent: 35 },;
     { label: 'Community Treasury', percent: 20 },;
     { label: 'Team & Contributors', percent: 15 },;
     { label: 'Investors', percent: 15 },;
     { label: 'Liquidity & Market Making', percent: 10 },;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>('Executive Summary');
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const previewMarkdown = useMemo(() => {;
     return (
       generatedMarkdown ||;
@@ -335,11 +293,7 @@ const [useCases, setUseCases] = useState<string>('Access to premium AI agents, m
         governance,;
         jurisdiction,;
         legalReview,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/tokenomics.tsx
-=======
 
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
@@ -350,13 +304,8 @@ const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepape
 export default function TokenomicsWhitepaperBuilder(req, res) {}
   try {};
 export default function TokenomicsWhitepaperBuilder() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/tokenomics.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
       });
     );
   }, [;
@@ -374,14 +323,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },;
         body: JSON && JSON.stringify({;
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/tokenomics.tsx
-=======
         headers: {;
           'Content-Type': 'application/json',;
           'X-Admin': isAdmin ? 'true' : 'false',;
@@ -413,7 +355,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         method: 'POST',;
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'false' },;
         body: JSON.stringify({;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
           tokenName,;
           tokenSupply,;
           useCases,;
@@ -423,8 +364,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           jurisdiction,;
           operatorPrompt,;
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
           legalReview,;
         }),;
       });
@@ -434,13 +373,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (e) {;
       console && console.error(e);
 :pages_backup/tokenomics.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       alert('Generation failed');
     } finally {;
       setIsGenerating(false);    }
   }
 :pages_backup/tokenomics.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       const blob = new Blob([previewMarkdown], { type: 'text/markdown,charset=utf-8' });
       const url = URL.createObjectURL(blob);
@@ -462,13 +399,8 @@ const a = document.createElement('a');
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
 
-<<<<<<< HEAD
       alert('Failed to create share link');
       return;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
     } finally {
       setIsGenerating(false);
     }
@@ -482,8 +414,6 @@ const blob = new Blob([previewMarkdown], {
 origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/tokenomics.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
       const a = document.createElement('a');
       a.href = url;'`
       a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
@@ -491,7 +421,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       a.click();
       document.body.removeChild(a);
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages_backup/tokenomics.tsx
 URL.revokeObjectURL(url);
     } else {
       const res = await fetch('/api/whitepaper/export', {
@@ -501,8 +430,6 @@ body: JSON.stringify({ markdown: previewMarkdown, tokenName }),
 origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/tokenomics.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
       });
       if (!res && res.ok) {;'
         alert('PDF export failed');
@@ -513,12 +440,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
 
       const item = { ...copy[index] }
 :pages_backup/tokenomics.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       URL.revokeObjectURL(url)
     } else {'
       const res = await fetch('/api/whitepaper/export', {'
@@ -538,12 +462,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setDistribution((prev) => {}
       const copy = [...prev];
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
 }
       const { url } = await res.json();'
       window.open(url, '_blank');
 :pages_backup/tokenomics.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -556,20 +478,16 @@ const { url } = await res.json();
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 ;
 :pages_backup/tokenomics.tsx
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {;
     setDistribution((prev) => {;
       const copy = [...prev];
-<<<<<<< HEAD
-<<<<<<< HEAD
       const item = { ...copy[index] };
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
       copy[index] = item;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const item = { ...copy[index] };
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
@@ -608,10 +526,8 @@ async function handleShareableLink() {;
       body: JSON.stringify({ markdown: previewMarkdown, publicPreview })}),;
     if (!res.ok) {;
   const preview_markdown = useMemo (() => {
-=======
 
   const preview_markdown = useMemo (() => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/tokenomics.tsx
     return (
       generated_markdown ||;
       buildLocalMarkdown ({}
@@ -671,8 +587,6 @@ function handle_generate() {}
       setIsGenerating (false);    }
 :pages_backup/tokenomics.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
   function updateDistribution(
     index: number
     key: keyof DistributionItem
@@ -687,12 +601,7 @@ function handle_generate() {}
 return copy;
     });
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
   }
   async /**
  * handle_download - Function description;
@@ -729,8 +638,6 @@ if ( {) {}
     }
   }
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
   /**
  * update_distribution - Function description;
  */
@@ -744,11 +651,8 @@ function update_distribution() {}
 if (item.label = value) {}
   $2;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       copy[index] = item;
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
   function removeDistributionItem(index: number) {
     setDistribution(prev => prev.filter((_, i) => i !== index));
   }
@@ -761,15 +665,8 @@ body: JSON.stringify({ markdown: previewMarkdown, publicPreview }),
     });
     if (!res.ok) {
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
       alert('Failed to create share link');
       return;
       } catch (error) {"
@@ -785,8 +682,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD:pages_backup/tokenomics.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const sections = [
     'Executive Summary'
     'Market Context'
@@ -829,7 +724,6 @@ if ( {) {
   $2
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const sections = [
     'Executive Summary'
     'Market Context'
@@ -839,14 +733,10 @@ if ( {) {
     'Governance Model'
     'Risks + Disclaimers'
 :pages/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   ];
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 :pages_backup/tokenomics.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className='px-3 py-1 rounded-md bg-indigo-600 text-white'>;
         <title > Tokenomics Whitepaper Generator</title>;
       </Head>;'
@@ -871,38 +761,27 @@ if ( {) {
               <span > Public after launch</span>;
             </label>;
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             <button;
               on_click={handleShareableLink}
               className='px - 3 py - 1 rounded - md bg - indigo - 600 text - white';
             >;
 
 :pages_backup/tokenomics.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
               Create Share Link;
             </button>;
           </div>;
         </div>;
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
         <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 6'>;
           <div className='space - y-6'>;
             <div className='rounded - lg border p - 4 space - y-4'>;
               <h2 className='font - medium'>Builder Inputs</h2>;
-=======
 '
         <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 6'>;'
           <div className='space - y-6'>;'
             <div className='rounded - lg border p - 4 space - y-4'>;'
               <h2 className='font - medium'>Builder Inputs</h2>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/tokenomics.tsx
               <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
                 <div>;'
                   <label className='text - xs opacity - 70'>Token name</label>;
@@ -956,11 +835,7 @@ if ( {) {
                     value={jurisdiction}
                     on_change={e => set_jurisdiction (e.target.value)}
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
                   >;
                     <option value='US'>US</option>;
                     <option value='EU'>EU</option>;
@@ -969,7 +844,6 @@ if ( {) {
                   </select>;
                 </div>;
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
 
                     onChange={e => setLegalReview(e && e.target.checked)}
                   />;
@@ -984,16 +858,11 @@ if ( {) {
                   <label html_for='legal_review' className='text - sm'>;
 
 :pages_backup/tokenomics.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
                     Submit to Counsel;
                   </label>                </div>;
               </div>;
             </div>;
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     className='px-3 py-1 rounded-md bg-gray-900 text-white'>;
             <div className='rounded - lg border p - 4 space - y-3'>;
@@ -1036,16 +905,11 @@ if ( {) {
                   >;
 
 :pages_backup/tokenomics.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
                     Add allocation;
                   </button>;
                 </div>;
               </div>;
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const sections = ['
     'Executive Summary''
@@ -1060,27 +924,13 @@ if ( {) {
 }'
   const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   ];
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/tokenomics.tsx
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/tokenomics.tsx
-=======
   ];
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
                   className='px-4 py-2 rounded-md border';
               <div className='mt - 3'>                <DistributionDonut data={distribution} />;
@@ -1178,16 +1028,12 @@ function jurisdictionalNote(): any (j: string) {;
   ];
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
   return (
     <>
       <Head>
         <title>Tokenomics Whitepaper Generator</title>
 :pages_backup/tokenomics.tsx
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Whitepaper Generator</h1>
@@ -1196,11 +1042,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/tokenomics.tsx
               <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
               <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
 <div className='space-y-6'>
         <div className='flex items-center justify-between'>
           <h1 className='text-2xl font-semibold'>Whitepaper Generator</h1>
@@ -1212,12 +1054,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 onChange={e => setIsAdmin(e.target.checked)}
               />
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
               <span>Admin</span>
             </label>"
             <label className="inline-flex items-center gap-2">"
@@ -1228,44 +1065,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
           <div className='space-y-6'>
             <div className='rounded-lg border p-4 space-y-4'>
               <h2 className='font-medium'>Builder Inputs</h2>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 :pages_backup/tokenomics.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="space-y-6">
             <div className="rounded-lg border p-4 space-y-4">
               <h2 className="font-medium">Builder Inputs</h2>
-=======
 
 "
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">"
           <div className="space-y-6">"
             <div className="rounded-lg border p-4 space-y-4">"
               <h2 className="font-medium">Builder Inputs</h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/tokenomics.tsx
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div>
                   <label className="text-xs opacity-70">Token name</label>
-=======
 
                 <div>"
                   <label className="text-xs opacity-70">Token name</label>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/tokenomics.tsx
                   <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
                 </div>
                 <div>"
@@ -1294,22 +1116,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </select>
                 </div>
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                 <div className="flex items-center gap-2">
                   <input id="legalReview" type="checkbox" checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
                   <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
 
 :pages_backup/tokenomics.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
               </div>
             </div>
@@ -1324,19 +1137,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <button onClick={() => removeDistributionItem(idx)} className="col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white">Remove</button>
                   </div>
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/tokenomics.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
                 <div className="flex items-center justify-between text-xs opacity-70">
                   <span>Total: {totalPercent}%</span>"
                   <button onClick={addDistributionItem} className="px-3 py-1 rounded-md bg-gray-900 text-white">Add allocation</button>
@@ -1347,10 +1153,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <DistributionDonut data={distribution} />
               </div>
             </div>
-<<<<<<< HEAD
             <div className='rounded-lg border p-4 space-y-3'>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
                 <div className='flex items-center gap-2'>
                   <input
                     id='legalReview'
@@ -1416,7 +1219,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/tokenomics.tsx
 <div className='rounded-lg border p-4 space-y-3'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h3 className='font-medium'>Operator Prompt</h3>
               <textarea
                 className='w-full border rounded-md px-3 py-2'
@@ -1428,24 +1230,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button
                   disabled={!isAdmin |isGenerating}
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
                   disabled={!isAdmin || isGenerating}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/tokenomics.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
                   onClick={handleGenerate}
-=======
                   onClick={handleGenerate}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/tokenomics.tsx
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
                 >'
                   {isGenerating ? 'Generating…' : 'Generate with GPT'}
@@ -1456,11 +1246,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >
 :pages_backup/tokenomics.tsx
                   Clear AI Draft
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             <div className="rounded-lg border p-4 space-y-3">
               <h3 className="font-medium">Operator Prompt</h3>
@@ -1476,27 +1262,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/tokenomics.tsx
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
             </div>
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="rounded-lg border p-4 space-y-2">
               <h3 className="font-medium">Output</h3>
               <div className="flex gap-3">
                 <button onClick={() => handleDownload('md')} className="px-3 py-2 rounded-md border">Download .md</button>
                 <button onClick={() => handleDownload('pdf')} className="px-3 py-2 rounded-md border">Download PDF</button>
 :pages_backup/tokenomics.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
             <div className='rounded-lg border p-4 space-y-2'>
               <h3 className='font-medium'>Output</h3>
               <div className='flex gap-3'>
@@ -1525,7 +1301,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/tokenomics.tsx
 <div className='rounded-lg border p-4'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className='flex items-center justify-between mb-3'>
               <div className='flex gap-2 overflow-x-auto'>
                 {sections.map(s => (
@@ -1538,18 +1313,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </button>
                 ))}
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="rounded-lg border p-4 space-y-2">
               <h3 className="font-medium">Output</h3>
               <div className="flex gap-3">
                 <button onClick={() => handleDownload('md')} className="px-3 py-2 rounded-md border">Download .md</button>
 :pages_backup/tokenomics.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
                 <button onClick={() => handleDownload('pdf')} className="px-3 py-2 rounded-md border">Download PDF</button>
               </div>
             </div>
@@ -1562,20 +1330,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {sections.map((s) => ('`
                   <button key={s} onClick={() => setActiveSection(s)} className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}>{s}</button>
 
-<<<<<<< HEAD
               </div>
 <span className="text-xs opacity-60">Auto-updating preview</span>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 ))  } catch (error) {
     console.error("Error:", error);
-=======
 
           <div className="rounded-lg border p-4">
             <div className="flex items-center justify-between mb-3">
@@ -1585,7 +1348,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 ))  } catch (error) {
     console.error("Error:", error);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1603,20 +1365,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               </div>"
               <span className="text-xs opacity-60">Auto-updating preview</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
             <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/tokenomics.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
             </div>
-=======
               </div>
 <span className="text-xs opacity-60">Auto-updating preview</span>
                 ))  } catch (error) {
@@ -1629,35 +1384,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span className="text-xs opacity-60">Auto-updating preview</span>
             </div>
             <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
             <MarkdownPreview
               markdown={previewMarkdown}
               activeSection={activeSection}
             />
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
           </div>
         </div>
       </div>
     </>
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/tokenomics.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
   )
 }
 
@@ -1665,21 +1405,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/tokenomics.tsx
 function buildLocalMarkdown(input: {;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 );
 
 function buildLocalMarkdown(input: {
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 );
 
 function buildLocalMarkdown(input: {
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
   tokenName: string;
   tokenSupply: string;
   useCases: string;
@@ -1689,18 +1422,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   jurisdiction: string;
   legalReview: boolean;
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
 }) {;
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
 return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`;
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
 }
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
 }) {
   const distLines = input.distribution
     .map(d => `- ${d.label}: ${d.percent}%`)
@@ -1710,12 +1437,7 @@ return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${in
     : '';
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`;
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
 
 function jurisdictionalNote() { return null; }
                     key={s}
@@ -1751,7 +1473,6 @@ function buildLocalMarkdown() {}
  */
 :pages_backup/tokenomics.tsx
 function jurisdictional_note() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   switch (j) {
     case 'US':;
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
@@ -1760,8 +1481,6 @@ function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
   // Simple textual donut placeholder until a chart lib is added;
   const total = data && data.reduce((a, b) => a + b && b.percent, 0) || 1;
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 function jurisdictionalNote(j: string) {;
@@ -1769,11 +1488,6 @@ function jurisdictionalNote(j: string) {;
     case 'US':;
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
     case 'EU':
 return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.';
     case 'SG':
@@ -1785,28 +1499,17 @@ return 'Designed for utility under EU frameworks; subject to MiCA and local guid
   }
 
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
   return (
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
     <div className="space-y-1 text-sm">
     <div className="space-y-1 text-sm">
 <div className='space-y-1 text-sm'>
 :pages_backup/tokenomics.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
       {data.map((d, idx) => (
         <div key={idx} className="flex items-center gap-2">
           <div className="h-2 bg-gray-200 rounded w-full">
@@ -1828,21 +1531,14 @@ case 'EU':;
   }
 }
 :pages_backup/tokenomics.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 }
 ;
@@ -1851,10 +1547,8 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {}
   // Simple textual donut placeholder until a chart lib is added;
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/tokenomics.tsx
   return (
 
-=======
 }
 
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
@@ -1862,7 +1556,6 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
   return (
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
 function MarkdownPreview(): any ({;
   markdown,;
   activeSection,;
@@ -1890,23 +1583,14 @@ function MarkdownPreview({
   markdown: string;
   activeSection: string;
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/tokenomics.tsx
-<<<<<<< HEAD
-}) {  // Very lightweight section filter: split by headings
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-}) {
-  // Very lightweight section filter: split by headings
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }) {  // Very lightweight section filter: split by headings
 }) {
   // Very lightweight section filter: split by headings
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
+}) {  // Very lightweight section filter: split by headings
+}) {
+  // Very lightweight section filter: split by headings
+origin/cursor/automate-test-improve-and-merge-code-2533
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g)
     const map: Record<string, string> = {}
@@ -1915,15 +1599,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 if (i === 0) return; // first is H1
       const [titleLine, ...rest] = s.split('\n');
       map[titleLine.trim()] = rest.join('\n');
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 if (i === 0) return; // first is H1
       const [titleLine, ...rest] = s.split('\n');
       map[titleLine.trim()] = rest.join('\n');
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }) {  // Very lightweight section filter: split by headings;
   const parts = useMemo(() => {;
     const sections = markdown && markdown.split(/\n## /g),;
@@ -1933,34 +1611,23 @@ if (i === 0) return; // first is H1
       const [titleLine, ...rest] = s && s.split('\n');
       map[titleLine && titleLine.trim()] = rest && rest.join('\n');
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     });
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
 
   return (
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
     <pre className='whitespace-pre-wrap text-sm leading-6'>;
       {content || markdown}
     </pre>;
   );
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
     case 'EU':;
       return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.';
     case 'SG':;
       return 'Intended utility token under MAS guidance; prospective purchasers should not view it as capital markets products.';
     case 'AE':;
-=======
 
   const parts = useMemo(() => {}
     const sections = markdown.split(/\n## /g)
@@ -1981,7 +1648,6 @@ if (i === 0) return; // first is H1
     case 'SG':;'
       return 'Intended utility token under MAS guidance; prospective purchasers should not view it as capital markets products.';'
     case 'AE':;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/tokenomics.tsx
       return 'Intended utility token within relevant UAE free zone guidance; not an investment product.';
     default:;'
       return 'Intended strictly for utility use.';
@@ -2034,15 +1700,11 @@ if (return) {}
 ;
 
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       ))  } catch (error) {
     console.error("Error:", error);
-=======
 
       ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/tokenomics.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -2056,21 +1718,11 @@ if (return) {}
 :pages_backup/tokenomics.tsx
 function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
   // Very lightweight section filter: split by headings
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
   const parts = useMemo(() => {
-=======
 function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {}
   // Very lightweight section filter: split by headings;
   const parts = useMemo(() => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/tokenomics.tsx
     const sections = markdown.split(/\n## /g),
     const map: Record<string, string> = {},
     sections.forEach((s, i) => {}
@@ -2083,7 +1735,6 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   const content = parts[activeSection] || '',
   return (
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD
 <pre className='whitespace-pre-wrap text-sm leading-6'>
       {content || markdown}
     </pre>
@@ -2118,15 +1769,7 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx
     return map;
   }, [markdown]);
 
@@ -2143,12 +1786,5 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
     </pre>
   );
 :pages_backup/tokenomics.tsx
-<<<<<<< HEAD:pages/tokenomics.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/tokenomics.tsx

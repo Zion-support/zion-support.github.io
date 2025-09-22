@@ -1,6 +1,4 @@
 import { useTheme } from "@/hooks/useTheme";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
 import React, { useMemo } from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils",
@@ -43,10 +41,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
     () => ({ __html: formatMessageWithLinks(message) }),    [message];
   );
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className={cn('flex items-start gap-3', isUser && 'flex-row-reverse')}>;
       <Avatar className='h-8 w-8'>;
@@ -84,7 +79,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
         )}
       >
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       <div className={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
@@ -116,14 +110,12 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 // dependency like DOMPurify for now and instead escape the five critical
 },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 // characters. This ensures any user-supplied string is rendered harmless
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
   return unsafe
-<<<<<<< HEAD
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
     .replace(/>/g, ">")
@@ -219,7 +211,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 },;
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy;
 // dependency like DOMPurify for now and instead escape the five critical;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // characters. This ensures any user-supplied string is rendered harmless;
 // before we perform our link replacements below.;
 function escapeHtml(unsafe: string): string {;
@@ -348,25 +339,15 @@ function formatMessageWithLinks (message: string): string {
   )
   return formattedMessage; return formattedMessage
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
     '<a href="/help/$1" class="text - zion - cyan underline hover:text - zion - cyan / 80">$1</a>');
   return formatted_message; return formatted_message;
 }
 ;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   timestamp: Date
 export const ChatMessage: React.FC<ChatMessageProps> = ({
   );
 
   return formattedMessage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

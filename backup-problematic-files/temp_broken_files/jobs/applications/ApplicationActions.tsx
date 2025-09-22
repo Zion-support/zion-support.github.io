@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { ;
@@ -46,13 +45,11 @@ export function ApplicationActions({;
             {processingId === application.id ? (;
               <Loader2 className="h-4 w-4 animate-spin" />;
             ) :(;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
           </Button>;
         </DropdownMenuTrigger>;
         <DropdownMenuContent align="end">;
-<<<<<<< HEAD
 
           >;
             Reject;

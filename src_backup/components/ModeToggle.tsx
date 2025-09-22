@@ -1,6 +1,4 @@
 :src_backup/components/ModeToggle.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Moon, Sun } from 'lucide-react'
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -19,16 +17,12 @@ import { useTheme } from '@/components/ThemeProvider'
 import { logIssue } from '@/utils/logIssue'
 import { useEffect, useState } from 'react'
 :src/components/ModeToggle.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
-=======
 import { Button } from "@/components/ui/button""
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip""
 import { toast } from "@/hooks/use-toast""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ModeToggle.tsx
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
 
 :src/components/ModeToggle.tsx
@@ -37,10 +31,7 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 :src/components/ModeToggle.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Use the ThemeProvider hook directly to ensure no conflicts
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
@@ -53,13 +44,11 @@ import { useEffect, useState } from "react"
 
 :src_backup/components/ModeToggle.tsx
 if (!isClient) return 'light'; // Default for SSR
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (theme === 'system') {
       return window.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
         : 'light'
 :src/components/ModeToggle.tsx
-<<<<<<< HEAD
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import {}
@@ -109,9 +98,7 @@ if ( {) {}
         ? 'dark';'
         : 'light';
 :src/components/ModeToggle.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ModeToggle.tsx
     }
     return theme;
   })();'
@@ -125,8 +112,6 @@ if ( {) {}
   const handle_toggle = () =>: any {
     try {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     }
   }
@@ -134,7 +119,6 @@ if ( {) {}
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function ModeToggle() {
 
   const { theme, toggleTheme } = useTheme();
@@ -188,17 +172,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       })
 :src/components/ModeToggle.tsx
       toast({    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ModeToggle() {
 
-=======
   const handle_toggle = () =>: any {}
     try {}
     }
@@ -207,7 +188,6 @@ export function ModeToggle() {
   if (!isClient) {}
     // Return a neutral state during SSR to prevent hydration issues;
 export function ModeToggle() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ModeToggle.tsx
   const { theme, toggleTheme } = useTheme(),
   const [isClient, setIsClient] = useState(false),
 ';
@@ -281,7 +261,6 @@ export function ModeToggle() {}
         aria-label="Loading theme toggle""
         className="focus-visible:ring-ring relative text-foreground"
 :src/components/ModeToggle.tsx
-<<<<<<< HEAD
       >
         <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
         <span className="sr-only">Loading theme toggle</span>
@@ -296,21 +275,17 @@ export function ModeToggle() {}
 :src_backup/components/ModeToggle.tsx
           <Button
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             variant="ghost"
             size="icon"
 import { Moon, Sun } from 'lucide-react';
             variant="ghost"
             size="icon"
 import { Moon, Sun } from 'lucide-react';
-=======
           <Button;
 "
             variant="ghost""
             size="icon"'
 import { Moon, Sun } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ModeToggle.tsx
 import { Button } from '@/components/ui/button';
 import {;
   Tooltip,;
@@ -329,18 +304,13 @@ import { logIssue } from '@/utils/logIssue';'
 import { useEffect, useState } from 'react';
 :src_backup/components/ModeToggle.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { toast } from "@/hooks/use-toast";
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages";
 :src/components/ModeToggle.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
 // Use the ThemeProvider hook directly to ensure no conflicts;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useTheme } from "@/components/ThemeProvider";
 import { logIssue } from "@/utils/logIssue";
 import { useEffect, useState } from "react";
@@ -403,7 +373,6 @@ title: "Theme switch failed",;
     }
   }
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (!isClient) {;
     // Return a neutral state during SSR to prevent hydration issues;
 :src_backup/components/ModeToggle.tsx
@@ -430,7 +399,6 @@ title: "Theme switch failed",;
             variant="ghost";
             size="icon";
 :src/components/ModeToggle.tsx
-<<<<<<< HEAD
             onClick={handleToggle}
             aria-pressed={isDarkMode}'`
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}'`
@@ -444,11 +412,8 @@ className="focus-visible:ring-ring relative group text-foreground" // Added text
             {isDarkMode ? (
               <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
             ) : (
-<<<<<<< HEAD
               <Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />
-=======
 
-=======
 
             />;
 '
@@ -482,9 +447,7 @@ className="focus-visible:ring-ring relative group text-foreground" // Added text
             ) : (
 :src_backup/components/ModeToggle.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ModeToggle.tsx
               <Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             )}
 ;
             {/* Enhanced visual indicator */}`
@@ -497,7 +460,6 @@ className="focus-visible:ring-ring relative group text-foreground" // Added text
             <span className="sr-only">'
               Toggle theme. Current: {resolvedTheme}. Click to switch to {isDarkMode ? 'light' : 'dark'}.
 :src/components/ModeToggle.tsx
-<<<<<<< HEAD
             </span>
           </Button>
         </TooltipTrigger>
@@ -507,15 +469,11 @@ className="focus-visible:ring-ring relative group text-foreground" // Added text
             <p className="text-xs opacity-80">Click to switch to {isDarkMode ? 'light' : 'dark'} mode</p>'
             {theme === 'system' && (
 :src_backup/components/ModeToggle.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <p className="text-xs opacity-60 mt-1">Following system preference</p>
-=======
 
             {isDarkMode ? (
               <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
             ) : (              <p className="text-xs opacity-60 mt-1">Following system preference</p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             )}
 </div>;
         </TooltipContent>;
@@ -523,7 +481,6 @@ className="focus-visible:ring-ring relative group text-foreground" // Added text
     </TooltipProvider>;
 );
 :src_backup/components/ModeToggle.tsx
-<<<<<<< HEAD
 }
       const newTheme = isDarkMode ? "light" : "dark";
 `
@@ -532,10 +489,8 @@ className="focus-visible:ring-ring relative group text-foreground" // Added text
 :src/components/ModeToggle.tsx
       // Determine the new theme we are switching TO;
       const new_theme = isDarkMode ? 'light' : 'dark';
-=======
       // Determine the new theme we are switching TO;'
       const new_theme = isDarkMode ? 'light' : 'dark';`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ModeToggle.tsx
       log_info (`Theme toggle: ${resolved_theme} → ${new_theme}`);
       // Apply the new theme via ThemeProvider;
       toggle_theme ();
@@ -650,10 +605,6 @@ if ( {") {
 }'"}
 }
 :src_backup/components/ModeToggle.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
           </div>
         </TooltipContent>
@@ -662,8 +613,6 @@ if ( {") {
   );
 
 :src/components/ModeToggle.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 if (!isClient) {";
   //Return a neutral state during SSR to prevent hydration issues return (<Button variant="ghost" size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground" > <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {;
@@ -680,18 +629,9 @@ if (!isClient) {";
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
 }'"
 :src/components/ModeToggle.tsx
-<<<<<<< HEAD
   );
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ModeToggle.tsx
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ModeToggle.tsx

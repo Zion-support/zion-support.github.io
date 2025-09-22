@@ -3,16 +3,13 @@ reputation: number;
 
 :src/components/community/ReputationDisplay.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { Trophy } from 'lucide-react'
 :src/components/community/ReputationDisplay.tsx
 import { Progress } from "@/components/ui/progress",
 interface ReputationDisplayProps {
-=======
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress",interface ReputationDisplayProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   reputation: number,
   size?: 'sm' | 'md' | 'lg'
 }
@@ -22,7 +19,6 @@ export const ReputationDisplay = ({
 size = 'md' 
 }: ReputationDisplayProps) => {
   // Calculate next milestone
-<<<<<<< HEAD:src/components/community/ReputationDisplay.tsx
   const currentLevel = Math.floor(reputation / 100),
   const nextMilestone = (currentLevel + 1) * 100,
   const progress = ((reputation % 100) / 100) * 100,
@@ -31,7 +27,6 @@ size = 'md'
   const sizeClasses = {
     sm: {
       progress: 'h-1',  // Styling based on size
-=======
 
   size = 'md' 
 }: ReputationDisplayProps) => {
@@ -42,16 +37,13 @@ size = 'md'
   // Styling based on size
   const sizeClasses = {
     sm: {      progress: 'h-1',  // Styling based on size
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const sizeClasses = {
     sm: {
       container: "text-xs"
       icon: "w-3 h-3"
 :src/components/community/ReputationDisplay.tsx
-<<<<<<< HEAD
       progress: "h-1"
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       container: "text-xs",
       icon: "w-3 h-3",
       progress: "h-1"
@@ -91,7 +83,6 @@ interface ReputationDisplayProps {;
   reputation: number,;
   size?: 'sm' | 'md' | 'lg';
 :src/components/community/ReputationDisplay.tsx
-<<<<<<< HEAD
 }
 ;
 
@@ -127,7 +118,6 @@ export default ReputationDisplay;
     </div>);
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const ReputationDisplay = ({;
   reputation,;
   size = 'md';
@@ -166,17 +156,12 @@ export const ReputationDisplay = ({;
 <div className="text-xs text-muted-foreground">;
         Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up;
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </div>;
     </div>;
   )
 };
 export default ReputationDisplay;
-<<<<<<< HEAD:src/components/community/ReputationDisplay.tsx
-<<<<<<< HEAD
 ';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },;
     md: {;
       container: 'text-sm',;
@@ -197,7 +182,6 @@ export default ReputationDisplay
     }
 };
 export default ReputationDisplay;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 '
 
 export default ReputationDisplay;
@@ -227,5 +211,3 @@ export const ReputationDisplay = null;
 export default ReputationDisplay;
 '
 :src/components/community/ReputationDisplay.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

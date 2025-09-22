@@ -1,5 +1,4 @@
 
-=======
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { z } from 'zod',;
@@ -57,13 +56,11 @@ export function WhitelabelRequestForm() {;
           cta:values.cta}
       },;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Submit to Supabase;
       const { data, error } = await supabase;
         .from('whitelabel_tenants');
         .insert(tenantData);
         .select();
-<<<<<<< HEAD
 
         <CardDescription>;
           Create a customized version of the platform for your client or partner.;

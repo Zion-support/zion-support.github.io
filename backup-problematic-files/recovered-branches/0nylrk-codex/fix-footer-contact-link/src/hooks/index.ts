@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 // Export all hooks from messaging directory;
 export * from './messaging';
 export * from './use-toast';

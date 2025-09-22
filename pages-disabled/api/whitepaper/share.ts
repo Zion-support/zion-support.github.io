@@ -10,11 +10,8 @@ export default async function handler() { return null; }
   const id = randomUUID(),
   store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview },'
   const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`,
-=======
->>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto',;
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 // In-memory store for demo purposes. Replace with persistent storage in production.
 const store: Record<
@@ -39,7 +36,6 @@ export function getShared(id: string) {
   return store[id];
 
 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 // In-memory store for demo purposes. Replace with persistent storage in production.
 const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {}
 
@@ -50,13 +46,10 @@ if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allo
   const id = randomUUID()
   store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview }
 const url = `${process.env.NEXT_PUBLIC_BASE_URL |''}/whitepaper/preview/${id}`
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
   res.status(200).json({ id, url })
 }
 export function getShared(id: string) {
   return store[id]
-<<<<<<< HEAD
 
 }
   return store[id];
@@ -98,8 +91,6 @@ export /**
  */
 function get_shared() {
   return store[id];
-=======
 export function getShared(id: string) {}
   return store[id];
 };'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

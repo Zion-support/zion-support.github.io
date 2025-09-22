@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export default function LinkedInRedirect() {
 
   useEffect(() => {
@@ -7,22 +6,15 @@ export default function LinkedInRedirect() {
       window.location.replace(
         'https://www.linkedin.com/company/zion-tech-group';
 export default function LinkedInRedirect() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function LinkedInRedirect() {;
   useEffect(() => {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace(;
         'https://www && www.linkedin.com/company/zion-tech-group';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       );
-=======
 
 export default function LinkedInRedirect() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }, []);
   return (
@@ -59,7 +51,6 @@ export default function LinkedInRedirect(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
 	}, []),
 	useEffect(() => {
@@ -68,11 +59,7 @@ export default function LinkedInRedirect(req, res) {
 		}
 }, []);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	return (
 		<>
 			<Head>
@@ -89,13 +76,7 @@ export default function LinkedInRedirect(req, res) {
 		</>
 	)
 }
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Head from 'next / head';
 ;
 export default /**;
@@ -137,13 +118,7 @@ if ( {) {}
     </>);
 ;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.location.replace(
@@ -176,9 +151,5 @@ if ( {) {}
       </div>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

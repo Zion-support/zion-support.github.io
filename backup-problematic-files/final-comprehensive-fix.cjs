@@ -1,6 +1,3 @@
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Function to fix all remaining syntax errors
 function fixSyntaxErrors(content) {
   // Fix extra commas in JSX attributes;
@@ -23,18 +20,8 @@ const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
 const seoFixed = seoContent.split('  );')[0] + '  );';
 fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
 console.log('✅ Fixed SEO.tsx');
-<<<<<<< HEAD:backup-problematic-files/final-comprehensive-fix.cjs
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:final-comprehensive-fix.cjs
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
 const talentFixed = talentContent
@@ -57,8 +44,6 @@ const talentFixed = talentContent
   .replace(/className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">/g, 'className="bg-zion-cyan text-zion-blue-dark "hover": bg-zion-cyan-light">')
   .replace(/className="text-sm">/g, 'className="text-sm">');
 fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const filesToFix = ['components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
   'components/PerformanceMonitor.tsx',
@@ -71,17 +56,8 @@ const toastFixed = toastContent.replace('  return { showToast };\n}', '  return 
 fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
 console.log('✅ Fixed use-toast.ts');
 
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:final-comprehensive-fix.cjs
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
 const servicesFixed = servicesContent
@@ -103,11 +79,8 @@ const authFixed = authContent
   .replace(/:src\/hooks\/useAuth\.tsx/g, '')
   .replace(/useEffect\(\(\) => \{\s*\/\/ Check if user is logged in \(e\.g\., check localStorage, cookies, etc\.\)\s*\/\/ Implementation here\s*\}, \[\]\);/g, 'useEffect(() => {\n    // Check if user is logged in (e.g., check localStorage, cookies, etc.)\n    // Implementation here\n  }, []);');
 fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 console.log(`\n📊 Syntax fixing complete:`)) {
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ) {
     if (processFile(file)) {
       totalFixed++}
@@ -120,10 +93,6 @@ if ( {
 console.log('✨ Final comprehensive fixes completed!');
   }} else {
   }
-<<<<<<< HEAD:backup-problematic-files/final-comprehensive-fix.cjs
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:final-comprehensive-fix.cjs
-=======
 if ( {
   ) {
      {
@@ -136,7 +105,6 @@ console.log('✨ Final comprehensive fixes completed!');
 console.log('✨ Final comprehensive fixes completed!');
   }} else {
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
 const fs = require('fs')
     return match.replace(/,\s*$/, '')
@@ -179,8 +147,4 @@ const fs = require('fs')
   .replace(/"isAuthenticated": tru e,/g, '"isAuthenticated")
 .replace(/"isLoading": fals e/g, '"isLoading")
   .replace(/"isLoading": fals e/g, '"isLoading")
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

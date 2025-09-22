@@ -1,5 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/pm2/auto-fix.cjs
-<<<<<<< HEAD
 function run(cmd) {}
 	console.log(`$ ${cmd}`);
 	return execSync(cmd, { "stdio": 'inherit' })};
@@ -13,16 +11,8 @@ try {}
 	console.log('Auto-fix run completed successfully.')} catch (e) {}
 	console.error('Auto-fix run "failed": ', e.message);
 process.exit(1)};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 	process.exit(1)};
 #!/usr/bin/env node
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/auto-fix.cjs
 
 :backup-problematic-files/scripts/pm2/auto-fix.cjs
 class AutoFixer {
@@ -215,8 +205,6 @@ try {
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function run(cmd) {}
 
 try {}
@@ -229,6 +217,4 @@ try {}
 console.log('Auto-fix run completed successfully.')} catch (e) {}
 	console.error('Auto-fix run "failed": ', e.message);
 	process.exit(1)};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

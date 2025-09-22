@@ -1,5 +1,4 @@
 
-=======
 import React, { useEffect, useState } from "react",;
 import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
@@ -71,7 +70,6 @@ function InterviewsContent() {;
 ;
   const renderInterviewGroups = (groupedInterviews:Record<string Interview[]>) => {;
     return Object.entries(groupedInterviews);
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       .sort(([dateA], [dateB]) => ;
         parseISO(dateA).getTime() - parseISO(dateB).getTime();
       );
@@ -82,7 +80,6 @@ function InterviewsContent() {;
             {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
           </h3>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
-<<<<<<< HEAD
 
           </TabsContent>;
         </Tabs>;

@@ -1,38 +1,20 @@
 :pages_backup/api/disputes/[id]/upload.ts
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
-<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :pages_backup/api/disputes/[id]/upload.ts
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
 
 :pages_backup/api/disputes/[id]/upload.ts
 import type { NextApiRequest, NextApiResponse } from "next";"
 import path from "path";
 import {
-<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
 :pages_backup/api/disputes/[id]/upload.ts
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   ensureDisputeUploadDir;
   getDisputeById;
@@ -53,7 +35,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
 :pages_backup/api/disputes/[id]/upload.ts
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ensureDisputeUploadDir
   getDisputeById
 upsertDispute
@@ -69,7 +50,6 @@ import {
   ensureDisputeUploadDir
   getDisputeById
   upsertDispute,;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "../../../../utils/fsdb";
 import {
   parseUserFromRequest
@@ -82,7 +62,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 :pages_backup/api/disputes/[id]/upload.ts
-<<<<<<< HEAD
 ) {
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
@@ -98,7 +77,6 @@ ensureDisputeUploadDir,
   upsertDispute,;
 } from "../../../../utils/fsdb";
 import {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
@@ -113,51 +91,26 @@ export default async function handler(
 ) {;
 const { id } = req.query;
 :pages/api/disputes/[id]/upload.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export default async function handler() { return null; }
   const { id } = req.query;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 
 "
   if (typeof id !== "string")
 "
     return res && res.status(400).json({ error: "Invalid id" });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
   if (typeof id !== 'string')
     return res.status(400).json({ error: 'Invalid id' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   if (typeof id !== 'string')
     return res.status(400).json({ error: 'Invalid id' });
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
   const user = parseUserFromRequest(req);
 "
   if (req && req.method === "POST") {}
     const dispute = await getDisputeById(id);
 :pages_backup/api/disputes/[id]/upload.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 
 "
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
@@ -167,15 +120,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/api/disputes/[id]/upload.ts
 
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
-=======
 ) {;
   const { id } = req.query;
 
   if (typeof id !== 'string')
     return res.status(400).json({ error: 'Invalid id' });
-=======
 ) {;
   const { id } = req.query;
 const { id } = req.query;
@@ -188,19 +137,15 @@ const { id } = req.query;
 
   if (typeof id !== 'string')
     return res.status(400).json({ error: 'Invalid id' });
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
 origin/cursor/automate-test-improve-and-merge-code-2533
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
 :pages_backup/api/disputes/[id]/upload.ts
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextApiRequest, NextApiResponse } from './next';
-=======
 
 import type { NextApiRequest, NextApiResponse } from './next';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 import path from './path';
 import {}
   ensureDisputeUploadDir,
@@ -242,10 +187,6 @@ if ( {) {}
     const { files } =;
       req.body ||;
 :pages_backup/api/disputes/[id]/upload.ts
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
-<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       ({} as {}
         files: { file_name: string; mime_type: string; base64: string }[];
@@ -259,7 +200,6 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {"
   const fs = await import("fs");
 :pages_backup/api/disputes/[id]/upload.ts
   await new Promise<void>((resolve, reject) => {
-<<<<<<< HEAD
     await upsert_dispute (dispute);
     return res.status (201).json ({ dispute });
   }
@@ -378,20 +318,13 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
 
       { recursive: true },
 :pages_backup/api/disputes/[id]/upload.ts
-=======
-=======
 
       { recursive: true }
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
-=======
 
       { recursive: true }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
       { recursive: true }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
     if (!dispute) return res.status(404).json({ error: "Dispute not found" });
     try {
 ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
@@ -519,14 +452,9 @@ fs.mkdir(
 :pages_backup/api/disputes/[id]/upload.ts
       require('path').dirname(filePath),
       { recursive: true },
-<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       require('path').dirname(filePath);
       { recursive: true };
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
       (err: any) => {
         if (return reject (err)) {
   $2
@@ -534,30 +462,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         fs.write_file (file_path, data, (err2: any) =>;
 :pages_backup/api/disputes/[id]/upload.ts
           err2 ? reject (err2) : resolve (),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 err2 ? reject (err2) : resolve (),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
         );
       }
     );
   });
 :pages_backup/api/disputes/[id]/upload.ts
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
-<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 
-=======
-=======
 
 }
 }
@@ -566,9 +481,7 @@ err2 ? reject (err2) : resolve (),
 
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 }
@@ -586,20 +499,10 @@ err2 ? reject (err2) : resolve (),
 }
 
 :pages_backup/api/disputes/[id]/upload.ts
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
-<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler() { return null; }
 import type { NextApiRequest, NextApiResponse } from 'next';'
@@ -623,46 +526,29 @@ export default async function handler(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 :pages_backup/api/disputes/[id]/upload.ts
-<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 :pages_backup/api/disputes/[id]/upload.ts
 
 }
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
 
-<<<<<<< HEAD
 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 :pages/api/disputes/[id]/upload.ts
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 }
 
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
   } catch (error) {
     console.error("Error:", error);
-=======
 
   } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -754,32 +640,11 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
 
 }
 :pages_backup/api/disputes/[id]/upload.ts
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
-<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :pages_backup/api/disputes/[id]/upload.ts
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts

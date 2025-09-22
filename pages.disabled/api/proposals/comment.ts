@@ -1,20 +1,14 @@
 :pages_backup/api/proposals/comment.ts
-<<<<<<<< HEAD:pages/api-disabled/api/proposals/comment.ts
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";"
 import fs from "fs-extra";"
 import path from "path";"
 const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalscomments && dataproposalscomments.json");
-<<<<<<< HEAD:pages_backup/api/proposals/comment.ts
-<<<<<<< HEAD:pages/api-disabled/api/proposals/comment.ts
 async function ensure() {;
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
 const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalscomments && dataproposalscomments.json");
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/proposals/comment.ts
 const FILE_PATH = path.join(
   process.cwd();
   'data';
@@ -24,7 +18,6 @@ const FILE_PATH = path.join(
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 async function ensure() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/proposals/comment.ts
   await fs && fs.ensureFile(FILE_PATH);
   try {;
     await fs && fs.readJson(FILE_PATH);
@@ -70,18 +63,12 @@ if (req && req.method === "GET") {
       region: body.region |"Global""
       author: body.author |"anon""
       text: body.text |""
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/proposals/comment.ts
       createdAt: new Date().toISOString()
     }
 :pages_backup/api/proposals/comment.ts
 
-========
 
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/comment.ts
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
       id: Date.now().toString()
       proposalId: body.proposalId
       region: body.region |"Global"
@@ -117,7 +104,6 @@ if (req && req.method === "GET") {
   res.status(405).json({ error: "Method not allowed" });
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/proposals/comment.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -153,7 +139,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       createdAt: new Date().toISOString()
       createdAt: new Date().toISOString(),
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     };
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
@@ -184,7 +169,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(200).json(data);
   }"
   if (req.method === "POST") {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/comment.ts
     const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data)
@@ -192,17 +176,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 :pages_backup/api/proposals/comment.ts
   }
     const data = await fs.readJson(FILE_PATH);
-<<<<<<< HEAD:pages/api-disabled/api/proposals/comment.ts
-<<<<<<< HEAD:pages/api-disabled/api/proposals/comment.ts
     const comment = {;
       id: Date.now().toString(), proposalId: body.proposalId;
       text: body.text || '',
       id: Date.now().toString(), proposalId: body.proposalId
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/proposals/comment.ts
       region: body.region || 'Global', author: body.author || 'anon'
 <:pages/api-disabled/api/proposals/comment.ts
       text: body.text || '';
-========
       id: Date.now().toString()
       proposalId: body.proposalId
       region: body.region || 'Global'
@@ -210,7 +190,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       text: body.text || ''
 
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/comment.ts
       createdAt: new Date().toISOString()
       createdAt: new Date().toISOString(),
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -220,8 +199,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(201).json(comment);
 <:pages/api-disabled/api/proposals/comment.ts
 }
-<<<<<<< HEAD:pages_backup/api/proposals/comment.ts
-<<<<<<< HEAD
   res.status(405).json({ error: "Method not allowed" });
   res.status(405).json({ error: 'Method not allowed' })
 }
@@ -271,10 +248,6 @@ if ( {) {
 
 }
 :pages_backup/api/proposals/comment.ts
-<<<<<<< HEAD:pages_backup/api/proposals/comment.ts
-<<<<<<< HEAD:pages/api-disabled/api/proposals/comment.ts
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/proposals/comment.ts
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
@@ -301,7 +274,6 @@ async function ensure() {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
   } catch (error) {;
     console.error("Error:", error);
@@ -362,39 +334,17 @@ export default async function handler(req, res) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 :pages/api-disabled/api/proposals/comment.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/proposals/comment.ts
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-========
 
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/comment.ts
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/proposals/comment.ts
   }
   res.status(405).json({ error: 'Method not allowed' });
 
 }}
 :pages_backup/api/proposals/comment.ts
-<<<<<<<< HEAD:pages/api-disabled/api/proposals/comment.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/proposals/comment.ts
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/proposals/comment.ts

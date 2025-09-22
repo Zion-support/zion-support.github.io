@@ -8,7 +8,6 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-brain-computer-interface'))
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!service) return null,
 
   return (

@@ -1,17 +1,14 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/PreviewHeader.tsx
 import { PdfExportButton } from '../PdfExportButton',;
 import { Resume } from '@/types/resume',;
 import { useState } from 'react',;
 import { useIsMobile } from '@/hooks/use-mobile',;
-=======
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link } from 'lucide-react';
 import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 interface PreviewHeaderProps {;
   resume: Resume;,;
@@ -71,15 +68,12 @@ disabled={isPrinting}
           Print;
         </Button>;
         ;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/PreviewHeader.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <Button variant="outline" className="gap-2">;
           <Link className="h-4 w-4" />;
           Add to Profile;
         </Button>;
       </div>;
     </div>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/preview/PreviewHeader.tsx
   isMobile ? 'flex-col' : 'justify-between' ;
 }items-$ {';
   isMobile ? 'stretch' : 'center' ;`;
@@ -97,4 +91,3 @@ disabled={isPrinting}
 }/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/preview/PreviewHeader.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

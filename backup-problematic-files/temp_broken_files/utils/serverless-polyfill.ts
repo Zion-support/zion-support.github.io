@@ -36,7 +36,6 @@ var webpackChunk_N_E:any[];
   var __assign:any,;
   var __rest:any,;
   var __decorate:any,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   var __awaiter:any;}
 // CRITICAL:Self polyfill - must be first;"
 if (typeof self === 'undefined') {;
@@ -46,7 +45,6 @@ if (typeof self === 'undefined') {;
       (globalThis as any).self = global;
     }
   } else if (typeof globalThis !== 'undefined') {;
-<<<<<<< HEAD
     (globalThis as any).self = globalThis;
   } else if (typeof window !== 'undefined') {;
     (window as any).self = window;
@@ -60,7 +58,6 @@ if (typeof self === 'undefined') {;
   } else {;
     // Last resort - create minimal self object;
     (globalThis as any).self = {},;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 }
 ;
@@ -68,7 +65,6 @@ if (typeof self === 'undefined') {;
 const selfRef:any = typeof self !== 'undefined' ? self :;
                     typeof global !== 'undefined' ? global :;
                     typeof globalThis !== 'undefined' ? globalThis :;
-<<<<<<< HEAD
                     typeof window !== 'undefined' ? window :{};
 ;
 // CRITICAL:Webpack chunk array polyfill;
@@ -131,7 +127,6 @@ const tsHelpers = {;
     function __extends_helper(this:any) { this.constructor = d }
     d.prototype = b === null ? Object.create(b) :(__extends_helper.prototype = b.prototype, new (__extends_helper as any)()),;
   },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ;
   __assign:function() {;
     return Object.assign || function (t:any) {;
@@ -163,12 +158,10 @@ s = arguments[i];
         s = arguments[i];
         for (let p in s) if (Object.prototype.hasOwnProperty.call(s, _p))
           t[p] = s[p];}
-<<<<<<< HEAD
       return t;
     };
       return t
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }(),
 
   __rest: function (_s: unknown, _e: string[]) {_let t: unknown = {};
@@ -182,7 +175,6 @@ s = arguments[i];
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, _symbol))
           t[symbol] = s[symbol];}
     }
-<<<<<<< HEAD
     return t;
   };
   ;
@@ -218,7 +210,6 @@ Object.keys(tsHelpers).forEach(helper => {;
     (selfRef as any)[helper] = (tsHelpers as any)[helper];
   }
 }),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
   __decorate:function (decorators:any[], target:any, key?:string | symbol, desc?:any) {;
     let c = arguments.length, r = c < 3 ? target :desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) :undefined) :desc, d,;"
@@ -243,7 +234,6 @@ Object.keys(tsHelpers).forEach(helper => {;)"
 try {;
   // Prevent webpack chunk loading errors;
   if (selfRef.webpackChunk_N_E && typeof selfRef.webpackChunk_N_E.push === 'function') {;
-<<<<<<< HEAD
     const originalPush = selfRef.webpackChunk_N_E.push;
     selfRef.webpackChunk_N_E.push = function(chunk:any) {;
       try {;
@@ -261,7 +251,6 @@ try {;
         return 0;
       }
 },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 } catch (e) {;
   // Silently handle any errors in error prevention setup;
@@ -269,10 +258,8 @@ try {;
 ;
 // Global error suppression for common serverless issues;
 if (typeof window !== 'undefined') {;
-<<<<<<< HEAD
   const originalOnError = window.onerror;
   const originalOnError = window.onerror,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   window.onerror = function(message, source, lineno, colno, error) {;
     // Suppress specific known errors that don't affect functionality;
     if (typeof message === 'string') {;
@@ -287,7 +274,6 @@ if (typeof window !== 'undefined') {;
     ;
     // Call original error handler for other errors;
     if (originalOnError) {;
-<<<<<<< HEAD
       return originalOnError.call(this, message, source, lineno, colno, error);
     }
     return false;
@@ -304,14 +290,12 @@ if (typeof window !== 'undefined') {;
       return originalOnError.call(this, message, source, lineno, colno, error),;
     return false,;
   const originalOnUnhandledRejection = window.onunhandledrejection,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   window.onunhandledrejection = function(event) {;
     // Suppress specific promise rejection errors;
     if (event.reason && typeof event.reason.message === 'string') {;
       if (event.reason.message.includes('Cannot read properties of undefined (reading \'env\')') ||;
           event.reason.message.includes('Cannot destructure property') ||;
           event.reason.message.includes('self is not defined')) {;
-<<<<<<< HEAD
         event.preventDefault();
         return;
       }
@@ -351,7 +335,6 @@ global.self = global;
 // Export a verification function for testing;
 export const verifyPolyfills = () => {;
   const checks = {;
-<<<<<<< HEAD
     selfDefined:typeof self !== 'undefined';
     webpackChunkDefined:typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined');
     tsHelpersDefined:typeof __extends !== 'undefined' && typeof __assign !== 'undefined';
@@ -375,7 +358,6 @@ if (process.env.NODE_ENV === 'development') {;
 // Auto-verify in development;
 if (process.env.NODE_ENV === 'development') {;
   setTimeout(() => verifyPolyfills(), 100),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;export default {}, // Ensure this can be imported as a module
 /* eslint-disable @typescript-eslint/no-explicit-any */ /* eslint-disable @typescript-eslint/no-unused-vars */ /* eslint-disable @typescript-eslint/no-this-alias */ /* eslint-disable prefer-const */ /** * Serverless Environment Polyfill * * - Missing global objects * - Webpack chunk loading issues * - TypeScript helper function issues * * This runs as the VERY FIRST script before any other code loads. */ //Type declarations for global augmentation ;
@@ -421,10 +403,8 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts;
   ';
 }//Node.js environment polyfills (for SSR/build time) if (typeof global !== 'undefined'&& typeof window === 'undefined') {';
   //Ensure Node.js global has necessary polyfills if (typeof global.self === 'undefined') {;
-<<<<<<< HEAD
   return Object.values (checks) .every (Boolean);
   return Object.values (checks) .every (Boolean)
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 :temp_broken_files/utils/serverless-polyfill.ts
 

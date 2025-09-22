@@ -1,9 +1,4 @@
 :src_backup/pages/AccountSettings.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState } from 'react',;
 import { useLocalStorage } from '@/hooks',;
@@ -167,22 +162,18 @@ export default function AccountSettings() {
       toast.success(
         `Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`,
       );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     } catch (error: any) {
       toast.error(error.message || "Failed to connect wallet");
     }
   },
-=======
 import React from "react";
 import MainLayout from "../components/layout/MainLayout";
->>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
 const AccountSettings: React.FC = () => {
   return (
 :src/pages/AccountSettings.tsx
 
 :src/pages/AccountSettings.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
@@ -226,34 +217,24 @@ export default function AccountSettings() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSave = null;
 :src_backup/pages/AccountSettings.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />"
       <Header />
 :src_backup/pages/AccountSettings.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
 
         <div className="grid gap-6 md:grid-cols-2">
-=======
 <main className="container mx-auto py-8 px-4">"
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>"
         <div className="grid gap-6 md:grid-cols-2">"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AccountSettings.tsx
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
 
         <div className="grid gap-6 md:grid-cols-2">
 :src_backup/pages/AccountSettings.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AccountSettings.tsx
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
@@ -262,9 +243,6 @@ export default function AccountSettings() {
               </CardDescription>
             </CardHeader>
 :src_backup/pages/AccountSettings.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <CardDescription>;
                 Manage your personal information and privacy;
               </CardDescription>;
@@ -289,24 +267,13 @@ export default function AccountSettings() {
                     type='button'
 :src_backup/pages/AccountSettings.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AccountSettings.tsx
             <CardContent className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
                 <Input
 :src_backup/pages/AccountSettings.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/AccountSettings.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AccountSettings.tsx
                   id="email"
                   value={user?.email || ''}
                   disabled
@@ -330,22 +297,13 @@ export default function AccountSettings() {
                   >
                     <Wallet className="h-4 w-4" />
 :src_backup/pages/AccountSettings.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/AccountSettings.tsx
-=======
 
             <CardContent className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
                 <Input
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AccountSettings.tsx
                     Connect
                   </Button>
                 </div>
@@ -354,10 +312,7 @@ export default function AccountSettings() {
                 </p>
               </div>
 :src_backup/pages/AccountSettings.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="displayWeb3">Display Web3 Identity</Label>
@@ -377,15 +332,11 @@ export default function AccountSettings() {
                 <div className="space-y-0.5">
                   <Label htmlFor="backup" className="flex items-center gap-1">
                     <Database className="h-4 w-4" />
-<<<<<<< HEAD
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AccountSettings.tsx
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="backup" className="flex items-center gap-1">
                     <Database className="h-4 w-4" />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                     Decentralized Backup
                   </Label>
                   <p className="text-xs text-gray-500">
@@ -394,9 +345,6 @@ export default function AccountSettings() {
                 </div>
                 <Switch
 :src_backup/pages/AccountSettings.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   id="backup"
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
@@ -414,9 +362,7 @@ export default function AccountSettings() {
                 disabled={isSubmitting}
 className="w-full"
               >
-=======
 id="backup""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AccountSettings.tsx
                   id="backup"
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
@@ -430,19 +376,14 @@ id="backup""
                 </div>
 :src_backup/pages/AccountSettings.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AccountSettings.tsx
               )}
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
 :src_backup/pages/AccountSettings.tsx
-<<<<<<< HEAD
                 className="w-full"
               >
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
 :src_backup/pages/AccountSettings.tsx
                 {!isSubmitting && <Save className='ml-2 h-4 w-4' />}
@@ -451,11 +392,9 @@ id="backup""
             </CardContent>
           </Card>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
           <Card>
 :src/pages/AccountSettings.tsx
 <CardHeader>
-=======
                 className="w-full"
               >
 {isSubmitting ? "Saving..." : "Save Settings"}"
@@ -465,7 +404,6 @@ id="backup""
           </Card>
           <Card>
             <CardHeader>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AccountSettings.tsx
               <CardTitle>Web3 Features</CardTitle>
               <CardDescription>
                 Manage your Web3 connections and features
@@ -557,7 +495,6 @@ id="backup""
               </div>
 :src_backup/pages/AccountSettings.tsx
 
-=======
               <div>
                 <h3 className="font-medium mb-2">Backup Status</h3>"
                 <div className="grid grid-cols-2 gap-2">"
@@ -583,7 +520,6 @@ id="backup""
                     <p className="text-sm font-medium">Reviews</p>"
                     <p className="text-xs text-gray-500">"
                       {enableBackup ? "Backed up" : "Not backed up"}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AccountSettings.tsx
               <div>
                 <h3 className="font-medium mb-2">Backup Status</h3>
                 <div className="grid grid-cols-2 gap-2">
@@ -613,7 +549,6 @@ id="backup""
                     <p className="text-xs text-gray-500">
 :src_backup/pages/AccountSettings.tsx
 {enableBackup ? 'Backed up' : 'Not backed up'}
-<<<<<<< HEAD
                     </p>
                   </div>
                 </div>
@@ -642,11 +577,8 @@ id="backup""
         </div>
       </main>
     </>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 :src_backup/pages/AccountSettings.tsx
-<<<<<<< HEAD:src/pages/AccountSettings.tsx
-<<<<<<< HEAD
 };
               <div>;
                 <h3 className='font - medium mb - 2'>Recovery Options</h3>;
@@ -660,9 +592,6 @@ id="backup""
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
 :src_backup/pages/AccountSettings.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                     : 'Enable backup first to use this feature'}'
                     </p>
                   </div>
@@ -681,7 +610,6 @@ id="backup""
                 <p className="text-xs text-gray-500 mt-1">
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AccountSettings.tsx
                     : 'Enable backup first to use this feature'}
                 </p>;
               </div>;
@@ -690,26 +618,13 @@ id="backup""
         </div>;
       </main>;
 :src_backup/pages/AccountSettings.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>;
   );
 
     </>);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 :src_backup/pages/AccountSettings.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/AccountSettings.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/AccountSettings.tsx

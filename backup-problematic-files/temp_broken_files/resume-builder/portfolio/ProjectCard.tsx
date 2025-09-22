@@ -32,18 +32,15 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
             loading="lazy";"
           />;
 ) :(;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <div className="w-full h-full flex items-center justify-center bg-muted">;
             <FileText className="h-12 w-12 text-muted-foreground/50" />;
           </div>;
         )}
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectCard.tsx
 
               <Button variant="ghost" size="icon">;
                 <Github className="h-4 w-4" />;
               </Button>;
             </a>;
-<<<<<<< HEAD
             <a;
               href={project.github_url}"
               target="_blank";""
@@ -56,7 +53,6 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
                 <Github className="h-4 w-4" />;"
 
             </a>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           )}
           ;
           {project.demo_url && (;
@@ -74,8 +70,6 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
           )}
         </div>;
         ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="flex gap-2">;
           <Button variant="ghost" size="icon" onClick={() => onEdit(project)} aria-label="Edit project">;
             <Edit className="h-4 w-4" />;
@@ -97,7 +91,6 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
           <AlertDialogFooter>;
 <AlertDialogCancel>Cancel</AlertDialogCancel>;
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectCard.tsx
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
@@ -122,4 +115,3 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/portfolio/ProjectCard.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectCard.tsx

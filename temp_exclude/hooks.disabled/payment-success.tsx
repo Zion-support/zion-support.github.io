@@ -163,7 +163,6 @@ export default function PaymentSuccess() { return null; }
 :temp_exclude/hooks.disabled/payment-success.tsx
           <Button 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"

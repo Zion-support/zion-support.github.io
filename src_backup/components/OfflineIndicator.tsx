@@ -1,7 +1,4 @@
 :src/components/OfflineIndicator.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react',
 import { WifiOff, Wifi } from 'lucide-react'
 import { Alert, AlertDescription } from '@/components/ui/alert',
@@ -26,22 +23,17 @@ export const OfflineIndicator = () => {
   const [isOnline, setIsOnline] = useState(true),
   const [showOfflineAlert, setShowOfflineAlert] = useState(false),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   useEffect(() => {
     const updateOnlineStatus = () => {
       const online = navigator.onLine,
       setIsOnline(online),
 
-=======
 import { useState, useEffect } from 'react';
 
 import { WifiOff, Wifi } from 'lucide-react'
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/OfflineIndicator.tsx
       if (!online) {
-=======
             if (!online) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
@@ -56,7 +48,6 @@ export const OfflineIndicator = () => {;
   const [showOfflineAlert, setShowOfflineAlert] = useState(false),;
   useEffect(() => {;
     const updateOnlineStatus = () => {;
-<<<<<<< HEAD
       const online = navigator.onLine,;
       setIsOnline(online),;
       if (!online) {;
@@ -65,7 +56,6 @@ export const OfflineIndicator = () => {;
         // Show brief "back online" message then hide;
 :src/components/OfflineIndicator.tsx
 setTimeout(() => setShowOfflineAlert(false), 3000);
-<<<<<<< HEAD
       }
     },;
     // Set initial status;
@@ -91,15 +81,10 @@ setTimeout(() => setShowOfflineAlert(false), 3000);
     }
   }, [showOfflineAlert]),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   if (!showOfflineAlert) return null,
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/OfflineIndicator.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="fixed top-4 right-4 z-50 max-w-sm pointer-events-none">
       <Alert variant={isOnline ? "default" : "destructive"}>
@@ -122,15 +107,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ) : (;
               'You are offline. Some features may not work.';
             )}
-<<<<<<< HEAD
           </AlertDescription>;
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </Alert>;
     </div>;
   );
-<<<<<<< HEAD
 
 };
     <div className='fixed top - 4 right - 4 z - 50 max - w-sm pointer - events - none'>;
@@ -148,18 +130,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Alert>;
     </div>);
 } }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };
 :src/components/OfflineIndicator.tsx
 
-=======
 );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 );
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/OfflineIndicator.tsx

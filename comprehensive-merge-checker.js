@@ -4,7 +4,6 @@ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🔍 Comprehensive Merge Conflict and PR Checker');
-console.log('==============================================');
 
 // Function to run git commands safely
 function runGitCommand(command, options = {}) {

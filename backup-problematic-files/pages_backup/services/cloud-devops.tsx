@@ -6,13 +6,11 @@ import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'l
 const features = [;
   {}
 icon: Cloud,;
-<<<<<<< HEAD
     title: 'Cloud Migration,',;
     description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',;
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
-=======
     icon: Cloud,
     title: 'Cloud Migration,',
     description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',
@@ -20,7 +18,6 @@ import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
 import * as React from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -40,7 +37,6 @@ import {Cloud,, Server,, Database,, Shield,, Zap,, ArrowRight,, CheckCircle} fro
 const features = [;
   {;
     icon: Cloud,;
-<<<<<<< HEAD
     title: 'Cloud Migration',;
     description: 'Seamless migration to cloud platforms with zero downtime';
   },;
@@ -82,7 +78,6 @@ const features = [;
 icon: Zap,;
     title: 'CI/CD Pipelines,',,
   description: 'Build automated deployment pipelines for faster, more reliable software delivery.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 ;];
 const services = [;
@@ -195,7 +190,6 @@ export default function CloudDevOpsPage() {
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
     title: 'Infrastructure as Code',
     description: 'Automated infrastructure provisioning and management'
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
@@ -215,7 +209,6 @@ export default function CloudDevOpsPage() {
     title: 'Database Management',
     description: 'Comprehensive database administration and optimization services.',
     benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening', 'Monitoring']
-=======
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
   },
@@ -230,7 +223,6 @@ export default function CloudDevOpsPage() {
     title: 'Database Management',
     description: 'Comprehensive database administration and optimization services.',
     benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening', 'Monitoring']
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },
   {
     icon: Shield,
@@ -251,7 +243,6 @@ description: 'Implement security best practices and maintain compliance standard
     benefits: ['Real-time monitoring', 'Custom dashboards', 'Automated alerts', 'Performance metrics']
   }
 ];
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
   },
   {
     icon: Zap,
@@ -266,7 +257,6 @@ description: 'Implement security best practices and maintain compliance standard
     benefits: ['Real-time monitoring', 'Custom dashboards', 'Automated alerts', 'Performance metrics']
   }
 ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
   'Improved deployment speed and reliability',
@@ -276,7 +266,6 @@ const benefits = [
   'Faster time-to-market for applications'
 ];
 export default function CloudDevOpsServices() {
-<<<<<<< HEAD
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -334,7 +323,6 @@ return (
             </motion.div>
             </motion.div>
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -420,13 +408,11 @@ return (
                     {feature.description}
                   </p>
                 </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ))}
             </div>
           </div>
         </section>
 {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
@@ -459,10 +445,7 @@ return (
                 </button>
               </div>
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {/* Tools Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
@@ -534,7 +517,6 @@ return (
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -567,7 +549,6 @@ return (
 </div>
         </section>
       </div>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
     </Layout>
     </Layout>
     </>
@@ -579,4 +560,3 @@ return (
     </Layout>
     </Layout>
     </>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

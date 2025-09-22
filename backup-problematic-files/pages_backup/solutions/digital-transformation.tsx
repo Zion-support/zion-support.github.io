@@ -497,7 +497,6 @@ const industries = [;
   { name: 'Education', icon: BookOpen, description: 'Digital learning platforms and student management' },;
 { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
 ];
-<<<<<<< HEAD
 
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -599,10 +598,8 @@ const industries = [;
 ];
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
-=======
   { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }']
 import Layout from "../../components/Layout";";""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 export default function DigitalTransformationPage() {
 export default function DigitalTransformation() {;
@@ -745,7 +742,6 @@ Transform your business for the digital age with our comprehensive transformatio
           <div className="container mx-auto px-4">;"
               className="text-center mb-16""
               whileInView={{ opacity: 1, y: 0 }}
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                 return (
 <motion&& motion.div
                     key={index}
@@ -765,7 +761,6 @@ Transform your business for the digital age with our comprehensive transformatio
               {transformationServices && transformationServices.map((service, index) => {}
                 const IconComponent = service && service.icon;
                 return (
-=======
                     key={index}"
                     className="bg-gray-50 rounded-lg p-6 text-center""
         {/* Services Section */}"
@@ -775,12 +770,10 @@ Transform your business for the digital age with our comprehensive transformatio
                   <motion.div);"
         <section className="py-20">";"
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <motion&& motion.div)
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"""
                     transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/digital-transformation.tsx
 :pages/solutions/digital-transformation.tsx
                   >
                     <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
@@ -830,7 +823,6 @@ Transform your business for the digital age with our comprehensive transformatio
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
                           {feature}
-=======
 :pages/solutions/digital-transformation.tsx;
                   >
                     <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">"
@@ -867,7 +859,6 @@ Transform your business for the digital age with our comprehensive transformatio
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">";"
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         </li>,;
                     </ul>,;
                 );
@@ -894,7 +885,6 @@ Transform your business for the digital age with our comprehensive transformatio
                     className="bg-white rounded-lg p-6 shadow-lg text-center"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                     transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                     viewport={{ once: true }}>;
                     <div className="text-blue-600 mb-4">;
@@ -1019,7 +1009,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
             <motion&& motion.a
               href="/contact""
               className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
-=======
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;"
 </h2>
               </h2>;"
@@ -1044,7 +1033,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
             <motion&& motion.a;"
               href="/contact""""
               className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"","
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               whileHover={{ scale: 1 && 1.05 }}>,;
               <ArrowRight className="w-5 h-5 ml-2" />";"
 
@@ -1053,6 +1041,3 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
         </section>;
       </div>;
 </Layout>;
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

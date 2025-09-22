@@ -15,11 +15,9 @@ import { useAuth } from "@/hooks/useAuth",
 import { Availability } from "@/types/profile",
 import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
-=======
 ';
 import React from 'react';'
 import { Handshake, MessageSquare, Star } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
 import { Button } from '@/components/ui/button';
 '
 import { HireNowCTA } from './HireNowCTA';'
@@ -37,7 +35,6 @@ import { Availability } from '@/types/profile';
 interface TalentProfileProps {;
   profile: TalentProfileType;
   onRequestHire: () => void;
-<<<<<<< HEAD:src_backup/components/profile/TalentProfile.tsx
   onMessageTalent?: () => void
 export function TalentProfile(): any ({;
   profile,;
@@ -135,7 +132,6 @@ import { TalentProfile as TalentProfileType } from '@/types / talent';'
 import { use_auth } from '@/hooks / use_auth';'
 import { Availability } from '@/types / profile';
 :src_backup/components/profile/TalentProfile.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface TalentProfileProps {
   profile: TalentProfileType,
   onRequestHire: () => void,
@@ -151,12 +147,6 @@ export function TalentProfile({
 
   // Create proper availability object from talent profile
   const availability: Availability = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     status:;
       profile.availability_type === 'full_time';
         ? 'available';
@@ -181,13 +171,8 @@ export function TalentProfile({
     })) || [];
   return (
     <div className='container mx - auto px - 4 py - 8'>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentProfile.tsx
     status: profile.availability_type === 'full_time' ? 'available' : 
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
-=======
 interface TalentProfileProps {}
   profile: TalentProfileType;
   onRequestHire: () => void;
@@ -201,7 +186,6 @@ function TalentProfile() {}
   const availability: Availability = {'
     status: profile.availability_type === 'full_time' ? 'available' : '
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
   },
 
@@ -264,10 +248,7 @@ export function TalentProfile() { return null; }
   return (;"
     <div className="container mx-auto px-4 py-8">;
 :src/components/profile/TalentProfile.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentProfile.tsx
       {/* Profile Header */}
       <ProfileHero;
         name={profile.full_name}
@@ -278,10 +259,8 @@ profileType="talent"
         reviewCount={profile.rating_count}
       />;
 :src_backup/components/profile/TalentProfile.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentProfile.tsx
 
       {/* Main content area */}
-<<<<<<< HEAD
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
       <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mt - 8'>;
         {/* Left Column - Skills & Info */}'
@@ -412,18 +391,14 @@ export function TalentProfile({}
   onMessageTalent
 }: TalentProfileProps) {
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Left Column - Skills & Info */}
         <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
           <ProfileAvailability availability={availability} />
 
           <ProfileContact 
-=======
           <ProfileContact;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
             email={profile.user_id}
             profileName={profile.full_name}"
             profileType="talent"
@@ -464,11 +439,7 @@ export function TalentProfile({}
                   {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
                 </p>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
                 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Button "
                     size="lg" "
@@ -496,9 +467,7 @@ export function TalentProfile({}
             </div>;
           )}
 :src/components/profile/TalentProfile.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>;
       </div>;
     </div>;
@@ -506,18 +475,10 @@ export function TalentProfile({}
 }
 
 ;
-=======
 ;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/TalentProfile.tsx
         </div>
       </div>
     </div>
   );
 :src/components/profile/TalentProfile.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/TalentProfile.tsx

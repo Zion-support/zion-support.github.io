@@ -37,11 +37,9 @@ export function KanbanColumn({;
   const getColumnBgColor = (columnId:string) => {;
 switch (columnId) {;
       case "hired":return "bg-green-50",;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       case "rejected":;
         return "bg-red-50",;
       default:;
         return "bg-muted/30";
-<<<<<<< HEAD
 
 }

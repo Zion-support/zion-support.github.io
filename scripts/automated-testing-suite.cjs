@@ -15,7 +15,6 @@ console.log('=====');
 const { execSync } = require('child_process');
 const fs = require('fs');
 
-===================');
 
 async function runTests() {
   const tests = [

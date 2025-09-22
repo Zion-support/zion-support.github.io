@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
@@ -25,21 +21,13 @@ import Referrals from "@/pages/Referrals";
 import DeveloperPortal from "@/pages/DeveloperPortal";
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const DashboardRoutes = () => {
 import {Fragment} from "react";
-=======
 const DashboardRoutes = () => {import {Fragment} from "react";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 const DashboardRoutes = () => {import {Fragment} from "react";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 const DashboardRoutes = () => {
 const DashboardRoutes = () => {;
 import {Fragment} from "react";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import Dashboard from "@/pages/Dashboard";
@@ -82,7 +70,6 @@ import PortfolioBuilder from "@/pages/PortfolioBuilder",
 import Referrals from "@/pages/Referrals",
 import DeveloperPortal from "@/pages/DeveloperPortal",
 import WalletPage from "@/pages/Wallet";
-=======
 import { Fragment } from "react";"
 import { Route, Routes } from "react-router-dom";"
 import { ProtectedRoute } from "@/components/ProtectedRoute";"
@@ -130,7 +117,6 @@ import PortfolioBuilder from "@/pages/PortfolioBuilder";"
 import Referrals from "@/pages/Referrals";"
 import DeveloperPortal from "@/pages/DeveloperPortal";"
 import WalletPage from "@/pages/Wallet";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import ContractBuilder from "@/pages/ContractBuilder";
 
 "
@@ -361,7 +347,6 @@ import Referrals from "@/pages/Referrals",;"
 import DeveloperPortal from "@/pages/DeveloperPortal",;"
 import WalletPage from "@/pages/Wallet",;"
 import ContractBuilder from "@/pages/ContractBuilder",;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const DashboardRoutes = () => {;
 
           <ProtectedRoute>
@@ -413,7 +398,6 @@ const DashboardRoutes = () => {;
         path="/project/:id"
         element={}
           <ProtectedRoute>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <ProjectDetails />;
           </ProtectedRoute>;
         }
@@ -515,8 +499,6 @@ element={          <ProtectedRoute>;
         }
       />
       <Route
-<<<<<<< HEAD
-<<<<<<< HEAD
         path="/contract-builder"
           </ProtectedRoute>;
         }
@@ -622,34 +604,20 @@ path="/dashboard / api - access";
   );
 },;
 export default DashboardRoutes;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default DashboardRoutes;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         }
-=======
         path="/contract-builder"        }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         path="/contract-builder"        }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         path="/contract-builder"
 
         }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       />;
     </Routes>);
 }
 ;
 export default DashboardRoutes;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       />
       <Route
         path="/wallet"
@@ -679,16 +647,6 @@ export default DashboardRoutes;
   );
 },;
 export default DashboardRoutes;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

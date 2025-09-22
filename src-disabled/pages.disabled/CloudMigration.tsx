@@ -3,7 +3,6 @@ import React from "react";
 import MainLayout from "../components/layout/MainLayout";
 
 const CloudMigration: React.FC = () => {
-<<<<<<< HEAD
   return (
     <MainLayout title="Cloud Migration - Zion Tech Group" description="Expert cloud migration services for your business.">
       <div className="container mx-auto px-4 py-16">
@@ -261,7 +260,6 @@ const CloudMigration: React.FC = () => {
       </div>
     </div>
 :src/pages/CloudMigration.tsx
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

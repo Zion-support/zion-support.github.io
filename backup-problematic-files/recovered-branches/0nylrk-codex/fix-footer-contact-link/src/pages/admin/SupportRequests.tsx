@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;
@@ -145,7 +144,6 @@ export default function SupportRequests() {;
       <SEO ;
         title="Support Requests | Admin Dashboard";
         description="Manage and track user support requests and issues";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       />;
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">;
@@ -157,7 +155,6 @@ export default function SupportRequests() {;
               Manage and respond to user support requests and issues;
             </p>;
           </div>;
-<<<<<<< HEAD
 
           <div className="mt-4 md:mt-0">;
             <Button className="bg-zion-purple hover:bg-zion-purple-light">;

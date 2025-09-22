@@ -246,11 +246,8 @@ export class PerformanceMonitor {}
 const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Log slow operations;
 
         console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};"
@@ -295,12 +292,10 @@ const publicDir = path.join(this.projectRoot, 'public';);
         const imageFiles = this.findImageFiles(publicDir;);
         let optimizedCount = ;0;
         const optimizations = [];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         for (const file of imageFiles) {}
             try {}
                 const stats = fs.statSync(file;);
                 const sizeKB = Math.round(stats.size / 1024;);
-<<<<<<< HEAD
                 if ( { // Only optimize large images;})
                     optimizations.push({})
 
@@ -366,10 +361,6 @@ return report};
     const optimizer = new AdvancedAppOptimizer) {}
     const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)};
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 module.exports = AdvancedAppOptimizer;
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

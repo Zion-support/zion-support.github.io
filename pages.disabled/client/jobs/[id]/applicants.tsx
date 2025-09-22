@@ -5,20 +5,12 @@ import useSWR from 'swr';
 import { TALENT_PROFILES  } from '../../../../data/talent';
 import Link from 'next/link';
 :pages_backup/client/jobs/[id]/applicants.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/client/jobs/[id]/applicants.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/client/jobs/[id]/applicants.tsx
 const fetcher = null;
           return (
             <div key={a.id} className="border rounded p-4 bg-white dark:bg-gray-900">
               <div className="flex items-center justify-between">
 :pages_backup/client/jobs/[id]/applicants.tsx
-<<<<<<< HEAD:pages/client/jobs/[id]/applicants.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function JobApplicantsPage() {
   const router = useRouter()
@@ -26,14 +18,10 @@ export default function JobApplicantsPage() {
   const { data: appsData } = useSWR(
     id ? `/api/applications?jobId=${id}` : null
     fetcher
-<<<<<<< HEAD
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
   const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
@@ -61,7 +49,6 @@ export default function JobApplicantsPage() {
   const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher),
   const job = jobData?.job
   const applications = (appsData?.applications as any[]) || []
-<<<<<<< HEAD
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Applicants</h1>
@@ -72,8 +59,6 @@ export default function JobApplicantsPage() {
         <Link href='/client/dashboard'>
           <a className='text-sm underline'>Back to Dashboard</a>
         </Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>
       {job && <p className='text-sm text-gray-600'>For job: {job.title}</p>}
       <div className='grid gap-3'>
@@ -84,14 +69,8 @@ export default function JobApplicantsPage() {
           const talent = TALENT_PROFILES.find(t => t.slug === a.talentSlug);
             >
               <div className='flex items-center justify-between'>
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/client/jobs/[id]/applicants.tsx
                 <div>
                   <p className='font-medium'>{talent?.name |a.talentSlug}</p>
                   <p className='text-xs text-gray-500'>
@@ -138,7 +117,6 @@ export default function JobApplicantsPage() {_const _router = useRouter();
 }
         {applications.map((a) => {
           const talent = TALENT_PROFILES.find((t) => t.slug === a.talentSlug)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           return (
             <div key={a.id} className="border rounded p-4 bg-white dark:bg-gray-900">
               <div className="flex items-center justify-between">
@@ -150,7 +128,6 @@ export default function JobApplicantsPage() {_const _router = useRouter();
                 <button className="px-2 py-1 text-sm border rounded">Message</button>
               </div>
             </div>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 }
           )
@@ -250,27 +227,16 @@ function JobApplicantsPage() {
   );
 
 :pages_backup/client/jobs/[id]/applicants.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       </div>
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/jobs/[id]/applicants.tsx
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/jobs/[id]/applicants.tsx
-=======
       </div>
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
       </div>
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/client/jobs/[id]/applicants.tsx

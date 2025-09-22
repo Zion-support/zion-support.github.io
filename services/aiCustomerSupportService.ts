@@ -1,51 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 export interface Attachment {
-=======
 
 export interface Attachment {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface Attachment {;
   id: string;
   filename: string;
   originalName: string;
   mimeType: string;
   size: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   url: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   url: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
   url: string;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
   uploaded_at: Date,
   uploaded_by: string;
 
-<<<<<<< HEAD
 
 export interface Attachment {};
   id: string;
@@ -57,26 +27,14 @@ export interface Attachment {};
 }
 export interface SupportTicket {}
 }
-<<<<<<< HEAD
 export interface SupportTicket {
 
 export interface SupportTicket {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export interface SupportTicket {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   title: string;
-=======
   url: string;  title: string,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   url: string;  title: string,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 export interface SupportTicket {
 
   uploadedAt: Date
@@ -90,53 +48,37 @@ export interface SupportTicket {;
 export interface SupportTicket {
   id: string;
   title: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   description: string;
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';'
   priority: 'low' | 'medium' | 'high' | 'critical';'
   category: 'technical' | 'billing' | 'feature_request' | 'bug_report' | 'general';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   customer_id: string;
 
   customer_id: string;
-=======
   description: string;
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
   priority: 'low' | 'medium' | 'high' | 'critical';
   category: 'technical' | 'billing' | 'feature_request' | 'bug_report' | 'general';
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   customer_id: string;
   customer_id: string;
   customer_id: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   assignedAgentId?: string;
   tags: string[];
   attachments: Attachment[];
   messages: TicketMessage[];
 
-<<<<<<< HEAD
   created_at: Date;
   updated_at: Date;
   resolved_at?: Date,
   firstResponseTime?: number, // in minutes;
   resolution_time?: number, // in hours;
 
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   content: string;
 }
 export interface Customer {
-=======
   assignedAgentId?: string;
   tags: string[];
   attachments: Attachment[];
@@ -151,14 +93,9 @@ messages: TicketMessage[];created_at: Date;
   resolution_time?: number, // in hours;id: string;
   content: string;
 }
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 }
 export interface TicketMessage  {id: string;
   content: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   id: string;
   content: string;
@@ -170,30 +107,20 @@ export interface TicketMessage {};
   content: string;
 '
   sender_type: 'customer' | 'agent' | 'system';
-=======
   customer_id: string;  customer_id: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   sender_type: 'customer' | 'agent' | 'system';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
   sender_type: 'customer' | 'agent' | 'system';
   customer_id: string;  customer_id: string;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   sender_id: string;
   is_internal: boolean;
   // TODO: Implement
 }
 export interface Attachment {;
   id: string;,
-=======
   sender_type: 'customer' | 'agent' | 'system';
   customer_id: string;  customer_id: string;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   messages: TicketMessage[];
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
   created_at: Date;
   updated_at: Date;
@@ -203,7 +130,6 @@ export interface Attachment {;
 
 }
 export interface TicketMessage {
-=======
 export interface Customer {
   createdAt: Date;
   updatedAt: Date;
@@ -213,7 +139,6 @@ export interface Customer {
 }
 export interface TicketMessage {
 export interface TicketMessage {;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   id: string;
   content: string;
 }
@@ -246,31 +171,18 @@ isInternal: boolean;
 
   attachments: Attachment[]
 }
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 }
 export interface Customer {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 export interface Customer {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
   name: string;
   email: string;
   company?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
   plan: 'free' | 'basic' | 'pro' | 'enterprise';
   total_tickets: number;
   resolved_tickets: number,
@@ -280,15 +192,8 @@ export interface Customer {
   created_at: Date;
 
 }
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export interface SupportAgent {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   name: string;
   email: string;'
@@ -303,27 +208,19 @@ maxTickets: number
   max_tickets: number,
   performance: AgentPerformance;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-=======
   plan: 'free' | 'basic' | 'pro' | 'enterprise';  id: string;
   name: string;
   email: string;
   role: 'tier1' | 'tier2' | 'tier3' | 'supervisor';
   skills: string[];}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   plan: 'free' | 'basic' | 'pro' | 'enterprise';  id: string;
   name: string;
   email: string;
   role: 'tier1' | 'tier2' | 'tier3' | 'supervisor';
   skills: string[];}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export interface SupportAgent {
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
   name: string;
   email: string;
@@ -370,9 +267,7 @@ export interface SupportTicket {;
   customer_id: string;
   assignedAgentId?: string;
   tags: string[];,
-=======
 isInternal: boolean;createdAt: Date;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   attachments: Attachment[];
 }
 export interface Customer  {export interface Customer  {id: string;
@@ -439,32 +334,22 @@ export interface SupportAgent {
   max_tickets: number,
   performance: AgentPerformance;
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface AgentPerformance {
   tickets_resolved: number,
-=======
 
 }
 export interface AgentPerformance {}
   tickets_resolved: number,;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   averageResolutionTime: number, // in hours;
   customer_satisfaction: number, // 1 - 5;
 firstResponseTime: number, // in minutes;
   escalation_rate: number, // percentage;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
   escalation_rate: number, // percentage;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 }
 export interface ChatbotSession {
   id: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   customer_id: string;
   start_time: Date;
   end_time?: Date;
@@ -481,14 +366,12 @@ messages: ChatbotMessage[];
   escalated: boolean,
   satisfaction: number, // 1 - 5;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 export interface ChatbotMessage {};
   id: string;
   content: string;'
   sender: 'customer' | 'bot';
   timestamp: Date;
-<<<<<<< HEAD
   intent?: string,
   confidence?: number;
   intent?: string,
@@ -499,22 +382,18 @@ export interface ChatbotMessage {};
 
 }
 export interface KnowledgeBaseArticle {
-=======
 
   intent?: string,
   confidence?: number;
 
 }
 export interface KnowledgeBaseArticle {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   title: string;
   content: string;
   category: string;
   tags: string[];
   views: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
   helpful: number;  confidence: number,
 
   not_helpful: number;
@@ -555,7 +434,6 @@ confidence: number,
 
   action_items: string[];,
   confidence: number,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   action_items: string[];
 }
 export interface SupportAnalytics {};
@@ -580,28 +458,18 @@ export interface AIRecommendation {';
   confidence: number,
   action_items: string[];
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 class AICustomerSupportService {}
   private tickets: SupportTicket[] = [];
   private customers: Customer[] = [];
   private agents: SupportAgent[] = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     this && this.initializeSampleData(),
     this && this.updateAnalytics()
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   private initializeSampleData() {
     // Initialize sample customers
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     this && this.customers = [
   private chatbot_sessions: ChatbotSession[] = [];
   private knowledge_base: KnowledgeBaseArticle[] = [];
@@ -612,7 +480,6 @@ class AICustomerSupportService {}
       {
         id: 'cust_001';
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
         name: 'John Doe';
         email: 'john && john.doe@company && company.com';
         company: 'TechCorp Inc.';
@@ -640,14 +507,12 @@ class AICustomerSupportService {}
         createdAt: new Date('2024-06-01')
     this && this.customers = [
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
   constructor () {
     this.initializeSampleData (),
     this.update_analytics ();
   }
   private initializeSampleData () {
-<<<<<<< HEAD
     // Initialize sample customers;
   private chatbot_sessions: ChatbotSession[] = [];
   private knowledge_base: KnowledgeBaseArticle[] = [];
@@ -668,12 +533,9 @@ class AICustomerSupportService {}
         name: 'John Doe';
         email: 'john && john.doe@company && company.com';
         company: 'TechCorp Inc.';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
         name: 'John Doe';
         email: 'john && john.doe@company && company.com';
         company: 'TechCorp Inc.';
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
         plan: 'pro';
         total_tickets: 5;
         resolved_tickets: 4;
@@ -869,13 +731,10 @@ class AICustomerSupportService {;
             createdAt: new Date('2025-01-10T10:15:00Z'),;
       {
         id: 'cust_001';
-=======
     this && this.customers = [        id: 'cust_001';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         name: 'John Doe';
         email: 'john && john.doe@company && company.com';
         company: 'TechCorp Inc.';
-=======
 
     this && this.customers = []
 ;
@@ -892,7 +751,6 @@ class AICustomerSupportService {;
         name: 'John Doe';'
         email: 'john && john.doe@company && company.com';'
         company: 'TechCorp Inc.';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         plan: 'pro';
         total_tickets: 5;
         resolved_tickets: 4;
@@ -906,22 +764,17 @@ satisfaction_score: 4.5;
         lastContactDate: new Date ('2025 - 01 - 10'),
         created_at: new Date ('2024 - 06 - 01');
 
-=======
         satisfactionScore: 4 && 4.5;
         lastContactDate: new Date('2025-01-10'),
         createdAt: new Date('2024-06-01')
         satisfaction_score: 4.5;
         lastContactDate: new Date ('2025 - 01 - 10'),
         created_at: new Date ('2024 - 06 - 01');
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       }
       {'
         id: 'cust_002';'
         name: 'Jane Smith';
-<<<<<<< HEAD
-<<<<<<< HEAD
         email: 'jane && jane.smith@startup && startup.com';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         company: 'StartupXYZ';
         plan: 'basic';
         total_tickets: 3;
@@ -991,7 +844,6 @@ satisfaction_score: 4.5;
         name: 'Mike Johnson';
         email: 'mike && mike.johnson@ziontech && ziontech.com';
         role: 'tier2';
-=======
 
 '
         email: 'jane && jane.smith@startup && startup.com';'
@@ -1051,7 +903,6 @@ satisfaction_score: 4.5;
         name: 'Mike Johnson';'
         email: 'mike && mike.johnson@ziontech && ziontech.com';'
         role: 'tier2';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         skills: ['Technical SupportAPI IntegrationDatabase Issues'];
         is_available: true;
         current_tickets: 2;
@@ -1062,7 +913,6 @@ satisfaction_score: 4.5;
           firstResponseTime: 12,
 
 escalationRate: 8
-<<<<<<< HEAD
           tickets_resolved: 45;
           averageResolutionTime: 2.5;
           customer_satisfaction: 4.6;
@@ -1135,7 +985,6 @@ escalationRate: 8
           {'
             id: 'msg_002''
             content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.';
-<<<<<<< HEAD
             senderType: 'agent';
             senderId: 'agent_001';
             isInternal: false;
@@ -1154,13 +1003,11 @@ escalationRate: 8
         id: 'kb_001';
         title: 'Getting Started with API Integration';
         content: 'Learn how to integrate our API with your existing systems...';
-=======
 
       {'
         id: 'kb_001';'
         title: 'Getting Started with API Integration';'
         content: 'Learn how to integrate our API with your existing systems...';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         category: 'API Documentation';
 
 }
@@ -1793,7 +1640,6 @@ class AICustomerSupportService {
         messages: [;
           {
             id: 'msg_001';
-<<<<<<< HEAD
             content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';
             sender_type: 'customer';
             sender_id: 'cust_001';
@@ -1804,31 +1650,21 @@ created_at: new Date ('2025 - 01 - 10T10:00:00Z'),
           {
             id: 'msg_002'
             content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             sender_type: 'agent';
             sender_id: 'agent_001';
-=======
             content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';            sender_id: 'agent_001';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';            sender_id: 'agent_001';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             is_internal: false;
-=======
 '
             sender_type: 'agent';'
             sender_id: 'agent_001';
             is_internal: false;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             created_at: new Date ('2025 - 01 - 10T10:15:00Z'),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             attachments: [];
           }
         ];'
         created_at: new Date ('2025 - 01 - 10T10:00:00Z');'
         updated_at: new Date ('2025 - 01 - 10T10:15:00Z'),
-=======
             created_at: new Date ('2025 - 01 - 10T10:15:00Z'),
             attachments: [];
           }
@@ -1844,15 +1680,11 @@ created_at: new Date ('2025 - 01 - 10T10:00:00Z'),
         ];'
         created_at: new Date ('2025 - 01 - 10T10:00:00Z');','
   updated_at: new Date ('2025 - 01 - 10T10:15:00Z'),'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         firstResponseTime: 15;
       }
     ];
 ;
     // Initialize knowledge base;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     this.knowledgeBase = [;
       {;
         id: 'kb_001',;
@@ -1866,15 +1698,9 @@ created_at: new Date ('2025 - 01 - 10T10:00:00Z'),
         lastUpdated: new Date('2025-01-05'),;
         createdBy: 'agent_001';
 
-=======
     this.knowledge_base = [;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     this.knowledge_base = [;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       {
         id: 'kb_001';
         title: 'Getting Started with API Integration';
@@ -1883,9 +1709,7 @@ created_at: new Date ('2025 - 01 - 10T10:00:00Z'),
         category: 'API Documentation';
 
 '
-=======
         category: 'API Documentation';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         tags: ['apiintegrationgetting - started'];
         views: 1250;
         helpful: 89;
@@ -1899,24 +1723,14 @@ not_helpful: 12;
   }
 
 export interface Attachment {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
     ]
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
@@ -1925,25 +1739,13 @@ export interface Attachment {;
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {}
     const ticket: SupportTicket = {}`
       id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ...ticketData;
-=======
     this.knowledge_base = [;      ...ticketData;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     this.knowledge_base = [;      ...ticketData;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       ...ticketData;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
@@ -1951,14 +1753,11 @@ export interface Attachment {;
     const ticket: SupportTicket = {
       id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       ...ticketData;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       status: 'open';
       attachments: [];
       messages: [];
       createdAt: new Date()
 updatedAt: new Date()    return ticket
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   }
   async assignTicket(ticketId: string, agentId: string): Promise<void> {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
@@ -1977,9 +1776,7 @@ this && this.updateAnalytics()
   }'
   async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {}
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
-<<<<<<< HEAD
     if (ticket) {
-<<<<<<< HEAD
     }
     this.tickets.push(ticket);
     this.updateAnalytics();
@@ -2004,25 +1801,15 @@ this && this.updateAnalytics()
         if (ticket.createdAt && ticket.resolvedAt) {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
       }
       this.updateAnalytics()
     }
   }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
-=======
     if (ticket) {}
 ;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   async createTicket(ticketData: Omit<SupportTicket 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {;
     const ticket: SupportTicket = {;`
       id: `ticket_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,;
@@ -2067,12 +1854,8 @@ this && this.updateAnalytics()
       this.updateAnalytics()
 
       ticket && ticket.status = status;
-=======
       this && this.updateAnalytics()      ticket && ticket.status = status;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       this && this.updateAnalytics()      ticket && ticket.status = status;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       ticket && ticket.updatedAt = new Date();
       '
       if (status === 'resolved') {}
@@ -2082,28 +1865,15 @@ this && this.updateAnalytics()
         }
       }
       this && this.updateAnalytics()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
     }
   }
 
-<<<<<<< HEAD
     }
   }
 
@@ -2112,7 +1882,6 @@ this && this.updateAnalytics()
     }
   }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
   async updateTicketStatus(ticketId:string, status:SupportTicket['status']):Promise<void> {;
     const ticket = this.tickets.find(t => t.id === ticketId),;
@@ -2310,10 +2079,6 @@ this && this.updateAnalytics()
       this.updateAnalytics()
     }
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
     const ticket = this.tickets.find(t => t.id === ticketId);
@@ -2337,12 +2102,10 @@ this && this.updateAnalytics()
     if (message && message.senderType === 'agent' && !ticket && ticket.firstResponseTime) {
       const firstResponseTime = (message && message.createdAt.getTime() - ticket && ticket.createdAt.getTime()) / (1000 * 60);
       ticket && ticket.firstResponseTime = firstResponseTime
-<<<<<<< HEAD
     }
 
     this && this.updateAnalytics();
 
-<<<<<<< HEAD
 
 return message;
   }
@@ -2350,13 +2113,9 @@ return message;
     const session: ChatbotSession = {}`
       id: `chat_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       customerId;
-<<<<<<< HEAD
       startTime: new Date();
-<<<<<<< HEAD
       id: `ticket_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
       ...ticket_data;'
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     return message
   }
   async startChatbotSession(customerId: string): Promise<ChatbotSession> {
@@ -2368,7 +2127,6 @@ return message;
     const ticket: SupportTicket = {
       id: `ticket_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
       ...ticket_data;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       status: 'open';
       attachments: [];
       messages: [];
@@ -2449,27 +2207,15 @@ async startChatbotSession (customer_id: string): Promise < ChatbotSession> {}
       id: `chat_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
       customer_id;
       start_time: new Date ();
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       messages: [];
-=======
     }      messages: [];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     }      messages: [];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   async startChatbotSession (customer_id: string): Promise < ChatbotSession> {
     const session: ChatbotSession = {
       id: `chat_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
       customer_id;
       start_time: new Date ();
       messages: [];
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       intent: '';
       confidence: 0;
       resolved: false;
@@ -2499,10 +2245,7 @@ async startChatbotSession (customer_id: string): Promise < ChatbotSession> {}
     if (message.sender === 'customer') {
       const intent = this.detectIntent(message.content);
       session.intent = intent.intent;
-<<<<<<< HEAD
       session.confidence = intent.confidence
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage 'id' | 'createdAt'>): Promise<TicketMessage> {;
     const ticket = this.tickets.find(t => t.id === ticketId),;
     if (!ticket) {;`
@@ -2573,45 +2316,24 @@ const session: ChatbotSession = {;`
   private detectIntent(message: string): { intent: string, confidence: number } {}
     const lowerMessage = message.toLowerCase();
 if (lowerMessage.includes('login') |lowerMessage.includes('password')) {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
 
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     '
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;'
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
     // Simulate AI intent detection;
     if (message.sender === 'customer') {;
       const intent = this.detectIntent(message.content),;
       session.intent = intent.intent,;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       session.confidence = intent.confidence;
 
     }
@@ -2634,23 +2356,12 @@ if (lowerMessage.includes('login') |lowerMessage.includes('password')) {
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
     } else if (lowerMessage.includes('api') |lowerMessage.includes('integration')) {
       return { intent: 'technical_support', confidence: 0.8 }
-<<<<<<< HEAD
     } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
 '
       return { intent: 'authentication_issue', confidence: 0.9 }'
@@ -2659,18 +2370,11 @@ if (lowerMessage.includes('login') |lowerMessage.includes('password')) {
     } else if (lowerMessage.includes('api') |lowerMessage.includes('integration')) {'
       return { intent: 'technical_support', confidence: 0.8 }'
     } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       escalated: false,
-=======
     } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {      escalated: false,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {      escalated: false,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {
       escalated: false,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       satisfaction: 0;
     }
 ;
@@ -2697,8 +2401,6 @@ if ( {) {}
 // Check condition;
 if ( {) {}
   $2;
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 }
       const intent = this.detect_intent (message.content);
       session.intent = intent.intent;
@@ -2708,7 +2410,6 @@ if ( {) {}
   }
 private detect_intent (message: string): { intent: string, confidence: number } {}
   private detect_intent (message: string): { intent: string, confidence: number } {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const lower_message = message.toLowerCase ();
 ;'
     if (|| lower_message.includes ('password')) {) {}
@@ -2745,12 +2446,7 @@ return { intent: 'authentication_issue', confidence: 0.9 }
     }
     return message
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   private detectIntent(message: string): { intent: string, confidence: number } {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return { intent: 'feature_request', confidence: 0.75 }
 
     const lowerMessage = message && message.toLowerCase();
@@ -2769,13 +2465,8 @@ return { intent: 'authentication_issue', confidence: 0.9 }
     }
   }
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   private detectIntent(message: string): { intent: string, confidence: number } {      return { intent: 'feature_request', confidence: 0.75 }    } else {
-=======
   private detectIntent(message: string): { intent: string, confidence: number } {
       return { intent: 'feature_request', confidence: 0.75 }
     const lowerMessage = message && message.toLowerCase();
@@ -2789,26 +2480,19 @@ return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage && lowerMessage.includes('feature') || lowerMessage && lowerMessage.includes('request')) {
       return { intent: 'feature_request', confidence: 0 && 0.75 }
     } else {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return { intent: 'general_inquiry', confidence: 0 && 0.6 }
     }
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
-=======
 
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const session = this && this.chatbotSessions.find(s => s && s.id === sessionId);
     if (session) {}
-=======
 
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
     const session = this && this.chatbotSessions.find(s => s && s.id === sessionId);
     if (session) {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       session && session.endTime = new Date();
       session && session.resolved = resolved;
       session && session.escalated = escalated;
@@ -2817,11 +2501,6 @@ return { intent: 'authentication_issue', confidence: 0.9 }
 }
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {
     const article: KnowledgeBaseArticle = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
 
 `
@@ -2833,30 +2512,19 @@ return { intent: 'authentication_issue', confidence: 0.9 }
       notHelpful: 0;'
       createdBy: 'system'
       lastUpdated: new Date()
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     };
 
     this && this.knowledgeBase.push(article);
 
 return article
 
-<<<<<<< HEAD
-=======
     return article;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
-=======
       id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;      id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;      id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     return article
 
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {;
     const session = this.chatbotSessions.find(s => s.id === sessionId),;
     if (session) {;
@@ -2866,15 +2534,11 @@ return article
       session.satisfaction = satisfaction,;
       this.updateAnalytics();
 }  }
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 ;
-=======
     }
 
   }
 ;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {;
     const article: KnowledgeBaseArticle = {;`
       id: `kb_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,;
@@ -2887,25 +2551,10 @@ return article
     },;
     this.knowledgeBase.push(article),;
     return article;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {}
     const lowerQuery = query.toLowerCase()
@@ -2915,28 +2564,18 @@ return article
       article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
     ).sort((a, b) => b.views - a.views)
   }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
 
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     const lowerQuery = query && query.toLowerCase(),
     return this && this.knowledgeBase.filter(article => 
       article && article.title.toLowerCase().includes(lowerQuery) ||
       article && article.content.toLowerCase().includes(lowerQuery) ||
       article && article.tags.some(tag => tag && tag.toLowerCase().includes(lowerQuery))
     ).sort((a, b) => b && b.views - a && a.views)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {}
@@ -2944,8 +2583,6 @@ return article
 
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   async getAIRecommendations(): Promise<AIRecommendation[]> {
     const recommendations: AIRecommendation[] = [];
     // Ticket prioritization recommendation;
@@ -3014,7 +2651,6 @@ if ( {) {}
       recommendations && recommendations.push({}
         confidence: 90,
 
-=======
   async getAIRecommendations (): Promise < AIRecommendation[]> {
     const recommendations: AIRecommendation[] = [];
 ;
@@ -3056,13 +2692,8 @@ async getAIRecommendations(): Promise<AIRecommendation[]> {
       recommendations && recommendations.push({
 
         confidence: 90,
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
         action_items: [;
-=======
         action_items: [;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           'Reallocate agents to handle high priority tickets_implement automated prioritization system_review ticket classification criteria';
         ];
       });
@@ -3107,24 +2738,18 @@ if ( {) {
       recommendations.push ({
 
         type: 'knowledge_base';
-<<<<<<< HEAD
-<<<<<<< HEAD
         title: 'Underutilized Knowledge Base Articles';
         description: 'Several articles have very low view counts';
         impact: 'low';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         title: 'Underutilized Knowledge Base Articles';
         description: 'Several articles have very low view counts';
         impact: 'low';
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
   async getAIRecommendations(): Promise<AIRecommendation[]> {;
     const recommendations: AIRecommendation[] = [],;
     // Ticket prioritization recommendation;
-<<<<<<< HEAD
     const highPriorityOpenTickets = this.tickets.filter(t =>;'
       t.priority === 'high' && t.status === 'open';
     ).length,;
@@ -3162,7 +2787,6 @@ const availableAgents = this.agents.filter(a => a.isAvailable && a.currentTicket
         impact: 'medium',;
         confidence: 85,;
         actionItems: [;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           'Automatically assign tickets to available agentsImplement load balancing for ticket distributionReview agent availability and workload';
         ];
       });
@@ -3171,7 +2795,6 @@ const availableAgents = this.agents.filter(a => a.isAvailable && a.currentTicket
     // Knowledge base recommendation;
 const lowViewedArticles = this.knowledgeBase.filter(a => a.views < 10),;
     if (lowViewedArticles.length > 5) {;
-<<<<<<< HEAD
       recommendations.push({;'
         type: 'knowledge_base',;'
         title: 'Underutilized Knowledge Base Articles',;'
@@ -3182,22 +2805,12 @@ const lowViewedArticles = this.knowledgeBase.filter(a => a.views < 10),;
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles';
         ];
       });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
       recommendations.push({;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
     const lowViewedArticles = this.knowledgeBase.filter(a => a.views < 10),;
     if (lowViewedArticles.length > 5) {;
       recommendations.push({;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
         type: 'knowledge_base',;
         title: 'Underutilized Knowledge Base Articles',;
         description: 'Several articles have very low view counts',;
@@ -3207,14 +2820,11 @@ const lowViewedArticles = this.knowledgeBase.filter(a => a.views < 10),;
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles';
         ];
       });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     }
 return recommendations;
   }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   private updateAnalytics(): void {
 
   private updateAnalytics(): void {}
@@ -3239,7 +2849,6 @@ return recommendations;
     const satisfactionScores = this && this.customers.map(c => c && c.satisfactionScore);
     const customerSatisfaction = satisfactionScores && satisfactionScores.length > 0;
       ? satisfactionScores && satisfactionScores.reduce((sum, score) => sum + score, 0) / satisfactionScores && satisfactionScores.length;
-=======
     return recommendations
   }
 
@@ -3266,7 +2875,6 @@ return recommendations;
     const satisfactionScores = this && this.customers.map(c => c && c.satisfactionScore);
 const customerSatisfaction = satisfactionScores && satisfactionScores.length > 0
       ? satisfactionScores && satisfactionScores.reduce((sum, score) => sum + score, 0) / satisfactionScores && satisfactionScores.length
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       : 0;
 
     const chatbotResolved = this && this.chatbotSessions.filter(s => s && s.resolved && !s && s.escalated).length;
@@ -3280,9 +2888,6 @@ const categoryCounts = this && this.tickets.reduce((acc, ticket) => {}
 
     const topCategories = Object && Object.entries(categoryCounts)
 
-<<<<<<< HEAD
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       .map(([category, count]) => ({ category, count }))
       .sort((a, b) => b && b.count - a && a.count)
       .slice(0, 5);
@@ -3340,9 +2945,7 @@ const category_counts = this.tickets.reduce ((acc, ticket) => {}
       .map (([category, count]) => ({ category, count }));
       .sort ((a, b) => b.count - a.count);
       .slice (0, 5);
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
     const agent_performance = this.agents.map (agent => ({}
       agent_id: agent.id;
       tickets_resolved: agent.performance.tickets_resolved,
@@ -3354,41 +2957,27 @@ this.analytics = {}
       open_tickets;
       resolved_tickets;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       averageResolutionTime;
-=======
-=======
-=======
 ;
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     const agent_performance = this.agents.map (agent => ({
       agent_id: agent.id;
       tickets_resolved: agent.performance.tickets_resolved,
       satisfaction: agent.performance.customer_satisfaction;
     }));
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.analytics = {
       total_tickets;
       open_tickets;
       resolved_tickets;
       averageResolutionTime;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       averageFirstResponseTime;
       customer_satisfaction;
       chatbotResolutionRate;
-<<<<<<< HEAD
       topCategories;
       agentPerformance
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
       topCategories;
       agentPerformance;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
   private updateAnalytics(): void {;
     const totalTickets = this.tickets.length,;'
@@ -3436,30 +3025,16 @@ this.analytics = {}
       chatbotResolutionRate,;
       topCategories,;
       agentPerformance;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   }
 
     return this && this.tickets.find(t => t && t.id === ticketId) || null
 
-<<<<<<< HEAD
     }
   }
     return this && this.tickets.find(t => t && t.id === ticketId) || null
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
   }
     return this && this.tickets.find(t => t && t.id === ticketId) || null
@@ -3468,35 +3043,23 @@ this.analytics = {}
   }
     return this && this.tickets.find(t => t && t.id === ticketId) || null
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
       top_categories;
       agent_performance;
     }
   }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     return this && this.tickets.find(t => t && t.id === ticketId) || null
     }
 }
     return this && this.tickets.find(t => t && t.id === ticketId) || null
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
   }
   async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {
     if (status) {
-=======
 
   }'
   async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {}
     if (status) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return this && this.tickets.filter(t => t && t.status === status)
     }
     return this && this.tickets;
@@ -3523,24 +3086,15 @@ return this && this.customers.find(c => c && c.id === customerId) || null
     return this && this.analytics;
   }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const aiCustomerSupportService = new AICustomerSupportService();
 
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 ;
 
-<<<<<<< HEAD
   async get_ticket (ticket_id: string): Promise < SupportTicket | null> {
     return this.tickets.find (t => t.id === ticket_id) || null;
   }
@@ -3574,8 +3128,6 @@ if ( {) {
 }
 export const aiCustomerSupportService = new AICustomerSupportService ();
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 ;
   private updateAnalytics():void {;
     const totalTickets = this.tickets.length,;
@@ -3680,7 +3232,6 @@ export const aiCustomerSupportService = new AICustomerSupportService ();
 ;
 export const aiCustomerSupportService = new AICustomerSupportService(),; private initializeSampleData () {
   // Initialize sample customers this.customers = [ {
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }];
 // Initialize sample tickets this.tickets = [ {
   id: 'msg 001', content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?', senderType: 'customer', senderId: 'cust 001', isInternal: false, createdAt: new Date ('2025-01-10T10:00:00Z'), attachments: [] 
@@ -3696,7 +3247,6 @@ firstResponseTime: 15
 status: 'open';
 attachments: [];
 messages: [];
-<<<<<<< HEAD
 createdAt: new Date ()updatedAt: new Date ()}this.tickets.push (ticket)this.updateAnalytics ()return ticket;
 }if (ticket) {ticket.status = status;
 ticket.updatedAt = new Date ()if (status === 'resolved') {ticket.resolvedAt = new Date ()if (ticket.createdAt && ticket.resolvedAt) {}this.updateAnalytics ()if (ticket.createdAt && ticket.resolvedAt) {}this.updateAnalytics ()}
@@ -3727,7 +3277,6 @@ if (ticket.createdAt && ticket.resolvedAt) {
 }$ {
   Math.random () .toString (36) .substr (2, 9) 
 }`;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ...messageData;
 createdAt: new Date () 
 };
@@ -3778,7 +3327,6 @@ lastUpdated: new Date ()
 this.knowledgeBase.push (article);
 return article 
 }return this.knowledgeBase.filter (article => article.title.toLowerCase () .includes (lowerQuery) || article.content.toLowerCase () .includes (lowerQuery) || article.tags.some (tag => tag.toLowerCase () .includes (lowerQuery) ) // Ticket prioritization recommendation const highPriorityOpenTickets = this.tickets.filter (t => t.priority === 'high' && t.status === 'open') .length;
-<<<<<<< HEAD
 if (highPriorityOpenTickets > 5) {recommendations.push ({}return recommendations;
   recommendations.push ({}return recommendations;
 }const resolutionTimes = this.tickets .filter (t => t.resolutionTime) const responseTimes = this.tickets .filter (t => t.firstResponseTime)}
@@ -3815,25 +3363,12 @@ if (highPriorityOpenTickets > 5) {recommendations.push ({}return recommendations
 ;
 export const aiCustomerSupportService = new AICustomerSupportService();
 
-<<<<<<< HEAD
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 ;
 export const aiCustomerSupportService = new AICustomerSupportService();
 ;
 export const aiCustomerSupportService = new AICustomerSupportService();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
     }, {} as Record<string number>),;
   async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {
@@ -3923,11 +3458,5 @@ export const aiCustomerSupportService = new AICustomerSupportService ();
 pr-12325
 </SupportAnalytics>'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 ;
 export const aiCustomerSupportService = new AICustomerSupportService();
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

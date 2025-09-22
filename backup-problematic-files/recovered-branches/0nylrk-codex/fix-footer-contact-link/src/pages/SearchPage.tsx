@@ -1,5 +1,4 @@
 
-=======
 import { useEffect, useState } from "react",;
 import { useNavigate, useSearchParams } from "react-router-dom",;
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
@@ -16,12 +15,10 @@ export default function SearchPage() {;
   const { results, loading, search } = useAISearch(),;
   const suggestions:SearchSuggestion[] = generateSearchSuggestions(),;
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {;
     if (initial) {;
       search(initial);
     }
-<<<<<<< HEAD
 
           </div>;
         )}

@@ -1,7 +1,4 @@
 :pages/blockchain.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next / head';
 import ErrorBoundary from '../components / ErrorBoundary';
@@ -11,8 +8,6 @@ export default /**
 function Blockchain() {
   return (
 :pages/blockchain.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
         <meta;
@@ -54,16 +49,6 @@ function Blockchain() {}
 
         <title>Blockchain Services - Zion Tech Group</title>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -119,15 +104,12 @@ export default function Blockchain(req, res) {
 
 }
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/blockchain.tsx
 import Head from 'next/head';
 import Link from 'next/link';
-=======
 
 '
 import Head from 'next/head';'
 import Link from 'next/link';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
 import {}
   Shield, 
@@ -365,8 +347,6 @@ export default function BlockchainPage() {}
     </MainLayout>
   );
 }
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 import React from 'react';
 import Head from 'next/head';
@@ -453,21 +433,10 @@ export default function Blockchain(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <title > Blockchain Services - Zion Tech Group</title>;
 
         <title>Blockchain Services - Zion Tech Group</title>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

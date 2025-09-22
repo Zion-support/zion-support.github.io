@@ -30,7 +30,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
 return {;
       hasError:true,;
       error;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   }
 ;
@@ -51,7 +50,6 @@ return {;
 ;
     // Log to console in development;
     if (process.env.NODE_ENV === 'development') {;
-<<<<<<< HEAD
       console.group('🚨 Error Boundary Caught Error');
       logErrorToProduction('Error:', { data:error });
       logErrorToProduction('Error Info:', { data:errorInfo });
@@ -152,13 +150,11 @@ return {;
 
                   <Button ;
 onClick={() => this.setState({ showDetails:!this.state.showDetails })}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     variant="ghost" ;
                     size="sm";
                     className="flex items-center gap-2";
                   >;
                     <Bug className="h-4 w-4" />;
-<<<<<<< HEAD
                 <AnimatePresence>;
 
                       initial={{ opacity: 0;, height: 0 ;}}"
@@ -185,12 +181,10 @@ onClick={() => this.setState({ showDetails:!this.state.showDetails })}
                             ;                          )}
                     </motion.div>;
                   )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </AnimatePresence>;
               </CardContent>;
             </Card>;
           </motion.div>;
-<<<<<<< HEAD
 }
 ;
 // Higher-order component for adding error boundaries;
@@ -209,7 +203,6 @@ export const withErrorBoundary = <P extends object>(;
   ;
   return WrappedComponent;}
 ;
-<<<<<<< HEAD
 export default GlobalErrorBoundary
 'use client' import { ;
   {;
@@ -367,4 +360,3 @@ pr-12325
   Component.displayName || Component.name ;
 }) ` return WrappedComponent;
 }export default GlobalErrorBoundary '"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

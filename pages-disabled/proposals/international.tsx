@@ -4,11 +4,6 @@ import React, { useEffect, useState } from 'react',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 import React, { useEffect, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout'
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 type ProposalListItem = {
   id: string
   title: string
@@ -17,7 +12,6 @@ type ProposalListItem = {
   type: string
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   createdAt: string
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 type ProposalListItem = {
   id: string,
   title: string,
@@ -26,17 +20,13 @@ type ProposalListItem = {
   type: string,'
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([]),
-=======
 
 },
 export default function InternationalProposalsPage() {}
   const [items, setItems] = useState<ProposalListItem[]>([]),'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [filter, setFilter] = useState('All'),
 
   useEffect__(() => {'
@@ -48,8 +38,6 @@ export default function InternationalProposalsPage() {}
 }, []),
   const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <EnhancedLayout>
       <div className="space-y-4">"
@@ -91,10 +79,6 @@ export default function InternationalProposalsPage() {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
@@ -107,7 +91,6 @@ export default function InternationalProposalsPage() {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 }
 
 type ProposalListItem = {
@@ -145,14 +128,11 @@ type ProposalListItem = {
     </EnhancedLayout>
 
   )
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
         </div>"
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
 ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   created_at: string;
 },
 export default /**;
@@ -204,7 +184,6 @@ function InternationalProposalsPage() {}
       </div>;
     </EnhancedLayout>);
 
-<<<<<<< HEAD
 
 '
 import React, { useEffect, useState } from 'react',;'
@@ -221,15 +200,6 @@ type ProposalListItem = {};
   type: string'
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
 createdAt: string
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   createdAt: string;
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

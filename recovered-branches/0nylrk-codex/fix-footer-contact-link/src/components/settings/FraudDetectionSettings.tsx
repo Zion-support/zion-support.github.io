@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -12,11 +8,6 @@ import { ShieldAlert, Info } from 'lucide-react';
 import {
 
 export function FraudDetectionSettings() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Switch} from '@/components/ui/switch';
 import {Button} from '@/components/ui/button';
@@ -27,13 +18,10 @@ import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 export function FraudDetectionSettings() {;
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {}
-=======
 import React, { useState } from "react";
 import {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Card,
   CardContent,
   CardDescription,
@@ -56,8 +44,6 @@ import { Switch } from '@/components/ui/switch',
 import { Button } from '@/components/ui/button',
 import { Label } from '@/components/ui/label',
 import { ShieldAlert, Info } from 'lucide-react',import {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   CardTitle,
 } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
@@ -65,7 +51,6 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { ShieldAlert, Info } from "lucide-react";
 import {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -75,20 +60,13 @@ import { toast } from "@/hooks/use-toast";"
 import { supabase } from "@/integrations/supabase/client";"
 import { useAuth } from "@/hooks/useAuth";
 export function FraudDetectionSettings() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const handleSavePreferences = async () => {
     if (!user?.id) return;
     setIsSaving(true);
@@ -96,7 +74,6 @@ export function FraudDetectionSettings() {
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
 await new Promise((resolve) => setTimeout(resolve, 1000));
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
@@ -112,33 +89,24 @@ import { toast } from '@/hooks/use-toast',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
 export function FraudDetectionSettings() {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const { user } = useAuth(),
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true),
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),
   const [isSaving, setIsSaving] = useState(false),
-<<<<<<< HEAD
   const handleSavePreferences = async () => {
-=======
     const handleSavePreferences = async () => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (!user?.id) return;
     setIsSaving(true);
     try {
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const handleSavePreferences = async () => {}
     if (!user?.id) return;
     setIsSaving(true);
     try {}
       // In a real implementation, we would save these preferences to the database;
       // For now, we'll just simulate a successful save;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       toast({"
@@ -146,11 +114,6 @@ export function FraudDetectionSettings() {
         description: "Your fraud detection preferences have been updated.",
       });
 } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       console.error('Error saving preferences:', error),
 
@@ -160,30 +123,22 @@ export function FraudDetectionSettings() {
         variant: "destructive"
       });
     } finally {
-<<<<<<< HEAD
       console.error("Error saving preferences:", error);
       toast({
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       console.error("Error saving preferences:", error);
       toast({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         title: "Error",
         description: "Failed to save your preferences. Please try again.",
         variant: "destructive",
       });
     } finally {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setIsSaving(false);
     }
 
   },
 
   return (
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <Card className="mb-8">
       <CardHeader className="space-y-1">
         <div className="flex items-center gap-2">
@@ -208,15 +163,6 @@ export function FraudDetectionSettings() {
                   material
                 </p>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const handleSavePreferences = async () => {;
     if (!user?.id) return;
     setIsSaving(true);
@@ -225,7 +171,6 @@ export function FraudDetectionSettings() {
       // For now, we'll just simulate a successful save;
       await new Promise(resolve => setTimeout(resolve, 1000));
       toast({;
-<<<<<<< HEAD
         title: "Settings saved",;
         description: "Your fraud detection preferences have been updated."});
     } catch (error) {;
@@ -240,13 +185,10 @@ export function FraudDetectionSettings() {
       toast({;
         title: "Error",,
   description: "Failed to save your preferences. Please try again.",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         variant: "destructive"});
     } finally {;
       setIsSaving(false);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   },
 
@@ -300,7 +242,6 @@ export function FraudDetectionSettings() {;
   },;
 ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <Card className="mb-8">;
       <CardHeader className="space-y-1">;
         <div className="flex items-center gap-2">;
@@ -323,7 +264,6 @@ export function FraudDetectionSettings() {;
                   Scan message content for potentially harmful or abusive material;
                 </p>;
               </div>;
-<<<<<<< HEAD
 
               <Switch
                 id="message-scanning"
@@ -342,10 +282,8 @@ export function FraudDetectionSettings() {;
                 onCheckedChange={setMessageScanningEnabled}
               />
             </div>
-=======
   }
   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -417,18 +355,14 @@ export function FraudDetectionSettings() {;
               </div>;
               <Switch;
                 id="message-scanning";
-=======
               <Switch
                 id="message-scanning"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 checked={messageScanningEnabled}
                 onCheckedChange={setMessageScanningEnabled}
               />
             </div>
-=======
   }
   return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -679,11 +613,7 @@ export function FraudDetectionSettings() {
                 id="ai-analysis""
 
                 checked={aiAnalysisEnabled}
-<<<<<<< HEAD
                 onCheckedChange={setAiAnalysisEnabled}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               />;
             </div>;
@@ -709,10 +639,7 @@ export function FraudDetectionSettings() {
                 <p>;
                   You can opt out of some of these protections, but this may limit your ability to use certain platform features. ;
                   We prioritize keeping our marketplace safe while respecting your privacy.;
-<<<<<<< HEAD
-=======
                 onCheckedChange={setAiAnalysisEnabled}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               />
 </Switch>
             </div>
@@ -759,9 +686,6 @@ export function FraudDetectionSettings() {
               className="bg-zion-purple hover:bg-zion-purple-light""
             >
               {isSaving ? "Saving..." : "Save Preferences"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     } catch (error) {"
       console.error("Error saving preferences:", error);
       toast({"
@@ -773,24 +697,15 @@ export function FraudDetectionSettings() {
       setIsSaving(false);
     }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Button>
-=======
                 onCheckedChange={setAiAnalysisEnabled}            </Button>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                 onCheckedChange={setAiAnalysisEnabled}            </Button>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
             </Button>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 </Button>
 
             </Button>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </div>
       </CardContent>
@@ -798,7 +713,6 @@ export function FraudDetectionSettings() {
   );
 }
 
-<<<<<<< HEAD
     setIsSaving(true);
     try {;
       // In a real implementation, we would save these preferences to the database;
@@ -876,15 +790,6 @@ mb-8"> <CardHeader className=" space-y-1"> <div className=" flex items-center ga
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   )
 
@@ -913,10 +818,6 @@ toast ({}
   )
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import React, { useState } from "react";"
 import {
   // TODO: Implement
@@ -1039,4 +940,3 @@ pr-12325
     </Card>;)"
 mb-8"> <CardHeader className=" space-y-1"> <div className=" flex items-center gap-2"> <ShieldAlert className=" h-5 w-5 text-amber-500"/> <CardTitle className=" text-xl">Fraud & Abuse Protection</CardTitle> </div> <CardDescription> Configure privacy settings related to fraud detection and abuse prevention on the platform </CardDescription> </CardHeader> <CardContent> <div className=" space-y-6"> <div className=" space-y-4"> <div className=" flex items-center justify-between"> <div> <Label className=" font-medium"htmlFor=" message-scanning"> Message Content Scanning </Label> <p className=" text-sm text-muted-foreground"> Scan message content for potentially harmful or abusive material </p> </div> <Switch /> </div> <div className=" flex items-center justify-between"> <div> <Label className=" font-medium"htmlFor=" activity-monitoring"> Activity Monitoring </Label> <p className=" text-sm text-muted-foreground"> Monitor account activity for suspicious patterns </p> </div> <Switch /> </div> <div className=" flex items-center justify-between"> <div> <Label className=" font-medium"htmlFor=" ai-analysis"> AI-powered Analysis </Label> <p className=" text-sm text-muted-foreground"> Use AI to analyze content and behavior for potential fraud </p> </div> <Switch /> </div> </div> <Accordion type=" single"collapsible className=" w-full"> <AccordionItem value=" item-1"> <AccordionTrigger className=" text-sm font-medium"> <div className=" flex items-center gap-2"> <Info className=" h-4 w-4"/> About Fraud Detection </div> </AccordionTrigger> <AccordionContent className=" text-sm text-muted-foreground"> <p className=" mb-2"> The Zion AI Marketplace uses automated fraud detection systems to protect our community. This includes: </p> <ul className=" list-disc pl-5 space-y-1 mb-2"> <li>Pattern detection in messages and job postings</li> <li>AI-powered content analysis</li> <li>Monitoring for suspicious account activities</li> </ul> <p> You can opt out of some of these protections, but this may limit your ability to use certain platform features. We prioritize keeping our marketplace safe while respecting your privacy. </p> </AccordionContent> </AccordionItem> </Accordion> <div className=" pt-2" > <Button </Button> </div> </div> </CardContent> </Card>)""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

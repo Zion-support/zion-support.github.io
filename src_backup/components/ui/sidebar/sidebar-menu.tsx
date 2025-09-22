@@ -3,11 +3,9 @@ return (<a;
           href={href}
     return(<button;
         ref={ref}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 SidebarMenuItem.display_name = "SidebarMenuItem";
 
-<<<<<<< HEAD:src/components/ui/sidebar/sidebar-menu.tsx
 export { SidebarMenuItem, SidebarMenuGroup }
 export { SidebarMenuItem, SidebarMenuGroup }
 }
@@ -24,15 +22,11 @@ export { SidebarMenuItem, SidebarMenuGroup };
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
 import { cn } from "@/lib/utils","
 import { SafeRef } from "@/types/ref-types",
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/sidebar/sidebar-menu.tsx
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'"
 import { cn } from "@/lib/utils","
@@ -46,7 +40,6 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   badge?: React.ReactNode
 
 import React, { forwardRef } from "react",;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 import { SafeRef } from "@/types/ref-types",;
@@ -149,20 +142,10 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
   );
 },;
 :src_backup/components/ui/sidebar/sidebar-menu.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export { SidebarMenuItem, SidebarMenuGroup };
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 export { SidebarMenuItem, SidebarMenuGroup };
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/sidebar/sidebar-menu.tsx
+export { SidebarMenuItem, SidebarMenuGroup };
+
 import React, { forwardRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -180,8 +163,4 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
 
 const SidebarMenuItem = null;
 :src/components/ui/sidebar/sidebar-menu.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export { SidebarMenuItem, SidebarMenuGroup };'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/sidebar/sidebar-menu.tsx

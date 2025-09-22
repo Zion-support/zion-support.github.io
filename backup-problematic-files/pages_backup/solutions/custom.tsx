@@ -7,7 +7,6 @@ import Link from 'next/link';';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
-<<<<<<< HEAD
 const features = [;
   {}
     title: 'Tailored Solutions,',
@@ -299,7 +298,6 @@ export default function CustomDevelopmentPage() {
 };
 
 export default Custom;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const Custom: React.FC<CustomProps> = ({ className }) => {
 "
     <div className={className || }>
@@ -310,4 +308,3 @@ const Custom: React.FC<CustomProps> = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

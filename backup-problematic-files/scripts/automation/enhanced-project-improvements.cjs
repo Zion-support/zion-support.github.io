@@ -81,10 +81,7 @@ export * from "@testing-"library/react""
   const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   "analyzerMode": "static"
           "openAnalyzer"
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
             <p className=text-gray-600 mb-4>We
 </div>"
   "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"]"
@@ -93,4 +90,3 @@ export * from "@testing-"library/react""
 
 ) => render(ui, { "wrapper"})"
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

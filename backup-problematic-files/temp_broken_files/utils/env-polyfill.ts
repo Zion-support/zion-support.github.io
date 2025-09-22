@@ -92,7 +92,6 @@ versions: {;
   ...defaultEnv ;
 };
 versions: {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };';
 platform: 'browser';';
 arch: 'x64';';
@@ -102,7 +101,6 @@ browser: true ;
 //Ensure process is available on globalThis ;
 }
 }//Ensure process is available on window ;
-<<<<<<< HEAD
 :temp_broken_files/utils/env-polyfill.ts
 }"}// Ensure process is available globally '"
 }

@@ -1,5 +1,4 @@
 
-=======
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import Marketplace from "@/pages/Marketplace",;
@@ -23,7 +22,6 @@ import VideoCall from "@/pages/VideoCall",;
 ;
 const MarketplaceRoutes = () => {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Routes>;
       {/* Marketplace Routes */}
       <Route path="/marketplace" element={<Marketplace />} />;
@@ -32,7 +30,6 @@ const MarketplaceRoutes = () => {;
       <Route path="/featured" element={<Featured />} />;
       <Route path="/marketplace/listing/:id" element={<ListingDetail />} />;
       <Route path="/listing/:id" element={<ListingDetail />} />;
-<<<<<<< HEAD
 
           <ProtectedRoute>;
             <PostJob />;

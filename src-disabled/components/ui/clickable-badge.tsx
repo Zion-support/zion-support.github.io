@@ -1,7 +1,5 @@
 :src_backup/components/ui/clickable-badge.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react",
 import { X } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -36,7 +34,6 @@ export function ClickableBadge({
   className;
 :src_backup/components/ui/clickable-badge.tsx
   variant;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   children,
   className,
   variant = "default",
@@ -73,14 +70,7 @@ export function ClickableBadge({
           <X className="h-3 w-3" />
         </button>
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/clickable-badge.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/clickable-badge.tsx
 import React from "react",;
 import { X } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -91,8 +81,6 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
 }
 :src/components/ui/clickable-badge.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/clickable-badge.tsx
   ...props;
 }:,  ClickableBadgeProps) {;
 }: ClickableBadgeProps) {;
@@ -103,7 +91,6 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
         "group flex items-center gap-1",;
         onRemove && "pl-2.5 pr-1.5 py-1";
         className;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       )}
 :src_backup/components/ui/clickable-badge.tsx
 {...props}
@@ -120,20 +107,12 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
             e.stopPropagation()
             onRemove()
 :src_backup/components/ui/clickable-badge.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           className="ml-1 rounded-full p-0.5 hover:bg-background/20";
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
           className="ml-1 rounded-full p-0.5 hover:bg-background/20";
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/clickable-badge.tsx
-=======
           }}
           className="ml-1 rounded-full p-0.5 hover:bg-background/20";",
       {...props}
@@ -147,21 +126,15 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
             onRemove();
           }}
           className="ml-1 rounded-full p-0.5 hover:bg-background/20";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/clickable-badge.tsx
           aria-label="Remove";
         >;
           <X className="h-3 w-3" />;
         </button>;
       )}
 :src_backup/components/ui/clickable-badge.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>;
   );
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/clickable-badge.tsx
 import React from 'react';
 import { X } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -245,18 +218,12 @@ function ClickableBadge() {
           <X className="h - 3 w - 3" />;
         </button>)}
     </div>);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 :src_backup/components/ui/clickable-badge.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/clickable-badge.tsx
-=======
     </div>;
   );
 }
@@ -287,4 +254,3 @@ export interface ClickableBadgeProps extends React.HTMLAttributes < HTMLDivEleme
 
     </div>);"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/clickable-badge.tsx

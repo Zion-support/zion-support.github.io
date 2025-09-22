@@ -1,7 +1,4 @@
 :src/components/ai-enhancement/AIEnhancementButton.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
@@ -17,23 +14,18 @@ interface AIEnhancementButtonProps {
   size?: "default" | "sm" | "lg" | "icon",
   contentLength?: number
 }
-=======
 const handleEnhance = async () => {
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementButton.tsx
     if ((!options.content |options.content.trim().length < contentLength) &&
-=======
 }
 export function AIEnhancementButton({
   const handleEnhance = async () => {    if ((!options.content |options.content.trim().length < contentLength) &&
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         (!options.context |options.context.trim().length < contentLength)) {
       toast({
         title: "Not enough content"
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
 :src/components/ai-enhancement/AIEnhancementButton.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export function AIEnhancementButton({
   options,
@@ -114,8 +106,6 @@ export function AIEnhancementButton({;
         description: "AI-enhanced content has been applied."})
     }
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
 
   const handleRegenerate = async () => {
@@ -126,7 +116,6 @@ export function AIEnhancementButton({;
     setShowActions(false),
     setGeneratedContent(null)
   },
-<<<<<<< HEAD
 
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -247,17 +236,13 @@ onClick={handleAccept}
         >;
 
         <Button
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           type="button"
           variant="ghost"
           size="sm"
           onClick = {handleRegenerate,}
 :src/components/ai-enhancement/AIEnhancementButton.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
           disabled = {isEnhancing,}>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {isEnhancing ? (;
             <Loader2 className="h-4 w-4 mr-1 animate-spin" />;
           ) : (;
@@ -313,9 +298,7 @@ on_click = {handle_regenerate, }
             <RefreshCw className="h - 4 w - 4 mr - 1" />)}
 :src/components/ai-enhancement/AIEnhancementButton.tsx
           Regenerate;
-=======
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"          Regenerate;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </Button>;
         <Button;
           type="button";
@@ -353,9 +336,7 @@ on_click = {handle_regenerate, }
 }"}
 
 :src/components/ai-enhancement/AIEnhancementButton.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />
@@ -363,17 +344,12 @@ on_click = {handle_regenerate, }
         <Sparkles className="h-4 w-4" />
       )}
 :src/components/ai-enhancement/AIEnhancementButton.tsx
-<<<<<<< HEAD
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
 }
 ;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </Button>
   );
 
@@ -386,5 +362,3 @@ on_click = {handle_regenerate, }
 }</Button>) ;
 }"
 :src/components/ai-enhancement/AIEnhancementButton.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

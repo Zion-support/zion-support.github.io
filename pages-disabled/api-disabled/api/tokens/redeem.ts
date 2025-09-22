@@ -1,5 +1,4 @@
 :pages/api/tokens/redeem.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -16,9 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const reqs = readJson<any[]>('support/requests.json', [])
     const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`
     reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() })
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     writeJson('support/requests.json', reqs)
   }
 import { readJson, writeJson } from '../../../utils/fsDb';
@@ -42,7 +39,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 return res.status(200).json({ ok: true, id });
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -89,10 +85,6 @@ if ( {) {
   return res.status (200).json ({ ok: true, id });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',
 ;
@@ -112,7 +104,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const reqs = readJson<any[]>('support/requests.json', []),
     const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`,
     reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() }),
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -129,7 +120,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const reqs = readJson<any[]>('support/requests.json', []);
     const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`;
     reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/tokens/redeem.ts
     writeJson('support/requests.json', reqs)
   }
   return res.status(200).json({ ok: true, id })
@@ -153,7 +143,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   return res.status(200).json({ ok: true, id })
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return res.status(200).json({ ok: true, id });
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -215,17 +204,5 @@ if ( {) {
     reqs.push ({ id: srid, session_id: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', created_at: Date.now () }),
     write_json ('support / requests.json', reqs);
   }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

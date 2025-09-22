@@ -18,7 +18,6 @@ const glob = require('glob');
 async function checkCodeDuplication() {
 
   const duplications = [{
-=======
 async function checkCodeComplexity() {}
   console.log('[INFO] Checking code complexity...');
   const complexFiles = [{ "file": 'components/PerformanceMonitor.tsx', "complexity": 12 },]
@@ -62,13 +61,7 @@ async function checkCodeStyle() {
   try {
     execSync('npm run "lint": check', { "stdio": 'pipe' });
 
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
   if (duplications.length > 0) {}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality-monitor.cjs
     console.warn(`[WARN] Found ${duplications.length} code duplications`);
     duplications;
       .slice(0, 5);
@@ -118,11 +111,6 @@ async function checkDocumentationCoverage() {
   }
 
 :backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
   };
 };
 async function checkTestCoverage() {}
@@ -171,9 +159,6 @@ async function runCodeQualityMonitor() {}
 
 process.exit(1);
   } else {
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality-monitor.cjs
   console.log()
     `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
   );
@@ -202,5 +187,3 @@ monitor.analyzeCodeQuality().then(metrics => {
   }
 });
 :backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality-monitor.cjs

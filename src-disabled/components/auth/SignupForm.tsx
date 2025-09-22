@@ -1,7 +1,4 @@
 :src_backup/components/auth/SignupForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from '@hookform/resolvers/zod',
@@ -29,9 +26,7 @@ const signupSchema = z.object({
   message: "Passwords don't match",
   path: ["confirmPassword"]}),
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
-=======
                 passwordStrength.strength >= 4 ? 'text-green-600' :                passwordStrength.strength >= 3 ? 'text-blue-600' :
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
               )}>
                 {passwordStrength.label}
@@ -62,7 +57,6 @@ const signupSchema = z.object({
                    Special character                </span>
 
                 </span>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>
             </div>
           </div>
@@ -75,9 +69,6 @@ const signupSchema = z.object({
           </p>
         )}
 :src/components/auth/SignupForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   path: ["confirmPassword"]}),;
 
@@ -264,16 +255,11 @@ return (;
 }
 
 :src/components/auth/SignupForm.tsx
-<<<<<<< HEAD
-=======
 
 :src_backup/components/auth/SignupForm.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/SignupForm.tsx
   path: ["confirm_password"]}),
-=======
       </div>  path: ["confirm_password"]}),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 type SignupFormData = z.infer < typeof signup_schema>;
         setFieldStates (prev => ({
           ...prev;
@@ -287,7 +273,6 @@ type SignupFormData = z.infer < typeof signup_schema>;
       return <AlertCircle className="h - 4 w - 4 text - red-500" />;
     }
 :src_backup/components/auth/SignupForm.tsx
-<<<<<<< HEAD
     return null
   }
   const getFieldClasses = (fieldName: string) => {
@@ -316,12 +301,9 @@ type SignupFormData = z.infer < typeof signup_schema>;
       set_error ('root', { message: error_message }),
               <span className={cn ('font - medium', password_strength.strength >= 4 ? 'text - green - 600' :}
 }
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/SignupForm.tsx
 
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>;
       {/* Confirm Password Field */}
       <div className="space-y-2">
@@ -402,22 +384,14 @@ type SignupFormData = z.infer < typeof signup_schema>;
     </form>;
   );
 }
-<<<<<<< HEAD:src/components/auth/SignupForm.tsx
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-=======
-=======
 ;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/SignupForm.tsx
-=======
 
 }
 ;)))))))
 ;
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/SignupForm.tsx
   );
 
 }/> </div> ✓ 8+ characters </span> <span className= {';
@@ -446,5 +420,3 @@ type SignupFormData = z.infer < typeof signup_schema>;
 }</Button> </form>) ;
 }'"
 :src/components/auth/SignupForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

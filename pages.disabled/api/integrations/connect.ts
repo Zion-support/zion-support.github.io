@@ -52,8 +52,6 @@ function handler() {}
     );
 :pages_backup/api/integrations/connect.ts
     const connection: ProviderConnection = {
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/integrations/connect.ts
       provider_id: provider_id as any
       status: "connected"
       access_token: "mock_access_token"
@@ -68,7 +66,6 @@ function handler() {}
       action: "connect"
       details: { sync_rules }
 :pages_backup/api/integrations/connect.ts
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/connect.ts
     });
   });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -101,9 +98,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 
 :pages_backup/api/integrations/connect.ts
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/integrations/connect.ts
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules };
   if (!providerId || !getProviderById(providerId)) {'
@@ -125,14 +120,9 @@ export default function handler(req, res) {
   });
 :pages_backup/api/integrations/connect.ts
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/integrations/connect.ts
-<<<<<<< HEAD
 
 }
 :pages_backup/api/integrations/connect.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ok: true,
     connection: updated.connections.find ((c) => c.provider_id === provider_id),
   });
@@ -141,8 +131,5 @@ export default function handler(req, res) {
 :pages_backup/api/integrations/connect.ts
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/connect.ts
-=======
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/integrations/connect.ts

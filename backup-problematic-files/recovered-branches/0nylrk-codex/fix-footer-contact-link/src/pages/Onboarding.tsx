@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -24,13 +23,11 @@ export default function Onboarding() {;
       case "serviceProvider":return "creator",;
       case "talent":;
         return "jobSeeker",;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       case "client":;
         return "employer",;
       default:;
         return "buyer";
     }
-<<<<<<< HEAD
 
     // Direct to specific registration page based on user type;
     if (type === "serviceProvider") {;

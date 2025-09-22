@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ReviewCardProps {
   review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>
@@ -31,7 +23,6 @@ import { formatDistanceToNow } from "date-fns";
 import { Star, Flag, User } from "lucide-react";
 import { Review } from "@/types/reviews";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -39,7 +30,6 @@ import {
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
 import {  Dialog,
-=======
 import { useState } from "react";"
 import { formatDistanceToNow } from "date-fns";"
 import { Star, Flag, User } from "lucide-react";"
@@ -49,13 +39,10 @@ import { Button } from "@/components/ui/button";"
 import { Badge } from "@/components/ui/badge";
 import {}
   Dialog,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   Dialog,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -64,16 +51,10 @@ import {
   DialogTrigger,";
 } from "@/components/ui/dialog";"
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface ReviewCardProps {
-=======
 interface ReviewCardProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>;
 }
@@ -100,14 +81,8 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
   const renderStars = (rating?: number) => {}
     if (!rating) return null;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
-=======
     return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="flex">;
         {[1, 2, 3, 4, 5].map((star) => (;
           <Star;
@@ -133,8 +108,6 @@ className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text
       </div>
     )
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const getInitials = (name: string) => {}
     return name"
@@ -142,8 +115,6 @@ className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text
       .map((n) => n[0])"
       .join("")
       .toUpperCase()
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState  } from './react';
 import { formatDistanceToNow  } from './date - fns';
@@ -159,7 +130,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
   DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
 interface ReviewCardProps {
@@ -247,10 +217,7 @@ if (return null) {
 
 return (
     <div className="border rounded-lg p-4 bg-card">
-=======
       <div className="border rounded-lg p-4 bg-card">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   const getInitials = (name: string) => {
     return name
@@ -263,16 +230,11 @@ return (
 
   return (
     <div className="border rounded-lg p-4 bg-card">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className="flex justify-between items-start mb-3">
-=======
   return ("
     <div className="border rounded-lg p-4 bg-card">"
       <div className="flex justify-between items-start mb-3">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="flex items-center gap-3">
           {review.is_anonymous ? (
             <Avatar>"
@@ -289,11 +251,6 @@ return (
                 />
               ) : (
                 <AvatarFallback>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   {review.reviewer_profile?.display_name
                     ? getInitials(review.reviewer_profile.display_name)
                     : "??"}
@@ -375,14 +332,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                     getInitials(review.reviewer_profile.display_name) : "??"}
 
                 </AvatarFallback>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               )}
             </Avatar>;
           )}
 
-=======
 {review.reviewer_profile?.display_name ? 
 
                     getInitials(review.reviewer_profile.display_name) : "??"}
@@ -390,10 +343,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                     ? getInitials(review.reviewer_profile.display_name)
                     : "??"}
                 </AvatarFallback>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               )}
             </Avatar>;
           )}
@@ -402,16 +351,9 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             <div className="font-medium">
 {review.is_anonymous
                 ? "Anonymous"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 : review.reviewer_profile?.display_name |"User"}
             </div>
             <div className="text-sm text-muted-foreground">
-<<<<<<< HEAD
               {formatDistanceToNow(new Date(review.created_at), {
                 addSuffix: true
               })}
@@ -426,28 +368,21 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         <div className="flex">
           {renderStars(review.rating)}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
               {review.is_anonymous"
                 ? "Anonymous""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 : review.reviewer_profile?.display_name || "User"}
             </div>"
             <div className="text-sm text-muted-foreground">
               {formatDistanceToNow(new Date(review.created_at), {}
-=======
                 : review.reviewer_profile?.display_name || "User"}
             </div>
             <div className="text-sm text-muted-foreground">
               {formatDistanceToNow(new Date(review.created_at), {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 addSuffix: true,
               })}
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className="flex">
 : review.reviewer_profile?.display_name |"User"}
             </div>
@@ -461,17 +396,12 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
           {renderStars(review.rating)}
 
           {renderStars(review.rating)}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </div>
         <div className="flex">{renderStars(review.rating)}</div>
-=======
 
         <div className="flex">{renderStars(review.rating)}</div>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
           {renderStars(review.rating)}
         </div>        <div className="flex">{renderStars(review.rating)}</div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
@@ -481,9 +411,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         review.timeliness_rating |
         review.would_work_again !== undefined) && (
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </AvatarFallback>)}
             </Avatar>)}
           <div>;
@@ -515,10 +443,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
 
         <div className="flex">{renderStars(review.rating)}</div>
-=======
           {renderStars(review.rating)}
         </div>        <div className="flex">{renderStars(review.rating)}</div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </div>
 "
       <div className="mb-4">"
@@ -528,15 +454,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         review.quality_rating ||
         review.timeliness_rating ||
         review.would_work_again !== undefined) && (
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Badge variant="outline" className="flex gap-1 items-center">
                 Communication"
                 <span className="ml-1 text-yellow-500">
@@ -545,8 +466,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               </Badge>
             )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             {review.quality_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Quality"
@@ -575,10 +494,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   : "Would not work again"}
               </Badge>
             )}
-<<<<<<< HEAD
           </div>
         </div>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
           </div>;
         </div>;
@@ -586,14 +503,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         </div>;
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Badge variant="outline" className="flex gap-1 items-center">
                 Communication
                 <span className="ml-1 text-yellow-500">
@@ -627,10 +540,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               >
                 {review.would_work_again
                   ? "Would work again"
-=======
                 {review.would_work_again"
                   ? "Would work again""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   : "Would not work again"}
               </Badge>
             )}
@@ -682,7 +593,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   : "Would not work again"}
       )}
           </div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       )}
 "
       <div className="mt-3 flex justify-end">
@@ -911,10 +821,6 @@ interface ReviewCardProps {
         </Dialog>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {review && review.quality_rating && (;
               <Badge variant="outline" className="flex gap-1 items-center">;
                 Quality;
@@ -941,9 +847,7 @@ interface ReviewCardProps {
           </div>;
         </div>;
 
-=======
           </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>;
 
       )}
@@ -1106,35 +1010,19 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 }
   )
 }
-<<<<<<< HEAD
 ;
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 ;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 ;
 ;
@@ -1277,4 +1165,3 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 pr-12325
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>) "
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

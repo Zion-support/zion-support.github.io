@@ -30,12 +30,10 @@ import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder,;
 // @ts-expect-error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Set up a mock for Vite environment variables accessed via import.meta.env;
 // This assumes that Babel (via babel-plugin-transform-import-meta or similar);
 // will transform import.meta.env.VITE_SOME_VAR to something like process.env.VITE_SOME_VAR;
 // or that import.meta itself is transformed into an object where 'env' can be populated.;
-<<<<<<< HEAD
 process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup';
 process.env.NEXT_PUBLIC_SUPABASE_URL = 'http://localhost:54321';
 process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test_anon_key';
@@ -71,7 +69,6 @@ Object.defineProperty(window, 'matchMedia', {;
 addEventListener:jest.fn(),;
     removeEventListener:jest.fn(),;
     dispatchEvent:jest.fn()}))}),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',;
 process.env.NEXT_PUBLIC_SUPABASE_URL = 'http: //localhost:54321';,;
@@ -96,7 +93,6 @@ Object.defineProperty(window, 'matchMedia', {;
 //   // @ts-expect-error;
 //   meta:{;
 //     env:{;
-<<<<<<< HEAD
 //       VITE_SUPABASE_URL:'mock_supabase_url';
 //       VITE_SUPABASE_ANON_KEY:'mock_supabase_anon_key';
 //       MODE:'test';
@@ -158,13 +154,11 @@ jest.mock('firebase/app', () => ({;')
   initializeApp: jest.fn();,;
   // Add other app-level exports if needed, e.g., getApps, getApp;
 })),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 jest.mock('firebase/firestore', () => {;
   // Mock collection function to be available on the db instance (for v8 style);
   // and as a top-level export (for v9 style).;
   const mockCollection = jest.fn((firestoreInstanceOrPath, pathIfV8) => {;
-<<<<<<< HEAD
     const actualPath = typeof firestoreInstanceOrPath === 'string' ? firestoreInstanceOrPath :pathIfV8;
     return {;
       path:actualPath;
@@ -232,12 +226,10 @@ jest.mock('firebase/firestore', () => {;
       onSnapshot:jest.fn(() => jest.fn()), // Returns an unsubscribe function;
 },;
   }),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
   return {;
     getFirestore:jest.fn(() => ({;
       // For v8 style:db.collection('path');
-<<<<<<< HEAD
       collection:mockCollection;
       // For v8 style:db.doc('path/docId');
       doc:mockDoc;
@@ -285,12 +277,10 @@ jest.mock('firebase/firestore', () => {;
     // Add other Firestore exports your code uses;
 },;
 }),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 jest.mock('firebase/auth', () => ({;
   getAuth:jest.fn(() => ({;
     // Mock Auth instance properties/methods if needed, e.g., currentUser;
-<<<<<<< HEAD
     currentUser:null;
     onAuthStateChanged:jest.fn(() => jest.fn()), // Returns an unsubscribe function;
   }));
@@ -314,12 +304,10 @@ jest.mock('firebase/auth', () => ({;
   // For example:;
 // GoogleAuthProvider:jest.fn(),;
   // signInWithPopup:jest.fn(() => Promise.resolve({ user:{ uid:'mock-uid' } }))})),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 jest.mock('firebase/storage', () => ({;
   getStorage:jest.fn(() => ({;
     // Mock Storage instance properties/methods if needed;
-<<<<<<< HEAD
   }));
   ref:jest.fn((storageInstance, path) => ({;
     // Mock StorageReference;
@@ -383,7 +371,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({;
 // Polyfill for URL.revokeObjectURL;
 if (typeof URL.revokeObjectURL === 'undefined') {;
 URL.revokeObjectURL = jest.fn(),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
     const actualPath = typeof firestoreInstanceOrPath === 'string' ? firestoreInstanceOrPath :pathIfV8,;
@@ -478,7 +465,6 @@ if (typeof BroadcastChannel === 'undefined') {;
       // @ts-expect-error - Mock name property assignment;
       this.name = name;
     }
-<<<<<<< HEAD
     postMessage = jest.fn();
     close = jest.fn();
     onmessage = null;
@@ -496,7 +482,6 @@ if (typeof BroadcastChannel === 'undefined') {;
     removeEventListener = jest.fn(),;
     dispatchEvent = jest.fn(),;
 },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
 // Polyfill for window.scrollTo;
@@ -584,7 +569,6 @@ beforeEach:global.beforeEach,;
     beforeAll:global.beforeAll,;
     afterAll:global.afterAll} as unknown as Record<string unknown>,;
 }),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // -----------------------------;
 // Lightweight Context & Redux mocks to avoid provider runtime errors;
@@ -593,7 +577,6 @@ beforeEach:global.beforeEach,;
 // Auth Context;
 jest.mock('@/context/auth/AuthProvider', () => {;
   const useAuth = () => ({;
-<<<<<<< HEAD
     isAuthenticated:false;
     isLoading:false;
     user:null;
@@ -618,12 +601,10 @@ __esModule:true,;
     default:AuthProvider,;
     useAuth},;
 }),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // Analytics Context;
 jest.mock('@/context/AnalyticsContext', () => {;
   const useAnalytics = () => ({;
-<<<<<<< HEAD
     trackEvent:jest.fn();
     trackPageView:jest.fn()});
   const AnalyticsProvider = ({ children } any) => children;
@@ -720,7 +701,6 @@ jest.mock('@/hooks/useWishlist', () => {;
 const useWishlist = () => ({ items:[] as string[], toggle:jest.fn(), isWishlisted:() => false }),;
   return { __esModule:true, useWishlist, default:useWishlist },;
 }),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // Polyfill IntersectionObserver for components that use it (e.g., embla-carousel);
 if (typeof window.IntersectionObserver === 'undefined') {;
@@ -731,7 +711,6 @@ if (typeof window.IntersectionObserver === 'undefined') {;
     takeRecords() { return [], }
   }
   // @ts-ignore;
-<<<<<<< HEAD
   window.IntersectionObserver = MockIntersectionObserver;
   // @ts-ignore;
   global.IntersectionObserver = MockIntersectionObserver;
@@ -778,20 +757,17 @@ jest.mock('@/context', () => {;
 const useEnqueueSnackbar = () => jest.fn(),;
   return { __esModule:true, useEnqueueSnackbar },;
 }),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // Extend Vitest shim with restoreAllMocks for suites that call it;
 // @ts-ignore - vi is added by the vitest mock above;
 if (global.vi && !global.vi.restoreAllMocks) {;
   // @ts-ignore;
-<<<<<<< HEAD
   global.vi.restoreAllMocks = jest.restoreAllMocks;
 }
 ;
 // Mock @supabase/ssr createBrowserClient so components don't crash in tests;
 jest.mock('@supabase/ssr', () => ({;
   createBrowserClient:() => ({;
-<<<<<<< HEAD
     auth:{ onAuthStateChange:jest.fn(), signInWithPassword:jest.fn(), signUp:jest.fn() }})}));
 ;
 // Ensure hooks/use-toast exports usable toast fn;
@@ -819,13 +795,11 @@ jest.mock('msw/node', () => ({ setupServer:() => ({ listen:jest.fn(), resetHandl
 ;
 // Provide mock for missing component;
 jest.mock('@/components/search/FilterSidebar', () => ({ FilterSidebar:() => null })),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // Extend Vitest shim with timer helpers if not present;
 // @ts-ignore - vi is added by the vitest mock above;
 if (global.vi) {;
   // @ts-ignore;
-<<<<<<< HEAD
   if (!global.vi.useFakeTimers) global.vi.useFakeTimers = jest.useFakeTimers.bind(jest);
   // @ts-ignore;
   if (!global.vi.useRealTimers) global.vi.useRealTimers = jest.useRealTimers.bind(jest);
@@ -839,7 +813,6 @@ if (global.vi) {;
   if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind(jest);
   // @ts-ignore;
 if (!global.vi.advanceTimersByTime) global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest),;}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 //Polyfill fetch and enable fetch mocks import 'whatwg-fetch';
 import fetchMock from 'jest-fetch-mock';
 fetchMock.enableMocks ();

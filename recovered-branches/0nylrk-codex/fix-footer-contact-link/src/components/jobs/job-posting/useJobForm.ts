@@ -7,12 +7,7 @@ import { format  } from 'date-fns';
 import { toast } from "sonner";
 import { useNavigate  } from 'react-router-dom';
 import { jobSchema, JobSchemaType  } from './validation';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -25,34 +20,21 @@ import {useAuth} from "@/hooks/useAuth";
 export interface JobPostingProps {;
   jobId?: string;
   onSuccess?: () => void;
-=======
 import {useAuth} from "@/hooks/useAuth";
 export interface JobPostingProps {;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   jobId?: string;
   onSuccess?: () => void
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useState, useEffect } from 'react',
-=======
 import { useAuth } from "@/hooks/useAuth";import { useState, useEffect } from 'react',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { useAuth } from "@/hooks/useAuth";import { useState, useEffect } from 'react',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import { useState, useEffect } from 'react',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
 import { format } from 'date-fns',
@@ -61,13 +43,8 @@ import { useNavigate } from 'react-router-dom',
 import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface JobPostingProps {
-=======
 
 '
 import { useState, useEffect } from 'react','
@@ -80,7 +57,6 @@ import { jobSchema, JobSchemaType } from './validation',"
 import { useAuth } from "@/hooks/useAuth",
 
 export interface JobPostingProps {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   job_id?: string;
   on_success?: () => void;
 }
@@ -91,24 +67,18 @@ export interface JobPostingProps {};
   const [isLoading, setIsLoading] = useState(false),
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const form = useForm<JobSchemaType>({
     resolver: zodResolver(jobSchema);
     defaultValues: {
       title: '';
-=======
 export interface JobPostingProps {
   job_id?: string;
   on_success?: () => void;
 }      title: '';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export interface JobPostingProps {
   job_id?: string;
   on_success?: () => void;
 }      title: '';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       company: '';
       location: '';
       job_type: '';
@@ -133,7 +103,6 @@ description: '',
       toast.error("You must be logged in to post a job"),"
       navigate("/login"),
 return
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -196,14 +165,10 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
         user_id: user.id},;
       if (onSuccess) {;
         onSuccess();
-<<<<<<< HEAD
 
       }
 
       return jobData
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 export interface JobPostingProps {
   job_id?: string;
@@ -243,7 +208,6 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       job_type: '';
       salary_range: '';
       description: '';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       responsibilities: '';
       qualifications: '';
       benefits: '';
@@ -272,7 +236,6 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
 
         is_remote: isRemote,
         user_id: user && user.id};
-<<<<<<< HEAD
 
       if (onSuccess) {
         onSuccess()
@@ -280,7 +243,6 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       return jobData
     } catch (error: any) {
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { format } from 'date-fns',;
@@ -388,21 +350,17 @@ export interface JobPostingProps {
       return jobData
     } catch (error: any) {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console && console.error("Error in job form submission:", error);
       toast && toast.error(error && error.message || "Failed to process form");
 
       throw error
-<<<<<<< HEAD
       status: '',
       external_apply_link: ''}
-=======
 
       throw error;
 '
       status: '','
       external_apply_link: ''}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     mode: "on_change"});
 ;
   // Function to create / update jobs that will be implemented by parent component;
@@ -412,7 +370,6 @@ if ( {) {}
   $2;
 }"
       toast.error ("You must be logged in to post a job");"
-=======
       throw error
       status: '',
       external_apply_link: ''}
@@ -425,7 +382,6 @@ if ( {) {
   $2
 }
       toast.error ("You must be logged in to post a job");
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       navigate ("/login"),
       return;
     }
@@ -448,14 +404,6 @@ if ( {) {}
 }
         on_success ();
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       // Check condition
 if ( {) {
   $2
@@ -488,21 +436,15 @@ if ( {) {
       navigate("/login"),
       return
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
       return job_data;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     } catch (error: any) {
       console.error ("Error in job form submission:", error);
       toast.error (error.message || "Failed to process form");
       throw error;
     } finally {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       }
       return job_data;
     } catch (error: any) {"
@@ -510,10 +452,7 @@ if ( {) {
       toast.error (error.message || "Failed to process form");
       throw error;
     } finally {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsLoading (false);
     }
   }
@@ -526,10 +465,7 @@ return {}
     is_remote;
     setIsRemote;
     initial_values;
-<<<<<<< HEAD
     setInitialValues;
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 }
 
@@ -558,12 +494,9 @@ return {}
     setIsRemote;
     initialValues;
     setInitialValues;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     submitJob
 ;
-=======
     setInitialValues;;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return jobData;
     } catch (error: any) {;"
       console.error("Error in job form submission:", error),;"
@@ -588,10 +521,8 @@ return {}
 setIsLoading(false)
 
 ;
-=======
     submitJob
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return jobData;
     } catch (error: any) {;
       console.error("Error in job form submission:", error),;
@@ -636,9 +567,7 @@ pr-12325
     setInitialValues;
     submitJob;
 
-=======
     submit_job;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 };
   }
@@ -646,10 +575,8 @@ pr-12325
 
 ;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 ;
 
@@ -657,21 +584,7 @@ pr-12325
 };
   }
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

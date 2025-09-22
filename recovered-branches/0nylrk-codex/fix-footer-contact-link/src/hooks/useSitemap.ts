@@ -1,38 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { useAuth  } from './useAuth';
 import { getAccessibleRoutes  } from '@/config/sitemap';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useAuth} from './useAuth';
-=======
 
 import {useAuth} from './useAuth';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {getAccessibleRoutes} from '@/config/sitemap';
 '
 import type { SitemapItem } from '@/config/sitemap';
 // Define the allowed user types
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export function useSitemap() {;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { user, isAuthenticated } = useAuth();
-=======
 type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
 export function useSitemap() {
 export function useSitemap() {;  const { user, isAuthenticated } = useAuth();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Get routes that the current user can access
   // Cast userType to UserType or pass undefined if not valid
   const userType = user?.userType && isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined;
@@ -50,12 +34,10 @@ import type { SitemapItem } from '@/config/sitemap';
 type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
 export function useSitemap() {
 export function useSitemap() {;  const { user, isAuthenticated } = useAuth();
-=======
 
 export function useSitemap() {;
 
   const { user, isAuthenticated } = useAuth();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Get routes that the current user can access
   // Cast userType to UserType or pass undefined if not valid
   const userType = user?.userType && isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined;
@@ -65,7 +47,6 @@ export function useSitemap() {;
   const findRouteByPath = (path: string): SitemapItem | undefined => {    }
     return true
   }  function isValidUserType(type: string): boolean {
-=======
 // Define the allowed user types;
 '
 type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
@@ -100,8 +81,6 @@ export function useSitemap() { return null; }
 
   // Helper function to check if userType is valid;
   function isValidUserType(type: string): boolean {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   const findRouteByPath = (path: string): SitemapItem | undefined => {
 
     return accessibleRoutes && accessibleRoutes.find(route => route && route.path === path)
@@ -146,34 +125,23 @@ export function useSitemap() {;
   }
   // Helper function to check if userType is valid
   function isValidUserType(type: string): boolean {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return ['employerbuyerjobSeekercreatoradmin'].includes(type)
   }
   return {}
     accessibleRoutes;
     findRouteByPath;
-<<<<<<< HEAD
     canAccessRoute
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {use_auth} from './use_auth';
-=======
 
 canAccessRouteimport {use_auth} from './use_auth';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {getAccessibleRoutes} from '@/config / sitemap';
 import type { SitemapItem } from '@/config / sitemap';// Define the allowed user types;
-=======
     canAccessRoute
 import {use_auth} from './use_auth';
 import {getAccessibleRoutes} from '@/config / sitemap';
 import type { SitemapItem } from '@/config / sitemap';
 // Define the allowed user types;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 type UserType = 'employer' | 'buyer' | 'job_seeker' | 'creator' | 'admin';
 ;
 export /**;
@@ -229,25 +197,13 @@ if (return false) {}
     findRouteByPath;
     canAccessRoute;
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  }
-}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   }
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  }
+}
+
   }
 }
   ;

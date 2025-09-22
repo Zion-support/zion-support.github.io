@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -53,7 +52,6 @@ export default function EditPostPage() {;
   ;
   if (isLoading) {;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <AppLayout>;
         <div className="container py-8">;
           <div className="flex justify-center items-center h-64">;
@@ -61,7 +59,6 @@ export default function EditPostPage() {;
           </div>;
         </div>;
       </AppLayout>;
-<<<<<<< HEAD
 
       <AppLayout>;
         <div className="container py-8">;

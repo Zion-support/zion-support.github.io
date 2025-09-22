@@ -1,9 +1,4 @@
 :pages_backup/careers.tsx
-<<<<<<< HEAD:pages_backup/careers.tsx
-<<<<<<< HEAD:pages/careers.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react';
 import React from 'react';
@@ -35,19 +30,9 @@ const Page = () => {
 
 import {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/careers.tsx
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/careers.tsx
   Users,
   MapPin,
   Clock,
@@ -64,15 +49,7 @@ import {
   Globe,
   CheckCircle,;
 :pages_backup/careers.tsx
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/careers.tsx
 } from "lucide-react";
 const jobOpenings = [
   {
@@ -320,12 +297,10 @@ import {;
   Globe,;
   CheckCircle,;
 :pages_backup/careers.tsx
-<<<<<<< HEAD
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 
 import {
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
 Users
   MapPin
@@ -342,8 +317,6 @@ Users
   GraduationCap
   Globe
   CheckCircle
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "lucide-react";
 const jobOpenings = [;
   {;
@@ -474,10 +447,7 @@ const values = [;
   },;
 ];
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <MainLayout
       title="Careers - Zion Tech Group"
@@ -486,8 +456,6 @@ const values = [;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
 :pages_backup/careers.tsx
-<<<<<<< HEAD:pages/careers.tsx
-<<<<<<< HEAD
 import Head from 'next/head';
 
 :pages_backup/careers.tsx
@@ -498,33 +466,16 @@ export default function CareersPage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
           </div>;
 :pages_backup/careers.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/careers.tsx
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
             <div className="text-center">
@@ -1084,12 +1035,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 :pages_backup/careers.tsx
-<<<<<<< HEAD
 
   );
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Don't See Your Dream Job?;
@@ -1132,9 +1080,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 :pages_backup/careers.tsx
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </MainLayout>
     </MainLayout>
     </Layout>
@@ -1144,11 +1089,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   );
 }
 :pages_backup/careers.tsx
-<<<<<<< HEAD:pages/careers.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { motion } from 'framer-motion';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -1167,16 +1108,8 @@ const Page = () => {
 
 :pages_backup/careers.tsx
 export default Page;
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/careers.tsx
-=======
         <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
@@ -1234,11 +1167,7 @@ export default Page;
     </>
   );
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/careers.tsx
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
         </div>
       </div>
     </MainLayout>
@@ -1246,4 +1175,3 @@ export default Page;
 };
 
 export default Page;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/careers.tsx

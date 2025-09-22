@@ -1,8 +1,4 @@
 :src_backup/components/jobs/applications/ApplicationsTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
@@ -42,27 +38,21 @@ import { JobApplication } from '@/types / jobs';
 import { Avatar as AvatarPrimitive } from '@/components / ui / avatar'; // Renamed;
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import {  Table,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationsTable.tsx
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs";
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { 
   Table;
-=======
 import { format } from 'date-fns''
 import { JobApplication } from '@/types/jobs'';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed'
 import { ClickableBadge } from '@/components/ui/clickable-badge';
 import {  Table;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
   TableBody;
   TableCell;
   TableHead;
@@ -84,7 +74,6 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
   const [avatarError, setAvatarError] = useState(false),
   const talentName = application.talent_profile?.full_name || "Candidate",
 
-<<<<<<< HEAD
   return (
     <AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
       {application.talent_profile?.profile_picture_url && !avatarError ? (
@@ -93,17 +82,11 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
           alt={talentName}
           width={32} // for h-8 w-8
           height={32} // for h-8 w-8
-<<<<<<< HEAD
           className="rounded-full object-cover"
           onError={() => setAvatarError(true)}
           priority={false}
         />
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationsTable.tsx
 import { format } from 'date-fns'
 import { JobApplication } from '@/types/jobs'
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -145,15 +128,12 @@ import Image from 'next/image'; // Import next/image;
 :src_backup/components/jobs/applications/ApplicationsTable.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ApplicationsTableProps {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   applications: JobApplication[];
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
 :src_backup/components/jobs/applications/ApplicationsTable.tsx
   onViewScore: (application: JobApplication) => void
-<<<<<<< HEAD
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import {  Table,
   TableBody,
@@ -202,15 +182,12 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
   const talentName = application && application.talent_profile?.full_name || "Candidate",;
 
 :src_backup/components/jobs/applications/ApplicationsTable.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationsTable.tsx
 
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
   const [avatarError, setAvatarError] = useState(false)
   const talentName = application.talent_profile?.full_name |"Candidate"
   return (
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationsTable.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
       {application.talent_profile?.profile_picture_url && !avatarError ? (
         <Image;
@@ -226,13 +203,11 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
 
 :src_backup/components/jobs/applications/ApplicationsTable.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationsTable.tsx
       ) : (
         <User className="h-4 w-4" />
       )}
 </AvatarPrimitive>
   )
-=======
   }
     </AvatarPrimitive>;
   );
@@ -269,7 +244,6 @@ export function ApplicationsTable({}
   onViewScore
 }: ApplicationsTableProps) {
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationsTable.tsx
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
 
@@ -290,8 +264,6 @@ export function ApplicationsTable({}
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = null;
 :src/components/jobs/applications/ApplicationsTable.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>;
 
@@ -343,11 +315,9 @@ const ApplicationAvatar = null;
         application = {selectedApplication |undefined,}
         onConfirm = {handleHireConfirmed,}
 :src/components/jobs/applications/ApplicationsTable.tsx
-<<<<<<< HEAD
   applications,
   processingId,
   onViewApplication,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },
 
 export function ApplicationsTable({}
@@ -359,7 +329,6 @@ export function ApplicationsTable({}
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
-<<<<<<< HEAD
 },
 
 export function ApplicationsTable({}
@@ -371,7 +340,6 @@ export function ApplicationsTable({}
   onViewScore
 }: ApplicationsTableProps) {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
 
@@ -403,27 +371,21 @@ export function ApplicationsTable({}
           <TableBody>
 {applications.map((application) => (
               <TableRow key={application.id}>
-=======
             {applications.map((application) => (
               <TableRow key={application.id}>
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationsTable.tsx
                 <TableCell>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
                     <div>
 
                       <div className="font-medium">
-=======
                 <TableCell>"
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
                     <div>
 "
                       <div className="font-medium">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
                         {application.talent_profile?.full_name || "Candidate"}
                       </div>"
                       <div className="text-xs text-muted-foreground mt-0.5">"
@@ -536,11 +498,8 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
 }/> </>)'"
 }'"}
 :src/components/jobs/applications/ApplicationsTable.tsx
-<<<<<<< HEAD
       />;
     </>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 },;
 export function ApplicationsTable({;
@@ -598,13 +557,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   /* Using Renamed AvatarPrimitive */ ;
 }{;
 :src_backup/components/jobs/applications/ApplicationsTable.tsx
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationsTable.tsx
-<<<<<<< HEAD
   application && application.talent profile?.profile picture url && !avatarError ? (<Imagesrc= {
   application && application.talent profile && profile.profile picture url 
                 <TableCell className='hidden md:table - cell'>;
                   {format (new Date (application.created_at), 'PP')}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </TableCell>;
                 <TableCell className="hidden md:table-cell">;
                   {format(new Date(application.created_at), "PP")}
@@ -691,16 +647,11 @@ return (<> <div className=" rounded-md border"> hidden md:table - cell" >Applied
   handleHireConfirmed;
 }/> </>);'"
 }'"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </>;
   );
 }
 :src_backup/components/jobs/applications/ApplicationsTable.tsx
 ;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationsTable.tsx
   application.talent profile?.profile picture url && !avatarError ? (<Image src= {;
   application.talent profile.profile picture url ;
 }alt= {;
@@ -744,8 +695,4 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
 }/> </>) ;
 }'"
 :src/components/jobs/applications/ApplicationsTable.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx

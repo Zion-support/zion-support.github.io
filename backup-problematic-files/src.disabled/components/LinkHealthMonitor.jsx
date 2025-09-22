@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link,ExternalLink,AlertTriangle,CheckCircle,RefreshCw,Zap const LinkHealthMonitor = () => { const [isOpen,setIsOpen] = useState (false) const [isMonitoring,setIsMonitoring] = useState (false) const [linkStatuses,setLinkStatuses] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ('all') '';'"";""}
 const LinkHealthMonitor = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const LinkHealthMonitor = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

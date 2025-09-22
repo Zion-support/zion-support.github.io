@@ -1,5 +1,4 @@
 
-=======
 import { QuoteFormData } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;
@@ -35,13 +34,11 @@ export function ProjectDetailsStep({ formData, updateFormData } ProjectDetailsSt
               placeholder="Describe your project in detail...";
               value={formData.projectDescription}
               onChange={(e) => updateFormData({ projectDescription:e.target.value })}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="min-h-32 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
             />;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
             <Input;
               id="email";

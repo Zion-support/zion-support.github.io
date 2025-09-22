@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import Head from 'next/head';'
 import React from 'react';
@@ -15,7 +12,6 @@ export default function ManifestoPage(): JSX.Element {}
 "
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
 <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
         <div className="mx-auto w-full max-w-5xl px-6 py-12">
@@ -38,7 +34,6 @@ export default function ManifestoPage(): JSX.Element {}
               work, programmable trust, and interoperable markets where value flows to the people who create it.
             </p>"
             <h2 id="problem-with-traditional-marketplaces">The Problem with Traditional Marketplaces</h2>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               scoping, verification, and reputation signals are assisted by models, yet decisions remain human-sovereign. We prioritize
               transparency, auditability, and consent. Your data powers your outcomes, not someone else’s moat.
             </p>"
@@ -46,7 +41,6 @@ export default function ManifestoPage(): JSX.Element {}
             <p>
 Zion evolves from a product into a protocol: identity, reputation, escrow, and discovery as shared public goods. Governance
               transitions gradually, guided by real usage and contributor ownership. The end-state is a resilient, permissionless network
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               credibly neutral.
             </p>
           </section>
@@ -54,7 +48,6 @@ Zion evolves from a product into a protocol: identity, reputation, escrow, and d
       </main>
     </>
 )
-<<<<<<< HEAD
 
 }
 
@@ -115,34 +108,14 @@ export default function ManifestoPage (): JSX.Element {};
 }
 
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

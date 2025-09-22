@@ -1,7 +1,4 @@
 :src_backup/components/disputes/DisputeStatusBadge.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import {
   Tooltip
@@ -59,8 +56,6 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
           <ShieldAlert className="h-3 w-3" />;
           <span>Under Dispute</span>;
 :src/components/disputes/DisputeStatusBadge.tsx
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeStatusBadge.tsx
 status: 'open' | 'under_review' | 'resolved' | 'closed';
 
 :src_backup/components/disputes/DisputeStatusBadge.tsx
@@ -120,7 +115,6 @@ pr-12325
     default:;,
       break;
 :src_backup/components/disputes/DisputeStatusBadge.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
@@ -170,7 +164,6 @@ pr-12325
 
   return (
 :src_backup/components/disputes/DisputeStatusBadge.tsx
-<<<<<<< HEAD
     <Tooltip>
       <TooltipTrigger asChild>
         <Badge variant={variant} className="flex items-center gap-1">
@@ -211,15 +204,12 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
   }
 ;
   return (;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputeStatusBadge.tsx
     <Tooltip>;
       <TooltipTrigger asChild>;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
 <span>Under Dispute</span>;
 
-=======
   }
   return (
     <Tooltip>;
@@ -273,19 +263,13 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
           <span>Under Dispute</span>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputeStatusBadge.tsx
         </Badge>;
-=======
           <span>Under Dispute</span>;        </Badge>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </TooltipTrigger>;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
 :src_backup/components/disputes/DisputeStatusBadge.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Tooltip>;
   );
 }
@@ -296,21 +280,10 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       </TooltipContent>
     </Tooltip>
 :src_backup/components/disputes/DisputeStatusBadge.tsx
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeStatusBadge.tsx
-=======
   )
 }}}
     </Tooltip>;
@@ -345,4 +318,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ;)
     );
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputeStatusBadge.tsx

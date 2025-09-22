@@ -67,43 +67,29 @@ export function EnterpriseCTA() {
                       <span className='text-primary text-sm font-medium'>
 :src_backup/components/enterprise/EnterpriseCTA.tsx
                         4
-<<<<<<< HEAD
                       </span>                    </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Calendar } from 'lucide-react';
 
-<<<<<<< HEAD:src/components/enterprise/EnterpriseCTA.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterpriseCTA.tsx
 import React from "react",
 import { Button } from "@/components/ui/button",
-=======
 import React from "react","
 import { Button } from "@/components/ui/button",'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/EnterpriseCTA.tsx
 import { Calendar, ArrowRight } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function EnterpriseCTA() {
   return (
     <section id="contact" className="py-20 px-4 md: px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="rounded-xl bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-purple-light/20 p-1">
           <div className="bg-card rounded-lg shadow-sm p-8 md:p-12">
-=======
 export function EnterpriseCTA() {}
   return ("
     <section id="contact" className="py-20 px-4 md: px-6">"
       <div className="container mx-auto max-w-6xl">"
         <div className="rounded-xl bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-purple-light/20 p-1">"
           <div className="bg-card rounded-lg shadow-sm p-8 md:p-12">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/EnterpriseCTA.tsx
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>"
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -159,8 +145,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
 :src/components/enterprise/EnterpriseCTA.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     </section>
   )
 import React from "react",;
@@ -168,13 +152,10 @@ import { Button } from "@/components/ui/button";
 
     </section>
 :src/components/enterprise/EnterpriseCTA.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseCTA.tsx
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Calendar, ArrowRight } from 'lucide-react';
 export function EnterpriseCTA() {;
   return (;
@@ -349,10 +330,8 @@ function EnterpriseCTA() {}
                       <span className="text - primary text - sm font - medium">4</span>;
                     </div>;
                     <p > Free consultation on implementation</p>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterpriseCTA.tsx
 
                   </li>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </ul>;
               </div>;
             </div>;
@@ -360,24 +339,13 @@ function EnterpriseCTA() {}
         </div>;
       </div>;
 :src/components/enterprise/EnterpriseCTA.tsx
-<<<<<<< HEAD
     </section>;
   );
 }
-<<<<<<< HEAD
 ;
-=======
-=======
 
   );
 }
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterpriseCTA.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterpriseCTA.tsx
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/EnterpriseCTA.tsx

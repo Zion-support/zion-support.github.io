@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Progress } from "@/components/ui/progress",;
@@ -31,7 +30,6 @@ export function UsageOverview() {;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card>;
       <CardHeader>;
         <CardTitle>Usage Overview</CardTitle>;
@@ -43,7 +41,6 @@ export function UsageOverview() {;
             <TabsTrigger value="current">Current Period</TabsTrigger>;
             <TabsTrigger value="historical">Historical</TabsTrigger>;
           </TabsList>;
-<<<<<<< HEAD
 
           <TabsContent value="current" className="space-y-6">;
             <div className="space-y-4">;

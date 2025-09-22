@@ -1,27 +1,18 @@
 :pages_backup/api/defi/cashout-check.ts
-<<<<<<< HEAD:pages_backup/api/defi/cashout-check.ts
-<<<<<<< HEAD:pages/api/defi/cashout-check.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import type { KycProfile } from '../../../utils/kyc',;
 import fs from 'fs',;
 import path from 'path',;
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),
 const FILE = path.join(DATA_DIR, 'profiles.json'),
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/defi/cashout-check.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   } catch {
-=======
 
   } catch {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/defi/cashout-check.ts
     return {}
   }
 }
@@ -30,7 +21,6 @@ import path from 'path';
   const { userId, amount, currency } = req.body as { userId?: string, amount?: number, currency?: string };'
   if (!userId || typeof amount !== 'number') return res.status(400).json({ error: 'Missing userId or amount' });
 :pages_backup/api/defi/cashout-check.ts
-<<<<<<< HEAD
 
   const THRESHOLD = Number(process.env.ZION_CASHOUT_KYC_THRESHOLD || '1000');
   const db = load();
@@ -40,30 +30,17 @@ import path from 'path';
   if (profile.status !== 'approved') return res.status(200).json({ allowed: false, reason: 'KYC not approved' });
   if (profile.amlStatus === 'match' || (profile.flags || []).includes('aml_alert')) return res.status(200).json({ allowed: false, reason: 'AML alert' });
 return res.status(200).json({ allowed: true, reason: 'KYC approved and AML clear' })
-<<<<<<< HEAD
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/defi/cashout-check.ts
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/defi/cashout-check.ts
 const DATA_DIR = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ allowed: true, reason: 'KYC approved and AML clear' })
 }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function load(): Record<string, KycProfile> {
   try {
-=======
 '
   if (amount <= THRESHOLD) return res.status(200).json({ allowed: true, reason: 'Below threshold' });'
   if (!profile) return res.status(200).json({ allowed: false, reason: 'KYC not started' });'
@@ -72,7 +49,6 @@ function load(): Record<string, KycProfile> {
 
 function load(): Record<string, KycProfile> {}
   try {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/defi/cashout-check.ts
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
   } catch {;
@@ -83,7 +59,6 @@ function load(): Record<string, KycProfile> {}
 }
 
 :pages_backup/api/defi/cashout-check.ts
-<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -111,12 +86,5 @@ export default function handler(req, res) {
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/defi/cashout-check.ts

@@ -5,13 +5,6 @@ interface ApplyToJobFormProps {
 
   onSuccess?: () => void
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -26,8 +19,6 @@ import {AlertCircle, FileText, Loader2} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 import {Job} from "@/types/jobs";
 import {toast} from "sonner";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -70,12 +61,9 @@ interface ApplyToJobFormProps {
 
   onSuccess?: () => void
 }
-=======
 interface ApplyToJobFormProps {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   job: Job,;
   onSuccess?: () => void;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) {;
@@ -107,7 +95,6 @@ import { Label } from "@/components/ui/label",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from "lucide-react",
-=======
 interface ApplyToJobFormProps {}
   job: Job;
   onSuccess?: () => void;
@@ -153,14 +140,12 @@ import { Label } from "@/components/ui/label","
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select","
 import { Alert, AlertDescription } from "@/components/ui/alert","
 import { AlertCircle, FileText, Loader2 } from "lucide-react","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { formatDistanceToNow } from "date-fns",
 interface ApplyToJobFormProps {};
   job: Job;
   onSuccess?: () => void;
 }
 interface ApplyToJobFormProps {;
-=======
 
 interface ApplyToJobFormProps {
 
@@ -186,7 +171,6 @@ interface ApplyToJobFormProps {
 
   onSuccess?: () => void
 }interface ApplyToJobFormProps {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   job: Job,;
   onSuccess?: () => void;
 }
@@ -197,7 +181,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const navigate = useNavigate(),
   const { user } = useAuth();
 const { applyToJob } = useJobApplications();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const navigate = useNavigate();
 "
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job && job.title}" position and would like to apply. My skills and experience align well with this role.`);"
@@ -210,9 +193,7 @@ const { applyToJob } = useJobApplications();
   const { applyToJob } = useJobApplications(),
   const { resumes, isLoading: isResumesLoading } = useResume(),
   const navigate = useNavigate(),
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),
   const [selectedResumeId, setSelectedResumeId] = useState<string>(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -220,14 +201,11 @@ const { applyToJob } = useJobApplications();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (!user) {
       toast.error("You must be logged in to apply")
-=======
 
     if (!user) {"
       toast.error("You must be logged in to apply")"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
       return;
 }
@@ -236,21 +214,14 @@ const { applyToJob } = useJobApplications();
     setError(null);
     try {}
       const success = await applyToJob(job.id, coverLetter, selectedResumeId |undefined);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     setIsSubmitting(true),
-=======
       toast.error("You must be logged in to apply")
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
       return    setIsSubmitting(true),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       toast.error("You must be logged in to apply")
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
       return    setIsSubmitting(true),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     if (!user) {
       toast.error("You must be logged in to apply")
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
@@ -276,42 +247,29 @@ const { applyToJob } = useJobApplications();
       const success = await applyToJob(job.id, coverLetter, selectedResumeId |undefined);
 
     setIsSubmitting(true),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setError(null),
 
     try {}
       const success = await applyToJob(job.id, coverLetter, selectedResumeId || undefined),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       if (success) {
         toast.success("Your application has been submitted!");
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       if (success) {
         toast.success("Your application has been submitted!"),
         if (onSuccess) {
-=======
 
       if (success) {"
         toast.success("Your application has been submitted!"),
 
         if (onSuccess) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           onSuccess()
         }
       }
     } catch (err: any) {"
       setError(err.message |"Failed to submit application")"
       toast.error("Failed to submit application")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { useJobApplications } from '@/hooks / useJobApplications';
@@ -335,7 +293,6 @@ export /**;
  * ApplyToJobForm - Function description;
  */
 function ApplyToJobForm() {}
-=======
 import { toast } from './sonner';
 interface ApplyToJobFormProps {
   job: Job,
@@ -345,7 +302,6 @@ export /**
  * ApplyToJobForm - Function description
  */
 function ApplyToJobForm() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user } = use_auth ();
   const { applyToJob } = useJobApplications ();
   const { resumes, is_loading: isResumesLoading } = use_resume (),
@@ -402,26 +358,16 @@ if ( {) {}
 
 },
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     } finally {
       setIsSubmitting(false)
     }
 
   },
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
-=======
 
   return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>"
         <h3 className="text-lg font-medium mb-1">Apply to: {job.title}</h3>"
@@ -438,15 +384,7 @@ if ( {) {}
       <div className="space-y-4">
         <div>"
           <Label htmlFor="coverLetter">Cover Letter</Label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     setIsSubmitting(true);
     setError(null);
@@ -482,14 +420,8 @@ if ( {) {}
 <div className="space-y-4">;
         <div>;
           <Label htmlFor="coverLetter">Cover Letter</Label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Textarea
-=======
           <Textarea
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             id="coverLetter"
             value={coverLetter}
             onChange={(e) => setCoverLetter(e && e.target.value)}
@@ -518,22 +450,13 @@ import {toast} from "sonner";"
 interface ApplyToJobFormProps {;
   job: Job,;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {isResumesLoading ? (
             <div className="flex items - center gap - 2 mt-2">;
               <Loader2 className="h - 4 w - 4 animate-spin" />;
-=======
 
           {isResumesLoading ? ("
             <div className="flex items - center gap - 2 mt - 2">;"
               <Loader2 className="h - 4 w - 4 animate - spin" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
 export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) {;
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
@@ -550,7 +473,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
   const [selectedResumeId, setSelectedResumeId] = useState < string>("");"
   const [is_submitting, setIsSubmitting] = useState (false);
   const [error, set_error] = useState < string | null>(null);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
   const handle_submit = async (e: React.FormEvent) => {
     e.prevent_default ();
@@ -644,7 +566,6 @@ if ( {) {
           {isResumesLoading ? (
             <div className="flex items - center gap - 2 mt - 2">;
               <Loader2 className="h - 4 w - 4 animate - spin" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <span > Loading your resumes...</span>;
             </div>) : resumes && resumes.length > 0 ? (
             <Select;
@@ -662,10 +583,6 @@ onValueChange={setSelectedResumeId}                type="button"
         <Button"
           type="button""
           variant="outline"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -680,8 +597,6 @@ import { AlertCircle, FileText, Loader2 } from "lucide-react",;
 import { formatDistanceToNow } from "date-fns",;
 import { Job } from "@/types/jobs",;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { toast } from "sonner",;
 interface ApplyToJobFormProps {;
   job: Job,;
@@ -750,17 +665,10 @@ return (;"
             value={coverLetter}
             onChange={(e) => setCoverLetter(e.target.value)}
             rows={6}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             placeholder="Introduce yourself and explain why you are a good fit for this job...";
-=======
 "
             placeholder="Introduce yourself and explain why you are a good fit for this job...";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="mt-1";
           />;"
           <p className="text-xs text-muted-foreground mt-1">;
@@ -779,24 +687,15 @@ return (;"
 <Select
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <SelectTrigger className="mt-1">;
-<<<<<<< HEAD
-=======
               <SelectTrigger className="mt-1">;            placeholder="Introduce yourself and explain why you are a good fit for this job...";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
             placeholder="Introduce yourself and explain why you are a good fit for this job...";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               <SelectTrigger className="mt-1">;
 >;
               <SelectTrigger className="mt - 1">;
             placeholder="Introduce yourself and explain why you are a good fit for this job...";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             className="mt-1";
           />;"
           <p className="text-xs text-muted-foreground mt-1">;
@@ -817,10 +716,6 @@ return (;"
               onValueChange={setSelectedResumeId}
             >;"
               <SelectTrigger className="mt-1">;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <SelectValue placeholder="Select a resume" />;
               </SelectTrigger>;
               <SelectContent>;"
@@ -833,8 +728,6 @@ return (;"
 <Button;
           type="button";
           variant="outline";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
@@ -865,13 +758,10 @@ type="button"
               </Button>;
             </div>;
           )}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button
           type="button"
-=======
         <Button
           type="button"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           variant="outline"
           disabled={isSubmitting}
           onClick={() => {;
@@ -929,9 +819,6 @@ type="button"
     </form>);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   ),; interface ApplyToJobFormProps {}
   job: Job;
@@ -961,7 +848,6 @@ const {
 }= useJobApplications ();
 const {
   resumes, isLoading: isResumesLoading 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }= useResume ();
 const navigate = useNavigate ();
 const [isSubmitting, setIsSubmitting] = useState (false);
@@ -1022,7 +908,6 @@ handleSubmit "
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />"
             </>
           ) : (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             "Submit Application"
           )}
         </Button>
@@ -1036,22 +921,8 @@ handleSubmit "
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
             "Submit Application"")
     </form>;"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

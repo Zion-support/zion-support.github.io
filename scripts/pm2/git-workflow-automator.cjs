@@ -1,10 +1,8 @@
-[\s\S]*?>>>>>>>\n/g, '\n');
             // Simple conflict resolution - take the incoming change
 
 main
 
             // Simple conflict resolution - take the incoming change
-            const resolved = content.replace(/\n<<<<<<<[\s\S]*?[\s\S]*?>>>>>>>\n/g, '\n');
 
             // Simple conflict resolution - take the incoming change;
             const resolved = content.replace(/\n<<<<<<<[\s\S]*?

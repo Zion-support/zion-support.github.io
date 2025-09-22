@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import React from 'react',;
 import Head from 'next/head',;
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',;
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 import React from 'react',;'
 import Head from 'next/head',;'
@@ -17,25 +13,17 @@ import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 import React from 'react'
 import Head from 'next/head'
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground'
-=======
 '
 import React from 'react''
 import Head from 'next/head''
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function AIEvalsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950'
 		email: 'kleber@ziontechgroup.com'
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 export default function AIEvalsPage() {}
 	const contactInfo = {'
@@ -44,7 +32,6 @@ export default function AIEvalsPage() {}
 		address: '364 E Main St STE 1008 Middletown DE 19709''
 		website: 'https://ziontechgroup.com'
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			<Head>
 				<title>AI Evaluations Platform | Zion Tech Group</title>
 				<meta name="description" content="Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails." />"
@@ -59,11 +46,6 @@ export default function AIEvalsPage() {}
 						<a href="/resources" className="border-gray-600 text-gray-200">Read Docs</a>
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Get a Demo</Link>
 						<a href="/resources" className="border-gray-600 text-gray-200">Read Docs</Link>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</div>
 				</div>"
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
@@ -75,24 +57,17 @@ export default function AIEvalsPage() {}
 								{p.items.map((i) => ("
 									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
 						<div className="text-gray-400 text-sm mb-2">Key Metric</div>
 						<div className="text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-cyan-400"><Gauge /> Accuracy & Faithfulness</div>
-=======
 
 				</div>"
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">"
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">"
 						<div className="text-gray-400 text-sm mb-2">Key Metric</div>"
 						<div className="text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-cyan-400"><Gauge /> Accuracy & Faithfulness</div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 						<p className="text-gray-400 mt-2 text-sm">Track quality with BLEU/ROUGE/F1 and hallucination/faithfulness scores across datasets.</p>
 					</div>"
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">"
@@ -116,16 +91,11 @@ export default function AIEvalsPage() {}
 
 "
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</div>
 				</div>
 			</div>
 		</QuantumHolographicMatrixBackground>
-<<<<<<< HEAD
 	);
 };
 	)
@@ -134,20 +104,17 @@ export default function AIEvalsPage() {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 }
 
 import React from 'react',
 import Head from 'next / head',
 import QuantumHolographicMatrixBackground from '../components / ui / QuantumHolographicMatrixBackground',
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
-=======
 '
 import React from 'react','
 import Head from 'next / head','
 import QuantumHolographicMatrixBackground from '../components / ui / QuantumHolographicMatrixBackground','
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 export default /**;
  * AIEvalsPage - Function description;
@@ -220,17 +187,12 @@ return (
   </div>;
   </QuantumHolographicMatrixBackground>);
 
-<<<<<<< HEAD
 
 '
 import React from 'react''
 import Head from 'next/head''
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground''
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function AIEvalsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950'
@@ -240,8 +202,6 @@ export default function AIEvalsPage() {
 return (_<QuantumHolographicMatrixBackground intensity={_1.5}>
 
 	return (_<QuantumHolographicMatrixBackground intensity={_1.5}>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 			<Head>
 				<title>AI Evaluations Platform | Zion Tech Group</title>"
 				<meta name="description" content="Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails." />"
@@ -252,12 +212,7 @@ return (_<QuantumHolographicMatrixBackground intensity={_1.5}>
 					<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">AI Evaluations</h1>"
 					<p className="text-xl text-gray-300">Benchmark models and prompts with real metrics and safety checks. Ship reliable AI faster.</p>"
 					<div className="mt-6 flex justify-center gap-3">
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</div>
 				</div>"
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
@@ -276,25 +231,12 @@ return (_<QuantumHolographicMatrixBackground intensity={_1.5}>
 		</QuantumHolographicMatrixBackground>
 
 	)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 								))}
 							</ul>
 						</div>
 					))}
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 ;
 '";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

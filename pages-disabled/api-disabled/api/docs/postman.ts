@@ -11,7 +11,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 :pages/api/docs/postman.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const postmanCollection = {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     info: {
 
       name: "Zion OS API"
@@ -43,7 +42,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json(toPostman());
 }
       name: 'Zion OS API',
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
     }
     item: [
@@ -158,7 +156,6 @@ export default function handler($2) {;
   }
 }
 :pages/api/docs/postman.ts
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             raw: `{{base_url}}${ep.path}`,
             host: ["{{base_url}}"],
             path: ep.path.replace (/^\//, "").split ("/"),
@@ -174,4 +171,3 @@ export default function handler($2) {;
       { key: "token", value: "" }
     ]
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

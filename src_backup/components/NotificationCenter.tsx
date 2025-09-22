@@ -1,17 +1,11 @@
 :src/components/NotificationCenter.tsx
 unreadCount, ;
     markAsRead, ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const handleFilterChange = (newFilter: FilterType,) => {;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src/components/NotificationCenter.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/NotificationCenter.tsx
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -33,7 +27,6 @@ import { FilterType } from '@/components/notifications/NotificationFilter',
 export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
-<<<<<<< HEAD
     unreadCount, 
     markAsRead, 
     markAllAsRead,
@@ -49,7 +42,6 @@ export const NotificationCenter: React.FC = () => {
   const [loadedOnce, setLoadedOnce] = useState(false),
   const enqueueSnackbar = useEnqueueSnackbar(),
 
-<<<<<<< HEAD
   // Refresh notifications when popover opens, but avoid duplicate
   useEffect(() => {
     if (open && !loadedOnce) {
@@ -128,14 +120,11 @@ const handleMarkAllAsRead = async () => {
 
   return (
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
  } from '@/components/notifications';
 import { FilterType } from '@/components/notifications/NotificationFilter';
 export const NotificationCenter: React.FC;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/NotificationCenter.tsx
 
   const handleMarkAllAsRead = async () => {
     try {
@@ -148,7 +137,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 
 :src/components/NotificationCenter.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
           <Bell className="h-5 w-5 text-zion-slate-light" />
@@ -156,7 +144,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
 
 :src/components/NotificationCenter.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }, [open, loadedOnce, fetchNotifications]),;
   const handleMarkAllAsRead = async () => {;
     try {;
@@ -181,11 +168,9 @@ setFilter(newFilter as any);
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>;
           )}
-<<<<<<< HEAD
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
-<<<<<<< HEAD
         <NotificationHeader
         />;
 
@@ -198,14 +183,11 @@ setFilter(newFilter as any);
           onDismiss = {dismissNotification,}
           onRetry = {fetchNotifications,}
 :src/components/NotificationCenter.tsx
-<<<<<<< HEAD
         />
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
     </Popover>
-<<<<<<< HEAD
   )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 
         />
@@ -248,13 +230,11 @@ setFilter(newFilter as any);
 
         />;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
   );
 };
-=======
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
   },
@@ -265,16 +245,8 @@ setFilter(newFilter as any);
           <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
         <NotificationHeader
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/NotificationCenter.tsx
   );
 };
 
@@ -319,5 +291,3 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
 };
 '"
 :src/components/NotificationCenter.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,8 +1,6 @@
 :src_backup/components/home/FeatureHighlights.tsx
-<<<<<<< HEAD
 className?: string;
   style?: React && React.CSSProperties;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -37,14 +35,11 @@ import React from 'react';'
 import { Card, CardContent } from '@/components / ui / card';'
 import { Check } from 'lucide-react';'
 import { cn } from '@/lib / utils';
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface FeatureHighlightsProps {
   className?: string,
   style?: React.CSSProperties
 }
 
-<<<<<<< HEAD
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
   const highlightsData = [
     {
@@ -68,16 +63,12 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
         "Access to enterprise clients and high-value projects",
         "Professional development resources and community support"
       ]
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/home/FeatureHighlights.tsx
   const highlightsData = [
 
     {
-=======
   const highlightsData = []
     {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/FeatureHighlights.tsx
       title: 'For Talent Seekers',
       features: [;'
         'AI - powered talent matching based on your specific project requirements','
@@ -98,7 +89,6 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
         'Access to enterprise clients and high - value projects','
         'Professional development resources and community support',
       ],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
 :src_backup/components/home/FeatureHighlights.tsx
     {
@@ -113,17 +103,12 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       ]
     }
   ],
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/home/FeatureHighlights.tsx
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white mb-3">Tailored Solutions for Everyone</h2>
-=======
     {}
       title: "For Enterprise Clients",
       features: []
@@ -132,7 +117,6 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       <div className="container mx-auto px-4">"
         <div className="text-center mb-12">"
           <h2 className="text-3xl font-bold text-white mb-3">Tailored Solutions for Everyone</h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/FeatureHighlights.tsx
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed;
           </p>
@@ -142,11 +126,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
 '"`;
 );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {highlightsData.map((category, index) => (
 :src/components/home/FeatureHighlights.tsx
@@ -232,20 +212,12 @@ export function FeatureHighlights() { return null; }
                       <span className='text-zion-slate-light'>{feature}</span>
                     </li>
 :src/components/home/FeatureHighlights.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   ))}
                 </ul>;
               </CardContent>;
             </Card>;
           ))}
 :src_backup/components/home/FeatureHighlights.tsx
-<<<<<<< HEAD:src/components/home/FeatureHighlights.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/home/FeatureHighlights.tsx
         <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
           {highlights_data.map ((category, index) => (
   return ()"
@@ -475,7 +447,6 @@ pr-12325
                 {feature.description}
 :src_backup/components/home/FeatureHighlights.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>;
       </div>;
     </section>;
@@ -694,31 +665,15 @@ pr-12325
 '"`);
 
 :src_backup/components/home/FeatureHighlights.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
-<<<<<<< HEAD:src/components/home/FeatureHighlights.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/home/FeatureHighlights.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/home/FeatureHighlights.tsx
         </div>
       </div>
     </section>
   );
 }
 :src/components/home/FeatureHighlights.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/FeatureHighlights.tsx
-=======
   delay: 0 && 0.4;"
 }}>";"
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">;"
@@ -738,4 +693,3 @@ pr-12325
         </motion.div>;
     </section>)}]"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/home/FeatureHighlights.tsx

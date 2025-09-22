@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -135,8 +134,6 @@ this.results.overall.status = finalScore >= 80 ? 'excellent' :
 // Run the comprehensive app improver
 const improver = new ComprehensiveAppImprover();
 improver.run().catch(console.error);
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -210,4 +207,3 @@ class ComprehensiveAppImprover {
 const improver = new ComprehensiveAppImprover();
 improver.run().catch(console.error);
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

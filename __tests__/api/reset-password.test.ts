@@ -22,7 +22,6 @@ interface ErrorResponse {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import handler from '@/pages/api/auth/reset'
@@ -65,7 +64,6 @@ describe('/api/auth/reset token validation', () => {
     });
     // Cast to the specific NextApi types for the handler
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
       "method": 'POST' as RequestMethod,')
       "body": { newPassword: 'pass12345' ;}});
       method: 'POST' as RequestMethod;,
@@ -73,7 +71,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     });
     // Cast to the specific NextApi types for the handler
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     await handler(
       req as unknown as NextApiRequest,
       res as unknown as NextApiResponse;)
@@ -92,13 +89,11 @@ const { req, res } = createMocks({
       body: { token: 'invalid', newPassword: 'pass12345' },
     });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
       "body": { token: 'invalid';, "newPassword": 'pass12345' }});
       method: 'POST' as RequestMethod;,
       body: { token: 'invalid';, newPassword: 'pass12345' ;},
     });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     await handler(
       req as unknown as NextApiRequest,
       res as unknown as NextApiResponse
@@ -131,6 +126,3 @@ main
   // - (Potentially) supabase.auth.admin.updateUserById if Supabase auth password also needs update
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/main

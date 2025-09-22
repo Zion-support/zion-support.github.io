@@ -3,9 +3,6 @@ import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
 import { SkillsFilterProps } from "@/types/filters",
 // Common skills in AI and tech
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const POPULAR_SKILLS = [
 
 const POPULAR_SKILLS = [
@@ -43,7 +40,6 @@ export function SkillsFilter(): any ({;
   toggleSection,;
   isMobileFilterOpen,;
 }: SkillsFilterProps) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   "Machine Learning",
   "Deep Learning",
   "Python",
@@ -61,7 +57,6 @@ export function SkillsFilter(): any ({;
   "DevOps",
   "Security"
 ],
-<<<<<<< HEAD
 
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
   return (
@@ -77,7 +72,6 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
       <button
         onClick={toggleSection}
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         className="flex w-full items-center justify-between text-white font-medium"
       >
 
@@ -135,11 +129,9 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                 checked={selectedSkills && selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
 :src/components/talent/filters/SkillsFilter.tsx
-<<<<<<< HEAD
 
                 {skill}
               ">
-<<<<<<< HEAD
 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'
               />
               <label
@@ -148,8 +140,6 @@ className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[sta
               >
                 {skill}
 :src/components/talent/filters/SkillsFilter.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </label>
             </div>
           ))}
@@ -169,8 +159,6 @@ export /**
 function SkillsFilter() {
   return (
     <div className="mb - 6 border - b border - zion - blue - light pb - 6">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <button;
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium";
@@ -193,7 +181,6 @@ function SkillsFilter() {
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
               />;
               <label;
-<<<<<<< HEAD
                 htmlFor={`skill-${skill}`}
                 html_for={`skill-${skill}`}
                 className='ml - 2 text - sm text - zion - slate - light cursor - pointer';
@@ -208,7 +195,6 @@ function SkillsFilter() {
 }
         </div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {skill}
@@ -217,13 +203,11 @@ function SkillsFilter() {
           ))}
         </div>;
       )}
-<<<<<<< HEAD
     </div>;
   );
 }
 
 ;
-=======
       )};
 
     </div>;
@@ -232,13 +216,4 @@ function SkillsFilter() {
 }
 
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/talent/filters/SkillsFilter.tsx

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { StarIcon } from 'lucide-react';
 import Image from 'next/image', // Import next/image;
 import React, { useState } from 'react', // Import useState;
@@ -21,14 +20,12 @@ export function ListingScoreCard({ ;
   description, ;
   image, ;
   category, ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   tags,;
   author,;
   authorImage,;
   aiScore,;
   rating = 0,;
   reviewCount = 0,;
-<<<<<<< HEAD
 } ListingScoreCardProps) {;
   const [mainImageError, setMainImageError] = useState(false),;
   const [authorImageError, setAuthorImageError] = useState(false),;
@@ -63,13 +60,11 @@ sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw" // General sizes;
             aiScore > 0 && (;
               <div className="flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs">;
                 <span className="font-medium mr-1">AI Match:</span>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <span>{aiScore}%</span>;
               </div>;
             );
           )}
         </div>;
-<<<<<<< HEAD
                 <StarIcon ;
                   key={star}
                   className={cn(;"
@@ -82,12 +77,10 @@ sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw" // General sizes;
 ))}
             </div>;
             <span className="text-sm text-zion-slate-light ml-1">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ({reviewCount});
             </span>;
           </div>;
         )}
-<<<<<<< HEAD
                   src={authorImage}
                   alt={author}"
                   className="object-cover rounded-full";"
@@ -180,4 +173,3 @@ pr-12325
 }<Image </div>) ;
 }</div> </div>) ;
 }'"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

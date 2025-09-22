@@ -1,5 +1,4 @@
 
-=======
 import { Skill } from '@/types/resume',;
 ;
 interface SkillsSectionProps {;
@@ -28,10 +27,8 @@ export function SkillsSection({ skills } SkillsSectionProps) {;
             <h3 className="text-sm font-medium">{category}</h3>;
             <p className="text-sm">;
               {skills.map(skill => skill.name).join(', ')}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </p>;
           </div>;
         ))}
       </div>;
     </div>;
-<<<<<<< HEAD

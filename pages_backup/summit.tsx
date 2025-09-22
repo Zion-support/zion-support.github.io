@@ -1,22 +1,14 @@
-<<<<<<< HEAD:pages/summit.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 const partners: Partner[] = [ {
   name: 'Gov Partner'
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import Head from 'next/head';
 import React from 'react';
 type Speaker = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
-=======
 import Head from 'next/head';
 import React from 'react';
 type Speaker = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 {
   name: 'Venture Partner'
 }
@@ -29,7 +21,6 @@ setSubmitting (true);
 setResult (null);
 try {
   const res = await fetch ('/api/summit/register', {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   method: 'POST';
 
 headers: {;
@@ -38,10 +29,7 @@ headers: {;
 body: JSON && JSON.stringify ({;
   ...form, source: 'summit-page' ;
 }) ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
 });
 const data = await res && res.json ();
 if (!res && res.ok) throw new Error (data?.error || 'Failed');
@@ -49,7 +37,6 @@ setResult ({;
   ok: true ;
 });
 :pages_backup/summit.tsx
-<<<<<<< HEAD
 setForm ({;
   name: '', email: '', role: '', country: '' ;
 }) ;
@@ -63,7 +50,6 @@ setForm ({;
 export default function SummitPage() {;
   const [platform, setPlatform] = React && React.useState<;
     'youtube' | 'twitch' | 'twitter';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   >('youtube');
   const [embedId, setEmbedId] = React && React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =;
@@ -73,16 +59,10 @@ const [form, setForm] = React.useState({
     email: ''
     role: ''
     country: ''
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     name: '',
     email: '',
     role: '',
     country: '',
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 export default function SummitPage() { return null; }
   const { isPast, days, hours, minutes, seconds } =;
@@ -93,16 +73,12 @@ export default function SummitPage() { return null; }
     role: '','
     country: '',
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
   });
   const [submitting, setSubmitting] = React && React.useState(false);
   const [result, setResult] = React && React.useState<{;
     ok?: boolean;
     error?: string;
   } | null>(null);
-<<<<<<< HEAD:pages/summit.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name'
@@ -124,10 +100,7 @@ export default function SummitPage() { return null; }
       bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.'
       twitter: 'https://twitter.com'
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
   ];
 
   const partners: Partner[] = [;'
@@ -157,12 +130,9 @@ const onSubmit = async (e: React.FormEvent) => {
   }
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
-=======
 '
 import Head from 'next/head';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
 import React from 'react';
 type Speaker = {}
   name: string,
@@ -207,19 +177,14 @@ export default function SummitPage() { return null; }
   const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO);'
   const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
 :pages_backup/summit.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
       title: 'Founder, Zion',
-<<<<<<< HEAD
     avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
-<<<<<<< HEAD
 
 const partners: Partner[] = [ {
   name: 'Gov Partner'
@@ -291,13 +256,10 @@ function SummitPage() {
   const [platform, set_platform] = React.useState<;
     'youtube' | 'twitch' | 'twitter';
   >('youtube');
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [embed_id, setEmbedId] = React.useState < string>('dQw4w9WgXcQ');
   const { is_past, days, hours, minutes, seconds } =;
     use_countdown (EVENT_START_ISO);
   const [form, set_form] = React.useState ({
-<<<<<<< HEAD
-<<<<<<< HEAD
 const partners: Partner[] = [ {
   name: 'Gov Partner'
 }
@@ -340,13 +302,11 @@ export default function SummitPage() {
   const [platform, setPlatform] = React.useState<
     'youtube' | 'twitch' | 'twitter'
   >('youtube');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =
     useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     name: '',
     email: '',
     role: '',
@@ -371,7 +331,6 @@ export default function SummitPage() {
     {
       name: 'Alex Rivera',
       title: 'Head of Protocol Engineering',
-=======
 '
   >('youtube');'
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
@@ -384,7 +343,6 @@ export default function SummitPage() {
     role: '','
     country: '',
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
     setResult(null),;
     try {;'
       const res = await fetch('/api/summit/register', {;'
@@ -413,7 +371,6 @@ avatarUrl: '/favicon.svg',
       avatarUrl: '/favicon.svg',
 bio: 'Leading the architecture of ZionDAO and trust rails.',
     },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       name: 'Jordan Lee',
       title: 'Zion Alumni | AI Fellow',
@@ -435,7 +392,6 @@ twitter: 'https://twitter.com'}],
 body: JSON.stringify({ ...form, source: 'summit-page' })}),
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.error || 'Failed'),
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       setResult({ ok: true }),
       setForm({ name: '', email: '', role: '', country: '' })
     } catch (err: any) {'
@@ -445,15 +401,12 @@ body: JSON.stringify({ ...form, source: 'summit-page' })}),
 :pages_backup/summit.tsx
 }
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
       return (
         <iframe;
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
 :pages_backup/summit.tsx
-<<<<<<< HEAD
     } catch (err: any) {
       setResult({ error: err?.message |'Unexpected error' });
     } finally {
@@ -482,8 +435,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' })}),
           name='description'
           content='Zion Global Summit: AI, Talent, Trust — Globalized'
         />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </Head>
       <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
         <div className='max-w-4xl'>
@@ -505,16 +456,11 @@ body: JSON.stringify({ ...form, source: 'summit-page' })}),
 
   return (
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <a
               href='#register'
-=======
 
             <a'
               href='#register''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
               className='inline-flex items-center px-4 py-2 rounded-md bg-neon-blue text-black font-semibold shadow-neon-blue'>;
               Register;
             </a>;
@@ -525,9 +471,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' })}),
             </a>;
             <a'
               href='#agenda'
-<<<<<<< HEAD:pages/summit.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     <>
       <Head>
         <title>Zion Global Summit 2025 — AI, Talent, Trust</title>
@@ -550,9 +493,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' })}),
           <ol className="space-y-3 list-decimal list-inside">
             <li>Opening Keynote — Launching Zion Protocol</li>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
             >
               Agenda
@@ -569,30 +509,18 @@ body: JSON.stringify({ ...form, source: 'summit-page' })}),
           <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
           <ol className='space-y-3 list-decimal list-inside'>
             <li>Opening Keynote — Launching Zion Protocol</li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
             <li>Featured Speaker — Founder</li>
           </ol>
         </section>
-<<<<<<< HEAD:pages/summit.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <h2 className="text-2xl font-bold mb-4">Event Info</h2>
           <ul className="space-y-2">
             <li><span className="font-medium">Date:</span> Nov 12, 2025</li>
             <li><span className="font-medium">Time:</span> 16:00 UTC</li>
             <li><span className="font-medium">Location:</span> Hybrid (Virtual + In‑Person)</li>
-=======
 
 "
           <h2 className="text-2xl font-bold mb-4">Event Info</h2>"
@@ -600,14 +528,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <li><span className="font-medium">Date:</span> Nov 12, 2025</li>"
             <li><span className="font-medium">Time:</span> 16:00 UTC</li>"
             <li><span className="font-medium">Location:</span> Hybrid (Virtual + In‑Person)</li>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
             <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
           </ul>
 
 </section>
       </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Agenda;
             </a>          </div>;
         </div>;
@@ -620,8 +545,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/summit.tsx
 <section
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
           <h2 className='text-2xl font-bold mb-4'>Event Info</h2>
           <ul className='space-y-2'>
@@ -645,17 +568,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
 
 <section
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         id='speakers'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
         <h2 className='text-2xl font-bold mb-6'>Speakers</h2>;
-=======
 
       <section'
         id='speakers''
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;'
         <h2 className='text-2xl font-bold mb-6'>Speakers</h2>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>;
           {speakers && speakers.map(s => (;
             <div;
@@ -667,7 +587,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   alt={s && s.name}'
                   className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800'
 :pages_backup/summit.tsx
-<<<<<<< HEAD
       <section id="speakers" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-6">Speakers</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -676,25 +595,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="flex items-center gap-4">
                 <img src={s.avatarUrl} alt={s.name} className="w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800" />
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div>
                   <div className="font-semibold">{s.name}</div>
                   <div className="text-sm opacity-70">{s.title}</div>
                 </div>
               </div>
-<<<<<<< HEAD
               <p className="mt-3 text-sm">{s.bio}</p>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           ))}
 
         </div>;
       </section>;
 
 :pages_backup/summit.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section
               <p className='mt-3 text-sm'>{s.bio}</p>
               <div className='mt-3 flex gap-3 text-sm'>
@@ -725,23 +637,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
 
 <section
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
         <div className='flex items-center justify-between'>;
-=======
 
       <section'
         id='partners''
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;'
         <div className='flex items-center justify-between'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
           <h2 className='text-2xl font-bold'>Partners</h2>;
           <a'
             href='#register'
 :pages_backup/summit.tsx
-<<<<<<< HEAD
             className='px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800'>;
             Become a Sponsor;
           </a>;
@@ -756,23 +663,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ) : (;
                 p && p.name;
               )}            </div>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
-=======
 
         </div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
           {partners.map((p) => ("
             <div key={p.name} className="h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70">"
               {p.logoUrl ? <img src={p.logoUrl} alt={p.name} className="max-h-12" /> : p.name}
             </div>
 :pages_backup/summit.tsx
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           ))}
 
         </div>;
@@ -786,22 +685,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='flex flex-wrap items-center gap-2'>;
 
 :pages_backup/summit.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
           <div className="flex flex-wrap items-center gap-2">
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
 
 "
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">"
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">"
           <h2 className="text-2xl font-bold">Livestream</h2>"
           <div className="flex flex-wrap items-center gap-2">
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
 
             <select'
               aria-label='Platform''
@@ -809,15 +703,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               value={platform}
               onChange={e => setPlatform(e && e.target.value as any)}
 :pages_backup/summit.tsx
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section;
         id='speakers';
-=======
 
       <section;'
         id='speakers';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
         className='mt - 8 p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black';
       >;'
         <h2 className='text - 2xl font - bold mb - 6'>Speakers</h2>;'
@@ -879,8 +769,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div;
 :pages_backup/summit.tsx
               key={p.name}
-<<<<<<< HEAD:pages/summit.tsx
-<<<<<<< HEAD
               className='h - 16 rounded - md border border - dashed border - gray - 300 dark:border - gray - 700 flex items - center justify - center text - sm opacity - 70';
             >;
               {p.logo_url ? ('
@@ -900,7 +788,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
 value={platform}
               on_change={e => set_platform (e.target.value as any)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className='h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70'
             >
               {p.logoUrl ? (
@@ -926,7 +813,6 @@ value={platform}
 origin/cursor/automate-test-improve-and-merge-code-2533
               value={platform}
               on_change={e => set_platform (e.target.value as any)}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >;
               <option value='youtube'>YouTube</option>;
               <option value='twitch'>Twitch</option>;
@@ -945,7 +831,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         id='register'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
         <h2 className='text-2xl font-bold mb-4'>Register</h2>;
-=======
             >;'
               <option value='youtube'>YouTube</option>;'
               <option value='twitch'>Twitch</option>;'
@@ -964,20 +849,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         id='register''
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;'
         <h2 className='text-2xl font-bold mb-4'>Register</h2>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
         <form onSubmit={onSubmit} className='grid md:grid-cols-2 gap-4'>;
           <div>;'
             <label className='block text-sm mb-1'>Name</label>;
 :pages_backup/summit.tsx
-<<<<<<< HEAD
 
 :pages_backup/summit.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div>
             <label className="block text-sm mb-1">Name</label>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <input
               required
               className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
@@ -1026,16 +905,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </span>;
             )}
 :pages_backup/summit.tsx
-<<<<<<< HEAD
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
-=======
 "
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">"
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">"
           <h2 className="text-2xl font-bold">Livestream</h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
           <div className="flex flex-wrap items-center gap-2">
             <select"
               aria-label="Platform""
@@ -1069,13 +945,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <h2 className="text-2xl font-bold mb-4">Register</h2>"
         <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4">
 :pages_backup/summit.tsx
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div>
-=======
           <div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
             <label className="block text-sm mb-1">Name</label>
             <input;
               required"
@@ -1121,8 +992,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {submitting ? 'Submitting...' : 'Submit Registration'}
 :pages_backup/summit.tsx
             </button>
-<<<<<<< HEAD:pages/summit.tsx
-<<<<<<< HEAD
             {result?.ok && <span className="text-green-600">Thank you! You are registered.</span>}
             {result?.error && <span className="text-red-600">{result.error}</span>}
             {result?.ok && (
@@ -1133,13 +1002,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {result?.error && (
               <span className='text-red-600'>{result.error}</span>
             )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </form>
       </section>
 
-<<<<<<< HEAD
 }
 }
 }"
@@ -1150,7 +1016,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               value={embed_id}
               on_change={e => setEmbedId (e.target.value)}
             />;
@@ -1233,8 +1098,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </p>;
       </section>;
 :pages_backup/summit.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -1404,13 +1267,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </form>
       </section>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
         <h2 className='text-xl font-semibold'>
           AI Session Summaries (Optional)
@@ -1421,8 +1277,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

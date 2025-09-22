@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { BillingHeader } from "./BillingHeader",;
 import { CurrentSubscription } from "./CurrentSubscription",;
@@ -19,10 +18,8 @@ export function BillingDashboard() {;
       ;
       <Tabs defaultValue="subscription" className="mt-8">;
         <TabsList className="grid w-full grid-cols-4 mb-8">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <TabsTrigger value="subscription">Subscription</TabsTrigger>;
           <TabsTrigger value="payment">Payment Methods</TabsTrigger>;
           <TabsTrigger value="invoices">Invoice History</TabsTrigger>;
           <TabsTrigger value="usage">Usage Overview</TabsTrigger>;
         </TabsList>;
-<<<<<<< HEAD

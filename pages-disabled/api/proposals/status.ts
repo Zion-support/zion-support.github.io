@@ -63,16 +63,13 @@ function handler() {
 }
 
 ;
->>>>>>> pr-12243
     const { id, status } = req.body || {},
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',;'
 import { updateProposalMeta } from '../../../utils/data/proposals',;
 export default function handler() { return null; }
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   try {}
     const { id, status } = req.body || {},'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (!id || !status) return res.status(400).json({ error: 'id and status are required' }),
     const updated = updateProposalMeta(id, (m) => ({ ...m, status })),
     res.status(200).json({ meta: updated })
@@ -89,5 +86,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ meta: updated })
   } catch (error: any) {
     res.status(500).json({ error: error?.message |'Failed to update status' })
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243

@@ -56,7 +56,6 @@ description: 'Bank-level security with comprehensive compliance features',
   },
   {
     icon: Users,
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/finance.tsx
   },
   {
     icon: TrendingUp,
@@ -351,7 +350,6 @@ const benefits = [;
   'Reduced operational costs',;
   'Faster transaction processing';
 ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     title: 'Customer Portal',
     description: 'Secure customer-facing applications and services'
   },
@@ -442,7 +440,6 @@ const benefits = [
   'Faster transaction processing'
 ];
 export default function FinanceSolutions() {
-<<<<<<< HEAD
     title: 'User Management',
     description: 'Secure user management with role-based access control',
     benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs']
@@ -504,7 +501,6 @@ return (
                 </button>
               </div>
             </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>
         </section>
 
@@ -521,9 +517,7 @@ return (
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our finance solutions are built with security and compliance in mind.
 </p>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/finance.tsx
               </p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
@@ -534,7 +528,6 @@ return (
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -554,7 +547,6 @@ return (
                     {feature.description}
                   </p>
                 </div>
-<<<<<<< HEAD
         <section className="bg-gradient-to-r from-blue-600 to-green-700 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center">;
@@ -736,19 +728,16 @@ enhance security, improve efficiency, and ensure regulatory compliance.,;
                   </div>;
                 </motion && motion.div>;
               ))}
-=======
                       </div>
                     ))}
                   </div>
                 </motion.div>
               ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -781,7 +770,6 @@ enhance security, improve efficiency, and ensure regulatory compliance.,;
 </div>
         </section>
       </div>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/finance.tsx
     </Layout>
     </Layout>
     </>
@@ -793,4 +781,3 @@ enhance security, improve efficiency, and ensure regulatory compliance.,;
     </Layout>
     </Layout>
     </>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

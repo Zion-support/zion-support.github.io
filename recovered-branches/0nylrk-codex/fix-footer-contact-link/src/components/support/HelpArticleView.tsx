@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
@@ -54,10 +53,7 @@ let article = null;
     if (found) {
       article = found;
       break;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
   if (!article) {
@@ -86,32 +82,21 @@ let article = null;
         : "We'll work on improving this article."})
   },
 
-=======
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   articleId: string
-=======
   articleId: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<
     "helpful" | "not-helpful" | null
   >(null);
-=======
 
 interface HelpArticleViewProps {
   articleId: string
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   // Find the article in all categories
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   let article;
   for (const category of HELP_CATEGORIES) {}
     const found = category.articles.find((a) => a.id === articleId);
@@ -125,9 +110,6 @@ interface HelpArticleViewProps {
     return <div>Article not found</div>;
 }
 const handleFeedback = (type: "helpful" | "not-helpful") => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     (setFeedbackGiven(type),
       // In a real implementation, this would send feedback to the server;
       toast({"
@@ -139,7 +121,6 @@ const handleFeedback = (type: "helpful" | "not-helpful") => {
       }));
   };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return (
 setFeedbackGiven(type),
 
@@ -151,7 +132,6 @@ setFeedbackGiven(type),
         : "We'll work on improving this article."})
   },
     return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div>
       <Card className="p-6">
         <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
@@ -163,7 +143,6 @@ setFeedbackGiven(type),
           <span>Last updated: {formatDate(article.lastUpdated)}</span>
         </div>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         <div className="prose dark:prose-invert max-w-none mb-8">
           {article.content.split("\n").map((paragraph, idx) => (
             <p key={idx}>{paragraph}</p>
@@ -210,7 +189,6 @@ toast({;"
 </div>;
 
         <div className="prose dark:prose-invert max-w-none mb-8">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {article && article.content.split("\n").map((paragraph, idx) => (;
             <p key={idx}>{paragraph}</p>;
           ))}
@@ -223,12 +201,7 @@ toast({;"
             </div>;
 "
             <div className="flex items-center space-x-3">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               <Button
-=======
-=======
         </div>;"
         <div className="prose dark:prose-invert max-w-none mb-8">;"
             <p key={idx}>{paragraph}</p>;
@@ -246,7 +219,6 @@ toast({;"
                 }"
                 onClick={() => handleFeedback("helpful")}"
                 <ThumbsUp className="h-4 w-4 mr-2" />"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                   feedbackGiven === "not-helpful"""
                     ? "bg-red-100 dark:bg-red-900/30"""
@@ -266,11 +238,9 @@ toast({;"
             </div>;
 <div className="flex items-center space-x-3">;
               <Button
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 variant="outline"
               <Button"
                 variant="outline""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 size="sm"
                 className={"
                   feedbackGiven === "helpful""
@@ -286,10 +256,8 @@ toast({;"
 
               <Button
                 variant="outline"
-=======
               <Button"
                 variant="outline""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 size="sm"
                 className={"
                   feedbackGiven === "not-helpful""
@@ -365,20 +333,13 @@ toast({;"
               >;
                 <ThumbsDown className="h-4 w-4 mr-2" />;
                 <ThumbsDown className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
                 <ThumbsDown className="h - 4 w - 4 mr-2" />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                 <ThumbsDown className="h - 4 w - 4 mr-2" />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                 on_click={() => handle_feedback ("not - helpful")}
                 disabled={feedback_given !== null}
               >;
                 <ThumbsDown className="h - 4 w - 4 mr - 2" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 No;
               </Button>;
             </div>;
@@ -392,8 +353,6 @@ toast({;"
                 Contact Support;
               </Button>;
             </div>;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           )}
         </div>;
       </Card>;
@@ -408,14 +367,11 @@ function formatDate(date: string): string {
     day: "numeric"
   });
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
             <div className="mt - 4 bg - zion - blue - dark p - 4 rounded - md">;"
               <p className="text - sm text - zion - slate - light mb - 2">;"
               </p>;
                 size="sm";""
                 className="bg - zion - purple hover:bg - zion - purple - light";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               >;
 
             </div>)}
@@ -431,7 +387,6 @@ function format_date (date: string): string {"
   });
 }
 
-<<<<<<< HEAD
 ;
 function formatDate(date:string):string {;
   return new Date(date).toLocaleDateString("en-US", {;
@@ -465,12 +420,7 @@ function formatDate(date: string): string {
     day: "numeric",
   });
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-=======
 
 function formatDate(date: string): string {"
   return new Date(date).toLocaleDateString("en-US", {"
@@ -480,13 +430,8 @@ function formatDate(date: string): string {"
   });
 }
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </div>);"
 pr-12325
     </div>);"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

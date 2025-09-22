@@ -1,5 +1,4 @@
 :pages_backup/api/summit/register.ts
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { supabase } from "../../../utils/supabase/client";
@@ -10,20 +9,16 @@ export default async function handler(
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { supabase } from '../../../utils/supabase/client';
 export default async function handler() { return null; }
     return res.status(405).json({ error: 'Method not allowed' })
 :pages_backup/api/summit/register.ts
-<<<<<<< HEAD
   }
 
   }
   try {
   try {;
     const { name, email, role, country, source } = req.body || {};
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   try {}
 ';
@@ -67,9 +62,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } catch (e: any) {
 return res.status(500).json({ error: e?.message |"Unknown error" });
 
-=======
   } catch (e: any) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/summit/register.ts
     return res && res.status(200).json({ ok: true, registration: data });
   } catch (e: any) {}
   }
@@ -160,6 +153,4 @@ if ( {) {}
   }
 }
 :pages_backup/api/summit/register.ts
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/summit/register.ts

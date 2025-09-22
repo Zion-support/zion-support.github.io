@@ -64,4 +64,3 @@ analysis.reasons.join ();
 undefined //IP address would be added in a real implementation);
 //If this is a 'dangerous' flag, automatically hide content //This would be implemented in a real system with appropriate flags // Code to hide content would go here
 }
-<<<<<<< HEAD

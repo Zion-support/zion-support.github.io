@@ -6,8 +6,6 @@ conflictType = 'incoming';
         continue;
       }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -22,39 +20,27 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
 
     // Check if file has merge conflicts
-<<<<<<< HEAD
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('
-=======
-=======
-=======
 // Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
   try {
   // TODO: Implement
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     // Check if file has merge conflicts;
     if (!content.includes(
       return false;
     })
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         conflictType = 'incoming';
         continue;
       }
 
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         inConflict = false;
         conflictType = '';
         continue;
       }
 
       if (!inConflict) {
-=======
     // Split by merge conflict markers;
     const lines = content.split('\n');
     const resolvedLines = [];
@@ -68,7 +54,6 @@ function resolveMergeConflicts(filePath) {
 conflictType = 'incoming';
         continue;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         resolvedLines.push(line);
       } else if (conflictType === 'head') {
         // Keep HEAD version (first part)
@@ -142,24 +127,13 @@ const stat = fs.statSync(fullPath);
         scanDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
 } catch (error) {
   console.error('❌ Error during merge conflict resolution:', error.message);
   process.exit(1);
 }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
-=======
       const stat = fs.statSync(fullPath);"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   scanDirectory(dir);
   return conflictedFiles;
@@ -174,5 +148,3 @@ const stat = fs.statSync(fullPath);
   console.log(`\n🎉 Successfully resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
   // Try to build after resolving conflicts;
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -60,7 +60,6 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,;
 ;
   // Form submission handler;
   const onSubmit = async (data:UpdatePasswordFormValues) => {;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (!accessToken) {;
       setError("No access token found. Please request a new password reset link."),;
       return;
@@ -89,7 +88,6 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,;
 
                 </div>;
 )}
-<<<<<<< HEAD
               {success ? (;
                 <div className="text-center py-8">;
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;
@@ -110,13 +108,11 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,;
                     <FormField;
 control={form.control}
                       name="password";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       render={({ field }) => (;
 
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">New Password;"
                           <FormControl>;
-<<<<<<< HEAD
                               disabled={isLoading}
                               {...field}
                             />;
@@ -206,5 +202,4 @@ flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-c
 }/> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Confirm Password</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) 
 }/> <Button </Button> <div className=" text-center" > <Button > Back to login </Button> </div> </form> </Form>) 
 }</div> </div> </div> Set a strong password to secure your account and continue your journey in the Zion marketplace. </p> </div> </div> </div> </div> </div> <Footer /> </>) 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }

@@ -1,5 +1,4 @@
 
-=======
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -51,12 +50,10 @@ export function UpcomingInterviewsCard() {;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
             <Video className="h-5 w-5 mr-2 text-zion-purple" />;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             Upcoming Interviews;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
 
             Upcoming Interviews;
           </CardTitle>;

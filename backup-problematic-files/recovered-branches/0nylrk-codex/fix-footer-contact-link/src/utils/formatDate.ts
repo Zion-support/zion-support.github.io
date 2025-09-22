@@ -45,7 +45,6 @@ export const formatDate = (date:Date | string | number, format:string = 'medium'
         return dateObj.toLocaleDateString();
       }
     default:return dateObj.toLocaleDateString();
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 };
 ;
@@ -90,4 +89,3 @@ export const timeAgo = (date:Date | string | number):string => {;
   case 'short': return dateObj.toLocaleDateString ();
 case 'medium':
 }
-<<<<<<< HEAD

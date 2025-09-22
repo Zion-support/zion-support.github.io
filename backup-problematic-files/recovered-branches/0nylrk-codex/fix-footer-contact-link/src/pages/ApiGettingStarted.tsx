@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
 import { CodeBlock } from "@/components/developers/CodeBlock",;
@@ -24,14 +23,12 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {;
       <div className="max-w-3xl prose prose-invert">;
         <h1>Getting Started</h1>;
         ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <h2>Overview</h2>;
         <p>;
           The Zion AI Marketplace API provides programmatic access to jobs, talent profiles, ;
           quotes, and projects. Our RESTful API lets you integrate Zion's features into your ;
           own applications and workflows.;
         </p>;
-<<<<<<< HEAD
 
         <h2>Authentication</h2>;
         <p>;

@@ -217,7 +217,6 @@ async function main() {
 }
 
 main().catch(console.error);
-<<<<<<< HEAD
   // List open PRs;
   const openPRs = listOpenPRs();
 
@@ -259,4 +258,3 @@ console.log("✅ No open PRs found");
 
 main().catch(console.error);
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

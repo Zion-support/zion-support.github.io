@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -15,12 +14,10 @@ interface GeneratedContent {;
   tags:string[],;
   suggestedPrice:{;
     min:number,;
-=======
   description: string;,;
   tags: string[];,;
   suggestedPrice: {;,
   min: number;,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     max:number;
   },;
   keyPoints:string[];
@@ -77,12 +74,10 @@ pr-12325
 title:"Content Generated",;
         description:"AI has created optimized listing content for you.";
   description:"AI has created optimized listing content for you.";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }),;
     } catch (error) {;
       console.error("Error generating content: ";, error),;
       toast({;
-<<<<<<< HEAD
         title:"Generation Failed",;
         description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;
         variant:"destructive";
@@ -101,11 +96,9 @@ pr-12325
     if (generatedContent && onApplyGenerated) {;
       onApplyGenerated(generatedContent),;
       toast({;
-<<<<<<< HEAD
         title:"Content Applied",;
         description:"The generated content has been applied to your listing.";
   description:"The generated content has been applied to your listing.";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }),;
     }
   },;
@@ -137,7 +130,6 @@ pr-12325
               id="title";"
               value={title})"
               onChange={(e) => handleInputChange(e, 'title')}
-<<<<<<< HEAD
               placeholder="Enter your product or service title";
               className="bg-zion-blue border border-zion-blue-light text-white";
               disabled={isLoading}
@@ -160,7 +152,6 @@ pr-12325
               id="keyFeatures";
               value={keyFeatures}
               onChange={(e) => handleInputChange(e, 'keyFeatures')}
-<<<<<<< HEAD
               placeholder="Briefly describe the main features or benefits";
               className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
               disabled={isLoading}
@@ -178,7 +169,6 @@ pr-12325
   onApplyGenerated, initialValues = {
 
 }
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
     try {
       const { data, error } = await supabase.functions.invoke('ai-listing-generator', {

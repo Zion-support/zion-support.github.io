@@ -3,8 +3,6 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ComprehensiveAutomationRunner {
   // TODO: Implement
 }
@@ -28,10 +26,6 @@ async runScript(scriptPath, scriptName) {
       this.log(`❌ ${scriptName} failed: ${error.message}`, 'ERROR');
       this.results.push({ script: scriptName, success: false, error: error.message });
       return { success: false, error: error.message };
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 '
 console.log('🚀 Starting Comprehensive Automation Runner...);
@@ -66,20 +60,13 @@ main
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   }
 
   async runAllAutomations() {
-<<<<<<< HEAD
     this.log('🚀 Starting Comprehensive Automation Runner...');
-=======
 this.log('🎯 Starting Comprehensive Automation Runner');
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const scripts = [
       { path: automation/master-orchestrator.cjs, name: Master Orchestrator},
       { path: enhanced-automation-suite.cjs, name: Enhanced Automation Suite},
@@ -121,9 +108,7 @@ this.log('🎯 Starting Comprehensive Automation Runner');
 const runner = new ComprehensiveAutomationRunner();
 runner.run().catch(console.error);
 
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const automations = [
 
     for (const automation of automations) {
@@ -172,30 +157,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 if (require.main === module) {
 
-<<<<<<< HEAD
 module.exports = ComprehensiveAutomationRunner;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
 module.exports = ComprehensiveAutomationRunner;
 main
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
 module.exports = ComprehensiveAutomationRunner;
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 module.exports = ComprehensiveAutomationRunner;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

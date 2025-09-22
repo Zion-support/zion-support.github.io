@@ -2,7 +2,6 @@
 #!/usr/bin/env node
 
 console.log('🔧 Ultimate Syntax Fix');
-console.log('======================');
 
 #!/usr/bin/env node
 

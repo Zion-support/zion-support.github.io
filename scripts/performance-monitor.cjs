@@ -253,7 +253,6 @@ setTimeout(() => {
 ursor/automate-test-improve-and-merge-code-59d5
 
 console.log('⚡ Performance Monitor');
-console.log('=====================');
 
 #!/usr/bin/env node
 

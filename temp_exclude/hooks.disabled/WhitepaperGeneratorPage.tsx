@@ -354,10 +354,8 @@ const WhitepaperGeneratorPage: React.FC = () => {;'
 
     try {
       const whitepaperPayload = {
-=======
     try {}
       const whitepaperPayload = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/WhitepaperGeneratorPage.tsx
         tokenName,
         tokenSupply,
         sections,
@@ -597,9 +595,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;'
             </div>
         </div>
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/WhitepaperGeneratorPage.tsx
         <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
           {/* ... (Input fields remain the same) ... */}
            <div>"
@@ -826,10 +822,8 @@ const WhitepaperGeneratorPage: React.FC = () => {;'
         {sections.length > 0 && (
 
           <div className="mt-8 pt-6 border-t">
-=======
 "
           <div className="mt-8 pt-6 border-t">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/WhitepaperGeneratorPage.tsx
             <h2 className="text-xl font-bold mb-4 text-center">Edit Generated Sections</h2>
             {sections.map((section) => (
 
@@ -865,7 +859,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;'
 }
 :temp_exclude/hooks.disabled/WhitepaperGeneratorPage.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
         <WhitepaperPreviewPanel;
             sections={sections}

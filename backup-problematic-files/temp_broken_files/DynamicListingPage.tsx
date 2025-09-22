@@ -7,7 +7,6 @@
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
 
-=======
   useEffect_(() => {
     const listingsWithPrice = allListings.filter(l => l.price !== null);
     if (listingsWithPrice.length > 0) {
@@ -129,7 +128,6 @@ defaultValue={_[priceRange.min, priceRange.max]}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
                     className="mb-4";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   />;
                   <div className="flex justify-between text-sm text-zion-slate-light">;
                     <span>${currentPriceFilter[0].toLocaleString()}</span>;
@@ -137,7 +135,6 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
 
               <div className="mb-6">;
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">;

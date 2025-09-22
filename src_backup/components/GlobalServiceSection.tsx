@@ -1,13 +1,9 @@
 :src/components/GlobalServiceSection.tsx
-<<<<<<< HEAD
   Truck,;
 } from 'lucide-react';
 import { Button } from './ui/button';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",
-<<<<<<< HEAD
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
 import { Button } from "./ui/button",
 
@@ -26,8 +22,6 @@ import {
 } from 'lucide-react'
 import { Button } from './ui/button'
 :src/components/GlobalServiceSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const services = [
   {
     title: "Servers",
@@ -54,7 +48,6 @@ const services = [
 title: "Equipment Rentals",
     description: "Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10" />}],
-<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
@@ -84,7 +77,6 @@ const services = [
     title: "Equipment Rentals",
     description: "Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10" />}],
-=======
 
 export function GlobalServiceSection() {;
     title: 'Equipment Rentals'
@@ -125,10 +117,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
 :src/components/GlobalServiceSection.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function GlobalServiceSection() {
   return (
     <section className="py-20 bg-zion-blue" id="global-services">
@@ -140,16 +129,11 @@ export function GlobalServiceSection() {
           </p>
 :src/components/GlobalServiceSection.tsx
 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
 :src/components/GlobalServiceSection.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {services.map((service, index) => (
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">
               <div className="text-zion-cyan mb-4">
@@ -159,15 +143,12 @@ export function GlobalServiceSection() {
               <p className="text-zion-slate-light mb-4">{service.description}</p>
 
 :src/components/GlobalServiceSection.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>
           ))}
         </div>
 
         <div className="flex justify-center mt-12">
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
 <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>
@@ -176,10 +157,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>
         </div>
 :src/components/GlobalServiceSection.tsx
-<<<<<<< HEAD
       </div>
     </section>
-<<<<<<< HEAD
   )
         </div>;
 
@@ -208,7 +187,6 @@ import {
   Truck,
 } from 'lucide-react';
 import { Button } from './ui / button';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react';
 import { Button } from "./ui/button",;
@@ -336,35 +314,22 @@ export function GlobalServiceSection() {;
         <div className='flex justify - center mt - 12'>;
           <Button className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8'>        <div className="flex justify - center mt - 12">;
           <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8">;
-<<<<<<< HEAD:src/components/GlobalServiceSection.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
               <p className="text-zion-slate-light mb-4">{service.description}</p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Get Your Free Commercial Proposal;
           </Button>;
         </div>;
       </div>;
 :src/components/GlobalServiceSection.tsx
-<<<<<<< HEAD
     </section>;
   );
 }
 ;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   );
 }
@@ -375,4 +340,3 @@ export function GlobalServiceSection() {;
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/GlobalServiceSection.tsx

@@ -1,6 +1,4 @@
 :src_backup/components/search/SearchResultsPage.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect, useMemo } from 'react',;
 import { useRouter } from 'next/router',;
 import { Search, Filter, X, SortAsc, SortDesc, GridIcon, List, Loader2 } from 'lucide-react';
@@ -68,14 +66,10 @@ class ErrorBoundary extends React.Component {
   }
 :src_backup/components/search/SearchResultsPage.tsx
 }
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/SearchResultsPage.tsx
 import React, { useState, useEffect, useMemo } from 'react';
-=======
 }'
 import React, { useState, useEffect, useMemo } from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/SearchResultsPage.tsx
 import { useRouter } from 'next/router';
 import {;
   Search,;
@@ -178,19 +172,16 @@ interface SearchResponse {;
   limit: number;
   query: string;
 :src/components/search/SearchResultsPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   hasMore: boolean;
 
     return <span className={className}>{text}</span>;
   }
 
 :src_backup/components/search/SearchResultsPage.tsx
-<<<<<<< HEAD
   const parts = text.split(new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')),
     new RegExp(`(${searchTerm && searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
   );
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <span className={className}>
       {parts.map((part, index) => 
@@ -275,7 +266,6 @@ const SearchResultCard: React.FC<{;
                 <span className='text - sm text - muted - foreground'>/hr</span>)}
 :src_backup/components/search/SearchResultsPage.tsx
             </div>)}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="text-right">
               <span className="font-bold text-primary">
                 {result.currency === 'USD' ? '$' : ''}{result.price}
@@ -284,9 +274,7 @@ const SearchResultCard: React.FC<{;
             </div>
           )}
         </div>
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/SearchResultsPage.tsx
         <p className="text-muted-foreground mb-3 line-clamp-2">
           <HighlightText text={result.description} searchTerm={searchTerm} />
         </p>
@@ -334,11 +322,9 @@ const SearchResultCard: React.FC<{;
           {result.rating && (
             <div className="flex items-center gap-1">
               <span className="text-yellow-500">★</span>
-=======
           {result.rating && ("
             <div className="flex items-center gap-1">"
               <span className="text-yellow-500">★</span>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/SearchResultsPage.tsx
               <span className="text-sm">{result.rating.toFixed(1)}</span>
             </div>
           )}
@@ -347,7 +333,6 @@ const SearchResultCard: React.FC<{;
     </div>;
   );
 :src/components/search/SearchResultsPage.tsx
-<<<<<<< HEAD
 };
 
 // Filter Sidebar Component;
@@ -398,7 +383,6 @@ const FilterSidebar: React.FC<{;
     })
   },
 :src/components/search/SearchResultsPage.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <div className="space-y-6">
@@ -425,11 +409,7 @@ const FilterSidebar: React.FC<{;
       <Separator />
 
       <div>
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/SearchResultsPage.tsx
         <h3 className="font-semibold mb-3">Category</h3>
         <Select value={filters.category} onValueChange={(value) => '
           onFiltersChange({ ...filters, category: value === 'all' ? '' : value })
@@ -465,15 +445,11 @@ const FilterSidebar: React.FC<{;
             className="mb-2"
           />
           <div className="flex justify-between text-sm text-muted-foreground">
-=======
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/SearchResultsPage.tsx
             className="mb-2"
           />"
           <div className="flex justify-between text-sm text-muted-foreground">
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <span>${filters.minPrice}</span>
             <span>${filters.maxPrice}</span>
           </div>
@@ -503,17 +479,13 @@ const FilterSidebar: React.FC<{;
           }
 
 :src_backup/components/search/SearchResultsPage.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <h3 className="font-semibold mb-3">Minimum Rating</h3>
         <Select value={filters.minRating.toString()} onValueChange={(value) => 
           onFiltersChange({ ...filters, minRating: parseFloat(value) })
         }>
           <SelectTrigger>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <SelectValue />
           </SelectTrigger>
 :src_backup/components/search/SearchResultsPage.tsx
@@ -564,9 +536,7 @@ const FilterSidebar: React.FC<{;
 :src_backup/components/search/SearchResultsPage.tsx
 const NoResultsState: React.FC<{
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },
 
 // No Results Component;
@@ -591,7 +561,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
         <p className='text-muted-foreground mb-6'>
           We couldn't find anything matching "{searchTerm}". Try adjusting your
           search or filters.
-=======
   return ("
     <div className="text-center py-12">"
       <div className="mb-6">"
@@ -599,13 +568,10 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
         <h2 className="text-2xl font-semibold mb-2">No results found</h2>"
         <p className="text-muted-foreground mb-6">'"
           We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/SearchResultsPage.tsx
         </p>
       </div>
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/SearchResultsPage.tsx
       <div className="max-w-md mx-auto space-y-4">
         <div>"
           <h3 className="font-semibold mb-3">Search Suggestions:</h3>"
@@ -690,18 +656,14 @@ const NoResultsState: React.FC<{;
 </div>
         </div>
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/SearchResultsPage.tsx
         <div className="text-sm text-muted-foreground">
           <p>Tips for better results: </p>"
           <ul className="mt-2 space-y-1">
-=======
         <div className="text-sm text-muted-foreground">
           <p>Tips for better results: </p>
           <ul className="mt-2 space-y-1">
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <li>• Try different keywords</li>
             <li>• Check your spelling</li>
             <li>• Use fewer filters</li>
@@ -712,11 +674,7 @@ const NoResultsState: React.FC<{;
     </div>
   )
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 export const SearchResultsPage: React.FC = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/SearchResultsPage.tsx
 },
 ;
 // Main Search Results Page Component;
@@ -896,15 +854,12 @@ if ( {) {}
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
 
     (filters.minRating > 0 ? 1 : 0)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
 :src_backup/components/search/SearchResultsPage.tsx
         </div>;
-<<<<<<< HEAD:src/components/search/SearchResultsPage.tsx
         <div className="text-sm text-muted-foreground">;
           <p>Tips for better results: </p>;"
           <ul className="mt-2 space-y-1">;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/SearchResultsPage.tsx
 
             <li>• Try different keywords</li>;
             <li>• Check your spelling</li>;
@@ -924,7 +879,6 @@ if ( {) {}
     maxPrice: 10000,;
 :src_backup/components/search/SearchResultsPage.tsx
     minRating: 0,;
-<<<<<<< HEAD:src/components/search/SearchResultsPage.tsx
     sort: 'relevance';
   }),;
   const suggestions = generateSearchSuggestions(),;
@@ -997,7 +951,6 @@ if ( {) {}
     } catch (error) {;'
       logErrorToProduction('Search failed', { data: error }),;
       setResults([]),;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/SearchResultsPage.tsx
 
       setTotalCount(0);
     } finally {;
@@ -1026,16 +979,13 @@ if ( {) {}
         <div className="flex gap-4 mb-4">"
           <div className="flex-1">
 :src_backup/components/search/SearchResultsPage.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/SearchResultsPage.tsx
 
             <EnhancedSearchInput
               value={searchTerm}
               onChange={setSearchTerm}
               onSelectSuggestion={(suggestion) => handleSearch(suggestion.text)}
               searchSuggestions={suggestions}
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/SearchResultsPage.tsx
               placeholder="Search products, talent, services, and more..."
             />
 
@@ -1057,11 +1007,7 @@ if ( {) {}
               </p>
             </div>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/SearchResultsPage.tsx
             <div className="flex items-center gap-2">
               {/* Sort Options */}
               <Select value={filters.sort} onValueChange={(value) => 
@@ -1070,8 +1016,6 @@ if ( {) {}
                 <SelectTrigger className="w-40">
                   <SelectValue />
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </SelectTrigger>
 :src_backup/components/search/SearchResultsPage.tsx
                 <SelectContent>
@@ -1155,7 +1099,6 @@ if ( {) {}
               </div>;
 
               {/* Mobile Filter Toggle */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 :src_backup/components/search/SearchResultsPage.tsx
               {/* View Mode Toggle */}
@@ -1191,7 +1134,6 @@ if ( {) {}
                   <div className="mt-6">
 :src_backup/components/search/SearchResultsPage.tsx
                     <FilterSidebar
-<<<<<<< HEAD
                       filters={filters}
                       onFiltersChange={handleFiltersChange}
                       availableCategories={availableCategories}
@@ -1231,9 +1173,7 @@ onClick={() =>;
                 availableCategories = {availableCategories,}
 
 :src_backup/components/search/SearchResultsPage.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     variant="ghost"
                     size="sm"
                     onClick={() => setFilters({}
@@ -1259,7 +1199,6 @@ onClick={() =>;
           {/* Main Content */}
 <div className="flex-1">
                 {hasMore && (
-<<<<<<< HEAD
                   <div className='text-center'>
                     <Button
                       onClick={loadMore}
@@ -1274,14 +1213,11 @@ onClick={() =>;
                         'Load More Results';
           <div className="flex-1">
 
-<<<<<<< HEAD:src/components/search/SearchResultsPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {loading && results.length === 0 ? (
               <div className="flex justify-center py-12">
                 <Loader2 className="h-8 w-8 animate-spin" />
               </div>
             ) : results.length === 0 && searchTerm ? (
-<<<<<<< HEAD
               <NoResultsState 
                 searchTerm={searchTerm} 
                 onNewSearch={handleSearch}
@@ -1305,7 +1241,6 @@ onClick={() =>;
                 {/* Load More Button */}
                 {hasMore && (
 :src_backup/components/search/SearchResultsPage.tsx
-<<<<<<< HEAD
                   <div className="text-center">
                     <Button 
                       onClick={loadMore} 
@@ -1537,19 +1472,9 @@ export default SearchResultsPage;
 '";
 export default SearchResultsPage,
 export default SearchResultsPage,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
   hasMore: boolean
 // Highlight search terms in text
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   hasMore: boolean
 // Highlight search terms in text
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/SearchResultsPage.tsx
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/SearchResultsPage.tsx

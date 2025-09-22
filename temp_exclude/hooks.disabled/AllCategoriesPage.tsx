@@ -46,7 +46,6 @@ export default function AllCategoriesPage() {
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
             Explore our extensive range of AI services and products.
             Find exactly what you're looking for to enhance your business or personal projects.
-=======
 ;
 // Reusing the categories array from CategoriesSection.tsx;
 // Ideally, this would come from a shared data source or API;
@@ -101,7 +100,6 @@ export default function AllCategoriesPage() { return null; }
 
           </div>;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/AllCategoriesPage.tsx
           </p>
         </div>
 
@@ -169,10 +167,8 @@ export default function AllCategoriesPage() {;
 
                 // The CategoryCard itself is a Link to its specific category page;
                 // So we don't pass the category.link to a 'to' prop here directly;
-=======
                 // The CategoryCard itself is a Link to its specific category page;'
                 // So we don't pass the category.link to a 'to' prop here directly;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/AllCategoriesPage.tsx
                 // The 'link' in the categories array above is used by CategoryCard's internal Link;
               />;
             ))}
@@ -184,6 +180,4 @@ export default function AllCategoriesPage() {;
 }
 
 ;
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/AllCategoriesPage.tsx

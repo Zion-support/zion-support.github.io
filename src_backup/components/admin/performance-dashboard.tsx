@@ -1,7 +1,4 @@
 :src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -47,7 +44,6 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 :src/components/admin/performance-dashboard.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -74,13 +70,11 @@ interface PerformanceMetrics {;
   performanceScore: number;
 :src/components/admin/performance-dashboard.tsx
   chunkCount: number;
-=======
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'  chunkCount: number;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -106,7 +100,6 @@ interface PerformanceMetrics {
   bundleSize: number
   loadTime: number
   performanceScore: number
-<<<<<<< HEAD
   chunkCount: number;
   cacheHitRate: number;
   }
@@ -148,7 +141,6 @@ interface BundleChunk {;
   cached: boolean,;
   type: string;
 }
-<<<<<<< HEAD
     const navigation = performance.getEntriesByType (
       'navigation')[0] as PerformanceNavigationTiming;
     // Check condition
@@ -267,7 +259,6 @@ if (return '0 B') {
     // Check condition
 if (return 'text - green - 600') {
   $2
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 interface BundleChunk {;
@@ -294,9 +285,7 @@ export function PerformanceDashboard() {;
 :src/components/admin/performance-dashboard.tsx
 loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0,;
         performanceScore: 0, // This would need to be calculated;
-=======
         loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0,;        performanceScore: 0, // This would need to be calculated;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         chunkCount: resourceCount,;
         cacheHitRate: 0, // This would need to be calculated from resource timing;
         fcp: 0, // First Contentful Paint - would need Performance Observer;
@@ -308,23 +297,17 @@ fid: 0  // First Input Delay - would need Performance Observer;
       setMetrics(performanceMetrics),;
       logInfo('Performance metrics collected successfully', {;
         loadTime: performanceMetrics.loadTime,;
-<<<<<<< HEAD
         resourceCount: performanceMetrics.chunkCount;
       });
-=======
         resourceCount: performanceMetrics.chunkCount;      });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {;
       logErrorToProduction('Failed to collect performance metrics', error, {;
         component: 'PerformanceDashboard',;
 :src/components/admin/performance-dashboard.tsx
 action: 'collectMetrics';
-<<<<<<< HEAD
       }),;
       // Set fallback metrics;
-=======
       }),;      // Set fallback metrics;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       setMetrics({;
         bundleSize: 0,;
         loadTime: 0,;
@@ -335,12 +318,9 @@ action: 'collectMetrics';
         lcp: 0,;
         cls: 0,;
 :src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
         fid: 0;
       });
-=======
         fid: 0;      });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   },;
   const collectWebVitals = async (): Promise<Partial<PerformanceMetrics>> => {;
@@ -386,7 +366,6 @@ action: 'collectMetrics';
     return vitals
   },
 
-<<<<<<< HEAD
   const collectChunkData = async (): Promise<BundleChunk[]> => {
     if (typeof window === 'undefined') return [],
 
@@ -436,10 +415,7 @@ const categorizeChunk = (filename: string): string => {
 
     return () => clearInterval(interval)
   }, []),
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
   chunkCount: number
   cacheHitRate: number
   fcp: number; // First Contentful Paint
@@ -460,8 +436,6 @@ export function PerformanceDashboard() {
 
   const collectMetrics = null;
 :src/components/admin/performance-dashboard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -474,7 +448,6 @@ export function PerformanceDashboard() {
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
 ;
 
@@ -518,7 +491,6 @@ export function PerformanceDashboard() {
     if (score >= 70) return <AlertTriangle className="w-4 h-4 text-yellow-600" />,;
     return <AlertTriangle className="w-4 h-4 text-red-600" />;
   },;
-=======
 
   const categorizeChunk = (filename: string): string => {
     if (filename.includes('framework')) return 'framework',
@@ -607,7 +579,6 @@ export function PerformanceDashboard() {
     return <AlertTriangle className='w-4 h-4 text-red-600' />
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   useEffect(() => {;
     collectMetrics();
     const interval = setInterval(collectMetrics, 30000), // Update every 30 seconds;
@@ -626,7 +597,6 @@ export function PerformanceDashboard() {
         <Button onClick={collectMetrics} disabled={isLoading}>;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
 :src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
           {isLoading ? 'Collecting...' : 'Refresh'}
         </Button>;
       </div>;
@@ -829,7 +799,6 @@ export function PerformanceDashboard() {
       )}
       {/* Bundle Chunks */}      <Card>
       <Card>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Package className="w-5 h-5" />
@@ -839,7 +808,6 @@ export function PerformanceDashboard() {
         <CardContent>
           {chunks.length > 0 ? (
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="space-y-2">
               {chunks.slice(0, 10).map((chunk, index) => (
                 <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">
@@ -876,14 +844,11 @@ export function PerformanceDashboard() {
                   ... and {chunks.length - 10} more chunks
                 </p>
 :src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               {chunks && chunks.length > 10 && (;
                 <p className='text-sm text-muted-foreground text-center pt-2'>;
                   ... and {chunks && chunks.length - 10} more chunks;
                 </p>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               )}
             </div>;
           ) : (;
@@ -892,7 +857,6 @@ export function PerformanceDashboard() {
             </p>;
           )}
 :src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
         </CardContent>;
       </Card>;
       {/* Recommendations */}
@@ -934,20 +898,15 @@ export function PerformanceDashboard() {
                 <p className='text-sm text-green-700 dark:text-green-300'>
                   Real-time performance tracking is helping optimize your
                   application
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </p>
               </div>
             </div>
 
 :src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 :src/components/admin/performance-dashboard.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className="flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded">
                 <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5" />
@@ -962,7 +921,6 @@ export function PerformanceDashboard() {
               </div>
             )}
 :src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
           </div>;
         </CardContent>;
       </Card>;
@@ -1124,22 +1082,12 @@ export function PerformanceDashboard() {
     </div>);
 }
 }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 }
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
           </div>
         </CardContent>
       </Card>
     </div>
   );
 :src/components/admin/performance-dashboard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

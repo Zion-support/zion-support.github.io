@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { useRouter } from 'next/router',;
 import { useForm, ControllerRenderProps } from "react-hook-form",;
@@ -173,12 +172,10 @@ export function LoginForm() {;
                     )}
                     <span className="sr-only">;
                       {showPassword ? "Hide password" :"Show password"}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     </span>;
                   </Button>;
                 </div>;
               </FormControl>;
-<<<<<<< HEAD
 
               </div>;
             </FormItem>;

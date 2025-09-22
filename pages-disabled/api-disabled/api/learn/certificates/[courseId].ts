@@ -3,7 +3,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
 
 :pages/api-disabled/api/learn/certificates/[courseId].ts
-<<<<<<< HEAD
 const doc = new PDFDocument ({
   size: 'A4', margin: 50
 });
@@ -39,9 +38,6 @@ export default function handler($2) {;
     res.setHeader('Content-Disposition', `attachment; filename="${courseId}-certificate.pdf"`);
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
 :pages/api/learn/certificates/[courseId].ts
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Pipe to response
     // @ts-ignore;
     doc && doc.pipe(res);
@@ -60,7 +56,6 @@ export default function handler($2) {;
     doc.fontSize(22).text(user.name |user.userId, { align: 'center' });
     doc.fontSize(22).text(user.name || user.userId, { align: 'center' });
     doc.moveDown(0.5);
-=======
 
     // Pipe to response;
     // @ts-ignore;
@@ -68,7 +63,6 @@ export default function handler($2) {;
     // Zion certificate template (simple)
 
     doc.moveDown(0.5);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/certificates/[courseId].ts
     doc.fontSize(14).text(`has successfully completed`, { align: 'center' });
     doc.moveDown(0.5);'
     doc.fontSize(20).text(course.title, { align: 'center' });
@@ -87,7 +81,6 @@ export default function handler($2) {;
     res
       .status(500)
       .json({ error: e?.message ?? 'Failed to generate certificate' });
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ certificate: 'PDF certificate' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -220,8 +213,6 @@ export default function handler(req, res) {
     doc.moveDown(2),
     doc.fontSize(12).text(`Date: ${date}`, { align: 'center' }),
     doc.end()
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
   }
@@ -235,7 +226,6 @@ export default function handler(req, res) {
     user_id?: string;
   }
   try {;
-=======
 
   } catch (e: any) {}
     res;
@@ -251,7 +241,6 @@ export default function handler(req, res) {
     user_id?: string;
   }
   try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/certificates/[courseId].ts
     const users = read_json (users_path);
     const courses = read_json (courses_path);
     const course = courses.find ((c: any) => c.id === course_id);
@@ -305,8 +294,6 @@ export default function handler(req, res) {
       .status (500);'
       .json ({ error: e?.message ?? 'Failed to generate certificate' });
 :pages/api-disabled/api/learn/certificates/[courseId].ts
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   }
 }
@@ -315,9 +302,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
 
@@ -335,9 +319,5 @@ export default function handler(req, res) {
   }
 }
 :pages/api/learn/certificates/[courseId].ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/certificates/[courseId].ts

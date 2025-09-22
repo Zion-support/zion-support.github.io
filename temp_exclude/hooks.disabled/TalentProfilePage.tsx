@@ -34,7 +34,6 @@ function TalentProfilePage() {}
 :temp_exclude/hooks.disabled/TalentProfilePage.tsx
     ? {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { toast } from "@/hooks/use-toast",
 import { SEO } from "@/components/SEO",
 export default function TalentProfilePage() {};
@@ -49,7 +48,6 @@ export default function TalentProfilePage() {};
 
 :temp_exclude/hooks.disabled/TalentProfilePage.tsx
   // Create a compatible UserProfile from UserDetails or the authenticated user
-<<<<<<< HEAD
   const userProfile: UserProfile = user ? {
 
     id: user.id || '',
@@ -157,7 +155,6 @@ export default function TalentProfilePage() {;
         variant: "default"}),
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`),
       return
-=======
         description:;'
           'There was a problem loading this talent profile. Please try again.','
         variant: 'destructive',"
@@ -192,7 +189,6 @@ if ( {) {}
     }`
     setIsHireModalOpen(true) };      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`)
       return;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/TalentProfilePage.tsx
     }
     setIsHireModalOpen(true)
   },
@@ -232,12 +228,10 @@ const handleMessageTalent = () => {
     <>;
       <SEO;
         title={profile.full_name}
-=======
 }onRequestHire= {}
   handleRequestHire;
 }onMessageTalent= {}
         title={profile.full_name}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/TalentProfilePage.tsx
         description={profile.bio || 'Talent profile'}
         ogImage={profile.profile_picture_url}
       />"
@@ -328,7 +322,6 @@ export default function TalentProfilePage() { return null; }
     if (!isAuthenticated) {
       toast({
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>"
         <div className="p-2 flex gap-2">

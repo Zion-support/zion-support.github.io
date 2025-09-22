@@ -86,14 +86,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           rel='stylesheet'
         />
       </Head>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
       <body>
         <Main />
         <NextScript />
       </body>
     </Html>
-<<<<<<< HEAD
   );
 }
   );
@@ -156,11 +153,7 @@ function Document() {
   }
 }
 
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> pr-12243

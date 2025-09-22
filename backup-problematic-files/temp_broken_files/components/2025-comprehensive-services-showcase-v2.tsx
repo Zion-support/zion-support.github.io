@@ -199,15 +199,12 @@ key={service.id}
                     >
                       <h4 className="text-xl font-semibold text-white mb-3">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         {service.title}
                       </h4>;
                       <p className="text-gray-300 mb-4">;
                         {service.description}
                       </p>;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       <div className="space-y-3 mb-6">;
                         <div className="flex items-center text-sm text-cyan-400">;
                           <TrendingUp className="w-4 h-4 mr-2" />;
@@ -217,9 +214,7 @@ key={service.id}
                           <Star className="w-4 h-4 mr-2" />;
                           {service.growthRate}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   ))}
                 </div>;
               </motion.div>;
             ))}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

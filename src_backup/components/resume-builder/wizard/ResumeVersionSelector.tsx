@@ -2,7 +2,6 @@ import { useResume } from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { useState } from 'react',;
 import {;
@@ -22,7 +21,6 @@ interface ResumeVersionSelectorProps {;
   currentResume: Resume,;
   onResumeChange: (resumeId: string) => void;
 }
-<<<<<<< HEAD
 ;
 export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
   const { createResume, fetchResume } = useResume(),;

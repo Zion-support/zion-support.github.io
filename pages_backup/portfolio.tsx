@@ -1,5 +1,4 @@
 :pages_backup/portfolio.tsx
-<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -12,9 +11,6 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function PortfolioPage() {
   const projects = null;
-<<<<<<< HEAD:pages/portfolio.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Rocket
   Brain
@@ -184,7 +180,6 @@ export default function PortfolioPage() {}
   Star,
   Users,
 :pages_backup/portfolio.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -195,14 +190,11 @@ import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 export default function PortfolioPage() {
   const projects = [
-<<<<<<< HEAD
 } from 'lucide-react';
 import EnhancedNavigation from '../components / EnhancedNavigation';
-=======
 ';
 } from 'lucide-react';'
 import EnhancedNavigation from '../components / EnhancedNavigation';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
 import EnhancedFooter from '../components / EnhancedFooter';
 export default /**;
  * PortfolioPage - Function description;
@@ -210,20 +202,6 @@ export default /**;
 function PortfolioPage() {}
   const projects = [;
 :pages_backup/portfolio.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    {
-<<<<<<< HEAD
-      title: "AI-Powered Financial Analytics Platform",
-      description: "Revolutionary financial analytics platform using advanced AI algorithms for real-time market analysis and predictive modeling",
-      category: "AI & Machine Learning",
-      client: "Fortune 500 Financial Institution",
-      technologies: ["Python", "TensorFlow", "React", "AWS", "PostgreSQL"],
-      results: ["40% improvement in prediction accuracy", "Real-time processing of 1M+ data points", "ROI of 300% in first year"],
-      image: "/api/placeholder/600/400",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
     {
       title: "AI-Powered Financial Analytics Platform",
       description: "Revolutionary financial analytics platform using advanced AI algorithms for real-time market analysis and predictive modeling",
@@ -236,7 +214,18 @@ function PortfolioPage() {}
       color: "from-purple-500 to-pink-500"
     },
     {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+    {
+      title: "AI-Powered Financial Analytics Platform",
+      description: "Revolutionary financial analytics platform using advanced AI algorithms for real-time market analysis and predictive modeling",
+      category: "AI & Machine Learning",
+      client: "Fortune 500 Financial Institution",
+      technologies: ["Python", "TensorFlow", "React", "AWS", "PostgreSQL"],
+      results: ["40% improvement in prediction accuracy", "Real-time processing of 1M+ data points", "ROI of 300% in first year"],
+      image: "/api/placeholder/600/400",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
       title: "Quantum Cryptography Security System",
       description: "Next-generation security system implementing quantum-resistant cryptography for enterprise-level protection",
       category: "Quantum Computing",
@@ -324,8 +313,6 @@ const stats = [
     selectedCategory === 'All'
       ? projects
       : projects.filter(project => project.category === selectedCategory);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -333,11 +320,9 @@ const stats = [
 
         <meta
           name='description'
-=======
     {}
         <meta'
           name='description''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
           content="Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions."
         />;'
         <meta property='og:title' content='Our Work - Zion Tech Group' />;
@@ -345,10 +330,7 @@ const stats = [
           property='og:description''
           content='Explore our portfolio of innovative technology projects and solutions.'
 :pages_backup/portfolio.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
         <meta
           name='description'
           content="Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions."
@@ -357,7 +339,6 @@ const stats = [
         <meta
           property='og:description'
           content='Explore our portfolio of innovative technology projects and solutions.'
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         />
         <link rel='canonical' href='https://ziontechgroup.com/portfolio' />
       </Head>
@@ -371,29 +352,21 @@ const stats = [
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='mb-8'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
-=======
 
           >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Our Work;
             </h1>
-<<<<<<< HEAD
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Innovative technology solutions that drive business transformation
               and growth
             </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </motion.div>
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
 
             transition={{ duration: 0 && 0.8 }}'
             className='mb-8'>;'
@@ -426,38 +399,24 @@ className='mb-8'
                 key={stat && stat.label}
 
 :pages_backup/portfolio.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover how we've helped organizations leverage cutting-edge technology to solve 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               complex challenges and achieve remarkable results.
-=======
               complex challenges and achieve remarkable results.
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 className='mb-12'
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
               Discover how we've helped organizations leverage cutting-edge
               technology to solve complex challenges and achieve remarkable
               results.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </p>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages_backup/portfolio.tsx
       {/* Stats Section */}
 <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -470,21 +429,13 @@ className='mb-12'
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 className='text-center'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
               >"
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">"
                   <stat.icon className="w-8 h-8 text-cyan-400" />
@@ -494,7 +445,6 @@ className='text-center'
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
             ))}
 
           </div>;
@@ -502,7 +452,6 @@ className='text-center'
       </section>;
 
 :pages_backup/portfolio.tsx
-<<<<<<< HEAD
 
 :pages_backup/portfolio.tsx
       {/* Category Filter */}
@@ -512,12 +461,6 @@ className='text-center'
             {categories.map((category) => (
               <button
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
@@ -533,11 +476,7 @@ className='text-center'
           <div className='flex flex-wrap justify-center gap-4'>
             {categories.map(category => (
               <button
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${;
@@ -547,9 +486,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }`}
               >;
                 {category}
-<<<<<<< HEAD:pages/portfolio.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <motion.div
 
@@ -558,10 +494,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
                     </div>
                     <span className='text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full'>
@@ -592,30 +524,20 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                           className='text-xs bg-white/5 text-white/70 px-2 py-1 rounded'>                          {tech}
                         </span>;
 
-=======
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center`}>
-=======
 
               >"
                 <div className="p-8">"
                   <div className="flex items-center gap-3 mb-4">`
                     <div className={`w-12 h-12 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center`}>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
                       <project.icon className="w-6 h-6 text-white" />
                     </div>
 <span className="text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full">
                       {project.category  } catch (error) {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <li
                           key={result}
                           className='text-sm text-white/80 flex items-center'>;
@@ -623,9 +545,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                         </li>;
 
 {tech  } catch (error) {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error("Error:", error);
-=======
                         <li;
                           key={result}'
                           className='text-sm text-white/80 flex items-center'>;'
@@ -634,7 +554,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
                           {tech  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -642,11 +561,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   </div>
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Results</h4>
-=======
 "
                   <div className="mb-6">"
                     <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Results</h4>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
                     <ul className="space-y-1">
                       {project.results.map((result) => ("
                         <li key={result} className="text-sm text-white/80 flex items-center">"
@@ -657,17 +574,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 :pages_backup/portfolio.tsx
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-white/60">Client: {project.client}</span>
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       View Details
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </button>
             ))}
           </div>
@@ -739,49 +649,33 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
                     <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                       View Details
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   "
                   <div className="flex items-center justify-between">"
                     <span className="text-sm text-white/60">Client: {project.client}</span>"
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       View Details;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
                     </button>
                   </div>
                 </div>
               </motion.div>
 :pages_backup/portfolio.tsx
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
           </div>;
         </div>;
       </section>;
 
 :pages_backup/portfolio.tsx
       {/* CTA Section */}
-<<<<<<< HEAD:pages/portfolio.tsx
-<<<<<<< HEAD
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
-=======
       {/* CTA Section */}'
       <section className='py-20 px-6'>;'
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div;
@@ -791,7 +685,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div;
             initial={{ opacity: 0, y: 30 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -811,21 +704,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/portfolio.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
 "
             <h2 className="text-4xl font-bold text-white mb-6">
-=======
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
@@ -835,66 +719,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             viewport={{ once: true }}
           >
 <h2 className='text-4xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Ready to Start Your Project?
             </h2>"
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">'
               Let's discuss how we can help you achieve similar results with our innovative technology solutions.
             </p>
-<<<<<<< HEAD:pages/portfolio.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Schedule Consultation
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
                 Start Your Project
               </button>
               <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
                 Schedule Consultation
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD:pages/portfolio.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ),'"
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
 
 :pages_backup/portfolio.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <EnhancedFooter />
     </div>
 );
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }</div> </div> </section> key= {
   category
 }onClick= {
-=======
 }</div> </div> </section> key= {}
   category;
 }onClick= {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
   () => setSelectedCategory (category)
 }className= {}`
   `px-6 py-3 rounded-full font-semibold transition-all duration-300 $ {'
@@ -908,9 +768,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</ul> </div> View Details </button> </div> </div> </motion.div>) )
 :pages_backup/portfolio.tsx
 }</div> </div> </section> <motion.div initial= {
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }</div> </div> </section> key= {
   category
 }onClick= {
@@ -927,9 +785,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</ul> </div> View Details </button> </div> </div> </motion.div>) )
 :pages_backup/portfolio.tsx
 }</div> </div> </section> <motion.div initial= {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -937,16 +792,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
   duration: 0 && 0.8
 }viewport= {
   {
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }</div> </div> </section> <motion.div initial= {}
   {}
   opacity: 0, y: 30;
@@ -955,7 +804,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   opacity: 1, y: 0;
 }transition= {}
   {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
               </button>;
             </div>;
           </motion.div>;
@@ -963,14 +811,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
       <EnhancedFooter />;
 :pages_backup/portfolio.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
     </div>;
   );
   } catch (error) {"
@@ -980,19 +821,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 ;
 :pages_backup/portfolio.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   duration: 0.8
 }viewport= {
   {
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Start Your Project? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,11 +1,6 @@
 :src_backup/components/admin/quotes/QuotesFilter.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 interface QuotesFilterProps {;
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 :src/components/admin/quotes/QuotesFilter.tsx
 import React from "react",
@@ -18,7 +13,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
 import { Button } from "@/components/ui/button",
 import { Calendar as CalendarComponent } from "@/components/ui/calendar",
-<<<<<<< HEAD
 import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
@@ -42,12 +36,8 @@ import { format } from 'date-fns'
 import type { DateRange } from 'react-day-picker'
 import type { QuoteStatus } from '@/types/quotes'
 :src/components/admin/quotes/QuotesFilter.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface QuotesFilterProps {
-=======
 interface QuotesFilterProps {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/quotes/QuotesFilter.tsx
   searchQuery: string;
   setSearchQuery: (value: string) => void;'
   statusFilter: QuoteStatus | 'all';'
@@ -59,7 +49,6 @@ interface QuotesFilterProps {};
 
 :src_backup/components/admin/quotes/QuotesFilter.tsx
 return (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>;
       <CardContent className='p-6'>;
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 items-end'>;
@@ -147,22 +136,17 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({}
               <SelectContent className='bg - zion - blue - dark border - zion - blue - light text - white'>;
 :src_backup/components/admin/quotes/QuotesFilter.tsx
 
-<<<<<<< HEAD:src/components/admin/quotes/QuotesFilter.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/quotes/QuotesFilter.tsx
                 <SelectItem value='all'>All Statuses</SelectItem>;
                 <SelectItem value='new'>New</SelectItem>;
                 <SelectItem value='in_review'>In Review</SelectItem>;
                 <SelectItem value='responded'>Responded</SelectItem>;
                 <SelectItem value='accepted'>Accepted</SelectItem>;
-=======
 '
                 <SelectItem value='all'>All Statuses</SelectItem>;'
                 <SelectItem value='new'>New</SelectItem>;'
                 <SelectItem value='in_review'>In Review</SelectItem>;'
                 <SelectItem value='responded'>Responded</SelectItem>;'
                 <SelectItem value='accepted'>Accepted</SelectItem>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/quotes/QuotesFilter.tsx
                 <SelectItem value='closed'>Closed</SelectItem>;
               </SelectContent>;
             </Select>;
@@ -187,7 +171,6 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({}
 :src_backup/components/admin/quotes/QuotesFilter.tsx
 
 import React from "react";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -211,9 +194,6 @@ interface QuotesFilterProps {
 }
 
 :src_backup/components/admin/quotes/QuotesFilter.tsx
-<<<<<<< HEAD:src/components/admin/quotes/QuotesFilter.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 searchQuery,
   setSearchQuery,
@@ -232,7 +212,6 @@ searchQuery,
   dateRange;
   setDateRange;
 :src_backup/components/admin/quotes/QuotesFilter.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onReset
 }) => {
   return (
@@ -307,8 +286,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
 :src_backup/components/admin/quotes/QuotesFilter.tsx
               </PopoverTrigger>
-<<<<<<< HEAD:src/components/admin/quotes/QuotesFilter.tsx
-<<<<<<< HEAD
               <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
                 <CalendarComponent;
                   initialFocus"
@@ -376,21 +353,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   onSelect = {setDateRange,}
                   numberOfMonths = {2,}
 :src/components/admin/quotes/QuotesFilter.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/admin/quotes/QuotesFilter.tsx
   onReset: () => void
-=======
   onReset: () => void;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/quotes/QuotesFilter.tsx
 }
-=======
 }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 :src/components/admin/quotes/QuotesFilter.tsx
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div>;
             <p className="text-zion-slate-light text-sm mb-2">Status</p>;
             <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>;
@@ -445,7 +415,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </PopoverTrigger>;
               <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">;
                 <CalendarComponent;
-<<<<<<< HEAD
                   initialFocus;
                   mode="range";
                   defaultMonth={dateRange?.from}
@@ -478,10 +447,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }  );
 :src_backup/components/admin/quotes/QuotesFilter.tsx
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/quotes/QuotesFilter.tsx
                 />
               </PopoverContent>
             </Popover>
@@ -501,13 +466,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 };
 :src/components/admin/quotes/QuotesFilter.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/quotes/QuotesFilter.tsx
-=======
 }
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/quotes/QuotesFilter.tsx

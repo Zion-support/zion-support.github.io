@@ -83,7 +83,6 @@ pr-12325
           <div>;
 <GradientHeading>Get In Touch</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl mb-8">;
-<<<<<<< HEAD
               We have the equipment, the parts, and the maintenance services ready for you — right now. Contact us today.;
             </p>;
             <div className="flex items-center mb-6">;
@@ -93,12 +92,10 @@ pr-12325
               <div>;
                 <p className="text-white font-semibold">Email Us</p>;
                 <a href="mailto:commercial@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   commercial@ziontechgroup.com;
                 </a>;
               </div>;
             </div>;
-<<<<<<< HEAD
               Request Commercial Proposal;
             </Button>;
           </div>;
@@ -121,14 +118,12 @@ pr-12325
                   </div>;
                   <div>;
                     <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       Email;
                     </label>;
                     <Input;
                       id="email";
                       name="email";
                       type="email";
-<<<<<<< HEAD
                     Subject;
                   </label>;
                   <Input;
@@ -152,14 +147,12 @@ pr-12325
                   ;"
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>;
 )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </div>;
               </form>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </section>;
   const [errors, setErrors] = useState< {;
   name?: string;
@@ -220,4 +213,3 @@ isSubmitting ? 'Sending...' : 'Send Message' ;
 }</Button>) ;
 }</div> </form> </div> </div> </div> </div> </section>) ;
 }'"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

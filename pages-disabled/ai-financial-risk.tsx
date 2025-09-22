@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   );
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -26,7 +25,6 @@ function AIFinancialRiskPage() {
   }
 ;
 const AIFinancialRisk: React.FC = () => {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -55,9 +53,7 @@ const AIFinancialRisk: React.FC = () => {
 }
             </h1>
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service?.tagline || 'Real-time risk scoring, fraud detection, and stress scenarios with explainable AI.'}</p>
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <UltraAdvancedFuturisticBackground>;
       <NextHead>;
         <title>;
@@ -98,7 +94,6 @@ const AIFinancialRisk: React.FC = () => {
                   ];
                 ).map((feat, i) => (;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
@@ -124,7 +119,6 @@ export default function AIFinancialRiskPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
   },
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <UltraAdvancedFuturisticBackground>
       <NextHead>
@@ -143,7 +137,6 @@ export default function AIFinancialRiskPage() {
 }
             </h1>
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service?.tagline || 'Real-time risk scoring, fraud detection, and stress scenarios with explainable AI.'}</p>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
@@ -162,10 +155,7 @@ export default function AIFinancialRiskPage() {
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>
 </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
               </ul>;
             </div>;'
@@ -238,16 +228,12 @@ export default function AIFinancialRiskPage() {
                 </div>;
               </div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
 </div>              </div>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 '
                 className='w-full'>;
@@ -266,36 +252,26 @@ export default function AIFinancialRiskPage() {
                   <MapPin className='w-4 h-4 text-green-400' />;'
                   <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 }
 }
-<<<<<<< HEAD
 
                 </div>              </div>;
 
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
-=======
 
   )'
 import NextHead from 'next/head';'
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';'
 import Button from '../components/ui/Button';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { innovativeAIServices } from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage(req, res) {}
   try {';
@@ -343,7 +319,6 @@ export default function AIFinancialRiskPage(req, res) {}
                 <div>;'"
                   <div className="text-3xl font-bold text-white">{service?.price || 'Custom pricing'}<span className="text-slate-400 text-base">{service?.period || ''}</span></div>;
                 </div>;
-<<<<<<< HEAD
                 <div className='flex items - center space - x-2'>;
                   <Mail className='w - 4 h - 4 text - purple - 400' />;
                   <span>{contact_info.email}</span>;
@@ -353,36 +328,19 @@ export default function AIFinancialRiskPage(req, res) {}
                   <span className='text - xs'>{contact_info.address}</span>;
                 </div>              </div>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
-=======
 
   } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

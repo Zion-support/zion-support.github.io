@@ -88,19 +88,11 @@ main
   // Fix missing semicolons in return statements
 
   // Fix duplicated content (remove duplicate lines)
-main
-
-  // Fix duplicated content (remove duplicate lines)
-
-  // Fix duplicated content (remove duplicate lines)
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   {
     pattern: /return\s+([^;]+)\s*$/gm,
     replacement: 'return $1;'
   },
-<<<<<<< HEAD
-
   // Fix missing semicolons in if statements
 
   // Fix missing semicolons in if statements
@@ -320,11 +312,9 @@ fs.writeFileSync(filePath, content, 'utf8');
     } else {
         console.log(`✨ No issues found in ${filePath}`);
     }
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     return fixes;
 
-<<<<<<< HEAD
 // Process all files
 let totalFixes = 0;
 filesToFix.forEach(file => {)

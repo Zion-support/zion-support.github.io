@@ -1,6 +1,4 @@
 :src_backup/components/SitemapPage.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
@@ -18,9 +16,7 @@ const path_map: Record < string, string> = {'
 const resolve_path = (path: string): string => path_map[path] ?? path,
 
 :src_backup/components/SitemapPage.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
 import Link from 'next/link',
@@ -29,7 +25,6 @@ import { SEO } from './SEO',
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string string> = {
-=======
 '
 import React from 'react','
 import { completeSitemap, dynamicPaths } from '@/config/sitemap','
@@ -39,7 +34,6 @@ import { SEO } from './SEO',;
 // Map sitemap paths to their actual routes in the application;
 // Note: This pathMap might need to be updated based on Next.js page structure;
 const pathMap: Record<string string> = {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/SitemapPage.tsx
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'},
 
 const resolvePath = (path: string): string => pathMap[path] ?? path,
@@ -64,28 +58,21 @@ export const SitemapPage: React.FC = () => {
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />                      {route.label}
                       {route.label}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </Link>;
 </li>;
                 ));
               }
             </ul>;
           </div>;
-=======
             </ul>;
           </div>;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
             </ul>;
           </div>;
 
 :src_backup/components/SitemapPage.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SitemapPage.tsx
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
@@ -105,26 +92,20 @@ export const SitemapPage: React.FC = () => {
                     >"
                       <ChevronRight className="h-4 w-4 mr-2" />
 :src/components/SitemapPage.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                       {route.label}
           {/* Talent Routes */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Talent Pages</h2>;
             <p className="text - sm text - zion - slate mb - 4">Requires talent or creator account</p>;
-=======
           {/* Talent Routes */}"
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;"
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Talent Pages</h2>;"
             <p className="text - sm text - zion - slate mb - 4">Requires talent or creator account</p>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/SitemapPage.tsx
             <ul className="space - y-2">;
-=======
           <div className="bg - zion - blue - dark p - 6 rounded-lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion-cyan">Talent Pages</h2>;
             <p className="text - sm text - zion - slate mb-4">Requires talent or creator account</p>;
             <ul className="space-y-2">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {complete_sitemap;
                 .filter (route =>;'
                   route.required_roles?.includes ('job_seeker') ||;'
@@ -173,7 +154,6 @@ export const SitemapPage: React.FC = () => {
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Client Pages</h2>;
             <p className="text - sm text - zion - slate mb - 4">Requires employer or buyer account</p>;
             <ul className="space - y-2">;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {complete_sitemap;
                 .filter (route =>;'
                   route.required_roles?.includes ('employer') ||;'
@@ -222,7 +202,6 @@ export const SitemapPage: React.FC = () => {
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Authenticated User Pages</h2>;
             <p className="text - sm text - zion - slate mb - 4">Requires any account type</p>;
             <ul className="space - y-2">;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {complete_sitemap;
                 .filter (route =>;
                   route.required_auth &&;
@@ -242,7 +221,6 @@ export const SitemapPage: React.FC = () => {
                 ))
               }          {/* Admin Routes */}
           {/* Admin Routes */}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires admin account</p>
@@ -259,7 +237,6 @@ export const SitemapPage: React.FC = () => {
                     >"
                       <ChevronRight className="h-4 w-4 mr-2" />
 :src/components/SitemapPage.tsx
-<<<<<<< HEAD
             </ul>;
           </div>;
           {/* Admin Routes */}"
@@ -284,7 +261,6 @@ export const SitemapPage: React.FC = () => {
                       <ChevronRight className="h-4 w-4 mr-2" />;
                       {route && route.label}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </Link>;
                   </li>;
                 ));
@@ -420,53 +396,35 @@ export const SitemapPage: React.FC = () => {
                       className="text - zinc - 300 hover:text - cyan - 400 transition - colors duration - 200 block py-1">;
                       {link.name}
 
-<<<<<<< HEAD:src/components/SitemapPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SitemapPage.tsx
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
-=======
           {/* Dynamic Routes */}"
           <div className="bg-zion-blue-dark p-6 rounded-lg">"
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>"
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/SitemapPage.tsx
             <ul className="space-y-2">
 :src/components/SitemapPage.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               {Object.entries(dynamicPaths).map(([key, path]) => (
-=======
 
               {Object.entries(dynamicPaths).map(([key, path]) => (
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SitemapPage.tsx
                 <li key={key}>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <div className="flex items-center text-zion-slate">
                     <ChevronRight className="h-4 w-4 mr-2" />
-=======
                 <li key={key}>"
                   <div className="flex items-center text-zion-slate">"
                     <ChevronRight className="h-4 w-4 mr-2" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/SitemapPage.tsx
                     {path} <span className="ml-2 text-xs italic">({key})</span>
                   </div>
                 </li>
               ))}
 
 :src/components/SitemapPage.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SitemapPage.tsx
             </ul>;
           </div>;
         </div>;
@@ -499,19 +457,9 @@ export const SitemapPage: React.FC = () => {
 '";
 
 :src_backup/components/SitemapPage.tsx
-<<<<<<< HEAD:src/components/SitemapPage.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 }
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SitemapPage.tsx
 import React from 'react';
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
 import Link from 'next/link';
@@ -527,8 +475,4 @@ import { SEO  } from './SEO';
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
 :src/components/SitemapPage.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/SitemapPage.tsx

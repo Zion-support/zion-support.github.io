@@ -41,7 +41,6 @@ window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
   };
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
       <p className='mb-4 text-sm'>{prompt.text}</p>
@@ -54,8 +53,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
 :src/components/prompts/PromptCard.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <div className="p-4 border rounded-md bg-background flex flex-col justify-between">
@@ -126,6 +123,4 @@ function PromptCard() {
     </div>);
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

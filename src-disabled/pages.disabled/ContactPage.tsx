@@ -1,5 +1,4 @@
 :src/pages/ContactPage.tsx
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import './ContactPage.css';
 
@@ -341,6 +340,5 @@ const ContactPage: React.FC = () => (
   </>
 );
 :src/pages/ContactPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default ContactPage;

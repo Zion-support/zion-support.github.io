@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -21,7 +20,6 @@ export function CurrentSubscription() {;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card>;
       <CardHeader>;
         <div className="flex items-center justify-between">;
@@ -34,7 +32,6 @@ export function CurrentSubscription() {;
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">;
           <div className="space-y-1">;
             <p className="text-sm font-medium leading-none text-muted-foreground">Plan</p>;
-<<<<<<< HEAD
 
           </div>;
           <div className="space-y-1">;

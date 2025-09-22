@@ -1,10 +1,7 @@
 :src_backup/components/jobs/MyApplications.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       default:        return <Badge variant="outline">{status}</Badge>
 
         return <Badge variant="outline">{status}</Badge>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
 :src_backup/components/jobs/MyApplications.tsx
 
@@ -48,7 +45,6 @@ import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import Link from 'next/link';
 import { ApplicationStatus } from '@/types/jobs';
-=======
       default:
 default:
         return <Badge variant="outline">{status}</Badge>"
@@ -63,7 +59,6 @@ import {ApplicationStatus} from "@/types/jobs";
   if (error) {
     return (
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/MyApplications.tsx
 
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -105,16 +100,12 @@ export function MyApplications() {
 
   if (isLoading) {
 :src/components/jobs/MyApplications.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className="flex justify-center items-center p-8">
-=======
 "
 import {ApplicationStatus} from "@/types/jobs";
     return ("
       <div className="flex justify-center items-center p-8">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/MyApplications.tsx
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     )
@@ -166,9 +157,6 @@ import {ApplicationStatus} from "@/types/jobs";
             <div className="flex justify-between items-start">
               <CardTitle className="text-lg">
 :src_backup/components/jobs/MyApplications.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/MyApplications.tsx
                 {application.job?.title || "Unknown Job"}
               </CardTitle>
               {getStatusBadge(application.status)}
@@ -183,7 +171,6 @@ import {ApplicationStatus} from "@/types/jobs";
               {application.cover_letter && ("
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
 :src_backup/components/jobs/MyApplications.tsx
-<<<<<<< HEAD
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -218,10 +205,8 @@ case "new": return <Badge variant="secondary">New</Badge>,;
 :src_backup/components/jobs/MyApplications.tsx
 return (;
       <div className="flex justify-center items-center p-8">;
-=======
     return ("
       <div className="flex justify-center items-center p-8">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/MyApplications.tsx
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
     );
@@ -231,20 +216,17 @@ return (;
   if (error) {;
 :src_backup/components/jobs/MyApplications.tsx
     return (;
-=======
   if (error) {;
     return (
 ;
   if (error) {;
     return (;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/MyApplications.tsx
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">;
         <p>{error}</p>;
       </div>;
     );
   }
 :src_backup/components/jobs/MyApplications.tsx
-<<<<<<< HEAD
 ;
   if (applications.length === 0) {;
     return (;
@@ -253,7 +235,6 @@ return (;
 
 :src_backup/components/jobs/MyApplications.tsx
     return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Card className="bg-muted/30">;
         <CardContent className="pt-6 text-center">;
           <p className="text-muted-foreground">;
@@ -294,29 +275,21 @@ return (;
               )}
 :src_backup/components/jobs/MyApplications.tsx
 
-=======
               "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/MyApplications.tsx
-=======
               <div className="flex justify-between items-center">"
                 <Button
                   variant="outline" "
                   size="sm" "
                   className="text-xs""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/MyApplications.tsx
               <div className="flex justify-between items-center">
                 <Button "
                   variant="outline" "
                   size="sm" 
 :src_backup/components/jobs/MyApplications.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                   {application.cover_letter}
                 </p>
               )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/MyApplications.tsx
                   className="text-xs"
                   asChild;
                 >
@@ -352,12 +325,9 @@ return (;
                   </Link>;
                 </Button>;
 
-<<<<<<< HEAD:src_backup/components/jobs/MyApplications.tsx
                 <Button
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <Button 
                   variant="default" 
                   size="sm"
@@ -380,10 +350,7 @@ return (;
           </CardContent>;
         </Card>;
 :src_backup/components/jobs/MyApplications.tsx
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/MyApplications.tsx
       ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>;
   );
 }
@@ -489,18 +456,9 @@ if ( {) {}
   );
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 ;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/MyApplications.tsx
-=======
     </div>;
   );
 }
@@ -511,7 +469,6 @@ if ( {) {}
 ;)))))
 ;
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/MyApplications.tsx
     </div>
   );
 
@@ -528,8 +485,4 @@ if ( {) {}
 }</div>) ;
 }'"
 :src/components/jobs/MyApplications.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/MyApplications.tsx

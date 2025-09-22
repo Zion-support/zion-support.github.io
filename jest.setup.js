@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 require('@testing-library/jest-dom');
 import "@testing-library/jest-dom";
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
@@ -33,9 +31,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 prefetch: jest.fn(),
       prefetch: jest.fn().mockResolvedValue(undefined),
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-=======
       prefetch: jest.fn(),
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       beforePopState: jest.fn(),
       events: {}
         on: jest.fn(),
@@ -44,7 +40,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
       },
 isFallback: false,
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-=======
       push: jest.fn();,
       pop: jest.fn();,
       reload: jest.fn();,
@@ -63,7 +58,6 @@ pr-12325
       isFallback: false;,
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     };
 }));
 
@@ -102,15 +96,11 @@ matches: false,
 });
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
-=======
 
 // Mock IntersectionObserver;
 global.IntersectionObserver = class IntersectionObserver {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   constructor() {}
   disconnect() {}
   observe() {}
@@ -142,7 +132,6 @@ Object.defineProperty(window, 'matchMedia', {
 import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
 import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
 import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
-<<<<<<< HEAD
 
 // Global test setup
 beforeEach(() => {
@@ -159,9 +148,5 @@ jest.mock('next/image', () => ({
   },
 }));
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   jest.clearAllMocks();
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

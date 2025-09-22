@@ -1,12 +1,8 @@
 :pages_backup/api/auth/verify-sol.ts
-<<<<<<< HEAD:pages_backup/api/auth/verify-sol.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',;
 pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/auth/verify-sol.ts
 import nacl from 'tweetnacl',;
 import bs58 from 'bs58',;
 import jwt from 'jsonwebtoken',;
@@ -14,8 +10,6 @@ const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me'
 
 :pages_backup/api/auth/verify-sol.ts
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/auth/verify-sol.ts
 const cookieHeader = req.headers.cookie || '';
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);'
     if (!match) return res.status(400).json({ error: 'Missing nonce' });
@@ -110,19 +104,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 };
 :pages_backup/api/auth/verify-sol.ts
-<<<<<<< HEAD:pages_backup/api/auth/verify-sol.ts
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
-=======
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/auth/verify-sol.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nacl from 'tweetnacl';
 import bs58 from 'bs58';
 import jwt from 'jsonwebtoken';
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/verify-sol.ts
 
 '
 import type { NextApiRequest, NextApiResponse } from 'next';'
@@ -155,16 +141,12 @@ export default async function handler() { return null; }
 const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' })
     res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
 const JWT_SECRET = null;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ ok: true })
   } catch (e: any) {'
     return res.status(500).json({ error: e?.message || 'Verify failed' })
 :pages_backup/api/auth/verify-sol.ts
   }
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
     const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' })
     res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
@@ -176,4 +158,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/auth/verify-sol.ts

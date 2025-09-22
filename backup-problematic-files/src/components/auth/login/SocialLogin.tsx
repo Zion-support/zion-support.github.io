@@ -1,5 +1,4 @@
 
-=======
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Web3Login } from "./Web3Login",;
@@ -64,9 +63,7 @@ export function SocialLogin() {;
         >;
           <span className="sr-only">Sign in with Twitter</span>;
           <Twitter className="h-5 w-5" />;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         </Button>;
         <Web3Login />;
       </div>;
     </div>;
-<<<<<<< HEAD

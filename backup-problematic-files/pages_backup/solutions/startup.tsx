@@ -7,7 +7,6 @@ import Link from 'next/link';';
 import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
-<<<<<<< HEAD
 const features = [;
   {}
     title: 'Rapid Prototyping,',
@@ -243,7 +242,6 @@ export default function StartupSolutionsPage() {
 };
 
 export default Startup;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const Startup: React.FC<StartupProps> = ({ className }) => {
 "
     <div className={className || }>
@@ -254,4 +252,3 @@ const Startup: React.FC<StartupProps> = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

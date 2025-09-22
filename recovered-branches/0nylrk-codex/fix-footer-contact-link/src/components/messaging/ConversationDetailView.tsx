@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-=======
 import React, { useState, useEffect, useRef } from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { format  } from 'date-fns';
 import { MessageSquare  } from 'lucide-react';
 import { useMessaging  } from '@/context/MessagingContext';
@@ -19,15 +11,8 @@ import { AspectRatio  } from '@/components/ui/aspect-ratio';
 import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function ConversationDetailView() {
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export function ConversationDetailView() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {format} from 'date-fns';
 import {MessageSquare} from 'lucide-react';
 import {useMessaging} from '@/context/MessagingContext';
@@ -39,24 +24,14 @@ import {MessageBubble} from './MessageBubble';
 import {DateDivider} from './DateDivider';
 export function ConversationDetailView() {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user } = useAuth();
-=======
 export function ConversationDetailView() {  const { user } = useAuth();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export function ConversationDetailView() {  const { user } = useAuth();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   const { user } = useAuth();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 export function ConversationDetailView() {  const { user } = useAuth();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const {
-=======
 import { format  } from 'date-fns';'
 import { MessageSquare  } from 'lucide-react';'
 import { useMessaging  } from '@/context/MessagingContext';'
@@ -80,7 +55,6 @@ import {DateDivider} from './DateDivider';
 export function ConversationDetailView() { return null; }
   const { user } = useAuth();
   const {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     activeConversation;
 
     activeMessages;
@@ -93,10 +67,7 @@ export function ConversationDetailView() { return null; }
     if (activeConversation) {}
       loadMessages(activeConversation.id)
     }
-<<<<<<< HEAD
   }, [activeConversation?.id, loadMessages]);
-<<<<<<< HEAD
-<<<<<<< HEAD
   useEffect(() => {
     scrollToBottom()
   }, [activeMessages]);
@@ -110,13 +81,8 @@ export function ConversationDetailView() { return null; }
     setMessageText('')
   }
 import React, { useState, useEffect, useRef } from 'react',;
-=======
   }, [activeConversation?.id, loadMessages]);import React, { useState, useEffect, useRef } from 'react',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   }, [activeConversation?.id, loadMessages]);import React, { useState, useEffect, useRef } from 'react',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   }, [activeConversation?.id, loadMessages]);
 
 useEffect(() => {
@@ -132,7 +98,6 @@ useEffect(() => {
     setMessageText('')
   }
 import React, { useState, useEffect, useRef } from 'react',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { format } from 'date-fns',;
 import { MessageSquare } from 'lucide-react',;
 import { useMessaging } from '@/context/MessagingContext',;
@@ -141,7 +106,6 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
 import { AspectRatio } from '@/components/ui/aspect-ratio',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessageBubble } from './MessageBubble',;
-=======
 '
 import React, { useState, useEffect, useRef } from 'react',;'
 import { format } from 'date-fns',;'
@@ -152,7 +116,6 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;'
 import { AspectRatio } from '@/components/ui/aspect-ratio',;'
 import { useAuth } from '@/hooks/useAuth',;'
 import { MessageBubble } from './MessageBubble',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { DateDivider } from './DateDivider',;
 export function ConversationDetailView() { return null; }
   const { user } = useAuth(),;
@@ -169,10 +132,6 @@ export function ConversationDetailView() { return null; }
       loadMessages(activeConversation.id);
     }
   }, [activeConversation?.id, loadMessages]),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {format} from 'date-fns';
 
@@ -185,7 +144,6 @@ import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
 import {AspectRatio} from '@/components / ui / aspect - ratio';
 import {use_auth} from '@/hooks / use_auth';
 import {MessageBubble} from './MessageBubble';
-=======
 '
 import {format} from 'date-fns';
 
@@ -199,33 +157,20 @@ import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';'
 import {AspectRatio} from '@/components / ui / aspect - ratio';'
 import {use_auth} from '@/hooks / use_auth';'
 import {MessageBubble} from './MessageBubble';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {DateDivider} from './DateDivider';
 
   }, [activeConversation?.id, loadMessages]),
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
-=======
 
   useEffect(() => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   useEffect(() => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     scrollToBottom()
   }, [activeMessages]),
 
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
@@ -234,29 +179,20 @@ import {DateDivider} from './DateDivider';
     e.preventDefault(),
     if (!messageText.trim() || !activeConversation) return,
 
-=======
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault(),
     if (!messageText.trim() || !activeConversation) return,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     await sendMessage(activeConversation.id, messageText),
     setMessageText('')
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   if (!activeConversation) {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {;
-=======
   useEffect(() => {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   if (!activeConversation) {  useEffect(() => {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     scrollToBottom();
   }, [activeMessages]);
 
@@ -275,9 +211,6 @@ import {DateDivider} from './DateDivider';
   if (!activeConversation) {;
 if (!activeConversation) {
   if (!activeConversation) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   const scrollToBottom = () => {'
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
@@ -290,7 +223,6 @@ if (!activeConversation) {
     setMessageText('')
   },
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">;"
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />;"
@@ -301,20 +233,10 @@ if (!activeConversation) {
       </div>;
     );
   }
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
   activeMessages.forEach(message => {'
@@ -328,20 +250,11 @@ if (!activeConversation) {
         messages: [message]
       })
     }
-<<<<<<< HEAD
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
   const hasContextData = activeConversation.context_data &&
     (activeConversation.context_data.title |activeConversation.context_data.description);
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   });
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
   // Group messages by date;
@@ -360,43 +273,28 @@ date: messageDate,;
     }
 
 }),
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="flex-1 flex flex-col h-full">;
       {/* Header */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   });        date: messageDate,;
-=======
         date: messageDate,;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         messages: [message];
       });
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   });        date: messageDate,;
         messages: [message];
       });
     }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   }),
 
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return ("
     <div className="flex-1 flex flex-col h-full">;
       {/* Header */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
@@ -420,15 +318,11 @@ date: messageDate,;
               {activeConversation.other_user.name}
             </div>
             <div className="text-xs text-zion-slate">
-<<<<<<< HEAD
 
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' :
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
@@ -462,11 +356,7 @@ date: messageDate,;
               {active_conversation.other_user.user_type === 'talent' ? 'Talent' :;
               active_conversation.other_user.user_type === 'employer' ? 'Employer' :;
               active_conversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>;
           </div>;
         </div>;
@@ -540,9 +430,7 @@ date: messageDate,;
 
 }
 ;
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             onChange={(e) => setMessageText(e && e.target.value)}
 
             onChange={(e) => setMessageText(e && e.target.value)}
@@ -560,26 +448,19 @@ date: messageDate,;
                     isUserMessage={message.sender_id === user?.id}
 
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             Send;
-=======
   return (
     <div className="flex-1 flex flex-col h-full">;
       {/* Header */}            </div>;
           </div>;
         </div>;
       </div>;            Send;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Button>;
         </form>;
       </div>;
 </div>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="flex-1 flex flex-col h-full">;
       {/* Header */}
@@ -1062,7 +943,6 @@ if ( {) {
           </Button>;
         </form>;
       </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 </div>);
@@ -1102,30 +982,15 @@ if ( {) {
 }
     </div>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 ;
 </div>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 ;
     </div>);
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

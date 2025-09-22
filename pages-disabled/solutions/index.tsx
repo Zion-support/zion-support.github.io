@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -719,9 +716,7 @@ key={index}
     </Layout>;
   );
 }
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 };
 
@@ -1266,8 +1261,6 @@ export default SolutionsPage,
 export default SolutionsPage;
 
 export default SolutionsPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 '
 import React from 'react';'
@@ -1285,17 +1278,7 @@ export default function SolutionsPage() {}
     </MainLayout>;
   );
 }
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 const SolutionsPage: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

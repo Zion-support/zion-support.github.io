@@ -1,26 +1,18 @@
 :src/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
 'use client';
 import React, { Suspense, lazy, useState, useEffect, ComponentType } from 'react';
-=======
 
 :src_backup/components/advanced/DynamicComponentLoader.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 :src/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {logErrorToProduction} from '@/utils/productionLogger',;
 import { logErrorToProduction } from '@/utils/productionLogger';
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
 interface LoadingState {;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   isLoading: boolean;
   error: Error | null;
   retryCount: number;
@@ -33,21 +25,13 @@ interface DynamicLoaderProps {;
 fallback?: React.ReactNode;
   errorFallback?: React.ComponentType<{ error: Error, retry: () => void }>;
   loadingComponent?: React.ComponentType;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/advanced/DynamicComponentLoader.tsx
   enableRetry?: boolean;
   maxRetries?: number;
   prefetch?: boolean;
   className?: string;
 :src/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   children?: React.ReactNode;
   [key: string]: any;
 }
@@ -82,19 +66,15 @@ const EnhancedLoading: React.FC<{;
   show_progress?: boolean;
 :src_backup/components/advanced/DynamicComponentLoader.tsx
 }> = ({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   progress = 0,
-<<<<<<< HEAD
   message = 'Loading component...', 
   showProgress = true 
 }) => (
-<<<<<<< HEAD
   message = 'Loading component...',
   show_progress = true,
 }) => (
 
 :src_backup/components/advanced/DynamicComponentLoader.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
   <Card className="w-full max-w-md mx-auto">
     <CardContent className="p-6">
       <div className="flex flex-col items-center space-y-4">
@@ -107,16 +87,13 @@ const EnhancedLoading: React.FC<{;
               style={{
 :src/components/advanced/DynamicComponentLoader.tsx
 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
-<<<<<<< HEAD
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}'
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
 :src/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
             />;
           )}
         </div>
@@ -133,11 +110,9 @@ background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progr
   </Card>
 )
 
-=======
 
 :src_backup/components/advanced/DynamicComponentLoader.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
 // Enhanced Error Component
 const EnhancedError: React.FC<{
   error: Error
@@ -147,23 +122,19 @@ const EnhancedError: React.FC<{
   maxRetries: number
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
 :src/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
   <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
     <CardContent className="p-6">
       <div className="flex flex-col items-center space-y-4">
-=======
 "
   <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">"
     <CardContent className="p-6">"
       <div className="flex flex-col items-center space-y-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
         <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
           {isOnline ? ("
             <AlertTriangle className="h-6 w-6 text-red-600" />
 
           ) : (
             <WifiOff className="h-6 w-6 text-red-600" />
-=======
           ) : ('
             <WifiOff className='h-6 w-6 text-red-600' />
         </div>;
@@ -187,7 +158,6 @@ const EnhancedError: React.FC<{;
             <AlertTriangle className='h-6 w-6 text-red-600' />;
           ) : (;'
             <WifiOff className='h-6 w-6 text-red-600' />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
           )}
         </div>;'
         <div className='text-center'>;'
@@ -206,7 +176,6 @@ const EnhancedError: React.FC<{;
 :src/components/advanced/DynamicComponentLoader.tsx
             <p className="text-xs text-red-600 dark:text-red-300 mt-2">
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Retry {retryCount}/{maxRetries}
             </p>;
           )}
@@ -214,13 +183,10 @@ const EnhancedError: React.FC<{;
         {retryCount < maxRetries && (
 :src/components/advanced/DynamicComponentLoader.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Button
-=======
 
 :src_backup/components/advanced/DynamicComponentLoader.tsx
           <Button 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
             onClick={retry} 
             variant="outline" 
             size="sm"
@@ -228,11 +194,9 @@ const EnhancedError: React.FC<{;
           >"
             <RefreshCw className="h-4 w-4 mr-2" />
 :src_backup/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
             Try Again
           </Button>
         )}
-<<<<<<< HEAD
 
             />)}
         </div>;'
@@ -296,35 +260,26 @@ const useNetworkStatus = () =>: any {}
     window.addEventListener ('offline', updateOnlineStatus);
 
 :src_backup/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
     return () => {
-=======
       </div>
     </CardContent>
   </Card>    return () => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       window.removeEventListener ('online', updateOnlineStatus);
-=======
     return () => {'
       window.removeEventListener ('online', updateOnlineStatus);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
       window.removeEventListener ('offline', updateOnlineStatus);
     }
   }, []);
   return is_online;
 :src/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
 }
 
     };
 ;
 
 :src_backup/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
     return () => {}; // Return empty cleanup function for other paths
-=======
     return () => {}; // Return empty cleanup function for other paths;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
   }, [loadingState.isLoading, loadingState.error])
   // Load component;
   const loadComponent = async () => {}
@@ -399,7 +354,6 @@ const useNetworkStatus = () =>: any {}
     }
           >
 :src/components/advanced/DynamicComponentLoader.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>;
     </CardContent>;
   </Card>;
@@ -542,11 +496,9 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
         className={cn("flex items-center justify-center p-8", className)}
       >
         <EnhancedError
-=======
 
           >;
         <EnhancedError;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
           error={loadingState.error}
           retry={retry}
           isOnline={loadingState.isOnline}
@@ -589,7 +541,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
             <DynamicComponent {...props}>{children}</DynamicComponent>;
           </motion && motion.div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className={className}
           >;
             <DynamicComponent {...props}>;
@@ -614,18 +565,12 @@ return (props: React.ComponentProps<T> & { children?: React.ReactNode }) => (;
       importFn={importFn}
       {...(options || {})}
     <DynamicComponentLoader
-=======
 }    <DynamicComponentLoader
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     <DynamicComponentLoader;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
       importFn = {importFn,}
       {...(options |{})}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {...(props as any)}
 :src/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
     />;
   );
 }
@@ -643,7 +588,6 @@ return (props: React.ComponentProps<T> & { children?: React.ReactNode }) => (;
 // export const DynamicChartComponent = createDynamicComponent(
 :src_backup/components/advanced/DynamicComponentLoader.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
@@ -651,7 +595,6 @@ return (props: React.ComponentProps<T> & { children?: React.ReactNode }) => (;
 //       </div>
 //     ),
 //     prefetch: true
-=======
 '
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
 
@@ -662,16 +605,11 @@ return (props: React.ComponentProps<T> & { children?: React.ReactNode }) => (;
 //       </div>
 //     );
 //     prefetch: true;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
 //   }
 // )
 
 // export const DynamicThreeComponent = createDynamicComponent(
 :src_backup/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
 'use client';
 
@@ -721,14 +659,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 //   }
 // )
 :src_backup/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
 export default DynamicComponentLoader; export default DynamicComponentLoader
 // );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-=======
 ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
 // Advanced Dynamic Component Loader;
 :src_backup/components/advanced/DynamicComponentLoader.tsx
 export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({}
@@ -916,14 +850,12 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
 
 :src_backup/components/advanced/DynamicComponentLoader.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
 //         <span className="text-muted-foreground">Loading 3D renderer...</span>
 //       </div>
 //     )
-=======
 //   {};
 //     loading_component: () => (";
 //       <div className="w - full h - 64 bg - muted animate - pulse rounded - lg flex items - center justify - center">;"
@@ -931,10 +863,8 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 //       </div>;
 //     ),
 //     prefetch: true;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx
 //   }
 // );
-<<<<<<< HEAD
 //   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),
 //   {};
 //     loading_component: () => (";
@@ -979,19 +909,9 @@ export default DynamicComponentLoader; export default DynamicComponentLoader;
 // );
 :src_backup/components/advanced/DynamicComponentLoader.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default DynamicComponentLoader;
-<<<<<<< HEAD:src/components/advanced/DynamicComponentLoader.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
 export default DynamicComponentLoader;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 export default DynamicComponentLoader;
 }}}}
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -1014,7 +934,6 @@ interface DynamicLoaderProps {;
   children?: React.ReactNode;
   [key: string]: any;
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/advanced/DynamicComponentLoader.tsx
 
 // Enhanced Loading Component
 const EnhancedLoading: React.FC<{ 
@@ -1317,7 +1236,4 @@ export default DynamicComponentLoader;
 
 export default DynamicComponentLoader;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/advanced/DynamicComponentLoader.tsx
-=======
 export default DynamicComponentLoader;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/advanced/DynamicComponentLoader.tsx

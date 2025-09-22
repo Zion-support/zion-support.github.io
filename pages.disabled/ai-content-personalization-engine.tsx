@@ -1,12 +1,5 @@
 :pages_backup/ai-content-personalization-engine.tsx
-<<<<<<< HEAD:pages_backup/ai-content-personalization-engine.tsx
-<<<<<<< HEAD:pages/ai-content-personalization-engine.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 
 			title;
@@ -14,7 +7,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: CDP, ESP, CMS, Web SDK"
 			]}
 			industries={["E‑commerce", "Media", "SaaS", "Education"]}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-content-personalization-engine.tsx
 
 			pricePerMonthUSD={1299  } catch (error) {
     console.error("Error:", error);
@@ -71,15 +63,11 @@ export default function AIContentPersonalizationEngine() {
 	return (
 		<ServiceLanding
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 			title="AI Content Personalization Engine"
 			slug="ai-content-personalization-engine"
 			description="Deliver tailored content, offers, and UX per user in real-time. Optimize journeys across web, email, and in-app to maximize engagement and conversions."
 			subtitle="Boost conversions 10–25% with context-aware personalization."
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 3–6x within 90 days"
 			features={[
@@ -94,28 +82,19 @@ export default function AIContentPersonalizationEngine() {
 			industries={["E‑commerce", "Media", "SaaS", "Education"]}
 
 :pages_backup/ai-content-personalization-engine.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 import React from 'react';
 			title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: CDP, ESP, CMS, Web SDK"
 			]}
 			industries={["E‑commerce", "Media", "SaaS", "Education"]}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			pricePerMonthUSD={1299  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 :pages_backup/ai-content-personalization-engine.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 3–6x within 90 days"
 			features={["
@@ -126,7 +105,6 @@ import React from 'react';
 				"Privacy-safe profiling and consent management","
 				"Integrations: CDP, ESP, CMS, Web SDK"
 :pages_backup/ai-content-personalization-engine.tsx
-<<<<<<< HEAD
 			]}
 			industries={["E‑commerce", "Media", "SaaS", "Education"]}
 			canonical="https: //ziontechgroup.com/ai-content-personalization-engine"
@@ -136,7 +114,6 @@ import React from 'react';
 };
 			]  } catch (error) {
     console.error("Error:", error);
-=======
 
 			]  } catch (error) {"
     console.error("Error:", error);"
@@ -145,7 +122,6 @@ import React from 'react';
 }"
 			industries={["E‑commerce", "Media", "SaaS", "Education"]  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-personalization-engine.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -154,9 +130,6 @@ import React from 'react';
 		/>
 :pages_backup/ai-content-personalization-engine.tsx
 	)
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-personalization-engine.tsx
 			canonical="https: //ziontechgroup.com/ai-content-personalization-engine";
 		/>;
 	);
@@ -166,29 +139,10 @@ import React from 'react';
   }
 :pages_backup/ai-content-personalization-engine.tsx
 }
-<<<<<<< HEAD:pages_backup/ai-content-personalization-engine.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-content-personalization-engine.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-content-personalization-engine.tsx
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-content-personalization-engine.tsx

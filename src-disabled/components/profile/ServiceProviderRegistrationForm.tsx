@@ -1,7 +1,4 @@
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD:src/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -214,7 +211,6 @@ if ( {) {}
 
       })
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return;
     }
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
@@ -407,15 +403,11 @@ if ( {) {}
         .from('profiles')
         .update({
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
       // Create the service profile;
       const { data: profileData, error } = await supabase'
         .from('profiles')
         .update({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
           display_name: values.name,
           bio: finalSummary,"
           user_type: "creator", // Set as service provider;
@@ -429,11 +421,8 @@ if ( {) {}
 
 if (error) throw error,
 
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
       // Store service-specific data in service_profiles table
-=======
       // Store service-specific data in service_profiles table;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
       // (This assumes you have a service_profiles table in your database)
 
       /*
@@ -442,11 +431,7 @@ if (error) throw error,
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
         .insert({
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
         .insert({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
           user_id: user.id,
           services: finalServices,
           hourly_rate: Number(values.hourlyRate),
@@ -455,8 +440,6 @@ if (error) throw error,
 website: values.website || null}),
 
 if (serviceError) throw serviceError,
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       */
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
 
@@ -519,10 +502,7 @@ if ( {) {}
           await supabase.functions.invoke('send-email', {
             body: {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               to: userEmail,
               subject: "Your Zion Service Profile Is Ready",
 
@@ -534,7 +514,6 @@ if ( {) {}
                 <p>You can now start receiving service requests and connecting with clients.</p>
                 <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
                   <p style="color: #666; font-size: 12px;">© ${new Date().getFullYear()} Zion Marketplace</p>
-=======
         try {'
           await supabase.functions.invoke('send-email', {}
             body: {}
@@ -549,7 +528,6 @@ if ( {) {}
                 <p>You can now start receiving service requests and connecting with clients.</p>"
                 <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">"
                   <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
                 </div>
               </div>
 `
@@ -703,7 +681,6 @@ if ( {) {}
         ];
       }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // Get user email for notification;
       const { data: userData } = await supabase && supabase.auth.getUser();
       const userEmail = (userData as any).user?.email;
@@ -842,20 +819,11 @@ if ( {) {}
         variant: 'destructive',
       });
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } finally {
       setIsSubmitting(false)
     }
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -867,9 +835,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Switch } from '@/components/ui/switch';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/ServiceProviderRegistrationForm.tsx
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form;
@@ -885,8 +851,6 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 // Define form schema
 const serviceProfileSchema = null;
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
     <div className="max-w-4xl mx-auto p-4 md:p-6">
@@ -909,7 +873,6 @@ const serviceProfileSchema = null;
                     <FormField;
                       control={form.control}
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD
                       name="name"
                       render={({ field }: { field: any }) => (
                         <FormItem>"
@@ -932,13 +895,7 @@ const serviceProfileSchema = null;
                     />
                   </div>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
                   <div className="col-span-1">
                     <FormField;
                       control={form.control}"
@@ -963,13 +920,7 @@ const serviceProfileSchema = null;
                     />
                   </div>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
                   <div className="col-span-1">
                     <FormField;
                       control={form.control}"
@@ -994,13 +945,7 @@ const serviceProfileSchema = null;
                     />
                   </div>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
                   <div className="col-span-1">
                     <FormField;
                       control={form.control}"
@@ -1057,8 +1002,6 @@ const serviceProfileSchema = null;
           <form onSubmit={form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
               {/* Basic Information */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -1066,8 +1009,6 @@ const serviceProfileSchema = null;
                     <FormField;
 
                     <FormField
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;'
             <CardContent className='space-y-8'>;
               {/* Basic Information */}"
@@ -1076,7 +1017,6 @@ const serviceProfileSchema = null;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
                   <div className="col-span-1">
                     <FormField;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
                       control={form.control}
 name="name";
                       render={({ field }: { field: any }) => (;
@@ -1131,7 +1071,6 @@ name="name";
                         ? 'Generating...''
                         : 'Generate Enhanced Profile'}
                     </Button>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>;
                   <div className="col-span-1">;
                     <FormField;
@@ -1221,7 +1160,6 @@ name="name";
                       )}
                     </div>
 
-<<<<<<< HEAD
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4" />
                       <span>Upload Photo</span>
@@ -1239,8 +1177,6 @@ name="name";
                 </div>
               </div>
 
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD
               <Separator className="bg-zion-blue-light/50" />
 
               {/* Bio Section */}
@@ -1277,14 +1213,8 @@ name="name";
                           <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
                           AI Profile Enhancement
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/ServiceProviderRegistrationForm.tsx
                         </FormLabel>
-=======
                         </FormLabel>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your service description for better visibility and client engagement;
                         </FormDescription>
@@ -1292,9 +1222,6 @@ name="name";
                       <FormControl>
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
                         <Switch
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/ServiceProviderRegistrationForm.tsx
                           aria-label="AI profile enhancement"
                           checked={field.value}
                           onCheckedChange={field.onChange}"
@@ -1317,10 +1244,6 @@ name="name";
                       <Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/ServiceProviderRegistrationForm.tsx
                     </Button>
                   </div>
                 )}
@@ -1335,14 +1258,8 @@ name="name";
                         AI-Generated Content;
                       </h4>;
                       <Button
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/ServiceProviderRegistrationForm.tsx
                         type="button"
                         size="sm"
-=======
                 {generatedContent && ("
                   <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">"
                     <div className="flex items-center justify-between mb-3">"
@@ -1354,7 +1271,6 @@ name="name";
 "
                         type="button""
                         size="sm""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                         onClick={applyGeneratedContent}
                       >"
@@ -1365,9 +1281,7 @@ name="name";
                     "
                     <div className="space-y-4">
 
-=======
                     <div className="space-y-4">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/ServiceProviderRegistrationForm.tsx
                       <div>
                         <h5 className='text-zion-slate-light text-sm mb-1'>
                           Professional Summary
@@ -1375,17 +1289,13 @@ name="name";
                         <p className='text-zion-slate italic'>
                           {generatedContent.summary}
                         </p>
-=======
 
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
                       <div>"
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>"
                         <p className="text-zion-slate italic">{generatedContent.summary}</p>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
                       </div>
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/ServiceProviderRegistrationForm.tsx
                       {generatedContent.services && generatedContent.services.length > 0 && (
                         <div>"
                           <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>"
@@ -1407,13 +1317,10 @@ name="name";
               </div>
 
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD
               <Separator className="bg-zion-blue-light/50" />
 
-=======
               <Separator className='bg-zion-blue-light/50' />;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/ServiceProviderRegistrationForm.tsx
               {/* Services and Availability */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
                 {/* Services Section */}
@@ -1425,8 +1332,6 @@ name="name";
                     control={form.control}
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/ServiceProviderRegistrationForm.tsx
                     name="services"
                     render={({ field }: { field: any }) => (
                       <FormItem>"
@@ -1440,17 +1345,12 @@ name="name";
                               placeholder='Add a service...'
                               {...field}
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                               onKeyDown={handleServiceKeyPress}
                             />
                           </FormControl>
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
                           <Button
 
-=======
                           <Button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
                   />;
 '
                   <div className='flex flex-wrap gap-2 mt-2'>;
@@ -1613,14 +1513,12 @@ name="name";
                       </p>)}
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             type="button"
                             variant="outline"
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
                             onClick={handleAddService}
                           >
                             Add
-=======
 "
                             type="button""
                             variant="outline""
@@ -1629,7 +1527,6 @@ name="name";
                           >
 
                             Add;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
                           </Button>
                         </div>"
                         <FormDescription className="text-zion-slate">
@@ -1641,8 +1538,6 @@ name="name";
                   />
 
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className="flex flex-wrap gap-2 mt-2">
                     {serviceTags.map(service => (
                       <Badge
@@ -1657,18 +1552,11 @@ name="name";
                         >
                           <X className="h-3 w-3" />
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/ServiceProviderRegistrationForm.tsx
                         </button>
                       </Badge>
                     ))}
                     {serviceTags.length === 0 && (
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/ServiceProviderRegistrationForm.tsx
                       <p className="text-zion-slate text-sm italic">No services added yet</p>
                     )}
                   </div>;
@@ -1768,7 +1656,6 @@ name="name";
                         <FormMessage className='text - red - 400' />;
                       </FormItem>)}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   />;
                   <FormField;
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
@@ -1831,7 +1718,6 @@ Currently Unavailable
                       </FormItem>
                     )}
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD
                   />
                 </div>
               </div>
@@ -1845,15 +1731,12 @@ Currently Unavailable
               </div>;
             </CardContent>;
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
                 <Button
                   type="button"
                   variant="outline"
-=======
 
 "
             <CardFooter className="border-t border-zion-blue-light pt-6">"
@@ -1862,7 +1745,6 @@ Currently Unavailable
                 <Button"
                   type="button""
                   variant="outline""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
                   className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
                 >
                   Save as Draft;
@@ -1871,10 +1753,8 @@ Currently Unavailable
 
                 <Button 
                   type="submit"
-=======
                 <Button "
                   type="submit""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                   disabled={isSubmitting}
                 >"
@@ -1887,11 +1767,8 @@ Currently Unavailable
       </Card>
     </div>
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD
   )
 }
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD
               <div className='flex flex - col sm:flex - row gap - 4 w - full sm:justify - between'>;
                 <Button;'
                   type='button';'
@@ -1921,7 +1798,6 @@ Currently Unavailable
   setServiceTags (service_tags.filter ( (s) => s !== service) );
 
 }
-<<<<<<< HEAD
 //Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) =>: any {
 }
 //Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
@@ -1937,9 +1813,7 @@ if ( {) {
 if (file) {}
   const reader = new FileReader ()
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
 reader.onloadend = () => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   setUploadedAvatar (reader.result as string);
 }
 reader.readAsDataURL (file);
@@ -1976,10 +1850,8 @@ if (newServices.length > 0) {}
   toast ({}
   return;
 :src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD
 }setIsSubmitting (true);try {
 try {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   //For actual implementation with Supabase if (!user?.id) {
 }//Enhance profile if not already done let finalSummary = values.bio
 let finalServices = serviceTags
@@ -1994,7 +1866,6 @@ try {
 }//Continue with submission even if email fails 
 
 }//Redirect to service provider dashboard or profile page setTimeout ( () => {'
-=======
 try {}
   //For actual implementation with Supabase if (!user?.id) {}
 }//Enhance profile if not already done let finalSummary = values.bio;
@@ -2009,7 +1880,6 @@ try {}
 }//Continue with submission even if email fails;
 '
 }//Redirect to service provider dashboard or profile page setTimeout ( () => {''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx
   router.push ('/service-dashboard')
 }, 1500)'
 }catch (error: any) {''
@@ -2131,10 +2001,7 @@ max - w-4xl mx - auto p - 4 md:p - 6"> <Card className=" bg - zion - blue - dark
 }/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items - center space-x-2"> <input /> <label html_for=" available"className=" text - white flex items - center gap-2"> <div className=" h - 2 w - 2 rounded - full bg - green-500"></div> Available for Work </label> </div> <div className=" flex items - center space-x-2"> <input /> <label html_for=" limited"className=" text - white flex items - center gap-2"> <div className=" h - 2 w - 2 rounded - full bg - yellow-500"></div> Limited Availability </label> </div> <div className=" flex items - center space-x-2"> <input /> <label html_for=" unavailable"className=" text - white flex items - center gap-2"> <div className=" h - 2 w - 2 rounded - full bg - red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text - red-400"/> </FormItem>) ";
 }/> </div> </div> </CardContent> <CardFooter className=" border - t border - zion - blue - light pt-6"> <div className=" flex flex - col sm:flex - row gap - 4 w - full sm:justify-between"> <Button type=" button"variant=" outline"className=" border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);
 }'"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 toast ({}
 }finally {}
   setIsSubmitting (false);"
@@ -2175,4 +2042,3 @@ max - w-4xl mx - auto p - 4 md:p - 6"> <Card className=" bg - zion - blue - dark
 }/> </div> </div> </CardContent> <CardFooter className=" border - t border - zion - blue - light pt - 6"> <div className=" flex flex - col sm:flex - row gap - 4 w - full sm:justify - between"> <Button type=" button"variant=" outline"className=" border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);'"
 }'"}
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ServiceProviderRegistrationForm.tsx

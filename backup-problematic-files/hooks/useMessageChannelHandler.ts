@@ -35,8 +35,6 @@ onError
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback(
     (event: MessageEvent<unknown>) => {
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       try {
   // TODO: Implement
         // Check condition;
@@ -47,15 +45,10 @@ if ( {) {
         // Check condition;
           on_error (error as Error);
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       }
     } catch (error) {
       if (onError) {
         onError(error as Error);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 }
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -67,15 +60,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }
 origin/main
 origin/automation-improvements-final
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
       }
     }
-=======
       if (onError) {
         onError(error as Error);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     [onMessage, onError]
   );
   useEffect(() => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

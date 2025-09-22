@@ -76,4 +76,3 @@ timestamp: new Date () .toISOString ();
 status: 'pending'
 });
 }
-<<<<<<< HEAD

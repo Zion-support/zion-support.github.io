@@ -1,18 +1,8 @@
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;'
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function AICustomerSuccessPlatform() {
 	return (
 		<ServiceLanding
@@ -27,13 +17,11 @@ export default function AICustomerSuccessPlatform() {
 			subtitle="Reduce churn by 20–45% and grow NRR with automated, data-driven customer health."
 			pricePerMonthUSD={1999}
 			implementationWeeks="Implementation: 2–4 weeks"
-=======
 
 export default function AICustomerSuccessPlatform() {};
 	return (;
 		<ServiceLanding;
 			implementationWeeks="Implementation: 2–4 weeks""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			roiNote="Average ROI 4–10x within 90 days"
 			features={["
 				"Unified customer health scoring (usage, support, sentiment, billing)""
@@ -45,19 +33,13 @@ export default function AICustomerSuccessPlatform() {};
 "Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
 			]}
 			industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
-=======
 
 '
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 export default /**;
  * AICustomerSuccessPlatform - Function description;
@@ -83,7 +65,6 @@ return (
     industries={["SaaS", "Fintech", "Media", "E‑commerce"]}"
     canonical="https: //ziontechgroup.com / ai - customer - success - platform";
   />);
-<<<<<<< HEAD
 }
 
 export default function AICustomerSuccessPlatform() { return null; }
@@ -103,22 +84,13 @@ export default function AICustomerSuccessPlatform() { return null; }
 
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 			pricePerMonthUSD={1999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 4–10x within 90 days"
 			features={[
@@ -135,17 +107,10 @@ export default function AICustomerSuccessPlatform() { return null; }
 		/>
 	)
 };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
 			title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			]  } catch (error) {
     console.error("Error:", error);
-=======
 
 "
 			implementationWeeks="Implementation: 2–4 weeks""
@@ -160,7 +125,6 @@ export default function AICustomerSuccessPlatform() { return null; }
 
 			]  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
@@ -181,11 +145,5 @@ export default function AICustomerSuccessPlatform() { return null; }
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

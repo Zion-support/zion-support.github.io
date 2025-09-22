@@ -1,5 +1,4 @@
 :src/components/jobs/applications/ApplicationActions.tsx
-<<<<<<< HEAD
 return (
     <div className='flex items-center justify-end gap-2'>;
 :src_backup/components/jobs/applications/ApplicationActions.tsx
@@ -42,16 +41,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         variant='outline'
         size='sm'
 
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
           <DropdownMenuItem;
 '
             onClick={() => onStatusChange(application.id, 'rejected')}'"
             className='text-red-600'          >            onClick={() => onStatusChange(application.id, "hired")}
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationActions.tsx
 import Link from "next/link",
 import {}
   DropdownMenu,
@@ -122,36 +117,23 @@ export function ApplicationActions({
           <DropdownMenuItem 
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationActions.tsx
             className='text-red-600'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Reject
-=======
 
             Reject;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationActions.tsx
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
 :src/components/jobs/applications/ApplicationActions.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 :src_backup/components/jobs/applications/ApplicationActions.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationActions.tsx
       <Button 
         variant="default"
         size="sm"
@@ -204,7 +186,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components / ui / dropdown - menu';
 import { Button } from '@/components / ui / button';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 interface ApplicationActionsProps {;
@@ -242,8 +223,6 @@ export function ApplicationActions() { return null; }
           </DropdownMenuItem>;
 :src_backup/components/jobs/applications/ApplicationActions.tsx
           <DropdownMenuItem;
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationActions.tsx
-<<<<<<< HEAD
             Schedule Interview;
           </DropdownMenuItem>;
           <DropdownMenuItem;"
@@ -255,7 +234,6 @@ export function ApplicationActions() { return null; }
           <DropdownMenuItem;
 :src/components/jobs/applications/ApplicationActions.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           >;
             Hire;
           </DropdownMenuItem>;
@@ -268,7 +246,6 @@ onClick={() => onStatusChange(application.id, "rejected")}
         </DropdownMenuContent>;
       </DropdownMenu>;
 :src/components/jobs/applications/ApplicationActions.tsx
-<<<<<<< HEAD
       <Button;
         variant="default";
         size="sm";
@@ -280,11 +257,9 @@ onClick={() => onStatusChange(application.id, "rejected")}
       </Button>;
     </div>;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
 :src_backup/components/jobs/applications/ApplicationActions.tsx
 }
-<<<<<<< HEAD
 ;
       <Button variant='default' size='sm' as_child>        <Link href={`/messages?talent_id=${application.talent_id}`}>;
       <Button;"
@@ -298,16 +273,7 @@ onClick={() => onStatusChange(application.id, "rejected")}
     </div>);
 :src_backup/components/jobs/applications/ApplicationActions.tsx
 }
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationActions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationActions.tsx
 <Button variant='default' size='sm' asChild>
         <Link href={`/messages?talentId=${application.talent_id}`}>
           Contact
@@ -317,8 +283,4 @@ onClick={() => onStatusChange(application.id, "rejected")}
   );
 }
 :src/components/jobs/applications/ApplicationActions.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationActions.tsx

@@ -37,14 +37,12 @@ export function BrowseCards({ items, type, onViewDetails } BrowseCardsProps) {;
     <div className="space-y-4 pb-24">;
       {items.map((item) => (;
         <Card key={item.id} className="overflow-hidden">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <CardContent className="p-0">;
             <div className="p-4">;
               <div className="flex justify-between">;
                 <div className="flex items-center gap-3">;
                   {type === "talents" ? (;
                     <Avatar className="h-12 w-12">;
-<<<<<<< HEAD
                     <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
@@ -59,12 +57,10 @@ export function BrowseCards({ items, type, onViewDetails } BrowseCardsProps) {;
                     variant="outline" ;""
                     className="text-xs font-normal";"
                   >;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {badge}
                   </Badge>;
                 ))}
               </div>;
-<<<<<<< HEAD
                     <span>{item.location}</span>;
                     <DollarSign className="h-3 w-3" />;"
 
@@ -78,14 +74,11 @@ export function BrowseCards({ items, type, onViewDetails } BrowseCardsProps) {;
                 {item.match && (;
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">;
                     {item.match}% match;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </div>;
                 )}
               </div>;
             </div>;
-<<<<<<< HEAD
                 onClick={() => onViewDetails(item.id)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 className="gap-1";
               >;
                 View Details <ChevronRight className="h-4 w-4" />;

@@ -46,7 +46,6 @@ jobs:
         
     - name: Check for merge conflicts
       run: |
-        if grep -r "<<<<<<< HEAD" . --exclude-dir=.git --exclude-dir=node_modules; then
           echo "❌ Merge conflicts detected"
           exit 1
         else

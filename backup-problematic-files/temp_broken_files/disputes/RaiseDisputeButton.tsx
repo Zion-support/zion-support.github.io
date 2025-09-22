@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { ;
@@ -43,13 +42,11 @@ export function RaiseDisputeButton({ ;
         variant={variant} ;
         size={size} ;
         className={className} ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         onClick={() => setIsDialogOpen(true)}
       >;
         <ShieldAlert className="h-4 w-4 mr-2" />;
         Raise Dispute;
       </Button>;
-<<<<<<< HEAD
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
         <DialogContent className="sm:max-w-[550px]">;

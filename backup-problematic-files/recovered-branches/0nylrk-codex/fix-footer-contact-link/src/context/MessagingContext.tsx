@@ -1,5 +1,4 @@
 
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -21,12 +20,10 @@ const defaultContext:MessagingContextType = {;
   loadMessages:async () => {}
 },;
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // "createContext" may be untyped if React type definitions are missing.;
 // To avoid TS2347 when the definitions are unavailable, we cast the default;
 // value instead of passing a generic type parameter directly.;
 const MessagingContext = createContext(;
   defaultContext as MessagingContextType;
-<<<<<<< HEAD
 
 }

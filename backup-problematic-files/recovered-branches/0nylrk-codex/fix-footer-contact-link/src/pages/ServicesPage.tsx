@@ -1,5 +1,4 @@
 
-=======
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -121,7 +120,6 @@ const SERVICE_FILTERS = [;
 ;
 export default function ServicesPage() {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <AppLayout>;
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">;
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">;
@@ -135,6 +133,5 @@ export default function ServicesPage() {;
             </Link>;
             <Link to="/request-quote">;
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
-<<<<<<< HEAD
 
 }

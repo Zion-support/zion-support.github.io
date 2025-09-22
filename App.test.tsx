@@ -9,7 +9,6 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './src/App';
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
@@ -99,6 +98,3 @@ pr-12325
     expect(screen.getByText('Leading the future of technology with AI, blockchain, and innovative solutions')).toBeInTheDocument();
   });
 });
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/main

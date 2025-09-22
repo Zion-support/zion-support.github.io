@@ -1,5 +1,4 @@
 
-=======
 import React, { forwardRef } from "react",;
 import { ChevronDown } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -36,9 +35,7 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
               <ChevronDown;
                 className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" :"-rotate-90")}
               />;            )}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </button>;
         )}
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
       </div>;
-<<<<<<< HEAD

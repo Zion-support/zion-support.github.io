@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",;
@@ -39,14 +38,12 @@ export function ApiDocsHub() {;
       color:"from-red-500 to-rose-500"}],;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <ApiDocsLayout>;
       <div className="max-w-4xl">;
         <h1 className="text-4xl font-bold text-white mb-6">Zion AI Marketplace API</h1>;
         <p className="text-zinc-400 text-lg mb-12">;
           Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.;
         </p>;
-<<<<<<< HEAD
 
               <div className="flex items-center text-zion-cyan">;
                 <span className="mr-2">View documentation</span>;

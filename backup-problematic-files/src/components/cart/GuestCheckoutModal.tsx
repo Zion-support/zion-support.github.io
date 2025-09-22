@@ -90,9 +90,7 @@ export default function GuestCheckoutModal({;
 
                 </>;
               )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </Button>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
-<<<<<<< HEAD

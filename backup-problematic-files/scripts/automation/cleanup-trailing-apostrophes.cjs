@@ -58,20 +58,12 @@ function $1() {}
 
         changed += 1};
     } catch (e) {}
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 } catch (e) {}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // ignore file-level errors} catch (e) {}
   // ignore file-level errors};
   console.log(`Cleaned ${changed} files.`)};
 if (require.main === module) {}
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
   main()};
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,4 @@
 
-=======
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
 import { Header } from "@/components/Header",;
@@ -7,7 +6,6 @@ import { Footer } from "@/components/Footer",;
 ;
 export default function CreatorDashboard() {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <SidebarProvider>;
       <div className="min-h-screen flex w-full bg-zion-blue">;
         <AppSidebar />;
@@ -47,4 +45,3 @@ export default function CreatorDashboard() {;
                 Create new content, monitor your analytics, or manage your account using the sidebar menu.;
               </p>;
               {/* Placeholder for more creator-specific content */}
-<<<<<<< HEAD

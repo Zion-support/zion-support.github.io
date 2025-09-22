@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/index.tsx
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
@@ -23,7 +22,6 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -39,10 +37,8 @@ const ServicesIndex: NextPage = () => {
         'Fraud Detection & Risk Assessment'
       ],
       pricing: 'Starting at $2,500/month',
-<<<<<<< HEAD
       icon: '🧠',
       icon: '',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/services/ai-development'
     },
     {
@@ -58,10 +54,8 @@ const ServicesIndex: NextPage = () => {
         'Disaster Recovery & Backup'
       ],
       pricing: 'Starting at $1,800/month',
-<<<<<<< HEAD
       icon: '☁️',
       icon: '',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/services/cloud-solutions'
     },
     {
@@ -77,10 +71,8 @@ const ServicesIndex: NextPage = () => {
         'Blockchain Security Audits'
       ],
       pricing: 'Starting at $3,500/month',
-<<<<<<< HEAD
       icon: '🔗',
       icon: '',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/services/blockchain'
     },
     {
@@ -96,10 +88,8 @@ const ServicesIndex: NextPage = () => {
         'Remote Device Control'
       ],
       pricing: 'Starting at $2,200/month',
-<<<<<<< HEAD
       icon: '🌐',
       icon: '',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/services/iot-platforms'
     },
     {
@@ -115,10 +105,8 @@ const ServicesIndex: NextPage = () => {
         'Third-party Integrations'
       ],
       pricing: 'Starting at $1,500/month',
-<<<<<<< HEAD
       icon: '⚡',
       icon: '',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/products/micro-saas'
     },
     {
@@ -134,10 +122,8 @@ const ServicesIndex: NextPage = () => {
         'Vulnerability Management'
       ],
       pricing: 'Starting at $2,000/month',
-<<<<<<< HEAD
       icon: '🔒',
       icon: '',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/services/cybersecurity'
     },
     {
@@ -153,10 +139,8 @@ const ServicesIndex: NextPage = () => {
         'Performance Optimization'
       ],
       pricing: 'Starting at $1,200/month',
-<<<<<<< HEAD
       icon: '💻',
       icon: '',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/services/web-development'
     },
     {
@@ -172,10 +156,8 @@ const ServicesIndex: NextPage = () => {
         'Custom Reporting Solutions'
       ],
       pricing: 'Starting at $1,800/month',
-<<<<<<< HEAD
       icon: '📊',
       icon: '',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       link: '/services/data-analytics'
   const microSaasServices = [
     {
@@ -541,7 +523,6 @@ export default function ServicesIndex() {
 <title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive technology services including AI development, cloud services, cybersecurity, and data analytics solutions." />
       </Head>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/index.tsx
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -746,9 +727,7 @@ export default function ServicesIndex() {
                   <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
                   <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       </Head>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -948,7 +927,6 @@ export default function ServicesIndex() {
                   {service && service.features.map((feature, idx) => (;
                     <li key={idx} className="mb-1">• {feature}</li>;
                   ))}
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4">;
@@ -1005,7 +983,6 @@ href={service.link}
                 </div>
               </div>
             ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>
         </section>
         {/* AI Services */}
@@ -1086,7 +1063,6 @@ href={service.link}
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -1118,7 +1094,6 @@ href={service.link}
             </motion.div>
 </div>
         </section>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/index.tsx
       </main>
     </div>
   );
@@ -1312,4 +1287,3 @@ pr-12325
   )
 };
 export default ServicesIndex;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -46,7 +46,6 @@ import { GradientHeading } from "@/components/GradientHeading";"
 import { Button } from "@/components/ui/button";'
 import Link from 'next/link';
 :temp_exclude/hooks.disabled/features/InstantMessaging.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function InstantMessaging() {
   const schema = {
     "@context": "https://schema.org",
@@ -56,10 +55,8 @@ export default function InstantMessaging() {
     "url": "https://app.ziontechgroup.com/features/instant-messaging"
   },
 
-<<<<<<< HEAD
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 :temp_exclude/hooks.disabled/features/InstantMessaging.tsx
     <>
@@ -181,6 +178,4 @@ export default function InstantMessaging() { return null; }
   );
 }
 ;
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/InstantMessaging.tsx

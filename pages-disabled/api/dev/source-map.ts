@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
 "
@@ -45,11 +39,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Allow", "GET, POST")
 
 import { getGitStatus, require_roles  } from '../../../utils / dev_access';,
->>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';
 import { getGitStatus, require_roles  } from '../../../utils / dev_access';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export default /**;
  * handler - Function description;
@@ -139,10 +131,8 @@ export default function handler(req, res) {
   }
 }
   res.setHeader("Allow", "GET, POST")
-=======
 }"
   res.setHeader("Allow", "GET, POST"),"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   res.status(405).end("Method Not Allowed")
 ;"
   res.setHeader("Allow", "GET, POST");"
@@ -165,7 +155,6 @@ export default function handler(req, res) {
 }
 }
 
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
@@ -175,4 +164,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = null;
   res.status(405).end("Method Not Allowed")
 };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

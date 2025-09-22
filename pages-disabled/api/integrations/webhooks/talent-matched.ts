@@ -41,11 +41,7 @@ const state = readState()
   }
 
   res.status(200).json({ ok: true, eventId })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState, readState } from '[^']*';
 import { crm } from '[^']*';
@@ -56,7 +52,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // record Zapier event
   const eventId = null;
     writeState(s => s.logs.push(log))
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState, readState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -70,14 +65,9 @@ s && s.events.push({
       type: "zion && zion.talent.matched",
       timestamp: Date && Date.now(),
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       id: eventId
       type: "zion && zion.talent.matched"
       timestamp: Date && Date.now()
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   if (req.method !== "POST")
     return res.status(405).json({ error: "Method not allowed" });
   const { match } = req.body as {
@@ -92,9 +82,6 @@ s.events.push({
       type: 'zion.talent.matched',
       timestamp: Date.now(),
       payload: { match },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { writeState, readState } from "../../../../lib/integrations/fileStore";"
@@ -108,7 +95,6 @@ export default async function handler(;
       type: "zion && zion.talent.matched",
       timestamp: Date && Date.now(),
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     });
 
   const eventId = `${Date.now()}-talent-matched`;
@@ -133,7 +119,6 @@ export default async function handler(;
       job_id: match.job_id,"`
       note: `Talent ${match.talent_id} matched. ${match.summary || ""}`.trim (),
     });
-<<<<<<< HEAD
   }
 
 res.status(200).json({ ok: true, eventId });
@@ -166,7 +151,6 @@ export default async function handler(req, res) {}
 }
 return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/main:pages/api/integrations/webhooks/talent-matched.ts
 }
 
   res.status(200).json({ ok: true, eventId });
@@ -176,13 +160,6 @@ return res.status(500).json({ error: "Internal server error" });
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

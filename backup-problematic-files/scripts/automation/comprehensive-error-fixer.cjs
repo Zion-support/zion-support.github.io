@@ -1172,8 +1172,6 @@ module.exports = { ComprehensiveErrorFixer };
 // Run if called directly
 if (require.main === module) {
 main()}
-<<<<<<< HEAD
-=======
           content = content.replace(/:\s*{\s*;/g, ": {");"
           // Fix property signatures;"
           content = content.replace(/action\?\s*:\s*{\s*;/g, "action?: {");"
@@ -1188,4 +1186,3 @@ main()}
 </div>)"
             "<div className=max-w-4xl mx-auto space-y-8><div"          );"
 </div>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,6 +1,4 @@
 :src_backup/components/profile/BackToDirectoryButton.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react',
 import { Button } from "@/components/ui/button",
@@ -20,8 +18,6 @@ import { ArrowLeft } from 'lucide-react';
 
 import React from 'react',
 :src/components/profile/BackToDirectoryButton.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -40,7 +36,6 @@ export function BackToDirectoryButton() {;
           href='/talents'
 
 :src_backup/components/profile/BackToDirectoryButton.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           Back to Talent Directory
 
 import React from 'react',
@@ -65,7 +60,6 @@ export function BackToDirectoryButton() {
 };
           Back to Talent Directory
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </Link>
       </Button>
     </div>
@@ -74,12 +68,7 @@ className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light
           <ArrowLeft className='mr-2 h-4 w-4' />          Back to Talent Directory    <div className="container mx-auto px-4 md: px-6 mb-12">;",
           <ArrowLeft className='mr-2 h-4 w-4' />          Back to Talent Directory    <div className="container mx-auto px-4 md: px-6 mb-12">;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import Link from "next/link";
@@ -92,21 +81,14 @@ export function BackToDirectoryButton() {;
         <Link href="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">;
           <ArrowLeft className="mr-2 h-4 w-4" />;
 :src_backup/components/profile/BackToDirectoryButton.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
           Back to Talent Directory;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/BackToDirectoryButton.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </Link>;
       </Button>;
     </div>;
   );
 }
-<<<<<<< HEAD
 
           Back to Talent Directory
         </Link>
@@ -143,10 +125,6 @@ function BackToDirectoryButton() {
 }
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/profile/BackToDirectoryButton.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/BackToDirectoryButton.tsx

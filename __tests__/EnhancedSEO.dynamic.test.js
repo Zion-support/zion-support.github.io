@@ -4,8 +4,6 @@ describe('EnhancedSEO.dynamic', () => {
   it('should work', () => {
     expect(true).toBe(true);
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedSEOdynamic from '../components/EnhancedSEO.dynamic'; describe('EnhancedSEOdynamic',() => { test('renders without crashing',() => { render(<EnhancedSEOdynamic />); expect(screen.getByTestId('enhancedseo.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedSEOdynamic />)}); test('handles user interactions',() => { render(<EnhancedSEOdynamic />)}); test('applies correct styling',() => { render(<EnhancedSEOdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
 main
@@ -20,9 +18,7 @@ describe('EnhancedSEOdynamic', () => {
   test('renders without crashing', () => {
     render(<EnhancedSEOdynamic />);
     expect(screen.getByTestId('enhancedseo.dynamic')).toBeInTheDocument();
->>>>>>> origin/main
   });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 });
 
 });
@@ -60,7 +56,6 @@ describe('EnhancedSEOdynamic'
 });
 
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedSEOdynamic from '../components/EnhancedSEO.dynamic'; describe('EnhancedSEOdynamic',() => { test('renders without crashing',() => { render(<EnhancedSEOdynamic />); expect(screen.getByTestId('enhancedseo.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedSEOdynamic />)}); test('handles user interactions',() => { render(<EnhancedSEOdynamic />)}); test('applies correct styling',() => { render(<EnhancedSEOdynamic />)})});
-<<<<<<< HEAD
 main
 
   test('displays correct content', () => {
@@ -79,5 +74,3 @@ main
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/main

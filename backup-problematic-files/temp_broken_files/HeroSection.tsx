@@ -1,5 +1,4 @@
 
-=======
 import { Button } from "@/components/ui/button",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Link } from "react-router-dom",;
@@ -10,7 +9,6 @@ export function HeroSection() {;
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Animated floating particles */}
       <div className="absolute inset-0">;
         <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse"></div>;
@@ -18,7 +16,6 @@ export function HeroSection() {;
         <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-40 animate-pulse"></div>;
         <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-20 animate-pulse"></div>;
       </div>;
-<<<<<<< HEAD
 
       <div className="container relative z-10 px-4 mx-auto text-center">;
         <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold">;

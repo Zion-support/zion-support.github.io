@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const images = document && document.querySelectorAll('img');
   images && images.forEach(img => {
     if (!img && img.loading) {
@@ -6,7 +5,6 @@ const images = document && document.querySelectorAll('img');
     }
     if (!img && img.decoding) {
       img && img.decoding = 'async';
-=======
 // Performance optimization utilities
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
@@ -16,7 +14,6 @@ export const optimizeImages = () => {
     }
     if (!img.decoding) {
       img.decoding = 'async';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   });
 };
@@ -30,7 +27,6 @@ export const preloadCriticalResources = () => {
     link.href = resource;
     link.as = resource.endsWith('.css') ? 'style' : 'font';
     document.head.appendChild(link);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   });
 };
 
@@ -105,7 +101,5 @@ export const optimizeBundleSize = () => {};
 
     link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
-=======
   return { loadComponent };
 };
->>>>>>> db9cf4227efbedeeb7625bb65c8a05924d3d2398

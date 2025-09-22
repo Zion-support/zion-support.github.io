@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>"
@@ -45,6 +44,5 @@
       </div>
     </UltraFuturisticBackground>
   )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;

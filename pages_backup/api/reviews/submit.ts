@@ -21,7 +21,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
-<<<<<<< HEAD
 
   }
   try {
@@ -39,7 +38,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       text: string, categories?: Review['categories'],
       anonymous?: boolean;
     };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     if (!projectId || !fromRole || !fromId) {
       return res.status(400).json({ error: "Missing required fields" });
@@ -82,13 +80,7 @@ if ( {) {
         categories?: Review["categories"];
         anonymous?: boolean;
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     const project = await findProjectById(projectId);
     if (!project) {
@@ -97,7 +89,6 @@ if ( {) {
     if (project.status !== "Completed") {
       return res.status(400).json({
         error: "Reviews can only be submitted after project completion",
-=======
   try {
     const {
       projectId;
@@ -131,7 +122,6 @@ return res.status(404).json({ error: 'Project not found' });
     if (project.status !== "Completed") {
       return res.status(400).json({
         error: "Reviews can only be submitted after project completion"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
     }
 
@@ -159,7 +149,6 @@ const toId = toRole === "talent" ? project.talentSlug : project.clientId;
       toRole,
       toId,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       rating,
       text: String (text).trim (),
       categories,
@@ -182,7 +171,6 @@ reported: false,
       .status(201)
       .json({ message: "Review submitted", reviewId: review.id });
   } catch (error: any) {
-<<<<<<< HEAD
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
 export default async function handler(req, res) {
   try {
@@ -352,7 +340,6 @@ export default async function handler(req, res) {
       text: String(text).trim(),;
       categories,;
       anonymous: Boolean(anonymous);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       approved: false, // requires admin approval;
       reported: false,
       reports: [],
@@ -370,7 +357,6 @@ export default async function handler(req, res) {
       .status (500);
       .json ({ error: "Internal server error", details: error?.message });
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
   } catch (error) {
@@ -389,15 +375,11 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
-=======
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
   }
 
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

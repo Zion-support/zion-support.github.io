@@ -51,7 +51,6 @@ const UiUxDesignChat: NextPage = () => {
 
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
 <meta name="description" content="UiUxDesignChat blog post" />{" "}
-<<<<<<< HEAD
 const UiUxDesignChat: NextPage = () => {
   return (
     <div />
@@ -63,7 +62,6 @@ const UiUxDesignChat: NextPage = () => {
         <h1>UiUxDesignChat</h1>
         <p>Blog content coming soon...</p>
         <a href="/blog">Back to Blog</a>
-=======
       </Head>;
 
 const UiUxDesignChat: NextPage = () => {
@@ -71,7 +69,6 @@ const UiUxDesignChat: NextPage = () => {
         <h1 />UiUxDesignChat</h1>
         <p />Blog content coming soon...</p>
         <a href=\"/blog\" />Back to Blog</a>
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       </main>
     </div>
       </Head>;

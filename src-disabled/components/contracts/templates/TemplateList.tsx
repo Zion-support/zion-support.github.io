@@ -1,14 +1,6 @@
 :src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateList.tsx
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
@@ -19,7 +11,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 :src/components/contracts/templates/TemplateList.tsx
 import { useAuth } from "@/hooks/useAuth",
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // useRouter replaces the old useLocation hook from react-router
 
 :src_backup/components/contracts/templates/TemplateList.tsx
@@ -40,7 +31,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { useAuth } from "@/hooks/useAuth"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router',
 import {
@@ -53,9 +43,6 @@ import {
   AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 :src/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 interface TemplateListProps {
   templates: ContractTemplate[],
@@ -127,11 +114,7 @@ export function TemplateList({;
 // use_router replaces the old use_location hook from react - router;
 import { use_router } from 'next / router';
 :src/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateList.tsx
 import { ContractTemplate } from '@/types/contracts';
 import { Button } from '@/components/ui/button';
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
@@ -148,13 +131,7 @@ import { useAuth } from '@/hooks/useAuth';
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router';
 :src/components/contracts/templates/TemplateList.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/templates/TemplateList.tsx
   AlertDialog;
   AlertDialogAction;
   AlertDialogCancel;
@@ -179,7 +156,6 @@ export function TemplateList({
   onSelect;
   onEdit
 }: TemplateListProps) {
-<<<<<<< HEAD
 
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null)
   const { deleteTemplate, setDefaultTemplate } = useContractTemplates()
@@ -274,9 +250,7 @@ import { useAuth } from "@/hooks/useAuth";
 // useRouter replaces the old useLocation hook from react-router;
 import { useRouter } from 'next/router';
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateList.tsx
 import {;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   AlertDialog,;
   AlertDialogAction,;
   AlertDialogCancel,;
@@ -296,7 +270,6 @@ import {;
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
       </div>;
     );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   if (!templates.length) {
     return (
@@ -319,7 +292,6 @@ import {;
                   {template.is_default && (
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>
                   )}
-<<<<<<< HEAD
                 </div>;
                 <p className="text-xs text-muted-foreground">;
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
@@ -359,8 +331,6 @@ import {;
                   <Button variant="ghost" size="icon" disabled aria-label="Default template">
                     <StarOff className="h-4 w-4" />
                   </Button>
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD:src/components/contracts/templates/TemplateList.tsx
 import { useState } from "react";
 interface TemplateListProps {;,
   AlertDialogTitle} from "@/components/ui/alert-dialog",;""
@@ -429,7 +399,6 @@ export function TemplateList(): any ({;
                   {template && template.is_default && (;
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateList.tsx
 
 :src_backup/components/contracts/templates/TemplateList.tsx
 
@@ -466,19 +435,13 @@ export function TemplateList(): any ({;
                   <Button variant="ghost" size="icon" disabled aria-label="Default template">;
                     <StarOff className="h-4 w-4" />;
                   </Button>;
-<<<<<<< HEAD:src/components/contracts/templates/TemplateList.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/templates/TemplateList.tsx
                 )}
-=======
                     </Tooltip>
                   </TooltipProvider>
                 ) : (
                   <Button variant="ghost" size="icon" disabled aria-label="Default template">
                     <StarOff className="h-4 w-4" />
                   </Button>                )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <Button
                   variant="ghost""
                   size="icon""
@@ -568,8 +531,6 @@ onClick={() => handleDeleteClick(template.id)}
                 </Button>
               </div>
             </div>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
             <Separator className="my-3" />
 
@@ -585,12 +546,9 @@ onClick={() => handleDeleteClick(template.id)}
 
             <Separator className="my-3" />
                         <Button
-=======
             <Separator className="my-3" />
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/templates/TemplateList.tsx
             <Button 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onClick={() => onSelect(template)} 
               variant="outline" 
               className="w-full"
@@ -601,12 +559,8 @@ onClick={() => handleDeleteClick(template.id)}
         </Card>
       ))}
 :src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/templates/TemplateList.tsx
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -630,7 +584,6 @@ onClick={() => handleDeleteClick(template.id)}
 :src_backup/components/contracts/templates/TemplateList.tsx
 
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
   template.title
 }</h3> {""
@@ -666,8 +619,6 @@ onClick={() => handleDeleteClick(template.id)}
             </Button>;
           </CardContent>;
 :src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         </Card>;
       ))}
   handleDeleteConfirm ;
@@ -676,13 +627,8 @@ onClick={() => handleDeleteClick(template.id)}
 ;
 :src_backup/components/contracts/templates/TemplateList.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/templates/TemplateList.tsx
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
-=======
 ;      <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <AlertDialogContent>;
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Template</AlertDialogTitle>;
@@ -693,9 +639,6 @@ onClick={() => handleDeleteClick(template.id)}
           <AlertDialogFooter>;
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
 :src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <AlertDialogAction;
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
               onClick={handleDeleteConfirm}
@@ -705,20 +648,15 @@ onClick={() => handleDeleteClick(template.id)}
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"",
               onClick = {handleDeleteConfirm,}>;
 :src_backup/components/contracts/templates/TemplateList.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
             <AlertDialogAction;
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
               onClick={handleDeleteConfirm}
             >;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/templates/TemplateList.tsx
               Delete;
-=======
             <AlertDialogAction;
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
               onClick={handleDeleteConfirm}
             >;              Delete;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
@@ -726,9 +664,6 @@ onClick={() => handleDeleteClick(template.id)}
     </div>;
   );
 :src_backup/components/contracts/templates/TemplateList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   // Check condition
 if ( {) {
@@ -871,22 +806,16 @@ return;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>);
 :src_backup/components/contracts/templates/TemplateList.tsx
 }'"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 :src/components/contracts/templates/TemplateList.tsx
 
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateList.tsx
-=======
 }'"}"
 }
 ;
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/templates/TemplateList.tsx
   );
 
 };
@@ -921,9 +850,6 @@ return ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
 }'"
 :src/components/contracts/templates/TemplateList.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   onEdit;)
 }: TemplateListProps) {;
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
@@ -1096,4 +1022,3 @@ return ;
 
 }> Delete     </div>);"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/templates/TemplateList.tsx

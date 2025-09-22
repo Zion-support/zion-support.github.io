@@ -44,7 +44,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
     </div>;
   ),;}
  ];
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/RegionFilter.tsx
   toggleSection 
 }className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) 
 }</button> {
@@ -56,7 +55,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 }</div>) 
 }</div>) 
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 :temp_broken_files/talent/filters/RegionFilter.tsx
 
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionFilter.tsx
@@ -72,4 +70,3 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionF
 }</div>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionFilter.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/filters/RegionFilter.tsx

@@ -1,7 +1,4 @@
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD:src/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { MobileHeader } from "@/mobile/components/common/MobileHeader",
@@ -32,9 +29,7 @@ import { MobileHeader } from "@/mobile/components/common/MobileHeader",
 import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/pages/MobileJobPost.tsx
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { 
@@ -52,8 +47,6 @@ type JobPostStep = any;
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details")
   const goToNextStep = () => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (currentStep === "details") {
       setCurrentStep("requirements")
     } else if (currentStep === "requirements") {
@@ -65,7 +58,6 @@ export function MobileJobPost() {
 :src_backup/mobile/pages/MobileJobPost.tsx
   },
 :src_backup/mobile/pages/MobileJobPost.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
       setCurrentStep("details")
@@ -92,7 +84,6 @@ export function MobileJobPost() {
   },
 return (
 
-<<<<<<< HEAD
       <main className="flex-1 py-4 pb-24 px-4">
         <div className="mb-6 flex justify-between">
           <div className="flex space-x-1">
@@ -104,16 +95,12 @@ return (
 
           <Button variant="outline" className="flex gap-1">
             <Zap className="h-4 w-4" /> AI Assist
-=======
 "
           <Button variant="outline" className="flex gap-1">"
             <Zap className="h-4 w-4" /> AI Assist;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
           </Button>
         </div>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {renderStepContent()}
         "
         <div className="flex gap-2 mt-6">"
@@ -127,13 +114,10 @@ return (
             </Button>
           )}
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button 
             className="flex-1 gap-1"
             onClick = {goToNextStep,}>;
             {currentStep === "preview" ? "Publish Job" : "Continue"}
-=======
 
           <Button;
           <Button;
@@ -142,7 +126,6 @@ return (
             onClick={goToNextStep}
           >"
             {currentStep === "preview" ? "Publish Job" : "Continue"}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
             {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
 
       <BottomNavigation />
@@ -151,12 +134,10 @@ return (
 }
 :src_backup/mobile/pages/MobileJobPost.tsx
 
-<<<<<<< HEAD
       <BottomNavigation />
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function DetailsStep() {
   return (
     <div className="space-y-4">
@@ -164,31 +145,25 @@ function DetailsStep() {
 
       <div className="space-y-2">
         <Label htmlFor="title">Job Title</Label>
-=======
 "
       <div className="space-y-2">"
         <Label htmlFor="title">Job Title</Label>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
         <Input id="title" placeholder="e.g. Senior React Developer" />
       </div>
 
       <div className="space-y-2">
         <Label htmlFor="company">Company Name</Label>
-=======
 "
       <div className="space-y-2">"
         <Label htmlFor="company">Company Name</Label>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
         <Input id="company" placeholder="Your company name" />
       </div>
 
       <div className="space-y-2">
         <Label htmlFor="location">Location</Label>
-=======
 "
       <div className="space-y-2">"
         <Label htmlFor="location">Location</Label>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
         <Select defaultValue="remote">
           <SelectTrigger>"
             <SelectValue placeholder="Select location type" />
@@ -202,10 +177,8 @@ function DetailsStep() {
       </div>
 
       <div className="space-y-2">
-=======
 "
       <div className="space-y-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
         <Label htmlFor="jobType">Job Type</Label>
         <Select>
           <SelectTrigger>"
@@ -226,8 +199,6 @@ function DetailsStep() {
           placeholder="Describe the job role and responsibilities" 
 
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="space-y-2">
         <Label htmlFor="description">Job Description</Label>
         <Textarea "
@@ -285,7 +256,6 @@ export function MobileJobPost() { return null; }
     <div className="min-h-screen flex flex-col">;
 :src_backup/mobile/pages/MobileJobPost.tsx
       <MobileHeader;
-<<<<<<< HEAD
         title={`Post a Job (${current_step === "preview" ? 4 : current_step === "budget" ? 3 : current_step === "requirements" ? 2 : 1}/4)`}
         show_back;
       />;
@@ -399,16 +369,12 @@ function DetailsStep() {;
       <div className="space-y-2">;
         <Label htmlFor="location">Location</Label>;
         <Select defaultValue="remote">;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/pages/MobileJobPost.tsx
 
           <SelectTrigger>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <SelectValue placeholder="Select location type" />;
           </SelectTrigger>;
           <SelectContent>;
             <SelectItem value="remote">Remote</SelectItem>;
-<<<<<<< HEAD:src/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
             <SelectItem value="onsite">On - site</SelectItem>;            <SelectItem value="hybrid">Hybrid</SelectItem>;
           </SelectContent>;
         </Select>;
@@ -423,24 +389,20 @@ function DetailsStep() {;
 :src/mobile/pages/MobileJobPost.tsx
 
         <Select>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <SelectTrigger>;
             <SelectValue placeholder="Select job type" />;
           </SelectTrigger>;
           <SelectContent>;
 :src/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
             <SelectItem value="fulltime">Full - time</SelectItem>;
             <SelectItem value="parttime">Part - time</SelectItem>;            <SelectItem value="contract">Contract</SelectItem>;
 
             <SelectItem value="contract">Contract</SelectItem>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <SelectItem value="freelance">Freelance</SelectItem>;
           </SelectContent>;
         </Select>;
       </div>;
 :src/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
       <div className="space-y-2">;
         <Label html_for="description">Job Description</Label>;
         <Textarea;
@@ -455,17 +417,13 @@ function DetailsStep() {;
       </div>;
     </div>;
   );
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/pages/MobileJobPost.tsx
 
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 function RequirementsStep() {}
   const [skills, setSkills] = useState<string[]>(["
     "React", "TypeScript", "Node.js"
 :src/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   ]),
   const [newSkill, setNewSkill] = useState(""),
 
@@ -483,7 +441,6 @@ function RequirementsStep() {}
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
-=======
 
 :src_backup/mobile/pages/MobileJobPost.tsx
   ])
@@ -501,20 +458,14 @@ function RequirementsStep() {}
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
 :src/mobile/pages/MobileJobPost.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/pages/MobileJobPost.tsx
       <div className="space-y-2">
-=======
 "
       <div className="space-y-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
         <Label htmlFor="experience">Experience Level</Label>
         <Select>
           <SelectTrigger>"
@@ -555,10 +506,8 @@ export function MobileJobPost() {;"
             >;
 
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
 
 :src_backup/mobile/pages/MobileJobPost.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="space-y-2">
         <Label htmlFor="education">Education</Label>
         <Select>
@@ -593,7 +542,6 @@ export function MobileJobPost() {;"
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
 :src/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
     "React", "TypeScript", "Node && Node.js";
   ]);
   const [newSkill, setNewSkill] = useState("");
@@ -619,9 +567,7 @@ function RequirementsStep() {;
     if (newSkill && !skills.includes(newSkill)) {;
       setSkills([...skills, newSkill]),;
       setNewSkill("");
-=======
 function RequirementsStep() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
     }
   };
   const removeSkill = (skill:,  string) => {;,
@@ -633,14 +579,12 @@ function RequirementsStep() { return null; }
   return (;
     <div className="space-y-4">;
       <h2 className="text-lg font-medium">Job Requirements</h2>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/pages/MobileJobPost.tsx
       <div className="space-y-2">;
         <Label htmlFor="experience">Experience Level</Label>;
 
         <Label html_for="experience">Experience Level</Label>;
 :src_backup/mobile/pages/MobileJobPost.tsx
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Select>;
           <SelectTrigger>;"
             <SelectValue placeholder="Select experience level" />;
@@ -654,13 +598,10 @@ function RequirementsStep() { return null; }
         </Select>;
       </div>;
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD:src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
       <div className="space-y-2">;
         <Label htmlFor="education">Education</Label>;
         <Label html_for="education">Education</Label>;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Select>;
           <SelectTrigger>;"
             <SelectValue placeholder="Select required education" />;
@@ -676,7 +617,6 @@ function RequirementsStep() { return null; }
         </Select>;
       </div>;
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
       <div className="space-y-2">;
         <Label>Required Skills</Label>;
         <div className="flex flex-wrap gap-2 mb-3">;
@@ -694,7 +634,6 @@ function RequirementsStep() { return null; }
               key={skill} "
               variant="secondary""
               className="flex items-center gap-1 px-3 py-1"
-=======
 
         <Label>Required Skills</Label>
         <div className="flex flex-wrap gap-2 mb-3">"
@@ -703,12 +642,9 @@ function RequirementsStep() { return null; }
               key={skill}
               variant="secondary""
               className="flex items-center gap-1 px-3 py-1""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/pages/MobileJobPost.tsx
             >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {skill}
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
               <button;
                 className="ml-1 rounded-full hover:bg-background/20 p-1";
                 onClick={() => removeSkill(skill)}
@@ -731,10 +667,8 @@ function RequirementsStep() { return null; }
 
 :src_backup/mobile/pages/MobileJobPost.tsx
       <div className="space-y-2">
-=======
 "
       <div className="space-y-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
         <Label htmlFor="requirements">Specific Requirements</Label>
         <Textarea "
           id="requirements" "
@@ -756,10 +690,6 @@ rows={4}
     </div>;
   );
 :src_backup/mobile/pages/MobileJobPost.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/pages/MobileJobPost.tsx
 }
 
 function BudgetStep() {}
@@ -778,10 +708,8 @@ function BudgetStep() {}
             <SelectItem value="none">No Specific Requirement"
 
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
 
 :src_backup/mobile/pages/MobileJobPost.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="space-y-2">
         <Label htmlFor="paymentType">Payment Type</Label>
         <Select>
@@ -800,10 +728,8 @@ function BudgetStep() {}
           <Input placeholder="Min" type="number" className="w-full" />"
 
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
 
 :src_backup/mobile/pages/MobileJobPost.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="space-y-2">
         <Label>Salary Range</Label>"
         <div className="flex gap-4 items-center">"
@@ -824,45 +750,36 @@ function BudgetStep() {}
       </div>
 
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
       <div className="space-y-2">
         <Label htmlFor="deadline">Application Deadline</Label>
-=======
 "
       <div className="space-y-2">"
         <Label htmlFor="deadline">Application Deadline</Label>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
         <Input type="date" id="deadline" />
       </div>
 
       <div className="space-y-2">
         <Label htmlFor="startDate">Expected Start Date</Label>
-=======
 "
       <div className="space-y-2">"
         <Label htmlFor="startDate">Expected Start Date</Label>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
         <Input type="date" id="startDate" />
       </div>
 
       <div className="space-y-2">
-=======
 "
       <div className="space-y-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
         <Label htmlFor="duration">Project Duration</Label>
         <Select>
           <SelectTrigger>"
             <SelectValue placeholder="Select project duration" />
           </SelectTrigger>
           <SelectContent>"
-=======
         <Select>
           <SelectTrigger>
             <SelectValue placeholder="Select project duration" />"
           </SelectTrigger>
           <SelectContent>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/pages/MobileJobPost.tsx
             <SelectItem value="ltw">Less than a week</SelectItem>"
             <SelectItem value="ltm">Less than a month</SelectItem>"
             <SelectItem value="1-3m">1-3 months</SelectItem>"
@@ -875,10 +792,8 @@ function BudgetStep() {}
       </div>
 :src_backup/mobile/pages/MobileJobPost.tsx
       <div className="space-y-2">
-=======
 "
       <div className="space-y-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
         <Label htmlFor="additionalInfo">Additional Budget Information</Label>
         <Textarea "
           id="additionalInfo" "
@@ -888,10 +803,6 @@ rows={3}
       </div>;
     </div>;
   );
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 :src_backup/mobile/pages/MobileJobPost.tsx
 
@@ -900,12 +811,9 @@ function PreviewStep() {}
     <div className="space-y-4">"
       <h2 className="text-lg font-medium mb-2">Job Preview</h2>
 
-<<<<<<< HEAD
-=======
 function PreviewStep() {
   return (
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/pages/MobileJobPost.tsx
       <Card>
         <CardContent className="p-4">"
           <h3 className="font-bold text-lg">Senior React Developer</h3>"
@@ -916,12 +824,10 @@ function PreviewStep() {
             <Badge variant="outline">Node.js</Badge>"
         <CardContent className="p-4">
           <h3 className="font-bold text-lg">Senior React Developer</h3>
-=======
 
       <Card>"
         <CardContent className="p-4">"
           <h3 className="font-bold text-lg">Senior React Developer</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
           <p className="text-muted-foreground">TechCorp Inc. • Remote • Full-time</p>
         <Label htmlFor="startDate">Expected Start Date""
         <Input type="date" id="startDate" />"
@@ -953,10 +859,8 @@ function PreviewStep() {
 pr-12325
 
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
 
 :src_backup/mobile/pages/MobileJobPost.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="flex gap-2 my-3">
             <Badge variant="outline">React</Badge>
             <Badge variant="outline">TypeScript</Badge>
@@ -964,15 +868,10 @@ pr-12325
           </div>
 
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
           <div className="space-y-1 text-sm mt-4">
-=======
 "
           <div className="space-y-1 text-sm mt-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/pages/MobileJobPost.tsx
             <p className="font-medium">Salary Range:</p>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/pages/MobileJobPost.tsx
             <p>$80,000 - $120,000 USD / year</p>
           </div>
           <div className="space-y-1 text-sm mt-3">"
@@ -992,10 +891,8 @@ pr-12325
 pr-12325
 
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
 
 :src_backup/mobile/pages/MobileJobPost.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="space-y-1 text-sm mt-3">
             <p className="font-medium">Experience Level:</p>
             <p>Senior</p>
@@ -1006,10 +903,8 @@ pr-12325
 pr-12325
 
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
 
 :src_backup/mobile/pages/MobileJobPost.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="space-y-1 text-sm mt-3">
             <p className="font-medium">Application Deadline:</p>
             <p>December 15, 2023</p>
@@ -1019,18 +914,14 @@ pr-12325
 pr-12325
 
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
 
 :src_backup/mobile/pages/MobileJobPost.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="mt-4 pt-3 border-t border-border">
             <h4 className="font-medium mb-2">Description</h4>
             <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>
           </div>
         </CardContent>
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       </Card>
 
       <Button variant="outline" className="w-full">Edit Job Post</Button>
@@ -1117,7 +1008,6 @@ function PreviewStep() {;
       <Button variant="outline" className="w-full">Edit Job Post</Button>;
     </div>;
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
   )
       </Card>
       <Button variant="outline" className="w-full">Edit Job Post</Button>
@@ -1126,7 +1016,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 :src_backup/mobile/pages/MobileJobPost.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };";
 min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"className=" flex gap-1"> <Zap className=" h-4 w-4"/> AI Assist </Button> </div> {;
   renderStepContent () ";
@@ -1146,7 +1035,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   skill ;
 }<button > × </button> </Badge>) ) ";
 :src_backup/mobile/pages/MobileJobPost.tsx
-<<<<<<< HEAD
 }</div> <div className=" flex gap-2"> <Input /> <ButtononClick={
   addSkill "
 }>Add</Button> </div> </div> <div className=" space-y-2"> <Label htmlFor=" requirements">Specific Requirements</Label> <Textarea /> </div> <div className=" space-y-2"> <Label htmlFor=" responsibilities">Key Responsibilities</Label> <Textarea /> </div> </div>) ";
@@ -1182,13 +1070,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             on_change = {(e, ) => setNewSkill (e.target.value), }"
             placeholder="Add a skill";'
             onKeyDown = {(e, ) => e.key === 'Enter' && add_skill (), }
-=======
           <Input ;
             value = {new_skill, }
             on_change = {(e, ) = /> setNewSkill (e.target.value), }
             placeholder="Add a skill";
             onKeyDown = {(e, ) => e.key === 'Enter' && add_skill (), }'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/pages/MobileJobPost.tsx
           />;
           <Button on_click={add_skill}>Add</Button>;
         </div>;
@@ -1353,11 +1239,7 @@ min - h-screen flex flex - col"> <MobileHeader </div> <Button variant=" outline"
 }<div className=" space-y-2"> <Label html_for=" payment_type">Payment Type</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select payment type"/> </SelectTrigger> <SelectContent> <SelectItem value=" hourly">Hourly Rate</SelectItem> <SelectItem value=" fixed">Fixed Price</SelectItem> <SelectItem value=" salary">Salary</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label > Salary Range</Label> <div className=" flex gap - 4 items-center"> <Input placeholder=" Min"type=" number"className=" w-full"/> <span > to</span> <Input placeholder=" Max"type=" number"className=" w-full"/> <Select default_value=" usd"> <SelectTrigger className=" w-24"> <SelectValue placeholder=" Currency"/> </SelectTrigger> <SelectContent> <SelectItem value=" usd">USD</SelectItem> <SelectItem value=" eur">EUR</SelectItem> <SelectItem value=" gbp">GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=" space-y-2"> <Label html_for=" deadline">Application Deadline</Label> <Input type=" date"id=" deadline"/> </div> <div className=" space-y-2"> <Label html_for=" start_date">Expected Start Date</Label> <Input type=" date"id=" start_date"/> </div> <div className=" space-y-2"> <Label html_for=" duration">Project Duration</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select project duration"/> </SelectTrigger> <SelectContent> <SelectItem value=" ltw">Less than a week</SelectItem> <SelectItem value=" ltm">Less than a month</SelectItem> <SelectItem value=" 1 - 3m">1 - 3 months</SelectItem> <SelectItem value=" 3 - 6m">3 - 6 months</SelectItem> <SelectItem value=" 6m+">6+ months</SelectItem> <SelectItem value=" ongoing">Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label html_for=" additional_info">Additional Budget Information</Label> <Textarea id=" additional_info"placeholder=" Any additional information about budget or payment"rows= {
   3;
 }/> </div> </div>) '";
-<<<<<<< HEAD
-<<<<<<< HEAD
 }<Card> <CardContent className=" p - 4"> <h3 className=" font - bold text - lg">Senior React Developer</h3> <p className=" text - muted - foreground">TechCorp Inc. • Remote • Full - time</p> <div className=" flex gap - 2 my - 3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node.js</Badge> </div> </div> <div className=" space - y-1 text - sm mt - 3"> <p className=" font - medium">Experience Level:</p> <p > Senior</p> </div> </div> <div className=" mt - 4 pt - 3 border - t border - border"> <h4 className=" font - medium mb - 2">Description</h4> <p className=" text - sm">We are looking for a skilled React developer to help us build out our new customer - facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w - full" >Edit Job Post</Button> </div> '"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   <div className=" space - y-2"> <Label html_for=" experience">Experience Level</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select experience level"/> </SelectTrigger> <SelectContent> <SelectItem value=" entry">Entry Level</SelectItem> <SelectItem value=" mid">Mid Level</SelectItem> <SelectItem value=" senior">Senior</SelectItem> <SelectItem value=" expert">Expert</SelectItem> </SelectContent> </Select> </div> <div className=" space - y-2"> <Label html_for=" education">Education</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select required education"/> </SelectTrigger> <SelectContent> <SelectItem value=" high school">High School</SelectItem> <SelectItem value=" associate">Associate Degree</SelectItem> <SelectItem value=" bachelor">Bachelor's Degree</SelectItem> <SelectItem value=" master">Master's Degree</SelectItem> <SelectItem value=" phd">PhD</SelectItem> <SelectItem value=" none">No Specific Requirement</SelectItem> </SelectContent> </Select> </div> <div className=" space - y-2"> <Label > Required Skills</Label> key= {"
   skill ";
 }variant=" secondary"className=" flex items - center gap - 1 px - 3 py - 1"> {"
@@ -1443,7 +1325,6 @@ function PreviewStep() {
 }
 ;
 }<Card> <CardContent className=" p - 4"> <h3 className=" font - bold text - lg">Senior React Developer</h3> <p className=" text - muted - foreground">TechCorp Inc. • Remote • Full - time</p> <div className=" flex gap - 2 my - 3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node.js</Badge> </div> </div> <div className=" space - y-1 text - sm mt - 3"> <p className=" font - medium">Experience Level:</p> <p > Senior</p> </div> </div> <div className=" mt - 4 pt - 3 border - t border - border"> <h4 className=" font - medium mb - 2">Description</h4> <p className=" text - sm">We are looking for a skilled React developer to help us build out our new customer - facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w - full" >Edit Job Post</Button> </div> '"}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/pages/MobileJobPost.tsx
 }</div> <div className=" flex gap-2"> <Input /> <Button onClick={;
   addSkill ";
 }>Add</Button> </div> </div> <div className=" space-y-2"> <Label htmlFor=" requirements">Specific Requirements</Label> <Textarea /> </div> <div className=" space-y-2"> <Label htmlFor=" responsibilities">Key Responsibilities</Label> <Textarea /> </div> </div>) ";
@@ -1452,9 +1333,6 @@ function PreviewStep() {
 }/> </div> </div>) '";
 }<Card> <CardContent className=" p-4"> <h3 className=" font-bold text-lg">Senior React Developer</h3> <p className=" text-muted-foreground">TechCorp Inc. • Remote • Full-time</p> <div className=" flex gap-2 my-3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node.js</Badge> </div> </div> <div className=" space-y-1 text-sm mt-3"> <p className=" font-medium">Experience Level:</p> <p>Senior</p> </div> </div> <div className=" mt-4 pt-3 border-t border-border"> <h4 className=" font-medium mb-2">Description</h4> <p className=" text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w-full" >Edit Job Post</Button> </div> '"
 :src_backup/mobile/pages/MobileJobPost.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="mt-4 pt-3 border-t border-border">"
             <h4 className="font-medium mb-2">Description</h4>""
@@ -1631,4 +1509,3 @@ min - h-screen flex flex - col"> <MobileHeader </div> <Button variant=" outline"
 }<div className=" space - y-2"> <Label html_for=" payment_type">Payment Type <Select> <SelectTrigger> <SelectValue placeholder=" Select payment type"/>  <SelectContent> <SelectItem value=" hourly">Hourly Rate <SelectItem value=" fixed">Fixed Price <SelectItem value=" salary">Salary   </div> <div className=" space - y-2"> <Label > Salary Range <div className=" flex gap - 4 items - center"> <Input placeholder=" Min"type=" number"className=" w - full"/> <span > to</span> <Input placeholder=" Max"type=" number"className=" w - full"/> <Select default_value=" usd"> <SelectTrigger className=" w - 24"> <SelectValue placeholder=" Currency"/>  <SelectContent> <SelectItem value=" usd">USD <SelectItem value=" eur">EUR <SelectItem value=" gbp">GBP   </div> </div> <div className=" space - y-2"> <Label html_for=" deadline">Application Deadline <Input type=" date"id=" deadline"/> </div> <div className=" space - y-2"> <Label html_for=" start_date">Expected Start Date <Input type=" date"id=" start_date"/> </div> <div className=" space - y-2"> <Label html_for=" duration">Project Duration <Select> <SelectTrigger> <SelectValue placeholder=" Select project duration"/>  <SelectContent> <SelectItem value=" ltw">Less than a week <SelectItem value=" ltm">Less than a month <SelectItem value=" 1 - 3m">1 - 3 months <SelectItem value=" 3 - 6m">3 - 6 months <SelectItem value=" 6m+">6+ months <SelectItem value=" ongoing">Ongoing   </div> <div className=" space - y-2"> <Label html_for=" additional_info">Additional Budget Information <Textarea id=" additional_info"placeholder=" Any additional information about budget or payment"rows= {"
 }<Card> <CardContent className=" p - 4"> <h3 className=" font - bold text - lg">Senior React Developer</h3> <p className=" text - muted - foreground">TechCorp Inc. • Remote • Full - time</p> <div className=" flex gap - 2 my - 3"> <Badge variant=" outline">React <Badge variant=" outline">TypeScript <Badge variant=" outline">Node.js </div> </div> <div className=" space - y-1 text - sm mt - 3"> <p className=" font - medium">Experience Level:</p> <p > Senior</p> </div> </div> <div className=" mt - 4 pt - 3 border - t border - border"> <h4 className=" font - medium mb - 2">Description</h4> <p className=" text - sm">We are looking for a skilled React developer to help us build out our new customer - facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div>   <Button variant=" outline"className=" w - full" >Edit Job Post </div> '"}"]"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/pages/MobileJobPost.tsx

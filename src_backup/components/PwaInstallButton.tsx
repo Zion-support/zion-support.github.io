@@ -1,5 +1,4 @@
 :src/components/PwaInstallButton.tsx
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Loader2 } from 'lucide-react';
@@ -34,7 +33,6 @@ export const PwaInstallButton: React.FC = () => {;
       toast('Installation not available', {;
         description: 'Your browser does not support app installation.'}),;
       return;
-=======
 const in_standalone = window.match_media ('(display - mode: standalone)').matches,
         description: 'Your browser does not support app installation.'}),
       return;
@@ -77,7 +75,6 @@ export const PwaInstallButton: React.FC = () => {;
       toast('Installation not available', {,
   description: 'Your browser does not support app installation.'}),;
       return;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     try {;
       setIsInstalling(true),;
@@ -110,15 +107,9 @@ export const PwaInstallButton: React.FC = () => {;
 },
 
 :src/components/PwaInstallButton.tsx
-<<<<<<< HEAD
 export default PwaInstallButton,
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 export default PwaInstallButton,
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PwaInstallButton.tsx
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
@@ -199,5 +190,3 @@ export const PwaInstallButton: React.FC = () => {
 export default PwaInstallButton;
 '
 :src/components/PwaInstallButton.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

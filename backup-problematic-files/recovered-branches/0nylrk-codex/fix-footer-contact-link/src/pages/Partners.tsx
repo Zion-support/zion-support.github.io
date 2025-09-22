@@ -1,5 +1,4 @@
 
-=======
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -21,13 +20,11 @@ export default function Partners() {;
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="container max-w-6xl py-10">;
         <div className="text-center mb-8">;
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>;
           <p className="text-xl text-zion-slate-light">Earn rewards by referring AI talent and clients to our marketplace</p>;
         </div>;
-<<<<<<< HEAD
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">;
           <Card className="bg-zion-blue-dark border-zion-blue-light">;

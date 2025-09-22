@@ -5,17 +5,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 :pages_backup/api/sync/index.ts
   const state = readState()
 if (req.method === "GET") {
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
-=======
 main
 
   if (req.method === "GET") {
 ursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 const state = readState(),
 
   if (req.method === "GET") {
@@ -24,7 +18,6 @@ const state = readState(),
   if (req.method === "GET") {
 ursor/fix-website-loading-errors-and-merge-6662
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/index.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
 import { filterEventsByScope } from "../../../utils/sync/storage";
@@ -93,7 +86,6 @@ const scope = state.config.scope
 
     return res.status (200).json ({
 :pages_backup/api/sync/index.ts
-<<<<<<< HEAD
       status: "ok",
       instanceId: state.config.instanceId,
       config: state.config,
@@ -109,7 +101,6 @@ proposals: scopedEvents.filter((e) => e.type === "proposal").length,
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
 :pages_backup/api/sync/index.ts
-<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -180,9 +171,7 @@ export default function handler(req, res) {
   return res.status(405).json({ error: "Method not allowed" })
 };
 :pages_backup/api/sync/index.ts
-=======
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/index.ts
       status: "ok"
       instanceId: state.config.instanceId
       config: state.config

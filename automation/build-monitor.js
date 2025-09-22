@@ -1,28 +1,14 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
 #!/usr/bin/env node;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
 const execAsync = promisify(exec);
 class BuildMonitor {
-<<<<<<< HEAD
   constructor() {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
     this.alertThreshold = 3; // Alert after 3 consecutive failures
@@ -160,25 +146,10 @@ results: results
         this.log('Could not read previous report', 'WARN');
       }
 
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     this.isRunning = false;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
-=======
 #!/usr/bin/env node;
 const fs = require('fs');'
 const path = require('path');'
@@ -189,7 +160,6 @@ class BuildMonitor {}
   constructor() {}
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.lastBuildTime = null;
     this.buildHistory = [];
@@ -206,10 +176,6 @@ class BuildMonitor {}
       console.log(logMessage);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     const report = {
       ...results,
@@ -263,28 +229,15 @@ class BuildMonitor {}
   }
   async run() {
     this.log('Starting build health check...');
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async checkBuildStatus() {
     try {
-=======
 
   async checkBuildStatus() {}
     try {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       this.log('info', 'Checking build status...');
       // Check if .next directory exists and is recent'
       const nextDir = path.join(process.cwd(), '.next');
@@ -302,12 +255,8 @@ class BuildMonitor {}
         this.log('warn', 'No build found, triggering build...');
         await this.triggerBuild();
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
 
       if (report.healthScore < 70) {
         this.log('Build health is below threshold. Consider immediate action.', 'WARN');
@@ -317,22 +266,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return true;
     } catch (error) {'`
       this.log('error', `Build check failed: ${error.message}`);
@@ -532,35 +470,19 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 // Handle command line arguments;
 const monitor = new BuildMonitor();
 if (require.main === module) {
-<<<<<<< HEAD
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   const command = process.argv[2];
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   switch (command) {
-=======
 if (require.main === module) {}
   const command = process.argv[2];
   switch (command) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     case 'start':
       monitor.start().catch(console.error);
       break;'
@@ -585,22 +507,14 @@ if (require.main === module) {}
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
-<<<<<<< HEAD
 module.exports = BuildMonitor;
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require('fs);
 const path = require('path'),
-=======
 
 '
 const fs = require('fs);'
 const path = require('path'),'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { execSync } = require(child_process');
 class BuildMonitor {}
   constructor() {'
@@ -732,7 +646,6 @@ class BuildMonitor {}
   this.log(`Build health check completed. Health score: ${report.healthScore}/100`);
 // Main execution;
 if (require.main === module) {}
-=======
         results: results;
       fs.writeFileSync()
         path.join(__dirname, alertsbuild-failure-alert.json'),
@@ -764,33 +677,17 @@ if (require.main === module) {}
       const report = await this.generateReport(results),`;
   this.log(`Build health check completed. Health score: ${report.healthScore}/100`);
 // Main execution;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const monitor = new BuildMonitor(),
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
   monitor.run().catch(console.error)}
 
 module.exports = BuildMonitor;
 module.exports = BuildMonitor;
-<<<<<<< HEAD
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 module.exports = BuildMonitor;
 
 module.exports = BuildMonitor;
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

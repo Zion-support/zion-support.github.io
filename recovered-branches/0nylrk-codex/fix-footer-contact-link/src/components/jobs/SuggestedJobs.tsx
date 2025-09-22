@@ -1,21 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {useAuth} from "@/hooks/useAuth";
 import {Loader2} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {useJobSuggestions} from "@/hooks/useJobSuggestions";
 import {JobMatchesCard} from "./JobMatchesCard";
 import {NoJobsCard} from "./NoJobsCard";
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
@@ -23,13 +14,10 @@ import { useJobSuggestions } from "@/hooks/useJobSuggestions",
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
 import { JobMatchesCard } from "./JobMatchesCard",
-<<<<<<< HEAD
 import { NoJobsCard } from "./NoJobsCard",
 interface SuggestedJobsProps {
   talentId?: string
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface SuggestedJobsProps {
   talentId?: string
 }
@@ -43,21 +31,15 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const { 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     isLoading,
 updateJobMatchStatus,
-=======
   const { 
     isLoading,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     updateJobMatchStatus, 
     categorizedMatches: { 
       newMatches, 
@@ -70,21 +52,15 @@ updateJobMatchStatus,
   const {
     isLoading;
     updateJobMatchStatus
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     categorizedMatches: {
       newMatches,
       viewedMatches,
       appliedMatches
     }
 } = useJobSuggestions(currentTalentId),
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-=======
   } = useJobSuggestions(currentTalentId);
   const handleApply = (matchId: string, jobId: string) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     updateJobMatchStatus(matchId, 'applied');
     // In a real app, this might redirect to application form or open a modal
 import {useAuth} from "@/hooks/useAuth";
@@ -100,10 +76,7 @@ import {NoJobsCard} from "./NoJobsCard";
     updateJobMatchStatus(matchId, 'declined')
   },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 if (isLoading) {
     return (
@@ -111,9 +84,7 @@ if (isLoading) {
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useAuth } from "@/hooks/useAuth",;
 import { Loader2 } from "lucide-react",;
 import { Badge } from "@/components/ui/badge",;
@@ -190,7 +161,6 @@ const { ;
     isLoading;
     updateJobMatchStatus, ;
     categorizedMatches: { ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       newMatches, ;
       viewedMatches, ;
       appliedMatches ;
@@ -201,9 +171,6 @@ const { ;
   const handleDecline = (matchId: string) => {;'
     updateJobMatchStatus(matchId, 'declined');
   };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   if (isLoading) {;
 
@@ -214,19 +181,9 @@ const { ;
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;
       </div>;
     );
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   } = useJobSuggestions(currentTalentId);
 
   const handleApply = (matchId: string, jobId: string) => {;
@@ -250,11 +207,9 @@ const { ;
 
   }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
     return <NoJobsCard />;
-=======
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
   const { user } = useAuth(),
@@ -262,10 +217,8 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { 
   const { user } = useAuth();
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}
@@ -281,23 +234,15 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 
           <div className="grid gap-4 md:grid-cols-2">;
             {newMatches && newMatches.map(match => (;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <JobMatchesCard
-<<<<<<< HEAD
                 key={match.id}
                 match={match}
                 onApply={handleApply}
                 onDecline={handleDecline}
               />
               />
-=======
               <JobMatchesCard              />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               <JobMatchesCard              />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               <JobMatchesCard
 }
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
@@ -322,7 +267,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
                 onApply={handleApply}
                 onDecline={handleDecline}
               />
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ))}
           </div>
         </div>
@@ -369,7 +313,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   )
 }
 key={match && match.id} 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline} 
@@ -430,7 +373,6 @@ key={match && match.id}
         </div>;
       )}
 
-<<<<<<< HEAD
       {/* Applied Jobs Section */}
       {appliedMatches && appliedMatches.length > 0 && (;
             ))}
@@ -445,19 +387,16 @@ key={match && match.id}
           <div className="flex items-center justify-between">;
             <h3 className="text-lg font-medium">Applied Jobs</h3>;
           </div>;
-=======
             ))}
           </div>;
         </div>;
       )}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 onDecline={handleDecline}                onDecline={handleDecline}
                 showApplied={true}
               />;
 ;
               />;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }= useAuth ();
 const currentTalentId = talentId || user?.id;
 const {}
@@ -588,17 +527,5 @@ if (isLoading) {"
 }</div>) 
 pr-12325
               />;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

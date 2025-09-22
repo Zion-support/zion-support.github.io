@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link';
 export default function Reports() {
   return (
@@ -18,40 +16,23 @@ export default function Reports() {
           <p className="text-sm opacity-80">Daily check of outbound links.</p>"
           <div className="flex gap-3">
 :pages_backup/reports.tsx
-<<<<<<< HEAD
 
             <Link href="/metrics/links.json"><a className="text-blue-600">Summary →</Link></Link>
             <Link href="/automation_logs/link-report.json"><a className="text-blue-600">Full report →</Link></Link>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports.tsx
           </div>
         </div>"
         <div className="border rounded p-5">"
           <h3 className="font-semibold">Automations Catalog</h3>"
           <p className="text-sm opacity-80">List of GitHub Action workflows.</p>
 :pages_backup/reports.tsx
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports.tsx
         </div>
       </div>
     </div>
   )
 :pages_backup/reports.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import Link from 'next / link',
 export default /**;
@@ -82,18 +63,12 @@ export default function Reports(req, res) {}
           <p className="text-sm opacity-80">Weekly summary of core categories.</p>;"
           <Link href="/metrics/window.window.window.performance.json"><a className="text-blue-600">Open JSON →</a></Link>;
 :pages_backup/reports.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>;
         <div className="border rounded p - 5">;
           <h3 className="font - semibold">External Link Health</h3>;
           <p className="text - sm opacity - 80">Daily check of outbound links.</p>;
           <div className="flex gap - 3">;
             <Link href="/metrics / links.json"><a className="text - blue - 600">Summary →</a></Link>;
-=======
 
         </div>;"
         <div className="border rounded p - 5">;"
@@ -101,7 +76,6 @@ export default function Reports(req, res) {}
           <p className="text - sm opacity - 80">Daily check of outbound links.</p>;"
           <div className="flex gap - 3">;"
             <Link href="/metrics / links.json"><a className="text - blue - 600">Summary →</a></Link>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports.tsx
             <Link href="/automation_logs / link - report.json"><a className="text - blue - 600">Full report →</a></Link>;
           </div>;
         </div>;"
@@ -114,12 +88,8 @@ export default function Reports(req, res) {}
     </div>);
 }
 :pages_backup/reports.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 :pages_backup/reports.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';
 export default function Reports() {
   return (
@@ -161,8 +131,4 @@ export default function Reports() {
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

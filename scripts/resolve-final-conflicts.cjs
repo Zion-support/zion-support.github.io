@@ -2,10 +2,7 @@
 const fs = require('fs');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD:backup-problematic-files/scripts/final-build-fix.cjs
-<<<<<<< HEAD:scripts/resolve-final-conflicts.cjs
 
-=====================');
 
 // Function to resolve merge conflicts by keeping the first version
 function resolveMergeConflicts(content) {

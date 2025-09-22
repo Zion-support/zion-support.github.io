@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ExportPanel.tsx
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -7,7 +6,6 @@ import { Download } from 'lucide-react';
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",;
 import { toast } from "sonner",;
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/ExportPanel.tsx
 interface ExportPanelProps {;
   platform: AppPlatform;,;
   metadata:AppMetadataValues;
@@ -54,7 +52,6 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
       ;
       toast.success(`Exported ${format.toUpperCase()} file successfully`),;
     } catch (error) {;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ExportPanel.tsx
       console.error("Export failed:", error),;
       toast.error(`Failed to export ${format.toUpperCase()} file`),;
     }
@@ -66,14 +63,11 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
   },;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card className="bg-zion-blue border-zion-purple/30">;
-=======
 export const ExportPanel: React.FC<ExportPanelProps> = ({ platform;, metadata }) => {;
 
     <Card className="bg-zion-blue border-zion-purple/30">;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <CardHeader>;
 "
         <CardTitle className="text-lg">Export & Analytics;"
@@ -92,13 +86,11 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform;, metadata })
               </Button>;
               <Button variant="outline" onClick={() => handleExport('csv')} className="flex-1">;
                 <Download className="mr-2 h-4 w-4" />;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ExportPanel.tsx
               Enable Analytics;
             </Button>;
           </div>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ExportPanel.tsx
     </Card>;
   ),;
 },; interface ExportPanelProps {;
@@ -120,4 +112,3 @@ return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export &
 };
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/ExportPanel.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/ExportPanel.tsx

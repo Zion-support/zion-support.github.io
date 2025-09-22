@@ -60,7 +60,6 @@ export function useCertifications() {;
           expiration_date:cert.expiration_date ? formatDateForDB(cert.expiration_date) :null;
           credential_id:cert.credential_id;
           credential_url:cert.credential_url;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         });
         .eq('id', certId);
       ;

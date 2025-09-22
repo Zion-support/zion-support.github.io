@@ -13,8 +13,6 @@ try {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   });
 
@@ -40,4 +38,3 @@ console.error(`Error setting localStorage key "${key}":`, error)};
 };
 };
 };
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

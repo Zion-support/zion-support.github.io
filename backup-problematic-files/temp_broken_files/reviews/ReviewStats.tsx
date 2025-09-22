@@ -18,7 +18,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution } 
   },;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="bg-card border rounded-lg p-4">;
       <div className="flex items-center justify-between mb-4">;
         <div>;
@@ -26,7 +25,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution } 
           <div className="flex items-center">;
             <div className="flex mr-2">;
               {[1, 2, 3, 4, 5].map((i) => (;
-<<<<<<< HEAD
                 />;
               ))}
             </div>;

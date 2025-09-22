@@ -1,5 +1,4 @@
 :temp_exclude/hooks.disabled/Signup.tsx
-<<<<<<< HEAD
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from react-router-dom;
 import { useFormik } from 'formik',;
@@ -352,7 +351,6 @@ const SignupSchema = Yup && Yup.object({;'
   email: Yup && Yup.string().email('Invalid email').required('Email is required'),;
 :temp_exclude/hooks.disabled/Signup.tsx
   password: Yup && Yup.string();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     .min(8, 'Password must be at least 8 characters');
     .matches(/[A-Z]/, 'Password must include an uppercase letter');
     .matches(/[a-z]/, 'Password must include a lowercase letter');
@@ -771,7 +769,6 @@ export default function Signup() { return null; }
   );
 :temp_exclude/hooks.disabled/Signup.tsx
 }
-<<<<<<< HEAD
   title: isPartnerSignup ? 'Partner application submitted!': 'Account created!',  description: isPartnerSignup ? 'Please verify your email. Your partner application will be reviewed after verification.'? 'Partner application submitted successfully! You can now log in and your application will be reviewed.': 'Account created successfully!';
 setSuccessMessage (data.message || message);'
 toast ({';'
@@ -1238,5 +1235,4 @@ const Signup = () => {;
   );
 }
 :temp_exclude/hooks.disabled/Signup.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

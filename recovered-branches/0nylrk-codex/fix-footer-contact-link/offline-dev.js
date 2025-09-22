@@ -22,15 +22,10 @@ res && res.writeHead(200, { 'Content-Type': 'text/html' }),
     res && res.writeHead(404),
     res && res.end('Not found')
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 })
 const PORT = 8080
     res && res.writeHead(200, { 'Content-Type': 'application/json' }),
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   }
 })
 const PORT = 8080
@@ -40,7 +35,6 @@ res && res.writeHead(200, { 'Content-Type': 'text/html' }),
   } else if (req && req.url === '/online-check') {
     // Endpoint to check if we're online
     res && res.writeHead(200, { 'Content-Type': 'application/json' }),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     res && res.end(JSON && JSON.stringify({ online: false, message: 'Running in offline development mode' }))
   } else {
     res && res.writeHead(404),
@@ -70,10 +64,6 @@ const server = http.createServer((req, res) => {
   }
 })
 const PORT = 8080
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     // Endpoint to check if we're online;
     res && res.writeHead(200, { 'Content-Type': 'application/json' }),
     res && res.end(JSON && JSON.stringify({ online: false, message: 'Running in offline development mode' }))
@@ -99,7 +89,6 @@ const server = http.createServer((req, res) => {
     res.writeHead(404)
     res.end('Not found')
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       res.writeHead(200, { 'Content-Type': 'text/html' }),;
       res.end(data);
     });
@@ -112,21 +101,16 @@ pr-12325
     res.end('Not found');
   }
 }),
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 
 `)
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }),;
 const PORT = 8080,;
 server.listen(PORT, () => {;`
   // // // console.log(`;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 ╔══════════════════════════════════════════════════════════════════╗;
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
@@ -140,7 +124,6 @@ server.listen(PORT, () => {;`
 ║                                                                  ║;
 
 ║                                                                  ║;
-=======
 
 }
 })
@@ -191,7 +174,6 @@ server.listen(PORT, () => {`;
 const PORT = 8080,;
 server.listen(PORT, () => {;
 // // // console.log(`;║                                                                  ║;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // // // console.log(`;
 
 });
@@ -229,7 +211,6 @@ server.listen (PORT, () => {`;
 ║  🔍 See OFFLINE - DEV - README.md for detailed instructions.         ║;
 ║  🔍 See OFFLINE-DEV-README.md for detailed instructions.         ║;
 ║                                                                  ║;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ║  🌐 When internet is available: ║;
 ║     1. Run: chmod +x setup.sh                                    ║;
 ║     2. Run: ./setup.sh npm                                       ║;
@@ -239,7 +220,6 @@ server.listen (PORT, () => {`;
 `);
 }),
 ;
-<<<<<<< HEAD
 }),
 ╚══════════════════════════════════════════════════════════════════╝;)`;
 `);
@@ -317,19 +297,12 @@ pr-12325
 });
 }),;
 }),;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 }),
 
 }),;
 
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }),; const server = http.createServer ( (req, res) => {
   if (req.url === '/' || req.url === '/index.html') {
   fs.readFile (path.join (dirname, 'offline.html'), (err, data) => {
@@ -339,4 +312,3 @@ pr-12325
 `;
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

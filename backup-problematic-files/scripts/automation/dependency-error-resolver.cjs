@@ -264,10 +264,8 @@ vulnCheck.vulnerabilities,
         outdatedCheck.outdated
       );
       // Fix package-lock issues
-=======
         outdatedCheck.outdated;)
       // Fix package-lock issues;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (!packageLockCheck.success) {
         if (await this.fixPackageLockIssues()) {
           resolutionsApplied += 1}
@@ -320,6 +318,4 @@ resolver.log('Shutting down dependency error resolver...');
     process.exit(1)})}
 ;
 module.exports = DependencyErrorResolver
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

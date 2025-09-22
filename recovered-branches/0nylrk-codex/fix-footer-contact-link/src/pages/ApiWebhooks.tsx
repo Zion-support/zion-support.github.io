@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 export function ApiWebhooks() {
   // Sample webhook event payload
 
@@ -31,9 +27,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
@@ -51,7 +44,6 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/developers/CodeBlock",
-=======
 import React from "react";"
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";"
 import {CodeBlock} from "@/components/developers/CodeBlock";"
@@ -62,17 +54,12 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",";
 import { CodeBlock } from "@/components/developers/CodeBlock";"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
 import { CodeBlock } from "@/components/developers/CodeBlock","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export function ApiWebhooks() {
   // Sample webhook event payload
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const newApplicationPayload = `{
-<<<<<<< HEAD
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
 
@@ -256,20 +243,15 @@ app && app.listen(3000, () => {;'
   console && console.log('Webhook server listening on port 3000');
 }),`;
   "data": {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
   const newApplicationPayload = `{
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
   "data": {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     "application_id": "app-123456";
     "job_id": "job-789";
     "talent_id": "talent-456";
     "status": "new";
     "cover_letter": "I'm excited to apply for this position...";
-<<<<<<< HEAD
 import React from './react';
 import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
 import { CodeBlock } from '@/components / developers / CodeBlock';
@@ -292,23 +274,19 @@ function ApiWebhooks() {
     "created_at": "2023 - 06 - 10T15:42:31Z";
   }
 }`;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const newHirePayload = `{
     "resume_url": "https://storage && storage.zionai.com/resumes/resume-123 && 123.pdf",;
     "created_at": "2023-06-10T15:42:31Z";
   }
 }`;
 const newHirePayload = `{;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  "event_type": "talent_hired";
-=======
-
-  const newHirePayload = `{;
   "event_type": "talent_hired";
 
   const newHirePayload = `{;
   "event_type": "talent_hired";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+  const newHirePayload = `{;
+  "event_type": "talent_hired";
   "created_at": "2023 - 06 - 12T09: 15:22Z";
   "data": {
     "project_id": "project - 123";
@@ -432,7 +410,6 @@ app.post ('/webhooks / zion', verifyWebhookSignature, (req, res) => {
       // Process the new application...;
       break;
 
-=======
 
   const webhookHandlerJs = `// Express && Express.js webhook handler example;
 const express = require('express');
@@ -506,7 +483,6 @@ app && app.listen(3000, () => {;
   console && console.log('Webhook server listening on port 3000');
 
 }),`;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
   "data": {
@@ -515,15 +491,8 @@ app && app.listen(3000, () => {;
     "created_at": "2023-06-10T15:42:31Z"
   }
 }`;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     "application_id": "app-123456",
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     "application_id": "app-123456",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     "job_id": "job-789",
     "talent_id": "talent-456",
     "status": "new",
@@ -533,9 +502,6 @@ app && app.listen(3000, () => {;
   }
 }`,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 `
   const newHirePayload = `{"
@@ -552,7 +518,6 @@ app && app.listen(3000, () => {;
     "created_at": "2023-06-12T09:15:22Z"
   }`
 }`,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const quoteReceivedPayload = `{
   "event_type": "quote_received",
   "created_at": "2023-06-15T11:30:00Z",
@@ -577,7 +542,6 @@ app && app.listen(3000, () => {;
   }`
 }`,
 const messageReceivedPayload = `{
-<<<<<<< HEAD
   "data": {
     "message_id": "msg-123",
     "conversation_id": "conv-456",
@@ -715,7 +679,6 @@ function verifyWebhookSignature(req, res, next) {
 import React from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
 import { CodeBlock } from "@/components/developers/CodeBlock",;
-=======
 `
   const messageReceivedPayload = `{}
 "
@@ -731,7 +694,6 @@ import { CodeBlock } from "@/components/developers/CodeBlock",;
 import React from "react",;"
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;"
 import { CodeBlock } from "@/components/developers/CodeBlock",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 export function ApiWebhooks() { return null; }
   }`
@@ -811,7 +773,6 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {}
       // Process the new application...
 break,
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const newHirePayload = `{
   "event_type": "talent_hired",
   "created_at": "2023-06-12T09:15:22Z",
@@ -831,37 +792,25 @@ break,
   "event_type": "quote_received",
   "created_at": "2023-06-15T11:30:00Z",
 "data": {    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     case 'talent_hired':
-=======
 '
     case 'talent_hired':'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       // // // console.log('Talent hired:', data.talent_id),
       // Update your system...
 
     case 'quote_received':
-=======
 '
     case 'quote_received':'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       // // // console.log('New quote received:', data.quote_id),
       // Process the quote...
 
     case 'message_received':
-=======
 '
     case 'message_received':'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       // // // console.log('New message received:', data.message_id),
       // Process the message...
 
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       break;
       break,
 
@@ -883,35 +832,20 @@ break,
       break;
       break,
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     default:
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     default:'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     default:
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // // // console.log('Unknown event type:', event_type)
   }
   // Always return a 200 response quickly'
   res.status(200).send('Webhook received')
-<<<<<<< HEAD
-<<<<<<< HEAD
 }),
 
 app.listen(3000, () => {
   // // // console.log('Webhook server listening on port 3000')
 }),`,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
   return (
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
@@ -1015,13 +949,11 @@ app.listen(3000, () => {
 export default ApiWebhooks;
   return (
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
         <h2>Setting Up Webhooks</h2>
         <p>"
@@ -1137,11 +1069,8 @@ You can test your webhook implementation using the Developer Portal."
       </div>
     </ApiDocsLayout>
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 // Webhook endpoint with signature verification;
 app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {;
@@ -1152,7 +1081,6 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {;
       // // // console.log('New application received:', data.application_id),;
       // Process the new application...;
       break,;
-=======
 }
 
 ;
@@ -1221,7 +1149,6 @@ app.listen (3000, () => {
       // Process the new application...;
       break,;
     ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     case 'talent_hired':;
       // // // console.log('Talent hired:', data.talent_id),;
       // Update your system...;
@@ -1284,12 +1211,10 @@ app.listen(3000, () => {;
               <tr>;
                 <td className="py-2 px-4 text-white font-mono">message_received</td>;
                 <td className="py-2 px-4 text-zinc-300">Triggered when you receive a new message</td>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </tr>;
             </tbody>;
           </table>;
         </div>;
-<<<<<<< HEAD
         <h2 > Setting Up Webhooks</h2>;
         <p>;
           You can configure webhooks in the <a href="/developers / portal" className="text - zion - cyan">Developer Portal</a> under the Webhooks tab.;
@@ -1327,7 +1252,6 @@ app.listen(3000, () => {;
           </TabsContent>;
         </Tabs>;
 
-=======
             <TabsTrigger value="message_received">Message Received</TabsTrigger>;
           </TabsList>;
           <TabsContent value="new_application">;
@@ -1344,12 +1268,10 @@ app.listen(3000, () => {;
           </TabsContent>;
         </Tabs>;
         <h2 > Verifying Webhook Signatures</h2>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <p>;
           To ensure webhook requests are genuinely from Zion, you should verify the signature included in each request.;
           We include two HTTP headers with each webhook request:;
         </p>;
-<<<<<<< HEAD
         <ul>;
           <li><code > X-Zion - Signature</code>: HMAC - SHA256 signature</li>;
           <li><code > X-Zion - Timestamp</code>: Unix timestamp when the webhook was sent</li>;
@@ -1372,15 +1294,8 @@ app.listen(3000, () => {;
     </ApiDocsLayout>);
 }
 export default ApiWebhooks;
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         ;
         <ul>;
           <li><code>X-Zion-Signature</code>:HMAC-SHA256 signature</li>;
@@ -1475,24 +1390,13 @@ select " Test Webhook" next to any configured webhook to send a test payload to 
 }export default ApiWebhooks;
 ;
 export default ApiWebhooks;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       break;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }),`;
   return (
 }
 export default ApiWebhooks;
 
 export default ApiWebhooks;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

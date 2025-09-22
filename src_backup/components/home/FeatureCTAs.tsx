@@ -1,5 +1,4 @@
 :src/components/home/FeatureCTAs.tsx
-<<<<<<< HEAD
 interface FeatureCTAsProps {;
   className?: string;
   style?: React && React.CSSProperties;
@@ -182,7 +181,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
       icon: <Search className = "h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: '/match',
       badge: 'popular'
-=======
   const features = []
     {'
       key: 'ai_talent_matching','
@@ -191,7 +189,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
       icon: <Search className = "h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,'
       link: '/match','
       badge: 'popular';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/FeatureCTAs.tsx
     };
     {'
       key: 'talent_directory','
@@ -314,18 +311,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/home/FeatureCTAs.tsx
                     <Badge
                       variant='secondary'
-<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
-<<<<<<< HEAD
                       className='bg-primary/20 text-primary'>                      {t(`badges.${feature && feature.badge}`)}
                     </Badge>;
                   )}
                 </div>;"
                     <Badge variant="secondary" className="bg-primary/20 text-primary">;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 :src_backup/components/home/FeatureCTAs.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <section
       className={cn(
         "py-16 bg-gradient-to-b from-background to-background/90"
@@ -335,7 +327,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         className
       )}
 :src/components/home/FeatureCTAs.tsx
-<<<<<<< HEAD
       style={style}
     >
       <div className="container mx-auto px-4">
@@ -350,7 +341,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {t(`badges.${feature.badge}`)}
                     </Badge>
                   )}
-<<<<<<< HEAD
                 </div>                )}
             {t('home && home.features_heading')}
           </h2>;"
@@ -359,7 +349,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>;
         </div>;
 :src_backup/components/home/FeatureCTAs.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/home/FeatureCTAs.tsx
 
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
           {features && features.map((feature, index) => (;"
@@ -385,16 +374,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </CardDescription>;
 
 :src/components/home/FeatureCTAs.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 )}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </CardHeader>
               <CardContent>
                 {feature.detailsKey && (
 :src_backup/components/home/FeatureCTAs.tsx
-<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
-<<<<<<< HEAD
 
                   <p className="text-sm text-muted-foreground">
 <p className='text-sm text-muted-foreground'>
@@ -406,17 +390,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </CardContent>
 :src_backup/components/home/FeatureCTAs.tsx
               <CardFooter>
-<<<<<<< HEAD
                 <Button asChild className="w-full gap-1">
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <Link
                     href={feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
 <span>
                       {t('general.explore')} {t(`features.${feature.key}`)}
                     </span>
-<<<<<<< HEAD
                     <ArrowRight className='h-4 w-4' />                  </Link>                  <Link
                     href={feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
@@ -424,7 +405,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}
                   >                    <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <ArrowRight className="h-4 w-4" />
                     <ArrowRight className='h-4 w-4' />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -435,9 +415,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
 :src/components/home/FeatureCTAs.tsx
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 }
 }
@@ -489,7 +467,6 @@ export /**;
 :src_backup/components/home/FeatureCTAs.tsx
 function FeatureCTAs() {
   const { t } = use_translation ();  const features = [    {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       key: 'ai_talent_matching',
       descriptionKey: 'ai_talent_matching_desc',
       detailsKey: 'ai_talent_matching_details',
@@ -637,7 +614,6 @@ badge: 'popular'
       icon: ('
         <Clock className='h - 10 w - 10 p - 2 rounded - md bg - violet - 100 text - violet - 700' />),'
       badge: 'premium',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
 {
       key: 'talent_directory',
@@ -839,7 +815,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
   ];
   return (;
     <section;
-<<<<<<< HEAD:src_backup/components/home/FeatureCTAs.tsx
       className={cn(;
         "py-16 bg-gradient-to-b from-background to-background/90";
         className;
@@ -953,25 +928,12 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
     </section>));
 }
 :src_backup/components/home/FeatureCTAs.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 ;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/home/FeatureCTAs.tsx
         </div>
       </div>
     </section>
 );
 :src/components/home/FeatureCTAs.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/FeatureCTAs.tsx

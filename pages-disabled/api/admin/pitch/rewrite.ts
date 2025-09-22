@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdminFromApi } from '../../../../utils/auth',;
 import OpenAI from 'openai',;
@@ -8,7 +7,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth',;
 import OpenAI from 'openai',;
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY })
->>>>>>> pr-12243
   try {
     const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
 Title: ${slide.title}\nContent:\n${slide.content}`
@@ -35,8 +33,6 @@ Title: ${slide.title}\nContent:\n${slide.content}`
       const parsed = JSON.parse(raw)
       title = parsed.title || title
       content = parsed.content || content
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 {
             role: 'system',
             content:
@@ -51,12 +47,9 @@ Title: ${slide.title}\nContent:\n${slide.content}`
       const parsed = JSON.parse(raw);
       title = parsed.title || title;
       content = parsed.content || content;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (err) {
-=======
       content = parsed.content || content;
     } catch (err) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       // keep original if AI fails;
     }
 
@@ -68,8 +61,5 @@ res.status(200).json({ title, content })
 import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
-<<<<<<< HEAD
 }
-=======
 };'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

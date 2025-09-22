@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs-extra';
 import path from 'path';
 import { createClient } from '@supabase/supabase-js';
@@ -33,7 +32,6 @@ pr-12325
   adminId?: string;
   resolution?: string;
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   month: string;
   totalCases: number;
   resolvedCases: number;,
@@ -41,7 +39,6 @@ pr-12325
   averageResolutionTime: number;,
   topFraudTypes: Array<{ type: string; count: number }>;
 }
-<<<<<<< HEAD
 ;
 function getSupabaseAdmin() {;
   const url = process.env.SUPABASE_URL!;
@@ -312,4 +309,3 @@ const records = this.listRecords();
   }
 }
 export const fraudStore = new FraudStore();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

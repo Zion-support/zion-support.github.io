@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 
-=======
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // add more env variables as needed;
 }
 interface ImportMeta {
@@ -61,11 +52,6 @@ declare module 'lovable - tagger' {
 }
 // Add Node.js globals;
 interface ImportMetaEnv {;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }
 // Add Node.js globals;
 
@@ -90,7 +76,6 @@ declare module 'path' {export function resolve(...paths: string[]): string;
 }
 declare module 'lovable-tagger' {import { Plugin } from 'vite';
 interface ImportMetaEnv {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   readonly VITE_APP_TITLE: string,;
 
   readonly VITE_SUPABASE_URL: string,;
@@ -139,29 +124,20 @@ declare module 'lovable-tagger' {;
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 declare let __dirname: string,
 declare let process: {}
   env: {}
     [key: string]: string | undefined,'
     NODE_ENV: 'development' | 'production' | 'test',
     PORT?: string;
-=======
-=======
 declare module 'lovable-tagger' {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export function componentTagger(): Plugin;
 }
@@ -179,7 +155,6 @@ declare let process: {,
     [key: string]: string | undefined,
     NODE_ENV: 'development' | 'production' | 'test',
 PORT?: string
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 // Add Node.js globals;
 declare let __dirname: string,;
@@ -188,26 +163,13 @@ declare let process: {;,
 [key: string]: string | undefined,;'
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     [key: string]: string | undefined,;
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
@@ -225,4 +187,3 @@ pr-12325
 };
   }
 };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

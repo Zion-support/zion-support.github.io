@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 export default function PerformanceMonitor() {
@@ -71,50 +65,29 @@ export default function PerformanceMonitor() {
             onClick={() => setIsVisible(false)},;
 
 import React from 'react';
-<<<<<<< HEAD
 import React from 'react';
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import React, { useEffect, useState } from 'react';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { useEffect } from 'react';
-=======
 import React from 'react';
 
 interface PerformanceMonitorProps {
   children: React.ReactNode;
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
   return <>{children}</>;
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
 export default PerformanceMonitor;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '
 import React from 'react';
 ;
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 interface PerformanceMonitorProps {
   children: React.ReactNode;
@@ -232,4 +205,3 @@ ursor/fix-syntax-push-and-merge-to-main-f9ca
 pr-12325
 
 export default PerformanceMonitor;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

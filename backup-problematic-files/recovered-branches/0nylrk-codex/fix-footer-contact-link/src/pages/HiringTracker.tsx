@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
 import { AppHeader } from "@/layout/AppHeader", ;
@@ -20,7 +19,6 @@ function HiringTrackerContent() {;
       <SEO ;
         title="Hiring Tracker | Zion AI Marketplace" ;
         description="Manage your candidate pipeline in the Zion AI Marketplace." ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
@@ -35,7 +33,6 @@ function HiringTrackerContent() {;
             </p>;
           </div>;
         </div>;
-<<<<<<< HEAD
 
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">;
           <TabsList>;

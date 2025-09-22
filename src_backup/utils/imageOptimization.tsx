@@ -1,5 +1,4 @@
 :src/utils/imageOptimization.tsx
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { cn } from '@/lib/utils',;
@@ -49,8 +48,6 @@ export function OptimizedImage({
   })
 } 
 :src/utils/imageOptimization.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -100,10 +97,8 @@ const observer = new IntersectionObserver ( ([entry]) => {
   // Check condition
 if ( {) {
   $2
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 :src/utils/imageOptimization.tsx
-<<<<<<< HEAD
 ;
 :src_backup/utils/imageOptimization.tsx
 export function OptimizedImage({;
@@ -127,9 +122,7 @@ export function OptimizedImage({;
   const [hasError, setHasError] = useState(false),;
   const [isInView, setIsInView] = useState(!lazy || priority),;
   const imgRef = useRef<HTMLDivElement>(null),;
-<<<<<<< HEAD:src/utils/imageOptimization.tsx
   // Intersection Observer for lazy loading;
-=======
   return () => observer.disconnect ();
 }, [lazy, priority, isInView]);
 //Generate WebP - compatible src const getOptimizedSrc = (original_src: string) =>: any {
@@ -144,9 +137,7 @@ export function OptimizedImage({;
   const img_ref = useRef < HTMLDivElement>(null);  // Intersection Observer for lazy loading;
 
     return () => observer.disconnect ();
-=======
 export function OptimizedImage() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/utils/imageOptimization.tsx
   }, [lazy, priority, isInView]);
   // Generate WebP - compatible src;
   const getOptimizedSrc = (original_src: string, ) =>: any {'
@@ -174,7 +165,6 @@ if (||) {}
     onError?.()
   }
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   useEffect(() => {;
     if (!lazy || priority || isInView) return,;
     const observer = new IntersectionObserver(;
@@ -219,11 +209,9 @@ const handleLoad = () => {
   // Generate blur placeholder
   const generateBlurDataURL = () => {
     if (blurDataURL) return blurDataURL,
-=======
         }
       }
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
@@ -231,7 +219,6 @@ const handleLoad = () => {
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />
             <stop offset="100%" style="stop-color:#e5e7eb;stop-opacity:1" />
-=======
     // Generate a simple gray blur placeholder;`
     return `data: image/svg+xml,base64,${Buffer.from("`
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
@@ -239,7 +226,6 @@ const handleLoad = () => {
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">"
             <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />"
             <stop offset="100%" style="stop-color:#e5e7eb,stop-opacity:1" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/utils/imageOptimization.tsx
           </linearGradient>
         </defs>"
         <rect width="100%" height="100%" fill="url(#grad)" />`
@@ -293,7 +279,6 @@ const handleLoad = () => {
     }
 
     // For internal images, Next && Next.js will handle optimization;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return originalSrc;
   },;
   const handleLoad = () => {;
@@ -323,15 +308,12 @@ const handleLoad = () => {
         </defs>;
         <rect width="100%" height="100%" fill="url(#grad)" />;
       </svg>`;
-<<<<<<< HEAD
     ).toString('base64')}`
 };
     >;
       {isInView && !hasError && (;
         <Image;
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           src={getOptimizedSrc(src)}
 :src_backup/utils/imageOptimization.tsx
           alt={alt}
@@ -352,13 +334,10 @@ blurDataURL={placeholder === 'blur' ? generateBlurDataURL() : undefined}
             isLoading ? 'opacity-0' : 'opacity-100'
           ),}
 :src_backup/utils/imageOptimization.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           className={cn(;
             'transition-opacity duration-300',;
             isLoading ? 'opacity-0' : 'opacity-100';
           )}
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {...props}
         />;
       )}
@@ -367,36 +346,26 @@ blurDataURL={placeholder === 'blur' ? generateBlurDataURL() : undefined}
 
       {(isLoading && isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
-=======
       {(isLoading && isInView) && (
-=======
       {(isLoading && isInView) && ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/utils/imageOptimization.tsx
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       {(isLoading && isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       )}
 ;
       {/* Error fallback */}
 :src_backup/utils/imageOptimization.tsx
-<<<<<<< HEAD
       {hasError && (;
         <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>;
           {fallbackSrc ? (;            <img
 
             <img
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               src={fallbackSrc}
               alt={alt}
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/utils/imageOptimization.tsx
               className="max-w-full max-h-full object-contain"
               onLoad={handleLoad}
             />
@@ -491,14 +460,9 @@ resolve({ width: img.naturalWidth, height: img.naturalHeight })
     img.onerror = reject;
     img.src = src;
   })
-<<<<<<< HEAD:src_backup/utils/imageOptimization.tsx
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       resolve({ width: img.naturalWidth, height: img.naturalHeight });
     img.onerror = reject;
     img.src = src;
   });
 :src/utils/imageOptimization.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

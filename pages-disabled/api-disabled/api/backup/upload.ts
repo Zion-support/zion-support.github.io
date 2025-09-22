@@ -16,9 +16,7 @@ export default async function handler(req, res) {
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next',
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Web3Storage, File } from 'web3.storage',
 ;
 const TOKEN = process.env.WEB3_STORAGE_TOKEN || '',
@@ -40,5 +38,3 @@ function handler() {
 }
   try {
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243

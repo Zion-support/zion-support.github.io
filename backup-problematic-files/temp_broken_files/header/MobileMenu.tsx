@@ -1,5 +1,4 @@
 
-=======
 import { Link } from "react-router-dom",;
 import { useLocation } from "react-router-dom",;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",;
@@ -66,7 +65,6 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
   ),;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="py-6">;
       <div className="flex justify-between items-center px-6 mb-6">;
         <h2 className="text-xl font-bold">Menu</h2>;
@@ -74,7 +72,6 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
           <X className="h-5 w-5" />;
         </Button>;
       </div>;
-<<<<<<< HEAD
 
           </Link>;
         ))}

@@ -1,14 +1,12 @@
 #!/usr/bin/env node;const fs = require('fs');
 
 const fs = require('fs');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const path = require('path');
 const { execSync } = require('child_process');
 class AutomationImprovementSuite {}
   constructor() {}
     this.projectRoot = process.cwd();
 this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-<<<<<<< HEAD
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 60000, // 1 minute timeout
@@ -68,7 +66,6 @@ return content}
         this.log(\"❌ Error fixing \${file}: \${error.message}\")}
     }
 this.log(\"🎉 Fixed \${this.fixedCount} files\")}
-=======
     // Fix common syntax issues;"
 
     this.log(\"Found \${files.length} files to check\");"
@@ -82,7 +79,6 @@ this.log(\"🎉 Fixed \${this.fixedCount} files\")}
       } catch (error) {"
         this.log(\"❌ Error fixing \${file}: \${error.message}\")}"
     this.log(\"🎉 Fixed \${this.fixedCount} files\")}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   getAllFiles(dir, extensions) {
     let files = [];
   // TODO: Implement
@@ -193,7 +189,6 @@ suite.run().catch(console.error);
         ...result;
 }
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Check for insecure configurations
       if (content.includes('http://') && !content.includes('localhost')) {
         vulnerabilities.push({
@@ -204,7 +199,6 @@ suite.run().catch(console.error);
       }
     }
   });
-<<<<<<< HEAD
   // Generate security report
   const report = {
     timestamp: new Date().toISOString(),
@@ -241,7 +235,6 @@ function scanSecurity() {
   const filesToCheck = [
 
   console.log(\`🔒 Security scan completed. Found \${vulnerabilities.length} potential issues.\`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return report;
 
 // Run security scan;
@@ -255,7 +248,6 @@ function analyzeCodeQuality() {
     classes: 0,
 comments: 0
   };
-<<<<<<< HEAD
 
   // Scan source files
   function scanDirectory(dir) {
@@ -269,7 +261,6 @@ comments: 0
     files.forEach(file => {)
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if (stat.isDirectory() && !['node_modules', '.git', '.next'].includes(file)) {
         scanDirectory(filePath);
       } else if (file.match(/\\.(js|jsx|ts|tsx)$/)) {
@@ -277,7 +268,6 @@ comments: 0
         const content = fs.readFileSync(filePath, 'utf8');
         const lines = content.split('\\n');
         stats.totalLines += lines.length;
-<<<<<<< HEAD
 
         // Count functions
         const functionMatches = content.match(/function\\s+\\w+|const\\s+\\w+\\s*=\\s*\\(/g);
@@ -298,7 +288,6 @@ comments: 0
         // Count comments;
         const commentMatches = content.match(/\\/\\/|\\/\\*|\\*\\//g);
         if (commentMatches) stats.comments += commentMatches.length;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Check for code quality issues
         lines.forEach((line, index) => {
           // Check for long lines;
@@ -310,7 +299,6 @@ type: 'long_line',
               message: 'Line exceeds 120 characters'
             });
           }
-<<<<<<< HEAD
           // Check for console.log in production code
           if (line.includes('console.log') && !filePath.includes('test')) {
             issues.push({
@@ -422,7 +410,6 @@ function runTests() {
   console.log(\`🧪 Test suite completed: \${passedTests}/\${totalTests} tests passed\`);
   const totalTests = testResults.tests.length;
   console.log(\`🧪 Test suite completed: \${passedTests}/\${totalTests} tests passed\`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return testResults;
 
 // Run tests;
@@ -433,7 +420,6 @@ try {
     // Run existing automation
     console.log('🔄 Running existing automation...');
     const automationResult = runCommand('node automation-runner.cjs', 'Automation Runner');
-<<<<<<< HEAD
     // Create improvement scripts
     console.log('🔄 Creating improvement scripts...');
     createPerformanceMonitor();
@@ -474,11 +460,6 @@ fs.writeFileSync('/workspace/automation-improvement-report.json', JSON.stringify
   }
 }
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
     // Run the new scripts;
 
     process.exit(1);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

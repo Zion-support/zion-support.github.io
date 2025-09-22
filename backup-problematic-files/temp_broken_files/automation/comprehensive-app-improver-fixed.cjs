@@ -56,8 +56,6 @@ this.log(`Report "generated": ${reportFile}`);
   async run() {}
     this.log('Starting comprehensive app improvement process...');
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {}
       // Install dependencies;
       await this.installDependencies();
@@ -95,4 +93,3 @@ if (require.main === module) {}
   const improver = new ComprehensiveAppImprover();
   improver.run().catch(console.error);
 };
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

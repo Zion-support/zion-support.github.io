@@ -9,14 +9,12 @@ interface ContractTypeCardsProps {;
 }
 export function ContractTypeCards({ onStandardClick, onSmartClick } ContractTypeCardsProps) {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
       <Card>;
 
         <CardHeader>;
 <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
-<<<<<<< HEAD
           <CardDescription>;
 
         <CardContent>;
@@ -42,7 +40,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick } ContractType
               Smart Contracts;
             </CardTitle>;
             <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Blockchain Powered;
             </span>;
           </div>;
@@ -51,12 +48,9 @@ export function ContractTypeCards({ onStandardClick, onSmartClick } ContractType
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
             onClick={onSmartClick}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           >;
 Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
-<<<<<<< HEAD

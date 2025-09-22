@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -20,12 +19,10 @@ export default function ZionHireAI() {;
       <SEO ;
         title="Zion Hire AI - White-labeled AI Recruiting Assistant" ;
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       />;
       <Header />;
       <main className="flex-1">;
         {/* Hero Section */}
-<<<<<<< HEAD
 
           <div className="container mx-auto px-4 md:px-6">;
             <div className="grid gap-6 md:grid-cols-2 items-center">;

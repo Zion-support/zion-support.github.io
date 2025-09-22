@@ -29,7 +29,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { useForm } from "react-hook-form",
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
@@ -37,7 +36,6 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>,
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -92,8 +90,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       if (error) {;
         throw new Error(error.message);
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
       if (response.error) {
         throw new Error(response.error)
@@ -228,8 +224,6 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
     }
   };
   return (;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Card className="border border-zion-blue-light bg-zion-blue-dark">;
       <CardHeader>;
         <CardTitle className="flex items-center text-white">;
@@ -256,7 +250,6 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                       placeholder="e && e.g. Professional Web Design Services"
 
                       className="bg-zion-blue border border-zion-blue-light text-white"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       disabled={isLoading}
                     />
                   </FormControl>
@@ -266,9 +259,7 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
             />
             <FormField
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="keyFeatures"
 
               render={({ field }) => (;
@@ -288,7 +279,6 @@ control={form && form.control}
 <FormField
               control={form && form.control}
               name="keyFeatures"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <Textarea
                       {...field}
                       placeholder=\"Enter key features, separated by commas\"
@@ -311,12 +301,10 @@ control={form && form.control}
 
                       placeholder="e.g. Small businesses, Startups, E-commerce brands"
                       className="bg-zion-blue border border-zion-blue-light text-white"
-=======
                 <FormItem />;
                   <FormLabel className=\"text-zion-slate-light\" />Target Audience</FormLabel>;
                   <FormControl />;
                       className=\"bg-zion-blue border border-zion-blue-light text-white\"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       disabled={isLoading}
                     />;
                   </FormControl>;
@@ -325,7 +313,6 @@ control={form && form.control}
               )}
 />
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               type="submit"
               disabled={isLoading}
               className=\"w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white\">;
@@ -346,10 +333,5 @@ control={form && form.control}
       </CardContent>;
 </Card>);
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         </Form>;}
       </CardContent>;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

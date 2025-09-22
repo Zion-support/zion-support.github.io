@@ -1,27 +1,14 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /**
  * SEO Optimizer
  * Automatically optimizes SEO for the application
  */
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { execSync } = require('child_process');
 
 const fs = require('fs');
 const path = require('path');
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 class SEOOptimizer {
   constructor() {
@@ -30,7 +17,6 @@ class SEOOptimizer {
   }
 
 log(message) {
-<<<<<<< HEAD
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
   }
@@ -90,7 +76,6 @@ log(message) {
     return report;
   }
 }
-<<<<<<< HEAD
 }
     }},
   {
@@ -198,7 +183,6 @@ for (const check of seoChecks) {
     successCount++;
   } catch (error) {
 
-<<<<<<< HEAD
 // Generate SEO report
 const report = {
   "timestamp": new Date().toISOString(),
@@ -233,19 +217,15 @@ console.log(' SEO Optimizer Starting...\n')
  * SEO Optimizer
  * Automatically optimizes SEO for the application
  */
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const { execSync } = require('child_process');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require('fs');
 const path = require('path');
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 class SEOOptimizer {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'seo-optimizer.log');
     this.ensureLogDir();
   }
-=======
 
   ensureLogDir() {
     const logsDir = path.dirname(this.logFile);
@@ -255,7 +235,6 @@ class SEOOptimizer {
   }
 
   log(message, level = 'INFO') {
-=======
 
 /**
  * SEO Optimizer;
@@ -276,7 +255,6 @@ class SEOOptimizer {
       fs.mkdirSync(this.reportsDir, { recursive: true });
 
   log(message) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const timestamp = new Date().toISOString();
 
     ];
@@ -309,8 +287,6 @@ class SEOOptimizer {
 const reportFile = path.join(__dirname, 'logs', 'seo-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 SEO report saved to: ${reportFile}`);
-=======
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -375,8 +351,6 @@ class SEOOptimizer {
     this.ensureLogDir();
   }
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   ensureLogDir() {
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
@@ -463,7 +437,6 @@ class SEOOptimizer {
     const reportFile = path.join(__dirname, 'logs', 'seo-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 SEO report saved to: ${reportFile}`);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   }
 
   async optimize() {
@@ -614,16 +587,11 @@ class SEOOptimizer {
     const reportFile = path.join(__dirname, 'logs', 'seo-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 SEO report saved to: ${reportFile}`);
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 
   async optimize() {
     this.log('🔍 Starting SEO optimization...');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     await this.generateSitemap();
     await this.optimizeMetaTags();
     await this.checkSEOHealth();
@@ -644,13 +612,9 @@ class SEOOptimizer {
     }, 6 * 60 * 60 * 1000);
 
     this.log('🔄 SEO Optimizer is running. Optimization every 6 hours.');
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -663,8 +627,6 @@ console.log(' SEO Optimizer Starting...\n')
     "name"
     "status"
 
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 #!/usr/bin/env node
 // Run SEO optimization
 const optimizer = new SEOOptimizer();
@@ -673,10 +635,7 @@ optimizer.optimizeSEO().catch(console.error);
 #!/usr/bin/env node
 main
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /**
  * SEO Optimizer
  * Automatically optimizes SEO for the application
@@ -691,7 +650,6 @@ class SEOOptimizer {
     this.ensureLogDir();
   }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ensureLogDir() {
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
@@ -708,9 +666,6 @@ class SEOOptimizer {
 
   async runCommand(command, description) {
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     try {
       this.log('Analyzing SEO elements...');
 
@@ -735,58 +690,26 @@ class SEOOptimizer {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
   optimizer.optimize().catch(console.error);
 }
 
 module.exports = SEOOptimizer;
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
 }
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
   optimizer.start().catch(console.error);
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 // Run SEO optimization
 const optimizer = new SEOOptimizer();
 optimizer.optimize().catch(console.error);
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 module.exports = SEOOptimizer;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 module.exports = SEOOptimizer;
 
 module.exports = SEOOptimizer;
@@ -798,12 +721,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
           h1Count += (content.match(/<h1[^>]*>/g) || []).length;
 </h1>
           h2Count += (content.match(/<h2[^>]*>/g) || []).length;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

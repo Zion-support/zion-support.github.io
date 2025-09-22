@@ -147,7 +147,6 @@ export function useHireRequest() {_const [isSubmitting, _setIsSubmitting] = useS
 
       setError(errorMessage),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       toast({
         title: &quot;Error&quot;,
         description: errorMessage,
@@ -156,7 +155,6 @@ export function useHireRequest() {_const [isSubmitting, _setIsSubmitting] = useS
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
 
   }
         title: "Error", _description: errorMessage, _variant: "destructive"});

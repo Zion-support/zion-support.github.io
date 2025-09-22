@@ -1,8 +1,4 @@
 :src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 export function RoleManagement() {
@@ -10,32 +6,22 @@ export function RoleManagement() {
   const teamMembers = [
 import React from 'react';
 :src/components/enterprise/admin/RoleManagement.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import React from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import React from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
 import {
-=======
 export function RoleManagement() {};
   // Mock team members data;
   const teamMembers = []
 import React from 'react';
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/RoleManagement.tsx
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
 :src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { Switch } from "@/components/ui/switch",
@@ -78,7 +64,6 @@ function RoleManagement() {}
     },
 
 :src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD
     {
       id: 2
       name: 'Jamie Smith'
@@ -179,7 +164,6 @@ import {
   TooltipContent;
   TooltipProvider;
   TooltipTrigger} from "@/components/ui/tooltip",
-=======
   TableRow,;'
 } from '@/components/ui/table';'
 import { Badge } from '@/components/ui/badge';'
@@ -256,7 +240,6 @@ export function RoleManagement() { return null; }
     Manager: 'Can view candidates and create jobs',;'
     Viewer: 'Read-only access to candidates',;
   };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/RoleManagement.tsx
 
 export function RoleManagement() {
   // Mock team members data
@@ -265,7 +248,6 @@ export function RoleManagement() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       id: 1,
       name: "Alex Johnson","
       email: "alex@example.com","
@@ -326,32 +308,22 @@ const roleDescriptions: Record<string string> = {
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"},
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
 
   return ("
     <div className="space-y-6">
       <div>
 :src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
-=======
   return (
     <div className="space-y-6">
       <div>
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 "
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/RoleManagement.tsx
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           {Object.entries(roleDescriptions).map(([role, description]) => ("
             <div key={role} className="bg-card rounded-lg p-4 border border-border">"
@@ -360,16 +332,12 @@ const roleDescriptions: Record<string string> = {
               </div>"
               <p className="text-sm text-muted-foreground">{description}</p>
 :src/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD
             </div>
           ))}
-<<<<<<< HEAD
         </div>
       </div>
 
       <div className="rounded-md border">
-=======
-=======
 
 import React from "react",;
 import {
@@ -418,9 +386,7 @@ export function RoleManagement() {
 "
       <div className="rounded-md border">
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Table>
           <TableHeader>
             <TableRow>
@@ -515,7 +481,6 @@ export function RoleManagement() {
           </TableHeader>
           <TableBody>
 :src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
                 <TableCell>
@@ -528,30 +493,20 @@ export function RoleManagement() {
 <TableCell>
                   <div className='font-medium'>{member.name}</div>
                   <div className='text-sm text-muted-foreground'>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
                 <TableCell>
                   <div className="font-medium">{member.name}</div>
                   <div className="text-sm text-muted-foreground">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/RoleManagement.tsx
                     {member.email}
                   </div>
                 </TableCell>
                 <TableCell>
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/RoleManagement.tsx
                   <select 
-=======
                   <select "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/RoleManagement.tsx
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     defaultValue={member.role}
                   >"
@@ -561,33 +516,16 @@ export function RoleManagement() {
                     <option value="Viewer">Viewer</option>
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/RoleManagement.tsx
                   </select>
                 </TableCell>"
                 <TableCell className="text-center">
 :src_backup/components/enterprise/admin/RoleManagement.tsx
                   <Switch
-<<<<<<< HEAD:src/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
-=======
                   <Switch;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/RoleManagement.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/RoleManagement.tsx
                     aria-label="View candidates"
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={(checked) =>"
                       handlePermissionChange(member.id, "viewCandidates", checked)
@@ -727,28 +665,21 @@ export function RoleManagement() { return null; }
               <TableHead>Team Member</TableHead>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
               <TableHead>Role</TableHead>;
-<<<<<<< HEAD
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
                 <div className='flex items-center justify-center gap-1'>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
                   View Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
                       <TooltipTrigger>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
                       </TooltipTrigger>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <TooltipContent>;
                         Can view candidate profiles and applications;
                       </TooltipContent>;
@@ -757,28 +688,21 @@ export function RoleManagement() { return null; }
                 </div>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
               </TableHead>;
-<<<<<<< HEAD
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
                 <div className='flex items-center justify-center gap-1'>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
                   Edit Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
                       <TooltipTrigger>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
                       </TooltipTrigger>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <TooltipContent>;
                         Can edit candidate information and status;
                       </TooltipContent>;
@@ -787,28 +711,21 @@ export function RoleManagement() { return null; }
                 </div>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
               </TableHead>;
-<<<<<<< HEAD
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
                 <div className='flex items-center justify-center gap-1'>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
                   Create Jobs;
                   <TooltipProvider>;
                     <Tooltip>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
                       <TooltipTrigger>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
                       </TooltipTrigger>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <TooltipContent>;
                         Can create and publish job listings;
                       </TooltipContent>;
@@ -817,28 +734,21 @@ export function RoleManagement() { return null; }
                 </div>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
               </TableHead>;
-<<<<<<< HEAD
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
                 <div className='flex items-center justify-center gap-1'>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
                   Manage Team;
                   <TooltipProvider>;
                     <Tooltip>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
                       <TooltipTrigger>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
                       </TooltipTrigger>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <TooltipContent>;
                         Can add, edit, and remove team members;
                       </TooltipContent>;
@@ -847,28 +757,21 @@ export function RoleManagement() { return null; }
                 </div>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
               </TableHead>;
-<<<<<<< HEAD
               <TableHead className="text-center">;
                 <div className="flex items-center justify-center gap-1">;
                 <div className='flex items-center justify-center gap-1'>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
                   Billing Access;
                   <TooltipProvider>;
                     <Tooltip>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
                       <TooltipTrigger>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />;
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
                       </TooltipTrigger>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <TooltipContent>;
                         Can view and manage billing information;
                       </TooltipContent>;
@@ -1117,7 +1020,6 @@ pr-12325
                   <div className='font - medium'>{member.name}</div>;'
                   <div className='text - sm text - muted - foreground'>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/RoleManagement.tsx
                     {member.email}
                   </div>;
                 </TableCell>;
@@ -1150,13 +1052,9 @@ className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 tex
                 </TableCell>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/RoleManagement.tsx
                 <TableCell className="text-center">;
                   <Switch;"
                     aria-label="View candidates";
-<<<<<<< HEAD:src/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewCandidates", checked);
@@ -1196,9 +1094,7 @@ className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 tex
                 </TableCell>'
                 <TableCell className='text-center'>
 :src/components/enterprise/admin/RoleManagement.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <Switch
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
                     aria-label='Create jobs'
                     checked={member.permissions.createJobs}
                     onCheckedChange={checked =>
@@ -1259,9 +1155,7 @@ className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 tex
 
                     checked={member.permissions.viewBilling}
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
       </div>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>;
   )
 };
@@ -1302,17 +1196,9 @@ className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 tex
                     aria-label="View billing";
 
 :src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                     checked={member.permissions.viewBilling}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/RoleManagement.tsx
                     onCheckedChange={(checked) =>;
-=======
                     onCheckedChange={(checked) =>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/RoleManagement.tsx
                       handlePermissionChange(member.id, "viewBilling", checked);
                     }
                   />;
@@ -1320,7 +1206,6 @@ className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 tex
               </TableRow>;
             ))}
 :src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD
 
           </TableBody>;
         </Table>;
@@ -1333,7 +1218,6 @@ className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 tex
 '
                 <TableCell className='text - center'>;
 :src_backup/components/enterprise/admin/RoleManagement.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Switch;
                     aria-label="Create jobs";
                     checked={member.permissions.createJobs}
@@ -1384,7 +1268,6 @@ aria-label="View billing";
                 </TableCell>;'
                 <TableCell className='text - center'>;
                   <Switch;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/RoleManagement.tsx
                     aria - label='Create jobs';
                     checked={member.permissions.create_jobs}
                     onCheckedChange={checked =>;'
@@ -1412,35 +1295,19 @@ aria-label="View billing";
         </Table>;
       </div>;
     </div>);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 :src_backup/components/enterprise/admin/RoleManagement.tsx
 ;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/RoleManagement.tsx
-=======
 }}))]
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/RoleManagement.tsx
           </TableBody>
         </Table>
       </div>
     </div>
   );
 :src/components/enterprise/admin/RoleManagement.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/RoleManagement.tsx
-=======
                 <TableCell className="text-center">;"
 
                     aria-label="View candidates";"
@@ -1485,4 +1352,3 @@ aria-label="View billing";
               ))}
     </div>);`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/RoleManagement.tsx

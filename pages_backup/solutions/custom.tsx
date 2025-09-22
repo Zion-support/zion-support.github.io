@@ -1,34 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import * as React from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';
-<<<<<<< HEAD
 import Link from 'next/link';';
-=======
 import React from 'react';import Link from 'next/link';';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import React from 'react';
 import * as React from 'react';
 import Link from 'next/link';';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
-=======
 import * as React from 'react';'
 import Link from 'next/link';';'
 import { motion } from 'framer-motion';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
-<<<<<<< HEAD
 
 const features = [;
   {}'
@@ -71,14 +56,12 @@ const process = [;
   { step: 'Development, description: 'Agile development with regular feedback and iterations' },',
   { step: 'Testing, description: 'Comprehensive testing and quality assurance' },',
   { step: 'Deployment, description: 'Smooth deployment and go-live support' },',
-=======
 const process = [;'
   { step: 'Discovery, description: 'Understanding your requirements and business goals' },','
   { step: 'Planning, description: 'Creating detailed project roadmap and architecture' },','
   { step: 'Development, description: 'Agile development with regular feedback and iterations' },','
   { step: 'Testing, description: 'Comprehensive testing and quality assurance' },','
   { step: 'Deployment, description: 'Smooth deployment and go-live support' },','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   { step: 'Maintenance, description: 'Ongoing support and continuous improvement' }',
 ;];
 
@@ -86,19 +69,15 @@ const stats = [;
   { number: '150+, label: 'Custom Projects' },',
   { number: '98%, label: 'Client Satisfaction' },',
   { number: 'On Time, label: 'Delivery Rate' },',
-=======
 const stats = [;'
   { number: '150+, label: 'Custom Projects' },','
   { number: '98%, label: 'Client Satisfaction' },','
   { number: 'On Time, label: 'Delivery Rate' },','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   { number: '5+, label: 'Years Experience' }',
 ;];
 
 export default function CustomDevelopmentPage() {
-=======
 export default function CustomDevelopmentPage() {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (;
     <Layout);"
       title="Custom Development - Zion Tech Group"";"
@@ -122,7 +101,6 @@ export default function CustomDevelopmentPage() {};
 >;
               <div className="flex items-center justify-center mb-6">";
                 <Settings className="w-16 h-16 text-purple-400 mr-4" />";
-<<<<<<< HEAD
 
                 <h1 className="text-5xl md: text-6xl font-bold">", Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Development</span>",;
                 </h1>;
@@ -157,7 +135,6 @@ export default function CustomDevelopmentPage() {};
                   href="/case-studies"";"
                   className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"";
                 >;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   View Portfolio;
                 </Link>;
               </div>;
@@ -175,13 +152,8 @@ export default function CustomDevelopmentPage() {};
               {stats.map((stat, index) => (,
                 <motion.div}),
                   key={stat.label}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   initial={{ opacity: 0, y: 30 }}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   initial={{ opacity: 0, y: 30 }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}"
                   className="text-center""
@@ -196,15 +168,12 @@ export default function CustomDevelopmentPage() {};
 
         {/* Features Section */}
         <section className="py-20 bg-gray-50">"
-=======
         {/* Features Section */}"
         <section className="py-20 bg-gray-50">""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
@@ -214,7 +183,6 @@ export default function CustomDevelopmentPage() {};
             >;"
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";"
                 Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Capabilities</span>";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We build custom solutions that perfectly match your business requirements and integrate seamlessly with your existing systems;
@@ -256,17 +224,12 @@ export default function CustomDevelopmentPage() {};
 
         {/* Technologies Section */}
         <section className="py-20 bg-white">"
-=======
         {/* Technologies Section */}"
         <section className="py-20 bg-white">""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
@@ -275,19 +238,14 @@ export default function CustomDevelopmentPage() {};
             >;"
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";"
                 Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Stack</span>";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </h2>;
-=======
               </h2>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Stack</span>";
               </h2>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We use the latest technologies and frameworks to build robust, scalable, and maintainable custom solutions,
               </p>;
@@ -321,15 +279,12 @@ export default function CustomDevelopmentPage() {};
 
         {/* Process Section */}
         <section className="py-20 bg-gray-50">"
-=======
         {/* Process Section */}"
         <section className="py-20 bg-gray-50">""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
@@ -339,7 +294,6 @@ export default function CustomDevelopmentPage() {};
             >;"
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";"
                 Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Process</span>";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our proven development process ensures your custom solution is delivered on time, on budget, and exceeds expectations,
@@ -352,9 +306,6 @@ export default function CustomDevelopmentPage() {};
                   key={step.step}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   className="bg-white rounded-xl p-6 shadow-lg hover: shadow-xl transition-shadow duration-300"">;
@@ -366,12 +317,8 @@ export default function CustomDevelopmentPage() {};
                   <div className="flex items-center mb-4">";"
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mr-4">";"
                       <span className="text-white font-bold text-lg">{index + 1}</span>"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </div>;
-=======
                     </div>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300""
                 >;
@@ -379,7 +326,6 @@ export default function CustomDevelopmentPage() {};
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mr-4">";
                       <span className="text-white font-bold text-lg">{index + 1}</span>"
                     </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <h3 className="text-xl font-bold text-gray-900">{step.step}</h3>"
                   </div>;"
                   <p className="text-gray-600">{step.description}</p>"
@@ -391,10 +337,8 @@ export default function CustomDevelopmentPage() {};
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">"
-=======
         {/* CTA Section */}"
         <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -405,15 +349,10 @@ transition={{ duration: 0 && 0.8 }}>,;
             >,"
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Build Something Custom?;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </h2>;
               <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">";
                 Let's discuss your unique requirements and create a custom solution that perfectly fits your business needs';
               </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link,
                   href="/contact""
@@ -436,11 +375,7 @@ transition={{ duration: 0 && 0.8 }}>,;
                   href="/solutions"";"
                   className="px-8 py-4 border border-white text-white hover:bg-white hover:text-purple-600 rounded-lg font-semibold transition-colors"";
                 >;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   View All Solutions;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link;
                   href="/contact"";
@@ -454,7 +389,6 @@ transition={{ duration: 0 && 0.8 }}>,;
                   className="px-8 py-4 border border-white text-white hover:bg-white hover:text-purple-600 rounded-lg font-semibold transition-colors"";
                 >;
                   View All Solutions;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </Link>;
               </div>;
             </motion.div>;

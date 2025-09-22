@@ -56,7 +56,6 @@ export default function Tutorial(): any ({;
   const slug = router && router.query.slug as string | undefined;
   const tutorial = initialTutorial || TUTORIALS && TUTORIALS.find(t => t && t.slug === slug);interface TutorialPageProps {;
   tutorial?: TutorialType;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
   const router = useRouter(),
@@ -148,7 +147,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
   );
 }
 :temp_exclude/hooks.disabled/Tutorial.tsx
-<<<<<<< HEAD
 import type { Tutorial as TutorialType } from '@/types / tutorial';
 interface TutorialPageProps {}
   tutorial?: TutorialType;
@@ -210,5 +208,4 @@ if ( {) {}
     </>);
 }
 :temp_exclude/hooks.disabled/Tutorial.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

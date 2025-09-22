@@ -8,7 +8,6 @@ export default function EmailValidatorPage() {;
   const [validationResults, setValidationResults] = useState<any[]>([]),;
 const [isValidating, setIsValidating] = useState(false),;
   const [bulkMode, setBulkMode] = useState(false),;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const validateEmails = async () => {;
     if (!emails.trim()) return;
     setIsValidating(true);
@@ -54,7 +53,6 @@ const [isValidating, setIsValidating] = useState(false),;
     } else if (hasTypo) {status = 'suspicious';
       score = 60;
       issues.push('Possible typo in domain');
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function EmailValidatorPage() {
   const [emails, setEmails] = useState(),
   const [validationResults, setValidationResults] = useState<any[]>([]),
@@ -110,7 +108,6 @@ const commonTypos = {
     // Additional checks,
 if (email.length > 254) {
       issues.push('Email too long')
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     // Additional checks;
     if (email.length > 254) {status = 'invalid';
@@ -118,7 +115,6 @@ if (email.length > 254) {
     if (email.split('@')[0].length > 64) {status = 'invalid';
       issues.push('Local part too long');
 }
-<<<<<<< HEAD
 
   const getStatusIcon = (status: string) => {
     switch (status) {
@@ -176,9 +172,7 @@ if (email.length > 254) {
 <Mail className=&quot;w-4 h-4 mr-2&quot; />              Email Validation & Verification
             </div>
           </div>
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <h1 className=&quot;text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight&quot;>
 </h1>
           <p className=&quot;text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed&quot;>
@@ -190,9 +184,7 @@ if (email.length > 254) {
           <div className=&quot;text-center mb-16&quot;>
 <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>              Validate Your Emails
             </h2>
-=======
 </h2>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
@@ -218,7 +210,6 @@ type=&quot;checkbox&quot;
                     <textarea,
 value={emails}
                       onChange={(e) => setEmails(e.target.value)}
-<<<<<<< HEAD:components/email-validator.tsx
                   <Mail className=&quot;w-6 h-6 mr-3 text-blue-400&quot; />
 
                 <div className=&quot;flex items-center space-x-2&quot;>
@@ -233,7 +224,6 @@ value={emails}
                     <label className=&quot;block text-sm font-medium text-gray-300 mb-2&quot;>
 Email Addresses (One per line)
                     </label>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     )}
                   </Button>;
                   {validation_results.length > 0 && (
@@ -241,7 +231,6 @@ Email Addresses (One per line)
 onClick={clearResults}
 variant=&quot;outline&quot;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
                     >
 
@@ -265,7 +254,6 @@ onClick={copyResults}
                   <BarChart3 className=&quot;w-6 h-6 mr-3 text-indigo-400&quot; />
 </BarChart3>
                     onClick={copyResults}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     variant=&quot;outline&quot;
                     size=&quot;sm&quot;
 
@@ -296,7 +284,6 @@ Copy Results
 Copy Results;
                   </Button>)}
               </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               {stats && (
 
                       <div className=&quot;flex items - center justify - between mb - 2&quot;>;
@@ -306,15 +293,11 @@ Copy Results;
 </span>
                           </span>;
 </div>;
-<<<<<<< HEAD
                         <span className={`text - sm font - medium ${getScoreColor (result.score)}`}>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               )}
 {validationResults.length > 0 ? (
                 <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   {validationResults.map((result, index) => (                    <div,
 key={index}`;
                       className={_`p-4 rounded-lg border ${
@@ -328,7 +311,6 @@ key={index}`;
                           <span className={`font-medium ${getStatusColor(result.status)}`}>
                             {result.email}                          </span>
                         <span className={_`text-sm font-medium ${getScoreColor(result.score)}`}>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           Score: {result.score}
 
 </span>;
@@ -339,7 +321,6 @@ key={index}`;
                       </div>;
 
                       {result.issues.length > 0 && (
-<<<<<<< HEAD
 
                         <div className=&quot;text-sm&quot;>
                           <span className=&quot;text-gray-400&quot;>Issues:</span>
@@ -349,12 +330,10 @@ key={index}`;
                                 <XCircle className=&quot;w-3 h-3 mr-2 flex-shrink-0&quot; />
 
                             ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </ul>;
                         </div>;
                       )}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         </div>
                       )}
                       {result.hasTypo && (
@@ -372,7 +351,6 @@ Validation results will appear here. Enter an email address and click validate t
                   </p>
                 </div>
               )}
-<<<<<<< HEAD
                         </div>)}
                         <div className=&quot;mt - 2 p - 2 bg - orange - 500 / 20 border border - orange - 500 / 30 rounded text - sm text - orange - 300 & quot;>;
                         <div className=&quot;mt - 2 p - 2 bg - yellow - 500 / 20 border border - yellow - 500 / 30 rounded text - sm text - yellow - 300 & quot;>;
@@ -384,13 +362,10 @@ Validation results will appear here. Enter an email address and click validate t
 Validation results will appear here. Enter an email address and click validate to get started.;
                   </p>;
                 </div>)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </Card>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Features */}
 
 <section className=&quot;py - 20 bg - gray - 800 & quot;>;
@@ -514,8 +489,6 @@ Validation results will appear here. Enter an email address and click validate t
       </section>;
       {/* CTA Section */}
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <section className=&quot;py-20 bg-gradient-to-r from-blue-600 to-indigo-600&quot;>
         <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <p className=&quot;text-xl text-blue-100 mb-8&quot;>
@@ -532,4 +505,3 @@ href=&quot;/pricing&quot;
 
     </>
 )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -22,12 +21,10 @@ export default function Analytics() {;
       const startDate = new Date(),;
       startDate.setDate(startDate.getDate() - days),;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       const { data, error } = await supabase;
         .from('analytics_events');
         .select('created_at, path');
         .eq('event_typepage_view');
-<<<<<<< HEAD
 
       const { data, error } = await supabase;
         .from('analytics_events');

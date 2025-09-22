@@ -1,8 +1,4 @@
 :src_backup/components/enterprise/admin/UsageStats.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import { Badge } from "@/components/ui/badge",
@@ -24,14 +20,12 @@ export function UsageStats() {
       title: "Limits updated",
       description: "The new usage limits have been saved successfully."})
   },
-=======
 
 export function UsageStats() {
 
   const handleSaveChanges = () => {
     toast({
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/UsageStats.tsx
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -83,7 +77,6 @@ export function UsageStats() {
 
   const handleSaveChanges = () => {
     toast({
-=======
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">"
 
 import React from "react",
@@ -115,15 +108,9 @@ export function UsageStats() {
           Configure usage limits for your team to manage your subscription resources.
         </p>
       </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/UsageStats.tsx
 
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-<<<<<<< HEAD:src/components/enterprise/admin/UsageStats.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/UsageStats.tsx
         <Card>
-=======
   return (
     <div className="space-y-8">
       <div>
@@ -132,7 +119,6 @@ export function UsageStats() {
           Configure usage limits for your team to manage your subscription resources.
         </p>
       </div>        <Card>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
             <CardDescription>
@@ -163,20 +149,14 @@ export function UsageStats() {
           </CardFooter>
         </Card>
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/UsageStats.tsx
-=======
             <Button size='sm' onClick={handleSaveChanges}>'
               Save Changes
             </Button>
           </CardFooter>
         </Card>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/UsageStats.tsx
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -208,19 +188,13 @@ export function UsageStats() {
           </CardFooter>
         </Card>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             <Button size='sm' onClick={handleSaveChanges}>'
               Save Changes
             </Button>
           </CardFooter>
         </Card>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/UsageStats.tsx
         <Card>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
             <CardDescription>
@@ -251,20 +225,14 @@ export function UsageStats() {
           </CardFooter>
         </Card>
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/UsageStats.tsx
-=======
             <Button size='sm' onClick={handleSaveChanges}>'
               Save Changes
             </Button>
           </CardFooter>
         </Card>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/UsageStats.tsx
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -308,20 +276,13 @@ export function UsageStats() {
         </Card>
       </div>
 :src/components/enterprise/admin/UsageStats.tsx
-<<<<<<< HEAD
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
             <Sparkles className="h-5 w-5 text-primary" />
 :src_backup/components/enterprise/admin/UsageStats.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/UsageStats.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/UsageStats.tsx
           </div>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div>
             <h3 className="font-medium">Need higher limits?</h3>
             <p className="text-sm text-muted-foreground">
@@ -359,7 +320,6 @@ return (;
     <div className="space-y-8">;
   return (
     <div className='space-y-8'>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div>;
 :src_backup/components/enterprise/admin/UsageStats.tsx
         <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>;
@@ -505,9 +465,6 @@ return (;
           </CardFooter>;
         </Card>;
       </div>;
-<<<<<<< HEAD:src/components/enterprise/admin/UsageStats.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">;
         <div className="flex items-center gap-4">;
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">;
@@ -520,7 +477,6 @@ return (;
             </p>;
           </div>;
         </div>;
-<<<<<<< HEAD
         <Button>Contact Us</Button>;
       </div>;
     </div>;
@@ -533,27 +489,16 @@ return (;
 }"}"
     </div>
 :src_backup/components/enterprise/admin/UsageStats.tsx
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>;
   );
 }
 ;
 :src_backup/components/enterprise/admin/UsageStats.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   );
 
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/UsageStats.tsx
   );
 
 }"
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/UsageStats.tsx

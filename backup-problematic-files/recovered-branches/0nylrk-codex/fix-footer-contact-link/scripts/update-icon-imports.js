@@ -26,7 +26,6 @@ function updateIconImportsInFile(filePath) {;
     }
     return false,;
 } catch (err) {;
-<<<<<<< HEAD
     console.error(`❌ Error processing ${filePath} `, err),;
     return false,;
   }
@@ -48,7 +47,6 @@ files.forEach(file => {;)
 }return false;
 }catch (err) {`;
   console.error (` Error processing $ {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   filePath
 }:`, err);
 return false;
@@ -60,5 +58,3 @@ files.forEach (file => {)
   const updated = updateIconImportsInFile (file);
 if (updated) updatedFiles++ 
 });
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

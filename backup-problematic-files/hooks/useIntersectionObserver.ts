@@ -1,4 +1,3 @@
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface UseIntersectionObserverProps {
   // TODO: Implement
 }
@@ -33,7 +32,6 @@ threshold = 0;
   const prevNode = useRef<Element | null>(null);
 useEffect(() => {
     if (prevNode.current) {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [entry, setEntry] = useState<IntersectionObserverEntry>(),;
 
   const [node, setNode] = useState<Element | null>(null),;
@@ -75,4 +73,3 @@ const frozen = entry?.isIntersecting && freezeOnceVisible,;
   }, [node]);
   return [setNode, entry] as const
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

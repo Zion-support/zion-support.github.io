@@ -353,11 +353,8 @@ this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();
 monitor.run();
-<<<<<<< HEAD
-=======
       this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes;
 
 // Start the monitor;
 monitor.run();
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

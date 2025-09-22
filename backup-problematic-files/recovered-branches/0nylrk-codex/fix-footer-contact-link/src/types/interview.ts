@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export type InterviewStatus = ;
   | 'requested' ;
   | 'confirmed' ;
@@ -53,4 +52,3 @@ export interface InterviewResponse {;
 } export type InterviewStatus = | 'requested' | 'confirmed' | 'declined' | 'rescheduled' | 'completed' | 'cancelled';
 export type InterviewType = 'video' | 'phone' | 'in-person';
 export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

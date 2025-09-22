@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             // Simple conflict resolution - take the incoming change
             const resolved = content.replace(/\n<<<<<<<[\s\S]*?
 
-=======
             // Simple conflict resolution - take the incoming change;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             fs.writeFileSync(file, resolved);
 
           }
@@ -70,15 +65,11 @@ if (require.main === module) {
   const automator = new GitWorkflowAutomator();
   automator.run();
 }
-<<<<<<< HEAD
 
 '
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 module.exports = GitWorkflowAutomator;
 
 '
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
         "encoding"
@@ -146,12 +137,6 @@ execSync(`"git": add ${file}`, { "cwd": this.projectRoo,t, "stdio"`})
           this.log(' "Merge")
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
   git commit -m '"fix"
 git commit -m '"fix"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

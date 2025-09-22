@@ -1,6 +1,4 @@
 :src_backup/components/home/ITServiceRequestHero.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import Image from "next/image",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -88,7 +86,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       // Simulate API call;
       setTimeout(: unknown {;
         setIsSubmitting(false);
-=======
 import React, { useState } from 'react';'
 import Image from 'next/image';'
 import { GradientHeading } from '@/components/GradientHeading';'
@@ -100,7 +97,6 @@ import axios from 'axios';'
 import { Loader2 } from 'lucide-react';'
 import { useTranslation } from 'react-i18next';'
 import { logErrorToProduction } from '@/utils/productionLogger';export function ITServiceRequestHero() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/ITServiceRequestHero.tsx
         router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
   const containerVariants = {;
   hidden: { opacity: 0,;
@@ -151,7 +147,6 @@ export function ITServiceRequestHero() { return null; }
 const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     if (!name || !email || !location) {;
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
       toast({;
         title: 'Missing Information',,
   description: 'Name, email and location are required.',;
@@ -291,20 +286,12 @@ if ( {) {}
       })
 
 :src_backup/components/home/ITServiceRequestHero.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } finally {
       setIsSubmitting (false);
     }
 },
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/home/ITServiceRequestHero.tsx
   return (
     <section"
       className="py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]"
@@ -343,16 +330,11 @@ src="/logos/zion-logo.png"
 onChange={(e) => setEmail(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               />
               <p className="text-xs text-zion-slate-light">{t('onsite_form.email_helper', "We'll confirm your request here.")}</p>
-=======
               />
-=======
               <Input;
               />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/ITServiceRequestHero.tsx
               <p className='text-xs text-zion-slate-light'>
                 {t('
                   'onsite_form.email_helper''"
@@ -364,12 +346,10 @@ className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple foc
                 {t(;'
                   'onsite_form && onsite_form.email_helper',;'"
                   "We'll confirm your request here.";
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/home/ITServiceRequestHero.tsx
 
                 )}
               </p>;
 :src_backup/components/home/ITServiceRequestHero.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Input
                 value={phone}
 onChange={(e) => setPhone(e.target.value)}
@@ -387,14 +367,8 @@ onChange={(e) => setPhone(e.target.value)}
 onChange={(e) => setLocation(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               />
-=======
               />'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/ITServiceRequestHero.tsx
               <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helperWhere do you need on-site support?')}</p>
               <Textarea;
                 value={details}
@@ -407,34 +381,22 @@ onChange={(e) => setDetails(e.target.value)}
                 disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105"
               >
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {isSubmitting && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 )}
                 Request Service
-=======
                 {isSubmitting && ("
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 )}
 
                 Request Service;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/ITServiceRequestHero.tsx
               </Button>
             </form>
           </div>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <p className="text-xs text-center text-zion-slate-light mt-3">
-=======
 "
           <p className="text-xs text-center text-zion-slate-light mt-3">'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/ITServiceRequestHero.tsx
             {t('onsite_form.privacy_noticeRest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.')}
 
           </p>
@@ -573,16 +535,10 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 :src/components/home/ITServiceRequestHero.tsx
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
-<<<<<<< HEAD:src_backup/components/home/ITServiceRequestHero.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Image from "next/image",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -592,7 +548,6 @@ import { useToast } from "@/hooks/use-toast",;
 import axios from "axios",;
 import { Loader2 } from 'lucide-react';
 import { useTranslation } from "react-i18next",;
-=======
 "
 import React, { useState } from "react",;"
 import Image from "next/image",;"
@@ -604,7 +559,6 @@ import { useToast } from "@/hooks/use-toast",;"
 import axios from "axios",;'
 import { Loader2 } from 'lucide-react';"
 import { useTranslation } from "react-i18next",;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/ITServiceRequestHero.tsx
 import {logErrorToProduction} from '@/utils/productionLogger',;
 export function ITServiceRequestHero() { return null; }
   const { toast } = useToast(),;
@@ -771,20 +725,9 @@ py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient 
 }'";
 }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src/components/home/ITServiceRequestHero.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/home/ITServiceRequestHero.tsx
-=======
   setIsSubmitting (false) ;"
 };";"
 py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center" > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className="mb-6 text-4xl md:text-5xl text-center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto" > <div className="flex flex-col md:flex-row items-center gap-4" > <Image<Input type="email" value= {}
@@ -851,4 +794,3 @@ py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient 
 }
 }
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/home/ITServiceRequestHero.tsx

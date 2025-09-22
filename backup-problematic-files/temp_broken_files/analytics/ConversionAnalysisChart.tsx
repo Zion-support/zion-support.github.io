@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -20,10 +19,8 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange } C
       <CardHeader>;
         <CardTitle className="text-white text-lg">Conversion Analysis</CardTitle>;
         <CardDescription className="text-zion-slate-light">Track different conversion types</CardDescription>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       </CardHeader>;
       <CardContent>;
         <AnalyticsChart;
           title="";
           data={data || []}
-<<<<<<< HEAD

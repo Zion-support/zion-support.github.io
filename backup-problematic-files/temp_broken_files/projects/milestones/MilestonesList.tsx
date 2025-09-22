@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestonesList.tsx
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -7,7 +6,6 @@ import { MilestoneCard } from './MilestoneCard',;
 import { AddMilestoneForm } from './AddMilestoneForm',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
-=======
 import React, { useState } from 'react';
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
 import { useAuth } from '@/hooks/useAuth';
@@ -15,13 +13,10 @@ import { MilestoneCard } from './MilestoneCard';
 import { AddMilestoneForm } from './AddMilestoneForm';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // lucide-react doesn't export PlusIcon, use our icon wrapper;
 import { Plus } from '@/components/icons',;
 import { EmptyState } from '@/components/ui/empty-state',;
-=======
 import { EmptyState } from '@/components/ui/empty-state';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 interface MilestonesListProps {;
   milestones: Milestone[];,;
@@ -59,15 +54,11 @@ milestones,;
 ;
   if (isLoading) {;
     return (;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestonesList.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
-=======
 
       <div className="space-y-4">;"
 </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <Card key={i}>;
 "
             <CardContent className="p-6">;"
@@ -75,7 +66,6 @@ milestones,;
               <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>;""
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;"
       </div>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestonesList.tsx
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
         <div className="flex justify-end">;
@@ -85,13 +75,11 @@ milestones,;
           </Button>;
         </div>;
       )}
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestonesList.tsx
       {showAddForm && (;
         <Card>;
           <CardContent className="pt-6">;
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
 <AddMilestoneForm ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestonesList.tsx
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
@@ -99,7 +87,6 @@ milestones,;
           </CardContent>;
         </Card>;
       )}
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestonesList.tsx
       ;
       <div className="space-y-4">;
         {milestones.map((milestone) => (;
@@ -111,14 +98,12 @@ milestones,;
             amount={parseFloat(milestone.amount.toString())}
             status={milestone.status}
             dueDate={milestone.duedate}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestonesList.tsx
             onApprove={onApprove}
             onReject={onReject}
           />;
 ))}
       </div>;
     </div>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestonesList.tsx
   ),;
 },; <Card key= {;
   i ;"
@@ -159,4 +144,3 @@ milestones,;
 };
 "
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/MilestonesList.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestonesList.tsx

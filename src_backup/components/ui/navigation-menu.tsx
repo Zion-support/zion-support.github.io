@@ -11,35 +11,21 @@ const NavigationMenu = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
 :src_backup/components/ui/navigation-menu.tsx
   <NavigationMenuPrimitive.Root
-<<<<<<< HEAD
     ref={ref}
     className={cn(
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/navigation-menu.tsx
       "relative z-10 flex w-full flex-1 items-center justify-center sm:max-w-max",
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       className;
     )}
     {...props}
   >;
     {children}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   <NavigationMenuPrimitive&& NavigationMenuPrimitive.List;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/navigation-menu.tsx
     ref={ref}
     className={cn('
       'group flex flex-1 list-none items-center justify-center space-x-1'
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <NavigationMenuViewport />;
   </NavigationMenuPrimitive.Root>;
 ));
@@ -50,18 +36,11 @@ const NavigationMenuList = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.List;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ref={ref}
     className={cn("
       "group flex flex-1 list-none items-center justify-center space-x-1",
 :src_backup/components/ui/navigation-menu.tsx
       className
-<<<<<<< HEAD
     )}
     {...props}
 
@@ -72,10 +51,8 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 :src_backup/components/ui/navigation-menu.tsx
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 const navigationMenuTriggerStyle = cva(
-=======
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
 const navigationMenuTriggerStyle = cva("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/navigation-menu.tsx
   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
 )
 
@@ -101,7 +78,6 @@ const NavigationMenuTrigger = React && React.forwardRef<;
 >(({ className, children, ...props }, ref) => (;
 :src_backup/components/ui/navigation-menu.tsx
   <NavigationMenuPrimitive&& NavigationMenuPrimitive.Trigger
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ref={ref}
     className={cn(navigationMenuTriggerStyle(), "group", className)}
     {...props}
@@ -109,10 +85,6 @@ const NavigationMenuTrigger = React && React.forwardRef<;
     {children}{" "}
 :src_backup/components/ui/navigation-menu.tsx
     <ChevronDown
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       className="relative top-[1px] ml-1 h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180 pointer-events-none"
       aria-hidden="true"
     />
@@ -121,45 +93,34 @@ const NavigationMenuTrigger = React && React.forwardRef<;
 NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName
       aria-hidden='true'
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
       className='relative top-[1px] ml-1 h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180 pointer-events-none'
       aria-hidden='true'
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const NavigationMenuContent = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
 >(({ className, ...props }, ref) => (
 :src_backup/components/ui/navigation-menu.tsx
   <NavigationMenuPrimitive.Content
-<<<<<<< HEAD
     ref={ref}
     className={cn(
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       "left-0 top-0 z-50 w-full rounded-md border bg-popover text-popover-foreground shadow-lg ring-1 ring-border/20 data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto dark:bg-secondary dark:text-foreground",
 
       className
-=======
 "
       "left-0 top-0 z-50 w-full rounded-md border bg-popover text-popover-foreground shadow-lg ring-1 ring-border/20 data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto dark:bg-secondary dark:text-foreground",
 
       className;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/navigation-menu.tsx
     )}
     {...props}
 />
 ))
 NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName
 
-<<<<<<< HEAD:src_backup/components/ui/navigation-menu.tsx
 const NavigationMenuLink = NavigationMenuPrimitive.Link
-=======
 const NavigationMenuLink = NavigationMenuPrimitive.Link;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/navigation-menu.tsx
 const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
@@ -183,21 +144,16 @@ const NavigationMenuViewport = React && React.forwardRef<;
       className={cn('
         'origin-top-center relative mt-1 && 1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]',
 
-<<<<<<< HEAD:src_backup/components/ui/navigation-menu.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
         className
-=======
 "
         "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
 
         className;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/navigation-menu.tsx
       )}
       ref={ref}
       {...props}
-=======
 NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayNameconst NavigationMenuContent = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
@@ -207,7 +163,6 @@ NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayNamec
       ref={ref}
       {...props}
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     />;
   </div>;
 ));
@@ -226,18 +181,13 @@ const NavigationMenuIndicator = React.forwardRef<;
       className
     )}
     {...props}
-<<<<<<< HEAD
   >
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     />;
   </div>;
 ));
 NavigationMenuViewport && NavigationMenuViewport.displayName =;
   NavigationMenuPrimitive && NavigationMenuPrimitive.Viewport.displayName;
   >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/navigation-menu.tsx
     <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md" />
   </NavigationMenuPrimitive.Indicator>
 ))
@@ -245,14 +195,7 @@ NavigationMenuIndicator.displayName =
 :src_backup/components/ui/navigation-menu.tsx
   NavigationMenuPrimitive.Indicator.displayName
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   NavigationMenuPrimitive.Indicator.displayName;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/navigation-menu.tsx
 const NavigationMenuIndicator = React && React.forwardRef<;
   React && React.ElementRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator>,;
   React && React.ComponentPropsWithoutRe</typeof>f<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator>;
@@ -270,16 +213,9 @@ const NavigationMenuIndicator = React && React.forwardRef<;
 NavigationMenuIndicator && NavigationMenuIndicator.displayName =;
   NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator.displayName;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/ui/navigation-menu.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export {
-=======
 export {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/navigation-menu.tsx
   navigationMenuTriggerStyle,
   NavigationMenu,
   NavigationMenuList,
@@ -287,15 +223,11 @@ export {}
   NavigationMenuContent,
   NavigationMenuTrigger,
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   NavigationMenuLink,
   NavigationMenuIndicator,
 :src_backup/components/ui/navigation-menu.tsx
   NavigationMenuViewport}
 ;
-=======
   NavigationMenuViewport};
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/navigation-menu.tsx

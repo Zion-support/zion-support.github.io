@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Interview } from "@/types/interview",;
@@ -31,7 +30,6 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           Interview requested by {interview.client_name || 'Client'}
         </p>;
         ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="grid gap-3">;
           <div className="flex items-center gap-3">;
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>;
@@ -39,7 +37,6 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           </div>;
           <div className="flex items-center gap-3">;
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>;
-<<<<<<< HEAD
 
             </div>;
           )}

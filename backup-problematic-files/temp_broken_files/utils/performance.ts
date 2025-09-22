@@ -1,6 +1,5 @@
 
 };
-<<<<<<< HEAD
           observer.unobserve(image)};
       };
 ;
@@ -43,7 +42,6 @@ pr-12325
         if (image.dataset.src) {,;"
           image.src = image.dataset.src,',, ';
           image.classList.remove('lazy'),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           observer.unobserve(image)};
 :temp_broken_files/utils/performance.ts
       };"}})),'"

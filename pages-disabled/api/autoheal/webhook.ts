@@ -26,7 +26,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST')
     return res.status(405).json({ error: 'Method not allowed' })
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 
 try {
@@ -127,11 +126,8 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
     return res.status(500).json({ error: 'Failed to process webhook' })
   }
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   } catch (e) {}
     console.error(e),'
     return res.status(500).json({ error: 'Failed to process webhook' })
   }
 };'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

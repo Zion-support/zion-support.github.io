@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -39,12 +38,10 @@ export function MobileResumeBuilder() {;
         <Button;
           variant={currentStep === "basics" ? "default" :"outline"}
           className="flex-1 rounded-full";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           onClick={() => setCurrentStep("basics")}
         >;
           Basics;
         </Button>;
-<<<<<<< HEAD
 
           onClick={() => setCurrentStep("experience")}
         >;

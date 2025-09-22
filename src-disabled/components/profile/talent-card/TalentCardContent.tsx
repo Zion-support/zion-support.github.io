@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { MapPin } from 'lucide-react'
@@ -27,12 +26,6 @@ summary: string | undefined;
   bio: string;
   timezone: string | undefined;
 skills: string[] | undefined
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function TalentCardContent(): any ({;
   summary,;
@@ -44,7 +37,6 @@ export function TalentCardContent(): any ({;
 
   return (
 <div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Location */}
       {timezone && (
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
@@ -64,16 +56,13 @@ export function TalentCardContent(): any ({;
           <MapPin className='h-3 w-3' />
           <span>{timezone}</span>
         </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Short bio or summary - longer on hover for desktop */}
       <div
         className='overflow-hidden transition-all duration-300'
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
-<<<<<<< HEAD
 
       >;
         <p className='text-zion-slate mb-4'>{summary || bio}</p>;
@@ -98,13 +87,10 @@ export function TalentCardContent(): any ({;
       <TalentCardSkills skills={skills} />;
     </div>;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Short bio or summary - longer on hover for desktop */}
       <div 
         className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
-<<<<<<< HEAD
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
@@ -152,20 +138,15 @@ function TalentCardContent() {
         <p className='text - zion - slate mb - 4'>{summary || bio}</p>;
       </div>;
         <p className="text - zion - slate mb - 4">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {summary || bio}
         </p>;
       </div>;
       {/* Skills */}
       <TalentCardSkills skills={skills} />;
-<<<<<<< HEAD
     </div>;
   );
 }
 ;
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {summary || bio}
         </p>;
       </div>;
@@ -173,11 +154,6 @@ function TalentCardContent() {
     </div>);
 }
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       >
 <p className='text-zion-slate mb-4'>{summary || bio}</p>
       </div>
@@ -186,8 +162,4 @@ function TalentCardContent() {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

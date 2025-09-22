@@ -51,5 +51,4 @@ export async function getJobById(jobId:string) {;
     return null;
   } export async function createJob (jobData: any) {
   try {
-<<<<<<< HEAD
 }

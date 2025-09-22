@@ -5,20 +5,13 @@ endpoint: string,
 
 endpoint: string;
 description: string;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 note?: string;
 params?: EndpointParam[];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { BookOpen, Terminal } from 'lucide-react'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -104,8 +97,6 @@ responseExamples?: {
 headers: {'
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json'
 :src/components/developers/ApiDocumentation.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function ApiDocumentation() {
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -119,12 +110,8 @@ export function ApiDocumentation() {
       </CardHeader>
 
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiDocumentation.tsx
       <CardContent>
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">
           <Terminal className="h-4 w-4" />
@@ -237,9 +224,6 @@ function ApiDocumentation() {
                 }
 
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <Tabs defaultValue="jobs" className="space-y-4">
           <TabsList className="bg-zinc-800 border-zinc-700">
@@ -253,8 +237,6 @@ function ApiDocumentation() {
           <TabsContent value="jobs" className="space-y-6">
 :src/components/developers/ApiDocumentation.tsx
             <EndpointSection
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               method="GET"
               endpoint="/api/jobs"
               description="List all available jobs with optional filtering."
@@ -262,15 +244,12 @@ function ApiDocumentation() {
               params={[
 
 :src/components/developers/ApiDocumentation.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "category", type: "string", description: "Filter by job category" },
                 { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" },
                 { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               ]}
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\
@@ -303,8 +282,6 @@ function ApiDocumentation() {
 
 :src/components/developers/ApiDocumentation.tsx
 }` ;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }';
 }/> <EndpointSection deadline: '2025-06-30T23:59:59Z' ;
 }) ;
@@ -331,7 +308,6 @@ headers=headers) data = response.json () print (data) `
   {
   success: ` {});'
 });'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 'deadline': '2025-06-30T23:59:59Z' '
 }response = requests.post ('https: //api.ziontechgroup.com/v1/jobs'
 headers=headers
@@ -343,7 +319,6 @@ data=json.dumps (payload) ) data = response.json () print (data) `
 }"
 }/> </TabsContent> <TabsContent value=" talent"className=" space-y-6"> <EndpointSection headers=headers) data = response.json () print (data) `
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
 const data = await response && response.json ()
 logInfo (data), `
 python: `import requests headers = {'
@@ -444,9 +419,7 @@ print(data)`,
 
 :src/components/developers/ApiDocumentation.tsx
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }),;
 const data = await response.json(),;
 logInfo(data),`,;
@@ -463,7 +436,6 @@ response = requests.get(;
 data = response.json();
 print(data)`;
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
               }}
               responseExamples={{
                 success: `{
@@ -478,14 +450,11 @@ print(data)`;
 
 :src/components/developers/ApiDocumentation.tsx
   "meta": {
-=======
     {  "meta": {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "total": 42
     "page": 1
     "limit": 10
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "min": 5000,
         "max": 10000,
         "currency": "USD"
@@ -501,7 +470,6 @@ print(data)`;
     "page": 1,
     "limit": 10
   }
-<<<<<<< HEAD
 }`
   }
 
@@ -510,14 +478,11 @@ print(data)`;
 }}
             />            <EndpointSection
             <EndpointSection
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               method='GET'
               endpoint='/api/jobs/:id'
               description='Get detailed information about a specific job.'
               note=''
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               params={[
             />;
             <EndpointSection;
@@ -583,11 +548,8 @@ data = response.json ();
 print (data)`,
 
 :src/components/developers/ApiDocumentation.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }`;
-=======
               params={[}`;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               }}
             />
 
@@ -600,8 +562,6 @@ print (data)`,
                 { name: "id", type: "string", description: "The job ID", required: true }
               ]}
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -645,8 +605,6 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               }}
               responseExamples={{
                 success: `{
@@ -660,8 +618,6 @@ print(data)`;
       "min": 5000,
       "max": 10000,
 "currency": "USD"
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     "status": "active",
     "client_id": "user_xyz789",
@@ -672,8 +628,6 @@ print(data)`;
 }`;
               }}
             />
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <EndpointSection
               method="POST"
               endpoint="/api/jobs"
@@ -681,8 +635,6 @@ print(data)`;
               note="Requires jobs:write scope"
               params={[
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             />;
             <EndpointSection;
@@ -694,8 +646,6 @@ print(data)`;
 
 :src/components/developers/ApiDocumentation.tsx
                 {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   name: 'title'
                   type: 'string'
                   description: 'Job title'
@@ -742,9 +692,7 @@ name: 'budget && budget.min',
                   description: 'Job deadline (ISO date string)'
                 }
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 { name: "title", type: "string", description: "Job title", required: true },
                 { name: "description", type: "string", description: "Detailed job description", required: true },
                 { name: "category", type: "string", description: "Job category", required: true },
@@ -755,7 +703,6 @@ name: 'budget && budget.min',
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
 :src/components/developers/ApiDocumentation.tsx
               ]}
-<<<<<<< HEAD
               codeExamples={{
                 curl: `curl -X POST "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -801,7 +748,6 @@ print(data)`;
     "budget": {
 }'`,
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/jobs', {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "min": 5000,
       "max": 10000,
       "currency": "USD"
@@ -821,10 +767,7 @@ print(data)`;
 
     budget: {
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiDocumentation.tsx
 
 const data = await response && response.json()
 logInfo(data)`,
@@ -837,7 +780,6 @@ headers = {
 });
 const data = await response.json();
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
 logInfo(data);`,
 }),
 
@@ -867,7 +809,6 @@ response = requests && requests.post(
 data = response && response.json()
 print(data)`,
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       min: 5000,
       max: 10000,
       currency: 'USD'
@@ -883,15 +824,9 @@ import json
 
 headers = {
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiDocumentation.tsx
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-=======
 logInfo(data);`,    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
 payload = {;
@@ -921,7 +856,6 @@ print(data)`;
                 success: `{
   "data": {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     "id": "job_def456",
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
@@ -943,9 +877,7 @@ print(data)`;
           </TabsContent>
 
           <TabsContent value="talent" className="space-y-6">
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiDocumentation.tsx
             <EndpointSection
               method="GET"
               endpoint="/api/talent"
@@ -964,7 +896,6 @@ print(data)`;
               params={[;
 
                 {
-=======
       "min": 5000
       "max": 10000
       "currency": "USD"
@@ -974,13 +905,11 @@ print(data)`;
           </TabsContent>
 
           <TabsContent value="talent" className="space-y-6">                {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   name: 'page'
                   type: 'integer'
                   description: 'Page number for pagination (default: 1)'
                 }
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
                 {
 
                   name: 'limit',
@@ -1002,7 +931,6 @@ print(data)`;
                 }
 
 :src/components/developers/ApiDocumentation.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" },
@@ -1042,7 +970,6 @@ print(data)`,
 
 :src/components/developers/ApiDocumentation.tsx
 headers = {;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
 }
 ;
@@ -1077,14 +1004,11 @@ responseExamples={{
               }}
             />            <EndpointSection
             <EndpointSection
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               method='GET'
               endpoint='/api/talent/:id'
               description='Get detailed information about a specific talent profile.'
               note=''
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               params={[
             />;
             <EndpointSection;
@@ -1112,7 +1036,6 @@ const response = await fetch(\`https://api && api.ziontechgroup.com/v1/talent/\$
                 javascript: `const talent_id = 'talent_abc123';
 const response = await fetch (\`https://api.ziontechgroup.com / v1 / talent/\${talent_id}\`, {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   method: 'GET',
   headers: {
 'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -1152,8 +1075,6 @@ responseExamples={{
     "page": 1,
     "limit": 20
   }
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }`;
               }}
             />
@@ -1263,9 +1184,7 @@ print(data)`;
               params={[;
 
                 {
-=======
               params={[                {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   name: 'talent_id'
                   type: 'string'
                   description: 'ID of the talent to request a quote from'
@@ -1317,9 +1236,7 @@ print(data)`;
                   required: true
                 }
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 { name: "talent_id", type: "string", description: "ID of the talent to request a quote from", required: true },
                 { name: "project_name", type: "string", description: "Name of the project", required: true },
                 { name: "project_summary", type: "string", description: "Brief summary of the project", required: true },
@@ -1354,10 +1271,8 @@ codeExamples={{
     talent_id: 'talent_abc123',
     project_name: 'E-commerce Website Redesign',
     project_summary: 'Redesign our outdated e-commerce website with modern UI',
-=======
     project_name: 'E - commerce Website Redesign',
     project_summary: 'Redesign our outdated e - commerce website with modern UI',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     project_description: 'Our current website is 5 years old and needs a complete overhaul...',
     timeline: '2-3 months',
     budget_min: 8000,
@@ -1374,8 +1289,6 @@ logInfo(data),`,
 import json
 
 headers = {
-<<<<<<< HEAD
-<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
 ;
@@ -1427,19 +1340,13 @@ payload = {
 
 :src/components/developers/ApiDocumentation.tsx
                 python: `import requests
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import json
 
 headers = {
 
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiDocumentation.tsx
                 success: `{
   "data": {
     "id": "quote_def456",
@@ -1458,12 +1365,10 @@ headers = {
     "created_at": "2025-05-16T14:30:15Z"
   }
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
 }`;
               }}
             />
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <EndpointSection
               method="GET"
               endpoint="/api/quotes"
@@ -1478,7 +1383,6 @@ note=""
               note='';
               params={[;
 
-<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
                 {
                   name: 'page'
                   type: 'integer'
@@ -1487,7 +1391,6 @@ note=""
                 {
 
 :src/components/developers/ApiDocumentation.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }
@@ -1529,7 +1432,6 @@ const data = await response.json ();
 log_info (data);`,
                 python: `import requests;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 headers = {;
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
 }
@@ -1549,15 +1451,12 @@ print(data)`;
   ],
 
 :src/components/developers/ApiDocumentation.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiDocumentation.tsx
   "meta": {
     "total": 5
     "page": 1
     "limit": 20
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "id": "quote_def456",
       "talent_id": "talent_abc123",
       "project_name": "E-commerce Website Redesign",
@@ -1575,23 +1474,17 @@ print(data)`;
     "page": 1,
     "limit": 20
   }
-<<<<<<< HEAD
 }`
-=======
               note=''
               params={[}`
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 
 }`,
 :src/components/developers/ApiDocumentation.tsx
 }}
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }`;
 }`;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               }}
             />
           </TabsContent>
@@ -1619,20 +1512,17 @@ function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret),
   const expectedSignature = hmac.update(payload).digest('hex'),
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
   return crypto.timingSafeEqual(
     Buffer.from(signature),
     Buffer.from(expectedSignature)
   )
 
-=======
 
   return crypto.timingSafeEqual(
     Buffer.from(signature)
     Buffer.from(expectedSignature)
   )
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiDocumentation.tsx
 }
 ;
 // Example usage in Express.js;
@@ -1657,7 +1547,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
 
               <h4 className="text-md font-semibold mt-6 mb-2">Event Types</h4>
               <table className="w-full border-collapse mt-2">
-=======
 
   return crypto.timingSafeEqual(
     Buffer.from(signature)
@@ -1665,7 +1554,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
   )
 
 :src/components/developers/ApiDocumentation.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <thead>
                   <tr className="border-b border-zinc-800">
                     <th className="py-2 px-4 text-left">Event Type</th>
@@ -1812,10 +1700,7 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
   "timestamp": "2025-05-16T15:30:00Z"
 
 :src/components/developers/ApiDocumentation.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>
               <p className="text-zinc-400 mb-2">
                 Here's an example of a <code className="bg-zinc-800 px-1 py-0.5 rounded">new_application</code> webhook payload:
@@ -1836,14 +1721,8 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
   }
 }`}
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiDocumentation.tsx
                 language="json"
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 showLineNumbers={true}
               />
             </div>
@@ -1860,8 +1739,6 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
 
               <table className="w-full border-collapse mt-4">
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <thead>
                   <tr className="border-b border-zinc-800">
                     <th className="py-2 px-4 text-left">Status Code</th>
@@ -1908,16 +1785,11 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
                 </tbody>
               </table>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <h4 className="text-md font-semibold mt-6 mb-2">Error Response Format</h4>
               <p className="text-zinc-400 mb-2">
                 Error responses include a consistent JSON object with the following format:
               </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <CodeBlock
                 code={`{
   "error": {
@@ -1926,8 +1798,6 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
     "details": [
       {
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         "field": "project_name",
         "message": "Project name is required"
 ;
@@ -2082,10 +1952,8 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
                 <code className='bg-zinc-800 px-1 py-0.5 rounded'>
                   429 Too Many Requests
                 </code>{' '}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </ul>
               </ul>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>
           </TabsContent>
         </Tabs>
@@ -2094,11 +1962,9 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
   )
 }
 
-<<<<<<< HEAD
 
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Helper component for API endpoint documentation
 function EndpointSection({
   method,
@@ -2158,8 +2024,6 @@ const [activeTab, setActiveTab] = useState("curl"),
 }`}
                 language='json';
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className='border border-zinc-800 rounded-md'>
       <div className='p-4'>
@@ -2197,7 +2061,6 @@ const [activeTab, setActiveTab] = useState("curl"),
                 ? "border-yellow-500 text-yellow-400 font-mono"
                 : "border-red-500 text-red-400 font-mono"
                 language="json";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               />;
               <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>;
               <p className="text-zinc-400 mb-4">;
@@ -2213,16 +2076,12 @@ const [activeTab, setActiveTab] = useState("curl"),
 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>;
 
               </ul>;
-=======
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>;              </ul>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Card>;
   );
 }
@@ -2267,19 +2126,15 @@ function EndpointSection({;
         <p className="mt-2 text-zinc-400">{description}</p>
       </div>
 
-=======
         <p className='mt-2 text-zinc-400'>{description}</p>
       </div>        
         <p className="mt-2 text-zinc-400">{description}</p>
       </div>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
         <p className="mt-2 text-zinc-400">{description}</p>
       </div>
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {params.length > 0 && (
         <div className="border-t border-zinc-800 p-4">
           <h4 className="font-medium mb-2">Parameters</h4>
@@ -2314,7 +2169,6 @@ function EndpointSection({;
             <tbody>;
               {params && params.map((param, index) => (;
 
-<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
                 <tr
                   key={index}
                   className={
@@ -2329,7 +2183,6 @@ function EndpointSection({;
                   </td>;
                 </tr>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <tr key={index} className={index < params.length - 1 ? "border-b border-zinc-800" : ""}>
                   <td className="py-2 font-mono text-sm">
                     {param.name}
@@ -2338,9 +2191,7 @@ function EndpointSection({;
                   <td className="py-2 text-sm text-zinc-400">{param.type}</td>
                   <td className="py-2 text-sm text-zinc-400">{param.description}</td>
 
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiDocumentation.tsx
                 </tr>
               ))}
             </tbody>;
@@ -2348,14 +2199,11 @@ function EndpointSection({;
         </div>;
       )}
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
 
 :src/components/developers/ApiDocumentation.tsx
 
       {codeExamples && (
-=======
               {params.map((param, index) => (      {codeExamples && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className='border-t border-zinc-800 p-4'>
           <div className='flex items-center mb-2'>
             <h4 className='font-medium'>Request Example</h4>
@@ -2370,7 +2218,6 @@ function EndpointSection({;
               {Object && Object.keys(codeExamples).map(lang => (                <button
                   key = {lang,}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       {codeExamples && (
         <div className="border-t border-zinc-800 p-4">
@@ -2380,7 +2227,6 @@ function EndpointSection({;
               {Object.keys(codeExamples).map((lang) => (
                 <button
                   key={lang}
-<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang 
                       ? "bg-zinc-700 text-white" 
@@ -2393,12 +2239,10 @@ function EndpointSection({;
                       : 'text-zinc-400 hover:bg-zinc-800'
 :src/components/developers/ApiDocumentation.tsx
 }`}                  onClick={() => setActiveTab(lang)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   }`}
 
 :src/components/developers/ApiDocumentation.tsx
                   onClick={() => setActiveTab(lang)}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 >
                   {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
                 </button>
@@ -2406,17 +2250,13 @@ function EndpointSection({;
             </div>
           </div>
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <CodeBlock 
             code={codeExamples[activeTab] || "// Code example not available"}
             language={activeTab === "curl" ? "bash" : activeTab}
-<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
           />
         </div>
       )}
 :src/components/developers/ApiDocumentation.tsx
-<<<<<<< HEAD
 
       {responseExamples && (
         <div className="border-t border-zinc-800 p-4">
@@ -2431,18 +2271,9 @@ function EndpointSection({;
   );
 }
 ;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       {responseExamples && (
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiDocumentation.tsx

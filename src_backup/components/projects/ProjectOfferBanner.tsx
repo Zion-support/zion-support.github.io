@@ -4,8 +4,6 @@
     router.push (`/project/${project_id}`);
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState } from "react",
 :src_backup/components/projects/ProjectOfferBanner.tsx
 import { useRouter } from 'next/router',
@@ -42,7 +40,6 @@ import { Bell, Calendar, X } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { useProjects } from "@/hooks/useProjects",;
-=======
 import { useRouter } from 'next/router','
 import { Bell, Calendar, X } from 'lucide-react'"
 import { Button } from "@/components/ui/button","
@@ -65,7 +62,6 @@ import { Bell, Calendar, X } from 'lucide-react';"
 import { Button } from "@/components/ui/button",;"
 import { Card, CardContent } from "@/components/ui/card",;"
 import { useProjects } from "@/hooks/useProjects",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/ProjectOfferBanner.tsx
 import { Project } from "@/types/projects",;
 export function ProjectOfferBanner() { return null; }
   const { projects, isLoading } = useProjects(),;
@@ -84,7 +80,6 @@ export function ProjectOfferBanner() { return null; }
       const updated = new Set(prev),;
       updated.add(projectId),;
       return updated;
-<<<<<<< HEAD:src_backup/components/projects/ProjectOfferBanner.tsx
     })
 };
   const handleViewOffer = (projectId: string) => {;
@@ -107,8 +102,6 @@ export function ProjectOfferBanner() { return null; }
   if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
     return null
 :src/components/projects/ProjectOfferBanner.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 
   return ("
@@ -125,7 +118,6 @@ export function ProjectOfferBanner() { return null; }
             <CardContent className="p-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <div className="bg-primary/10 rounded-full p-2">
-=======
           <Card;
             key={offer.id} 
 
@@ -136,7 +128,6 @@ export function ProjectOfferBanner() { return null; }
             <CardContent className="p-4 flex items-center justify-between">"
               <div className="flex items-center gap-2">"
                 <div className="bg-primary/10 rounded-full p-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/ProjectOfferBanner.tsx
                   <Bell className="h-4 w-4 text-primary" />
                 </div>
                 <div>"
@@ -148,10 +139,8 @@ export function ProjectOfferBanner() { return null; }
               </div>
 
               <div className="flex items-center gap-2">
-=======
 "
               <div className="flex items-center gap-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/ProjectOfferBanner.tsx
                 <Button size="sm" className="whitespace-nowrap">
                   View Offer;
                 </Button>
@@ -223,7 +212,6 @@ export function ProjectOfferBanner() { return null; }
                 </Button>;
 :src_backup/components/projects/ProjectOfferBanner.tsx
                 <Button
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   size="sm" 
                   variant="ghost"
                   onClick = {(e,) => handleDismiss(offer && offer.id, e),}
@@ -235,8 +223,6 @@ export function ProjectOfferBanner() { return null; }
           </Card>;
         ))}
 :src/components/projects/ProjectOfferBanner.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   if ()) {) {}
   $2;
@@ -319,7 +305,6 @@ return updated;
 };
 :src_backup/components/projects/ProjectOfferBanner.tsx
 const handleViewOffer = (projectId: string) => {;
-<<<<<<< HEAD
   router && router.push (`/project/$ {;
   projectId ;
 }`)
@@ -346,7 +331,6 @@ if () ) {) {}
 }</div>);
 }'"}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>;
   );
 }

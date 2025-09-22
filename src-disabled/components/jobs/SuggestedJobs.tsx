@@ -1,6 +1,4 @@
 :src_backup/components/jobs/SuggestedJobs.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from 'lucide-react'
@@ -16,15 +14,11 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 interface SuggestedJobsProps {
   talent_id?: string;
 }
-=======
-=======
 
 interface SuggestedJobsProps {
   talent_id?: string;
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/SuggestedJobs.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/SuggestedJobs.tsx
 
 export /**
  * SuggestedJobs - Function description
@@ -51,7 +45,6 @@ function SuggestedJobs() {
   const currentTalentId = talentId || user?.id,
   const { user } = useAuth()
   const currentTalentId = talentId || user?.id
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
 
@@ -66,7 +59,6 @@ newMatches,
     } 
   } = useJobSuggestions(currentTalentId),
 
-<<<<<<< HEAD
   const handleApply = (matchId: string, jobId: string) => {
     updateJobMatchStatus(matchId, 'applied'),
     // In a real app, this might redirect to application form or open a modal
@@ -92,8 +84,6 @@ import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
 :src/components/jobs/SuggestedJobs.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     updateJobMatchStatus
 import { useAuth } from "@/hooks/useAuth"
 import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge"
@@ -109,18 +99,12 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   if (isLoading) {
     return (
 :src/components/jobs/SuggestedJobs.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="flex items-center justify-center p-6">
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
 :src_backup/components/jobs/SuggestedJobs.tsx
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/SuggestedJobs.tsx
 import { useAuth } from "@/hooks/useAuth",;
 import { Loader2 } from 'lucide-react';
 import { Badge } from "@/components/ui/badge",;
@@ -165,7 +149,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
     updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleDecline = (matchId: string) => {;
     updateJobMatchStatus(matchId, 'declined')
 };
@@ -180,15 +163,11 @@ return (;
 ;
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {;
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return <NoJobsCard />;
 :src_backup/components/jobs/SuggestedJobs.tsx
-<<<<<<< HEAD
   }
 
-=======
   }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/SuggestedJobs.tsx
   return (
     <div className="space-y-6">
       {/* New Matches Section */}
@@ -219,12 +198,7 @@ return (;
               />;
 
 :src_backup/components/jobs/SuggestedJobs.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/SuggestedJobs.tsx
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -238,9 +212,6 @@ return (;
         </div>;
       )}
 :src_backup/components/jobs/SuggestedJobs.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 
 ;
@@ -248,21 +219,15 @@ return (;
 ;
 :src_backup/components/jobs/SuggestedJobs.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/SuggestedJobs.tsx
       {/* Previously Viewed Section */}
-=======
 
 ;      {/* Previously Viewed Section */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {viewedMatches.length > 0 && (
         <div className="space-y-4">"
           <div className="flex items-center justify-between">"
             <h3 className="text-lg font-medium">Previously Viewed</h3>"
           </div>
 :src_backup/components/jobs/SuggestedJobs.tsx
-<<<<<<< HEAD
       {/* Previously Viewed Section */}
       {viewedMatches && viewedMatches.length > 0 && (;
         <div className="space-y-4">;
@@ -279,11 +244,7 @@ return (;
               />;
 
 :src_backup/components/jobs/SuggestedJobs.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/SuggestedJobs.tsx
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -297,9 +258,6 @@ return (;
         </div>;
       )}
 :src_backup/components/jobs/SuggestedJobs.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 
 ;
@@ -307,21 +265,15 @@ return (;
 ;
 :src_backup/components/jobs/SuggestedJobs.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/SuggestedJobs.tsx
       {/* Applied Jobs Section */}
-=======
 
 ;      {/* Applied Jobs Section */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {appliedMatches.length > 0 && (
         <div className="space-y-4">"
           <div className="flex items-center justify-between">"
             <h3 className="text-lg font-medium">Applied Jobs</h3>"
           </div>
 :src_backup/components/jobs/SuggestedJobs.tsx
-<<<<<<< HEAD
 
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
@@ -347,18 +299,13 @@ return (;
               <JobMatchesCard
                 key = {match && match.id,}
 :src_backup/components/jobs/SuggestedJobs.tsx
-<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/SuggestedJobs.tsx
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
                 showApplied = {true,}
 :src_backup/components/jobs/SuggestedJobs.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               />;
 
-=======
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
@@ -374,14 +321,11 @@ return (;
                 onDecline={handleDecline}
                 showApplied={true}
               />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/SuggestedJobs.tsx
             ))}
           </div>;
         </div>;
       )}
 :src_backup/components/jobs/SuggestedJobs.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>;
   );
 }
@@ -517,25 +461,15 @@ if ( {) {
 :src_backup/components/jobs/SuggestedJobs.tsx
 }'"}
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 ;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/SuggestedJobs.tsx
-=======
 }'"}"
 }
 ;
 }}))
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/SuggestedJobs.tsx
     </div>
   );
 
@@ -592,5 +526,3 @@ if (isLoading) {;
 }</div>) ;
 }'"
 :src/components/jobs/SuggestedJobs.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

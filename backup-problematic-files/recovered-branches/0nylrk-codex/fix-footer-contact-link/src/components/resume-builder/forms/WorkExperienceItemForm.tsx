@@ -82,7 +82,6 @@ pr-12325
             <FormField;
 control={form.control}
               name="company_name";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               render={({ field }) => (;
 
                 <FormItem>;
@@ -106,12 +105,10 @@ control={form.control}
                       id="current-position";"
                     />;
 <label htmlFor="current-position" className="text-sm text-muted-foreground">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       I currently work here;
                     </label>;
                   </div>;
                   <FormMessage />;
-<<<<<<< HEAD
                   <Popover>;
 
                     <PopoverTrigger asChild>;
@@ -138,22 +135,17 @@ control={form.control}
                         captionLayout="dropdown-buttons";"
                         fromYear={1990}
                         toYear={new Date().getFullYear()}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       />;
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
-<<<<<<< HEAD
                 render={({ field }) => (;
                   <FormItem className="flex flex-col">;
                     <FormLabel>End Date</FormLabel>;
                     <Popover>;
                       <PopoverTrigger asChild>;
                         <FormControl>;
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                           </Button>;
                         </FormControl>;
@@ -162,12 +154,10 @@ control={form.control}
 
                           selected={field.value || undefined}
                           disabled={(date) => date > new Date()}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         />;
                       </PopoverContent>;
                     </Popover>;
                     <FormMessage />;
-<<<<<<< HEAD
             render={({ field }) => (;
               <FormItem>;
                 <div className="flex justify-between items-center">;
@@ -187,7 +177,6 @@ control={form.control}
                       size="sm";"
                       onClick={() => setIsEnhancementDialogOpen(true)}
 className="text-xs";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     >;
                       AI Writer;
                     </Button>;
@@ -196,7 +185,6 @@ className="text-xs";
                 <FormControl>;
                   <Textarea;
                     placeholder="Describe your responsibilities, achievements, and skills used in this role...";
-<<<<<<< HEAD
                     {...field}
                   />;
                 </FormControl>;
@@ -258,4 +246,3 @@ form.control
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) 
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

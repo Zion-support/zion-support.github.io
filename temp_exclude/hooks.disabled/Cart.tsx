@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from 'react-redux',
 import { useState, useEffect } from 'react',
 import axios from 'axios',
 import { useAuth } from '@/hooks/useAuth',
-=======
 '
 import { Button } from '@/components/ui/button','
 import Link from 'next/link','
@@ -13,7 +12,6 @@ import { useSelector, useDispatch } from 'react-redux','
 import { useState, useEffect } from 'react','
 import axios from 'axios','
 import { useAuth } from '@/hooks/useAuth','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Cart.tsx
 import type { RootState, AppDispatch } from '@/store',
 import {}
   removeItem as removeItemAction,'
@@ -199,10 +197,8 @@ export default function CartPage() { return null; }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4">
-=======
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Cart.tsx
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <motion.div "
@@ -466,7 +462,6 @@ export default function CartPage() { return null; }
   );
 }
 :temp_exclude/hooks.disabled/Cart.tsx
-<<<<<<< HEAD
  */
 function CartPage() {): any {): any {} const { items, dispatch } = use_cart (); const { user } = use_auth (); const [hydrated, set_hydrated] = useState (false); useEffect (() => {} set_hydrated (true)}, []); // Check condition;
 if (return null) {}
@@ -477,5 +472,4 @@ if ( {}) {}
 } return () <div className="container py - 10 text - center">""";" <img src="/placeholder.svg" alt="Empty cart" className="mx - auto mb - 4" / / />";" <p > Your cart is empty</p>""";" <Button as_child className="mt - 4">""";" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div>)}" ";" return (""";" <div className="container max - w-2xl py - 10">""";" <h1 className="text - 3xl font - bold mb - 6">Shopping Cart</h1>""";" <ul className="space - y-4"> {items.map (item => ( <CartItemComponent key={item.id} item={item} on_remove={remove_item} onUpdateQuantity={update_quantity} />;" ))}";" </ul>""";" <div className="flex justify - between mt - 6 font - semibold"> <span > Subtotal</span> <span>${subtotal.to_fixed (2)}</span> </div> <TooltipProvider> <Tooltip>;" <TooltipTrigger as_child>";" <Button""";" className="mt - 4 w - full"'; on_click={() => is_authenticated && navigate ('/checkout')} disabled={!is_authenticated} >; Checkout </Button> </TooltipTrigger> {!is_authenticated && <TooltipContent > Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>;" )}";" '""";";
 }
 :temp_exclude/hooks.disabled/Cart.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

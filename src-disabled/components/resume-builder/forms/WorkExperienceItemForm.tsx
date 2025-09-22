@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react',
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -75,7 +73,6 @@ import { cn } from '@/lib / utils';'
 import { Switch } from '@/components / ui / switch';'
 import { format } from 'date - fns';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
@@ -232,7 +229,6 @@ import { Switch } from '@/components/ui/switch';
 import { format } from 'date-fns';
 import { CalendarIcon, Loader2 } from 'lucide-react';
 
-<<<<<<< HEAD
 type FormValues = z && z.infer<typeof formSchema>;
 
 interface WorkExperienceItemFormProps {;
@@ -269,13 +265,11 @@ export function WorkExperienceItemForm({;
   onSubmit,;
   onCancel}: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Set up form;
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
 
-=======
 export function WorkExperienceItemForm() { return null; }
       location: initialData?.location || ""}}),;
   const { isSubmitting } = form.formState,;"
@@ -298,7 +292,6 @@ export function WorkExperienceItemForm() { return null; }
   },;
   const handleAIEnhancement = (content: string) => {;"
     form.setValue("description", content, { shouldDirty: true }),;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setIsEnhancementDialogOpen(false);
   },;
   return (;
@@ -350,7 +343,6 @@ export function WorkExperienceItemForm() { return null; }
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             />;
             <FormField;
               control={form.control}
@@ -374,7 +366,6 @@ export function WorkExperienceItemForm() { return null; }
             <FormField
 
                 </FormItem>)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               control={form.control}
               name="location"
               render={({ field }: { field: any }) => (
@@ -414,13 +405,11 @@ I currently work here
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
-=======
 
 '
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
             <FormField;
               control={form.control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               name="start_date"
               render={({ field }: { field: any }) => ("
                 <FormItem className="flex flex-col">
@@ -443,7 +432,6 @@ I currently work here
                           ) : (
                             <span>Select date</span>
                           )}
-=======
                           {field.value ? ("
                             format(field.value, "MMM yyyy")
                           ) : (
@@ -486,7 +474,6 @@ I currently work here
                       </FormControl>;
                     </PopoverTrigger>;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
                         </Button>
                       </FormControl>
@@ -516,7 +503,6 @@ I currently work here
 
             />;
             {!watchIsCurrent && (;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <FormField;
                 control={form.control}
                 name="end_date"
@@ -650,7 +636,6 @@ buttonText='Enhance with AI'
                 </FormControl>;
                 <FormMessage />;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
           <FormField;
             control={form.control}
@@ -663,7 +648,6 @@ buttonText='Enhance with AI'
                   <div className="flex gap-2">
                     <AIEnhancementButton
                       options={{
-<<<<<<< HEAD
                         enhancementType: "work-description",
                         content: field.value || "",
                         context: `${watchRoleTitle} at ${watchCompanyName}`
@@ -886,7 +870,6 @@ setIsEnhancementDialogOpen (false);
 };
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           enhancementType: "work-description",
           content: form.getValues("description") || "",
           context: `${watchRoleTitle} at ${watchCompanyName}`}}
@@ -897,13 +880,6 @@ setIsEnhancementDialogOpen (false);
 }
 ;
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   form.control
 }<FormLabel>End Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) "
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
@@ -914,9 +890,6 @@ setIsEnhancementDialogOpen (false);
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>)
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>)
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
                           <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />"
 
@@ -939,4 +912,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                           <Button;)
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

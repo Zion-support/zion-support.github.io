@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import _React from 'react'; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };
 const EnhancedHome = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const EnhancedHome = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,16 +1,11 @@
 import React from 'react',
 import React from 'react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
-=======
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     super(props);
     this.state = { hasError: false };
   }
@@ -32,9 +27,6 @@ class ErrorBoundary extends React.Component {}
   }
 }
 import React from 'react';
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function ZeroTrustSecurityPlatformPage() {
@@ -52,7 +44,6 @@ export default function ZeroTrustSecurityPlatformPage() {
           href='https://ziontechgroup.com/zero-trust-security-platform'
         />
       </Head>
-=======
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 return (
@@ -68,13 +59,11 @@ return (
           href='https://ziontechgroup && ziontechgroup.com/zero-trust-security-platform'
         />;
       </Head>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <ServiceLanding
         title='Zero Trust Security Platform'
         description='Accelerate zero trust adoption with reference architectures, policy-as-code, identity-aware proxies, microsegmentation, and continuous verification across users, devices, and services.'
         subtitle='Trust nothing, verify everything'
         pricePerMonthUSD={3499}
-<<<<<<< HEAD
         implementationWeeks='4-8 weeks';
         roiNote='Reduce breach impact and lateral movement risk; meet compliance faster'
         features={[
@@ -98,24 +87,14 @@ canonical='https: //ziontechgroup.com/zero-trust-security-platform'
         canonical='https: //ziontechgroup && ziontechgroup.com/zero-trust-security-platform'
       />;
     </>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 '
 import Head from 'next/head','
 import ServiceLanding from '../components/sections/ServiceLanding',
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function ZeroTrustSecurityPlatformPage() {
-=======
 
 export default function ZeroTrustSecurityPlatformPage() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	return (
 		<>
 			<Head>
@@ -194,15 +173,12 @@ canonical="https: //ziontechgroup.com/zero-trust-security-platform";
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next / head';
-=======
 
 '
 import React from 'react';'
 import Head from 'next / head';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import ServiceLanding from '../components / sections / ServiceLanding';
 export default /**;
  * ZeroTrustSecurityPlatformPage - Function description;
@@ -247,13 +223,6 @@ function ZeroTrustSecurityPlatformPage() {}
       />;
     </>);
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 				pricePerMonthUSD={3499}"
 				implementationWeeks="4-8 weeks"
@@ -402,7 +371,3 @@ export default function ZeroTrustSecurityPlatformPage(req, res) {}
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

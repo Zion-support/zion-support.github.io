@@ -44,7 +44,6 @@ function containsVagueJobClaims(text: string): string[] {
 
   return reasons;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 const suspiciousLinkHosts = [;"
   'paypal.me',
@@ -87,7 +86,6 @@ function containsSuspiciousHost (text: string): boolean {
   const lower = text.toLowerCase ();
   return suspiciousLinkHosts.some (host => lower.includes (host));
 }
-<<<<<<< HEAD
 ;
 export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps): Promise<HeuristicEvaluation> {;
   const reasons: string[] = [];
@@ -140,7 +138,6 @@ export async function evaluateHeuristics(
   const confidence = flags.size > 0 ? 0.8 : 0.1;
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return {
   // TODO: Implement
     flagged: reasons && reasons.length > 0,
@@ -170,23 +167,13 @@ flagged: reasons.length > 0
   }
 
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   }
 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
   return {;
     flagged: reasons.length > 0;
     reasons;
     severity}
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 </string>`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

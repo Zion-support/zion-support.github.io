@@ -1,5 +1,4 @@
 
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 ;
 export function ReferralGuide() {;
@@ -18,7 +17,6 @@ export function ReferralGuide() {;
       description:"Rewards are issued based on the type of user who completes onboarding"}],;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card>;
       <CardHeader>;
         <CardTitle>How Referrals Work</CardTitle>;
@@ -26,4 +24,3 @@ export function ReferralGuide() {;
       </CardHeader>;
       <CardContent>;
         <div className="space-y-4">;
-<<<<<<< HEAD

@@ -52,7 +52,6 @@ export default function SavedTalentsPage() {
               location,
               availability,
 :temp_exclude/hooks.disabled/SavedTalentsPage.tsx
-<<<<<<< HEAD
               is_verified
             )
           `
@@ -98,7 +97,6 @@ if ( {) {}
   const handleRequestHire = (talent: TalentProfile) =>: any {
     log_info ('Request to hire:', { data: talent });    toast ({
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           .eq("user_id", user.id),
 
         if (error) {}
@@ -216,7 +214,6 @@ export default function SavedTalentsPage() { return null; }
 :temp_exclude/hooks.disabled/SavedTalentsPage.tsx
   },;
   const handleRequestHire = (talent: TalentProfile) => {;
-<<<<<<< HEAD
     logInfo('Request to hire:', { data: talent }),;
     toast({;
       title: "Hire Request Sent",;
@@ -267,7 +264,6 @@ if ( {) {}
           throw error;
         }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
@@ -482,5 +478,4 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
   );
 }
 :temp_exclude/hooks.disabled/SavedTalentsPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

@@ -1,7 +1,4 @@
 :src_backup/components/marketplace/EmptyState.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from 'react';
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
@@ -32,8 +29,6 @@ export interface EmptyStateProps {
   }
   icon?: React.ReactNode
 :src/components/marketplace/EmptyState.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
 import React from 'react';
 import * as React from 'react';
 import {;
@@ -75,9 +70,7 @@ type:;
     | 'network';
     | 'loading';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import * as React from 'react',;
-=======
   type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
   title?: string;
   description?: string;
@@ -86,11 +79,9 @@ import * as React from 'react',;
     onClick: () => void
   }
   icon?: React.ReactNodeimport * as React from 'react',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import Link from 'next/link',;
-=======
 import {}
   RefreshCw,
   Wifi,
@@ -119,7 +110,6 @@ import * as React from 'react',;'
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';'
 import { Button } from '@/components/ui/button',;'
 import Link from 'next/link',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/marketplace/EmptyState.tsx
 import { useTranslation } from 'react-i18next',;
 export interface EmptyStateProps {;'
   type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading',;
@@ -129,28 +119,22 @@ export interface EmptyStateProps {;'
     label: string,;
 
 :src/components/marketplace/EmptyState.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     onClick: () => void;
   },;
   icon?: React.ReactNode;
 }
 :src/components/marketplace/EmptyState.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :src_backup/components/marketplace/EmptyState.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const defaultContent = {
   products: {
     icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,
     title: 'No Products Available',
-=======
 const defaultContent = {}
   products: {}
     icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,'
     title: 'No Products Available','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/marketplace/EmptyState.tsx
     description: 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!'},
   categories: {"
     icon: <Lightbulb className="w-16 h-16 text-gray-400" />,'
@@ -180,7 +164,6 @@ const defaultContent = {}
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,'
     title: 'Loading...',
 :src/components/marketplace/EmptyState.tsx
-<<<<<<< HEAD
     description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
 
 export function EmptyState({
@@ -229,9 +212,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Button>
       )}
 :src/components/marketplace/EmptyState.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
         {displayTitle}
@@ -251,15 +232,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Button>;
       )}
 
-=======
 
 :src/components/marketplace/EmptyState.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {type === 'error' && (
-=======
       '
       {type === 'error' && ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/marketplace/EmptyState.tsx
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
         </div>
@@ -269,7 +246,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {type === 'network' && ("
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>
-<<<<<<< HEAD
 }: {
   onRetry?: () => void
   onAddProduct?: () => void
@@ -318,7 +294,6 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {}
   )
 :src_backup/components/marketplace/EmptyState.tsx
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
-<<<<<<< HEAD
       />
   )
 } ;
@@ -333,7 +308,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 }
 :src_backup/components/marketplace/EmptyState.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {t('general.check_status_page')}
             {" "}
             <Link href="https://status.zion.ai" className="underline">
@@ -373,7 +347,6 @@ onClick: onAddProduct;
 
 :src/components/marketplace/EmptyState.tsx
   return (
-<<<<<<< HEAD
     <EmptyState 
       type="products" 
     : undefined;
@@ -410,7 +383,6 @@ export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
   );
 }
 
-<<<<<<< HEAD
   return (
     <EmptyState"
       type="talent"'
@@ -420,7 +392,6 @@ export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
 }
 
 :src_backup/components/marketplace/EmptyState.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState"
@@ -458,11 +429,7 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {}
 } ;
 
 :src_backup/components/marketplace/EmptyState.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/marketplace/EmptyState.tsx
         label: is_authenticated ? 'Add Product' : 'Login to Add Product',
         on_click: onAddProduct,
       }
@@ -487,26 +454,13 @@ export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {};
       />);
 }
 :src_backup/components/marketplace/EmptyState.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
     />
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }
 
     />
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/marketplace/EmptyState.tsx
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/marketplace/EmptyState.tsx

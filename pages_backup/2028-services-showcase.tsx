@@ -1,16 +1,10 @@
-<<<<<<< HEAD:pages/2028-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-=======
 
 import React from 'react',;'
 import Head from 'next/head',;'
 import Link from 'next/link',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2028-services-showcase.tsx
 import { motion } from 'framer-motion',;
 import {}
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
@@ -23,15 +17,12 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 import { futuristic2028Services } from '../data/2028-futuristic-innovations',;'
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services',;
 :pages_backup/2028-services-showcase.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 const serviceCategories = []
   {'
@@ -88,9 +79,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   CheckCircle,
   ArrowRight,
   Star,
@@ -118,15 +106,10 @@ import { motion } from 'framer-motion';
   Music,
   Gamepad2,;
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     description: 'Intelligent urban solutions'
     icon: Building
     color: 'from-blue-600 to-cyan-600'
@@ -157,7 +140,6 @@ const serviceCategories = [
     color: 'from-violet-600 to-purple-600',
 services: futuristic2028Services.slice(0, 4),
   },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {
     title: '🏙️ Smart City & Infrastructure',
     description: 'Intelligent urban solutions',
@@ -232,7 +214,6 @@ const serviceCategories = [;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 ],
 export default function ServicesShowcase2028() {}
@@ -244,10 +225,8 @@ export default function ServicesShowcase2028() {}
 :pages_backup/2028-services-showcase.tsx
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
-=======
       {/* Hero Section */  } catch (error) {";
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2028-services-showcase.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
@@ -258,11 +237,6 @@ export default function ServicesShowcase2028() {}
   }
 :pages_backup/2028-services-showcase.tsx
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-1/2 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -271,8 +245,6 @@ export default function ServicesShowcase2028() {}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className='absolute inset-0'>
           <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>
           <div className='absolute top-1/2 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
@@ -282,8 +254,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -300,11 +270,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/2028-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className="space-y-8"
           >"
             <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">"
@@ -321,9 +286,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed">
 Experience the future of technology with our cutting-edge 2028 services. 
               Experience the future of technology with our cutting-edge 2028 services.
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2028-services-showcase.tsx
               From AI consciousness to quantum internet, we're building tomorrow's solutions today.
             </p>"
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -350,11 +313,6 @@ Experience the future of technology with our cutting-edge 2028 services.
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -397,13 +355,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <DollarSign className='w-5 h-5' />
               </Link>
             </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-16">
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400">50+</div>
                 <div className="text-purple-300">Innovative Services</div>
-<<<<<<< HEAD
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400">99.9%</div>
@@ -416,8 +371,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-center">"
                 <div className="text-3xl font-bold text-cyan-400">24/7</div>"
                 <div className="text-cyan-300">Support Available</div>
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {/* Stats */}
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16'>
               <div className='text-center'>
@@ -436,31 +389,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='text-center'>
                 <div className='text-3xl font-bold text-cyan-400'>24/7</div>
                 <div className='text-cyan-300'>Support Available</div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD:pages/2028-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
 
 "
       <section className="py-20 bg-black/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="text-center mb-16">"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2028-services-showcase.tsx
               Explore Our <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Service Categories</span>
             </h2>"
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
@@ -468,16 +411,13 @@ Discover our comprehensive range of futuristic services designed to transform yo
               Discover our comprehensive range of futuristic services designed to transform your business 
               Discover our comprehensive range of futuristic services designed to transform your business
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               and propel you into the future of technology.
             </p>
           </div>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
               <motion.div;
-<<<<<<< HEAD:pages_backup/2028-services-showcase.tsx
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Services Categories */}
 <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -499,16 +439,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {serviceCategories.map((category, index) => (
               <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2028-services-showcase.tsx
                 key={category.title}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 :pages_backup/2028-services-showcase.tsx
-<<<<<<< HEAD
                 key={category.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -534,9 +470,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="group relative"
               >"
                 <div className="relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">"
@@ -556,13 +489,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/2028-services-showcase.tsx
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       ))  } catch (error) {
     console.error("Error:", error);
-=======
                       ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2028-services-showcase.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -574,21 +504,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/2028-services-showcase.tsx
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"
                     >
                       <span>Explore More</span>"
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-=======
                       className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       ))}
                     </div>
                     <Link
@@ -598,18 +518,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >
                       <span>Explore More</span>
                       <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </Link>
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD:pages/2028-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -625,9 +537,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div;
 :pages_backup/2028-services-showcase.tsx
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ))}
           </div>
         </div>
@@ -652,16 +561,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {futuristic2028Services.slice(0, 6).map((service, index) => (
               <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2028-services-showcase.tsx
                 key={service.id}
                 initial={{ opacity: 0, coordinate_x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, coordinate_x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 :pages_backup/2028-services-showcase.tsx
-<<<<<<< HEAD
                 key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -687,9 +592,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="group relative"
               >"
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">"
@@ -726,22 +628,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/2028-services-showcase.tsx
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       </div>
                     </div>"
                     <div className="flex items-center justify-between">
 :pages_backup/2028-services-showcase.tsx
                       <Link
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                       <Link;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2028-services-showcase.tsx
                         className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                       >
                         Learn More;
@@ -749,12 +643,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className="text-right">"
                         <div className="text-sm text-purple-300">Setup Time</div>"
                         <div className="text-white font-medium">{service.setupTime}</div>
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <div className='text-sm text-purple-300'>
                         <span className='font-medium'>Market Size:</span>{' '}
                         {service.marketSize}
@@ -781,19 +669,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className='text-white font-medium'>
                           {service.setupTime}
                         </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </div>
                     </div>
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD:pages/2028-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -808,14 +688,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/2028-services-showcase.tsx
             <motion.div
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ))}
           </div>
         </div>
@@ -839,25 +711,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <motion.div
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
             >"
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />"
               <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>"
               <p className="text-purple-300 mb-6">
-<<<<<<< HEAD
                 Our services target markets with exponential growth potential
 
                 Our services target markets with exponential growth potential,
                 Our services target markets with exponential growth potential, 
                 Our services target markets with exponential growth potential,
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -874,11 +737,7 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               </p>
               <div className='text-3xl font-bold text-green-400'>500%+</div>
               <div className='text-purple-300'>Average Annual Growth</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 with some sectors growing at 300-800% annually.
               </p>"
               <div className="text-3xl font-bold text-green-400">500%+</div>"
@@ -886,16 +745,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
 :pages_backup/2028-services-showcase.tsx
             <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             <motion.div;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2028-services-showcase.tsx
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
             >"
               <DollarSign className="w-16 h-16 text-blue-400 mx-auto mb-6" />"
@@ -905,25 +756,13 @@ Combined market size of our service categories exceeds
                 Combined market size of our service categories exceeds 
                 Combined market size of our service categories exceeds
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 $500 billion with rapid expansion expected.
               </p>"
               <div className="text-3xl font-bold text-blue-400">$500B+</div>"
               <div className="text-blue-300">Total Addressable Market</div>
             </motion.div>
-<<<<<<< HEAD:pages_backup/2028-services-showcase.tsx
             <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                 $500 billion with rapid expansion expected.
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -943,19 +782,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='text-blue-300'>Total Addressable Market</div>
             </motion.div>
             <motion.div
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
             >"
               <Shield className="w-16 h-16 text-pink-400 mx-auto mb-6" />"
               <h3 className="text-2xl font-bold text-white mb-4">Competitive Edge</h3>"
               <p className="text-pink-300 mb-6">
-<<<<<<< HEAD
                 First-to-market solutions with proprietary technology
                 First-to-market solutions with proprietary technology 
                 First-to-market solutions with proprietary technology
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 and AI algorithms that competitors cannot replicate.
               </p>"
               <div className="text-3xl font-bold text-pink-400">90%</div>"
@@ -977,13 +812,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
               <div className='text-3xl font-bold text-pink-400'>90%</div>
               <div className='text-pink-300'>Market Share in Niche</div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </motion.div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
@@ -1021,10 +853,6 @@ transition={{ duration: 0.8 }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className="space-y-8"
           >"
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">"
@@ -1033,9 +861,7 @@ transition={{ duration: 0.8 }}
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
 Join hundreds of forward-thinking companies already leveraging our futuristic services 
               Join hundreds of forward-thinking companies already leveraging our futuristic services
-=======
       {/* CTA Section */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
@@ -1053,12 +879,8 @@ className='space-y-8'
               </span>{' '}
               Your Business?
             </h2>
-<<<<<<< HEAD
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               to gain competitive advantages and drive innovation.
             </p>"
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -1123,7 +945,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <div className='flex items-center space-x-2'>
                 <CheckCircle className='w-5 h-5 text-green-400' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <span>Money-Back Guarantee</span>
               </div>
             </div>
@@ -1132,18 +953,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       <UltraFuturisticFooter2028 />
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
   )
             className="space-y-8";
           >;
             <h2 className="text - 4xl md: text - 5xl font - bold text - white mb - 6">;
-=======
           >;"
             <h2 className="text - 4xl md: text - 5xl font - bold text - white mb - 6">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2028-services-showcase.tsx
               Ready to <span className="bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent">Transform</span> Your Business?;
             </h2>;"
             <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
@@ -1185,7 +1002,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
       <UltraFuturisticFooter2028 />;
 :pages_backup/2028-services-showcase.tsx
-<<<<<<< HEAD
     </>;
   );
   } catch (error) {
@@ -1194,33 +1010,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2028-services-showcase.tsx
-=======
 '
 import React from 'react';'
 import Head from 'next/head';'
@@ -1233,8 +1036,5 @@ import { futuristic2028Services } from '../data/2028-futuristic-innovations';'
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2028-services-showcase.tsx
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

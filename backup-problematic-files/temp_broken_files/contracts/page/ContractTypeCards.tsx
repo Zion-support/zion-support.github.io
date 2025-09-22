@@ -1,5 +1,4 @@
 
-=======
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { FileText, ShieldCheck } from "lucide-react",;
@@ -11,13 +10,11 @@ interface ContractTypeCardsProps {;
 ;
 export function ContractTypeCards({ onStandardClick, onSmartClick } ContractTypeCardsProps) {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
-<<<<<<< HEAD
 
             Create Standard Contract;
           </Button>;

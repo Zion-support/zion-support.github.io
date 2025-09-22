@@ -1,5 +1,4 @@
 
-=======
 import { useState } from 'react',;
 import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',;
 import { ContractBuilder } from '@/components/contracts/ContractBuilder',;
@@ -75,7 +74,6 @@ export function ContractBuilderContent() {;
       ;
       {showBuilderType === 'smart' && (;
         <SmartContractBuilder;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           isOpen={true}
           onClose={() => setShowBuilderType('none')}          talent={mockTalent}
           clientName={user?.displayName || 'Client'}
@@ -83,4 +81,3 @@ export function ContractBuilderContent() {;
         />;
       )}
     </>;
-<<<<<<< HEAD

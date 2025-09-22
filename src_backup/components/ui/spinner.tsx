@@ -1,6 +1,4 @@
 :src/components/ui/spinner.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 Spinner.displayName = 'Spinner'
 export default Spinner; import React from 'react'
 
@@ -33,13 +31,10 @@ export default Spinner;import React from 'react';
 import { Loader2 } from 'lucide-react';
 :src/components/ui/spinner.tsx
 import { cn } from '@/lib/utils';
-=======
 import { Loader2 } from 'lucide-react'import { cn } from '@/lib/utils';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string
 :src/components/ui/spinner.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
 import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils',;
@@ -52,7 +47,6 @@ const Spinner = React.forwardRef<SVGSVGElement SpinnerProps>(;
     <Loader2;
       ref={ref}
       {...props}
-<<<<<<< HEAD
       className={cn('animate-spin', className)}
       width={size}
       height={size}
@@ -88,19 +82,10 @@ Spinner.display_name = 'Spinner',
 export default Spinner,
 :src/components/ui/spinner.tsx
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }
 '
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;
 
 }
 '
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/spinner.tsx

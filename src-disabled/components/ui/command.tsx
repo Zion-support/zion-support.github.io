@@ -9,7 +9,6 @@ const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
 :src_backup/components/ui/command.tsx
-<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
   <CommandPrimitive
 import {Dialog, DialogContent, DialogHeader, DialogTitle,} from '@/components/ui/dialog';
@@ -18,12 +17,9 @@ const Command = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof CommandPrimitive>;
 ></typeof>(({ className, ...props }, ref) => (;
   <CommandPrimitive;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/command.tsx
     ref={ref}
     className={cn(
 :src_backup/components/ui/command.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       "flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground",
       className
     )}
@@ -50,7 +46,6 @@ interface CommandDialogProps;
 extends React && React.ComponentPropsWithoutRef<typeof Dialog> {}
 
 const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 
   />;
@@ -58,7 +53,6 @@ const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {
 Command && Command.displayName = CommandPrimitive && CommandPrimitive.displayName;
 
 :src_backup/components/ui/command.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Dialog {...props}>
   extends React.ComponentPropsWithoutRef<typeof Dialog> {}
 interface CommandDialogProps;
@@ -77,30 +71,22 @@ import { Search } from 'lucide-react'
 
 :src_backup/components/ui/command.tsx
     <Dialog {...props}>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/command.tsx
       <DialogContent className="overflow-hidden p-0 shadow-lg">
         <DialogHeader>"
           <DialogTitle className="sr-only">Command Menu</DialogTitle>
         </DialogHeader>
 :src_backup/components/ui/command.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
           {children}
         <Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
           {children}
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
         <Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
           {children}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         <Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
           {children}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/command.tsx
         </Command>;
       </DialogContent>;
     </Dialog>;
@@ -108,10 +94,6 @@ import { Search } from 'lucide-react'
 }
 :src_backup/components/ui/command.tsx
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from 'react';
 import {Command, as, CommandPrimitive} from 'cmdk';
 import {Search} from 'lucide-react';
@@ -161,18 +143,11 @@ const CommandInput = React.forward_ref<;
         'flex h - 11 w - full rounded - md bg - transparent py - 3 text - sm outline - none placeholder:text - muted - foreground disabled:cursor - not - allowed disabled:opacity - 50',
         class_name)}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       className={cn (
         'flex h - 11 w - full rounded - md bg - transparent py - 3 text - sm outline - none placeholder:text - muted - foreground disabled:cursor - not - allowed disabled:opacity - 50',',
         class_name)}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/command.tsx
 const CommandInput = React.forwardRef<
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
 :src_backup/components/ui/command.tsx
@@ -182,12 +157,8 @@ const CommandInput = React.forwardRef<
     <CommandPrimitive.Input;
       ref={ref}
 :src_backup/components/ui/command.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       className={cn(;
-=======
       className={cn(;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/command.tsx
         "flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",;
         className;
       )}
@@ -202,7 +173,6 @@ const CommandList = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.List;
 :src_backup/components/ui/command.tsx
-<<<<<<< HEAD
     ref={ref}
     className={cn("max-h-[300px] overflow-y-auto overflow-x-hidden", className)}
     {...props}
@@ -213,15 +183,10 @@ const CommandEmpty = React.forward_ref<;
   React.ElementRef < typeof CommandPrimitive.Empty>,
   React.ComponentPropsWithout</typeof > Ref < typeof CommandPrimitive.Empty>;
 :src_backup/components/ui/command.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/command.tsx
 >((props, ref) => (
 :src_backup/components/ui/command.tsx
   <CommandPrimitive.Empty
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   <CommandPrimitive.Empty;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/command.tsx
   />;
 ));
 CommandList.displayName = CommandPrimitive.List.displayName;
@@ -321,7 +286,6 @@ const CommandSeparator = React.forwardRef<;
     className={cn("-mx-1 h-px bg-border", className)}
     {...props}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   />;
 ));
 CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
@@ -332,9 +296,6 @@ const CommandItem = React.forwardRef<;
   <CommandPrimitive.Item;
     ref={ref}
 :src_backup/components/ui/command.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     className={cn(;
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected='true']:bg-accent data-[selected=true]:text-accent-foreground data-[disabled=true]:opacity-50",;
       className;
@@ -373,7 +334,6 @@ export {
   CommandShortcut,
   CommandSeparator}
 ;
-=======
     className={cn(
       'overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground'
       className
@@ -456,8 +416,6 @@ const CommandItem = React.forwardRef<;
       className
     )}
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected='true']:bg-accent data-[selected=true]:text-accent-foreground data-[disabled=true]:opacity-50"",
       className
@@ -509,7 +467,6 @@ const CommandShortcut = ({
         className
       )}
       {...props}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/command.tsx
     />;
   );
 }
@@ -517,9 +474,7 @@ CommandShortcut.displayName = "CommandShortcut""
 CommandShortcut.displayName = "CommandShortcut"
 
 export {
-=======
 export {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/command.tsx
   Command,
   CommandDialog,
   CommandInput,
@@ -528,13 +483,9 @@ export {}
   CommandGroup,
 :src_backup/components/ui/command.tsx
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
   CommandItem,
   CommandShortcut,
   CommandSeparator}
 ;
 })
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/command.tsx

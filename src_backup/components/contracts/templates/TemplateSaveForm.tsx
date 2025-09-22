@@ -178,7 +178,6 @@ if ( {) {}
       return;
     }
 :src/components/contracts/templates/TemplateSaveForm.tsx
-<<<<<<< HEAD
     set_saving (true);
     try {}
       // Check condition;
@@ -221,7 +220,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             field
           }: {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   },
   return (
@@ -230,19 +228,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <FormField;
           control={form.control}
 :src_backup/components/contracts/templates/TemplateSaveForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
           name="title"
-=======
 "
           name="title""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/contracts/templates/TemplateSaveForm.tsx
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
-=======
 
 :src/components/contracts/templates/TemplateSaveForm.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <FormLabel>Template Name</FormLabel>
 :src_backup/components/contracts/templates/TemplateSaveForm.tsx
               <FormControl>
@@ -285,10 +277,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   aria-label='Default template'
                   checked={field && field.value}
 :src/components/contracts/templates/TemplateSaveForm.tsx
-<<<<<<< HEAD
                   onCheckedChange={field && field.onChange}                />;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   };
   return (;
     <Form {...form}>;"
@@ -302,15 +292,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <FormControl>;"
                 <Input {...field} placeholder="Enter template name" />;
 :src/components/contracts/templates/TemplateSaveForm.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
 :src/components/contracts/templates/TemplateSaveForm.tsx
-<<<<<<< HEAD
         />;
         <FormField;
           control={form.control}"
@@ -349,8 +336,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Cancel
           </Button>
 
-<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button type='button' variant='outline' onClick={onCancel}>;
             Cancel;
           </Button>;'
@@ -364,22 +349,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               `${editTemplate ? 'Update' : 'Save'} Template`;
 :src_backup/components/contracts/templates/TemplateSaveForm.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
             ) : (
 :src_backup/components/contracts/templates/TemplateSaveForm.tsx
-<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               `${editTemplate ? "Update" : "Save"} Template`
   editTemplate ? "Update" : "Save" 
-=======
 "
   editTemplate ? "Update" : "Save" `
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/contracts/templates/TemplateSaveForm.tsx
 }Template`) ;
 }</Button> </div> </form> </Form>) ;"
 }"};
@@ -387,24 +366,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               `${editTemplate ? "Update" : "Save"} Template`
 
 :src/components/contracts/templates/TemplateSaveForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             )}
 </Button>;
         </div>;
       </form>;
-<<<<<<< HEAD
     </Form>;
   );
 }
 ;
 :src/components/contracts/templates/TemplateSaveForm.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/templates/TemplateSaveForm.tsx
           </Button>
         </div>
       </form>
@@ -425,8 +396,4 @@ try {;
 }</Button> </div> </form> </Form>) ;
 }"
 :src/components/contracts/templates/TemplateSaveForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/contracts/templates/TemplateSaveForm.tsx

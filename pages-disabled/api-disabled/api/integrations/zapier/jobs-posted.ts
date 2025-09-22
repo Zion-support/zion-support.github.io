@@ -1,19 +1,7 @@
 :pages/api-disabled/api/integrations/zapier/jobs-posted.ts
-<<<<<<< HEAD:pages/api/integrations/zapier/jobs-posted.ts
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/integrations/zapier/jobs-posted.ts
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/integrations/zapier/jobs-posted.ts
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../../lib/integrations/fileStore";
 :pages/api/integrations/zapier/jobs-posted.ts
@@ -29,8 +17,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ events });
 }
 :pages/api-disabled/api/integrations/zapier/jobs-posted.ts
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state  } from '../../../../lib / integrations / file_store';
 ;
@@ -42,16 +28,12 @@ function handler() {;
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
 }
-=======;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../../lib/integrations/fileStore";
 export default function handler($2) {;
   if (req.method !== "GET");
     return res.status(405).json({ error: "Method not allowed" });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/integrations/zapier/jobs-posted.ts
   const { since } = req.query as { since?: string }
   const state = readState();
   const sinceTs = since ? Number(since) : 0;
@@ -62,12 +44,9 @@ const events = state && state.events.filter(
 }
 
 :pages/api-disabled/api/integrations/zapier/jobs-posted.ts
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/integrations/zapier/jobs-posted.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler($2) {;
   res.status(200).json({ message: 'API endpoint' });
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { readState } from "../../../../lib/integrations/fileStore";
@@ -106,7 +85,6 @@ function handler() {}
 }
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/zapier/jobs-posted.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler() { return null; }
   res.status(200).json({ message: 'API endpoint' });'
@@ -136,7 +114,6 @@ function handler() {;
   if (;
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
   const { since } = req.query as { since?: string }
   const state = read_state ();
@@ -147,18 +124,7 @@ function handler() {;
   );
   res.status (200).json ({ events });
 }
-<<<<<<< HEAD:pages/api/integrations/zapier/jobs-posted.ts
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/integrations/zapier/jobs-posted.ts
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/integrations/zapier/jobs-posted.ts
-=======
   const events = state.events.filter ("
     (e) => e.type === "zion.job.posted" && e.timestamp > since_ts,
   );
@@ -166,4 +132,3 @@ function handler() {;
 }
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/zapier/jobs-posted.ts

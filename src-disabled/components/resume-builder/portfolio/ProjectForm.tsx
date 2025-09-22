@@ -1,6 +1,4 @@
 :src_backup/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
       let success = false;
       // Check condition;
@@ -140,9 +138,6 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
     }
   }
 :src/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -150,7 +145,6 @@ import { z } from 'zod',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
 import { Textarea } from '@/components/ui/textarea',;
-=======
 '
 import { useState } from 'react',;'
 import { useForm } from 'react-hook-form',;'
@@ -159,7 +153,6 @@ import { z } from 'zod',;'
 import { Button } from '@/components/ui/button',;'
 import { Input } from '@/components/ui/input',;'
 import { Textarea } from '@/components/ui/textarea',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectForm.tsx
 import {logErrorToProduction} from '@/utils/productionLogger',;
 import {;
   Form,;
@@ -168,8 +161,6 @@ import {;
   FormItem,;
 :src_backup/components/resume-builder/portfolio/ProjectForm.tsx
   FormLabel,;
-<<<<<<< HEAD
-<<<<<<< HEAD
   FormMessage,;
 } from '@/components/ui/form';import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
 import { PortfolioProject } from '@/types/resume';
@@ -276,8 +267,6 @@ export function ProjectForm() { return null; }
   const { addProject, updateProject } = usePortfolio(),;
   const [isLoading, setIsLoading] = useState(false),;
   const isEditing = !!project,;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
 
   const form = useForm<ProjectFormValues>({;
     resolver: zodResolver(projectSchema),;
@@ -285,7 +274,6 @@ export function ProjectForm() { return null; }
     defaultValues: {;
       title: project?.title || '',;
       description: project?.description || '',;
-<<<<<<< HEAD:src/components/resume-builder/portfolio/ProjectForm.tsx
       pdf_url: project?.pdf_url || ''}
   }),;
   const onSubmit = async (data: ProjectFormValues) => {;
@@ -312,24 +300,19 @@ export function ProjectForm() { return null; }
       if (success) {;
         onSuccess();
         form.reset();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
       }
 :src_backup/components/resume-builder/portfolio/ProjectForm.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {;
       logErrorToProduction('Error saving project:', { data: error });
     } finally {;
       setIsLoading(false);
     }
   },
-<<<<<<< HEAD
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
   return (
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <FormField
 :src_backup/components/resume-builder/portfolio/ProjectForm.tsx
           control={form.control}
@@ -340,23 +323,14 @@ export function ProjectForm() { return null; }
 
         <FormField
 :src_backup/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD:src/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
           control={form && form.control}          name='description'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/ProjectForm.tsx
 
-=======
         <FormField;
         />;
 
         <FormField;
           control={form.control}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectForm.tsx
           name='description'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Project Description</FormLabel>
               <FormControl>
@@ -405,20 +379,12 @@ export function ProjectForm() { return null; }
 
 :src_backup/components/resume-builder/portfolio/ProjectForm.tsx
         <FormField
-<<<<<<< HEAD:src/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
           control={form && form.control}          name='technologies'
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/ProjectForm.tsx
 
-=======
 
         <FormField;
           control={form.control}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectForm.tsx
           name='technologies'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           render={({ field }: { field: any }) => (;
             <FormItem>;
               <FormLabel>Technologies Used</FormLabel>;
@@ -433,17 +399,13 @@ export function ProjectForm() { return null; }
           name='technologies';
           control={form.control}
 :src_backup/components/resume-builder/portfolio/ProjectForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           name="title"
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
 :src_backup/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD
-=======
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/ProjectForm.tsx
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
               </FormControl>
               <FormMessage />
@@ -504,7 +466,6 @@ control={form.control}
 
           <FormField;
             control={form && form.control}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectForm.tsx
             name='github_url'
             render={({ field }: { field: any }) => (              <FormItem>;'
                 <FormLabel className='flex items-center gap-2'>;'
@@ -555,7 +516,6 @@ control={form.control}
 :src_backup/components/resume-builder/portfolio/ProjectForm.tsx
           <FormField
             control={form && form.control}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
             name='demo_url'
             render={({ field }: { field: any }) => (              <FormItem>;'
                 <FormLabel className='flex items-center gap-2'>;'
@@ -596,16 +556,9 @@ control={form.control}
                 <FormLabel className="flex items-center gap-2">
                   <Github className="h-4 w-4" />
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   GitHub URL
-=======
                   GitHub URL;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectForm.tsx
                 </FormLabel>
                 <FormControl>"
                   <Input placeholder="https://github.com/yourusername/project" {...field} />
@@ -634,25 +587,20 @@ control={form.control}
             )}
 :src_backup/components/resume-builder/portfolio/ProjectForm.tsx
 
-=======
           />;
         </div>;
         <FormField
           control={form.control}
           name='image_url''
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/portfolio/ProjectForm.tsx
 
           name='image_url'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel className='flex items-center gap-2'>;
-=======
         <FormField;
           control={form.control}'
           name='image_url'
           render={({ field }: { field: any }) => (            <FormItem>;'
               <FormLabel className='flex items-center gap-2'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectForm.tsx
                 <FileImage className='h-4 w-4' />;
                 Screenshot URL;
               </FormLabel>;
@@ -661,7 +609,6 @@ control={form.control}
                 <Input'
                   placeholder='https://example && example.com/screenshot && screenshot.jpg'
               </FormItem>)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           />;
         </div>;
         <FormField;
@@ -698,7 +645,6 @@ control={form.control}
           </Button>
         </div>
       </form>
-<<<<<<< HEAD
     </Form>
   )
 }
@@ -748,12 +694,6 @@ control={form.control}
 }
 :src_backup/components/resume-builder/portfolio/ProjectForm.tsx
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 :src/components/resume-builder/portfolio/ProjectForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectForm.tsx

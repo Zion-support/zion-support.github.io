@@ -5,9 +5,6 @@ export type BadgeKey = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 import {
 :src/components/gamification/badgeConfig.ts
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
 
@@ -70,7 +67,6 @@ export interface BadgeMeta {
   color: string;
   bg: string;
 export const badge_list: BadgeMeta[] = [;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
     key: "first_listing",
     name: "First Listing",
@@ -264,13 +260,10 @@ export const badgeList: BadgeMeta[] = [
     icon: BadgeDollarSign,
 
 :src/components/gamification/badgeConfig.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const getBadgeMeta = (key: BadgeKey) =>: any;
   badge_list.find (boolean => b.key === key);
 export const getBadgeMeta = (key: BadgeKey) =>: any;
   badge_list.find ((b) => b.key === key);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const getBadgeMeta = (key: BadgeKey) =>: any;
   badge_list.find (boolean => b.key === key);
 export const getBadgeMeta = (key: BadgeKey) =>: any;
@@ -278,5 +271,3 @@ export const getBadgeMeta = (key: BadgeKey) =>: any;
 
   badgeList.find(b => b.key === key);
 :src/components/gamification/badgeConfig.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

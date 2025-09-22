@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import TalentGrid from '../../components/seo/TalentGrid';
 import FAQ from '../../components/seo/FAQ';
 
@@ -48,18 +47,12 @@ import FAQ from '../../components/seo/FAQ';
 
 export type LandingPayload = {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   title: string;
   h1: string;
   body_html: string;
   region?: string;
-<<<<<<< HEAD
   service?: string;
   faq: Array<{ q: string; a: string }>;}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function SEOLandingPage() {
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
@@ -105,7 +98,6 @@ const router = useRouter();
 },;
 export default function SEOLandingPage(req, res) {
   try {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
@@ -117,7 +109,6 @@ export default function SEOLandingPage(req, res) {
       try {;
         setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
         return;
-<<<<<<< HEAD
       } catch {}
     }
       } catch {  } catch (error) {
@@ -133,7 +124,6 @@ export default function SEOLandingPage(req, res) {
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div
         className='prose dark:prose-invert max-w-none'
         dangerouslySetInnerHTML={{ __html: payload.bodyHtml }}
@@ -161,29 +151,16 @@ export default function SEOLandingPage(req, res) {
       try {;
         setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
         return;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         return;
       } catch {}
     }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     // Fallback: render a basic placeholder until a generated page is deployed'
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
   }, [router.isReady, slug]);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   if (!payload) return null;
 
   return (
@@ -202,11 +179,7 @@ export default function SEOLandingPage(req, res) {
       <FAQ items={payload && payload.faq} />;
     </div>;
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   faq: Array<{ q: string; array: string }>;}
 ;
 export default /**;
@@ -267,31 +240,14 @@ if (return null) {}
       <FAQ items={payload.faq} />;
     </div>);
 ;
-<<<<<<< HEAD
 );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   )
   } catch (error) {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

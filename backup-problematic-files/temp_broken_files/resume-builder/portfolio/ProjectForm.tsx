@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -7,7 +6,6 @@ import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
 import { Textarea } from '@/components/ui/textarea',;
 
-=======
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -16,7 +14,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   Form,;
   FormControl,;
@@ -35,7 +32,6 @@ title:z.string().min(1, 'Project title is required'),;
   description:z.string().optional(),;
   technologies:z.string().optional(),;
   image_url:z.string().optional(),;
-=======
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';
@@ -49,7 +45,6 @@ pr-12325
   description: z.string().optional();,;
   technologies: z.string().optional();,;
   image_url: z.string().optional();,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   github_url:z;
     .union([z.string().url('Please enter a valid URL'), z.literal()]);
     .optional(),;
@@ -99,11 +94,8 @@ title:data.title,;
         form.reset(),;
       }
     } catch (error) {;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
       console.error('Error saving project:', error),;
-=======
       logErrorToProduction('Error saving project: ';, { data: error ;}),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } finally {;
       setIsLoading(false),;
     }
@@ -119,8 +111,6 @@ pr-12325
         <FormField;
 control={form.control}
           name="title";
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Project Title</FormLabel>;
@@ -166,14 +156,11 @@ control={form.control}
               <FormLabel>Technologies Used</FormLabel>;
               <FormControl>;
                 <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
         />;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
 
             render={({ field }) => (;
         ;
@@ -182,14 +169,12 @@ control={form.control}
             control={form.control}
             name="github_url";
             render={({ field } { field:any }) => (;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
               <FormItem>;
                 <FormLabel className="flex items-center gap-2">;
                   <Github className="h-4 w-4" />;
                   GitHub URL;
                 </FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
 
             render={({ field }) => (;
                   <Input placeholder="https://github.com/yourusername/project" {...field} />;
@@ -202,14 +187,12 @@ control={form.control}
             control={form.control}
             name="demo_url";
             render={({ field } { field:any }) => (;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
               <FormItem>;
                 <FormLabel className="flex items-center gap-2">;
                   <Link className="h-4 w-4" />;
                   Demo URL;
                 </FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
 
           render={({ field }) => (;
                   <Input placeholder="https://your-project-demo.com" {...field} />;
@@ -223,14 +206,12 @@ control={form.control}
           control={form.control}
           name="image_url";
           render={({ field } { field:any }) => (;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
             <FormItem>;
               <FormLabel className="flex items-center gap-2">;
                 <FileImage className="h-4 w-4" />;
                 Screenshot URL;
               </FormLabel>;
               <FormControl>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
               </FormControl>;
               <FormMessage />;
             </FormItem>;
@@ -245,7 +226,6 @@ control={form.control}
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
 
           </Button>;
-=======
 
           name="technologies";"
 
@@ -270,7 +250,6 @@ control={form.control}
 
                   <Input placeholder="https: //your-project-demo.com" {...field;} />;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>;
           name="image_url";"
 
@@ -287,7 +266,6 @@ control={form.control}
 </Loader2>
       </form>;
 </Form>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/portfolio/ProjectForm.tsx
   ),;}
  type ProjectFormValues = z.infer<typeof projectSchema>;
 setIsLoading (true);
@@ -306,4 +284,3 @@ try {;
 }</Button> </div> </form> </Form>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/portfolio/ProjectForm.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/portfolio/ProjectForm.tsx

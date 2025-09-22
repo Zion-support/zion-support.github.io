@@ -8,7 +8,6 @@ export default function IdentitySettingsPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null),
   const [error, setError] = useState(''),
 
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 import Head from 'next/head';
@@ -21,7 +20,6 @@ export default function IdentitySettingsPage() {
   const [error, setError] = useState('')
   async function load() {
 try {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
       const data = await res.json();
       if (data.ok) setProfile(data.profile);
@@ -52,8 +50,6 @@ export default function IdentitySettingsPage() {
   const [userId, setUserId] = useState('demo-user'),
   const [profile, setProfile] = useState<KycProfile | null>(null),
   const [error, setError] = useState(''),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useEffect, useState } from 'react';
 '
 import Head from 'next/head';'
@@ -65,10 +61,8 @@ export default function IdentitySettingsPage() {}
   const [profile, setProfile] = useState<KycProfile | null>(null)'
   const [error, setError] = useState('')
 async function load() {
-<<<<<<< HEAD
 
     try {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
       const data = await res.json();
       if (data.ok) setProfile(data.profile);
@@ -95,8 +89,6 @@ function load() {
   $2
 }
       else set_error (data.error || 'Not found');
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import React, { useEffect, useState } from 'react';
 
@@ -109,19 +101,14 @@ export default function IdentitySettingsPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null)
   const [error, setError] = useState('')
   async function load() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } catch (e) {
       setError('Failed to fetch')
     }
   }
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../../utils/kyc';
-=======
   async function load() {}
     } catch (e) {'
       setError('Failed to fetch')
@@ -132,7 +119,6 @@ import type { KycProfile } from '../../../utils/kyc';
 import React, { useEffect, useState } from 'react';'
 import Head from 'next/head';'
 import type { KycProfile } from '../../../utils/kyc';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ProfileBadges } from '../../../components/ui/ProfileBadges';
 export default function IdentitySettingsPage(req, res) {}
   try {';
@@ -140,20 +126,10 @@ export default function IdentitySettingsPage(req, res) {}
   const [profile, setProfile] = useState<KycProfile | null>(null);'
   const [error, setError] = useState('');
 async function load() {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {
-=======
   async function load() { return null; }
     try {}`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
       const data = await res.json();
       if (data.ok) setProfile(data.profile);'
@@ -165,7 +141,6 @@ async function load() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -180,27 +155,19 @@ async function load() {;
     <>
       <Head>
         <title>Identity Settings - Zion</title>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
           <ProfileBadges profile={profile || undefined} />
         </div>"
         <div className="mb-4 text-sm text-gray-600">
 
-=======
           <ProfileBadges profile={profile || undefined} />
         </div>
         <div className="mb-4 text-sm text-gray-600">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </main>
     </>
   );
 };
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -213,8 +180,6 @@ async function load() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 '
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'  } catch (error) {"
     console.error("Error:", error);"
@@ -229,7 +194,6 @@ async function load() {;
   }
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </main>
     </>
   )
@@ -237,10 +201,4 @@ async function load() {;
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

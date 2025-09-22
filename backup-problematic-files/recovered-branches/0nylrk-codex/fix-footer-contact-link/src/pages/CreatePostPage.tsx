@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useSearchParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -60,7 +59,6 @@ export default function CreatePostPage() {;
         keywords="community, forum, discussion, create post, new thread";
       />;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
@@ -69,6 +67,5 @@ export default function CreatePostPage() {;
           <span className="text-muted-foreground">/</span>;
           <span className="text-sm font-medium">Create Post</span>;
         </div>;
-<<<<<<< HEAD
 
 }

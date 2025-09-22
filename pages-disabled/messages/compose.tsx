@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 import { useRouter } from 'next/router';
@@ -6,14 +5,12 @@ import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage(req, res) {
   try {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
 
   const { user, loading } = useCurrentUser();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [message, setMessage] = React.useState('');
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
@@ -26,8 +23,6 @@ export default function ComposePage(req, res) {
       ? `Invite ${recipientName || talentName || 'Talent'}`;
       : type === 'apply';
         ? `Apply to ${jobTitle || 'Job'}`;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   React.useEffect(() => {
 if (!loading && !user) router.replace('/auth');
   }, [loading, user, router]);
@@ -39,9 +34,6 @@ const headerTitle =
       ? `Invite ${recipientName |talentName |'Talent'}`
       : type === 'apply'
         ? `Apply to ${jobTitle |'Job'}`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const [message, setMessage] = React.useState('');'
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
@@ -54,7 +46,6 @@ const headerTitle =
       ? `Invite ${recipientName || talentName || 'Talent'}`;'
       : type === 'apply';'`
         ? `Apply to ${jobTitle || 'Job'}`;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         : 'New Message';
   const context =;'
     type === 'invite';'
@@ -82,7 +73,6 @@ let attachmentBase64: string | undefined,
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
       const mime = file.type || 'application/octet-stream';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
       attachmentBase64 = `data:${mime},base64,${base64}`;
       } catch (error) {}
@@ -90,17 +80,10 @@ let attachmentBase64: string | undefined,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       const mime = file.type || 'application/octet-stream';
       attachmentBase64 = `data:${mime},base64,${base64}`
     }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
@@ -172,11 +155,9 @@ let attachmentBase64: string | undefined,
         recipientId: recipientId || talentId,
         body: message,
         linkUrl: linkUrl || undefined,
-=======
         recipientId: recipientId || talentId,
         body: message,
         linkUrl: linkUrl || undefined,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         attachmentBase64;
         attachmentName: file?.name,
         context})});
@@ -185,8 +166,6 @@ let attachmentBase64: string | undefined,
     if (data?.conversation?.id) router.replace(`/messages/${data.conversation.id}`)
   };
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-2xl mx-auto p-4">
@@ -194,10 +173,8 @@ let attachmentBase64: string | undefined,
           <div className="p-4 border-b">
             <h1 className="text-xl font-semibold">{headerTitle}</h1>
             <p className="text-sm text-gray-500">
-<<<<<<< HEAD
             />
             <input type="url" value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder="Optional proposal or portfolio link" className="border rounded-lg p-2 w-full" />
-=======
   return ("
     <div className="min-h-screen bg-gray-50">"
       <div className="max-w-2xl mx-auto p-4">"
@@ -208,7 +185,6 @@ let attachmentBase64: string | undefined,
 
             />"
             <input type="url" value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder="Optional proposal or portfolio link" className="border rounded-lg p-2 w-full" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <input type="file" onChange={(e) => setFile(e.target.files?.[0] || null)} className="text-sm" />
           </div>"
           <div className="p-4 border-t flex justify-end">'"
@@ -222,11 +198,9 @@ let attachmentBase64: string | undefined,
 }
   )
 }
-<<<<<<< HEAD
 
 }
 
-<<<<<<< HEAD
 
   )
 }
@@ -266,16 +240,12 @@ if (return null) {}
       ? `Invite ${recipient_name || talent_name || 'Talent'}`;'
       : type === 'apply';'`
         ? `Apply to ${job_title || 'Job'}`;
-<<<<<<< HEAD
 
 '
 import { useRouter } from 'next/router';'
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage(req, res) {
   try {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
@@ -292,7 +262,6 @@ React.useEffect(() => {
       ? `Invite ${recipientName |talentName |'Talent'}`
       : type === 'apply'
         ? `Apply to ${jobTitle |'Job'}`
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         : 'New Message';
   const context =;
     type === 'invite';
@@ -300,34 +269,20 @@ React.useEffect(() => {
       : type === 'apply';
         ? { type: 'application', job_id, job_title }
         : { type: 'general' }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setSending(true);
     let attachmentBase64: string | undefined;
     if (file) {;
       const buff = await file.arrayBuffer();'
       const base64 = Buffer.from(buff).toString('base64');
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 `
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       attachmentBase64 = `data:${mime},base64,${base64}`;
       } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
@@ -347,16 +302,12 @@ React.useEffect(() => {
         </div>
       </div>
     </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '
     const res = await fetch('/api/messages/compose', {'
       method: 'POST''
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     });
     const data = await res.json ();
     set_sending (false);
@@ -376,17 +327,11 @@ React.useEffect(() => {
               {type === 'invite' && job_title;'`
                 ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                 : null}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
           </div>"
           <div className="p-4 space-y-3">
 <textarea
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               value={message}
               on_change={e => set_message (e.target.value)}
               rows={6}
@@ -395,12 +340,5 @@ React.useEffect(() => {
                 type === 'invite' && job_title;
                   ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                   : 'Write your message...';
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             <textarea;
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

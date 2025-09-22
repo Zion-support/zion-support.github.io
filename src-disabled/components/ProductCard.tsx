@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link',;
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist',;
@@ -54,8 +52,6 @@ const imageUrl = Array && Array.isArray(product && product.images) && product &&
 }
 
   const stock_status =;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     product.stock === undefined;
       ? 'In stock';
       : product.stock <= 0;
@@ -245,7 +241,6 @@ title: 'Added to cart',;
 }
 ;
 
-=======
 import Link from 'next/link';
 import { Heart } from 'lucide-react'
 import { useWishlist  } from '@/hooks/useWishlist';
@@ -312,15 +307,9 @@ onBuy () > {'";
 }</Tooltip> </TooltipProvider>) ;
 }</div> </div>) ;
 }'"
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   )
 }
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

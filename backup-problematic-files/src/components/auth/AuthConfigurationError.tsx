@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
               <li>• AUTH0_SECRET</li>;
               <li>• AUTH0_BASE_URL</li>;
@@ -58,14 +57,12 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
 className="bg-blue-600 hover:bg-blue-700 text-white flex-1";
               >;
                 <Settings className="w-4 h-4 mr-2" />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 Setup Guide;
               </Button>;
             )}
             ;
             <Button ;
               onClick={handleRefresh}
-<<<<<<< HEAD
             >;
               <RefreshCw className="w-4 h-4 mr-2" />;"
 
@@ -85,12 +82,10 @@ className="bg-blue-600 hover:bg-blue-700 text-white flex-1";
                     rel="noopener noreferrer";
                     className="text-blue-600 hover:underline inline-flex items-center gap-1";
                   >;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     Visit Auth0 Dashboard <ExternalLink className="w-3 h-3" />;
                   </a>;
                 </div>;
               </li>;
-<<<<<<< HEAD
               <li className="flex items-start gap-3">;
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>;
                 <div>;
@@ -121,4 +116,3 @@ className="bg-blue-600 hover:bg-blue-700 text-white flex-1";
 }<button ;
 }export default AuthConfigurationError;
 '"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

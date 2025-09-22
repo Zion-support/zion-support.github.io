@@ -14,11 +14,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('AllowGET')
   return res.status(405).end('Method Not Allowed');
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
 '
   res.setHeader('AllowGET'),';
   return res.status(405).end('Method Not Allowed');
 };'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

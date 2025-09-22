@@ -1,5 +1,4 @@
 :pages/api-disabled/api/referrals/track.ts
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
@@ -13,18 +12,12 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/referrals/track.ts
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 :pages/api/referrals/track.ts
 export default async function handler(
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, event, url, referrer } = req.body |{}
   if (!code |!event) return res.status($1).json({ $2 });
@@ -33,9 +26,7 @@ export default async function handler(
 :pages/api/referrals/track.ts
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
 if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/referrals/track.ts
   const { code, event, url, referrer } = req && req.body || {};
   if (!code || !event) return res && res.status($1).json({ $2 });
   const usingPlaceholder =
@@ -62,7 +53,6 @@ if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
     if (error) return res && res.status(500).json({ error: "Database error" });
     return res && res.status(200).json({ saved: true });
   } catch (e: any) {;
-=======
   try {}
     if (usingPlaceholder) {}
       return res && res.status(200).json({ saved: false, mock: true });
@@ -85,7 +75,6 @@ if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
     return res && res.status(200).json({ saved: true });
 
   } catch (e: any) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/referrals/track.ts
     return res && res.status(200).json({ saved: false, error: e?.message });
 
   }
@@ -111,7 +100,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       partner_code: String(code).toLowerCase(), event: String(event);
       url: url || null, referrer: referrer || null;
       user_agent: req.headers['user-agent'] || null;
-=======
 
   } catch (e: any) {}
     return res.status(200).json({ saved: false, error: e?.message });
@@ -136,7 +124,6 @@ export default async function handler() { return null; }
       partner_code: String(code).toLowerCase(), event: String(event),
       url: url || null, referrer: referrer || null,'
       user_agent: req.headers['user-agent'] || null,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/referrals/track.ts
       ip_address: (req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || null});
 ;
     if (error) return res.status(500).json({ error: error.message });
@@ -161,12 +148,9 @@ function handler() {;
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;"
       "placeholder - key";
 :pages/api-disabled/api/referrals/track.ts
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return res.status(200).json({ saved: false, error: e?.message });
 :pages/api-disabled/api/referrals/track.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler($2) {;
   res.status(200).json({ message: 'API endpoint' });
@@ -177,16 +161,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
 import { getServerSupabase } from '../../../utils/supabase/server';
 :pages/api-disabled/api/referrals/track.ts
 export default async function handler(req, res) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/referrals/track.ts
   try {
     // Check condition;
 if ( {) {
@@ -223,21 +197,15 @@ if ( {) {
   }
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   } catch (error) {
-=======
   } catch (error) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/referrals/track.ts
     console.error("Error:", error);
-=======
 
   }
 }
 
   } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/referrals/track.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -277,32 +245,17 @@ if ( {) {
   } catch (error) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   }
 }
 
 :pages/api-disabled/api/referrals/track.ts
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 :pages/api/referrals/track.ts
 
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/referrals/track.ts
-=======
 
   }
 }
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/referrals/track.ts

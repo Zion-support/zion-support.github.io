@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -15,7 +14,6 @@ import {Button} from "@/components/ui/button";
 import {Loader2, MessageSquare, ExternalLink} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
-=======
 import {useState} from "react";"
 import {useJobApplications} from "@/hooks/useJobApplications";"
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";"
@@ -24,19 +22,14 @@ import {Button} from "@/components/ui/button";"
 import {Loader2, MessageSquare, ExternalLink} from "lucide-react";"
 import {formatDistanceToNow} from "date-fns";"
 import {Link} from "react-router-dom";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {ApplicationStatus} from "@/types/jobs";
 export function MyApplications() { return null; }
   const { applications, isLoading, error } = useJobApplications();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
 
     switch (status) {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { Link } from "react-router-dom";
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
@@ -45,7 +38,6 @@ export function MyApplications() {
 const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from './react';
 import { useJobApplications } from '@/hooks / useJobApplications';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -65,10 +57,7 @@ function MyApplications() {
 
   const getStatusBadge = (status: ApplicationStatus) => {
     switch (status) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -76,7 +65,6 @@ import { Button } from "@/components/ui/button",
 import { Loader2, MessageSquare, ExternalLink } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom";
-=======
 
     switch (status) {}
 import { useState } from './react';'
@@ -106,18 +94,14 @@ import { Button } from "@/components/ui/button","
 import { Loader2, MessageSquare, ExternalLink } from "lucide-react","
 import { formatDistanceToNow } from "date-fns",";
 import { Link } from "react-router-dom";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {};
   const { applications, isLoading, error } = useJobApplications();
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import { Link } from "react-router-dom",
-=======
   const getStatusBadge = (status: ApplicationStatus) =>: any {}
 "
 import { Link } from "react-router-dom","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ApplicationStatus } from "@/types/jobs",
 export function MyApplications() {}
   const { applications, isLoading, error } = useJobApplications(),
@@ -142,13 +126,11 @@ export function MyApplications() {}
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
-=======
   },
 
   if (isLoading) {}
     return ("
       <div className="flex justify-center items-center p-8">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     )
@@ -173,8 +155,6 @@ export function MyApplications() {}
         </CardContent>
       </Card>
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
   return (
     <div className="grid gap-4 md:grid-cols-2">
@@ -196,12 +176,8 @@ export function MyApplications() {}
               {application.cover_letter && (
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
 case "new": return <Badge variant="secondary">New</Badge>;
-=======
       case "new": return <Badge variant="secondary">New</Badge>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   }      case "new": return <Badge variant="secondary">New</Badge>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       case "viewed":;
         return <Badge variant="outline">Viewed</Badge>;
       case "shortlisted":;
@@ -210,9 +186,7 @@ case "new": return <Badge variant="secondary">New</Badge>;
 
   if (isLoading) {
 
-=======
       case "rejected":;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,;
       default:;"
         return <Badge variant="outline">{status}</Badge>;
@@ -252,9 +226,7 @@ return (
     );
   }
 
-<<<<<<< HEAD
 import { useState } from "react",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -289,7 +261,6 @@ export function MyApplications() { return null; }
       case "viewed":;"
         return <Badge variant="outline">Viewed</Badge>;"
       case "shortlisted":;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
@@ -319,48 +290,29 @@ if (applications && applications.length === 0) {;
       </Card>;
     );
   }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {application.cover_letter}
                 </p>
               )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                   {application.cover_letter}
                 </p>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-              <div className="flex justify-between items-center">
-=======
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}              <div className="flex justify-between items-center">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}              <div className="flex justify-between items-center">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-              <div className="flex justify-between items-center">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
               <div className="flex justify-between items-center">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}              <div className="flex justify-between items-center">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center">
+              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}              <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
                   size="sm"
-=======
 
 "
               <div className="flex justify-between items-center">
                 <Button"
                   variant="outline""
                   size="sm""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="text-xs"
                   asChild;
                 >
@@ -368,13 +320,10 @@ if (applications && applications.length === 0) {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job;
                   </Link>
                 </Button>
-<<<<<<< HEAD
                 <Button
                   variant="default"
                 <Button 
                   variant="default" 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <div className="grid gap-4 md:grid-cols-2">;
@@ -397,17 +346,10 @@ if (applications && applications.length === 0) {;
 
                 <Button "
                   variant="default" 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   size="sm"
-=======
 
 "
                   size="sm""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="text-xs"
                   asChild>;`
                   <Link to={`/messages?jobId=${application && application.job_id}`}>;
@@ -428,7 +370,6 @@ if (applications && applications.length === 0) {;
       case "hired":;
         return <Badge className="bg - green - 100 text - green - 800">Hired</Badge>;
       case "rejected":;
-=======
 "
         return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;"
       case "interview":;"
@@ -436,7 +377,6 @@ if (applications && applications.length === 0) {;
       case "hired":;"
         return <Badge className="bg - green - 100 text - green - 800">Hired</Badge>;"
       case "rejected":;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return <Badge className="bg - red - 100 text - red - 800">Rejected</Badge>,
       default:;"
         return <Badge variant="outline">{status}</Badge>;
@@ -444,17 +384,7 @@ if (applications && applications.length === 0) {;
   }
 ;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   return (
     <div className="grid gap-4 md:grid-cols-2">;
@@ -881,4 +811,3 @@ default: return <Badge variant="outline"> {
         return <Badge className="bg - red - 100 text - red - 800">Rejected</Badge>,""
         return <Badge variant="outline">{status}</Badge>;""
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

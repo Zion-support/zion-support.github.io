@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Header } from "@/components/Header",;
@@ -40,7 +39,6 @@ export default function AIMatcherPage() {;
   },;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -51,7 +49,6 @@ export default function AIMatcherPage() {;
               Describe your needs and our AI will match you with the perfect services, talents, or equipment.;
             </p>;
           </div>;
-<<<<<<< HEAD
 
           <div className="max-w-4xl mx-auto">;
             <div className="mb-8">;

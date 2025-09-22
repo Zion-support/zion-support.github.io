@@ -1,14 +1,10 @@
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-=======
 
 import React, { useState } from 'react',;'
 import Head from 'next/head',;'
 import Link from 'next/link',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion',;
 import {}
   Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, 
@@ -19,7 +15,6 @@ import {}
 import Layout from '../components/layout/Layout',;'
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services',;'
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced',;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -68,9 +63,7 @@ export default function InnovativeMicroSaasShowcase() {
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
 
     return matchesCategory && matchesSearch
-<<<<<<< HEAD
   }),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -80,7 +73,6 @@ import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-rea
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
 const contactInfo = {
 
-=======
 export default function InnovativeMicroSaasShowcase() { return null; }
 import React, { useState } from 'react';'
 import Head from 'next/head';'
@@ -91,7 +83,6 @@ import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-rea
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
 const contactInfo = {}
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   website: 'https://ziontechgroup.com'
 }
 const stats = ['
@@ -109,8 +100,6 @@ const categories = ['
   { name: 'Creativity & Design', value: 'creativity', icon: Palette, color: 'from-pink-500 to-rose-600' }'
   { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from-teal-500 to-cyan-600' }'
   { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from-yellow-500 to-orange-600' }
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function InnovativeMicroSaasShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
@@ -119,7 +108,6 @@ export default function InnovativeMicroSaasShowcase() {
   // Combine all services
   const allServices = [
 
-=======
 ...innovativeRealMicroSaasServices2025,
     ...emergingTechServicesEnhanced2025,
   ];
@@ -139,25 +127,18 @@ const matchesCategory =
     return matchesCategory && matchesSearch;
   });
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
-=======
 
 export default function InnovativeMicroSaasShowcase() { return null; }
   const sortedServices = [...filteredServices].sort((a, b) => {}
     switch (sortBy) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)'
       case 'price-low':
-<<<<<<< HEAD
 
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {;
   Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket,;
   CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target,;
@@ -238,10 +219,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
   }
 }
   }),
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <Layout>
       <Head>
@@ -251,7 +228,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
         <link rel="canonical" href="https://ziontechgroup.com/innovative-micro-saas-showcase" />
       </Head>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <Layout>
       <Head>
@@ -271,20 +247,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
           href='https://ziontechgroup.com/innovative-micro-saas-showcase'
         />
       </Head>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -300,16 +270,11 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
 <motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                 <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   key={stat.label}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
 
 "
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
@@ -355,16 +320,8 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >`
                   <stat.icon className={`w-5 h-5 ${stat.color}`} />"
@@ -376,7 +333,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>;
           </motion.div>;
         </div>;
@@ -552,8 +508,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
               <Mail className="w-5 h-5 text-white" />"
               <span className="text-white font-semibold">{contactInfo.email}</span>
             </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </motion.div>
         </div>
       </section>
@@ -568,11 +522,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
               <span className="text-white font-semibold">{contactInfo.email}</span>
             </div>
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="flex items-center space-x-4">
               <MapPin className="w-5 h-5 text-white" />
               <span className="text-white text-sm">{contactInfo.address}</span>
@@ -590,12 +539,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="relative flex-1 max-w-md">
-=======
 "
             <div className="flex items-center space-x-4">"
               <MapPin className="w-5 h-5 text-white" />"
@@ -604,7 +548,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
 
 "
             <div className="relative flex-1 max-w-md">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
                 type="text""
@@ -630,7 +573,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
               />
             </div>
             {/* Category Filter */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -649,9 +591,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
@@ -691,7 +631,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="popularity">Most Popular</option>
@@ -711,7 +650,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mb-8">
@@ -723,7 +661,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </h2>
             <p className="text-gray-400">
               {filteredServices.length} services found
@@ -755,7 +692,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
                 >
             </div>
@@ -772,9 +708,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
               <Mail className="w-5 h-5 text-white" />
               <span className="text-white font-semibold">{contactInfo.email}</span>
             </div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <div className="flex items-center space-x-4">
               <MapPin className="w-5 h-5 text-white" />
               <span className="text-white text-sm">{contactInfo.address}</span>
@@ -783,29 +716,20 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
         </div>
       </section>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search services..."
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
-=======
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
-=======
 <div className='flex flex-wrap gap-2'>
               {categories.map(category => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <button
                   key={category.value  } catch (error) {
     console.error("Error:", error);
-=======
 
 "
             <div className="flex flex-wrap gap-2">
@@ -813,7 +737,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
                 <button;
                   key={category.value  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -835,20 +758,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
 <category.icon className="w-4 h-4" />
                   <span className="text-sm font-medium">{category.name}</span>
                 </button>
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             <div className="flex flex - wrap gap - 2">;
               {categories.map ((category) => (
                 <button;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   key={category.value}
                   on_click={() => setSelectedCategory (category.value)}
                   className={`flex items - center space - x-2 px - 4 py - 2 rounded - lg border transition - all duration - 300 ${
@@ -857,24 +774,15 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
                       : 'bg - white / 10 border - white / 20 text - gray - 300 hover:bg - white / 20';
                   }`}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="flex items-center space-x-4">
               <div className="flex bg-white/10 rounded-lg p-1">
-=======
             <div className="flex items-center space-x-4">
               <div className="flex bg-white/10 rounded-lg p-1">
-=======
               ))}
             </div>
             {/* View Mode and Sort */}
 <div className='flex items-center space-x-4'>
               <div className='flex bg-white/10 rounded-lg p-1'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <button
                   onClick={() => setViewMode('grid')  } catch (error) {
     console.error("Error:", error);
@@ -889,9 +797,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {}
                 >
 
                   <Grid className="w-5 h-5" />
-=======
 <Grid className='w-5 h-5' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </button>
                 <button'
                   onClick={() => setViewMode('list')  } catch (error) {"
@@ -914,16 +820,8 @@ className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-600 text-white' : 'te
                 </button>
               </div>
 <select
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               <select;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >"
                 <option value="popularity">Most Popular</option>"
@@ -931,51 +829,31 @@ className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-600 text-white' : 'te
                 <option value="price-low">Price: Low to High</option>"
                 <option value="price-high">Price: High to Low</option>"
                 <option value="newest">Newest First</option>
-=======
 
                 className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-=======
                 value={sortBy}
 onChange={e => setSortBy(e.target.value)}
                 className='bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <option value='popularity'>Most Popular</option>
                 <option value='rating'>Highest Rated</option>
                 <option value='price-low'>Price: Low to High</option>
                 <option value='price-high'>Price: High to Low</option>
                 <option value='newest'>Newest First</option>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </select>
             </div>
           </div>
         </div>
       </section>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-white mb-2">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </h2>
             <p className="text-gray-400">
-=======
 
-=======
       {/* Services Grid */}
 <section className='py-16'>
         <div className='container mx-auto px-4'>
@@ -984,10 +862,8 @@ onChange={e => setSortBy(e.target.value)}
               {selectedCategory === 'all'
                 ? 'All Services'
                 : `${categories.find(c => c.value === selectedCategory)?.name}`}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </h2>
             <p className='text-gray-400'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {filteredServices.length} services found
             </p>
           </div>
@@ -998,14 +874,11 @@ onChange={e => setSortBy(e.target.value)}
 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
                 >
                   {/* Popular Badge */  } catch (error) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   {/* Popular Badge */  } catch (error) {
     console.error("Error:", error);
@@ -1055,14 +928,11 @@ className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
 
                       {service.price}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   )  } catch (error) {
     console.error("Error:", error);
-=======
 
                   )  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1100,7 +970,6 @@ className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                   <div className="flex items-center justify-between mb-4">"
                     <div className="text-2xl font-bold text-purple-400">
 {service.price  } catch (error) {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -1110,10 +979,6 @@ className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                       Popular
                     </div>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <span className="text-sm text-gray-400 font-normal">{service.period}</span>
                     </div>"
                     <div className="flex items-center space-x-1">"
@@ -1128,28 +993,18 @@ className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
   }
 }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div className="mb-4">
                     <div className="text-sm text-gray-400 mb-2">Key Features:</div>
-=======
 
 "
                   <div className="mb-4">"
                     <div className="text-sm text-gray-400 mb-2">Key Features:</div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div className="space-y-1">
                       {service.features.slice(0, 3).map((feature, idx) => ("
                         <div key={idx} className="flex items-center space-x-2 text-xs text-gray-300">"
                           <CheckCircle className="w-3 h-3 text-green-400" />
                           <span>{feature}</span>
                         </div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </div>
                     <div className='flex items-center space-x-1'>
                       <Star className='w-4 h-4 text-yellow-400 fill-current' />
@@ -1172,20 +1027,14 @@ className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                           <CheckCircle className='w-3 h-3 text-green-400' />
                           <span>{feature}</span>
                         </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
                     <span className="bg-white/10 px-2 py-1 rounded">{service.category}</span>
                     <span>Setup: {service.setupTime}</span>
                   </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                       href={service.link}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1198,8 +1047,6 @@ className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
                     >
                       Learn More;
@@ -1208,11 +1055,9 @@ className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                       <Heart className="w-4 h-4" />
                     </button>
                   </div>
-<<<<<<< HEAD
 
                   {/* Hover Overlay */}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     >
                       Learn More
                     </Link>
@@ -1220,24 +1065,17 @@ className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                       <Heart className='w-4 h-4' />
                     </button>
                   </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {/* Hover Overlay */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-6">
                     <div className="text-center w-full">
                       <p className="text-white text-sm mb-3 line-clamp-3">{service.description}</p>
                       <Link
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                         href={service.link  } catch (error) {
     console.error("Error:", error);
-=======
 "
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-6">"
                     <div className="text-center w-full">"
@@ -1245,12 +1083,9 @@ className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                       <Link;
                         href={service.link  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         className="inline-flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors"
                       >
                         <span>View Details</span>"
@@ -1258,34 +1093,26 @@ className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                       >
                         <span>View Details</span>
                         <ArrowRight className='w-4 h-4' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </Link>
                     </div>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
             </div>
           ) : ("
             <div className="space-y-4">
               {sortedServices.map((service, index) => (
 <motion.div
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                 <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   key={service.id}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   animate={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 {/* Service Details */}
-<<<<<<< HEAD
                   key={service.id  } catch (error) {
     console.error("Error:", error);
-=======
 
                   key={service.id  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1318,28 +1145,18 @@ className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <div className="flex-1">
-=======
 "
                     <div className="flex-1">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <div className="flex items-start justify-between mb-3">
                         <div>"
                           <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                             {service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           </h3>
                           <p className="text-gray-400 text-sm">{service.tagline}</p>
                         </div>"
@@ -1353,20 +1170,12 @@ className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                         </div>
 <div className="text-right">
                           <div className="text-2xl font-bold text-purple-400">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             {service.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             <span className="text-sm text-gray-400 font-normal">{service.period}</span>
                           </div>"
                           <div className="flex items-center justify-end space-x-1 mt-1">"
@@ -1376,7 +1185,6 @@ className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                           </div>
                         </div>
                       </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <p className="text-gray-300 text-sm mb-4 line-clamp-2">{service.description}</p>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4 text-xs text-gray-500">
@@ -1386,27 +1194,19 @@ className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                         </div>"
                         <div className="flex space-x-2">
 <Link
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
                           >
                             Learn More;
                           </Link>"
                           <button className="p-2 bg-white/10 border border-white/20 rounded-lg text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300">"
                             <Heart className="w-4 h-4" />
-=======
                             <span className="text-sm text-gray-400 font-normal">{service.period}</span>
-=======
                         <div className='text-right'>
                           <div className='text-2xl font-bold text-purple-400'>
                             {service.price}
                             <span className='text-sm text-gray-400 font-normal'>
                               {service.period}
                             </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
                           <div className='flex items-center justify-end space-x-1 mt-1'>
                             <Star className='w-4 h-4 text-yellow-400 fill-current' />
@@ -1440,14 +1240,12 @@ className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rou
                           </Link>
                           <button className='p-2 bg-white/10 border border-white/20 rounded-lg text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300'>
                             <Heart className='w-4 h-4' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           </button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
 
               ))  } catch (error) {"
     console.error("Error:", error);"
@@ -1464,7 +1262,6 @@ className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rou
   }
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1474,15 +1271,12 @@ className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rou
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20">
         <div className="container mx-auto px-4 text-center">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <motion.div
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -1529,9 +1323,6 @@ className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rou
       </section>
     </Layout>
 )
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -1539,10 +1330,7 @@ className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rou
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             <span className="text - sm text - gray - 400 font - normal">{service.period}</span>;
                           </div>;"
                           <div className="flex items - center justify - end space - x-1 mt - 1">;"
@@ -1586,13 +1374,9 @@ className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rou
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >;
-=======
 
           >;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className="text - 4xl font - bold text - white mb - 6">;
               Ready to Transform Your Business?;
             </h2>;"
@@ -1608,10 +1392,7 @@ className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rou
               </Link>;
               <Link;"
                 href="/pricing";
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >;
                 View Pricing;
               </Link>;
@@ -1628,18 +1409,8 @@ className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rou
   }
 }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
@@ -1647,4 +1418,3 @@ className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rou
 }
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

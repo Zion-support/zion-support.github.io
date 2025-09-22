@@ -3,7 +3,6 @@
 
 const fs = require('fs');
 console.log('🔧 Final Syntax Cleanup');
-===============');
 
 console.log('=');
 

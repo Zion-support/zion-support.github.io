@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ReferralStatsProps {
   stats: ReferralStatsType,
   isLoading: boolean,
@@ -8,26 +6,22 @@ import { ReferralStats as ReferralStatsType } from "@/types/referrals","
 import { Award, Share, Star, TrendingUp } from 'lucide-react''
   stats: ReferralStatsType
   isLoading: boolean
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
 
-<<<<<<< HEAD
 interface ReferralStatsProps {
 
   stats: ReferralStatsType
   isLoading: boolean
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { ReferralStats as ReferralStatsType } from '@/types / referrals';
-=======
 interface ReferralStatsProps {};
   stats: ReferralStatsType;
   isLoading: boolean'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';'
 import { ReferralStats as ReferralStatsType } from '@/types / referrals';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
 interface ReferralStatsProps {}
   stats: ReferralStatsType;
@@ -42,16 +36,12 @@ function ReferralStats() {}
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';'
 import { ReferralStats as ReferralStatsType  } from '@/types / referrals';'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';'
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Star } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ReferralStatsProps {
   stats: ReferralStatsType,
   isLoading: boolean
 }
-<<<<<<< HEAD
 
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
@@ -153,7 +143,6 @@ value: stats && stats.pendingReferrals,;
           </CardContent>;
         </Card>;
       ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -200,20 +189,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardHeader>
           <CardContent>
             {isLoading ? (
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             ) : (
 <>"
                 <div className="text-2xl font-bold">{card.value}</div>"
                 <p className="text-xs text-muted-foreground">{card.description}</p>
-<<<<<<< HEAD
       description: "People you've invited",
     },
     {'
@@ -251,7 +235,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </>
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
@@ -309,10 +292,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
         </Card>))}
     </div>);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";""
 import { ReferralStats as ReferralStatsType } from "@/types/referrals";""
@@ -399,4 +379,3 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
             )}
     </div>;]"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

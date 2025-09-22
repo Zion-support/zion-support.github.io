@@ -1,5 +1,4 @@
 
-=======
 import { createContext, useContext, useEffect, useState } from "react";
 ;
 type Theme = "dark" | "light" | "system";
@@ -52,10 +51,8 @@ export function ThemeProvider({;
     }}
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <ThemeProviderContext.Provider value={value}>;
       {children}
     </ThemeProviderContext.Provider>;
   );
 }
-<<<<<<< HEAD

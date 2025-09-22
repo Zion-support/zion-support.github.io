@@ -84,11 +84,8 @@ pr-12325
 
 
 
-      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
         issues.push('Invalid return statement syntax');
       }
-      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
-      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {        issues.push('Merge conflict markers found');
       }
       'next.config.js]
     ];

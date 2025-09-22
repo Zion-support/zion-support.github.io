@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -21,17 +17,9 @@ import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import {useToast} from "@/hooks/use-toast";
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -51,14 +39,8 @@ import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
 import ReplyForm from "@/components/community/ReplyForm",
-<<<<<<< HEAD
 import { useToast } from "@/hooks/use-toast",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { useToast } from "@/hooks/use-toast",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -72,8 +54,6 @@ const mockPost: ForumPost = {
   tags: ["machine-learning", "fine-tuning", "gpt"],
   createdAt: "2025-04-01T12:00:00Z",
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   updatedAt: "2025-04-01T12:00:00Z",
   upvotes: 48,
   downvotes: 2,
@@ -81,18 +61,13 @@ const mockPost: ForumPost = {
   isAnswered: true,
 isFeatured: true;
 },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const mockPost: ForumPost = {
-=======
 import { useToast } from "@/hooks/use-toast",const mockPost: ForumPost = {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   isFeatured: true
 },
 
 const mockPost: ForumPost = {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: "1"
   title: "Best practices for AI model fine-tuning"
   content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?";
@@ -122,19 +97,12 @@ const mockReplies: ForumReply[] = [
     createdAt: "2025-04-01T14:30:00Z"
     updatedAt: "2025-04-01T14:30:00Z"
     upvotes: 12
-<<<<<<< HEAD
-<<<<<<< HEAD
     downvotes: 0
-<<<<<<< HEAD
   {
-=======
     downvotes: 0  {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     downvotes: 0
 
   {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: "reply2"
     postId: "1"
     content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance."
@@ -157,12 +125,8 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-02T09:45:00Z"
     upvotes: 15
     downvotes: 0
-<<<<<<< HEAD
     isAnswer: true
-<<<<<<< HEAD
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
   {
     id: "reply2",
@@ -189,12 +153,8 @@ const mockReplies: ForumReply[] = [
     downvotes: 0,
     isAnswer: true
   },
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     id: "reply4"
     postId: "1"
@@ -206,7 +166,6 @@ const mockReplies: ForumReply[] = [
     upvotes: 4
     downvotes: 0
   }
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -324,7 +283,6 @@ export default function ForumPostPage() { return null; }
   const [replies, setReplies] = useState(mockReplies);
 
 ],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
@@ -368,7 +326,6 @@ const [replies, setReplies] = useState(mockReplies);'
   '
   // For this demo, we'll assume the post is found;
   if (!post) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return (
       <AppLayout>"
         <div className="container py-8">
@@ -391,7 +348,6 @@ const [replies, setReplies] = useState(mockReplies);'
     toast({"
       title: "Vote recorded""
       description: "You upvoted this post"})
-<<<<<<< HEAD
     return (
       <AppLayout>
         <div className="container py-8">
@@ -417,20 +373,17 @@ const [replies, setReplies] = useState(mockReplies);'
 }
   },
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const { postId } = useParams() as { postId?:string },;
   const { user } = useAuth(),;
   const { toast } = useToast(),;
   const [post, setPost] = useState(mockPost),;
   const [replies, setReplies] = useState(mockReplies),;
   ;
-=======
   // Cast the result instead to provide the expected shape.
 
   // For this demo, we'll assume the post is found
   if (!post) {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Check if this is the user's own post;
   const isAuthor = user?.id === post?.authorId;
 
@@ -440,11 +393,9 @@ const [replies, setReplies] = useState(mockReplies);'
   // For this demo, we'll assume the post is found;
   if (!post) {;
 return (;
-=======
     return (
     return (
       <AppLayout>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="container py-8">;
           <h1>Post not found</h1>;"
           <Button asChild className="mt-4">;"
@@ -469,19 +420,13 @@ return (;
     setPost({ ...post, downvotes: post.downvotes + 1 })
 toast({
       title: "Vote recorded"
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: "You downvoted this post"})
 
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       description: "You downvoted this post"})
 
   },
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
@@ -493,10 +438,7 @@ toast({
 // Create a new reply
     const newReply: ForumReply = {
 downvotes: 0
-=======
       description: "You downvoted this post"})      downvotes: 0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         description: "Please sign in to reply"})
       return
     }
@@ -504,7 +446,6 @@ downvotes: 0
     const newReply: ForumReply = {
 
       downvotes: 0
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 })
@@ -528,26 +469,19 @@ downvotes: 0
       description: "Your reply has been added to the discussion"})
 
   },
-=======
     // Create a new reply;
     const newReply: ForumReply = {}
       downvotes: 0;
     }
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 })
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     toast({
       title: "Reply posted"
       description: "Your reply has been added to the discussion"})
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
@@ -560,13 +494,11 @@ downvotes: 0
     if (!user) {;
       toast({;"
         title: "Authentication required",;"
-=======
 
   const handleUpvote = () => {;
     if (!user) {;
       toast({;
         title: "Authentication required",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: "Please sign in to vote on posts"}),;
       return;
     }
@@ -628,17 +560,11 @@ toast({;"
         title: "Permission denied",;"
         description: "Only the original poster or moderators can mark answers",;"
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       toast({;
         title: "Permission denied",;
         description: "Only the original poster or moderators can mark answers",;
         variant: "destructive";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       });
       return;
     }
@@ -650,33 +576,20 @@ toast({;"
     }));
 
       ...reply,
-<<<<<<< HEAD
-<<<<<<< HEAD
       isAnswer: reply.id === replyId
-<<<<<<< HEAD
-=======
       isAnswer: reply.id === replyId;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     })),
-=======
       isAnswer: reply.id === replyId    })),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       isAnswer: reply.id === replyId    })),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       isAnswer: reply.id === replyId
 
     })),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
 
 toast({
       title: "Answer marked"
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: "The reply has been marked as the accepted answer"})
 
   },
@@ -685,25 +598,17 @@ toast({
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       description: "The reply has been marked as the accepted answer"})    toast({
-=======
     toast({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       description: "The reply has been marked as the accepted answer"})    toast({
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleReportPost = () => {
     if (!user) {
       toast({
         title: "Authentication required"
-=======
 
     toast({"
       title: "Answer marked""
@@ -713,14 +618,11 @@ toast({
     if (!user) {}
       toast({"
         title: "Authentication required""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: "Please sign in to report content"})
       return;
     }
 toast({
       title: "Report submitted"
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: "A moderator will review this content"})
 
 toast({
@@ -729,13 +631,11 @@ toast({
   },
 
   const handlePinPost = () => {}
-=======
       description: "A moderator will review this content"})
 
   },
 
   const handlePinPost = () => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (!isAdminOrMod) return,
 
     setPost({ ...post, isPinned: !post.isPinned }),
@@ -745,12 +645,9 @@ toast({"
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
   }
 const handleLockPost = () => {
-<<<<<<< HEAD
     if (!isAdminOrMod) return;
     setPost({ ...post, isLocked: !post.isLocked })
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
-=======
     toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned"
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
@@ -763,7 +660,6 @@ const handleLockPost = () => {
     if (!isAdminOrMod) return;
     setPost({ ...post, isLocked: !post.isLocked })
   },
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const handleLockPost = () => {
     if (!isAdminOrMod) return,
@@ -772,33 +668,22 @@ const handleLockPost = () => {
 
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked"
-<<<<<<< HEAD
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     toast({
-=======
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})    toast({
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
     toast({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       title: post.isLocked ? "Post unlocked" : "Post locked"
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
   }
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
-<<<<<<< HEAD
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
 
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
 
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
     <AppLayout>
@@ -823,7 +708,6 @@ const handleLockPost = () => {
           <CardContent className="p-6">"
             <div className="flex justify-between items-start mb-6">"
               <div className="flex items-center gap-4">"
-=======
 
   return (
     <AppLayout>
@@ -848,7 +732,6 @@ const handleLockPost = () => {
           <CardContent className="p-6">
             <div className="flex justify-between items-start mb-6">
               <div className="flex items-center gap-4">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <Avatar className="h-12 w-12">
                   <AvatarImage src={post.authorAvatar} />
                   <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>
@@ -857,10 +740,7 @@ const handleLockPost = () => {
                   <div className="font-medium text-lg">{post.authorName}</div>
                   {post.authorRole && ("
                     <Badge variant="outline" className="mt-1">
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -891,7 +771,6 @@ const mockPost: ForumPost = {;"
   categoryId: "ai-tools",;"
   tags: ["machine-learning", "fine-tuning", "gpt"],;"
   createdAt: "2025-04-01T12:00:00Z",;"
-=======
 import { useToast } from "@/hooks/use-toast",;
 // Mock data for a forum post;
 const mockPost: ForumPost = {;
@@ -905,7 +784,6 @@ const mockPost: ForumPost = {;
   categoryId: "ai-tools",;
   tags: ["machine-learning", "fine-tuning", "gpt"],;
   createdAt: "2025-04-01T12:00:00Z",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   updatedAt: "2025-04-01T12:00:00Z",;
   upvotes: 48,;
   downvotes: 2,;
@@ -1122,33 +1000,17 @@ toast({;"
                   <div className="font-medium text-lg">{post.authorName}</div>;
                   {post.authorRole && (;"
                     <Badge variant="outline" className="mt-1">;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       {post.authorRole}
-=======
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")                      {post.authorRole}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")                      {post.authorRole}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 <div>;
                   <div className="font-medium text-lg">{post.authorName}</div>;
                   {post.authorRole && (;
                     <Badge variant="outline" className="mt-1">;
 
                       {post.authorRole}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </Badge>
                   )}
                 </div>
@@ -1164,10 +1026,6 @@ toast({;"
             <div className="flex flex-wrap gap-2 mb-6">
               {post.tags.map(tag => ("
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true }),;
@@ -1179,7 +1037,6 @@ toast({;"
 
     toast({;
       title: "Answer marked",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description: "The reply has been marked as the accepted answer"});
   };
   const handleReportPost = () => {;
@@ -1218,13 +1075,8 @@ toast({;"
           <span className="text-muted-foreground">/</span>;
 
         <Card>;
-=======
     setPost({ ...post, isAnswered: true }),;        <Card>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     setPost({ ...post, isAnswered: true }),;        <Card>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       <SEO
         title={`${post && post.title} | Community Forum | Zion AI Marketplace`}
         description={post && post.content.substring(0, 160)}
@@ -1382,7 +1234,6 @@ toast({;"
         </div>;
         ;
         <Card>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <CardContent className="p-6">;
             <div className="flex justify-between items-start mb-6">;
               <div className="flex items-center gap-4">;
@@ -1395,7 +1246,6 @@ toast({;"
                   {post && post.authorRole && (;
                     <Badge variant="outline" className="mt-1">;
 {post && post.authorRole}                    </Badge>;
-=======
                       {post && post.authorRole}
 <AvatarImage src={post.authorAvatar} />;
                   <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>;
@@ -1406,7 +1256,6 @@ toast({;"
                     <Badge variant="outline" className="mt-1">;
                       {post.authorRole}
                     </Badge>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   )}
                 </div>;
               </div>;
@@ -1419,27 +1268,17 @@ toast({;"
             </div>;
 
 <div className="flex flex-wrap gap-2 mb-6">;
-<<<<<<< HEAD
-<<<<<<< HEAD
               {post && post.tags.map(tag => (;
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               {post && post.tags.map(tag => (;                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               {post && post.tags.map(tag => (;                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {tag}
                 </Badge>;
 ))}                <Button
                   variant="outline"
                   size="sm"
                   onClick={handleUpvote}
-=======
 </div>;
                   {tag}
                 </Badge>
@@ -1452,7 +1291,6 @@ toast({;"
             </div>
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
               <div className="flex items-center gap-4">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <Button
                   variant="outline"
                   size="sm"
@@ -2048,8 +1886,6 @@ if (return) {
               )}
             </div>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <Button
                   variant="ghost"
                   size="sm"
@@ -2422,15 +2258,10 @@ if (return) {}
           </CardContent>;
         </Card>;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {!post.isLocked && (
             <div className="mb-8">
-=======
           {!post.isLocked && ("
             <div className="mb-8">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h3 className="text-lg font-medium mb-4">Your Response</h3>
               {user ? (
                 <ReplyForm onSubmit={handleSubmitReply} />
@@ -2455,14 +2286,9 @@ if (return) {}
             </div>
           )}
 
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 )}
             </div>
           )}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
               {post && post.tags.map(tag => (;                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
                   {tag}
                 </Badge>;
@@ -2476,16 +2302,13 @@ if (return) {}
                   onClick={handleDownvote}              )}
             </div>
           )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
-=======
 
           {post.isLocked && ("
             <Alert className="mb-8">"
               <AlertDescription className="flex items-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Lock className="h-4 w-4 mr-2" />
                 This thread has been locked and is no longer open for responses.
               </AlertDescription>
@@ -2891,7 +2714,6 @@ pr-12325
 
                   canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
                 />
-<<<<<<< HEAD
 
 canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
                 />
@@ -2915,7 +2737,6 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
   );
 }
 
-<<<<<<< HEAD
 
 "
         <div className="mt - 8">;"
@@ -2944,7 +2765,6 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
             </div>)}
           {!post.is_locked && (
             <div className="mb - 8">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <h3 className="text - lg font - medium mb - 4">Your Response</h3>;
               {user ? (
                 />;                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
@@ -2981,7 +2801,6 @@ canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
               <h3 className="text - lg font - medium mb - 4">Your Response</h3>;"
                 <ReplyForm on_submit={handleSubmitReply} />) : (
 <Alert>;
-<<<<<<< HEAD
                   <AlertDescription>;"
                     Please <Link to="/login" className="font - medium text - zion - purple hover:underline">sign in</Link> to join the discussion.;
                   </AlertDescription>;
@@ -3124,22 +2943,11 @@ downvotes: 0;
 }</div> </div> </div> </AppLayout>) 
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 }</div> </div> </div> ) "`;
 pr-12325
 </ReplyCard>
 }</div> </div> </div> </AppLayout>) "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

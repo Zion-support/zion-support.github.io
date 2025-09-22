@@ -30,15 +30,12 @@ preDeploymentChecks() {}
             "build": this.runBuildCheck(),
             "test": this.runTestCheck();
        };
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         // Health check after each instance
         const healthCheck = await this.performHealthCheck(environment);
         if (!healthCheck.healthy) {
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -169,22 +166,16 @@ preDeploymentChecks() {}
             this.log('Smart Deployment Automation completed successfully');
             return report} catch (error) {}
             this.log(`Smart Deployment Automation "failed": ${error.message}`);
-=======
     preDeploymentChecks() {}"
 
             "test": this.runTestCheck();"
         // Health check after each instance;
         const healthCheck = await this.performHealthCheck(environment);
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
 // Run the automation if this script is executed directly;
     const automation = new SmartDeploymentAutomation) {}
     const automation = new SmartDeploymentAutomation}(;);
     automation.run().catch(console.error)};
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 module.exports = SmartDeploymentAutomation;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

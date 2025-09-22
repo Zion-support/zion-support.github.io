@@ -1,5 +1,4 @@
 :pages_backup/api/tokens/redeem.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb';
 ;
@@ -20,14 +19,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const reqs = readJson<any[]>('support/requests.json', []),
     const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`,
     reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() }),
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     const reqs = readJson<any[]>('support/requests.json', []);
     const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`;
     reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() });
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/tokens/redeem.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb'
 ;
@@ -48,7 +43,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`
     reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() })
 :pages_backup/api/tokens/redeem.ts
-<<<<<<< HEAD
 
     writeJson('support/requests.json', reqs)
   }
@@ -150,11 +144,8 @@ if ( {) {
 ;
 
 :pages_backup/api/tokens/redeem.ts
->>>>>>> pr-12243
-=======
 main
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/tokens/redeem.ts
     writeJson('support/requests.json', reqs)
   }
   return res.status(200).json({ ok: true, id })

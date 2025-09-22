@@ -316,7 +316,6 @@ const Services: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <ServiceCard
 :src/pages/Services.tsx
-<<<<<<< HEAD
             title="Micro SaaS Development"
             href="/micro-saas"
             description="Build and scale your micro SaaS business with our comprehensive development services."
@@ -363,14 +362,12 @@ const Services: React.FC = () => {
           </Link>
         </div>
 :src/pages/Services.tsx
->>>>>>> pr-12243
       </div>
     </div>
   );
 };
 :src/pages/Services.tsx
 
-<<<<<<< HEAD
 export default Services;
 function ServiceCard({ title, href, description, bullets = [], icon, price }: {
   title: string;
@@ -406,4 +403,3 @@ function ServiceCard({ title, href, description, bullets = [], icon, price }: {
 
 export default Services;
 :src/pages/Services.tsx
->>>>>>> pr-12243

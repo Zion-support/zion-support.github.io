@@ -50,7 +50,6 @@ import { Button } from "@/components/ui/button",;"
 import { HireNowCTA } from "@/components/profile/HireNowCTA",;'
 import { logErrorToProduction } from '@/utils/productionLogger',;
 :temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -173,10 +172,8 @@ export default function ProfilePage() { return null; }
 </div>;
                 {/* Main Info */}
                 <div className="flex-1">
-=======
                 {/* Main Info */}"
                 <div className="flex-1">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
                   <div className="flex justify-between items-start">
                     <div>"
                       <h1 className="text-2xl font-bold text-white">{profileData.full_name}</h1>"
@@ -185,9 +182,7 @@ export default function ProfilePage() { return null; }
                     {/* Add Save/Unsave Button Here */}
 </div>;
                   {/* Location & Availability */}
-=======
                   {/* Location & Availability */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">
                     {profileData.location && ("
                       <div className="flex items-center text-zion-slate-light">"
@@ -221,9 +216,7 @@ export default function ProfilePage() { return null; }
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
 
             </div>
@@ -254,9 +247,7 @@ export default function ProfilePage() { return null; }
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
               <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
 
             </div>
@@ -313,7 +304,6 @@ export default function ProfilePage() { return null; }
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA
               talentProfile={{
-<<<<<<< HEAD
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
@@ -495,7 +485,6 @@ if ( {) {}
                 full_name: profile_data?.full_name || '','
                 professional_title: profile_data?.professional_title || '',
                 hourly_rate: profile_data?.hourly_rate || 0,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               }}
             />;
             {/* Placeholder for other sidebar elements */}
@@ -506,7 +495,6 @@ if ( {) {}
   );
 }
 :temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
-<<<<<<< HEAD
 }
   fetch_profile ();
 }, [profile_id]);
@@ -551,5 +539,4 @@ if ( {") {}
 }'"}
 }
 :temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

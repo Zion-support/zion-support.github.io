@@ -1,5 +1,4 @@
 :pages/api/telemetry/search.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
@@ -53,7 +52,6 @@ export default function handler($2) {;
     }
 :pages/api/telemetry/search.ts
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -96,25 +94,18 @@ export default function handler($2) {;
 :pages/api/telemetry/search.ts
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return res.status (204).end ();
 
   }
 ;
     const counts = new Map<string, number>();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     for (const { q } of memoryStore) counts.set(q, (counts.get(q) || 0) + 1);
     const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n }));
     return res.status(200).json({ ok: true, top, total: memoryStore.length })
-=======
 
   }
   return res.status(405).end()
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -136,12 +127,4 @@ export default function handler($2) {;
   }
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

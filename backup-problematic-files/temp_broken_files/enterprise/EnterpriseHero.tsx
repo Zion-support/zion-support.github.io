@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -30,12 +29,10 @@ export function EnterpriseHero() {;
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 1" className="h-8" />;
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 2" className="h-8" />;
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 3" className="h-8" />;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>;
             </div>;
           </div>;
           <div className="relative">;
-<<<<<<< HEAD
 
             </div>;
           </div>;

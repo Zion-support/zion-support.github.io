@@ -107,11 +107,9 @@ console.error('Error exporting PDF:', error),;
         <DropdownMenuSeparator />;
         <DropdownMenuCheckboxItem ;
           checked={includePortfolio}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           onCheckedChange={setIncludePortfolio}
         >;
           Include Portfolio Projects;
         </DropdownMenuCheckboxItem>;
-<<<<<<< HEAD
 
 }

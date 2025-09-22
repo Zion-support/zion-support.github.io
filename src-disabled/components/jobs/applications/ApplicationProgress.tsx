@@ -1,9 +1,6 @@
 :src_backup/components/jobs/applications/ApplicationProgress.tsx
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationProgress.tsx
-<<<<<<< HEAD
 interface ApplicationProgressProps {
 
-<<<<<<< HEAD
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress",
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
@@ -28,15 +25,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export function ApplicationProgress({ status, className }:,  ApplicationProgressProps) {
   // Define the progress value based on status
 :src_backup/components/jobs/applications/ApplicationProgress.tsx
-<<<<<<< HEAD
 
   const getProgressValue = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ApplicationStatus  } from '@/types / jobs';
 import { Progress  } from '@/components / ui / progress';
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn  } from '@/lib / utils';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
@@ -63,22 +56,16 @@ case "new": return 20,
     <div className={cn("w-full space-y-2", className)}>"
       <Progress value={progressValue} className="h-2" />
 
-=======
 
 :src_backup/components/jobs/applications/ApplicationProgress.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationProgress.tsx
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
-=======
 "
       <div className="flex justify-between text-xs text-muted-foreground">"
         <div className="flex flex-col items-center">"
           <StatusIcon status={status} current="new" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationProgress.tsx
           <span className="mt-1">Submitted</span>
         </div>"
         <div className="flex flex-col items-center">"
@@ -106,16 +93,11 @@ case "new": return 20,
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const statusRank: Record<ApplicationStatus number> = {
-=======
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {}
   // Helper to determine if this step is active, completed, or inactive;
   const statusRank: Record<ApplicationStatus number> = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationProgress.tsx
     new: 1,
     viewed: 2,
     shortlisted: 3,
@@ -129,8 +111,6 @@ const statusRank_ = statusRank[status],
 
 const currentRank = statusRank[current],
   const statusRank_ = statusRank[status],
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   const currentRank = statusRank[current],
 
@@ -139,23 +119,16 @@ const currentRank = statusRank[current],
 :src_backup/components/jobs/applications/ApplicationProgress.tsx
   const getProgressValue = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationProgress.tsx
   if (currentRank < statusRank_) {
     // This step is complete
-=======
   if (currentRank < statusRank_) {}
     // This step is complete"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationProgress.tsx
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
   } else if (currentRank === statusRank_) {}
     // This is the current step"
     return <CircleDot className="h-4 w-4 text-blue-500" />
 :src_backup/components/jobs/applications/ApplicationProgress.tsx
   } else {
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationProgress.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     // This step is upcoming
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
 import { ApplicationStatus } from "@/types/jobs",;
@@ -164,23 +137,16 @@ import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 :src_backup/components/jobs/applications/ApplicationProgress.tsx
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils";
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationProgress.tsx
-=======
 
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationProgress.tsx
 interface ApplicationProgressProps {;
-=======
 import { ApplicationStatus } from "@/types/jobs",;
 import { Progress } from "@/components/ui/progress",;
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
 import { cn } from "@/lib/utils",;interface ApplicationProgressProps {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   status: ApplicationStatus,;
   className?: string;
 }
@@ -233,7 +199,6 @@ function StatusIcon() { return null; }
   } else {;
 :src_backup/components/jobs/applications/ApplicationProgress.tsx
     // This step is upcoming;
-<<<<<<< HEAD
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
         </div>;
       </div>;
@@ -272,38 +237,25 @@ if ( {) {
   } else {
     // This step is upcoming;
     return <Circle className="h - 4 w - 4 text - muted-foreground / 50" />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 }
 :src_backup/components/jobs/applications/ApplicationProgress.tsx
 ;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   }
 
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
     // This step is upcoming
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
 }}}
   }
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationProgress.tsx
   }
 
 }"
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/jobs/applications/ApplicationProgress.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationProgress.tsx
-=======
   // Check condition;
 if ( {) {
   $2;
@@ -313,4 +265,3 @@ if ( {) {
     return <Circle className="h - 4 w - 4 text - muted - foreground / 50" />;"
     return <Circle className="h-4 w-4 text-muted-foreground/50" />"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationProgress.tsx

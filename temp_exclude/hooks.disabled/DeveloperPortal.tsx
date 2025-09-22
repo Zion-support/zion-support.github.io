@@ -39,7 +39,6 @@ import { WebhooksManager } from "@/components/developers/WebhooksManager";"
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation";"
 import { ApiLogs } from "@/components/developers/ApiLogs";
 :temp_exclude/hooks.disabled/DeveloperPortal.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface TabDefinition {
   id: string,
   label: string,
@@ -165,6 +164,4 @@ export default function ProtectedDeveloperPortal() {;
 }
 
 ;
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/DeveloperPortal.tsx

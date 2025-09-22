@@ -74,7 +74,6 @@ interface FeedItem {;
 
 :temp_exclude/hooks.disabled/GlobalMap.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { NextSeo } from '@/components/NextSeo',;
@@ -193,7 +192,6 @@ export default function GlobalMapPage() { return null; }
           </div>
           <div className="flex-1 space-y-6">
             <section>
-<<<<<<< HEAD
               <h2 className="text-xl font-semibold mb-2">Top Regions by Talent</h2>
               <ul className="space-y-1">
                 {topRegions.map((r) => ("
@@ -208,10 +206,8 @@ export default function GlobalMapPage() { return null; }
             <section>
 
               <h2 className="text-xl font-semibold mb-2">Live Feed</h2>
-=======
 "
               <h2 className="text-xl font-semibold mb-2">Live Feed</h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/GlobalMap.tsx
               <ul className="space-y-1">
                 {feed.map((f) => ("
                   <li key={f.id} className="text-sm">{f.text}</li>
@@ -226,6 +222,4 @@ export default function GlobalMapPage() { return null; }
 }
 
 ;
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/GlobalMap.tsx

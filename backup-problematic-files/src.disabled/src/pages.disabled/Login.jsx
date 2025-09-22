@@ -3,7 +3,6 @@ interface LoginProps {
   // Add props here as needed
 }
 import React from 'react';
-=======
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
@@ -27,7 +26,6 @@ return <div>Something went wrong.</div>;
 import React from 'react';
 
 const Login = ({ className }) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className={className || ''}>
       <h1>Login</h1>
@@ -35,7 +33,5 @@ const Login = ({ className }) => {
     </div>
 );
 }
-=======
     </div>'
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,4 @@
 
-=======
 import { format } from "date-fns",;
 import { Calendar } from "@/components/ui/calendar",;
 import { Button } from "@/components/ui/button",;
@@ -71,9 +70,7 @@ export function TimelineStep({ formData, updateFormData } TimelineStepProps) {;
                       onSelect={(date) => updateFormData({ startDate:date })}
                       initialFocus;
                       className="p-3 pointer-events-auto";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     />;
                   </PopoverContent>;
                 </Popover>;
               </div>;
-<<<<<<< HEAD

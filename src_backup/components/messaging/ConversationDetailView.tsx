@@ -1,7 +1,4 @@
 :src/components/messaging/ConversationDetailView.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState, useEffect, useRef } from 'react',;
 import { format } from 'date-fns',;
@@ -132,7 +129,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           />
           <Button 
 :src/components/messaging/ConversationDetailView.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
 import { MessageSquare } from 'lucide-react';
@@ -175,7 +171,6 @@ export function ConversationDetailView() {
       console.error('Failed to send message:', error);
     } finally {
       setIsSending(false);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     inputRef.current?.focus();
   }, [activeConversation?.id, loadMessages]),;
@@ -338,7 +333,6 @@ return (
               </div>
             );
           })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         )}
         <div ref={messagesEndRef} />;
       </div>;
@@ -351,7 +345,6 @@ return (
             onChange={(e) => setMessageText(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
-<<<<<<< HEAD
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref={inputRef}
           />
@@ -360,16 +353,13 @@ return (
             type="submit"
 className="bg-zion-purple hover: bg-zion-purple-dark text-white"
             disabled={!newMessage.trim() || isSending}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             Send
           </Button>
         </form>
 :src/components/messaging/ConversationDetailView.tsx
-<<<<<<< HEAD
       </div>
     </div>
-<<<<<<< HEAD
   )
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
@@ -394,17 +384,10 @@ className="bg-zion-purple hover: bg-zion-purple-dark text-white"
   );
 }
 ;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
       </div>
     </div>
   );
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/ConversationDetailView.tsx
 
 });
 <AvatarImage src= {;
@@ -435,5 +418,3 @@ className="bg-zion-purple hover: bg-zion-purple-dark text-white"
 }/> </div> /> <Button > Send </Button> </form> </div> </div>) ;
 }'"
 :src/components/messaging/ConversationDetailView.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

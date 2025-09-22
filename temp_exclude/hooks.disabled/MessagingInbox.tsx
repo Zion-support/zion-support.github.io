@@ -9,7 +9,6 @@ import { useRouter } from 'next/router'; // Changed from react-router-dom;
 '
 import {logErrorToProduction} from '@/utils/productionLogger';
 :temp_exclude/hooks.disabled/MessagingInbox.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React, { useEffect, useState } from 'react',
 import { MessageSquare, Video } from 'lucide-react'
@@ -101,7 +100,6 @@ export default function MessagingInbox() {
               ) : (
 :temp_exclude/hooks.disabled/MessagingInbox.tsx
                 <ConversationsList
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext',;

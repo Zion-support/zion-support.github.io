@@ -96,13 +96,10 @@ export function MobileBrowse() {;
           <Button;
             variant={browseType === "jobs" ? "default" :"ghost"}
             className="rounded-full";
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             onClick={() => setBrowseType("jobs")}
           >;
             Jobs;
           </Button>;
-<<<<<<< HEAD
           >;
             Talents;
           </Button>;
@@ -126,4 +123,3 @@ return (<div className="min-h-screen" > <MobileHeader title= {
   browseType 
 }/> <div className="py-4 px-4" > <BrowseCards /> </div> <BottomNavigation /> </div>) 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

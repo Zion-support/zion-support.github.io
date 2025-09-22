@@ -1,5 +1,4 @@
 
-=======
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react';
 import { Button } from "./ui/button",;
@@ -55,9 +54,7 @@ export function GlobalServiceSection() {;
 ;
         <div className="flex justify-center mt-12">;
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             Get Your Free Commercial Proposal;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD

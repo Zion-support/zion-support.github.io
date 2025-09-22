@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
 const ITOnsiteServicesPage = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const ITOnsiteServicesPage = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

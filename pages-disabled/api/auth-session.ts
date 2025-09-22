@@ -28,7 +28,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 import { getSessionFromReq, isInternalAgentRequest } from '../../utils/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -38,8 +37,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'OK' });
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',;'
 import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth',;
 ;
@@ -52,4 +49,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   }'
   res.status(200).json({ message: 'OK' })
 };'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

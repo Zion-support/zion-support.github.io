@@ -55,8 +55,6 @@ export default async function handler(req, res) {
 }
   return res.status(200).json({ ok: true })
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',;'
 import { readJson, writeJson } from '../../../utils/fsDb',;'
 import { logSupportEventToOperator } from '../../../utils/operator',;
@@ -74,4 +72,3 @@ export default async function handler() { return null; }
 
   return res.status(200).json({ ok: true });
 };'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

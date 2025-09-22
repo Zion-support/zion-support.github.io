@@ -68,6 +68,3 @@ const { execSync } = require("child_process")
         this.log("\\n Errors:")
       this.log("\\n� Dependency fixing completed!")
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

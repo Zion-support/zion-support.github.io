@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -31,12 +30,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
       case "Strongly Recommended":return "bg-green-100 text-green-800",;
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800",;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       case "Low Match":;
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
-<<<<<<< HEAD
 
     <Card className="overflow-hidden">;
       <CardHeader className="pb-3">;

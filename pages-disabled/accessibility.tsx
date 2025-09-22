@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   Eye
   Ear
   Hand
@@ -18,10 +16,7 @@ import MainLayout from '../components/layout/MainLayout';
 import Link from 'next / link';'
 import MainLayout from '../components / layout / MainLayout';'
 import { motion } from 'framer-motion';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   Eye,
   Ear,
@@ -29,19 +24,13 @@ import { motion } from 'framer-motion';
   Brain,
   CheckCircle,
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Eye, 
   Ear, 
   Hand, 
   Brain, 
   CheckCircle, 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   AlertTriangle,
   Globe,
   Users,
@@ -49,13 +38,7 @@ import { motion } from 'framer-motion';
   Zap,
   FileText,
   Settings;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 const accessibility_features = [;
   {}
@@ -123,29 +106,20 @@ const accessibilityFeatures = [;
     ];
   }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> origin/automation-improvements-final
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function AccessibilityPage() {
 interface AccessibilityProps {
   className?: string;
 }
 
 const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 export default function AccessibilityPage() {}
 interface AccessibilityProps {};
   className?: string;
 }
 
 const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <MainLayout"
       title="Accessibility - Zion Tech Group"'"
@@ -156,32 +130,20 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {}
             <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
           </div>
         </section>"
         <section className="py-20">"
           <div className="container mx-auto px-4">
 <motion.div
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-=======
             <motion.div;
               transition={{ duration: 0 && 0.8 }}"
               className="text-center max-w-4xl mx-auto">;"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">;
                   Web Accessibility;
                 </span>;
@@ -195,25 +157,15 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {}
         <section className="py-20">;"
           <div className="container mx-auto px-4">;
 <motion&& motion.div
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
             <motion&& motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
           </div>
         </section>"
         <section className="py-20">"
           <div className="container mx-auto px-4">
 <motion.div
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
             <motion.div;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -422,7 +374,6 @@ key={index}
             <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
       </div>
     </MainLayout>;
@@ -430,10 +381,7 @@ key={index}
 };
 
 export default Accessibility;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }"
     title: "Visual Accessibility","
@@ -854,11 +802,6 @@ function AccessibilityPage() {}
       </div>;
     </MainLayout>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       </div>
     </MainLayout>;
   );
@@ -995,16 +938,7 @@ export default function AccessibilityPage() {}
     </MainLayout>
   );
 }
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     </MainLayout>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages-disabled/accessibility.tsx

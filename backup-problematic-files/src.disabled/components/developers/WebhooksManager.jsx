@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ' ' ' ' ' ' ' ' ' ' "export": function WebhooksManager() { const { webhooks,loading,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook,clearTestResult } = useWebhooks() const [showCreateDialog,setShowCreateDialog] = useState(false) const [showDeleteConfirm,setShowDeleteConfirm] = useState(null) const [showTestDialog,setShowTestDialog] = useState(null) const [showTestResult,setShowTestResult] = useState(false)';";";""
 
 ' \' \' \' \' \' \' \' \' \''\';\'";\";
@@ -31,4 +30,3 @@ const WebhooksManager = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

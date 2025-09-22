@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -110,15 +109,11 @@ function ApiMockContractTestingPage() {}
             ))}
 import React from 'react',
 import Head from 'next/head';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-=======
 '
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check  } from 'lucide-react';'
 import Layout from '../components/layout/Layout';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import ServiceAds from '../components/sections/ServiceAds';
 export default function ApiMockContractTestingPage() { return null; }
 import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check,} from 'lucide-react';'
@@ -135,7 +130,6 @@ export default function ApiMockContractTestingPage() {}
     mobile: '+1 302 464 0950''
     email: 'kleber@ziontechgroup.com''
     address: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -173,12 +167,9 @@ function ApiMockContractTestingPage() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     website: 'https://ziontechgroup.com',  }
   const adItems = [
     {
-<<<<<<< HEAD
       title: '🧪 API Mock & Contract Testing Platform'
       description:
         'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.'
@@ -187,7 +178,6 @@ function ApiMockContractTestingPage() {
         'OpenAPI/GraphQL import and live mock server'
         'Contract tests gated in CI (GitHub/GitLab/Bitbucket)'
         'Dynamic data generators and scenario templates'
-=======
 function ApiMockContractTestingPage() {}
   const contact_info = {'
     mobile: '+1 302 464 0950','
@@ -200,7 +190,6 @@ function ApiMockContractTestingPage() {}
         'OpenAPI/GraphQL import and live mock server''
         'Contract tests gated in CI (GitHub/GitLab/Bitbucket)''
         'Dynamic data generators and scenario templates''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Snapshot diffs and changelog with approvals'
       ]'
       link: 'https://ziontechgroup.com/api-mock-contract-testing';
@@ -214,7 +203,6 @@ function ApiMockContractTestingPage() {}
       link: 'https://ziontechgroup.com/api-mock-contract-testing',;
       contactInfo,;
     },;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ];
   const tiers = []
     {'
@@ -232,7 +220,6 @@ function ApiMockContractTestingPage() {}
       price: 'Custom''
       items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support']
     },  ];
-<<<<<<< HEAD
   return (
 import React from 'react';
 import Head from 'next/head';
@@ -288,25 +275,21 @@ export default function ApiMockContractTestingPage(req, res) {}
   ];
 ;
   const tiers = [;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },  ];
 ;
   return (
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <Layout>
       <Head>
         <title>API Mock & Contract Testing | Zion Tech Group</title>"
         <meta name="description" content="OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals." />"
         <link rel="canonical" href="https://ziontechgroup.com/api-mock-contract-testing" />
 </Head>
-<<<<<<< HEAD
 
                 </ul>
               </div>
             ))}
           </div>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Layout>
       <Head>
@@ -314,7 +297,6 @@ export default function ApiMockContractTestingPage(req, res) {}
 <meta name="description" content="OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals." />
         <link rel="canonical" href="https://ziontechgroup.com/api-mock-contract-testing" />
       </Head>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
         <ServiceAds'
           heading='API Quality Fast-Track''
@@ -342,7 +324,6 @@ className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
           </div>
 
 <div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4'>
               <div className='flex items-center justify-center gap-2 text-cyan-400 w-4 h-4'>
                 <Phone />
@@ -356,7 +337,6 @@ className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
                 <MapPin />
                 <span>{contactInfo.address}</span>
               </div>
-<<<<<<< HEAD
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
         <ServiceAds heading="API Quality Fast-Track" subheading="Mock, validate, and ship with confidence." items={adItems} />
         <div className="max-w-5xl mx-auto mt-8">
@@ -383,65 +363,37 @@ className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
 "
           <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
               <div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
               <div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
-=======
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">"
               <div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>"
               <div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
             </div>"
             <div className="text-center">
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 "
               <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
             </div>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
             </div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
           </div>;
 '
@@ -528,40 +480,22 @@ className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
                 className='bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 6 py - 3 rounded - xl';
               >;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 Book a Demo;
               </a>            </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   )
 }
 
     </Layout>);
 ;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 ;
 
@@ -582,13 +516,5 @@ className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
 
 ;
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

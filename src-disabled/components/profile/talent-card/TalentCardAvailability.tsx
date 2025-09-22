@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 interface TalentCardAvailabilityProps {
@@ -24,9 +22,7 @@ function TalentCardAvailability() {}
     }'
   } return 'bg - gray - 500 / 20 text - gray - 400';
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Clock } from 'lucide-react'
 
 interface TalentCardAvailabilityProps {
@@ -65,7 +61,6 @@ interface TalentCardAvailabilityProps {
 '
 import React from 'react';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 
 import { Clock } from 'lucide-react';
@@ -94,7 +89,6 @@ return 'bg-yellow-500/20 text-yellow-400';      case 'project-based':;
   };
 
   const getAvailabilityLabel = (status: string,) => {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     switch (status) {;
       case 'full-time':;
         return 'Full-time',;
@@ -103,7 +97,6 @@ return 'bg-yellow-500/20 text-yellow-400';      case 'project-based':;
       case 'project-based':;
         return 'Project';
       default:;
-<<<<<<< HEAD
         return status;
     }
   },
@@ -130,26 +123,17 @@ return 'bg-yellow-500/20 text-yellow-400';      case 'project-based':;
       <Clock className='h - 3 w - 3' />;
       <span>{getAvailabilityLabel (availability_type)}</span>;
     </div>);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
   const getAvailabilityColor = null;
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;
 ;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

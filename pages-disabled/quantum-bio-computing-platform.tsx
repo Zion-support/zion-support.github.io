@@ -1,6 +1,5 @@
 import React from 'react',
 import React from 'react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -25,9 +24,6 @@ class ErrorBoundary extends React.Component {}
   }
 }
 import React from 'react';
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 export default function QuantumBioComputingPlatformPage() {
@@ -76,7 +72,6 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
         />;
         <link'
           rel='canonical'
-<<<<<<< HEAD
           href='https: //ziontechgroup && ziontechgroup.com/quantum-bio-computing-platform'
         />;
       </Head>;'
@@ -100,7 +95,6 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
     </UltraFuturisticBackground>;
   );
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 export default function QuantumBioComputingPlatformPage() {
@@ -152,16 +146,11 @@ export default function QuantumBioComputingPlatformPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from 'react';
 import Head from 'next / head';
-=======
 '
 import React from 'react';'
 import Head from 'next / head';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
 export default /**;
  * QuantumBioComputingPlatformPage - Function description;
@@ -199,9 +188,4 @@ function QuantumBioComputingPlatformPage() {}
       </div>;
     </UltraFuturisticBackground>);
 ;
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

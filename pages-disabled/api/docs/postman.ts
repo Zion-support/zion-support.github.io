@@ -15,7 +15,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           method: ep && ep.method
           header: [
             {
-<<<<<<< HEAD
             : undefined,
         },
       })),
@@ -28,8 +27,6 @@ schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
     )
 schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
     }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     item: [
       {
         name: 'Health Check'

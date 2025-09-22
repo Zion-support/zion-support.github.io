@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from "react";
 import {useToast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
@@ -25,46 +18,25 @@ import {Sparkles} from "lucide-react";
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
 export function QuoteRequestForm() {
 
-<<<<<<< HEAD
 export function QuoteRequestForm() {;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export function QuoteRequestForm() {;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 export function QuoteRequestForm() {;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
-=======
 
   const [formData, setFormData] = useState<QuoteFormData>({"
     serviceType: """
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     serviceCategory: ""
     specificItem: null"
     projectName: """;
@@ -75,13 +47,9 @@ export function QuoteRequestForm() {;
     budget: {}
       amount: 0"
       type: "fixed"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     contactInfo: {
       name: ""
       email: ""
@@ -90,34 +58,20 @@ export function QuoteRequestForm() {;
       company: ""
     }
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       company: ""
     }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }),
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
     },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
     },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
       ...prev
       ...data
     }))
-<<<<<<< HEAD
-<<<<<<< HEAD
   const handleNext = () => {
     switch (currentStep) {
       case "service": setCurrentStep("details"),
@@ -154,21 +108,15 @@ export function QuoteRequestForm() {;
 
   },
 
-=======
     }
   }
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     }
   }
   },
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const handleNext = () => {}
     switch (currentStep) {}
@@ -202,12 +150,7 @@ amount: 0,;
 
   const handleNext = () => {;
     switch (currentStep) {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       case "service": setCurrentStep("details");
         break;"
       case "details":;"
@@ -222,31 +165,23 @@ amount: 0,;
       default:;
         break;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   },
 
 const handleBack = () => {
     switch (currentStep) {
     switch (currentStep) {  };
-=======
     switch (currentStep) {
   };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const handleBack = () => {;
     switch (currentStep) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
   };
 
   const handleBack = () => {;
     switch (currentStep) {;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       case "details": setCurrentStep("service");
         break;"
       case "timeline":;"
@@ -261,22 +196,12 @@ const handleBack = () => {
       default:;
         break;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleSubmit = async () => {
-=======
 
   const handleSubmit = async () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setIsSubmitting(true);
     try {}
       // In a real application, you would send the data to your backend"
@@ -293,25 +218,14 @@ const handleBack = () => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500)),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast({
         title: "Quote Request Submitted"
-=======
       // Simulate API call;
       toast({"
         title: "Quote Request Submitted""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: "We've received your request and will get back to you soon."})
       // Redirect to confirmation page or homepage"
       navigate("/")
@@ -389,11 +303,8 @@ toast ({"
         variant: "destructive"});
 
     } finally {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setIsSubmitting (false);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 
     } finally {}
@@ -402,12 +313,9 @@ toast ({"
   }
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const renderStepContent = () => {
     switch (currentStep) {
       case "service":
-<<<<<<< HEAD
         return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
       case "details":;
         return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />;
@@ -422,8 +330,6 @@ toast ({"
 
   },
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   };
 
   const handleSubmit = async () => {;
@@ -455,15 +361,10 @@ toast ({"
   const renderStepContent = () => {;
     switch (currentStep) {;"
       case "service":;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
-=======
   }        return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
         return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       case "details":;
         return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />;"
       case "timeline":;
@@ -475,24 +376,12 @@ toast ({"
       default: return null;
     }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto">
-=======
   return ("
     <div className="container mx-auto px-4 py-12">"
       <div className="max-w-3xl mx-auto">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="text-center mb-8">
           <GradientHeading>Request a Quote</GradientHeading>"
           <p className="text-zion-slate-light mt-4">'
@@ -542,12 +431,7 @@ className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:f
   )
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { useNavigate } from "react-router-dom",;
@@ -585,7 +469,6 @@ export function QuoteRequestForm() { return null; }
       name: "",;"
       email: "",;"
       phone: "",;"
-=======
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",;
 export function QuoteRequestForm() {;
   const navigate = useNavigate(),;
@@ -609,7 +492,6 @@ export function QuoteRequestForm() {;
       name: "",;
       email: "",;
       phone: "",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       company: "";
     }
   }),;
@@ -840,10 +722,6 @@ case "summary":;
   return (;
   };
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
       case "details":;
         return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />;
@@ -859,15 +737,12 @@ case "summary":;
   };
 
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="container mx-auto px-4 py-12">;
       <div className="max-w-3xl mx-auto">;
-=======
 
 "
     <div className="container mx-auto px-4 py-12">;"
       <div className="max-w-3xl mx-auto">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="text-center mb-8">;
           <GradientHeading>Request a Quote</GradientHeading>;"
           <p className="text-zion-slate-light mt-4">;'
@@ -880,11 +755,9 @@ case "summary":;
         </div>;
 
         <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">;
-=======
 
 "
         <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <CardContent className="px-6 py-8">;
             <StepProgress currentStep={currentStep} />;
 "
@@ -894,13 +767,6 @@ case "summary":;
 "
             <div className="flex justify-between mt-8">;"
               {currentStep !== "service" && (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <Button
                   variant="outline"
                   onClick={handleBack}"
@@ -911,8 +777,6 @@ case "summary":;
 "
               {currentStep !== "summary" ? (;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <Button
                   variant="outline"
                   onClick={handleBack}
@@ -924,10 +788,8 @@ case "summary":;
               {currentStep !== "summary" ? (;
                 <Button
                   onClick={handleNext}
-=======
                 <Button;
                   onClick={handleNext}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
                   Continue;
                 </Button>;
@@ -942,10 +804,8 @@ case "summary":;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
     </div>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
     </div>);
@@ -955,7 +815,6 @@ case "summary":;
       </div>;
 
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>);
     </div>;
   ),; export function QuoteRequestForm () {};
@@ -995,26 +854,14 @@ return (<div className="container mx-auto px-4 py-12" > <div className="max-w-3x
 }
     </div>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 ;
 </div>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 
 import {useState} from "react";""
@@ -1254,4 +1101,3 @@ export function QuoteRequestForm() {;
                   disabled={is_submitting}"
     </div>);
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

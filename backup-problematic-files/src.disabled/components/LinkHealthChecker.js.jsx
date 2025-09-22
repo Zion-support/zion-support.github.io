@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import _React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {'''';
 const LinkHealthChecker.js = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const LinkHealthChecker.js = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

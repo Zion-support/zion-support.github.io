@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -21,12 +20,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   if (!job) return null,;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card className="overflow-hidden border-l-4 border-l-blue-500">;
       <CardHeader className="p-4 pb-2">;
         <div className="flex justify-between items-start">;
           <div>;
-<<<<<<< HEAD
 
                 </span>;
               )}

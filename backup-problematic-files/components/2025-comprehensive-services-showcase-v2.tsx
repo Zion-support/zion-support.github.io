@@ -7,8 +7,6 @@ Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
 } from 'lucide-react',;
 // Import our new 2025 V2 innovative services;
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
 import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
 import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
@@ -79,7 +77,6 @@ import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-brea
       <SEOHead 
         title="2025 Comprehensive Services Showcase V2 | Zion Tech Group"
         description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions."
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         keywords={["micro SAAS", "IT infrastructure", "AI services", "industry solutions", "emerging technology", "Zion Tech Group"]}
       />;
@@ -333,7 +330,6 @@ function ComprehensiveServicesShowcase2025V2() {
                           Starting at {(service as any).pricing?.starter || service.price}
 
                         </div>;
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                           {(service as any).pricing?.professional ?;
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;`;
                             `${service.price} ${service.period}`;
@@ -361,7 +357,6 @@ function ComprehensiveServicesShowcase2025V2() {
                     {category.description}
                   </p>
                 </div>
-<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service) => (
                     <motion.div
@@ -410,8 +405,6 @@ className="inline - flex items - center text - cyan - 400 hover:text - cyan - 30
                       </a>
                     </motion.div>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   ))}
                     </motion.div>))}
 </a>
@@ -539,10 +532,6 @@ pr-12325
     </div>
   );
 }
-<<<<<<< HEAD:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
     </div>);
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,6 +1,4 @@
 :src_backup/components/admin/HealthDashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,9 +22,7 @@ class ErrorBoundary extends React.Component {
   }
 :src_backup/components/admin/HealthDashboard.tsx
 }
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/HealthDashboard.tsx
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -60,12 +56,8 @@ import {}
   Activity,';
 } from 'lucide-react';
 :src_backup/components/admin/HealthDashboard.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface HealthData {
-=======
 interface HealthData {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/HealthDashboard.tsx
   status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
   uptime: number;
@@ -89,7 +81,6 @@ metrics: {
 :src/components/admin/HealthDashboard.tsx
   }
 :src_backup/components/admin/HealthDashboard.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   errors: {
     summary: {
       total: number;
@@ -105,16 +96,12 @@ patternId: string,
   description: string;
       patternId: string;
       description: string;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       occurrences: number;
       severity: string;
       solution?: string;
     }>
     byCategory: { [category: string]: number }
 :src/components/admin/HealthDashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       low: number;
     }
     top_errors: Array<{}
@@ -129,7 +116,6 @@ patternId: string,
 
 :src_backup/components/admin/HealthDashboard.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -187,10 +173,6 @@ const HealthDashboard: React.FC = () => {;
       const data = await response.json(),;
       setHealthData(data),;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   if (loading) {}
     return ('
@@ -213,7 +195,6 @@ const HealthDashboard: React.FC = () => {;
         </CardContent>
       </Card>
 :src/components/admin/HealthDashboard.tsx
-<<<<<<< HEAD
     )
 
 const HealthDashboard: React.FC = () => {;
@@ -232,7 +213,6 @@ const HealthDashboard: React.FC = () => {;
       }
       const data = await response && response.json();
       setHealthData(data);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setError(null);
     } catch (err) {;
 :src_backup/components/admin/HealthDashboard.tsx
@@ -311,10 +291,8 @@ const getStatusIcon = (status: string) => {
 
   if (!healthData) return null,
 
-<<<<<<< HEAD
 
 :src_backup/components/admin/HealthDashboard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="space-y-6">
       {/* Header */}"
@@ -327,8 +305,6 @@ const getStatusIcon = (status: string) => {
 :src_backup/components/admin/HealthDashboard.tsx
           <Button
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             variant="outline"
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
@@ -336,7 +312,6 @@ const getStatusIcon = (status: string) => {
 
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
-=======
           <Button;
 "
             variant="outline""
@@ -346,7 +321,6 @@ const getStatusIcon = (status: string) => {
 '
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh;
           </Button>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/HealthDashboard.tsx
           <Button onClick={fetchHealthData} size="sm">
             Refresh;
           </Button>
@@ -418,20 +392,14 @@ const getStatusIcon = (status: string) => {
           <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
 :src/components/admin/HealthDashboard.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <TabsContent value="overview" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-=======
 
 :src/components/admin/HealthDashboard.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Card>
-=======
     )            <Card>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <CardHeader>
                 <CardTitle>System Information</CardTitle>
               </CardHeader>
@@ -467,17 +435,11 @@ const getStatusIcon = (status: string) => {
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
 :src_backup/components/admin/HealthDashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <ul className="space-y-2">
                     {healthData.health.issues.map((issue, index) => (
 :src/components/admin/HealthDashboard.tsx
                       <li key={index} className="text-sm text-red-600 flex items-start">
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
 ;
     return undefined;
@@ -492,7 +454,6 @@ const getStatusIcon = (status: string) => {
         return <XCircle className="w-5 h-5 text-red-500" />,;
       default:;
         return <Activity className="w-5 h-5 text-gray-500" />;
-=======
 "
                   <ul className="space-y-2">
                     {healthData.health.issues.map((issue, index) => ("
@@ -512,7 +473,6 @@ const getStatusIcon = (status: string) => {
         return <XCircle className='w-5 h-5 text-red-500' />;
       default:;'
         return <Activity className='w-5 h-5 text-gray-500' />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/HealthDashboard.tsx
     }
   },;
   const getStatusBadge = (status: string) => {;
@@ -537,7 +497,6 @@ const getStatusIcon = (status: string) => {
     return (;
       <div className="flex items-center justify-center p-8">;
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>;
-=======
     const minutes = Math && Math.floor((seconds % 3600) / 60);`
     return `${hours}h ${minutes}m`;
   };
@@ -549,7 +508,6 @@ const getStatusIcon = (status: string) => {
     return ('
       <div className='flex items-center justify-center p-8'>;'
         <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/HealthDashboard.tsx
       </div>;
     );
   }
@@ -581,8 +539,6 @@ const getStatusIcon = (status: string) => {
           <h1 className="text-3xl font-bold">Health Dashboard</h1>;
           {getStatusBadge(healthData.status)}
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className="flex items-center space-x-2">;
           <Button;
             variant="outline";
@@ -596,7 +552,6 @@ const getStatusIcon = (status: string) => {
 
 :src_backup/components/admin/HealthDashboard.tsx
             onClick={() => setAutoRefresh(!autoRefresh)}          >;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/HealthDashboard.tsx
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh;
           </Button>;
           <Button onClick={fetchHealthData} size="sm">;
@@ -712,37 +667,27 @@ const getStatusIcon = (status: string) => {
           <Button
             variant='outline'
             size='sm'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     ))}
-<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
                   </ul>
                 ) : (
                   <p className="text-green-600 text-sm">No issues detected</p>
                 )}
-<<<<<<< HEAD
               </CardContent>
             </Card>
           </div>
         </TabsContent>
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/HealthDashboard.tsx
 
         <TabsContent value="errors" className="space-y-4">
-=======
 "
         <TabsContent value="errors" className="space-y-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/HealthDashboard.tsx
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-=======
         <TabsContent value='errors' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <Card>
               <CardHeader>
                 <CardTitle>Error Summary</CardTitle>
@@ -829,15 +774,12 @@ const getStatusIcon = (status: string) => {
                       .slice(0, 5);
                       .map((error, index) => (;
 
-<<<<<<< HEAD:src/components/admin/HealthDashboard.tsx
                         <div
                           key={index}
                           className='border-l-4 border-red-400 pl-3 py-1'>;
-=======
                         <div;
                           key={index}'
                           className='border-l-4 border-red-400 pl-3 py-1'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/HealthDashboard.tsx
                           <p className='text-sm font-medium'>;
                             {error && error.description}
                           </p>;'
@@ -850,9 +792,6 @@ const getStatusIcon = (status: string) => {
                   <p className='text-gray-600 text-sm'>No recurring errors</p>;
 :src_backup/components/admin/HealthDashboard.tsx
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div className="space-y-2">
                     {healthData.errors.topErrors.slice(0, 5).map((error, index) => ("
                       <div key={index} className="border-l-4 border-red-400 pl-3 py-1">"
@@ -872,7 +811,6 @@ const getStatusIcon = (status: string) => {
           </div>
         </TabsContent>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <TabsContent value="metrics" className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -929,7 +867,6 @@ const getStatusIcon = (status: string) => {
 
             <Card>
               <CardHeader className='pb-2'>
-=======
                 ) : ("
                   <p className="text-gray-600 text-sm">No recurring errors</p>
                 )}
@@ -940,7 +877,6 @@ const getStatusIcon = (status: string) => {
 
             <Card>'
               <CardHeader className='pb-2'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/HealthDashboard.tsx
                 <CardTitle className='text-sm'>Error Rate</CardTitle>
               </CardHeader>
               <CardContent>'
@@ -985,7 +921,6 @@ const getStatusIcon = (status: string) => {
 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
                 )}          <Card>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
               </CardContent>
             </Card>
@@ -994,15 +929,11 @@ const getStatusIcon = (status: string) => {
 
 :src/components/admin/HealthDashboard.tsx
           <Card>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <CardHeader>
               <CardTitle>Improvement Recommendations</CardTitle>
             </CardHeader>
             <CardContent>
 {healthData.health.recommendations.length > 0 ? (
-<<<<<<< HEAD:src/components/admin/HealthDashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <ul className="space-y-3">
                   {healthData.health.recommendations.map((rec, index) => (
                     <li key={index} className="flex items-start">
@@ -1081,19 +1012,16 @@ const getStatusIcon = (status: string) => {
                       <span className='text-sm'>{rec}</span>                    </li>;
 
 :src/components/admin/HealthDashboard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   ))}
                 </ul>
               ) : (
                 <p className="text-gray-600">No specific recommendations at this time</p>
-=======
               {healthData.health.recommendations.length > 0 ? (                  ))}
                 </ul>;
               ) : (;'
                 <p className='text-gray-600'>;
                   No specific recommendations at this time;
                 </p>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               )}
 </CardContent>;
           </Card>;
@@ -1114,12 +1042,9 @@ export default HealthDashboard;
 if ( {) {
   $2
 }
-<<<<<<< HEAD:src/components/admin/HealthDashboard.tsx
-<<<<<<< HEAD
           </Card>;
         </TabsContent>;
       </Tabs>;
-<<<<<<< HEAD
         throw new Error (`HTTP ${response.status}`);
       }
       const data = await response.json ();
@@ -1477,7 +1402,6 @@ if (return null) {}
           </Card>;
         </TabsContent>;
       </Tabs>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/HealthDashboard.tsx
 
     </div>);
 }
@@ -1485,23 +1409,11 @@ export default HealthDashboard;
 export default HealthDashboard,
 :src_backup/components/admin/HealthDashboard.tsx
 export default HealthDashboard,
-<<<<<<< HEAD:src/components/admin/HealthDashboard.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/HealthDashboard.tsx
   }
   );
 };
 
 export default HealthDashboard;
 :src/components/admin/HealthDashboard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export default HealthDashboard,'";`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/HealthDashboard.tsx

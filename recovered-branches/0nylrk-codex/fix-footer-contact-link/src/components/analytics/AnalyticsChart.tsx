@@ -1,16 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend  } from 'recharts';"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";"
@@ -24,13 +15,10 @@ import {useState} from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';'
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';'
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from './react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface AnalyticsChartProps {
 
   title: string
@@ -50,22 +38,14 @@ description
   timeRange = '7d';
   onTimeRangeChange
 }: AnalyticsChartProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [chartType, setChartType] = useState<'line' | 'bar'>(type);
-<<<<<<< HEAD
-  const colors = [
-    '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
-  ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   const [chartType, setChartType] = useState<'line' | 'bar'>(type);
   const colors = [
     '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
   ];
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  const [chartType, setChartType] = useState<'line' | 'bar'>(type);
+  const colors = [
+    '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
+  ];
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
@@ -89,29 +69,18 @@ export function AnalyticsChart(): any ({ ;
 }: AnalyticsChartProps) {;'
   const [chartType, setChartType] = useState<'line' | 'bar'>(type);
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { useState } from "react",
 
-=======
 "
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select","
 import { useState } from "react",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   const [chartType, setChartType] = useState<'line' | 'bar'>(type);import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-=======
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
@@ -141,20 +110,14 @@ export function AnalyticsChart(): any ({ ;
   ];
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { useState } from "react",
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface AnalyticsChartProps {
-=======
 
 interface AnalyticsChartProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title: string,
   description?: string,
   data: any[],'
@@ -163,16 +126,12 @@ interface AnalyticsChartProps {}
   timeRange?: string,;
   onTimeRangeChange?: (range: string) => void;
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   description,
   data,
 
   description, 
 data, 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   type = 'line',
   dataKeys,
   timeRange = '7d',
@@ -181,14 +140,8 @@ data,
   const [chartType, setChartType] = useState<'line' | 'bar'>(type),
 const colors = [
     '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
-<<<<<<< HEAD
   ],
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
   const colors = [;
     '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57';
@@ -196,11 +149,7 @@ const colors = [
   return (
 
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
   return (  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',;
@@ -234,14 +183,11 @@ export function AnalyticsChart({ ;
   ;
   return (;
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
-=======
 "
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;"
       <CardHeader className="pb-2">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">;
           <div>;"
             <CardTitle className="text-white text-lg">{title}</CardTitle>;"
@@ -254,17 +200,8 @@ export function AnalyticsChart({ ;
                   <SelectValue placeholder="Time Range" />;
                 </SelectTrigger>;"
                 <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   data_keys: string[],
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   data_keys: string[],
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   time_range?: string;
   onTimeRangeChange?: (range: string) => void;
 }
@@ -292,27 +229,15 @@ function AnalyticsChart() {
                 <SelectTrigger className="w - 24 h - 8 text - xs bg - zion - blue border - zion - blue - light text - zion - slate - light">;
                   <SelectValue placeholder="Time Range" />;
                 </SelectTrigger>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate - light">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                  <SelectItem value="1d">1 Day</SelectItem>;
-=======
-                <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate-light">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate-light">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate - light">;
                   <SelectItem value="1d">1 Day</SelectItem>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+                <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate-light">;
+                <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate-light">;
+                <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate - light">;
+                  <SelectItem value="1d">1 Day</SelectItem>;
                   <SelectItem value="7d">7 Days</SelectItem>;
                   <SelectItem value="30d">30 Days</SelectItem>;
                   <SelectItem value="90d">3 Months</SelectItem>;
-=======
 function AnalyticsChart() { return null; }
             <CardTitle className="text - white text - lg">{title}</CardTitle>;"
             {description && <CardDescription className="text - zion - slate - light">{description}</CardDescription>}
@@ -330,22 +255,16 @@ function AnalyticsChart() { return null; }
                   <SelectItem value="7d">7 Days</SelectItem>;"
                   <SelectItem value="30d">30 Days</SelectItem>;"
                   <SelectItem value="90d">3 Months</SelectItem>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <SelectItem value="365d">1 Year</SelectItem>;
-<<<<<<< HEAD
                 </SelectContent>;
 '
                   tick={{ fill: '#b1b9c6', fontSize: 12 }}
                   angle={-30}"
                   textAnchor="end"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-=======
                 </SelectContent>;
 
                   tick={{ fill: '#b1b9c6', fontSize: 12 }}
@@ -355,7 +274,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react",;
 interface AnalyticsChartProps {;
   title: string,;
@@ -392,17 +310,10 @@ export function AnalyticsChart() { return null; }
                 <SelectValue placeholder="Chart Type" />;
               </SelectTrigger>;"
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light">;
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <SelectItem value="line">Line</SelectItem>;
-=======
 
 "
                 <SelectItem value="line">Line</SelectItem>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
             <Select value={chartType} onValueChange={(value: 'line' | 'bar') => setChartType(value)}>;
               <SelectTrigger className="w-24 h-8 text-xs bg-zion-blue border-zion-blue-light text-zion-slate-light">;
@@ -410,7 +321,6 @@ export function AnalyticsChart() { return null; }
               </SelectTrigger>;
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light">;
                 <SelectItem value="line">Line</SelectItem>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <SelectItem value="bar">Bar</SelectItem>;
               </SelectContent>;
             </Select>;
@@ -419,21 +329,12 @@ export function AnalyticsChart() { return null; }
       </CardHeader>;
 
 textAnchor="end";
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   height={50}
-=======
                 </SelectContent>;                  height={50}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                 </SelectContent>;                  height={50}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   textAnchor="end";
 
                   height={50}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                 />;
                 <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />;
@@ -458,7 +359,6 @@ textAnchor="end";
                   tick={{ fill: '#b1b9c6', fontSize: 12 }}
                   angle={-30}
                   textAnchor="end";
-<<<<<<< HEAD
                   height={50}
                 />
                 <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
@@ -471,7 +371,6 @@ textAnchor="end";
                 />
                 <Legend />
                 {dataKeys.map((key, index) => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <Line
                     key={key}
                     type="monotone"
@@ -494,24 +393,20 @@ textAnchor="end";
                 <XAxis"
                   dataKey="date" '
                   tick={{ fill: '#b1b9c6', fontSize: 12 }} 
-<<<<<<< HEAD
                 />;
                 <YAxis tick={{ fill: '#b1b9c6', font_size: 12 }} />;
                 <Tooltip;
                   content_style={{'
                     background_color: '#1a2332','
                     border_color: '#293445','
-=======
                   <Line
                     key={key}
                     type="monotone"
                     dataKey={key}
                     stroke={colors[index % colors && colors.length]}
-=======
 
                     radius={[4, 4, 0, 0]}
 stroke={colors[index % colors.length]}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     activeDot={{ r: 8 }}
                     strokeWidth={2}
                   />
@@ -529,7 +424,6 @@ dataKey="date"
                   content_style={{
                     background_color: '#1a2332',
                     border_color: '#293445',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     color: '#fff';
                   }}
                 />;
@@ -591,7 +485,6 @@ key={key}"
 }
                   />))}
               </BarChart>)}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </ResponsiveContainer>;
         </div>;
       </CardContent>;
@@ -621,7 +514,6 @@ key={key}"
                 <Legend />;
                 {dataKeys.map((key, index) => (;
                   <Line;
-<<<<<<< HEAD
                     key={key}"
                     type="monotone";                    dataKey={key}
                     stroke={colors[index % colors.length]}
@@ -657,7 +549,6 @@ angle={-30}
                   contentStyle={{ ;
                     backgroundColor:'#1a2332', ;
                     borderColor:'#293445',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     color:'#fff';
                   }} ;
                 />;
@@ -673,7 +564,6 @@ angle={-30}
         </div>;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD
   ),; interface AnalyticsChartProps {}
   title: string;
 description?: string;
@@ -734,29 +624,16 @@ bg-zion-blue-dark border-zion-blue-light overflow-hidden"> <CardHeader className
 }fill= {
   colors[index % colors.length] 
 }radius= {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   [4, 4, 0, 0]
 }/>) ) 
 }</BarChart>) 
 }</ResponsiveContainer> </div> </CardContent> </Card>) 
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                   height={50}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 }) 
 } </div>  ) 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

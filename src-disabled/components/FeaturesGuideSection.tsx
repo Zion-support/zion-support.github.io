@@ -1,7 +1,4 @@
 :src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link'
 import { GradientHeading } from './GradientHeading'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -55,10 +52,8 @@ export function FeaturesGuideSection() {
 origin/cursor/automate-test-improve-and-merge-code-2533
       description:
         'Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.',
-=======
       description:'
         'Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
       icon: <Users className='h-10 w-10 text-zion-purple' />,
       instructions: ['
         'Access the talent directory from the main navigation','
@@ -306,7 +301,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
 :src_backup/components/FeaturesGuideSection.tsx
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from "next/link",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -318,12 +312,9 @@ export function FeaturesGuideSection() {
   const features = [
     {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
-=======
               >"
 import Link from "next/link","
 import { GradientHeading } from "./GradientHeading","
@@ -339,7 +330,6 @@ export function FeaturesGuideSection() {}
       id: "ai-matcher","
       title: "AI Matcher","
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
       instructions: ["
         "Navigate to the AI Matcher page from the homepage or marketplace","
@@ -450,8 +440,6 @@ export function FeaturesGuideSection() {}
       buttonText: "View Resources"
     }
   ],
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
 
   return ("
     <section className="py-20 bg-zion-blue-dark">"
@@ -602,13 +590,9 @@ title: "Help & Resources",,
       ],;"
       link: "/help";"
       buttonText: "View Resources";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       ],;
       link: "/help";",
       buttonText: "View Resources";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
     }
 :src_backup/components/FeaturesGuideSection.tsx
   ];
@@ -744,7 +728,6 @@ title: "Help & Resources",,
         </div>'
         <Tabs defaultValue='ai-matcher' className='w-full max-w-5xl mx-auto'>'
           <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8'>
-=======
       id: 'talent-directory'',
       title: 'Talent Directory'',
       description:
@@ -863,17 +846,11 @@ title: "Help & Resources",,
         </div>
         <Tabs defaultValue='ai-matcher' className='w-full max-w-5xl mx-auto'>'
           <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8'>'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
             {features.slice(0, 4).map(feature => (
               <TabsTrigger;
                 key={feature.id}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 value={feature.id}
 :src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
               >;
 
@@ -883,14 +860,11 @@ title: "Help & Resources",,
       icon: <Sparkles className = "h-10 w-10 text-zion-cyan" />,
 
 :src/components/FeaturesGuideSection.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace"
         "Fill in your project requirements and specifications"
         "Review the AI-recommended matches tailored to your needs"
-=======
 "
       id: "ai-matcher","
       title: "AI Matcher","
@@ -901,7 +875,6 @@ title: "Help & Resources",,
         "Navigate to the AI Matcher page from the homepage or marketplace""
         "Fill in your project requirements and specifications""
         "Review the AI-recommended matches tailored to your needs""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
         "Connect with matched talents or services directly"
       ]"
       link: "/match""
@@ -1009,7 +982,6 @@ import Link from 'next/link';'
 import { GradientHeading } from './GradientHeading';'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'
 import { Button } from './ui/button';'
-=======
       id: "ai-matcher","
       title: "AI Matcher","
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.","
@@ -1125,7 +1097,6 @@ import Link from 'next/link';
 import { GradientHeading } from './GradientHeading';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from './ui/button';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
 import { fireEvent } from '@/lib/analytics';
 import {;
   Users,;
@@ -1705,62 +1676,35 @@ icon: <HelpCircle className="h - 10 w - 10 text - zion-purple" />,
 :src_backup/components/FeaturesGuideSection.tsx
       ];
 
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
               >;
 
 :src/components/FeaturesGuideSection.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
-=======
       ];,
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";,
               >;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
                 {feature.title}
               </TabsTrigger>;
-=======
               </TabsTrigger>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             ))}
           </TabsList>
 :src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
-=======
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
 
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
 
 :src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
-=======
 <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
 <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
             {features.slice(4).map(feature => (
               <TabsTrigger;
                 key={feature.id}
                 value={feature.id}
 :src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
             {features.slice(4).map(feature => (
               <TabsTrigger;
@@ -1768,10 +1712,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 value={feature.id}
 :src_backup/components/FeaturesGuideSection.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1789,8 +1730,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </TabsList>
           {features.map(feature => (
 :src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
 
 link: "/help",
       button_text: "View Resources";
@@ -1814,9 +1753,7 @@ link: "/help",
                 value={feature.id}
 :src_backup/components/FeaturesGuideSection.tsx
                 className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion-cyan";
-=======
                 className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
               >;
                 {feature.title}
               </TabsTrigger>))}
@@ -1850,35 +1787,23 @@ className='data-[state = active]:bg - zion - blue - light data-[state = active]:
                   <p className='text - zion - slate - light mb - 6'>;
                     {feature.description}
 :src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <TabsContent key={feature.id} value={feature.id} className="mt-8">
               <div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">
                 <div className="md:w-1/3 flex flex-col items-center md:items-start">
-=======
 "
             <TabsContent key={feature.id} value={feature.id} className="mt-8">"
               <div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">"
                 <div className="md:w-1/3 flex flex-col items-center md:items-start">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
                   <div className="bg-zion-blue-dark p-4 rounded-xl mb-4">
                     {feature.icon}
                   </div>"
                   <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>"
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
 :src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <Button 
-=======
                   <Button "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
 
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
 <TabsContent key={feature.id} value={feature.id} className='mt-8'>
               <div className='bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8'>
                 <div className='md:w-1/3 flex flex-col items-center md:items-start'>
@@ -1894,14 +1819,11 @@ className='data-[state = active]:bg - zion - blue - light data-[state = active]:
                   <Button
                     className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
 :src/components/FeaturesGuideSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     asChild
                   >
                     <Link href={feature.link} />
                       {feature.buttonText}
 :src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -1966,12 +1888,10 @@ className='data-[state = active]:bg - zion - blue - light data-[state = active]:
             </TabsContent>;
           ))}
         </Tabs>
-<<<<<<< HEAD
 
         <div className="mt-12 text-center">
     <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
-=======
                 "
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">"
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>"
@@ -1982,7 +1902,6 @@ className='data-[state = active]:bg - zion - blue - light data-[state = active]:
 "
     <section className="py-20 bg-zion-blue-dark">;"
       <div className="container mx-auto px-4">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
         <div className="text-center mb-12">;
           <GradientHeading>Your Complete Guide to Zion</GradientHeading>;"
           <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto">;
@@ -2080,7 +1999,6 @@ className='data-[state = active]:bg - zion - blue - light data-[state = active]:
                       </li>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </ol>
                 </div>
               </div>
@@ -2088,10 +2006,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </Tabs>
 :src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         <div className="mt-12 text-center">
 
@@ -2099,56 +2014,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <div className='mt-12 text-center'>
 :src/components/FeaturesGuideSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Button
-=======
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>          <Button
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             variant="outline"
-=======
         "
         <div className="mt-12 text-center">
 
           <Button"
             variant="outline""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             asChild;
           >
 :src_backup/components/FeaturesGuideSection.tsx
             <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
               href="/marketplace"
-=======
             <Link;
 "
               href="/marketplace"'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/FeaturesGuideSection.tsx
               onClick={() => fireEvent('explore_marketplace_click')}
             >
               Explore Full Marketplace"
               <ArrowRight className="ml-2 h-4 w-4" />
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/FeaturesGuideSection.tsx
             </Link>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Button>
         </div>
       </div>
     </section>
 :src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >;
               Explore Full Marketplace;'"
               <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />;
@@ -2163,8 +2058,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 :src_backup/components/FeaturesGuideSection.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
   );
 }
                   </p>;
@@ -2229,7 +2122,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </section>);
 }
 :src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
   ),;}
  import { ;
   {;
@@ -2268,14 +2160,10 @@ const features = [ {;
 }
   )
 }
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 }
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx
   );
 };
   );
@@ -2285,9 +2173,7 @@ const features = [ {;
 }
   )
 :src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
   )
 }
@@ -2301,9 +2187,6 @@ const features = [ {;
   );
 }
 :src/components/FeaturesGuideSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       id: 'talent-directory',
       title: 'Talent Directory',
       description:
@@ -2601,4 +2484,3 @@ const features = [ {;
 
     </section>);"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/FeaturesGuideSection.tsx

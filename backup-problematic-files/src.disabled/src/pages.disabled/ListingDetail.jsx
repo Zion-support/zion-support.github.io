@@ -22,16 +22,13 @@ import React from 'react';
 
   return (
     <div className={className || ''}>
-=======
       return <div>Something went wrong.</div>;'
     <div className={className || ''}>'
 </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <h1>ListingDetail</h1>
       <p>This component is under development.</p>
     </div>
 );
-<<<<<<< HEAD
 
     </div>'
 pr-12325

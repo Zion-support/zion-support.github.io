@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>'';
 const SitemapPage = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const SitemapPage = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

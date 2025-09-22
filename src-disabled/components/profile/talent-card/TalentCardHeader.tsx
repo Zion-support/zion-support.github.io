@@ -1,5 +1,4 @@
 :src_backup/components/profile/talent-card/TalentCardHeader.tsx
-<<<<<<< HEAD
 
 import React from "react",
 import { BadgeCheck } from 'lucide-react'
@@ -21,7 +20,6 @@ interface TalentCardHeaderProps {
   profilePicture?: string;
   availabilityType: string;
 :src_backup/components/profile/talent-card/TalentCardHeader.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   yearsExperience: number
 }
 
@@ -31,13 +29,8 @@ fullName,
   profilePicture, 
   availabilityType,
   yearsExperience
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/talent-card/TalentCardHeader.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/talent-card/TalentCardHeader.tsx
 }: TalentCardHeaderProps) {
   return (
     <div className="flex items-start gap-4 mb-4">"
@@ -72,18 +65,11 @@ export function TalentCardHeader(): any ({;
 }
 
 :src_backup/components/profile/talent-card/TalentCardHeader.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="flex-1">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
 
-=======
 import React from "react",
 import { BadgeCheck } from 'lucide-react'
 import { TalentCardAvatar } from "./TalentCardAvatar",
@@ -110,7 +96,6 @@ export function TalentCardHeader({
       <div className="flex-1">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/profile/talent-card/TalentCardHeader.tsx
             {fullName}
             {/* AI score could be used for verification badge */}
             {yearsExperience > 5 && (
@@ -118,8 +103,6 @@ export function TalentCardHeader({
             )}
           </h3>
 :src_backup/components/profile/talent-card/TalentCardHeader.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           <TalentCardAvailability availabilityType={availabilityType} />
         </div>
@@ -144,7 +127,6 @@ interface TalentCardHeaderProps {;
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
 export function TalentCardHeader({;
@@ -173,12 +155,10 @@ export function TalentCardHeader({;
     </div>;
   );
 }
-<<<<<<< HEAD
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from 'react';
 import { BadgeCheck } from 'lucide-react';
@@ -217,6 +197,4 @@ function TalentCardHeader() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -26,7 +25,6 @@ export default function WhitelabelManager() {;
       <SEO ;
         title="White-Label Management - Zion AI Marketplace";
         description="Create and manage white-label instances of the Zion AI Marketplace platform.";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       />;
       <Header />;
       <main className="flex-1 container max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">;
@@ -37,7 +35,6 @@ export default function WhitelabelManager() {;
               Create and manage branded versions of the platform for agencies, startups, and enterprise clients.;
             </p>;
           </div>;
-<<<<<<< HEAD
 
               <TabsTrigger value="tenants">Tenants</TabsTrigger>;
               <TabsTrigger value="create">Create New</TabsTrigger>;

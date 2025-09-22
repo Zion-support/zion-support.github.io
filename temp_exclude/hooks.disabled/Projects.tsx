@@ -41,7 +41,6 @@ import { Badge } from '@/components/ui/badge''
 import Link from 'next/link'
 
 :temp_exclude/hooks.disabled/Projects.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
 import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
@@ -77,7 +76,6 @@ function ProjectsContent() {
           <div className="grid gap-6">
             {projects.map((project) => (
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Card key={project.id}>
                 <CardHeader>"
                   <CardTitle className="flex items-center gap-2">"

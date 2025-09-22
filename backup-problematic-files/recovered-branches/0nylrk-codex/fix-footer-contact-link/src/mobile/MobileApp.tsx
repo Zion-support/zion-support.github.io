@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Routes, Route, Navigate } from "react-router-dom",;
 import { MobileThemeProvider } from "./theme/MobileThemeProvider",;
@@ -24,10 +23,8 @@ export function MobileApp() {;
           element={;
             isAuthenticated ? <MobileHome /> :<Navigate to="/onboarding" />;
           } ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         />;
         <Route path="/browse" element={<MobileBrowse />} />;
         <Route path="/projects" element={<MobileProjects />} />;
         <Route path="/inbox" element={<MobileMessages />} />;
         <Route path="/resume" element={<MobileResumeBuilder />} />;
-<<<<<<< HEAD

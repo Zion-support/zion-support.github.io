@@ -85,13 +85,9 @@ const Table = require("cli-table3")
     console.log(chalk.gray("  quit               - Exit dashboard")
     console.log(chalk.gray("  help               - Show this help")
   console.error(chalk.red(" Dashboard "error": ")
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 
       chalk.gray("  restart <process>  - Restart a specific process")"
 </process>"
 // console.log(chalk.gray("  stop <process>     - Stop a specific process")"
     console.log(chalk.gray("  start <process>    - Start a specific process")"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

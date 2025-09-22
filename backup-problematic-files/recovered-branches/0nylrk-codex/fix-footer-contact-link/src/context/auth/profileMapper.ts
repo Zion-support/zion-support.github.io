@@ -29,4 +29,3 @@ export function mapProfileToUser(user:SupabaseUser, profile:any):UserProfile {;
     role:profile.user_type // Map user_type to role for backward compatibility;
   };
 } }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

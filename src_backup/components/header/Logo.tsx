@@ -1,6 +1,4 @@
 :src/components/header/Logo.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react',;
 import Link from 'next/link',;
@@ -22,17 +20,10 @@ return (
       </Link>);
   }
 :src/components/header/Logo.tsx
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/header/Logo.tsx
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   const logoToUse = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/header/Logo.tsx
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">
@@ -106,7 +97,6 @@ if ( {) {
         width={32}
         height={32}
 :src/components/header/Logo.tsx
-<<<<<<< HEAD
 
       />;
     </Link>;
@@ -127,21 +117,11 @@ if ( {) {
       />;
     </Link>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
       />
     </Link>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 
@@ -149,4 +129,3 @@ if ( {) {
     </Link>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/header/Logo.tsx

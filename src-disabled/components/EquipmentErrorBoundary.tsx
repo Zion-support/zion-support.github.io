@@ -1,15 +1,9 @@
 :src_backup/components/EquipmentErrorBoundary.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',;
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface Props {;
   children: React.ReactNode;
 }
@@ -29,9 +23,7 @@ this.state = { hasError: false }
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EquipmentErrorBoundary.tsx
 import {logErrorToProduction} from '@/utils/productionLogger';
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface Props {
@@ -50,7 +42,6 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
     super(props);
 
   static getDerivedStateFromError(error: Error): State {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return { hasError: true, error }
   }
   }
@@ -58,7 +49,6 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-<<<<<<< HEAD
         <div className="container py-8">
           <Card className="border-red-200 bg-red-50">
             <CardContent className="p-8 text-center">
@@ -98,7 +88,6 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                   onClick={() => window.location.reload()}
                   variant='default'
 >                  Refresh Page
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <Button onClick={() => window.location.reload()} variant="default">
               </p>
               <div className="flex gap-2 justify-center">
@@ -107,7 +96,6 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                   variant="outline"
                 >
 :src_backup/components/EquipmentErrorBoundary.tsx
-<<<<<<< HEAD
                   <RefreshCw className="h-4 w-4 mr-2" />
                   Try Again
                 </Button>
@@ -128,11 +116,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                   Try Again
 :src_backup/components/EquipmentErrorBoundary.tsx
                 </Button>                <Button onClick={() => window.location.reload()} variant="default">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
                 </Button>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EquipmentErrorBoundary.tsx
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -200,7 +184,6 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
                 </Button>
                 <Button onClick={() => window.location.reload()} variant="default">
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/EquipmentErrorBoundary.tsx
                   Refresh Page
                 </Button>
               </div>
@@ -208,27 +191,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>
         </div>
 :src_backup/components/EquipmentErrorBoundary.tsx
-<<<<<<< HEAD
       )
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
       )
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EquipmentErrorBoundary.tsx
     return this.props.children
   }      )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 :src_backup/components/EquipmentErrorBoundary.tsx
-<<<<<<< HEAD
 ;
     return this.props.children;
-<<<<<<< HEAD
   }
 } ;
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   onClick={() => window && window.location.reload()}
                   variant='default';
                 >                  Refresh Page;
@@ -322,23 +296,13 @@ return this.props.children;
   }
 :src_backup/components/EquipmentErrorBoundary.tsx
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } ;
 :src/components/EquipmentErrorBoundary.tsx
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/EquipmentErrorBoundary.tsx
-=======
 } ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EquipmentErrorBoundary.tsx
 );
     }
 
     return this.props.children;
   }
 :src/components/EquipmentErrorBoundary.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/arxiv-research.json';
@@ -8,13 +7,10 @@ import data from '../../data/arxiv-research.json',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/arxiv-research.json',
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function ArxivResearchPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 40)
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -36,10 +32,7 @@ export default function ArxivResearchPage() {
       </div>
     </EnhancedLayout>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function ArxivResearchPage() {
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ArxivResearchPage() {}
   const items: any[] = (data?.items |[]).slice(0, 40)
@@ -60,8 +53,6 @@ export default function ArxivResearchPage() {}
       </div>
     </EnhancedLayout>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 
 ';
@@ -123,10 +114,8 @@ export default function ArxivResearchPage() {}
 );
 };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 {it.title  } catch (error) {
     console.error("Error:", error);
-=======
 
 ;
 ;
@@ -135,14 +124,11 @@ export default function ArxivResearchPage() {}
 
                 {it.title  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               </Link>'"
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">{(it.authors || []).join(', ')}</div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <p className="mt-2 text-sm text-gray-700 dark:text-gray-200">{it.summary}</p>
             </li>
           ))  } catch (error) {"
@@ -158,15 +144,6 @@ export default function ArxivResearchPage() {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,4 @@
 :src/components/errors/GlobalErrorBoundary.tsx
-<<<<<<< HEAD
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -28,7 +27,6 @@ import * as Sentry from '@sentry / nextjs';
 import { logErrorToProduction } from '@/utils / production_logger';
 interface ErrorBoundaryState {
   has_error: boolean;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
@@ -67,8 +65,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Enhanced error logging
     const enhancedError = {
 :src/components/errors/GlobalErrorBoundary.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       scope.setLevel('error');      scope.setContext('errorInfo', {
         componentStack: errorInfo.componentStack
         retryCount: this.state.retryCount
@@ -76,8 +72,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       Sentry.captureException(error)    })
 
 })
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 
   componentWillUnmount() {
@@ -95,9 +89,7 @@ private generateErrorId(): string {
 
   }
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   private getUserId(): string | null {
     // Try to get user ID from various sources
     if (typeof window !== 'undefined') {
@@ -160,7 +152,6 @@ export class GlobalErrorBoundary extends Component<;
 > {;
   private retryTimeouts: NodeJS && NodeJS.Timeout[] = [];
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   constructor(props: ErrorBoundaryProps) {;
     super(props);
 export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
@@ -176,7 +167,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       errorId: null,;
       retryCount: 0,;
       userFeedback: '',;
-<<<<<<< HEAD
       showDetails: false,
 };  }    ,}
       showDetails: false;
@@ -286,7 +276,6 @@ buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',
         errorId: null,
         retryCount: this.state.retryCount + 1,
 :src/components/errors/GlobalErrorBoundary.tsx
-<<<<<<< HEAD
 
         showDetails: false
       })
@@ -296,9 +285,7 @@ buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',
       })
     }, retryDelay)
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (response.ok) {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         // Show success message
   private report_error = async () => {
     // Check condition
@@ -338,7 +325,6 @@ logErrorToProduction ('Failed to report error:', { data: err });
     }    }
   }
 
-<<<<<<< HEAD
     if (this.props.onError) {;
       this.props.onError(error, errorInfo);
     }
@@ -502,35 +488,25 @@ logErrorToProduction('Failed to report error:', { data: err });
   };
 
 :src/components/errors/GlobalErrorBoundary.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   private goHome = () => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (typeof window !== 'undefined') {
       window.location.href = '/';
     }
 :src/components/errors/GlobalErrorBoundary.tsx
-<<<<<<< HEAD
   }
 
-<<<<<<< HEAD
   };
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   render() {
     if (this.state.hasError && this.state.error) {
       // Use custom fallback if provided
       if (this.props.fallback) {
 :src/components/errors/GlobalErrorBoundary.tsx
-<<<<<<< HEAD
 
         return this.props.fallback;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   private getBuildInfo() {;
     return {;
       version: process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',;
@@ -543,7 +519,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       environment: process && process.env.NODE_ENV,;
       buildTime: process && process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 ;
   private getErrorSeverity(error: Error): 'low' | 'medium' | 'high' | 'critical' {;
@@ -665,8 +640,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       // Use custom fallback if provided;
       if (this.props.fallback) {;
         return this.props.fallback;
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
 
       const severity = this.getErrorSeverity(this.state.error)
@@ -678,9 +651,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       return (
 
         <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/errors/GlobalErrorBoundary.tsx
 return this.props.fallback;
       }
 
@@ -702,18 +672,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
 :src/components/errors/GlobalErrorBoundary.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <Card className="w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">
                   <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400" />
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </div>
                 <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                   Oops! Something went wrong
@@ -726,7 +689,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
 
                     </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className="flex items-center justify-center gap-2 mt-2">
                   <Badge 
                     variant={severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary'}
@@ -766,7 +728,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Go Home
                   </Button>
 
-<<<<<<< HEAD
                   <Button 
                     onClick={() => this.setState({ showDetails: !this.state.showDetails })}
                     variant="ghost" 
@@ -809,12 +770,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <RefreshCw className="h-4 w-4" />;
                       Try Again;
                     </Button>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 )}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>;
@@ -829,7 +787,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </Button>
                   )}
 
-<<<<<<< HEAD
                   <Button 
                     onClick={() => this.setState({ showDetails: !this.state.showDetails })}
                     variant="ghost" 
@@ -854,8 +811,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     <Bug className='h-4 w-4' />
 :src/components/errors/GlobalErrorBoundary.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
                   </Button>
                 </div>
@@ -877,12 +832,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Button>;
                 </div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD:src/components/errors/GlobalErrorBoundary.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/errors/GlobalErrorBoundary.tsx
                 {/* Error Details */}
                 <AnimatePresence>;
                   {this.state.showDetails && (;
@@ -891,22 +842,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
 :src/components/errors/GlobalErrorBoundary.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 :src/components/errors/GlobalErrorBoundary.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       className="border-t pt-4"
 
                     >
                       <div className="space-y-4">
                         <div>
-<<<<<<< HEAD
                           <h4 className="font-semibold text-sm mb-2">Error Message:</h4>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           <code className="block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto">
 className='border-t pt-4'
                     >
@@ -920,7 +864,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             {this.state.error.message}
                           </code>
                         </div>
-<<<<<<< HEAD
 
   private go_home = () => {
     // Check condition
@@ -1092,16 +1035,10 @@ if ( {) {
                         </div>;
                         {process.env.NODE_ENV === 'development' &&;
 :src/components/errors/GlobalErrorBoundary.tsx
-<<<<<<< HEAD
-=======
 {process.env.NODE_ENV === 'development' &&
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 {process.env.NODE_ENV === 'development' &&
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/errors/GlobalErrorBoundary.tsx
                           this.state.error.stack && (
                             <div>;
                               <h4 className='font - semibold text - sm mb - 2'>;
@@ -1156,10 +1093,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               onClick={this && this.reportError}
                               variant='outline'
 :src/components/errors/GlobalErrorBoundary.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         {process.env.NODE_ENV === 'development' && this.state.error.stack && (
                           <div>
                             <h4 className="font-semibold text-sm mb-2">Stack Trace:</h4>
@@ -1169,9 +1103,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>;
                         )}
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
@@ -1179,14 +1110,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </Button>
 
                           {this.props.showReportButton !== false && (
-<<<<<<< HEAD
 
                             Copy Details
                           </Button>
                           {this.props.showReportButton !== false && (
 
 :src/components/errors/GlobalErrorBoundary.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             <Button onClick={this.reportError} variant="outline" size="sm">
                               <Send className="h-4 w-4 mr-2" />
                               size='sm'
@@ -1203,9 +1132,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               Report Issue;
                             </Button>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           )}
-=======
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
@@ -1218,14 +1145,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               <Send className="h-4 w-4 mr-2" />
                               Report Issue
                             </Button>                          )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         </div>;
                       </div>;
                     </motion.div>;
                   )}
 :src/components/errors/GlobalErrorBoundary.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </AnimatePresence>;
               </CardContent>;
             </Card>;
@@ -1295,9 +1219,6 @@ export default GlobalErrorBoundary;
 
     return this.props.children;
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/errors/GlobalErrorBoundary.tsx
                 </AnimatePresence>
               </CardContent>
             </Card>
@@ -1313,9 +1234,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 // Hook for programmatic error boundary
 :src/components/errors/GlobalErrorBoundary.tsx
 export const useErrorBoundary = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (error) {
       throw error;
     }
@@ -1376,7 +1294,6 @@ export const withErrorBoundary = <P extends object>(;
 }
 ;
 export default GlobalErrorBoundary;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const useErrorBoundary = () => {
 
 );
@@ -1388,5 +1305,3 @@ export const useErrorBoundary = () => {
 
 export default GlobalErrorBoundary;
 :src/components/errors/GlobalErrorBoundary.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

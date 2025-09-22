@@ -1,5 +1,4 @@
 
-=======
 import React, { useState, useEffect, useRef } from 'react',;
 import { format } from 'date-fns',;
 import { MessageSquare } from 'lucide-react',;
@@ -77,13 +76,11 @@ export function ConversationDetailView() {;
     (activeConversation.context_data.title || activeConversation.context_data.description),;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="flex-1 flex flex-col h-full">;
       {/* Header */}
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">;
         <div className="flex items-center gap-3">;
           <Avatar className="h-10 w-10 border border-zion-purple/20">;
-<<<<<<< HEAD
 
             </AvatarFallback>;
           </Avatar>;

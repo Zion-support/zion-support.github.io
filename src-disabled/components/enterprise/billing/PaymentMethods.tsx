@@ -1,15 +1,11 @@
 :src_backup/components/enterprise/billing/PaymentMethods.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 
 import React from "react",
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/billing/PaymentMethods.tsx
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -30,9 +26,7 @@ const paymentMethods = [
       brand: 'Visa',
       last4: '4242',
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
@@ -52,27 +46,16 @@ isDefault: false}
   ],
 export function PaymentMethods() {
   // Mock payment methods
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/billing/PaymentMethods.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/billing/PaymentMethods.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/billing/PaymentMethods.tsx
   return (
     <Card>
       <CardHeader>
         <CardTitle>Payment Methods</CardTitle>
 :src_backup/components/enterprise/billing/PaymentMethods.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
-=======
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/billing/PaymentMethods.tsx
 <CardDescription>
           Manage your payment methods for automatic billing
         </CardDescription>
@@ -159,7 +142,6 @@ pr-12325
             key = {method && method.id,}
 :src_backup/components/enterprise/billing/PaymentMethods.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">"
@@ -201,33 +183,20 @@ pr-12325
                   )}
                 </p>
 :src_backup/components/enterprise/billing/PaymentMethods.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <p className="text-sm text-muted-foreground">
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 :src/components/enterprise/billing/PaymentMethods.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
                 <p className="text-sm text-muted-foreground">"
                 <p className="text-sm text-muted-foreground">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/billing/PaymentMethods.tsx
                   Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
             </div>
 :src_backup/components/enterprise/billing/PaymentMethods.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="flex gap-2">
               {!method.isDefault && (
-=======
 
 :src/components/enterprise/billing/PaymentMethods.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
             <div className="flex gap-2">"
               {!method.isDefault && (
                 <Button size="sm" variant="ghost">Set Default</Button>"
@@ -236,10 +205,7 @@ pr-12325
                 <Trash className="h-4 w-4" />"
             <div className="flex gap-2">
               {!method.isDefault && (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/billing/PaymentMethods.tsx
                 <Button size="sm" variant="ghost">Set Default</Button>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               )}
               <Button size="sm" variant="ghost" className="text-destructive">
                 <Trash className="h-4 w-4" />
@@ -248,8 +214,6 @@ pr-12325
           </div>
         ))}
 :src_backup/components/enterprise/billing/PaymentMethods.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       </CardContent>
       <CardFooter>
 
@@ -257,7 +221,6 @@ pr-12325
 
         <Button className="gap-1">
 
-<<<<<<< HEAD
 
         <Button className="gap-1">
 
@@ -265,7 +228,6 @@ pr-12325
 
 :src_backup/components/enterprise/billing/PaymentMethods.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/billing/PaymentMethods.tsx
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
@@ -274,7 +236,6 @@ pr-12325
   );
 };
 :src_backup/components/enterprise/billing/PaymentMethods.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <Button className="gap-1">
           <Plus className="h-4 w-4" />
           Add Payment Method
@@ -283,9 +244,7 @@ pr-12325
     </Card>
 :src_backup/components/enterprise/billing/PaymentMethods.tsx
 )
-=======
   )
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/billing/PaymentMethods.tsx
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -366,7 +325,6 @@ function PaymentMethods() {
       exp_year: 2026,
       is_default: false,
     },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ];
   return (;
     <Card>;
@@ -499,17 +457,9 @@ pr-12325
 }
 ;
 :src_backup/components/enterprise/billing/PaymentMethods.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/billing/PaymentMethods.tsx
-=======
 }}}))))))]
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/billing/PaymentMethods.tsx
       </CardContent>
       <CardFooter>
 <Button className='gap-1'>
@@ -521,9 +471,6 @@ pr-12325
   );
 }
 :src/components/enterprise/billing/PaymentMethods.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
               </div>;
               <div>;
@@ -557,4 +504,3 @@ pr-12325
 
     );"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/billing/PaymentMethods.tsx

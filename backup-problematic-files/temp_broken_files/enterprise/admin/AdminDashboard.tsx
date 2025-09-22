@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { AdminHeader } from "./AdminHeader",;
 import { TeamManagement } from "./TeamManagement",;
@@ -19,10 +18,8 @@ export function AdminDashboard() {;
       ;
       <Tabs defaultValue="team" className="mt-8">;
         <TabsList className="grid w-full grid-cols-4 mb-8">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <TabsTrigger value="team">Team Management</TabsTrigger>;
           <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>;
           <TabsTrigger value="activity">Team Activity</TabsTrigger>;
         </TabsList>;
-<<<<<<< HEAD

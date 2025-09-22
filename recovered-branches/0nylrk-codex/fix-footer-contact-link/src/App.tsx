@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import './App.css',
 import { ThemeProvider } from "./components/ThemeProvider","
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -94,7 +91,6 @@ const baseRoutes = [;"
   { path: "/community", element: <CommunityPage /> },;"
   { path: "/contact", element: <ContactPage /> },;
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { Suspense } from 'react',
 import { Routes, Route } from 'react-router-dom',
 import './App.css',
@@ -120,9 +116,6 @@ import { ThemeProvider  } from './components / ThemeProvider';
 import { WhitelabelProvider  } from './context / WhitelabelContext';
 import { Toaster  } from './components / ui / toaster';
 import { Toaster, as, SonnerToaster  } from './components / ui / sonner';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -185,14 +178,7 @@ import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
-=======
 
 '
 import React, { Suspense } from './react';'
@@ -204,7 +190,6 @@ import { Toaster  } from './components / ui / toaster';'
 import { Toaster, as, SonnerToaster  } from './components / ui / sonner';
 
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   AuthRoutes,
   DashboardRoutes,
   MarketplaceRoutes,
@@ -215,9 +200,6 @@ import {}
   ErrorRoutes,
   EnterpriseRoutes,
   CommunityRoutes,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   DeveloperRoutes,
 } from './routes';
 const Home = React.lazy (() => import ("./pages / Home"));
@@ -264,9 +246,6 @@ const App = () =>: any {
           <Routes>;
             {base_routes.map (({ path, element }) => (
               <Route key={path} path={path} element={element} />))}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <Route path="/auth/*" element={<AuthRoutes />} />;
             <Route path="/dashboard/*" element={<DashboardRoutes />} />;
             <Route path="/marketplace/*" element={<MarketplaceRoutes />} />;
@@ -278,8 +257,6 @@ const App = () =>: any {
             <Route path="/community/*" element={<CommunityRoutes />} />;
             <Route path="/developers/*" element={<DeveloperRoutes />} />;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Route path="*" element={<ErrorRoutes />} />;
           </Routes>;
         </Suspense>;
@@ -311,14 +288,8 @@ import {}
   EnterpriseRoutes,
   CommunityRoutes,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   DeveloperRoutes
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   DeveloperRoutes
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 } from './routes',
 const Home = React.lazy(() => import('./pages/Home')),
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher')),
@@ -335,11 +306,7 @@ const Signup = React.lazy(() => import('./pages/Signup')),
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
 const ContactPage = React.lazy(() => import('./pages/Contact')),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -385,9 +352,6 @@ const App = () => {}
       </ThemeProvider>
     </WhitelabelProvider>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default App,
 import React, { Suspense } from 'react',;
 import { Routes, Route } from 'react-router-dom',;
@@ -395,7 +359,6 @@ import './App.css',;
 import { ThemeProvider } from "./components/ThemeProvider",;
 import { WhitelabelProvider } from "./context/WhitelabelContext",;
 import { Toaster } from "./components/ui/toaster",;
-=======
 export default App,';
 import React, { Suspense } from 'react',;'
 import { Routes, Route } from 'react-router-dom',;'
@@ -403,7 +366,6 @@ import './App.css',;"
 import { ThemeProvider } from "./components/ThemeProvider",;"
 import { WhitelabelProvider } from "./context/WhitelabelContext",;"
 import { Toaster } from "./components/ui/toaster",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Toaster as SonnerToaster } from "./components/ui/sonner",;
 import {;
   AuthRoutes,;
@@ -505,14 +467,10 @@ export default App;  )
 },
 
 export default App;
-=======
 export default App;
 export default App;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   { path: '/contact', element: <ContactPage /> },
 ];
-=======
 "
         <SonnerToaster position="top - right" />;
       </ThemeProvider>;
@@ -522,7 +480,6 @@ export default App;
 export default App;
 ;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const App = () => {
   return (
@@ -552,14 +509,9 @@ const App = () => {
     </WhitelabelProvider>
   );
 };
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 export default App;
 export default App;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default App,
 import React, { Suspense } from 'react',;
 import { Routes, Route } from 'react-router-dom',;
@@ -641,18 +593,8 @@ const App = () => {;
     </WhitelabelProvider>;
   );
 },;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default App;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default App;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

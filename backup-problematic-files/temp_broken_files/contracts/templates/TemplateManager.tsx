@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { useContractTemplates } from "@/hooks/useContractTemplates",;
 import { ContractTemplate } from "@/types/contracts",;
@@ -44,12 +43,10 @@ export function TemplateManager({;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle>;
-<<<<<<< HEAD
 
               >;
                 Save Current as Template;

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/QrCodeDownload.tsx
 import { AppStoreButtons } from "./AppStoreButtons",;
 ;
 export const QrCodeDownload:React.FC = () => {;
@@ -8,7 +7,6 @@ export const QrCodeDownload:React.FC = () => {;
   const googlePlayUrl = "#", // Replace with actual Google Play URL;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="max-w-5xl mx-auto">;
@@ -36,12 +34,10 @@ export const QrCodeDownload:React.FC = () => {;
             <div className="flex-shrink-0">;
               <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-xl shadow-lg">;
                 <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <QrCode className="w-full h-full p-4" />;
                   {/* This would be replaced with an actual QR code in production */}
                 </div>;
                 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/QrCodeDownload.tsx
                   Scan to download;
                 </p>;
               </div>;
@@ -62,4 +58,3 @@ export const QrCodeDownload:React.FC = () => {;
 };
 "
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/QrCodeDownload.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/QrCodeDownload.tsx

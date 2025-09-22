@@ -1,5 +1,4 @@
 
-=======
 import { Fragment } from "react",;
 import { Route, Routes, Navigate } from "react-router-dom",;
 import Home from "@/pages/Home",;
@@ -17,10 +16,8 @@ import VideoCall from "@/pages/VideoCall",;
 ;
 const ContentRoutes = () => {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Routes>;
       {/* Content Routes */}
       <Route path="/" element={<Home />} />;
       <Route path="/home" element={<Home />} />;
       <Route path="/about" element={<About />} />;
-<<<<<<< HEAD

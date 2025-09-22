@@ -120,7 +120,6 @@ pr-12325
 
             <FormItem>;
 <FormLabel>Interview Title</FormLabel>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <FormControl>;
                 <Input placeholder="Brief title for the interview" {...field} />;"
 
@@ -132,11 +131,7 @@ render={({ field }) => (;
 
                   <PopoverTrigger asChild>;
 <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                       <Button;
                         variant="outline";
                         className={cn(;
@@ -159,13 +154,11 @@ render={({ field }) => (;
                         ) :(;
                           <span>Pick a date</span>;
                         )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                       </Button>;
                     </FormControl>;
                   </PopoverTrigger>;
                   <PopoverContent className="w-auto p-0" align="start">;
-<<<<<<< HEAD
                     />;
                   </PopoverContent>;
                 </Popover>;
@@ -228,19 +221,15 @@ render={({ field }) => (;
           <FormField;
             control={form.control}
             name="meetingLink";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Meeting Link (Optional)</FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
                     placeholder={`Add your ${form.watch('platform')} link here`}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {...field}
 />;
                 </FormControl>;
                 <FormMessage />;
-<<<<<<< HEAD
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Notes (Optional)</FormLabel>;
@@ -288,5 +277,4 @@ form.control
 }/>) 
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
 }/> </Button> </div> </form> </Form>) 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }

@@ -7,8 +7,6 @@ const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ComprehensiveAutomationRunner {
   // TODO: Implement
 }
@@ -166,5 +164,4 @@ module.exports = HealthCheckAutomation;`;
   const runner = new ComprehensiveAutomationRunner();
   runner.run().catch(console.error);
 }
-<<<<<<< HEAD
 module.exports = ComprehensiveAutomationRunner;

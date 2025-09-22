@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -26,9 +23,6 @@ class ErrorBoundary extends React.Component {
 }'
 import React from 'react';
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -37,7 +31,6 @@ import EnhancedButton from "../../components/ui/EnhancedButton";
 import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
 
 const TalentProfile: NextPage = () => {
-=======
 
 import type { NextPage } from "next";"
 import Head from "next/head";"
@@ -46,7 +39,6 @@ import { useState } from "react";"
 import EnhancedButton from "../../components/ui/EnhancedButton";"
 import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
 const TalentProfile: NextPage = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const router = use_router ();
   const { slug } = router.query;
 
@@ -74,8 +66,6 @@ import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
 const TalentProfile: NextPage = () => {}
   const router = useRouter(),
   const { slug } = router.query,
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="space-y-6 pb-20">;
       {" "}
@@ -105,18 +95,14 @@ const TalentProfile: NextPage = () => {}
             variant="ghost""
             onClick={() => handleRespond("Negotiate")}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
   },
-<<<<<<< HEAD
   return (
     <div className="space-y-6 pb-20">
-=======
   return (
     <div className="space-y-6 pb-20">
-=======
 const [responseLog, setResponseLog] = useState<
     Array<{ action: 'Accept' | 'Decline' | 'Negotiate'; at: string }>
   >([]);
@@ -127,8 +113,6 @@ const [responseLog, setResponseLog] = useState<
 
   return (
     <div className='space-y-6 pb-20'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Head>
         <title>{slug} - Talent - Zion</title>
       </Head>
@@ -149,7 +133,6 @@ const [responseLog, setResponseLog] = useState<
             <TrustBadge type='Top Rated' />
           </div>
         </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="flex gap-2">
           <EnhancedButton onClick={() => handleRespond('Accept')}>Accept</EnhancedButton>
           <EnhancedButton variant="secondary" onClick={() => handleRespond('Decline')}>Decline</EnhancedButton>
@@ -157,8 +140,6 @@ const [responseLog, setResponseLog] = useState<
         </div>
       </header>
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section className="grid md:grid-cols-3 gap-6">
         <div className="md:col-span-2 space-y-4">
           <div className="border rounded-md p-4">
@@ -187,39 +168,28 @@ Experienced developer specializing in React, Next.js, and Node.js.
             />
           </div>
         </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <aside className="space-y-4">
           <div className="border rounded-md p-4">
             <h3 className="font-semibold mb-2">Response Log</h3>
             <ul className="space-y-1 text-sm">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         </div>"
         <aside className="space-y-4">"
           <div className="border rounded-md p-4">"
             <h3 className="font-semibold mb-2">Response Log</h3>"
             <ul className="space-y-1 text-sm">
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           >;
             Negotiate;
           </EnhancedButton>;
         </div>;
       </header>;
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
               ))  } catch (error) {"
     console.error("Error:", error);"
@@ -227,24 +197,14 @@ Experienced developer specializing in React, Next.js, and Node.js.
   }
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </ul>;
           </div>;
         </aside>;
       </section>;
-<<<<<<< HEAD
 
 export default TalentProfile;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default TalentProfile;
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
         <aside className='space-y-4'>
           <div className='border rounded-md p-4'>
@@ -268,14 +228,10 @@ export default TalentProfile;
     </div>
 );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default TalentProfile;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 export default TalentProfile;
 ;
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

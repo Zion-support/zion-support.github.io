@@ -1,5 +1,4 @@
 
-=======
 import React, { useState, useEffect } from 'react',;
 // Use the shared icon wrapper;
 import { Bell } from '@/components/icons',;
@@ -16,12 +15,10 @@ import { ;
 import { FilterType } from '@/components/notifications/NotificationFilter',;
 ;
 export const NotificationCenter:React.FC = () => {;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const { ;
     filteredNotifications,;
     unreadCount, ;
     markAsRead, ;
-<<<<<<< HEAD
 
   // Refresh notifications when popover opens;
   useEffect(() => {;

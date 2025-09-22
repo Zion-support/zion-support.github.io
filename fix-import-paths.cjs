@@ -1,4 +1,3 @@
-===========================================');
 console.log('');
 
 // Fix enterprise members file - correct import path
@@ -75,7 +74,6 @@ if (fs.existsSync(oauthCallbackPath)) {
 
 console.log('');
 console.log('📊 IMPORT PATHS FIX REPORT');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z] ==================================================');
 console.log('');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Files fixed: 5');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Errors: 0');
@@ -104,7 +102,6 @@ const report = {
 
 fs.writeFileSync('/workspace/import-paths-fix-report.json', JSON.stringify(report, null, 2));
 console.log('📄 Report saved to import-paths-fix-report.json');
-=======
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');

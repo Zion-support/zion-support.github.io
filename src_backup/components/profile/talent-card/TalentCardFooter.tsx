@@ -87,9 +87,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
             variant="default" 
             size="sm" 
             onClick={handleRequestHire}
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/talent-card/TalentCardFooter.tsx
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire;
@@ -112,7 +110,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         isOpen = {isHireModalOpen,}
         onClose = {() => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       {/* Hire Request Modal */}
       <HireRequestModal;
@@ -124,8 +121,5 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     </>;
   );
 }
-<<<<<<< HEAD
 ;
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/talent-card/TalentCardFooter.tsx

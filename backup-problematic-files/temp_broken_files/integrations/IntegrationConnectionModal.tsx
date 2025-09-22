@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
 import { Button } from "@/components/ui/button",;
@@ -81,12 +80,10 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
         </DialogHeader>;
         ;
         {(integration.status === "connected" || integration.status === "warning") ? (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <>;
             <div className="grid gap-4 py-4">;
               <div className="space-y-4">;
                 <h3 className="text-sm font-medium">Sync Settings</h3>;
-<<<<<<< HEAD
 
                     }
                   />;

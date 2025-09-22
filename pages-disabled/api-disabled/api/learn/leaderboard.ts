@@ -1,8 +1,4 @@
 :pages/api/learn/leaderboard.ts
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -11,7 +7,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 res.status(200).json({ leaderboard: top })
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' })
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -22,7 +17,6 @@ export default function handler($2) {;
   try {;
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
     const entries = Object.values(users as any).map((u: any) => ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/learn/leaderboard.ts
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -42,7 +36,6 @@ export default /**
  * handler - Function description
  */
 function handler() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
     const users = JSON.parse (fs.readFileSync (users_path, 'utf - 8')),
     const entries = Object.values (users as any).map ((u: any) => ({
@@ -55,7 +48,6 @@ function handler() {
     res.status (200).json ({ leaderboard: top });
 :pages/api/learn/leaderboard.ts
   } catch (e: any) {
-<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -100,21 +92,9 @@ export default function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' });
   }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' });
   }
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

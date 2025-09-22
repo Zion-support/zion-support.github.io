@@ -1,18 +1,13 @@
 :src_backup/components/ui/radio-group.tsx
-<<<<<<< HEAD
 import * as React from "react"
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 import { Circle } from 'lucide-react'
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
 :src_backup/components/ui/radio-group.tsx
 >(({ className, ...props }, ref) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
     <RadioGroupPrimitive.Root
 import * as React from &quot;react & quot;
@@ -31,19 +26,13 @@ const RadioGroup = React.forward_ref<;
 :src_backup/components/ui/radio-group.tsx
     <RadioGroupPrimitive.Root
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className={cn("grid gap-2", className)}
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {...props}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       ref={ref}
     />;
   );
 });
-<<<<<<< HEAD
 RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
 const RadioGroupItem = React.forwardRef<;
   React.ElementRef<typeof RadioGroupPrimitive.Item>,;
@@ -51,22 +40,15 @@ RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
 const RadioGroupItem = React.forwardRef<;
   React.ElementRef<typeof RadioGroupPrimitive.Item>,;  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, ...props }, ref) => {;
   return (;
     <RadioGroupPrimitive.Item;
       ref={ref}
 className={cn(
         "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         className
-=======
 
         className;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/radio-group.tsx
       )}
       {...props}
     >"
@@ -78,8 +60,6 @@ className={cn(
 })
 :src_backup/components/ui/radio-group.tsx
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export { RadioGroup, RadioGroupItem }
 RadioGroup.display_name = RadioGroupPrimitive.Root.display_name;
@@ -107,19 +87,13 @@ export { RadioGroup, RadioGroupItem };
 ;
 export { RadioGroup, RadioGroupItem };
 
-<<<<<<< HEAD:src_backup/components/ui/radio-group.tsx
 export { RadioGroup, RadioGroupItem }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
 
 export { RadioGroup, RadioGroupItem }
 
 export { RadioGroup, RadioGroupItem }
 ;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export { RadioGroup, RadioGroupItem };
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/radio-group.tsx

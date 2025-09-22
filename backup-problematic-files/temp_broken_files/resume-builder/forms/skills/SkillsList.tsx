@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from 'react',;
 import { Skill } from '@/types/resume',;
 import { SkillCategory } from './SkillCategory',;
@@ -41,9 +40,7 @@ export const SkillsList = ({ skills, onDeleteSkill } SkillsListProps) => {;
             category={category} ;
             skills={categorySkills} ;
             onDelete={onDeleteSkill} ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           />;
         ))}
       </div>;
     </div>;
-<<<<<<< HEAD

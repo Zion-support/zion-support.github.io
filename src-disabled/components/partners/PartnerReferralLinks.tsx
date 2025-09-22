@@ -1,7 +1,4 @@
 :src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD:src/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -114,24 +111,17 @@ import { Input } from "@/components/ui/input",
 import { Copy, Download, Link, Plus } from 'lucide-react'
 
 :src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Copy, Download, Link, Plus } from 'lucide-react'
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerReferralLinks.tsx
 import { toast } from "@/hooks/use-toast",
 import { useReferrals } from "@/hooks/useReferrals",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
 import { Label } from "@/components/ui/label",
-=======
 "
 import { useRef, useState } from "react","
 import { Button } from "@/components/ui/button","
@@ -142,18 +132,12 @@ import { toast } from "@/hooks/use-toast","
 import { useReferrals } from "@/hooks/useReferrals","
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog","
 import { Label } from "@/components/ui/label","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/partners/PartnerReferralLinks.tsx
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
 :src/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function PartnerReferralLinks() {
-=======
 export function PartnerReferralLinks() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/partners/PartnerReferralLinks.tsx
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
   const [isDialogOpen, setIsDialogOpen] = useState(false),"
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),"
@@ -197,14 +181,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         url.searchParams.append("campaign", selectedCampaign)
 
 :src/components/partners/PartnerReferralLinks.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
 
 :src_backup/components/partners/PartnerReferralLinks.tsx
       // Add custom parameter if provided
       if (customParam) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         url.searchParams.append("source", customParam)
       }
 
@@ -240,32 +221,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link.click(),
     document.body.removeChild(link)
 },
-<<<<<<< HEAD
 
 :src/components/partners/PartnerReferralLinks.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerReferralLinks.tsx
   return (
     <div className="space-y-6">
-=======
       // Add custom parameter if provided;
       if (customParam) {}
   return ("
     <div className="space-y-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/partners/PartnerReferralLinks.tsx
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>"
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
 
 :src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Button 
               variant="outline" 
               size="sm" 
@@ -278,7 +250,6 @@ import { toast } from "@/hooks/use-toast",;
 import { useReferrals } from "@/hooks/useReferrals",;
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
 import { Label } from "@/components/ui/label",;
-=======
             <Button "
               variant="outline" "
               size="sm" "
@@ -291,7 +262,6 @@ import { toast } from "@/hooks/use-toast",;"
 import { useReferrals } from "@/hooks/useReferrals",;"
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;"
 import { Label } from "@/components/ui/label",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/partners/PartnerReferralLinks.tsx
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 export function PartnerReferralLinks() { return null; }
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),;
@@ -356,8 +326,6 @@ export function PartnerReferralLinks() { return null; }
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
           <CardTitle className="flex items-center justify-between">;
             <span>Your Referral Link</span>;
             <Button;
@@ -376,18 +344,13 @@ export function PartnerReferralLinks() { return null; }
               className='flex items - center gap - 2'            >;'
               <Download className='h - 4 w - 4' />;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerReferralLinks.tsx
               Export Links;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </Button>;
           </CardTitle>;
           <CardDescription>Share this link with your audience to earn rewards</CardDescription>;
         </CardHeader>;
         <CardContent>;
 :src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="flex space-x-2">;
             <Input;
               value={baseLink}
@@ -411,18 +374,14 @@ export function PartnerReferralLinks() { return null; }
             <Input value={base_link} read_only className='font - mono text - sm' />;
             <Button variant='outline' on_click={() => handleCopyLink (base_link)}>;
               <Copy className='h - 4 w - 4' />;
-=======
 '
           <div className='flex space - x-2'>;'
             <Input value={base_link} read_only className='font - mono text - sm' />;'
             <Button variant='outline' on_click={() => handleCopyLink (base_link)}>;'
               <Copy className='h - 4 w - 4' />;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/partners/PartnerReferralLinks.tsx
               <span className='sr - only'>Copy</span>            </Button>;
 :src/components/partners/PartnerReferralLinks.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerReferralLinks.tsx
           </div>;
         </CardContent>;
       </Card>;'
@@ -446,10 +405,8 @@ export function PartnerReferralLinks() { return null; }
               <DialogTitle > Create Custom Campaign Link</DialogTitle>;
 
 :src/components/partners/PartnerReferralLinks.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
 :src_backup/components/partners/PartnerReferralLinks.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <DialogTrigger asChild>
             <Button variant="outline" size="sm" className="flex items-center gap-2">
               <Plus className="h-4 w-4" />
@@ -464,12 +421,7 @@ export function PartnerReferralLinks() { return null; }
               </DialogDescription>
             </DialogHeader>
 :src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
 
-<<<<<<< HEAD:src/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
             <div className="grid gap-4 py-4">"
               <div className="grid gap-2">"
                 <Label htmlFor="campaign">Campaign Type</Label>"
@@ -496,14 +448,11 @@ export function PartnerReferralLinks() { return null; }
                   placeholder="spring_campaign, video_123, etc." "
                   value={customParam}
                   onChange={(e) = /> setCustomParam(e.target.value)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerReferralLinks.tsx
             <div className="grid gap-4 py-4">
               <div className="grid gap-2">
-=======
 "
             <div className="grid gap-4 py-4">"
               <div className="grid gap-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/partners/PartnerReferralLinks.tsx
                 <Label htmlFor="campaign">Campaign Type</Label>
                 <Select;
                   value={selectedCampaign}
@@ -523,29 +472,16 @@ export function PartnerReferralLinks() { return null; }
                 </Select>
               </div>
 :src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD:src/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerReferralLinks.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerReferralLinks.tsx
               <div className="grid gap-2">
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 "
               <div className="grid gap-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/partners/PartnerReferralLinks.tsx
                 <Label htmlFor="custom">Custom Parameter (Optional)</Label>
                 <Input "
                   id="custom" "
                   placeholder="spring_campaign, video_123, etc." 
                   value={customParam}
 :src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD
                   onChange={e => setCustomParam(e && e.target.value)}                />;
               </div>;
             </div>;
@@ -564,7 +500,6 @@ export function PartnerReferralLinks() { return null; }
                 type="button" "
                 variant="secondary" 
                 onClick={() => setIsDialogOpen(false)}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerReferralLinks.tsx
               >
                 Cancel;
               </Button>
@@ -573,7 +508,6 @@ export function PartnerReferralLinks() { return null; }
                 type="button" 
                 onClick={handleGenerateLink}"
                 className="bg-zion-purple hover:bg-zion-purple-dark"
-<<<<<<< HEAD:src/components/partners/PartnerReferralLinks.tsx
 
                 onClick={() => setIsDialogOpen(false)}
               >
@@ -581,7 +515,6 @@ export function PartnerReferralLinks() { return null; }
               </Button>
 :src_backup/components/partners/PartnerReferralLinks.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               >
                 Generate Link
               </Button>
@@ -592,7 +525,6 @@ export function PartnerReferralLinks() { return null; }
                 type='button'
                 onClick={handleGenerateLink}
 :src/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD
                 className='bg-zion-purple hover:bg-zion-purple-dark'              >
                 Generate Link
               </Button>
@@ -602,12 +534,9 @@ export function PartnerReferralLinks() { return null; }
 :src_backup/components/partners/PartnerReferralLinks.tsx
       </div>                    <span>{item.name || 'Campaign Link'}</span>                  </div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerReferralLinks.tsx
                     <span>{item.name || 'Campaign Link'}</span>                  </div>
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
 :src_backup/components/partners/PartnerReferralLinks.tsx
@@ -624,7 +553,6 @@ export function PartnerReferralLinks() { return null; }
                 </CardTitle>
 :src_backup/components/partners/PartnerReferralLinks.tsx
               </CardHeader>
-<<<<<<< HEAD:src/components/partners/PartnerReferralLinks.tsx
               <CardContent className="pb-4">
                 <div className="flex space-x-2">
                   <Input
@@ -632,9 +560,7 @@ export function PartnerReferralLinks() { return null; }
                     readOnly
                     className="font-mono text-xs"
 :src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD
                   />
-<<<<<<< HEAD
               <CardContent className='pb-4'>
                 <div className='flex space-x-2'>
                 className='bg-zion-purple hover:bg-zion-purple-dark'>;
@@ -668,9 +594,7 @@ export function PartnerReferralLinks() { return null; }
 "
                     className="font-mono text-xs"
                   />
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerReferralLinks.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Button 
                     variant="outline"
                     size="sm" 
@@ -681,12 +605,8 @@ export function PartnerReferralLinks() { return null; }
 :src_backup/components/partners/PartnerReferralLinks.tsx
 
 :src/components/partners/PartnerReferralLinks.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerReferralLinks.tsx
                   </Button>
-=======
                   />                  </Button>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </div>
               </CardContent>
             </Card>
@@ -698,12 +618,9 @@ export function PartnerReferralLinks() { return null; }
               <p className="text-zion-slate-light text-center mb-4">
 :src_backup/components/partners/PartnerReferralLinks.tsx
                 Create custom campaign links to track different marketing efforts
-<<<<<<< HEAD
               </p>
 :src_backup/components/partners/PartnerReferralLinks.tsx
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Button
                 variant="outline"
                 onClick={() => setIsDialogOpen(true)}"
@@ -711,18 +628,14 @@ export function PartnerReferralLinks() { return null; }
               >;"
                 <Plus className="h-4 w-4" />;
 :src/components/partners/PartnerReferralLinks.tsx
-=======
               <Button 
                 variant="outline"
                 onClick={() => setIsDialogOpen(true)}
                 className="flex items-center gap-2";
               >;
                 <Plus className="h-4 w-4" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerReferralLinks.tsx
                 Create First Link;
-=======
               </p>                Create First Link;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </Button>;
             </CardContent>;
           </Card>;
@@ -739,7 +652,6 @@ export function PartnerReferralLinks() { return null; }
 };
 ...generatedLinks ];
 :src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD
 link && link.style.visibility = 'hidden';
 document && document.body.appendChild (link);
 link && link.click ();
@@ -774,9 +686,6 @@ document && document.body.removeChild (link)
                 type='button';'
                 variant='secondary';
                 on_click={() => setIsDialogOpen (false)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }</div> </div>) ;
 }'"}"
               <div className='grid gap - 2'>;
@@ -797,23 +706,18 @@ document && document.body.removeChild (link)
                 variant="outline"
                 onClick={() => setIsDialogOpen(true)}
                 className="flex items-center gap-2";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerReferralLinks.tsx
               >;
-=======
               >;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/partners/PartnerReferralLinks.tsx
                 <Plus className="h-4 w-4" />;
                 Create First Link;
               </Button>;
             </CardContent>;
           </Card>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         )}
       </div>;
     </div>;
   );
 :src/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD
 }
 :src_backup/components/partners/PartnerReferralLinks.tsx
 }const new_link = {}`
@@ -850,17 +754,9 @@ document.body.remove_child (link);"
     </div>;
   );
 :src_backup/components/partners/PartnerReferralLinks.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-<<<<<<< HEAD:src/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerReferralLinks.tsx
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerReferralLinks.tsx
 link.style.visibility = 'hidden';
 document.body.appendChild (link);
 link.click ();
@@ -880,8 +776,4 @@ document.body.removeChild (link);
 }</div> </div>) ;
 }'"
 :src/components/partners/PartnerReferralLinks.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/partners/PartnerReferralLinks.tsx

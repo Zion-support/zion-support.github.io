@@ -1,7 +1,4 @@
 :src/components/community/ForumCategories.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from "next/link",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { useAuth } from "@/hooks/useAuth",
@@ -31,10 +28,8 @@ import { ForumCategoryInfo } from "@/types/community",
     adminOnly: false
     icon: "MessageSquare"
   {    id: "feedback"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     id: "feedback"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
@@ -49,9 +44,7 @@ import { ForumCategoryInfo } from "@/types/community",
     adminOnly: true
     icon: "Megaphone"
 :src/components/community/ForumCategories.tsx
-<<<<<<< HEAD
 const categories: ForumCategoryInfo[] = [;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
     id: "project-help",
     name: "Project Help",
@@ -104,12 +97,8 @@ export const ForumCategories = () => {
       {visibleCategories.map((category) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ForumCategories.tsx
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
               <CardHeader className="flex flex-row items-center gap-4">
@@ -134,8 +123,6 @@ const categories: ForumCategoryInfo[] = [;
   {;
     id: "getting-hired",;
 name: "Getting Hired",;
-<<<<<<< HEAD
-<<<<<<< HEAD
     description: "Tips, strategies, and questions about getting hired on the platform.",;
     adminOnly: false,;
     icon: "Briefcase";
@@ -145,7 +132,6 @@ name: "Getting Hired",;
     icon: "Briefcase";
   };
 :src/components/community/ForumCategories.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {;
     id: "project-help",;
     name: "Project Help",;
@@ -153,7 +139,6 @@ name: "Getting Hired",;
     adminOnly: false,;
     icon: "MessageSquare";
 :src/components/community/ForumCategories.tsx
-<<<<<<< HEAD
   },;
   {;
     id: "ai-tools",;
@@ -171,7 +156,6 @@ name: "Getting Hired",;
     icon: "Code";
   };
 :src/components/community/ForumCategories.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {;
     id: "feedback",;
     name: "Feedback & Feature Requests",;
@@ -179,16 +163,11 @@ name: "Getting Hired",;
     adminOnly: false,;
     icon: "FileText";
 :src/components/community/ForumCategories.tsx
-<<<<<<< HEAD
   },;
-=======
   };
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ForumCategories.tsx
   {;
-=======
     name: "Getting Hired",;  {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     id: "announcements",;
     name: "Announcements",,
   description: "Official announcements from the Zion team.",;
@@ -196,8 +175,6 @@ name: "Getting Hired",;
     icon: "Megaphone";
   }
 :src/components/community/ForumCategories.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 ],;
 const iconMap = {;
   Briefcase,;
@@ -244,15 +221,11 @@ export const ForumCategories = () => {;
           <Link key={category && category.id} href={`/community/category/${category && category.id}`}>;
             <Card className="h-full transition-all hover: shadow-md hover:border-zion-purple/50 cursor-pointer">;
 :src/components/community/ForumCategories.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <CardHeader className="flex flex-row items-center gap-4">;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <div className="p-2 bg-zion-purple/10 rounded-full">;
                   <Icon className="h-6 w-6 text-zion-purple" />;
                 </div>;
 :src/components/community/ForumCategories.tsx
-<<<<<<< HEAD
                 <CardTitle className="text-xl">{category.name}</CardTitle>;
               </CardHeader>;
               <CardContent>;
@@ -262,7 +235,6 @@ export const ForumCategories = () => {;
               <CardContent>;
                 <CardDescription className="text-base">{category && category.description}</CardDescription>;
 :src/components/community/ForumCategories.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </CardContent>;
             </Card>;
           </Link>;
@@ -272,11 +244,7 @@ export const ForumCategories = () => {;
   )
 };
 :src/components/community/ForumCategories.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default ForumCategories;
 :src/components/community/ForumCategories.tsx
 
@@ -284,13 +252,9 @@ export default ForumCategories;
 ";
   const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
 :src/components/community/ForumCategories.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default ForumCategories;
-=======
-=======
 export default ForumCategories;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ForumCategories.tsx
 import Link from 'next/link';
 import {
   Card,
@@ -312,5 +276,3 @@ import { ForumCategoryInfo } from '@/types/community';
 const categories: ForumCategoryInfo[] = [
   {
 :src/components/community/ForumCategories.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,10 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getRequiredDocuments, getOptionalDocuments } from '[^']*';
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
-=======
 
 '
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
@@ -12,9 +10,7 @@ import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 '
 import type { KycProfile, KycRole } from '../../../utils/kyc';'
 import fs from 'fs';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import path from 'path';
-<<<<<<< HEAD
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 function load(): Record<string, KycProfile> {
   try {
@@ -54,7 +50,6 @@ function save() {
   fs.mkdir_sync (DATA_DIR, { recursive: true });
   fs.writeFileSync (FILE, JSON.stringify (db, null, 2));
 }
-<<<<<<< HEAD
 export default /**
  * handler - Function description
  */
@@ -64,13 +59,11 @@ function handler() {
   $2
 }
   const {    user_id,
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
 }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
@@ -80,15 +73,11 @@ const {    userId
     businessName
     businessRegistrationNumber
   } = req.body as {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     role,
     fullLegalName,
     business_name,
     businessRegistrationNumber,
 
-=======
   const {
     userId,
     role,
@@ -96,14 +85,10 @@ const {    userId
     businessName,
     businessRegistrationNumber,
 } = req.body as {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     userId?: string;
-=======
 
   } = req.body as {}
     user_id?: string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     role?: KycRole;
     fullLegalName?: string;
     business_name?: string;
@@ -153,15 +138,11 @@ res.status(200).json({
 ok: true, profile,
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role)})
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 
   }
-<<<<<<< HEAD
 }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -207,9 +188,6 @@ ok: true,
     profile,
     required_documents: getRequiredDocuments (role),
 optional_documents: getOptionalDocuments (role),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   });
 
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

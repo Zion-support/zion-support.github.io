@@ -1,6 +1,4 @@
 :src/components/SupportChatbot.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useRef, useEffect } from 'react',;
 }
     set_messages (prev => [...prev, user_msg]);
@@ -16,10 +14,8 @@ import { useState, useRef, useEffect } from 'react',;
           method: 'POST'
           headers: {
 
-=======
 
 :src/components/SupportChatbot.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useRef, useEffect } from 'react'
 import { MessageSquare, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -31,14 +27,12 @@ interface Msg {
   message: string
 
 import { useState, useRef, useEffect } from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { MessageSquare, X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { ChatMessage, ChatInput } from '@/components/ChatAssistant',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 
 :src/components/SupportChatbot.tsx
-<<<<<<< HEAD
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 // Fallback responses when API is unavailable
 const FALLBACK_RESPONSES = [
@@ -47,7 +41,6 @@ const FALLBACK_RESPONSES = [
   "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
 :src/components/SupportChatbot.tsx
-<<<<<<< HEAD
   "While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance."
 ],
 
@@ -79,9 +72,7 @@ export function SupportChatbot() {
           messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }]
         })
       }),
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
 
       // If Supabase function fails, try local API fallback
       if (!res.ok) {
@@ -114,9 +105,7 @@ method: 'POST',
           for (let i = 0, i < lines.length - 1, i++) {
             let line = lines[i]?.trim(),
             if (!line) continue,
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
         const message = null;
           data.message ||
           data.choices?.[0]?.message?.content ||
@@ -129,11 +118,9 @@ method: 'POST',
 :src/components/SupportChatbot.tsx
 
           FALLBACK_RESPONSES[
-=======
 // Fallback responses when API is unavailable
 
 const FALLBACK_RESPONSES = [          FALLBACK_RESPONSES[
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."
@@ -159,7 +146,6 @@ const FALLBACK_RESPONSES = [          FALLBACK_RESPONSES[
 
 :src/components/SupportChatbot.tsx
           const result = await reader.read();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           done = result.done;
           buffer += decoder.decode(result.value || new Uint8Array());
           const lines = buffer.split('\n');
@@ -168,7 +154,6 @@ const FALLBACK_RESPONSES = [          FALLBACK_RESPONSES[
           for (let i = 0; i < lines.length - 1; i++) {
             let line = lines[i]?.trim()
             if (!line) continue
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             if (line.startsWith('data:')) {
               line = line.replace(/^data:\s*/, '')
               if (line === '[DONE]') {
@@ -176,7 +161,6 @@ const FALLBACK_RESPONSES = [          FALLBACK_RESPONSES[
                 break
 ;
                   ''
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 if (token) {
                   accumulated += token
                   setMessages(prev =>
@@ -189,7 +173,6 @@ interface Msg {;
   id: string;
   role: 'user' | 'assistant';
   message: string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Fallback responses when API is unavailable;
 const FALLBACK_RESPONSES = [;
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",;
@@ -267,7 +250,6 @@ const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text },
                   accumulated += token,;
                   setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m));
 :src/components/SupportChatbot.tsx
-<<<<<<< HEAD
                 }
               } catch (_) {;
                 // ignore parse errors;
@@ -276,18 +258,14 @@ const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text },
           }
 buffer = lines[lines.length - 1] || '';
         }
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
           FALLBACK_RESPONSES[
-=======
                 // ignore parse errors
               }
             }
           }
           buffer = lines[lines.length - 1] |''
         }          FALLBACK_RESPONSES[
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."
@@ -307,7 +285,6 @@ buffer = lines[lines.length - 1] || '';
         id: Date.now().toString() + '-e'
         role: 'assistant'
 :src/components/SupportChatbot.tsx
-<<<<<<< HEAD
         message: fallbackResponse
 
           buffer = lines[lines.length - 1] || '';
@@ -339,7 +316,6 @@ buffer = lines[lines.length - 1] || '';
         aria-label='Open help chat'      >
         <MessageSquare className='h-5 w-5' />
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         const final = accumulated.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m))
@@ -360,9 +336,7 @@ buffer = lines[lines.length - 1] || '';
       setLoading(false),
       setTyping(false)
     }
-=======
         message: fallbackResponse    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
 
   if (!open) {
@@ -398,13 +372,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src/components/SupportChatbot.tsx
         <MessageSquare className='h-5 w-5' />      </Button>
       </Button>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )
   }
 
   return (
 :src/components/SupportChatbot.tsx
-<<<<<<< HEAD
     <div className="fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40">
       <div className="bg-zion-blue-dark p-2 flex justify-between items-center">
         <span className="text-white font-medium">Help Bot</span>
@@ -417,12 +389,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           aria-label="Close help bot"
         >
           <X className="h-5 w-5" />
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx
         </Button>
       </div>
       <div className="flex-1 overflow-y-auto p-3 space-y-4" style={{ maxHeight: '400px' }}>
@@ -431,7 +399,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             role="assistant" 
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" 
 :src/components/SupportChatbot.tsx
-<<<<<<< HEAD
           />
 
         const final = accumulated.trim() ||;
@@ -489,21 +456,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           />;
 :src/components/SupportChatbot.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         )}
         {messages.map(m => (;
           <ChatMessage key={m.id} role={m.role} message={m.message} />;
         ))}
 :src/components/SupportChatbot.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         {typing && (
           <ChatMessage role="assistant" message="..." />
         )}
-=======
 
 :src/components/SupportChatbot.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div ref={endRef} />
       </div>
       <div className="p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30">
@@ -512,7 +474,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   )
 :src/components/SupportChatbot.tsx
-<<<<<<< HEAD
 }
 ;
 
@@ -648,25 +609,15 @@ set_typing (false);
 });
 }<div ref= {
 :src/components/SupportChatbot.tsx
-<<<<<<< HEAD
   end_ref;
 }/> </div> </div> </div>);
 }'";
 }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   endRef
 }/> </div> </div> </div>)
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   endRef
 }/> </div> </div> </div>)
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SupportChatbot.tsx

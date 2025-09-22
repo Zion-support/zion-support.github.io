@@ -1,5 +1,4 @@
 import { Moon, Sun } from 'lucide-react';
-<<<<<<< HEAD
 // Use the ThemeProvider hook directly to ensure no conflicts;
 import { useTheme } from "@/components/ThemeProvider";
 import { logIssue } from "@/utils/logIssue";
@@ -61,7 +60,6 @@ pr-12325
 title:"Theme switch failed",,
   description:"Unable to change theme. Please try again.",;
         variant:"destructive"}),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
         title: "Theme switch failed";,;""
         description: "Unable to change theme. Please try again.";,;")"
@@ -83,7 +81,6 @@ pr-12325
       </Button>;
     ),;
   }
-<<<<<<< HEAD
 
             )}
             ;
@@ -112,10 +109,8 @@ pr-12325
             ;
             <span className="sr-only">;
               Toggle theme. Current:{resolvedTheme}. Click to switch to {isDarkMode ? 'light' :'dark'}.;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </span>;
         <TooltipContent>;
-<<<<<<< HEAD
             )}
           </div>;
         </TooltipContent>;
@@ -128,4 +123,3 @@ pr-12325
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>) ;
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
 }'"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

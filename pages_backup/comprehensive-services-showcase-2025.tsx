@@ -1,6 +1,3 @@
-<<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -21,7 +18,6 @@ const contactInfo = {
 };
 
 const categories = [
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   'All Services',
   'AI & Machine Learning',
   'Customer Success',
@@ -38,9 +34,6 @@ const categories = [
   'Under $300',
   '$300 - $500',
   '$500 - $800',
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   '$800+',];
 
 export default function ComprehensiveServicesShowcase2025() {;
@@ -66,10 +59,6 @@ const pricingRanges = [;
 ];
 export default function ComprehensiveServicesShowcase2025(req, res) {
   try {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -81,16 +70,10 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
 import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
 const contactInfo = null;
 export default function ComprehensiveServicesShowcase2025() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const [sortBy, setSortBy] = useState<
     'name' | 'price' | 'rating' | 'popularity'
   >('popularity');
@@ -99,11 +82,8 @@ const [sortBy, setSortBy] = useState<
     const categoryMatch =
       selectedCategory === 'All Services' |
       service.category.includes(selectedCategory);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     let priceMatch = true;
     if (selectedPriceRange !== 'All Prices') {;
-=======
 
   const [selectedCategory, setSelectedCategory] = useState('All Services');'
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');'
@@ -112,7 +92,6 @@ const [sortBy, setSortBy] = useState<
 
     let priceMatch = true;'
     if (selectedPriceRange !== 'All Prices') {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
       const price = parseInt(service && service.price.replace('$', ''));
       switch (selectedPriceRange) {;'
         case 'Under $300':;
@@ -126,12 +105,8 @@ const [sortBy, setSortBy] = useState<
           break;'
         case '$800+':;
           priceMatch = price > 800;
-<<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
           break;
 break;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
     }
     const searchMatch =
@@ -155,7 +130,6 @@ return (
       default:
         return 0;    }
   });
-=======
 return (
           parseInt(a.price.replace('$', '')) -
           parseInt(b.price.replace('$', ''))
@@ -168,8 +142,6 @@ default:
         return 0;
     }
   });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', ''));
     if (numPrice < 300) return 'Under $300';
@@ -187,10 +159,8 @@ return '$800+';
     const categoryData = categories.find(cat =>
       category.toLowerCase().includes(cat.id.toLowerCase())
     );
-<<<<<<< HEAD
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  }
 
-<<<<<<< HEAD
 
   return (
 '
@@ -245,11 +215,7 @@ import Link from 'next/link';
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter services based on selections;
   const filteredServices = comprehensiveRealServices2025.filter(service => {;'
@@ -324,26 +290,18 @@ import Link from 'next/link';
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
   },
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2025.tsx
-=======
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <Head>
         <title>Comprehensive Services Showcase 2025 | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI services, micro SAAS, IT solutions, business automation, customer success, supply chain optimization, financial planning, sales intelligence" />
         <meta property="og:title" content="Comprehensive Services Showcase 2025 | Zion Tech Group" />
@@ -352,8 +310,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <meta
           name='description'
           content='Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with cutting-edge technology.'
@@ -379,8 +335,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           rel='canonical'
           href='https://ziontechgroup.com/comprehensive-services-showcase-2025'
         />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </Head>
         {/* Hero Section */  } catch (error) {"
     console.error("Error:", error);"
@@ -440,19 +394,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{comprehensiveRealServices2025.length}+</div>"
                   <div className="text-gray-400">Real Services</div>
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">$2.5B+</div>
-=======
 
                 </div>"
                 <div className="text-center">"
                   <div className="text-3xl font-bold text-blue-400 mb-2">$2.5B+</div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
                   <div className="text-gray-400">Market Coverage</div>
                 </div>"
                 <div className="text-center">"
@@ -463,7 +411,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="text-3xl font-bold text-green-400 mb-2">400%</div>"
                   <div className="text-gray-400">Average ROI</div>
 :pages_backup/comprehensive-services-showcase-2025.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <div className='text-gray-400'>Real Services</div>
               </div>
@@ -499,7 +446,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             {/* Contact CTA */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
               <Link'
@@ -510,16 +456,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>;
 :pages_backup/comprehensive-services-showcase-2025.tsx
               <a
-<<<<<<< HEAD
       {/* Filters and Search Section */}
       <section className='py-12 bg-gray-900 border-b border-gray-800'>;
         <div className='container mx-auto px-4'>;
-=======
               <a;
       {/* Filters and Search Section */}'
       <section className='py-12 bg-gray-900 border-b border-gray-800'>;'
         <div className='container mx-auto px-4'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
             {/* Search */}'
             <div className='relative flex-1 max-w-md'>;'
@@ -529,12 +472,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 placeholder='Search services...'
                 value={searchQuery}
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
             {/* Category Filter */}
-=======
 
             {/* Category Filter */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
             <div className='flex flex-wrap gap-2'>;
               {categories && categories.map(category => (;
                 <button;
@@ -550,14 +490,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>;
               ))}
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
             {/* Price Range Filter */}
             <div className='flex items-center gap-2'>;
-=======
 
             {/* Price Range Filter */}'
             <div className='flex items-center gap-2'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
               <Filter className='w-5 h-5 text-gray-400' />;
               <select;
                 value={selectedPriceRange}
@@ -570,12 +507,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </option>;
                 ))}
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
             {/* View Mode Toggle */}
-=======
 
             {/* View Mode Toggle */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
             <div className='flex items-center gap-2 bg-gray-800 rounded-lg p-1'>;
               <button'
                 onClick={() => setViewMode('grid')}`
@@ -595,30 +529,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     : 'text-gray-400 hover:text-white';`
                 }`}
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
             {/* Sort Options */}
             <div className='flex items-center gap-2'>;
-=======
 
             {/* Sort Options */}'
             <div className='flex items-center gap-2'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
               <span className='text-gray-400 text-sm'>Sort by:</span>;
               <select;
                 value={sortBy}
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
               >;
                 <option value='popularity'>Popularity</option>;
                 <option value='name'>Name</option>;
                 <option value='price'>Price</option>;
-=======
 
               >;'
                 <option value='popularity'>Popularity</option>;'
                 <option value='name'>Name</option>;'
                 <option value='price'>Price</option>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
                 <option value='rating'>Rating</option>;
               </select>;
             </div>;
@@ -626,10 +554,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}'
@@ -645,26 +570,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     )}
                     {/* Service Icon */}
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
                     {/* Service Info */}
-=======
 
                     {/* Service Info */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
                     <h3 className='text - 2xl font - bold text - white mb - 3'>;
                       {service.name}
                     </h3>;'
                     <p className='text - gray - 300 mb - 4 line - clamp - 3'>;
                       {service.description}
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
                     {/* Price */}
                     <div className='flex items - center justify - between mb - 6'>;
-=======
 
                     {/* Price */}'
                     <div className='flex items - center justify - between mb - 6'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
                       <div className='text - 3xl font - bold text - cyan - 400'>;
                         {service.price}'
                         <span className='text - lg text - gray - 400'>;
@@ -676,12 +595,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className='text - white font - semibold'>;
                           {service.rating}
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
                     {/* Key Features */}
-=======
 
                     {/* Key Features */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
                     <div className='space-y-2 mb-6'>;
                       {service && service.features.slice(0, 3).map((feature, idx) => (;'
                         <div key={idx} className='flex items-center'>;'
@@ -692,7 +608,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       ))}
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
                     {/* Category and Setup */}
                     <div className='flex items - center justify - between mb - 6 text - sm'>;
                       <span className='px - 3 py - 1 bg - gray - 700 text - gray - 300 rounded - full'>;
@@ -700,7 +615,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     {/* Key Benefits */}
                     <div className='mb-6'>;
-=======
 
                     {/* Category and Setup */}'
                     <div className='flex items - center justify - between mb - 6 text - sm'>;'
@@ -709,7 +623,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     {/* Key Benefits */}'
                     <div className='mb-6'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
                       <h4 className='text-white font-semibold mb-3'>;
                         Key Benefits:;
                       </h4>;'
@@ -723,10 +636,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>;
                         ))}
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
                     {/* CTA Button */}
                     <Link;
                       href={service && service.link}'
@@ -764,14 +674,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </span>;
                             )}
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
                       {/* Price and Rating */}
                       <div className='text - right'>;
-=======
 
                       {/* Price and Rating */}'
                       <div className='text - right'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
                         <div className='text - 3xl font - bold text - cyan - 400 mb - 2'>;
                           {service.price}'
                           <span className='text - lg text - gray - 400'>;
@@ -782,11 +689,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;'
                           <span className='text - white font - semibold'>;
                             {service.rating}
-<<<<<<< HEAD:pages/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           </span>
                           <span className='text-gray-400'>
                             ({service.reviews})
@@ -842,21 +744,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Link
                         href={service.link}
                         className='px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       >
                         Learn More"
                         <ArrowRight className="w-4 h-4 ml-2 inline" />
                       </Link>
                     </div>
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
                   </motion.div>
                 ))  } catch (error) {"
     console.error("Error:", error);"
@@ -1047,7 +942,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }"
                   className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300"
 :pages_backup/comprehensive-services-showcase-2025.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   {contactInfo.website}
                 </a>
@@ -1057,10 +951,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
     </>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300'>;
                 <Mail className='w-5 h-5 mr-2' />;
@@ -1069,22 +960,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
 
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <a
                   href={`tel:${contactInfo.mobile}`}
-=======
 
                 <a;`
                   href={`tel:${contactInfo.mobile}`}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
                 >"
                   <Phone className="w-5 h-5 mr-2 inline" />
                   {contactInfo.mobile}
                 </a>
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
       switch (selectedPriceRange) {
         case 'Under $300':
           priceMatch = price < 300,
@@ -1101,13 +987,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
           priceMatch = price > 800;
           break;}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
@@ -1131,19 +1012,11 @@ const pricingRanges = [;'
 :pages_backup/comprehensive-services-showcase-2025.tsx
 export default function ComprehensiveServicesShowcase2025(req, res) {
   try {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export default function ComprehensiveServicesShowcase2025(req, res) {}
   try {}
 ';
@@ -1153,7 +1026,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {}
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter services based on selections;
   const filteredServices = comprehensiveRealServices2025.filter(service => {;'
@@ -1209,10 +1081,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {}
 }
   }),
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', '')),
     if (numPrice < 300) return 'Under $300',
@@ -1220,9 +1088,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {}
     if (numPrice <= 800) return '$500 - $800',
     return '$800+'
   },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
   const getPriceRange = (price: string) => {'
     const numPrice = parseInt(price.replace('$', '')),'
@@ -1232,35 +1097,23 @@ export default function ComprehensiveServicesShowcase2025(req, res) {}
     return '$800+'
   },
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
       category.toLowerCase().includes(cat.id.toLowerCase())
     ),
     return categoryData ? categoryData.icon : Globe;
   },
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
       category.toLowerCase().includes(cat.id.toLowerCase())
     ),'
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
   },
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
   return (
     <>
       <Head>
         <title>Comprehensive Services Showcase 2025 | Zion Tech Group</title>
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
 
                 </div>
                 <div className="text-center">
@@ -1290,15 +1143,12 @@ export default function ComprehensiveServicesShowcase2025(req, res) {}
   }
 }
                   className="flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
               </div>
             </motion.div>
           </div>
         </section>
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
   )
 },
 export default ComprehensiveServicesShowcase2025,
@@ -1308,11 +1158,9 @@ export default ComprehensiveServicesShowcase2025,
         {/* Filters and Search Section */}
         <section className="py-12 bg-gray-900 border-b border-gray-800">
           <div className="container mx-auto px-4">
-=======
 "
         <section className="py-12 bg-gray-900 border-b border-gray-800">"
           <div className="container mx-auto px-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
               {/* Search */}"
               <div className="relative flex-1 max-w-md">"
@@ -1350,7 +1198,6 @@ export default ComprehensiveServicesShowcase2025,
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}"
                   className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   {contactInfo.mobile  } catch (error) {
@@ -1378,7 +1225,6 @@ export default ComprehensiveServicesShowcase2025,
 <div className="text-center text-gray-400">
                 <p className="mb-2">{contactInfo.address}</p>
                 <p>Visit us at: <a href={contactInfo.website} className="text-cyan-400 hover:text-cyan-300 transition-colors">{contactInfo.website}</Link></p>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               {/* Sort Options */}"
               <div className="flex items-center gap-2">"
@@ -1483,13 +1329,6 @@ export default ComprehensiveServicesShowcase2025,
                         </div>
                       </div>
 :pages_backup/comprehensive-services-showcase-2025.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
 
 '
             <div className='text-center text-gray-400'>;'
@@ -1499,23 +1338,13 @@ export default ComprehensiveServicesShowcase2025,
 :pages_backup/comprehensive-services-showcase-2025.tsx
                 <a
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
 
 export default ComprehensiveServicesShowcase2025;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2025.tsx
-=======
                 <a;
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2025.tsx
-=======
   );
 
 export default ComprehensiveServicesShowcase2025;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

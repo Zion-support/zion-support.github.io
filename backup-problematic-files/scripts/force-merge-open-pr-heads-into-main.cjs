@@ -1,12 +1,4 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/force-merge-open-pr-heads-into-main.cjs
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/force-merge-open-pr-heads-into-main.cjs
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -69,7 +61,4 @@ try {}
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 });
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

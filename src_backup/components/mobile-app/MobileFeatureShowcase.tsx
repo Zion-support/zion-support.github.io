@@ -1,7 +1,4 @@
 :src/components/mobile-app/MobileFeatureShowcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
@@ -33,11 +30,8 @@ export const MobileFeatureShowcase: React.FC = () => {
       title: "Biometric Security",
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
     }
-=======
-=======
 {
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
 
 import React from "react";
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
@@ -53,12 +47,8 @@ export const MobileFeatureShowcase: React.FC = () => {
     }
     {
 :src/components/mobile-app/MobileFeatureShowcase.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       icon: <Star className="h-8 w-8 text-zion-purple" />
-=======
     {      icon: <Star className="h-8 w-8 text-zion-purple" />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       title: "AI-Match Instantly"
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
 
@@ -71,13 +61,11 @@ export const MobileFeatureShowcase: React.FC = () => {
 
 :src/components/mobile-app/MobileFeatureShowcase.tsx
 {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       icon: <Mail className="h-8 w-8 text-zion-purple" />
       title: "Instant Messaging"
       description: "Chat with candidates or clients and receive notifications in real-time."
 
 :src/components/mobile-app/MobileFeatureShowcase.tsx
-<<<<<<< HEAD
     },
     {
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />
@@ -87,7 +75,6 @@ export const MobileFeatureShowcase: React.FC = () => {
 icon: <Star className="h - 8 w - 8 text - zion-purple" />,
     {
       icon: <Star className="h - 8 w - 8 text - zion - purple" />,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       title: "AI - Match Instantly",
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm.";
     }
@@ -108,11 +95,8 @@ icon: <Star className="h - 8 w - 8 text - zion-purple" />,
     }
   ];
 :src/components/mobile-app/MobileFeatureShowcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ],
 
   return (
@@ -149,7 +133,6 @@ className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:
                 {feature.icon}
 
 :src/components/mobile-app/MobileFeatureShowcase.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-zion-slate-light">{feature.description}</p>
@@ -187,10 +170,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
   ];
   return (;
 :src/components/mobile-app/MobileFeatureShowcase.tsx
-<<<<<<< HEAD
     <section id="features" className="py-16 bg-zion-blue">;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
@@ -215,24 +195,17 @@ export const MobileFeatureShowcase: React.FC = () => {;
             </div>;
           ))}
 :src/components/mobile-app/MobileFeatureShowcase.tsx
-<<<<<<< HEAD
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
 };
 };
 
 '"},
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 }
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
         </div>
       </div>
     </section>
@@ -240,5 +213,3 @@ export const MobileFeatureShowcase: React.FC = () => {;
 };
 '"
 :src/components/mobile-app/MobileFeatureShowcase.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

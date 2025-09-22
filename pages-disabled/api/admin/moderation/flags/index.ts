@@ -18,8 +18,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     )
     return res.status(200).json({ flags: filtered })
   }
-<<<<<<< HEAD
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req);
@@ -40,14 +38,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.status(405).end('Method Not Allowed');
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39;
-=======
 '
   res.setHeader('AllowGET,POST'),'
   return res.status(405).end('Method Not Allowed')
 };'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

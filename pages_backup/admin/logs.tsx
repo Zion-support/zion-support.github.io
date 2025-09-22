@@ -3,14 +3,11 @@ import { useState, useEffect  } from 'react';
 import { GetServerSideProps  } from 'next';
 import fs from 'fs',
 import path from 'path';
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages_backup/admin/logs.tsx
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import {useState, useEffect} from 'react';
 import {GetServerSideProps} from 'next';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import { useState, useEffect } from 'react';
@@ -18,10 +15,6 @@ import { GetServerSideProps } from 'next';
 
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -44,15 +37,12 @@ import {
 Select,
   SelectContent,
   SelectItem,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 '
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';'
 import { Badge } from '@/components/ui/badge';'
 import { Button } from '@/components/ui/button';'
 import { Input } from '@/components/ui/input';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   SelectTrigger,;
   SelectValue,;'
 } from '@/components/ui/select';
@@ -100,7 +90,6 @@ import {}
   Search,
 
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -110,7 +99,6 @@ import { Badge } from '@/components/ui/badge';'
 import { Button } from '@/components/ui/button';'
 import { Input } from '@/components/ui/input';
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -122,7 +110,6 @@ import { Input } from '@/components/ui/input';
 
 import { logErrorToProduction } from '@/utils/productionLogger';
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from 'lucide-react';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -149,13 +136,10 @@ interface LogEntry {
   id: string;
   timestamp: string;
 
-=======
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical';
   message: string;
   category: string;
   context?: Record<string, unknown>,
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 import {
 Select
   SelectContent
@@ -171,7 +155,6 @@ import {
   Search
   Download
   RefreshCw;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 } from 'lucide-react';
 
 '
@@ -180,9 +163,6 @@ import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw 
 '
 import { logErrorToProduction } from '@/utils/productionLogger';
 :pages_backup/admin/logs.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
@@ -191,46 +171,35 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw  } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { logErrorToProduction } from '@/utils/productionLogger';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface LogEntry {
 interface LogEntry {;
   id: string;
   timestamp: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 interface LogEntry {}
 interface LogEntry {;
   id: string;
   timestamp: string;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   stack?: string;
   url?: string;
   userAgent?: string;
   userId?: string;
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
   error?: {
-=======
 
   error?: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   error?: {;
     name: string;
     message: string;
     stack?: string;
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface LogEntry {
   id: string;
   timestamp: string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical',;
   message: string;
   category: string;
@@ -265,14 +234,7 @@ interface LogEntry {
 }
 ;
 interface LogsPageProps {;
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical';
   message: string;
   category: string;
@@ -286,33 +248,21 @@ interface LogsPageProps {;
 }
 
 interface LogsPageProps {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
   totalCount: number;
-<<<<<<< HEAD:pages/admin/logs.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
       return <Info className="h-4 w-4 text-blue-500" />,
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   lastUpdated: string
 }
 
@@ -322,8 +272,6 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
 return <Info className='h-4 w-4 text-blue-500' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     case 'info':
       return <Info className="h-4 w-4 text-green-500" />,
     case 'warn':
@@ -331,8 +279,6 @@ return <Info className='h-4 w-4 text-blue-500' />;
     case 'error':
       return <AlertCircle className="h-4 w-4 text-red-500" />,
     case 'critical':
-<<<<<<< HEAD
-<<<<<<< HEAD
       return <XCircle className='h-4 w-4 text-red-700' />;
     default:
       return <Info className='h-4 w-4 text-gray-500' />;
@@ -354,8 +300,6 @@ export default function LogsPage({
   warningCount
   totalCount
   lastUpdated
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
   } catch (error) {}
     console.error("Error:", error);"
@@ -375,35 +319,24 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {}
       return <AlertCircle className="h-4 w-4 text-red-500" />,'
     case 'critical':
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   logs: initialLogs,
   errorCount,
   warningCount,
   totalCount,
   lastUpdated,;
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
-=======
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return <XCircle className="h-4 w-4 text-red-700" />,
-=======
 "
       return <XCircle className="h-4 w-4 text-red-700" />,"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
     default: return <Info className="h-4 w-4 text-gray-500" />
 ;'
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {;
   switch (level) {;'
     case 'debug':;
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {;
   const colors = {;'
     debug: 'bg-blue-100 text-blue-800',;'
@@ -413,13 +346,10 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {;
     critical: 'bg-red-200 text-red-900',;
   };
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
 
   return <Badge className={colors[level]}>{level && level.toUpperCase()}</Badge>;
 };
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
 export default function LogsPage(): any ({;
   logs: initialLogs,;
   errorCount,;
@@ -429,14 +359,9 @@ export default function LogsPage(): any ({;
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
 
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     cause?: unknown
-=======
 
     cause?: unknown;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   };
   performance?: {}
     memory?: number;
@@ -445,12 +370,9 @@ export default function LogsPage(): any ({;
   }
 }
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
 interface LogsPageProps {
-=======
 
 interface LogsPageProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   logs: LogEntry[],
   errorCount: number,
   warningCount: number,
@@ -458,7 +380,6 @@ interface LogsPageProps {}
   lastUpdated: string;
 }
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
@@ -475,8 +396,6 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   }
 };
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return <XCircle className='h-4 w-4 text-red-700' />;
     default:
       return <Info className='h-4 w-4 text-gray-500' />;
@@ -484,14 +403,12 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
   const colors = {
     debug: 'bg-blue-100 text-blue-800',
     info: 'bg-green-100 text-green-800',
     warn: 'bg-yellow-100 text-yellow-800',
     error: 'bg-red-100 text-red-800',
-<<<<<<< HEAD
     critical: 'bg-red-200 text-red-900'},
   return (
     <Badge className={colors[level]}>
@@ -505,10 +422,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
 
 :pages_backup/admin/logs.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 critical: 'bg-red-200 text-red-900',
   };
 
@@ -523,26 +436,19 @@ export default function LogsPage({
 }: LogsPageProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
   const [levelFilter, setLevelFilter] = useState<string>('all');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
-=======
 
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);'
   const [searchTerm, setSearchTerm] = useState('');'
   const [levelFilter, setLevelFilter] = useState<string>('all');'
   const [categoryFilter, setCategoryFilter] = useState<string>('all');'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(
-<<<<<<< HEAD:pages_backup/admin/logs.tsx
     Boolean
 );
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(
@@ -555,31 +461,21 @@ const categories = Array.from(new Set(logs.map(log => log.category))).filter(
 origin/cursor/automate-test-improve-and-merge-code-2533
     Boolean
 
-=======
     Boolean;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   const categories = Array && Array.from(new Set(logs && logs.map(log => log && log.category))).filter(;
     Boolean;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
   const sources = Array && Array.from(new Set(logs && logs.map(log => log && log.source))).filter(;
     Boolean;
   );
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
       setLogs(mockLogs);
       setFilteredLogs(mockLogs);
       setLoading(false);
     }, 1000);
   }, []);
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
   useEffect(() => {
     let filtered = [...logs];
     if (searchTerm) {
@@ -601,13 +497,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }, [logs, searchTerm, levelFilter, categoryFilter]);
 const getLevelColor = (level: string) => {
     switch (level) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case 'debug': return 'bg-blue-100 text-blue-800';
       case 'info': return 'bg-green-100 text-green-800';
       case 'warn': return 'bg-yellow-100 text-yellow-800';
       case 'error': return 'bg-red-100 text-red-800';
       case 'critical': return 'bg-red-200 text-red-900';
-<<<<<<< HEAD
       default: return 'bg-gray-100 text-gray-800';    }
 }
   const exportLogs = () => {
@@ -619,10 +513,7 @@ const getLevelColor = (level: string) => {
 origin/cursor/automate-test-improve-and-merge-code-2533
     const dataStr = JSON.stringify(filteredLogs, null, 2);
 const dataUri =
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     const dataUri ='
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
 
@@ -634,15 +525,10 @@ const dataUri =
 '
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
 :pages_backup/admin/logs.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
 
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
   useEffect(() => {;
@@ -716,8 +602,6 @@ const dataUri =
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);`
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
 :pages_backup/admin/logs.tsx
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
@@ -762,7 +646,6 @@ const dataUri =
             <RefreshCw'`
               className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const linkElement = document.createElement('a');
@@ -839,9 +722,6 @@ const dataUri =
 }
   },;
   const exportLogs = () => {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
@@ -856,16 +736,12 @@ const formatTimestamp = (timestamp: string) => {
     return new Date(timestamp).toLocaleString()
   };
   }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },;
   const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const formatTimestamp = (timestamp: string) => {
     return new Date(timestamp).toLocaleString();  }
-<<<<<<< HEAD
   const formatPerformance = (performance?: LogEntry['performance']) => {
     if (!performance) return null;
     const parts = [];
@@ -914,11 +790,9 @@ const formatTimestamp = (timestamp: string) => {
 
   const formatTimestamp = (timestamp: string) => {
     return new Date(timestamp).toLocaleString();  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const formatPerformance = (performance?: LogEntry['performance']) => {
     if (!performance) return null;
     const parts = [];
-=======
 
   const formatTimestamp = (timestamp: string) => {
     return new Date(timestamp).toLocaleString();
@@ -927,7 +801,6 @@ const formatTimestamp = (timestamp: string) => {
   const formatPerformance = (performance?: LogEntry['performance']) => {
     if (!performance) return null;
 const parts = [];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (performance.memory) {
       parts.push(`Memory: ${(performance.memory / 1024 / 1024).toFixed(1)}MB`)
     }
@@ -942,26 +815,18 @@ const parts = [];
     return new Date(timestamp).toLocaleString();
   };
 :pages_backup/admin/logs.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   },;
   const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
   };
 :pages_backup/admin/logs.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const formatPerformance = (performance?: LogEntry['performance']) => {;
-=======
 
 '
   const formatPerformance = (performance?: LogEntry['performance']) => {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       } catch (error) {"
     console.error("Error:", error);"
@@ -971,21 +836,13 @@ const parts = [];
     return parts.length > 0 ? parts.join() : null;
   },
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold">System Logs & Error Monitoring</h1>
         <div className="flex items-center space-x-2">
           <Button onClick={refreshLogs} disabled={isLoading} variant="outline">
-=======
 
   return ("
     <div className="container mx-auto p-6 space-y-6">"
@@ -993,7 +850,6 @@ const parts = [];
         <h1 className="text-3xl font-bold">System Logs & Error Monitoring</h1>"
         <div className="flex items-center space-x-2">"
           <Button onClick={refreshLogs} disabled={isLoading} variant="outline">'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
             <RefreshCw className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
             Refresh;
           </Button>'
@@ -1003,18 +859,12 @@ const parts = [];
           </Button>
         </div>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Logs</CardTitle>
             <Info className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
             <div className="text-2xl font-bold">{totalCount}</div>
             <p className="text-xs text-muted-foreground">All log entries</p>
           </CardContent>
@@ -1056,11 +906,6 @@ const parts = [];
 
 </Card>
       </div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className='text-2xl font-bold'>{totalCount}</div>
             <p className='text-xs text-muted-foreground'>All log entries</p>
           </CardContent>
@@ -1104,41 +949,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>
       </div>
       {/* Filters */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       {/* Filters */  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
       <Card>
         <CardHeader>
           <CardTitle>Filters</CardTitle>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD:pages/admin/logs.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="relative">
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input"
                 placeholder="Search logs...""
                 className="pl-8"
 :pages_backup/admin/logs.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
             <div className='relative'>
               <Search className='absolute left-2 top-2.5 h-4 w-4 text-muted-foreground' />
@@ -1150,18 +982,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               />
             </div>
             <Select value={levelFilter} onValueChange={setLevelFilter}>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <SelectTrigger>
                 <SelectValue placeholder="All levels" />
               </SelectTrigger>
               <SelectContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <SelectTrigger>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <SelectItem value='all'>All Levels</SelectItem>
                 <SelectItem value='debug'>Debug</SelectItem>
                 <SelectItem value='info'>Info</SelectItem>
@@ -1173,52 +999,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
               <SelectTrigger>
 <SelectValue placeholder='All categories' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value='all'>All Categories</SelectItem>
                 {categories.map(category => (
-<<<<<<< HEAD
               <SelectTrigger>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <SelectValue placeholder="All categories" />
               </SelectTrigger>
               <SelectContent>"
                 <SelectItem value="all">All Categories</SelectItem>
                 {categories.map(category => (
                   <SelectItem key={category} value={category}>{category}</SelectItem>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   <SelectItem key={category} value={category}>
                     {category}
                   </SelectItem>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 ))}
               </SelectContent>
             </Select>
             <Select value={sourceFilter} onValueChange={setSourceFilter}>
               <SelectTrigger>
-<<<<<<< HEAD
 
                 onChange={e => setSearchTerm(e && e.target.value)}
               />;
             </div>;"
                 <SelectValue placeholder="All sources" />
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 <SelectValue placeholder='All sources' />
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </SelectTrigger>
               <SelectContent>"
                 <SelectItem value="all">All Sources</SelectItem>
                 {sources.map(source => (
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
                     {source}
                   </SelectItem>                ))}
               </SelectContent>
@@ -1227,22 +1040,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       {/* Logs Table */}
                   <SelectItem key={source} value={source}>{source}</SelectItem>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </SelectContent>
             </Select>
             <Select value={sourceFilter} onValueChange={setSourceFilter}>
               <SelectTrigger>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
               </SelectContent>;
             </Select>;
           </div>;
@@ -1299,29 +1106,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <pre className='mt - 1 text - xs overflow - x-auto'>;
                               {log.error.stack}
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
 
 :pages_backup/admin/logs.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <Card>
         <CardHeader>
           <CardTitle>Log Entries ({filteredLogs.length})</CardTitle>
         </CardHeader>
 :pages_backup/admin/logs.tsx
         <CardContent>
-<<<<<<< HEAD:pages/admin/logs.tsx
-<<<<<<< HEAD
           <div className="space-y-4">
-=======
 <div className='space-y-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
-=======
 <div className='space-y-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {filteredLogs.length > 0 ? (
               filteredLogs.map((log) => ("
                 <div key={log.id} className="border rounded-lg p-4 space-y-2">"
@@ -1333,38 +1130,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Badge variant="secondary">{log.source}</Badge>
                       {log.component && ("
                         <Badge variant="outline">{log.component}</Badge>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
-=======
 
                   {log.context && Object.keys(log.context).length > 0 && ("
                     <details className="text-xs">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
                         View Context;
                       </summary>
 :pages/admin/logs.tsx
-<<<<<<< HEAD
                       <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-x-auto'>                        {JSON.stringify(log.context, null, 2)}
                       </pre>
                     </details>
                   )}
 
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
                       <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-x-auto">
                         {JSON.stringify(log.context, null, 2)  } catch (error) {"
     console.error("Error:", error);"
@@ -1381,17 +1163,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   {log.error && (
 :pages_backup/admin/logs.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <details className="text-xs">
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
-=======
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
                         View Context
                       </summary>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-x-auto'>
                         {JSON.stringify(log.context, null, 2)}
                       </pre>
@@ -1400,17 +1178,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 {log.error && (
                     <details className='text-xs'>
                       <summary className='cursor-pointer text-red-600 hover:text-red-800'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         View Error Details
                       </summary>
-=======
 "
                     <details className="text-xs">"
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
                         View Error Details;
                       </summary>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
                       <div className="mt-2 p-2 bg-red-50 rounded">
                         <div><strong>Name:</strong> {log.error.name}</div>
                         <div><strong>Message:</strong> {log.error.message}</div>
@@ -1419,8 +1193,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <summary className="cursor-pointer">Stack Trace</summary>"
                             <pre className="mt-1 text-xs overflow-x-auto">{log.error.stack}</pre>
                           </details>
-<<<<<<< HEAD
-<<<<<<< HEAD
                         )}
                         <div className="flex items-center justify-between text-xs text-gray-500">
                           <div>
@@ -1492,7 +1264,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </div>
               ))
             ) : ("
@@ -1500,8 +1271,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 No logs found matching the current filters.
               </div>
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                   )}
                 </div>;
@@ -1514,20 +1283,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 No logs found matching the current filters.
               </div>
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             )}
           </div>;
         </div>;
       </main>;
     </>;
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
             }
           }
         } catch (fileError) {;
@@ -1607,41 +1369,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-=======
 export const getServerSideProps: GetServerSideProps = async () => {}
   try {';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
     const logs_dir = path.join (process.cwd (), 'logs');
     const logs: LogEntry[] = [];
-<<<<<<< HEAD
               // Skip malformed log entries;
             }
           }
-<<<<<<< HEAD:pages_backup/admin/logs.tsx
         } catch (file_error) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
               // Skip malformed log entries
 origin/cursor/automate-test-improve-and-merge-code-2533
             }
           }
         } catch (file_error) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         } catch (file_error) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
           // Skip problematic files;
         }
       }
     }
-<<<<<<< HEAD:pages/admin/logs.tsx
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Sort logs by timestamp (newest first)
 logs.sort(
       (a, b) =>
@@ -1652,14 +1400,10 @@ logs.sort(
       log => log.level === 'error' || log.level === 'critical'
     ).length;
     const warningCount = logs.filter(log => log.level === 'warn').length;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const totalCount = logs.length;
     return {
       props: {
         logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
   } catch (error) {
     logErrorToProduction ('Error reading logs:', error);    return {
@@ -1673,19 +1417,9 @@ logs.sort(
       }
     }
 
-=======
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 errorCount,
         warningCount,
         totalCount,
@@ -1696,33 +1430,24 @@ errorCount,
     logErrorToProduction('Error reading logs:', error);
     return {
       props: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         logs: [],
         errorCount: 0,
         warningCount: 0,
         totalCount: 0,
-<<<<<<< HEAD
         lastUpdated: new Date().toISOString(),
       },
     };
 
-<<<<<<< HEAD:pages_backup/admin/logs.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
 };
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
         </CardContent>;
       </Card>;
@@ -1782,13 +1507,7 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 }
 ;
 :pages_backup/admin/logs.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
     // Sort logs by timestamp (newest first);
     logs && logs.sort(;
       (a, b) =>;
@@ -1821,7 +1540,6 @@ export const getServerSideProps: GetServerSideProps = async () => {;
       },;
     };
 }
-<<<<<<< HEAD
 
 }
     } catch (error) {
@@ -1834,10 +1552,7 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   }
 }
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
 
         errorCount;
         warningCount;
@@ -1849,23 +1564,12 @@ export const getServerSideProps: GetServerSideProps = async () => {;
       props: {}
         logs: [],
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 lastUpdated: new Date().toISOString(),
       },
     };
   }
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

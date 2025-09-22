@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail, ; MapPin, ; Phone, ; Search, ; Shield, ; TrendingUp } from 'lucide-react'; import { useState } from 'react';''
 const ComprehensiveServicesShowcase2025 = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const ComprehensiveServicesShowcase2025 = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

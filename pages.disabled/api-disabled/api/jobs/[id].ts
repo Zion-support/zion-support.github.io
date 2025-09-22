@@ -1,8 +1,6 @@
 
 :pages_backup/api/jobs/[id].ts
-<<<<<<< HEAD:pages/api/jobs/[id].ts
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs/[id].ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
@@ -11,17 +9,11 @@ import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
 :pages_backup/api/jobs/[id].ts
 
 :pages/api/jobs/[id].ts
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/jobs/[id].ts
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
 :pages_backup/api/jobs/[id].ts
-<<<<<<< HEAD:pages/api/jobs/[id].ts
-=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -31,7 +23,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const jobs = readJsonFile<Job[]>(FILE, []);
   const idx = jobs && jobs.findIndex((j) => j && j.id === id);
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/jobs/[id].ts
   if (idx === -1) {
     res && res.status(404).json({ error: "Job not found" });
     return;
@@ -55,7 +46,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     const {
 
 :pages_backup/api/jobs/[id].ts
-<<<<<<< HEAD:pages/api/jobs/[id].ts
       title
       description
       category
@@ -134,7 +124,6 @@ if (job.status = status as Job["status"]) {
   }
 
 :pages_backup/api/jobs/[id].ts
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs/[id].ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -222,7 +211,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const isOwner = userEmail && userEmail === job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {;
 :pages_backup/api/jobs/[id].ts
-<<<<<<< HEAD:pages/api/jobs/[id].ts
       title
       description
       category
@@ -233,7 +221,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       status
 :pages_backup/api/jobs/[id].ts
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs/[id].ts
 
       res.status(403).json({ error: 'Forbidden' });
       return
@@ -251,10 +238,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (typeof status === 'string') job.status = status as Job['status'];
 
 :pages_backup/api/jobs/[id].ts
-<<<<<<< HEAD:pages/api/jobs/[id].ts
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/jobs/[id].ts
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job,;
     writeJsonFile<Job[]>(FILE, jobs),;
@@ -284,10 +268,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
 
 :pages_backup/api/jobs/[id].ts
-<<<<<<< HEAD:pages/api/jobs/[id].ts
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/jobs/[id].ts
   }
 }
   } catch (error) {
@@ -296,11 +277,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
 :pages_backup/api/jobs/[id].ts
-<<<<<<< HEAD:pages/api/jobs/[id].ts
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/jobs/[id].ts
 }
 
   if (req.method === "PATCH") {
@@ -312,7 +289,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 return;
     }
 :pages_backup/api/jobs/[id].ts
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const {
       title,
       description,
@@ -349,36 +325,20 @@ return;
   }
 
 :pages_backup/api/jobs/[id].ts
-<<<<<<< HEAD:pages/api/jobs/[id].ts
-<<<<<<< HEAD
 res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
 
 }
 :pages_backup/api/jobs/[id].ts
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/jobs/[id].ts
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/jobs/[id].ts
   res.setHeader('Allow', 'GET, PATCH');
   res.status(405).end('Method Not Allowed');
 
 }
 :pages_backup/api/jobs/[id].ts
-<<<<<<< HEAD:pages/api/jobs/[id].ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/jobs/[id].ts

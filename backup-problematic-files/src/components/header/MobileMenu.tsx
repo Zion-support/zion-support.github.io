@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
@@ -141,4 +140,3 @@ pr-12325
   item.name ;
 }</Link>) ) ";
 }</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

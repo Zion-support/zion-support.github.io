@@ -10,7 +10,6 @@ import {
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from 'lucide-react'
-<<<<<<< HEAD
 interface TalentRateRecommenderProps {
   skills: string[],
   yearsExperience: number,
@@ -113,7 +112,6 @@ return (
 '"};
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
@@ -124,6 +122,4 @@ return (
     </div>;
   );
 };
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/pricing/TalentRateRecommender.tsx

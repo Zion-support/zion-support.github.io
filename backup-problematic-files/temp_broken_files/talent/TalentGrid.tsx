@@ -1,5 +1,4 @@
 
-=======
 import { TalentCard } from "@/components/talent/TalentCard",;
 import { TalentProfile } from "@/types/talent",;
 ;
@@ -16,13 +15,11 @@ export interface TalentGridProps {;
 }
 ;
 export function TalentGrid({ ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   talents, ;
   isLoading, ;
   onTalentClick, ;
   savedTalentIds, ;
   onToggleSave, ;
-<<<<<<< HEAD
 
     if (handleRequestHire) {;
       handleRequestHire(talent);

@@ -9,7 +9,6 @@ import { Button } from '@/components/ui/button';
 :src/components/forms/ValidatedFormField.tsx
 interface ValidationRule {  required?: boolean;
   required?: boolean;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
@@ -39,7 +38,6 @@ interface ValidationRule {  required?: boolean;
 
   debounceMs?: number
 export function ValidatedFormField({
-<<<<<<< HEAD
 
   name
   label
@@ -80,7 +78,6 @@ export function ValidatedFormField({
     }, debounceMs)
 :src_backup/components/forms/ValidatedFormField.tsx
     setDebounceTimer(timer)
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import {}
   FormField,
@@ -208,9 +205,7 @@ if ( {) {}
     }
     return null;
 :src/components/forms/ValidatedFormField.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
   }
   const getValidationIcon = () =>: any {}
     // Check condition;
@@ -253,7 +248,6 @@ import React, { useState, useEffect } from 'react';
 
 import { Checkbox } from '@/components/ui/checkbox';
 import { cn } from '@/lib/utils';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 interface ValidationRule {;
@@ -350,7 +344,6 @@ if (timer) clearTimeout(timer);
     return null
   },
 
-<<<<<<< HEAD
   const getValidationIcon = () => {
     if (!showValidIcon || !isTouched || validationState === 'idle') return null,
 
@@ -391,24 +384,19 @@ if (timer) clearTimeout(timer);
 
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className),
-=======
   const getValidationIcon = () => {
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     switch (type) {
       case 'textarea':
         return (
           <div className="relative">
             <Textarea
 :src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
               disabled={disabled}
               className={baseClasses}
               rows={4}
-=======
 
 :src/components/forms/ValidatedFormField.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {...form.register(name)}
 :src_backup/components/forms/ValidatedFormField.tsx
             />
@@ -432,7 +420,6 @@ if (timer) clearTimeout(timer);
 
 :src_backup/components/forms/ValidatedFormField.tsx
       case 'select':;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         return (
           <div className="relative">
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
@@ -458,15 +445,11 @@ if (timer) clearTimeout(timer);
         return (
           <div className="flex items-center space-x-2">
         return (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className='flex items-center space-x-2'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Checkbox
-=======
         return ('
           <div className='flex items-center space-x-2'>;
             <Checkbox;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
               id={name}
               checked={fieldValue}
               onCheckedChange={(checked) => form.setValue(name, checked)}
@@ -475,7 +458,6 @@ if (timer) clearTimeout(timer);
             <label;
               htmlFor={name}
 :src_backup/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
               {label}
@@ -490,9 +472,7 @@ if (timer) clearTimeout(timer);
             {getValidationIcon()}
 
 :src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         ),
 
 :src_backup/components/forms/ValidatedFormField.tsx
@@ -502,16 +482,10 @@ if (timer) clearTimeout(timer);
           <div className='relative'>;
             <Input
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
         return ('
           <div className='relative'>;
             <Input;
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}'
               className={cn(baseClasses, 'pr-20')}
@@ -522,33 +496,23 @@ if (timer) clearTimeout(timer);
               {getValidationIcon()}
 :src_backup/components/forms/ValidatedFormField.tsx
               <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
                 type="button"
                 variant="ghost"
                 size="sm"
-=======
               <Button;
 "
                 type="button""
                 variant="ghost""
                 size="sm""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
                 className="h-7 w-7 p-0"
                 onClick={() => setShowPassword(!showPassword)}'
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
 
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
                 {showPassword ? (
-=======
                 {showPassword ? ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
                   <EyeOff className="h-4 w-4" />
                 ) : ("
                   <Eye className="h-4 w-4" />
@@ -558,10 +522,8 @@ if (timer) clearTimeout(timer);
           </div>
         ),
 
-<<<<<<< HEAD
         ),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       default:
 :src/components/forms/ValidatedFormField.tsx
         return (
@@ -595,11 +557,9 @@ if (timer) clearTimeout(timer);
                 {fieldError && ("
                   <FormMessage className="text-sm text-red-500">
 
-=======
         return (
           <div className='relative'>;
             <Input
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 :src/components/forms/ValidatedFormField.tsx
                     {fieldError.message}
@@ -607,17 +567,11 @@ if (timer) clearTimeout(timer);
                 )}
                 {description && !fieldError && (
 :src_backup/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <p className="text-sm text-muted-foreground">{description}</p>
-=======
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx
                   <p className="text-sm text-muted-foreground">{description}</p>
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
                 )}
               </div>;
             )}
@@ -733,9 +687,7 @@ if ( {) {}
             {validation.required && (
 
 :src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       />;
     );
   }
@@ -767,13 +719,11 @@ if ( {) {}
               {description && !fieldError && (
 :src_backup/components/forms/ValidatedFormField.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <p className="text-sm text-muted-foreground">{description}</p>
               )}
                 <p className="text-sm text-muted-foreground">{description}</p>
 
               )}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
             </div>;
           )}
         </FormItem>;
@@ -871,7 +821,6 @@ export const validationPatterns = {;
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Pre-configured validation rules;
 export const commonValidations = {;
   required: { required: true },;
@@ -921,24 +870,11 @@ pattern: validationPatterns.email,;
   }},
     }
 :src_backup/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }};
-<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/forms/ValidatedFormField.tsx
       return null;
     },
   },
 };
 :src/components/forms/ValidatedFormField.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   }};'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/forms/ValidatedFormField.tsx

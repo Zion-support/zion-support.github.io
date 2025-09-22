@@ -1,17 +1,8 @@
 :pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD:pages/api/docs/changelog.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/changelog.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
@@ -25,21 +16,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     return;
 :pages_backup/api/docs/changelog.ts
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
   if (req.method === 'POST') {
     try {
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/changelog.ts
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
         : { content: "" };
       res.status(200).json(content);
     } catch (e: any) {
@@ -51,7 +34,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     try {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/changelog.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
@@ -74,75 +56,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   if (req.method === 'POST') {
     try {
 :pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD:pages/api/docs/changelog.ts
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/changelog.ts
       const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 const body =
         typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/api/docs/changelog.ts
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/changelog.ts
       const payload = { content: body?.content || '' };
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
       res.status(200).json({ ok: true })
 :pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD:pages/api/docs/changelog.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :pages_backup/api/docs/changelog.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/changelog.ts
     } catch (e: any) {
       res
         .status(500)
-=======
 
     } catch (e: any) {}
       res;
         .status(500)"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/docs/changelog.ts
         .json({ error: e?.message |"Failed to write changelog" });
     }
     return;
   }
 :pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD
 
 :pages_backup/api/docs/changelog.ts
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
-=======
-=======
 
 res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
@@ -161,22 +109,17 @@ res.setHeader("Allow", "GET, POST");
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/changelog.ts
 
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/changelog.ts
-=======
 
 "
   res.setHeader("Allow", "GET, POST");"
   res.status(405).end("Method Not Allowed");
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/docs/changelog.ts
 }
 '
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -184,33 +127,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/changelog.ts
 
 res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
 :pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD:pages/api/docs/changelog.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/changelog.ts
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/changelog.ts
 export default /**
  * handler - Function description
-=======
 export default function handler() { return null; }
   if (req.method === 'GET') {}
 ";
@@ -220,7 +148,6 @@ res && res.setHeader("Allow", "GET, POST");"
 
 export default /**;
  * handler - Function description;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/docs/changelog.ts
  */
 function handler() {}
   // Check condition;
@@ -228,7 +155,6 @@ if ( {) {}
   $2;
 }
 :pages_backup/api/docs/changelog.ts
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {
       const content = fs.exists_sync (file_path);
         ? JSON.parse (fs.readFileSync (file_path, "utf8"));
@@ -261,10 +187,6 @@ if ( {) {}
   res.status (405).end ("Method Not Allowed");
 }
 :pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD:pages/api/docs/changelog.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   } catch (error) {"
     console.error("Error:", error);"
@@ -287,23 +209,11 @@ if ( {) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/changelog.ts
-
-:pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/docs/changelog.ts
 
 :pages_backup/api/docs/changelog.ts
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/changelog.ts
-=======
+:pages_backup/api/docs/changelog.ts
+
 
   } catch (error) {
     console.error("Error:", error);
@@ -327,18 +237,10 @@ if ( {) {}
   }
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/changelog.ts
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 
 }
 :pages_backup/api/docs/changelog.ts
-<<<<<<< HEAD:pages/api/docs/changelog.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/docs/changelog.ts

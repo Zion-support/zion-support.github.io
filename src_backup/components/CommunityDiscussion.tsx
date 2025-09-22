@@ -1,7 +1,4 @@
 :src/components/CommunityDiscussion.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { MessageCircle } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -35,15 +32,11 @@ const initial_posts: DiscussionPost[] = [;
   {
     id: 1,  time: string,
 :src/components/CommunityDiscussion.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/CommunityDiscussion.tsx
   title: string,
   body: string
 }
 
-=======
   id: number,
   author: string,
   avatar?: string,
@@ -88,17 +81,14 @@ export const CommunityDiscussion: React.FC = () => {
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 :src/components/CommunityDiscussion.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const initialPosts: DiscussionPost[] = [
   {
-<<<<<<< HEAD
     author: "Anna Zhou",
     time: "2h ago",
     title: "What AI trends are you most excited for in 2025?",
     body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},  {
 
   {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     id: 1,
 author: "Anna Zhou",
@@ -107,8 +97,6 @@ author: "Anna Zhou",
     body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
   {
     id: 2,
-<<<<<<< HEAD:src/components/CommunityDiscussion.tsx
-<<<<<<< HEAD
     author: "David Kim",
     time: "50m ago",
     title: "Quick tip: How to rank your Zion listing higher",
@@ -130,7 +118,6 @@ export const CommunityDiscussion: React.FC = () => {
   const handleAddPost = () => {    setShowNew(false)
 
     setShowNew(false)
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className='w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in'>;
       <div className='flex items - center gap - 3 mb - 4'>;
         <MessageCircle size={28} className='text - zion - cyan' />;
@@ -177,7 +164,6 @@ export const CommunityDiscussion: React.FC = () => {
 
   const handleAddPost = () => {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (!newTitle.trim() || !newBody.trim()) return,
     setPosts([
       {
@@ -208,27 +194,21 @@ author: "You",
       <div className="mb-4 flex justify-end">
         <Button
 :src/components/CommunityDiscussion.tsx
-<<<<<<< HEAD
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
           size="sm"
           onClick={() => setShowNew((v) => !v)}
         >
           {showNew ? "Cancel" : "New Post"}
-=======
 
 :src/components/CommunityDiscussion.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>
       </div>
       {showNew && (
         <Card className="mb-6 animate-scale-in">
           <CardContent className="py-5">
             <Input
-<<<<<<< HEAD
               placeholder="Title (e.g., Share an AI tool, Ask for help...)"
-=======
 
-=======
 
         </Button>
       </div>
@@ -237,9 +217,7 @@ author: "You",
           <CardContent className="py-5">
             <Input
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/CommunityDiscussion.tsx
               placeholder="Title (e.g., Share an AI tool, Ask for help...)"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
@@ -278,7 +256,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 />
             <Textarea
               placeholder="What's on your mind?"
-<<<<<<< HEAD
               className="mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]"
 import React, { useState } from "react",;
 import { MessageCircle } from 'lucide-react';
@@ -345,9 +322,7 @@ export const CommunityDiscussion: React.FC = () => {;
         <Button;
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";
           size="sm";
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           onClick={() => setShowNew((v) => !v)}
         >;
           {showNew ? "Cancel" : "New Post"}
@@ -360,7 +335,6 @@ export const CommunityDiscussion: React.FC = () => {;
               placeholder="Title (e.g., Share an AI tool, Ask for help...)";
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate";
               value={newTitle}
-<<<<<<< HEAD
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
               maxLength={80}
             />;
@@ -378,12 +352,7 @@ export const CommunityDiscussion: React.FC = () => {;
                 size="sm"
                 className="bg-zion-blue text-white hover:bg-zion-blue-dark"
                 onClick={() => setShowNew(false)}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/CommunityDiscussion.tsx
 className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]'
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
@@ -398,27 +367,19 @@ className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-
                 className='bg-zion-blue text-white hover:bg-zion-blue-dark'
                 onClick={() => setShowNew(false)}
 :src/components/CommunityDiscussion.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 Cancel
               </Button>
               <Button
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 size="sm"
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
 size='sm'
                 className='bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 onClick={handleAddPost}
 disabled={!newTitle.trim() || !newBody.trim()}
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/CommunityDiscussion.tsx
                 disabled = {!newTitle && newTitle.trim() || !newBody && newBody.trim(),}>;
     <div className="w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in">;
       <div className="flex items - center gap - 3 mb - 4">;
@@ -468,7 +429,6 @@ disabled={!newTitle.trim() || !newBody.trim()}
                 size="sm";
                 className="bg - zion - blue text - white hover:bg - zion - blue - dark";
                 on_click = {() => setShowNew (false), }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >;
                 Post;
               </Button>;
@@ -491,9 +451,7 @@ disabled={!newTitle.trim() || !newBody.trim()}
 
 :src/components/CommunityDiscussion.tsx
       </div>;
-=======
                     .slice(0, 2)}      </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className='mt-8 text-xs text-zion-slate-dark text-center'>;
         🚀 Stay engaged! Top contributors are regularly featured on the;
         homepage.;
@@ -553,7 +511,6 @@ disabled={!newTitle.trim() || !newBody.trim()}
     </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
   );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
   newTitle ;
 }onChange= {;
@@ -565,7 +522,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }.join ("") .toUpperCase () .slice (0, 2) ";
 }</AvatarFallback> </Avatar> <div> <div className="flex gap-2 items-center"> <span className="font-semibold text-white"> {;
 :src/components/CommunityDiscussion.tsx
-<<<<<<< HEAD
   post && post.author ";
 }</span> <span className="text-xs text-zion-slate-light"> {;
   post && post.time ";
@@ -607,11 +563,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     .map ((s, ) => s[0]);
                     .join ("");
                     .slice (0, 2)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </AvatarFallback>;
               </Avatar>;
               <div>;
-<<<<<<< HEAD
                 <div className="flex gap-2 items-center">;
                   <span className="font-semibold text-white">{post.author}</span>;
                   <span className="text-xs text-zion-slate-light">{post.time}</span>;
@@ -622,7 +576,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </CardContent>;
           </Card>;
         ))}
-<<<<<<< HEAD
       </div>;
       <div className="mt-8 text-xs text-zion-slate-dark text-center">;
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
@@ -630,15 +583,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 </div>;
   );
 };
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/CommunityDiscussion.tsx
   post.author ";
 }</span> <span className="text-xs text-zion-slate-light"> {;
   post.time ";
@@ -651,5 +597,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 '"
 :src/components/CommunityDiscussion.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

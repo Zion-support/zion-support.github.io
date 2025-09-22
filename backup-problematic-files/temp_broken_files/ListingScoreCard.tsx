@@ -1,5 +1,4 @@
 
-=======
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -43,7 +42,6 @@ export function ListingScoreCard({ ;
             src={image} ;
             alt={title} ;
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           />;
         </div>;
       )}
@@ -61,7 +59,6 @@ export function ListingScoreCard({ ;
         </div>;
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
-<<<<<<< HEAD
 
         {/* Rating */}
         {rating > 0 && (;

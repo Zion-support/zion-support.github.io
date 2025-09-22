@@ -15,7 +15,6 @@ interface CategoryType {
   name: string,
   slug: string,
   icon: string
-<<<<<<< HEAD
 import useSWR from 'swr',;
 import { CategoryCard } from "@/components/CategoryCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -83,7 +82,6 @@ export interface CategoriesProps {;
 }'
 import React from './react';'"
 import { Brain, Cloud, Shield, Code, Database, Network  } from './lucide-react';"});"});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 :temp_exclude/hooks.disabled/Categories.tsx
 
@@ -111,7 +109,6 @@ export default function Categories({ categories: initialCategories = [] }: Categ
           </p>
         </div>
 
-<<<<<<< HEAD
         <ErrorBoundary>
           {isLoading && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-testid="skeleton-loader">
@@ -339,4 +336,3 @@ export default Categories, " ];"
 export default Categories"")))))))));
 :temp_exclude/hooks.disabled/Categories.tsx
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

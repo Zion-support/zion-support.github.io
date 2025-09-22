@@ -1,6 +1,4 @@
 :src_backup/layout/PrimaryNav.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react',;
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
 import Link from 'next/link',;
@@ -23,7 +21,6 @@ import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next',;
 import { CartDrawer } from '@/components/cart/CartDrawer',;
 import { LoginModal } from '@/components/auth/LoginModal',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Logo  } from '@/components/header/Logo';
@@ -39,7 +36,6 @@ import { generateSearchSuggestions  } from '@/data/marketplaceData';
 import { slugify  } from '@/lib/slugify';
 import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
 import { MobileMenu  } from '@/components/header/MobileMenu';
-=======
 import Link from 'next/link';'
 import { useRouter  } from 'next/router';'
 import { Logo  } from '@/components/header/Logo';'
@@ -55,7 +51,6 @@ import { generateSearchSuggestions  } from '@/data/marketplaceData';'
 import { slugify  } from '@/lib/slugify';'
 import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';'
 import { MobileMenu  } from '@/components/header/MobileMenu';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/layout/PrimaryNav.tsx
 import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
 '
 import { useState } from 'react''
@@ -82,7 +77,6 @@ import { useTranslation  } from 'react-i18next';'
 import { CartDrawer  } from '@/components/cart/CartDrawer';'
 import { LoginModal } from '@/components/auth/LoginModal';
 :src_backup/layout/PrimaryNav.tsx
-<<<<<<< HEAD
 
 import { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils / production_logger';
@@ -160,10 +154,7 @@ if ( {) {}
           })) }
   }
 :src_backup/layout/PrimaryNav.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function PrimaryNav() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
   const { user } = useAuth();
@@ -224,27 +215,23 @@ export function PrimaryNav() {;
     }
   },
 :src/layout/PrimaryNav.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
         data-testid='header'>;
         <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap'>;
           <Logo />;
 
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-=======
 '
         data-testid='header'>;'
         <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap'>;
           <Logo />;
 
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/layout/PrimaryNav.tsx
           <div className='hidden lg:block order-1 flex-shrink-0'>
             <ResponsiveNavigation;
               openLoginModal={returnToPath => setLoginOpen(true)}
 
             />          </div>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <>
@@ -259,9 +246,7 @@ export function PrimaryNav() {;
 
 :src_backup/layout/PrimaryNav.tsx
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-=======
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/layout/PrimaryNav.tsx
           <div className="hidden lg:block order-1 flex-shrink-0">
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
@@ -303,7 +288,6 @@ onSelectSuggestion={(sugg) => {;
 
 :src_backup/layout/PrimaryNav.tsx
                     // Product listings with IDs go to product detail page;
-<<<<<<< HEAD
                     router.push(`/marketplace/listing/${sugg.id}`);
                   } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
                     // Documentation suggestions navigate directly to their path;
@@ -311,7 +295,6 @@ onSelectSuggestion={(sugg) => {;
                   } else if (sugg.type === 'blog' && sugg.slug) {;
 :src_backup/layout/PrimaryNav.tsx
                     // Blog posts navigate to blog detail page;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     router.push(`/blog/${sugg.slug}`);
                   } else {;
                     // Default: search results page with query parameter;`
@@ -319,7 +302,6 @@ onSelectSuggestion={(sugg) => {;
                   }'
                   setQuery(''),;
 :src_backup/layout/PrimaryNav.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   // Track analytics event;
 if (typeof window !== 'undefined' && window.gtag) {;
                     window.gtag('eventsearch_suggestion_click', {;
@@ -415,7 +397,6 @@ if ( {) {}
                     window.gtag ('event', search_suggestion_click', {}
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       suggestion_id: sugg.id || sugg.slug;
                     });
                   }
@@ -473,15 +454,12 @@ href="/auth/login"
                     }}
                   >;
 
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/layout/PrimaryNav.tsx
                     {t('auth.login')}
                   </Link>
 
                   <Link
 :src/layout/PrimaryNav.tsx
-<<<<<<< HEAD
                     href='/signup'
                     className='text-sm hover:text-primary whitespace-nowrap'>;
                     {t('auth && auth.signup')}
@@ -493,18 +471,11 @@ href="/auth/login"
                     {t('auth.signup')}
 </Link>;
                 </>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/layout/PrimaryNav.tsx
               )}
               {isLoggedIn && <UserMenu />}
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>;
           </div>;
           {/* Tablet view (md to lg) - simplified controls */}
@@ -546,10 +517,7 @@ export function PrimaryNav() {
                 }}
               >
 :src/layout/PrimaryNav.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {t('auth.login')}
-=======
 '
                 {t('auth.login')}
               </Link>
@@ -561,7 +529,6 @@ export function PrimaryNav() {
                   setLoginOpen(true);                }}
               >;'
                 {t('auth && auth.login')}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/layout/PrimaryNav.tsx
               </Link>;
             )}
             {isLoggedIn && <UserMenu />}
@@ -613,7 +580,6 @@ export function PrimaryNav() {
           {/* Mobile menu button */}
 
           </div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Mobile menu button */}
           <button"
             className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0"
@@ -631,8 +597,6 @@ export function PrimaryNav() {
 :src/layout/PrimaryNav.tsx
 
           <div
-<<<<<<< HEAD
-<<<<<<< HEAD
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
@@ -810,10 +774,6 @@ setLoginOpen (true)'
 :src_backup/layout/PrimaryNav.tsx
 }{
   isMobile && <MobileBottomNav unreadCount= {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   unreadCount
 
   unreadCount 
@@ -843,7 +803,6 @@ setLoginOpen (true)'
               <X className='h - 6 w - 6' />) : (
               <Menu className='h - 6 w - 6' />)}
           </button>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>;
       )}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
@@ -851,7 +810,6 @@ setLoginOpen (true)'
     </>;
   );
 }
-<<<<<<< HEAD
 return (<> <header className="sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md" role="navigation" aria - label="Primary" data - testid="header" > <div className="container flex items - center justify - between gap - 2 min - h-16 px - 4 sm:px - 6 max-[320px]:flex - wrap" > <Logo />;
 }set_query ('');
 //Track analytics event;
@@ -965,13 +923,7 @@ setLoginOpen (true);
 '"`;
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/layout/PrimaryNav.tsx
   isMobile && <MobileBottomNav unreadCount= {;
   unreadCount ;
 }/> ;
@@ -982,10 +934,6 @@ setLoginOpen (true);
 }/> </>) ;
 }'"
 :src/layout/PrimaryNav.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }{}
   isMobile && <MobileBottomNav unreadCount= {}
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/layout/PrimaryNav.tsx

@@ -1,8 +1,4 @@
 :src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { Calendar, User, FileText, BarChart } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -15,12 +11,9 @@ import { ApplicationActions } from "./ApplicationActions",
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import useState
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface ApplicationRowProps {
 import { Button } from "@/components/ui/button",
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationRow.tsx
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
 import { TableRow, TableCell } from "@/components/ui/table",;
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
@@ -53,17 +46,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (
 :src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 interface ApplicationRowProps {
   application: JobApplication;,
   processing_id: string | null;,
   onViewApplication: (application_id:,  string) => Promise < void>;,
   onStatusChange: (,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationRow.tsx
 export function ApplicationRow({
   application
   processingId
@@ -74,8 +63,6 @@ export function ApplicationRow({
   const [avatarError, setAvatarError] = useState(false)
 :src_backup/components/jobs/applications/ApplicationRow.tsx
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface ApplicationRowProps {
   application: JobApplication,
@@ -111,7 +98,6 @@ interface ApplicationRowProps {;
   onViewApplication: (applicationId: string,) => Promise<void>,;
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>,;
   onViewScore: (application: JobApplication,) => void;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 :src_backup/components/jobs/applications/ApplicationRow.tsx
 
@@ -185,7 +171,6 @@ export function ApplicationRow({
   const talentName = application.talent_profile?.full_name || 'Unknown'
 
 :src/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD
     applicationId: string
     newStatus: ApplicationStatus
   ) => Promise<void>
@@ -209,11 +194,7 @@ export function ApplicationRow({
 
   return (
 :src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationRow.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <TableRow key={application.id}>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <TableCell>
         <div className="flex items-center gap-3">
           <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
@@ -222,21 +203,15 @@ export function ApplicationRow({
 <Image
 :src_backup/components/jobs/applications/ApplicationRow.tsx
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 src={application.talent_profile.profile_picture_url} 
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationRow.tsx
-=======
                 src={application.talent_profile.profile_picture_url} 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationRow.tsx
                 alt={talentName}
                 width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
                 height={36} // Corresponds to h-9 w-9
                 className="rounded-full object-cover" // Ensure rounded and object-cover
                 onError={() => setAvatarError(true)}
 :src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD
                 priority={false}
               />
 
@@ -252,44 +227,31 @@ export function ApplicationRow({
               {application.talent_profile?.professional_title || "Talent"}
 :src_backup/components/jobs/applications/ApplicationRow.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationRow.tsx
             </div>
           </div>
         </div>
       </TableCell>
       <TableCell>
 :src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
 
 :src/components/jobs/applications/ApplicationRow.tsx
-=======
         <div className="flex items-center gap-1">"
           <Calendar className="h-4 w-4 text-muted-foreground" />"
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationRow.tsx
         </div>
-=======
               <Image        </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </TableCell>
       <TableCell>
         <StatusBadge status={application.status} />
       </TableCell>
       <TableCell>
 :src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationRow.tsx
-=======
         <Button
           variant="ghost" "
           size="sm" "
@@ -297,10 +259,7 @@ export function ApplicationRow({
           className="flex items-center gap-1""
         >
           <BarChart className="h-4 w-4 mr-1" />"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationRow.tsx
         <Button 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           variant="ghost" 
           size="sm" 
           onClick={() => onViewScore(application)}
@@ -393,7 +352,6 @@ interface ApplicationRowProps {
   onStatusChange: (application_id: string, new_status: ApplicationStatus, ) => Promise < void>,
   onViewScore: (application: JobApplication, ) => void;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { formatDistanceToNow } from "date-fns",;
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
@@ -454,8 +412,6 @@ export function ApplicationRow({;
       </TableCell>;
       <TableCell>;
 :src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD
         <div className="flex items-center gap-1">;
           <Calendar className="h-4 w-4 text-muted-foreground" />;
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>;
@@ -467,7 +423,6 @@ export function ApplicationRow({;
             })}
           </span>;
 :src_backup/components/jobs/applications/ApplicationRow.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationRow.tsx
         </div>;
       </TableCell>;
       <TableCell>;
@@ -483,20 +438,15 @@ export function ApplicationRow({;
         >;
           <BarChart className="h-4 w-4 mr-1" />;
 :src_backup/components/jobs/applications/ApplicationRow.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationRow.tsx
           <ScoreBadge application={application} />;
         </Button>;
       </TableCell>;
       <TableCell>;
 :src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         {application.resume ? (;
           <Button variant="ghost" size="sm" asChild>;
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">;
               <FileText className="h-4 w-4 mr-1" /> View;
-=======
               href={application && application.resume.file_url || '#'}'
               target='_blank''
               rel='noopener noreferrer'>;
@@ -505,17 +455,13 @@ export function ApplicationRow({;
           <Button variant="ghost" size="sm" asChild>;
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">;
               <FileText className="h-4 w-4 mr-1" /> View;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationRow.tsx
             </a>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Button>;
         ) : (;
           <span className="text-muted-foreground text-sm">No resume</span>;
         )}
       </TableCell>;
 :src/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD
       <TableCell className="text-right">;
         <ApplicationActions;
           application={application}
@@ -529,17 +475,13 @@ export function ApplicationRow({;
           onViewApplication = {onViewApplication,}
           onStatusChange = {onStatusChange,}
 :src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         />;
       </TableCell>;
     </TableRow>;
   );
 }
 :src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD
               target='_blank';
               rel='noopener noreferrer';
             >;
@@ -560,24 +502,12 @@ export function ApplicationRow({;
     </TableRow>);
 }
 :src_backup/components/jobs/applications/ApplicationRow.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationRow.tsx
-=======
 ;
 }}}
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationRow.tsx
         />
       </TableCell>
     </TableRow>
   );
 :src/components/jobs/applications/ApplicationRow.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

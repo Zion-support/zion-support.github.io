@@ -1,49 +1,33 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
 import { UsageStats } from "./UsageStats",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
 import { AdminHeader } from "./AdminHeader";
 import { TeamManagement } from "./TeamManagement";
 import { UsageStats } from "./UsageStats";
-<<<<<<< HEAD
 import { RoleManagement } from "./RoleManagement";
 import { TeamActivity } from "./TeamActivity";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-import { AdminHeader } from "./AdminHeader";
-import { TeamManagement } from "./TeamManagement";
-import { UsageStats } from "./UsageStats";
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { AdminHeader } from "./AdminHeader";
 import { TeamManagement } from "./TeamManagement";
 import { UsageStats } from "./UsageStats";
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
+
+
+import { AdminHeader } from "./AdminHeader";
+import { TeamManagement } from "./TeamManagement";
+import { UsageStats } from "./UsageStats";
+
 export function AdminDashboard() {
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">
       <AdminHeader />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
 import { UsageStats } from "./UsageStats",
 import { RoleManagement } from "./RoleManagement",
-=======
 
 import React from "react";"
 import { AdminHeader } from "./AdminHeader";"
@@ -61,7 +45,6 @@ import { AdminHeader } from "./AdminHeader","
 import { TeamManagement } from "./TeamManagement","
 import { UsageStats } from "./UsageStats","
 import { RoleManagement } from "./RoleManagement","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { TeamActivity } from "./TeamActivity",
 import {}
   Tabs,
@@ -69,30 +52,12 @@ import {}
   TabsList,"
   TabsTrigger} from "@/components/ui/tabs",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Tabs defaultValue="team" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="team">Team Management</TabsTrigger>
           <TabsTrigger value="roles">Role Assignment</TabsTrigger>
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>
-=======
 
 "
       <Tabs defaultValue="team" className="mt-8">"
@@ -100,16 +65,9 @@ import {}
           <TabsTrigger value="team">Team Management</TabsTrigger>"
           <TabsTrigger value="roles">Role Assignment</TabsTrigger>"
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <TabsTrigger value="activity">Team Activity</TabsTrigger>
-<<<<<<< HEAD
         </TabsList>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
         </TabsContent>"
@@ -119,8 +77,6 @@ import {}
         <TabsContent value="usage" className="space-y-8">
           <UsageStats />
         </TabsContent>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         </TabsList>
 
         <TabsContent value="team" className="space-y-8">
@@ -132,7 +88,6 @@ import {}
         <TabsContent value="usage" className="space-y-8">
           <UsageStats />
         </TabsContent>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
         </TabsContent>
@@ -143,17 +98,9 @@ import {}
           <UsageStats />
         </TabsContent>
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
         </TabsContent>
@@ -161,7 +108,6 @@ import {}
 </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>;
   );
 }
@@ -180,22 +126,16 @@ import {;
   TabsTrigger} from "@/components/ui/tabs";
 export function AdminDashboard() {;
   return (;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <TabsTrigger value="team">Team Management</TabsTrigger>;
           <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
-=======
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
         </TabsContent>
       </Tabs>          <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
         </TabsContent>
       </Tabs>          <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
@@ -251,7 +191,6 @@ import {
         <TabsList className="grid w-full grid-cols-4 mb-8">;
           <TabsTrigger value="team">Team Management</TabsTrigger>;
           <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>;
           <TabsTrigger value="activity">Team Activity</TabsTrigger>;
         </TabsList>;
@@ -300,11 +239,9 @@ import {
 }
 }
         ;
-=======
 export function AdminDashboard() { return null; }
 }
         ;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <TabsContent value="team" className="space-y-8">;
           <TeamManagement />;
         </TabsContent>;
@@ -335,17 +272,10 @@ export function AdminDashboard() { return null; }
 }
 ;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 }
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import React from "react";""
 import { AdminHeader } from "./AdminHeader";""
 import { TeamManagement } from "./TeamManagement";""
@@ -432,4 +362,3 @@ import {
 
     </div>;"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

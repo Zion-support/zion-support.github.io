@@ -1,6 +1,4 @@
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { upsertFile } = require('./_lib/github');
 exports.handler = async function () {
   try {
@@ -61,4 +59,3 @@ return { statusCode: 200, body: JSON.stringify({ ok: true, pages: pages.length }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

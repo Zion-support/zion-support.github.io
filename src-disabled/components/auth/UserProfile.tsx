@@ -1,10 +1,6 @@
 :src_backup/components/auth/UserProfile.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD:src_backup/components/auth/UserProfile.tsx
-<<<<<<< HEAD
 import {supabase} from '@/utils / supabase / client';
 import {Button} from '@/components / ui / button';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
@@ -63,7 +59,6 @@ if ( {) {
   $2
 'use client';
 import React, { useEffect, useState } from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { supabase } from '@/utils/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -102,7 +97,6 @@ interface UserProfileProps {;
   onUserChange?: (user: SupabaseUser | null) => void,;
 
 export default function UserProfile(): any ({ onUserChange }: UserProfileProps) {;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/UserProfile.tsx
   const [user, setUser] = useState<SupabaseUser | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
@@ -127,7 +121,6 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     return () => subscription.unsubscribe();
   }, [onUserChange]);
   const handleSignOut = async () => {;
-<<<<<<< HEAD:src_backup/components/auth/UserProfile.tsx
     await supabase.auth.signOut();
   }
 ;
@@ -162,7 +155,6 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
         </CardContent>;
       </Card>;
     );
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
 :src_backup/components/auth/UserProfile.tsx
@@ -186,7 +178,6 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
   }
 
   return (
-<<<<<<< HEAD
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -239,8 +230,6 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
         <CardContent>;'
           <Button onClick={handleSignIn} className='w-full'>;'
             <LogIn className='h-4 w-4 mr-2' />;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/UserProfile.tsx
             Sign In;
           </Button>;
         </CardContent>;
@@ -274,13 +263,9 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
             </span>
           </div>
         </div>          Sign Out
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 :src_backup/components/auth/UserProfile.tsx
 Sign Out
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>;
       </CardContent>;
     </Card>;
@@ -328,13 +313,11 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
 <Button onClick={handleSignOut} variant="outline" className="w-full">
           <LogOut className="h-4 w-4 mr-2" />
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           Sign Out
         </Button>
       </CardContent>
     </Card>
 :src_backup/components/auth/UserProfile.tsx
-<<<<<<< HEAD
   )
 }
     <Card className='w-full max-w-sm'>;
@@ -432,18 +415,9 @@ if ( {) {}
         </Button>;
       </CardContent>;
 :src_backup/components/auth/UserProfile.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Card>);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     </Card>);'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/UserProfile.tsx
-=======
     </Card>);
 }
   )
@@ -458,4 +432,3 @@ if ( {) {}
 
           <LogOut className='h - 4 w - 4 mr - 2' />;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/UserProfile.tsx

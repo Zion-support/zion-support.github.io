@@ -1,8 +1,4 @@
 :src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -15,9 +11,7 @@ interface ContractTypeCardsProps {
 
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
 :src_backup/components/contracts/page/ContractTypeCards.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/page/ContractTypeCards.tsx
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -36,22 +30,14 @@ import { FileText, ShieldCheck } from 'lucide-react'
 }
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
 :src/components/contracts/page/ContractTypeCards.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
         <CardHeader>
 <CardTitle className="flex items-center gap-2">
 <CardTitle className="flex items-center gap-2">
-<<<<<<< HEAD:src/components/contracts/page/ContractTypeCards.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/page/ContractTypeCards.tsx
             <FileText className="h-5 w-5" />
-=======
           <CardTitle className="flex items-center gap-2">            <FileText className="h-5 w-5" />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Standard Contracts
           </CardTitle>
           <CardDescription>
@@ -61,17 +47,8 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         <CardContent>
 :src_backup/components/contracts/page/ContractTypeCards.tsx
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/page/ContractTypeCards.tsx
-=======
           <ul className="space-y-2">"
             <li className="text-sm">✓ Legally binding templates</li>"
             <li className="text-sm">✓ Milestone-based payment terms</li>"
@@ -82,7 +59,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         <CardFooter>
           <Button variant="outline" onClick={onStandardClick}>"
           <Button variant="outline" onClick={onStandardClick}>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/page/ContractTypeCards.tsx
           <ul className="space-y-2">
             <li className="text-sm">✓ Legally binding templates</li>
             <li className="text-sm">✓ Milestone-based payment terms</li>
@@ -92,16 +68,11 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardContent>
         <CardFooter>
 :src/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD
           <Button variant="outline" onClick={onStandardClick}>
-<<<<<<< HEAD
 
           <Button variant="outline" onClick={onStandardClick}>
 
 :src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD:src/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <ul className='space-y-2'>
             <li className='text-sm'>✓ Legally binding templates</li>
             <li className='text-sm'>✓ Milestone-based payment terms</li>
@@ -112,25 +83,16 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         <CardFooter>
           <Button variant='outline' onClick={onStandardClick}>
 :src/components/contracts/page/ContractTypeCards.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/page/ContractTypeCards.tsx
             Create Standard Contract
           </Button>
         </CardFooter>
       </Card>
 :src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD
 
       <Card>
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
       <Card>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/page/ContractTypeCards.tsx
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
@@ -139,8 +101,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
             </CardTitle>
             <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">
 :src_backup/components/contracts/page/ContractTypeCards.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/page/ContractTypeCards.tsx
 <Card>
         <CardHeader className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg'>
           <div className='flex justify-between items-center'>
@@ -157,12 +117,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Deploy agreements on Ethereum or Polygon with escrow capabilities
           </CardDescription>
         </CardHeader>
-<<<<<<< HEAD
         <CardContent>
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD:src/components/contracts/page/ContractTypeCards.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <ul className="space-y-2">
             <li className="text-sm">✓ All standard contract features</li>
             <li className="text-sm">✓ Automatic escrow payment release</li>
@@ -176,9 +132,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={onSmartClick}
 
 :src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/page/ContractTypeCards.tsx
 <ul className='space-y-2'>
             <li className='text-sm'>✓ All standard contract features</li>
             <li className='text-sm'>✓ Automatic escrow payment release</li>
@@ -192,10 +145,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='w-full bg-gradient-to-r from-blue-600 to-indigo-600'
             onClick={onSmartClick}
 :src/components/contracts/page/ContractTypeCards.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/page/ContractTypeCards.tsx
           >
             Create Smart Contract
           </Button>
@@ -215,10 +164,7 @@ import {;
 } from '@/components/ui/card';
 :src_backup/components/contracts/page/ContractTypeCards.tsx
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           <Button
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" "
           <ul className="space-y-2">
@@ -230,7 +176,6 @@ import {;
           </ul>
         </CardContent>
         <CardFooter>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/page/ContractTypeCards.tsx
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
@@ -240,7 +185,6 @@ interface ContractTypeCardsProps {;
 :src_backup/components/contracts/page/ContractTypeCards.tsx
   onStandardClick: () => void;
   onSmartClick: () => void;
-<<<<<<< HEAD
 }
 ;
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {;
@@ -265,18 +209,13 @@ export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }:,  C
   return (
 :src_backup/components/contracts/page/ContractTypeCards.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/page/ContractTypeCards.tsx
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
-=======
         <CardContent>    <div className="grid md:grid-cols-2 gap-6 mb-10">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
 :src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from '@/components / ui / button';
 import {
   Card,
@@ -318,10 +257,7 @@ function ContractTypeCards() {
             <FileText className="h - 5 w - 5" />;
 :src_backup/components/contracts/page/ContractTypeCards.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/page/ContractTypeCards.tsx
             Standard Contracts;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </CardTitle>;
           <CardDescription>;
             Generate traditional legal agreements for your projects;
@@ -329,7 +265,6 @@ function ContractTypeCards() {
         </CardHeader>;
         <CardContent>;
 :src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD
           <ul className="space-y-2">;
             <li className="text-sm">✓ Legally binding templates</li>;
             <li className="text-sm">✓ Milestone-based payment terms</li>;
@@ -341,7 +276,6 @@ function ContractTypeCards() {
             <li className='text - sm'>✓ Milestone - based payment terms</li>;
             <li className='text - sm'>✓ IP rights and confidentiality clauses</li>;
             <li className='text - sm'>✓ DocuSign integration</li>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/page/ContractTypeCards.tsx
           </ul>;
         </CardContent>;
         <CardFooter>;
@@ -358,13 +292,8 @@ function ContractTypeCards() {
               Smart Contracts;
             </CardTitle>;
 <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/page/ContractTypeCards.tsx
-=======
             <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full">;
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">;
           <div className="flex justify-between items-center">;
@@ -373,7 +302,6 @@ function ContractTypeCards() {
               Smart Contracts;
             </CardTitle>;
             <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/contracts/page/ContractTypeCards.tsx
               Blockchain Powered;
             </span>;
           </div>;
@@ -383,8 +311,6 @@ function ContractTypeCards() {
         </CardHeader>;
         <CardContent>;
 :src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
           <ul className="space-y-2">;
             <li className="text-sm">✓ All standard contract features</li>;
             <li className="text-sm">✓ Automatic escrow payment release</li>;
@@ -459,7 +385,6 @@ pr-12325
           >;
 :src_backup/components/contracts/page/ContractTypeCards.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/page/ContractTypeCards.tsx
             Create Smart Contract;
           </Button>;
         </CardFooter>;
@@ -471,22 +396,14 @@ pr-12325
 
 );
 }
-<<<<<<< HEAD
 ;
 :src/components/contracts/page/ContractTypeCards.tsx
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 ;
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/contracts/page/ContractTypeCards.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/page/ContractTypeCards.tsx

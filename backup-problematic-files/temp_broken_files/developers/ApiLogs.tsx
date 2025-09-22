@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { List, RefreshCw } from "lucide-react",;
@@ -48,7 +47,6 @@ export function ApiLogs() {;
   const hasPrevPage = currentPage > 0,;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
@@ -58,7 +56,6 @@ export function ApiLogs() {;
           View logs of requests made using your API keys.;
         </CardDescription>;
       </CardHeader>;
-<<<<<<< HEAD
 
       <CardContent>;
         <div className="flex justify-between items-center mb-6">;

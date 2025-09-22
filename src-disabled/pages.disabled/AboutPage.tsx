@@ -1,6 +1,5 @@
 :src/pages/AboutPage.tsx
 import React from 'react';
-<<<<<<< HEAD
 import './AboutPage.css';
 
 const AboutPage: React.FC = () => {
@@ -223,6 +222,5 @@ Zion Tech Group is a leading technology company dedicated to delivering innovati
   </>
 );
 :src/pages/AboutPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default AboutPage;

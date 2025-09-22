@@ -35,10 +35,7 @@ type RoadmapInputs = {}
       .map((s) => String(s))
     const metrics: string[] = ['
       'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS']
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   priorities: string;
 },
 type Stage = {}
@@ -82,20 +79,12 @@ function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): 
       .map ((s) => String (s)),
     const metrics: string[] = [;'
       'Weekly active contributors_verified engagements (intros, briefs, scopes)On - chain / escrow settlement volume_time - to - hire and time - to - pay_retention and NPS'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return { id, name, theme, objective, highlights, metrics }
   });
 }
 
 function defaultOperatorPrompt(): string {
   return `You are Zion's Product Operator.
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 Inputs you will receive:
 - milestones (string list)
 - keywords (string list)
@@ -107,19 +96,15 @@ Goals:
 4) Include explicit risks and validation signals per stage;
 5) Output concise, skimmable, exec-ready text;
 Format:
-<<<<<<< HEAD
 
 import Head from 'next/head',;
 import React, { useMemo, useState } from 'react',;
 ;
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 type RoadmapInputs = {
-=======
 
 type RoadmapInputs = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   milestones: string;
   keywords: string;
   priorities: string;
@@ -192,7 +177,6 @@ Goals:;
 5) Output concise, skimmable, exec - ready text;
 Format:;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 Zion v{n} — {theme}
 Objective: ...;
 Highlights:;
@@ -208,7 +192,6 @@ Validation:;
 
     () => generateStages({ milestones, keywords, priorities });
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     [milestones, keywords, priorities]
   )
   const operatorPrompt = useMemo(() => defaultOperatorPrompt(), [])
@@ -216,18 +199,15 @@ const copyPrompt = async () => {
     try {
 await navigator.clipboard.writeText(operatorPrompt);
       setCopied(true);
-<<<<<<< HEAD
       setTimeout(() => setCopied(false), 1500);
     } catch {;
       setCopied(false);
       } catch (error) {
-<<<<<<< HEAD
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setTimeout(() => setCopied(false), 1500)
 export default function RoadmapPage (): JSX.Element {
   const [milestones, set_milestones] = useState ('MVP live, First 50 users, First 10 paid engagements'),
@@ -248,10 +228,7 @@ export default function RoadmapPage (): JSX.Element {
 
     }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
   return (
     <>;
@@ -289,12 +266,10 @@ export default function RoadmapPage (): JSX.Element {
   }
 }
 rows={3  } catch (error) {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
   },
   return (
     <>
@@ -319,7 +294,6 @@ rows={3  } catch (error) {
 
                 <textarea
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
                 />
@@ -349,8 +323,6 @@ className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm 
                 <label className="block text-sm font-medium text-gray-700">Vision keywords</label>
                 <input
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 />
               </div>
               <div>
@@ -360,7 +332,6 @@ className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm 
                 <input
                   value={keywords}
 onChange={(e) => setKeywords(e.target.value)}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   value={keywords  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -371,9 +342,6 @@ onChange={(e) => setKeywords(e.target.value)}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
                 />
@@ -389,7 +357,6 @@ onChange={(e) => setKeywords(e.target.value)}
                   Upcoming priorities
                 </label>
                 <input
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   value={priorities  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -400,54 +367,39 @@ onChange={(e) => setKeywords(e.target.value)}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
-=======
                   value={priorities}
                   onChange={e => setPriorities(e.target.value)}
                   className='mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none'
                   placeholder='e.g., governance, scale, regional expansion'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 />
               </div>
             </div>
           </section>
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <section className="mb-12">
             <div className="mb-3 flex items-center justify-between gap-3">
               <h2 className="text-xl font-semibold">Operator Prompt</h2>
               <button
 
-=======
 
 <section className='mb-12'>
             <div className='mb-3 flex items-center justify-between gap-3'>
               <h2 className='text-xl font-semibold'>Operator Prompt</h2>
               <button
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'  } catch (error) {
@@ -470,7 +422,6 @@ onChange={(e) => setKeywords(e.target.value)}
                   <div className="mt-3">"
                     <p className="font-semibold">Highlights</p>"
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               >
                 {copied ? 'Copied' : 'Copy'}
               </button>
@@ -498,15 +449,12 @@ onChange={(e) => setKeywords(e.target.value)}
                   <div className='mt-3'>
                     <p className='font-semibold'>Highlights</p>
                     <ul className='mt-1 list-disc space-y-1 pl-5 text-gray-800'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {stage.highlights.map((h, i) => (
                         <li key={i}>{h}</li>
                       ))}
                     </ul>
 </div>
 <div className="mt-3">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <p className="font-semibold">Metrics</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       {stage.metrics.map((m, i) => (
@@ -522,16 +470,12 @@ onChange={(e) => setKeywords(e.target.value)}
                       <li>Regulatory and payment-compliance variability</li>
                     </ul>
 </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <p className="font-semibold">Validation</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       <li>Leading indicator movement on activation and retention</li>
                       <li>Faster time-to-hire and time-to-pay</li>
                       <li>Positive contributor NPS and dispute resolution rates</li>
-=======
 <div className='mt-3'>
                     <p className='font-semibold'>Validation</p>
                     <ul className='mt-1 list-disc space-y-1 pl-5 text-gray-800'>
@@ -542,18 +486,11 @@ onChange={(e) => setKeywords(e.target.value)}
                       <li>
                         Positive contributor NPS and dispute resolution rates
                       </li>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </ul>
                   </div>
                 </article>
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
   return (;
     <>;
@@ -580,7 +517,6 @@ onChange={(e) => setKeywords(e.target.value)}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
                   onChange={(e) => setMilestones(e.target.value)  } catch (error) {"
     console.error("Error:", error);"
@@ -627,22 +563,16 @@ onChange={(e) => setKeywords(e.target.value)}
   }
 }"
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   placeholder="e.g., governance, scale, regional expansion";
                 />;
               </div>;
             </div>;
           </section>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>;
           </section>;
         </div>;
       </main>;
-<<<<<<< HEAD
     </>;
   );
   } catch (error) {
@@ -651,11 +581,4 @@ onChange={(e) => setKeywords(e.target.value)}
   }
 }
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

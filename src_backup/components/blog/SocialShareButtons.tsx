@@ -1,8 +1,4 @@
 :src_backup/components/blog/SocialShareButtons.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
@@ -26,14 +22,9 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 
   const shareUrl =
   const shareToTwitter = () => {    window.open(
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
 const shareToTwitter = () => {
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/blog/SocialShareButtons.tsx
 
     window.open(
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
@@ -71,17 +62,14 @@ function SocialShareButtons() {}
 
   }
 :src_backup/components/blog/SocialShareButtons.tsx
-<<<<<<< HEAD:src/components/blog/SocialShareButtons.tsx
   const copy_link = () =>: any {
     // Check condition
 if (return) {
   $2
-=======
   const copy_link = () =>: any {}
     // Check condition;
 if (return) {}
   $2;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/blog/SocialShareButtons.tsx
 }
     navigator.clipboard;
       .write_text (window.location.href);'
@@ -168,11 +156,8 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 
 :src/components/blog/SocialShareButtons.tsx
       icon: <Twitter className='h - 4 w - 4' />,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 '
       icon: <Twitter className='h - 4 w - 4' />,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/blog/SocialShareButtons.tsx
       label: 'Twitter',
       on_click: shareToTwitter,
     },
@@ -209,12 +194,8 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 }
 
 :src/components/blog/SocialShareButtons.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/blog/SocialShareButtons.tsx
   },
 
   const shareToFacebook = () => {'`
@@ -228,7 +209,6 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
   const copyLink = () => {'
     if (typeof window === 'undefined') return,
 :src_backup/components/blog/SocialShareButtons.tsx
-<<<<<<< HEAD
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
@@ -276,14 +256,12 @@ export function SocialShareButtons() { return null; }`
           <span>{btn.label}</span>;
         </Button>;
       ))}
-=======
 
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/blog/SocialShareButtons.tsx
     </div>;
 );
 };
@@ -348,21 +326,12 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
         </Button>;
       ))}
 :src/components/blog/SocialShareButtons.tsx
-<<<<<<< HEAD
     </div>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-<<<<<<< HEAD:src_backup/components/blog/SocialShareButtons.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 
     </div>
   );
 :src/components/blog/SocialShareButtons.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/blog/SocialShareButtons.tsx

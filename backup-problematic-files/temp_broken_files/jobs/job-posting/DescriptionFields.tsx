@@ -1,5 +1,4 @@
 
-=======
 import React from 'react',;
 import { Control } from 'react-hook-form',;
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",;
@@ -18,12 +17,10 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
       <FormField;
         control={control}
         name="description";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Job Description</FormLabel>;
             <FormControl>;
-<<<<<<< HEAD
 
                 placeholder="Enter a detailed description of the job role";
               />;

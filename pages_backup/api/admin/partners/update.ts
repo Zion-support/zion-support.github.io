@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server',;
@@ -21,7 +18,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { error } = await supabase.from('partners').update(updates).eq('code', String(code).toLowerCase())
     if (error) return res.status(500).json({ error: error.message })
 
-<<<<<<< HEAD
     return res.status(200).json({ ok: true })
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { code, status, commission_rate } = req.body || {};
@@ -35,5 +31,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: e?.message })
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

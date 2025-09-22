@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;
@@ -51,12 +50,10 @@ export function WebhooksManager() {;
   const handleCreateWebhook = async () => {;
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,;
     ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     await createWebhook(;
       webhookName, ;
       webhookUrl, ;
       selectedEvents, ;
-<<<<<<< HEAD
 
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;

@@ -1,5 +1,4 @@
 
-=======
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -47,7 +46,6 @@ function ReviewsModerationContent() {;
       <SEO;
         title="Review Moderation | Zion AI Marketplace";
         description="Moderate and manage reviews in the Zion AI Marketplace";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
@@ -57,7 +55,6 @@ function ReviewsModerationContent() {;
             <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>;
           </div>;
         </div>;
-<<<<<<< HEAD
 
         <Card>;
           <CardHeader>;

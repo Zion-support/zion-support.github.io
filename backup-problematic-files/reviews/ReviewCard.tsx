@@ -28,7 +28,6 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
 
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return (import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
@@ -49,11 +48,8 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 
   return (
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           <StarRating
-=======
           <StarRating;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             value={review && review.rating}
             onChange={() => {}}
 
@@ -108,7 +104,6 @@ main:components/reviews/ReviewCard.tsx
       <div className='flex items-center gap-2 mb-3'>
         <span className='text-sm font-medium'>{review.authorName}</span>
           <span className='pill pill-success'>Would work again</span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
 
       </div>;
@@ -164,7 +159,6 @@ export default ReviewCard;        {review && review.categories?.wouldWorkWithAga
       <div className="flex flex-wrap gap-2 mt-3">;
         {typeof review && review.categories?.communication === 'number' && (;
           <span className="pill">Communication: {review && review.categories.communication}★</span>;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
 
 export default ReviewCard;
@@ -173,7 +167,3 @@ export default ReviewCard;
 :components/reviews/ReviewCard.tsx
 main:components/reviews/ReviewCard.tsx
 export default ReviewCard;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewCard.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

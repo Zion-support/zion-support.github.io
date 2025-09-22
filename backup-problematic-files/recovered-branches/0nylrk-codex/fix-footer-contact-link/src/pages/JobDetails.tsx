@@ -34,7 +34,6 @@ export default function JobDetails() {;
 ;
   if (error || !job) {;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <>;
         <Header />;
 "
@@ -49,7 +48,6 @@ export default function JobDetails() {;
 <Header />;
       <main className="container mx-auto px-4 py-8">;
         <div className="mb-6">;
-<<<<<<< HEAD
 
             onClick={() => navigate('/jobs')}
           >;
@@ -63,7 +61,6 @@ export default function JobDetails() {;
               <CardHeader>;
                 <div className="flex justify-between items-start">;"
                   <div>;
-<<<<<<< HEAD
                 </div>;
               </CardHeader>;
               <CardContent className="space-y-6">;
@@ -127,14 +124,12 @@ export default function JobDetails() {;
 pr-12325
             budget: job.budget;,;
             client_id:job.client_id;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           }}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
 />;
       )}
     </>;
-<<<<<<< HEAD
   ),;}
  const [isApplyModalOpen, setIsApplyModalOpen] = useState (false);
 if (error || !job) {"
@@ -159,4 +154,3 @@ if (error || !job) {"
 
 }</>) 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

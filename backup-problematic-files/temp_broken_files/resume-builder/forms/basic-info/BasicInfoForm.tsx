@@ -1,5 +1,4 @@
 
-=======
 import React, { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -53,12 +52,10 @@ export function BasicInfoForm({;
   }, [initialData, form]),;
 ;
   const handleSubmit = (data:BasicInfoFormData) => {;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     onSave(data),;
     if (onComplete) {;
       onComplete();
     }
-<<<<<<< HEAD
 
         <div className="flex justify-end">;
           <Button type="submit">Save Basic Information</Button>;

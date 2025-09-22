@@ -1,5 +1,4 @@
 :src/components/AIMatchingResults.tsx
-<<<<<<< HEAD
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -16,8 +15,6 @@ interface AIMatchingResultsProps {
   projectDescription?: string,
   serviceType?: string
 }
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AIMatchingResults.tsx
 
 export function AIMatchingResults({
   matches,
@@ -29,9 +26,7 @@ export function AIMatchingResults({
   const [activeTab, setActiveTab] = useState("all"),
 
   // Group matches by category
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AIMatchingResults.tsx
   const categories = {
     all: matches,
     talent: matches.filter(match => match.category.toLowerCase().includes("talent")),
@@ -60,7 +55,6 @@ export function AIMatchingResults({
     )
   }
 :src/components/AIMatchingResults.tsx
-<<<<<<< HEAD
 
   if (matches.length === 0) {
     return (
@@ -147,7 +141,6 @@ export function AIMatchingResults({;
       </Card>;
     );
   }
-=======
 
 :src/components/AIMatchingResults.tsx
   }
@@ -231,7 +224,6 @@ if ( {) {
         </CardContent>;
       </Card>);
   }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -291,19 +283,12 @@ if ( {) {
                                   <div className="font-medium text-white">${match.price}</div>
                                   <div className="text-xs text-zion-slate-light">
                                     {match.category.toLowerCase().includes("talent") ? "/hour" : ""}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                                   </div>
                                 </div>
                               )}
                             </div>
 :src/components/AIMatchingResults.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
                             <div className="mt-2 flex flex-wrap gap-1">
                               <Badge variant="outline">
@@ -326,17 +311,13 @@ if ( {) {
               <div className="text-center py-8 text-zion-slate-light">;
                 No {tab} matches found.;
               </div>;
-=======
                         </div>;
                       </div>;
                     </div>;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             )}
           </TabsContent>;
         ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
       </Tabs>;
     </div>;
   );
@@ -344,13 +325,11 @@ if ( {) {
 };
 ;
 
-=======
             )}
           </TabsContent>;
         ))}
 
 :src/components/AIMatchingResults.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
       </Tabs>;
     </div>;
@@ -366,23 +345,13 @@ if ( {) {
       </Tabs>;
     </div>);
 :src/components/AIMatchingResults.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
       </Tabs>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }
 
       </Tabs>
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AIMatchingResults.tsx

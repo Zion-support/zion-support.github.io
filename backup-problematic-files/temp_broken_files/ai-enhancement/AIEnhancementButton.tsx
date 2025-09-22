@@ -1,5 +1,4 @@
 
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',;
@@ -92,12 +91,10 @@ export function AIEnhancementButton({;
           {isEnhancing ? (;
             <Loader2 className="h-4 w-4 mr-1 animate-spin" />;
           ) :(;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <RefreshCw className="h-4 w-4 mr-1" />;
           )}
           Regenerate;
         </Button>;
-<<<<<<< HEAD
 
           <X className="h-4 w-4 mr-1" />;
           Cancel;

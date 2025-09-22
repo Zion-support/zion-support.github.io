@@ -43,7 +43,6 @@ navigate(`/project/${projectId}`),;
             key={offer.id} ;
             className="border-2 border-primary bg-primary/5";
             onClick={() => handleViewOffer(offer.id)}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >;
             <CardContent className="p-4 flex items-center justify-between">;
               <div className="flex items-center gap-2">;
@@ -53,7 +52,6 @@ navigate(`/project/${projectId}`),;
                 <div>;
 <h4 className="font-semibold">🎉 New Project Offer!</h4>;
                   <p className="text-sm text-muted-foreground">;
-<<<<<<< HEAD
               <div className="flex items-center gap-2">;
                 <Button size="sm" className="whitespace-nowrap">;
                   View Offer;

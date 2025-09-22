@@ -66,9 +66,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({}
   title,
   subtitle,
 heroImage,
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
   description,
   benefits,
 
@@ -309,15 +306,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                   <div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
 </div>;
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
                 )}
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
-=======
                 )}"
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/services/ServiceLandingTemplate.tsx
                 <p className="text-zion-slate-light">{benefit.description}</p>
               </div>
             ))}
@@ -358,8 +350,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                         <p className="text-sm text-gray-400">{t.role}</p>
                       )}
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
                     </div>
                   </div>
                 </CardFooter>
@@ -370,9 +360,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                 </CardFooter>;
               </Card>;
 
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
             ))}
           </div>
         </div>
@@ -385,9 +372,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           asChild;
         >
 <a href={ctaLink}>{ctaText}</Link>
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
         </Button>
       </section>
     </div>

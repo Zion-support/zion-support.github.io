@@ -6,4 +6,3 @@ import _React from "react"; import Link from "next/link"; import { ArrowRight,Ph
 
 import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function DynamicPage() {}; return null} )}
 
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:src.disabled/src/pages.disabled/talent/[id].jsx

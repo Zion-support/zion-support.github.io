@@ -1,11 +1,8 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
 import type { QuoteRequest } from "@/types/quotes",;
-=======
 import { Button } from "@/components/ui/button";""
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 interface ExportToCSVProps {;
   quotes: QuoteRequest[];,;
@@ -71,16 +68,11 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
 variant="outline" ;
       onClick={handleExport}
       className="flex items-center gap-2";
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
       variant="outline" ;"
       onClick={handleExport}"
       className="flex items-center gap-2";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       disabled={quotes.length === 0}
     >;
 
       <Download size={16} />;
 Export CSV;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx

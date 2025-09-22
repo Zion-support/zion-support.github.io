@@ -1,6 +1,4 @@
 :src_backup/components/gamification/AchievementBadges.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { BadgeCheck } from 'lucide-react'
 export interface Achievement {
 
@@ -9,9 +7,7 @@ export interface Achievement {
   description: string
   achieved: boolean
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 
 export interface Achievement {
@@ -47,9 +43,7 @@ export interface Achievement {
 interface AchievementBadgesProps {
   achievements: Achievement[];
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/gamification/AchievementBadges.tsx
 
   achieved: boolean
 }
@@ -101,7 +95,6 @@ export interface Achievement {
 }
 :src_backup/components/gamification/AchievementBadges.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface Achievement {;
   id: string,;
 title: string;
@@ -117,8 +110,6 @@ interface AchievementBadgesProps {;
 export function AchievementBadges({ achievements }: AchievementBadgesProps) {
   return (
 :src_backup/components/gamification/AchievementBadges.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Card>
       <CardHeader>
         <CardTitle>Achievements</CardTitle>
@@ -132,11 +123,7 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
             <div>
 :src_backup/components/gamification/AchievementBadges.tsx
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/gamification/AchievementBadges.tsx
               <p className="font-medium">{a.title}</p>
               <p className="text-sm text-muted-foreground">{a.description}</p>
             </div>
@@ -144,7 +131,6 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
         ))}
 :src_backup/components/gamification/AchievementBadges.tsx
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </CardContent>;
     </Card>;
   );
@@ -187,21 +173,10 @@ function AchievementBadges() {
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
-<<<<<<< HEAD:src/components/gamification/AchievementBadges.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/gamification/AchievementBadges.tsx
-=======
 }}}
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/gamification/AchievementBadges.tsx
     <Card>
       <CardHeader>
         <CardTitle>Achievements</CardTitle>
@@ -222,9 +197,6 @@ function AchievementBadges() {
   );
 }
 :src/components/gamification/AchievementBadges.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   // TODO: Implement
   // TODO: Implement
   achievements: Achievement[]
@@ -273,4 +245,3 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
           </div>))}
     );"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/gamification/AchievementBadges.tsx

@@ -1,6 +1,5 @@
 :pages/api-disabled/api/learn/progress.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -10,16 +9,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = readUsers()
     if (req.method === 'GET') {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 :pages/api-disabled/api/learn/progress.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 const users = readUsers(),
-<<<<<<< HEAD
     if (req && req.method === 'GET') {
       const { userId = 'demo-user' } = req && req.query;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const user = users[userId as string];
     if (req && req.method === 'POST') {
       const {
@@ -117,7 +113,6 @@ function readUsers() {;
 function writeUsers(data: any) {;
   fs.writeFileSync(usersPath, JSON.stringify(data, null, 2))
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -175,12 +170,10 @@ function readUsers() {;
     return res.status(500).json({ error: e?.message ?? 'Failed to handle progress' })
   }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 :pages/api/learn/progress.ts
 
   }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
         course_progress.completed_lessons.push (lesson_id);
       }
@@ -189,10 +182,5 @@ if ( {) {}
   $2;
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/learn/progress.ts
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/progress.ts

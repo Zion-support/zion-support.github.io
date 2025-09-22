@@ -14,21 +14,18 @@ function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8')
     return JSON.parse(raw)
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch {
     return {};
   }
 }
 
 function save(db: Record<string, KycProfile>) {
-=======
   } catch {}
     return {};
   }
 }
 
 function save(db: Record<string, KycProfile>) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   fs.mkdirSync(DATA_DIR, { recursive: true }),
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
@@ -83,8 +80,4 @@ try {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
-=======
 };'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

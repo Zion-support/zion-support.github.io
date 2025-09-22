@@ -7,7 +7,6 @@ import React from 'react';
 interface Basic.specProps {
 :src.broken/pages/ai-search.jsx
   // Add props here as needed
-<<<<<<< HEAD:src.broken/pages/ai-search.jsx
 }
   // Add props here as needed;
 
@@ -26,9 +25,6 @@ interface Basic.specProps {
 
 export default function Basic.spec({ }: Basic.specProps) {
 :src.broken/pages/ai-search.jsx
-<<<<<<< HEAD:src.broken/pages/ai-search.jsx
-<<<<<<< HEAD:src.broken/pages/ai-search.jsx
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 })
@@ -50,15 +46,11 @@ import React from 'react';
 interface HelpProps {
 :src.broken/pages/ai-search.jsx
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31:tests/e2e/basic.spec.ts
   // Add props here as needed
 
-=======
 =
 interface Basic.specProps {
 >  // Add props here as needed
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:tests/e2e/basic.spec.ts
 
 <:src.pages.disabled/Help.jsx
 
@@ -67,43 +59,25 @@ export default function Help({ }: HelpProps) {
 =
 export default function Basic.spec({ }: Basic.specProps) {
 :src.broken/pages/ai-search.jsx
-<<<<<<< HEAD:src.broken/pages/ai-search.jsx
-<<<<<<< HEAD:src.broken/pages/ai-search.jsx
->>>>>>>> main:tests/e2e/basic.spec.ts
->>>>>>> main
-<<<<<<< HEAD:src.broken/pages/ai-search.jsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:tests/e2e/basic.spec.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:tests/e2e/basic.spec.ts
   return (
 >  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:tests/e2e/basic.spec.ts
-=======
 >  return (
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:tests/e2e/basic.spec.ts
-=======
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31:tests/e2e/basic.spec.ts
     <div>
       <h1>Aisearch</h1>
-=======
 >  return (
     <div>
 </div>
       <h1>Basic.spec</h1>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:tests/e2e/basic.spec.ts
       <p>This component is currently under development.</p>
     </div>
   );
 :src.broken/pages/ai-search.jsx
-<<<<<<< HEAD:src.broken/pages/ai-search.jsx
-<<<<<<< HEAD:src.broken/pages/ai-search.jsx
-<<<<<<< HEAD:backup-problematic-files/src.disabled/components/ui/ai-search.jsx
 }
 
 }=
 
 >}
-=======
 
 <:src.pages.disabled/Help.jsx
 
@@ -114,15 +88,11 @@ export default function Basic.spec({ }: Basic.specProps) {
 
 }
 :src.broken/pages/ai-search.jsx
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31:tests/e2e/basic.spec.ts
 }
 
 >:src.pages.disabled/Help.jsx
-<<<<<<< HEAD:src.broken/pages/ai-search.jsx
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:tests/e2e/basic.spec.ts
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 :src.pages.disabled/Help.jsx
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31:tests/e2e/basic.spec.ts
 }
 }
 }
@@ -140,27 +110,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 :src.pages.disabled/Help.jsx
 :src.broken/pages/ai-search.jsx
-<<<<<<< HEAD:src.broken/pages/ai-search.jsx
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:tests/e2e/basic.spec.ts
 }
 }
 }
 }
 :src.broken/pages/ai-search.jsx
-<<<<<<< HEAD:src.broken/pages/ai-search.jsx
 }
-<<<<<<< HEAD:src.broken/pages/ai-search.jsx
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> main
 :src.broken/pages/ai-search.jsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:tests/e2e/basic.spec.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:tests/e2e/basic.spec.ts
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:tests/e2e/basic.spec.ts
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:tests/e2e/basic.spec.ts
-=======
 
       <p>This component is currently under development.</p>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:tests/e2e/basic.spec.ts

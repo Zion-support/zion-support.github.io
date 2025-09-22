@@ -1,6 +1,4 @@
 :pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { requireUser } from "../../../../../utils/api/auth";
@@ -14,14 +12,12 @@ getProject
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../../utils/api/auth";
 import {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   getProject,
   updateMilestone,
   assertParticipantOrAdmin,
   isClient,;
   isTalent,;
 :pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from "../../../../../utils/api/projects";
 import { isMilestoneStatus } from "../../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -32,7 +28,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     milestoneId: string;
   }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const project = getProject(projectId);
   if (!project) {
     res.status(404).json({ error: 'Project not found' });
@@ -61,7 +56,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
         (status === 'Paid' && isClientUser);
 if (!allowed && user.role !== 'admin') {
         res.status(403).json({ error: 'Not allowed to set this status' });
-<<<<<<< HEAD
 
       return;
     }
@@ -72,7 +66,6 @@ if (!allowed && user.role !== 'admin') {
 res.setHeader('AllowPATCH');
   res.status(405).end('Method Not Allowed')
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       return;
     }
     res && res.status(200).json({ milestone: updated });
@@ -132,12 +125,5 @@ res.setHeader("AllowPATCH");
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones/[milestoneId].ts

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import _React from';react''';'';
 
 import React from\';react\''\';\'';
@@ -27,4 +26,3 @@ const EnhancedServicesOverview = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
@@ -44,7 +43,6 @@ export function ApplicationCard({ application } ApplicationCardProps) {;
         ),;
       case "rejected":;
         return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <Button variant="outline" size="sm">;
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback;
           </Button>;
@@ -52,7 +50,6 @@ export function ApplicationCard({ application } ApplicationCardProps) {;
       default:;
         return null;
     }
-<<<<<<< HEAD
 
             </div>;
           </div>;

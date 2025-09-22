@@ -19,12 +19,10 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 :backup-problematic-files/src.pages.disabled/AIAutonomousSystems.jsx
 
-=======
 interface _appProps {;
   // Add props here as needed;
 }
 export default function _app(): any ({ }: _appProps) {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp_exclude/pages.bak/_app.tsx
   return (
     <div>;
       <h1>_app</h1>;
@@ -32,6 +30,4 @@ export default function _app(): any ({ }: _appProps) {;
     </div>;
   );
 :backup-problematic-files/src.pages.disabled/AIAutonomousSystems.jsx
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

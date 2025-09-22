@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
 import { Search } from "lucide-react",;
@@ -22,7 +21,6 @@ export function ApiDocsLayout({ children } ApiDocsLayoutProps) {;
     { title:"Error Codes & Rate Limits", path:"/developers/docs/errors" }],;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="flex min-h-screen bg-zinc-950">;
       {/* Sidebar */}
       <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">;
@@ -32,7 +30,6 @@ export function ApiDocsLayout({ children } ApiDocsLayoutProps) {;
           </div>;
           <span className="font-bold text-white">API Docs</span>;
         </Link>;
-<<<<<<< HEAD
 
       {/* Main content */}
       <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">;

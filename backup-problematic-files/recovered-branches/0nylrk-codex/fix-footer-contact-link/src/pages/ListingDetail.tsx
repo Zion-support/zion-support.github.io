@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
@@ -27,7 +26,6 @@ export default function ListingDetail() {;
 ;
   if (!listing) {;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <AppLayout>;
         <div className="min-h-screen bg-zion-blue py-12 px-4">;
           <div className="container mx-auto">;
@@ -41,7 +39,6 @@ export default function ListingDetail() {;
           </div>;
         </div>;
       </AppLayout>;
-<<<<<<< HEAD
 
     <AppLayout>;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;

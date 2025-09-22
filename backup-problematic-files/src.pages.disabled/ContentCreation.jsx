@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 }
 <:backup-problematic-files/src.pages.disabled/ContentCreation.jsx
@@ -16,4 +14,3 @@ export default function Emailautomation({ }: EmailautomationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

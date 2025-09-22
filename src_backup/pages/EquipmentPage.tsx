@@ -1,14 +1,7 @@
 :src/pages/EquipmentPage.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 }
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -52,19 +45,15 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 :src/pages/EquipmentPage.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import Spinner from '@/components/ui/spinner';
 import { EquipmentErrorBoundary  } from '@/components/EquipmentErrorBoundary';
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
 :src/pages/EquipmentPage.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     id: "nvidia-a100-server",
     title: "NVIDIA A100 GPU Training Server",
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -394,7 +383,6 @@ function EquipmentPageContent() {;
           <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure</p>
         </motion.div>
         <EquipmentLoadingGrid />
-=======
 import React from "react";
 import MainLayout from "../components/layout/MainLayout";
 
@@ -404,13 +392,11 @@ const EquipmentPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-8">Equipment</h1>
         <p className="text-lg">This is the Equipment page. Content coming soon.</p>
->>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
       </div>
     </MainLayout>
   );
 };
 
-<<<<<<< HEAD
   // Error state
   if (error && equipment.length === 0) {
     return (
@@ -530,7 +516,6 @@ const EquipmentPage: React.FC = () => {
       </motion.div>
 
 :src/pages/EquipmentPage.tsx
-<<<<<<< HEAD
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
           {equipment.map((item, index) => (
@@ -619,12 +604,7 @@ export default function EquipmentPage() {;
 }
 
 ;
-=======
 export default EquipmentPage;
->>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/EquipmentPage.tsx
   );
 
 }animate= {;
@@ -796,5 +776,3 @@ export default function EquipmentPage() {
   )
 }
 :src/pages/EquipmentPage.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

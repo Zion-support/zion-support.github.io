@@ -1,5 +1,4 @@
 
-=======
 import React, { useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -21,7 +20,6 @@ export default function Profile() {;
 ;
   if (isLoading) {;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <>;
         <Header />;
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
@@ -29,7 +27,6 @@ export default function Profile() {;
         </div>;
         <Footer />;
       </>;
-<<<<<<< HEAD
 
       <>;
         <Header />;

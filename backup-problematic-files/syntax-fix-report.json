@@ -1,23 +1,4 @@
 {
-<<<<<<< HEAD:backup-problematic-files/syntax-fix-report.json
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
   "timestamp": "2025-09-06T00:33:39.754Z",
   "duration": "6853ms",
   "fixedFiles": 517,
@@ -541,15 +522,12 @@
     "/workspace/src/utils/seo-optimizer.ts",
     "/workspace/src/utils/serverless-polyfill.ts"
   ],
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:syntax-fix-report.json
   "timestamp": "2025-09-04T15:37:53.118Z",
   "totalFiles": 1516,
   "fixedFiles": 31,
@@ -564,7 +542,6 @@
     "/workspace/src/components/EnterpriseDashboard.jsx",
     "/workspace/src/components/FuturisticServicesShowcase.jsx",
     "/workspace/src/components/LinkMonitor.js.jsx",
-<<<<<<< HEAD
     "/workspace/src/components/MachineLearningDashboard.jsx",
     "/workspace/src/components/MobileExperienceEnhancer.tsx",
     "/workspace/src/components/ProductCard.jsx",
@@ -719,7 +696,6 @@
   ],
 
 }
-=======
   "errorDetails": []
 
 
@@ -7473,7 +7449,6 @@
   ],
   "errorList": []
 }
-=======
     "/workspace/src/components/LinkMonitor.jsx",
     "/workspace/src/components/ModernDataTable.jsx",
     "/workspace/src/components/ModernForm.jsx",
@@ -7498,4 +7473,3 @@
     "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExportAndImportAndPrintAndShare.jsx"
   ],
   "summary": "Successfully fixed syntax errors in 31 files"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

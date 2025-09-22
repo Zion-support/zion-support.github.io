@@ -7,8 +7,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'"
 import { FavoriteButton } from "@/components/FavoriteButton",
 :src_backup/components/talent/TalentCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export const TalentCard = React && React.memo(TalentCardComponent);
 TalentCard && TalentCard.displayName = 'TalentCard';import React from 'react';
@@ -21,7 +19,6 @@ import { FavoriteButton } from "@/components/FavoriteButton";
 import { TalentProfile } from "@/types/talent";
 import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
-=======
 
 ;
 export const TalentCard = React && React.memo(TalentCardComponent);'
@@ -35,41 +32,23 @@ import { FavoriteButton } from "@/components/FavoriteButton";"
 import { TalentProfile } from "@/types/talent";'
 import { RatingStars  } from '@/components/RatingStars';'
 import { useAuth  } from '@/context/auth/AuthProvider';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/talent/TalentCard.tsx
 import { useCart } from '@/context/CartContext';
 :src/components/talent/TalentCard.tsx
-<<<<<<< HEAD:src_backup/components/talent/TalentCard.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { TalentProfile } from "@/types/talent",
 import { RatingStars } from '@/components/RatingStars',
 import { useAuth } from '@/context/auth/AuthProvider',
-=======
 "
 import { TalentProfile } from "@/types/talent",'
 import { RatingStars } from '@/components/RatingStars','
 import { useAuth } from '@/context/auth/AuthProvider','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/talent/TalentCard.tsx
 import { useCart } from '@/context/CartContext',
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
   onRequestHire: (talent: TalentProfile) => void,
   isAuthenticated: boolean
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import { useRouter } from 'next/router',;
 import { Badge } from "@/components/ui/badge",;
@@ -80,7 +59,6 @@ import { FavoriteButton } from "@/components/FavoriteButton",;
 import { TalentProfile } from "@/types/talent",;
 import { RatingStars } from '@/components/RatingStars',;
 import { useAuth } from '@/context/auth/AuthProvider',;
-=======
 export interface TalentCardProps {};
   talent: TalentProfile;
   onViewProfile: (id: string,) => void;
@@ -97,7 +75,6 @@ import { FavoriteButton } from "@/components/FavoriteButton",;"
 import { TalentProfile } from "@/types/talent",;'
 import { RatingStars } from '@/components/RatingStars',;'
 import { useAuth } from '@/context/auth/AuthProvider',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/talent/TalentCard.tsx
 import { useCart } from '@/context/CartContext',;
 export interface TalentCardProps {;
   talent: TalentProfile,;
@@ -105,10 +82,6 @@ export interface TalentCardProps {;
   onRequestHire: (talent: TalentProfile) => void,;
   isAuthenticated: boolean;
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 :src_backup/components/talent/TalentCard.tsx
 ;
@@ -141,7 +114,6 @@ export interface TalentCardProps {;
   isAuthenticated: boolean;
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const TalentCardComponent = ({;
   talent,;
   onViewProfile,;
@@ -163,7 +135,6 @@ const handleRequestHire = (e: React && React.MouseEvent,) => {;
     e && e.preventDefault(),;
     e && e.stopPropagation(),;    if (onRequestHire) {;
     if (onRequestHire) {;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       onRequestHire(talent);
     }
   },
@@ -176,10 +147,6 @@ const handleRequestHire = (e: React && React.MouseEvent,) => {;
   return (
     <Card"
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       onClick={handleViewProfile}
       tabIndex={0}
 
@@ -188,23 +155,15 @@ const handleRequestHire = (e: React && React.MouseEvent,) => {;
       <div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="relative mr-4">
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
               {talent.profile_picture_url ? (
                 <img
-<<<<<<< HEAD
 
                 <img
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                 <img
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
     >"
       <div className="p-6">"
@@ -214,7 +173,6 @@ const handleRequestHire = (e: React && React.MouseEvent,) => {;
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
               {talent.profile_picture_url ? (
                 <img;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/talent/TalentCard.tsx
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
 
@@ -226,21 +184,16 @@ const handleRequestHire = (e: React && React.MouseEvent,) => {;
                   {talent.full_name?.charAt(0) || "T"}
                   {talent.full_name?.charAt(0) || "T"}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                   className="w-full h-full object-cover"
                   loading="lazy"
 
                   {talent.full_name?.charAt(0) || "T"}
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
                   className="w-full h-full object-cover"
                   loading="lazy"
 
                   {talent.full_name?.charAt(0) || "T"}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
 :src_backup/components/talent/TalentCard.tsx
               )}
@@ -263,10 +216,7 @@ const handleRequestHire = (e: React && React.MouseEvent,) => {;
             </div>;"
             <p className="text-white font-medium">{talent && talent.professional_title}</p>;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-<<<<<<< HEAD
             {/* Location & Availability */}
 :src/components/talent/TalentCard.tsx
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
@@ -282,11 +232,9 @@ const handleRequestHire = (e: React && React.MouseEvent,) => {;
                   <span>{talent && talent.availability_type}</span>;
                 </div>;
               )}
-<<<<<<< HEAD
             </div>;
           </div>;
         </div>;
-=======
 :src/components/talent/TalentCard.tsx
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && ("
@@ -302,18 +250,12 @@ const handleRequestHire = (e: React && React.MouseEvent,) => {;
                 </div>
               )}
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/talent/TalentCard.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/talent/TalentCard.tsx
 
             </div>;
           </div>;
         </div>;
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Skills */}
         {skills.length > 0 && ("
           <div className="mt-4">"
@@ -336,21 +278,14 @@ const handleRequestHire = (e: React && React.MouseEvent,) => {;
                 </span>
               )}
 :src/components/talent/TalentCard.tsx
-<<<<<<< HEAD
             </div>;
-<<<<<<< HEAD
           </div>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/talent/TalentCard.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         )}
 ;
-=======
           </div>;        )}
 
 :src_backup/components/talent/TalentCard.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">
           <div>
@@ -361,7 +296,6 @@ const handleRequestHire = (e: React && React.MouseEvent,) => {;
               </div>
             ) : (
               <div className="text-zion-slate-light">Rate not specified</div>
-=======
 
         {/* Hourly Rate & Actions */}"
         <div className="mt-5 flex items-center justify-between">;
@@ -373,21 +307,14 @@ const handleRequestHire = (e: React && React.MouseEvent,) => {;
               </div>;
             ) : (;"
               <div className="text-zion-slate-light">Rate not specified</div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/talent/TalentCard.tsx
             )}
-<<<<<<< HEAD
           </div>
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
                 size="sm"
-=======
 "
           <div className="flex items-center gap-2">
             {isAuthenticated && (
@@ -397,15 +324,8 @@ const handleRequestHire = (e: React && React.MouseEvent,) => {;
             {isAuthenticated && (;
               <Button"
                 size="sm""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/talent/TalentCard.tsx
                 variant="secondary"
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 onClick={handleRequestHire}
 
 :src_backup/components/talent/TalentCard.tsx
@@ -417,23 +337,15 @@ const handleRequestHire = (e: React && React.MouseEvent,) => {;
             <Button"
               size="sm""
               variant="ghost"
-<<<<<<< HEAD
               onClick={(e) => {
 
 :src_backup/components/talent/TalentCard.tsx
               onClick={(e) => {
               onClick={(e) => {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               onClick={(e) => {}
               onClick={(e) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/talent/TalentCard.tsx
                 e.stopPropagation(),
                 handleViewProfile()
               }}"
@@ -622,13 +534,10 @@ if ( {) {}
             >;
               View <ArrowRight className="ml - 1 h - 4 w-4" />;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </Button>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Card>;
   );
 },;
@@ -649,12 +558,8 @@ TalentCard.displayName = 'TalentCard',
 :src_backup/components/talent/TalentCard.tsx
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface TalentCardProps {
   );
 };
 "
 :src/components/talent/TalentCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

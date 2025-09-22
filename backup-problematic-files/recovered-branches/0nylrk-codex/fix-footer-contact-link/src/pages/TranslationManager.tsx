@@ -1,5 +1,4 @@
 
-=======
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -221,14 +220,12 @@ export default function TranslationManager() {;
         <Card>;
           <CardHeader>;
             <CardTitle className="text-2xl">{t('translation.manager_title')}</CardTitle>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </CardHeader>;
           <CardContent>;
             <div className="space-y-6">;
               {/* Search and filter */}
               <div className="flex flex-col sm:flex-row gap-4">;
                 <div className="relative flex-1">;
-<<<<<<< HEAD
 
                   value={selectedNamespace}
                   onValueChange={(value) => setSelectedNamespace(value)}

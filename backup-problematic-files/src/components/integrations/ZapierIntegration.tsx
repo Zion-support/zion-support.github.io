@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -45,13 +44,11 @@ export function ZapierIntegration() {;
                   />;
                   <Button size="sm" variant="outline" onClick={handleCopyApiKey}>;
                     {copied ? <Check className="h-4 w-4" /> :<Copy className="h-4 w-4" />}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </Button>;
                 </div>;
               </div>;
             </div>;
           </CardContent>;
-<<<<<<< HEAD
 
               Open Zapier Dashboard;
             </Button>;

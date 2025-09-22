@@ -77,7 +77,6 @@ function ProjectDetailsContent() {;
   }, [projectId]),;
   ;
   const fetchProjectNotes = async (projectId:string) => {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     try {;
       const { data, error } = await supabase;
         .from("project_notes");
@@ -87,7 +86,6 @@ function ProjectDetailsContent() {;
       const { data, error } = await supabase;
         .from("project_notes");
         .insert({;
-<<<<<<< HEAD
         .select(),;
       ;
       if (error) throw error,;
@@ -144,7 +142,6 @@ function ProjectDetailsContent() {;
         return <Badge variant="destructive">Canceled</Badge>,;
       default:;
         return <Badge variant="outline">{status}</Badge>,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   },;
   ;
@@ -174,10 +171,7 @@ pr-12325
       </div>;
     ),;
   }
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         <Card>;
 "
           <CardContent className="flex flex-col items-center justify-center py-10">;"
@@ -263,7 +257,6 @@ pr-12325
             </div>;
             ;
             {/* Action Buttons Based on Role and Status */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <div className="space-x-2">;
               {isTalent && isOfferPending && (;
                 <>;
@@ -288,7 +281,6 @@ pr-12325
                       </AlertDialogFooter>;
                     </AlertDialogContent>;
                   </AlertDialog>;
-<<<<<<< HEAD
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>;
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes;
                   </Button>;
@@ -358,7 +350,6 @@ pr-12325
                       <div>;
                         <h3 className="font-semibold mb-2">Project Description</h3>;
                         <div className="bg-muted/30 p-4 rounded-md">;
-<<<<<<< HEAD
                         </div>;
                       </div>;
                     </div>;
@@ -459,7 +450,6 @@ pr-12325
                             disabled={!newNote.trim() || isSubmittingNote}
                           >;
 {isSubmittingNote ? "Posting..." :"Post Note"}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           </Button>;
                         </div>;
                       )}
@@ -467,7 +457,6 @@ pr-12325
                   </CardContent>;
                 </Card>;
               </TabsContent>;
-<<<<<<< HEAD
               <TabsContent value="reviews">;
                 <ProjectReviewSection project={project} />;
               </TabsContent>;
@@ -630,4 +619,3 @@ project.talent id
 }</Card> </div> </div> </main> <Footer /> </>) 
 }export default function ProjectDetails () {
   return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

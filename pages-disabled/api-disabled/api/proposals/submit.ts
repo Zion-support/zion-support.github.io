@@ -1,7 +1,5 @@
 :pages/api-disabled/api/proposals/submit.ts
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
@@ -12,7 +10,6 @@ getProposal
   getProposal,
   updateProposalMeta,
   updateArtifacts,;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from "../../../utils/data/proposals";
 async function submitByEmail(;
   to: string;
@@ -27,33 +24,22 @@ export default function handler($2) {;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import nodemailer from 'nodemailer';'
 import crypto from 'crypto';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/submit.ts
 import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
 :pages/api/proposals/submit.ts
 
-<<<<<<< HEAD
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {;
 
 :pages/api-disabled/api/proposals/submit.ts
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/submit.ts
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
 :pages/api-disabled/api/proposals/submit.ts
-<<<<<<< HEAD
   const from = process.env.EMAIL_FROM |user;
   if (!host |!user |!pass) throw new Error("Email not configured");
   const from = process.env.EMAIL_FROM || user;
@@ -145,7 +131,6 @@ async /**
  * submitByEmail - Function description
 */
 function submitByEmail() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const host = process.env.EMAIL_HOST;
   const port = Number (process.env.EMAIL_PORT || 587);
   const user = process.env.EMAIL_USER;
@@ -162,9 +147,6 @@ host,
     secure: port === 465,
     auth: { user, pass },
 :pages/api-disabled/api/proposals/submit.ts
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   });
 ;
   try {;
@@ -193,17 +175,13 @@ await transporter.sendMail({ from, to, subject, text, attachments });
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
-=======
   });
 
   try {'
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/submit.ts
     if (!id) return res.status(400).json({ error: 'id is required' });
     const meta = getProposal(id);'
     if (!meta) return res.status(404).json({ error: 'Proposal not found' });
@@ -238,12 +216,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   }
 
@@ -267,16 +239,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages/api/proposals/submit.ts
   }
 
 }
 
 :pages/api-disabled/api/proposals/submit.ts
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/submit.ts

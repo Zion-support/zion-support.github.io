@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 
 :pages_backup/innovations.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   Brain,
   Rocket,
@@ -29,24 +24,18 @@ import {
   ExternalLink,
   Sparkles,;
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
 import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
-<<<<<<< HEAD
-<<<<<<< HEAD
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
 import Head from 'next/head',;
-=======
 import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';'
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';'
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';'
@@ -54,7 +43,6 @@ import ComprehensiveServicesShowcase2029 from '../components/sections/Comprehens
 '
 import React from 'react',;'
 import Head from 'next/head',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovations.tsx
 import { motion } from 'framer-motion',;
 import {}
   Brain, Rocket, Target, Cpu, Globe, Eye, 
@@ -62,20 +50,14 @@ import {}
 
 import React from 'react',
 import Head from 'next/head',
-=======
 '
 import React from 'react','
 import Head from 'next/head','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovations.tsx
 import { motion } from 'framer-motion',
 import {}
   Brain, Rocket, Target, Cpu, Globe, Eye,
 :pages_backup/innovations.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovations.tsx
   ChevronRight, Star, TrendingUp, Zap, Shield,
   ArrowRight, Search, Filter, Grid, List,
   Phone, Mail, MapPin, ExternalLink, Sparkles';
@@ -85,30 +67,19 @@ import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisti
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2',;'
 import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029',;
 :pages_backup/innovations.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const contactInfo = {
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 const contactInfo = {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function InnovationsPage() {
   return (
     <UltraFuturisticBackground2029>
       <div className="min-h-screen bg-black/90">
         <Head>
 :pages_backup/innovations.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 };
 
@@ -118,31 +89,17 @@ export default function InnovationsPage() {
     <UltraFuturisticBackground2029>
 <div className='min-h-screen bg-black/90'>
         <Head>
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <title>2029 Innovations - Zion Tech Group | AI, Quantum, Space Tech Breakthroughs</title>
           <meta name="description" content="Discover our groundbreaking 2029 innovations in AI consciousness, quantum computing, space technology, and enterprise solutions. Transform your business with next-generation technology." />
           <meta name="keywords" content="AI innovations, quantum computing, space technology, enterprise solutions, Zion Tech Group, 2029 technology" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <meta property="og:title" content="2029 Innovations - Zion Tech Group" />
           <meta property="og:description" content="Discover our groundbreaking 2029 innovations in AI consciousness, quantum computing, space technology, and enterprise solutions." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/innovations" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="2029 Innovations - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our groundbreaking 2029 innovations in AI consciousness, quantum computing, space technology, and enterprise solutions." />
@@ -151,7 +108,6 @@ export default function InnovationsPage() {
 
         {/* Enhanced Navigation */  } catch (error) {
     console.error("Error:", error);
-=======
           <title>2029 Innovations - Zion Tech Group | AI, Quantum, Space Tech Breakthroughs</title>"
           <meta name="description" content="Discover our groundbreaking 2029 innovations in AI consciousness, quantum computing, space technology, and enterprise solutions. Transform your business with next-generation technology." />"
           <meta name="keywords" content="AI innovations, quantum computing, space technology, enterprise solutions, Zion Tech Group, 2029 technology" />"
@@ -174,7 +130,6 @@ export default function InnovationsPage() {
 
         {/* Enhanced Navigation */  } catch (error) {";
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovations.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -185,7 +140,6 @@ export default function InnovationsPage() {
   }
 }
 :pages_backup/innovations.tsx
-<<<<<<< HEAD
 
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -193,20 +147,12 @@ export default function InnovationsPage() {
 
               <motion.div
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <motion.div
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
-=======
 
 "
         <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -215,7 +161,6 @@ export default function InnovationsPage() {
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovations.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -230,9 +175,6 @@ export default function InnovationsPage() {
   }
 }
 :pages_backup/innovations.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="mb-8"
               >"
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6">"
@@ -242,15 +184,9 @@ export default function InnovationsPage() {
 
 :pages_backup/innovations.tsx
               <motion.h1
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 className="text-5xl md:text-7xl font-bold mb-8"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="text-5xl md:text-7xl font-bold mb-8"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   2029 Innovations;
@@ -259,13 +195,7 @@ export default function InnovationsPage() {
                 <span className="text-white">
                   Breakthrough;
                 </span>
-=======
                 className="mb-8"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovations.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <title>
             2029 Innovations - Zion Tech Group | AI, Quantum, Space Tech
             Breakthroughs
@@ -344,16 +274,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>
                 <br />
                 <span className='text-white'>Breakthrough</span>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </motion.h1>
-<<<<<<< HEAD:pages/innovations.tsx
-<<<<<<< HEAD
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
                 Experience the future today with our revolutionary innovations in AI consciousness
-<<<<<<< HEAD
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
                 Experience the future today with our revolutionary innovations in AI consciousness
 
@@ -364,12 +289,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
                 Experience the future today with our revolutionary innovations in AI consciousness,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
-=======
 "
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
@@ -377,7 +298,6 @@ className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed m
               <motion.p;
                 initial={{ opacity: 0, y: 30 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovations.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -392,19 +312,12 @@ className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed m
   }
 }
 :pages_backup/innovations.tsx
-<<<<<<< HEAD
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
                 Experience the future today with our revolutionary innovations in AI consciousness,
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
                 Experience the future today with our revolutionary innovations in AI consciousness,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 quantum computing, space technology, and enterprise solutions that are reshaping
                 industries and unlocking unprecedented possibilities.
               </motion.p>
@@ -424,12 +337,8 @@ initial={{ opacity: 0, y: 30 }  } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
                 <a"
                   href="#innovations""
@@ -438,17 +347,10 @@ initial={{ opacity: 0, y: 30 }  } catch (error) {
                   <Eye className="w-5 h-5 mr-2" />
 :pages_backup/innovations.tsx
                   Explore Innovations
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105 text-lg"
                 >"
                   <Mail className="w-5 h-5 mr-2" />
 :pages_backup/innovations.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -481,20 +383,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <Mail className='w-5 h-5 mr-2' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Partner With Us
-=======
                   Partner With Us;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovations.tsx
                 </a>
               </motion.div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Innovation Categories Overview */}
         <section className="py - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -504,14 +400,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 :pages_backup/innovations.tsx
-<<<<<<< HEAD
         {/* Innovation Categories Overview */  } catch (error) {
     console.error("Error:", error);
-=======
 
         {/* Innovation Categories Overview */  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovations.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
@@ -539,7 +432,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 :pages_backup/innovations.tsx
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >"
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
@@ -564,14 +456,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Categories
                 </span>
               </h2>
-<<<<<<< HEAD
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD:pages_backup/innovations.tsx
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 of what's possible in technology and business transformation.
               </p>
             </motion.div>
@@ -595,7 +482,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   description: 'Revolutionary AI consciousness development and emotional intelligence platforms''
                   color: 'from-violet-600 via-purple-600 to-indigo-600'
 :pages_backup/innovations.tsx
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[]
                 {}
@@ -603,10 +489,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   title: 'AI Consciousness','
                   description: 'Revolutionary AI consciousness development and emotional intelligence platforms',
 :pages_backup/innovations.tsx
-<<<<<<< HEAD
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovations.tsx
                   features: ['Consciousness EvolutionEmotional IntelligenceCreative OrchestrationAutonomous Business Management'];
                 },
                 {}
@@ -617,7 +500,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   features: ['Quantum - AI FusionQuantum Internet SecurityDNA ComputingQuantum Financial Trading'];
                 },
 :pages_backup/innovations.tsx
-<<<<<<< HEAD
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Our innovations span across four revolutionary domains, each
                 pushing the boundaries of what's possible in technology and
@@ -665,7 +547,6 @@ description:
                     'AI Health Analytics',
                     'Holographic Events',
                   ],
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 },
                 {
                   icon: Cpu,
@@ -674,7 +555,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
                   color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
                   features: ['Business IntelligenceSupply Chain OptimizationHR AnalyticsCybersecurity'];
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 }
 
               ].map ((category, index) => (
@@ -685,11 +565,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="group"
                 >
                   <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 h-full hover:transform hover:scale-105 backdrop-blur-sm`}>"
@@ -709,8 +584,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
                       </p>
                     </div>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </p>
                     </div>
                     <div className="space-y-3">
@@ -739,7 +612,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
 
                       </p>
                     </div>
@@ -768,7 +640,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
                         </div>))}
 
 :pages_backup/innovations.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -827,10 +698,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
 
 :pages_backup/innovations.tsx
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >"
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
@@ -839,8 +706,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Our innovations are already transforming industries and creating unprecedented value 
                 Our innovations are already transforming industries and creating unprecedented value
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -850,28 +715,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Impact
                 </span>
               </h2>
-<<<<<<< HEAD
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 for businesses worldwide.
               </p>
             </motion.div>"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD:pages_backup/innovations.tsx
               {[
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 }
-=======
                 for businesses worldwide.
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovations.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Our innovations are already transforming industries and creating
                 unprecedented value for businesses worldwide.
@@ -905,40 +757,24 @@ description:
 origin/cursor/automate-test-improve-and-merge-code-2533
                   stats: '2029+ Future-ready'
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 }
 
               ].map ((item, index) => (
                 <motion.div;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                   key={item.title}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="text-center p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500"
                 >"
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6">"
                     <item.icon className="w-8 h-8 text-white" />
                   </div>"
                   <h3 className="text-2xl font-bold text-white mb-4">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovations.tsx
               className="text-center"
             >"
               <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl p-12 backdrop-blur-sm">"
@@ -985,18 +821,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Future?
                   </span>
                 </h2>
-<<<<<<< HEAD
                 <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Transform your business and lead your industry into the future.
                 </p>"
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-<<<<<<< HEAD:pages_backup/innovations.tsx
                   <a
-<<<<<<< HEAD
 
                     href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`  } catch (error) {
     console.error("Error:", error);
@@ -1004,23 +834,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                   <a;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/innovations.tsx
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"
                   >"
                     <Mail className="w-5 h-5 mr-2" />
 :pages_backup/innovations.tsx
                     Start Innovation Partnership
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div className="flex items-center space-x-6 text-gray-300">
                     <div className="flex items-center space-x-2">
                       <Phone className="w-5 h-5 text-cyan-400" />
@@ -1028,13 +848,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>"
                     <div className="flex items-center space-x-2">"
                       <Mail className="w-5 h-5 text-cyan-400" />
-=======
                   Transform your business and lead your industry into the future.
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/innovations.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <p className='text-xl text-gray-300 mb-12 max-w-3xl mx-auto'>
                   Partner with Zion Tech Group to access the most advanced
                   innovations of 2029. Transform your business and lead your
@@ -1060,7 +874,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                     <div className='flex items-center space-x-2'>
                       <Mail className='w-5 h-5 text-cyan-400' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <span>{contactInfo.email}</span>
                     </div>
                   </div>
@@ -1069,32 +882,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   );
 };
 
 :pages_backup/innovations.tsx
-<<<<<<< HEAD
         {/* Enhanced Footer */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {/* Enhanced Footer */}
         <UltraFuturisticFooter2029V2 />
       </div>
     </UltraFuturisticBackground2029>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

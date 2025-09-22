@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 </Clock>"
 
@@ -14,7 +13,6 @@ const ContactInfo = ({ className }) => {
     </div>
   )
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     </div>)'
 pr-12325

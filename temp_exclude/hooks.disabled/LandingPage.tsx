@@ -17,7 +17,6 @@ import { FeaturesGuideSection } from "@/components/FeaturesGuideSection",
 import { SocialShareSection } from "@/components/SocialShareSection",
 import { useTranslation } from "react-i18next",
 import { useLanguage } from "@/context/LanguageContext",
-=======
 import { Header } from "@/components/Header","
 import { TrustedBySection } from "@/components/TrustedBySection","
 import { TestimonialCarousel } from "@/components/TestimonialCarousel","
@@ -36,7 +35,6 @@ import { FeaturesGuideSection } from "@/components/FeaturesGuideSection","
 import { SocialShareSection } from "@/components/SocialShareSection","
 import { useTranslation } from "react-i18next","
 import { useLanguage } from "@/context/LanguageContext",'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/LandingPage.tsx
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
 
 export default function LandingPage() {}
@@ -79,7 +77,6 @@ export default function LandingPage() {}
       title: "Mobile App",
       description: "Take Zion with you on the go with our mobile app for iOS and Android",
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
-=======
   ;
   // Tools and features showcase;
   const toolsFeatures = []
@@ -117,7 +114,6 @@ export default function LandingPage() {}
       title: "Mobile App","
       description: "Take Zion with you on the go with our mobile app for iOS and Android","
       icon: <Smartphone className = "h-6 w-6 text-zion-purple" />,"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/LandingPage.tsx
       link: "/mobile-launch"
     }
   ],
@@ -137,13 +133,11 @@ export default function LandingPage() {}
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">
-=======
       {/* Quick Access Tools Section */}"
       <section className="py-16 bg-zion-blue-dark">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-12">"
             <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/LandingPage.tsx
               {t("home.explore_tools")}
             </h2>"
             <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">"
@@ -151,9 +145,7 @@ export default function LandingPage() {}
             </p>
           </div>
 
-=======
           '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/LandingPage.tsx
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index) => (
               <Link;
@@ -272,7 +264,6 @@ export default function LandingPage() {;
                 </div>;
               </Link>;
             ))}
-=======
       <SEO;'
         title={t ('home.seo_title')}'
         description={t ('home.seo_description')}'
@@ -320,7 +311,6 @@ export default function LandingPage() {;
                   <span>{t ("general.explore")}</span>;'`
                   <ArrowRight className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`} />;
               </Link>))}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/LandingPage.tsx
           </div>;
         </div>;
       </section>;

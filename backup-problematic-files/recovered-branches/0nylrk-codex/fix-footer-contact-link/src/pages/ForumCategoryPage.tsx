@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -241,7 +240,6 @@ export default function ForumCategoryPage() {;
   ;
   if (!categoryId || !categoriesInfo[categoryId]) {;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <AppLayout>;
         <div className="container py-8">;
           <h1>Category not found</h1>;
@@ -250,7 +248,6 @@ export default function ForumCategoryPage() {;
           </Button>;
         </div>;
       </AppLayout>;
-<<<<<<< HEAD
 
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;

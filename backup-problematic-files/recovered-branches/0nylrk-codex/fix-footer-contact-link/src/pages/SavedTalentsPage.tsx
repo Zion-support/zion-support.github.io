@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -26,13 +25,11 @@ export default function SavedTalentsPage() {;
           return,;
         }
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         const { data, error } = await supabase;
           .from("saved_talents");
           .select(;
             `;
             talent_profile (;
-<<<<<<< HEAD
 
               is_verified;
             );

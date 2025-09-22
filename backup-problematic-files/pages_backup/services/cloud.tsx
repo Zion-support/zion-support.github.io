@@ -57,7 +57,6 @@ return (
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."">;
       <div className="min-h-screen bg-gray-50">";
   ];
-<<<<<<< HEAD
 interface CloudProps {
   className?: string;
 }
@@ -170,7 +169,6 @@ Transform your business with our comprehensive cloud solutions.
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {cloudServices && cloudServices.map((service, index) => (;
                 <motion&& motion.div
-=======
   return ()
     <Layout)"
       title="Cloud Solutions - Zion Tech Group""""
@@ -215,7 +213,6 @@ Transform your business with our comprehensive cloud solutions.
         <section className="py-16 px-4">;"
           <div className="max-w-7xl mx-auto">;"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -239,7 +236,6 @@ Transform your business with our comprehensive cloud solutions.
 
                   ;
               ))}
-<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
@@ -284,4 +280,3 @@ Transform your business with our comprehensive cloud solutions.
 </div>;
         </section>;
       </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

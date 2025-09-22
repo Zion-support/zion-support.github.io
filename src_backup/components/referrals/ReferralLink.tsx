@@ -1,5 +1,4 @@
 :src/components/referrals/ReferralLink.tsx
-<<<<<<< HEAD
 
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -23,8 +22,6 @@ import {
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 :src/components/referrals/ReferralLink.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 interface ReferralLinkProps {
   referralLink: string;
@@ -124,7 +121,6 @@ export function ReferralLink(): any ({;
 }: ReferralLinkProps) {;
   const [copied, setCopied] = useState(false);
 :src/components/referrals/ReferralLink.tsx
-<<<<<<< HEAD
 
   const handleCopy = () => {;
     onCopy();
@@ -156,7 +152,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input";
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface ReferralLinkProps {
   referralLink: string,
@@ -165,7 +160,6 @@ interface ReferralLinkProps {
 }
 
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
-<<<<<<< HEAD
   const [copied, setCopied] = useState(false),
 
   const handleCopy = () => {
@@ -262,11 +256,9 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
   };
   return (;
     <Card className="mt-6">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 
     <Card className="mt - 6">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <Link className="h-5 w-5" />;
@@ -339,7 +331,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />;
         <div className="flex flex - col space - y-3">;
           <div className="flex space - x-2">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Input;
               value={referralLink}
               readOnly;
@@ -392,13 +383,11 @@ variant="outline";
               on_click={() => on_share ('linkedin')}            >;
               <Share className='h - 4 w - 4' />              LinkedIn              <Share className="h - 4 w - 4" />;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               LinkedIn;
             </Button>;
           </div>;
         </div>;
       </CardFooter>;
-<<<<<<< HEAD
     </Card>;
   );
 }
@@ -412,18 +401,9 @@ variant="outline";
       </CardFooter>
     </Card>
 :src/components/referrals/ReferralLink.tsx
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           )}
         </div>
       </CardContent>
@@ -431,4 +411,3 @@ variant="outline";
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/referrals/ReferralLink.tsx

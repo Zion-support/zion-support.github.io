@@ -20,8 +20,6 @@ static getDerivedStateFromError(error) {}
     return this.props.children;
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {GetServerSideProps} from 'next';
 import React, { useRef, useState } from 'react';
 import PdfExportButton from '../../../components/ui/PdfExportButton';
@@ -36,7 +34,6 @@ import { createServerClient } from '../../../utils/supabase/server',
 export default function TalentPortfolio() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const ref = useRef<HTMLDivElement>(null),
-<<<<<<< HEAD
   const data: ResumeData = {
     name: 'Your Name',
     contact: {
@@ -51,10 +48,8 @@ export default function TalentPortfolio() {
     portfolio: [{ title: 'Top Project', description: 'Showcase' }]},
 return (
   return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="relative">
       <div className="flex items-center gap-3 mb-4">
-=======
 
   const data: ResumeData = {'
     name: 'Your Name',
@@ -71,7 +66,6 @@ return (
 
     <div className="relative">"
       <div className="flex items-center gap-3 mb-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <label className="text-sm">Theme</label>
         <select;
           value={theme}
@@ -81,7 +75,6 @@ return (
         </select>
       </div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 return { props: {} };
 };
 
@@ -92,26 +85,21 @@ return { props: {} };
     </div>
   )
 }
-=======
 
       <PdfExportButton targetRef={ref} fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
       <ResumePreview ref={ref} data={data} theme={theme} />
     </div>
 )
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export const getServerSideProps: GetServerSideProps = async () => {};
   const supabase = createServerClient();
 if (!user) {
 return { redirect: { destination: '/auth', permanent: false } } as any;
   }
-<<<<<<< HEAD
 };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 };
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 };
 '
@@ -120,8 +108,6 @@ import PdfExportButton from '../../../components / ui / PdfExportButton';
 import {GetServerSideProps} from 'next';
 import React, { useRef, useState } from 'react';
 import PdfExportButton from '../../../components/ui/PdfExportButton';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import ResumePreview, {
   ResumeData,
 } from '../../../components / ui / ResumePreview';
@@ -200,7 +186,6 @@ export default function TalentPortfolio() { return null; }
           <option value="dark">Dark</option>
         </select>
       </div>
-<<<<<<< HEAD
       <PdfExportButton
         targetRef={ref}
         fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
@@ -212,18 +197,9 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   const supabase = createServerClient();
   const user = await (supabase as any).auth.getUser?.()
   if (!user) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return { redirect: { destination: '/auth', permanent: false } } as any;
   }
 return { props: {} }
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

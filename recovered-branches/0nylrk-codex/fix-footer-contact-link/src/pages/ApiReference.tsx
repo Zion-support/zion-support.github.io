@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
@@ -10,34 +6,21 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 export function ApiReference() {;
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState } from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 
 import { CodeBlock } from "@/components/developers/CodeBlock";
-=======
 import React, { useState } from "react","
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",";
 import { CodeBlock } from "@/components/developers/CodeBlock";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export function ApiReference() { return null; }
 import { CodeBlock } from "@/components/developers/CodeBlock","
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Sample endpoint data
 
   const endpoints = [
@@ -47,24 +30,16 @@ export function ApiReference() {
       path: "/api/jobs"
       description: "Retrieve a list of job postings with optional filtering"
       parameters: [
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" },
         { name: "category", type: "string", description: "Filter by job category" },
         { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
         { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
 
-=======
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
 
@@ -73,18 +48,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       responses: {
         "200": {
           description: "A list of jobs"
           example: `{
   "jobs": [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function ApiReference() {;
   const [activeEndpoint, setActiveEndpoint] = useState(\"get-jobs\");
   // Sample endpoint data;
@@ -115,7 +85,6 @@ export function ApiReference() {;
   "jobs": []
     {}
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "id": "job-123";
 import React, { useState } from './react';"
 import ApiDocsLayout from "@/components / developers / ApiDocsLayout";'
@@ -141,10 +110,6 @@ function ApiReference() { return null; }
       "category": "development";"
       "budget": {;"
         "min": 5000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         "max": 10000,
         "currency": "USD";
       }"
@@ -181,9 +146,6 @@ function ApiReference() { return null; }
       "status": "open";
       "created_at": "2023-05-10T15:30:00Z"
     }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "min": 5000;
         "max": 10000
         "currency": "USD"
@@ -191,7 +153,6 @@ function ApiReference() { return null; }
       "status": "open";
       "created_at": "2023-05-10T15:30:00Z"
     }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         "min": 5000,
         "max": 10000,
         "currency": "USD"
@@ -201,9 +162,6 @@ function ApiReference() { return null; }
       "created_at": "2023-05-10T15:30:00Z"
     },
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     // More jobs...
   ],"
   "count": 42,"
@@ -211,7 +169,6 @@ function ApiReference() { return null; }
   "offset": 0;`
 }`
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "401": {
           description: "Unauthorized"
           example: `{
@@ -223,17 +180,14 @@ function ApiReference() { return null; }
 "429": {
           description: "Rate limit exceeded"
           example: `{
-=======
 }`
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         },
 
         "429": {
           description: "Rate limit exceeded"
           example: `{
 
-<<<<<<< HEAD
         },
         "429": {
           description: "Rate limit exceeded"
@@ -242,9 +196,6 @@ function ApiReference() { return null; }
   "message": "Rate limit exceeded. Please try again in 60 seconds"
 
   "retry_after": 60
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         },
 "
         "429": {"
@@ -252,11 +203,7 @@ function ApiReference() { return null; }
           example: `{}
 "
   "retry_after": 60;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   "retry_after": 60
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   "retry_after": 60
       \"id\": \"job - 123\";
       \"title\": \"Senior React Developer\";
@@ -264,7 +211,6 @@ function ApiReference() { return null; }
       \"category\": \"development\";
       \"budget\": {;}
         \"min\": 5000;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }`
         }
       }`
@@ -286,28 +232,14 @@ https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\
   -H \"Authorization: Bearer YOUR_API_KEY\"`
     },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     {
       id: "post-jobs"
       method: "POST"
       path: "/api/jobs"
       description: "Create a new job posting"
-<<<<<<< HEAD
       parameters: [
-<<<<<<< HEAD
   "message": "Rate limit exceeded. Please try again in 60 seconds",
   "retry_after": 60;
 }`;
@@ -338,11 +270,6 @@ https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\
         { name: "skills", type: "array", description: "Array of required skills" },"
         { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       parameters: [
 
   "message": "Rate limit exceeded. Please try again in 60 seconds",
@@ -380,12 +307,10 @@ https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\
         { name: "skills", type: "array", description: "Array of required skills" },
         { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }],
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       responses: {
         "201": {
           description: "Job created successfully"
           example: `{
-<<<<<<< HEAD
   "title": "UX Designer",
   "description": "Looking for a UX designer with 3+ years experience...",
   "category": "design",
@@ -398,7 +323,6 @@ https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\
   "message": "Invalid input",
   "details": [
     {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   ]`
 }`
@@ -424,27 +348,18 @@ export function ApiReference() { return null; }
       "category": "development",;"
       "budget": {;"
         "min": 5000,;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "max": 10000,;
         "currency": "USD";
       };
-=======
       parameters: [        "max": 10000,;
         "currency": "USD"
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       parameters: [        "max": 10000,;
         "currency": "USD"
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
       "field": "title"
       "error": "Title is required"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   ]
 }`
@@ -487,7 +402,6 @@ export function ApiReference() {;
         "max": 10000,;
         "currency": "USD";
       };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       "status": "open";
       "created_at": "2023-05-10T15:30:00Z";
     };
@@ -588,9 +502,7 @@ export function ApiReference() {;
   description: \"Job created successfully\",;
           example: `{;
 
-<<<<<<< HEAD
   "id": "job-456";
-<<<<<<< HEAD
 }`;
         }
 {;"
@@ -613,15 +525,11 @@ export function ApiReference() {;
 
 "
   "id": "job-456";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   "id": "job - 456";
 
 "
   "id": "job-456";"
   "id": "job - 456";
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   "title": "UX Designer";
   "description": "Looking for a UX designer with 3+ years experience...";
   "category": "design";
@@ -662,23 +570,14 @@ export function ApiReference() {;
       "field": "title",;"
       "error": "Title is required";
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   "id": "job-456";  "id": "job-456";
   "id": "job - 456";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   "id": "job-456";  "id": "job-456";
   "id": "job - 456";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
       "field": "title","
       "error": "Title is required";
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];`
 }`;
@@ -698,24 +597,10 @@ export function ApiReference() {;
   \"details\": [
     {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 },
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -745,7 +630,6 @@ export function ApiReference() {;
   -H "Content - Type: application / json" \\;'
   -d '{}
       };`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       requestExample: `curl -X POST \\;
   https://api && api.zionai.com/v1/api/jobs \\;"
   -H "Authorization: Bearer YOUR_API_KEY" \\;"
@@ -756,17 +640,11 @@ export function ApiReference() {;
     "category": "design";
     "budget": {;
       "min": 3000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "title": "UX Designer",
     "description": "Looking for a UX designer with 3+ years experience...",
     "category": "design",
     "budget": {
-<<<<<<< HEAD
 
 "
     "title": "UX Designer","
@@ -783,15 +661,7 @@ export function ApiReference() {;
     "deadline": "2023-07-01T00:00:00Z"
   }'`
     }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "min": 3000,
       "max": 5000,
       "currency": "USD"
@@ -806,37 +676,22 @@ export function ApiReference() {;
     },
 "skills": ["Figma", "User Research", "Prototyping"],
     "deadline": "2023-07-01T00:00:00Z"
-=======
     \"skills\": [\"Figma\", \"User Research\", \"Prototyping\"],
     \"deadline\": \"2023-07-01T00:00:00Z\"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }'`
-<<<<<<< HEAD
-    },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    {
-=======
-    },    {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    },    {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     },
 
     {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    },    {
+    },    {
+    },
+
+    {
       id: "get-talent"
       method: "GET"
       path: "/api/talent"
       description: "Search for talent profiles with optional filtering"
-<<<<<<< HEAD
       parameters: [
-<<<<<<< HEAD
-<<<<<<< HEAD
       "max": 5000,
       "currency": "USD";
     }"
@@ -861,17 +716,9 @@ export function ApiReference() {;
         { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },"
         { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       responses: {
-=======
       parameters: [      responses: {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       parameters: [      responses: {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       parameters: [
 
       "max": 5000,
@@ -913,27 +760,17 @@ export function ApiReference() {;
         { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
         { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
       responses: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         "200": {
           description: "A list of talent profiles"
           example: `{
   "talent": [;
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 "id": "talent - 123";
       "full_name": "Jane Smith";
       "professional_title": "Full Stack Developer"
       "skills": ["React", "Node.js", "TypeScript"];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "max": 5000,;
       "currency": "USD";
     };
@@ -1028,13 +865,9 @@ export function ApiReference() {;
   "offset": 0;
 }`;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       },
 
-<<<<<<< HEAD
     // More talent profiles...
   ],
   "count": 38,
@@ -1047,17 +880,9 @@ export function ApiReference() {;
   "limit": 20;
   "offset": 0;
 }`;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       requestExample: `curl -X GET \\
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       requestExample: `curl -X GET \\
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\
-=======
       responses: {"
         "200": {"
           description: "A list of talent profiles"`
@@ -1137,30 +962,22 @@ export function ApiReference() {;
 `
       requestExample: `curl -X GET \\
   https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   -H "Authorization: Bearer YOUR_API_KEY"`
     }
 
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   ],
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Find the active endpoint data;
   const activeEndpointData = endpoints && endpoints.find(e => e && e.id === activeEndpoint);
 
 return (
-=======
 
   ],
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Find the active endpoint data;
   const activeEndpointData = endpoints && endpoints.find(e => e && e.id === activeEndpoint);
 
@@ -1344,12 +1161,10 @@ export function ApiReference() {;
   return (;
   return (
     <ApiDocsLayout>;
-=======
 
   return (
 
     <ApiDocsLayout>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="grid md:grid-cols-5 gap-8">;
         {/* Endpoint list */}"
         <div className="md:col-span-1">;"
@@ -1370,7 +1185,6 @@ export function ApiReference() {;
 <ApiDocsLayout>;
       <div className="grid md:grid - cols - 5 gap - 8">;
         {/* Endpoint list */}
-<<<<<<< HEAD
         <div className="md:col - span-1">;
           <div className="sticky top-8">;
             <h3 className="text - lg font - semibold text - white mb-4">Endpoints</h3>;
@@ -1397,7 +1211,6 @@ export function ApiReference() {;
                     }`}
                   >;
                     <span className={`inline-block w-16 font-mono ${endpoint.method === "GET" ? "text-green-500" :endpoint.method === "POST" ? "text-blue-500" :"text-yellow-500"}`}>;
-=======
     <ApiDocsLayout />;
       <div className=\"grid md:grid - cols - 5 gap-8\" />;
         {/* Endpoint list */}
@@ -1431,7 +1244,6 @@ export function ApiReference() {;
                   >;
                     <span className={`inline-block w-16 font-mono ${endpoint.method === "GET" ? "text-green-500" :endpoint.method === "POST" ? "text-blue-500" :"text-yellow-500"}`}>;
                     <span className={`inline-block w-16 font-mono ${endpoint.method === \"GET\" ? \"text-green-500\" :endpoint.method === \"POST\" ? \"text-blue-500\" :\"text-yellow-500\"}`} />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       {endpoint.method}
                     </span>;"
                     <span className="truncate">{endpoint.path}</span>;
@@ -1487,7 +1299,6 @@ export function ApiReference() {;
         </div>;
 
         {/* Endpoint details */}
-<<<<<<< HEAD
         <div className="md:col - span-4">;
           {activeEndpointData ? (
 
@@ -1498,9 +1309,7 @@ export function ApiReference() {;
           </div>;
         </div>;
 
-<<<<<<< HEAD
         {/* Endpoint details */}
-<<<<<<< HEAD
         <div className="md:col-span-4">;
           {activeEndpointData ? (;
             <div>;"
@@ -1525,7 +1334,6 @@ export function ApiReference() {;
                                 <th className="text-left py-2 px-4 text-zinc-400 font-medium">Name</th>;"
                                 <th className="text-left py-2 px-4 text-zinc-400 font-medium">Type</th>;"
                                 <th className="text-left py-2 px-4 text-zinc-400 font-medium">Required</th>;"
-=======
         {/* Endpoint details */}
 </li>;              ))}
             </ul>;
@@ -1583,13 +1391,11 @@ export function ApiReference() {;
                                 <th className="text-left py-2 px-4 text-zinc-400 font-medium">Name</th>;
                                 <th className="text-left py-2 px-4 text-zinc-400 font-medium">Type</th>;
                                 <th className="text-left py-2 px-4 text-zinc-400 font-medium">Required</th>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                                 <th className="text-left py-2 px-4 text-zinc-400 font-medium">Description</th>;
                               </tr>;
                             </thead>;
                             <tbody>;
 ))}
-=======
 {activeEndpointData.parameters.map((param, index) => (;
                                 <tr key={param.name} className={index < activeEndpointData.parameters.length - 1 ? "border-b border-zinc-800" :""}>;
                                   <td className="py-2 px-4 text-white font-mono">{param.name}</td>;
@@ -1598,7 +1404,6 @@ export function ApiReference() {;
                                   <td className="py-2 px-4 text-zinc-300">{param.description}</td>;
                                 </tr>;                              ))}
                               ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                             </tbody>;
                           </table>;
                         </div>;
@@ -1614,7 +1419,6 @@ export function ApiReference() {;
   const activeEndpointData = endpoints.find(e => e.id === activeEndpoint);
   ],
 
-<<<<<<< HEAD
   // Find the active endpoint data
   const activeEndpointData = endpoints.find(e => e.id === activeEndpoint),
 
@@ -1704,23 +1508,13 @@ export function ApiReference() {;
                     <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>
                     <CodeBlock 
 code={activeEndpointData.requestExample} 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       language="bash"
-=======
         {/* Endpoint details */}                      language="bash"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         {/* Endpoint details */}                      language="bash"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                       language="bash"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                       code={activeEndpointData.requestExample}
                       language="bash"
         {/* Endpoint details */}                      language="bash"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       showLineNumbers={true}
                     />
                   </div>
@@ -1733,8 +1527,6 @@ code={activeEndpointData.requestExample}
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${'
                             status.startsWith('2') ? 'bg-green-950 text-green-500' :'
                             status === '401' |status === '403' ? 'bg-orange-950 text-orange-500' :
-<<<<<<< HEAD
-<<<<<<< HEAD
                             'bg-red-950 text-red-500'
                           }`}>
                             {status}
@@ -1744,12 +1536,6 @@ code={activeEndpointData.requestExample}
 
                         <CodeBlock
                           code={response.example}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
                     <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>;
@@ -1765,7 +1551,6 @@ code={activeEndpointData.requestExample}
                           <spanclassName={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
                             status && status.startsWith('2') ? 'bg-green-950 text-green-500' : 
                             status === '401' || status === '403' ? 'bg-orange-950 text-orange-500' : 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             'bg-red-950 text-red-500'
                           }`}>;
                             {status}
@@ -1776,18 +1561,9 @@ code={activeEndpointData.requestExample}
 
                         <CodeBlock
                           code={response && response.example} 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
                         <CodeBlock 
                           code={response.example} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                     {Object && Object.entries(activeEndpointData && activeEndpointData.responses).map(([status, response]) => (;"
                       <div key={status} className="mb-6">;"
                         <div className="flex items-center mb-3">;`
@@ -1798,7 +1574,6 @@ code={activeEndpointData.requestExample}
                           }`}>;
                             {status}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <CodeBlock;
                           code={response.example} 
@@ -1808,7 +1583,6 @@ language="json"                        <CodeBlock
                           }`}>;
                             {status}
                           language="json"
-=======
 
                         <CodeBlock;
                           code={response.example} '
@@ -1817,7 +1591,6 @@ language="json"                        <CodeBlock
                             {status}"
                           language="json"
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           showLineNumbers={true}
                         />;
                       </div>;
@@ -1829,10 +1602,6 @@ language="json"                        <CodeBlock
                     <div className="text-center">;
                       <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p>;
                       <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className="flex items - center mb - 6">;
                 <span className={`inline - block px - 2 py - 1 text - xs font - medium rounded mr - 3 ${
                   activeEndpointData.method === "GET" ? "bg - green - 950 text - green - 500" :;
@@ -1913,15 +1682,7 @@ language="json"                        <CodeBlock
                     <div className="text - center">;
                       <p className="text - zinc - 400 mb - 3">Interactive API tester coming soon</p>;
                       <p className="text - zinc - 600 text - sm">Try the Postman collection in the meantime</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </div>;
                   </div>;
                 </TabsContent>;
@@ -1933,28 +1694,19 @@ export default ApiReference;
 
 <div className="p - 8 border border - zinc - 800 rounded - lg text-center">;
               <p className="text - zinc-400">Select an endpoint from the list to view details</p>;
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default ApiReference;
 
             </div>) : (
             <div className="p - 8 border border - zinc - 800 rounded - lg text - center">;
               <p className="text - zinc - 400">Select an endpoint from the list to view details</p>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>)}
         </div>;
       </div>;
     </ApiDocsLayout>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default ApiReference;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;
 export default ApiReference;
 
@@ -2153,40 +1905,13 @@ pr-12325
     </ApiDocsLayout>);
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default ApiReference;
 ;
 export default ApiReference;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

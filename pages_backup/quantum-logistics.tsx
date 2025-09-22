@@ -1,6 +1,3 @@
-<<<<<<< HEAD:pages/quantum-logistics.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function QuantumLogisticsPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'))
@@ -10,27 +7,20 @@ export default function QuantumLogisticsPage() {
 export default function QuantumLogisticsPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'))
   if (!service) return null,
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from 'react',;
 import Head from 'next/head',;
 import { Phone, Mail, MapPin, Check, ArrowRight, Truck, Star } from 'lucide-react',;
 import Layout from '../components/layout/Layout',;
-=======
 
 '
 import React from 'react',;'
 import Head from 'next/head',;'
 import { Phone, Mail, MapPin, Check, ArrowRight, Truck, Star } from 'lucide-react',;'
 import Layout from '../components/layout/Layout',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/quantum-logistics.tsx
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
 export default function QuantumLogisticsPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'))
   if (!service) return null,
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Truck, Star } from 'lucide-react',
@@ -44,27 +34,13 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 export default function QuantumLogisticsPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'))
   if (!service) return null,
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
 export default function QuantumLogisticsPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'))
   if (!service) return null,
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export default function QuantumLogisticsPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'))
   if (!service) return null,
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-logistics.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   Phone,
   Mail,
@@ -84,17 +60,11 @@ export default function QuantumLogisticsPage() {
   );
   if (!service) return null;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Layout>
       <Head>
-=======
 export default function QuantumLogisticsPage() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/quantum-logistics.tsx
         <title>{service.name} - Zion Tech Group</title>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <link rel="canonical" href="https://ziontechgroup.com/quantum-logistics" />
       </Head>"
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">"
@@ -114,22 +84,13 @@ export default function QuantumLogisticsPage() { return null; }
 :pages_backup/quantum-logistics.tsx
 
 :pages_backup/quantum-logistics.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </ul>
             </div>"
             <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6 h-fit">"
@@ -141,9 +102,6 @@ export default function QuantumLogisticsPage() { return null; }
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
 :pages_backup/quantum-logistics.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 "
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Request Demo<ArrowRight /></Link>
@@ -151,11 +109,6 @@ export default function QuantumLogisticsPage() { return null; }
 :pages_backup/quantum-logistics.tsx
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Request Demo<ArrowRight /></a>
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Request Demo<ArrowRight /></Link>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 <meta name='description' content={service.description} />
         <link
           rel='canonical'
@@ -209,8 +162,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {service.rating.toFixed(1)}
                 </div>
               </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
@@ -235,21 +186,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <MapPin />
                   <span>{service.contactInfo.address}</span>
                 </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
             </div>
           </div>
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
   )
-<<<<<<< HEAD:pages_backup/quantum-logistics.tsx
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 }
 
@@ -260,8 +203,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 :pages_backup/quantum-logistics.tsx
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -271,25 +212,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 ;
 :pages_backup/quantum-logistics.tsx
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/quantum-logistics.tsx
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/quantum-logistics.tsx
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

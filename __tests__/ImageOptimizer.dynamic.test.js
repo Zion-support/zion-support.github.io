@@ -32,8 +32,6 @@ describe('ImageOptimizerdynamic', () => {
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ImageOptimizerdynamic from "./components/ImageOptimizer.dynamic"; describe("ImageOptimizerdynamic",() => { test("renders without crashing",() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId("imageoptimizer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ImageOptimizerdynamic />)}); test("handles user interactions",() => { render(<ImageOptimizerdynamic />)}); test("applies correct styling",() => { render(<ImageOptimizerdynamic />)})});''"
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import _React from 'react';  import '@testing-library/jest-dom'; import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic'; describe('ImageOptimizerdynamic',() => { test('renders without crashing',() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ImageOptimizerdynamic />)}); test('handles user interactions',() => { render(<ImageOptimizerdynamic />)}); test('applies correct styling',() => { render(<ImageOptimizerdynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic'; describe('ImageOptimizerdynamic',() => { test('renders without crashing',() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ImageOptimizerdynamic />)}); test('handles user interactions',() => { render(<ImageOptimizerdynamic />)}); test('applies correct styling',() => { render(<ImageOptimizerdynamic />)})});
 ursor/add-new-services-and-deploy-updates-0462
@@ -71,5 +69,3 @@ main
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/main

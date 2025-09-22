@@ -1,11 +1,9 @@
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
-=======
     {}
 "
 import React from "react";"
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ITSupportPage.tsx
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 
 export default function ITSupportPage() {}
@@ -40,12 +38,10 @@ return (
       title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
-=======
     <ServiceLandingTemplate"
       title="IT Support Services""
       subtitle="Reliable assistance to keep your business technology operating smoothly.""
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ITSupportPage.tsx
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
 
       benefits={benefits}
@@ -79,7 +75,6 @@ export default function ITSupportPage() {;
       text: "Zion's support team resolved our network outage within hours and saved us from a major downtime.",;
       avatar: "/placeholder.svg"},;
     {;
-<<<<<<< HEAD
       name: "Carlos Diaz",;
       role: "IT Lead",;
       text: "Professional and responsive. Their technicians feel like an extension of our own team.";
@@ -110,4 +105,3 @@ export default function ITSupportPage() {;
       subtitle="Reliable assistance to keep your business technology operating smoothly."
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

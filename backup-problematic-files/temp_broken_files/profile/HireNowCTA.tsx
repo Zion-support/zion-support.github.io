@@ -1,5 +1,4 @@
 
-=======
 import { Button } from "@/components/ui/button",;
 import { HireRequestModal } from "./hire-request",;
 import { useState } from "react",;
@@ -35,14 +34,12 @@ export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">;
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="mb-4">;
         <div className="flex justify-between mb-2">;
           <span>Profile Completeness</span>;
           <span className="font-bold">{profileCompleteness}%</span>;
         </div>;
         <div className="h-2 bg-zion-blue-light rounded-full overflow-hidden">;
-<<<<<<< HEAD
 
         <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">;
           Schedule Interview;

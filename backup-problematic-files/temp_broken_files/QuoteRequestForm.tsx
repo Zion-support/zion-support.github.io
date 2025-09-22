@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { useNavigate } from "react-router-dom",;
@@ -130,7 +129,6 @@ export function QuoteRequestForm() {;
   },;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="container mx-auto px-4 py-12">;
       <div className="max-w-3xl mx-auto">;
         <div className="text-center mb-8">;
@@ -143,7 +141,6 @@ export function QuoteRequestForm() {;
             <span className="text-sm text-white">AI-powered matching</span>;
           </div>;
         </div>;
-<<<<<<< HEAD
 
             </div>;
           </CardContent>;

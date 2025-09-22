@@ -1,5 +1,4 @@
 
-=======
 import React from 'react',;
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 ;
@@ -24,7 +23,6 @@ export function MilestoneCreator({;
 } MilestoneCreatorProps) {;
   return (;
     <AddMilestoneForm ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}
@@ -33,4 +31,3 @@ export function MilestoneCreator({;
       projectEndDate={projectEndDate}
       projectType={projectType}
     />;
-<<<<<<< HEAD

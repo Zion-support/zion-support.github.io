@@ -1,7 +1,5 @@
 :src_backup/components/quotes/QuoteDetails.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react",
 import { 
   Dialog,
@@ -15,7 +13,6 @@ import {
   DialogContent;
   DialogHeader;
   DialogTitle;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   DialogDescription 
 } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -25,7 +22,6 @@ import { Separator } from "@/components/ui/separator",
 import { QuoteStatusBadge } from "./QuoteStatusBadge",
 import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface QuoteDetailsProps {
   quote: QuoteRequest | null,
   isOpen: boolean,
@@ -45,14 +41,10 @@ import { Separator } from "@/components/ui/separator",;
 import { QuoteStatusBadge } from "./QuoteStatusBadge",;
 import type { QuoteRequest } from "@/types/quotes",;
 import { format } from "date-fns",;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 interface QuoteDetailsProps {}
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/quotes/QuoteDetails.tsx
 };
 import React from "react";
 import { ;
@@ -68,7 +60,6 @@ import { Separator } from "@/components/ui/separator";"
 import { QuoteStatusBadge } from "./QuoteStatusBadge";"
 import type { QuoteRequest } from "@/types/quotes";"
 import {format} from "date-fns";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
@@ -82,14 +73,11 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
   const formatDate = (dateString?: string) => {;
     if (!dateString) return 'Not specified';    try {;      return format(new Date(dateString), 'PPP');
       return format(new Date(dateString), 'PPP');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (e) {;
       return dateString;
     }
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -103,38 +91,26 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
           </DialogDescription>
         </DialogHeader>
 
-=======
   return (
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
   return (
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/quotes/QuoteDetails.tsx
         <Separator className="my-4" />
         "
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Requester Information</h3>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-=======
 
           <Card>"
             <CardContent className="pt-6">"
               <h3 className="text-lg font-medium mb-3">Requester Information</h3>"
               <div className="space-y-2">"
                 <div className="flex items-center gap-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/quotes/QuoteDetails.tsx
                   <User className="h-4 w-4 text-gray-500" />
                   <span>{quote.requester_name}</span>
                 </div>"
@@ -146,22 +122,17 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             </CardContent>
           </Card>
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-=======
 
           <Card>"
             <CardContent className="pt-6">"
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>"
               <div className="space-y-2">"
                 <div className="flex items-center gap-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/quotes/QuoteDetails.tsx
                   <Calendar className="h-4 w-4 text-gray-500" />
                   <span>Start date: {formatDate(quote.start_date)}</span>
                 </div>"
@@ -174,23 +145,15 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
           </Card>
         </div>
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Card className="mt-6">
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
-=======
 "
         <Card className="mt-6">"
           <CardContent className="pt-6">"
             <h3 className="text-lg font-medium mb-3">Project Details</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/quotes/QuoteDetails.tsx
             <p className="mb-4">{quote.project_summary}</p>
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {quote.project_description && (
               <>"
                 <h4 className="font-medium mt-4">Additional Details</h4>
@@ -198,7 +161,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
               </>
             )}
 
-<<<<<<< HEAD:src_backup/components/quotes/QuoteDetails.tsx
             <div className="mt-6 flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-gray-500" />
               <span className="font-medium">Budget: </span>
@@ -207,7 +169,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
                 ? `$${quote.budget_min} - $${quote.budget_max}` 
                 : quote.budget_min 
                   ? `$${quote.budget_min}` 
-=======
 "
             <div className="mt-6 flex items-center gap-2">"
               <DollarSign className="h-4 w-4 text-gray-500" />"
@@ -217,18 +178,12 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
                 ? `$${quote.budget_min} - $${quote.budget_max}`
                 : quote.budget_min;`
                   ? `$${quote.budget_min}`'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/quotes/QuoteDetails.tsx
                   : 'Not specified')}
             </div>
           </CardContent>
         </Card>
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/quotes/QuoteDetails.tsx
         <div className="mt-6 flex justify-end">
           <Button onClick={onClose}>Close</Button>
         </div>
@@ -368,11 +323,6 @@ if (return 'Not specified') {}
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>);
 :src_backup/components/quotes/QuoteDetails.tsx
 }
-<<<<<<< HEAD
 '";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"
 '";'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/quotes/QuoteDetails.tsx

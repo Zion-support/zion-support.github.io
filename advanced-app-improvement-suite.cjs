@@ -271,7 +271,6 @@ const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
     this.ensureDirectories();,
 
-<<<<<<< HEAD
   ensureDirectories() {;
   if (!fs.existsSync(this.reportsDir)) {;
   fs.mkdirSync(this.reportsDir, { recursive: true });,
@@ -643,4 +642,3 @@ suite.run();
 const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

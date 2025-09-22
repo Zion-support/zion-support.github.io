@@ -1,16 +1,11 @@
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-=======
 
 import React, { useState } from 'react',;'
 import Head from 'next/head',;'
 import Link from 'next/link',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion, AnimatePresence } from 'framer-motion',;
 import {}
   Search, Filter, Star, Users, TrendingUp, 
@@ -124,18 +119,10 @@ const serviceCategories = []
     color: 'from-orange-500 to-red-500','
     services: allServices.filter(s => s.category.includes('Logistics')),'
     gradient: 'from-orange-500/20 to-red-500/20'
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '
 import React, { useState } from 'react';'
@@ -143,7 +130,6 @@ import Head from 'next/head';'
 import Link from 'next/link';'
 import { motion, AnimatePresence } from 'framer-motion';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {;
   Search, Filter, Star, Users, TrendingUp,;
   DollarSign, Clock, CheckCircle, ArrowRight,;
@@ -256,14 +242,7 @@ const serviceCategories = [;
     } catch (error) {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
       <Head>
@@ -273,20 +252,13 @@ const serviceCategories = [;
         <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2025-services-showcase" />
       </Head>"
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
           <div className="container mx-auto relative z-10">
             <motion.div
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
-=======
 
 "
         <section className="relative py-20 px-4 overflow-hidden">"
@@ -296,7 +268,6 @@ const serviceCategories = [;
             <motion.div;
               initial={{ opacity: 0, y: 30 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -310,13 +281,8 @@ const serviceCategories = [;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="text-center max-w-4xl mx-auto"
             >"
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -342,7 +308,6 @@ const serviceCategories = [;
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Search and Filter Section */}
         <section className="py - 8 px - 4 border - b border - gray - 800">;
           <div className="container mx - auto">;
@@ -360,13 +325,10 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                     {serviceCategories.map(category => (
                       <option key={category.id} value={category.id}>
                         {category.title.split(' ').slice(1).join(' ')  } catch (error) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -374,10 +336,8 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                   placeholder="Search revolutionary services..."
 
               {/* Filters */}
-=======
 
               {/* Filters */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="flex flex - wrap gap - 4 items - center">;
                 {/* Category Filter */}"
                 <div className="relative">
@@ -420,11 +380,7 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 }"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"
                   >"
                     <option value="all">All Categories</option>
@@ -436,14 +392,11 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                   </select>"
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                 </div>
-<<<<<<< HEAD
                 {/* Sort Filter */  } catch (error) {
     console.error("Error:", error);
-=======
 
                 {/* Sort Filter */  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
@@ -459,14 +412,8 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"
                   >"
                     <option value="popularity">Most Popular</option>"
@@ -477,15 +424,8 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                   </select>"
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                 </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1">
                   <button'
                     onClick={() => setViewMode('grid')}'
@@ -508,13 +448,11 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Services Grid */}
         <section className="py - 16 px - 4">;
           <div className="container mx - auto">;
             {/* Results Count */}
 {/* Services Grid */  } catch (error) {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -578,20 +516,13 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
           </div>
         </section>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="mb-8">
               <p className="text-gray-400">
                 Showing <span className="text-white font-semibold">{filteredServices.length}</span> revolutionary services
                 {selectedCategory !== 'all' && (
                   <> in <span className="text-white font-semibold">{serviceCategories.find(c => c.id === selectedCategory)?.title.split(' ').slice(1).join(' ')}</span></>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 )  } catch (error) {
     console.error("Error:", error);
-=======
 
         {/* Services Grid */}"
         <section className="py - 16 px - 4">;"
@@ -620,7 +551,6 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
 
                 )  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -631,27 +561,18 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <AnimatePresence mode="wait">
-=======
 
 "
             <AnimatePresence mode="wait">'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {viewMode === 'grid' ? (
                 <motion.div"
                   key="grid"
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
-=======
 
                   initial={{ opacity: 0 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -670,10 +591,6 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
                 >
                   {sortedServices.map((service, index) => (
@@ -682,12 +599,8 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                           <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                             POPULAR
                           </div>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       key={service.id  } catch (error) {
     console.error("Error:", error);
-=======
 
 "
                   className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
@@ -696,7 +609,6 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                     <motion.div;
                       key={service.id  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -723,8 +635,6 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         {service.popular && (
                           <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                             POPULAR
@@ -736,14 +646,12 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                           <div className="absolute -top - 3 -right - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white text - xs font - bold px - 3 py - 1 rounded - full">;
                             POPULAR;
                           </div>)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         {/* Service Icon */}
                         <div className="text - 4xl mb - 4">{service.icon}</div>;
 
                         {/* Service Title */}"
                         <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors">;
                           {service.name}
-<<<<<<< HEAD
                         </h3>
                         {/* Tagline */}
                         <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -757,11 +665,9 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                         {/* Features */}
                         )  } catch (error) {
     console.error("Error:", error);
-=======
 
                         )  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -785,7 +691,6 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
 }
 
                         </h3>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         {/* Tagline */}
                         <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
                           {service.tagline}
@@ -808,28 +713,20 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                                 <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0" />;
                                 {feature}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <div className="space-y-2 mb-6">
                           <h4 className="text-sm font-semibold text-purple-400">Key Features</h4>
-=======
 "
                         <div className="space-y-2 mb-6">"
                           <h4 className="text-sm font-semibold text-purple-400">Key Features</h4>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <ul className="space-y-1">
                             {service.features.slice(0, 4).map((feature, featureIndex) => ("
                               <li key={featureIndex} className="flex items-center text-xs text-gray-300">"
                                 <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                                 {feature  } catch (error) {
     console.error("Error:", error);
-=======
 
                                 {feature  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -846,20 +743,14 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <div className="grid grid-cols-2 gap-3 mb-6">
                           <div className="bg-gray-800/50 rounded-lg p-3">
                             <div className="text-xs text-gray-400 mb-1">Market Size</div>
-=======
 
 "
                         <div className="grid grid-cols-2 gap-3 mb-6">"
                           <div className="bg-gray-800/50 rounded-lg p-3">"
                             <div className="text-xs text-gray-400 mb-1">Market Size</div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             <div className="text-sm text-gray-200">{service.marketSize}</div>
                           </div>"
                           <div className="bg-gray-800/50 rounded-lg p-3">"
@@ -867,23 +758,15 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                             <div className="text-sm text-gray-200">{service.growthRate}</div>
                           </div>
                         </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <div className="flex space-x-3 mb-4">
                           <Link href={service.link} target="_blank" rel="noopener noreferrer">
                             <button className="flex-1 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 text-sm">
-=======
 
 "
                         <div className="flex space-x-3 mb-4">"
                           <Link href={service.link} target="_blank" rel="noopener noreferrer">"
                             <button className="flex-1 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 text-sm">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                               <ExternalLink className="w-4 h-4 mr-2 inline" />
                               Learn More;
                             </button>
@@ -894,25 +777,18 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                             </button>
                           </Link>
                         </div>
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                         {/* Contact Info */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <div className="grid grid-cols-1 gap-2 text-xs">
                           <div className="flex items-center gap-2 text-purple-400">
                             <Phone className="w-3 h-3" />
                             <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                               {service.contactInfo.mobile  } catch (error) {
     console.error("Error:", error);
-=======
 
                         {/* Contact Info */  } catch (error) {"
     console.error("Error:", error);"
@@ -928,25 +804,16 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
 
                               {service.contactInfo.mobile  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                             </Link>
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           </div>
                           <div className="flex items-center gap-2 text-blue-400">
                             <Mail className="w-3 h-3" />
                             <a href={`mailto:${service.contactInfo.email}`} className="hover:text-white">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                               {service.contactInfo.email  } catch (error) {
     console.error("Error:", error);
-=======
 
                           </div>"
                           <div className="flex items-center gap-2 text-blue-400">"
@@ -955,17 +822,11 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
 
                               {service.contactInfo.email  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                             </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           </div>
                         </div>
                       </div>
@@ -979,18 +840,12 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
               ) : (
                 <motion.div"
                   key="list"
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
-=======
 
                   initial={{ opacity: 0 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1009,19 +864,12 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="space-y-6"
                 >
                   {sortedServices.map((service, index) => (
                     <motion.div
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       key={service.id  } catch (error) {
     console.error("Error:", error);
-=======
 
 "
                   className="space-y-6"
@@ -1030,7 +878,6 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                     <motion.div;
                       key={service.id  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1057,9 +904,6 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <div className="flex-1">
                           <div className="flex items-start gap-4 mb-4">
                             <div className="text-4xl">{service.icon}</div>
@@ -1087,7 +931,6 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                                 {service.features.slice(0, 4).map((feature, featureIndex) => (
                                   <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                                     <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-<<<<<<< HEAD
                                 {service.popular && (
 
                                 {service.popular && (
@@ -1121,14 +964,11 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
 
                                   </span>))}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                                     {feature  } catch (error) {
     console.error("Error:", error);
-=======
 
                                     {feature  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1138,12 +978,8 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                               </ul>
                             </div>
                             <div>"
@@ -1151,24 +987,13 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                               <div className="flex flex-wrap gap-2">
                                 {service.technology.slice(0, 6).map((tech, techIndex) => ("
                                   <span key={techIndex} className="bg-gray-800/50 text-gray-300 text-xs px-2 py-1 rounded">
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                               </div>;
                             </div>;
                           </div>;
                         </div>;
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                         {/* Right Column */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1226,19 +1051,14 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           <div className="space-y-3">
                             <Link href={service.link} target="_blank" rel="noopener noreferrer">
                               <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300">
-=======
 
 "
                           <div className="space-y-3">"
                             <Link href={service.link} target="_blank" rel="noopener noreferrer">"
                               <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                                 <ExternalLink className="w-4 h-4 mr-2 inline" />
                                 Learn More;
                               </button>
@@ -1249,37 +1069,20 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                               </button>
                             </Link>
                           </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           {/* Contact Info */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           <div className="space-y-2 text-xs">
                             <div className="flex items-center gap-2 text-purple-400">
                               <Phone className="w-3 h-3" />
                               <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             </div>
                             <div className="flex items-center gap-2 text-blue-400">
                               <Mail className="w-3 h-3" />
                               <a href={`mailto:${service.contactInfo.email}`} className="hover:text-white">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
                           {/* Contact Info */  } catch (error) {"
     console.error("Error:", error);"
@@ -1298,36 +1101,26 @@ className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4
                               <Mail className="w-3 h-3" />"`
                               <a href={`mailto:${service.contactInfo.email}`} className="hover:text-white">
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             </div>
                           </div>
                         </div>
                       </div>
                     </motion.div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {filteredServices.length === 0 && (
               <div className="text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-=======
 
             {filteredServices.length === 0 && ("
               <div className="text-center py-16">"
                 <div className="text-6xl mb-4">🔍</div>"
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <p className="text-gray-400 mb-6">Try adjusting your search terms or filters</p>
                 <button;
                   onClick={() => {'
                     setSearchTerm('')
 setSelectedCategory('all')
-<<<<<<< HEAD
 
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
 
@@ -1412,29 +1205,19 @@ Visit Website
     </>
 
   )
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     setSelectedCategory('all')
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '
                     setSelectedCategory('all')
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Clear Filters;
                 </button>
               </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20">
-=======
 "
         <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto text-center">
             <motion.div;
               initial={{ opacity: 0, y: 30 }  } catch (error) {"
@@ -1457,13 +1240,9 @@ Visit Website
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >
-=======
 
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>"
@@ -1516,11 +1295,8 @@ Visit Website
 );
 };
   )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >;
-=======
             >;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready to Transform Your Business?;
               </h2>;"
@@ -1569,30 +1345,18 @@ Visit Website
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
     </>;
   );
   } catch (error) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     </>);
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
@@ -1600,4 +1364,3 @@ Visit Website
 }
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,8 +1,4 @@
 :src_backup/components/enterprise/admin/TeamManagement.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from "react",
 import {
@@ -67,9 +63,6 @@ import { toast } from "@/hooks/use-toast"
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false)
   const [newMemberEmail, setNewMemberEmail] = useState('')
-<<<<<<< HEAD:src/components/enterprise/admin/TeamManagement.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Mock team members data
   const teamMembers = [
     {
@@ -103,10 +96,8 @@ export function TeamManagement() {
 
 :src/components/enterprise/admin/TeamManagement.tsx
   const handleAddMember = () => {    // In a real app, this would make an API call to add the member
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     // In a real app, this would make an API call to add the member
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!newMemberEmail) {
       toast({
 
@@ -139,14 +130,12 @@ export function TeamManagement() {
       description: `A new invitation has been sent to ${memberEmail}`
     })
 :src/components/enterprise/admin/TeamManagement.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
 :src_backup/components/enterprise/admin/TeamManagement.tsx
-<<<<<<< HEAD
   TableRow} from "@/components/ui/table",
 import {
   Dialog,
@@ -229,8 +218,6 @@ if ( {) {}
     setIsAddingMember (false);
   }
 :src_backup/components/enterprise/admin/TeamManagement.tsx
-<<<<<<< HEAD:src/components/enterprise/admin/TeamManagement.tsx
-<<<<<<< HEAD
   const handleRemoveMember = (_memberId: number, ) =>: any {
     // In a real app, this would make an API call to remove the member;
     toast ({'
@@ -245,10 +232,8 @@ if ( {) {}
       description: `A new invitation has been sent to ${member_email}`,
     });
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 :src_backup/components/enterprise/admin/TeamManagement.tsx
-<<<<<<< HEAD
   // Mock team members data
   const teamMembers = [
     {
@@ -280,21 +265,16 @@ if ( {) {}
       status: "active",
       lastActive: "3 days ago"}],
 
-<<<<<<< HEAD
   const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title: "Email required",
         description: "Please enter an email address for the new team member.",
-=======
 "
         title: "Email required","
         description: "Please enter an email address for the new team member.","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/TeamManagement.tsx
         variant: "destructive"}),
       return;
     }
@@ -322,21 +302,14 @@ title: "Invitation sent",
       description: `A new invitation has been sent to ${memberEmail}`})
   },
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/TeamManagement.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/TeamManagement.tsx
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-=======
   return ("
     <div className="space-y-6">"
       <div className="flex items-center justify-between">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/TeamManagement.tsx
         <h3 className="text-xl font-medium">Team Members</h3>
         <Dialog open={isAddingMember} onOpenChange={setIsAddingMember}>
           <DialogTrigger asChild>"
@@ -360,17 +333,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Label>
 :src_backup/components/enterprise/admin/TeamManagement.tsx
                 <Input
-<<<<<<< HEAD
                   id="email"
                   type="email"
                   placeholder="colleague@company.com"
-=======
                 <Input;
 "
                   id="email""
                   type="email""
                   placeholder="colleague@company.com""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/TeamManagement.tsx
                   className="col-span-3"
                   value={newMemberEmail}
                   onChange={(e) => setNewMemberEmail(e.target.value)}
@@ -404,13 +374,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
 :src_backup/components/enterprise/admin/TeamManagement.tsx
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/TeamManagement.tsx
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -446,9 +410,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className="text-sm font-medium">
                         {member.name
 :src_backup/components/enterprise/admin/TeamManagement.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/TeamManagement.tsx
                           .split(" ")
                           .map((n) => n[0])"
                           .join("")}
@@ -468,10 +429,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <TableCell>
 :src_backup/components/enterprise/admin/TeamManagement.tsx
                   <Badge
-<<<<<<< HEAD
-=======
                     variant={member.status === "active" ? "default" : "outline"}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/TeamManagement.tsx
                     variant={member.status === "active" ? "default" : "outline"}
                   >
                     {member.status}
@@ -484,13 +442,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {member.status === "pending" ? (
 :src_backup/components/enterprise/admin/TeamManagement.tsx
                       <Button
-<<<<<<< HEAD
                         variant="ghost"
-=======
                       <Button;
 "
                         variant="ghost""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/TeamManagement.tsx
                         size="sm"
                         onClick={() => handleResendInvite(member.email)}
                       >"
@@ -506,7 +461,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"
-=======
                         Resend;
                       </Button>
                     ) : (
@@ -515,7 +469,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         variant="ghost""
                         size="sm""
                         className="text-destructive hover:text-destructive""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/TeamManagement.tsx
 import React, { useState } from "react",;
   return ("
     <div className="space-y-6">"
@@ -616,9 +569,7 @@ import {;
   TableHeader,;
 :src_backup/components/enterprise/admin/TeamManagement.tsx
   TableRow} from "@/components/ui/table",;
-=======
   TableRow} from "@/components/ui/table",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/TeamManagement.tsx
 import {;
   TableRow,;"
 } from '@/components/ui/table';
@@ -727,17 +678,13 @@ export function TeamManagement() {;
       toast({;'
         title: 'Email required',;'
         description: 'Please enter an email address for the new team member.',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/TeamManagement.tsx
         variant: 'destructive',;
       });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return;
     }
 :src_backup/components/enterprise/admin/TeamManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
 ;
     toast({;
-<<<<<<< HEAD
       title: "Invitation sent",;
       description: `An invitation has been sent to ${newMemberEmail}`}),;
     setNewMemberEmail(""),;
@@ -786,7 +733,6 @@ export function TeamManagement() {;
 '
     <div className='space - y-6'>;'
       <div className='flex items - center justify - between'>;'
-=======
     toast({;
       title: 'Invitation resent',;
       description: `A new invitation has been sent to ${memberEmail}`,;`
@@ -801,15 +747,12 @@ pr-12325
 
     <div className='space - y-6'>;
       <div className='flex items - center justify - between'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/TeamManagement.tsx
         <h3 className='text - xl font - medium'>Team Members</h3>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Dialog open={isAddingMember} onOpenChange={setIsAddingMember}>;
 :src_backup/components/enterprise/admin/TeamManagement.tsx
           <DialogTrigger asChild>;
             <Button className="gap-2">;
               <UserPlus className="h-4 w-4" />;
-=======
         title: "Email required",;
         description: "Please enter an email address for the new team member.",;
         variant: "destructive"}),;
@@ -842,7 +785,6 @@ pr-12325
           <DialogTrigger asChild>;
             <Button className="gap-2">;
               <UserPlus className="h-4 w-4" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/TeamManagement.tsx
               Add Team Member;
             </Button>;
           </DialogTrigger>;
@@ -912,7 +854,6 @@ pr-12325
                   <option value='recruiter'>Recruiter</option>;'
                   <option value='manager'>Manager</option>;'
                   <option value='viewer'>Viewer</option>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/TeamManagement.tsx
                 </select>;
               </div>;
             </div>;
@@ -927,7 +868,6 @@ pr-12325
         </Dialog>;
       </div>;
 :src_backup/components/enterprise/admin/TeamManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
       <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
@@ -1000,7 +940,6 @@ pr-12325
                       <div className='font - medium'>{member.name}</div>;'
                       <div className='text - sm text - muted - foreground'>;
 :src_backup/components/enterprise/admin/TeamManagement.tsx
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/TeamManagement.tsx
                         {member.email}
                       </div>;
                     </div>;
@@ -1037,19 +976,13 @@ pr-12325
                         <Trash className="h-4 w-4" />;
                       </Button>;
 :src_backup/components/enterprise/admin/TeamManagement.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/TeamManagement.tsx
                     )}
                   </div>;
                 </TableCell>;
               </TableRow>;
             ))}
 :src_backup/components/enterprise/admin/TeamManagement.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </TableBody>;
         </Table>;
       </div>;
@@ -1118,20 +1051,9 @@ pr-12325
 }'"}
 }
 :src_backup/components/enterprise/admin/TeamManagement.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
-<<<<<<< HEAD:src/components/enterprise/admin/TeamManagement.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/admin/TeamManagement.tsx
-=======
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/TeamManagement.tsx
           </TableBody>
         </Table>
       </div>
@@ -1164,12 +1086,7 @@ pr-12325
 }</TableBody> </Table> </div> </div>) ;
 }'"
 :src/components/enterprise/admin/TeamManagement.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/admin/TeamManagement.tsx
-=======
             <DialogFooter>;
 
               <Button onClick={handleAddMember}>Send Invitation;
@@ -1261,4 +1178,3 @@ pr-12325
 }</div>  ) );
 }  </div> </div>);"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/admin/TeamManagement.tsx

@@ -18,15 +18,11 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-=======
 const VideoCall = ({ className }) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className={className || ''}>
       <h1>VideoCall</h1>
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

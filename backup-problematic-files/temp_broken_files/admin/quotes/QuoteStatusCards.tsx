@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -95,9 +94,7 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
 import React from "react";
 
 interface QuoteStatusCardsProps {_statusCounts: {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     new: number;
     in_review: number;
     responded: number;
     accepted: number;
-<<<<<<< HEAD

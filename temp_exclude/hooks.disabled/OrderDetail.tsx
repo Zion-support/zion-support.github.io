@@ -36,7 +36,6 @@ export default function OrderDetailPage() {;
           html: `<p>Thank you for your purchase. Total ${order.total}.</p>`;
         }
       }),;
-=======
 export default function OrderDetailPage() { return null; }
   const { orderId } = router && router.query as { orderId?: string };
   const { user } = useAuth();
@@ -65,7 +64,6 @@ export default function OrderDetailPage() { return null; }
           html: `<p>Thank you for your purchase. Total ${order && order.total}.</p>`,;
         },;
       });'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/OrderDetail.tsx
       toast({ title: 'Receipt sent!' });
     } catch (err) {;'
       toast({ title: 'Failed to send receipt', variant: 'destructive' });
@@ -144,6 +142,4 @@ return (
   )
 }
 ;
-=======
   return ('"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/OrderDetail.tsx

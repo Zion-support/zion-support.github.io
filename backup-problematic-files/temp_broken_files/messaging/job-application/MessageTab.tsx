@@ -1,5 +1,4 @@
 
-=======
 import React from 'react',;
 import { Textarea } from "@/components/ui/textarea",;
 import { Input } from "@/components/ui/input",;
@@ -21,9 +20,7 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
           id="message";
           value={message}
           onChange={(e) => setMessage(e.target.value)}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white";
           placeholder="Write a message to the job poster...";
         />;
       </div>;
-<<<<<<< HEAD

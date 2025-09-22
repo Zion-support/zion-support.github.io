@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -105,6 +104,4 @@ const path = require('path')
         const content = fs.readFileSync(filePath, 'utf8')
         if (!content.includes('<Head>') && !content.includes('<title>')
             "issue"
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

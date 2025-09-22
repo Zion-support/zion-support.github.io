@@ -302,10 +302,7 @@ if (require.main === module) {}
   resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
     process.exit(1)})};
 ;
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 
 // Main execution;
 if (require.main === module) {}
@@ -321,4 +318,3 @@ if (require.main === module) {}
     process.exit(1)})};
 module.exports = IntelligentConflictResolver;
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

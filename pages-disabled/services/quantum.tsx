@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -23,10 +22,8 @@ export default function QuantumServicesPage() {
   const services = [
 
 import React from 'react';
-=======
 
 import React from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Head from 'next / head';
 '
 import { motion } from 'framer-motion';
@@ -53,9 +50,7 @@ export default /**;
  */
 function QuantumServicesPage() {}
   const services = [;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
-<<<<<<< HEAD
       title: 'Quantum Algorithm Development'
       description:
         'Custom quantum algorithms designed for specific business problems'
@@ -116,9 +111,6 @@ function QuantumServicesPage() {}
     { number: '10x', label: 'Performance Boost', icon: TrendingUp }
     { number: '24/7', label: 'Quantum Support', icon: Clock }
   ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Atom,
   Cpu,
   Shield,
@@ -129,7 +121,6 @@ function QuantumServicesPage() {}
   CheckCircle,
   Star,
   Users,
-<<<<<<< HEAD
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -145,10 +136,7 @@ export default function QuantumServicesPage() {
       description: "Custom quantum algorithms designed for specific business problems",
       features: ["Optimization Algorithms", "Machine Learning", "Cryptography", "Simulation"],
       price: "From $15,000",
-<<<<<<< HEAD
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       title: 'Quantum Algorithm Development',
       description:;'
         'Custom quantum algorithms designed for specific business problems',
@@ -159,9 +147,7 @@ export default function QuantumServicesPage() {
         'Simulation',
       ],'
       price: 'From $15, 000',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       icon: Atom,
-<<<<<<< HEAD
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -196,9 +182,7 @@ export default function QuantumServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
   ],
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const stats = [
     { number: "100+", label: "Quantum Algorithms", icon: Atom },
     { number: "99.99%", label: "Security Guarantee", icon: Shield },
@@ -215,8 +199,6 @@ export default function QuantumServicesPage() {
         <link rel="canonical" href="https://ziontechgroup.com/services/quantum" />
       </Head>
       <EnhancedNavigation />
-=======
-=======
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
@@ -248,8 +230,6 @@ export default function QuantumServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='mb-8'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Quantum Computing
@@ -260,8 +240,6 @@ className='mb-8'
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
               Experience the future of computing with our quantum solutions.
@@ -312,8 +290,6 @@ className='mb-8'
               Quantum Computing;
             </h1>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Explore Quantum Solutions'
@@ -333,14 +309,11 @@ className='mb-8'
           >"
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
 Experience the future of computing with our quantum solutions. From algorithm development 
-<<<<<<< HEAD
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
               Explore Quantum Solutions
               <ArrowRight className="w-5 h-5" />
-=======
               <ArrowRight className='w-5 h-5' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </button>
           </motion.div>
         </div>
@@ -468,14 +441,9 @@ export default function QuantumServicesPage(req, res) {
             </p>;
           </motion.div>;
           <motion.div;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </p>
           </motion.div>
           <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 className='text-center'
               >
                 <div className='w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4'>
@@ -494,14 +462,12 @@ className='text-center'
 <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 </p>
           </motion.div>
           <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -522,8 +488,6 @@ transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
           >"
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
 Experience the future of computing with our quantum solutions. From algorithm development
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               to security protocols, we're pioneering the quantum revolution.
             </p>"
             <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -533,9 +497,7 @@ Experience the future of computing with our quantum solutions. From algorithm de
           </motion.div>
         </div>
       </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
 
 >
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>
@@ -559,7 +521,6 @@ Experience the future of computing with our quantum solutions. From algorithm de
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Experience the future of computing with our quantum solutions. From algorithm development 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               to security protocols, we're pioneering the quantum revolution.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -570,7 +531,6 @@ Experience the future of computing with our quantum solutions. From algorithm de
         </div>
       </section>
 
-<<<<<<< HEAD
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -584,10 +544,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
               >"
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">"
                   <stat.icon className="w-8 h-8 text-cyan-400" />
@@ -597,38 +553,27 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
 
           </div>;
         </div>;
       </section>;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <h2 className="text-4xl font-bold text-white mb-6">Quantum Computing Services</h2>
-=======
 
           >"
             <h2 className="text-4xl font-bold text-white mb-6">Quantum Computing Services</h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Cutting-edge quantum solutions designed to solve complex problems and secure the future;
             </p>
           </motion.div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <motion.div
                 key={service.title  } catch (error) {
     console.error("Error:", error);
@@ -656,11 +601,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <motion.div
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
               <motion.div;
 '
@@ -678,57 +619,36 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               <motion&& motion.div;
                 key={service && service.title}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>"
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
-=======
 "
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>"
                 <p className="text-white/70 mb-6">{service.description}</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature) => ("
                     <li key={feature} className="flex items-center text-white/80">"
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
                 </ul>
                 <div className="flex items-center justify-between">
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </ul>
                 <div className="flex items-center justify-between">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {feature  } catch (error) {
     console.error("Error:", error);
-=======
 
                       {feature  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -739,28 +659,19 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   }
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </ul>
                 <div className="flex items-center justify-between">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Get Started
                   </button>
                 </div>
               </motion.div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             ))  } catch (error) {
     console.error("Error:", error);
-=======
 
                 </ul>"
                 <div className="flex items-center justify-between">
@@ -774,13 +685,11 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
             ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
           </div>;
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
@@ -812,17 +721,12 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
 "
             <h2 className="text-4xl font-bold text-white mb-6">
-=======
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
-=======
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
@@ -832,45 +736,30 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             viewport={{ once: true }}
           >
 <h2 className='text-4xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Ready to Experience Quantum Computing?
             </h2>"
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">'
               Let's explore how quantum computing can revolutionize your business operations and solve previously impossible problems.
             </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Learn More
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                 Learn More;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }</div> </div> </section> <motion.div initial= {
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ),
 "
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Quantum Computing Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Cutting-edge quantum solutions designed to solve complex problems and secure the future </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 
 }</div> </div> </section> <motion.div initial= {
-<<<<<<< HEAD
 }</div> </div> </section> <motion.div initial= {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }</div> </div> </section> <motion.div initial= {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;'
             <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -897,11 +786,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 "
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Quantum Computing Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Cutting-edge quantum solutions designed to solve complex problems and secure the future </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
-<<<<<<< HEAD
 }</div> </div> </section> <motion.div initial= {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -923,8 +808,6 @@ duration: 0 && 0.8
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Experience Quantum Computing? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's explore how quantum computing can revolutionize your business operations and solve previously impossible problems. </p> Schedule Quantum Demo </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }</div> </div> </section> <motion&& motion.div initial= {}
 }</div> </div> </section> <motion.div initial= {}
   {}
@@ -938,7 +821,6 @@ duration: 0 && 0.8
 '"
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Experience Quantum Computing? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's explore how quantum computing can revolutionize your business operations and solve previously impossible problems. </p> Schedule Quantum Demo </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   )
 }'
             <button className='px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>;
@@ -1044,7 +926,6 @@ duration: 0 && 0.8
                 Schedule Quantum Demo;
               </button>;'
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                Learn More;
-<<<<<<< HEAD
 
   )
           >;"
@@ -1060,18 +941,13 @@ duration: 0 && 0.8
               </button>;"
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
                 Learn More;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </button>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
       <EnhancedFooter />;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>;
   );
   } catch (error) {"
@@ -1079,12 +955,5 @@ duration: 0 && 0.8
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

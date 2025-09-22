@@ -8,17 +8,13 @@ import {
   ArrowRight,
   Sparkles,
   Star,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
-<<<<<<< HEAD
 export default function MetaverseAIPlatformPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
   if (!service) return null;
 
@@ -153,6 +149,4 @@ className="w - full";
         </div>;
       </div>;
 </UltraAdvancedFuturisticBackground>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

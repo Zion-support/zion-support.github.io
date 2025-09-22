@@ -1,7 +1,5 @@
 
 :pages_backup/api/feedback/submit.ts
-<<<<<<< HEAD:pages/api/feedback/submit.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -11,7 +9,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== "POST") return res.status(405).end();
   const { responseId, rating, comment, pagePath, aiModel } = req.body |{}
   if (!responseId |!rating |!["up", "down"].includes(rating)) {
-=======
 import type { NextApiRequest, NextApiResponse } from "next";"
 import fs from "fs";"
 import path from "path";
@@ -19,13 +16,8 @@ import path from "path";
 export default function handler() { return null; }
   const { responseId, rating, comment, pagePath, aiModel } = req.body |{}"
   if (!responseId |!rating |!["up", "down"].includes(rating)) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/feedback/submit.ts
     return res.status(400).json({ error: "Missing responseId or rating" });
 :pages_backup/api/feedback/submit.ts
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/feedback/submit.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).end();
   const { responseId, rating, comment, pagePath, aiModel } = req.body || {};
@@ -35,8 +27,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 :pages_backup/api/feedback/submit.ts
   const entry = {
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/feedback/submit.ts
     id: responseId
     rating
     comment: String(comment || "").slice(0, 2000)
@@ -47,12 +37,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/api/feedback/submit.ts
 
 };
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/feedback/submit.ts
 
   };
   };
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/feedback/submit.ts
   const rows = readAll();
   rows && rows.push(entry);
   writeAll(rows);
@@ -170,11 +158,7 @@ export default function handler(req, res) {}
   return res.status(200).json({ ok: true });
 
 :pages_backup/api/feedback/submit.ts
-<<<<<<< HEAD:pages_backup/api/feedback/submit.ts
-<<<<<<< HEAD:pages/api/feedback/submit.ts
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -199,15 +183,8 @@ export default function handler(req, res) {}
 }
 
 :pages_backup/api/feedback/submit.ts
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/feedback/submit.ts
-=======
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/feedback/submit.ts

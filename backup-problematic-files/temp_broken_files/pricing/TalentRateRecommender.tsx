@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/TalentRateRecommender.tsx
 import { ;
   getTalentRateSuggestion,;
   PricingSuggestion,;
@@ -8,10 +7,8 @@ import { ;
 } from "@/services/pricingSuggestionService",;
 import { PricingSuggestionBox } from "./PricingSuggestionBox",;
 import { useAuth } from "@/hooks/useAuth",;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/TalentRateRecommender.tsx
 import { Sparkles } from "lucide-react",;
 import { Sparkles } from 'lucide-react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/pricing/TalentRateRecommender.tsx
 ;
 interface TalentRateRecommenderProps {;
   skills: string[];,;
@@ -35,12 +32,9 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
       const result = await getTalentRateSuggestion(params),;
       setSuggestion(result),;
 } catch (error) {;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/TalentRateRecommender.tsx
       console.error("Error generating rate suggestion:", error),;
-=======
     } catch (error) {;"
       logErrorToProduction('Error generating rate suggestion: ';, { data: error ;}),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } finally {;
       setIsLoading(false),;
   },;
@@ -58,8 +52,6 @@ if (user) {;
         trackPricingSuggestion({;
 userId:user.id,;
           suggestionType:"talent",;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/pricing/TalentRateRecommender.tsx
           suggestedMin:suggestion.minRate,;
           suggestedMax:suggestion.maxRate,;
           actualValue:suggestedRate,;
@@ -89,7 +81,6 @@ userId:user.id,;
       </div>;
 </div>;
   ),;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/TalentRateRecommender.tsx
 },; import {
   getTalentRateSuggestion;
 PricingSuggestion;
@@ -123,7 +114,6 @@ return (<div className="space-y-4" > <div> {
 }/>) 
 }</div> </div>) 
 };
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 },; import {;
   getTalentRateSuggestion;
 PricingSuggestion;
@@ -155,4 +145,3 @@ return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<B
 };
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/pricing/TalentRateRecommender.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/pricing/TalentRateRecommender.tsx

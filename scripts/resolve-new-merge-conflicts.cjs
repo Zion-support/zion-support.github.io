@@ -2,7 +2,6 @@
 const fs = require('fs');
 const { execSync } = require('child_process');
 console.log('🔧 Resolving New Merge Conflicts');
-==========================');
 
 :scripts/resolve-new-merge-conflicts.cjs
 // Function to resolve merge conflicts by keeping the first version

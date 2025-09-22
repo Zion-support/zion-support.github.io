@@ -1,6 +1,4 @@
 :src/components/developers/ApiPlayground.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
@@ -19,10 +17,8 @@ interface Param {;
   name: string,;
   type: string,;
   required?: boolean;
-=======
 const options: RequestInit = {
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiPlayground.tsx
       method
       headers: {
 
@@ -43,7 +39,6 @@ const options: RequestInit = {
       let response_text: string;
       if () {) {
   $2
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
         try {
           const json_data = await res.json ();
@@ -103,10 +98,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       try {
         options.body = JSON.stringify(JSON.parse(body))
       } catch {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiPlayground.tsx
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -114,7 +106,6 @@ import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
 
 :src/components/developers/ApiPlayground.tsx
-<<<<<<< HEAD
   name: string
 type: string
 required?: boolean
@@ -159,7 +150,6 @@ import { Textarea } from "@/components/ui/textarea",;
 import { Button } from "@/components/ui/button",;
 import CodeBlock from "./CodeBlock",;
 interface Param {;
-<<<<<<< HEAD
   name: string;
 type: string;
 required?: boolean ;
@@ -180,7 +170,6 @@ export function ApiPlayground(): any ({;
   const [loading, setLoading] = useState(false);
 
 :src/components/developers/ApiPlayground.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         options.body = body
 ;
 export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {;
@@ -262,12 +251,9 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   return (
     <div className="space-y-4">
   return (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className='space-y-4'>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Input
         value={apiKey}
-<<<<<<< HEAD
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
       />
@@ -287,20 +273,15 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
           value={paramValues[p.name] || ''}
 
-<<<<<<< HEAD
 
           onChange={e => handleParamChange(p.name, e.target.value)}        />
           key={p && p.name}
           value={paramValues[p && p.name] || ''}
           onChange={e => handleParamChange(p && p.name, e && e.target.value)}        />;
-<<<<<<< HEAD:src/components/developers/ApiPlayground.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       ))}
       {method !== "GET" && method !== "DELETE" && (
-=======
           onChange={e => handleParamChange(p.name, e.target.value)}        />      ))}
       {method !== 'GET' && method !== 'DELETE' && (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Textarea
           value={body}
           onChange={(e) => setBody(e.target.value)}
@@ -317,10 +298,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
 ;
 :src/components/developers/ApiPlayground.tsx
-<<<<<<< HEAD
 export default ApiPlayground;
 
 interface Param {
 :src/components/developers/ApiPlayground.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

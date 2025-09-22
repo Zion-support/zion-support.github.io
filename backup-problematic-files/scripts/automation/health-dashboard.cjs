@@ -4,13 +4,9 @@
  * Comprehensive monitoring dashboard for PM2 processes;
  */
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const pm2 = require('pm2')
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 const http = require('http')
@@ -61,10 +57,5 @@ this.logFile = path.join(this.projectRoot, 'logs', 'health-dashboard.log')
             \"
                     "onlineProcesses"
                 console.error('Failed to refresh "data")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,5 +1,4 @@
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -10,7 +9,6 @@ import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Stethoscope, Brain, Eye, Heart;
   Microscope, Shield, BarChart3;
   TrendingUp, Target, Users, CheckCircle;
@@ -18,9 +16,6 @@ import { Stethoscope, Brain, Eye, Heart;
   Lock, Clock, DollarSign, PieChart;
   Activity, Zap, Pill, Syringe, Hospital, Ambulance
  } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -42,7 +37,6 @@ class ErrorBoundary extends React.Component {}
     }
 
     return this.props.children;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
   ],
@@ -143,8 +137,6 @@ class ErrorBoundary extends React.Component {}
       color: "from-blue-500 to-cyan-500"
 
 },
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Link from 'next/link';
 
 const AIHealthcareDiagnosticsPro: React.FC = () => {;
@@ -192,24 +184,18 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
       color: 'from-yellow-500 to-orange-500',;
     },  ];
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
 import Head from 'next / head';
 import Layout from '../components / layout / Layout';
 import {motion} from 'framer-motion';
 import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance, } from 'lucide-react';
-=======
 '
 import Head from 'next / head';'
 import Layout from '../components / layout / Layout';'
 import {motion} from 'framer-motion';'
 import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance, } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
 import Link from 'next / link';
 
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const AIHealthcareDiagnosticsPro: React.FC = () => {
   const features = [
     {
@@ -264,13 +250,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       description:;
         'AI - powered analysis of X - rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.',
       benefits: [;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const AIHealthcareDiagnosticsPro: React.FC;
       description:
         'AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.'
       benefits: [
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         '95% accuracy rate',
         '80% faster diagnosis',
         'Reduced radiologist workload',
@@ -375,25 +358,17 @@ price: '$29, 999',
       color: 'from - blue - 500 to - cyan - 500',
     },
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     {
       name: "EHR Platforms",
       icon: Database,
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
       description: "Epic, Cerner, Allscripts, athenahealth",
       color: "from-green-500 to-emerald-500"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
 
     {
-=======
     },
 
     {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
       name: "LIS Systems",
       icon: Microscope,
 '
@@ -403,26 +378,18 @@ price: '$29, 999',
       description: "Lab information systems integration","
       color: "from-purple-500 to-pink-500"
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
 
     {"
       name: "RIS Systems",
       icon: BarChart3,
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
       description: "Radiology information systems",
-=======
 '
       description: 'Radiology information systems','
       color: 'from - orange - 500 to - red - 500',
 "
       description: "Radiology information systems","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
       color: "from-orange-500 to-red-500"
 
     },
@@ -437,8 +404,6 @@ price: '$29, 999',
       description: "CT, MRI, X-ray, ultrasound machines","
       color: "from-indigo-500 to-blue-500"
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
 
     {"
@@ -512,83 +477,52 @@ color: 'from - yellow - 500 to - orange - 500',
       icon: Heart,'
       name: 'Cardiology',
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       description:;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         'Heart disease detection, ECG analysis, cardiovascular risk assessment',
-=======
 
       description:;'
         'Heart disease detection, ECG analysis, cardiovascular risk assessment','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
       accuracy: '99.1%',
     },
     {}
       icon: Brain,'
       name: 'Neurology',
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
       description:;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       description:
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         'Brain tumor detection, stroke diagnosis, neurological disorder analysis',
-=======
       description:;'
         'Brain tumor detection, stroke diagnosis, neurological disorder analysis','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
       accuracy: '98.9%',
     },
     {}
       icon: Activity,'
       name: 'Pulmonology',
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
       description:;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       description:
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         'Lung cancer screening, pneumonia detection, respiratory disease analysis',
-=======
       description:;'
         'Lung cancer screening, pneumonia detection, respiratory disease analysis','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
       accuracy: '99.3%',
     },
     {}
       icon: Eye,'
       name: 'Ophthalmology',
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
       description:;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       description:
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         'Retinal disease detection, glaucoma screening, diabetic retinopathy',
-=======
       description:;'
         'Retinal disease detection, glaucoma screening, diabetic retinopathy','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
       accuracy: '98.7%',
     },
     {}
       icon: Shield,'
       name: 'Hepatology',
-<<<<<<< HEAD
       description:;
-<<<<<<< HEAD:pages_backup/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
       description:
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'Liver disease detection, cirrhosis assessment, tumor identification',
       accuracy: '99.0%',
     },
@@ -600,7 +534,6 @@ description:;
       accuracy: '98.8%',
     },  ];
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 
     <Layout>
@@ -645,8 +578,6 @@ description:;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.15),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]"></div>
 {/* Floating Elements */}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>
         <div className="absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500"></div>
@@ -656,18 +587,9 @@ description:;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className="mb-8"
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
-=======
 "
         <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>"
         <div className="absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000"></div>"
@@ -676,7 +598,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           >"
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
               <Brain className="w-4 h-4" />
               <span>AI-Powered Healthcare</span>
             </div>"
@@ -687,9 +608,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <br />"
               <span className="text-white">Diagnostics Pro</span>
             </h1>
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Transform healthcare delivery with the world's most advanced AI diagnostic platform. 
@@ -728,10 +646,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
                 className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >"
                 <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>"
@@ -745,10 +660,6 @@ initial={{ opacity: 0, scale: 0.8 }}
 className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
               Transform healthcare delivery with the world's most advanced AI
               diagnostic platform. Achieve 99.2% accuracy in disease detection
@@ -767,13 +678,9 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
                   99.2%
                 </div>
 <div className='text-gray-300'>Diagnostic Accuracy</div>              </motion.div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
-=======
 
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {"
@@ -783,7 +690,6 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
 }
                 animate={{ opacity: 1, scale: 1 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -816,7 +722,6 @@ initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
 }
                 className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
                 <div className="text-gray-300">Faster Diagnosis</div>
               </motion.div>
@@ -826,7 +731,6 @@ initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
 className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
-=======
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -843,11 +747,8 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
   }
 }
                 className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
                 <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-=======
               <motion.div"
                 className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
@@ -858,7 +759,6 @@ className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
               <motion.div;
               >"
                 <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
                 <div className="text-gray-300">Continuous Monitoring</div>
               </motion.div>
             </div>
@@ -882,8 +782,6 @@ Schedule Demo
 }
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
               >
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             {/* CTA Buttons */  } catch (error) {"
     console.error("Error:", error);"
@@ -911,8 +809,6 @@ Schedule Demo
               >
 
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Schedule Demo
               </motion.button>
               <motion.button;
@@ -921,34 +817,21 @@ Schedule Demo
 "
                 className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Contact Sales
-=======
 
               >
 
                 Contact Sales;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
               </motion.button>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
       </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Features Section */}
 "
       <section className="py-20 bg-gray-900 relative overflow-hidden">"
@@ -956,7 +839,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
           <motion.div
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -978,50 +860,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
             className="text-center mb-16"
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 {/* Features Section */}
       <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-healthcare-diagnostics-pro.tsx
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
 
           >"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
               Powered by <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Advanced AI</span>
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our platform combines cutting-edge artificial intelligence with deep medical expertise to deliver unprecedented diagnostic accuracy and speed.
             </p>
           </motion.div>
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <motion.div
               <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>;
@@ -1072,10 +935,6 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-
   }
 }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
@@ -1086,37 +945,21 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>"
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
             ))}
 
           </div>;
         </div>;
       </section>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Medical Specialties Section */}
 
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <h3 className='text-xl font-semibold text-white mb-4'>
                   {feature.title}
                 </h3>
@@ -1132,38 +975,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
           >"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
               Medical <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Specialties</span>
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI platform covers all major medical specialties with specialized models trained on millions of cases for maximum accuracy.
             </p>
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Our AI platform covers all major medical specialties with;
               specialized models trained on millions of cases for maximum;
               accuracy.;
@@ -1176,9 +1003,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
 
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <ul className="text-sm text-gray-500 space-y-2">
               <li>• X-ray analysis</li>
               <li>• CT scan interpretation</li>
@@ -1190,19 +1014,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {specialties.map((specialty, index) => (
               <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300'
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1234,25 +1051,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-healthcare-diagnostics-pro.tsx
-=======
 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
-=======
 
               >"
                 <div className="flex items-center justify-between mb-4">"
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
                     <specialty.icon className="w-8 h-8 text-white" />
                   </div>"
                   <div className="text-right">"
@@ -1260,25 +1069,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="text-sm text-gray-400">Accuracy</div>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             ))}
 
           </div>;
         </div>;
       </section>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Use Cases Section */}
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1300,7 +1103,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
             className="text-center mb-16"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <h3 className='text-xl font-semibold text-white mb-3'>
                   {specialty.name}
                 </h3>
@@ -1316,39 +1118,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages_backup/ai-healthcare-diagnostics-pro.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
           >"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
               Transform Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Practice</span>
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From radiology to pathology, our AI platform adapts to your specific medical specialty and workflow requirements.
             </p>
           </motion.div>
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <motion.div
               <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>;
@@ -1363,28 +1150,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases && useCases.map((useCase, index) => (;
               <motion&& motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm'
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
@@ -1415,26 +1191,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-healthcare-diagnostics-pro.tsx
-=======
 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0">
-=======
 
               >"
                 <div className="flex items-start space-x-4">"
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>"
                   <div className="flex-1">"
@@ -1442,18 +1209,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description}</p>"
                     <div className="space-y-2">
                       {useCase.benefits.map((benefit, benefitIndex) => (
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <div
                           key={benefitIndex}
                           className='flex items-center space-x-2 text-sm'
@@ -1461,24 +1217,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <CheckCircle className='w-4 h-4 text-green-400' />
                           <span className='text-gray-300'>{benefit}</span>
                         </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       ))}
                     </div>;
                   </div>;
                 </div>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-healthcare-diagnostics-pro.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>
         </div>
       </section>
@@ -1487,52 +1232,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages_backup/ai-healthcare-diagnostics-pro.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
           >"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Flexible pricing options designed to scale with your healthcare practice. Start with our Starter plan and upgrade as you grow.
             </p>
           </motion.div>
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map((plan, index) => (
               <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1540,9 +1262,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-2xl p-8 backdrop-blur-sm ${
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                   plan.popular
                     ? 'border-green-500/50 shadow-lg shadow-green-500/25'                    : 'border-gray-700/50'
                 }`}
@@ -1583,13 +1302,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                 viewport={{ once: true }}`
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-2xl p-8 backdrop-blur-sm ${}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
               >
                 {plan.popular && ("
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -1598,12 +1312,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <div className="text-center mb-8">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center space-x-1 mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
@@ -1639,7 +1349,6 @@ plan.popular
                   </div>
                   <p className='text-gray-300'>{plan.description}</p>
                 </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -1668,9 +1377,6 @@ plan.popular
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
                 <div className="text-center mb-8">
 "
@@ -1684,7 +1390,6 @@ plan.popular
                 </div>
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center space-x-3">"
@@ -1692,28 +1397,19 @@ plan.popular
                       <span className="text-gray-300">{feature}</span>
                     </li>
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   ))}
                 </ul>
 
 `
                 <button className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-healthcare-diagnostics-pro.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   Get Started
-=======
                   Get Started;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
                 </button>
               </motion.div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
 
           </div>;
@@ -1722,81 +1418,51 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
       {/* Integrations Section */}
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
       <section className='py-20 bg-gray-900 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0 && 0.08),transparent_50%)]'></div>;
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
 <section className='py-20 bg-gray-900 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0 && 0.08),transparent_50%)]'></div>;
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages_backup/ai-healthcare-diagnostics-pro.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
           >"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
               Seamless <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Integrations</span>
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Connect with your existing healthcare systems and workflows. Our platform integrates with all major EHR, PACS, and medical device platforms.
             </p>
 </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Connect with your existing healthcare systems and workflows. Our;
               platform integrates with all major EHR, PACS, and medical device;
               platforms.;
             </p>;
 
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {integrations.map((integration, index) => (
               <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD:pages/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {integrations.map((integration, index) => (
@@ -1828,22 +1494,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300"
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-healthcare-diagnostics-pro.tsx
-=======
 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <integration.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1865,25 +1523,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </button>
             </div>
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
               >`
                 <div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>"
                   <integration.icon className="w-8 h-8 text-white" />
                 </div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
             ))}
 
           </div>;
         </div>;
       </section>;
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
       {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1920,7 +1571,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   {integration.name}
                 </h3>
@@ -1948,45 +1598,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Transform
               </span>{' '}
               Healthcare?
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </h2>
-=======
           >"
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">"
               Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
 
             </h2>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
               Join leading healthcare institutions worldwide who have already;
               revolutionized patient care with AI-powered diagnostics.
             </p>
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25'>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Schedule Demo
               </button>
-=======
 
                 Schedule Demo;
               </button>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
               <button className='px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300'>
                 Contact Sales;
               </button>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
                 Questions? Call us at{' '}
                 <a'
                   href='tel:+13024640950''
@@ -1996,10 +1632,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 or email{' '}
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
                 <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                 Questions? Call us at{' '}
                 <a
                   href='tel:+13024640950'
@@ -2008,7 +1640,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </a>{' '}
                 or email{' '}
                 <a
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   href='mailto: kleber@ziontechgroup.com'
                   className='text-green-400 hover:text-green-300'
                 >
@@ -2018,23 +1649,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="mt-8 text-sm text-gray-400">
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 302 464 0950</Link> or email <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</Link></p>
             </div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               </p>
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </motion.div>
         </div>
       </section>
     </Layout>
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
   ),
 };
   )
@@ -2055,19 +1677,14 @@ export default AIHealthcareDiagnosticsPro,
       </section>;
     </Layout>;
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
 
 export default AIHealthcareDiagnosticsPro;
 
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
 
           </motion.div>;
-=======
 
           </motion.div>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {integrations.map ((integration, index) => (
               <motion.div;
                 key={index}
@@ -2100,7 +1717,6 @@ export default AIHealthcareDiagnosticsPro;
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >;
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
               Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?;
@@ -2127,24 +1743,8 @@ export default AIHealthcareDiagnosticsPro;
 },;
 export default AIHealthcareDiagnosticsPro;
 :pages_backup/ai-healthcare-diagnostics-pro.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-healthcare-diagnostics-pro.tsx
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-healthcare-diagnostics-pro.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

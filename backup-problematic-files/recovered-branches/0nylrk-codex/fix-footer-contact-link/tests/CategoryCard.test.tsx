@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 it('renders category card with link to slug', () => {;
   render(;
@@ -49,4 +48,3 @@ it ('removes accents from slug', () => {
   render (<MemoryRouter> <CategoryCard title="Crme Brle" description="desc" icon="*" /> </MemoryRouter>);
 it ('treats underscores as spaces in slug', () => {
   render (<MemoryRouter> <CategoryCard title="AI Tools" description="desc" icon="*" /> </MemoryRouter>);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

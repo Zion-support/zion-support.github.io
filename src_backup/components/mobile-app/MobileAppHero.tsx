@@ -1,14 +1,10 @@
 :src/components/mobile-app/MobileAppHero.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import Link from "next/link",
 import { ArrowRight, Phone } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { AppStoreButtons } from "./AppStoreButtons",
-=======
 import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
 export const MobileAppHero: React.FC;
@@ -18,8 +14,6 @@ import Link from "next/link"
 import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button"
 import { AppStoreButtons } from "./AppStoreButtons"
 :src/components/mobile-app/MobileAppHero.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -47,22 +41,16 @@ export const MobileAppHero: React.FC = () => {
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
 <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Open App
-=======
             <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">                Open App
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <ArrowRight size={20} />
               </Button>
             </Link>
           </div>
 
 :src/components/mobile-app/MobileAppHero.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/MobileAppHero.tsx
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
@@ -71,7 +59,6 @@ export const MobileAppHero: React.FC = () => {
 :src/components/mobile-app/MobileAppHero.tsx
 }
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 import React from "react";
 import Link from "next/link";
@@ -83,8 +70,6 @@ import { AppStoreButtons } from "./AppStoreButtons";
 ";
 
 :src/components/mobile-app/MobileAppHero.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, Phone } from 'lucide-react';
@@ -134,20 +119,9 @@ export const MobileAppHero: React.FC = () => {;
 
 "
 :src/components/mobile-app/MobileAppHero.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ";
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/MobileAppHero.tsx

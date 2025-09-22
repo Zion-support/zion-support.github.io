@@ -50,7 +50,6 @@ export default function GreenIT() { return null; }
   ];
 
 :temp_exclude/hooks.disabled/GreenIT.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
       icon: Server},
@@ -68,7 +67,6 @@ export default function GreenIT() { return null; }
   return (
     <>
       <SEO
-<<<<<<< HEAD
         title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
@@ -252,7 +250,6 @@ export default function GreenIT() { return null; }
 
 :temp_exclude/hooks.disabled/GreenIT.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div className="mt-8">
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       Explore Green IT Solutions;
@@ -334,13 +331,11 @@ import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
 import { Leaf, Server, Cloud } from 'lucide-react';
-=======
 "
 import { SEO } from "@/components/SEO",;"
 import { GradientHeading } from "@/components/GradientHeading",;"
 import { Button } from "@/components/ui/button",;'
 import { Leaf, Server, Cloud } from 'lucide-react';"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/GreenIT.tsx
 import Link from "next/link",;
 export default function GreenIT() { return null; }
       icon: Server},;

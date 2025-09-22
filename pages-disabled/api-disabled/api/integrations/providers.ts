@@ -1,13 +1,10 @@
 :pages/api-disabled/api/integrations/providers.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { PROVIDERS } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 :pages/api-disabled/api/integrations/providers.ts
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/integrations/providers.ts
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from './next';
 import { PROVIDERS  } from '../../../lib / integrations / registry';
 export default /**
@@ -17,13 +14,9 @@ function handler() {;
   if (;
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 :pages/api-disabled/api/integrations/providers.ts
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/integrations/providers.ts
 
 '
 import type { NextApiRequest, NextApiResponse } from 'next';'
@@ -35,7 +28,6 @@ export default function handler($2) {;
     return res.status(405).json({ error: "Method not allowed" });
   res.status(200).json({ providers: PROVIDERS });
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PROVIDERS } from "../../../lib/integrations/registry";
 export default function handler($2) {;
@@ -46,7 +38,6 @@ export default function handler($2) {;
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 :pages/api-disabled/api/integrations/providers.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 export default function handler($2) {;
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -68,19 +59,8 @@ export default function handler($2) {;
   }
 }
 :pages/api-disabled/api/integrations/providers.ts
-<<<<<<< HEAD:pages/api/integrations/providers.ts
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 :pages/api-disabled/api/integrations/providers.ts
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/integrations/providers.ts
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/integrations/providers.ts
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/providers.ts

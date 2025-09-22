@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -7,7 +5,6 @@ import { Button } from '@/components/ui/button';
   )
 };
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -50,19 +47,13 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
     </Button>;
   );
 }
-<<<<<<< HEAD
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
     </Button>;
   );
 }
 ;
 
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       className={cn("", className)}
       onClick={toggleSidebar}
       {...props}
@@ -74,8 +65,4 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
   )
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

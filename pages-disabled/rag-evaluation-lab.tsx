@@ -3,7 +3,6 @@ import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 export default function RAGEvaluationLabPage() {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -28,15 +27,12 @@ class ErrorBoundary extends React.Component {}
   }
 }'
 import React from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <>;
       <SEO'
         title='RAG Evaluation Lab''
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
-<<<<<<< HEAD
-<<<<<<< HEAD
       />
       <section className='relative pt-28 pb-16 md:pt-36 md:pb-24'>
         <div className='container mx-auto px-4'>
@@ -73,8 +69,6 @@ import React from 'react';
 
 import SEO from '../components/SEO',
 import Link from 'next/link',
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
@@ -114,12 +108,10 @@ export default function RAGEvaluationLabPage() {
 					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
 						<a href="mailto: kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
-=======
 "
 					<div className="mt-12 flex flex-wrap items-center gap-4">"
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>"
 						<a href="mailto: kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
 					</div>
 				</div>
@@ -151,18 +143,7 @@ export default function RAGEvaluationLabPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

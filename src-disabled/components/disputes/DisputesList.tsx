@@ -1,6 +1,4 @@
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Dispute, DisputeStatus } from "@/types/disputes",
@@ -40,11 +38,9 @@ import { Dispute, DisputeStatus } from "@/types/disputes",
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 import { Dispute, DisputeStatus  } from '@/types/ disputes';
 import { Button  } from '@/components/ui/ button';
 import { Badge  } from '@/components/ui/ badge';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
 import {
   // TODO: Implement
 pr-12325
@@ -73,7 +69,6 @@ import {  Table,  Table,;
   TableCell,;
   TableHead,;
   TableHeader,;
-<<<<<<< HEAD
   TableRow,;
 } from '@/components/ui/table';
 import Skeleton from '@/components/ui/skeleton';
@@ -128,17 +123,13 @@ TableBody,
   TableHead,
   TableHeader,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Table,
   Table,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
 TableRow} from "@/components/ui/table",
-<<<<<<< HEAD
 import Skeleton from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
 import { ShieldAlert } from 'lucide-react'
@@ -169,7 +160,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
     }
   },
 
-<<<<<<< HEAD
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -226,7 +216,6 @@ function DisputesList() {
         return "secondary";
       case "resolved":;
 :src/components/disputes/DisputesList.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="border rounded-md">
 }
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
@@ -247,9 +236,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         return "default"
     }
   }
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
   if (isLoading) {
     return (
       <div className='space-y-4'>
@@ -268,34 +255,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <TableHead>Created</TableHead>
                 <TableHead>Status</TableHead>
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 <TableHead className="text-right">Actions</TableHead>
-=======
 <TableHead className='text-right'>Actions</TableHead>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
                 <TableHead className="text-right">Actions</TableHead>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
                 <TableHead className="text-right">Actions</TableHead>
 
 <TableHead className='text-right'>Actions</TableHead>
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/disputes/DisputesList.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputesList.tsx
               </TableRow>
-=======
   TableRow} from "@/components/ui/table",              </TableRow>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </TableHeader>
             <TableBody>
               {[...Array(5)].map((_, i) => (
                 <TableRow key={i}>
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
                   <TableCell><Skeleton className="h-4 w-24" /></TableCell>
                   <TableCell><Skeleton className="h-4 w-40" /></TableCell>
                   <TableCell><Skeleton className="h-4 w-32" /></TableCell>
@@ -303,9 +278,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
                 </TableRow>
 import React, { useState } from "react",;
 import { Dispute, DisputeStatus } from "@/types/disputes",;
@@ -385,16 +357,12 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                 </TableRow>;
               ))}
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
-=======
               ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
             </TableBody>;
           </Table>;
         </div>;
       </div>;
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
     );
 }
 
@@ -403,13 +371,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
   }
   if (disputes && disputes.length === 0) {;
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD:src/components/disputes/DisputesList.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
     return (
-=======
               ))}    return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
         <h3 className='text-xl font-medium'>No disputes found</h3>;
@@ -419,11 +382,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
   if (disputes && disputes.length === 0) {;
     return (
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
   }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="text-center py-12 border rounded-md bg-muted/20">
   if (disputes.length === 0) {
     return (
@@ -432,7 +392,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
   if (disputes.length === 0) {
 :src_backup/components/disputes/DisputesList.tsx
     return (      <div className="text-center py-12 border rounded-md bg-muted/20">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
         <h3 className='text-xl font-medium'>No disputes found</h3>;
@@ -445,18 +404,12 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 :src_backup/components/disputes/DisputesList.tsx
       <div className="text-center py-12 border rounded-md bg-muted/20">
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputesList.tsx
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
         <p className="text-muted-foreground mt-2">
           No active disputes match the selected filter
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD:src/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <TableCell>
                     <Skeleton className='h-4 w-24' />
                   </TableCell>
@@ -492,8 +445,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
         <p className='text-muted-foreground mt-2'>
           No active disputes match the selected filter
 :src/components/disputes/DisputesList.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </p>
       </div>
     )
@@ -539,12 +490,9 @@ variant={statusFilter === 'resolved' ? 'default' : 'outline'}
 variant={statusFilter === 'closed' ? 'default' : 'outline'}
           onClick={() => setStatusFilter('closed')}
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
           size='sm'        >    <div className="space-y-4">
     <div className="space-y-4">
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   if (disputes && disputes.length === 0) {;
     return (
@@ -599,11 +547,8 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
     <div className="space-y-4">
 :src_backup/components/disputes/DisputesList.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputesList.tsx
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
-=======
     <div className="space-y-4">      <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Button
           variant={statusFilter === "all" ? "default" : "outline"}
           onClick={() => setStatusFilter("all")}
@@ -618,7 +563,6 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
           variant={statusFilter === "open" ? "default" : "outline"}
           onClick={() => setStatusFilter("open")}
 :src_backup/components/disputes/DisputesList.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           size="sm"
         >
           Open
@@ -630,9 +574,6 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
           variant={statusFilter === "under_review" ? "default" : "outline"}
           onClick={() => setStatusFilter("under_review")}
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
           size="sm"
         >
           Under Review
@@ -645,8 +586,6 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
           onClick={() => setStatusFilter("resolved")}
 :src_backup/components/disputes/DisputesList.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
           size="sm"
         >
           Resolved
@@ -659,8 +598,6 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
           onClick={() => setStatusFilter("closed")}
 :src_backup/components/disputes/DisputesList.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
           size="sm"
           size='sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -668,18 +605,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Closed
         </Button>
 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       <div className="border rounded-md overflow-hidden">
 :src/components/disputes/DisputesList.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 :src_backup/components/disputes/DisputesList.tsx
 
 <div className='border rounded-md overflow-hidden'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputesList.tsx
         <Table>
           <TableHeader>
             <TableRow>
@@ -689,8 +622,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <TableHead>Created</TableHead>
               <TableHead>Status</TableHead>
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               <TableHead className="text-right">Actions</TableHead>
 <TableHead className='text-right'>Actions</TableHead>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -700,8 +631,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/disputes/DisputesList.tsx
 
 :src/components/disputes/DisputesList.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
             {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
                 <TableCell className='font-mono text-xs'>',
@@ -712,14 +641,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 {dispute.project?.title || 'Unknown Project'}
 
-<<<<<<< HEAD:src/components/disputes/DisputesList.tsx
-=======
                   {dispute.project?.title || 'Unknown Project'}'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
                 </TableCell>
-=======
       </div>                </TableCell>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <TableCell>
                   <div className='flex flex-col text-sm'>'
                     <span>
@@ -729,7 +653,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>
 :src_backup/components/disputes/DisputesList.tsx
                       Talent:{' '}
-<<<<<<< HEAD
                       {dispute.talent_profile?.display_name |'Unknown Talent'}                    </span>
                   </div>
                 </TableCell>
@@ -737,7 +660,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {formatDistanceToNow(new Date(dispute.created_at), {
 :src_backup/components/disputes/DisputesList.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <TableHead className="text-right">Actions</TableHead>
             </TableRow>
           </TableHeader>
@@ -764,11 +686,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </TableCell>
                 <TableCell>
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
                   {dispute.project?.title || "Unknown Project"}
                 </TableCell>
                 <TableCell>
@@ -779,29 +696,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>
                       Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
 :src_backup/components/disputes/DisputesList.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                       {dispute.talent_profile?.display_name || 'Unknown Talent'}
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputesList.tsx
-=======
 
                       {dispute.talent_profile?.display_name || 'Unknown Talent'}
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
                     </span>
                   </div>
                 </TableCell>
                 <TableCell>
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
                 </TableCell>;
                 <TableCell>;
@@ -844,9 +750,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       Client:{' '}
                       {dispute && dispute.client_profile?.display_name || 'Unknown Client'}
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputesList.tsx
                     </span>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <span>;
                       Talent:{' '}'
                       {dispute && dispute.talent_profile?.display_name || 'Unknown Talent'}                    </span>;
@@ -913,7 +817,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <TableCell>
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>
 :src_backup/components/disputes/DisputesList.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {dispute.status.replace('_ ')}
                   </Badge>
                 </TableCell>
@@ -941,10 +844,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </TableRow>
             ))}
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           </TableBody>;
         </Table>;
       </div>;
@@ -952,8 +851,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
                   {formatDistanceToNow (new Date (dispute.created_at), {
                     add_suffix: true,
                   })}
@@ -985,11 +882,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
 :src_backup/components/disputes/DisputesList.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
 }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Check condition
 if ( {") {"
   $2
@@ -1008,16 +901,12 @@ addSuffix: true
 }</TableBody> </Table> </div> </div>) ;
 :src/components/disputes/DisputesList.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
           </TableBody>;
         </Table>;
       </div>;
     </div>;
   );
 :src_backup/components/disputes/DisputesList.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   i ";
 }> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 4 w - 40" /></TableCell> <TableCell><Skeleton className="h - 4 w - 32" /></TableCell> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 6 w - 20" /></TableCell> <TableCell className="text - right" ><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>) ";
@@ -1036,18 +925,9 @@ addSuffix: true
 }}}}}})))
 }
 :src_backup/components/disputes/DisputesList.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputesList.tsx
-=======
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx
           </TableBody>
         </Table>
       </div>
@@ -1075,9 +955,6 @@ if (isLoading) {";
 }</TableBody> </Table> </div> </div>) ;
 }"
 :src/components/disputes/DisputesList.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
               <TableRow key={dispute.id}>
                 <TableCell className='font-mono text-xs'>
@@ -1174,4 +1051,3 @@ if (isLoading) {";
 } <TableCell>   ) );
 }  </div> </div>);"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputesList.tsx

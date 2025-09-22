@@ -1,5 +1,4 @@
 
-=======
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { TalentProfile } from "@/components/profile/TalentProfile",;
@@ -48,12 +47,10 @@ export default function TalentProfilePage() {;
     role:'' // Default empty string since userDetails doesn't have this property;
   },;
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Handle loading error gracefully;
   useEffect(() => {;
     if (error) {;
       toast({;
-<<<<<<< HEAD
 
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}

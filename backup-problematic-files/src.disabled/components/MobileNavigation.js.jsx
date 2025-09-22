@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import _React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';
 const MobileNavigation.js = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const MobileNavigation.js = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

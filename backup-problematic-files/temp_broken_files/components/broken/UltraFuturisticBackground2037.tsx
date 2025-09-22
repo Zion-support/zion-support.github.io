@@ -481,8 +481,6 @@ export default function UltraFuturisticBackground2037({;
               ctx.moveTo(particle1.x, particle1.y);
               ctx.lineTo(particle2.x, particle2.y);
 ctx.stroke();
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 export default function UltraFuturisticBackground2037({ 
   intensity = 'medium',
@@ -712,7 +710,6 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
               ctx.moveTo(particle1.x, particle1.y),
               ctx.lineTo(particle2.x, particle2.y),
 ctx.stroke()
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             }
           });
         });
@@ -736,8 +733,6 @@ ref={canvasRef}
         style={{
 background: 'transparent'
           filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'
-<<<<<<< HEAD
-<<<<<<< HEAD
         }}      />
       {children}
     </div>
@@ -746,5 +741,3 @@ background: 'transparent'
 
 export default UltraFuturisticBackground2037,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

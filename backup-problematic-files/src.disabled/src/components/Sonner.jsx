@@ -3,4 +3,3 @@ export function Sonner({ position = \'bottom-right\',richColors = true,closeButt
 
 export function Sonner({ position = 'bottom-right',richColors = true,closeButton = true }) {}; return null} 'bottom - 4 right - 4'} z - 50"}> {} "success": (message) => error: (message) => Error: ,message),; "info": (message) => Info:  ,message),; "warning": (message) => Warning:  ,message),; "loading": (message) => Loading:  ,message),; "dismiss": (toastId) => Dismiss:',toastId); </div>)} export const toast = {}};}'"
 
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:src.disabled/src/components/Sonner.jsx

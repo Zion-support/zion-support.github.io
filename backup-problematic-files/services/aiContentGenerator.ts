@@ -10,12 +10,10 @@ type:'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-descript
   tone:'professional' | 'casual' | 'friendly' | 'formal',;
   length:'short' | 'medium' | 'long',;
   keywords?:string[],;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   targetAudience?:string;
 }
 ;
 export interface ContentGenerationResponse {;
-<<<<<<< HEAD
   content:string;
   wordCount:number;
   seoScore:number;
@@ -56,7 +54,6 @@ export interface ContentTemplate {;
 pr-12325
   type:string,;
   preview:string,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   price:number;
 export class AIContentGeneratorService {;
 private apiKey:string;
@@ -69,7 +66,6 @@ private apiKey:string;
 try {;
       // In a real implementation, this would call OpenAI, Claude, or similar API;
       const response = await fetch(`${this.baseUrl}/content/generate`, {;
-<<<<<<< HEAD
         method:'POST';
         headers:{;
           'Authorization':`Bearer ${this.apiKey}`;
@@ -254,7 +250,6 @@ export const AI_CONTENT_PRICING = {;
     };
   }
 },; async generateContent (request: ContentGenerationRequest) : Promise<ContentGenerationResponse> {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   try {
   // In a real implementation, this would call OpenAI, Claude, or similar API const response = await fetch (`$ {
   this.baseUrl 
@@ -289,7 +284,6 @@ body: JSON.stringify (request)
   request.topic 
 }implementation ## Conclusion 
 }
-<<<<<<< HEAD
 
     ];
   }

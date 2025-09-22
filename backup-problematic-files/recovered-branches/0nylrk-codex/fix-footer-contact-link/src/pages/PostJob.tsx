@@ -1,5 +1,4 @@
 
-=======
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -32,7 +31,6 @@ export default function PostJob() {;
         <Card className="border shadow-md">;
           <CardHeader>;
             <CardTitle className={`text-${isMobile ? '2xl' :'3xl'} font-bold`}>Post a Job</CardTitle>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <CardDescription>;
               Fill out the form below to post your job and find the perfect talent.;
             </CardDescription>;
@@ -44,4 +42,3 @@ export default function PostJob() {;
       </main>;
       <Footer />;
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
-<<<<<<< HEAD

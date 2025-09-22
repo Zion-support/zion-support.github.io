@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -62,13 +60,11 @@ deployment.generateDeploymentReport().then(report => {
   console.error('❌ Deployment automation "failed": ', error)});
   console.error(' Deployment automation "failed")
 #!/usr/bin/env node
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { execSync } = require('child_process');
 
 class DeploymentAutomation {
   async deploy() {
     console.log('🚀 Starting Deployment Automation...');
-<<<<<<< HEAD
     const steps = [
       { name: 'Build Application', command: 'npm run build' },
       { name: 'Run Tests', command: 'npm test -- --passWithNoTests' },
@@ -98,8 +94,6 @@ const { execSync } = require('child_process')
       console.error(' Rollback "failed")
       "status"
   console.log(' Deployment report "generated")
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 // Automated deployment process;
 function deployApplication() {
@@ -130,7 +124,4 @@ const deployment = new DeploymentAutomation();
 deployment.deploy().catch(console.error);
 const deployment = new DeploymentAutomation();
 deployment.deploy().catch(console.error);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

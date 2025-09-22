@@ -7,7 +7,6 @@ async function fetchFromGitHub(): Promise<any[]> {
 
       } catch {
         // ignore;
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',;'
 import fs from 'fs',;'
 import path from 'path',;
@@ -41,7 +40,6 @@ import fs from 'fs',;'
 import path from 'path',;
 async function fetchFromGitHub(): Promise<any[]> {}
   try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
     }
     return results;
@@ -169,7 +167,5 @@ const remote = await fetchFromGitHub (),
   }
 
   const remote = await fetchFromGitHub()
->>>>>>> pr-12243
   return res.status(200).json({ logs: remote })
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

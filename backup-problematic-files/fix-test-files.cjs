@@ -28,11 +28,7 @@ files.forEach(file => {)
 });`;
 console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Function to fix malformed test files;
 function fixTestFile(filePath) {}
   try {}
@@ -69,12 +65,7 @@ files.forEach(file => {})
       fireEventCount++;
 console.log(`Fixed ${fixedCount} malformed test files`);`;
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 }
 });
 `;`
@@ -87,8 +78,6 @@ console.log(`Removed unused fireEvent from ${fireEventCount} files`);
     return false;
   };
 };
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Function to remove unused fireEvent imports;
 
     // Fix malformed files;
@@ -101,7 +90,6 @@ if (removeUnusedFireEvent(filePath)) {}
 });
 console.log(`Fixed ${fixedCount} malformed test files`);
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { execSync } = require('child_process');
 class TestFileFixer {
   // TODO: Implement
@@ -137,10 +125,6 @@ if (require.main === module) {
     process.exit(fixedCount > 0 ? 0 : 1);
 });
 }
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
 module.exports = TestFileFixer;
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -90,11 +90,7 @@ class PRMerger {
 
       // Clean merge conflicts - keep the HEAD version by default
       let resolvedContent = content
-        .replace(/<<<<<<< HEAD[\s\S]*?
-          // Extract the HEAD version (before =======)
           const headMatch = match.match(/([\s\S]*?)
-          // Extract the HEAD version (before =======)
-          const headMatch = match.match(/<<<<<<< [^\n]+([\s\S]*?)=======/);
           return headMatch ? headMatch[1].trim() : '';
         })
         .replace(/^$/gm, '')

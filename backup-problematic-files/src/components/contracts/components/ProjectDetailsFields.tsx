@@ -1,5 +1,4 @@
 
-=======
 import { format } from "date-fns",;
 import { CalendarIcon } from 'lucide-react';
 import { UseFormReturn, ControllerRenderProps } from "react-hook-form",;
@@ -49,7 +48,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               <Textarea;
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min-h-[120px]";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {...field}
               />;
             </FormControl>;
@@ -59,7 +57,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
             <FormMessage />;
           </FormItem>;
         )}
-<<<<<<< HEAD
 
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;

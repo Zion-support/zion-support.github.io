@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { ApplicationCard } from "./ApplicationCard",;
@@ -78,9 +77,7 @@ export function ApplicationsTracker() {;
           size="sm";
           variant={statusFilter === 'rejected' ? 'default' :'outline'}
           onClick={() => setStatusFilter('rejected')}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         >;
           Not Selected;
         </Button>;
       </div>;
-<<<<<<< HEAD

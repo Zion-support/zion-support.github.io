@@ -1,7 +1,4 @@
 :src/components/messaging/job-application/ApplyForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
@@ -213,9 +210,6 @@ interface ApplyFormProps {
   onClose: () => void
   onApplySuccess?: (jobId: string,) => Promise<void>
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/job-application/ApplyForm.tsx
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
@@ -322,7 +316,6 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 :src/components/messaging/job-application/ApplyForm.tsx
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
   const [activeTab, setActiveTab] = useState('message');
@@ -378,7 +371,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         variant: "destructive";
       });
 } finally {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setIsSubmitting(false);
     }
   };
@@ -395,17 +387,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </TabsList>;
         <TabsContent value="message">;
 <MessageTab;
-<<<<<<< HEAD:src/components/messaging/job-application/ApplyForm.tsx
             message={message}
             setMessage={setMessage}
             proposalLink={proposalLink}
             setProposalLink={setProposalLink}
-=======
 
           <MessageTab;            message={message}
             onMessageChange={setMessage}
             job={job}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           />
         </TabsContent>
 
@@ -417,7 +406,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </TabsContent>
       </Tabs>
 :src/components/messaging/job-application/ApplyForm.tsx
-<<<<<<< HEAD
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
         <Button
           type="button"
@@ -428,12 +416,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Cancel
         </Button>
         <Button
-<<<<<<< HEAD
           type="button" 
           onClick={handleApply}
           disabled={isSubmitting}
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-=======
 
       <div className="flex justify-end space-x-2">
         <Button variant="outline" onClick={onClose}>
@@ -443,11 +429,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onClick={handleSubmit}
           disabled={isSubmitting || !selectedResume}
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/job-application/ApplyForm.tsx
         >
-=======
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"        >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {isSubmitting ? (
             <>
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />
@@ -457,9 +440,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             'Submit Application'
           )}
 :src/components/messaging/job-application/ApplyForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         </Button>;
       </div>;
     </>;
@@ -524,9 +504,6 @@ return (<> <Tabs value= {
   );
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>
       </div>
     </div>
@@ -597,5 +574,3 @@ return (<> <Tabs value= {;
 }</Button> </div> </>) ;
 }'"
 :src/components/messaging/job-application/ApplyForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

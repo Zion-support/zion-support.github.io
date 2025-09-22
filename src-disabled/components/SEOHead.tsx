@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -19,7 +18,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   keywords = 'IT services, AI solutions, cybersecurity, cloud migration, software development, digital transformation, micro SaaS, mobile development',
   canonical,
   ogImage = '/og-image.jpg',
-<<<<<<< HEAD
   canonical = 'https://ziontechgroup.com',
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
@@ -97,7 +95,6 @@ canonical = 'https://ziontechgroup.com'
       {/* Additional SEO */}"
       <meta name="robots" content="index, follow" />"
       <meta name="author" content="Zion Tech Group" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       {/* Structured Data */}
@@ -109,7 +106,6 @@ canonical = 'https://ziontechgroup.com'
 };
 
 export default SEOHead;
-=======
       <meta property="og:type" content="website" />"
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />"
@@ -124,5 +120,3 @@ export default SEOHead;
   );
 };
 export default SEOHead;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172

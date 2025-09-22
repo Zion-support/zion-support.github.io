@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;,"});"})"; """
 const FeaturedListingsSection.js = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const FeaturedListingsSection.js = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

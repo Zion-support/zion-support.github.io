@@ -1,11 +1,9 @@
 :pages/api-disabled/api/marketplace/projects.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
@@ -15,13 +13,11 @@ import {;
   ProjectNote
 } from "../../../utils/marketplace/types";
 :pages/api/marketplace/projects.ts
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
 :pages/api/marketplace/projects.ts
-<<<<<<< HEAD
 import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types";
 import {
   Project,
@@ -42,10 +38,8 @@ import { getProjectById, saveProject } from "../../../utils/marketplace/store",
 import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types",
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res && res.status(code).json({ ok: false, error: message });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
@@ -150,14 +144,12 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
 
   }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user && user.role === "client" && user && user.id === project && project.clientId) return true;
   if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
     return true;
   return false;
 
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -187,8 +179,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {;
     const user = getDemoUser(req);
     const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
@@ -203,14 +193,10 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {;
   if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug);
     return true;
   return false;
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/marketplace/projects.ts
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
-=======;
     if (req && req.method === "PATCH") {;
       const { action } = req && req.body as { action: string };
       if (action === "add_note") {;
@@ -306,15 +292,12 @@ if ( {) {
           createdAtIso: new Date ().toISOString ()
         }
 const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
     if (req.method === "PATCH") {
-=======
     if (req.method === "PATCH") {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/marketplace/projects.ts
       const { action } = req.body as { action: string };
       if (action === "add_note") {;
         const { content } = req.body as { content: string };
@@ -518,8 +501,6 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {;
     return true;
   return false;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -645,7 +626,6 @@ export default function handler($2) {;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
   }
 :pages/api/marketplace/projects.ts
-<<<<<<< HEAD
 }
 }
   } catch (error) {
@@ -666,8 +646,6 @@ export default function handler($2) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   }
 
@@ -677,11 +655,5 @@ export default function handler($2) {;
 }
 
 :pages/api-disabled/api/marketplace/projects.ts
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/marketplace/projects.ts
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/marketplace/projects.ts

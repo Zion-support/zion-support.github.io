@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -90,12 +89,10 @@ const mockReplies:ForumReply[] = [;
   }
 ],;
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function ForumPostPage() {;
   // Using `useParams` without type arguments avoids issues when TypeScript;
   // can't determine the generic type for the helper from React Router.;
   // Cast the result instead to provide the expected shape.;
-<<<<<<< HEAD
 
       <AppLayout>;
         <div className="container py-8">;

@@ -1,5 +1,4 @@
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -7,17 +6,11 @@ export default function ToolPage() {}
   const [currentQuestion, setCurrentQuestion] = useState(0),
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
   const [showResults, setShowResults] = useState(false),
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
 
-=======
   const [answers, setAnswers] = useState<{ [key: string]: number }>({});
   const [showResults, setShowResults] = useState(false);
   const questions = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -26,7 +19,6 @@ const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState<{ [key: string]: number }>({})
   const [showResults, setShowResults] = useState(false)
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const questions = [
     {
       id: 'current-automation'
@@ -43,7 +35,6 @@ const [currentQuestion, setCurrentQuestion] = useState(0)
         'No expertise - team needs trainingBeginner - some basic knowledgeIntermediate - can implement basic solutionsAdvanced - can build complex systemsExpert - can innovate and lead'
       ]
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       options: [
         'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority'
       ]
@@ -77,8 +68,6 @@ export default function ToolPage(req, res) {
   const [showResults, setShowResults] = useState(false);
 const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
       options: ['
         'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority'
       ]
@@ -86,31 +75,26 @@ const handleAnswer = (questionId: string, value: number) => {
 
   const handleAnswer = (questionId: string, value: number) => {}
     setAnswers(prev => ({ ...prev, [questionId]: value }))
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const nextQuestion = () => {}
     if (currentQuestion < questions.length - 1) {}
       setCurrentQuestion(currentQuestion + 1)
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
 export default /**
  * ToolPage - Function description
-=======
 '
 import React, { useState } from 'react','
 import Head from 'next / head','
 import Link from 'next / link',;
 export default /**;
  * ToolPage - Function description;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
 function ToolPage() {}
   const [current_question, setCurrentQuestion] = useState (0),
   const [answers, set_answers] = useState<{ [key: string]: number }>({}),
   const [show_results, setShowResults] = useState (false),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const questions = [;
     {'
       id: 'current - automation','
@@ -151,7 +135,6 @@ function ToolPage() {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
   ],;
@@ -181,17 +164,11 @@ function ToolPage() {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     setCurrentQuestion(0)
     setAnswers({})
     setShowResults(false)
   }
   },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (showResults) {
     const result = calculateScore()
     return (
@@ -208,7 +185,6 @@ function ToolPage() {}
                 </Link>
               </nav>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold text-white mb-4">Assessment Results</h1>
                 <p className="text-white/80 text-lg">Your automation readiness evaluation is complete</p>
@@ -220,7 +196,6 @@ function ToolPage() {}
                   {questions.map((q, index) => ("
                     <div key={q.id} className="bg-white/10 rounded-lg p-4 border border-white/20">"
                       <h3 className="font-semibold text-cyan-400 mb-2">{q.question}</h3>
-<<<<<<< HEAD
 
                     </div>
                   ))  } catch (error) {
@@ -247,7 +222,6 @@ function ToolPage() {}
                   {questions.map((q, index) => (
 <div key={q.id} className="bg-white/10 rounded-lg p-4 border border-white/20">
                       <h3 className="font-semibold text-cyan-400 mb-2">{q.question}</h3>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <button
                     onClick={resetAssessment}
                     onClick={resetAssessment  } catch (error) {
@@ -255,8 +229,6 @@ function ToolPage() {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 "
                       <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
@@ -268,15 +240,9 @@ function ToolPage() {}
                   <button;
                     onClick={resetAssessment}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
 
                       <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
-=======
                     <div
                       key={q.id}
                       className='bg-white/10 rounded-lg p-4 border border-white/20'
@@ -287,7 +253,6 @@ function ToolPage() {}
                       <p className='text-white/80 text-sm'>
                         Score: {answers[q.id] || 0}/5
                       </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   ))}
                 </div>
@@ -296,20 +261,15 @@ function ToolPage() {}
                   <button
                     onClick={resetAssessment}
                     className='bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   >
                     Retake Assessment;
                   </button>
 <Link
                   <Link 
                   <Link
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   >
                     Get Personalized Recommendations;
                   </Link>
@@ -320,7 +280,6 @@ function ToolPage() {}
         </div>
       </>
 )
-<<<<<<< HEAD
   return (
     <>
       <Head>
@@ -361,7 +320,6 @@ function ToolPage() {}
                   <label key={index} className=&quot;flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer&quot;>
                     <input
                       type=&quot;radio&quot;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <>
       <Head>
@@ -388,12 +346,7 @@ function ToolPage() {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
 
@@ -406,7 +359,6 @@ function ToolPage() {}
                     <input"
                       type="radio"
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 {currentQ.options.map((option, index) => (
                   <label
                     key={index}
@@ -414,7 +366,6 @@ function ToolPage() {}
                   >
                     <input
 type="radio"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },;
   const resetAssessment = () => {;
     setCurrentQuestion(0);
@@ -539,30 +490,23 @@ type="radio"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
 
                     />
                     <span className="text-white/90">{option}</span>
-=======
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
-=======
                       type='radio'
                       name={currentQ.id}
                       value={index + 1}
                       checked={answers[currentQ.id] === index + 1}
                       onChange={() => handleAnswer(currentQ.id, index + 1)}
 className='mr-3 text-cyan-400 focus:ring-cyan-400'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     />
                     <span className='text-white/90'>{option}</span>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </label>
 ))}
               </div>
 
-<<<<<<< HEAD
 
               <div className="flex justify-between">
                 <button 
@@ -576,7 +520,6 @@ className='mr-3 text-cyan-400 focus:ring-cyan-400'
                     setCurrentQuestion(Math.max(0, currentQuestion - 1))
                   }
                   disabled={currentQuestion === 0}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -587,11 +530,7 @@ className='mr-3 text-cyan-400 focus:ring-cyan-400'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     />
                     <span className="text-white/90">{option}</span>
                   </label>
@@ -604,22 +543,13 @@ className='mr-3 text-cyan-400 focus:ring-cyan-400'
 
 "
               <div className="flex justify-between">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous;
                 </button>
-<<<<<<< HEAD
                 <button
                   onClick={nextQuestion}
                   disabled={!answers[currentQ.id]}
@@ -636,7 +566,6 @@ className='mr-3 text-cyan-400 focus:ring-cyan-400'
                   {currentQuestion === questions.length - 1
                     ? 'Get Results'
                     : 'Next'}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </button>
               </div>
             </div>
@@ -654,11 +583,7 @@ className='mr-3 text-cyan-400 focus:ring-cyan-400'
   }
 }
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
   const reset_assessment = () =>: any {}
     setCurrentQuestion (0),
@@ -669,17 +594,12 @@ className='mr-3 text-cyan-400 focus:ring-cyan-400'
 if ( {) {}
   $2;
 }
-<<<<<<< HEAD
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >'
                   {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   const current_q = questions[current_question],
   return (
@@ -733,14 +653,11 @@ if ( {) {}
                   className="bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300 disabled:opacity - 50 disabled:cursor - not - allowed";
                 >;'
                   {current_question === questions.length - 1 ? 'Get Results' : 'Next'}
-<<<<<<< HEAD
                   onClick={nextQuestion  } catch (error) {
     console.error("Error:", error);
-=======
 
                   onClick={nextQuestion  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -749,7 +666,6 @@ if ( {) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >'
                   {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {"
@@ -758,25 +674,14 @@ if ( {) {}
   }
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </button>;
               </div>;
             </div>;
           </div>;
         </main>;
       </div>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>;
   );
   } catch (error) {"
@@ -786,15 +691,7 @@ if ( {) {}
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

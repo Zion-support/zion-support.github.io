@@ -49,7 +49,6 @@ console.log('Script executed successfully');
 
     try {
       // Find all .cjs files with merge conflicts
-      const result = execSync('find scripts/ -name "*.cjs" -exec grep -l "<<<<<<< HEAD" {} \\;', { encoding: 'utf8' });
       const files = result.trim().split('\n').filter(file => file.trim());
 
       console.log(`Found ${files.length} files with merge conflicts`);
@@ -101,8 +100,6 @@ console.log('Script executed successfully');
             // Check if file is severely corrupted
             if (content.length < 100 && (
               content.includes('<<<<<<<') || 
-              content.includes('=======') || 
-              content.includes('>>>>>>>') ||
               content.trim().length === 0
             )) {
               console.log(`Removing severely corrupted file: ${filePath}`);

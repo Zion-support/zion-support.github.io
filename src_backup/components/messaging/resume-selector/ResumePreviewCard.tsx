@@ -6,9 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 :src/components/messaging/resume-selector/ResumePreviewCard.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
 interface Resume {
   id: string;
   title: string,
@@ -18,9 +16,6 @@ interface Resume {
   url: string;
   status?: 'draft' | 'published' | 'archived';
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from 'react',
 import { Card, CardContent } from "@/components/ui/card",
@@ -36,7 +31,6 @@ interface ResumePreviewCardProps {
 
 :src/components/messaging/resume-selector/ResumePreviewCard.tsx
 export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
-=======
 export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
   resume,
   isSelected,
@@ -56,7 +50,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
     }
   };
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/resume-selector/ResumePreviewCard.tsx
   return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
       <CardContent className="p-4">
@@ -68,9 +61,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
               <p className="text-sm text-zion-cyan">{resume.basic_info.headline}</p>
             )}
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <Button 
             variant="ghost" 
             size="sm" 
@@ -100,7 +90,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 }
 :src/components/messaging/resume-selector/ResumePreviewCard.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {resume.status && (
             <Badge className={getStatusColor(resume.status)}>
               {resume.status}
@@ -122,7 +111,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onDownload(resume);
             }}
             className="flex-1"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <Download className="h-4 w-4 text-zion-cyan" />
             <span className="sr-only">Download Resume</span>
@@ -196,16 +184,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
   );
 }
 ;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/resume-selector/ResumePreviewCard.tsx

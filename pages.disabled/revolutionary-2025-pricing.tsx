@@ -1,15 +1,9 @@
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from 'lucide-react';
-=======
 } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Star,
   Zap,
   Shield,
@@ -125,7 +119,6 @@ import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolo
   Share,
   Users as UsersIcon2,
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
 
 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
@@ -171,7 +164,6 @@ function Revolutionary2025Pricing() {
   const allRevolutionaryServices = [;
     ...revolutionaryAI2025Services,
     ...revolutionaryITInfrastructure2025Services,
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Target as TargetIcon,
   Zap as ZapIcon2,
 } from 'lucide-react';
@@ -220,22 +212,17 @@ export default function Revolutionary2025Pricing() {}
   const allRevolutionaryServices = [
     ...revolutionaryAI2025Services
     ...revolutionaryITInfrastructure2025Services
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ...revolutionary2025MicroSaasServices,  ];
 ;
   // Service categories;
   const service_categories = [;
 
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       id: 'all'
-=======
 
     {'
       id: 'all''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
       name: 'All Services'
       icon: Sparkles;
       count: allRevolutionaryServices.length;
@@ -278,14 +265,10 @@ website: 'https://ziontechgroup.com',
       icon: Sparkles,
       count: allRevolutionaryServices.length,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       id: 'ai'
-=======
     {'
       id: 'ai''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
       name: 'AI & Machine Learning'
       icon: Brain;
       count: revolutionaryAI2025Services.length;
@@ -355,16 +338,11 @@ export default function Revolutionary2025Pricing() { return null; }
             );'
           if (selectedCategory === 'saas');
             return (
-<<<<<<< HEAD:pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     return basePrice;  }
     return basePrice;  };
 :pages_backup/revolutionary-2025-pricing.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
 '
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';'
@@ -401,16 +379,6 @@ const filteredServices = selectedCategory === 'all'
         return true;
       });
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2025-pricing.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               service.category.includes('AI') |
               service.category.includes('Virtual') |
               service.category.includes('Creative')
@@ -426,8 +394,6 @@ const filteredServices = selectedCategory === 'all'
     return basePrice;
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Pricing tiers for comparison
   const pricingTiers = [
     {
@@ -535,7 +501,6 @@ const filteredServices = selectedCategory === 'all'
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-<<<<<<< HEAD
     },
     {
       name: 'Enterprise',
@@ -567,17 +532,14 @@ const filteredServices = selectedCategory === 'all'
     timeToValue: '< 30 days',
     globalReach: '150+ countries'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <div className="min-h-screen">
         <Head>
-<<<<<<< HEAD
           <title>
             Revolutionary 2025 Pricing - Zion Tech Group | Competitive AI & IT
             Solutions
           </title>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <meta
             name='description'
             content="Explore competitive pricing for Zion Tech Group's revolutionary 2025 services. AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950"
@@ -623,7 +585,6 @@ const filteredServices = selectedCategory === 'all'
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
 'Access to 50+ ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Custom IntegrationsPerformance Monitoring'
       ];
       icon: <Rocket className="w-8 h-8" />,
@@ -766,9 +727,6 @@ if ( {) {
 ;
   // Market analysis;
   const market_analysis = {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     totalMarketSize: '$150B+',
     growth_rate: '250% annually',
     customer_satisfaction: '98%',
@@ -785,7 +743,6 @@ if ( {) {
     timeToValue: '< 30 days',
 
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
           <title>Revolutionary 2025 Pricing - Zion Tech Group | Competitive AI & IT Solutions</title>'"
           <meta name="description" content="Explore competitive pricing for Zion Tech Group's revolutionary 2025 services. AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950" />"
@@ -798,7 +755,6 @@ if ( {) {
           <meta property="og:type" content="website" />"
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2025-pricing" />
 </Head>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     totalMarketSize: '$150B+',
     growthRate: '250% annually',
     customerSatisfaction: '98%',
@@ -810,8 +766,6 @@ globalReach: '150+ countries',
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
 <div className='min-h-screen'>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <div className='min-h-screen'>
@@ -849,25 +803,16 @@ globalReach: '150+ countries',
           />
 origin/cursor/automate-test-improve-and-merge-code-2533
         </Head>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
 
         <UltraAdvancedNavigation />
 
         {/* Hero Section */}
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-<<<<<<< HEAD
-=======
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
 <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
             <motion.div
@@ -877,12 +822,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
 <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                 Revolutionary 2025 Pricing
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -913,9 +853,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
 
               transition={{ duration: 0 && 0.8 }}>;'
@@ -927,7 +865,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>;'
-=======
 
             >
 
@@ -940,7 +877,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
       <div className='min - h-screen'>;
         <Head>;
           <title>;
@@ -983,7 +919,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
             >;
               <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent mb - 6'>;
                 Revolutionary 2025 Pricing;
@@ -997,20 +932,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/revolutionary-2025-pricing.tsx
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
               {/* Billing Toggle */}
               <div className='flex items-center justify-center gap-4 mb-12'>;
                 <span className='text-gray-400'>Monthly</span>;
                 <button
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                   onClick={() =>
                     setBillingCycle(
                       billingCycle === 'monthly' ? 'yearly' : 'monthly'
@@ -1019,46 +946,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                     billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                   }`}
                 >;
                   <span
                     className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
 
                   animate={{ opacity: 1, scale: 1 }}
 
                       billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
 :pages_backup/revolutionary-2025-pricing.tsx
 }`}
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
 billingCycle === 'yearly'
                         ? 'translate-x-8'
                         : 'translate-x-1'
 origin/cursor/automate-test-improve-and-merge-code-2533
                     }`}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {/* Billing Toggle */  } catch (error) {
     console.error("Error:", error);
-=======
 
               {/* Billing Toggle */  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
@@ -1087,23 +996,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                   />
                 </button>"
                 <span className="text-gray-400">Yearly (Save 20%)</span>
               </div>
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 <motion.div;
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -1112,28 +1011,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '
               <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12'>
 :pages_backup/revolutionary-2025-pricing.tsx
-=======
               <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {/* Market Analysis */  } catch (error) {
     console.error("Error:", error);
-=======
 
               {/* Market Analysis */  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
@@ -1146,11 +1038,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                 <motion.div;
                   initial={{ opacity: 0, scale: 0.8 }  } catch (error) {"
@@ -1164,15 +1054,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   transition={{ duration: 0.6, delay: 0.1 }} className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30">
                   <div className="text-2xl font-bold text-blue-400">{marketAnalysis.totalMarketSize}</div>
                   <div className="text-xs text-gray-400">Market Size</div>
                 </motion.div>
                 <motion.div
-<<<<<<< HEAD
                   initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1184,9 +1070,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   transition={{ duration: 0.6, delay: 0.2 }} className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-4 border border-green-500/30">
                   <div className="text-2xl font-bold text-green-400">{marketAnalysis.growthRate}</div>
                   <div className="text-xs text-gray-400">Growth Rate</div>
@@ -1203,9 +1086,6 @@ initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   transition={{ duration: 0.6, delay: 0.3 }} className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/30">
                   <div className="text-2xl font-bold text-purple-400">{marketAnalysis.customerSatisfaction}</div>
                   <div className="text-xs text-gray-400">Satisfaction</div>
@@ -1222,9 +1102,6 @@ initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   transition={{ duration: 0.6, delay: 0.4 }} className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-500/30">
                   <div className="text-2xl font-bold text-orange-400">{marketAnalysis.averageROI}</div>
                   <div className="text-xs text-gray-400">Average ROI</div>
@@ -1241,9 +1118,6 @@ initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   transition={{ duration: 0.6, delay: 0.5 }} className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-4 border border-cyan-500/30">
                   <div className="text-2xl font-bold text-cyan-400">{marketAnalysis.timeToValue}</div>
                   <div className="text-xs text-gray-400">Time to Value</div>
@@ -1260,23 +1134,16 @@ initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   transition={{ duration: 0.6, delay: 0.6 }} className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30">
                   <div className="text-2xl font-bold text-pink-400">{marketAnalysis.globalReach}</div>
                   <div className="text-xs text-gray-400">Global Reach</div>
                 </motion.div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
                   transition={{ duration: 0.6, delay: 0.6 }} className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30">
                   <div className="text-2xl font-bold text-pink-400">{marketAnalysis.globalReach}</div>
                   <div className="text-xs text-gray-400">Global Reach</div>
                   transition={{ duration: 0.6, delay: 0.6 }} className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30">
                   <div className="text-2xl font-bold text-pink-400">{marketAnalysis.globalReach}</div>
                   <div className="text-xs text-gray-400">Global Reach</div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                   transition={{ duration: 0.6, delay: 0.6 }}
                   className='bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30'
                 >
@@ -1286,8 +1153,6 @@ initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
                   <div className='text-xs text-gray-400'>Global Reach</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
                   transition={{ duration: 0.6, delay: 0.1 }} className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30">"
@@ -1330,17 +1195,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="text-xs text-gray-400">Global Reach</div>
                 </motion.div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
               </div>
             </motion.div>
           </div>
         </section>
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                   className='bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30'>;
@@ -1405,24 +1265,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/revolutionary-2025-pricing.tsx
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Pricing Tiers */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
-=======
 
         {/* Pricing Tiers */}'
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;'
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Choose Your Transformation Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1430,9 +1284,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 our revolutionary AI and quantum computing services.
               </p>
             </motion.div>
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
@@ -1446,11 +1298,9 @@ viewport={{ once: true }}
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Choose Your Transformation Plan
               </h2>
-=======
 
                 Choose Your Transformation Plan;
               </h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Start with our starter plan and scale up as you grow. All plans include;
                 our revolutionary AI and quantum computing services.
@@ -1459,7 +1309,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/revolutionary-2025-pricing.tsx
 <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
               {pricingTiers.map((tier, index) => (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <motion.div
                   key={tier.name}
                   initial={{ opacity: 0, y: 30 }}
@@ -1468,7 +1317,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   viewport={{ once: true }}
                   className={`relative ${
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
                     tier.popular
                       ? 'scale-105 border-2 border-blue-500'                      : 'border border-gray-700'
                   } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
@@ -1481,12 +1329,9 @@ tier.popular
                   } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className='text-center mb-16'>;
-=======
 '
               className='text-center mb-16'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Choose Your Transformation Plan;
               </h2>;'
@@ -1496,30 +1341,22 @@ tier.popular
               </p>;
             </motion && motion.div>;
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>              {pricingTiers && pricingTiers.map((tier, index) => (;
                 <motion&& motion.div
                   key={tier && tier.name}
 
 :pages_backup/revolutionary-2025-pricing.tsx
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
                   viewport={{ once: true }}
                   className={`relative ${
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-=======
 
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1529,14 +1366,11 @@ tier.popular
                 >
                   {tier.popular && ("
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
                       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
                         Most Popular;
                       </div>
                     </div>
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                     <p className="text-gray-400 mb-6">{tier.description}</p>
@@ -1547,21 +1381,13 @@ tier.popular
                     {tier.savings && (
                       <div className="text-green-400 text-sm font-semibold mb-6">
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                       <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold'>
                         Most Popular
@@ -1575,12 +1401,7 @@ tier.popular
                     </div>
                     <h3 className='text-2xl font-bold text-white mb-2'>
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                       {tier.name}
                     </h3>
                     <p className='text-gray-400 mb-6'>{tier.description}</p>
@@ -1591,8 +1412,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className='text-gray-400'>{tier.period}</span>
                     </div>
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
 
                   <div className="text-center mb-8">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl mb-4">
@@ -1604,17 +1423,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
 
                   <ul className="space-y-4 mb-8">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
 <span className="text-gray-300">{feature}</span>
 </li>
-<<<<<<< HEAD:pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
                     ))}
                   </ul>
                   <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200'>                    {tier.cta}
@@ -1639,16 +1452,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                         <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200'>                    {tier.cta}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                     {tier.savings && (
                       <div className='text-green-400 text-sm font-semibold mb-6'>
                         {tier.savings}
@@ -1675,8 +1483,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                     ))}
                   </ul>
                   <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200">
@@ -1701,7 +1507,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     )}
                   </div>;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                   <ul className='space-y-4 mb-8'>;
                     {tier && tier.features.map((feature, featureIndex) => (;'
                       <li key={featureIndex} className='flex items-start gap-3'>;'
@@ -1717,8 +1522,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </button>;
                 </motion && motion.div>;
               ))}
@@ -1728,23 +1531,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/revolutionary-2025-pricing.tsx
         {/* Service Pricing Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
-=======
         {/* Service Pricing Grid */}'
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;'
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         {/* Service Pricing Grid */}"
         <section className="py-20 px-4 sm:px-6 lg:px-8">"
@@ -1756,34 +1552,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
             <motion.div
-=======
             <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
 
                 Individual Service Pricing;
               </h2>"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Choose individual services or bundle them for maximum savings.
                 All services include free trials and comprehensive support.
-<<<<<<< HEAD
               </p>
             </motion.div>
 
@@ -1796,7 +1579,6 @@ Choose individual services or bundle them for maximum savings.
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </p>
             </motion.div>
 
@@ -1813,12 +1595,8 @@ Choose individual services or bundle them for maximum savings.
             </motion && motion.div>;
 
             {/* Category Filter */}
-=======
                 Choose individual services or bundle them for maximum savings. 
 :pages_backup/revolutionary-2025-pricing.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                 All services include free trials and comprehensive support.
               </p>
             </motion.div>
@@ -1834,7 +1612,6 @@ Choose individual services or bundle them for maximum savings.
               </p>;
             </motion && motion.div>;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
 viewport={{ once: true }}
               className='text-center mb-16'
             >
@@ -1849,9 +1626,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
             {/* Category Filter */}
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             </div>;
 
@@ -1865,10 +1639,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   viewport={{ once: true }}'
                   className='group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105'>;
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
                   {/* Service Header */}
-<<<<<<< HEAD:pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
                   <div className='flex items-start justify-between mb-4'>;
                     <div className='flex items-center gap-3'>;
                       <div className='text-3xl'>{service && service.icon}</div>;
@@ -1892,17 +1663,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                           {service.name}
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div className='flex items-start justify-between mb-4'>
                     <div className='flex items-center gap-3'>
                       <div className='text-3xl'>{service.icon}</div>
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                   viewport={{ once: true }}
                   className='group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105'
                 >
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
 <div className='flex flex-wrap justify-center gap-4 mb-12'>
               {serviceCategories.map(category => (
                 <button
@@ -1938,10 +1704,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='flex items-start justify-between mb-4'>
                     <div className='flex items-center gap-3'>
                       <div className='text-3xl'>{service.icon}</div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
-=======
 '
                   <div className='flex items-start justify-between mb-4'>'
                     <div className='flex items-center gap-3'>'
@@ -1949,7 +1713,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             {/* Category Filter */  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
@@ -2034,9 +1797,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="flex items-center gap-3">"
                       <div className="text-3xl">{service.icon}</div>
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                           {service.name  } catch (error) {
@@ -2048,7 +1808,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                           {service.name}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   <div className='flex items-start justify-between mb-4'>;
                     <div className='flex items-center gap-3'>;
                       <div className='text-3xl'>{service && service.icon}</div>;
@@ -2071,7 +1830,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/revolutionary-2025-pricing.tsx
                           {service.name}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
 :pages_backup/revolutionary-2025-pricing.tsx
@@ -2081,19 +1839,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                         </h3>
                         <p className="text-gray-400 text-sm">{service.tagline}</p>
                       </div>
                     </div>
                     {service.popular && (
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
                       <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -2107,22 +1858,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                     {service.popular && ("
                       <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
                         <Star className="w-3 h-3" />
                         Popular;
                       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     )  } catch (error) {
     console.error("Error:", error);
-=======
 
                     )  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -2134,7 +1878,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
                   <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
                   {/* Price and Rating */}
                   <div className="flex items-center justify-between mb-4">
@@ -2142,26 +1885,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className="text-2xl font-bold text-blue-400">
 
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         ${getPrice(service)  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       </span>
                       <span className="text-gray-400">{service.period}</span>
                     </div>
                   </div>
 :pages_backup/revolutionary-2025-pricing.tsx
 
-=======
                   {/* Key Features */}
                   <div className='mb-4'>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                       <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1'>
                         <Star className='w-3 h-3' />
                         Popular
@@ -2192,7 +1929,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   {/* Key Features */}
 <div className='mb-4'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                       Key Features:
                     </h4>
@@ -2225,17 +1961,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {feature}
                         </div>
                       ))}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {/* Key Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
-=======
 
                         ${getPrice(service)  } catch (error) {"
     console.error("Error:", error);"
@@ -2256,15 +1989,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
                   <div className="mb-4">"
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
                     <div className="grid grid-cols-1 gap-1">
                       {service.features.slice(0, 3).map((feature, idx) => ("
                         <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">"
                           <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
 
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       {service.features.length > 3 && (
                         <div className="text-xs text-gray-500 mt-1">
 
@@ -2272,7 +2002,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
 
                   </div>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2285,9 +2014,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                       {service.features.length > 3 && ("
                         <div className="text-xs text-gray-500 mt-1">
@@ -2297,7 +2023,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/revolutionary-2025-pricing.tsx
                       {service.features.length > 3 && (
-=======
 
                       {service.features.length > 3 && (
                         <div className="text-xs text-gray-500 mt-1">
@@ -2306,18 +2031,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       {service.features.length > 3 && (
                         <div className="text-xs text-gray-500 mt-1">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
 <div className='text-xs text-gray-500 mt-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                           +{service.features.length - 3} more features
                         </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       )  } catch (error) {
     console.error("Error:", error);
-=======
                       )  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -2329,33 +2050,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
                   </div>
-<<<<<<< HEAD:pages_backup/revolutionary-2025-pricing.tsx
 
                   <div className="mb-4 p-3 bg-gray-800/50 rounded-lg">
                     <h4 className="text-xs font-semibold text-gray-300 mb-1">Market Position:</h4>
                     <p className="text-xs text-gray-400 line-clamp-2">{service.marketPosition}</p>
                   </div>
 :pages_backup/revolutionary-2025-pricing.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                     </div>;
                   </div>;
 
                   {/* Market Position */}
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
                   <div className='mb-4 p-3 bg-gray-800/50 rounded-lg'>;
-=======
 
                     </div>;
                   </div>;
 
                   {/* Market Position */}'
                   <div className='mb-4 p-3 bg-gray-800/50 rounded-lg'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
                     <h4 className='text-xs font-semibold text-gray-300 mb-1'>;
                       Market Position:;
                     </h4>;'
@@ -2367,19 +2080,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/revolutionary-2025-pricing.tsx
 {/* Actions */}
 
-<<<<<<< HEAD:pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       Learn More
                     </button>
-=======
                   {/* Actions */}
 
                   <div className="flex items-center gap-3">
                     <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                       <ExternalLink className="w-4 h-4 mr-2" />
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
 <div className='mb-4 p-3 bg-gray-800/50 rounded-lg'>
                     <h4 className='text-xs font-semibold text-gray-300 mb-1'>
                       Market Position:
@@ -2394,27 +2102,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       Learn More
                     </button>
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
                       <Phone className="w-4 h-4" />
                     </button>
                   </div>
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               ))}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                     <button className='border-blue-500 text-blue-400 hover:bg-blue-500/20'>
                       <Phone className='w-4 h-4' />
                     </button>
@@ -2424,20 +2122,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>
                 </motion.div>
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
               ))}
             </div>
           </div>
         </section>
         {/* Contact Section */}
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
 
               ))}
 
@@ -2458,12 +2149,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </section>;
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
 
         {/* Contact Section */}'
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;'
@@ -2473,18 +2161,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="max-w-4xl mx-auto text-center">
 :pages_backup/revolutionary-2025-pricing.tsx
             <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
-=======
             <motion.div;
               initial={{ opacity: 0, y: 30 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -2504,10 +2186,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
 "
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -2515,9 +2193,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h2>"
               <p className="text-xl text-gray-300 mb-8">
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
             >
 
@@ -2525,7 +2200,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
@@ -2542,7 +2216,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Contact our team to discuss your specific needs and get a custom quote. 
                 We offer flexible pricing and payment options to fit your budget.
               </p>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30'>
                   <Phone className='w-8 h-8 text-blue-400 mx-auto mb-3' />
@@ -2613,8 +2286,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                   <Phone className="w-5 h-5 mr-2" />
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Get Custom Quote
                 </button>
                 <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
@@ -2628,16 +2299,10 @@ Get Custom Quote
 :pages_backup/revolutionary-2025-pricing.tsx
                   Download Pricing Guide
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                 <button className='border-blue-500 text-blue-400 hover:bg-blue-500/20'>
                   <BookOpen className='w-5 h-5 mr-2' />
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Download Pricing Guide
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                   Get Custom Quote;
                 </button>"
@@ -2645,7 +2310,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <BookOpen className="w-5 h-5 mr-2" />
 
                   Download Pricing Guide;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
                 </button>
               </div>
             </motion.div>
@@ -2654,9 +2318,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </UltraQuantumHolographicBackground>
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD:pages/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 );
 
 }
@@ -2665,18 +2326,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               viewport={{ once: true }}>;'
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
 
 }
 
 :pages_backup/revolutionary-2025-pricing.tsx
 
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
   )
             >;"
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -2758,14 +2414,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 budget.;
               </p>;
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
   )
 }'
               <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8'>;'
@@ -2803,9 +2453,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button className='border - blue - 500 text - blue - 400 hover:bg - blue - 500 / 20'>;'
                   <BookOpen className='w - 5 h - 5 mr - 2' />                  Download Pricing Guide;
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   )
             >;"
@@ -2842,10 +2489,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <BookOpen className="w-5 h-5 mr-2" />;
                   Download Pricing Guide;
 :pages_backup/revolutionary-2025-pricing.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 );
 
 }
@@ -2883,7 +2526,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">;
                   <BookOpen className="w-5 h-5 mr-2" />;
                   Download Pricing Guide;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
                 </button>;
               </div>;
             </motion.div>;
@@ -2891,18 +2533,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </div>;
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx
     </UltraQuantumHolographicBackground>;
   );
   } catch (error) {"
@@ -2911,25 +2543,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/revolutionary-2025-pricing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2025-pricing.tsx
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2025-pricing.tsx
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2025-pricing.tsx

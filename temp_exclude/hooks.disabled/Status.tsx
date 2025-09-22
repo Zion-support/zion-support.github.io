@@ -65,7 +65,6 @@ const FALLBACK_SERVICES: ServiceStatus[] = []
 
     return this.props.children;
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 :temp_exclude/hooks.disabled/Status.tsx

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages_backup/proposals/new.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   const [jobBrief, setJobBrief] = useState(''),'
   const [resumeSummary, setResumeSummary] = useState(''),'
@@ -13,11 +10,6 @@
   ), [jobBrief, relevantExperience, resumeSummary]),
 
 :pages_backup/proposals/new.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
@@ -39,25 +31,13 @@ const NewProposal: NextPage = () => {
   const pitchPrompt = useMemo(() => (
     `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief || '(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary || '(Not provided)'}\n\nRelevant Experience:\n${relevantExperience || '(Not provided)'}\n\nReturn markdown only.`
   ), [jobBrief, relevantExperience, resumeSummary]),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 const NewProposal: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div>
       <Head>
         <title>New Proposal - Zion AI Marketplace</title>
       </Head>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="grid gap-4">
         <label className="text-sm">Job Description / Brief
           <textarea value={jobBrief} onChange={e => setJobBrief(e.target.value)} rows={6} className="mt-1 w-full rounded-md border p-3" />
@@ -81,14 +61,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           authorizationToken={operatorToken}
 
 :pages_backup/proposals/new.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           defaultPrompt={pitchPrompt  } catch (error) {
     console.error("Error:", error);
-=======
 
           defaultPrompt={pitchPrompt  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/new.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -103,28 +80,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/proposals/new.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         />
       </div>
 
 :pages_backup/proposals/new.tsx
-<<<<<<< HEAD
     </div>
   )
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 :pages_backup/proposals/new.tsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/new.tsx
         />
       </div>"
       <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
@@ -133,13 +98,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/proposals/new.tsx
 }
 export default NewProposal;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/proposals/new.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           buttonLabel='Generate Pitch Based on Profile & Job'
           title='Generate Proposal'
           defaultPrompt={pitchPrompt}
@@ -155,9 +113,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         className='mt-2 w-full rounded-md border p-3'
       />
     </div>
-<<<<<<< HEAD
   )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },
 export default NewProposal,
 },
@@ -166,13 +122,7 @@ export default NewProposal,
 export default NewProposal,
 
 :pages_backup/proposals/new.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/new.tsx
 },
 export default NewProposal,
 },
@@ -180,36 +130,19 @@ export default NewProposal,
 export default NewProposal,;
 export default NewProposal,
 :pages_backup/proposals/new.tsx
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/new.tsx
 
 },
 export default NewProposal,
 
 },
 export default NewProposal,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 export default NewProposal,
 
 :pages_backup/proposals/new.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 };
 
 export default NewProposal;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

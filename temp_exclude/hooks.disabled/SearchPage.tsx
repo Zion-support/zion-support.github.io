@@ -75,7 +75,6 @@ import {
   TabsContent
   TabsList
   TabsTrigger} from "@/components/ui/tabs"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
@@ -391,6 +390,4 @@ export default function SearchPage() {;
 }
 
 ;
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/SearchPage.tsx

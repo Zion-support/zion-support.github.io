@@ -1,7 +1,6 @@
 // Accessibility utilities
 export const a11yUtils = {
   // Focus management
-<<<<<<< HEAD
   "trapFocus": (element) => {
     const focusableElements = element.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -32,7 +31,6 @@ export const a11yUtils = {
     setTimeout(() => {
       document.body.removeChild(announcement)}, 1000)}
 };
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
     const focusableElements = element.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
     );
@@ -172,4 +170,3 @@ export const a11yUtils = {}
     }, 1000);
   },
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8

@@ -113,7 +113,6 @@ export default defineConfig({
 					if (/\.(css)$/.test(assetInfo.name || '')) return 'css/[name]-[hash].[ext]';
 					if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
 					if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 					return 'assets/[name]-[hash].[ext]'}
 			}
 		},
@@ -312,4 +311,3 @@ import { defineConfig } from 'vite'; import react from '@vitejs/plugin-react'; i
 }
 }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

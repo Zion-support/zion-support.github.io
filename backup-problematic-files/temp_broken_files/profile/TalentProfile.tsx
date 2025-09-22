@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx
 import { Button } from "@/components/ui/button",;
 ;
 import { HireNowCTA } from "./HireNowCTA",;
@@ -13,7 +12,6 @@ import { ProfileRatings } from "./ProfileRatings",;
 import { TalentProfile as TalentProfileType } from "@/types/talent",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Availability } from "@/types/profile",;
-=======
 import React from "react";""
 import { Handshake, MessageSquare, Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";"
@@ -29,7 +27,6 @@ import { ProfileRatings } from "./ProfileRatings";""
 import { TalentProfile as TalentProfileType } from "@/types/talent";""
 import { useAuth } from "@/hooks/useAuth";""
 import { Availability } from "@/types/profile";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 interface TalentProfileProps {;
   profile: TalentProfileType;,;
@@ -121,7 +118,6 @@ title:proj.title,;
                       <MessageSquare className="mr-2 h-5 w-5" />;
                       Message;
                     </Button>;                  )}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </div>;
               </div>;
             </div>;

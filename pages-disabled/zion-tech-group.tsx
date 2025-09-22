@@ -4,7 +4,6 @@ import Link from 'next/link';
 import React from 'react';
 
 export default function ZionTechGroupPage() {;
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 import {
@@ -24,21 +23,15 @@ import {
   Calendar, Clock, FileText2, PieChart, Atom,
   Truck, ChevronRight, Home
 } from 'lucide-react',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function ZionTechGroupPage() {
-=======
 export default function ZionTechGroupPage() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 
 import Head from 'next / head';
 import Link from 'next / link';
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {
-=======
 export default function ZionTechGroupPage() { return null; }
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Brain,
   Zap,
   Target,
@@ -114,7 +107,6 @@ import {}
   PieChart,
   Atom,
   Truck,
-<<<<<<< HEAD
 
 import Head from 'next/head',
 import Link from 'next/link',
@@ -140,29 +132,20 @@ export default function ZionTechGroupPage() {
 
 export default function ZionTechGroupPage() {}
   return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
 ;
 ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <>;
       <Head>;
         <title>;
           About Zion Tech Group | Revolutionary Quantum AI & Autonomous Systems;
         </title>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Navigation */}
         <nav className='bg-black/20 backdrop-blur-md border-b border-white/10'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
             <div className='flex justify-between items-center h-16'>;
               <div className='flex items-center'>;
                 <div className='flex-shrink-0'>;
-=======
 
         {/* Navigation */}'
         <nav className='bg-black/20 backdrop-blur-md border-b border-white/10'>;'
@@ -170,7 +153,6 @@ export default function ZionTechGroupPage() {}
             <div className='flex justify-between items-center h-16'>;'
               <div className='flex items-center'>;'
                 <div className='flex-shrink-0'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Link href='/' className='text-2xl font-bold text-white'>;
         <meta;'
           name='description';'
@@ -196,7 +178,6 @@ export default function ZionTechGroupPage() {}
                 </div>;
               </div>;'
               <div className='hidden md:block'>;
-<<<<<<< HEAD
     <>
       <Head>
         <title>About Zion Tech Group | Revolutionary Quantum AI & Autonomous Systems</title>
@@ -206,14 +187,11 @@ export default function ZionTechGroupPage() {}
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <nav className="bg-black/20 backdrop-blur-md border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-=======
 
 "
         <nav className="bg-black/20 backdrop-blur-md border-b border-white/10">"
@@ -221,12 +199,8 @@ export default function ZionTechGroupPage() {}
             <div className="flex justify-between items-center h-16">"
               <div className="flex items-center">"
                 <div className="flex-shrink-0">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Link href="/" className="text-2xl font-bold text-white">Zion Tech Group</Link>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
               </div>"
               <div className="hidden md:block">"
@@ -241,22 +215,14 @@ About
 
                     Contact
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                     Contact;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </Link>
                 </div>
               </div>
             </div>
           </div>
         </nav>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -267,9 +233,6 @@ About
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <nav className="flex" aria-label="Breadcrumb">
               <ol className="flex items-center space-x-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
         {/* Breadcrumb */  } catch (error) {"
     console.error("Error:", error);"
@@ -282,51 +245,39 @@ About
             <nav className="flex" aria-label="Breadcrumb">"
               <ol className="flex items-center space-x-4">
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <li>
                   <div>"
                     <Link href="/" className="text-gray-300 hover:text-white">"
                       <Home className="h-4 w-4" />"
                       <span className="sr-only">Home</span>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </Link>
                   </div>
                 </li>
                 <li>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <ChevronRight className="h-4 w-4 text-gray-400" />
                     <span className="ml-4 text-sm font-medium text-white">About Zion Tech Group</span>
                   </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
                     <ChevronRight className="h-4 w-4 text-gray-400" />"
                     <span className="ml-4 text-sm font-medium text-white">About Zion Tech Group</span>
                   </div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </li>
               </ol>
             </nav>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="relative overflow-hidden py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
                 <span className="block">About</span>
-=======
 
         {/* Hero Section */  } catch (error) {"
     console.error("Error:", error);"
@@ -339,11 +290,7 @@ About
             <div className="text-center">"
               <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">"
                 <span className="block">About</span>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <span className="block text-purple-400">Zion Tech Group</span>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </h1>
               <p className="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                 We are the architects of tomorrow, building revolutionary quantum AI solutions and autonomous systems that will define the next decade of innovation.
@@ -354,9 +301,6 @@ About
             </div>
           </div>
         </div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             </div>
           </div>
@@ -375,9 +319,6 @@ About
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div>
                 <div className="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
                   <Target className="h-8 w-8 text-white" />
@@ -392,21 +333,16 @@ About
 
                 <div className="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
                   <Eye className="h-8 w-8 text-white" />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>
                 <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>
                 <p className="text-lg text-gray-300 mb-6">
                   To be the global leader in quantum AI innovation, creating a world where artificial intelligence and human intelligence work in perfect harmony to solve complex problems.
                 </p>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Core Values Section */}
         <div className='py-16'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -452,7 +388,6 @@ About
             </div>
           </div>
         </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Innovation First
@@ -466,19 +401,16 @@ About
               <div className='text-center'>
                 <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Shield className='h-8 w-8 text-white' />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Core Values Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Our Core Values</h2>
-=======
 
         {/* Core Values Section */  } catch (error) {"
     console.error("Error:", error);"
@@ -490,16 +422,10 @@ About
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center mb-12">"
               <h2 className="text-3xl font-bold text-white mb-4">Our Core Values</h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 These principles guide everything we do and shape the culture of our organization.
               </p>
             </div>
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Innovation First</h3>
                 <p className="text-gray-300">
@@ -513,11 +439,8 @@ About
                 </p>
               </div>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Ethical Responsibility</h3>
-=======
 
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">Innovation First</h3>"
@@ -528,16 +451,11 @@ About
 
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">Ethical Responsibility</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <p className="text-gray-300">
                   We develop technology with a deep commitment to ethical principles, ensuring our solutions benefit humanity and protect our future.
                 </p>
               </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <div className='text-center'>
                 <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Users className='h-8 w-8 text-white' />
@@ -545,42 +463,26 @@ About
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-white" />
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Human-Centric Design</h3>
-=======
 
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">Human-Centric Design</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <p className="text-gray-300">
                   Every solution we create is designed with human needs at the center, ensuring technology serves people, not the other way around.
                 </p>
               </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Global Impact</h3>
-=======
 
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">Global Impact</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <p className="text-gray-300">
                   We think globally and act locally, creating solutions that can scale to benefit communities around the world.
                 </p>
               </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <div className='text-center'>
                 <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Award className='h-8 w-8 text-white' />
@@ -588,32 +490,22 @@ About
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="h-8 w-8 text-white" />
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Excellence</h3>
-=======
 
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">Excellence</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <p className="text-gray-300">
                   We maintain the highest standards of quality in everything we do, from research and development to customer support.
                 </p>
               </div>
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </div>
-=======
 
                 </div>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Future-Focused;
                 </h3>
-<<<<<<< HEAD
 
 "
               <div className="text-center">"
@@ -630,37 +522,24 @@ About
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Rocket className="h-8 w-8 text-white" />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Rocket className="h-8 w-8 text-white" />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Future-Focused</h3>
                 <p className="text-gray-300">
-=======
 
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">Future-Focused</h3>"
                 <p className="text-gray-300">'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   We don't just adapt to change, we anticipate it and create the technologies that will define tomorrow.
 </p>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </p>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -670,17 +549,11 @@ About
                 We leverage the most advanced technologies available to create revolutionary solutions.
               </p>
             </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Brain className="h-6 w-6 text-white" />
-=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         {/* Technology Stack Section */}
 <div className='py-16 bg-black/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -697,41 +570,25 @@ About
               <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center'>
                 <div className='w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4'>
                   <Brain className='h-6 w-6 text-white' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>
-=======
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <p className="text-gray-300 text-sm">
                   Next-generation quantum processors and algorithms for unprecedented computational power.
                 </p>
               </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Artificial Intelligence</h3>
-=======
 
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-2">Artificial Intelligence</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <p className="text-gray-300 text-sm">
                   Advanced machine learning, neural networks, and AI systems that learn and adapt.
                 </p>
               </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center'>
                 <div className='w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4'>
                   <Server className='h-6 w-6 text-white' />
@@ -739,34 +596,22 @@ About
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Server className="h-6 w-6 text-white" />
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Cloud Infrastructure</h3>
-=======
 
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-2">Cloud Infrastructure</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <p className="text-gray-300 text-sm">
                   Scalable, secure cloud platforms built for the most demanding applications.
                 </p>
               </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Cybersecurity</h3>
                 <p className="text-gray-300 text-sm">
                   Quantum-resistant encryption and AI-powered threat detection systems.
                 </p>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-2">Cybersecurity</h3>"
@@ -774,7 +619,6 @@ About
                   Quantum-resistant encryption and AI-powered threat detection systems.
                 </p>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
           </div>
@@ -784,20 +628,13 @@ About
           </div>
         </div>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-=======
               </div>"
               <div className="text-center">"
                 <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className="text-gray-300">Uptime Guarantee</div>
               </div>"
               <div className="text-center">"
@@ -808,7 +645,6 @@ About
                 <div className="text-4xl font-bold text-purple-400 mb-2">10+</div>"
                 <div className="text-gray-300">Years Experience</div>
               </div>
-<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -816,14 +652,11 @@ About
           </div>
         </div>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Team Section */  } catch (error) {
     console.error("Error:", error);
-=======
 
         {/* Team Section */  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -835,7 +668,6 @@ About
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Meet the visionaries and experts who are driving innovation at Zion Tech Group.
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </p>
             </div>
 "
@@ -844,10 +676,6 @@ About
                 <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"
                   <User className="h-10 w-10 text-white" />
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Kleber</h3>
                 <p className="text-purple-400 mb-2">CEO & Founder</p>
@@ -855,63 +683,41 @@ About
                   Visionary leader with over a decade of experience in quantum computing and AI innovation.
 </p>
               </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </p>
               </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Dr. Sarah Chen</h3>
                 <p className="text-purple-400 mb-2">Chief Technology Officer</p>
-=======
 
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">Dr. Sarah Chen</h3>"
                 <p className="text-purple-400 mb-2">Chief Technology Officer</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <p className="text-gray-300 text-sm">
                   Quantum computing expert with PhD from MIT and 15+ years in advanced AI research.
                 </p>
               </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Marcus Rodriguez</h3>
                 <p className="text-purple-400 mb-2">Chief Security Officer</p>
                 <p className="text-gray-300 text-sm">
                   Cybersecurity specialist with expertise in quantum-resistant encryption and threat detection.
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </p>
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
         <div className="bg-purple-600">
           <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
               <span className="block">Ready to Join the Future?</span>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </h2>
-=======
 
             </h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <p className="mt-4 text-lg leading-6 text-purple-100">
               Discover how Zion Tech Group can transform your business with revolutionary technology solutions.
             </p>"
@@ -921,13 +727,11 @@ About
                 <ArrowRight className="ml-2 h-4 w-4" />
 </Link>
 <Link href="/contact" className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-purple-700">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Schedule Consultation
               </Link>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Footer */}
         <footer className='bg-black/40'>
           <div className='max-w-7xl mx-auto py-12 px-4 sm: px-6 lg:py-16 lg:px-8'>
@@ -1004,9 +808,6 @@ About
                     </ul>;
                   </div>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </p>
               </div>"
               <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">"
@@ -1016,30 +817,20 @@ About
                     <ul className="mt-4 space-y-4">
 <li>
 <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           Quantum AI
                         </Link>
                       </li>
                       <li>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           Autonomous Systems
                         </Link>
                       </li>
                       <li>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           Technology Platforms
                         </Link>
                       </li>
                     </ul>
                   </div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
-=======
                       <li>"
                         <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
                           Quantum AI;
@@ -1061,25 +852,16 @@ About
                   <div className="mt-12 md:mt-0">
 "
                     <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <ul className="mt-4 space-y-4">
                       <li>"
                         <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           About
                         </Link>
                       </li>
                       <li>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           Contact
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           Contact
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                           About;
                         </Link>
                       </li>
@@ -1087,7 +869,6 @@ About
                         <Link href="/contact" className="text-base text-gray-300 hover:text-white">
 
                           Contact;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         </Link>
                       </li>
                     </ul>
@@ -1096,16 +877,12 @@ About
               </div>
             </div>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </footer>
       </div>
     </>
-<<<<<<< HEAD
   );
 
 }
@@ -1500,12 +1277,10 @@ export default function ZionTechGroupPage(req, res) {
                     <ul className="mt-4 space-y-4">;
                           className='text-base text-gray-300 hover:text-white'>                          Contact;
                   <div className='mt - 12 md:mt - 0'>;
-=======
 '
                           className='text-base text-gray-300 hover:text-white'>                          Contact;
 '
                   <div className='mt - 12 md:mt - 0'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <h3 className='text - sm font - semibold text - gray - 400 tracking - wider uppercase'>;
                       Company;
                     </h3>;'
@@ -1523,8 +1298,6 @@ export default function ZionTechGroupPage(req, res) {
                           className='text - base text - gray - 300 hover:text - white';
                         >                          Contact;
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   )
 import React from 'react';
 import Head from 'next/head';
@@ -1942,13 +1715,7 @@ export default function ZionTechGroupPage(req, res) {
                       <li>;
                         <Link href="/contact" className="text-base text-gray-300 hover:text-white">;
                           Contact;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         </Link>;
                       </li>;
                     </ul>;
@@ -1956,13 +1723,8 @@ export default function ZionTechGroupPage(req, res) {
                 </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
                 &copy; 2025 Zion Tech Group. All rights reserved.              </p>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
                 &copy; 2025 Zion Tech Group. All rights reserved.              </p>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                 &copy; 2025 Zion Tech Group. All rights reserved.              </p>;
 "
@@ -1971,29 +1733,15 @@ export default function ZionTechGroupPage(req, res) {
                 &copy, 2025 Zion Tech Group. All rights reserved.;
               </p>;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>;
           </div>;
         </footer>;
       </div>;
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   } catch (error) {"
     console.error("Error:", error);"
@@ -2002,4 +1750,3 @@ export default function ZionTechGroupPage(req, res) {
 }
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

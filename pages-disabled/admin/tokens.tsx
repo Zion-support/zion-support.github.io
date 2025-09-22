@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useEffect, useState } from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
@@ -20,19 +19,13 @@ export default function AdminTokens() {
   const [amount, setAmount] = useState(100),
   const [reason, setReason] = useState("admin_action"),
   const [config, setConfig] = useState<any>(null),
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   async function load() {
     const [txRes, cfgRes] = await Promise.all([
       fetch("/api/admin/tokens").then((r) => r.json())
       fetch("/api/admin/tokens/config").then((r) => r.json())])
     setTransactions(txRes.transactions |[])
 
-<<<<<<< HEAD
     setConfig(cfgRes)
   }
   useEffect(() => {
@@ -43,9 +36,7 @@ export default function AdminTokens() {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useEffect, useState } from "react";
-=======
 
   async function load() {}
     const [txRes, cfgRes] = await Promise.all([]
@@ -55,7 +46,6 @@ import React, { useEffect, useState } from "react";
 
 "
 import React, { useEffect, useState } from "react";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
 export default function AdminTokens() {};
   const [transactions, setTransactions] = useState<any[]>([]);"
@@ -74,11 +64,9 @@ export default function AdminTokens() {};
 
     } catch (error) {
     console.error("Error:", error);
-=======
 
     } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
 
   }
@@ -126,20 +114,14 @@ import EnhancedLayout from "../../components/layout/EnhancedLayout",
 
 import React, { useEffect, useState } from "react",;
 import EnhancedLayout from "../../components/layout/EnhancedLayout",;
-=======
 import React, { useEffect, useState } from "react",;
 import EnhancedLayout from "../../components/layout/EnhancedLayout",;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from "react",
 import EnhancedLayout from "../../components/layout/EnhancedLayout",
 export default function AdminTokens() {
   const [transactions, setTransactions] = useState<any[]>([]),
-=======
 export default function AdminTokens() {}
   const [transactions, setTransactions] = useState<any[]>([]),"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [userId, setUserId] = useState(""),
   const [amount, setAmount] = useState(100),"
   const [reason, setReason] = useState("admin_action"),
@@ -178,7 +160,6 @@ export default function AdminTokens() {};
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   }
 }
@@ -186,9 +167,7 @@ export default function AdminTokens() {};
     load()
   }, []),
 async function issue() {
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const res = await fetch("/api/admin/tokens/issue", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -197,7 +176,6 @@ async function issue() {
     if (data.error) alert(data.error)
     await load()
   }
-<<<<<<< HEAD
   async function revoke() {
     const res = await fetch("/api/admin/tokens/revoke", {
       method: "POST"
@@ -222,7 +200,6 @@ async function issue() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   async function saveConfig() {
     const res = await fetch("/api/admin/tokens/config", {
       method: "POST"
@@ -232,26 +209,18 @@ async function issue() {
 
     setConfig(data)
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       method: "POST",
-=======
 
 "
     const res = await fetch("/api/admin/tokens/config", {}
 "
       method: "POST","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(config)}),
     const data = await res.json(),
 setConfig(data)
 
     setConfig(data)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 
     } catch (error) {"
@@ -259,18 +228,12 @@ setConfig(data)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(config)}),
     const data = await res.json(),
     setConfig(data)
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <EnhancedLayout title="Admin: ZION$">
       <div className="max-w-4xl mx-auto space-y-6">
@@ -284,71 +247,43 @@ setConfig(data)
 
 <input type="number" placeholder="amount" className="border rounded px-2 py-1" value={amount} onChange={(e) => setAmount(parseInt(e.target.value |"0"))} />
             <input type="number" placeholder="amount" className="border rounded px-2 py-1" value={amount} onChange={(e) => setAmount(parseInt(e.target.value || "0"))} />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <input placeholder="reason" className="border rounded px-2 py-1" value={reason} onChange={(e) => setReason(e.target.value)} />
             <div className="flex gap-2">
               <button className="px-3 py-1 rounded border" onClick={issue}>Issue</button>
-=======
 
 "
             <input placeholder="reason" className="border rounded px-2 py-1" value={reason} onChange={(e) => setReason(e.target.value)} />"
             <div className="flex gap-2">"
               <button className="px-3 py-1 rounded border" onClick={issue}>Issue</button>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <button className="px-3 py-1 rounded border" onClick={revoke}>Revoke</button>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Conversion & Rules</h2>
           {config && ("
             <div className="space-y-3 text-sm">"
               <div className="flex items-center gap-2">"
                 <label className="w-40">USD per Token</label>
-<<<<<<< HEAD
 
 "
                 <input type="number" step="0.01" className="border rounded px-2 py-1" value={config.usdPerToken} onChange={(e) => setConfig({ ...config, usdPerToken: parseFloat(e.target.value || "0") })} />
 
 <input type="number" step="0.01" className="border rounded px-2 py-1" value={config.usdPerToken} onChange={(e) => setConfig({ ...config, usdPerToken: parseFloat(e.target.value |"0") })} />
                 <input type="number" step="0.01" className="border rounded px-2 py-1" value={config.usdPerToken} onChange={(e) => setConfig({ ...config, usdPerToken: parseFloat(e.target.value || "0") })} />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <button className="px-3 py-1 rounded border" onClick={saveConfig}>Save</button>
               </div>"
               <div className="text-xs text-gray-500">Example: 0.05 means 100 ZION$ = $5 credit.</div>
             </div>
           )}
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <h2 className="font-medium mb-3">Transactions</h2>
-=======
 "
           <h2 className="font-medium mb-3">Transactions</h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="space-y-2 text-sm max-h-96 overflow-auto">
             {transactions.map((t) => ("
               <div key={t.id} className="flex justify-between border rounded p-2">"
@@ -357,7 +292,6 @@ setConfig(data)
                   <span className="text-gray-600">{t.userId}</span>"
                   <span className="text-gray-500">{t.reason.replaceAll("_"," ")}</span>
                 </div>
-<<<<<<< HEAD
                 <div className="font-medium">{t.type === "earn" |t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
                 <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
               </div>
@@ -383,7 +317,6 @@ setConfig(data)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 ;
   async function saveConfig() {;
@@ -404,15 +337,11 @@ setConfig(data)
 
 }
 
-=======
 }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from './react';,
-=======
 
 import React, { useEffect, useState } from './react';,"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import EnhancedLayout from "../../components / layout / EnhancedLayout",
 export default /**;
  * AdminTokens - Function description;
@@ -470,7 +399,6 @@ function save_config() { return null; }
     set_config (data);
   }
 return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <EnhancedLayout title="Admin: ZION$">;
       <div className="max-w-4xl mx-auto space-y-6">;
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">;
@@ -527,13 +455,6 @@ return (
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     <EnhancedLayout title="Admin: ZION$">;
       <div className="max - w-4xl mx - auto space - y-6">;
         <div className="p - 4 border rounded bg - white dark:bg - zinc - 900">;
@@ -544,7 +465,6 @@ return (
             <input placeholder="reason" className="border rounded px - 2 py - 1" value={reason} on_change={(e) => set_reason (e.target.value)} />;
             <div className="flex gap - 2">;
               <button className="px - 3 py - 1 rounded border" on_click={issue}>Issue</button>;
-=======
   return ("
     <EnhancedLayout title="Admin: ZION$">;"
       <div className="max - w-4xl mx - auto space - y-6">;"
@@ -556,7 +476,6 @@ return (
             <input placeholder="reason" className="border rounded px - 2 py - 1" value={reason} on_change={(e) => set_reason (e.target.value)} />;"
             <div className="flex gap - 2">;"
               <button className="px - 3 py - 1 rounded border" on_click={issue}>Issue</button>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <button className="px - 3 py - 1 rounded border" on_click={revoke}>Revoke</button>;
             </div>;
           </div>;
@@ -589,40 +508,19 @@ return (
           </div>;
         </div>;
       </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 "
                 <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
 
               </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </EnhancedLayout>;
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

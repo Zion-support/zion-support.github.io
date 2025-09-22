@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import _React from 'react'; const ComprehensiveServices = () => { return ( <div> <h1>ComprehensiveServices</h1> <p>Component placeholder</p> </div> )}; export default ComprehensiveServices;
 const ComprehensiveServices = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const ComprehensiveServices = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,13 +1,7 @@
 :pages_backup/partners.tsx
-<<<<<<< HEAD:pages/partners.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 :pages_backup/partners.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import {
@@ -182,13 +176,8 @@ const Page = () => {
 
 export default Page;
 :pages_backup/partners.tsx
-<<<<<<< HEAD:pages/partners.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/partners.tsx
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Handshake, Globe, Rocket, Brain, Atom, Shield;
@@ -236,7 +225,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     { number: '25+', label: 'Countries', icon: Globe }
     { number: '300%', label: 'Growth Rate', icon: TrendingUp }
   ];
-=======
 
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -259,7 +247,6 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function PartnersPage() {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
@@ -337,8 +324,6 @@ className='mb-12'
         </div>
       </section>
 :pages_backup/partners.tsx
-<<<<<<< HEAD:pages/partners.tsx
-<<<<<<< HEAD
             transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
@@ -409,8 +394,6 @@ Join our ecosystem of technology leaders, innovators, and industry experts
           </motion.div>
         </div>
       </section>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
       {/* Stats Section */}
 <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -671,19 +654,12 @@ className='text-center mb-16'
                 viewport={{ once: true }}
 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300'
 :pages_backup/partners.tsx
-<<<<<<< HEAD:pages/partners.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
 :pages_backup/partners.tsx
-<<<<<<< HEAD:pages/partners.tsx
-<<<<<<< HEAD
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
@@ -694,8 +670,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
 
 :pages_backup/partners.tsx
-<<<<<<< HEAD
-=======
 {/* Partnership Types */}
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
@@ -705,7 +679,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="max-w-7xl mx-auto">
           <motion.div
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {type.title}
                 </h3>
@@ -731,12 +704,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto'>
           <motion.div
 :pages_backup/partners.tsx
-<<<<<<< HEAD:pages/partners.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -776,17 +744,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 :pages_backup/partners.tsx
-<<<<<<< HEAD:pages/partners.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <type.icon className="w-8 h-8 text-white" />
@@ -1047,8 +1008,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <EnhancedFooter />
     </div>
 :pages_backup/partners.tsx
-<<<<<<< HEAD:pages/partners.tsx
-<<<<<<< HEAD
 )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) )
 }</ul> </motion.div>) )
@@ -1057,8 +1016,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 ),
 :pages_backup/partners.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) ) 
@@ -1115,8 +1072,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }transition= {
   {
 :pages_backup/partners.tsx
-<<<<<<< HEAD:pages/partners.tsx
-<<<<<<< HEAD
           >;
             <h2 className='text - 4xl font - bold text - white mb - 6'>;
               Ready to Partner with Us?;
@@ -1162,10 +1117,6 @@ once: true
 }
 ;
 :pages_backup/partners.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -1187,20 +1138,8 @@ const Page = () => {
 
 export default Page;
 :pages_backup/partners.tsx
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/partners.tsx
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx
   duration: 0.8
 }viewport= {
   {
@@ -1210,9 +1149,4 @@ export default Page;
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 :pages_backup/partners.tsx
-<<<<<<< HEAD:pages/partners.tsx
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/partners.tsx

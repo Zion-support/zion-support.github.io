@@ -1,12 +1,4 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/smart-code-fixer.cjs
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/smart-code-fixer.cjs
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -14,20 +6,12 @@ const path = require('path');
 const { execSync } = require('child_process');
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-=======
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 console.log('🔧 Smart Code Fixer');
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Function to fix unescaped entities only in JSX content
 function fixUnescapedEntities(content) {
   // Only replace single quotes that are not in import statements or string literals;
@@ -71,8 +55,6 @@ content = content.replace(/import Image from 'next\/image'/, '// import Image fr
     }
   }
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Fix missing semicolons
   content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
   if (content !== content.replace(/([^;}])\n\s*}/g, '$1;\n}')) {
@@ -84,8 +66,6 @@ content = content.replace(/import Image from 'next\/image'/, '// import Image fr
   if (content !== content.replace(/([^,}])\n\s*}/g, '$1,\n}')) {
     modified = true;
   }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return { content, modified };
 // Function to process a single file;
@@ -147,7 +127,6 @@ function main() {
   const targetDir = process.cwd();
   console.log(`🔍 Scanning directory: ${targetDir}`);
 
-<<<<<<< HEAD
   const files = findFiles(targetDir);
   console.log(`📁 Found ${files.length} files to process`);
 
@@ -182,6 +161,4 @@ if (require.main === module) {
   main();
 }
 module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
-=======
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,4 @@
 
-=======
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Upload, FileText } from 'lucide-react',;
@@ -11,12 +10,10 @@ interface UploadSectionProps {;
 ;
 export function UploadSection({ customFile, onFileUpload } UploadSectionProps) {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-3">;
       <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">;
         <Upload className="h-8 w-8 text-zion-purple mb-2" />;
         <p className="text-sm text-zion-slate mb-2">;
-<<<<<<< HEAD
 
       {customFile && (;
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">;

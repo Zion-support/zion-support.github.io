@@ -1,5 +1,4 @@
 
-=======
 import { useState } from 'react',;
 import { AppHeader } from '@/layout/AppHeader',;
 import { Footer } from '@/components/Footer',;
@@ -17,12 +16,10 @@ function PortfolioBuilderContent() {;
       <SEO ;
         title="Portfolio Builder | Zion AI Marketplace" ;
         description="Create and customize your resume and portfolio to showcase your skills and experience." ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
         <h1 className="text-3xl font-bold mb-8">Resume & Portfolio Builder</h1>;
-<<<<<<< HEAD
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">;
           <TabsList className="bg-muted/60 p-0">;

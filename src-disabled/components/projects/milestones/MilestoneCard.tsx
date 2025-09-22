@@ -1,5 +1,4 @@
 :src_backup/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD
 
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -20,16 +19,12 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { format } from 'date-fns'
 :src/components/projects/milestones/MilestoneCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Check, ArrowDown, X } from 'lucide-react'
 :src_backup/components/projects/milestones/MilestoneCard.tsx
 import { useDisputeCheck } from '@/hooks/useDisputeCheck',
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
 interface MilestoneCardProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
   id: string,
   projectId: string,
   title: string,
@@ -78,13 +73,11 @@ export function MilestoneCard({
   dueDate
   onApprove
   onReject?: (id: string) => Promise<void>;
-=======
 import { Check, ArrowDown, X } from 'lucide-react
 pr-12325
 import { useDisputeCheck  } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge  } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/projects/milestones/MilestoneCard.tsx
 
   function getStatusBadgeColor() {
     switch (status) {
@@ -96,14 +89,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { format } from 'date-fns';
 :src_backup/components/projects/milestones/MilestoneCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Check, ArrowDown, X } from 'lucide-react';
-<<<<<<< HEAD
 import { useDisputeCheck } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';interface MilestoneCardProps {;
 interface MilestoneCardProps {;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string,;
   projectId: string,;
   title: string,;
@@ -112,7 +102,6 @@ interface MilestoneCardProps {;
   status: string,;
   dueDate?: string,;
 :src_backup/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD
   onApprove?: (id: string,) => Promise<void>,;
   onReject?: (id: string,) => Promise<void>;
 }
@@ -125,9 +114,7 @@ export function MilestoneCard(): any ({;  id,;
 ;
 export function MilestoneCard({;
 :src_backup/components/projects/milestones/MilestoneCard.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/projects/milestones/MilestoneCard.tsx
   id,;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   projectId,;
   title,;
   description,;
@@ -136,9 +123,6 @@ export function MilestoneCard({;
   dueDate,;
   onApprove,;
 :src_backup/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD:src/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   onReject;
 }: MilestoneCardProps) {;
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id),;
@@ -146,19 +130,16 @@ export function MilestoneCard({;
     switch (status) {;
       case 'completed':;
         return 'bg-green-500',;
-=======
   onReject,;}: MilestoneCardProps) {;
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
 
         return 'bg-green-500';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case 'in_progress':;
 :src/components/projects/milestones/MilestoneCard.tsx
 return 'bg-blue-500';      case 'pending':;
         return 'bg-yellow-500';
       case 'rejected':;
         return 'bg-red-500';
-<<<<<<< HEAD
       default: return 'bg-gray-500';
     }
   }
@@ -167,8 +148,6 @@ return 'bg-blue-500';      case 'pending':;
       case 'rejected':;
         return 'bg-red-500';
 :src_backup/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from 'react';
 import {
@@ -228,22 +207,11 @@ interface MilestoneCardProps {
               <p className="text-sm text-muted-foreground">;
   dueDate?: string,
 
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/projects/milestones/MilestoneCard.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/projects/milestones/MilestoneCard.tsx
 default:
         return 'bg-gray-500';
     }
   }
 :src/components/projects/milestones/MilestoneCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card>
       <CardHeader className="pb-2">"
@@ -267,10 +235,7 @@ default:
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
 :src_backup/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <p className="text-sm text-muted-foreground">
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>;
@@ -280,15 +245,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>;
             )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>
 :src_backup/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           </div>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="flex gap-2">
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
               {status.replace('_ ')}
@@ -297,14 +258,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {isUnderDispute && disputeStatus && (
 :src_backup/components/projects/milestones/MilestoneCard.tsx
 
-=======
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/projects/milestones/MilestoneCard.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/projects/milestones/MilestoneCard.tsx
 <div className='flex gap-2'>
             <Badge
               variant='outline'
@@ -314,17 +269,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Badge>
             {isUnderDispute && disputeStatus && (
 :src/components/projects/milestones/MilestoneCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <DisputeStatusBadge status={disputeStatus} />
             )}
           </div>
         </div>
       </CardHeader>
 :src_backup/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
       <CardContent className="pb-2">
         {description && (
           <p className="text-muted-foreground">{description}</p>
@@ -333,22 +284,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-xl font-bold">${amount.toFixed(2)}</p>
 :src_backup/components/projects/milestones/MilestoneCard.tsx
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/projects/milestones/MilestoneCard.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/projects/milestones/MilestoneCard.tsx
 <CardContent className='pb-2'>
         {description && <p className='text-muted-foreground'>{description}</p>}
         <div className='mt-4'>
           <p className='text-xl font-bold'>${amount.toFixed(2)}</p>
 :src/components/projects/milestones/MilestoneCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>
       </CardContent>
 :src_backup/components/projects/milestones/MilestoneCard.tsx
@@ -361,7 +302,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               milestoneId={id}
               variant="ghost"
               size="sm"
-=======
       <CardFooter className="pt-2 flex justify-between">
         <div>
           {status !== 'completed' && status !== 'rejected' && (
@@ -370,26 +310,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               milestoneId={id} 
               variant="ghost"
               size="sm"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/projects/milestones/MilestoneCard.tsx
               size='sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
             />
           )}
         </div>
-<<<<<<< HEAD
 
           {status === 'pending' && onReject && !isUnderDispute && (
             <Button variant='outline' size='sm' onClick={() => onReject(id)}>
               <X className='h-4 w-4 mr-1' /> Reject            </Button>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className="flex gap-2">
           {status === 'pending' && onReject && !isUnderDispute && (
             <Button variant="outline" size="sm" onClick={() => onReject(id)}>
               <X className="h-4 w-4 mr-1" /> Reject
 :src_backup/components/projects/milestones/MilestoneCard.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/projects/milestones/MilestoneCard.tsx
         <div className='flex gap-2'>
           {status === 'pending' && onReject && !isUnderDispute && (
             <Button variant='outline' size='sm' onClick={() => onReject(id)}>
@@ -409,7 +344,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
 :src_backup/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD
           )}
 
           {status === 'pending' && onApprove && !isUnderDispute && (
@@ -419,12 +353,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           )}
 :src/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD
 
           {status === 'pending' && onApprove && !isUnderDispute && (
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           )}
           {isUnderDispute && (
             <Button variant="outline" size="sm" disabled>
@@ -493,9 +424,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Button variant="outline" size="sm" disabled>;
 :src_backup/components/projects/milestones/MilestoneCard.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/projects/milestones/MilestoneCard.tsx
               Actions frozen due to dispute;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </Button>;
           )}
         </div>;
@@ -504,7 +433,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 :src_backup/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD
 ;
   );
 }
@@ -691,18 +619,12 @@ pr-12325
     </Card>);
 }
 :src_backup/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD:src/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
       </CardFooter>
     </Card>
   );
 }
 :src/components/projects/milestones/MilestoneCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             />)}
 
             <Button variant='outline' size='sm' on_click={() => on_reject (id)}>;
@@ -718,4 +640,3 @@ pr-12325
             )}
     );"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/projects/milestones/MilestoneCard.tsx

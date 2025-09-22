@@ -45,4 +45,3 @@ export const analyzeContent = (content:string):AnalysisResult => {;
 }; // Content analysis functionality // Check for suspicious phrases for (const phrase of suspiciousPhrases) {
   if (contentLower.includes (phrase.toLowerCase () ) ) {
 }
-<<<<<<< HEAD

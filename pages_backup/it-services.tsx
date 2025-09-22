@@ -1912,7 +1912,6 @@ export default function ITServices() {
     selectedCategory === 'all'
       ? services
       : services.filter(service => service.category === selectedCategory);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 const Page = () => {
   return (
@@ -2603,9 +2602,3 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

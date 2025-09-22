@@ -1,25 +1,18 @@
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   } catch {}
   if (role !== 'admin') {'
     return { redirect: { destination: '/', permanent: false } }
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   } catch {}
   if (role !== 'admin') {
     return { redirect: { destination: '/', permanent: false } };
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
   const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
@@ -28,8 +21,6 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
     return acc;
   }, {} as Record<string, string>),;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 '
 import useSWR from 'swr';'
 import React, { useMemo, useState } from 'react';'
@@ -38,12 +29,10 @@ import Link from 'next/link';'
 import type { GetServerSideProps } from 'next';
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   let role = 'guest';
   try {;'
     const user = cookies['x-user'] ? JSON && JSON.parse(cookies['x-user']) : null;'
     role = user?.role || 'guest';
-<<<<<<< HEAD
   } catch {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -59,7 +48,6 @@ export default function AdminDisputesDashboard() {;
 const [statusFilter, setStatusFilter] = useState<
     'All' | 'Open' | 'Under Review' | 'Resolved'
   >('Open');
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
   if (role !== 'admin') {;
     return { redirect: { destination: '/', permanent: false } };
@@ -81,23 +69,18 @@ export default function AdminDisputesDashboard() {
   const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open'),
 const disputes = useMemo(() => {
     const list = data?.disputes |[];
-<<<<<<< HEAD
   const disputes = useMemo(() => {
     const list = data?.disputes |[];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch {}
   if (role !== 'admin') {;
-=======
 
   } catch {}'
   if (role !== 'admin') {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return { redirect: { destination: '/', permanent: false } };
   }
 
   const disputes = useMemo(() => {;
     const list = data?.disputes || [];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (statusFilter === 'All') return list;
     return list && list.filter((d: any) => d && d.status === statusFilter);  }, [data, statusFilter]);
   return (
@@ -158,7 +141,6 @@ const disputes = useMemo(() => {
                       </a>;
                     </Link>                  </td>;
                 </tr>;
-<<<<<<< HEAD
 
     const list = data?.disputes || [],
     if (statusFilter === 'All') return list,
@@ -205,18 +187,12 @@ export default function AdminDisputesDashboard() { return null; }
   const { data } = useSWR('/api/disputes', fetcher),'
   const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open'),
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const disputes = useMemo(() => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <EnhancedLayout>"
       <div className="max-w-6xl mx-auto">"
         <div className="flex items-center justify-between mb-4">"
           <h1 className="text-2xl font-semibold">Dispute Resolution Center</h1>
-<<<<<<< HEAD
           </select>
         </div>
         <div className="overflow-auto border rounded">
@@ -237,8 +213,6 @@ export default function AdminDisputesDashboard() { return null; }
                 <th className=&quot;text-left px-3 py-2&quot;>Created At</th>
                 <th className=&quot;text-left px-3 py-2&quot;>Status</th>
                 <th className=&quot;text-left px-3 py-2&quot;>Actions</th>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
                 <th className='text-left px-3 py-2'>Case ID</th>
                 <th className='text-left px-3 py-2'>Talent</th>
                 <th className='text-left px-3 py-2'>Client</th>
@@ -246,9 +220,6 @@ export default function AdminDisputesDashboard() { return null; }
                 <th className='text-left px-3 py-2'>Created At</th>
                 <th className='text-left px-3 py-2'>Status</th>
                 <th className='text-left px-3 py-2'>Actions</th>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
           </select>
         </div>"
@@ -264,13 +235,10 @@ export default function AdminDisputesDashboard() { return null; }
             <thead className="bg-gray-50 dark:bg-gray-900">
               <tr>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </tr>
             </thead>
             <tbody>
               {disputes.map((d: any) => (
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <td className="px-3 py-2 font-medium">{d.id}</td>
                   <td className="px-3 py-2">{d.talentUserId}</td>
                   <td className="px-3 py-2">{d.clientUserId}</td>
@@ -278,7 +246,6 @@ export default function AdminDisputesDashboard() { return null; }
                   <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
                   <td className="px-3 py-2">{d.status}</td>
                   <td className="px-3 py-2 flex gap-2">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </td>
                 </tr>
 ))}
@@ -310,17 +277,12 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {';
     },
     {} as Record < string, string>);'
   let role = 'guest';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 }
 
 },;
 export default function AdminDisputesDashboard(req, res) {
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 },;
 export default function AdminDisputesDashboard(req, res) {}
@@ -412,35 +374,16 @@ if (return list) {}
                       </a>;
                     </Link>                  </td>;
                 </tr>))}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </tbody>;
           </table>;
         </div>;
       </div>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   } catch (error) {"
     console.error("Error:", error);"
@@ -449,4 +392,3 @@ if (return list) {}
 }
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

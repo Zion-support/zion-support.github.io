@@ -1,6 +1,4 @@
 :src_backup/components/EnhancedNewsletterForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useState, useRef } from 'react'
@@ -10,9 +8,7 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
 
 :src_backup/components/EnhancedNewsletterForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [email, setEmail] = useState("");
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState, useRef } from 'react';
@@ -45,7 +41,6 @@ const lastSubmit = useRef(0);
     }
 
     setIsSubmitting(true);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       const res = await fetch("/api/newsletter", {
         method: "POST",
@@ -99,20 +94,15 @@ const lastSubmit = useRef(0);
   },
 
 :src_backup/components/EnhancedNewsletterForm.tsx
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> pr-12243
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">
-=======
 
   return ("
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">"
       <div className="flex items-center mb-4">"
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/EnhancedNewsletterForm.tsx
           <Mail className="h-6 w-6" />
         </div>
         <div>"
@@ -123,7 +113,6 @@ const lastSubmit = useRef(0);
           </p>
         </div>
       </div>
-=======
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">"
       <div className="flex items-center mb-4">"
@@ -144,7 +133,6 @@ const lastSubmit = useRef(0);
           <p className="text-zion-slate-light mt-1">"
             We&apos;ll keep you updated with the latest from Zion.
           </p>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx
 
 :src_backup/components/EnhancedNewsletterForm.tsx
       {isSubmitted ? (
@@ -225,7 +213,6 @@ const lastSubmit = useRef(0);
       </div>
     </div>
 :src_backup/components/EnhancedNewsletterForm.tsx
-<<<<<<< HEAD
   )
 
             type="email"
@@ -507,15 +494,8 @@ pr-12325
   );
 }
 :src_backup/components/EnhancedNewsletterForm.tsx
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/EnhancedNewsletterForm.tsx
-=======
 
 }
 
@@ -572,4 +552,3 @@ pr-12243
           We respect your privacy. Unsubscribe at any time.
       </form>
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/EnhancedNewsletterForm.tsx

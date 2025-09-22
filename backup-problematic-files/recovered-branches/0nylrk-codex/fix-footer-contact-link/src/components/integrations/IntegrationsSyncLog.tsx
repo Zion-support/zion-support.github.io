@@ -51,11 +51,9 @@ switch (status) {;
       case "success":return <Badge className="bg-green-500">Success</Badge>,;
       case "error":;
         return <Badge variant="destructive">Error</Badge>,;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       case "warning":;
         return <Badge className="bg-amber-500">Warning</Badge>,;
       default:;
         return <Badge variant="outline">Unknown</Badge>;
-<<<<<<< HEAD
 
 }

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -22,18 +17,7 @@ class GitWorkflow {}
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {'
       console.error('Error writing to log file: ', error.message);
-=======
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             }).trim(),
 ,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
@@ -81,7 +65,6 @@ class GitWorkflow {}
         erro: r: error.message,;
         branche: s: [];
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   },;
 ,;
@@ -225,8 +208,6 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 }
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   }
 
   async checkGitStatus() {}
@@ -245,13 +226,8 @@ const { execSync } = require('child_process');
         encoding: 'utf8'
       }).trim();
 
-<<<<<<< HEAD
 gitWorkflow.run().catch(error = > {; process.exit(1)});
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         success: true,
         hasChanges: status.trim().length > 0,'
         changes: status.trim().split('\n').filter(line => line.trim()),'
@@ -279,15 +255,12 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});
       }).trim().split('\n');
       const branchInfo = [];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       for (const branch of branches) {
         const branchName = branch.replace('origin/', '').trim();
         if (branchName && !branchName.includes('HEAD')) {
           try {
             const lastCommit = execSync(`git log -1 --format="%H %s %an %ad" origin/${branchName}`, {
               cwd: this.projectRoot,
-=======
       for (const branch of branches) {'
         const branchName = branch.replace('origin/', '').trim();'
         if (branchName && !branchName.includes('HEAD')) {}
@@ -298,7 +271,6 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});
             }).trim();`
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {}
               cwd: this.projectRoot,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               encoding: 'utf8'
             }).trim();
             branchInfo.push({}
@@ -312,7 +284,6 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});
           }
         }
       }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
       return {}
         success: true,
@@ -339,8 +310,6 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});
         .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
         .map(line => line.trim().split(/\s+/)[1]);
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         success: true,
         hasConflicts: conflictFiles.length > 0,
         conflictFiles: conflictFiles;
@@ -545,19 +514,7 @@ if (require.main === module) {}
 }
 
 module.exports = GitWorkflow;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 class GitWorkflow {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json'); this.startTime = Date.now()};
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
@@ -609,12 +566,6 @@ class GitWorkflow {; constructor() {; this.projectRoot = process.cwd(); this.log
 // Run the git workflow monitor;
 const gitWorkflow = new GitWorkflow();
 gitWorkflow.run().catch(error = > {; process.exit(1)});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 `;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

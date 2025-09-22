@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader", ;
 import { Footer } from "@/components/Footer",;
@@ -53,12 +52,10 @@ function ClientDashboardContent() {;
           </div>;
           <div className={`flex gap-2 ${isMobile ? 'flex-col' :''}`}>;
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' :''}>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <Link to="/hiring-tracker">;
                 <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline;
               </Link>;
             </Button>;
-<<<<<<< HEAD
 
               <Link to="/post-job">;
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 " " " " " " " " " """";";'"'"
 const ProductSubmissionForm.js = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const ProductSubmissionForm.js = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

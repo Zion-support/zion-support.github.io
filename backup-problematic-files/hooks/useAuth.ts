@@ -8,7 +8,6 @@ interface User {
   name: string;
 }
 export const useAuth = () => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export const useAuth = () => {;
   const [user, setUser] = useState<User | null>(null);
@@ -17,9 +16,7 @@ const [loading, setLoading] = useState(true);
     // Simulate auth check
     setLoading(false);
   }, []);
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {

@@ -1,15 +1,9 @@
 :pages_backup/api/sync/metrics.ts
-<<<<<<< HEAD:pages_backup/api/sync/metrics.ts
-<<<<<<< HEAD:pages/api/sync/metrics.ts
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/metrics.ts
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 ;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
@@ -46,12 +40,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 ursor/fix-website-loading-errors-and-merge-6662
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/metrics.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 import type { NextApiRequest, NextApiResponse } from "next",;
-=======
 import type { NextApiRequest, NextApiResponse } from "next",;"
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 ;
@@ -85,7 +76,6 @@ export default function handler() { return null; }
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";"
 import type { NextApiRequest, NextApiResponse } from "next",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/metrics.ts
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
@@ -122,8 +112,6 @@ import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, filterEventsByScope } from "../../../utils/sync/storage"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 :pages_backup/api/sync/metrics.ts
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/sync/metrics.ts
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   const events = filterEventsByScope(state.events, state.config.scope)
@@ -132,7 +120,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   let globalVotes = 0
 :pages_backup/api/sync/metrics.ts
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/metrics.ts
   for (const e of events) {
     if (e.type === "token_transfer") {
       const p = e.payload as any
@@ -149,8 +136,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/api/sync/metrics.ts
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/metrics.ts
     }
   }
   const topContributors = Object.entries(contributionsBySubject)
@@ -164,7 +149,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 
-<<<<<<< HEAD:pages/api/sync/metrics.ts
     lastSyncedAt: state.lastSyncedAt})
       const p = e.payload as any
     treasuryTotals: totalsByToken
@@ -241,16 +225,12 @@ export default function handler(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 :pages_backup/api/sync/metrics.ts
-<<<<<<< HEAD:pages_backup/api/sync/metrics.ts
 
       const p = e.payload as any
 
-<<<<<<< HEAD
 
       const p = e.payload as any
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/metrics.ts
-=======
 
 }
 }
@@ -259,7 +239,6 @@ export default function handler(req, res) {}
 
       const p = e.payload as any
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/metrics.ts
   const topContributors = Object.entries(contributionsBySubject)
     .map(([subjectId, score]) => ({ subjectId, score }))
     .sort((a, b) => b.score - a.score)
@@ -280,13 +259,5 @@ treasuryTotals: totalsByToken,
     lastSyncedAt: state.lastSyncedAt})
 :pages_backup/api/sync/metrics.ts
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/sync/metrics.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/metrics.ts

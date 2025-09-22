@@ -1,32 +1,23 @@
-<<<<<<< HEAD
 import { ApplicationStatus } from "@/types/jobs";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";
 import { cn } from "@/lib/utils";
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress",
-=======
 import { ApplicationStatus } from "@/types/jobs",;
 import { Progress } from "@/components/ui/progress",;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";
 import { cn } from "@/lib/utils";
 interface ApplicationProgressProps {
-=======
 
 import { ApplicationStatus } from "@/types/jobs","
 import { Progress } from "@/components/ui/progress",";
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";"
 import { cn } from "@/lib/utils";
 interface ApplicationProgressProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   status: ApplicationStatus;
 className?: string;
 }
@@ -35,53 +26,35 @@ export function ApplicationProgress({
   className
 }: ApplicationProgressProps) {
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { cn } from "@/lib/utils",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
 }
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Define the progress value based on status
-=======
 
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",;
 import { cn } from "@/lib/utils",  // Define the progress value based on status
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   const getProgressValue = () => {
     switch (status) {
 
     }
 
-=======
 
   const getProgressValue = () => {
     switch (status) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { cn } from "@/lib/utils",  // Define the progress value based on status
 
   const getProgressValue = () => {
     switch (status) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function ApplicationProgress(): any ({;
   status,;
   className,;
 }: ApplicationProgressProps) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Define the progress value based on status;
 const getProgressValue = () => {;
     switch (status) {;
@@ -138,9 +111,6 @@ function ApplicationProgress() {}
   const getProgressValue = () =>: any {}
     switch (status) {"
       case "new":;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         return 20;
       case "viewed":;
         return 40;"
@@ -150,7 +120,6 @@ function ApplicationProgress() {}
         return 80;"
       case "hired":;
         return 100;"
-=======
         return 20;
       case "viewed":;
         return 40;
@@ -160,7 +129,6 @@ function ApplicationProgress() {}
         return 80;
       case "hired":;
         return 100;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       case "rejected":;
         return 100;
       default:;
@@ -178,29 +146,18 @@ return 20;
         return 100;
       default:
         return 0;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     }
   }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       case "new": return 20,
       case "viewed": return 40,
       case "shortlisted": return 60,
       case "interview": return 80,
       case "hired": return 100,
       case "rejected": return 100,
-<<<<<<< HEAD
       default: return 0
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     }
-=======
 "
       case "new": return 20,"
       case "viewed": return 40,"
@@ -209,13 +166,10 @@ return 20;
       case "hired": return 100,"
       case "rejected": return 100,
       default: return 0;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       default: return 0
 
     }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
 
   const progressValue = getProgressValue(),
@@ -223,22 +177,10 @@ return 20;
 return ("
     <div className={cn("w-full space-y-2", className)}>"
       <Progress value={progressValue} className="h-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="flex justify-between text-xs text-muted-foreground">
-=======
       default: return 0      <div className="flex justify-between text-xs text-muted-foreground">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       default: return 0      <div className="flex justify-between text-xs text-muted-foreground">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 }
   }
   const progressValue = getProgressValue();
@@ -248,22 +190,18 @@ return ("
   },
 
   const progressValue = getProgressValue(),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
 
       <div className="flex justify-between text-xs text-muted-foreground">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
-=======
 
 "
       <div className="flex justify-between text-xs text-muted-foreground">"
         <div className="flex flex-col items-center">"
           <StatusIcon status={status} current="new" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <span className="mt-1">Submitted</span>
         </div>"
         <div className="flex flex-col items-center">"
@@ -286,13 +224,9 @@ return ("
     </div>
 );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   )
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function StatusIcon({
   status
   current
@@ -434,7 +368,6 @@ return <Circle className="h-4 w-4 text-muted-foreground/50" />;
 import { ApplicationStatus } from "@/types/jobs",;
 import { Progress } from "@/components/ui/progress",;
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",;
-=======
 
   )
 }
@@ -452,7 +385,6 @@ import { CheckCircle2, Circle, CircleDot } from "lucide-react",;
 import { ApplicationStatus } from "@/types/jobs",;"
 import { Progress } from "@/components/ui/progress",;"
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from "@/lib/utils",;
 interface ApplicationProgressProps {;
   status: ApplicationStatus,;
@@ -544,30 +476,17 @@ const statusRank: Record<ApplicationStatus, number> = {;    new: 1,;
 rejected: 5,
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
     rejected: 5,
 };
 
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     }
   }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 
@@ -580,7 +499,6 @@ rejected: 5,
   } else {;
     // This step is upcoming;"
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
-<<<<<<< HEAD
   }
 
 ;
@@ -630,7 +548,6 @@ function StatusIcon() {}
   const current_rank = status_rank[current];
   const statusRank_ = status_rank[status];
 ;
-<<<<<<< HEAD
   // Check condition;
 if ( {) {}
   $2;
@@ -648,15 +565,7 @@ if ( {) {}
     return <Circle className="h - 4 w - 4 text - muted - foreground / 50" />;
   }
 
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 if ( {) {
   $2
 }
@@ -674,7 +583,6 @@ if ( {) {
   }
 
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 }
@@ -734,7 +642,6 @@ return (<div className= {"
   status 
 }current="interview" /> <span className="mt-1" >Interview</span> </div> <div className="flex flex-col items-center" > <StatusIcon status= {
   status 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }current="hired" /> <span className="mt-1" >Decision</span> 
 }
 }
@@ -742,17 +649,9 @@ return (<div className= {"
 }
 ;
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }className="h-2" /> <div className="flex justify-between text-xs text-muted-foreground" > <div className="flex flex-col items-center" > <StatusIcon status= {"
 }current="new" /> <span className="mt-1" >Submitted</span> </div> <div className="flex flex-col items-center" > <StatusIcon status= {"
   status;"
@@ -762,4 +661,3 @@ return (<div className= {"
 }current="hired" /> <span className="mt-1" >Decision</span>""
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

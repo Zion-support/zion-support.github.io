@@ -1,8 +1,6 @@
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import OpenAI from 'openai',;
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
@@ -30,12 +28,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
 return res.status(405).json({ error: 'Method Not Allowed' })
   }
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
-=======
 function isRateLimited(ip: string): boolean {}
   const now = Date.now(),
   const bucket = ipToRequests[ip] || { timestamps: [] },
@@ -53,7 +45,6 @@ export default async function handler() { return null; }
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP);
@@ -64,8 +55,6 @@ function isRateLimited(ip: string): boolean {}
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
 // Drop old timestamps
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -79,7 +68,6 @@ export default async function handler() { return null; }
 const authHeader = req.headers.authorization || ''
   const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return res.status(401).json({ error: 'Unauthorized' })
   }
   // Rate limit
@@ -109,7 +97,6 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.'
 
 const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.',
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.',
 
@@ -154,8 +141,6 @@ export default async function handler(req, res) {
 }
 ;
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini'
       temperature: typeof temperature === 'number' ? temperature : 0.7
@@ -168,7 +153,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ text });
 
 }
-=======
     return res.status(405).json({ error: 'Method not allowed' });
   }
   try {
@@ -189,7 +173,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Internal Server Error' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 };'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

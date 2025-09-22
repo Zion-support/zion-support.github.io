@@ -1,6 +1,4 @@
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -32,7 +30,6 @@ import {
   CheckCircle,
   Star,;
 } from 'lucide-react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import React from 'react',;
@@ -45,9 +42,6 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -74,8 +68,6 @@ class ErrorBoundary extends React.Component {}
 import React from 'react';
 :pages_backup/ai-business-intelligence.tsx
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
@@ -166,9 +158,6 @@ export default function AIBusinessIntelligencePage() {
       <EnhancedNavigation />
 
 :pages_backup/ai-business-intelligence.tsx
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function AIBusinessIntelligencePage() {
 
   const features = [
@@ -286,9 +275,6 @@ industry: 'Retail & E-commerce',
     {
       industry: 'Manufacturing',
       description:
-<<<<<<< HEAD:pages/ai-business-intelligence.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'Predictive maintenance, quality control, and supply chain optimization'
       results: '45% reduction in downtime, 35% improvement in product quality'
     },  ];
@@ -303,7 +289,6 @@ industry: 'Retail & E-commerce',
       description: "Monitor key performance indicators in real-time with customizable, interactive dashboards.",
       color: "from-blue-500 to-cyan-500"
     },
-<<<<<<< HEAD
         'Predictive maintenance, quality control, and supply chain optimization',
       results: '45% reduction in downtime, 35% improvement in product quality',
     },
@@ -324,8 +309,6 @@ plan: 'Starter',
       ]
       popular: false
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       icon: TrendingUp,
       title: "Performance Optimization",
@@ -469,10 +452,8 @@ const AIBusinessIntelligence: React.FC = () => {}
     },
 
   ];
-=======
   ];
 :pages/ai-business-intelligence.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   return (
       <EnhancedNavigation />;
@@ -485,13 +466,9 @@ const AIBusinessIntelligence: React.FC = () => {}
             transition={{ duration: 0 && 0.6 }}'
             className='text-center'>;'
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
-<<<<<<< HEAD:pages_backup/ai-business-intelligence.tsx
               AI-Powered;
               <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
   return (
     <Layout>
       <Head>
@@ -533,15 +510,8 @@ className='text-center'
               AI-Powered
               <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD:pages/ai-business-intelligence.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
                 {' '}
                 Business Intelligence;
               </span>;
@@ -556,11 +526,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/ai-business-intelligence.tsx
               <a
                 href='/contact'
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/ai-business-intelligence.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
                 className='bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'>;
                 Get Started Today;
               </a>;
@@ -568,9 +533,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='#demo'
 
 :pages_backup/ai-business-intelligence.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
                 className='bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'
               >
                 Get Started Today
@@ -593,41 +555,27 @@ href='#demo'
             transition={{ duration: 0.6 }}
 className='text-center mb-16'
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD:pages/ai-business-intelligence.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered"
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
                 {" "}Business Intelligence
-=======
 "
                 {" "}Business Intelligence;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
               </span>
             </h1>"
             <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               with machine learning-powered analytics.
             </p>
-=======
               Transform raw data into actionable insights with our advanced AI platform. 
 Make data-driven decisions, predict future trends, and optimize every aspect of your business
               Transform raw data into actionable insights with our advanced AI platform.
               Make data-driven decisions, predict future trends, and optimize every aspect of your business
               with machine learning-powered analytics.
             </p>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
                 href="/contact""
@@ -635,21 +583,14 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
               >
 :pages_backup/ai-business-intelligence.tsx
                 Get Started Today
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 </a>
               </Link>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
               <a
                 href="#demo"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Watch Demo
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
 </a>
             </div>
           </motion.div>
@@ -664,22 +605,16 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
         </div>;
 
 :pages_backup/ai-business-intelligence.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                 Get Started Today;
               <a"
                 href="#demo""
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Watch Demo;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
-=======
       </section>
 
       {/* Features */}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
       {/* Features */}
 
             transition={{ duration: 0 && 0.6 }}'
@@ -699,22 +634,17 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
               <motion&& motion.div;
                 key={feature && feature.title}
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
       {/* Benefits */}
 
 :pages_backup/ai-business-intelligence.tsx
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Benefits */}
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-=======
       {/* Benefits */}
 
                 initial={{ opacity: 0, y: 20 }}
@@ -745,10 +675,6 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 :pages_backup/ai-business-intelligence.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
             <ul className="text-sm text-gray-500 space-y-2">
               <li>• Sales forecasting</li>
               <li>• Customer behavior prediction</li>
@@ -786,22 +712,14 @@ className='bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duratio
         <div className='max-w-7xl mx-auto px-6'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD:pages/ai-business-intelligence.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD:pages/ai-business-intelligence.tsx
-<<<<<<< HEAD
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose AI Business Intelligence?</h2>
-=======
 "
       <section className="py-20 bg-slate-50">"
         <div className="max-w-7xl mx-auto px-6">"
@@ -812,7 +730,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 0.6 }}
             >"
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose AI Business Intelligence?</h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
                 Our AI-powered platform delivers measurable results that directly impact your bottom line. 
                 From increased revenue to reduced costs, see the difference data-driven decisions can make.
@@ -945,23 +862,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 make.;
               </p>;
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
-=======
               <div className='space - y-4'>                {benefits.map ((benefit, index) => (
                   <motion.div;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
                     key={benefit}
                     initial={{ opacity: 0, coordinate_x: -20 }}
                     whileInView={{ opacity: 1, coordinate_x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8"
             >
@@ -980,12 +889,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="text-slate-600">Time Saved on Reporting</div>
                 </div>
 :pages_backup/ai-business-intelligence.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
 <h2 className='text-4xl font-bold text-slate-900 mb-6'>
                 Why Choose AI Business Intelligence?
               </h2>
@@ -1039,24 +944,14 @@ className='bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8'
                   <div className='text-slate-600'>Time Saved on Reporting</div>
                 </div>
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD:pages/ai-business-intelligence.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD:pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               </div>;
             </motion && motion.div>;
 
@@ -1094,21 +989,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/ai-business-intelligence.tsx
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Use Cases */}
       <section className='py-20 bg-white'>;
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
-=======
 
       {/* Use Cases */}'
       <section className='py-20 bg-white'>;'
@@ -1118,7 +1007,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             transition={{ duration: 0 && 0.6 }}'
             className='text-center mb-16'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
             <h2 className='text-4xl font-bold text-slate-900 mb-6'>;
               Industry Applications;
             </h2>;'
@@ -1133,8 +1021,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={useCase && useCase.industry}
 
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">{useCase.industry}</h3>
                 <p className="text-slate-600 mb-4 leading-relaxed">{useCase.description}</p>
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
@@ -1144,19 +1030,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             ))}
 :pages_backup/ai-business-intelligence.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               </div>;
             </motion.div>;
           </div>;
         </div>;
 </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
-=======
 
           </div>;
         </div>;
@@ -1164,7 +1044,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Pricing */}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
       {/* Pricing */}
 
             transition={{ duration: 0 && 0.6 }}'
@@ -1183,14 +1062,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={plan && plan.plan}
 
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
       {/* Use Cases */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
 <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>
           <motion.div
@@ -1255,19 +1127,12 @@ className='text-center mb-16'
               <motion.div
                 key={plan.plan}
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD:pages/ai-business-intelligence.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 className={`relative bg-white rounded-2xl p-8 ${
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD:pages/ai-business-intelligence.tsx
-<<<<<<< HEAD
 
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-slate-900 mb-2'>;
@@ -1298,10 +1163,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </a>;
               </motion && motion.div>;
 :pages_backup/ai-business-intelligence.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
                   plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
                 }`}
               >
@@ -1315,7 +1176,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>
                   <div className="text-4xl font-bold text-slate-900 mb-2">
 :pages_backup/ai-business-intelligence.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>
                     Most Popular
                   </div>
@@ -1326,35 +1186,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </h3>
                   <div className='text-4xl font-bold text-slate-900 mb-2'>
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/ai-business-intelligence.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
                     {plan.price}
-=======
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}`
                 className={`relative bg-white rounded-2xl p-8 ${}
                     {plan.price}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
                     <span className="text-lg text-slate-600">{plan.period}</span>
                   </div>"
                   <p className="text-slate-600">{plan.description}</p>
                 </div>
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD:pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD:pages/ai-business-intelligence.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                   ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map(feature => (
                     <li key={feature} className='flex items-center space-x-3'>
@@ -1363,17 +1208,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </li>
 origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </section>
       {/* Features */  } catch (error) {
     console.error("Error:", error);
-=======
 
                   ))}
 
       {/* Use Cases */  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
@@ -1544,7 +1386,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center space-x-3">
@@ -1552,11 +1393,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className="text-slate-700">{feature}</span>
                     </li>
 :pages_backup/ai-business-intelligence.tsx
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
-=======
                   ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
       {/* Use Cases */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1583,10 +1421,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className="text-center mb-16";
           >;
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Industry Applications</h2>;
-=======
           >;"
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Industry Applications</h2>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">;
               See how businesses across different industries are leveraging AI to transform their operations.;
             </p>;
@@ -1725,17 +1561,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
                 </ul>
 
                 <a;
@@ -1747,7 +1573,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Get Started
 
               </motion.div>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 href='/contact'
                   className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1755,20 +1580,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Get Started
                 </a>
               </motion.div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
           </div>
         </div>
       </section>
       {/* CTA */}
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
         <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div
 <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
         <div className='max-w-4xl mx-auto px-6 text-center'>
           <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -1778,18 +1600,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
-=======
                   Get Started;
                 </a>
               </motion.div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
-=======
 
             ))}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
           </div>;
         </div>;
       </section>;
@@ -1817,9 +1634,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/contact'
 
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD:pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -1837,11 +1651,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
 Schedule Demo
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
 <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
             </h2>
@@ -1865,25 +1675,14 @@ href='/contact'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Schedule Demo
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 Schedule Demo;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
             </div>
           </motion.div>
         </div>
       </section>
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD:pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD:pages/ai-business-intelligence.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
-=======
       <EnhancedFooter />
     </>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
 
 '
                 className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
@@ -1899,27 +1698,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
-=======
 }
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx
 
 }
 }
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
   )
 }
 
@@ -1976,28 +1763,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 
 :pages_backup/ai-business-intelligence.tsx
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
       <EnhancedFooter />
     </>
 );
 :pages_backup/ai-business-intelligence.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-business-intelligence.tsx
-=======
       <EnhancedFooter />
     </>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/ai-business-intelligence.tsx

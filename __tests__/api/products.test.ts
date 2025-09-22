@@ -19,8 +19,6 @@ describe('products', () => {
           "description_similarity": 0.85
         }
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const mockRawResults = [
         {
           id: 'product-gpt-high-score',
@@ -39,8 +37,6 @@ describe('products', () => {
         },
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ];
       // Note: The API sorts by GREATEST(name_similarity, description_similarity) DESC
       // So, product-gpt-high-score (0.9) should come first, then product-gpt-medium-score (0.85)
@@ -133,7 +129,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         },
       });
     });
->>>>>>> origin/main
   });
 "id"
 });
@@ -155,5 +150,3 @@ main
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/main

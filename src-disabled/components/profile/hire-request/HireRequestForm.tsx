@@ -35,7 +35,6 @@ pr-12325
 import { TimelineField } from "./TimelineField","
 import { BudgetFields } from "./BudgetFields","
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { TimelineField } from "./TimelineField",
 import { BudgetFields } from "./BudgetFields",
 
@@ -48,7 +47,6 @@ export interface HireRequestFormProps {
     name?: string,
     email?: string,
     id?: string
-=======
 export interface HireRequestFormProps {}
   talent: TalentProfile,
   onClose: () => void,
@@ -57,7 +55,6 @@ export interface HireRequestFormProps {}
     name?: string,;
     email?: string,;
     id?: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
   onSubmitSuccess?: () => void;
 }
@@ -111,11 +108,9 @@ export interface HireRequestFormProps {}
 }
 
 export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {;
-=======
 
 }
 export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }:,  HireRequestFormProps) {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ ;
     talent, ;
     onClose: onSubmitSuccess || onClose, ;
@@ -145,7 +140,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <DialogFooter className="pt-4">;
 <Button
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <ProjectDetailsField form={form} />
         <TimelineField form={form} />
         "
@@ -155,13 +149,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         "
         <DialogFooter className="pt-4">
 <Button 
-<<<<<<< HEAD
             type="button" 
-=======
           <Button;
 "
             type="button" "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             variant="outline" 
             onClick={onClose}"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -177,7 +168,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ) : (;'
               'Submit Request';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             Cancel;
           </Button>
@@ -188,19 +178,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
             {isSubmitting ? (
 <>
-<<<<<<< HEAD
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
 
-=======
 
 <Loader2 className='mr-2 h-4 w-4 animate-spin' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Submitting...
               </>
             ) : ('
               'Submit Request'
-<<<<<<< HEAD
 import React from "react",;
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",;
 import { Button } from "@/components/ui/button",;
@@ -223,7 +208,6 @@ export interface HireRequestFormProps {;
   },;
   onSubmitSuccess?: () => void;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {;
@@ -344,7 +328,6 @@ function HireRequestForm() {}
             type="button";
             variant="outline";
             on_click={on_close}
-<<<<<<< HEAD
             className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
             disabled={is_submitting}
         <DialogFooter className="pt-4">;
@@ -376,10 +359,7 @@ className="bg - zion - purple hover:bg - zion - purple - dark text-white";
       </form>;
     </Form>);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 
             type='submit';
@@ -411,4 +391,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               'Submit Request')}
     );
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

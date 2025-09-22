@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import _React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';
 const ThemeToggle.js = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const ThemeToggle.js = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

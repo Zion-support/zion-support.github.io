@@ -1,26 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 :pages/api-disabled/api/kyc/submit.ts
-<<<<<<< HEAD
 import type { KycProfile } from '../../../utils/kyc';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { validateKycSubmission } from '[^']*';
 import { getAmlProvider } from '[^']*';
 import fs from 'fs';
 import path from 'path';
 ;
-=======
 '
 import { validateKycSubmission } from '[^']*';'
 import { getAmlProvider } from '[^']*';'
 import fs from 'fs';'
 import path from 'path';
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/kyc/submit.ts
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 :pages/api/kyc/submit.ts
 
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'KYC submitted' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -47,15 +42,12 @@ function save(db: Record<string, KycProfile>) {
     return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };
   if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
 :pages/api/kyc/submit.ts
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 function save(db: Record<string, KycProfile>) {}
 '
   if (req && req.method !== 'POST')'
     return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };'
   if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/kyc/submit.ts
   const db = load();
   const profile = db[userId];
   if (!profile) return res && res.status($1).json({$2});
@@ -71,19 +63,12 @@ function save(db: Record<string, KycProfile>) {}
     .split(',')[0]
     .trim();
   if (ip) {
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Compute simple risk score
   let riskScore = 10; // base low risk
-=======
   // Compute simple risk score;
   let riskScore = 10; // base low risk;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/kyc/submit.ts
   if (flags && flags.has('aml_alert')) riskScore += 50;
   if (flags && flags.has('fraud_risk')) riskScore += 20;
-=======
 '
       ? 'clear''
       : amlResult && amlResult.status === 'match''
@@ -100,7 +85,6 @@ function save(db: Record<string, KycProfile>) {}
   let riskScore = 10; // base low risk'
   if (flags && flags.has('aml_alert')) riskScore += 50;'
   if (flags && flags.has('fraud_risk')) riskScore += 20;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/kyc/submit.ts
   if (flags && flags.has('duplicate_ip')) riskScore += 15;
   riskScore = Math && Math.min(100, riskScore);
   profile && profile.flags = Array && Array.from(flags);
@@ -109,7 +93,6 @@ function save(db: Record<string, KycProfile>) {}
   const now = new Date().toISOString();
 :pages/api/kyc/submit.ts
 
-<<<<<<< HEAD
   });
   db[userId] = profile;
   save(db);
@@ -122,9 +105,6 @@ function save(db: Record<string, KycProfile>) {}
 
 }
 :pages/api-disabled/api/kyc/submit.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/kyc/submit.ts
 
 '
 import type { KycProfile } from '../../../utils / kyc';'
@@ -247,18 +227,14 @@ if ( {) {
   const now = new Date ().toISOString ();
 :pages/api-disabled/api/kyc/submit.ts
   profile.lastUpdatedAt = now;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   profile.auditTrail.push({ at: now, by: userId, action: 'kyc_submitted', details: { aml: amlResult, ip } });
   db[userId] = profile;
   save(db);
   res.status(200).json({ ok: true, profile, aml: amlResult })
 }
 :pages/api-disabled/api/kyc/submit.ts
-<<<<<<< HEAD
 
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -280,10 +256,5 @@ res.status (200).json ({ ok: true, profile, aml: aml_result });
 }
 
 :pages/api-disabled/api/kyc/submit.ts
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/kyc/submit.ts

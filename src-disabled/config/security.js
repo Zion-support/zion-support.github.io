@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 // Security Configuration
 export const securityConfig = {
   // Content Security Policy
 
->>>>>>> pr-12243
   csp: {
     directives: {
 
@@ -77,7 +75,6 @@ upgradeInsecureRequests: []
   }
 };
 export default securityConfig;
-=======
 
 pr-12243
 // Security Configuration;
@@ -117,4 +114,3 @@ export const security_config = {
 export default securityConfig;
 "
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

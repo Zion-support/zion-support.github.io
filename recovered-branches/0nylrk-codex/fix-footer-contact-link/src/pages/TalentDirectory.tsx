@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,15 +21,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -45,10 +34,7 @@ import {X} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 export default function TalentDirectory() {;
-<<<<<<< HEAD
   const navigate = useNavigate();
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -61,8 +47,6 @@ import { X } from "lucide-react",
 
   // Use our custom hook to manage state;
   const {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 import React, { useState } from "react";"
 import {useNavigate} from "react-router-dom";"
@@ -77,15 +61,9 @@ import {Button} from "@/components/ui/button";"
 import {TalentProfile} from "@/types/talent";
 export default function TalentDirectory() { return null; }
   const {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     filteredTalents;
-=======
   const navigate = useNavigate();    filteredTalents;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const navigate = useNavigate();    filteredTalents;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const navigate = useNavigate();
 
   // Use our custom hook to manage state;
@@ -95,10 +73,8 @@ export default function TalentDirectory() { return null; }
   // Use our custom hook to manage state
   const {
     filteredTalents;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     isLoading;
     searchTerm;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { TalentProfile } from '@/types / talent';
 export default /**;
  * TalentDirectory - Function description;
@@ -111,7 +87,6 @@ function TalentDirectory() {}
     filtered_talents;
     is_loading;
     search_term;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     setSearchTerm;
     selected_skills;
     selected_availability;
@@ -129,28 +104,16 @@ function TalentDirectory() {}
     setIsHireModalOpen;
 selected_talent;
     setSelectedTalent;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 clearFilters}}
             />;
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const navigate = useNavigate();
   // Use our custom hook to manage state
   const {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     filteredTalents,
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     filteredTalents,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     isLoading,
     searchTerm,
     setSearchTerm,
@@ -179,16 +142,11 @@ selected_talent;
     toggleSection,
     handleToggleSave} = useTalentDirectory(),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent)
     setIsHireModalOpen(true)
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
 
   const viewProfile = (id: string) => {}
@@ -196,24 +154,12 @@ selected_talent;
     navigate(`/talent/${id}`)
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     selected_talent;
     setSelectedTalent;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     selected_talent;
     setSelectedTalent;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <AppLayout>"
       <div className="container mx-auto px-4 py-8">"
@@ -223,19 +169,11 @@ selected_talent;
             <p className="text-zion-slate-light">
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
             </p>
-<<<<<<< HEAD
           </div>
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Main content */}
-=======
 
           {/* Main content */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="flex flex-col lg:flex-row gap-6">;
             {/* Sidebar - Desktop */}"
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
@@ -329,15 +267,9 @@ export default function TalentDirectory() { return null; }
                 sort_option={sort_option}
                 setSortOption={setSortOption}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Mobile filter button */}
-=======
 
             {/* Mobile filter button */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="lg:hidden mb-4">
               <Button;
                 onClick={() => setIsMobileFilterOpen(true)}
@@ -366,30 +298,18 @@ export default function TalentDirectory() { return null; }
               </Button>;
             </div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Results */}
-=======
           </div>          {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">;
             {/* Sidebar - Desktop */}
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
               <FilterSidebar            {/* Results */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           </div>          {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">;
             {/* Sidebar - Desktop */}
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
               <FilterSidebar            {/* Results */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           </div>
 
           {/* Main content */}
@@ -547,7 +467,6 @@ export default function TalentDirectory() {;
             </div>;
 
             {/* Results */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <TalentResults;
               filtered_talents={filtered_talents}
               is_loading={is_loading}
@@ -569,14 +488,8 @@ export default function TalentDirectory() {;
                 price_range;
 
 setPriceRange;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 experience_range;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 isAuthenticated={isAuthenticated}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               activeFiltersProps={{;
                 selectedSkills,;
                 toggleSkill,;
@@ -586,7 +499,6 @@ isAuthenticated={isAuthenticated}
                 toggleRegion,;
                 priceRange,;
                 setPriceRange,;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 selectedSkills;
                 toggleSkill;
                 selectedAvailability;
@@ -595,7 +507,6 @@ isAuthenticated={isAuthenticated}
                 toggleRegion;
                 priceRange;
                 setPriceRange;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               activeFiltersProps={{;
                 selectedSkills,;
                 toggleSkill,;
@@ -606,8 +517,6 @@ isAuthenticated={isAuthenticated}
                 priceRange,;
                 setPriceRange,;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 experienceRange;
                 setExperienceRange;
 
@@ -624,10 +533,8 @@ isAuthenticated={isAuthenticated}
                 setPriceRange
                 experienceRange
                 setExperienceRange
-=======
                 experienceRange,;
                 setExperienceRange,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 clearFilters}}
             />;
             ;
@@ -742,7 +649,6 @@ isAuthenticated={isAuthenticated}
                   <FilterSidebar
                     searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
-<<<<<<< HEAD
                     selectedSkills={selectedSkills}
                     toggleSkill={toggleSkill}
                     selectedAvailability={selectedAvailability}
@@ -763,11 +669,7 @@ isAuthenticated={isAuthenticated}
                 </div>
               </div>
             )}
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     searchTerm={searchTerm}
-=======
-=======
                 experienceRange;
                 setExperienceRange;
                 clearFilters}}
@@ -813,7 +715,6 @@ isAuthenticated={isAuthenticated}
 
                     searchTerm={searchTerm}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 clear_filters}}
             />;
             {/* Mobile filter sidebar */}
@@ -840,18 +741,11 @@ isAuthenticated={isAuthenticated}
                   <FilterSidebar;
                     searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                     setSearchTerm={setSearchTerm}
                   <FilterSidebar
                     searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     selected_skills={selected_skills}
                     toggle_skill={toggle_skill}
                     selected_availability={selected_availability}
@@ -1037,16 +931,6 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
           </div>;
         </div>;
@@ -1057,10 +941,6 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
 ;
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                 experience_range;
               activeFiltersProps={{;
 
@@ -1129,4 +1009,3 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
 }/> </div> </div>) 
 }</div> </div> </div> ) "
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

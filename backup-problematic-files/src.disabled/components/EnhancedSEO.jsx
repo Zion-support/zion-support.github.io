@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import _React from';react'';"export": default function EnhancedSEO({' title = 'Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions',' description = 'Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions. Transform your business with cutting-edge technology services.',' keywords = 'AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation',canonical,' ogImage = '"https": ''';,;
 const EnhancedSEO = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const EnhancedSEO = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

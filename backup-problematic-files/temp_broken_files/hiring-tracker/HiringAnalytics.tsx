@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -75,7 +74,6 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
   ;
   if (!applications || applications.length === 0) {;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <Card className="text-center py-16">;
         <CardContent>;
           <h3 className="text-lg font-semibold mb-2">No data available</h3>;
@@ -84,7 +82,6 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
           </p>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
       {/* Status Distribution */}

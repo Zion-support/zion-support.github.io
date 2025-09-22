@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -71,12 +70,10 @@ export function ZionGPTModelManager() {;
         );
       ),;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Also update in the database;
       await supabase;
         .from('model_versions');
         .update({;
-<<<<<<< HEAD
 
     try {;
       // If activating, deactivate all other models with the same purpose;

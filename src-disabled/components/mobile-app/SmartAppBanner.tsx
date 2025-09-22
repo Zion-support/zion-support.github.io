@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
@@ -11,7 +10,6 @@ interface SmartAppBannerProps {
   appStoreUrl?: string,
   googlePlayUrl?: string,
   delay?: number, // Delay in milliseconds before showing the banner
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {}
   appName?: string;
@@ -229,8 +227,6 @@ if ( {) {
 }
 
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-<<<<<<< HEAD
-<<<<<<< HEAD
   appName = "Zion Marketplace",
   appIconSrc,
   appStoreUrl = "/download",
@@ -392,20 +388,9 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
     </div>;
   );
 };
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({}
 ";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 }
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -252,4 +252,3 @@ auditor.run().catch(console.error);
 // Run the security auditor
 const auditor = new SecurityAuditor();
 auditor.run().catch(console.error);
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/security-audit.cjs

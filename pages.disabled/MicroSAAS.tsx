@@ -1,7 +1,4 @@
 :pages/MicroSAAS.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Layout from '../components/Layout';
 
@@ -15,7 +12,6 @@ import Layout from '../components/Layout';
             </p>
           </div>"
           <div className="text-center">"
-=======
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -82,26 +78,21 @@ export default function MicroSAAS() {
             </p>
           </div>
           <div className="text-center">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/MicroSAAS.tsx
             <p className="text-gray-600">Micro SaaS page is under construction.</p>
           </div>
         </div>
       </div>
     </Layout>
 :pages/MicroSAAS.tsx
-<<<<<<< HEAD
-=======
   );
 import React from 'react';
 import Head from 'next/head';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/MicroSAAS.tsx
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
 import { 
-=======
 
 import React from 'react';'
 import Head from 'next/head';'
@@ -109,7 +100,6 @@ import Link from 'next/link';'
 import { motion } from 'framer-motion';'
 import MainLayout from '../src/components/layout/MainLayout';
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Video, 
   Palette, 
   QrCode, 
@@ -333,9 +323,6 @@ export default function MicroSAASPage() {}
   );
 }
 :pages/MicroSAAS.tsx
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
@@ -352,8 +339,4 @@ export default function MicroSAASPage() {}
       </div>
     </Layout>
 :pages/MicroSAAS.tsx
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/MicroSAAS.tsx

@@ -1,10 +1,5 @@
 :src/components/QuoteRequestForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm.tsx
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
 import {useToast} from "@/hooks/use-toast"
@@ -26,15 +21,12 @@ export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | 
 const serviceStepSchema = z.object({
 
 :src/components/QuoteRequestForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
 
 :src/components/QuoteRequestForm.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm.tsx
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -49,8 +41,6 @@ const serviceStepSchema = z.object({
       type: "fixed"
 
 :src/components/QuoteRequestForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 const serviceStepSchema = z.object({
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
@@ -436,11 +426,9 @@ export function QuoteRequestForm() {
   );
 }
     },
-=======
 
     },
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm.tsx
     contactInfo: {
       name: ""
       email: ""
@@ -449,7 +437,6 @@ export function QuoteRequestForm() {
     }
 
 :src/components/QuoteRequestForm.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   )
 }
 
@@ -511,13 +498,7 @@ function QuoteRequestForm() {
   );
 }
 :src/components/QuoteRequestForm.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm.tsx

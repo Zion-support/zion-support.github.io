@@ -48,11 +48,9 @@ if (reviews.length > 0) {;
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
-=======
   return ("
     <div className="space-y-6">"
       <div className="flex flex-col md:flex-row gap-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ProfileRatings.tsx
         <div className="md:w-1/3">
           <ReviewStats;
             averageRating={averageRating}
@@ -109,7 +107,6 @@ ratingDistribution={ratingDistribution}
   );
 }
 ;
-=======
 
     </div>);
 }, [reviews]);"
@@ -141,4 +138,3 @@ ratingDistribution={ratingDistribution}
 }"}
 }
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/profile/ProfileRatings.tsx

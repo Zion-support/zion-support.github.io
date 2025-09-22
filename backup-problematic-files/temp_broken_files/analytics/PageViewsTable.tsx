@@ -1,5 +1,4 @@
 
-=======
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -25,13 +24,11 @@ export function PageViewsTable() {;
     queryFn:async () => {;
       const { days } = timeRangeToInterval[timeRange],;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Get top pages by views;
       const { data, error } = await supabase;
         .from('analytics_events');
         .select('path, count');
         .eq('event_typepage_view');
-<<<<<<< HEAD
 
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader className="pb-2">;

@@ -78,7 +78,6 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
 import { use_auth } from '@/hooks / use_auth';
 import { use_points } from '@/hooks / use_points';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth',;
 import { usePoints } from '@/hooks/usePoints',;
@@ -107,7 +106,6 @@ export default function PointsPage() {;
     } finally {;
       setRedeeming(false);
 :temp_exclude/hooks.disabled/Points.tsx
-<<<<<<< HEAD
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title })
       });
@@ -115,14 +113,12 @@ export default function PointsPage() {;
     } finally {}
       setRedeeming(false)
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   }
 
 :temp_exclude/hooks.disabled/Points.tsx
   const earningOpportunities = [
     {
-<<<<<<< HEAD
       icon: <Users className='h - 5 w - 5' />,
 '
       title: 'Sign Up & Profile Setup','
@@ -176,7 +172,6 @@ export default function PointsPage() {;
       action: 'Share Referral Link',
 
 :temp_exclude/hooks.disabled/Points.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       icon: <Users className="h-5 w-5" />,
       title: "Sign Up & Profile Setup",
       description: "Complete your profile and verify your email",
@@ -249,7 +244,6 @@ export default function PointsPage() {;
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
   ];
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   if (!isAuthenticated) {}
     return (
@@ -280,9 +274,7 @@ export default function PointsPage() {;
                 </CardDescription>
               </CardHeader>
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Points.tsx
               <CardContent className="space-y-4">
                 {earningOpportunities.map((opportunity, index) => ("
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
@@ -382,9 +374,7 @@ export default function PointsPage() {;
             </CardDescription>
           </CardHeader>
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Points.tsx
           <CardContent className="space-y-4">
             {earningOpportunities.map((opportunity, index) => ("
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
@@ -419,9 +409,7 @@ export default function PointsPage() {;
             </CardDescription>
           </CardHeader>
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Points.tsx
           <CardContent className="space-y-4">
             {upcomingRewards.map((reward) => ("
               <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
@@ -434,14 +422,12 @@ export default function PointsPage() {;
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
-=======
                 </div>"
                 <div className="text-right space-y-1">"
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
 "
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Points.tsx
                       {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
                   ) : (
@@ -466,9 +452,7 @@ export default function PointsPage() {;
         <CardContent>
           {ledger.length === 0 ? (
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Points.tsx
             <p className="text-center py-8 text-muted-foreground">No points activity yet.</p>
           ) : ("
             <ScrollArea className="h-64">"
@@ -485,9 +469,7 @@ export default function PointsPage() {;
                       variant="outline"
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
                     >;
-=======
                     >;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Points.tsx
                       {entry.delta >= 0 ? '+' : ''}
                       {entry.delta} pts;
                     </Badge>;
@@ -513,12 +495,10 @@ export default function PointsPage() {;
             </Button>
 
             <Button variant="outline" asChild>
-=======
 "
             <Button variant="outline" asChild>
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Points.tsx
               <Link href="/community">Join Community</Link>
             </Button>
           </div>
@@ -528,6 +508,4 @@ export default function PointsPage() {;
 )
 }
 ;
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Points.tsx

@@ -36,7 +36,6 @@ try {}
             };);
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             this.log(`Found ${vulnerabilities} security vulnerabilities`);
             return {;}
                 "status": 'success',
@@ -49,7 +48,6 @@ try {}
     };
     scanForSecrets() {}
         this.log('Scanning for exposed secrets...');
-<<<<<<< HEAD
         const secretPatterns = [{ "name": 'API Keys', "pattern": /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi },
             { "name": 'Passwords', "pattern": /password\s*[:=]\s*['"][^'"]+['"]/gi },
             { "name": 'Secrets', "pattern": /secret\s*[:=]\s*['"][^'"]+['"]/gi },
@@ -71,14 +69,12 @@ const files = this.findSourceFiles(;);
 try {}
                 const content = fs.readFileSync(file, 'utf8';);
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 for (const secretType of secretPatterns) {}
                     const matches = content.match(secretType.pattern;);
                     if ( {})
                         foundSecrets.push({})
 
         const files = [];
-<<<<<<< HEAD
 
         const scanDirectory = (dir) => {}
             if () retu) {}
@@ -158,7 +154,6 @@ const totalDeps = Object.keys(dependencies).lengt;h;
             this.log(`Analyzing ${totalDeps} dependencies`);
             // Check for known vulnerable packages;
             const vulnerablePackages = this.checkForVulnerablePackages(dependencies;);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             return {;}
                 "status": 'success',
                 "totalDependencies": totalDeps,
@@ -174,7 +169,6 @@ const totalDeps = Object.keys(dependencies).lengt;h;
             'jquery@1.12.0',
             'moment@2.24.0'
         ];
-<<<<<<< HEAD
 
         const vulnerable = [];
         for (const [name, version] of Object.entries(dependencies)) {}
@@ -282,10 +276,6 @@ return report};
     const scanner = new SecurityScanner) {}
     const scanner = new SecurityScanner}(;);
     scanner.run().catch(console.error)};
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 module.exports = SecurityScanner;
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { useNavigate } from "react-router-dom",;
 import { ChevronLeft, Bell, Settings } from "lucide-react",;
@@ -30,12 +29,10 @@ export function MobileHeader({;
     <header className={cn(;
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",;
       className;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     )}>;
       <div className="flex items-center justify-between h-14 px-4">;
         <div className="flex items-center">;
           {showBack && (;
-<<<<<<< HEAD
 
               onClick={() => navigate(-1)}
             >;

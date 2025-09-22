@@ -59,7 +59,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
 :pages_backup/api/sync/talent-mobility.ts
-<<<<<<< HEAD
   if (sig) headers["x-zion-signature"] = sig;
 
   await Promise.all(
@@ -67,7 +66,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       .filter((p) => !p.paused)
       .map(async (peer) => {
 :pages_backup/api/sync/talent-mobility.ts
-<<<<<<< HEAD
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
 if (sig) headers['x-zion-signature'] = sig;
 
@@ -83,15 +81,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       })
 :pages_backup/api/sync/talent-mobility.ts
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {}
       })
 :pages_backup/api/sync/talent-mobility.ts
-<<<<<<< HEAD
   );
 
 return res
@@ -198,10 +192,8 @@ export default async function handler(req, res) {
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };
 
-=======
 pr-12243
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/sync/talent-mobility.ts

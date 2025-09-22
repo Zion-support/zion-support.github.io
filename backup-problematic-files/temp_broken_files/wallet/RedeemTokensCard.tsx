@@ -1,12 +1,10 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/RedeemTokensCard.tsx
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Gift, ArrowRight, ExternalLink } from "lucide-react",;
 import { Gift, ArrowRight, ExternalLink } from 'lucide-react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/wallet/RedeemTokensCard.tsx
 import {;
   Dialog,;
   DialogContent,;
@@ -53,7 +51,6 @@ export function RedeemTokensCard() {;
     await spendTokens(option.cost, `Redeemed: ${option.title;}`),;
     setOpen(false),;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card>;
 
       <CardHeader>;
@@ -79,7 +76,6 @@ Exchange your tokens for these rewards. You currently have {wallet?.balance || 0
               </DialogDescription>;
             </DialogHeader>;
             <div className="space-y-4 py-4">;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/RedeemTokensCard.tsx
                       onClick={() => handleRedeem(option)}
                     >;"
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />;"
@@ -111,7 +107,6 @@ DialogHeader;
 DialogTitle;
 type RewardOption = {;
   id: string;
-<<<<<<< HEAD
 title: string;
 description: string;
 cost: number;';
@@ -157,7 +152,6 @@ type: 'feature' ;
   id: 'platform-credit';';
 title: '$5 Platform Credit';',
   description: 'Get $5 credit to use on any paid service';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 cost: 100;';
 type: 'credit' ;
 }];
@@ -192,5 +186,3 @@ setOpen (false) ;
 }</div> </Button> </div> </DialogContent> </Dialog> </CardContent> </Card>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/wallet/RedeemTokensCard.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/wallet/RedeemTokensCard.tsx

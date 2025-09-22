@@ -1,7 +1,4 @@
 :src_backup/components/projects/milestones/AddMilestoneForm.tsx
-<<<<<<< HEAD:src/components/projects/milestones/AddMilestoneForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -18,7 +15,6 @@ import { Calendar } from '@/components/ui/calendar',;
         description: milestone.description,
         due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
-=======
 // If there are multiple milestones, submit them one by one;
     milestones.forEach(milestone => {}
       onSubmit({}
@@ -26,7 +22,6 @@ import { Calendar } from '@/components/ui/calendar',;
         description: milestone.description;
         due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/milestones/AddMilestoneForm.tsx
       })
     })
 // If there are multiple milestones, submit them one by one;
@@ -58,7 +53,6 @@ import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from 'zod';
 import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date - fns';
 import { Button } from '@/components / ui / button';
-=======
   const handleAddMilestone = (milestone: GeneratedMilestone) => {}
     onSubmit({}
       title: milestone.title;
@@ -74,7 +68,6 @@ import { zod_resolver } from '@hookform / resolvers / zod';'
 import { z } from 'zod';'
 import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date - fns';'
 import { Button } from '@/components / ui / button';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/milestones/AddMilestoneForm.tsx
 import { Calendar } from '@/components / ui / calendar';
 import {};
   Form;
@@ -88,7 +81,6 @@ import { Textarea } from '@/components / ui / textarea';
   Popover;
 :src_backup/components/projects/milestones/AddMilestoneForm.tsx
   PopoverContent;
-<<<<<<< HEAD
   PopoverTrigger} from '@/components / ui / popover'; import { AIMilestoneGenerator } from './AIMilestoneGenerator';
 import { GeneratedMilestone } from '@/hooks / useMilestoneGenerator';
 const form_schema = z.object ({
@@ -199,7 +191,6 @@ import { z } from 'zod';'
 import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date-fns';'
 import { Button } from '@/components/ui/button';'
 import { Calendar } from '@/components/ui/calendar';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {;
 :src/components/projects/milestones/AddMilestoneForm.tsx
 Form;
@@ -280,7 +271,6 @@ export function AddMilestoneForm(): any ({;
 :src/components/projects/milestones/AddMilestoneForm.tsx
 },
 
-<<<<<<< HEAD
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
       title: milestone.title,
@@ -302,14 +292,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <div className="space-y-6">
       {/* AI Milestone Generator */}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
 
   return ("
     <div className="space-y-6">
       {/* AI Milestone Generator */}
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
 
   return (
@@ -317,7 +305,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* AI Milestone Generator */}
 :src_backup/components/projects/milestones/AddMilestoneForm.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
 
   return (
@@ -357,11 +344,9 @@ pr-12325
           <FormField
 :src_backup/components/projects/milestones/AddMilestoneForm.tsx
             control = {form && form.control,}
-=======
             control={form.control}
             name="title""
             control = {form && form.control,}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/projects/milestones/AddMilestoneForm.tsx
             name="title"
 render={({ field }: { field: any }) => (
               <FormItem>
@@ -443,9 +428,7 @@ pr-12325
             render={({ field }: { field: any }) => (
 :src_backup/components/projects/milestones/AddMilestoneForm.tsx
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <FormItem>
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
@@ -466,7 +449,6 @@ pr-12325
                   <Textarea;
                     placeholder="Describe what needs to be delivered";
 className="min-h-[100px]";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {...field}
                   />;
                 </FormControl>;
@@ -478,8 +460,6 @@ className="min-h-[100px]";
 
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
-<<<<<<< HEAD:src/components/projects/milestones/AddMilestoneForm.tsx
-<<<<<<< HEAD
               control = {form && form.control,}
               name="due_date"
               render={({ field }: { field: any },) => (;
@@ -496,10 +476,8 @@ className="min-h-[100px]";
                     <PopoverTrigger asChild>
                       <FormControl>
 :src_backup/components/projects/milestones/AddMilestoneForm.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/projects/milestones/AddMilestoneForm.tsx
 
                         <Button
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           variant="outline"
                           className="w-full pl-3 text-left font-normal"
                         >
@@ -518,11 +496,6 @@ className="min-h-[100px]";
                       <Calendar"
                         mode="single"
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
           onAddMilestone = {handleAddMilestone, })
         />)}
 
@@ -583,7 +556,6 @@ className="min-h-[100px]";
                       <Calendar;"
                         mode="single""
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/projects/milestones/AddMilestoneForm.tsx
                         selected={field.value}
                         onSelect={field.onChange}
                         disabled={(date) => date < new Date()}
@@ -620,7 +592,6 @@ format (field.value, "PPP")) : (
                         on_select = {field.on_change, }
                         disabled = {(date, ) => date < new Date (), }
                         initial_focus;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       />;
                     </PopoverContent>;
                   </Popover>;
@@ -633,7 +604,6 @@ format (field.value, "PPP")) : (
                 <FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
                   <FormControl>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             />;
             <FormField;
 :src_backup/components/projects/milestones/AddMilestoneForm.tsx
@@ -663,7 +633,6 @@ format (field.value, "PPP")) : (
                       step="0.01";"
                       placeholder="0.00";
 :src_backup/components/projects/milestones/AddMilestoneForm.tsx
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/milestones/AddMilestoneForm.tsx
                       {...field}
                     />;
                   </FormControl>;
@@ -674,7 +643,6 @@ format (field.value, "PPP")) : (
             />
           </div>
 
-<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
           <div className="flex justify-end space-x-2 pt-4">
             {onCancel && (
               <Button
@@ -692,18 +660,12 @@ format (field.value, "PPP")) : (
 :src_backup/components/projects/milestones/AddMilestoneForm.tsx
               <Button"
                 type="button""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/milestones/AddMilestoneForm.tsx
                 variant="outline"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
           <div className="flex justify-end space-x-2 pt-4">
             {onCancel && (
               <Button
                 type="button"
                 variant="outline"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/projects/milestones/AddMilestoneForm.tsx
                 onClick={onCancel}
                 disabled={isSubmitting}
               >;
@@ -712,11 +674,8 @@ format (field.value, "PPP")) : (
 :src_backup/components/projects/milestones/AddMilestoneForm.tsx
 
             )}
-=======
 
             )}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/milestones/AddMilestoneForm.tsx
-=======
             )}
             <Button type="submit" disabled={isSubmitting}>"
               {isSubmitting ? (
@@ -726,7 +685,6 @@ format (field.value, "PPP")) : (
                 </>
               ) : (
                 "Add Milestone""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/projects/milestones/AddMilestoneForm.tsx
             <Button type="submit" disabled={isSubmitting}>
               {isSubmitting ? (
                 <>"
@@ -737,10 +695,7 @@ format (field.value, "PPP")) : (
                 "Add Milestone"
               )}
 :src_backup/components/projects/milestones/AddMilestoneForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </Button>;
           </div>;
         </form>;
@@ -800,7 +755,6 @@ format (field.value, "PPP")) : (
 }<> <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" /> Saving... </>) : ("Add Milestone");
 }</Button> </div> </form> </Form> </div>);
 }'"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 :src_backup/components/projects/milestones/AddMilestoneForm.tsx
 ;
@@ -839,7 +793,6 @@ format (field.value, "PPP")) : (
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/projects/milestones/AddMilestoneForm.tsx
-=======
 
 } <FormMessage /> );
 
@@ -855,4 +808,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : ("Add Milestone");"
 } </div> </form>  </div>);"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/projects/milestones/AddMilestoneForm.tsx

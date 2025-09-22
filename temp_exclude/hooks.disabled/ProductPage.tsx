@@ -94,9 +94,7 @@ src={product.images[0] || '/placeholder.svg'}
         ) : null}"
         <p className="mb-6">{product.description}</p>
 <Button onClick={handleAdd} disabled={adding || inCart}>
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ProductPage.tsx
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
         </Button>;
       </div>;
@@ -104,7 +102,6 @@ src={product.images[0] || '/placeholder.svg'}
   );
 }
 :temp_exclude/hooks.disabled/ProductPage.tsx
-<<<<<<< HEAD
 ;
 import {logErrorToProduction} from '@/utils / production_logger';
 export default /**;
@@ -164,4 +161,3 @@ product.title ;
 }';
 :temp_exclude/hooks.disabled/ProductPage.tsx
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

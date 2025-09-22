@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import {Calendar, RefreshCw} from "@/components/icons";
 import {Card, CardContent} from "@/components/ui/card";
@@ -17,14 +10,8 @@ import {format} from "date-fns";
 import type { DateRange } from "@/types/dateRange";
 import type { QuoteStatus } from "@/types/quotes";
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { Calendar, RefreshCw } from "@/components/icons",
 import { Card, CardContent } from "@/components/ui/card",
@@ -38,14 +25,8 @@ import type { DateRange } from "@/types/dateRange";
 import type { QuoteStatus } from "@/types/quotes";
 import { format } from "date-fns",
 import type { DateRange } from "@/types/dateRange",
-<<<<<<< HEAD
 import type { QuoteStatus } from "@/types/quotes",
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface QuotesFilterProps {
 
   searchQuery: string
@@ -75,15 +56,12 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   archiveFilter;
   setArchiveFilter;
   dateRange;
-=======
 import type { QuoteStatus } from "@/types/quotes",  setSearchQuery;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   status_filter;
   setStatusFilter;
   archive_filter;
   setArchiveFilter;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   onReset;
   date_range;
@@ -244,15 +222,7 @@ setDateRange
               <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
                 <CalendarComponent
                   initialFocus
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   mode="range"
 import React from "react",;
 import { Calendar, RefreshCw } from "@/components/icons",;
@@ -313,7 +283,6 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({};
   setArchiveFilter;
 
 setDateRange;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   searchQuery,
   setSearchQuery,
   statusFilter,
@@ -354,37 +323,22 @@ setDateRange;
               <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
                 <SelectValue placeholder="Status" />;
               </SelectTrigger>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <SelectItem value="all">All Statuses</SelectItem>;
                 <SelectItem value="new">New</SelectItem>;
                 <SelectItem value="in_review">In Review</SelectItem>;
                 <SelectItem value="responded">Responded</SelectItem>;
                 <SelectItem value="accepted">Accepted</SelectItem>;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <SelectItem value="closed">Closed</SelectItem>;
               </SelectContent>;
             </Select>;
           </div>;
 
                 <SelectItem value="active">Active Only</SelectItem>;
-=======
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;                <SelectItem value="active">Active Only</SelectItem>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;                <SelectItem value="active">Active Only</SelectItem>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           <div>;
             <p className="text - zion - slate - light text - sm mb - 2">Archive</p>;
             <Select value={archive_filter} onValueChange={(value: any) => setArchiveFilter (value)}>;
@@ -394,20 +348,14 @@ setDateRange;
               <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
 
                 <SelectItem value="active">Active Only</SelectItem>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <SelectItem value="archived">Archived Only</SelectItem>;
-=======
 "
                 <SelectItem value="active">Active Only</SelectItem>;"
                 <SelectItem value="archived">Archived Only</SelectItem>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <SelectItem value="all">All Quotes</SelectItem>;
               </SelectContent>;
             </Select>;
-<<<<<<< HEAD
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div>;
             <p className="text-zion-slate-light text-sm mb-2">Date Range</p>;
             <Popover>;
@@ -425,18 +373,10 @@ setDateRange;
                       </>;
                     ) : (;
                       format(dateRange.from, "LLL dd, y");
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     );
-=======
           </div>;                    );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           </div>;                    );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   ) : (;
                     <span>Date range</span>;
                   )}
@@ -444,23 +384,16 @@ setDateRange;
               </PopoverTrigger>;"
               <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">;
 <CalendarComponent
-<<<<<<< HEAD
                   initialFocus
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                 <CalendarComponent;
                   initialFocus;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   mode="range"
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
 
-=======
 
                 />
               </PopoverContent>
@@ -479,15 +412,10 @@ setDateRange;
       </CardContent>
     </Card>
   )
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 }
-=======
                   initialFocus}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 },
 
@@ -547,12 +475,7 @@ setDateRange;
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   numberOfMonths={2}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                   numberOfMonths={2}
 
 }
@@ -590,25 +513,14 @@ setDateRange;
                   selected={date_range}
                   on_select={setDateRange}
                   numberOfMonths={2}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 />;
               </PopoverContent>;
             </Popover>;
           </div>;
         </div>;
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         <div className="mt - 4 flex justify - end">;
           <Button;
             variant="outline";
@@ -623,7 +535,4 @@ setDateRange;
 }
 ;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

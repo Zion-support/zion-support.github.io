@@ -16,7 +16,6 @@ import { equipmentListings } from '@/data/equipmentData',
 import { ProductListing } from '@/types/listings',
 import { motion } from 'framer-motion',
 import { useCurrency } from '@/hooks/useCurrency',
-=======
 "
 import { useState, useEffect } from "react",'
 import { useRouter } from 'next/router','
@@ -35,7 +34,6 @@ import { equipmentListings } from '@/data/equipmentData','
 import { ProductListing } from '@/types/listings','
 import { motion } from 'framer-motion','
 import { useCurrency } from '@/hooks/useCurrency','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/EquipmentDetail.tsx
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface EquipmentSpecification {}
   name: string,
@@ -251,7 +249,6 @@ if ( {) {}
           price: equipment.price,
 
 :temp_exclude/hooks.disabled/EquipmentDetail.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Loading state
   if (loading) {
     return (
@@ -344,7 +341,6 @@ className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >;
 
               : undefined,
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
     loadEquipment();
   }, [id]),;
@@ -489,7 +485,6 @@ className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >;
 "
           <div className="grid lg:grid-cols-2 gap-12">
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Images */}
             <motion.div "
               className="space-y-4"
@@ -500,7 +495,6 @@ className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >;
               <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
 :temp_exclude/hooks.disabled/EquipmentDetail.tsx
                 <ImageWithRetry
-<<<<<<< HEAD
                     equipment && equipment.images[selectedImageIndex] ||
                     equipment && equipment.images[0] ||'
                     'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
@@ -516,7 +510,6 @@ className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >;
                       onClick = {(,) => setSelectedImageIndex(index),}
 :temp_exclude/hooks.disabled/EquipmentDetail.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}
                   alt={equipment.name}"
                   className="object-cover"
@@ -555,7 +548,6 @@ className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >;
             >;
               {/* Header */}
 :temp_exclude/hooks.disabled/EquipmentDetail.tsx
-<<<<<<< HEAD
                     className='border-zion-slate-light text-zion-slate-light'>;
                     {equipment && equipment.brand}
                   </Badge>;
@@ -577,7 +569,6 @@ className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >;
                               : 'text-zion-slate-light'
 :temp_exclude/hooks.disabled/EquipmentDetail.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="space-y-2">
                 <div className="flex items-center gap-2 mb-2">
                   <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
@@ -723,6 +714,4 @@ className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >;
 }
 
 ;
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/EquipmentDetail.tsx

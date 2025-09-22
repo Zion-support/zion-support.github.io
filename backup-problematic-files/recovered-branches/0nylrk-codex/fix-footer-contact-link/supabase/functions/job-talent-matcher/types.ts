@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export interface JobData {;
   id:string;
   title:string;
@@ -38,4 +37,3 @@ export interface MatchResult {;
   matchedSkills:string[];
   reason?:string;
 } 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

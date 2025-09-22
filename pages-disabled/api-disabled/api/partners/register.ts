@@ -101,7 +101,6 @@ if ( {) {
   }
 }
 :pages/api/partners/register.ts
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 function sanitizeCode(input: string): string {
   return input
     .toLowerCase()
@@ -155,10 +154,7 @@ return res.status(500).json({ error: e?.message });
   }
 }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return res.status(500).json({ error: e?.message })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 }
     return res.status (200).json ({ ok: true, code, status: "pending" });
@@ -181,6 +177,3 @@ return res.status(500).json({ error: e?.message });
   }
 }
 :pages/api/partners/register.ts
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/ActiveFiltersBar.tsx
         >;
           {type}
           <X className="h-3 w-3" />;
@@ -95,4 +94,3 @@ export default ActiveFiltersBar;"'"
 export default ActiveFiltersBar;
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/search/ActiveFiltersBar.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

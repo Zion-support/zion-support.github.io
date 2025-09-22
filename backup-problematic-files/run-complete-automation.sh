@@ -14,15 +14,12 @@ run_with_log() {
     local name="$1"
     local command="$2"
     local log_file="$LOG_DIR/${name}-${TIMESTAMP}.log"
-<<<<<<< HEAD
     
     echo "📋 Running: $name"
     echo "   Command: $command"
     
-=======
     echo "📋 Running: $name"
     echo "   Command: $command"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if eval "$command" > "$log_file" 2>&1; then
         echo "✅ $name completed successfully"
         return 0
@@ -37,15 +34,12 @@ run_optional() {
     local name="$1"
     local command="$2"
     local log_file="$LOG_DIR/${name}-${TIMESTAMP}.log"
-<<<<<<< HEAD
     
     echo "📋 Running: $name (optional)"
     echo "   Command: $command"
     
-=======
     echo "📋 Running: $name (optional)"
     echo "   Command: $command"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if eval "$command" > "$log_file" 2>&1; then
         echo "✅ $name completed successfully"
     else
@@ -81,85 +75,26 @@ echo "🔒 Phase 3: Security & Performance"
 echo "====="
 
 # Security scan
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
-=======
-<<<<<<< HEAD:backup-problematic-files/run-complete-automation.sh
-=======
-<<<<<<< HEAD:run-complete-automation.sh
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
-=======
-=======
-<<<<<<< HEAD:backup-problematic-files/run-complete-automation.sh
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/run-complete-automation.sh
-<<<<<<< HEAD
-=======
 run_with_log "Security Scanner" "node scripts/security-audit.cjs"
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
-=======
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:run-complete-automation.sh
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
-=======
 run_with_log "Security Scanner" "node scripts/security-audit.cjs"
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-<<<<<<< HEAD:backup-problematic-files/run-complete-automation.sh
-=======
 run_with_log "Security Scanner" "node scripts/security-audit.cjs"
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
-=======
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:run-complete-automation.sh
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/run-complete-automation.sh
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
->>>>>>> main:run-complete-automation.sh
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 :backup-problematic-files/run-complete-automation.sh
 run_with_log "Security Scanner" "node scripts/security-audit.cjs"
@@ -188,7 +123,6 @@ run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scan
 
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 # Security audit
 run_optional "Security Audit" "node scripts/security-audit.cjs"
 
@@ -233,7 +167,6 @@ echo "====="
 # Check if PM2 is available
 if command -v pm2 &> /dev/null; then
     echo "📋 Setting up PM2 processes..."
-<<<<<<< HEAD
     
     # Create logs directory for PM2
     mkdir -p logs
@@ -244,14 +177,12 @@ if command -v pm2 &> /dev/null; then
     # Show PM2 status
     run_optional "PM2 Status Check" "pm2 status"
     
-=======
     # Create logs directory for PM2
     mkdir -p logs
     # Start PM2 processes
     run_optional "PM2 Process Start" "pm2 start ecosystem.config.cjs || echo 'PM2 start failed'"
     # Show PM2 status
     run_optional "PM2 Status Check" "pm2 status"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     echo "📋 PM2 processes configured"
 else
     echo "⚠️  PM2 not available, skipping process management"

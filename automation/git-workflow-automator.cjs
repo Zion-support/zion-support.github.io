@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -14,16 +8,10 @@ class GitWorkflowAutomator {
   // TODO: Implement
 }
   constructor() {
-<<<<<<< HEAD
     this.logFile = './automation/logs/git-workflow.log';    this.ensureLogDirectory();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 this.logFile = './automation/logs/git-workflow.log';
     this.ensureLogDirectory();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 
   ensureLogDirectory() {
@@ -95,25 +83,16 @@ fs.mkdirSync(logDir, { recursive: true });
       return true;
     } catch (error) {
       this.log('ERROR', `Failed to pull changes: ${error.message}`);
-<<<<<<< HEAD
       return false;    }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       return false;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
       return false;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 
   async getCurrentBranch() {
     try {
-<<<<<<< HEAD
       const branch = execSync('git branch --show-current', { encoding: 'utf8' });
       return branch.trim();
     } catch (error) {
@@ -324,20 +303,14 @@ fs.mkdirSync(logDir, { recursive: true });
   }
 }
 
-<<<<<<< HEAD
 // CLI interfaceif (require.main === module) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // CLI interface
 if (require.main === module) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const automator = new GitWorkflowAutomator();
   const command = process.argv[2];
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   const automator = new GitWorkflowAutomator();
   const command = process.argv[2];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   switch (command) {
     case 'status':
       automator.checkGitStatus().then(changes => {
@@ -379,22 +352,12 @@ Examples:
 }
 
 module.exports = GitWorkflowAutomator;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 // CLI interface
 
 if (require.main === module) {
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   const automator = new GitWorkflowAutomator();
   const command = process.argv[2];
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

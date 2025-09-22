@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { useNavigate } from "react-router-dom",;
@@ -293,12 +292,10 @@ export default function PartnerManager() {;
     if (flags === 0) return null,;
     ;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">;
         <Flag className="h-3 w-3" />;
         {flags}
       </Badge>;
-<<<<<<< HEAD
 
     <div className="container max-w-7xl py-10">;
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;

@@ -1,8 +1,5 @@
 :pages_backup/api/reviews/list.ts
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD:pages/api/reviews/list.ts
 
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readReviews, readProjects } from "../../../utils/dataStore";
 import type { PublicReview, ReviewsSummary } from "../../../types/reviews";
@@ -21,7 +18,6 @@ export default async function handler(
     if (targetType !== 'talent' && targetType !== 'client') {
       return res.status(400).json({ error: 'Invalid targetType' })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readReviews, readProjects } from '../../../utils/dataStore';
 import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
@@ -34,42 +30,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {;
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (!targetType || !targetId) {
       return res.status(400).json({ error: "Missing targetType or targetId" });
     }"
     if (targetType !== "talent" && targetType !== "client") {"
       return res.status(400).json({ error: "Invalid targetType" });
 :pages_backup/api/reviews/list.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     if (targetType !== "talent" && targetType !== "client") {
       return res.status(400).json({ error: "Invalid targetType" });
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
     }
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
 
 :pages_backup/api/reviews/list.ts
-<<<<<<< HEAD:pages/api/reviews/list.ts
-<<<<<<< HEAD
 
     const filtered = all && all.filter((r) => {
       if (r && r.removed || !r && r.approved) return false;
 origin/cursor/automate-test-improve-and-merge-code-382a
       const matchesTarget =
         r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId;
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     const filtered = all && all.filter((r) => {
       if (r && r.removed || !r && r.approved) return false;
       const matchesTarget =
@@ -81,21 +63,13 @@ const filtered = all.filter((r) => {
 origin/cursor/automate-test-improve-and-merge-code-382a
       const matchesTarget =
         r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
     const filtered = all.filter((r) => {
 
       if (r.removed || !r.approved) return false;
 const matchesTarget = r.toRole === (targetType as 'talent' | 'client') && r.toId === targetId;
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/reviews/list.ts
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
       if (!matchesTarget) return false;
       const counterpartExists = all && all.some(
         (x) =>
@@ -158,11 +132,7 @@ if (return false) {
           x.from_role !== r.from_role &&;
           x.to_role !== r.to_role &&;
           x.approved &&;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/reviews/list.ts
           !x.removed,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       );
       return counterpart_exists;
     });
@@ -172,19 +142,13 @@ try {
       targetType?: string;
       targetId?: string;
     };
->>>>>>> main
-=======
           !x.removed
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
       );
       return counterpart_exists;
     });
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
           !x.removed,
       );
@@ -230,7 +194,6 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
       return counterpart_exists;
     });
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readReviews, readProjects } from '[^']*';
 import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
@@ -243,10 +206,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
 origin/cursor/automate-test-improve-and-merge-code-2533
     if (!targetType || !targetId) {
-=======
 
     if (!targetType || !targetId) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
       return res.status(400).json({ error: "Missing targetType or targetId" });
     }"
     if (targetType !== "talent" && targetType !== "client") {"
@@ -254,16 +215,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
 :pages_backup/api/reviews/list.ts
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
 
-<<<<<<< HEAD:pages/api/reviews/list.ts
-<<<<<<< HEAD
 try {
-=======
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed;
 try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
     if (!targetType || !targetId) {"
       return res && res.status(400).json({ error: "Missing targetType or targetId" });
@@ -291,8 +247,6 @@ const { targetType, targetId } = req.query as {}
     const all = await readReviews();
 :pages_backup/api/reviews/list.ts
     // Include reviews where both sides have submitted and both are approved and not removed
-<<<<<<< HEAD
-<<<<<<< HEAD
     const filtered = all.filter((r) => {
     const filtered = all.filter((r) => {
 
@@ -330,13 +284,7 @@ const { targetType, targetId } = req.query as {}
         };
       });
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
     const filtered = all.filter((r) => {
     const filtered = all.filter((r) => {
@@ -347,7 +295,6 @@ const { targetType, targetId } = req.query as {}
       if (!matchesTarget) return false;
       const counterpartExists = all && all.some(
         (x) =>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
     const all = null;
     return res.status(200).json({ summary, reviews: publicReviews })
           x.projectId === r.projectId &&
@@ -438,20 +385,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ summary, reviews: publicReviews });
 :pages_backup/api/reviews/list.ts
   } catch (error: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/reviews/list.ts
-<<<<<<< HEAD
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
 
@@ -459,41 +396,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
       .map((r) => {
         let authorName = r && r.fromId;
         if (r && r.fromRole === "talent") {
-=======
   } catch (error: any) {}
       .map((r) => {}
         let authorName = r && r.fromId;"
         if (r && r.fromRole === "talent") {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
           const t = TALENT_PROFILES && TALENT_PROFILES.find((tp) => tp && tp.slug === r && r.fromId);
           authorName = t ? t && t.name : r && r.fromId;
         }"
         if (r && r.anonymous) authorName = "Anonymous";
 :pages_backup/api/reviews/list.ts
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD:pages/api/reviews/list.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :pages_backup/api/reviews/list.ts
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
     const summary: ReviewsSummary = {
       average_rating;
       total_reviews;
       totalCompletedProjects;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
 ;
     // Map to public reviews (mask anonymous author);
     const public_reviews: PublicReview[] = filtered;
@@ -534,17 +456,12 @@ if (author_name = "Anonymous") {}
     ).length;
 
 :pages_backup/api/reviews/list.ts
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD:pages/api/reviews/list.ts
           author_name,
-=======
 author_name
 
           author_name,
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
           author_name
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
         }
       });
 ;
@@ -565,42 +482,25 @@ author_name
     ).length;
 ;
 :pages_backup/api/reviews/list.ts
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD:pages/api/reviews/list.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
     const summary: ReviewsSummary = {
-=======
 
     const summary: ReviewsSummary = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
       average_rating,
       total_reviews,
       totalCompletedProjects,
 
-=======
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
     const summary: ReviewsSummary = {
       average_rating
       total_reviews
       totalCompletedProjects
 :pages_backup/api/reviews/list.ts
-<<<<<<< HEAD:pages/api/reviews/list.ts
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
 
   } catch (error: any) {}
     return res;
@@ -608,14 +508,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
       .json ({ error: "Internal server error", details: error?.message });
   }
 :pages_backup/api/reviews/list.ts
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD:pages/api/reviews/list.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
   }
 }
@@ -623,33 +516,23 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
   }
 }
 ursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
-=======
 
 }
 
   }
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
-=======
 
   }
 }
 ursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
   }
 }
@@ -661,7 +544,6 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 }
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
 }
 
   }
@@ -688,37 +570,16 @@ ursor/fix-website-loading-errors-and-merge-6662
       .json({ error: "Internal server error", details: error?.message });
   }
 :pages_backup/api/reviews/list.ts
-<<<<<<< HEAD:pages/api/reviews/list.ts
-<<<<<<< HEAD
 }
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/api/reviews/list.ts
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
-=======
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts

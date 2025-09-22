@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -109,7 +108,6 @@ export default function CommunityPage() {;
         keywords="community, forum, discussion, AI marketplace, questions, answers";
       />;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="container py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;
           <div>;
@@ -118,7 +116,6 @@ export default function CommunityPage() {;
               Join the conversation, ask questions, and share your knowledge;
             </p>;
           </div>;
-<<<<<<< HEAD
 
               Create New Post;
             </Link>;

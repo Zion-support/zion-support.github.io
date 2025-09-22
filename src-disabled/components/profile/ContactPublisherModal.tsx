@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',;
 import FocusLock from 'react-focus-lock',;
 import {;
@@ -33,7 +31,6 @@ interface ContactPublisherModalProps {;
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {}
-=======
 import React from 'react''
 import FocusLock from 'react-focus-lock''
 import {
@@ -44,7 +41,6 @@ import {
   // TODO: Implement
 }
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Dialog,
   DialogContent,;
   DialogHeader,;
@@ -118,7 +114,6 @@ import api from '@/services/apiClient';
   publisherEmail?: string;
   productId?: string'
 import React from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import FocusLock from 'react - focus - lock';
 import {}
   Dialog,
@@ -138,7 +133,6 @@ import { Input } from '@/components / ui / input';
   FormItem,
   FormLabel,
   FormControl,
-<<<<<<< HEAD
   FormMessage,
 } from '@/components / ui / form';
 import { use_form, type Resolver } from 'react - hook - form';
@@ -254,10 +248,8 @@ interface ContactPublisherModalProps {
   publisherName: string;
 
 publisherEmail?: string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   productId?: string;
 }
-<<<<<<< HEAD
 ;
 type FormValues = {;
   subject: string,;
@@ -406,7 +398,6 @@ export function ContactPublisherModal({;
 
 const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       e.stopPropagation();
       onClose()
     }
@@ -523,10 +514,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
               {publisherEmail}
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </Link>
           </div>
         )}
@@ -550,8 +537,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </FormItem>
               )}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             />;
             <FormField;
 control={form.control}
@@ -623,10 +608,8 @@ control={form.control}
                   </FormControl>;
                   <FormMessage className="text - red-500" />;
                 </FormItem>)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             />;
             <Button;
-<<<<<<< HEAD
               onClick={handleSend}
               className="w-full"
               disabled={!form.formState.isValid || isSubmitting}
@@ -634,14 +617,12 @@ control={form.control}
               <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
               {is_submitting ? 'Sending...' : 'Send Message'}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </Button>;
           </form>;
         </Form>;
         </DialogContent>;
       </FocusLock>;
     </Dialog>;
-<<<<<<< HEAD
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
@@ -682,10 +663,7 @@ control={form.control}
     <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
 
     </>) </>);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
-=======
 ;"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

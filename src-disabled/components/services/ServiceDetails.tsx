@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 // Component to show service details for the selected country
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
 
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Server, Clock, MapPin } from 'lucide-react'
 import Image from "next/image",
@@ -87,7 +85,6 @@ const time_zones: Record < string, string> = {
       'United Kingdom': 'GMT / BST',
       Germany: 'CET / CEST',
       Japan: 'JST',
-<<<<<<< HEAD
       Australia: 'AEST / ACDT / AWST depending on location',      Singapore: 'SGT',
       default: 'Local timezone',
     }
@@ -101,7 +98,6 @@ const time_zones: Record < string, string> = {
       `For remote locations, additional travel fees may apply.`);  }
 
   }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import {;
   Card,;
@@ -112,7 +108,6 @@ import {;
   CardTitle,;'
 } from '@/components/ui/card';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const dataCenters: Record<string string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
@@ -122,7 +117,6 @@ import {;
       "Singapore": ["Singapore Central"],
       "Canada": ["Toronto", "Montreal", "Vancouver"],
       // Default for other countries
-<<<<<<< HEAD
       "default": ["Major metropolitan areas"]
     },
 
@@ -167,10 +161,6 @@ import {;
   },
 
   const datacenters = getDatacenters(country),
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -189,13 +179,8 @@ interface ServiceDetailsProps {
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
   const getDatacenters = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
-=======
     const dataCenters: Record<string string[]> = {}
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],"
       "United Kingdom": ["London", "Manchester", "Birmingham"],"
@@ -217,7 +202,6 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
       // Default placeholder;
   return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>"
         <CardTitle className="text-white flex items-center">"
@@ -238,30 +222,24 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
           />
         </div>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-4">
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
-=======
         "
         <div className="space-y-4">
 
           <div>"
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <MapPin className="mr-2 h-4 w-4 text-zion-purple" />
               Service Locations;
             </h4>
 
-=======
         <div className="space-y-4">
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
               <MapPin className="mr-2 h-4 w-4 text-zion-purple" />
               Service Locations
             </h4>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {datacenters.map((dc, idx) => (
                 <div;
@@ -372,10 +350,8 @@ const regions: Record<string, string> = {;
             loading="lazy";
             loading='lazy'
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           />;
 </div>;
-=======
             alt={`Datacenter in ${country}`}`
             className='object-cover transform transition-transform duration-500 hover:scale-110'',
             loading='lazy''
@@ -384,14 +360,12 @@ const regions: Record<string, string> = {;
             loading="lazy";
           />;
         </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <div className='space-y-4'>;
           <div>;
             <h4 className='text-lg font-medium text-white mb-2 flex items-center'>;
 <MapPin className='mr-2 h-4 w-4 text-zion-purple' />;              Service Locations;
               Service Locations;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </h4>;
 <div className="grid grid-cols-2 md:grid-cols-3 gap-2">;
               {datacenters.map((dc, idx) => (;
@@ -403,18 +377,13 @@ const regions: Record<string, string> = {;
                 </div>;
               ))}
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div>
             <h4 className='text-lg font-medium text-white mb-2 flex items-center'>
               <Clock className='mr-2 h-4 w-4 text-zion-purple' />
               Service Instructions
             </h4>
             <p className='text-zion-slate-light'>
-=======
 
           <div>"
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">"
@@ -422,30 +391,18 @@ const regions: Record<string, string> = {;
               Service Instructions;
             </h4>"
             <p className="text-zion-slate-light">
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {getRegionalInstructions(country)}
             </p>
           </div>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">
             <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>
-=======
           "
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">'"
             <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
     const dataCenters: Record<string string[]> = {
 </string>
@@ -520,7 +477,6 @@ const regions: Record<string, string> = {;
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">"
 </ul>
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <li>Transportation to your site</li>
               <li>First hour of onsite technical support</li>
               <li>Basic hardware diagnosis</li>
@@ -531,17 +487,11 @@ pr-12325
         </div>
       </CardContent>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
       <CardFooter className="border-t border-zion-blue-light pt-4">"
         <p className="text-sm text-zion-slate-light">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <CardFooter className="border-t border-zion-blue-light pt-4">
-=======
 "
       <CardFooter className="border-t border-zion-blue-light pt-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-sm text-zion-slate-light">
           For custom enterprise needs or multi-site services in {country}, please contact our enterprise team for tailored pricing.
 
@@ -580,17 +530,14 @@ pr-12325
         </p>;
       </CardFooter>;
     </Card>;
-<<<<<<< HEAD
   )
   );
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 }operate during business hours (8AM-6PM $ {;
 timezone ;
 }) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.` 
 };";
-<<<<<<< HEAD
 return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <divkey= {
   idx "
 }className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"> {;
@@ -676,9 +623,6 @@ return (<Card className="bg - zion - blue - dark border - zion - blue-light" > <
 }</div>) ) ";
 }</div> </div> <div> <h4 className="text - lg font - medium text - white mb - 2 flex items - center" > <Clock className="mr - 2 h - 4 w - 4 text - zion - purple" /> Service Instructions </h4> </p> </div> <div className="bg - zion - blue rounded - lg p - 4 border border - zion - blue - light" > <h4 className="text - lg font - medium text - white mb - 2" >What's Included</h4> <ul className="list - disc list - inside text - zion - slate - light space - y-1" > <li > Transportation to your site</li> <li > First hour of onsite technical support</li> <li > Basic hardware diagnosis</li> <li > Network connectivity troubleshooting</li> <li > Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>);
 }'"}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <div key= {;
   idx ";
 }className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light" > {;
@@ -686,9 +630,6 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 }</div>) ) ";
 }</div> </div> <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <Clock className="mr-2 h-4 w-4 text-zion-purple" /> Service Instructions </h4> </p> </div> <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light" > <h4 className="text-lg font-medium text-white mb-2" >What's Included</h4> <ul className="list-disc list-inside text-zion-slate-light space-y-1" > <li>Transportation to your site</li> <li>First hour of onsite technical support</li> <li>Basic hardware diagnosis</li> <li>Network connectivity troubleshooting</li> <li>Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
       <CardFooter className='border - t border - zion - blue - light pt - 4'>;
 
@@ -697,4 +638,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 return (<Card className="bg - zion - blue - dark border - zion - blue - light" > <CardHeader>   <CardContent className="space - y-4" > <div className="overflow - hidden rounded - lg mb - 4 relative h - 48" > <Image /> </div> <div className="space - y-4" > <div> <h4 className="text - lg font - medium text - white mb - 2 flex items - center" > <MapPin className="mr - 2 h - 4 w - 4 text - zion - purple" /> Service Locations </h4> <div key= {"
 }</div> </div> <div> <h4 className="text - lg font - medium text - white mb - 2 flex items - center" > <Clock className="mr - 2 h - 4 w - 4 text - zion - purple" /> Service Instructions </h4> </p> </div> <div className="bg - zion - blue rounded - lg p - 4 border border - zion - blue - light" > <h4 className="text - lg font - medium text - white mb - 2" >What's Included</h4> <ul className="list - disc list - inside text - zion - slate - light space - y-1" > <li > Transportation to your site</li> <li > First hour of onsite technical support</li> <li > Basic hardware diagnosis</li> <li > Network connectivity troubleshooting</li> <li > Equipment installation assistance</li> </ul> </div> </div>  </p>  );""`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

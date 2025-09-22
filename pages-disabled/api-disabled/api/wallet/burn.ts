@@ -1,8 +1,4 @@
 <:pages/api-disabled/api/wallet/burn.ts
-<<<<<<< HEAD:pages/api/wallet/burn.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api-disabled/api/wallet/burn.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { burnTokens, burnForFeature } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -13,7 +9,6 @@ import { burnTokens, burnForFeature } from "../../../utils/token/service",;
 
   try {
 } catch (err: any) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -79,15 +74,8 @@ export default function handler(req, res) {
 }
   }
 }
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { burnTokens, burnForFeature } from "../../../utils/token/service"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/wallet/burn.ts
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return res.status(400).json({ error: err.message })
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-========
 
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/wallet/burn.ts

@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import {;
   Table,;
@@ -58,12 +57,10 @@ export function TeamManagement() {;
       status:"active",;
       lastActive:"3 days ago"}],;
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleAddMember = () => {;
     // In a real app, this would make an API call to add the member;
     if (!newMemberEmail) {;
       toast({;
-<<<<<<< HEAD
 
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;

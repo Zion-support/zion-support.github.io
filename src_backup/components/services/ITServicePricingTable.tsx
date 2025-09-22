@@ -17,7 +17,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   });
 
 :src/components/services/ITServicePricingTable.tsx
-<<<<<<< HEAD
 import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { Input } from "@/components/ui/input",
@@ -93,17 +92,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     filteredData && filteredData.sort((a, b,) => {;
       if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
         return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
 :src/components/services/ITServicePricingTable.tsx
-<<<<<<< HEAD
       if (a[sortConfig && sortConfig.key] > b[sortConfig && sortConfig.key]) {;
         return sortConfig && sortConfig.direction === 'ascending' ? 1 : -1;
       }
       return 0;
     });
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
 :src/components/services/ITServicePricingTable.tsx
@@ -183,9 +179,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
 :src/components/services/ITServicePricingTable.tsx
-<<<<<<< HEAD
               </TableHead>
-<<<<<<< HEAD
               <TableHead className="text-right text-zion-cyan font-medium">
                 <Button 
                   variant="ghost" 
@@ -202,7 +196,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className='hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light'                >
                   <span>Price Per Incident</span>
                   <ArrowUpDown className='h-4 w-4' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </Button>
               </TableHead>
             </TableRow>
@@ -331,4 +324,3 @@ export function ITServicePricingTable() {;
   );
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

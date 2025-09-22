@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
 import { HireRequestForm } from "./HireRequestForm",;
@@ -30,11 +29,9 @@ export function HireRequestModal({ talent, isOpen, onClose, userDetails } HireRe
         </DialogHeader>;
         ;
         <HireRequestForm ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}
         />;
       </DialogContent>;
     </Dialog>;
-<<<<<<< HEAD

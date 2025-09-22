@@ -152,7 +152,6 @@ const files = fs.readdirSync(dir;);
         files.forEach(file => {})
           const filePath = path.join(dir, file;);
           const stat = fs.statSync(filePath;);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           if (&& !file.startsWith('.') && file !== 'node_modules') {}
             scanDirectory(filePath)} else if (stat.isFile()) {}
             const ext = path.extname(file) {}
@@ -166,7 +165,6 @@ const files = fs.readdirSync(dir;);
 
       scanDirectory(dir)}
 });
-<<<<<<< HEAD
 
     return sourceFiles};
   async checkDuplicateDependencies() {}
@@ -266,4 +264,3 @@ if ( {})
       process.exit(success ? 0 : 1)}
 
       process.exit(1)})};
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

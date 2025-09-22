@@ -1,5 +1,4 @@
 
-=======
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
 import { Button } from "./ui/button",;
@@ -32,7 +31,6 @@ const services = [;
 ;
 export function GlobalServiceSection() {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <section className="py-20 bg-zion-blue" id="global-services">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-16">;
@@ -41,7 +39,6 @@ export function GlobalServiceSection() {;
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes;
           </p>;
         </div>;
-<<<<<<< HEAD
 
             Get Your Free Commercial Proposal;
           </Button>;

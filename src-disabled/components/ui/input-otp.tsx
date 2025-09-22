@@ -8,8 +8,6 @@ const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>,
   React.ComponentPropsWithoutRef<typeof OTPInput>
 :src_backup/components/ui/input-otp.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 >(({ className, containerClassName, ...props }, ref) => (
   <OTPInput
 const InputOTP = React && React.forwardRef<;
@@ -18,23 +16,14 @@ const InputOTP = React && React.forwardRef<;
 ></typeof>(({ className, containerClassName, ...props }, ref) => (;
 :src_backup/components/ui/input-otp.tsx
   <OTPInput;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/input-otp.tsx
     ref={ref}
-<<<<<<< HEAD
     containerClassName={cn(
-<<<<<<< HEAD
       "flex items-center gap-2 [&:has([disabled])]:opacity-50",
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 :src_backup/components/ui/input-otp.tsx
       containerClassName
-=======
     containerClassName={cn(      containerClassName
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     )}
 :src_backup/components/ui/input-otp.tsx
     className={cn("disabled:cursor-not-allowed", className)}
@@ -44,11 +33,9 @@ const InputOTP = React && React.forwardRef<;
 InputOTP.displayName = "InputOTP"
 const InputOTPGroup = React && React.forwardRef<;
   React && React.ElementRef<'div'>,;
-=======
 
 const InputOTPGroup = React && React.forwardRef<;'
   React && React.ElementRef<'div'>,;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/input-otp.tsx
   React && React.ComponentPropsWithoutRef<'div'>;
 >(({ className, ...props }, ref) => (;'
   <div ref={ref} className={cn('flex items-center', className)} {...props} />;
@@ -56,40 +43,28 @@ const InputOTPGroup = React && React.forwardRef<;'
 InputOTPGroup && InputOTPGroup.displayName = 'InputOTPGroup';
 :src_backup/components/ui/input-otp.tsx
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/ui/input-otp.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const InputOTPGroup = React.forwardRef<
   React.ElementRef<"div">,
-=======
 const InputOTPGroup = React.forwardRef<"
   React.ElementRef<"div">,"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/input-otp.tsx
   React.ComponentPropsWithoutRef<"div">
 >(({ className, ...props }, ref) => (
-<<<<<<< HEAD
   <div ref={ref} className={cn("flex items-center", className)} {...props} />
 ))
 InputOTPGroup.displayName = "InputOTPGroup"
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 :src_backup/components/ui/input-otp.tsx
 const InputOTPSlot = React.forwardRef<
   React.ElementRef<"div">,
-=======
 const InputOTPSlot = React.forwardRef<"
   React.ElementRef<"div">,"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/input-otp.tsx
   React.ComponentPropsWithoutRef<"div"> & { index: number }
 >(({ index, className, ...props }, ref) => {}
   const inputOTPContext = React.useContext(OTPInputContext) as any;
   const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
 
 :src_backup/components/ui/input-otp.tsx
-<<<<<<< HEAD
   return (
     <div
       ref={ref}
@@ -97,7 +72,6 @@ const InputOTPSlot = React.forwardRef<"
         "relative flex h-10 w-10 items-center justify-center border-y border-r border-input text-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md",
         isActive && "z-10 ring-2 ring-ring ring-offset-background",
         className
-<<<<<<< HEAD
       )}
 {...props}
     >;
@@ -117,9 +91,7 @@ InputOTPSlot.displayName = "InputOTPSlot"
 
 InputOTPSlot.displayName = "InputOTPSlot"
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const InputOTPSeparator = React.forwardRef<
-=======
       )}InputOTPSlot.displayName = "InputOTPSlot"
 
 InputOTPSlot.displayName = "InputOTPSlot"
@@ -135,12 +107,9 @@ InputOTPSlot.displayName = "InputOTPSlot"
     </div>
   )
 })const InputOTPSeparator = React.forwardRef<
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   React.ElementRef<"div">,
-=======
 const InputOTPSeparator = React.forwardRef<"
   React.ElementRef<"div">,"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/input-otp.tsx
   React.ComponentPropsWithoutRef<"div">
 >(({ ...props }, ref) => ("
   <div ref={ref} role="separator" {...props}>
@@ -223,18 +192,13 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ';
 InputOTPSeparator.displayName = 'InputOTPSeparator';
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
-<<<<<<< HEAD
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
 "
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/input-otp.tsx
-=======
 InputOTPSeparator.displayName = 'InputOTPSeparator';
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
 InputOTPSeparator.displayName = "InputOTPSeparator""
@@ -310,4 +274,3 @@ InputOTPSeparator.displayName = "InputOTPSeparator"
 
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ui/input-otp.tsx

@@ -1,12 +1,6 @@
 :src/components/projects/milestones/AIMilestoneGenerator.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface AIMilestoneGeneratorProps {;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
 
 import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -43,7 +37,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
 :src/components/projects/milestones/AIMilestoneGenerator.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!scope || !startDate || !projectType) {
       return;
 
@@ -137,20 +130,13 @@ if ( {) {}
     }
   }
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
-=======
 '
 import React, { useState } from 'react',;'
 import { Button } from '@/components/ui/button',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/milestones/AIMilestoneGenerator.tsx
 import { Card, CardContent } from '@/components/ui/card',;
 import {;
   Accordion,;
@@ -169,18 +155,13 @@ interface AIMilestoneGeneratorProps {;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
   onAddMilestone: (milestone: GeneratedMilestone) => void;
 :src/components/projects/milestones/AIMilestoneGenerator.tsx
-<<<<<<< HEAD
 export function AIMilestoneGenerator(): any ({;  scope,;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
 
   scope,;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   startDate,;
   endDate,;
   projectType,;
   onAddMilestones,;
-<<<<<<< HEAD
-<<<<<<< HEAD
   onAddMilestone,;
 }: AIMilestoneGeneratorProps) {;
   const {;
@@ -194,28 +175,20 @@ export function AIMilestoneGenerator(): any ({;  scope,;
   >({});
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator(),;
   const [selectedMilestones, setSelectedMilestones] = useState<Record<string boolean>>({}),;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleGenerateMilestones = async () => {;
     if (!scope || !startDate || !projectType) {;
       return;
     }
 :src/components/projects/milestones/AIMilestoneGenerator.tsx
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const input: MilestoneInput = {;
       scope,;
       startDate,;
       endDate,;
 :src/components/projects/milestones/AIMilestoneGenerator.tsx
-<<<<<<< HEAD
       projectType,
 };
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
 
     await generateMilestones(input);
     // Initially select all milestones;
@@ -247,10 +220,7 @@ export function AIMilestoneGenerator(): any ({;  scope,;
 };
   const formatDate = (dateString: string,) => {;    try {;
     try {;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
     try {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/milestones/AIMilestoneGenerator.tsx
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
@@ -259,9 +229,6 @@ export function AIMilestoneGenerator(): any ({;  scope,;
 
   return (
 :src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-medium flex items-center">
@@ -270,35 +237,21 @@ export function AIMilestoneGenerator(): any ({;  scope,;
         </h3>
 :src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
 <Button
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
 
         <Button
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
         <Button
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         <Button;
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/milestones/AIMilestoneGenerator.tsx
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {isGenerating ? (
 :src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
             <>
@@ -324,16 +277,8 @@ export function AIMilestoneGenerator(): any ({;  scope,;
                 project scope
               </p>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Button 
-=======
               <Button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/milestones/AIMilestoneGenerator.tsx
                 onClick={handleAddToProject}
                 disabled={!Object.values(selectedMilestones).some(Boolean)}
               >
@@ -368,14 +313,10 @@ export function AIMilestoneGenerator(): any ({;  scope,;
 :src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
                     <Button
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       variant="ghost"
-=======
                     <Button;
 "
                       variant="ghost""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/milestones/AIMilestoneGenerator.tsx
                       size="sm"
                       onClick={(e) => {}
                         e.stopPropagation(),
@@ -430,7 +371,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>;
       )}
 :src/components/projects/milestones/AIMilestoneGenerator.tsx
-<<<<<<< HEAD
     </div>;
   );
 }
@@ -470,9 +410,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
 :src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/milestones/AIMilestoneGenerator.tsx

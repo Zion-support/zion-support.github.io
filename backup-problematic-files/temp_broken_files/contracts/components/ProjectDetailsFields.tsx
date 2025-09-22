@@ -1,5 +1,4 @@
 
-=======
 import { format } from "date-fns",;
 import { CalendarIcon } from "lucide-react",;
 import { UseFormReturn } from "react-hook-form",;
@@ -41,12 +40,10 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
       <FormField;
         control={form.control}
         name="scopeSummary";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
-<<<<<<< HEAD
 
                 {...field}
               />;

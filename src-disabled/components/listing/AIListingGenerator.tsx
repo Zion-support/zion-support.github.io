@@ -1,5 +1,4 @@
 :src_backup/components/listing/AIListingGenerator.tsx
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -10,7 +9,6 @@ import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface GeneratedContent {
-<<<<<<< HEAD
   description: string,
   tags: string[],
   suggestedPrice: {
@@ -46,20 +44,14 @@ interface GeneratedContent {
 origin/cursor/automate-test-improve-and-merge-code-2533
     max: number
 :src/components/listing/AIListingGenerator.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   keyPoints: string[]
-=======
   }
   keyPoints: string[],
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
 }
 interface AIListingGeneratorProps {
 :src/components/listing/AIListingGenerator.tsx
-<<<<<<< HEAD
 interface GeneratedContent {,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   description: string,;
   tags: string[],;
   suggestedPrice: {;
@@ -82,10 +74,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     category?: string;
     keyFeatures?: string;
     targetAudience?: string
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
-<<<<<<< HEAD
 ;
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast(),;
@@ -154,7 +144,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',      toast({
     try {
 
 toast({
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
       })
@@ -170,7 +159,6 @@ if (.error) {) {
   $2
 }
         throw new Error ((data as any).error);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
 ;
       if (data && (data as any).error) {;
@@ -193,29 +181,20 @@ if (.error) {) {
       setIsLoading(false)
     }
 :src/components/listing/AIListingGenerator.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   },
 
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
-=======
 
 :src/components/listing/AIListingGenerator.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({
         title: "Content Applied",
         description: "The generated content has been applied to your listing."
       })
 :src/components/listing/AIListingGenerator.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
   },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -331,8 +310,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
 :src_backup/components/listing/AIListingGenerator.tsx
       setGeneratedContent((data as any)?.generated || null);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       setGeneratedContent((data as any)?.generated || null),
       toast({
         title: "Content Generated",
@@ -378,7 +355,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             isLoading={isLoading} 
 ;
       setGeneratedContent((data as any)?.generated || null),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
       toast({;
         title: "Content Generated",;
         description: "AI has created optimized listing content for you.";
@@ -389,18 +365,15 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         title: "Generation Failed",;
 :src/components/listing/AIListingGenerator.tsx
 description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
-=======
         description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
 :src_backup/components/listing/AIListingGenerator.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
 :src/components/listing/AIListingGenerator.tsx
-<<<<<<< HEAD
   },;
   const handleApply = () => {;
     if (generatedContent && onApplyGenerated) {;
@@ -417,10 +390,7 @@ description: error instanceof Error ? error.message : "Failed to generate conten
   return (
 :src_backup/components/listing/AIListingGenerator.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
     <div className="space-y-6">;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
           <CardTitle className="flex items-center text-white">;
@@ -433,9 +403,6 @@ description: error instanceof Error ? error.message : "Failed to generate conten
         </CardHeader>;
         <CardContent>;
 :src_backup/components/listing/AIListingGenerator.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
@@ -450,15 +417,11 @@ description: error instanceof Error ? error.message : "Failed to generate conten
 
           <AIListingForm 
 
-=======
           <AIListingForm
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
       {isLoading && <LoadingContentSkeleton />}
-=======
           />;
         </CardContent>;
       </Card>;      {isLoading && <LoadingContentSkeleton />}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {generatedContent && !isLoading && (
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
@@ -505,16 +468,11 @@ key_features: string;,
 target_audience: string;
 :src_backup/components/listing/AIListingGenerator.tsx
 
-<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
 }) => {
   setIsLoading (true)
 try {
   const {
 :src_backup/components/listing/AIListingGenerator.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   data, error;
 }= await supabase.functions.invoke ('ai - listing - generator', {'
@@ -537,7 +495,6 @@ toast ({
 }catch (error) {'
   logErrorToProduction ('Error generating content:', {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           />;
         </CardContent>;
       </Card>;
@@ -575,14 +532,11 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }'";
 :src_backup/components/listing/AIListingGenerator.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
   data: error;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 });
 toast ({
 }finally {
   setIsLoading (false);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 :src_backup/components/listing/AIListingGenerator.tsx
 const handle_apply = () =>: any {
@@ -594,7 +548,6 @@ if ( {) {
 toast ({
 }
 :src/components/listing/AIListingGenerator.tsx
-<<<<<<< HEAD
 }
 }
 }
@@ -603,14 +556,10 @@ toast ({
   );
 }
 :src/components/listing/AIListingGenerator.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-=======
 ;
 :src_backup/components/listing/AIListingGenerator.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
 return (<div className="space-y-6" > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized, SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm onSubmit= {
   handleGenerate
 }isLoading= {
@@ -628,5 +577,3 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }</div>)
 }'"
 :src/components/listing/AIListingGenerator.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -36,11 +36,7 @@ import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, writeState } from "../../../utils/sync/storage"
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   const state = readState()
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
   if (req.method === "GET") {
     return res.status(200).json({ config: state.config })
   }
@@ -48,7 +44,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   } catch (error) {
     console.error("Error:", error);
-=======
 }"
 import type { NextApiRequest, NextApiResponse } from "next","
 import { readState, writeState } from "../../../utils/sync/storage","
@@ -64,7 +59,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
 };
   } catch (error) {";
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -83,7 +77,6 @@ peers?: Peer[],
     if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId,
 
     writeState(state),
-<<<<<<< HEAD
     return res.status(200).json({ config: state.config })
     } catch (error) {"
     console.error("Error:", error);"
@@ -100,7 +93,6 @@ if (req.method === "POST") {
     }
     if (scope && !["full", "dao", "marketplace"].includes(scope)) {
       return res.status(400).json({ error: "Invalid scope" })
->>>>>>> pr-12243
     }
     if (Array.isArray(peers)) {
       state.config.peers = peers.filter((p) => typeof p.baseUrl === "string" && p.baseUrl.length > 0)
@@ -184,10 +176,8 @@ if (state.config.instance_id = instance_id, ) {
   return res.status (405).json ({ error: "Method not allowed" });
 }
 ;
->>>>>>> pr-12243
     return res.status(200).json({ config: state.config })
     } catch (error) {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -199,8 +189,6 @@ if (state.config.instance_id = instance_id, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 "
   return res.status(405).json({ error: "Method not allowed" })
 };'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

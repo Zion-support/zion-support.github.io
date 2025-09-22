@@ -1,11 +1,7 @@
 :src_backup/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 application: JobApplication
 :src_backup/components/jobs/applications/ApplicationCard.tsx
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 :src_backup/components/jobs/applications/ApplicationCard.tsx
 import { useState } from "react",
@@ -25,24 +21,18 @@ import { formatDistanceToNow } from 'date - fns';
 import { JobApplication } from '@/types / jobs';
 import { Button } from '@/components / ui / button';
 :src_backup/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationCard.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {
-=======
 import { useState } from 'react';'
 import { formatDistanceToNow } from 'date - fns';'
 import { JobApplication } from '@/types / jobs';'
 import { Button } from '@/components / ui / button';
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationCard.tsx
-=======
 import {
 import { JobApplication } from '@/types/ jobs';
 import { Button } from '@/components/ui/ button';
 import {
   // TODO: Implement
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
   Card,
   CardContent,
   CardFooter,
@@ -84,16 +74,13 @@ import { toast } from "sonner";
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ApplicationCardProps {
 :src_backup/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationCard.tsx
 
-<<<<<<< HEAD
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
 :src_backup/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD
 
   const [expanded, setExpanded] = useState(false)
   const handleDownloadResume = () => {
@@ -103,9 +90,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 :src_backup/components/jobs/applications/ApplicationCard.tsx
   const renderActionButtons = () =>: any {
     switch (application.status) {
-=======
 interface ApplicationCardProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationCard.tsx
   application: JobApplication;
 export /**;
  * ApplicationCard - Function description;
@@ -119,7 +104,6 @@ function ApplicationCard() {}
   const renderActionButtons = () =>: any {}
     switch (application.status) {interface ApplicationCardProps {}
   application: JobApplication;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export /**;
  * ApplicationCard - Function description;
@@ -138,11 +122,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     switch (application.status) {'
       case 'shortlisted':;
 :src_backup/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationCard.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
     toast.info('Resume download functionality will be implemented soon') }
   const renderActionButtons = () => {
     switch (application.status) {interface ApplicationCardProps {
@@ -152,26 +131,18 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false);
   const handleDownloadResume = null;
 :src/components/jobs/applications/ApplicationCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
         return (
           <Button variant='default' size='sm'>;
             <Calendar className='h - 4 w - 4 mr - 1' /> Prepare for,  Interview);
       case 'interview':;
         return (
 :src_backup/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
   },
           <Button variant='default' size='sm'>;
-=======
         return ('
           <Button variant='default' size='sm'>;'
             <Calendar className='h - 4 w - 4 mr - 1' /> Prepare for Interview);'
@@ -179,7 +150,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         return (
 '
           <Button variant='default' size='sm'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationCard.tsx
             <Calendar className='h - 4 w - 4 mr - 1' /> View Interview Details;
           </Button>);'
       case 'hired':;
@@ -189,7 +159,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       case 'rejected':;
 :src_backup/components/jobs/applications/ApplicationCard.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationCard.tsx
         return (
           <Button variant='outline' size='sm'>
             <HelpCircle className='h-4 w-4 mr-1' /> View Feedback
@@ -204,42 +173,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
   };
 :src_backup/components/jobs/applications/ApplicationCard.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 :src_backup/components/jobs/applications/ApplicationCard.tsx
   const renderActionButtons = () => {
     switch (application.status) {
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   }
   const renderActionButtons = () => {
     switch (application.status) {
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationCard.tsx
-=======
   }
   const renderActionButtons = () => {
     switch (application.status) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
       case "shortlisted": return (
           <Button variant="default" size="sm">
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview
           </Button>
 :src/components/jobs/applications/ApplicationCard.tsx
 
-=======
   const renderActionButtons = () => {}
     switch (application.status) {"
       case "shortlisted": return ("
@@ -247,9 +198,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
           </Button>
         ),"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationCard.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
       case "interview":
         return ("
           <Button variant="default" size="sm">"
@@ -257,8 +205,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>
 :src_backup/components/jobs/applications/ApplicationCard.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
       case "hired":
         return ("
           <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">"
@@ -266,15 +212,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>
 :src_backup/components/jobs/applications/ApplicationCard.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
       case "rejected":
         return ("
           <Button variant="outline" size="sm">"
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback;
           </Button>
 :src/components/jobs/applications/ApplicationCard.tsx
-=======
   return (
     <Card className="overflow-hidden">"
       <CardHeader className="pb-3">"
@@ -286,7 +229,6 @@ export function ApplicationCard({ application }:,  ApplicationCardProps) {,
   const handleDownloadResume = () => {
     // This would typically download the resume file
             <div className="text-sm text-muted-foreground mt-1">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
 
   return (
     <Card className="overflow-hidden">
@@ -294,18 +236,12 @@ export function ApplicationCard({ application }:,  ApplicationCardProps) {,
         <div className="flex justify-between items-start">
           <div>
 :src_backup/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
             <div className="text-sm text-muted-foreground mt-1">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationCard.tsx
-=======
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
             <div className="text-sm text-muted-foreground mt-1">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
             <CardTitle>{application.job?.title |'Unknown Job'}</CardTitle>
             <div className='text-sm text-muted-foreground mt-1'>
               Applied{' '}
@@ -319,20 +255,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </CardHeader>
 :src_backup/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
     <Card className='overflow - hidden'>;
       <CardHeader className='pb - 3'>;
-=======
 '
     <Card className='overflow - hidden'>;'
       <CardHeader className='pb - 3'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationCard.tsx
         <div className='flex justify - between items - start'>;
 :src_backup/components/jobs/applications/ApplicationCard.tsx
           <div>;'
@@ -355,14 +283,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <ApplicationProgress status={application.status} className="my-4" />"
 
 :src_backup/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationCard.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <CardContent className="pb-3">
-=======
       "
       <CardContent className="pb-3">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationCard.tsx
         <ApplicationProgress status={application.status} className="my-4" />
 :src_backup/components/jobs/applications/ApplicationCard.tsx
 
@@ -387,9 +310,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <ApplicationProgress status={application.status} className='my-4' />
 origin/cursor/automate-test-improve-and-merge-code-2533
         {expanded && (
-=======
         {expanded && ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationCard.tsx
           <div className='mt - 4 space - y-3'>;
             {application.cover_letter && (
               <div>;'
@@ -532,8 +453,6 @@ export function ApplicationCard(): any ({ application }:,  ApplicationCardProps)
                     onClick={handleDownloadResume}
 :src_backup/components/jobs/applications/ApplicationCard.tsx
                   >
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD
                     <Download className='h-3 w-3 mr-1' /> Download                  </Button>
                 </div>
               </div>
@@ -568,14 +487,7 @@ export function ApplicationCard(): any ({ application }:,  ApplicationCardProps)
           <div className="mt-4 space-y-3">
             {application.cover_letter && (
 
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationCard.tsx
-=======
         {expanded && (
           <div className="mt-4 space-y-3">"
             {application.cover_letter && (
@@ -598,21 +510,16 @@ export function ApplicationCard(): any ({ application }:,  ApplicationCardProps)
                     <FileText className="h-4 w-4 mr-2 text-blue-500" />
                     <span className="text-sm font-medium">{application.resume.title || "Resume"}</span>
                   </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>
                     <Download className="h-3 w-3 mr-1" /> Download
                     <Download className='h-3 w-3 mr-1' /> Download
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/jobs/applications/ApplicationCard.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
                   </Button>
                 </div>
               </div>
             )}
 :src_backup/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <div>;"
                 <h4 className="text - sm font - medium mb - 1">Your Cover Letter</h4>;"
@@ -633,8 +540,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/jobs/applications/ApplicationCard.tsx
 
 {application.match_score && (
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD
 {application.match_score && (
 origin/cursor/automate-test-improve-and-merge-code-2533
               <div>
@@ -649,11 +554,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div>;
                 <h4 className='text - sm font - medium mb - 1'>Match Score</h4>;
                 <div className='flex items - center'>;
-=======
               <div>;'
                 <h4 className='text - sm font - medium mb - 1'>Match Score</h4>;'
                 <div className='flex items - center'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationCard.tsx
                   <div className='h - 6 w - 6 rounded - full bg - blue - 100 text - blue - 800 flex items - center justify - center text - xs font - medium'>;
                     {application.match_score}%;
                   </div>;'
@@ -662,27 +565,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </span>                </div>            {application.match_score && (
 
 :src_backup/components/jobs/applications/ApplicationCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {application.match_score && (
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <div>
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationCard.tsx
               <div>
 
 :src_backup/components/jobs/applications/ApplicationCard.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>
                 <div className="flex items-center">
-=======
 
 "
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>"
                 <div className="flex items-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationCard.tsx
                   <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium">
                     {application.match_score}%
                   </div>"
@@ -692,12 +587,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
 :src_backup/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :src_backup/components/jobs/applications/ApplicationCard.tsx
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
@@ -761,16 +653,9 @@ export function ApplicationCard() { return null; }
       <CardContent className="pb-3">;"
         <ApplicationProgress status={application.status} className="my-4" />;
 :src_backup/components/jobs/applications/ApplicationCard.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationCard.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
         {expanded && (;
-=======
         {expanded && (;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationCard.tsx
           <div className="mt-4 space-y-3">;
             {application.cover_letter && (;
               <div>;"
@@ -793,14 +678,7 @@ export function ApplicationCard() { return null; }
                 </div>;
               </div>;
 :src_backup/components/jobs/applications/ApplicationCard.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationCard.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
             )}
 ;
             {application.match_score && (;
@@ -818,7 +696,6 @@ export function ApplicationCard() { return null; }
         )}
 :src/components/jobs/applications/ApplicationCard.tsx
 
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
       </CardContent>
 <CardFooter className='flex flex-col gap-3 pt-0'>
         <div className='flex justify-between items-center w-full'>
@@ -834,12 +711,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='flex gap-2'>;
             {renderActionButtons()}
 :src/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD
 
           </div>
         )}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </CardContent>
       "
       <CardFooter className="flex flex-col gap-3 pt-0">"
@@ -847,12 +722,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>"
             {expanded ? "Show Less" : "Show More"}
 
-<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </Button>
-=======
           </Button>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationCard.tsx
           <div className="flex gap-2">
             {renderActionButtons()}
             <Button "
@@ -926,37 +797,23 @@ pr-12325
               <Link href={`/jobs/${application.job_id}`}>
 :src_backup/components/jobs/applications/ApplicationCard.tsx
 <ExternalLink className="h-4 w-4 mr-1" /> View Job
-=======
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
             <Button variant='outline' size='sm' asChild>
               <Link href={`/jobs/${application.job_id}`}>
                 <ExternalLink className='h-4 w-4 mr-1' /> View Job
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/jobs/applications/ApplicationCard.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
               </Link>
             </Button>
           </div>
         </div>
 :src/components/jobs/applications/ApplicationCard.tsx
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client        
 :src/components/jobs/applications/ApplicationCard.tsx
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationCard.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
         <Button 
           variant="secondary" 
           size="sm"
@@ -966,10 +823,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className="h-4 w-4 mr-1" /> Message Client
 :src_backup/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD
           </Link>
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationCard.tsx
         </Button>
       </CardFooter>
     </Card>
@@ -1048,7 +903,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 :src_backup/components/jobs/applications/ApplicationCard.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </Link>
         </Button>
       </CardFooter>
@@ -1084,13 +938,7 @@ default: return (<Card className="overflow - hidden" > <CardHeader className="pb
 }</div>) ";"
 }</CardContent> <Button variant="outline" size="sm" as_child > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child > </Link> </Button> </CardFooter> </Card>);"
 }";
-<<<<<<< HEAD:src/components/jobs/applications/ApplicationCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         >;
           <Link href={`/messages?job_id=${application.job_id}`} />;`
             <MessageSquare className="h - 4 w - 4 mr - 1" /> Message Client;
@@ -1116,7 +964,6 @@ default: return (<Card className="overflow - hidden" > <CardHeader className="pb
 }
 ;
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx
 <Button variant='secondary' size='sm' className='w-full' asChild>
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client
@@ -1140,12 +987,7 @@ default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3
 }</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) ;
 }"
 :src/components/jobs/applications/ApplicationCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationCard.tsx
-=======
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job;"
 
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client;
@@ -1215,4 +1057,3 @@ default: return (<Card className="overflow - hidden" > <CardHeader className="pb
 }</div>) ";""
 } <Button variant="outline" size="sm" as_child >   </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child >    );""`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/applications/ApplicationCard.tsx

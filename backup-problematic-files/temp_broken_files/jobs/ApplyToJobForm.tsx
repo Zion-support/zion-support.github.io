@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -74,14 +73,12 @@ export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
         </p>;
       </div>;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {error && (;
         <Alert variant="destructive">;
           <AlertCircle className="h-4 w-4" />;
           <AlertDescription>{error}</AlertDescription>;
         </Alert>;
       )}
-<<<<<<< HEAD
 
             value={coverLetter}
             onChange={(e) => setCoverLetter(e.target.value)}

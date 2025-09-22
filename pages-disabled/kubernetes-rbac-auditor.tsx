@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </div>
       </div>
@@ -17,7 +12,6 @@
         <div className="max-w-4xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">Kubernetes RBAC Auditor</h1>
 
-<<<<<<< HEAD
     <Layout>;
       <Head>;
         <title > Kubernetes RBAC Auditor | Zion Tech Group</title>;
@@ -25,7 +19,6 @@
         <link rel="canonical" href="https://ziontechgroup.com / kubernetes - rbac - auditor" />;
       </Head>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function KubernetesRbacAuditorPage() {
@@ -69,18 +62,15 @@ export default function KubernetesRbacAuditorPage(req, res) {
         <meta name="description" content="Detect over-permissive Kubernetes roles and unused bindings with least-privilege recommendations." />;
         <link rel="canonical" href="https://ziontechgroup.com/kubernetes-rbac-auditor" />;
       </Head>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">Kubernetes RBAC Auditor</h1>;
           <p className="text-slate-300">Over-permission detection, wildcard checks, unused bindings, and least-privilege recommendations.</p>;
-=======
 "
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-4xl mx-auto space-y-6">;"
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">Kubernetes RBAC Auditor</h1>;"
           <p className="text-slate-300">Over-permission detection, wildcard checks, unused bindings, and least-privilege recommendations.</p>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             {[ 'Cluster-wide RBAC inventoryOver-permission & wildcard detectionUnused binding analysisLeast-privilege recommendations' ].map((f) => (;"
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-sky-500/30 text-slate-200">{f}</div>;
@@ -100,27 +90,14 @@ export default function KubernetesRbacAuditorPage(req, res) {
     </Layout>;
   );
   } catch (error) {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
 ;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

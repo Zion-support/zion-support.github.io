@@ -1,5 +1,4 @@
 
-=======
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -42,7 +41,6 @@ export default function ReferralsPage() {;
   const referralLink = getReferralLink(),;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="container max-w-7xl py-10">;
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">;
         <div>;
@@ -56,7 +54,6 @@ export default function ReferralsPage() {;
           Share Referral Link;
         </Button>;
       </div>;
-<<<<<<< HEAD
 
           <Tabs defaultValue="referrals" className="w-full">;
             <TabsList className="w-full grid grid-cols-2">;

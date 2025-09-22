@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -27,7 +22,6 @@ SheetTrigger,";
 } from "@/components/ui/sheet";"
 import { Badge } from "@/components/ui/badge";"
 import { Label } from "@/components/ui/label";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
@@ -37,10 +31,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { X, Filter } from "lucide-react",
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",import { Label } from "@/components/ui/label";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface BrowseFiltersProps {
   type: "jobs" | "talents";
 }
@@ -67,8 +58,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       setActiveFilters([...activeFilters, filter])
     }
   };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
@@ -82,8 +71,6 @@ import { Label } from "@/components/ui/label";
 interface BrowseFiltersProps {
   type: "jobs" | "talents"
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
@@ -95,7 +82,6 @@ setActiveFilters([...activeFilters, filter])
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   }
-<<<<<<< HEAD
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Slider } from '@/components / ui / slider';
@@ -119,20 +105,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       setActiveFilters([...activeFilters, filter]);
     }
   },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 interface BrowseFiltersProps {"
   type: "jobs" | "talents";
 }
@@ -142,7 +119,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {};
 
   const addFilter = (filter: string) => {}
     if (!activeFilters.includes(filter)) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setActiveFilters([...activeFilters, filter]);
     }
   };
@@ -151,18 +127,11 @@ const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter((f) => f !== filter));
   };
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return (
-=======
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
-=======
   const removeFilter = (filter: string) => {}
     setActiveFilters(activeFilters.filter((f) => f !== filter));
   };
@@ -170,7 +139,6 @@ const removeFilter = (filter: string) => {
   return ("
     <div className="space-y-3">"
       <div className="flex justify-between items-center px-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">
           <Sheet>
             <SheetTrigger asChild>"
@@ -589,7 +557,6 @@ interface BrowseFiltersProps {
                   </Select>;
                 </div>;
 
-<<<<<<< HEAD
                 <div className="space-y-2">;
                   <Label > Salary Range</Label>;
                   <div className="flex gap - 4 items-center">;
@@ -626,7 +593,6 @@ interface BrowseFiltersProps {
             </SelectContent>;
           </Select>;
 
-=======
 ;
           {activeFilters.map((filter) => (;
             <Badge ;
@@ -637,7 +603,6 @@ interface BrowseFiltersProps {
               {filter}
               <X ;
                 className="h-3 w-3 cursor-pointer" ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 onClick={() => removeFilter(filter)} ;
               />;
             </Badge>;
@@ -654,18 +619,14 @@ interface BrowseFiltersProps {
               {filter}
               <X;"
                 className="h - 3 w - 3 cursor - pointer";
-=======
 
                 className="h - 3 w - 3 cursor - pointer";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 on_click={() => remove_filter (filter)}
 
             ))}
     </div>);
 }
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                 )}"
 
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript""
@@ -679,4 +640,3 @@ interface BrowseFiltersProps {
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters"
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

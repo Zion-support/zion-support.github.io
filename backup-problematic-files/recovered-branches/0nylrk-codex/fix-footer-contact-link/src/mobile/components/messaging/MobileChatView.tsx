@@ -44,9 +44,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
     const roomId = `mobile-${contact.id}`,;
 toast.success("Starting video call", {;
       description:`Connecting with ${contact.name}...`;
-=======
   description: `Connecting with ${contact.name;}...`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }),;
     ;
     // Navigate to video call page;
@@ -57,9 +55,7 @@ toast.success("Starting video call", {;
     const roomId = `mobile-audio-${contact.id}`,;
 toast.success("Starting audio call", {;
       description:`Connecting with ${contact.name}...`;
-=======
   description: `Connecting with ${contact.name;}...`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }),;
     ;
     // Navigate to video call page with audio-only flag;
@@ -67,14 +63,12 @@ toast.success("Starting audio call", {;
   },;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="flex flex-col h-full pb-safe">;
       <header className="sticky top-0 z-10 bg-background border-b border-border">;
         <div className="flex items-center h-14 px-4">;
           <Button variant="ghost" size="icon" onClick={onBack}>;
             <ChevronLeft className="h-5 w-5" />;
           </Button>;
-<<<<<<< HEAD
           <div className="flex">;
             <Button variant="ghost" size="icon" onClick={startAudioCall}>;
               <Phone className="h-5 w-5" />;
@@ -105,7 +99,6 @@ toast.success("Starting audio call", {;
               )}>;                {message.timestamp}
 {message.isMe && message.status && (;
                   <span className="ml-1">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </span>;
                 )}
               </div>;
@@ -113,7 +106,6 @@ toast.success("Starting audio call", {;
           </div>;
         ))}
       </div>;
-<<<<<<< HEAD
       <div className="sticky bottom-0 bg-background border-t border-border p-2">;
         <div className="flex items-center gap-2">;
           <Button variant="ghost" size="icon">;
@@ -121,14 +113,12 @@ toast.success("Starting audio call", {;
           </Button>;
 
           <Input;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
 onKeyDown={handleKeyDown}
             placeholder="Type a message...";
             className="flex-1";
           />;
-<<<<<<< HEAD
             <Send className="h-5 w-5" />;
           </Button>;
         </div>;
@@ -147,4 +137,3 @@ onKeyDown={handleKeyDown}
 }</div> </div> </div>) ) 
 }</div> <div className="sticky bottom-0 bg-background border-t border-border p-2"> <div className="flex items-center gap-2"> <Button variant=" ghost"size=" icon"> <PaperclipIcon className="h-5 w-5"/> </Button> <Input > <Send className=" h-5 w-5" /> </Button> </div> </div> </div>) 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

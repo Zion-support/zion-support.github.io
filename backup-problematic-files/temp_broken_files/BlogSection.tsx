@@ -1,5 +1,4 @@
 
-=======
 import { GradientHeading } from "./GradientHeading",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 import { Button } from "./ui/button",;
@@ -13,14 +12,12 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {;
 ;
 export function BlogSection() {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <section className="py-20 bg-zion-blue-dark" id="blog">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">;
           <div>;
             <GradientHeading>Latest Insights</GradientHeading>;
             <p className="mt-2 text-zion-slate-light text-xl max-w-2xl">;
-<<<<<<< HEAD
 
                 </Button>;
               </CardFooter>;

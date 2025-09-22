@@ -1,10 +1,8 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
 import { Edit, Trash2 } from 'lucide-react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/certifications/CertificationsList.tsx
 import { format } from 'date-fns',;
 ;
 interface CertificationsListProps {;
@@ -35,18 +33,14 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
 <> · Expires:{typeof cert.expiration_date === 'string' ;
                       ? cert.expiration_date ;
                       :format(cert.expiration_date, 'MMM yyyy')}
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     <>  Expires:{typeof cert.expiration_date === 'string' ;
                       ? cert.expiration_date ;)
                       :format(cert.expiration_date, 'MMM yyyy')}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     </>;
                   )}
                 </p>;
               </div>;
 <div className="flex gap-2">;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
 
                   onClick={() => onEdit(cert)}
                 >;
@@ -57,14 +51,11 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
 
                   onClick={() => onDelete(cert.id!)}
 aria-label="Delete certification";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 >;
                   <Trash2 className="h-4 w-4" />;
                 </Button>;
               </div>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
             {cert.credential_url && (;
               <p className="text-xs mt-2">;
                 <a ;
@@ -76,12 +67,10 @@ aria-label="Delete certification";
 </a>
                 </a>;
               </p>;            )}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/certifications/CertificationsList.tsx
           </CardContent>;
         </Card>;
       ))}
     </div>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/certifications/CertificationsList.tsx
   typeof cert.expiration date === 'string' ? cert.expiration date : format (cert.expiration date, 'MMM yyyy') ;
 }</>) ;
 }</p> </div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div> <a href= {;"  cert.credential url ";"}target="blank" rel="noopener noreferrer" className="text-primary hover:underline" > View credential </Link> </p>) ;
@@ -91,4 +80,3 @@ aria-label="Delete certification";
 }</div>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/certifications/CertificationsList.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/certifications/CertificationsList.tsx

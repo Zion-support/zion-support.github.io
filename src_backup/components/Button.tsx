@@ -31,19 +31,11 @@ const baseClasses = 'font-semibold rounded-lg transition-all duration-300 transf
     outline: 'border border-white/30 hover:border-white/60 text-white hover:bg-white/10',
     ghost: 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800',
     danger: 'bg-red-600 hover:bg-red-700 text-white shadow-lg'
-=======
     ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
     ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
-=======
     ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500'  };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',

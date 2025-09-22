@@ -1,8 +1,5 @@
 :pages_backup/api/admin/partners/list.ts
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
 export default async function handler(
@@ -10,7 +7,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       "placeholder-key";
 
 import type { NextApiRequest, NextApiResponse } from 'next';'
@@ -22,8 +18,6 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
 
 :pages_backup/api/admin/partners/list.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
@@ -31,7 +25,6 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
           {
 {
           {
-<<<<<<< HEAD
             code: "promptpro"
             name: "Prompt Pro"
             status: "pending"
@@ -58,7 +51,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       "placeholder-key";
 import type { NextApiRequest, NextApiResponse } from 'next';
           {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   try {}
     if (usingPlaceholder) {}
@@ -84,7 +76,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } catch (e: any) {}
     return res && res.status(500).json({ error: e?.message });
 :pages_backup/api/admin/partners/list.ts
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 '
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -148,9 +139,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   } catch (e: any) {}
     return res.status (500).json ({ error: e?.message });
 :pages_backup/api/admin/partners/list.ts
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   try {';
@@ -178,8 +166,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
     return res.status(500).json({ error: "Internal server error" });
 }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -203,17 +189,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
   }
 }
 :pages_backup/api/admin/partners/list.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/admin/partners/list.ts

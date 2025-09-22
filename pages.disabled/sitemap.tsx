@@ -1,12 +1,5 @@
 :pages/sitemap.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 import {}
@@ -44,7 +37,6 @@ const sitemap_data = [;
       { name: 'Contact', url: '/contact', icon: 'Globe' },
       { name: 'Services', url: '/services', icon: 'Settings' }
     ]
-=======
   {'
     category: 'Main Pages',
     pages: [;'
@@ -53,7 +45,6 @@ const sitemap_data = [;
       { name: 'Contact', url: '/contact', icon: Globe },'
       { name: 'Services', url: '/services', icon: Settings }
     ];
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
   {'
     category: 'Services',
@@ -231,7 +222,6 @@ import {}
 '
 } from 'lucide-react';'
 import SmartHeader from '../components/SmartHeader';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import SmartFooter from '../components/SmartFooter';
 export default function SitemapPage() {}
   const mainPages = []
@@ -272,7 +262,6 @@ function SitemapPage() {}
     {'
       href: '/explore'
 :pages/sitemap.tsx
-<<<<<<< HEAD
       href: '/contact',
       label: '📧 Contact',
       description: 'Get in touch and start your project',
@@ -726,7 +715,6 @@ transition={{ duration: 0 && 0.8 }}>;'
             </p>;'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
 :pages/sitemap.tsx
-<<<<<<< HEAD
 <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
               Site Map
             </h1>
@@ -747,7 +735,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <a'
                 href='/search'
 :pages/sitemap.tsx
-<<<<<<< HEAD
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
               >
                 Search Site
@@ -762,13 +749,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto'>
           <motion.div
 :pages/sitemap.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 :pages/sitemap.tsx
-<<<<<<< HEAD
       {/* Main Pages */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -832,7 +817,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 :pages/sitemap.tsx
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {mainPages.map((page, index) => (
               <motion.div
@@ -918,11 +902,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
-=======
           >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Service Categories;
             </h2>'
@@ -1062,7 +1043,6 @@ key={category.href}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Featured Services
@@ -1084,9 +1064,7 @@ key={category.href}
 
             className="mb-16"
           >
-=======
           >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className="text-3xl font-bold text-white mb-4 text-center">
               Featured Services;
             </h2>"
@@ -1176,13 +1154,11 @@ key={service.href}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">"
         <div className="max-w-7xl mx-auto">
           <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.href}
@@ -1205,7 +1181,6 @@ key={service.href}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Resources & Tools
@@ -1224,7 +1199,6 @@ key={service.href}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
-=======
           >'
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Resources & Tools;
@@ -1232,7 +1206,6 @@ key={service.href}
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed;
             </p>
           </motion.div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
             className="mb-16"
@@ -1328,13 +1301,11 @@ key={resource.href}
       <section className="py-20 px-6">"
         <div className="max-w-7xl mx-auto">
           <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources && resources.map((resource, index) => (;
               <motion&& motion.div
                 key={resource && resource.href}
@@ -1357,7 +1328,6 @@ key={resource.href}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               External Resources
@@ -1376,7 +1346,6 @@ key={resource.href}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
-=======
           >'
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               External Resources;
@@ -1384,7 +1353,6 @@ key={resource.href}
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms;
             </p>
           </motion.div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
             className="mb-16"
@@ -1482,13 +1450,11 @@ key={link.href}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">"
         <div className="max-w-4xl mx-auto">
           <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1507,11 +1473,8 @@ key={link.href}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
-=======
           >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Contact Information;
             </h2>'
@@ -1582,7 +1545,6 @@ key={contact.type}
                       ? 'noopener noreferrer''
                       : ''
 }
-<<<<<<< HEAD
                   className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'>;
                   {contact && contact.value}
                 </a>;
@@ -1598,7 +1560,6 @@ key={contact.type}
 className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
 className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                   className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   {contact.value}
                 </a>
@@ -1696,7 +1657,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
               <Link'
                 href='/contact'
 :pages/sitemap.tsx
-<<<<<<< HEAD
   ),
   );
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -2094,9 +2054,6 @@ duration: 0 && 0.8
       <SmartFooter />;
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 type: 'Address',
       value: 'Middletown, DE',
@@ -2488,11 +2445,6 @@ export default function SitemapPage() {}
   );
 }
 :pages/sitemap.tsx
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
 </div>;
   );
   } catch (error) {
@@ -2887,7 +2839,6 @@ export default function SitemapPage() {
     </MainLayout>
   );
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
   duration: 0.8
 }viewport= {
   {
@@ -2895,8 +2846,6 @@ export default function SitemapPage() {
 
 }> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>)
 :pages/sitemap.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   // We generate the XML sitemap with the posts data
   const sitemap = generateSiteMap();
@@ -2913,6 +2862,3 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 
 export default SiteMap;
 :pages/sitemap.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/data-analytics.tsx
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -400,7 +399,6 @@ const analyticsServices = [
     pricing: "$4,000 - $20,000/month"
   }
 ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const benefits = [
   'Data-driven decision making',
   'Improved business performance',
@@ -410,7 +408,6 @@ const benefits = [
   'Automated reporting and analytics'
 ];
 export default function DataAnalyticsServices() {
-<<<<<<< HEAD
 
 export default function DataAnalyticsPage() {
 
@@ -457,7 +454,6 @@ export default function DataAnalyticsPage() {
             </motion.div>
           </div>
         </section>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -475,10 +471,7 @@ export default function DataAnalyticsPage() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {/* Services Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -536,7 +529,6 @@ transition={{ duration: 0.5, delay: index * 0.1 }}
                       <span className="text-gray-700">{benefit}</span>
                     </li>
                   ))}
-<<<<<<< HEAD
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">
@@ -597,4 +589,3 @@ transition={{ duration: 0.5, delay: index * 0.1 }}
     </Layout>
     </>
     </>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

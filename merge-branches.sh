@@ -3,7 +3,6 @@
 set -e
 
 echo "🚀 Starting comprehensive branch merge process..."
-echo "================================================"
 
 # Ensure we're on main branch
 echo "📋 Checking current branch..."
@@ -152,7 +151,6 @@ end_time=$(date -u +"%Y-%m-%dT%H:%M:%S.%3NZ")
 
 echo ""
 echo "📊 MERGE SUMMARY:"
-echo "=================="
 echo "  Total Branches: $total_branches"
 echo "  Successfully Merged: $successful_merges"
 echo "  Failed: $failed_merges"

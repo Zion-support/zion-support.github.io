@@ -1,5 +1,4 @@
 
-=======
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",;
 import { Badge } from "@/types/community",;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -36,13 +35,11 @@ export const UserBadges = ({ badges } UserBadgesProps) => {;
                   <IconComponent ;
                     style={{ color:badge.color }} ;
                     className="w-4 h-4" ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   />;
                 </div>;
               </TooltipTrigger>;
               <TooltipContent>;
                 <div className="text-center">;
-<<<<<<< HEAD
 
                 </div>;
               </TooltipContent>;

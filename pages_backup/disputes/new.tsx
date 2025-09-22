@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react',
 
@@ -26,8 +24,6 @@ class ErrorBoundary extends React.Component {}
   }
 :pages_backup/disputes/new.tsx
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 '
@@ -36,8 +32,6 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 '
 import {useCurrentUser} from '../../utils/auth';
 :pages_backup/disputes/new.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -58,7 +52,6 @@ const REASONS = [
   const user = useCurrentUser();
 
 :pages_backup/disputes/new.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useRouter  } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -80,14 +73,11 @@ const REASONS = [
   } = router.query as Record<string, string>;
   const user = useCurrentUser();
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
   const [description, setDescription] = useState('');
   const [files, setFiles] = useState<File[]>([]);
-<<<<<<< HEAD
     try {;
       const res = await fetch('/api/disputes', {;
         method: 'POST',;
@@ -131,8 +121,6 @@ await fetch(`/api/disputes/${encodeURIComponent(dispute && dispute.id)}/upload`,
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [talentUserId, setTalentUserId] = useState(talentId || '');
 const [clientUserId, setClientUserId] = useState(
     clientId || (user.role === 'client' ? user.id : '')
@@ -184,8 +172,6 @@ body: JSON.stringify({ files: filePayload }),
     } finally {
       setSubmitting(false);
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 ;`
@@ -196,28 +182,21 @@ body: JSON.stringify({ files: filePayload }),
   return (
 :pages_backup/disputes/new.tsx
     <EnhancedLayout>
-<<<<<<< HEAD:pages/disputes/new.tsx
-<<<<<<< HEAD
       <div className="max-w-2xl mx-auto">
         <h1 className="text-2xl font-semibold mb-4">Raise a Dispute</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 <div className='max-w-2xl mx-auto'>
         <h1 className='text-2xl font-semibold mb-4'>Raise a Dispute</h1>
         <form onSubmit={handleSubmit} className='space-y-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div>
             <label className="block text-sm font-medium">Project ID</label>
-=======
     <EnhancedLayout>"
       <div className="max-w-2xl mx-auto">"
         <h1 className="text-2xl font-semibold mb-4">Raise a Dispute</h1>"
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>"
             <label className="block text-sm font-medium">Project ID</label>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/disputes/new.tsx
             <input value={projectId} onChange={e => setProjectId(e.target.value)} required className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
           </div>"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -262,12 +241,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="pt-2">'"
             <button disabled={submitting} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Dispute'}</button>
           </div>
-<<<<<<< HEAD
         </form>
       </div>
     </EnhancedLayout>
   );
-<<<<<<< HEAD:pages_backup/disputes/new.tsx
           <div className='pt-2'>
             <button
               disabled={submitting}
@@ -282,18 +259,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </EnhancedLayout>
 );
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function toBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
 const reader = new FileReader();
   )
 
-=======
 function toBase64(file: File): Promise<string> {}
   return new Promise((resolve, reject) => {}
 const reader = new FileReader();
   )`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/disputes/new.tsx
       router && router.push(`/disputes/${encodeURIComponent(dispute && dispute.id)}`);
     } catch (e: any) {;'
       alert(e && e.message || 'Error');
@@ -301,14 +275,10 @@ const reader = new FileReader();
 
       setSubmitting(false);    }
 :pages_backup/disputes/new.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const [talentUserId, setTalentUserId] = useState(talentId || '');
-=======
 
 '
   const [talentUserId, setTalentUserId] = useState(talentId || '');'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/disputes/new.tsx
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
 
@@ -327,9 +297,6 @@ import {useCurrentUser} from '../../utils / auth';
 ;
 const REASONS = [;
 :pages_backup/disputes/new.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   'Scope Disagreement',
   'Quality Issues',
   'Delivery Delay',
@@ -338,7 +305,6 @@ const REASONS = [;
   'Other',
 ] as const;
 
-=======
 
 '
   'Scope Disagreement','
@@ -349,7 +315,6 @@ const REASONS = [;
   'Other',
 ] as const;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/disputes/new.tsx
 ;
 type ReasonType = (typeof REASONS)[number];
 ;
@@ -393,7 +358,6 @@ function handle_submit() {}
     try {'
       const res = await fetch ('/api / disputes', {'
         method: 'POST',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const router = useRouter();
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
@@ -518,14 +482,11 @@ function handle_submit() {}
               className='px - 4 py - 2 rounded bg - blue - 600 text - white hover:bg - blue - 700 disabled:opacity - 50';
 :pages_backup/disputes/new.tsx
             >;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {submitting ? 'Submitting...' : 'Submit Dispute'}
             </button>          </div>;
         </form>;
       </div>;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
@@ -543,7 +504,6 @@ function toBase64(): any (file: File): Promise<string> {;
   })
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     </EnhancedLayout>);
 function toBase64 (file: File): Promise < string> {}
   return new Promise ((resolve, reject) => {}
@@ -553,19 +513,14 @@ const reader = new FileReader ();
     reader.readAsDataURL (file);
   });
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 }
 
-<<<<<<< HEAD:pages_backup/disputes/new.tsx
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
-=======
 
   } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/disputes/new.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -579,7 +534,6 @@ function toBase64(file: File): Promise<string> {;
   });
 
 :pages_backup/disputes/new.tsx
-<<<<<<< HEAD
 }
 }
   } catch (error) {
@@ -587,20 +541,7 @@ function toBase64(file: File): Promise<string> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/disputes/new.tsx
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/disputes/new.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

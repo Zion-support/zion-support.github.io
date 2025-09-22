@@ -57,7 +57,6 @@ export const useSearchParams = () =>: any [new URLSearchParams (), () => {}] as 
   use_params,
   useSearchParams,
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   BrowserRouter;
   Routes;
   Route;
@@ -70,6 +69,4 @@ useNavigate;
   useLocation;
   useParams;
   useSearchParams};
-=======
   useSearchParams}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/stubs/react-router-dom.ts

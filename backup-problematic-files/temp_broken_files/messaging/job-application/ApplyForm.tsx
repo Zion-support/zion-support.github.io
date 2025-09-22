@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
@@ -114,7 +113,6 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
         <TabsList className="w-full mb-4 bg-zion-blue-dark/30">;
@@ -125,7 +123,6 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
             Resume;
           </TabsTrigger>;
         </TabsList>;
-<<<<<<< HEAD
 
             message={message}
             setMessage={setMessage}

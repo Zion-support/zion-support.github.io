@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -57,14 +56,12 @@ export function MobileProjectView({ project, milestones } ProjectViewProps) {;
   },;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-6 px-4 pb-24">;
       <Card>;
         <CardContent className="p-4">;
           <div className="space-y-4">;
             <div className="flex items-center justify-between">;
               <div>;
-<<<<<<< HEAD
 
             <div className="flex gap-2">;
               <Button size="sm" variant="outline" className="gap-1 flex-1">;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -9,11 +8,9 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
-=======
 import React from 'react','
 import Head from 'next/head',';
 import Link from 'next/link';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
 
 import { Satellite, ArrowRight, CheckCircle, Star, TrendingUp;
@@ -32,14 +29,12 @@ import {}
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground','
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026',
 export default function SpaceTechnologyAIPlatform() {
-<<<<<<< HEAD
 
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   ;
   static getDerivedStateFromError(error) {};
@@ -59,7 +54,6 @@ export default function SpaceTechnologyAIPlatform() {
   }
 }'
 import React from 'react';
-<<<<<<< HEAD
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -84,17 +78,14 @@ import React from 'react';
     'Airbus Defence ($10000-100000/month)',
     'Lockheed Martin',
     'Boeing',
-=======
 '
     'Maxar ($5000-50000/month)','
     'Planet Labs ($1000-10000/month)','
     'Airbus Defence ($10000-100000/month)','
     'Lockheed Martin','
     'Boeing','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     'Northrop Grumman',
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ];
 '
     'Maxar ($5000-50000/month)Planet Labs ($1000-10000/month)Airbus Defence ($10000-100000/month)Lockheed MartinBoeingNorthrop Grumman'
@@ -128,7 +119,6 @@ import React from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
   const features = [;
     'AI-powered satellite operations',;
     'Autonomous space exploration',;
@@ -211,13 +201,10 @@ import React from 'react';
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     >
       <div className="min-h-screen">
         <Head>
           <title>Space Technology AI Platform - Zion Tech Group</title>
-<<<<<<< HEAD
           <meta
             name='description'
             content='Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis.'
@@ -272,23 +259,16 @@ import React from 'react';
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
               className="text-center mb-16"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-blue-400" />
                 <span className="text-blue-300 text-sm font-medium">2026 Revolutionary Innovation</span>
               </div>
-<<<<<<< HEAD
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent'>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Space Technology
-=======
 
             >"
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6">"
@@ -297,7 +277,6 @@ import React from 'react';
               </div>
 
                   Space Technology;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </span>
                 <br />"
                 <span className="text-white">AI Platform</span>
@@ -309,18 +288,13 @@ import React from 'react';
                 satellite operations, and space data analysis.
               </p>
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12'>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                 artificial intelligence to enable autonomous space exploration,
 
                 satellite operations, and space data analysis.
               </p>'
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
                 Revolutionary AI platform that combines space technology with artificial intelligence to enable;
                 autonomous space exploration, satellite operations, and space data analysis.
@@ -328,8 +302,6 @@ import React from 'react';
 "
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -342,49 +314,30 @@ import React from 'react';
                   <ArrowRight className="w-5 h-5" />
                 </motion.div>
               </div>
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <span>1-month setup</span>
                 </div>"
                 <div className="flex items-center space-x-2">"
                   <Shield className="w-5 h-5 text-blue-400" />
                   <span>Enterprise security</span>
                 </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
               </div>
             </motion.div>
           </div>
         </section>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
 
             >"
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                   Revolutionary Features;
                 </span>
@@ -472,8 +425,6 @@ function SpaceTechnologyAIPlatform() {}
     'Maxar ($5000 - 50000 / month)','
     'Planet Labs ($1000 - 10000 / month)','
     'Airbus Defence ($10000 - 100000 / month)',
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 
@@ -490,8 +441,6 @@ export default function SpaceTechnologyAIPlatform() {}
     'NASA APIsESA APIsSatellite ground stationsGIS systemsSlackMicrosoft TeamsCustom applications'
   ],
 const competitors = [
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     'Lockheed Martin',
     'Boeing',
     'Northrop Grumman',
@@ -713,15 +662,12 @@ initial={{ opacity: 0, x: -20 }}
                     <div className="text-yellow-300 text-sm">Months to ROI</div>
 
                   </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   key={feature}
                   initial={{ opacity: 0, scale: 0.8, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, scale: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300">
@@ -734,26 +680,20 @@ initial={{ opacity: 0, x: -20 }}
                     </p>
                   </div>
                 </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Market Position Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
         {/* Market Position Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -765,8 +705,6 @@ initial={{ opacity: 0, x: -20 }}
               </p>
             </motion.div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
               <motion.div
@@ -775,8 +713,6 @@ initial={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
 className='space-y-6'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Analysis</h3>
                 <div className="space-y-4">
@@ -785,7 +721,6 @@ className='space-y-6'
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                       <span className="text-gray-300">{competitor}</span>
                     </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
               </motion.div>
               <motion.div
@@ -794,10 +729,6 @@ className='space-y-6'
                 </div>
               </motion.div>
               <motion.div
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6 }}
@@ -825,7 +756,6 @@ className='space-y-6'
 }
                 className="space-y-6"
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Market Statistics</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -866,24 +796,18 @@ className='space-y-6'
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
                   <div className='p-6 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 rounded-xl border border-yellow-500/30 text-center'>
                     <div className='text-3xl font-bold text-yellow-400 mb-2'>
                       24
                     </div>
                     <div className='text-yellow-300 text-sm'>Months to ROI</div>
                   </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
               </motion.div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
@@ -909,27 +833,16 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
   }
 }
               className="text-center mb-16"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
             >"
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Use Cases;
                 </span>
@@ -938,7 +851,6 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
                 Transform every aspect of space operations with AI-powered intelligence;
               </p>
             </motion.div>
-<<<<<<< HEAD
 
                 <motion.div
                   key={useCase}
@@ -947,24 +859,17 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <motion.div
 
                 <motion.div;
 "
                   className="group relative"
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   key={useCase  } catch (error) {
     console.error("Error:", error);
-=======
 
                   key={useCase  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -989,10 +894,6 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
   }
 }"
                   className="group relative"
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
@@ -1007,21 +908,16 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
                 </motion.div>
 <motion.a
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               ))  } catch (error) {
     console.error("Error:", error);
-=======
 
               ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
             </div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
@@ -1054,16 +950,11 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             >
 "
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Ready to Explore the Cosmos?
                 </span>
               </h2>"
@@ -1075,7 +966,6 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200'
-<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
                 <motion.a
                   href={`tel:${contactInfo.mobile}`  } catch (error) {
@@ -1094,34 +984,25 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
   }
 }
                   className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call {contactInfo.mobile}</span>
                 </motion.a>
 <motion.a
                 <motion.a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
 
                   className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >
                   <Mail className="w-5 h-5" />
                   <span>Email Us</span>
                 </motion.a>
-<<<<<<< HEAD
               </div>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div>
                     <Phone className="w-6 h-6 text-blue-400 mx-auto mb-2" />
-=======
 
                 >"
                   <Phone className="w-5 h-5" />
@@ -1131,7 +1012,6 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
                 <motion.a;
                   <div>"
                     <Phone className="w-6 h-6 text-blue-400 mx-auto mb-2" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <p className="text-white font-medium">{contactInfo.mobile}</p>
                   </div>
                   <div>"
@@ -1139,11 +1019,7 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
                     <p className="text-white font-medium">{contactInfo.email}</p>
                   </div>
                   <div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
               </div>
             </motion.div>
@@ -1328,16 +1204,10 @@ transition={{ duration: 0 && 0.6 }}
                 capabilities and operational efficiency.;
               </p>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 }
 '
@@ -1386,21 +1256,9 @@ transition={{ duration: 0 && 0.6 }}
       </div>;
     </UltraAdvancedFuturisticBackground>);
 ;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 ;
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

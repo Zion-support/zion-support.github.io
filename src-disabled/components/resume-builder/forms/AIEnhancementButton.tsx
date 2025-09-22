@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -13,13 +11,9 @@ interface AIEnhancementButtonProps {;
   buttonText?: string,;
   className?: string;
 }
-=======
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function AIEnhancementButton({
-=======
 export function AIEnhancementButton({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   currentContent,
   enhancementType,
   context,
@@ -92,7 +86,6 @@ export function AIEnhancementButton(): any ({;
       setError('Please enter at least some basic content before enhancing');
       return;
     }
-<<<<<<< HEAD
 import { Button } from '@/components / ui / button';
 import { Sparkles, Loader2 } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks / useResumeEnhancer';
@@ -151,17 +144,12 @@ if ( {) {}
 }
       on_enhanced (enhanced_content);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 
   },
 
   return (
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       onClick={handleEnhance}
       disabled={isEnhancing}
 
@@ -210,12 +198,7 @@ if ( {) {}
 }
 ;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2 } from 'lucide-react';
@@ -269,9 +252,6 @@ export function AIEnhancementButton({
       <span className='text-xs'>{buttonText}</span>
     </Button>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
     // Check condition;
 if (.length < 10) {) {
@@ -286,4 +266,3 @@ if (.length < 10) {) {
 if ( {) {
       on_enhanced (enhanced_content);
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -6,7 +6,6 @@ import {Badge} from '@/components / ui / badge';
 import Link from 'next / link';
 import {useState, useEffect} from 'react';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const [isOnline, setIsOnline] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<string>('');
@@ -32,14 +31,10 @@ import {useState, useEffect} from 'react';
 const handleRetry = () => {
     try {
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isOnline, setIsOnline] = useState(false);
-=======
   const handleRetry = () => {}
     try {}
   const [isOnline, setIsOnline] = useState(false);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [lastUpdate, setLastUpdate] = useState<string>('');
   const [retryCount, setRetryCount] = useState(0);
   useEffect(() =></string> {;
@@ -250,7 +245,6 @@ icon: Home,;
                     isOnline ? 'text-green-600' : 'text-orange-600'
                   }`}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function OfflinePage(req, res) {}
   try {};
@@ -340,14 +334,7 @@ export default function OfflinePage(req, res) {}
   }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
       <Head>'
@@ -357,17 +344,13 @@ export default function OfflinePage(req, res) {}
       </Head>
 <div className='min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900'>
         <div className='container mx-auto px-4 py-8'>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <motion.div
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
-=======
 
           <motion.div;
             initial={{ opacity: 0, y: 20 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -440,9 +423,6 @@ export default function OfflinePage(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
                 <WifiOff className={`w-12 h-12 ${
                   isOnline ? 'text-green-600' : 'text-orange-600'
@@ -461,8 +441,6 @@ export default function OfflinePage(req, res) {}
 
 <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               {isOnline ? 'You\'re Back Online!' : 'You\'re Offline'  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -477,11 +455,6 @@ className="text-sm px-3 py-1"
               </Badge>
             </div>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {isOnline
                 ? 'Your internet connection has been restored. You can now access all features.'
                 : "No internet connection detected. Don't worry - you can still access cached content and use offline features."}
@@ -494,34 +467,24 @@ className="text-sm px-3 py-1"
 
           </motion && motion.div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
           {/* Action Buttons */}'
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-12'>;
 <Button
               onClick={handleRetry}
               size='lg'
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <RefreshCw className="w-5 h-5" />
               {retryCount > 0 ? `Retry (${retryCount})` : 'Try Again'  } catch (error) {
     console.error("Error:", error);
-=======
             >"
               <RefreshCw className="w-5 h-5" />'`
               {retryCount > 0 ? `Retry (${retryCount})` : 'Try Again'  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             </Button>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
           <Button;
             asChild"
@@ -593,9 +556,6 @@ className="text-sm px-3 py-1"
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >
                   <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
                     action.available
@@ -628,17 +588,13 @@ className="text-sm px-3 py-1"
                         <Button disabled size="sm" className="w-full">
                           Requires Internet;
                         </Button>
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                       )  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </CardContent>;
                   </Card>;
                 </motion && motion.div>;
@@ -647,11 +603,8 @@ className="text-sm px-3 py-1"
 </div>;
           </motion && motion.div>;
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {/* Tips Section */}
           <motion&& motion.div
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {/* Tips Section */}
           <motion&& motion.div;
           {/* Quick Actions */}
@@ -720,7 +673,6 @@ className="text-sm px-3 py-1"
           {/* Tips Section */}
           <motion.div;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <Card className='max-w-2xl mx-auto'>
               <CardHeader>'
@@ -751,14 +703,11 @@ className="text-sm px-3 py-1"
                     <span>
                       Check your internet connection and try refreshing the page;
                     </span>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </div>
                 </div>
               </CardContent>
             </Card>
           </motion.div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
           {/* Auto-refresh when online */  } catch (error) {"
     console.error("Error:", error);"
@@ -779,8 +728,6 @@ className="text-sm px-3 py-1"
 }"
               className="fixed bottom-6 right-6 z-50"
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <Card className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800">
                 <CardContent className="p-4">
@@ -811,7 +758,6 @@ className="text-sm px-3 py-1"
   );
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -823,8 +769,3 @@ className="text-sm px-3 py-1"
     </>;
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

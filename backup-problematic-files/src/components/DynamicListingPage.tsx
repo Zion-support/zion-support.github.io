@@ -86,7 +86,6 @@ export function DynamicListingPage({;
         selectedRating === null ||;
         (listing.rating !== undefined && listing.rating >= selectedRating),;
       return (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         matchesSearch &&;
         matchesCategory &&;
         matchesPrice &&;
@@ -101,7 +100,6 @@ export function DynamicListingPage({;
 ))}
                 </div>;
               </div>;
-<<<<<<< HEAD
                     </SelectContent>;
                   </Select>;
                 </div>;
@@ -125,12 +123,10 @@ setSelectedAvailability(value);
                         <SelectItem key={a || 'unknown-availability'} value={a || ''} className="text-white">;
                           {a || 'N/A'}
                         </SelectItem>;                      ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     </SelectContent>;
                   </Select>;
                 </div>;
               )}
-<<<<<<< HEAD
                     min={0}
                     max={priceRange.max}
                     step={priceRange.max / 100}
@@ -149,12 +145,10 @@ onValueChange={handleSliderChange}
                               className="h-3 w-3 fill-zion-cyan text-zion-cyan";"
                           <span className="ml-1">& Up</span>;"
                         </div>;                      )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     </Button>;
                   ))}
                 </div>;
               </div>;
-<<<<<<< HEAD
               >;
                 Clear All;
               </Button>;
@@ -187,13 +181,11 @@ onValueChange={handleSliderChange}
                     {ToggleViewIcon}
                     <span className="sr-only">;
                       {isGrid ? "List view" :"Grid view"}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     </span>;
                   </Button>;
                 </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
               <div;
                 className={;"
                   view === "grid";""
@@ -239,7 +231,6 @@ onValueChange={handleSliderChange}
                     setSelectedAvailability("all"),;
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 >;
                   Clear All;
                 </Button>;

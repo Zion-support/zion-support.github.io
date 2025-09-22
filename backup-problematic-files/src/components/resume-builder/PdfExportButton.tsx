@@ -1,7 +1,6 @@
 
 }
 }
-<<<<<<< HEAD
 import { useRouter } from 'next/router', // Changed from useParams;
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -197,4 +196,3 @@ pr-12325
     </>)
   )
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -60,7 +59,6 @@ export const MetadataManager:React.FC = () => {;
   },;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="bg-zion-blue-dark rounded-lg p-6">;
       <Tabs defaultValue="ios" className="w-full">;
         <div className="flex justify-between items-center mb-6">;
@@ -72,7 +70,6 @@ export const MetadataManager:React.FC = () => {;
               Google Play (Android);
             </TabsTrigger>;
           </TabsList>;
-<<<<<<< HEAD
 
         <TabsContent value="ios" className="mt-0">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;

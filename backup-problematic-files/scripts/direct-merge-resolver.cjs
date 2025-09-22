@@ -1,26 +1,14 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD:backup-problematic-files/scripts/direct-merge-resolver.cjs
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/direct-merge-resolver.cjs
-=======
 #!/usr/bin/env node;
 #!/usr/bin/env node;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     log("4. Continue with your workflow", "blue"),}
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 if (require.main === module) {;
   main()}
 ;
 module.exports = { resolveMergeConflict, findConflictedFiles }
-<<<<<<< HEAD:backup-problematic-files/scripts/direct-merge-resolver.cjs
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/direct-merge-resolver.cjs
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -177,5 +165,4 @@ if (require.main === module) {
 if (require.main === module) {
   main()}
 module.exports = { resolveMergeConflict, findConflictedFiles }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   log("\n Resolution ""Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next ""steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"}"

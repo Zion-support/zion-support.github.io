@@ -1,12 +1,9 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/AIEnhancementButton.tsx
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
-=======
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2 } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 interface AIEnhancementButtonProps {;
   currentContent: string;,;
@@ -49,8 +46,6 @@ export function AIEnhancementButton({;
 {isEnhancing ? (;
         <Loader2 className="h-3 w-3 animate-spin" />;
       ) :(;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/AIEnhancementButton.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <Sparkles className="h-3 w-3" />;
       )}
       <span className="text-xs">{buttonText}</span>;

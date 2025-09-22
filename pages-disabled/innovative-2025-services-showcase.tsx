@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',;
 import { motion } from 'framer-motion',;
 import { 
@@ -109,9 +108,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ],
   const filteredServices = allInnovativeServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
@@ -137,7 +134,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
   }
 }
   },
-<<<<<<< HEAD
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -147,8 +143,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut"   } catch (error) {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const staggerContainer = {
     animate: {
       transition: {
@@ -159,9 +153,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
   }
 }
       } catch (error) {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     console.error("Error:", error);
-=======
   const staggerContainer = {}
     animate: {}
       transition: {}
@@ -173,7 +165,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
 }
       } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -192,8 +183,6 @@ const staggerContainer = {
         <link rel="canonical" href="https://ziontechgroup.com/innovative-2025-services-showcase" />
       </Head>"
       <div className="min-h-screen bg-black text-white overflow-hidden">
-<<<<<<< HEAD
-<<<<<<< HEAD
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -506,9 +495,6 @@ export default Innovative2025ServicesShowcase,
   );
 },;
 export default Innovative2025ServicesShowcase;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="fixed inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
@@ -516,7 +502,6 @@ export default Innovative2025ServicesShowcase;
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(120,219,255,0.3),transparent_50%)]"></div>
 
           {/* Floating Particles */}
-=======
 
 "
         <div className="fixed inset-0 z-0">"
@@ -526,19 +511,15 @@ export default Innovative2025ServicesShowcase;
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(120,219,255,0.3),transparent_50%)]"></div>
 
           {/* Floating Particles */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="absolute inset - 0 overflow - hidden">;
             {[...Array (20)].map ((_, i) => (
               <div;
                 key={i}
-<<<<<<< HEAD
           {/* Floating Particles */  } catch (error) {
     console.error("Error:", error);
-=======
 
           {/* Floating Particles */  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
@@ -550,17 +531,11 @@ export default Innovative2025ServicesShowcase;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 style={{
                   left: `${Math.random() * 100}%`
                   top: `${Math.random() * 100}%`
                   animationDelay: `${Math.random() * 2}s`
-=======
 
 "
                 className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
@@ -569,7 +544,6 @@ export default Innovative2025ServicesShowcase;
                   left: `${Math.random() * 100}%``
                   top: `${Math.random() * 100}%``
                   animationDelay: `${Math.random() * 2}s``
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   animationDuration: `${2 + Math.random() * 3}s`
                 }}
               />))}
@@ -579,15 +553,12 @@ export default Innovative2025ServicesShowcase;
         {/* Content */}"
         <div className="relative z - 10">;
           {/* Header */}
-<<<<<<< HEAD
           <motion.header
             className="relative z-20 py-8 px-4 sm:px-6 lg:px-8"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ],;
   const filteredServices = allInnovativeServices.filter(service => {;'
     const matchesCategory = selectedCategory === 'all' ||;
@@ -716,15 +687,9 @@ export default Innovative2025ServicesShowcase;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
-=======
 
           >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Innovative 2025;
             </span>
@@ -733,20 +698,16 @@ export default Innovative2025ServicesShowcase;
           </motion.h1>
           <motion.p"
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Experience the future of technology with our revolutionary AI platforms, quantum computing solutions
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
-=======
 
             initial={{ opacity: 0, y: 30 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -762,43 +723,28 @@ export default Innovative2025ServicesShowcase;
 }
           >
             Experience the future of technology with our revolutionary AI platforms, quantum computing solutions,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
           </motion.p>
           <motion.div"
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             transition={{ duration: 0.8, delay: 0.4 }}
           >;"
             <div className="max - w-7xl mx - auto">;
               {/* Search Bar */}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="mb-8">
-=======
 
 "
               <div className="mb-8">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className="relative max-w-2xl mx-auto">
                   <input"
                     type="text""
                     placeholder="Search innovative services..."
-<<<<<<< HEAD
                     value={searchTerm  } catch (error) {
     console.error("Error:", error);
-=======
 
                     value={searchTerm  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -807,24 +753,14 @@ export default Innovative2025ServicesShowcase;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />"
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
                 </div>
               </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
                   <button;
@@ -851,14 +787,11 @@ export default Innovative2025ServicesShowcase;
                     <category.icon className="w-5 h-5" />
                     <span>{category.name}</span>"
                     <span className="bg-gray-700 px-2 py-1 rounded-full text-xs">
-<<<<<<< HEAD
                       {category.count  } catch (error) {
     console.error("Error:", error);
-=======
 
                       {category.count  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -884,8 +817,6 @@ export default Innovative2025ServicesShowcase;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial="initial"
             animate="animate"
           >"
@@ -893,12 +824,9 @@ export default Innovative2025ServicesShowcase;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service) => (
 <motion.div
-<<<<<<< HEAD
                     key={service.id}
-=======
                   <motion.div;
                     key={service.id}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className="group relative";
                     variants={fadeInUp}
                     while_hover={{ coordinate_y: -10 }}
@@ -906,19 +834,15 @@ export default Innovative2025ServicesShowcase;
                   >;"
                     <div className="relative overflow - hidden rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 30 border border - gray - 700 / 50 backdrop - blur - sm">;
                       {/* Service Icon and Header */}
-<<<<<<< HEAD
                       <div className="p-8">
                         <div className="flex items-center justify-between mb-6">
                           <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${(service as any).color |'from-blue-500 to-purple-500'} flex items-center justify-center text-3xl`}>
                             {(service as any).icon |'🚀'}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     key={service.id  } catch (error) {
     console.error("Error:", error);
-=======
 
                     key={service.id  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
@@ -961,23 +885,18 @@ export default Innovative2025ServicesShowcase;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </div>
                                                       {(service as any).popular && ("
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
 POPULAR
                             </div>
-<<<<<<< HEAD
                         <div className="flex items - baseline mb - 6">;
                           <span className="text - 3xl font - bold text - white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>;
-=======
                               POPULAR;
                             </div>
 "
                         <div className="flex items - baseline mb - 6">;'"
                           <span className="text - 3xl font - bold text - white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <span className="text - gray - 400 ml - 2">{(service as any).period || ''}</span>;
                         </div>;
 
@@ -988,15 +907,11 @@ POPULAR
                               <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 0.5 flex - shrink - 0" />;"
                               <span className="text - gray - 300 text - sm">{feature}</span>;
                             </div>))}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           )  } catch (error) {
     console.error("Error:", error);
-=======
 
                           )  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1025,18 +940,12 @@ POPULAR
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <div className="flex items-baseline mb-6">
                           <span className="text-3xl font-bold text-white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>
-=======
 
 "
                         <div className="flex items-baseline mb-6">'"
                           <span className="text-3xl font-bold text-white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <span className="text-gray-400 ml-2">{(service as any).period || ''}</span>
                         </div>
                         {/* Features */}
@@ -1056,7 +965,6 @@ POPULAR
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {service.features.length > 5 && (
                             <div className="text-gray-500 text-sm">
                               +{service.features.length - 5} more features;
@@ -1064,7 +972,6 @@ POPULAR
                           )}
                         </div>
 {/* Service Stats */}
-<<<<<<< HEAD
                         <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                           <div>
                             <div className="text-lg font-bold text-white">{(service as any).customers |'1000'}+</div>
@@ -1101,15 +1008,11 @@ POPULAR
                         <Link;`
                           href={`/services/${service.id}`}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           )  } catch (error) {
     console.error("Error:", error);
-=======
 
                           )  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1133,7 +1036,6 @@ POPULAR
                             <div className="text-xs text-gray-400">Reviews</div>
                           </div>
                         </div>
-<<<<<<< HEAD
                         {/* CTA Button */}
                         <Link
                           href={`/services/${service.id}`}
@@ -1148,43 +1050,28 @@ POPULAR
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                         >
                           <span>Learn More</span>"
                           <ArrowRight className="w-5 h-5" />
                         </Link>
                       </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </motion.div>
                 ))}
               </div>
               {filteredServices.length === 0 && (
-<<<<<<< HEAD
                 <motion.div 
                   className="text-center py-20"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                 <motion.div
-=======
                 <motion.div"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="text-center py-20"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -1198,11 +1085,7 @@ POPULAR
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >
                   <div className="text-6xl mb-6">🔍</div>
                   <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
@@ -1213,15 +1096,8 @@ POPULAR
                     onClick={() => {'
                       setSearchTerm('')'
                       setSelectedCategory('all')
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
                   >
                     Clear Filters;
@@ -1242,17 +1118,11 @@ POPULAR
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <div className="max-w-4xl mx-auto text-center">
-=======
 
           >"
             <div className="max-w-4xl mx-auto text-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
                 Ready to Transform Your Business?
               </h2>"
@@ -1260,7 +1130,6 @@ POPULAR
 Get in touch with our team to learn more about our innovative 2025 services 
                 Get in touch with our team to learn more about our innovative 2025 services
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 and how they can revolutionize your operations.
               </p>"
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">"
@@ -1311,18 +1180,11 @@ Get in touch with our team to learn more about our innovative 2025 services
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <div className="max-w-7xl mx-auto">
-=======
 
           >"
             <div className="max-w-7xl mx-auto">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
                 <div>"
                   <div className="flex items-center space-x-2 mb-4">"
@@ -1378,15 +1240,11 @@ Get in touch with our team to learn more about our innovative 2025 services
 © 2025 Zion Tech Group. All rights reserved. |"
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
 
-<<<<<<< HEAD
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> | 
 
                   © 2025 Zion Tech Group. All rights reserved. |"
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link href="/terms" className="hover:text-white transition-colors ml-2">Terms of Service</Link>
                 </p>
               </div>
@@ -1397,15 +1255,12 @@ Get in touch with our team to learn more about our innovative 2025 services
     </>
   )
 
-<<<<<<< HEAD
 },
 
 export default Innovative2025ServicesShowcase,;
 ;
 export default Innovative2025ServicesShowcase,
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           className="w - full bg - gradient - to - r from - purple - 500 to - pink - 500 text - white py - 3 px - 6 rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center space - x-2";
                         >;
                           <span > Learn More</span>;"
@@ -1441,7 +1296,6 @@ export default Innovative2025ServicesShowcase,
             </div>;
           </motion.section>;
           {/* Contact Section */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <motion.section;
             className="relative z - 20 py - 20 px - 4 sm:px - 6 lg:px - 8";
             initial={{ opacity: 0, coordinate_y: 30 }}
@@ -1554,20 +1408,11 @@ export default Innovative2025ServicesShowcase,
   );
 },;
 export default Innovative2025ServicesShowcase;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     </>);
 },
 export default Innovative2025ServicesShowcase,;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

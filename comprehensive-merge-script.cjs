@@ -319,7 +319,6 @@ class MergeConflictResolver {
 async function main() {
   try {
     console.log('🎯 Comprehensive Merge Conflict Resolver');
-    console.log('=====================================\n');
     
     // Ensure we're on main branch
     const resolver = new MergeConflictResolver();

@@ -17,16 +17,10 @@ function resolveMergeConflicts(filePath) {}
 // Remove merge conflict markers and keep the HEAD version
 content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)        
         // Remove any remaining conflict markers
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         content = content.replace(/        content = content.replace(/
         content = content.replace(/        
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         // Clean up any duplicate content
-=======
         // Remove merge conflict markers and keep the HEAD version;
         content = content.replace(/
 
@@ -34,14 +28,12 @@ content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)
         content = content.replace(/
 
         // Clean up any duplicate content'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         content = content.replace(/\n\n\n+/g, '\n\n');
 
         fs.writeFileSync(filePath, content);`
         console.log(`✅ Resolved conflicts in: ${filePath}`);
         return true;
     } catch (error) {}`
-=======
         content = content.replace(/\n/g, '');
         content = content.replace(/\n/g, '');
         content = content.replace(/        
@@ -53,7 +45,6 @@ content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)
         console.log(`✅ Resolved conflicts in: ${filePath}`);
         return true;
     } catch (error) {`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         console.log(`❌ Error processing ${filePath}: ${error.message}`);
         return false;
 
@@ -73,7 +64,6 @@ if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
                 } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.json') || item.endsWith('.md'))) {
   // TODO: Implement
                         const content = fs.readFileSync(itemPath, 'utf8');
-<<<<<<< HEAD
                         if (content.includes('                            conflictFiles.push(itemPath);
                         }
                     } catch (error) {'
@@ -86,8 +76,6 @@ if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         }
     }
     '
-=======
-if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
                         if (content.includes('                            conflictFiles.push(itemPath);
                             conflictFiles.push(itemPath);
 
@@ -95,7 +83,6 @@ if (content.includes('') || content.includes('') || content.includes('>>>>>>>'))
                         // Skip files that can't be read;
             // Skip directories that can't be read;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     searchDirectory('.');
     return conflictFiles;
 

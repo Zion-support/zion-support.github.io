@@ -32,6 +32,4 @@ export default async function handler(
 res.status(500).json({ error: e?.message || 'internal error' });
 }
 }
-=======
     res.status(500).json({ error: e?.message || 'internal error' });
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

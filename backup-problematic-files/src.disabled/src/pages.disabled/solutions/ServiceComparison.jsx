@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Servicecomparison() {}; return null} )}
 const ServiceComparison = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const ServiceComparison = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

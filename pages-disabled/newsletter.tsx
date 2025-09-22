@@ -1,18 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout';
 import { motion } from 'framer-motion';
 import { 
-=======
 
 import React, { useState } from 'react';'
 import Head from 'next/head';'
 import Layout from './components/Layout';'
 import { motion } from 'framer-motion';
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ArrowRight,
   Users,
   Calendar,
@@ -634,14 +630,10 @@ transition={{ duration: 0 && 0.8 }}>;
                   </div>;
                 </form>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 
 '
 import React from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {}
@@ -661,16 +653,6 @@ const Page = () => {}
 };
 
 export default Page;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages-disabled/newsletter.tsx

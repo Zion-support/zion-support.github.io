@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -15,12 +14,10 @@ export default function EnterprisePlans() {;
   return (;
     <>;
       <SEO ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         title="Enterprise Plans - Zion AI Marketplace";
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.";
       />;
       <Header />;
-<<<<<<< HEAD
 
         <EnterpriseHero />;
         <EnterprisePricingTable />;

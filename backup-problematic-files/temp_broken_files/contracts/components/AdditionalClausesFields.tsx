@@ -1,5 +1,4 @@
 
-=======
 import { UseFormReturn } from "react-hook-form",;
 import { ;
   FormField,;
@@ -20,12 +19,10 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
     <FormField;
       control={form.control}
       name="additionalClauses";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       render={() => (;
         <FormItem>;
           <div className="mb-4">;
             <FormLabel>Additional Clauses</FormLabel>;
-<<<<<<< HEAD
 
                     <FormDescription>;
                       Protect sensitive information;

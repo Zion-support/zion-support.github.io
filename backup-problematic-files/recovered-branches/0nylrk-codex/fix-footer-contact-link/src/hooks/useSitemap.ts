@@ -33,7 +33,6 @@ export function useSitemap() {;
       if (!user || !user.userType) return false;
       const userTypeEnum = isValidUserType(user.userType) ? user.userType as UserType :undefined;
       return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) :false;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     ;
     return true;

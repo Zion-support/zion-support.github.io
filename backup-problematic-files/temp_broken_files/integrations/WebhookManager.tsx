@@ -1,5 +1,4 @@
 
-=======
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -93,12 +92,10 @@ export function WebhookManager() {;
   },;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-8">;
       <Card>;
         <CardHeader>;
           <CardTitle>Create Webhook</CardTitle>;
-<<<<<<< HEAD
 
               If provided, this secret will be used to sign the webhook payload.;
             </p>;

@@ -32,7 +32,6 @@ import React from 'react'; const PricingPage = () =>: any { return ( <div classN
     <div className="min-h-screen py-20">"
       <div className="container mx-auto px-4">"
         <div className="max-w-6xl mx-auto">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
             Pricing Plans;
           </h1>
@@ -94,5 +93,4 @@ import React from 'react'; const PricingPage = () =>: any { return ( <div classN
   );
 };
 
-<<<<<<< HEAD
 export default PricingPage;

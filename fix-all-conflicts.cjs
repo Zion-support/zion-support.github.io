@@ -11,7 +11,6 @@ function fixMergeConflicts(filePath) {
       let inConflict = false;
       let takeHead = true;
 
-<<<<<<< HEAD
       // Remove merge conflict markers
             files.push(fullPath);
           }
@@ -21,12 +20,10 @@ function fixMergeConflicts(filePath) {
         const line = lines[i];
 
           continue;
-        } else if (line.includes('>>>>>>>')) {
           inConflict = false;
 
 if (!inConflict || (inConflict && takeHead)) {
           resolvedLines.push(line);
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         }
       }
       fs.writeFileSync(filePath, resolvedLines.join('\n'),utf8);

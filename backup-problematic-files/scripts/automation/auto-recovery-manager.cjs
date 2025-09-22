@@ -52,7 +52,6 @@ this.log(Found ${issues.length} system issues")
         "severity": "high"
   const content = fs.readFileSync(filePath, "utf8")
           content.includes("")
-          content.includes(">>>>>>>")
   "type": "corruption"
             "name": "merge-conflicts","description": "Merge conflicts detected in ${filePath}"
             "severity": "high"
@@ -238,9 +237,5 @@ this.log( Unreadable file "recovered")
         "recoveredIssues"
         "recoveryRate"
       "recoveryResults"
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Check, X } from "lucide-react",;
@@ -67,7 +66,6 @@ export function EnterprisePricingTable() {;
         { name:"Dedicated success manager", included:true }]}],;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <section id="pricing" className="py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-7xl">;
         <div className="text-center mb-12">;
@@ -76,7 +74,6 @@ export function EnterprisePricingTable() {;
             Choose the perfect plan for your team size and requirements;
           </p>;
         </div>;
-<<<<<<< HEAD
 
         <div className="overflow-x-auto">;
           <Table className="border rounded-lg">;

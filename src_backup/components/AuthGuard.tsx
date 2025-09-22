@@ -1,7 +1,6 @@
 :src/components/AuthGuard.tsx
 const redirectTo = options?.redirectTo |'/login'      const returnUrl = options?.returnUrl |router.asPath
       const returnUrl = options?.returnUrl |router.asPath
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           if (!requireAuth({ showToast: false })) return false
     const userRoles = user?.role ? [user.role] : []
     requireAuth
@@ -11,8 +10,6 @@ const redirectTo = options?.redirectTo |'/login'      const returnUrl = options?
     user
 
 :src/components/AuthGuard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export function AuthGuard({
   children,
@@ -27,12 +24,10 @@ export function AuthGuard({
       const redirectTo = options?.redirectTo || '/login';
       const returnUrl = options?.returnUrl || router && router.asPath;
           if (!requireAuth({ showToast: false })) return false,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   useEffect(() => {
     // Don't redirect while auth is still loading
     if (isLoading) return,
-<<<<<<< HEAD:src/components/AuthGuard.tsx
     // If authentication is required but user is not authenticated
     if (requireAuth && !isAuthenticated && !allowGuest) {
       if (showToast) {
@@ -68,7 +63,6 @@ export function AuthGuard({;
       return;
     }
     const userRoles = user?.role ? [user && user.role] : [];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     // If specific roles are required
     if (requireRole && isAuthenticated && user) {
@@ -268,8 +262,6 @@ export function useAuthGuard() {;
     isLoading}
 }
 :src/components/AuthGuard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       const redirect_to = options?.redirect_to || '/login';
       const return_url = options?.return_url || router.as_path;
@@ -284,16 +276,9 @@ export function useAuthGuard() {;
     user;
     is_loading}
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 :src/components/AuthGuard.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/AuthGuard.tsx
 import React, { useEffect } from 'react';
 import { useRouter  } from 'next/router';
 import { useAuth  } from '@/hooks/useAuth';
@@ -534,5 +519,3 @@ return false;
     isLoading}
 }
 :src/components/AuthGuard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const React from";react" const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" ) } return context }"";";''"
 const Accessibility.js = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const Accessibility.js = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

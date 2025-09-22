@@ -1,7 +1,4 @@
 :src/components/admin/quotes/QuotesTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
@@ -37,27 +34,22 @@ interface QuotesTableProps {
 
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
-=======
 
 :src/components/admin/quotes/QuotesTable.tsx
   quotes
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isArchived = false
   isLoading
   updateStatus
   toggleArchive
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({
-=======
 export const QuotesTable: React.FC<QuotesTableProps> = ({};
   quotes;
   isArchived = false;
   isLoading;
   updateStatus;
   toggleArchive;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/quotes/QuotesTable.tsx
   quotes,
   isArchived = false,
   isLoading,
@@ -102,23 +94,16 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({};
           ) : (
             quotes.map(quote => (
 :src/components/admin/quotes/QuotesTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :src_backup/components/admin/quotes/QuotesTable.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <TableRow 
                 key={quote.id}
 
-<<<<<<< HEAD:src/components/admin/quotes/QuotesTable.tsx
                 className="border-zion-blue-light hover:bg-zion-blue"
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               >
                 <TableCell className="text-white">
                   {quote.talent_name || 'Unknown Talent'}
                 </TableCell>
-=======
               <TableRow;
                 key={quote.id}
 
@@ -128,10 +113,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({};
                 <TableCell className="text-white">
                   {quote.talent_name |'Unknown Talent'}
                 </TableCell>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/quotes/QuotesTable.tsx
                 <TableCell className="text-white">
 :src/components/admin/quotes/QuotesTable.tsx
-<<<<<<< HEAD
   quotes;
   is_archived = false;'
 import React from './react';'
@@ -208,9 +191,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({};
                 <TableCell className="text-white">;
                   {quote.talent_name || 'Unknown Talent'}
                 </TableCell>;
-<<<<<<< HEAD
                 <TableCell className="text - white">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {quote.requester_name}
 :src_backup/components/admin/quotes/QuotesTable.tsx
                 </TableCell>;
@@ -236,31 +217,22 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({};
                 </TableCell>
                 <TableCell>
                   <div className="flex items-center gap-2">
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <Button 
                       variant="ghost" 
-=======
                     <Button "
                       variant="ghost" "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/quotes/QuotesTable.tsx
                       size="icon" 
                       onClick={() => onViewDetails(quote)}
 
-=======
 
 :src_backup/components/admin/quotes/QuotesTable.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     >
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
 
 :src/components/admin/quotes/QuotesTable.tsx
-<<<<<<< HEAD
                     {isArchived ? (
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <>
 :src_backup/components/admin/quotes/QuotesTable.tsx
                         <Button 
@@ -276,7 +248,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({};
                           variant="ghost"
 
 :src/components/admin/quotes/QuotesTable.tsx
-<<<<<<< HEAD
   quotes;
   isArchived = false;"
 import React from "react";'
@@ -297,16 +268,12 @@ import { ;
 } from "@/components/ui/dropdown-menu";import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import {formatDate} from "@/utils/dateUtils";
-<<<<<<< HEAD:src/components/admin/quotes/QuotesTable.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           size="icon"
-=======
   DropdownMenuTrigger ;"
 } from "@/components/ui/dropdown-menu";import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";"
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";"
 import {formatDate} from "@/utils/dateUtils";"
                           size="icon""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/quotes/QuotesTable.tsx
                           className="text-red-500"
                           onClick={() => {'
                             if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {}
@@ -347,31 +314,20 @@ import {formatDate} from "@/utils/dateUtils";"
                             Archive;
                           </DropdownMenuItem>
 :src/components/admin/quotes/QuotesTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/quotes/QuotesTable.tsx
                           <DropdownMenuItem 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
 :src/components/admin/quotes/QuotesTable.tsx
-<<<<<<< HEAD
                               }
                             }}
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/quotes/QuotesTable.tsx
-=======
                           <DropdownMenuItem;
                             onClick={() => {'
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {}
                                 deleteQuote(quote.id)
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/quotes/QuotesTable.tsx
                             className="text-red-500"
                           >"
                             <Trash2 className="h-4 w-4 mr-2" />
@@ -380,19 +336,10 @@ import {formatDate} from "@/utils/dateUtils";"
                         </DropdownMenuContent>
                       </DropdownMenu>
 :src_backup/components/admin/quotes/QuotesTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/quotes/QuotesTable.tsx
 import React from "react",;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 "
 import React from "react",;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/quotes/QuotesTable.tsx
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import {;
   Table,;
@@ -518,8 +465,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <Button;
                           variant="ghost";
                           size="icon";
@@ -533,7 +478,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                             if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
                               deleteQuote(quote && quote.id);
                             ,}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/quotes/QuotesTable.tsx
                           }}
 :src_backup/components/admin/quotes/QuotesTable.tsx
                         >;
@@ -585,11 +529,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
                     )}
-=======
 
                     )}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </div>;
                 </TableCell>;
               </TableRow>;
@@ -598,9 +539,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
 )
 };
-=======
 };'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/quotes/QuotesTable.tsx
 '";
 
         </TableBody>;
@@ -611,7 +550,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 '"
 '"
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>;
 :src_backup/components/admin/quotes/QuotesTable.tsx
                 </TableCell>;
@@ -717,22 +655,14 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                   </div>;
                 </TableCell>;
               </TableRow>)))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </TableBody>;
       </Table>;
 </div>;
   );
 };
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 '";
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/quotes/QuotesTable.tsx
 
 import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
@@ -792,9 +722,5 @@ interface QuotesTableProps {
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 :src/components/admin/quotes/QuotesTable.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"
 '";'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/quotes/QuotesTable.tsx

@@ -14,10 +14,8 @@ interface SortDropdownProps {
   DropdownMenuItem;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 
-<<<<<<< HEAD:src_backup/components/talent/SortDropdown.tsx
   sortOption: string
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   setSortOption: (option: string) => void
 }
 
@@ -41,7 +39,6 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
       >
 {SORT_OPTIONS.map((option) => (
-=======
 interface SortDropdownProps {
   sortOption: string;
   setSortOption: (option: string) => void
@@ -67,7 +64,6 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
         className='w-[200px] bg-zion-blue-dark border-zion-blue-light'
       >
         {SORT_OPTIONS.map(option => (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <DropdownMenuItem
             key={option.value}
             onClick={() => setSortOption(option.value)}
@@ -100,10 +96,8 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
             {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
           </div>;
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />;
-=======
 "
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : "";`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/talent/SortDropdown.tsx
             }`}
           >
             {option.label}
@@ -166,12 +160,10 @@ function SortDropdown() {}
             {SORT_OPTIONS.find (opt => opt.value === sort_option)?.label || "Sort by"}
           </div>;"
           <ChevronDown className="h - 4 w - 4 ml - 2 opacity - 50" />;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </Button>;
       </DropdownMenuTrigger>;
 <DropdownMenuContent;
         align="start";
-<<<<<<< HEAD
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light";
       >;
         {SORT_OPTIONS.map((option) => (;
@@ -214,4 +206,3 @@ function SortDropdown() {}
             key={option.value}
 :src_backup/components/talent/SortDropdown.tsx
             onClick={() => setSortOption(option.value)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

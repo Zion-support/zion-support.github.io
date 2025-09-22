@@ -11,13 +11,11 @@ function fixMergeConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('=======')) {
       return false;
     }
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
     
-    // Remove merge conflict markers and keep the content after the last =======
     const lines = content.split('\n');
     const fixedLines = [];
     let inConflict = false;
@@ -32,11 +30,9 @@ function fixMergeConflicts(filePath) {
         continue;
       }
       
-      if (line.includes('=======')) {
         continue;
       }
       
-      if (line.includes('>>>>>>>')) {
         inConflict = false;
         conflictStart = -1;
         continue;

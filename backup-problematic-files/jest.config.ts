@@ -1,6 +1,5 @@
 import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
-<<<<<<< HEAD
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files
   dir: './',
@@ -89,4 +88,3 @@ const config: Config = {
   }
 }
 export default createJestConfig(config);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

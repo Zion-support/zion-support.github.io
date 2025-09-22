@@ -1,11 +1,8 @@
 :pages_backup/api/support/requests.ts
-<<<<<<< HEAD:pages_backup/api/support/requests.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb'
 ;
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',
 import { readJson, writeJson } from '../../../utils/fsDb';
@@ -13,16 +10,13 @@ pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb'
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/support/requests.ts
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const requests = readJson<any[]>('support/requests.json', [])
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',;'
 import { readJson, writeJson } from '../../../utils/fsDb',;
 ;
 export default async function handler() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/requests.ts
     return res.status(200).json({ requests })
   }'
   if (req.method === 'POST') {}
@@ -62,8 +56,6 @@ export default async function handler(req, res) {}
     return res.status(500).json({ error: "Internal server error" });'
   return res.status(405).json({ error: 'Method not allowed' })
 :pages_backup/api/support/requests.ts
-<<<<<<< HEAD:pages_backup/api/support/requests.ts
-<<<<<<< HEAD
 
 }
 
@@ -90,6 +82,3 @@ if ( {) {
 
 };
 :pages_backup/api/support/requests.ts
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/support/requests.ts

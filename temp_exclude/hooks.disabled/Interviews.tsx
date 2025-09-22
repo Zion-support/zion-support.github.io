@@ -202,7 +202,6 @@ function InterviewsContent() {}
         </div>;
 
 :temp_exclude/hooks.disabled/Interviews.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="space-y-8">
           <TabsList className="mb-6">
@@ -220,7 +219,6 @@ function InterviewsContent() {}
               Pending;
               {pendingInterviews.length > 0 && (
 :temp_exclude/hooks.disabled/Interviews.tsx
-<<<<<<< HEAD
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
                   {pendingInterviews.length}
                 </span>;
@@ -232,10 +230,8 @@ function InterviewsContent() {}
           <TabsContent value="upcoming" className="space-y-6">
             {isLoading ? (
               <div className="flex justify-center py-12">
-=======
             {isLoading ? ("
               <div className="flex justify-center py-12">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Interviews.tsx
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>
             ) : upcomingInterviews.length > 0 ? (
@@ -252,13 +248,11 @@ function InterviewsContent() {}
           <TabsContent value="pending" className="space-y-6">
             {isLoading ? (
               <div className="flex justify-center py-12">
-=======
           "
           <TabsContent value="pending" className="space-y-6">
 
             {isLoading ? ("
               <div className="flex justify-center py-12">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Interviews.tsx
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>
             ) : pendingInterviews.length > 0 ? (
@@ -275,13 +269,11 @@ function InterviewsContent() {}
           <TabsContent value="past" className="space-y-6">
             {isLoading ? (
               <div className="flex justify-center py-12">
-=======
           "
           <TabsContent value="past" className="space-y-6">
 
             {isLoading ? ("
               <div className="flex justify-center py-12">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Interviews.tsx
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
               </div>
             ) : pastInterviews.length > 0 ? (
@@ -305,6 +297,4 @@ export default function Interviews() { return null; }
 }
 
 ;
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Interviews.tsx

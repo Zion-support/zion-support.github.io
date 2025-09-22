@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
 ;
@@ -31,7 +30,6 @@ const features = [;
 ;
 export function EnterpriseFeatures() {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <section className="py-20 px-4 md:px-6 bg-muted/50">;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-16">;
@@ -42,7 +40,6 @@ export function EnterpriseFeatures() {;
             Our enterprise solutions offer powerful tools designed for large teams and complex hiring needs;
           </p>;
         </div>;
-<<<<<<< HEAD
 
             </div>;
           ))}

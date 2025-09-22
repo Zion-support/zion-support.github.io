@@ -1,5 +1,4 @@
 :src_backup/components/quotes/QuoteRequestCard.tsx
-<<<<<<< HEAD
 
 import React from "react",
 import { format } from "date-fns",
@@ -44,7 +43,6 @@ import { Button } from '@/components / ui / button';
 import { QuoteStatusBadge } from '@/components / quotes / QuoteStatusBadge';
 import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from 'lucide-react';
 import type { QuoteRequest } from "@/types / quotes";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
@@ -120,7 +118,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           <span>Timeline: {quote.timeline}</span>
         </div>
 
-=======
         "
         <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
 
@@ -133,7 +130,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/quotes/QuoteRequestCard.tsx
         <div className="flex justify-between items-center mt-4">
           <Button"
             variant="outline""
@@ -269,7 +265,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     </Card>;
   );
 };
-=======
               )}
             </Button>
           </div>
@@ -279,7 +274,4 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
   );
 };
 "
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/quotes/QuoteRequestCard.tsx

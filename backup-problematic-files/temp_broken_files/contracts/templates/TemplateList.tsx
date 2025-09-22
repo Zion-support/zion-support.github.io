@@ -1,5 +1,4 @@
 
-=======
 import { ContractTemplate } from "@/types/contracts",;
 import { Button } from "@/components/ui/button",;
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",;
@@ -58,12 +57,10 @@ export function TemplateList({;
 ;
   if (!templates.length) {;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="text-center py-8">;
         <p className="text-muted-foreground">No templates found.</p>;
         <p className="text-sm text-muted-foreground">Save a contract as a template to reuse it later.</p>;
       </div>;
-<<<<<<< HEAD
 
           <CardContent className="p-4">;
             <div className="flex items-center justify-between">;

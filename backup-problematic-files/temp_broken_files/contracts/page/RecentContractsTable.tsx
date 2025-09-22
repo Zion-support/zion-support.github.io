@@ -1,5 +1,4 @@
 
-=======
 import { Button } from "@/components/ui/button",;
 ;
 interface Contract {;
@@ -17,14 +16,12 @@ interface RecentContractsTableProps {;
 ;
 export function RecentContractsTable({ contracts, onViewContract } RecentContractsTableProps) {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
       <div className="overflow-x-auto rounded-md border">;
         <table className="min-w-full divide-y divide-border">;
           <thead className="bg-muted">;
             <tr>;
-<<<<<<< HEAD
 
                 Type;
               </th>;

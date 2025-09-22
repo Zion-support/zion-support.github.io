@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -49,13 +48,11 @@ export default function RequestsPanel() {;
   const archivedQuotes = quotes.filter(q => q.is_archived),;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <ProtectedRoute>;
       <div>;
         <Header />;
         <div className="min-h-screen bg-zion-blue px-4 py-8">;
           <div className="container mx-auto">;
-<<<<<<< HEAD
 
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}

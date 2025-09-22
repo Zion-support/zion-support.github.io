@@ -65,4 +65,3 @@ const path = require("path")
       this.log(" Accessibility styles created successfully")
       this.log(` Failed to create accessibility "styles"`)
     this.log("♿ Starting accessibility enhancement...")
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

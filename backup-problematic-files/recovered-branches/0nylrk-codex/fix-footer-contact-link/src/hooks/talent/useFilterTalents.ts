@@ -146,4 +146,3 @@ export function useFilterTalents(talents:TalentProfile[]) {;
   result = result.filter (talent => selectedRegions.some (region => talent.location?.includes (region) ) return result 
 }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -390,9 +390,7 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
 const fixReports = reports.filter(report =>
       report.fixesApplied !== undefined || report.resolutionsApplied !== undefined
     );
-=======
       report.fixesApplied !== undefined || report.resolutionsApplied !== undefined;)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const successRates = [];
     for (const report of fixReports) {
       const totalIssues = report.initialErrors || report.initialIssues || 0;
@@ -641,8 +639,6 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 module.exports = ErrorAnalyticsDashboard
-<<<<<<< HEAD
-=======
         <div class="stats-grid">"
             <div class="stat-card">"
 
@@ -655,4 +651,3 @@ module.exports = ErrorAnalyticsDashboard
 </script>
 </body>`;
 </html>`;"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

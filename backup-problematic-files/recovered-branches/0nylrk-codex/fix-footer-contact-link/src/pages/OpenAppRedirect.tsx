@@ -1,5 +1,4 @@
 
-=======
 import React, { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
@@ -62,12 +61,10 @@ const OpenAppRedirect:React.FC = () => {;
       <SEO ;
         title="Opening Zion App" ;
         description="Redirecting to the Zion AI Marketplace mobile app";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         noindex={true}
       />;
       <div className="text-center p-8">;
         <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>;
-<<<<<<< HEAD
 
         {status === 'redirecting' && (;
           <>;

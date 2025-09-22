@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardSaveButton.tsx
 ;
 interface TalentCardSaveButtonProps {;
   profileId: string;,;
@@ -9,7 +8,6 @@ interface TalentCardSaveButtonProps {;
   isAuthenticated:boolean;
 }
 ;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardSaveButton.tsx
 export function TalentCardSaveButton({ ;
   profileId, ;
   profileName,;
@@ -28,12 +26,10 @@ export function TalentCardSaveButton({;
   const { toast } = useToast(),;
   const router = useRouter(),;
   // Using router.asPath for current path;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
   const [localIsSaved, setLocalIsSaved] = React.useState(isSaved),;
   // Handle save toggle;
   const handleSaveToggle = (e:React.MouseEvent) => {;
     e.stopPropagation(),;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardSaveButton.tsx
     ;
     if (!isAuthenticated) {;
       toast({;
@@ -54,7 +50,6 @@ pr-12325
       }),;
       const returnTo = encodeURIComponent(router.asPath),;
       router.push(`/auth/login?returnTo=${returnTo}`),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return,;
     setLocalIsSaved(!localIsSaved),;
     if (onToggleSave) {;
@@ -65,7 +60,6 @@ pr-12325
 title:localIsSaved ? "Removed from favorites" :"Added to favorites",;
       description:localIsSaved ;
   description:localIsSaved ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         ? `${profileName} has been removed from your favorites` ;
         :`${profileName} has been added to your favorites`,;
       variant:"default";
@@ -93,8 +87,6 @@ pr-12325
       />;
 </button>;
   ),;}
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardSaveButton.tsx
  interface TalentCardSaveButtonProps {
   profileId: string;
 profileName: string;
@@ -122,7 +114,6 @@ if (!isAuthenticated) {
 };
 }/> </button>) 
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 isAuthenticated ;
 }: TalentCardSaveButtonProps) {;
   const { ;
@@ -143,10 +134,7 @@ const router = useRouter ();
 }/> </button>) ;"}"
 }variant: "default" ;
 }) 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 }/> </button>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/talent-card/TalentCardSaveButton.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx

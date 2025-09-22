@@ -9,8 +9,6 @@ import React from "react"
 import { QrCode } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
 origin/cursor/automate-test-improve-and-merge-code-2533
 export const QrCodeDownload: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import { QrCode } from 'lucide-react'
@@ -32,13 +30,9 @@ export const QrCodeDownload: React.FC = () => {
                 Scan the QR code with your phone camera to download the app instantly, or use the buttons below to get it from your app store of choice.
               </p>
               <AppStoreButtons 
-=======
                             <AppStoreButtons 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export const QrCodeDownload: React.FC = () => {};
               <AppStoreButtons;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/mobile-app/QrCodeDownload.tsx
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
@@ -53,13 +47,11 @@ export const QrCodeDownload: React.FC = () => {};
             </div>
 
 :src/components/mobile-app/QrCodeDownload.tsx
-<<<<<<< HEAD
             <div className="flex-shrink-0">
               <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-xl shadow-lg">
                 <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                   <QrCode className="w-full h-full p-4" />
 :src/components/mobile-app/QrCodeDownload.tsx
-<<<<<<< HEAD
                   {/* This would be replaced with an actual QR code in production */}
                 </div>
                 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">
@@ -124,7 +116,6 @@ import { AppStoreButtons } from "./AppStoreButtons",;
 import React from "react";"
 import { QrCode } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons";
 :src/components/mobile-app/QrCodeDownload.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const QrCodeDownload: React.FC = () => {;
 :src_backup/components/mobile-app/QrCodeDownload.tsx
   // App store links - these would come from environment variables in production;
@@ -138,7 +129,6 @@ return (;
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">;
             <div className="flex-1">;
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
-=======
   // App store links - these would come from environment variables in production;"
   const appStoreUrl = "#", // Replace with actual App Store URL;"
   const googlePlayUrl = "#", // Replace with actual Google Play URL;
@@ -149,14 +139,12 @@ return (;
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">;"
             <div className="flex-1">;"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/mobile-app/QrCodeDownload.tsx
                 Download <span className="text-zion-cyan">Zion</span> to Your Device;
               </h2>;"
               <p className="text-lg text-gray-300 mb-8">;
                 Scan the QR code with your phone camera to download the app instantly, or use the buttons below to get it from your app store of choice.;
               </p>;
 :src_backup/components/mobile-app/QrCodeDownload.tsx
-<<<<<<< HEAD
                 className="mb-8";
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
@@ -169,10 +157,8 @@ return (;
             </div>;
             <div className="flex-shrink-0">;
               <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-xl shadow-lg">;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/QrCodeDownload.tsx
 
                 <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <QrCode className="w-full h-full p-4" />;
                   {/* This would be replaced with an actual QR code in production */}
                 </div>;"
@@ -190,8 +176,6 @@ return (;
 "
 "
 :src_backup/components/mobile-app/QrCodeDownload.tsx
-<<<<<<< HEAD:src/components/mobile-app/QrCodeDownload.tsx
-<<<<<<< HEAD
 ";
                   {/* This would be replaced with an actual QR code in production */}
                 </div>"
@@ -206,16 +190,8 @@ return (;
     </section>
 
 :src_backup/components/mobile-app/QrCodeDownload.tsx
-<<<<<<< HEAD
   )
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   )
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/QrCodeDownload.tsx
-=======
   )'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/mobile-app/QrCodeDownload.tsx

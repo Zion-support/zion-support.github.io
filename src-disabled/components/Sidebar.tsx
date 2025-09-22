@@ -1,6 +1,5 @@
 import React from 'react';
 :src_backup/components/Sidebar.tsx
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
     <div className="fixed inset-0 z-50 md:hidden">
@@ -101,4 +100,3 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   );
 };
 export default Sidebar;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

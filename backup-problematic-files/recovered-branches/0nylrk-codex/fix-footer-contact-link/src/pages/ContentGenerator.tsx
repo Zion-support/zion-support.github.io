@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -93,7 +92,6 @@ export default function ContentGenerator() {;
     } catch (error) {;
       console.error("Error sending test newsletter:", error),;
       toast.error("Failed to send test newsletter. Please try again."),;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   },;
 ;
@@ -109,7 +107,6 @@ export default function ContentGenerator() {;
       </>;
     ),;
   }
-<<<<<<< HEAD
 
     <>;
       <Header />;

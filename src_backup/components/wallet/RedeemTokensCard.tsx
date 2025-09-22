@@ -88,7 +88,6 @@ disabled={!wallet || wallet.balance < option && option.cost}
                 size='sm'
                 onClick={() => setOpen(false)}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <Card>
@@ -107,7 +106,6 @@ disabled={!wallet || wallet.balance < option && option.cost}
             <DialogHeader>
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
-<<<<<<< HEAD
                 Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
               </DialogDescription>
             </DialogHeader>

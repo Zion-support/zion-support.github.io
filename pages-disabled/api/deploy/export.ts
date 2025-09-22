@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
@@ -47,7 +46,6 @@ note: 'This is a stub export. Connect to persistence to return real deployment s
   }
   // In a real system, look up persisted deployment by id
   const fake = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json(fake)
 }
   } catch (error) {
@@ -63,16 +61,7 @@ note: 'This is a stub export. Connect to persistence to return real deployment s
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   return res.status(200).json(fake)
 };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

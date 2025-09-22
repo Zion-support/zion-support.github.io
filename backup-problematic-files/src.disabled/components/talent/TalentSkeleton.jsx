@@ -28,7 +28,6 @@ import React from 'react';
 interface TalentSkeletonProps {
   // Add props here as needed
 
-=======
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -37,7 +36,6 @@ interface TalentSkeletonProps {
   // Add props here as needed
 }
 export default function TalentSkeleton({ }: TalentSkeletonProps) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div>
       <h1>TalentSkeleton</h1>
@@ -71,7 +69,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       <p>This component is under development.</p>
     </div>
 );
-<<<<<<< HEAD
 
     </div>'
 pr-12325

@@ -1,6 +1,4 @@
 :src/components/GlobalErrorHandler.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',;
 import { toast } from '@/hooks/use-toast',;
 import { Button } from '@/components/ui/button',;
@@ -24,16 +22,12 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
 :src/components/GlobalErrorHandler.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
 :src_backup/components/GlobalErrorHandler.tsx
   clearAllErrors: () => void
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   }, [])
   const showRetryableError = useCallback(
     (error: Error, retryAction?: () => void) => {
@@ -547,11 +541,8 @@ export function useErrorHandler() { return null; }
   }, [])
 :src_backup/components/GlobalErrorHandler.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/GlobalErrorHandler.tsx
 import { toast } from '@/hooks/use-toast';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from '@/components/ui/button';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
 import * as Sentry from '@sentry/nextjs',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -649,9 +640,6 @@ export function GlobalErrorHandler() { return null; }
     showNetworkError,
     showAuthError,
 :src/components/GlobalErrorHandler.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     clearAllErrors},
 
   return (
@@ -760,28 +748,17 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 } ;
-=======
     clearAllErrors},
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
 :src_backup/components/GlobalErrorHandler.tsx
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/GlobalErrorHandler.tsx
     reportError,
     handleApiError,
     handleAsyncOperation,
   };
     handleAsyncOperation}
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

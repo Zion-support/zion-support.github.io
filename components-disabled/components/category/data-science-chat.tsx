@@ -51,7 +51,6 @@ const DataScienceChat: NextPage = () => {
 
         <title>DataScienceChat - Zion Tech Solutions</title>;
 <meta name="description" content="DataScienceChat blog post" />{" "}
-<<<<<<< HEAD
 const DataScienceChat: NextPage = () => {
   return (
     <div />
@@ -63,7 +62,6 @@ const DataScienceChat: NextPage = () => {
         <h1>DataScienceChat</h1>
         <p>Blog content coming soon...</p>
         <a href="/blog">Back to Blog</a>
-=======
       </Head>;
 
 const DataScienceChat: NextPage = () => {
@@ -71,7 +69,6 @@ const DataScienceChat: NextPage = () => {
         <h1 />DataScienceChat</h1>
         <p />Blog content coming soon...</p>
         <a href=\"/blog\" />Back to Blog</a>
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       </main>
     </div>
       </Head>;

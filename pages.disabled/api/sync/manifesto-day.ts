@@ -1,7 +1,4 @@
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import {
   readState
@@ -26,7 +23,6 @@ import {;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 :pages/api-disabled/api/sync/manifesto-day.ts
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import {
 readState,
@@ -45,63 +41,37 @@ import {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 } from "../../../utils/sync/storage";
 
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 :pages/api-disabled/api/sync/manifesto-day.ts
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/sync/manifesto-day.ts
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/sync/manifesto-day.ts
-========
 
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
-<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
     return res && res.status(405).json({ error: "Method not allowed" });
 ;
   const state = readState();
-<<<<<<< HEAD:pages/api/sync/manifesto-day.ts
-<<<<<<< HEAD
   if (!state.config.optIn |state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-========
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 if (req && req.method !== "POST")
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
     return res && res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
@@ -159,9 +129,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
 :pages_backup/api/sync/manifesto-day.ts
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/sync/manifesto-day.ts
   }
 ;
   const { milestoneId, title, timestamp } = req && req.body as {;
@@ -187,12 +155,10 @@ export default async function handler(req, res) {
   try {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
-<<<<<<< HEAD
 
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 import { signPayload } from "../../../utils/sync/signature";
@@ -202,7 +168,6 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req, res) {;
   try {;
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/sync/manifesto-day.ts
   const state = readState();
   if (!state && state.config.optIn || state && state.config.paused) {;
     return res && res.status(403).json({ error: "Sync disabled for this instance" });
@@ -218,15 +183,9 @@ export default async function handler(req, res) {;
     return res && res.status(400).json({ error: "milestoneId, title required" });
 :pages/api/sync/manifesto-day.ts
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!state.config.optIn || state.config.paused) {
-=======
 ;
   if (!state.config.optIn || state.config.paused) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/sync/manifesto-day.ts
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
 ;
@@ -234,22 +193,14 @@ export default async function handler(req, res) {;
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
 
 <:pages/api-disabled/api/sync/manifesto-day.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a;
   const version = nextVersionFor(state, milestoneId);
   const event = {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       id: milestoneId,
       subjectId: milestoneId,
 
       id: milestoneId;
       subjectId: milestoneId
-=======;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/sync/manifesto-day.ts
-========
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
 
 origin/cursor/automate-test-improve-and-merge-code-382a
   const version = nextVersionFor(state, milestoneId);
@@ -261,8 +212,6 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
       id: milestoneId
       subjectId: milestoneId
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
-=======
   const version = nextVersionFor(state, milestoneId);
   const event = {
 
@@ -274,7 +223,6 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
       id: milestoneId
       subjectId: milestoneId
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import {;
   read_state;
@@ -293,7 +241,6 @@ function handler() {;
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
@@ -305,18 +252,13 @@ function handler() {;
       id: milestoneId
       subjectId: milestoneId
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/sync/manifesto-day.ts
-=======
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
 }
   } catch (error) {;
     console.error("Error:", error);
@@ -346,12 +288,9 @@ payload: {;
       id: milestone_id;
       subject_id: milestone_id
 
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
       score: 0;
       category: `milestone:${title}`;
       period: undefined;
-=======
       id: milestone_id;
       subject_id: milestone_id;
 
@@ -370,23 +309,17 @@ payload: {;
 
       id: milestone_id
       subject_id: milestone_id
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
 
       score: 0
       category: `milestone:${title}`
       period: undefined
 :pages_backup/api/sync/manifesto-day.ts
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/sync/manifesto-day.ts
       rank: undefined
     }
 
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
-<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
     eventId: uuidv4();
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category;
     eventId: uuidv4()
-=======
       rank: undefined
     }
 
@@ -403,21 +336,15 @@ payload: {;
 
     eventId: uuidv4(),
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/sync/manifesto-day.ts
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined }
     originInstanceId: state.config.instanceId;
     version;
     timestamp: timestamp || Date.now()
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
-<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
   };
   };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
   };
   };
 ;
@@ -468,32 +395,19 @@ export default async function handler(req, res) {;
     originInstanceId: state.config.instanceId;
     version;
     timestamp: timestamp |Date.now()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<< HEAD
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-========
 
 origin/cursor/automate-test-improve-and-merge-code-382a
 
   };
 
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
-=======
 
 origin/cursor/automate-test-improve-and-merge-code-382a
 
   };
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
   };
 
@@ -503,7 +417,6 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
   };
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
   const state = null;
@@ -535,23 +448,14 @@ type: 'leaderboard_entry' as const, // reuse as a generic announcement carrier w
   };
 
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/sync/manifesto-day.ts
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
   upsertEvent(state, event);
   writeState(state);
   const body = { ...event, propagate: false }
   const headers: Record<string, string> = {}
   const sig = signPayload(body);
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
-<<<<<<< HEAD
   if (sig) headers["x-zion-signature"] = sig;
-<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
-=======
   if (sig) headers["x-zion-signature"] = sig;
 
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
@@ -565,7 +469,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined }
     originInstanceId: state.config.instanceId;
     version;
@@ -577,7 +480,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
   await Promise.all(;
     state.config.peers
       .filter((p) => !p.paused);
@@ -585,24 +487,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages/api-disabled/api/sync/manifesto-day.ts
   await Promise && Promise.all(;
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
 
   await Promise && Promise.all(
 :pages_backup/api/sync/manifesto-day.ts
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
     state && state.config.peers
       .filter((p) => !p && p.paused)
 origin/cursor/automate-test-improve-and-merge-code-382a
       .map(async (peer) => {
 
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
 
         const url = new URL("/api/sync/publish", peer && peer.baseUrl).toString();
         try {;
@@ -613,11 +509,7 @@ origin/cursor/automate-test-improve-and-merge-code-382a
       .map(async (peer) => {;
 const url = new URL("/api/sync/publish", peer.baseUrl).toString();
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
-<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
         try {;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
 if (sig) headers['x-zion-signature'] = sig;
 
   await Promise.all(
@@ -627,7 +519,6 @@ if (sig) headers['x-zion-signature'] = sig;
         const url = new URL('/api/sync/publish', peer.baseUrl).toString();
 origin/cursor/automate-test-improve-and-merge-code-2533
         try {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/sync/manifesto-day.ts
           await axios.post(url, body, { headers, timeout: 5000 });
 
         } catch {}
@@ -637,24 +528,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return res
     .status(200)
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
-<<<<<<< HEAD
 
     .json({ status: "created", version, eventId: event && event.eventId });
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
     originInstanceId: state.config.instance_id;
     version;
     timestamp: timestamp || Date.now ()
       .map(async (peer) => {
 :pages_backup/api/sync/manifesto-day.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
       .map(async (peer) => {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
   }
 ;
   upsert_event (state, event);
@@ -682,19 +565,14 @@ if (headers["x - zion - signature"] = sig) {
     .status (200);
     .json ({ status: "created", version, event_id: event.event_id });
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
-<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
   } catch (error) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 }
 
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
 
   } catch (error) {
     console.error("Error:", error);
@@ -702,7 +580,6 @@ if (headers["x - zion - signature"] = sig) {
   }
 ursor/fix-website-loading-errors-and-merge-6662
 :pages_backup/api/sync/manifesto-day.ts
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
 
 }
 
@@ -763,10 +640,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 }
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<<< HEAD:pages/api-disabled/api/sync/manifesto-day.ts
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 :pages/api-disabled/api/sync/manifesto-day.ts
-<<<<<<< HEAD:pages/api/sync/manifesto-day.ts
 ;
   return res;
     .status (200);
@@ -778,42 +652,14 @@ ursor/fix-website-loading-errors-and-merge-6662
     return res.status(500).json({ error: "Internal server error" });
   }
 :pages_backup/api/sync/manifesto-day.ts
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/sync/manifesto-day.ts
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     .json({ status: 'created', version, eventId: event.eventId });
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f:pages/api/sync/manifesto-day.ts
-========
-
-    .json({ status: 'created', version, eventId: event.eventId });
-
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/manifesto-day.ts
-=======
-
-    .json({ status: 'created', version, eventId: event.eventId });
-
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 }
 
@@ -821,4 +667,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/sync/manifesto-day.ts
+
+    .json({ status: 'created', version, eventId: event.eventId });
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+}
+
+    .json({ status: 'created', version, eventId: event.eventId });
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

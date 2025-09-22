@@ -209,7 +209,6 @@ title: "Talents",
       description: "Intelligent automation for your workflow""
       icon: <Bot className="w-6 h-6" />
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
 :temp_exclude/hooks.disabled/CategoryDetail.tsx
     'voice-speech': {
@@ -228,12 +227,10 @@ title: "Talents",
     'business-solutions': {
       title: "Business Solutions",
       description: "Enterprise AI integrations and services",
-=======
     },'
     'business-solutions': {"
       title: "Business Solutions","
       description: "Enterprise AI integrations and services","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/CategoryDetail.tsx
       icon: <Briefcase className="w-6 h-6" />
     }
   },
@@ -576,6 +573,4 @@ title: "Talents",
 }
 
 ;
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/CategoryDetail.tsx

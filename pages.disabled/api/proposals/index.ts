@@ -1,15 +1,6 @@
 :pages_backup/api/proposals/index.ts
-<<<<<<< HEAD:pages_backup/api/proposals/index.ts
-<<<<<<< HEAD:pages/api/proposals/index.ts
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/proposals/index.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -23,33 +14,20 @@ import fs from 'fs-extra';
 import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
 :pages_backup/api/proposals/index.ts
-<<<<<<< HEAD:pages/api/proposals/index.ts
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/index.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/proposals/index.ts
 
 :pages_backup/api/proposals/index.ts
 import type { NextApiRequest, NextApiResponse } from "next";"
 import fs from "fs-extra";"
 import path from "path";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/index.ts
 const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalsindex && dataproposalsindex.json");
 async function ensureStore() {}
   await fs && fs.ensureFile(FILE_PATH);
 try {
-<<<<<<< HEAD
     const raw = await fs.readFile(FILE_PATH, "utf8");
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler() { return null; }
@@ -61,22 +39,8 @@ const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json'),;
 async function ensureStore() { return null; }
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
 :pages_backup/api/proposals/index.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/index.ts
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/proposals/index.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -98,7 +62,6 @@ async function ensureStore() {;
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
 
 :pages_backup/api/proposals/index.ts
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const FILE_PATH = path.join(process.cwd(), 'data', 'proposals', 'index.json');
 
 async function ensureStore() {
@@ -107,18 +70,12 @@ async function ensureStore() {
     const raw = await fs.readFile(FILE_PATH, 'utf8');
 if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
 :pages_backup/api/proposals/index.ts
-<<<<<<< HEAD:pages/api/proposals/index.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/proposals/index.ts
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
 :pages_backup/api/proposals/index.ts
-<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -188,14 +145,9 @@ function ensure_store() {
   }
 }
 :pages_backup/api/proposals/index.ts
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/proposals/index.ts
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
 ) {
   } catch (error) {
     console.error("Error:", error);
-=======
 
   } catch {}
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
@@ -204,7 +156,6 @@ function ensure_store() {
 
   } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/index.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -229,10 +180,8 @@ req: NextApiRequest,
 ) {;
   await ensureStore();
   if (req.method === "GET") {
-=======
 export default async function handler() { return null; }
   if (req.method === "GET") {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/index.ts
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data);
   }"
@@ -240,14 +189,12 @@ export default async function handler() { return null; }
     const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
 :pages_backup/api/proposals/index.ts
-<<<<<<< HEAD
 
 "
   if (req && req.method === "POST") {}
     const body = req && req.body || {};
     const data = await fs && fs.readJson(FILE_PATH);
 :pages_backup/api/proposals/index.ts
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const item = {
       id: body && body.id,
       title: body && body.title,
@@ -256,7 +203,6 @@ export default async function handler() { return null; }
       type: body && body.type,"
       status: body && body.status || "Draft",
       createdAt: new Date().toISOString(),
-=======
 
   if (req && req.method === "POST") {
     const body = req && req.body || {};
@@ -270,23 +216,18 @@ export default async function handler() { return null; }
       type: body && body.type
       status: body && body.status || "Draft"
       createdAt: new Date().toISOString()
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     };
     data && data.items.unshift(item);
     await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res && res.status(201).json(item);
   }
 :pages_backup/api/proposals/index.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
   res && res.status(405).json({ error: "Method not allowed" });
 
 }
 
 :pages_backup/api/proposals/index.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const FILE_PATH = path.join (process.cwd (), "dataproposalsindex.json");
 async /**
  * ensure_store - Function description;
@@ -294,7 +235,6 @@ async /**
 function ensure_store() {}
   await fs.ensure_file (FILE_PATH);
 :pages_backup/api/proposals/index.ts
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
     const raw = await fs.read_file (FILE_PATH, "utf8");
     if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })) {}
@@ -305,18 +245,14 @@ function ensure_store() {}
     await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/proposals/index.ts
 export default async /**
  * handler - Function description
-=======
   } catch {}
     await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
 export default async /**;
  * handler - Function description;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/index.ts
  */
 function handler() {}
   await ensure_store ();
@@ -335,9 +271,6 @@ if ( {) {}
     const data = await fs.read_json (FILE_PATH);
 :pages_backup/api/proposals/index.ts
     const item = {
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/api/proposals/index.ts
-<<<<<<< HEAD
       id: body.id,
       title: body.title,
       target_institution: body.target_institution,
@@ -351,7 +284,6 @@ if ( {) {}
     return res.status (201).json (item);
   }
 :pages_backup/api/proposals/index.ts
-<<<<<<< HEAD
   res.status (405).json ({ error: "Method not allowed" });
 }
 res.status(405).json({ error: "Method not allowed" });
@@ -364,15 +296,6 @@ export default async function handler(req, res) {
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-=======
 res.status (405).json ({ error: "Method not allowed" });
 
   res.status (405).json ({ error: "Method not allowed" });
@@ -381,13 +304,8 @@ res.status (405).json ({ error: "Method not allowed" });
 
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/proposals/index.ts
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/index.ts
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/index.ts
 
 "
   res.status(405).json({ error: "Method not allowed" });
@@ -415,10 +333,8 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(item);
 :pages_backup/api/proposals/index.ts
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } catch (error) {
     console.error("Error:", error);
-<<<<<<< HEAD
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {"
     console.error("Error:", error);"
@@ -431,20 +347,9 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
 :pages_backup/api/proposals/index.ts
-<<<<<<< HEAD:pages/api/proposals/index.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
   res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/index.ts
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/proposals/index.ts
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
@@ -458,7 +363,6 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 :pages_backup/api/proposals/index.ts
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -474,27 +378,11 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 }
 :pages_backup/api/proposals/index.ts
-<<<<<<< HEAD:pages/api/proposals/index.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/proposals/index.ts
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 id: body.id,
       title: body.title,
       targetInstitution: body.targetInstitution,
@@ -502,7 +390,6 @@ id: body.id,
       type: body.type,
       status: body.status || 'Draft',
       createdAt: new Date().toISOString(),
-=======
 
 id: body.id;
       title: body.title;
@@ -511,7 +398,6 @@ id: body.id;
       type: body.type;
       status: body.status || 'Draft';
       createdAt: new Date().toISOString();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/proposals/index.ts
     };
     data.items.unshift(item);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
@@ -521,12 +407,5 @@ id: body.id;
 
 }}
 :pages_backup/api/proposals/index.ts
-<<<<<<< HEAD:pages/api/proposals/index.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/proposals/index.ts

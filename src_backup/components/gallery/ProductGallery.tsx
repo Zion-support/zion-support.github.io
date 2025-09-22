@@ -1,6 +1,4 @@
 :src/components/gallery/ProductGallery.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, Suspense } from 'react',;
 import {;
   Dialog,;
@@ -61,8 +59,6 @@ const ModelViewer = React.lazy(async () => {
   }
 })
 :src/components/gallery/ProductGallery.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ProductGalleryProps {
 
 const ReactPlayer = React && React.lazy(() => import('react-player'));
@@ -177,9 +173,6 @@ export function ProductGallery(): any ({;
             className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
             onClick={() => setZoomed(!zoomed)}
           >
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   images: string[];
   video_url?: string;
   model_url?: string;
@@ -277,7 +270,6 @@ function ProductGallery() {
           >;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/gallery/ProductGallery.tsx
             <img
               src={images[selected] |images[0] |''}
               alt='Zoomed view'
@@ -286,7 +278,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </DialogContent>;
       )}
 :src/components/gallery/ProductGallery.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>
@@ -404,7 +395,6 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
     )}
     </Dialog>;
   );
-<<<<<<< HEAD
 }
 import React, { useState, Suspense } from 'react',;
 import {;
@@ -426,7 +416,6 @@ interface ProductGalleryProps {;
   videoUrl?: string,;
 modelUrl?: string;          </TabsContent>)}
           </TabsContent>)}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </Tabs>;
       {images.length > 0 && (
         <DialogContent className='max - w-3xl p - 0'>;
@@ -443,14 +432,7 @@ modelUrl?: string;          </TabsContent>)}
     </Dialog>);
 }
 :src/components/gallery/ProductGallery.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/gallery/ProductGallery.tsx

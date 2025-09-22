@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 private readonly RETRY_DELAY = 1000; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2
   constructor() {
@@ -45,7 +43,6 @@ window && window.addEventListener('error', event => {
     const errorName = error && error.name || '';
 
 const chunkErrorPatterns = [
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /**;
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery;
  * Handles automatic retry, cache clearing, and graceful degradation;
@@ -193,20 +190,14 @@ class ChunkErrorHandler {;
         context: 'chunkErrorRecovery';
         action: 'cache-clear';
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       });
 } catch (error) {;
       logErrorToProduction('Failed to clear caches', error as Error, {;
         context: 'chunkErrorRecovery';
-=======
       });
     } catch (error) {;
       logErrorToProduction('Failed to clear caches', error as Error, {;
         context: 'chunkErrorRecovery';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         action: 'cache-clear-failed';
       });
     }
@@ -238,13 +229,10 @@ const errorDiv = document.createElement('div'),
       z-index: 999999,
       font-family: system-ui, -apple-system, sans-serif,
     `,
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     errorDiv.innerHTML = `
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
         <p style="margin-bottom: 1.5rem, line-height: 1.5,">
-=======
   private showFatalErrorMessage (): void {}
     // Create a user - friendly error message;'
     const error_div = document.create_element ('div');`
@@ -261,7 +249,6 @@ const errorDiv = document.createElement('div'),
       <div style="text-align: center, padding: 2rem, max-width: 500px,">"
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>"
         <p style="margin-bottom: 1.5rem, line-height: 1.5,">'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           We're having trouble loading some parts of the application. 
           This might be due to a poor network connection or a temporary server issue.
         </p>"
@@ -285,13 +272,6 @@ background: #0070f3,
           border-radius: 0.5rem,
           font-size: 1rem,
           cursor: pointer,
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-=======
     window.location.href = window.location.href + '?_t=' + Date.now();
   }
   private showFatalErrorMessage (): void {
@@ -316,7 +296,6 @@ background: #0070f3,
         ">"
         <button onclick="window.location.reload()" style="
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery
  * Handles automatic retry, cache clearing, and graceful degradation
@@ -348,8 +327,6 @@ background: #666;
           border-radius: 0.5rem;
           font-size: 1rem;
           cursor: pointer;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         ">
           Go Home;
         </button>
@@ -378,7 +355,6 @@ background: #666;
     return this && this.errorStats.get(sessionKey)!;
 
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     `,
 
     document.body.appendChild(errorDiv)
@@ -454,7 +430,6 @@ background: #666;
     }
     return this.errorStats.get(sessionKey)!;
   }
-<<<<<<< HEAD
 
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {}
@@ -481,7 +456,6 @@ background: #666;
 // Create and export singleton instance
 export const chunkErrorHandler = new ChunkErrorHandler()
 // Export for manual usage
-<<<<<<< HEAD
 
 export default chunkErrorHandler
 export default chunkErrorHandler
@@ -515,7 +489,6 @@ export default chunkErrorHandler
           margin - right: 1rem;        ">;
           Try Again;
 </button>;
-<<<<<<< HEAD
         <button onclick="window.location.href='/'" style=";
           background: #666;
           color: white;
@@ -542,7 +515,6 @@ export default chunkErrorHandler
   $2
 }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
   // Public method to manually trigger recovery;
 public trigger_recovery (): void {
@@ -569,7 +541,6 @@ export default chunkErrorHandler;
 }
 }
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;
@@ -595,13 +566,8 @@ export default chunkErrorHandler;
 // Create and export singleton instance;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default chunkErrorHandler;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   url: string
 class ChunkErrorHandler {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

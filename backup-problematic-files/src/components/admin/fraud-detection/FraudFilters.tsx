@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -40,7 +39,6 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
         />;
       </div>;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
@@ -53,7 +51,6 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
           <SelectItem value="actioned">Actioned</SelectItem>;
         </SelectContent>;
       </Select>;
-<<<<<<< HEAD
 
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;

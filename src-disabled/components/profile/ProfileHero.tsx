@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
@@ -72,12 +71,10 @@ export function ProfileHero(): any ({};
             </Avatar>            />;
           ) : (;"
             <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   profileType: 'service' | 'talent'
 }
 
 export function ProfileHero({
-<<<<<<< HEAD
   name;
   title;
   avatarUrl;
@@ -89,16 +86,11 @@ export function ProfileHero({
 
 export function ProfileHero({
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 profileType: 'service' | 'talent';
 
 export function ProfileHero({
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name,
   title,
   avatarUrl,
@@ -107,47 +99,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   rating,
   reviewCount,
   aiScore,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   profileType
 }: ProfileHeroProps) {
   return (
     <div className="w-full overflow-hidden">
       <div className="relative">
-=======
 ;
   profileType;
 }: ProfileHeroProps) {}
   return ("
     <div className="w-full overflow-hidden">"
       <div className="relative">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <AspectRatio ratio={3/1} className="bg-zion-blue-light">
-=======
   profileType,
 }: ProfileHeroProps) {
   return (
     <div className='w-full overflow-hidden'>
       <div className='relative'>
         <AspectRatio ratio={3 / 1} className='bg-zion-blue-light'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           {coverImageUrl ? (
             <img;
               src={coverImageUrl}`
               alt={`${name} cover`}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="w-full h-full object-cover"
-=======
 "
               className="w-full h-full object-cover""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               loading="lazy"
             />
           ) : ("
@@ -157,11 +136,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">
-=======
 "
         <div className="container px-4 md:px-6">"
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">
               {avatarUrl ? (
                 <AvatarImage src={avatarUrl} alt={name} />
@@ -209,10 +186,6 @@ export function ProfileHero({;
           ) : (;
             <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;
           )}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </AspectRatio>;
 <div className="container px-4 md:px-6">;
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">;
@@ -230,7 +203,6 @@ export function ProfileHero({;
               <div className="flex flex-wrap items-center gap-2 mb-1">
                 <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
                 <Badge
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {name}
                 </h1>
                 <Badge'
@@ -240,16 +212,13 @@ export function ProfileHero({;
                     'ml-2 border-zion-purple/50 text-zion-cyan''
                     profileType === 'service''
                       ? 'bg-zion-purple/10'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   variant="outline" 
                   className={cn(
-<<<<<<< HEAD
                     "ml-2 border-zion-purple/50 text-zion-cyan"
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
 )}
 >;
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>
               </div>
@@ -261,12 +230,9 @@ export function ProfileHero({;
                 {title}
               </h2>
               <div className='flex flex-wrap items-center gap-3 mt-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {location && (
                   <span className="text-sm text-zion-slate-light">{location}</span>
                 )}
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {location && (
                   <span className="text-sm text-zion-slate-light">{location}</span>"
@@ -331,7 +297,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {location && (
                   <span className="text-sm text-zion-slate-light">{location}</span>
                 )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {rating && (
                   <div className="flex items-center gap-1">
                     <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan" />
@@ -343,18 +308,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 )}
 
-=======
                     )}
                   </div>;
                 )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {aiScore && (
                   <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
                     AI Match: {aiScore}%
                   </div>
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
               </div>;
             </div>;
           </div>;
@@ -379,18 +340,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
 ;
-=======
-=======
 ;
 
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {aiScore && (
                   <div className='px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>
                     AI Match: {aiScore}%
@@ -404,8 +358,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

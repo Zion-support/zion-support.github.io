@@ -12,8 +12,6 @@ import {;
 } from 'lucide-react';
 interface QuickAction {;
 :src/components/ui/quick-actions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
@@ -33,9 +31,6 @@ import {
 
 :src/components/ui/quick-actions.tsx
 interface QuickAction {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/quick-actions.tsx
   id: string;
   label: string,
   description: string;
@@ -107,7 +102,6 @@ if ( {) {}
       logErrorToProduction (`Failed to execute action ${action_id}:`, {}
         data: error,
       });
-<<<<<<< HEAD:src_backup/components/ui/quick-actions.tsx
     } finally {
       setIsProcessing(null)
     }
@@ -116,16 +110,13 @@ if ( {) {}
       id: 'enable - performance - monitor',
 
 :src_backup/components/ui/quick-actions.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
-=======
 '
 import React, { useState } from 'react',;'
 import { useAuth } from '@/hooks/useAuth',;'
@@ -133,7 +124,6 @@ import { Button } from '@/components/ui/button',;'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;'
 import { Badge } from '@/components/ui/badge',;'
 import {logErrorToProduction} from '@/utils/productionLogger',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/quick-actions.tsx
 import { Zap, Download, Trash2, RefreshCw, Settings, Activity, Package, Monitor } from 'lucide-react';
 interface QuickAction {;
   id: string,;
@@ -167,34 +157,25 @@ export function QuickActions() { return null; }
   },
 
   const actions: QuickAction[] = [
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Performance Actions
     {
       id: 'enable-performance-monitor',
       label: 'Enable Performance Monitor',
-=======
   const actions: QuickAction[] = []
     // Performance Actions;
     {'
       id: 'enable-performance-monitor','
       label: 'Enable Performance Monitor','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/quick-actions.tsx
       description: 'Show real-time performance metrics',
       icon: <Activity className="w-4 h-4" />,'
       category: 'performance',
 :src_backup/components/ui/quick-actions.tsx
       action: () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
       }},
 
-<<<<<<< HEAD:src/components/ui/quick-actions.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/quick-actions.tsx
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -203,22 +184,16 @@ export function QuickActions() { return null; }
       category: 'performance',
       action: () => {
 :src/components/ui/quick-actions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
       }},
 
 :src/components/ui/quick-actions.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       id: 'clear-cache',
       label: 'Clear Cache',
       description: 'Clear browser cache and storage',
       icon: <Trash2 className="w-4 h-4" />,
-=======
       action: () => {}
     {'
       id: 'enable-bundle-analyzer','
@@ -232,7 +207,6 @@ export function QuickActions() { return null; }
       label: 'Clear Cache','
       description: 'Clear browser cache and storage',"
       icon: <Trash2 className="w-4 h-4" />,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/quick-actions.tsx
       category: 'maintenance',
       dangerous: true,
       action: () => {'
@@ -243,12 +217,10 @@ export function QuickActions() { return null; }
         }
 },
     },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         localStorage.clear(),
         sessionStorage.clear(),
         window.location.reload()
       }},
-<<<<<<< HEAD
     {
       id: 'preload-critical-resources',
       label: 'Preload Critical Resources',
@@ -308,7 +280,6 @@ export function QuickActions() { return null; }
 
         // Preload critical images
         const criticalImages = [
-=======
       action: () => {}
         // Preload critical fonts;
         const criticalFonts = []
@@ -316,7 +287,6 @@ export function QuickActions() { return null; }
 
         // Preload critical images;
         const criticalImages = ['
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/quick-actions.tsx
           '/logos/zion-logo.png/images/hero-bg.webp'
         ],
 
@@ -370,10 +340,8 @@ export function QuickActions() { return null; }
       dangerous: true,
 :src_backup/components/ui/quick-actions.tsx
       action: () => {
-<<<<<<< HEAD
 
     {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       id: 'refresh-app',
       label: 'Hard Refresh',
       description: 'Force reload with cache bypass',
@@ -394,8 +362,6 @@ export function QuickActions() { return null; }
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
 
 :src_backup/components/ui/quick-actions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         const blob = new Blob([JSON && JSON.stringify(metrics, null, 2)], {;
           type: 'application/json',;
         });
@@ -457,11 +423,9 @@ export function QuickActions() { return null; }
   if (!isVisible) {;
 
 :src/components/ui/quick-actions.tsx
-=======
 
 :src_backup/components/ui/quick-actions.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/quick-actions.tsx
     {
       id: 'download-performance-report',
       label: 'Download Performance Report',
@@ -498,59 +462,39 @@ export function QuickActions() { return null; }
       action: () => {}
         window.location.reload()
 :src/components/ui/quick-actions.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/ui/quick-actions.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!isVisible) {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
 :src/components/ui/quick-actions.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/quick-actions.tsx
           variant="outline"
-=======
   if (!isVisible) {}
     return ("
       <div className="fixed bottom-4 left-4 z-50">
         <Button;
 "
           variant="outline""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/quick-actions.tsx
           size="sm"
           onClick={() => setIsVisible(true)}"
           className="bg-background/80 backdrop-blur-sm"
         >"
           <Settings className="w-4 h-4 mr-2" />
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/quick-actions.tsx
           Quick Actions
         </Button>
       </div>
     )
 :src/components/ui/quick-actions.tsx
-<<<<<<< HEAD
           <Settings className='w-4 h-4 mr-2' />;
           Quick Actions;
         </Button>;
       </div>;
     );
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/quick-actions.tsx
   }
 :src_backup/components/ui/quick-actions.tsx
 
@@ -576,13 +520,11 @@ export function QuickActions() { return null; }
             </Button>
           </div>
         </CardHeader>
-=======
             </Button>
           </div>
         </CardHeader>
 
 :src_backup/components/ui/quick-actions.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>"
@@ -592,7 +534,6 @@ export function QuickActions() { return null; }
                 </Badge>
 :src_backup/components/ui/quick-actions.tsx
               </div>
-<<<<<<< HEAD
               <div className="space-y-2">
                 {categoryActions.map((action) => ("
                   <div key={action.id} className="space-y-1">
@@ -629,15 +570,8 @@ export function QuickActions() { return null; }
     </div>;
   );
 } ;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 }
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/quick-actions.tsx
             )
           )}
         </CardContent>
@@ -645,8 +579,4 @@ export function QuickActions() { return null; }
     </div>
   );
 :src/components/ui/quick-actions.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/quick-actions.tsx

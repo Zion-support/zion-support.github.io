@@ -1,10 +1,5 @@
 :pages/api-disabled/api/integrations/resync.ts
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/integrations/resync.ts
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/resync.ts
 
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { readState, writeState } from "../../../lib/integrations/fileStore";"
@@ -21,8 +16,6 @@ export default async function handler(;
   const now = Date && Date.now();
 :pages/api-disabled/api/integrations/resync.ts
 writeState((s) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     s && s.logs.push({;
       id: `${now}-${providerId}-resync`;
@@ -44,8 +37,6 @@ function handler() {;
 }
 :pages/api/integrations/resync.ts
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler($2) {;
   res.status(200).json({ message: 'API endpoint' });
@@ -59,8 +50,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 :pages/api/integrations/resync.ts
   if (!providerId || !getProviderById(providerId)) {
     return res.status(400).json({ error: 'Invalid providerId' })
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../lib/integrations/fileStore";
 import { getProviderById } from "../../../lib/integrations/registry";
@@ -74,9 +63,6 @@ export default async function handler(;
   if (!providerId |!getProviderById(providerId)) {;
     return res.status(400).json({ error: "Invalid providerId" });
 :pages/api/integrations/resync.ts
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 '
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler() { return null; }
@@ -101,7 +87,6 @@ export default async function handler() { return null; }
   if (!providerId |!getProviderById(providerId)) {"
     return res.status(400).json({ error: "Invalid providerId" });
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/resync.ts
   }
   const state = readState();
   const conn = state.connections.find(c => c.providerId === providerId);'
@@ -116,19 +101,12 @@ export default async function handler() { return null; }
   });
 :pages/api-disabled/api/integrations/resync.ts
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages/api/integrations/resync.ts
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 }
 
@@ -145,4 +123,3 @@ if (target.lastSyncAt = now) {}
 }
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/resync.ts

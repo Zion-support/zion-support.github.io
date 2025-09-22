@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -67,12 +66,10 @@ export default function TenantOnboarding() {;
         cta:"Get Started";
       },;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Submit to Supabase;
       const { data, error } = await supabase;
         .from('whitelabel_tenants');
         .insert({;
-<<<<<<< HEAD
 
       />;
       <Header />;

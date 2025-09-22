@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -7,29 +5,19 @@ import { Card } from "@/components/ui/card",
 import { ThumbsUp, ThumbsDown } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast",
 import { HELP_CATEGORIES } from "./help-content",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import { HELP_CATEGORIES } from "./help-content";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface HelpArticleViewProps {
   articleId: string
-=======
 interface HelpArticleViewProps {}
   articleId: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
 
   // Find the article in all categories
   let article,
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
 
 // Find the article in all categories
@@ -118,10 +106,7 @@ function HelpArticleView() {
   const [feedback_given, setFeedbackGiven] = useState<"helpful" | "not - helpful" | null>(null);
   // Find the article in all categories;
   let article;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   for (const category of HELP_CATEGORIES) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     const found = category.articles.find (array => a.id === article_id);
     // Check condition
 if ( {) {
@@ -142,7 +127,6 @@ if ( {) {
   return new Date (date).toLocaleDateString ("en - US", {
     year: "numeric",
     month: "long",
-<<<<<<< HEAD
     day: "numeric"
   })
 ;
@@ -154,9 +138,7 @@ function formatDate(date: string): string {;"
   });
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
 
 }
 
@@ -167,8 +149,4 @@ function formatDate(date: string): string {;"
 
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

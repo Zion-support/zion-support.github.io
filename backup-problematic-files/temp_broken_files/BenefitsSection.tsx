@@ -1,5 +1,4 @@
 
-=======
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;
@@ -24,7 +23,6 @@ const benefits = [;
 ;
 export function BenefitsSection() {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <section className="py-20 bg-zion-blue-light">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;
@@ -33,4 +31,3 @@ export function BenefitsSection() {;
             Experience the next generation of tech marketplace with features designed to maximize efficiency and value;
           </p>;
         </div>;
-<<<<<<< HEAD

@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -30,7 +29,6 @@ export function RolePicker({ onSelect } RolePickerProps) {;
             selectedRole === 'talent' ;
               ? "border-primary bg-primary/5" ;
               :"border-border hover:border-primary/40";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           }`}
           onClick={() => handleSelect('talent')}
         >;
@@ -49,7 +47,6 @@ export function RolePicker({ onSelect } RolePickerProps) {;
             </div>;
           </CardContent>;
         </Card>;
-<<<<<<< HEAD
 
           }`}
           onClick={() => handleSelect('client')}

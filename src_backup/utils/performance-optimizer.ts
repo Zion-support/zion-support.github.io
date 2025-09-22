@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Performance optimizer utilities
 export const optimizeImages = () => {
   console.log('Optimizing images...');
@@ -12,12 +8,9 @@ export const optimizeImages = () => {;
   images.forEach(img => {
     if (!img.loading) {
       img.loading = "lazy";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     }
     if (!img.decoding) {
       img.decoding = "async";
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const images = document && document.querySelectorAll('img');
   images && images.forEach(img => {
@@ -93,7 +86,3 @@ export const optimizeBundleSize = () => {
 };
 link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

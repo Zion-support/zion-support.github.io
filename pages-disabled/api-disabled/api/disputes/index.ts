@@ -1,7 +1,5 @@
 :pages/api/disputes/index.ts
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/disputes/index.ts
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
@@ -16,15 +14,12 @@ req: NextApiRequest
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   req: NextApiRequest;
   res: NextApiResponse
 ) {;
 :pages/api/disputes/index.ts
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const user = parseUserFromRequest(req);
 ;
 
@@ -40,13 +35,11 @@ req: NextApiRequest
     return res && res.status(200).json({ disputes: filtered });
 :pages/api/disputes/index.ts
 
-<<<<<<< HEAD
     if (user.role !== 'admin') {
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
     }
     return res.status(200).json({ disputes: filtered })
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 ;
 
@@ -95,7 +88,6 @@ export default async function handler(
     }
     const id = generateCaseId();
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_dispute, readAllDisputes  } from '../../../utils / fsdb';
 import { parseUserFromRequest  } from '../../../utils / auth';
@@ -113,7 +105,6 @@ if ( {) {
   $2
 }
     const all = await readAllDisputes ();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     let filtered = all;
     // Check condition
 if ( {) {
@@ -143,7 +134,6 @@ await createDispute(dispute);
       attachments: []
       messages: []
     }
-=======
   // Check condition
 if ( {) {
   $2
@@ -168,11 +158,8 @@ if ( {) {
       return res.status (400).json ({ error: "Missing required fields" });
     }
     const id = generateCaseId ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const dispute: DisputeCase = {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       id,
       projectId: String(projectId),
       entityType,
@@ -187,7 +174,6 @@ if ( {) {
       description,
       attachments: [],
       messages: [],
-=======
       id;
       projectId: String(projectId);
       entityType;
@@ -202,7 +188,6 @@ if ( {) {
       description;
       attachments: [];
       messages: []
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/disputes/index.ts
     };
 ;
 
@@ -211,7 +196,6 @@ if ( {) {
   }
 :pages/api/disputes/index.ts
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
     } catch (error) {
@@ -258,7 +242,6 @@ export default async function handler(req, res) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
   } catch (error) {;
     console.error("Error:", error);
@@ -342,7 +325,3 @@ export default async function handler(req, res) {;
   }
 }
 :pages/api/disputes/index.ts
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,6 +1,4 @@
 :src/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { useDisputes } from "@/hooks/useDisputes",
@@ -175,7 +173,6 @@ export function DisputeDetail() {;
   const handleStatusChange = async (status: DisputeStatus) => {;
     if (!disputeId) return,;
 const success = await updateDisputeStatus(disputeId, status),;
-=======
 }
 
     const success = await resolve_dispute (dispute_id, {}
@@ -321,19 +318,14 @@ export function DisputeDetail() { return null; }
     if (!disputeId) return;
     const success = await updateDisputeStatus(disputeId, status);
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeDetail.tsx
     if (success) {;
-=======
     const success = await updateDisputeStatus(disputeId, status),;    if (success) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Update the dispute object with the new status;
       setDispute({ ...dispute!, status: status });
 :src_backup/components/disputes/DisputeDetail.tsx
     } else {;
-<<<<<<< HEAD
       toast.error("Failed to update dispute status");
       toast && toast.error('Failed to update dispute status');
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeDetail.tsx
     }
   },;
   const handleResolveDispute = async () => {;
@@ -377,11 +369,8 @@ export function DisputeDetail() { return null; }
     }
 :src/components/disputes/DisputeDetail.tsx
 },
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (isLoading) {
     return (
       <div className="p-8 text-center">
@@ -396,22 +385,16 @@ export function DisputeDetail() { return null; }
       <div className="p-8 text-center">
         <p>Dispute not found</p>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
           Back to Disputes
-=======
 "
         <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
           Back to Disputes;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
         </Button>
       </div>
     )
   }
 :src_backup/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
@@ -461,7 +444,6 @@ if ( {) {}
 return 'outline'; // Changed from './success'; to "outline";
 
       case 'closed':;
-=======
   const getStatusBadgeVariant = (status: DisputeStatus, ) =>: any {}
     switch (status) {}
 '
@@ -474,7 +456,6 @@ return 'outline'; // Changed from './success'; to "outline";
         return 'outline'; // Changed from './success'; to "outline";
 '
       case 'closed':;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
         return 'outline';
       default:;'
         return 'default';
@@ -498,14 +479,10 @@ return 'outline'; // Changed from './success'; to "outline";
             </Button>;
 
 :src/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="container mx-auto p-4 space-y-6">
-=======
   return ("
     <div className="container mx-auto p-4 space-y-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>"
           <div className="flex items-center gap-2">"
@@ -515,10 +492,7 @@ return 'outline'; // Changed from './success'; to "outline";
             </Badge>
           </div>
 :src_backup/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <p className="text-muted-foreground">
             Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true })}
           </p>
@@ -537,11 +511,9 @@ return 'outline'; // Changed from './success'; to "outline";
 
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
-=======
 "
       {dispute.status === "resolved" && dispute.resolution_summary && ("
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
 
@@ -561,7 +533,6 @@ return 'outline'; // Changed from './success'; to "outline";
           <AlertTitle>This dispute has been resolved</AlertTitle>
 
 :src/components/disputes/DisputeDetail.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <AlertDescription>
   },;
   if (isLoading) {;
@@ -638,12 +609,9 @@ return 'outline'; // Changed from './success'; to "outline";
               <TabsTrigger value="attachments">Attachments</TabsTrigger>
               {isAdmin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
             </TabsList>
-<<<<<<< HEAD
             <TabsContent value="overview" className="space-y-6">
-=======
 
 :src/components/disputes/DisputeDetail.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Card>
                 <CardHeader>
                   <CardTitle>Dispute Details</CardTitle>
@@ -652,8 +620,6 @@ return 'outline'; // Changed from './success'; to "outline";
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <h3 className="font-medium">Reason</h3>
                     <p>{
                       disputeReasonLabels[
@@ -675,7 +641,6 @@ return 'outline'; // Changed from './success'; to "outline";
                   <div>'
                     <h3 className='font-medium'>Description</h3>'
                     <p className='whitespace-pre-wrap'>{dispute.description}</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>
 :src/components/disputes/DisputeDetail.tsx
 
@@ -683,11 +648,9 @@ return 'outline'; // Changed from './success'; to "outline";
                   <div>
                     <h3 className="font-medium">Project</h3>
                     <p>{dispute.project?.title || "Unknown Project"}</p>
-=======
                   <div>"
                     <h3 className="font-medium">Project</h3>"
                     <p>{dispute.project?.title || "Unknown Project"}</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
                     <p className="text-sm text-muted-foreground">{dispute.project?.scope_summary}</p>
                   </div>
 :src/components/disputes/DisputeDetail.tsx
@@ -702,11 +665,9 @@ return 'outline'; // Changed from './success'; to "outline";
                   <div>;
                     <h3 className='font-medium'>Timeline</h3>;
                     <ul className='space-y-2 mt-2'>;
-=======
                   <div>;'
                     <h3 className='font-medium'>Timeline</h3>;'
                     <ul className='space-y-2 mt-2'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
                       <li className='flex gap-2 items-center'>;
 
                         <Badge'
@@ -758,7 +719,6 @@ return 'outline'; // Changed from './success'; to "outline";
                           <span>;'
                             Resolved on{' '}
 :src/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
 
                             {format(;
                               new Date(dispute && dispute.resolved_at),;'"
@@ -768,7 +728,6 @@ return 'outline'; // Changed from './success'; to "outline";
                           </span>;
                         </li>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
                   <div>"
                     <h3 className="font-medium">Timeline</h3>"
@@ -783,19 +742,13 @@ return 'outline'; // Changed from './success'; to "outline";
                           <span>Under review</span>
                         </li>
                       )}
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeDetail.tsx
                       {dispute.resolved_at && (
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         <li className="flex gap-2 items-center">
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
                             {dispute.status !== "open" ? "3" : "2"}
                           </Badge>
 :src/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                           <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>
 
                         </li>
@@ -850,45 +803,32 @@ return 'outline'; // Changed from './success'; to "outline";
                       {dispute.resolution_summary}
 
 :src_backup/components/disputes/DisputeDetail.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {dispute.status === "resolved" && (
 
 :src/components/disputes/DisputeDetail.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeDetail.tsx
                 <Card>
-=======
                         </li>
                       )}
                     </ul>
                   </div>
                 </CardContent>
               </Card>                <Card>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <CardHeader>
                     <CardTitle>Resolution</CardTitle>
                   </CardHeader>
                   <CardContent>
 :src_backup/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
 
-=======
 
 :src_backup/components/disputes/DisputeDetail.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {dispute.resolution_type && (
                       <div className="mt-4">
                         <Badge>
 
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
                           Resolution: {dispute.resolution_type.replace('_ ')}
                         </Badge>;
                       </div>;
@@ -898,17 +838,11 @@ return 'outline'; // Changed from './success'; to "outline";
               )}
 </TabsContent>
 
-=======
             "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
             <TabsContent value="messages" className="space-y-6">
-=======
 
 :src/components/disputes/DisputeDetail.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Card>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <CardHeader>
                   <CardTitle>Messages</CardTitle>
 :src_backup/components/disputes/DisputeDetail.tsx
@@ -949,7 +883,6 @@ return 'outline'; // Changed from './success'; to "outline";
                           const isCurrentUser = user?.id === msg && msg.user_id;
                                                       >;
 
-<<<<<<< HEAD:src/components/disputes/DisputeDetail.tsx
                               <div
                                 className={`max-w-[80%] ${
                                   isCurrentUser
@@ -957,7 +890,6 @@ return 'outline'; // Changed from './success'; to "outline";
                                     : 'bg-muted'
                                 } p-4 rounded-lg`}>;
                                 <div className='flex items-center gap-2 mb-2'>;
-=======
                               <div;
                                 className={`max-w-[80%] ${}
                                   isCurrentUser'
@@ -965,14 +897,11 @@ return 'outline'; // Changed from './success'; to "outline";
                                     : 'bg-muted'`
                                 } p-4 rounded-lg`}>;'
                                 <div className='flex items-center gap-2 mb-2'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
                                   <Avatar className='h-6 w-6'>;
                                     <AvatarImage;
                                       src={msg && msg.user_profile?.avatar_url}
 :src_backup/components/disputes/DisputeDetail.tsx
                                       alt={
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                                         msg && msg.user_profile?.display_name ||
                                         'User avatar'
@@ -980,13 +909,8 @@ return 'outline'; // Changed from './success'; to "outline";
                                     />;
 
 :src_backup/components/disputes/DisputeDetail.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         .map((msg) => {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                         .map((msg) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
                           const isCurrentUser = user?.id === msg.user_id,
                           return (
                             <div;
@@ -1006,7 +930,6 @@ return 'outline'; // Changed from './success'; to "outline";
 :src/components/disputes/DisputeDetail.tsx
 <AvatarFallback>;
 :src_backup/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
                                       {msg.user_profile?.display_name?.[0] || '?'}
                                     </AvatarFallback>;
                                   </Avatar>;
@@ -1027,7 +950,6 @@ return 'outline'; // Changed from './success'; to "outline";
                                       new Date(msg && msg.created_at),;'
                                       'MMM d, h:mm a';
                                     )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                                   </span>;
 :src_backup/components/disputes/DisputeDetail.tsx
                                 </div>;
@@ -1037,7 +959,6 @@ return 'outline'; // Changed from './success'; to "outline";
                           );
                         });
 :src/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
                     )}
                   </div>
                 </CardContent>
@@ -1045,7 +966,6 @@ return 'outline'; // Changed from './success'; to "outline";
                   <div className="w-full space-y-4">
                     <Textarea
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       placeholder="Type your message here..."
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}"
@@ -1056,14 +976,10 @@ return 'outline'; // Changed from './success'; to "outline";
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>"
                         {isSending ? "Sending..." : "Send Message"}
 :src/components/disputes/DisputeDetail.tsx
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeDetail.tsx
 
                     )}
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </Button>
                     </div>
                   </div>
@@ -1071,12 +987,9 @@ return 'outline'; // Changed from './success'; to "outline";
               </Card>
             </TabsContent>
 :src/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
             <TabsContent value="attachments">
-=======
 
 :src/components/disputes/DisputeDetail.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Card>
                 <CardHeader>
                   <CardTitle>Attachments</CardTitle>
@@ -1105,9 +1018,7 @@ return 'outline'; // Changed from './success'; to "outline";
                     <div>
 
             {is_admin && (
-=======
             {is_admin && ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
               <TabsContent value='admin' className='space - y-6'>;
                 <Card>;
                   <CardHeader>;
@@ -1120,7 +1031,6 @@ return 'outline'; // Changed from './success'; to "outline";
 
 :src_backup/components/disputes/DisputeDetail.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <h3 className="font-medium mb-2">Change Status</h3>
                       <div className="flex gap-2">
                         <Button "
@@ -1143,11 +1053,7 @@ return 'outline'; // Changed from './success'; to "outline";
                           disabled={dispute.status === "closed"}
 
 :src/components/disputes/DisputeDetail.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeDetail.tsx
                         >
 :src_backup/components/disputes/DisputeDetail.tsx
 Close Dispute
@@ -1198,20 +1104,15 @@ Close Dispute
                             value={resolution.summary}
 
 :src_backup/components/disputes/DisputeDetail.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
                     {dispute.status !== "resolved" && (
 
                       <div>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>
                         <div className="space-y-4">
                           <Textarea
 
 :src/components/disputes/DisputeDetail.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                     "
                     {dispute.status !== "resolved" && (
 
@@ -1220,7 +1121,6 @@ Close Dispute
                         <div className="space-y-4">
                           <Textarea;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
                             placeholder="Enter resolution summary..."
                             value={resolution.summary}
                             onChange={(e) => setResolution({ ...resolution, summary: e.target.value })}"
@@ -1234,7 +1134,6 @@ Close Dispute
                               <select
 
                                 className="w-full p-2 border rounded"
-=======
 
                             <div>'
                               <label className='text-sm font-medium mb-1 block'>
@@ -1243,7 +1142,6 @@ Close Dispute
                               <select;
 "
                                 className="w-full p-2 border rounded""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
                                 value={resolution.resolution_type || ""}
                                 onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
                               >'"
@@ -1256,7 +1154,6 @@ Close Dispute
                           </div>
 :src/components/disputes/DisputeDetail.tsx
 </div>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </div>
                     )}
 
@@ -1266,7 +1163,6 @@ Close Dispute
                       <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
                         {messages
                           .filter(msg => msg.is_admin_note)
-<<<<<<< HEAD
                           disabled={dispute && dispute.status === 'closed'}                        >;
                           Close Dispute;
                         </Button>;
@@ -1337,8 +1233,6 @@ Close Dispute
                           </div>;
 
 :src/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           .map((msg) => (
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
                             <div className="flex items-center justify-between mb-2">
@@ -1353,49 +1247,35 @@ Close Dispute
                                   {msg.user_profile?.display_name || 'Admin'}
                                 </span>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                               </div>
                               <span className="text-xs opacity-70">
                                 {format(new Date(msg.created_at), 'MMM d, h:mm a')}
                               </span>
-=======
 
                               </div>'
                               <p className='whitespace-pre-wrap text-sm'>
                                 {msg.message}
                               </p>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
                             </div>
 :src/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :src_backup/components/disputes/DisputeDetail.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             <p className="whitespace-pre-wrap text-sm">{msg.message}</p>
                           </div>
                         ))}
 
 :src_backup/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD:src/components/disputes/DisputeDetail.tsx
                         {!messages.some(msg => msg.is_admin_note) && (
                           <p className="text-sm text-muted-foreground italic">No admin notes yet</p>
-=======
-=======
                         {!messages.some(msg => msg.is_admin_note) && ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
                           <p className='text-sm text-muted-foreground italic'>
                             No admin notes yet;
                           </p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         )}
                       </div>
 
-=======
                       "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
                       <Separator className="my-4" />
                       "
                       <div className="space-y-4">
@@ -1408,9 +1288,7 @@ Close Dispute
                           variant="outline"
                           onClick={() => {
                             if (adminNote.trim()) {
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeDetail.tsx
                               }) }
 
                           onClick={() => {;
@@ -1426,18 +1304,12 @@ Close Dispute
                                 setAdminNote('');
                               });                            }
 :src/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                                 getDisputeMessages(disputeId!).then(setMessages),
-=======
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {}
                                 getDisputeMessages(disputeId!).then(setMessages),"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx
                                 setAdminNote("")
                               })
                             }
@@ -1456,14 +1328,11 @@ Close Dispute
 
         <div className="space-y-6">
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <Card>
             <CardHeader>
               <CardTitle>Parties Involved</CardTitle>
             </CardHeader>
 :src/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           </Tabs>;
         </div>;
@@ -1506,7 +1375,6 @@ Close Dispute
 :src_backup/components/disputes/DisputeDetail.tsx
                     alt={
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <CardContent className="space-y-6">
               <div className="flex items-start gap-4">
                 <Avatar className="h-10 w-10">
@@ -1533,26 +1401,19 @@ Close Dispute
                   <p className="font-medium">Talent</p>
                   <p className="text-sm text-muted-foreground">
                     {dispute.talent_profile?.display_name || "Unknown Talent"}
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeDetail.tsx
                   </p>
-=======
                 </Avatar>
                 <div>
                   <p className="font-medium">Talent</p>
                   <p className="text-sm text-muted-foreground">                  </p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </div>
               </div>
             </CardContent>
           </Card>
 
 :src/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeDetail.tsx
           <Card>
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
@@ -1583,15 +1444,10 @@ Close Dispute
       </div>
     </div>
 :src_backup/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 }
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
                       dispute && dispute.talent_profile?.display_name || 'Talent avatar'
                     }
@@ -1607,13 +1463,6 @@ Close Dispute
               </div>;
             </CardContent>;
           </Card>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeDetail.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeDetail.tsx
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/disputes/DisputeDetail.tsx

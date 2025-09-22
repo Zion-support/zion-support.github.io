@@ -43,7 +43,6 @@ export function useSkills() {;
     if (!user) {;
       setError('You must be logged in to delete skills');
       return false;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     ;
     setIsLoading(true);

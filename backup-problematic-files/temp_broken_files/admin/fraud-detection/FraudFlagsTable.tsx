@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
@@ -20,12 +19,10 @@ export const FraudFlagsTable:React.FC<FraudFlagsTableProps> = ({;
   flags,;
   isLoading,;
   hasFilters,;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   resetFilters,;
   onAction;
 }) => {;
   if (isLoading) {;
-<<<<<<< HEAD
 
     <Table>;
       <TableHeader>;

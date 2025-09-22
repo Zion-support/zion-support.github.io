@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -10,9 +9,6 @@ import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AIMarketResearchPage() {
   const service = null;
-<<<<<<< HEAD:pages/ai-market-research.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Phone
   Mail
@@ -20,7 +16,6 @@ import {
   Check
   ArrowRight
   Star
-=======
 import {};
   Phone;
   Mail;
@@ -28,9 +23,7 @@ import {};
   Check;
   ArrowRight;
   Star;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-market-research.tsx
   Search;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   );  if (!service) return null;
 
   return (
@@ -91,16 +84,13 @@ import {};
               <a'
                 href='/contact'
 :pages_backup/ai-market-research.tsx
-<<<<<<< HEAD
 import Head from 'next / head';
 import {
 
-=======
 '
 import Head from 'next / head';
 import {}
 ';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-market-research.tsx
 import React from 'react';
 '
 import Head from 'next/head';
@@ -108,7 +98,6 @@ import Head from 'next/head';
 :pages_backup/ai-market-research.tsx
 import {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Phone,
   Mail,
   MapPin,
@@ -116,18 +105,14 @@ import {
   ArrowRight,
 :pages_backup/ai-market-research.tsx
 
-=======
   Star,;
   Search,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 } from 'lucide-react';
-=======
 ;
   Star,;
   Search,;
 '
 } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-market-research.tsx
 import Layout from '../components / layout / Layout';
 ;'
 import { enhancedRealMicroSaasServices } from '../data / enhanced - real - micro - saas - services';
@@ -219,20 +204,14 @@ if (return null) {}
           </div>;
         </div>;
 :pages_backup/ai-market-research.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-market-research.tsx
           </p>;
           <div className="flex justify - center gap - 4">;"
             <a href="/contact" className="bg - indigo - 600 text - white px - 6 py - 3 rounded - lg hover: bg - indigo - 700">;
               Get Started;
             </a>;
 :pages_backup/ai-market-research.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-market-research.tsx
               Learn More;
             </a>;
           </div>;
@@ -240,8 +219,6 @@ if (return null) {}
       </main>;
 
 :pages_backup/ai-market-research.tsx
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function AIMarketResearchPage() {
 const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research'));
   if (!service) return null;
@@ -250,12 +227,10 @@ export default function AIMarketResearchPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research'));
   if (!service) return null;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search } from 'lucide-react',
 import Layout from '../components/layout/Layout'
-=======
 
 export default function AIMarketResearchPage() {}
 '
@@ -263,53 +238,34 @@ import React from 'react''
 import Head from 'next/head''
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search } from 'lucide-react','
 import Layout from '../components/layout/Layout''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-market-research.tsx
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 export default function AIMarketResearchPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research'))
   if (!service) return null,
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 :pages_backup/ai-market-research.tsx
 export default function AIMarketResearchPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research'))
   if (!service) return null,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     s.link.endsWith('/ai-market-research')
   );
   if (!service) return null;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <link rel="canonical" href="https://ziontechgroup.com/ai-market-research" />
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <meta name='description' content={service.description} />
         <link
           rel='canonical'
           href='https://ziontechgroup.com/ai-market-research'
         />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3 w-10 h-10"><Search />{service.name}</h1>
-=======
 export default function AIMarketResearchPage() { return null; }
         <title>{service.name} - Zion Tech Group</title>
 
@@ -320,7 +276,6 @@ export default function AIMarketResearchPage() { return null; }
         <div className="max-w-6xl mx-auto">"
           <div className="text-center mb-10">"
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3 w-10 h-10"><Search />{service.name}</h1>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-market-research.tsx
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
           </div>"
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">"
@@ -329,8 +284,6 @@ export default function AIMarketResearchPage() { return null; }
               <p className="text-slate-300 mb-6">{service.description}</p>"
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
-<<<<<<< HEAD:pages/ai-market-research.tsx
-<<<<<<< HEAD
 
 }
 
@@ -387,7 +340,6 @@ export default function AIMarketResearchPage() { return null; }
                   <MapPin />
                   <span>{service.contactInfo.address}</span>
                 </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
             </div>
           </div>
@@ -401,12 +353,6 @@ export default function AIMarketResearchPage() { return null; }
     </Layout>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 <div className="bg-indigo-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Understand Your Market</h2>
           <p className="text-lg text-gray-700 mb-6">
@@ -424,8 +370,4 @@ export default function AIMarketResearchPage() { return null; }
       </main>
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

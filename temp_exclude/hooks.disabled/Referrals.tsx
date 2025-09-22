@@ -53,9 +53,7 @@ export default function ReferralsPage() {
   return ("
     <div className="container max-w-7xl py-10">
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Referrals.tsx
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
         <div>"
           <h1 className="text-3xl font-bold tracking-tight">Referral Program</h1>"
@@ -186,7 +184,6 @@ export default function ReferralsPage() { return null; }
             <TabsContent value="rewards" className="p-0 mt-6">;
 
 :temp_exclude/hooks.disabled/Referrals.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       <div className="grid gap-6 mt-6 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-6">
@@ -238,7 +235,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Button } from '@/components/ui/button',;
 import { toast } from '@/hooks/use-toast',;
 import { Share, Users } from 'lucide-react';
-=======
 '
 import { useEffect } from 'react',;'
 import { useAuth } from '@/hooks/useAuth',;'
@@ -254,7 +250,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Button } from '@/components/ui/button',;'
 import { toast } from '@/hooks/use-toast',;'
 import { Share, Users } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Referrals.tsx
 import { useRouter } from 'next/router', // Changed from useNavigate;
 export default function ReferralsPage() { return null; }
   const { isAuthenticated } = useAuth(),;
@@ -330,6 +325,4 @@ export default function ReferralsPage() { return null; }
 }
 
 ;
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Referrals.tsx

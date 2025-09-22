@@ -1,5 +1,4 @@
 
-=======
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
 import { Mail } from "lucide-react",;
@@ -21,12 +20,10 @@ export function ContactSection() {;
               <div>;
                 <p className="text-white font-semibold">Email Us</p>;
                 <a href="mailto:commercial@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   commercial@ziontechgroup.com;
                 </a>;
               </div>;
             </div>;
-<<<<<<< HEAD
 
               Request Commercial Proposal;
             </Button>;

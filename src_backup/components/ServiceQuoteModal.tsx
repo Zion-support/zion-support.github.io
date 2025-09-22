@@ -1,8 +1,6 @@
 ...formData;            startDate: startDate?.toISOString(),
 :src/components/ServiceQuoteModal.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ServiceQuoteModal.tsx
 
             endDate: endDate?.toISOString()}
         }
@@ -19,21 +17,16 @@
 }
 
 :src/components/ServiceQuoteModal.tsx
-<<<<<<< HEAD
 
 ;
 
 :src/components/ServiceQuoteModal.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react',
 :src_backup/components/ServiceQuoteModal.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import { useState } from 'react',
 import { useState  } from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ServiceQuoteModal.tsx
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -49,7 +42,6 @@ import { cn } from "@/lib/utils",
 import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
-=======
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog","
 import { Button } from "@/components/ui/button","
 import { Input } from "@/components/ui/input","
@@ -65,7 +57,6 @@ import { cn } from "@/lib/utils","
 import { ProductListing } from "@/types/listings",'
 import { toast } from '@/hooks/use-toast',"
 import { supabase } from "@/integrations/supabase/client",'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ServiceQuoteModal.tsx
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface ServiceQuoteModalProps {}
   open: boolean,
@@ -227,7 +218,6 @@ interface ServiceQuoteModalProps {;
 }
 ;
 :src_backup/components/ServiceQuoteModal.tsx
-<<<<<<< HEAD
 const BUDGET_RANGES = [;
   { label: "Less than $5,000", value: "0-5000" },;
   { label: "$5,000 - $10,000", value: "5000-10000" },;
@@ -533,12 +523,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     </Dialog>;
   );
 }
-<<<<<<< HEAD:src_backup/components/ServiceQuoteModal.tsx
 ;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ServiceQuoteModal.tsx
             </div>
           </DialogFooter>
         </form>
@@ -609,8 +594,4 @@ else if (currentStep === 'contact') setCurrentStep ('timeline') ;
 }
 }
 :src/components/ServiceQuoteModal.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ServiceQuoteModal.tsx

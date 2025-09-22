@@ -1,5 +1,4 @@
 
-=======
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react',;
 import { useMessaging } from '@/context/MessagingContext',;
@@ -91,13 +90,11 @@ export default function MessagingInbox() {;
                 />;
               )}
               ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {/* Conversation Detail */}
               <ConversationDetailView />;
             </div>;
           </div>;
         </div>;
-<<<<<<< HEAD
 
         {/* Add extra bottom padding on mobile to account for the bottom nav */}
         {isMobile && <div className="h-16"></div>}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 export interface MilestoneAssistantProps {;
   scopeOfWork: string;,;
@@ -55,24 +54,20 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
                   <textarea;
                     value={item.description}
 onChange={(e) => updateItem(idx, { description:e.target.value })}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     rows={3}
                     placeholder="Description";
                   />;
                 </div>;
-<<<<<<< HEAD
                   <label>Suggested due date</label>;
                   <input;"
                     type="date";"
                     value={item.suggestedDueDateIso.slice(0, 10)}
                     onChange={(e) => updateItem(idx, { suggestedDueDateIso: new Date(e.target.value).toISOString() ;})}
                   <label>Estimated effort (hours)</label>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <input;
                     type="number";
                     min={1}
                     value={item.estimatedEffortHours}
-<<<<<<< HEAD
 
 }
 }> <button onClick= {
@@ -121,12 +116,10 @@ onChange={(e) => updateItem(idx, { description:e.target.value })}
 }<div style= {
   {
 marginTop: 12 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 }> {
   items.length === 0 && !loading && (<div style= {
   {
-<<<<<<< HEAD
   color: "#666"
 }
 }>No suggestions yet. Click "Generate" above.</div>)
@@ -269,5 +262,4 @@ marginTop: 12
 }>Accept</button> </div> </div>) 
 }</div>) ) 
 }</div> </div>) 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }export default MilestoneAssistant;

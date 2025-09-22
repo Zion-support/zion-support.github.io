@@ -8,8 +8,6 @@ const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
 const chokidar = // // require('chokidar');
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -18,9 +16,7 @@ this.autoFix = process.env.AUTO_FIX === 'true';
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     this.errorTypes = {}
       "syntax": [],
       "typescript": [],
@@ -28,10 +24,8 @@ this.autoFix = process.env.AUTO_FIX === 'true';
       "build": [],
       "dependency": [],
       "configuration": [];
-=======
 
       "configuration": [];"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     };
     this.fixAttempts = new Map();
     this.isRunning = false};
@@ -44,9 +38,7 @@ this.autoFix = process.env.AUTO_FIX === 'true';
 data,
 "service": 'error-detection-service'
     };
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
@@ -72,12 +64,8 @@ data,
       // Start file watching for real-time detection;
       this.startFileWatching();
 this.log('info', 'Error Detection Service started successfully');
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Keep the process alive;
       setInterval(() => {}
         if (!this.isRunning) {}
@@ -86,11 +74,7 @@ this.log('info', 'Error Detection Service started successfully');
 
     ];
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -215,7 +199,6 @@ this.log('info', 'Error Detection Service started successfully');
         'vite.config.ts',
         'tailwind.config.js'
       ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {}
@@ -224,9 +207,7 @@ this.log('info', 'Error Detection Service started successfully');
             this.errorTypes.configuration.push({})"
 
     const files = [];
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     sourceDirs.forEach(dir => {})
       if (fs.existsSync(fullPath)) {}
         this.walkDirectory(fullPath, extensions, files)};
@@ -254,12 +235,7 @@ this.log('info', 'Error Detection Service started successfully');
     const blockComments = content.match(commentRegex) || [];
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (openComments !== closeComments) {}
     // Check for missing semicolons in certain contexts;"
     const lines = content.split('\n');
@@ -390,9 +366,7 @@ if (error.message.includes('Cannot find module') ||
       const count = this.errorTypes[type].length;
       report.summary.totalErrors += count;
       report.summary.errorsByType[type] = count;
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       this.errorTypes[type].forEach(error => {})
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
@@ -404,9 +378,7 @@ if (error.message.includes('Cannot find module') ||
 
     this.log('info', `Error report "generated": ${reportPath}`);
     this.log('info', `Total errors "found": ${report.summary.totalErrors}`);
-=======
       this.errorTypes[type].forEach(error => {})"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     return report};
   generateRecommendations() {}
@@ -475,9 +447,5 @@ process.on('unhandledRejection', (reason, promise) => {}
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
   process.exit(1)}
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

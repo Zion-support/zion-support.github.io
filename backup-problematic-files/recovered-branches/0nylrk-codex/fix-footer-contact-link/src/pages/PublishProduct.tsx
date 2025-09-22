@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -33,7 +32,6 @@ export default function PublishProduct() {;
         title="Publish Your Product" ;
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals.";
         keywords="publish product, sell online, digital marketplace, AI tools, tech services";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       />;
       <Header />;
       <main className="flex-1 p-6 md:p-10">;
@@ -42,7 +40,6 @@ export default function PublishProduct() {;
           <p className="text-zion-slate mb-8">;
             Share your products, services, or digital assets with the Zion community.;
           </p>;
-<<<<<<< HEAD
 
             <ProductSubmissionForm />;
           </div>;

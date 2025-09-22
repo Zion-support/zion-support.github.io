@@ -1,25 +1,15 @@
 :src_backup/components/onboarding/OnboardingTracker.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
-=======
 {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingTracker.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/onboarding/OnboardingTracker.tsx
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Steps list */}
       <div className="space-y-3">;
         {steps && steps.map((step,) => (;
@@ -53,9 +43,6 @@ import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn  } fro
 import { Button  } from '@/components / ui / button';
 import Link from './next / link';
 :src/components/onboarding/OnboardingTracker.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
@@ -89,19 +76,12 @@ export interface OnboardingStep {
   completed: boolean
   link: string
 :src_backup/components/onboarding/OnboardingTracker.tsx
-<<<<<<< HEAD:src/components/onboarding/OnboardingTracker.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/onboarding/OnboardingTracker.tsx
 export interface OnboardingStep {
   id: string,
   label: string,
   completed: boolean,
   link: string,
 :src/components/onboarding/OnboardingTracker.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   action?: string
 import React from "react",;
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react';
@@ -138,8 +118,6 @@ export function OnboardingTracker({
   steps;
 :src_backup/components/onboarding/OnboardingTracker.tsx
   title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
       <div className="flex items-center justify-between mb-4">
@@ -170,7 +148,6 @@ export function OnboardingTracker({;
         <div;
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out";
 :src/components/onboarding/OnboardingTracker.tsx
-=======
   action?: string;
 }
 interface OnboardingTrackerProps {,
@@ -196,7 +173,6 @@ function OnboardingTracker() {
           className="h - 2 bg - gradient - to - r from - zion - purple to - zion - cyan rounded - full transition - all duration - 500 ease - out";
 :src_backup/components/onboarding/OnboardingTracker.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingTracker.tsx
           style={{ width: `${progress}%` }}
         ></div>;
       </div>;
@@ -216,10 +192,7 @@ function OnboardingTracker() {
               <div className="text-sm font-medium text-white">{step.label}</div>
             </div>
 :src_backup/components/onboarding/OnboardingTracker.tsx
-<<<<<<< HEAD
             {!step.completed && step.action && (
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Button 
                 asChild 
                 variant="ghost" 
@@ -245,7 +218,6 @@ function OnboardingTracker() {
               <div className="text - sm font - medium text - white">{step.label}</div>;
             </div>;
             {!step.completed && step.action && (
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingTracker.tsx
               <Button;
                 as_child;
                 variant="ghost";
@@ -266,15 +238,12 @@ function OnboardingTracker() {
 :src_backup/components/onboarding/OnboardingTracker.tsx
 
   step.link 
-=======
             {!step.completed && step.action && (  step.link 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }> </Link> </Button>) 
 }</div>) ) ;
 }</div> </div>) ;
 }"};
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>;
     </div>;
   );
@@ -282,9 +251,5 @@ function OnboardingTracker() {
 }
 ;
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/onboarding/OnboardingTracker.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/OnboardingTracker.tsx

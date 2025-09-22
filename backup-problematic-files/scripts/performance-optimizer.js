@@ -52,7 +52,6 @@ if (require.main === module) {
   optimizer.analyzeBundle();
   optimizer.generateReport();
 }
-<<<<<<< HEAD
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 #!/usr/bin/env node
@@ -110,15 +109,10 @@ if (require && require.main === module) {
 }
 module && module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
-=======
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 #!/usr/bin/env node
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = // // require('fs');
 const path = // // require('path');
 const glob = // // require('glob');
@@ -127,7 +121,6 @@ class PerformanceOptimizer {
 this.projectRoot = process.cwd();
     this.srcDir = path.join(this.projectRoot, 'src');
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
     this.ensureDirectories();
   }
   ensureDirectories() {
@@ -135,11 +128,6 @@ this.projectRoot = process.cwd();
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
 
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
@@ -149,11 +137,8 @@ this.projectRoot = process.cwd();
     const timestamp = new Date().toISOString();
 console.log(`[${timestamp}] ${message}`);
   }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
-=======
     console.log(`[${timestamp}] ${message}`);
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     console.log(`[${timestamp}] ${message}`)}
   async optimizePerformance() {
 this && this.log('⚡ Starting performance optimization');
@@ -184,14 +169,10 @@ for (const file of files) {
               /export default function (\w+)/g,
               'export default React.memo(function $1'
             );
-<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
             fileOptimizations++;
           }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
-=======
             fileOptimizations++;
           }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             fileOptimizations++}
           // Add useCallback to event handlers
           if (content.includes('onClick') && !content.includes('useCallback')) {
@@ -199,11 +180,8 @@ for (const file of files) {
             // For now, we'll just log it as a potential optimization
 fileOptimizations++;
           }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
-=======
             fileOptimizations++;
           }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             fileOptimizations++}
           // Add useMemo to expensive calculations
           if (content.includes('useState') && content.includes('map(') && !content.includes('useMemo')) {
@@ -226,7 +204,6 @@ fileOptimizations++;
           }
         });
         // Add performance optimizations for React components
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               "import React, { memo, useCallback, useMemo } from 'react';"
             );
             fileOptimizations++;
@@ -234,7 +211,6 @@ fileOptimizations++;
         }
         if (newContent !== content) {
 fs.writeFileSync(filePath, newContent, 'utf8');
-<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
           this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
         }
         results.processed++;
@@ -243,7 +219,6 @@ fs.writeFileSync(filePath, newContent, 'utf8');
 results && results.errors.push({ file, error: error && error.message });
         this && this.log(`❌ Error optimizing ${file}: ${error && error.message}`);
       }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
           this.log(`✅ "Optimized": ${file} (${fileOptimizations} optimizations)`)}
         results.processed++;
         results.optimizations += fileOptimizations} catch (error) {
@@ -254,17 +229,13 @@ results && results.errors.push({ file, error: error && error.message });
         results && results.optimizations += fileOptimizations} catch (error) {
         results && results.errors.push({ file, "error": error && error.message });
         this && this.log(`❌ Error optimizing ${file}: ${error && error.message}`)}
-=======
-=======
         results.errors.push({ file, error: error.message });
         this.log(`❌ Error optimizing ${file}: ${error.message}`);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
           this.log(`✅ "Optimized": ${file} (${fileOptimizations} optimizations)`)}
         results.processed++;
         results.optimizations += fileOptimizations} catch (error) {
         results.errors.push({ file, "error": error.message });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     // Generate report
     const report = {
@@ -278,17 +249,11 @@ results && results.errors.push({ file, error: error && error.message });
     };
 const reportPath = path.join(this.reportsDir, 'performance-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
     this.log(`📊 Report generated: ${reportPath}`);
     this.log(`✅ Performance optimization completed: ${results.optimizations} optimizations applied to ${results.processed} files`);
     return report;
   }
 
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.log(`📊 Report "generated": ${reportPath}`);
     this.log(`✅ Performance optimization "completed": ${results.optimizations} optimizations applied to ${results.processed} files`);
     return report}
@@ -300,7 +265,6 @@ const path = // // require('path');
 class PerformanceMonitor {
   constructor() {
 this.metrics = {
-<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
       pageLoadTime: 0,
       firstContentfulPaint: 0,
       largestContentfulPaint: 0,
@@ -309,11 +273,6 @@ this.metrics = {
     };
   }
 
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       "pageLoadTime": 0,
       "firstContentfulPaint": 0,
       "largestContentfulPaint": 0,
@@ -325,18 +284,12 @@ this.metrics = {
       // Monitor page load time
 window.addEventListener('load', () => {
         this.metrics.pageLoadTime = performance.now();
-<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
         this.reportMetrics();
       });
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       window.addEventListener('load', () => {
         this.metrics.pageLoadTime = performance.now();
         this.reportMetrics();
       });
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         this.reportMetrics()});
       // Monitor Web Vitals
       if ('PerformanceObserver' in window) {
@@ -362,11 +315,8 @@ window.addEventListener('load', () => {
         });
 observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
       }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
-=======
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
       }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         observer.observe({ "entryTypes": ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] })}
     }
   }
@@ -374,11 +324,8 @@ observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shi
     if (process.env.NODE_ENV === 'development') {
 console.log('Performance Metrics:', this.metrics);
     }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
-=======
       console.log('Performance Metrics:', this.metrics);
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       console.log('Performance "Metrics": ', this.metrics)}
     // Send to analytics in production
     if (typeof gtag !== 'undefined') {
@@ -390,9 +337,6 @@ event_category: 'Performance',
         });
       });
     }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           "event_category": 'Performance',
           "value": Math.round(value),
           "non_interaction": true
@@ -403,28 +347,21 @@ export default PerformanceMonitor;";
     const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js');
     const utilsDir = path.dirname(scriptPath);
     if (!fs.existsSync(utilsDir)) {
-<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
       fs.mkdirSync(utilsDir, { recursive: true });
     }
 fs && fs.writeFileSync(scriptPath, monitoringScript);
     this && this.log(`✅ Performance monitoring script created: ${scriptPath}`);
   }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
       fs.mkdirSync(utilsDir, { "recursive": true })}
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script "created": ${scriptPath}`)}
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script created: ${scriptPath}`);
   }
       fs.mkdirSync(utilsDir, { "recursive": true })}
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script "created": ${scriptPath}`)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 // Run the script
 if (require.main === module) {
@@ -436,7 +373,6 @@ console.log('🎉 Performance optimization completed successfully');
       process.exit(0);
     })
     .catch((error) => {
-<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.js
       console.error('❌ Performance optimization failed:', error);
       process.exit(1);
     });
@@ -451,13 +387,9 @@ module.exports = PerformanceOptimizer;
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/performance-optimizer.js
-=======
       console.error(' Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       console.error('❌ Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
@@ -479,4 +411,3 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

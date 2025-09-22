@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 
 export default function Terms() {
@@ -41,7 +40,6 @@ export default function Terms() {
     </>
 );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 };
 
@@ -130,4 +128,3 @@ export default TermsPage,
           </section>;
         </main>;
       </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

@@ -1,13 +1,9 @@
 :pages_backup/learn/index.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import {useEffect, useState} from 'react';
 import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
 :pages_backup/learn/index.tsx
-<<<<<<< HEAD:pages/learn/index.tsx
-<<<<<<< HEAD
 
   const [filters, setFilters] = useState({
     category: ''
@@ -31,9 +27,6 @@ export default function LearnMarketplace(req, res) {
   const [filters, setFilters] = useState({ category: '', level: '', isFree: '' });
   const [courses, setCourses] = useState<Course[]>([]);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [loading, setLoading] = useState(true);
   useEffect(() => {;
     async function load() { return null; }
@@ -104,9 +97,6 @@ export default function LearnMarketplace() {
       setCourses(data.courses |[]);
       setLoading(false);
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useEffect, useState  } from 'react';
 import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
@@ -118,25 +108,18 @@ import FilterBar from '../../components/learn/FilterBar';
   });  const [courses, setCourses] = useState<Course[]>([]);
 
 :pages_backup/learn/index.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export default function LearnMarketplace() {
   const [filters, setFilters] = useState({ category: '', level: '', isFree: '' });
   const [courses, setCourses] = useState<Course[]>([]),
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/learn/index.tsx
-=======
 export default function LearnMarketplace() {
   const [filters, setFilters] = useState({ category: '', level: '', isFree: '' });
   const [courses, setCourses] = useState<Course[]>([]),
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 export default function LearnMarketplace() {
   const [filters, setFilters] = useState({ category: '', level: '', isFree: '' });
   const [courses, setCourses] = useState<Course[]>([]),
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/learn/index.tsx
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function load() {
@@ -180,8 +163,6 @@ export default function LearnMarketplace(req, res) {
     async function load() {;
       setLoading(true);
 :pages_backup/learn/index.tsx
-<<<<<<< HEAD:pages/learn/index.tsx
-<<<<<<< HEAD
 
       const params = new URLSearchParams();
       setLoading(false);
@@ -189,11 +170,9 @@ export default function LearnMarketplace(req, res) {
     load ();
   }, [filters]);
 ;
-=======
 
       const params = new URLSearchParams();
       setLoading(false);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/learn/index.tsx
       setCourses(data.courses || []);
 setLoading(false);
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -201,18 +180,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     load ();
   }, [filters]);
 :pages_backup/learn/index.tsx
-<<<<<<< HEAD:pages/learn/index.tsx
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/learn/index.tsx
   return (
       setCourses(data.courses || []);
       setLoading(false)
@@ -221,16 +193,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }, [filters]);
 :pages_backup/learn/index.tsx
 
-=======
 export default function LearnMarketplace() {
 
       setCourses(data.courses |[]);
       setLoading(false);
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/learn/index.tsx
       } catch (error) {
     console.error("Error:", error);
-=======
 
 '
 import CourseCard, { Course } from '../../components/learn/CourseCard';'
@@ -238,24 +207,17 @@ import FilterBar from '../../components/learn/FilterBar';
 
       } catch (error) {}
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/learn/index.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
     load()
   }, [filters]),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="space-y-6">
-=======
 
   return ("
     <div className="space-y-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/learn/index.tsx
       <div className="flex items-end justify-between gap-4">
         <div>
 :pages/learn/index.tsx
@@ -266,22 +228,13 @@ import FilterBar from '../../components/learn/FilterBar';
           </div>
         </div>
 :pages_backup/learn/index.tsx
-<<<<<<< HEAD:pages/learn/index.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/learn/index.tsx
       </div>
       <FilterBar {...filters} onChange={setFilters} />
       {loading ? (
         <div>Loading...</div>
       ) : (
 :pages_backup/learn/index.tsx
-<<<<<<< HEAD:pages_backup/learn/index.tsx
-<<<<<<< HEAD:pages/learn/index.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
           {courses.map(c => (            <CourseCard key={c.id} course={c} />
           ))}
@@ -293,10 +246,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
     <div className='space-y-6'>;
-=======
 '
     <div className='space-y-6'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/learn/index.tsx
       <div className='flex items-end justify-between gap-4'>;
         <div>;'
           <h1 className='text-2xl font-semibold'>Zion Academy</h1>;'
@@ -314,35 +265,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {courses && courses.map(c => (            <CourseCard key={c && c.id} course={c} />;
 
 :pages_backup/learn/index.tsx
-<<<<<<< HEAD
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {courses.map((c) => (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
           {courses.map(c => (
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/learn/index.tsx
             <CourseCard key={c.id} course={c} />
           ))}
         </div>;
       )}
 :pages_backup/learn/index.tsx
-<<<<<<< HEAD:pages/learn/index.tsx
-<<<<<<< HEAD
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {courses.map((c) => (
             <CourseCard key={c.id} course={c} />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {courses.map((c) => (
             <CourseCard key={c.id} course={c} />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/learn/index.tsx
           ))}
         </div>;
       )}
@@ -351,17 +290,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 :pages_backup/learn/index.tsx
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className='space - y-6'>;
-=======
 
 '
     <div className='space - y-6'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/learn/index.tsx
       <div className='flex items - end justify - between gap - 4'>;
         <div>;'
           <h1 className='text - 2xl font - semibold'>Zion Academy</h1>;'
@@ -378,27 +310,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
 ;
 :pages_backup/learn/index.tsx
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/learn/index.tsx
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     </div>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/learn/index.tsx
-=======
 
   } catch (error) {"
     console.error("Error:", error);"
@@ -407,15 +327,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/learn/index.tsx
-=======
     </div>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
     </div>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/learn/index.tsx

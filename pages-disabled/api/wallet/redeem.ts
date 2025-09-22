@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { redeemToCredits } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -30,8 +29,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!userId || typeof amount !== "number") return res.status(400).json({ error: "userId and amount required" })
   try {
     const result = redeemToCredits(userId, Math.floor(amount))
->>>>>>> pr-12243
-=======
 import type { NextApiRequest, NextApiResponse } from "next",;"
 import { redeemToCredits } from "../../../utils/token/service",;
 export default function handler() { return null; }
@@ -40,7 +37,6 @@ export default function handler() { return null; }
   if (!userId || typeof amount !== "number") return res.status(400).json({ error: "userId and amount required" }),
   try {}
     const result = redeemToCredits(userId, Math.floor(amount)),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(200).json(result)
   } catch (err: any) {}
     return res.status(400).json({ error: err.message })

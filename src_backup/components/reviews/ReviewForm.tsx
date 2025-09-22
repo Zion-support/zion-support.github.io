@@ -58,12 +58,10 @@ interface ReviewFormValues {;
 is_anonymous?: boolean;
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ReviewFormProps {;
   projectId: string,;
   revieweeId: string,;
   revieweeName: string,;
-<<<<<<< HEAD
   onSubmit: (data: any) => Promise<boolean>,;
   defaultValues?: Review,;
   isSubmitting: boolean;

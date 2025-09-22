@@ -1,9 +1,4 @@
 :pages_backup/webinars.tsx
-<<<<<<< HEAD:pages_backup/webinars.tsx
-<<<<<<< HEAD:pages/webinars.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const Page = () => {
   return (
@@ -22,8 +17,6 @@ const Page = () => {
 };
 
 export default Page;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react',;
 import SEO from '../components/SEO',;
 import React from 'react';
@@ -31,7 +24,6 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 
 export default function WebinarsPage() {
-=======
 
 export default function WebinarsPage() {
 import React from 'react';
@@ -41,7 +33,6 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 
 export default function WebinarsPage() {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/webinars.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
@@ -60,8 +51,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 :pages_backup/webinars.tsx
-<<<<<<< HEAD:pages/webinars.tsx
-<<<<<<< HEAD
  <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </> 
 import SEO from '../components/SEO';
 export default function WebinarsPage() {
@@ -70,21 +59,12 @@ export default function WebinarsPage() {
 origin/main
 origin/automation-improvements-final
 :pages_backup/webinars.tsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/webinars.tsx
-=======
 
 const Page = () => {}
   return (
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/webinars.tsx
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/webinars.tsx
 	return (
 		<>
 			<SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" />"
@@ -92,55 +72,35 @@ const Page = () => {}
 				<h1 className="text-4xl font-bold mb-4">Webinars</h1>"
 				<p className="text-gray-300">No upcoming webinars at this time. Check back soon.</p>
 :pages_backup/webinars.tsx
-<<<<<<< HEAD:pages_backup/webinars.tsx
-<<<<<<< HEAD:pages/webinars.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/webinars.tsx
 		<>
 			<SEO title=&quot;Webinars | Zion Tech Group&quot; description=&quot;Upcoming webinars and on-demand sessions.&quot; canonical=&quot;/webinars&quot; />
 			<div className=&quot;container mx-auto px-4 py-16&quot;>
 				<h1 className=&quot;text-4xl font-bold mb-4&quot;>Webinars</h1>
 				<p className=&quot;text-gray-300&quot;>No upcoming webinars at this time. Check back soon.</p>
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 :pages_backup/webinars.tsx
-<<<<<<< HEAD:pages/webinars.tsx
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/webinars.tsx
 			</div>
 		</>
 	)
 
 :pages_backup/webinars.tsx
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/webinars.tsx
 
 import React from 'react',
-=======
 
 }
 
 '
 import React from 'react','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/webinars.tsx
 import SEO from '../components / SEO',
 export default /**;
  * WebinarsPage - Function description;
-=======
 origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react',;
 import SEO from '../components / SEO',;
 export default /**
  * WebinarsPage - Function description
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/webinars.tsx
  */
 function WebinarsPage() {}
 return (
@@ -167,17 +127,10 @@ origin/automation-improvements-final
   }
 }
 ;
-<<<<<<< HEAD:pages_backup/webinars.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/webinars.tsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <MainLayout"
       title="Webinars - Zion Tech Group""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/webinars.tsx
       description="Upcoming webinars and events"
     >"
       <div className="min-h-screen bg-gray-50">"
@@ -191,28 +144,14 @@ origin/automation-improvements-final
 };
 
 export default Page;
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
  <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
  <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/webinars.tsx
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/webinars.tsx
-=======
  <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
  <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </>
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/webinars.tsx

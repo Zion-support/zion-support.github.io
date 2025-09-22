@@ -1,5 +1,4 @@
 
-=======
 import { useEffect, useState } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -115,7 +114,6 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
               <JobMatchCard;
                 key={talent.id}                matchId={talent.id}
                 talentId={talent.id}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 name={talent.name}
                 title={talent.title}
                 company={talent.company}
@@ -124,6 +122,5 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
                 category={talent.category}
                 matchPercent={talent.matchPercent}
                 skills={talent.skills}
-<<<<<<< HEAD
 
 }

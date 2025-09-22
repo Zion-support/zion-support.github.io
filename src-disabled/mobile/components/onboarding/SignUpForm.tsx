@@ -1,6 +1,4 @@
 :src_backup/mobile/components/onboarding/SignUpForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
@@ -104,26 +102,18 @@ import React from 'react';
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 :src_backup/mobile/components/onboarding/SignUpForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function SignUpForm() {;
-=======
-=======
 export function SignUpForm() {
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/mobile/components/onboarding/SignUpForm.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/onboarding/SignUpForm.tsx
 
 ;
 import { use_router } from 'next / router';
 import Link from 'next/link';
-=======
 export function SignUpForm() {
 
 ;
 import { use_router } from 'next / router';
 import Link from 'next / link';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/components/onboarding/SignUpForm.tsx
 import { use_auth  } from '@/context / auth / AuthProvider';
 import { AlertCircle } from 'lucide-react'import { use_router } from 'next / router';
 import { AlertCircle } from 'lucide-react';
@@ -157,7 +147,6 @@ function SignUpForm() {
       setFieldErrors(errors)
       setIsLoading(false)
       return;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 ;
     if (Object.keys(errors).length > 0) {;
@@ -169,13 +158,10 @@ function SignUpForm() {
     try {;
       setShowVerificationMessage(false), // Reset verification message;
       if (signupMode) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
         const result = await signUp(formData && formData.email, formData && formData.password, {;
           name: formData && formData.name}),;        if (result?.error) {;
 
         if (result?.error) {;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           throw new Error(result.error as any), // Cast to any if type is AuthError;
         }
 
@@ -190,14 +176,11 @@ function SignUpForm() {
         } else {;
           // Only navigate if email verification is not required;
 :src/mobile/components/onboarding/SignUpForm.tsx
-<<<<<<< HEAD
           router && router.push("/mobile")
 };
       } else {;
         const { error } = await login(formData && formData.email, formData && formData.password);
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/onboarding/SignUpForm.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (error) {;
           throw new Error(error);
         }
@@ -219,20 +202,15 @@ const handleGoogleLogin = async () => {;
     } catch (err: any) {;
 :src/mobile/components/onboarding/SignUpForm.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   },
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   return (
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="space-y-2">
         <Button 
           variant="outline" 
@@ -248,20 +226,14 @@ export function SignUpForm() {
           Continue with Google
         </Button>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Button 
           variant="outline"
-=======
         <Button 
           variant="outline" 
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
         <Button 
           variant="outline" 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -346,20 +318,12 @@ export function SignUpForm() {
               name="name""
 
 :src_backup/mobile/components/onboarding/SignUpForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       <div className="relative flex items-center">
         <div className="flex-grow border-t border-border"></div>
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
       </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/components/onboarding/SignUpForm.tsx
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -379,15 +343,10 @@ export function SignUpForm() {
         </Alert>;
 :src_backup/mobile/components/onboarding/SignUpForm.tsx
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       )}
-=======
       )}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
           <div className="space-y-2">
@@ -401,14 +360,7 @@ export function SignUpForm() {
               name="name"
 
 :src_backup/mobile/components/onboarding/SignUpForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   // TODO: Implement
           // Only navigate if email verification is not required;
           router.push("/mobile")"
@@ -500,18 +452,12 @@ export function SignUpForm() {
               id="name"""
               name="name""
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/components/onboarding/SignUpForm.tsx
               value={formData.name}
               onChange={handleInputChange}
               required;
               aria-invalid={!!fieldErrors.name}
 :src_backup/mobile/components/onboarding/SignUpForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               placeholder="Enter your full name"
             />
             {fieldErrors.name && (
@@ -528,19 +474,11 @@ pr-12325
             name="email"
             type="email"
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             value={formData.email}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.email}
 :src_backup/mobile/components/onboarding/SignUpForm.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             placeholder="Enter your email"
           />
           {fieldErrors.email && (
@@ -556,19 +494,11 @@ pr-12325
             name="password"
             type="password"
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             value={formData.password}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.password}
 :src_backup/mobile/components/onboarding/SignUpForm.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             placeholder="Create a password"
           />
           <PasswordStrengthMeter password={formData.password} />
@@ -579,12 +509,7 @@ pr-12325
 </div>
         </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Button
 :src_backup/mobile/components/onboarding/SignUpForm.tsx
           type="submit"
@@ -601,9 +526,6 @@ pr-12325
           )}
       <p className="text-center text-sm">"
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <p className="text-center text-sm">
         {signupMode
 :src_backup/mobile/components/onboarding/SignUpForm.tsx
@@ -691,10 +613,8 @@ pr-12325
         {signup_mode;
           ? "Already have an account? ";
           : "Don't have an account? ";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         }
 :src_backup/mobile/components/onboarding/SignUpForm.tsx
-<<<<<<< HEAD
         </Button>;
       </form>;
       <p className="text-center text-sm">;
@@ -705,11 +625,8 @@ pr-12325
 :src_backup/mobile/components/onboarding/SignUpForm.tsx
         <Link
           href="/login"
-<<<<<<< HEAD:src/mobile/components/onboarding/SignUpForm.tsx
-<<<<<<< HEAD
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer">;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Link;
           href="/login";
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer";
@@ -719,15 +636,12 @@ pr-12325
       </p>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   error;
 }= await login (form_data.email, form_data.password);
 // Check condition
 if ( {) {
   $2
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
   error;
@@ -757,10 +671,6 @@ if ( {) {
 }</Button> </form> <Link href="/login" className="p - 0 h - auto text - zion - cyan hover: text - zion - cyan - light cursor-pointer" > Sign In </Link> </p> </div>);
 }"}
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/mobile/components/onboarding/SignUpForm.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/onboarding/SignUpForm.tsx

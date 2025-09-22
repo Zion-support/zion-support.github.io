@@ -59,9 +59,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                   className={`h-4 w-4 ${;
 :src/components/reviews/ReviewStats.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
-=======
 
 import { Star } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
@@ -91,24 +89,16 @@ export function ReviewStats({
                       ? 'fill-yellow-400 text-yellow-400'
                       : 'text-gray-300'
 :src/components/reviews/ReviewStats.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   }`}
                 />;
               ))}
             </div>
 :src/components/reviews/ReviewStats.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             <span className="text-sm text-muted-foreground">
 
             <span className="text-sm text-muted-foreground">
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/reviews/ReviewStats.tsx
 <span className='text-sm text-muted-foreground'>
               {totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -117,7 +107,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
 :src/components/reviews/ReviewStats.tsx
-<<<<<<< HEAD
 
       {ratingDistribution && (
         <div className="space-y-2">
@@ -201,13 +190,10 @@ if (return 0) {
         </div>;
       </div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {ratingDistribution && (
         <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
@@ -219,13 +205,10 @@ value={getPercentage(ratingDistribution[rating] || 0)}
                 {ratingDistribution[rating] || 0}
               </div>;
             </div>;
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           ))}
         </div>;
       )}
 :src/components/reviews/ReviewStats.tsx
-<<<<<<< HEAD
 
     </div>;
   );
@@ -265,7 +248,6 @@ value={getPercentage(ratingDistribution[rating] || 0)}
 }</div>) ;
 }"};
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>;
   );
 }

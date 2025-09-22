@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     headline: string
     subtitle: string
 
@@ -31,18 +30,14 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 export interface WhitelabelContextType {
 headline: string
     subtitle: string
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     cta: string
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     headline: string,
     subtitle: string,
     cta: string;
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   tenant: WhitelabelTenant | null
-=======
   isWhitelabel: boolean;
   primaryColor: string;
   logoUrl: string | null;
@@ -54,18 +49,15 @@ headline: string
     cta: string
 };
   tenant: WhitelabelTenant | null;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
 // The context may be undefined if the provider is not mounted.  By declaring
 // the generic as `WhitelabelContextType | null` we get proper type checking
 // without falling back to an empty object which triggers TS2740 errors.
 const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
-<<<<<<< HEAD
 export const useWhitelabel = (): WhitelabelContextType => {
 
 export const useWhitelabel = (): WhitelabelContextType => {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface WhitelabelContextType {;
   isWhitelabel: boolean,;
   primaryColor: string,;
@@ -101,7 +93,6 @@ export const useWhitelabel = (): WhitelabelContextType => {;
 
 export const useWhitelabel = (): WhitelabelContextType => {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const context = useContext(WhitelabelContext);
   if (!context) {
     throw new Error("useWhitelabel must be used within a WhitelabelProvider");
@@ -116,35 +107,25 @@ interface WhitelabelProviderProps {
 }
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
 
-<<<<<<< HEAD
 
 export const useWhitelabel = (): WhitelabelContextType => {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const context = useContext(WhitelabelContext);
   if (!context) {;
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
   }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
-=======
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
 
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);  const { tenant, isLoading } = useWhitelabelTenant();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
 
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);  const { tenant, isLoading } = useWhitelabelTenant();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
   const [contextValue, setContextValue] =
     useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {
     if (!isLoading && tenant) {
       setContextValue({
@@ -157,7 +138,6 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
         tenant: tenant,
       });
     } else if (!isLoading) {
-<<<<<<< HEAD
       setContextValue(defaultContext);
     }
   }, [tenant, isLoading]);
@@ -166,11 +146,9 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
     <WhitelabelContext.Provider value={contextValue}>
       {children}
     </WhitelabelContext.Provider>
-<<<<<<< HEAD
   )
 }
 
-<<<<<<< HEAD
 export interface WhitelabelContextType {;
   isWhitelabel: boolean,;
   primaryColor: string,;
@@ -224,14 +202,10 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
     } else if (!isLoading) {
       setContextValue(defaultContext)
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Cast is used here because the context default is `null` until provided by;
   // `WhitelabelProvider`. The runtime check above guarantees it's defined.;
   return context as WhitelabelContextType;
-=======
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 };
 
 interface WhitelabelProviderProps {;
@@ -246,10 +220,7 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
   // `WhitelabelProvider`. The runtime check above guarantees it's defined.;
   return context as WhitelabelContextType
 };
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   );
 };
 
@@ -261,7 +232,6 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {;
     if (!isLoading && tenant) {;
       setContextValue({;
@@ -271,11 +241,9 @@ primaryColor: tenant && tenant.primary_color,;
         brandName: tenant && tenant.brand_name,;
         themePreset: tenant && tenant.theme_preset,;
         landingPageCopy: tenant && tenant.landing_page_copy,;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         tenant: tenant});
     } else if (!isLoading) {;
       setContextValue(defaultContext);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   }, [tenant, isLoading]);
 
@@ -284,21 +252,11 @@ primaryColor: tenant && tenant.primary_color,;
       {children}
 
 </WhitelabelContext && WhitelabelContext.Provider>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { create_context, useContext, useState, useEffect, ReactNode } from 'react';
-=======
 import React, { create_context, useContext, useState, useEffect, ReactNode } from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks / useWhitelabelTenant';
 export interface WhitelabelContextType {}
   is_whitelabel: boolean,
@@ -309,7 +267,6 @@ export interface WhitelabelContextType {}
   landingPageCopy: {}
     headline: string,
     subtitle: string,;
-=======
   );
 };
 
@@ -327,7 +284,6 @@ export interface WhitelabelContextType {
   landingPageCopy: {
     headline: string,
     subtitle: string,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     cta: string;
   }
   tenant: WhitelabelTenant | null;
@@ -470,19 +426,9 @@ export const WhitelabelProvider = ({ children } WhitelabelProviderProps) => {;
     </WhitelabelContext.Provider>;
   );
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   )
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     </WhitelabelContext.Provider>);
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

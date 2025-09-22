@@ -92,12 +92,10 @@ setActiveTab(RESUME_STEPS[currentIndex - 1].id),;
   if (showNewResumeForm) {;
     return (;
       <CreateResumeForm ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         onCreateResume={handleCreateNewResume}
         onCancel={() => setShowNewResumeForm(false)}
         isLoading={isLoading}
       />;
-<<<<<<< HEAD
     <div className="space-y-6">;
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
         <h1 className="text-2xl font-bold">Resume Builder</h1>;

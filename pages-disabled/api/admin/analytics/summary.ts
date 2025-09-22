@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ensureAdminFromApi } from '../../../../utils/auth',;
 type EventRow = {}
   name: string,
@@ -25,7 +24,6 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {}
         const t = new Date(obj.at),
         if (start && t < start) continue,
         if (end && t > end) continue,
->>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -59,7 +57,6 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         if (end && t > end) continue
         rows.push(obj)
       } catch {}
-=======
 function parseLines(startIso?: string, endIso?: string): EventRow[] {
   try {
     if (!fs.existsSync(LOG_FILE)) return [];
@@ -68,7 +65,6 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
     const start = startIso ? new Date(startIso) : null;
     const end = endIso ? new Date(endIso) : null;
     const rows: EventRow[] = [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
 return rows;
   } catch {
@@ -76,16 +72,12 @@ return rows;
   }
 }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
-=======
     return rows;
   } catch {}
     return []
   }
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
     .sort((a, b) => b.value - a.value)
@@ -100,7 +92,6 @@ return rows;
 const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 })),
     .sort((a, b) => b.value - a.value)
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const days = Object.keys(byDay).sort()
   const line = days.map((d) => ({ date: d, value: byDay[d] }))
@@ -108,7 +99,6 @@ const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
   const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent']
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }))
 
-=======
     .sort((a, b) => b.value - a.value);
 
   const days = Object.keys(byDay).sort();
@@ -124,8 +114,6 @@ const line = days.map(d => ({ date: d, value: byDay[d] }));
     label: stage,
     value: byEvent[stage] || 0,
   }));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> pr-12243
 
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 function featureFromPath (page?: string): string {
@@ -133,7 +121,6 @@ function featureFromPath (page?: string): string {
 if (return 'other', ) {
   $2
 }
-<<<<<<< HEAD
   const p = page.toLowerCase (),
   if (|| p.includes ('ai')) return 'AI services', ) {
   $2
@@ -198,10 +185,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 };'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   const byFeature: Record<string, number> = {};
   const byEvent: Record<string, number> = {};
@@ -213,4 +197,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const day = r.at.slice(0, 10);
     byDay[day] = (byDay[day] || 0) + 1;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

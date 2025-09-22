@@ -1,5 +1,4 @@
 
-=======
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
@@ -67,7 +66,6 @@ export function FaqSection() {;
                 </AccordionTrigger>;
                 <AccordionContent className="text-zion-slate-light">;
                   {faq.answer}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </AccordionContent>;
               </AccordionItem>;
             ))}
@@ -75,4 +73,3 @@ export function FaqSection() {;
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD

@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { Dialog, DialogContent } from "@/components/ui/dialog",;
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
@@ -40,12 +39,10 @@ export function ContractBuilder({;
 ;
   const handleContractGenerated = (contract:string) => {;
     setGeneratedContract(contract),;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     setActiveTab("preview"),;
     if (onContractGenerated) {;
       onContractGenerated(contract);
     }
-<<<<<<< HEAD
 
         }}
         talent={talent}

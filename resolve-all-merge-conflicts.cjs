@@ -1,10 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         content = content.replace(/
 
-<<<<<<< HEAD
-=======
 // Function to resolve merge conflicts in a file;
 
 function resolveMergeConflicts(filePath) {
@@ -18,7 +14,6 @@ function resolveMergeConflicts(filePath) {
       // Extract only the HEAD part (before;)
     // Handle incomplete conflicts (missing closing markers)
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 console.log('🚀 Starting comprehensive merge conflict resolution...');
 // Function to resolve modify/delete conflicts by removing the files;
 function resolveModifyDeleteConflicts() {
@@ -59,16 +54,11 @@ try {
 
         // Remove conflict markers and keep main branch version
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Clean up any remaining conflict markers
-<<<<<<< HEAD
         content = content.replace(/
         content = content.replace(/
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         // Write the cleaned content
-=======
   // TODO: Implement
 
         // Remove conflict markers and keep main branch version;
@@ -77,7 +67,6 @@ try {
         // Clean up any remaining conflict markers;
         // Write the cleaned content;)
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         fs.writeFileSync(file, content);
         execSync(`git add ${file});
 
@@ -110,20 +99,13 @@ console.log('➕ Resolving add/add conflicts...');
         let content = fs.readFileSync(file, 'utf8');
 
         // Remove conflict markers and keep both versions
-<<<<<<< HEAD
-<<<<<<< HEAD
         content = content.replace(/
           const parts = match.split('
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
   addAddFiles.forEach(file => {)
   // TODO: Implement
 
           const parts = match.split()
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           if (parts.length === 2) {
             const headPart = parts[0].replace(/
             const mainPart = parts[1].replace(/\s*
@@ -153,7 +135,3 @@ async function main() {
 
 main();
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

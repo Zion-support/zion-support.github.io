@@ -19,12 +19,10 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 :backup-problematic-files/src.pages.disabled/AIAnalytics.jsx
 
-=======
 interface IndexProps {;
   // Add props here as needed;
 }
 export default function Index(): any ({ }: IndexProps) {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp_exclude/pages.blog.disabled/index.tsx
   return (
     <div>;
       <h1>Index</h1>;
@@ -32,6 +30,4 @@ export default function Index(): any ({ }: IndexProps) {;
     </div>;
   );
 :backup-problematic-files/src.pages.disabled/AIAnalytics.jsx
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

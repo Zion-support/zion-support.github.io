@@ -1,5 +1,4 @@
 
-=======
 import React, { useState, useEffect } from 'react',;
 import { useParams } from 'react-router-dom',;
 import { useProjects } from '@/hooks/useProjects',;
@@ -76,13 +75,11 @@ export function ProjectMilestonesContent() {;
 ;
   if (isLoading || !project) {;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="container mx-auto py-8 px-4">;
         <div className="flex justify-center items-center h-64">;
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
           projectId={projectId || ''}
           isUnderDispute={isUnderDispute}

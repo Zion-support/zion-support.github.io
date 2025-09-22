@@ -1,5 +1,4 @@
 
-=======
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",;
@@ -7,7 +6,6 @@ import { GradientHeading } from "@/components/GradientHeading",;
 ;
 export default function Featured() {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
@@ -21,7 +19,6 @@ export default function Featured() {;
               These featured listings represent the best that the Zion Marketplace has to offer.;
             </p>;
           </div>;
-<<<<<<< HEAD
 
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false} />;

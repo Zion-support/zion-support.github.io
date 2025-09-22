@@ -1,31 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}          price: priceId,
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
-=======
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
-=======
 
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   res.status(200).json({ message: 'Checkout session created' });
 }
 export default function handler() { return null; }
-=======
 
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}          price: priceId,
@@ -37,7 +19,6 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
   res.status(200).json({ message: 'Checkout session created' });
 }
 (req, res) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   res.status(200).json({ "message": 'Checkout session created' });
 }
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
@@ -66,7 +47,6 @@ try {}
       line_items: []
         {}
           price: priceId,
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
           quantity: quantity,
         },]
       ],
@@ -74,14 +54,10 @@ try {}
       cancel_url: `${req.headers.origin}/cancel`,
     });
 
-<<<<<<< HEAD
->>>>>>> main
-=======
 
       success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,`;
       cancel_url: `${req.headers.origin}/cancel`,)
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     res.statusCode = 200;
     res.json({}
       success: true, 
@@ -95,38 +71,13 @@ url: session.url;
   }
 }
 
-<<<<<<< HEAD
 export default withErrorLogging(handler);      url: session.url
 
 }
 ;
 export default withErrorLogging(handler);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
->>>>>>> main
->>>>>>> main
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
@@ -136,23 +87,14 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       url: session.url
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       url: session.url
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export default withErrorLogging(handler);      url: session.url
 
 export default withErrorLogging(handler);
 
       url: session.url;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     })
   } catch (err) {,
     // console.error('Checkout session API error:, err),
@@ -160,51 +102,17 @@ export default withErrorLogging(handler);
     res.json({ error: err.message || 'Checkout session creation failed' })
   };
 export default withErrorLogging(handler),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 ,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default withErrorLogging(handler);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}`;
 '
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}''
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

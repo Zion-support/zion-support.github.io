@@ -1,7 +1,4 @@
 :src_backup/pages/Careers.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -74,9 +71,7 @@ import { CAREER_JOBS } from '@/data/careersJobs';
 export default function Careers() {
   const applyEmail = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Careers.tsx
   return (
     <>
       <SEO
@@ -330,12 +325,9 @@ export default function Careers() {;
       </main>
     </>
 :src_backup/pages/Careers.tsx
-<<<<<<< HEAD
   )
 }
 ;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Careers.tsx
 import React from 'react';
 import Card from '../components/Card';
 
@@ -378,18 +370,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 export default Careers;
 :src_backup/pages/Careers.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Careers.tsx
-=======
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Careers.tsx

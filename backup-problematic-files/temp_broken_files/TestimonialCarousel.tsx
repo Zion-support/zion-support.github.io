@@ -1,5 +1,4 @@
 
-=======
 import {;
   Carousel,;
   CarouselContent,;
@@ -38,7 +37,6 @@ const testimonials = [;
 ;
 export function TestimonialCarousel() {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -47,7 +45,6 @@ export function TestimonialCarousel() {;
             Discover how Zion is transforming the tech and AI marketplace ecosystem;
           </p>;
         </div>;
-<<<<<<< HEAD
 
             </div>;
           </Carousel>;

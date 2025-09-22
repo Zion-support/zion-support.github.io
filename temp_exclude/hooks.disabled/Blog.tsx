@@ -83,9 +83,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {}
   const filteredPosts = posts.filter(post => {}
     const matchesCategory =
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Blog.tsx
       selectedCategory === "All Categories" || post.category === selectedCategory,
 
     return matchesCategory;
@@ -453,9 +451,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                         {post.publishedDate} • {post.readTime}
                       </div>;
                     </div>;
-=======
                     </div>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/Blog.tsx
                     <h3 className="text-xl font-bold text-white mb-3">;
                       {post.title}
                     </h3>;"
@@ -798,7 +794,6 @@ function Blog() { return null; }
   return (
 
 :temp_exclude/hooks.disabled/Blog.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 onClick={() => {;
                   setSearchQuery("");
                   setSelectedCategory("All Categories");

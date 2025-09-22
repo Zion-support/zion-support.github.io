@@ -1,5 +1,4 @@
 :src_backup/components/talent/MobileFilterBar.tsx
-<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -46,7 +45,6 @@ Search talents;
     </div>;
   );
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 export function MobileFilterBar({ 
@@ -126,9 +124,5 @@ export function MobileFilterBar() { return null; }
 }
 
 ;
-=======
   );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/talent/MobileFilterBar.tsx

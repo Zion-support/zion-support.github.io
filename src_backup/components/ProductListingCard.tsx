@@ -7,9 +7,6 @@ import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
 :src/components/ProductListingCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
 import type { AppDispatch } from '@/store'
@@ -17,14 +14,9 @@ import { addItem } from '@/store/cartSlice'
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
 import Image from 'next/image'; // Import next/imageimport { RatingStars } from "@/components/RatingStars",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductListingCard.tsx
 import { RatingStars } from "@/components/RatingStars",
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
 import type { AppDispatch } from '@/store',
@@ -48,14 +40,10 @@ interface ProductListingCardProps {
   detailBasePath?: string
 :src/components/ProductListingCard.tsx
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
-<<<<<<< HEAD
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid',
@@ -174,7 +162,6 @@ if ( {) {
   }
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48'
       onKeyDown={e => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   detailBasePath?: string;
 }
 ;
@@ -184,13 +171,11 @@ if ( {) {
 }
 
 :src/components/ProductListingCard.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const ProductListingCardComponent = ({;
   listing,;
   view = 'grid',;
   onRequestQuote,;
 :src/components/ProductListingCard.tsx
-<<<<<<< HEAD
   detailBasePath = '/marketplace/listing';
 }: ProductListingCardProps) => {;
   const isGrid = view === 'grid',;
@@ -282,7 +267,6 @@ const ProductListingCardComponent = ({;
 
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
 
-<<<<<<< HEAD
   return (
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
 
@@ -294,9 +278,7 @@ const ProductListingCardComponent = ({;
     >
       {/* Image */}
 :src/components/ProductListingCard.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductListingCard.tsx
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
   const getPrice = () => {
@@ -429,14 +411,12 @@ interface ProductListingCardProps {;
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
-<<<<<<< HEAD
 
         onKeyDown={e => {;
           if (e && e.key === 'Enter' || e && e.key === ' ') {;
             e && e.preventDefault();
             handleViewListing();
           }  return ();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div
       data-testid="equipment-link"
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
@@ -463,7 +443,6 @@ interface ProductListingCardProps {;
           }
         }}
       >;
-<<<<<<< HEAD
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
           <Image;
             src={imageSrc}
@@ -472,31 +451,24 @@ interface ProductListingCardProps {;
             style={{ objectFit: 'cover' }}
             onError={handleImageError}
           handleViewListing () }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }}
       {/* Image */}
       <div'
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
 :src/components/ProductListingCard.tsx
-<<<<<<< HEAD
             handleViewListing () }
         }}
       >
         <div className={`relative ${imageContainerClasses}`}>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {' '}
           {/* Ensure this container has dimensions */}        onKeyDown={(e) => {
         onKeyDown={(e) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
 :src/components/ProductListingCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             priority={false} // Assuming these are not LCP images
             sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
           />
@@ -506,7 +478,6 @@ interface ProductListingCardProps {;
             </Badge>
           )}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {stockStatus && (;
             <Badge;
               variant={stockVariant as any}
@@ -577,13 +548,11 @@ interface ProductListingCardProps {;
             </Badge>;
             {listing.rating && (
               <RatingStars value={listing.rating} count={listing.review_count} />)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
           {/* Title & Description */}
 <div onClick={handleViewListing} className="block">
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
-<<<<<<< HEAD
                 {listing.uspHeadline}
               </p>;
             )}
@@ -613,10 +582,8 @@ interface ProductListingCardProps {;
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'                >            <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {listing.title}
             </h3>
           </div>
@@ -632,8 +599,6 @@ interface ProductListingCardProps {;
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
 :src/components/ProductListingCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                   {tag}
                 </span>;
               ))}
@@ -644,13 +609,11 @@ interface ProductListingCardProps {;
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
             {listing.price !== null ? (
-=======
 
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
 
             {listing.price !== null ? (
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductListingCard.tsx
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
                 {getPrice()}
@@ -658,8 +621,6 @@ interface ProductListingCardProps {;
 :src/components/ProductListingCard.tsx
 ) : (
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <span className="text-foreground/80">
                 {getPrice()}
               </span>;
@@ -691,7 +652,6 @@ interface ProductListingCardProps {;
             </Button>
 
 :src/components/ProductListingCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Button
               size="sm"
               variant="default"
@@ -709,7 +669,6 @@ interface ProductListingCardProps {;
               Buy Now
             </Button>
 :src/components/ProductListingCard.tsx
-<<<<<<< HEAD
 
             {onRequestQuote && (
               <Button 
@@ -736,22 +695,17 @@ interface ProductListingCardProps {;
 
 :src/components/ProductListingCard.tsx
               <Button
-=======
             ) : (              <Button
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 size='sm'
                 variant='outline'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 onClick={handleRequestQuote}
 :src/components/ProductListingCard.tsx
-<<<<<<< HEAD
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
               >
                 Request Quote
               </Button>
 
                 Request Quote;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </Button>;
             )}
 
@@ -776,7 +730,6 @@ interface ProductListingCardProps {;
                 {get_price ()}
               </div>) : (
               <span className='text - foreground / 80'>{get_price ()}</span>)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>;
           <div className="flex gap-2">;
             <Button;
@@ -892,13 +845,11 @@ interface ProductListingCardProps {;
 
 :src/components/ProductListingCard.tsx
           </div>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </div>;
     </div>;
   );
 :src/components/ProductListingCard.tsx
-<<<<<<< HEAD
 
           </div>;
         </div>;
@@ -917,16 +868,10 @@ export default ProductListingCard;
 
 export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
 :src/components/ProductListingCard.tsx
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductListingCard.tsx

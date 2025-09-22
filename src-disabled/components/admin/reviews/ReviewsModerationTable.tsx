@@ -1,8 +1,4 @@
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
@@ -21,23 +17,15 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import {
   Dialog,
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 Dialog,
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
 :src/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/reviews/ReviewsModerationTable.tsx
   Table;
   TableBody;
   TableCell;
@@ -52,8 +40,6 @@ import {
   DialogFooter;
   DialogHeader;
 :src/components/admin/reviews/ReviewsModerationTable.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   DialogTitle} from "@/components/ui/dialog",
 import {
   DropdownMenu,
@@ -153,8 +139,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       if (error) throw error,
       return { reviewId, status }
-<<<<<<< HEAD:src/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
     },
     onSuccess: (data) => {
       toast({
@@ -182,7 +166,6 @@ export function ReviewsModerationTable({
         .update({ status })
         .eq("id", reviewId),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setViewDetailsOpen(false)
     },
     onSuccess: (data) => {
@@ -190,8 +173,6 @@ export function ReviewsModerationTable({
         title: "Review updated",
         description: `Review has been ${data.status}.`}),
       onRefresh(),
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/reviews/ReviewsModerationTable.tsx
     };
     onSuccess: (data) => {
       toast({
@@ -199,8 +180,6 @@ export function ReviewsModerationTable({
         description: `Review has been ${data.status}.`});
       onRefresh();
 :src/components/admin/reviews/ReviewsModerationTable.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setViewDetailsOpen(false)
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
     }
@@ -209,7 +188,6 @@ export function ReviewsModerationTable({
         title: "Error";
 origin/cursor/automate-test-improve-and-merge-code-2533
         description: `Failed to update review: ${error.message}`,
-<<<<<<< HEAD
         variant: "destructive"})
     }}),
 
@@ -266,8 +244,6 @@ if (reviews.length === 0) {
   },
 
   const renderStars = (rating: number) => {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return (
       <div className="space-y-4">
         <div className="h-12 w-full bg-muted rounded animate-pulse" />
@@ -472,9 +448,7 @@ export function ReviewsModerationTable(): any ({;
             <TableHead>Reports</TableHead>;
             <TableHead className="text-right">Actions</TableHead>;
     return (
-=======
   if (reviews.length === 0) {    return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="py-10 text-center">
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>
         <p className="text-muted-foreground">
@@ -516,7 +490,6 @@ updateReviewStatus({ reviewId, status: 'approved' })
     setViewDetailsOpen(true)
   },
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>
       <Table>
@@ -569,15 +542,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {review && review.reviewer_profile?.display_name || 'User'}'
                       </span>;
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD:src/components/admin/reviews/ReviewsModerationTable.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     )}
                   </div>;
                 </div>;
               </TableCell>;
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
     updateReviewStatus({ reviewId, status: "approved" })
   },
               <TableCell>{renderStars(review && review.rating)}</TableCell>;
@@ -598,9 +567,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 )}
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           onClick={() =>;
                             updateReviewStatus({;
                               reviewId: review && review.id,;
@@ -628,13 +595,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <TableHead > Status</TableHead>;
             <TableHead > Reports</TableHead>;
             <TableHead className='text - right'>Actions</TableHead>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </TableRow>;
         </TableHeader>;
         <TableBody>;
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD:src/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
           {reviews.map((review) => (;
             <TableRow key={review.id}>;
               <TableCell>;
@@ -644,8 +608,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <AvatarImage;
                         src={review.reviewer_profile.avatar_url}
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                         alt={review.reviewer_profile.display_name || ""}
                       />
                     ) : (
@@ -689,7 +651,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <AvatarImage;
                         src={review.reviewer_profile.avatar_url}
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
                         alt={review.reviewer_profile.display_name || ''}                      />) : (
                       <AvatarFallback>;
                         {review.reviewer_profile?.display_name ? (
@@ -717,7 +678,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Badge>;
               </TableCell>;
               <TableCell>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {review.report_count > 0 ? (
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
                   <Badge variant="destructive">{review.report_count}</Badge>
@@ -729,8 +689,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               </TableCell>
               <TableCell>{renderStars(review.rating)}</TableCell>
               <TableCell>
@@ -749,7 +707,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ) : (
                   "None"
                 )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/reviews/ReviewsModerationTable.tsx
               </TableCell>
               <TableCell>{renderStars(review.rating)}</TableCell>
               <TableCell>
@@ -775,7 +732,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Button
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
@@ -794,9 +750,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <X className="h-4 w-4 text-red-500" />
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
-<<<<<<< HEAD:src/components/admin/reviews/ReviewsModerationTable.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/reviews/ReviewsModerationTable.tsx
                       </Button>
                     </>
                   )}
@@ -845,17 +798,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         View details
                       </DropdownMenuItem>
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/reviews/ReviewsModerationTable.tsx
                       {review.status === "approved" && (
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
                           Mark as rejected
                         </DropdownMenuItem>
@@ -891,14 +835,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Table>
 
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD:src/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
       {selectedReview && (
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>
           <DialogContent className="max-w-lg">
@@ -909,38 +847,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {format(new Date(selectedReview.created_at), "MMMM d, yyyy")}
               </DialogDescription>
             </DialogHeader>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/reviews/ReviewsModerationTable.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/reviews/ReviewsModerationTable.tsx
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                         alt={selectedReview.reviewer_profile.display_name || ""}
                       />;
 
                         alt={selectedReview.reviewer_profile.display_name || ''}                      />
 
 :src/components/admin/reviews/ReviewsModerationTable.tsx
-=======
                         alt={selectedReview.reviewer_profile.display_name || ''}                      />'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/reviews/ReviewsModerationTable.tsx
                     ) : (
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       <AvatarFallback>
                         {selectedReview.reviewer_profile?.display_name ? (
                           getInitials(
@@ -949,7 +874,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         ) : (
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
                           <User className='h-4 w-4' />
-<<<<<<< HEAD
         </TableBody>;
       </Table>;
       {selectedReview && (;
@@ -970,7 +894,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <AvatarImage
                         src={selectedReview && selectedReview.reviewer_profile.avatar_url}
                         alt={selectedReview && selectedReview.reviewer_profile.display_name || ''}                      />;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     ) : (;
                       <AvatarFallback>;
                         {selectedReview.reviewer_profile?.display_name;
@@ -978,33 +901,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     )}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         ? "Anonymous"
                         : selectedReview.reviewer_profile?.display_name || "User"}
-<<<<<<< HEAD:src/components/admin/reviews/ReviewsModerationTable.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/reviews/ReviewsModerationTable.tsx
                     </div>
                     <Badge variant="outline">
                       {selectedReview.status}
                     </Badge>
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/reviews/ReviewsModerationTable.tsx
                   </div>
                 </div>
                 <div>{renderStars(selectedReview.rating)}</div>
               </div>
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
               <div className="border rounded-md p-3 bg-muted/20">
                 <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>
@@ -1043,7 +955,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Badge variant='outline'>;
                       Communication: {selectedReview && selectedReview.communication_rating}/5;
                     </Badge>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
                   )}
                   {selectedReview && selectedReview.quality_rating && (;
                     <Badge variant='outline'>;
@@ -1058,7 +969,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {selectedReview && selectedReview.would_work_again !== undefined && (;
                     <Badge
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
                       variant={selectedReview.would_work_again ? "default" : "secondary"}
                     >
                       {selectedReview.would_work_again ? "Would work again" : "Would not work again"}"
@@ -1088,7 +998,6 @@ onClick={() => handleReject(selectedReview && selectedReview.id)}
                     variant="destructive""
 
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     variant="destructive"
                     onClick={() => handleReject(selectedReview.id)}
                     disabled={isPending}
@@ -1117,11 +1026,7 @@ onClick={() => handleReject(selectedReview && selectedReview.id)}
                   onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: "approved" })}
                   disabled={isPending}
                 >;
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/reviews/ReviewsModerationTable.tsx
                   Mark as Rejected;
                 </Button>;
               )}
@@ -1135,14 +1040,9 @@ onClick={() => handleReject(selectedReview && selectedReview.id)}
                   }
                   disabled={isPending}                >;
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Mark as Approved;
                 </Button>;
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-=======
               {selectedReview.status === "approved" && (
                 <Button
                   variant="destructive"
@@ -1159,7 +1059,6 @@ onClick={() => handleReject(selectedReview && selectedReview.id)}
                 >;
                   Mark as Approved;
                 </Button>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/reviews/ReviewsModerationTable.tsx
               )}
             </DialogFooter>;
           </DialogContent>;
@@ -1167,10 +1066,6 @@ onClick={() => handleReject(selectedReview && selectedReview.id)}
       )},
       )}
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>;
   );
 }
@@ -1181,7 +1076,6 @@ onClick={() => handleReject(selectedReview && selectedReview.id)}
   return (<div className="flex"> {
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 [1, 2, 3,  4, 5].map ( (star) => (<Star key= {  [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   star ;
 }/>) ) ;
 }</div>) ;
@@ -1202,9 +1096,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }/>) ) ;
 }</div>) ;
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               )}
             </DialogFooter>
           </DialogContent>
@@ -1220,16 +1111,12 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</div>) ;
 
 :src/components/admin/reviews/ReviewsModerationTable.tsx
-=======
 return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <TableHead > Rating</TableHead> <TableHead > Date</TableHead> <TableHead > Status</TableHead> <TableHead > Reports</TableHead> <TableHead className="text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/reviews/ReviewsModerationTable.tsx
   reviews.map ( (review) => (<TableRow key= {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   review.id ";
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 }> <TableCell> <div className="flex items - center gap-2"> <Avatar className="h - 8 w-8"> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
-<<<<<<< HEAD
   review.reviewer profile.avatar url
 }alt= {"
   review.reviewer profile.display name |""
@@ -1276,9 +1163,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 
 }</AvatarFallback>) 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 }</Avatar> <div> </Badge> </div> </div> <div> {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   renderStars (selectedReview.rating) "
 }</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {
   selectedReview.review text "
@@ -1308,9 +1193,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</>)
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
 }"}
-<<<<<<< HEAD:src/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>;
   );
   review.status.char_at (0) .toUpperCase () + review.status.slice (1) ";
@@ -1365,18 +1247,9 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
   );
 }
 }"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 :src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/reviews/ReviewsModerationTable.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/admin/reviews/ReviewsModerationTable.tsx
 };";
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
   reviews.map ( (review) => (<TableRow key= {;
@@ -1442,5 +1315,3 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</>) ;
 }"
 :src/components/admin/reviews/ReviewsModerationTable.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

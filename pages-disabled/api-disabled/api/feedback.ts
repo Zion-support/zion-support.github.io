@@ -1,16 +1,11 @@
 :pages/api/feedback.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {
   saveFeedbackFallback,
   FeedbackRecord,
 } from "../../utils/feedback/store";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import {
   saveFeedbackFallback
   FeedbackRecord
@@ -59,9 +54,6 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
     return false;
   try {
     const admin = require("firebase-admin");
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       });
     }
 ;
@@ -74,7 +66,6 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
   }
 }
 :pages/api/feedback.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const r = Number(rating);
   if (!r |r < 1 |r > 5) return bad(res, "rating must be 1-5");
   const k: FeedbackRecord["kind"] =;
@@ -109,15 +100,12 @@ function ok(res: NextApiResponse, data: any) {;
   }
 :pages/api/feedback.ts
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/feedback.ts
 export default async /**
  * handler - Function description
  */;
 function handler() {;
   if (return bad (res, "Method not allowed", 405)) {
   $2
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
   const { rating, comment, kind, context } = req.body || {}
   const r = Number (rating);
@@ -135,16 +123,13 @@ function handler() {;
 }
 :pages/api/feedback.ts
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 function bad(res: NextApiResponse, msg: string, code = 400) {
   return res.status(code).json({
     ok: false,
-=======
 ;
 function bad(res: NextApiResponse, msg: string, code = 400) {;
   return res.status(code).json({;
     ok: false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/feedback.ts
     error: msg
   });
   } catch (error) {;
@@ -210,8 +195,6 @@ async function tryWriteToFirestore(req, res) {
   if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) return false,
   try {
     const admin = require("firebase-admin"),
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
@@ -503,7 +486,6 @@ export default async function handler(req, res) {;
 const k: FeedbackRecord["kind"] =
     kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const doc: FeedbackRecord = {
     id: uuidv4(),
     createdAtIso: new Date().toISOString(),
@@ -511,7 +493,6 @@ const k: FeedbackRecord["kind"] =
     rating: r,
     comment: comment || undefined,
     kind: k,
-<<<<<<< HEAD
     context: context || undefined},
   const wrote = await tryWriteToFirestore(doc),
   if (!wrote) saveFeedbackFallback(doc),
@@ -605,7 +586,6 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {;
   if (!wrote) saveFeedbackFallback(doc);
   return ok(res, { id: doc.id });
 :pages/api/feedback.ts
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -623,8 +603,3 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {;
 ;
 export default async function handler(req, res) {
   try {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

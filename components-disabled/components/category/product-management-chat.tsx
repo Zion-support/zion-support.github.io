@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-<<<<<<< HEAD
   return (import Link from 'next/link';
 import Seo from '../../components/seo/Seo';
 const ProductManagementChat: NextPage = () => {return (return (<div>;
@@ -20,10 +19,7 @@ const ProductManagementChat: NextPage = () => {
     </div>
   )
 }
-<<<<<<< HEAD
-=======
         <a href="/blog">Back to Blog</a>"
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     <div>;
 </div>"
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
@@ -37,13 +33,10 @@ const ProductManagementChat: NextPage = () => {
 );
 };
 export default ProductManagementChat;
-<<<<<<< HEAD:components/category/product-management-chat.tsx
 import Link from 'next / link';
 import Seo from '../../components / seo / Seo';
   return (
     <div>;
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       <Seo title="Product Management" description="Product management strategy and insights by Zion." open_graph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
 
         <h1 > ProductManagementChat</h1>;
@@ -53,7 +46,6 @@ import Seo from '../../components / seo / Seo';
 }
 ;
 export default ProductManagementChat;
-<<<<<<< HEAD
 ;
 export default ProductManagementChat;
 

@@ -3,7 +3,6 @@ import React from "react";
 import MainLayout from "../components/layout/MainLayout";
 
 const MobileDevelopment: React.FC = () => {
-<<<<<<< HEAD
   return (
     <MainLayout title="Mobile Development - Zion Tech Group" description="Professional mobile app development services.">
       <div className="container mx-auto px-4 py-16">
@@ -285,7 +284,6 @@ const MobileDevelopment: React.FC = () => {
       </div>
     </div>
 :src/pages/MobileDevelopment.tsx
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

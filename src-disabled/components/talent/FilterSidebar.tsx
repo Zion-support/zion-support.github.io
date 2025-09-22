@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button",
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Filter } from 'lucide-react'
 import { SearchFilter } from "./filters/SearchFilter","
 import { SortFilter } from "./filters/SortFilter","
@@ -92,9 +89,7 @@ export function FilterSidebar({}
   sortOption,
   setSortOption,
   clearFilters,
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
 export function FilterSidebar({}
@@ -115,7 +110,6 @@ export function FilterSidebar({}
   sortOption,
   setSortOption,
 clearFilters,
-<<<<<<< HEAD
   isMobileFilterOpen
 }: FilterSidebarProps) {
   return (
@@ -126,17 +120,14 @@ clearFilters,
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
 
           Filters
-=======
 
           Filters;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </h3>
         <Button "
           variant="ghost" "
           size="sm" 
           onClick={clearFilters}"
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
-=======
   isMobileFilterOpen
 }: FilterSidebarProps) {
   searchTerm
@@ -157,8 +148,6 @@ clearFilters,
   setSortOption
   clearFilters
   isMobileFilterOpen,}: FilterSidebarProps) {
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       {/* Filter header */}
@@ -200,10 +189,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Clear All;
         </Button>
       </div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Filter } from 'lucide-react';
@@ -214,7 +200,6 @@ import { AvailabilityFilter } from "./filters/AvailabilityFilter",;
 import { RegionFilter } from "./filters/RegionFilter",;
 import { ExperienceFilter } from "./filters/ExperienceFilter",;
 import { PriceFilter } from "./filters/PriceFilter",;
-=======
       "
 import React from "react",;"
 import { Button } from "@/components/ui/button",;'
@@ -226,7 +211,6 @@ import { AvailabilityFilter } from "./filters/AvailabilityFilter",;"
 import { RegionFilter } from "./filters/RegionFilter",;"
 import { ExperienceFilter } from "./filters/ExperienceFilter",;"
 import { PriceFilter } from "./filters/PriceFilter",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { FilterSidebarProps } from "@/types/filters",;
 export function FilterSidebar() { return null; }
       {/* Filter header */}"
@@ -266,12 +250,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Button>;
       </div>;
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
-<<<<<<< HEAD
       {/* Skills */}
       <SkillsFilter;
         selectedSkills={selectedSkills} ;
@@ -478,7 +460,6 @@ expanded={expanded_sections.experience}'
         priceRange={priceRange}
         setPriceRange={setPriceRange}
 
-<<<<<<< HEAD
         <Button 
 
         expanded={expanded_sections.price}
@@ -503,12 +484,10 @@ expanded={expanded_sections.experience}'
         toggle_skill={toggle_skill}
 expanded={expanded_sections.skills}'
         toggle_section={() => toggle_section ('skills')}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         isMobileFilterOpen={isMobileFilterOpen}
       />;
       {isMobileFilterOpen && (;
         <Button;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         <Button
@@ -521,8 +500,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Apply Filters;
         </Button>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
         <Button'
           onClick = {(,) => window && window.dispatchEvent(new CustomEvent('closeMobileFilter')),}"
@@ -581,10 +558,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
     </>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
   );
@@ -601,25 +574,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   );
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
-=======
 }
 ;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
     </>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     </>
   );
 }
@@ -642,4 +605,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   );
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -22,14 +11,11 @@ import {Navigate} from "react-router-dom";
 export default function WhitelabelManager() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { Navigate } from "react-router-dom";
 export default function WhitelabelManager() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-<<<<<<< HEAD
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";
 
@@ -37,8 +23,6 @@ export default function WhitelabelManager() {
     return <Navigate to="/unauthorized" />;
   }
   return (
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -49,11 +33,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
   // Check if user has admin role
   const isAdmin = user?.role === "admin",
-<<<<<<< HEAD
-=======
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { useAuth } from "@/hooks/useAuth";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import React, { useState } from "react";"
 import { Header } from "@/components/Header";"
 import { Footer } from "@/components/Footer";"
@@ -62,25 +42,19 @@ import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelR
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList";"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
 import { useAuth } from "@/hooks/useAuth";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Navigate } from "react-router-dom";
 export default function WhitelabelManager() {};
   const { user } = useAuth();"
   const [activeTab, setActiveTab] = useState("tenants");
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
   // Check if user has admin role
 const isAdmin = user?.role === "admin",
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
   return (
 
-<<<<<<< HEAD
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.
           <Tabs
             value={activeTab}
@@ -148,7 +122,6 @@ const isAdmin = user?.role === "admin",
                   manage their white-label instance, including content, users,
                   and analytics. Tenant admins cannot access data from other
                   tenants.
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                 </p>
               </div>
             </TabsContent>
@@ -160,12 +133,6 @@ const isAdmin = user?.role === "admin",
     </>
 )
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -185,8 +152,6 @@ if (!isAdmin) {;
   }
 ;
   return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
     <>;
       <SEO
         title="White-Label Management - Zion AI Marketplace"
@@ -224,32 +189,17 @@ if (!isAdmin) {;
           </div>;
           <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
             <TabsList className="mb - 8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
             <TabsList className="mb-8">;
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
             <TabsList className="mb-8">;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <TabsTrigger value="tenants">Tenants</TabsTrigger>;
               <TabsTrigger value="create">Create New</TabsTrigger>;
               <TabsTrigger value="docs">Documentation</TabsTrigger>;
             </TabsList>;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
   return (
               <TabsTrigger value="tenants">Tenants</TabsTrigger>;
@@ -294,7 +244,6 @@ if (!isAdmin) {;
                 <p>;
                   Add a CNAME record pointing to <code > ziontechmarketplace.com</code>.;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </p>;
                 <table>;
                   <thead>;
@@ -308,10 +257,8 @@ pr-12325
 <th > Record Type</th>;
                       <th > Name</th>;
                       <th > Value</th>;
-<<<<<<< HEAD
                       <th > TTL</th>;                  including content, users, and analytics. Tenant admins cannot access data from other tenants.;
                       <th > TTL</th>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <th>Record Type</th>;
                       <th>Name</th>;
@@ -325,7 +272,6 @@ pr-12325
 </tr>
 
 including content, users, and analytics. Tenant admins cannot access data from other tenants.;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </p>;
               </div>;
             </TabsContent>;
@@ -333,11 +279,8 @@ including content, users, and analytics. Tenant admins cannot access data from o
         </div>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 </>);
@@ -385,30 +328,15 @@ including content, users, and analytics. Tenant admins cannot access data from o
 }
     </>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 ;
 </>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 ;
     </>);
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

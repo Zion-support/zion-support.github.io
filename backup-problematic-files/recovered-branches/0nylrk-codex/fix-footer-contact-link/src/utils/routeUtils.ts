@@ -85,4 +85,3 @@ label: route.label, path: currentPath
   // For dynamic routes that might not be in the static sitemap breadcrumbs.push ({
 
 }
-<<<<<<< HEAD

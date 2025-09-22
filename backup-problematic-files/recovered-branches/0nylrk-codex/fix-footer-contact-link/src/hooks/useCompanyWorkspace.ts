@@ -89,4 +89,3 @@ setError (null);
 }, 1000), // Simulate loading delay 
 }, [companySlug]);
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

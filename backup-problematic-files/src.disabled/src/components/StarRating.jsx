@@ -5,7 +5,6 @@ interface StarRatingProps {
 export default function StarRating({ }: StarRatingProps) {
 
 export default function Cache.test({ }: Cache.testProps) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:tests/unit/lib/cache.test.ts
   return (
     <div>
       <h1>StarRating</h1>
@@ -13,4 +12,3 @@ export default function Cache.test({ }: Cache.testProps) {
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:tests/unit/lib/cache.test.ts

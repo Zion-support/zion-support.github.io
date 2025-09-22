@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import useSWR from 'swr',
 import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -17,15 +16,12 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
       if (k) acc[k] = decodeURIComponent(v |'');
       return acc;
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
 
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -38,13 +34,11 @@ class ErrorBoundary extends React.Component {}
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 
     return this.props.children;
   }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function ContentReviewPage() {
   const [filters, setFilters] = useState<{;
     status?: string;
@@ -79,14 +73,11 @@ export default function ContentReviewPage(req, res) {
   try {
   const [filters, setFilters] = useState<{ status?: string, reason?: string, userEmail?: string, contentType?: string }>({ status: 'pending' }),;
   const query = useMemo(() => {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const p = new URLSearchParams();
     if (filters.status) p.set('status', filters.status);
     if (filters.reason) p.set('reason', filters.reason);
     if (filters.userEmail) p.set('userEmail', filters.userEmail);
     if (filters.contentType) p.set('contentType', filters.contentType);
-<<<<<<< HEAD
   return (
   }, [filters]),;
   const { data, mutate } = useSWR(`/api/admin/moderation/flags${query ? `?${query}` : ''}`, fetcher);
@@ -106,7 +97,6 @@ export default function ContentReviewPage(req, res) {
 }
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
-=======
 
     return this.props.children;
   }
@@ -114,13 +104,11 @@ import React, { useMemo, useState } from 'react';
 import useSWR from 'swr';'
 import React, { useMemo, useState } from 'react';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       }
     );
     set_selected (null);
     mutate ();  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <EnhancedLayout>;
 
@@ -131,7 +119,6 @@ import React, { useMemo, useState } from 'react';
 
 }
             className='border rounded px-2 py-1';
-<<<<<<< HEAD
           >;
             <option value=''>All Statuses</option>;
             <option value='pending'>Pending</option>;
@@ -216,22 +203,18 @@ import React, { useMemo, useState } from 'react';
             Reset;
           </button>;
         </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
             value={filters && filters.status || ''}
             onChange={e =>;
               setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <EnhancedLayout>
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-semibold">Admin Content Review</h1>
         </div>
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm">
           <select value={filters.status || ''} onChange={e => setFilters(f => ({ ...f, status: e.target.value || undefined }))} className="border rounded px-2 py-1">
             <option value="">All Statuses</option>
@@ -292,8 +275,6 @@ import React, { useMemo, useState } from 'react';
                 <th className=&quot;text-left px-3 py-2&quot;>Created</th>
                 <th className=&quot;text-left px-3 py-2&quot;>Status</th>
                 <th className=&quot;text-left px-3 py-2&quot;>Actions</th>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <EnhancedLayout>;
 
@@ -377,16 +358,10 @@ className='border rounded px-2 py-1';
             Reset;
           </button>;
         </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </tr>
             </thead>
             <tbody>
               {flags.map((f: any) => (
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <td className="px-3 py-2 font-mono text-xs">{f.id}</td>
                   <td className="px-3 py-2">{f.contentType}</td>
                   <td className="px-3 py-2">{f.userEmail}</td>
@@ -401,37 +376,23 @@ className='border rounded px-2 py-1';
 
 }
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
               )  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </tbody>;
           </table>;
         </div>;
       </div>;
 
       {selected && (;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <ModerationModal
-=======
 
         <ModerationModal;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           flag={selected}
           onClose={() => setSelected(null)}
           onAction={handleAction}
@@ -441,12 +402,6 @@ className='border rounded px-2 py-1';
   );
     </EnhancedLayout>
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
         <div className='overflow - auto border rounded'>;
           <table className='min - w-full text - sm'>;
@@ -496,7 +451,6 @@ className='border rounded px-2 py-1';
                     No results;
                   </td>;
                 </tr>              )}
-<<<<<<< HEAD
 
 "
                 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
@@ -505,16 +459,11 @@ className='border rounded px-2 py-1';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </tbody>;
           </table>;
         </div>;
       </div>;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       {selected && (
         <ModerationModal;
           flag={selected}
@@ -523,20 +472,11 @@ className='border rounded px-2 py-1';
         />)}
     </EnhancedLayout>);
 ;
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   } catch (error) {"
     console.error("Error:", error);"
@@ -545,4 +485,3 @@ className='border rounded px-2 py-1';
 }
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

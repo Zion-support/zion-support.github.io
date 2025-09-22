@@ -1,5 +1,4 @@
 :pages_backup/api/messages/compose.ts
-<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from '[^']*';
 import { requireUser } from '[^']*';
 import { sendMessage } from '[^']*';
@@ -19,10 +18,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
     recipientId,
   const {
-=======
 
   const {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/messages/compose.ts
     recipient_id,
 
     body,
@@ -72,16 +69,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!recipientId || !body) return res.status(400).json({ error: 'Missing required fields' });
 :pages_backup/api/messages/compose.ts
   const { conversation, message } = sendMessage({
-=======
   const { conversation, message } = sendMessage({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/messages/compose.ts
     senderId: user.id,
     recipientId,
     body,
     linkUrl,
     attachmentBase64,
 :pages_backup/api/messages/compose.ts
-<<<<<<< HEAD
     attachmentName,
     context
   });
@@ -131,10 +125,5 @@ export default function handler(req, res) {
   }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/messages/compose.ts

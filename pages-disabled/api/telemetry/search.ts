@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next'
 ;
 const memoryStore: { q: string, ts: number }[] = []
@@ -61,15 +60,11 @@ const memoryStore: { q: string, ts: number }[] = [],
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ ok: true, top, total: memoryStore.length })
-<<<<<<< HEAD
-=======
     return res.status(200).json({ ok: true, top, total: memoryStore.length })
   }
   return res.status(405).end()
 };
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const memoryStore: Array<{ q: string; ts: number }> = [];
@@ -94,5 +89,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', 'GET, POST');
   return res.status(405).end('Method Not Allowed');
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

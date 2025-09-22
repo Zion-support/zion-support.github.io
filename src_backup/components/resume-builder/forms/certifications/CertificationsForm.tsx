@@ -1,5 +1,4 @@
 :src/components/resume-builder/forms/certifications/CertificationsForm.tsx
-<<<<<<< HEAD
 
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -174,7 +173,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onDelete={handleDelete}        />;
       )}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       {certifications.length > 0 && (
         <CertificationsList 
@@ -210,9 +208,7 @@ setEditingId(null),
                     setEditingId(null),
                     setEditingId(null),
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     form.reset({
 :src/components/resume-builder/forms/certifications/CertificationsForm.tsx
 name: '',
@@ -220,8 +216,6 @@ name: '',
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     setEditingId(null),
                     setEditingId(null),
@@ -231,7 +225,6 @@ name: '',
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       credential_url: ''})
                       name: ''
                       issuing_organization: ''
@@ -249,10 +242,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -261,8 +250,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 <Button type="button" onClick={onComplete}>
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Next
                 </Button>
               </div>
@@ -273,7 +260,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
 :src/components/resume-builder/forms/certifications/CertificationsForm.tsx
 )
-<<<<<<< HEAD
 }
   );
 
@@ -395,7 +381,4 @@ if ( {) {
 }'"}
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,4 @@
 :pages_backup/api/suggest.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -12,7 +11,6 @@ const SAMPLE_QUERIES = [
 ];
 
 const SKILLS = [
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -44,7 +42,6 @@ const SKILLS = [
   'PostgreSQL',
 'Rust'
 ];
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -68,7 +65,6 @@ class ErrorBoundary extends React.Component {}
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = []
@@ -85,16 +81,11 @@ const SAMPLE_QUERIES = []
   "DevOps engineers with Kubernetes"
 :pages_backup/api/suggest.ts
 
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   "React developers under $50/hr",
   "Part-time DevOps jobs in LATAM",
   "AI/ML engineers for startup",
   "Blockchain developers remote",
   "UI/UX designers available now",
-=======
 
 "
   "React developers under $50/hr","
@@ -102,7 +93,6 @@ const SAMPLE_QUERIES = []
   "AI/ML engineers for startup","
   "Blockchain developers remote","
   "UI/UX designers available now","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/suggest.ts
   "Full-stack developers with Next && Next.js",
 '
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -134,15 +124,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {
   if (req.method !== "GET") {;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     res.setHeader("Allow", "GET");
-=======
 
 "
     res.setHeader("Allow", "GET");"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/suggest.ts
     return res.status(405).json({ error: "Method not allowed" });
 
   }
@@ -186,7 +171,6 @@ if ( {) {}
 
 :pages_backup/api/suggest.ts
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler() { return null; }
@@ -212,10 +196,8 @@ export default function handler(req, res) {}
 
   } catch (error) {
     console.error("Error:", error);
-=======
   } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/suggest.ts
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {"
     console.error("Error:", error);"
@@ -233,8 +215,6 @@ if ( {) {}
   $2;
 }
 :pages_backup/api/suggest.ts
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   'Rust',
 ];
 
@@ -257,8 +237,5 @@ res
   ).slice(0, 5);
   return res.status(200).json({ suggestions });
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/suggest.ts

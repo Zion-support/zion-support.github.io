@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react'
 import { Badge } from "@/types/community",
@@ -11,9 +8,6 @@ interface UserBadgesProps {
 }
 
 const iconMap = {
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react';
 import { Badge } from '@/types/community';
 import {
@@ -24,9 +18,6 @@ import {
 } from '@/components/ui/tooltip';
 
 const iconMap = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 const icon_map = {}
   Trophy;
   Award;
@@ -40,29 +31,21 @@ if (return null) {}
   $2;
 }
 const iconMap = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Trophy,
-=======
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface UserBadgesProps {
   badges: Badge[]
 }  Trophy,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Award,
   BadgeCheck,
   Star,
-<<<<<<< HEAD
   MessageSquare
 },
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {}
   if (!badges?.length) return null,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
@@ -73,13 +56,9 @@ export default UserBadges;
 }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
-=======
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-=======
   MessageSquare,
 };
 export const UserBadges = ({;
@@ -94,7 +73,6 @@ export const UserBadges = ({;
         const IconComponent =
           iconMap[badge.icon as keyof typeof iconMap] || Trophy;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
@@ -131,10 +109,8 @@ const iconMap = {;
   BadgeCheck,;
   Star,;
   MessageSquare;
-<<<<<<< HEAD
 },;
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
-<<<<<<< HEAD
   if (!badges?.length) return null,;
   return (;
     <div className="flex flex-wrap gap-2">;
@@ -181,10 +157,7 @@ const IconComponent = iconMap[badge && badge.icon as keyof typeof iconMap] || Tr
       {badges.map ((badge, ) => {'
         // Get the correct icon component based on the badge's icon name;
         const IconComponent = icon_map[badge.icon as keyof typeof icon_map] || Trophy;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default UserBadges;
-=======
         );
       })}
     </div>
@@ -192,13 +165,7 @@ export default UserBadges;
 };
 export default UserBadges;
 '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export default UserBadges;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 ;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

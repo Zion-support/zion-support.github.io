@@ -10,7 +10,6 @@ total: number;
 ;
 const initialState: CartState = {;
   items: [], ;
-<<<<<<< HEAD
   total: 0;
   itemCount: 0;
 };
@@ -29,7 +28,6 @@ const cartSlice = createSlice({';
   reducers: {;
     addItem: (state,  action: PayloadAction<CartItem>) => {;
 const existingItem = state.items.find(item => item.id === action.payload.id),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (existingItem) {;
         existingItem.quantity += action.payload.quantity;
 } else {;
@@ -37,7 +35,6 @@ const existingItem = state.items.find(item => item.id === action.payload.id),;
 }
       state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
       state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0);
-<<<<<<< HEAD
     };
     removeItem: (state, action: PayloadAction<string>) => {;
   state.items = state.items.filter(item => item.id !== action.payload);
@@ -73,7 +70,6 @@ const existingItem = state.items.find(item => item.id === action.payload.id),;
     clearCart: (state) => {;
   state.items = [], ;
 state.total = 0,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   state.itemCount = 0;
 }
   }

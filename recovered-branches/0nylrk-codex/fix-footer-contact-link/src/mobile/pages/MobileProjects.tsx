@@ -1,37 +1,20 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileProjectView} from "../components/projects/MobileProjectView";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileProjectView} from "../components/projects/MobileProjectView";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileProjectView } from "../components/projects/MobileProjectView";
 import { BottomNavigation } from "../components/common/BottomNavigation",
-<<<<<<< HEAD
 import { MobileProjectView } from "../components/projects/MobileProjectView",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { MobileProjectView } from "../components/projects/MobileProjectView",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Mock data
 
 const projectData = {
@@ -54,7 +37,6 @@ const projectData = {"
     avatar: ""
 
 const milestonesData = [;
-=======
 // Mock data;
 const projectData = {;
   id: "project-123",;
@@ -72,7 +54,6 @@ const projectData = {;
 };
 
 const milestonesData = [;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {;
     id: "milestone-1",;
     title: "Initial Design Concepts",;
@@ -139,13 +120,7 @@ const milestonesData = []
     dueDate: "Dec 30, 2023","
     status: "pending" as const,"
     paymentStatus: "pending" as const,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     amount: "$5,000"
   }
 ],
@@ -158,13 +133,7 @@ export function MobileProjects() {}
         showBack
       />
       <main className="py-4">
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -201,39 +170,23 @@ const milestonesData = [;
     paymentStatus: "pending" as const,;
     amount: "$5,000";
   }
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ];
 export function MobileProjects() {;
 
         <MobileProjectView 
           project={projectData} 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           milestones={milestonesData}
         />
       </main>
       <BottomNavigation />
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       />;
 "
       <main className="py-4">;
@@ -272,11 +225,8 @@ const projectData = {;"
   endDate:"Jan 15, 2024",;"
   status:"in_progress",;"
   totalAmount:"$12,000",;
-<<<<<<< HEAD
   progress:60,,
-=======
   progress:60,,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description:"Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages.";
 },;
 ;
@@ -325,22 +275,8 @@ export function MobileProjects() { return null; }
 }
 };
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 import React from "react";""
 import {MobileHeader} from "../components/common/MobileHeader";""
@@ -512,4 +448,3 @@ pr-12325
 }
 };
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

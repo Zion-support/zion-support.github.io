@@ -55,7 +55,6 @@ const MOCK_SUPPORT_REQUESTS = [;
     category: 'authentication',
 
 :temp_exclude/hooks.disabled/admin/SupportRequests.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     id: "SR-1001",
     user: "john.doe@example.com",
     userId: "user-123",
@@ -333,7 +332,6 @@ return true
             <TabsTrigger value="need-response">Need Response</TabsTrigger>
           </TabsList>
 
-=======
         "
         <Tabs defaultValue="all" className="mb-8">
 
@@ -409,7 +407,6 @@ return true
           <TabsContent value='all' className='mt-6'>;
 
           "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
           <TabsContent value="all" className="mt-6">
 
             {/* Search and Filters */}
@@ -418,7 +415,6 @@ return true
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <Input
 
-=======
             {/* Search and Filters */}"
             <div className="flex flex-col md:flex-row gap-4 mb-6">"
               <div className="relative flex-1">"
@@ -431,7 +427,6 @@ return true
               >'
                 <SelectTrigger className='w-[180px]'>'
                   <SelectValue placeholder='Status' />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
@@ -453,11 +448,9 @@ return true
 
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
-=======
               "
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>"
                 <SelectTrigger className="w-[180px]">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
                 <SelectContent>"
@@ -470,11 +463,9 @@ return true
 
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
-=======
               "
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>"
                 <SelectTrigger className="w-[180px]">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
                 <SelectContent>"
@@ -490,11 +481,9 @@ return true
 
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters
-=======
               "
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">"
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
               </Button>
             </div>
 
@@ -530,13 +519,11 @@ return true
                               ? 'default' 
                               : request.status === 'in-progress' 
                               ? 'secondary' 
-=======
                           <Badge variant={'
                             request.status === 'open' '
                               ? 'default' '
                               : request.status === 'in-progress' '
                               ? 'secondary' '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx
                               : 'outline'
                           }>
 ;
@@ -758,10 +745,8 @@ return true
   )
 }
 ;
-=======
 }</TableCell> <TableCell> {"
   new Date (request.last_updated) .toLocaleDateString () ";"
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";"
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Escalated Requests</h3> <p className=" text - zion - slate - light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai - flagged"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">AI Flagged Issues</h3> <p className=" text - zion - slate - light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need - response"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Awaiting Response</h3> <p className=" text - zion - slate - light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>);'"
 }'"}'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/SupportRequests.tsx

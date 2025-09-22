@@ -16,14 +16,12 @@ import { Card, CardContent } from "@/components/ui/card",
   FormLabel;
   FormControl;
   FormDescription;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: UseFormSetValue<any>,
   skills: string[],
   yearsExperience: number,
-<<<<<<< HEAD
   location?: string,
   rateType: "hourly" | "fixed"
 }

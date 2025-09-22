@@ -60,7 +60,6 @@ const features = [
 description: 'Real-time inventory tracking and automated reordering'
   },
   {
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/retail.tsx
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
@@ -265,7 +264,6 @@ const benefits = [;
   'Streamlined operations',;
   'Mobile-first customer engagement';
 ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
@@ -347,7 +345,6 @@ const benefits = [
   'Mobile-first customer engagement'
 ];
 export default function RetailSolutions() {
-<<<<<<< HEAD
     icon: Smartphone,
     title: 'Mobile Commerce',
     description: 'Mobile-optimized shopping experience'
@@ -407,7 +404,6 @@ return (
                 </button>
               </div>
             </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>
         </section>
 
@@ -424,9 +420,7 @@ return (
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Everything you need to succeed in modern retail.
 </p>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/retail.tsx
               </p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
@@ -437,7 +431,6 @@ return (
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -535,7 +528,6 @@ return (
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Retail Guide;
-<<<<<<< HEAD
                 </ul>;
               </div>;
             </div>;
@@ -580,14 +572,11 @@ return (
                 </motion.div>
               ))}
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-green-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -620,7 +609,6 @@ return (
 </div>
         </section>
       </div>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/retail.tsx
     </Layout>
     </Layout>
     </>
@@ -632,4 +620,3 @@ return (
     </Layout>
     </Layout>
     </>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -18,14 +18,11 @@ import {
   getMessages,
   sendMessage,;
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/messages/thread.ts
 
   getConversationById,
   getMessages,
   sendMessage,;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 } from "../../../utils/messaging/storage";
 
@@ -33,7 +30,6 @@ import {
   if (req && req.method === "GET") {
     const { id } = req && req.query;
     if (!id || typeof id !== "string") return res && res.status($1).json({ $2 });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     const messages = getMessages(id);
 
@@ -72,7 +68,6 @@ export default function handler(req, res) {
   const user = requireUser(req, res);
 if (!user) return,;
   if (req.method === 'GET') {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const { id } = req.query;
     if (return res.status ($1).json ({ $2 })) {}
   $2;
@@ -112,7 +107,6 @@ if ( {) {}
 
 }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
 
@@ -135,11 +129,5 @@ if ( {) {}
 :pages_backup/api/messages/thread.ts
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 :pages_backup/api/messages/thread.ts
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

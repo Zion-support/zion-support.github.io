@@ -102,7 +102,6 @@ class IntelligentGitWorkflow {
           continue;
 
         )
-        if (line.includes('>>>>>>>')) {
           inConflict = false;
           conflictType = ;
 

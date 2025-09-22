@@ -1,16 +1,10 @@
 :pages_backup/fintech-solutions.tsx
-<<<<<<< HEAD:pages/fintech-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 			title="Fintech AI Solutions""
 			slug="fintech-solutions""
 			description="AI solutions for fraud detection, risk scoring, KYC/AML automation, and real-time decisioning. Improve compliance and customer experience across the lifecycle.""
 			subtitle="Smarter finance with lower risk and faster time to yes."
 :pages_backup/fintech-solutions.tsx
-<<<<<<< HEAD
 			pricePerMonthUSD={2799}
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Reduce fraud loss 15–35% and manual review by 30–50%"
@@ -23,28 +17,15 @@
 
 }
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
 
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/fintech-solutions.tsx
 
 :pages_backup/fintech-solutions.tsx
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/fintech-solutions.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
-=======
 title="Fintech AI Solutions"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/fintech-solutions.tsx
 export default function FintechSolutions() {
 			title;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -52,17 +33,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 			]}
 			industries={["Fintech", "Banking", "Lending", "Payments"]}
 :pages_backup/fintech-solutions.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**;
  * FintechSolutions - Function description;
-=======
 import React from 'react',;
 import ServiceLanding from '../components / sections / ServiceLanding',;
 export default /**
  * FintechSolutions - Function description
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/fintech-solutions.tsx
  */
 function FintechSolutions() {}
 return (
@@ -112,7 +90,6 @@ export default function FintechSolutions() {
 			industries={["Fintech", "Banking", "Lending", "Payments"]}
 
 :pages_backup/fintech-solutions.tsx
-<<<<<<< HEAD
 
 :pages_backup/fintech-solutions.tsx
 			title="Fintech AI Solutions"
@@ -132,37 +109,20 @@ export default function FintechSolutions() {
 				"Integrations: Core banking, KYC, payments, CRMs"
 			]}
 			industries={["Fintech", "Banking", "Lending", "Payments"]}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			pricePerMonthUSD={2799  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/fintech-solutions.tsx
-<<<<<<< HEAD
 
 :pages_backup/fintech-solutions.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/fintech-solutions.tsx
 			implementationWeeks="Implementation: 4–8 weeks"
-=======
 
 "
 			implementationWeeks="Implementation: 4–8 weeks""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/fintech-solutions.tsx
 			roiNote="Reduce fraud loss 15–35% and manual review by 30–50%"
 			features={["
 				"Transaction anomaly detection and entity resolution","
@@ -172,23 +132,15 @@ export default function FintechSolutions() {
 				"Realtime rules with feature store integration","
 				"Integrations: Core banking, KYC, payments, CRMs"
 :pages_backup/fintech-solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 			]}
-=======
 
 ]}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/fintech-solutions.tsx
 			industries={["Fintech", "Banking", "Lending", "Payments"]}
 			canonical="https: //ziontechgroup.com/fintech-solutions"
 		/>
 	)
 };
 :pages_backup/fintech-solutions.tsx
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/fintech-solutions.tsx
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -203,10 +155,6 @@ export default function FintechSolutions() {
 		/>
 	)
 :pages_backup/fintech-solutions.tsx
-<<<<<<< HEAD:pages/fintech-solutions.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/fintech-solutions.tsx
 			canonical="https: //ziontechgroup.com/fintech-solutions";
 		/>;
 	);
@@ -215,18 +163,8 @@ export default function FintechSolutions() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/fintech-solutions.tsx
-=======
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/fintech-solutions.tsx

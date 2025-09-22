@@ -1,25 +1,16 @@
 :src_backup/components/SearchBar.tsx
-<<<<<<< HEAD:src/components/SearchBar.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react',;
 import { useRouter } from 'next/router',;
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react'
-=======
 import { useRouter } from 'next/router';'
 import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/SearchBar.tsx
 import { Input } from '@/components/ui/input'
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 :src/components/SearchBar.tsx
 
 :src_backup/components/SearchBar.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SearchBar.tsx
 import { Search, X } from 'lucide-react'
 import { useRouter } from 'next/router';
 import { Search, X, Input } from 'lucide-react'; import { Search, X } from 'lucide-react
@@ -32,10 +23,7 @@ import { fireEvent  } from '@/lib/analytics';
 import { SearchSuggestion  } from '@/types/search';
 import { slugify  } from '@/lib/slugify';
 import { useDebounce  } from '@/hooks/useDebounce';
-<<<<<<< HEAD:src/components/SearchBar.tsx
-<<<<<<< HEAD
 
-=======
 '
 import { Search, X } from 'lucide-react'';
 import { Input  } from '@/components/ui/input';'
@@ -52,9 +40,7 @@ import { fireEvent } from '@/lib/analytics';'
 import { SearchSuggestion } from '@/types/search';'
 import { slugify } from '@/lib/slugify';'
 import { useDebounce } from '@/hooks/useDebounce';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/SearchBar.tsx
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 /**
  * SearchBar component props;
  */
@@ -68,15 +54,10 @@ interface SearchBarProps {}
    */;
   value: string;  value: string,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import React, { useState, useEffect, useRef } from 'react';
   value: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SearchBar.tsx
-=======
 interface SearchBarProps {
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 /**
@@ -88,15 +69,12 @@ interface SearchBarProps {
 pr-12325
   /**
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/SearchBar.tsx
   /**
    * Function to call when the search input changes;
    * @param {string} val - The new value of the search input;
    */
 :src_backup/components/SearchBar.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   onChange: (val: string) => void;  /**
    * Function to call when a suggestion is selected
    * @param {SearchSuggestion} suggestion - The selected suggestion
@@ -106,20 +84,14 @@ pr-12325
 
   onChange: (val: string) => void;
 :src/components/SearchBar.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   onChange: (val:,  string) => void,
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/SearchBar.tsx
   /**
    * Function to call when a suggestion is selected;
    * @param {SearchSuggestion} suggestion - The selected suggestion;
    */
 :src_backup/components/SearchBar.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void
   /**
    * The placeholder text for the search input
@@ -132,8 +104,6 @@ pr-12325
 
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
 :src/components/SearchBar.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   /**
    * The placeholder text for the search input;
    */
@@ -141,16 +111,13 @@ pr-12325
 }
 :src_backup/components/SearchBar.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   value,
   onChange,
   onSelectSuggestion,;'
   placeholder = 'Search...';
 :src/components/SearchBar.tsx
-<<<<<<< HEAD
 export function SearchBar({}: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const router = useRouter()
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
   const [focused, setFocused] = useState(false)
@@ -179,14 +146,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/SearchBar.tsx
       .then(data => {
         if (Array.isArray(data)) {
-<<<<<<< HEAD
           setSuggestions(data.slice(0, 5)) } else {  const debounced = useDebounce(value, 150)
   const inputRef = useRef<HTMLInputElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   useEffect(() => {}
     if (!debounced) {}
       setSuggestions([])
-<<<<<<< HEAD
       setHighlightedIndex(-1)
 
 /**
@@ -208,10 +173,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
       setHighlightedIndex(-1);
 :src_backup/components/SearchBar.tsx
       return
-<<<<<<< HEAD:src/components/SearchBar.tsx
-=======
       return;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/SearchBar.tsx
     }
     const controller = new AbortController()`
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal })
@@ -254,12 +216,9 @@ inputRef.current?.blur();
 
       aria-expanded={focused && suggestions.length > 0}
       aria-haspopup='listbox'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react';import { Input } from '@/components/ui/input';import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input',;
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions',;
@@ -268,7 +227,6 @@ import { SearchSuggestion } from '@/types/search',;
 import { slugify } from '@/lib/slugify',;
 import { useDebounce } from '@/hooks/useDebounce',;
 import { useOnClickOutside } from '@/hooks/useOnClickOutside',;
-=======
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react';import { Input } from '@/components/ui/input';import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -279,7 +237,6 @@ import { fireEvent } from '@/lib/analytics';
 import { SearchSuggestion } from '@/types/search';
 import { slugify } from '@/lib/slugify';
 import { useDebounce } from '@/hooks/useDebounce';
-=======
       .catch(() => setSuggestions([]))
     return () => controller.abort() }, [debounced])
   useOnClickOutside(containerRef, () => {}
@@ -312,10 +269,8 @@ import { fireEvent } from '@/lib/analytics';'
 import { SearchSuggestion } from '@/types/search';'
 import { slugify } from '@/lib/slugify';'
 import { useDebounce } from '@/hooks/useDebounce';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/SearchBar.tsx
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SearchBar.tsx
 /**;
  * SearchBar component props;
  */;
@@ -332,12 +287,10 @@ value: string,;
 :src/components/SearchBar.tsx
 
   onChange: (val: string) => void,;
-=======
       setHighlightedIndex(-1)  /**;
    * Function to call when the search input changes;
    * @param {string} val - The new value of the search input;
    */;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   /**;
    * Function to call when a suggestion is selected;
    * @param {SearchSuggestion} suggestion - The selected suggestion;
@@ -350,7 +303,6 @@ onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
   placeholder?: string;
 }
 :src/components/SearchBar.tsx
-<<<<<<< HEAD
 ;
 /**;
  * SearchBar component that allows users to search for content.;
@@ -449,12 +401,8 @@ onChange={(e) => onChange(e.target.value)}
                 e.preventDefault(),
                 setFocused(false),
                 setHighlightedIndex(-1),
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SearchBar.tsx
           }}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           onBlur={e => {;
             // Only blur if not clicking on suggestions;
             const relatedTarget = e && e.relatedTarget as HTMLElement;
@@ -465,7 +413,6 @@ onChange={(e) => onChange(e.target.value)}
               setFocused(false);
               setHighlightedIndex(-1);
 :src_backup/components/SearchBar.tsx
-<<<<<<< HEAD
             }
           }}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"          aria-autocomplete="list"
@@ -478,15 +425,11 @@ onChange={(e) => onChange(e.target.value)}
 
 :src_backup/components/SearchBar.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SearchBar.tsx
           aria-autocomplete="list"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
           onKeyDown={(e) => {
 
-<<<<<<< HEAD:src/components/SearchBar.tsx
-<<<<<<< HEAD
           autoComplete='search';
           onKeyDown={e => {            if (!focused || suggestions && suggestions.length === 0) {;"
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate";"
@@ -504,10 +447,8 @@ onChange={(e) => onChange(e.target.value)}
 
               }
               // If Enter is pressed and there's a value, navigate with query parameter;
-=======
               }'
               // If Enter is pressed and there's a value, navigate with query parameter;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/SearchBar.tsx
               if (e && e.key === 'Enter' && value && value.trim()) {                e && e.preventDefault(); // Prevent form submission if SearchBar is in a form;
 '
                 fireEvent('search', { search_term: value });`
@@ -534,7 +475,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 setFocused(false);
                 setHighlightedIndex(-1);
 :src/components/SearchBar.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 inputRef.current?.blur()
               }
               // If Enter is pressed and there's a value, navigate with query parameter;
@@ -555,13 +495,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 setFocused(false);
 inputRef.current?.blur();
 :src/components/SearchBar.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               }
               return;
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
                 setFocused(false);
                 setHighlightedIndex(-1);
                 inputRef.current?.blur();
@@ -583,7 +519,6 @@ break }              default: break
               }
               return;
             }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
             switch (e.key) {;
               case 'ArrowDown':;
@@ -601,7 +536,6 @@ break }              default: break
                 } else if (value.trim()) {;
                   // This case should ideally be handled by the form's onSubmit,;
                   // but if SearchBar is used standalone, this provides a fallback.;
-<<<<<<< HEAD
                   e.preventDefault(),;
                   fireEvent('search', { search_term: value }),;
                   router.push(`/search?q=${encodeURIComponent(value)}`),;
@@ -616,36 +550,24 @@ break }              default: break
                 inputRef.current?.blur();
                 break;
               default: break;
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
               }
               return;
             }
                 break;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SearchBar.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/SearchBar.tsx
             }
           }}
         />
         {value && (
 <button
-<<<<<<< HEAD
-<<<<<<< HEAD
             className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
 
 :src_backup/components/SearchBar.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             aria-label="Clear search"
-=======
 <button            aria-label="Clear search"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-=======
             switch (e && e.key) {;
               case 'ArrowDown':;
                 e && e.preventDefault();
@@ -695,7 +617,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 break;
               default:;,
                 break;            }              default: break;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/SearchBar.tsx
             }
           }}
         />;
@@ -711,18 +632,12 @@ className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-
             onClick={() => onChange('')}
             aria-label='Clear search'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SearchBar.tsx
           >
             <X className='h-4 w-4' />
           </button>
         )}
 :src_backup/components/SearchBar.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/SearchBar.tsx
 ;
 }
 }
@@ -730,7 +645,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 :src_backup/components/SearchBar.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>;
       <AutocompleteSuggestions;
         suggestions={suggestions}
@@ -739,8 +653,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         visible={focused}
         highlightedIndex={highlightedIndex}
         listId={listId}
-<<<<<<< HEAD
-<<<<<<< HEAD
       />;
     </div>;
   );
@@ -1178,19 +1090,10 @@ pr-12325
   list_id;
 }/> </div>);'"
 }'"  );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 :src_backup/components/SearchBar.tsx
 ;
-<<<<<<< HEAD:src/components/SearchBar.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SearchBar.tsx
-=======
 }}}}}}}}}}}}}}}
     return () => controller.abort()
   }, [debounced]),
@@ -1322,7 +1225,6 @@ pr-12325
   );
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/SearchBar.tsx
       </div>
       <AutocompleteSuggestions
         suggestions = {suggestions,}
@@ -1353,12 +1255,6 @@ pr-12325
 }/> </div>) ;
 }'"
 :src/components/SearchBar.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/SearchBar.tsx
-=======
 "`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/SearchBar.tsx

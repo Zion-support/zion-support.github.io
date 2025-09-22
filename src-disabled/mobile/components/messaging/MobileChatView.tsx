@@ -67,8 +67,6 @@ id: string,;
   messages: Message[];
   onBack: () => void;
 onSendMessage: (content: string) => void
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
@@ -98,14 +96,12 @@ interface MobileChatViewProps {}
     id: string;
     name: string;
     avatar?: string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     status?: string;
   },;
   messages: Message[],;
   onBack: () => void,;
   onSendMessage: (content: string) => void;
 }
-<<<<<<< HEAD
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
   const [newMessage, setNewMessage] = useState(""),
   const router = useRouter(),
@@ -120,7 +116,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   const router = useRouter(),;
       setNewMessage ('');
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }
   const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {    // Check condition;
@@ -156,7 +151,6 @@ export function MobileChatView(): any ({;
 }: MobileChatViewProps) {;'
   const [newMessage, setNewMessage] = useState('');
   const router = useRouter();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleSend = () => {;
     if (newMessage && newMessage.trim() !== '') {;
       onSendMessage(newMessage);'
@@ -171,7 +165,6 @@ export function MobileChatView(): any ({;
 
   return (
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
 
   const startVideoCall = () => {}`
@@ -199,7 +192,6 @@ return (
       <header className="sticky top-0 z-10 bg-background border-b border-border">
         <div className="flex items-center h-14 px-4">
           <Button
-<<<<<<< HEAD
             variant="ghost"
             size="icon"
             onClick={onBack}"
@@ -250,13 +242,9 @@ return (
               size='icon'
               onClick={startVideoCall}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h3 className="font-medium">{contact.name}</h3>
               <p className="text-xs text-muted-foreground">
-=======
 
             <Button'
               variant='ghost''
@@ -266,7 +254,6 @@ return (
 "
               <h3 className="font-medium">{contact.name}</h3>"
               <p className="text-xs text-muted-foreground">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {contact.status || "Online"}
               </p>
             </div>
@@ -292,10 +279,6 @@ return (
 
             <Button variant="ghost" size="icon" aria-label="More options">
               <MoreVertical className="h-5 w-5" />
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </Button>
           </div>
         </div>
@@ -366,7 +349,6 @@ return (
               message && message.isMe ? 'justify-end' : 'justify-start'
             )}>;
 <div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className={cn(
                 "max-w-[80%] rounded-2xl px-4 py-2",
                 message.isMe 
@@ -375,7 +357,6 @@ return (
               )}
             >
               <p>{message.content}</p>
-<<<<<<< HEAD
                 className={cn(
 '
                   'text-xs mt-1 flex justify-end',
@@ -407,7 +388,6 @@ return (
               )}
             >
               <p>{message.content}</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className={cn(
                 "text-xs mt-1 flex justify-end",
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
@@ -504,14 +484,8 @@ key={message.id}
                 {message.isMe && message.status && (;"
                   <span className="ml-1">;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
                 {message.timestamp}
                 {message.isMe && message.status && (;
@@ -525,7 +499,6 @@ key={message.id}
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {message.status === 'read' ? '✓✓' : '✓'}
                   </span>;
                 )}
@@ -542,7 +515,6 @@ key={message.id}
 };
 }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="sticky bottom-0 bg-background border-t border-border p-2">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" aria-label="Attach file">
@@ -583,7 +555,6 @@ key={message.id}
 
           </Button>
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>
     </div>
   )
@@ -633,11 +604,7 @@ disabled={!new_message.trim ()}'
     </div>);
 }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 
             <PaperclipIcon className='h-5 w-5' />;
@@ -668,4 +635,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     </div>);`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

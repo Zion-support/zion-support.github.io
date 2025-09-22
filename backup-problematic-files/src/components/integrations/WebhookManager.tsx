@@ -1,5 +1,4 @@
 
-=======
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -146,12 +145,10 @@ export function WebhookManager() {;
                 <SelectContent>;
                   {eventOptions.map(option => (;
                     <SelectItem key={option.value} value={option.value}>;                      {option.label}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     </SelectItem>;
                   ))}
                 </SelectContent>;
               </Select>;
-<<<<<<< HEAD
 
           </div>;
         </CardContent>;

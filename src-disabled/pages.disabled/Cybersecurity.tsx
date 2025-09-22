@@ -3,7 +3,6 @@ import React from "react";
 import MainLayout from "../components/layout/MainLayout";
 
 const Cybersecurity: React.FC = () => {
-<<<<<<< HEAD
   return (
     <MainLayout title="Cybersecurity - Zion Tech Group" description="Comprehensive cybersecurity solutions to protect your business.">
       <div className="container mx-auto px-4 py-16">
@@ -232,7 +231,6 @@ const Cybersecurity: React.FC = () => {
       </div>
     </div>
 :src/pages/Cybersecurity.tsx
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

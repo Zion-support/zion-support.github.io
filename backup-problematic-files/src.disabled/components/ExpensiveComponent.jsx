@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import _React from';react' "export": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {''';
 const ExpensiveComponent = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const ExpensiveComponent = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -40,7 +40,6 @@ export default function TenantOnboarding() {
   );
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }),
 
   // Check if user has admin role"
@@ -642,6 +641,4 @@ export default function TenantOnboarding() { return null; }
 }
 
 ;
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/TenantOnboarding.tsx

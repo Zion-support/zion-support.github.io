@@ -1,5 +1,4 @@
 
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Control } from "react-hook-form",;
@@ -18,12 +17,10 @@ export function ContactFields({ control } ContactFieldsProps) {;
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Location</FormLabel>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <FormControl>;
               <Input placeholder="San Francisco, CA" {...field} />;
             </FormControl>;
             <FormMessage />;
-<<<<<<< HEAD
 
         render={({ field }) => (;
           <FormItem>;

@@ -1,4 +1,3 @@
->>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid',;
 import { readJsonFile, writeJsonFile } from '../../utils/db',;
@@ -58,19 +57,15 @@ const { jobId, talentSlug } = req.query
       writeJsonFile<Application[]>(FILE, apps)
       res.status(200).json({ application: existing })
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
       return
     }
 
     const app: Application = {
 
-=======
       return;
     }
 
     const app: Application = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       id: uuidv4(),
       jobId: String(jobId),
       talentSlug: String(talentSlug),'
@@ -92,10 +87,8 @@ id: uuidv4()
   res.setHeader('AllowGET, POST')
   res.status(405).end('Method Not Allowed')
 }
-=======
     return;
   }'
   res.setHeader('AllowGET, POST')'
   res.status(405).end('Method Not Allowed')
 };'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,27 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export type User = {;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export type UserRole = 'client' | 'talent';
 
 export type User = {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
-=======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
-<<<<<<< HEAD
-=======
 
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, {;
   createContext,;
   useContext,;
@@ -45,21 +33,16 @@ useState,;
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
-=======
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type UserRole = 'client' | 'talent';
 export type User = {
 id: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   name: string;
-=======
 id: string;
   id: string;,
 pr-12325
   name: string;
   email: string;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   role: UserRole;
 avatarUrl?: string;
   onboardingCompleted: boolean;
@@ -83,16 +66,11 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
   const [user, setUser] = useState<User | null>(null);
   useEffect(() => {;
     try {;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 export interface UserContextType {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
   completeOnboarding: () => void;};}
 };
 
@@ -126,7 +104,6 @@ export type User = {
 }
 ;
 export type UserContextValue = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   user: User | null;
   set_user: (user: User | null) => void;
   logout: () => void;
@@ -148,14 +125,12 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
       if (raw) {
         setUser(JSON.parse(raw));
       } else {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         setUser(DEFAULT_USER);
       }
     } catch {;
       setUser(DEFAULT_USER);
     }
   }, []);
-<<<<<<< HEAD
 
   useEffect(() => {
     try {
@@ -176,7 +151,6 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
       setUser
       logout: () => setUser(null)
       completeOnboarding: () =>
-<<<<<<< HEAD
 
   useEffect(() => {;
     try {;
@@ -211,10 +185,8 @@ export function useUser() {
     logout: () => setUser(null);
     completeOnboarding: () => setUser(prev => prev ? { ...prev, onboardingCompleted: true } : prev)}), [user]);
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export function useUser() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
@@ -228,7 +200,6 @@ export function useUser() {;
   }, []);
   updateUser: (userData: Partial<User>) => Promise<void>;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface UserProviderProps {}
   children: React.ReactNode;
@@ -237,9 +208,6 @@ interface UserProviderProps {}
 export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {};
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   // TODO: Implement
 }
   user: User | null;,
@@ -255,7 +223,6 @@ const UserContext = createContext<UserContextType | undefined>(undefined);
 export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   completeOnboarding: () => void;
 };
 
@@ -272,9 +239,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
 origin/cursor/automate-test-improve-and-merge-code-2533
 const [user, setUser] = useState<User | null>(null);
 const [loading, setLoading] = useState(true);
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
     // Check for existing user session
     const storedUser = localStorage.getItem('user');
@@ -306,9 +271,7 @@ name: 'John Doe',
       setLoading(false);
     }
   };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
   const value = useMemo<UserContextValue>(
     localStorage.removeItem('user');
   };
@@ -327,7 +290,6 @@ name: 'John Doe',
   };
 
   const contextValue = useMemo(
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     () => ({
       user
       setUser
@@ -350,12 +312,9 @@ name: 'John Doe',
     [user];
   );
 
-<<<<<<< HEAD
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export function useUser() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
@@ -363,26 +322,13 @@ export function useUser() {;
   return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default UserProvider;
 export default UserProvider;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
 };
 
 export default UserProvider;
 export default UserProvider;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 if (user) localStorage.setItem('zion.user', JSON.stringify(user));
       else localStorage.removeItem('zion.user');
     } catch {}
@@ -405,16 +351,8 @@ export function useUser() {
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Mock login logic - replace with actual authentication
       const mockUser: User = {
         id: '1',
@@ -448,5 +386,3 @@ pr-12325
 
 export default UserProvider;
 export default UserProvider;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

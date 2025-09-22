@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -94,13 +93,11 @@ export default function AccountSettings() {;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <SEO title="Account Settings" description="Manage your account" />;
       <Header />;
       <main className="container mx-auto py-8 px-4">;
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>;
-<<<<<<< HEAD
 
         <div className="grid gap-6 md:grid-cols-2">;
           <Card>;

@@ -1,12 +1,9 @@
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/settings/FraudDetectionSettings.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;
 import { Button } from '@/components/ui/button',;
 import { Label } from '@/components/ui/label',;
 import { ShieldAlert, Info } from 'lucide-react',;
-=======
 :temp_broken_files/settings/FraudDetectionSettings.tsx;
  export function FraudDetectionSettings () {;
   const { ;
@@ -17,7 +14,6 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { ShieldAlert, Info } from 'lucide-react';
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   Accordion,;
   AccordionContent,;
@@ -44,7 +40,6 @@ export function FraudDetectionSettings() {;
 title:"Settings saved",;
         description:"Your fraud detection preferences have been updated."}),;
     } catch (error) {;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/settings/FraudDetectionSettings.tsx
       console.error('Error saving preferences:', error),;
       toast({;
         title:"Error",;
@@ -54,7 +49,6 @@ title:"Settings saved",;
       toast({;
 title:"Error",,
   description:"Failed to save your preferences. Please try again.",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         variant:"destructive"}),;
     } finally {;
       setIsSaving(false),;
@@ -62,14 +56,11 @@ title:"Error",,
   },;
 ;
   return (;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/settings/FraudDetectionSettings.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card className="mb-8">;
       <CardHeader className="space-y-1">;
         <div className="flex items-center gap-2">;
           <ShieldAlert className="h-5 w-5 text-amber-500" />;
           <CardTitle className="text-xl">Fraud & Abuse Protection</CardTitle>;
-=======
   return (;"
     <Card className="mb-8">;"
 "
@@ -78,7 +69,6 @@ title:"Error",,
 </div>"
           <ShieldAlert className="h-5 w-5 text-amber-500" />;"
           <CardTitle className="text-xl">Fraud & Abuse Protection;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>;
         <CardDescription>;
 
@@ -95,12 +85,10 @@ title:"Error",,
 </p>
                 </p>;
 </div>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/settings/FraudDetectionSettings.tsx
                 checked={messageScanningEnabled}
                 onCheckedChange={setMessageScanningEnabled}
               />;
             </div>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/settings/FraudDetectionSettings.tsx
             <div className="flex items-center justify-between">;
               <div>;
                 <Label className="font-medium" htmlFor="activity-monitoring">;
@@ -145,7 +133,6 @@ title:"Error",,
                   The Zion AI Marketplace uses automated fraud detection systems to protect our community. This includes:;
                 </p>;
                 <ul className="list-disc pl-5 space-y-1 mb-2">;
-=======
               <Switch;"
                 id="message-scanning";""
                 aria-label="Message scanning";"
@@ -178,7 +165,6 @@ title:"Error",,
                 </p>;"
                 <ul className="list-disc pl-5 space-y-1 mb-2">;"
 </ul>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <li>Pattern detection in messages and job postings</li>;
                   <li>AI-powered content analysis</li>;
                   <li>Monitoring for suspicious account activities</li>;
@@ -186,7 +172,6 @@ title:"Error",,
                 <p>;
 You can opt out of some of these protections, but this may limit your ability to use certain platform features. ;
                   We prioritize keeping our marketplace safe while respecting your privacy.;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/settings/FraudDetectionSettings.tsx
                 </p>;
               </AccordionContent>;
             </AccordionItem>;
@@ -199,12 +184,10 @@ You can opt out of some of these protections, but this may limit your ability to
               className="bg-zion-purple hover:bg-zion-purple-light";"
             >;
 {isSaving ? "Saving..." :"Save Preferences"}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/settings/FraudDetectionSettings.tsx
             </Button>;
           </div>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/settings/FraudDetectionSettings.tsx
 
 }
     </Card>;
@@ -232,4 +215,3 @@ toast ({;
 }
 };
 mb-8"> <CardHeader className=" space-y-1"> <div className=" flex items-center gap-2"> <ShieldAlert className=" h-5 w-5 text-amber-500"/> <CardTitle className=" text-xl">Fraud & Abuse Protection</CardTitle> </div> <CardDescription> Configure privacy settings related to fraud detection and abuse prevention on the platform </CardDescription> </CardHeader> <CardContent> <div className=" space-y-6"> <div className=" space-y-4"> <div className=" flex items-center justify-between"> <div> <Label className=" font-medium"htmlFor=" message-scanning"> Message Content Scanning </Label> <p className=" text-sm text-muted-foreground"> Scan message content for potentially harmful or abusive material </p> </div> <Switch /> </div> <div className=" flex items-center justify-between"> <div> <Label className=" font-medium"htmlFor=" activity-monitoring"> Activity Monitoring </Label> <p className=" text-sm text-muted-foreground"> Monitor account activity for suspicious patterns </p> </div> <Switch /> </div> <div className=" flex items-center justify-between"> <div> <Label className=" font-medium"htmlFor=" ai-analysis"> AI-powered Analysis </Label> <p className=" text-sm text-muted-foreground"> Use AI to analyze content and behavior for potential fraud </p> </div> <Switch /> </div> </div> <Accordion type=" single"collapsible className=" w-full"> <AccordionItem value=" item-1"> <AccordionTrigger className=" text-sm font-medium"> <div className=" flex items-center gap-2"> <Info className=" h-4 w-4"/> About Fraud Detection </div> </AccordionTrigger> <AccordionContent className=" text-sm text-muted-foreground"> <p className=" mb-2"> The Zion AI Marketplace uses automated fraud detection systems to protect our community. This includes: </p> <ul className=" list-disc pl-5 space-y-1 mb-2"> <li>Pattern detection in messages and job postings</li> <li>AI-powered content analysis</li> <li>Monitoring for suspicious account activities</li> </ul> <p> You can opt out of some of these protections, but this may limit your ability to use certain platform features. We prioritize keeping our marketplace safe while respecting your privacy. </p> </AccordionContent> </AccordionItem> </Accordion> <div className=" pt-2" > <Button </Button> </div> </div> </CardContent> </Card>) ;"}'"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/settings/FraudDetectionSettings.tsx

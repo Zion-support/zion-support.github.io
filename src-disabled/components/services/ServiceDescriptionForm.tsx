@@ -1,5 +1,4 @@
 :src/components/services/ServiceDescriptionForm.tsx
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -18,7 +17,6 @@ const formSchema = z.object({
   keyFeatures: z.string(),
   targetAudience: z.string()}),
 
-<<<<<<< HEAD:src_backup/components/services/ServiceDescriptionForm.tsx
 type FormData = z.infer<typeof formSchema>,
 
 interface ServiceDescriptionFormProps {
@@ -46,7 +44,6 @@ const form_schema = z.object ({"
   target_audience: z.string ()}),
 type FormData = z.infer < typeof form_schema>;"
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high - quality solutions tailored to your specific needs.";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 :src_backup/components/services/ServiceDescriptionForm.tsx
@@ -287,7 +284,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </>;
               )}
 :src_backup/components/services/ServiceDescriptionForm.tsx
-<<<<<<< HEAD
             </Button>;
           </form>;
         </Form>;
@@ -298,13 +294,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 ;
-=======
   );
 }
 ;
 
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/ServiceDescriptionForm.tsx
             </Button>
           </form>
         </Form>
@@ -333,8 +327,4 @@ toast ({;
   )
 }
 :src/components/services/ServiceDescriptionForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/services/ServiceDescriptionForm.tsx

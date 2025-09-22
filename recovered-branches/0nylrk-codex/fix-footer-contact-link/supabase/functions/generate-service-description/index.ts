@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-<<<<<<< HEAD
 
 "
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"";
@@ -27,45 +21,27 @@ import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts","
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
-=======
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
 const corsHeaders = {
@@ -79,11 +55,8 @@ import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -101,7 +74,6 @@ serve(async (req) => {
         });
         {
           status: 400
-=======
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*","
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -114,7 +86,6 @@ serve(async (req) => {"
         });
         {}
           status: 400"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           headers: { ...corsHeaders, "Content-Type": "application/json" }
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
@@ -207,8 +178,6 @@ const { title, keyFeatures, targetAudience } = await req && req.json();
         });
         {
           status: 400
-<<<<<<< HEAD
-<<<<<<< HEAD
           headers: { ...corsHeaders, "Content-Type": "application/json" }
 
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,'
@@ -253,8 +222,6 @@ if ( {) {}
       )
     }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
         });
         {
@@ -263,19 +230,12 @@ if ( {) {}
       );
     }
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
         }
       );
     }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const configuration = new Configuration({
-=======
     const configuration = new Configuration({'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     const configuration = new Configuration({
         JSON.stringify({;"
           error: "Missing required field: title";")
@@ -323,42 +283,23 @@ if ( {) {
 
     const configuration = new Configuration({)"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
     const prompt = `Create a professional and detailed service description for the following service:
 Title: ${title}
 Key Features: ${keyFeatures |"Not specified"}
 Target Audience: ${targetAudience |"General users"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     const configuration = new Configuration({;'
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
 const openai = new OpenAIApi(configuration),;
-<<<<<<< HEAD
-<<<<<<< HEAD
     const prompt = `Create a professional and detailed service description for the following service:;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 Title: ${title}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 The description should: 1. Be approximately 200-300 words
 2. Highlight the key benefits and unique selling points
 3. Use professional language suitable for a marketplace listing
@@ -374,12 +315,9 @@ The description should: 1. Be approximately 200-300 words;
 {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
       {}
         status: 500"
         headers: { ...corsHeaders, "Content-Type": "application/json" }"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     const prompt = `Create a professional and detailed service description for the following service:;
 
 Title: ${title}
@@ -411,7 +349,6 @@ The description should: 1. Be approximately 200-300 words
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.error ("Error in generate - service - description:", error);
 ;
     return new Response (
@@ -423,8 +360,6 @@ The description should: 1. Be approximately 200-300 words
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
 Key Features: ${keyFeatures || "Not specified"}
-<<<<<<< HEAD
-<<<<<<< HEAD
 Target Audience: ${targetAudience || "General users"}
 ;
 The description should: 1. Be approximately 200-300 words;
@@ -442,9 +377,7 @@ The description should: 1. Be approximately 200-300 words;
 {;"
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
-=======
 Target Audience: ${targetAudience || "General users"}      }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     );
   } catch (error) {;"
     console.error("Error in generate-service-description:", error),;
@@ -452,7 +385,6 @@ Target Audience: ${targetAudience || "General users"}      }
       JSON.stringify({;"
         error: "Failed to generate service description",;
         details: error.message;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }),;
       {;
         status: 500,;"
@@ -466,11 +398,8 @@ Target Audience: ${targetAudience || "General users"}      }
 
 ;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     );
 `
 5. Include a compelling opening and closing statement`,
@@ -809,15 +738,8 @@ return new Response (JSON.stringify ({
   }
 
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       JSON.stringify({ description: generatedDescription }),
   } catch (error) {"
     console.error("Error in generate-service-description:", error),"
@@ -872,4 +794,3 @@ return new Response (JSON.stringify ({
 pr-12325
 "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

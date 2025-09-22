@@ -1,15 +1,11 @@
 :pages_backup/revolutionary-2026-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation';
 import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero';
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
 import {Phone, Mail} from 'lucide-react';
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2026-services.tsx
 import React from 'react',
 import Head from 'next/head',
 import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation',
@@ -19,7 +15,6 @@ import { Phone, Mail } from 'lucide-react';
 :pages_backup/revolutionary-2026-services.tsx
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase',
 import { Phone, Mail } from 'lucide-react',
-=======
 
 import React from 'react',;
 import Head from 'next/head',;
@@ -30,26 +25,16 @@ import { Phone, Mail } from 'lucide-react';
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase',;
 import { Phone, Mail } from 'lucide-react',;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2026-services.tsx
 
 :pages_backup/revolutionary-2026-services.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function Revolutionary2026ServicesPage() {
-=======
 
 export default function Revolutionary2026ServicesPage() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2026-services.tsx
   return (
     <>
       <Head>
         <title>Revolutionary 2026 Services - Zion Tech Group</title>
 :pages_backup/revolutionary-2026-services.tsx
-<<<<<<< HEAD:pages/revolutionary-2026-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {};
   constructor(props) {};
@@ -79,9 +64,7 @@ import Revolutionary2026UltimateNavigation from '../components / layout / Revolu
 import Revolutionary2026UltimateHero from '../components / sections / Revolutionary2026UltimateHero';'
 import Revolutionary2026UltimateServicesShowcase from '../components / sections / Revolutionary2026UltimateServicesShowcase';'
 import {Phone, Mail} from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <meta
           name='description'
           content='Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions.'
@@ -100,7 +83,6 @@ import {Phone, Mail} from 'lucide-react';
         />;'
         <meta name='viewport' content='width=device-width, initial-scale=1' />;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Open Graph */}
         <meta'
           property='og:title''
@@ -142,7 +124,6 @@ import {Phone, Mail} from 'lucide-react';
           name='address'
           content='364 E Main St STE 1008 Middletown DE 19709'
 />
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Structured Data */}
         <meta name="description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions." />
         <meta name="keywords" content="AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group" />
@@ -185,15 +166,11 @@ import {Phone, Mail} from 'lucide-react';
         />;
 
 :pages_backup/revolutionary-2026-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default /**
  * Revolutionary2026ServicesPage - Function description
-=======
 
 export default /**;
  * Revolutionary2026ServicesPage - Function description;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2026-services.tsx
  */
 function Revolutionary2026ServicesPage() {}
   return (
@@ -252,8 +229,6 @@ function Revolutionary2026ServicesPage() {}
         />;
         {/* Structured Data */}
 :pages_backup/revolutionary-2026-services.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -263,10 +238,6 @@ function Revolutionary2026ServicesPage() {}
               name: 'Zion Tech Group'
               url: 'https://ziontechgroup.com'
               logo: 'https://ziontechgroup.com/logo.png'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2026-services.tsx
 
             __html: JSON && JSON.stringify({'
               '@context': 'https://schema && schema.org','
@@ -276,7 +247,6 @@ function Revolutionary2026ServicesPage() {}
               logo: 'https://ziontechgroup && ziontechgroup.com/logo && logo.png',
 
 :pages_backup/revolutionary-2026-services.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               description:
                 'Revolutionary AI, quantum computing, and emerging technology services for 2026'
               address: {'
@@ -289,7 +259,6 @@ function Revolutionary2026ServicesPage() {}
               }
 :pages_backup/revolutionary-2026-services.tsx
               contactPoint: {
-<<<<<<< HEAD
               "address": {
                 "@type": "PostalAddress";
                 "streetAddress": "364 E Main St STE 1008";
@@ -306,7 +275,6 @@ function Revolutionary2026ServicesPage() {}
               };
               "sameAs": [
                 "https://github.com/Zion-Holdings"
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         {/* Navigation */}
         <Revolutionary2026UltimateNavigation />
@@ -317,11 +285,7 @@ function Revolutionary2026ServicesPage() {}
         {/* Additional Content Sections */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               contactPoint: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2026-services.tsx
         {/* Navigation */}
         <Revolutionary2026UltimateNavigation />
 
@@ -471,11 +435,6 @@ color: 'from-indigo-500 to-purple-500'
             <div className='text-center mb-16'>
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2026-services.tsx
-=======
 
             __html: JSON && JSON.stringify({
               '@context': 'https://schema && schema.org',
@@ -495,7 +454,6 @@ color: 'from-indigo-500 to-purple-500'
                 addressCountry: 'US'
               }
               contactPoint: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 '@type': 'ContactPoint',
                 telephone: '+1-302-464-0950',
                 contactType: 'customer service',
@@ -519,9 +477,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Revolutionary2026UltimateServicesShowcase />
 
         {/* Additional Content Sections */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2026-services.tsx
       <main className="min-h-screen bg-gray-900">
         {/* Navigation */  } catch (error) {"
     console.error("Error:", error);"
@@ -547,27 +502,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 :pages_backup/revolutionary-2026-services.tsx
 }
-<<<<<<< HEAD
-=======
 }"
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">"
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>
           "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2026-services.tsx
           <div className="max-w-7xl mx-auto relative z-10">
             {/* Why Choose Zion Tech Group */}"
             <div className="text-center mb-16">"
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
 :pages_backup/revolutionary-2026-services.tsx
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Why Choose Zion Tech Group?
                 </span>
               </h2>
 :pages/revolutionary-2026-services.tsx
-<<<<<<< HEAD
                 {
                   icon: '🧠',
                   title: 'AI Consciousness',
@@ -605,8 +553,6 @@ color: 'from-teal-500 to-cyan-500'
 color: 'from-indigo-500 to-purple-500'
                 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   Why Choose Zion Tech Group?
                 </span>
               </h2>
@@ -616,14 +562,11 @@ color: 'from-indigo-500 to-purple-500'
               </p>
 
             </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {
                   icon: '🧠',
                   title: 'AI Consciousness',
                   description: 'First-to-market AI consciousness orchestration and autonomous intelligence systems.',
                   color: 'from-purple-500 to-pink-500'
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>
 
@@ -635,7 +578,6 @@ color: 'from-indigo-500 to-purple-500'
                   Why Choose Zion Tech Group?
                 </span>
               </h2>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 We're not just another technology company. We're pioneers in the
                 future of AI, quantum computing, and emerging technologies,
@@ -652,12 +594,9 @@ description:
                     'First-to-market AI consciousness orchestration and autonomous intelligence systems.',
                   color: 'from-purple-500 to-pink-500',
                 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {
                   icon: '⚛️',
                   title: 'Quantum Technology',
-=======
 
                   Why Choose Zion Tech Group?
                 </span>
@@ -671,7 +610,6 @@ description:
                 {'
                   icon: '⚛️','
                   title: 'Quantum Technology','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2026-services.tsx
                   description: 'Leading-edge quantum computing, cryptography, and quantum internet infrastructure.',
                 {'
                   icon: '🚀','
@@ -688,61 +626,42 @@ description:
                   color: 'from-yellow-500 to-orange-500'
 :pages_backup/revolutionary-2026-services.tsx
                 {
-<<<<<<< HEAD:pages/revolutionary-2026-services.tsx
-<<<<<<< HEAD
                   icon: '🌐',
                   title: 'Global Impact',
                   description: 'Serving 2,500+ customers worldwide with transformative technology solutions.',
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   icon: '🌐'
                   title: 'Global Impact'
                   description:
                     'Serving 2,500+ customers worldwide with transformative technology solutions.'
                   color: 'from-indigo-500 to-purple-500'
                 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2026-services.tsx
               ].map((feature, index) => (
                 <div key={index} className="group">
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105">
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>
 :pages_backup/revolutionary-2026-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                       {feature.icon  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/revolutionary-2026-services.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </div>
                     <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                     <p className="text-gray-400 leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
 :pages_backup/revolutionary-2026-services.tsx
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
 :pages_backup/revolutionary-2026-services.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2026-services.tsx
               ))  } catch (error) {
     console.error("Error:", error);
-=======
                 {'
                   icon: '🌐','
                   title: 'Global Impact','
@@ -761,7 +680,6 @@ description:
 
               ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2026-services.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -776,14 +694,7 @@ description:
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
 
 :pages_backup/revolutionary-2026-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
                     </div>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2026-services.tsx
                     <h3 className='text-xl font-bold text-white mb-4'>
                       {feature.title}
                     </h3>
@@ -799,9 +710,6 @@ description:
               <div className='bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20'>
                 <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages_backup/revolutionary-2026-services.tsx
-<<<<<<< HEAD:pages/revolutionary-2026-services.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Ready to Experience the Future?
                 </h3>"
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -811,15 +719,8 @@ description:
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 :pages_backup/revolutionary-2026-services.tsx
                   <a 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2026-services.tsx
                   Ready to Experience the Future?
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -828,7 +729,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <a 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   Ready to Experience the Future?
                 </h3>"
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -838,8 +738,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 :pages_backup/revolutionary-2026-services.tsx
                   <a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
             {/* Call to Action */}
             <div className='text-center'>
               <div className='bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20'>
@@ -866,22 +764,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2026-services.tsx
                     href="tel:+13024640950"
-=======
                   <a;
 "
                     href="tel:+13024640950""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2026-services.tsx
                     className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2"
                   >"
                     <Phone className="w-5 h-5" />
 :pages_backup/revolutionary-2026-services.tsx
                     Call +1 302 464 0950
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     href="mailto:kleber@ziontechgroup.com"
                     className="border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                   >"
@@ -890,12 +781,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Email Us
 
                   </a>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                     href="mailto:kleber@ziontechgroup.com"
                     className="border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                   >
-=======
                   </a>
                   <a 
                   </Link>
@@ -904,12 +792,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className="border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     <Mail className="w-5 h-5" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2026-services.tsx
                     <Mail className='w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
                     Email Us
                   </a>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
               </div>
             </div>
@@ -917,14 +803,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </main>
 :pages_backup/revolutionary-2026-services.tsx
-<<<<<<< HEAD:pages_backup/revolutionary-2026-services.tsx
-<<<<<<< HEAD:pages/revolutionary-2026-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>
   );
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2026-services.tsx
     </>;
   );
 
@@ -932,16 +812,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="text-center">;
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">;
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                     href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                     className='border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2'>;
-=======
 
 '
                     href='mailto:kleber@ziontechgroup && ziontechgroup.com''
                     className='border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2026-services.tsx
                     <Mail className='w-5 h-5' />                    Email Us;
             __html: JSON.stringify ({'
               '@context': 'https://schema.org','
@@ -1056,7 +933,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='text - center'>;'
               <div className='bg - gradient - to - r from - purple - 900 / 20 to - cyan - 900 / 20 rounded - 3xl p - 12 border border - purple - 500 / 20'>;'
                 <h3 className='text - 3xl md:text - 4xl font - bold text - white mb - 6'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Ready to Experience the Future?;
                 </h3>;
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
@@ -1078,9 +954,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Mail className="w-5 h-5" />;
                     Email Us;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </a>;
                 </div>;
               </div>;
@@ -1088,32 +961,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </section>;
       </main>;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2026-services.tsx
 
 :pages_backup/revolutionary-2026-services.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 :pages_backup/revolutionary-2026-services.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     </>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/revolutionary-2026-services.tsx
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/revolutionary-2026-services.tsx
-=======
     </>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/revolutionary-2026-services.tsx

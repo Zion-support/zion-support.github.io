@@ -47,4 +47,3 @@ export const useResumeProgress = (resume:Resume | null) => {;
   // Basic info is always considered (1 point) completed += 1;
 // Work experience (1 point if at least one entry) return progress 
 };
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

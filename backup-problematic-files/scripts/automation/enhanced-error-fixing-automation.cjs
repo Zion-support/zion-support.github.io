@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
@@ -39,7 +38,6 @@ class EnhancedErrorFixingAutomation {
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, "utf8");
-        if (content.includes("<<<<<<< HEAD") || content.includes("
           this.log(`Fixing merge conflicts in ${file}`);
 
           // Simple merge conflict resolution - keep the HEAD version
@@ -48,7 +46,6 @@ class EnhancedErrorFixingAutomation {
           let inConflict = false;
 
           for (const line of lines) {
-if (line.includes("<<<<<<< HEAD")) {
               inConflict = true;
               continue;
             } else if (line.includes("
@@ -141,9 +138,7 @@ module.exports = EnhancedErrorFixingAutomation;
 
 #!/usr/bin/env node;
 #!/usr/bin/env node;
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -317,6 +312,3 @@ export default function"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
 "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

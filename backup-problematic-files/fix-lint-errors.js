@@ -128,12 +128,10 @@ pr-12325
       return match;
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {;"
   // Check if imports have proper commas;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {;
   const cleanImports = imports.trim().split(/\s+/).join();
   );
   // Fix missing semicolons after variable declarations;
-<<<<<<< HEAD
 // Main function;
 async function $1() {;
   // Get all TypeScript/JavaScript files;
@@ -165,7 +163,6 @@ fixedCount++}
 
   // console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)}
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
         return match.replace(imports, cleanImports)};
       return match,
@@ -204,4 +201,3 @@ errorCount++};
   };
 ,
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
-<<<<<<< HEAD

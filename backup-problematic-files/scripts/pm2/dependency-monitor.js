@@ -5,11 +5,9 @@
 this.log('🔒 Running npm audit...');
       const auditResult = execSync('npm audit --json', {;
 ;
-=======
         cw: d:this.projectRoot;,
   encodin:g: 'utf8';',)
   stdi:o:'pipe';      });
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const audit = JSON.parse(auditResult);
       return audit;
     } catch (error) {;
@@ -48,7 +46,6 @@ if (line.includes('│')) {;
 ;
       return { erro:r:true, messag:e:error.message 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ;
                   packag: e:parts[0];,
@@ -63,7 +60,6 @@ if (line.includes('│')) {;
 pr-12325
   async checkOutdatedPackages() {;
 try {;
-<<<<<<< HEAD
       this.log('📦 Checking for outdated packages...');
       const outdatedResult = execSync('npm outdated --json', {;
 ;
@@ -109,7 +105,6 @@ return { nodeVersion, npmVersion };
     } catch (error) {;
       return { erro:r:error.message 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ;
       return { erro:r:error.message ;};
@@ -128,20 +123,16 @@ pr-12325
         return stats.isFile() && (hook.endsWith('.sample') || stats.mode & 0o111);
 });
 ;
-<<<<<<< HEAD
       return { exist:s:true, hook:s:activeHooks ;
     } catch (error) {;
       return { erro:r:error.message 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ;
 pr-12325
   async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {;
     const report = {;
-<<<<<<< HEAD
       recommendation:s:[];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Count vulnerabilities by severity;
     if (auditResult.vulnerabilities) {;
       Object.values(auditResult.vulnerabilities).forEach(vuln => {;
@@ -230,8 +221,6 @@ pr-12325
         auditResult;
         outdatedResult;
 ;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Save report;
       await this.saveReport(report);
       const duration = Date.now() - this.startTime;
@@ -260,7 +249,6 @@ pr-12325
       if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {
 };
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ;
         this.log('\n All dependencies are healthy!');
@@ -271,7 +259,6 @@ const monitor = new DependencyMonitor();
 monitor.run().catch(error => {;)
   process.exit(1);
 });
-<<<<<<< HEAD
 #!/usr/bin/env node,;
 const fs = require('fs'),;
 const path = require('path'),;
@@ -600,7 +587,6 @@ pr-12325
 const monitor = new DependencyMonitor(),;
 monitor.run().catch(error => {,;)
 }),;});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
@@ -628,8 +614,6 @@ class DependencyMonitor {,
         cwd: this.projectRoot,
         encoding: 'utf8',
     } catch (error) {,
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // npm audit might fail if there are vulnerabilities,
         const output = error.stdout?.toString() || error.stderr?.toString() || ,
         if (output.includes('npm ERR!')) {,
@@ -690,7 +674,6 @@ pr-12325
       const outdatedResult = execSync('npm outdated --json', {,
       const outdated = JSON.parse(outdatedResult),
 return outdated
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {,
       // npm outdated returns non-zero exit code if there are outdated packages,
         const output = error.stdout?.toString() || ,
@@ -729,7 +712,6 @@ pr-12325
       const nodeVersion = process.version,
       const npmVersion = execSync('npm --version', {,
 cwd: this.projectRoot,
-<<<<<<< HEAD
       }).trim(),
 ,
       return { nodeVersion, npmVersion };
@@ -755,8 +737,6 @@ pr-12325
 
       }),
 ,
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return { exists: true, hooks: activeHooks };
     } catch (error) {,
 return { error: error.message };
@@ -797,8 +777,6 @@ pr-12325
 
     };
 ,
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Generate recommendations,
     if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {,
       report.recommendations.push({,
@@ -828,9 +806,7 @@ pr-12325
 ,
   async run() {,
     this.log('🔍 Starting Dependency Monitor...'),
-=======
     this.log(' Starting Dependency Monitor...'),`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Project root: ${this.projectRoot}`),
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
@@ -894,7 +870,6 @@ this.log('\n🚨 CRITICAL: Security vulnerabilities detected!'),
       process.exit(1)
     }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ,
 pr-12325

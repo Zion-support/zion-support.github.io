@@ -1,18 +1,12 @@
 
 import React from 'react';
 import React from 'react';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import React from 'react',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next/head';
-=======
 
 import React from 'react';
 '
 import Head from 'next/head';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Layout from '../components/layout/Layout';
 export default function MarketPricingPage() {}
   return (
@@ -30,91 +24,48 @@ export default function MarketPricingPage() {}
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">"
               <h2 className="text-2xl font-semibold mb-2">LLM & AI Platforms</h2>"
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </ul>
-=======
 
               </ul>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month depending on traffic and model choice.</div>
             </div>"
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">"
               <h2 className="text-2xl font-semibold mb-2">Security & Compliance</h2>"
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </ul>
-=======
 
               </ul>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$5,000/month based on scale and compliance scope.</div>
             </div>"
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">"
               <h2 className="text-2xl font-semibold mb-2">Data & Analytics</h2>"
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </ul>
-=======
 
               </ul>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$3,000/month depending on storage, queries, and concurrency.</div>
             </div>"
             <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">"
               <h2 className="text-2xl font-semibold mb-2">Cloud & Edge</h2>"
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </ul>
-=======
 
               </ul>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$10,000/month depending on traffic and workloads.</div>
             </div>"
             <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6">"
               <h2 className="text-2xl font-semibold mb-2">Vector Search & RAG Infra</h2>"
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,000/month based on dimensions, throughput, and replicas.</div>
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Email Deliverability & Warmup</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </ul>
-=======
 
               </ul>"
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,000/month based on dimensions, throughput, and replicas.</div>"
@@ -123,105 +74,62 @@ export default function MarketPricingPage() {}
               <ul className="list-disc list-inside text-slate-300 space-y-1">
 
               </ul>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$300/month for warmup and monitoring, ESP fees separate.</div>
             </div>"
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">"
               <h2 className="text-2xl font-semibold mb-2">Product Analytics & Personalization</h2>"
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </ul>
-=======
 
               </ul>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
             </div>"
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">"
               <h2 className="text-2xl font-semibold mb-2">Vector Search & Retrieval</h2>"
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </ul>
-=======
 
               </ul>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,000/month depending on index size and QPS.</div>
             </div>"
             <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">"
               <h2 className="text-2xl font-semibold mb-2">API Security & Edge</h2>"
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </ul>
-=======
 
               </ul>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month based on traffic and protections.</div>
             </div>"
             <div className="bg-black/30 rounded-2xl border border-slate-500/30 p-6">"
               <h2 className="text-2xl font-semibold mb-2">Privacy, PII & DSAR</h2>"
               <ul className="list-disc list-inside text-slate-300 space-y-1">
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </ul>
-=======
 
               </ul>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month by data volume and systems.</div>
             </div>"
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">"
               <h2 className="text-2xl font-semibold mb-2">Identity & SSO/SCIM</h2>"
               <ul className="list-disc list-inside text-slate-300 space-y-1">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
 
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </div>
         </div>
       </div>
     </Layout>
   )
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <Layout>;
       <Head>;
         <title > Market Pricing & Competitor References | Zion Tech Group</title>;"
@@ -333,27 +241,16 @@ export default function MarketPricingPage() {}
                 <li > WorkOS pricing: <a className="text - cyan - 400 underline" href={`https://workos.com / pricing`} target="_blank" rel="noopener noreferrer">workos.com / pricing</a></li>;"`
                 <li > Okta pricing: <a className="text - cyan - 400 underline" href={`https://www.okta.com / pricing/`} target="_blank" rel="noopener noreferrer">okta.com / pricing</a></li>;
               </ul>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Layout>);
 }
 ;
 
 ;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export interface ProfileSkill {;
   name:string;
   level:number, // 1-5;
@@ -52,4 +51,3 @@ export interface ProfileData {;
   hourlyRate?:number;
   contactEmail?:string;
 } 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

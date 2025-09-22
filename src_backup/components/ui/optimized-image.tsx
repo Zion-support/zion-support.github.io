@@ -1,14 +1,10 @@
 :src_backup/components/ui/optimized-image.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ImageIcon, AlertTriangle } from 'lucide-react'
 import { cn  } from '@/lib/utils';
 import { imageOptimization  } from '@/utils/performance';
-=======
 import { ImageIcon, AlertTriangle } from 'lucide-react'';
 import { cn  } from '@/lib/utils';'
 import { imageOptimization  } from '@/utils/performance';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/optimized-image.tsx
 import { logWarn } from '@/utils/productionLogger';
 interface OptimizedImageProps {;'
 import React, { useState, useRef, useEffect } from 'react';'
@@ -24,7 +20,6 @@ interface OptimizedImageProps {}
   width?: number;
   height?: number;
 :src/components/ui/optimized-image.tsx
-<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
   const [isInView, setIsInView] = useState(!lazy |priority)
@@ -37,7 +32,6 @@ interface OptimizedImageProps {}
   const loadStartTime = useRef<number>(0)
   // Intersection Observer for lazy loading      entries => {
       entries => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         const [entry] = entries;        // Check condition
 if ( {) {
   $2
@@ -62,9 +56,7 @@ const [entry] = entries;        if (entry && entry.isIntersecting) {
 root_margin: '50px', // Start loading 50px before image comes into view;
         threshold: 0.1,
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/optimized-image.tsx
       }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )
     if (imgRef.current) {}
       observerRef.current.observe(imgRef.current)
@@ -73,7 +65,6 @@ root_margin: '50px', // Start loading 50px before image comes into view;
       observerRef.current?.disconnect()
     }
 :src/components/ui/optimized-image.tsx
-<<<<<<< HEAD
   }, [lazy, priority, isInView])
   // Start load time tracking
   useEffect(() => {
@@ -87,7 +78,6 @@ root_margin: '50px', // Start loading 50px before image comes into view;
         entries.forEach(entry => {          if (entry.name === src && entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming              resourceEntry.responseEnd - resourceEntry.requestStart
               resourceEntry.responseEnd - resourceEntry.requestStart
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             setMetrics({
               loadTime
               fileSize
@@ -206,11 +196,8 @@ if ( {) {}
       set_retries (0);
 
 :src_backup/components/ui/optimized-image.tsx
-<<<<<<< HEAD:src/components/ui/optimized-image.tsx
     } else {
-=======
     } else {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/optimized-image.tsx
       setIsLoading(false)
       setHasError(true)
       onError?.()
@@ -220,7 +207,6 @@ if ( {) {}
 // Simulate loading progress for demo purposes
   useEffect(() => {    const interval = setInterval((,) => {
     const interval = setInterval((,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setLoadProgress(prev => {
         if (prev >= 90) {
           clearInterval(interval)
@@ -249,16 +235,13 @@ if ( {) {}
   style?: React && React.CSSProperties;
 
 :src_backup/components/ui/optimized-image.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { motion, AnimatePresence } from 'framer-motion',;
 import { ImageIcon, AlertTriangle } from 'lucide-react';
 import { cn } from '@/lib/utils',;
 import { imageOptimization } from '@/utils/performance',;
-=======
 '
 import React, { useState, useRef, useEffect } from 'react',;'
 import Image from 'next/image',;'
@@ -266,7 +249,6 @@ import { motion, AnimatePresence } from 'framer-motion',;'
 import { ImageIcon, AlertTriangle } from 'lucide-react';'
 import { cn } from '@/lib/utils',;'
 import { imageOptimization } from '@/utils/performance',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/optimized-image.tsx
 import { logWarn } from '@/utils/productionLogger',;
 interface OptimizedImageProps {;
   src: string,;
@@ -292,7 +274,6 @@ interface OptimizedImageProps {;
   loading?: 'lazy' | 'eager',;
   style?: React.CSSProperties,;
 :src/components/ui/optimized-image.tsx
-<<<<<<< HEAD
   objectPosition?: string;
 }
 ;
@@ -305,9 +286,7 @@ interface ImageMetrics {;
 ;
 :src/components/ui/optimized-image.tsx
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
-=======
   objectPosition?: string;export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   src,;
   alt,;
   width,;
@@ -343,7 +322,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
                 loadTime: `${loadTime.toFixed(2)}ms`;
 
               });
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/optimized-image.tsx
             }
           }
         });
@@ -415,7 +393,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 :src/components/ui/optimized-image.tsx
 }
 
-<<<<<<< HEAD
     return (
 <div className={placeholderClassName}>
         <ImageIcon className="h-8 w-8 text-gray-400" />
@@ -426,12 +403,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   // Container styles
   const containerStyle: React.CSSProperties = {
     aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
-=======
 
   // Container styles;
   const containerStyle: React.CSSProperties = {}`
     aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/optimized-image.tsx
     width: width ? `${width}px` : undefined,
 height: height ? `${height}px` : undefined},
 
@@ -449,13 +424,11 @@ height: height ? `${height}px` : undefined},
           <motion.div;
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-<<<<<<< HEAD
             transition={{ duration: 0.3 }}
 
             transition={{ duration: 0.3 }}
 
 :src/components/ui/optimized-image.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className="absolute inset-0"
           >
             {generatePlaceholder()}
@@ -468,22 +441,16 @@ height: height ? `${height}px` : undefined},
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">
 :src_backup/components/ui/optimized-image.tsx
                 <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="h-full bg-blue-500"
-=======
 
                   className="h-full bg-blue-500"
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/optimized-image.tsx
                   initial={{ width: 0 }}
-=======
                 <motion.div;
 "
                   className="h-full bg-blue-500"
 
                   initial={{ width: 0 }}`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/optimized-image.tsx
                   animate={{ width: `${loadProgress}%` }}
                   transition={{ duration: 0.3 }}
                 />;
@@ -500,14 +467,11 @@ height: height ? `${height}px` : undefined},
             animate={{ opacity: 1 }}
 
 :src_backup/components/ui/optimized-image.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
 
 :src/components/ui/optimized-image.tsx
           >
-=======
     if (placeholder === 'color') {;
       return (;
         <div;
@@ -520,16 +484,12 @@ height: height ? `${height}px` : undefined},
           >
             {generatePlaceholder()}
 ;          >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <AlertTriangle className="h-8 w-8 mb-2" />
             <span className="text-sm">Failed to load image</span>
             {retries > 0 && (
 :src/components/ui/optimized-image.tsx
-<<<<<<< HEAD
               <span className="text-xs mt-1">Retried {retries} times</span>
-=======
 
-=======
 "
             className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
 
@@ -538,29 +498,19 @@ height: height ? `${height}px` : undefined},
             <span className="text-sm">Failed to load image</span>
             {retries > 0 && (
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/optimized-image.tsx
               <span className="text-xs mt-1">Retried {retries} times</span>
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/optimized-image.tsx
             )}
           </motion.div>;
-=======
           </motion.div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         )}
 ;
         {/* Actual image */}
 :src/components/ui/optimized-image.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         {isInView && !hasError && (;
-=======
 
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/optimized-image.tsx
         {isInView && !hasError && (;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <motion.img;
             src={optimizedSrc}
             srcSet={srcSet}
@@ -573,8 +523,6 @@ height: height ? `${height}px` : undefined},
               `object-${objectFit}`,;
               isLoading ? 'opacity-0' : 'opacity-100';
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             )}
             initial={{ opacity: 0 }}
             animate={{ opacity: isLoading ? 0 : 1 }}
@@ -585,10 +533,7 @@ height: height ? `${height}px` : undefined},
 :src/components/ui/optimized-image.tsx
   opacity: 0 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   opacity: 0;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/optimized-image.tsx
       </AnimatePresence>;
     </div>;
   );
@@ -606,20 +551,13 @@ interface ImageGalleryProps {;
   onImageClick?: (index: number) => void;
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
-=======
 export const ImageGallery: React.FC<ImageGalleryProps> = ({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/optimized-image.tsx
   images,
   columns = 3,'
   aspectRatio = '16/9',
   className,
 :src/components/ui/optimized-image.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   onImageClick
 }) => {
   const [loadedCount, setLoadedCount] = useState(0),
@@ -628,9 +566,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({}
     setLoadedCount(prev => prev + 1)
   },
 
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/optimized-image.tsx
 
   return ('
     <div className={cn('space-y-4', className)}>"
@@ -641,9 +577,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({}
         </span>
       </div>
 :src/components/ui/optimized-image.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       <div;`
         className={`grid gap-4`}
@@ -655,9 +589,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({}
           <motion.div;
             key={index}
 :src/components/ui/optimized-image.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/optimized-image.tsx
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}"
@@ -667,16 +599,12 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({}
             <div className="relative">
 
               <OptimizedImage
-=======
               <OptimizedImage;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/optimized-image.tsx
                 src={image.src}
                 alt={image.alt}
                 aspectRatio={aspectRatio}
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/optimized-image.tsx
                 className="rounded-lg group-hover:scale-105 transition-transform duration-300"
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images;
@@ -688,7 +616,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({}
                 </div>
 :src/components/ui/optimized-image.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
             </div>;
           </motion.div>;
@@ -697,11 +624,8 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({}
 const initials = null;
     fallback ||
 
-<<<<<<< HEAD:src/components/ui/optimized-image.tsx
     alt
-=======
     alt'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/optimized-image.tsx
       .split(' ')
       .map(n => n[0])'
       .join('')
@@ -710,7 +634,6 @@ const initials = null;
     >
       {src ? (
 :src/components/ui/optimized-image.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>;
     </div>;
   );
@@ -743,8 +666,6 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
   return (;
     <div className={cn('relative rounded-full overflow-hidden', sizeClasses[size], className)}>;
       {src ? (;
-<<<<<<< HEAD:src/components/ui/optimized-image.tsx
-<<<<<<< HEAD
         <OptimizedImage;
           src={src}
           alt={alt}
@@ -766,8 +687,6 @@ fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&b
           priority={true}
 
 :src/components/ui/optimized-image.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   className,;
 }) => {  const sizeClasses = {;'
     sm: 'h-8 w-8',;'
@@ -797,13 +716,11 @@ fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&b
           placeholderColor='#f3f4f6'
           priority={true}
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/optimized-image.tsx
           className="rounded-full"
         />
       ) : ("
         <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold">
 {initials}
-<<<<<<< HEAD
         </div>;
       )}
     </div>;
@@ -811,7 +728,6 @@ fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&b
 };
 
 },;
-=======
                 </div>              )}
             </div>
           </motion.div>
@@ -822,7 +738,6 @@ fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&b
 
           {initials}
 },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 }
 
@@ -830,7 +745,6 @@ fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&b
   )
 };
 :src/components/ui/optimized-image.tsx
-<<<<<<< HEAD
 
         {(is_loading || !isInView) && !has_error && (
           <motion.div;
@@ -1015,15 +929,7 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({}
 },
 :src_backup/components/ui/optimized-image.tsx
 },
-<<<<<<< HEAD:src/components/ui/optimized-image.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/optimized-image.tsx
   className?: string;
   placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty';
   placeholderColor?: string;
@@ -1056,8 +962,4 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 };
 :src/components/ui/optimized-image.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 },'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/optimized-image.tsx

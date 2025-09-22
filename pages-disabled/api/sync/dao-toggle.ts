@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -45,12 +44,8 @@ export default function handler(req, res) {
   const state = readState()
   state.config.paused = Boolean(paused)
   writeState(state)
->>>>>>> pr-12243
   return res.status(200).json({ paused: state.config.paused })
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   writeState(state),;
   return res.status(200).json({ paused: state.config.paused });
 };'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

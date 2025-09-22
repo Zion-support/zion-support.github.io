@@ -24,7 +24,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
   const getSuggestionColor = (suggestion:string | undefined) => {;
     switch (suggestion) {;
 case "Strongly Recommended":return "bg-green-100 text-green-800",;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800",;
       case "Low Match":;
@@ -33,7 +32,6 @@ case "Strongly Recommended":return "bg-green-100 text-green-800",;
         return "bg-gray-100 text-gray-800";
 }
   },;
-<<<<<<< HEAD
 
   // Trigger the scoring process;
   const handleScore = async () => {;

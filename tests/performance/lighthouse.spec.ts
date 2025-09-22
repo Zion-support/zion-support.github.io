@@ -49,5 +49,3 @@ await page.waitForLoadState('networkidle');
     expect(cls).toBeLessThan(0.1);
   });
 });
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:tests/performance/lighthouse.spec.ts

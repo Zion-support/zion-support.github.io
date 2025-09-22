@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { slugify } from '@/lib/slugify';
 import { unslugify } from '@/lib/slugify';
 ;
@@ -62,4 +61,3 @@ it('converts slug back to title', () => {;
 it('handles custom separator when unslugifying', () => {;
   expect(unslugify('multi_word_title_')).toBe('Multi Word Title'),;
 }),; 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

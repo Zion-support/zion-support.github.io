@@ -1,9 +1,4 @@
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 ;
 export interface ChatAssistantProps {;
@@ -154,14 +149,10 @@ export function ChatAssistant({;
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
 
   useState  useEffect
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ChatAssistant/ChatAssistant.tsx
 
   useState
 useState
   useEffect
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useRef
   ReactNode
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
@@ -182,7 +173,6 @@ import { ChatInput } from './ChatInput''
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar''
 import { Button } from '@/components/ui/button''
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
 import { X } from 'lucide-react'
 export interface Message {}
   id: string';
@@ -246,8 +236,6 @@ export interface ChatAssistantProps {
   starterQuestions?: string[]
 }
 export function ChatAssistant({
-<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD
 
   isOpen
   onClose
@@ -283,7 +271,6 @@ export function ChatAssistant({
         setDisplayGuestMessages(initialMessages)
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
-<<<<<<< HEAD
   const is_guest = !auth?.is_authenticated;
   const handleSendMessage = async (message_content: string) => {}
     if () return) {}
@@ -364,9 +351,7 @@ if ( {) {}
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
 
       } else {
-=======
       } else {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
         setDisplayGuestMessages (storedGuestMessages);
       }
     }
@@ -398,7 +383,6 @@ if ( {) {}
       setStoredGuestMessages(newMessages), // Always update localStorage for guests
     } else {      setLoggedInMessages(newMessages)
       setLoggedInMessages(newMessages)
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
   const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000)
@@ -459,15 +443,11 @@ if ( {) {}
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose])
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (!isOpen) return null
   const isGuest = !auth?.isAuthenticated;
 
   const handleSendMessage = async (messageContent: string) => {;
     if (!messageContent && messageContent.trim()) return;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, {;
   useState,;
   useEffect,;
@@ -643,9 +623,7 @@ export function ChatAssistant({;
 
 :src/components/ChatAssistant/ChatAssistant.tsx
   if (!isOpen) return null,
-=======
   if (!isOpen) return null,;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
 
   isOpen;
   onClose;
@@ -653,27 +631,21 @@ export function ChatAssistant({;
   conversationId;
   initialMessages;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ChatAssistant/ChatAssistant.tsx
   return (
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
     <div
 className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
-<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD
       aria-labelledby="chat-assistant-title"
     >
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
-=======
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4""
       role="dialog""
       aria-modal="true""
       aria-labelledby="chat-assistant-title">;,
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ChatAssistant/ChatAssistant.tsx
         {/* Header */}
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
           <div className="flex items-center space-x-3">
@@ -689,7 +661,6 @@ className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
               </h2>
               {recipient.role && (
                 <div className="text-xs text-zion-slate">{recipient.role}</div>
-=======
     <div;
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4""
       role="dialog""
@@ -711,10 +682,8 @@ className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
               </h2>;
               {recipient && recipient.role && (;"
                 <div className="text-xs text-zion-slate">{recipient && recipient.role}</div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
               )}
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD
             </div>
           </div>
           <Button
@@ -722,17 +691,11 @@ className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
 :src/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD
             onClick={onClose}
-=======
 
 :src/components/ChatAssistant/ChatAssistant.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             aria-label="Close chat"
-=======
   if (!isOpen) return null            aria-label="Close chat"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             </div>
           </div>
             </div>;
@@ -743,19 +706,16 @@ className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
             className="text-white hover:bg-zion-purple/10 rounded-full"",
             onClick={onClose}
             aria-label="Close chat""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ChatAssistant/ChatAssistant.tsx
           >
             <X className="h-5 w-5" />"
           </Button>
         </div>
 :src/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD
             <X className="h-5 w-5" />;
           </Button>;
         </div>;
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
         {/* Context Header (Optional) */}
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
         {contextHeader && (
@@ -769,7 +729,6 @@ className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
         <div"
           className="flex-1 overflow-y-auto p-4 space-y-4"
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD
           aria-live="polite"
         >
           {currentMessages.length === 0 ? ("
@@ -785,7 +744,6 @@ className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
                       className="text-xs"
                       onClick={() => handleSendMessage(q)}
                     >;
-=======
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
             {contextHeader}
@@ -869,7 +827,6 @@ className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
           className="flex-1 overflow-y-auto p-4 space-y-4"
 
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       {q}
                     </Button>
                   ))}
@@ -884,7 +841,6 @@ currentMessages.map((msg) => (;
           <div ref={messagesEndRef} />;
         </div>;
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage} />
@@ -892,22 +848,17 @@ currentMessages.map((msg) => (;
       </div>
 
       {showGuestModal && guestMessage && (
-=======
-=======
       {showGuestModal && guestMessage && (;
         <div,
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4""
           role="dialog""
           aria-modal="true""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ChatAssistant/ChatAssistant.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD
           aria-labelledby="confirm-message-title"
         >
           <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
@@ -923,7 +874,6 @@ currentMessages.map((msg) => (;
             <div className="flex justify-end space-x-3">
               <Button
 variant="outline"
-<<<<<<< HEAD
           <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">;
             <h3"
               id="confirm-message-title""
@@ -937,7 +887,6 @@ variant="outline"
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
               <Button"
                 variant="outline"
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
 
     []),;
   const [displayGuestMessages, setDisplayGuestMessages] = useState<Message[]>([]),;
@@ -1245,7 +1194,6 @@ if (return null, ) {}
           </div>;
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 onClick={handleModalCancel}
                 className="text-white border-zion-purple hover:bg-zion-purple/10""
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
@@ -1254,11 +1202,7 @@ if (return null, ) {}
       </div>
 
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
-=======
       {showGuestModal && guestMessage && (
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
@@ -1280,34 +1224,22 @@ if (return null, ) {}
               <Button
                 variant="outline"
                 onClick={handleModalCancel}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ChatAssistant/ChatAssistant.tsx
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
-=======
                 variant="outline"                className="text-white border-zion-purple hover:bg-zion-purple/10"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               >
                 Cancel;
               </Button>
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
               <Button
-<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                 onClick={handleModalSendConfirm}
-=======
 
                 onClick={handleModalSendConfirm}
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
-=======
               <Button;
                 onClick={handleModalSendConfirm}
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
-=======
                 onClick={handleModalSendConfirm}
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ChatAssistant/ChatAssistant.tsx
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
                 Send;
@@ -1317,12 +1249,8 @@ if (return null, ) {}
         </div>
       )}
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
-<<<<<<< HEAD
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 ;
 
@@ -1337,16 +1265,7 @@ if (return null, ) {}
 
 :src_backup/components/ChatAssistant/ChatAssistant.tsx
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ChatAssistant/ChatAssistant.tsx
     </div>
   );
 
@@ -1391,12 +1310,7 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
 }</div>) ;
 }'"
 :src/components/ChatAssistant/ChatAssistant.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
-=======
     setStoredGuestMessages,]
     recipient.id]),
   // Effect for logged - in user messages;
@@ -1461,4 +1375,3 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
 
     </div>);"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ChatAssistant/ChatAssistant.tsx

@@ -1,6 +1,4 @@
 :src_backup/components/jobs/JobMatchesCard.tsx
-<<<<<<< HEAD:src/components/jobs/JobMatchesCard.tsx
-<<<<<<< HEAD
 import { useState } from 'react';
 import {
   Card
@@ -18,9 +16,6 @@ import { JobMatch } from "@/types/jobs";
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface JobMatchCardProps {
 :src/components/jobs/JobMatchesCard.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
@@ -51,16 +46,13 @@ import { format } from 'date-fns';'
 import { JobMatch } from '@/types/jobs';
 interface JobMatchCardProps {;
 :src/components/jobs/JobMatchesCard.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/JobMatchesCard.tsx
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
 :src_backup/components/jobs/JobMatchesCard.tsx
   showApplied?: boolean
 :src/components/jobs/JobMatchesCard.tsx
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 export function JobMatchesCard(): any ({;
   match,;
   onApply,;
@@ -70,7 +62,6 @@ export function JobMatchesCard(): any ({;
 }: JobMatchCardProps) {;
   const job = match && match.job;
 
-<<<<<<< HEAD
 
   return ('
     <Card className='overflow-hidden border-l-4 border-l-blue-500'>;'
@@ -94,30 +85,18 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 
 :src_backup/components/jobs/JobMatchesCard.tsx
 
-<<<<<<< HEAD:src/components/jobs/JobMatchesCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/JobMatchesCard.tsx
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobMatchesCard.tsx
   const job = match.job,
   if (!job) return null,
 :src_backup/components/jobs/JobMatchesCard.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied;
 :src_backup/components/jobs/JobMatchesCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/JobMatchesCard.tsx
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">"
       <CardHeader className="p-4 pb-2">"
@@ -145,16 +124,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </p>
 
 :src_backup/components/jobs/JobMatchesCard.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/JobMatchesCard.tsx
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
             <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>
-=======
         {match.matched_skills?.length > 0 && ("
           <div className="mb-3">"
             <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobMatchesCard.tsx
             <div className="flex flex-wrap gap-1">
               {match.matched_skills.slice(0, 5).map((skill, i) => ("
                 <Badge key={i} variant="secondary" className="text-xs">"
@@ -229,7 +204,6 @@ Posted {format(new Date(job.created_at), "MMM d")}
               ))}
 
               {match.matched_skills.length > 5 && ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobMatchesCard.tsx
                 <Badge variant="secondary" className="text-xs">
 
                   +{match.matched_skills.length - 5}
@@ -239,26 +213,20 @@ Posted {format(new Date(job.created_at), "MMM d")}
           </div>;
         )}
 :src_backup/components/jobs/JobMatchesCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>
           <div className='flex items-center text-sm'>
             <DollarSign className='h-4 w-4 mr-1 text-muted-foreground' />$
             {job.budget.min} - ${job.budget.max}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
 :src/components/jobs/JobMatchesCard.tsx
-<<<<<<< HEAD
-=======
 
 :src_backup/components/jobs/JobMatchesCard.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/JobMatchesCard.tsx
           </div>
           <div className="flex items-center text-sm">
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
@@ -267,10 +235,6 @@ Posted {format(new Date(job.created_at), "MMM d")}
         </div>
       </CardContent>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <CardFooter className="p-4 pt-0">
         {match.status === 'applied' || showApplied ? (
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
@@ -287,7 +251,6 @@ Posted {format(new Date(job.created_at), "MMM d")}
 
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>;
           <div className='flex items-center text-sm'>;
-=======
 "
       <CardFooter className="p-4 pt-0">'
         {match.status === 'applied' || showApplied ? ("
@@ -306,7 +269,6 @@ Posted {format(new Date(job.created_at), "MMM d")}
 '
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>;'
           <div className='flex items-center text-sm'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobMatchesCard.tsx
             <DollarSign className='h-4 w-4 mr-1 text-muted-foreground' />$;
             {job && job.budget.min} - ${job && job.budget.max}
 :src_backup/components/jobs/JobMatchesCard.tsx
@@ -349,14 +311,8 @@ Posted {format(new Date(job.created_at), "MMM d")}
         )}
 :src_backup/components/jobs/JobMatchesCard.tsx
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobMatchesCard.tsx
-=======
           <div className="flex gap-2 w-full">"
             <Button
               className="flex-1" "
@@ -383,7 +339,6 @@ Posted {format(new Date(job.created_at), "MMM d")}
             Declined
           </div>
         ) : (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/JobMatchesCard.tsx
           <div className="flex gap-2 w-full">
             <Button "
               className="flex-1" 
@@ -394,19 +349,13 @@ Posted {format(new Date(job.created_at), "MMM d")}
             </Button>
 :src_backup/components/jobs/JobMatchesCard.tsx
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
             <Button
               variant="outline" "
               className="flex-1""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/JobMatchesCard.tsx
             <Button 
               variant="outline" 
-=======
             <Button "
               variant="outline" "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/JobMatchesCard.tsx
               className="flex-1"
               onClick={() => onDecline(match.id)}
             >;
@@ -415,11 +364,9 @@ Posted {format(new Date(job.created_at), "MMM d")}
           </div>;
         )}
 :src_backup/components/jobs/JobMatchesCard.tsx
-<<<<<<< HEAD
       </CardFooter>;
     </Card>;
   );
-<<<<<<< HEAD
 }
 import { useState } from 'react';
 import {}
@@ -531,22 +478,10 @@ if (return null) {}
     </Card>);
 }
 :src_backup/components/jobs/JobMatchesCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
       </CardFooter>
     </Card>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/JobMatchesCard.tsx
 ;
 }}}}}})))))
 ;
@@ -555,8 +490,6 @@ if (return null) {}
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/jobs/JobMatchesCard.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/JobMatchesCard.tsx
-=======
 
             <Calendar className='h - 4 w - 4 mr - 1 text - muted - foreground' />;
 
@@ -580,4 +513,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     );
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/JobMatchesCard.tsx

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +13,6 @@ interface SearchFilters {}
 minRating: number,
   sort: string
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -122,8 +119,6 @@ if (filters.minRating > 0) {;
 <div className={`flex items-center gap-2 flex-wrap ${className}`}>
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {activeFilters.map(filter => (
         <Badge;
           key={filter.key} 
@@ -139,8 +134,6 @@ variant="secondary"
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onClick={() => removeFilter(filter.key)}
 
             aria-label={`Remove ${filter.label} filter`}
@@ -154,10 +147,8 @@ variant="secondary"
         size="sm"
 
         onClick={onClearAll}
-=======
         onClick={onClearAll}
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className="text-xs h-6 px-2"
       >
         Clear all;
@@ -181,21 +172,12 @@ export default ActiveFiltersBar,
       </button>;
     </div>)}
 '";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
 import React from 'react';
 
 export default ActiveFiltersBar; import React from 'react'
 import { X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Badge } from '@/components/ui/badge';
 interface SearchFilters {
   types: string[];
@@ -210,8 +192,4 @@ interface ActiveFiltersBarProps {
   className?: string
 }
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

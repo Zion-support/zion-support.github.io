@@ -1,9 +1,5 @@
 :src/components/search/EnhancedSearchInput.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
 import { Search, X } from 'lucide-react'
@@ -16,7 +12,6 @@ import { slugify } from "@/lib/slugify",
 :src/components/search/EnhancedSearchInput.tsx
 import { debounce } from "lodash",
 import { logInfo, logWarn } from '@/utils/productionLogger',
-=======
 
 :src_backup/components/search/EnhancedSearchInput.tsx
 import { debounce } from "lodash";
@@ -26,28 +21,22 @@ interface EnhancedSearchInputProps {
   onChange: (value: string) => void;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface EnhancedSearchInputProps {
   value: string
   onChange: (value: string,) => void
 origin/cursor/automate-test-improve-and-merge-code-2533
   /**
    * Optional callback when a suggestion is selected. This allows parent
-=======
 
 interface EnhancedSearchInputProps {}
   value: string,
   onChange: (value: string) => void,
   /**;
    * Optional callback when a suggestion is selected. This allows parent;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
    * components to perform actions such as navigation.
 */
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
   placeholder?: string,
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
   placeholder?: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -60,8 +49,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/search/EnhancedSearchInput.tsx
 
 export function EnhancedSearchInput({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   value
   onChange
@@ -80,7 +67,6 @@ import { SearchSuggestion } from '@/types/search'
 :src_backup/components/search/EnhancedSearchInput.tsx
 export function EnhancedSearchInput({
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   value,
   onChange,
   onSelectSuggestion,
@@ -98,18 +84,14 @@ const [isFocused, setIsFocused] = useState(false),
   const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]),
   const [loading, setLoading] = useState(false),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const debounced = useDebounce(value, 200),
 
   const debouncedFetchSuggestions = useMemo(
     () =>
       debounce(async (query: string) => {
-=======
     () =>
       debounce(async (query: string) => {
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
         if (!query.trim()) {
 setApiSuggestions([]),
           return
@@ -129,7 +111,6 @@ interface EnhancedSearchInputProps {;
   onChange: (value: string) => void,;
 
 ;
-=======
 export function EnhancedSearchInput({}
   value,
   onChange,
@@ -142,12 +123,10 @@ export function EnhancedSearchInput({}
       debounce(async (query: string) => {}
         if (!query.trim()) {}
 ;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
 import { log_info, log_warn } from '@/utils / production_logger';
 interface EnhancedSearchInputProps {}
   value: string,
   on_change: (value: string, ) => void,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   /**;
 :src/components/search/EnhancedSearchInput.tsx
 * Optional callback when a suggestion is selected. This allows parent;
@@ -193,7 +172,6 @@ function EnhancedSearchInput() {
           setApiSuggestions ([]),          return;
 
           return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
 ;
         setLoading(true),;
@@ -219,8 +197,6 @@ function EnhancedSearchInput() {
         } finally {;
           setLoading(false);
         }
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }, 300),;
     [];
   ),;
@@ -270,16 +246,10 @@ function EnhancedSearchInput() {
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
     onChange(suggestionObj.text),
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (onSelectSuggestion) {
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),
-=======
     if (onSelectSuggestion) {'
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/search/EnhancedSearchInput.tsx
       onSelectSuggestion(suggestionObj)
 } else {
       // Provide a sensible default navigation if the parent did not supply a handler
@@ -327,7 +297,6 @@ function EnhancedSearchInput() {
     setHighlightedIndex (-1);    return () => {
 
     return () => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       debouncedFilterSuggestions.cancel()
 }
 }, [value, searchSuggestions, debouncedFilterSuggestions])
@@ -479,7 +448,6 @@ export function EnhancedSearchInput(): any ({;
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),;
     onChange(suggestionObj && suggestionObj.text);
 :src_backup/components/search/EnhancedSearchInput.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (onSelectSuggestion) {;
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),;
       onSelectSuggestion(suggestionObj);
@@ -698,7 +666,6 @@ if ( {) {}
 
 :src_backup/components/search/EnhancedSearchInput.tsx
     switch(e && e.key) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case 'ArrowDown':;
         if (isFocused && filteredSuggestions.length > 0) {;
           e.preventDefault(),;
@@ -741,9 +708,6 @@ if ( {) {}
         break;
     }
 :src/components/search/EnhancedSearchInput.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   },
   return (
 :src_backup/components/search/EnhancedSearchInput.tsx
@@ -761,7 +725,6 @@ if ( {) {}
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
         />
         <Input
-<<<<<<< HEAD
           ref={inputRef}
           type="text"
           id="enhanced-search-input"
@@ -819,7 +782,6 @@ if ( {) {}
         break;
     }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           onChange={(e) => {;
             onChange(e && e.target.value);
             setEnterHandledPostFocus(false);
@@ -833,11 +795,8 @@ if ( {) {}
           }}
           onBlur={(e) => {;
             const relatedTarget = e && e.relatedTarget as HTMLElement;            if (!containerRef && containerRef.current || !containerRef && containerRef.current.contains(relatedTarget as Node)) {;              setIsFocused(false);
-=======
 
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
   };
 
       // Provide a sensible default navigation if the parent did not supply a handler
@@ -933,10 +892,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             const relatedTarget = e.relatedTarget as HTMLElement;
             if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {;
 :src/components/search/EnhancedSearchInput.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               setIsFocused(false);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               setHighlightedIndex(-1);
             }
             setValueOnFocus(null);
@@ -953,18 +909,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {value && (
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-<<<<<<< HEAD:src/components/search/EnhancedSearchInput.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             onClick={() => onChange('')}
             aria-label="Clear search"
           >"
             <X className="h-4 w-4" />
           </button>
 :src/components/search/EnhancedSearchInput.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/search/EnhancedSearchInput.tsx
         )}
 
       </div>;
@@ -976,7 +927,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         onSelectSuggestion = {handleSelectSuggestion,}
         visible = {isFocused,}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>;
       <AutocompleteSuggestions;
         suggestions={filteredSuggestions}
@@ -1070,7 +1020,6 @@ break
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
 :src/components/search/EnhancedSearchInput.tsx
-<<<<<<< HEAD
 
         highlightedIndex={highlightedIndex} "
         listId="autocomplete-suggestions-list" 
@@ -1079,7 +1028,6 @@ break
   );
 }
 
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
           on_blur={(e) => {
             const related_target = e.related_target as HTMLElement;            if () {) {
   $2
@@ -1191,8 +1139,6 @@ break;
     </div>);
 :src_backup/components/search/EnhancedSearchInput.tsx
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         highlightedIndex={highlightedIndex}
         listId="autocomplete-suggestions-list"
       />
@@ -1222,5 +1168,3 @@ break ;
 }</div> <AutocompleteSuggestions /> </div>) ;
 }'"
 :src/components/search/EnhancedSearchInput.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

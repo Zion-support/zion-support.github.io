@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Badge } from '@/components/ui/badge',
 import { Button } from '@/components/ui/button',
@@ -7,10 +6,8 @@ import { SkillItemProps } from './types',
 import { Trash2 } from 'lucide-react'
 '
 import { SkillItemProps } from './types'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
   return (
-<<<<<<< HEAD
 import { SkillItemProps } from './types';
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {;
   return (
@@ -60,7 +57,6 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {;
         <Trash2 className="h-3 w-3" />;
       </Button>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Badge
       key={skill.id} 
 "
@@ -80,10 +76,6 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {;
       >"
         <Trash2 className="h-3 w-3" />
       </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Badge>
   )
 },
@@ -150,10 +142,6 @@ export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: an
     </Badge>);
 } },
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Trash2 } from 'lucide-react';
@@ -162,11 +150,5 @@ import { SkillItemProps } from './types';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
 import { Trash2 } from 'lucide-react'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

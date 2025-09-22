@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from 'react',;
 import {;
   Dialog,;
@@ -88,13 +87,11 @@ export function MessageTalentModal({;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20">;
         <DialogHeader>;
           <DialogTitle className="text-white flex items-center gap-3">;
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
-<<<<<<< HEAD
 
         <div className="space-y-4">;
           <div>;

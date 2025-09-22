@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -48,13 +47,11 @@ key={language.code}
                   <Check className='h-4 w-4 text-primary' />                )}          {languages && languages.map((language) => (;
 <Card
               key={language && language.code}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language && language.code 
                   ? "border-primary bg-primary/5" 
                   : "border-border hover:border-primary/40"
               }`}
-<<<<<<< HEAD
               onClick={() => setSelectedLanguage(language.code)}
             >
               <CardContent className="p-3 flex items-center justify-between">
@@ -102,7 +99,6 @@ export function LanguageThemeSelector() {;
 
               onClick={() => setSelectedLanguage(language.code)}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >;
               <CardContent className="p-3 flex items-center justify-between">;
                 <div className="flex items-center">;
@@ -172,7 +168,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </CardContent>;
             </Card>;
           ))}
-<<<<<<< HEAD
 
         </div>;
       </div>;
@@ -227,7 +222,6 @@ theme === 'light'
             </CardContent>;
           </Card>;"
                 <Check className="h-4 w-4 text-primary mt-2" />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         </div>
       </div>
       <div className="space-y-2">"
@@ -253,14 +247,10 @@ theme === 'light'
                 ? "border-primary bg-primary/5" "
                 : "border-border hover:border-primary/40"
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             }`}
-=======
 
 `
             }`}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             onClick={() => setTheme('light')}
 >"
             <CardContent className="p-3 flex flex-col items-center justify-center">"
@@ -275,15 +265,12 @@ theme === 'light'
 <Card 
             className={`flex-1 cursor-pointer transition-all ${
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark' 
                 ? "border-primary bg-primary/5" 
                 : "border-border hover:border-primary/40"
             }`}
-=======
           <Card;`
             className={`flex-1 cursor-pointer transition-all ${}
           <Card;`
@@ -293,7 +280,6 @@ theme === 'light'
                 ? "border-primary bg-primary/5" "
                 : "border-border hover:border-primary/40"`
             }`}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             onClick={() => setTheme('dark')}
 >
             <CardContent className="p-3 flex flex-col items-center justify-center">
@@ -308,7 +294,6 @@ theme === 'light'
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 };
 
 import React, { useState } from 'react';
@@ -446,7 +431,6 @@ key = {language.code, }`
   );
 }
     </div>);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
         </div>
@@ -508,4 +492,3 @@ key = {language.code, }`
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

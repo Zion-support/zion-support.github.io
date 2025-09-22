@@ -366,9 +366,7 @@ index c2bdb9f107a..115ec9fcd6b 100644
    },
    {
 -    files: ['**/*.{js,jsx,ts,tsx}'],
--=======
 -    files: ['**/*.{js,jsx,ts,tsx}'],
-->>>>>>> 
 +    files: ['app/**/*.{js,jsx,ts,tsx}'],
      languageOptions: {
 -      ecmaVersion: 2020,
@@ -504,7 +502,6 @@ index c2bdb9f107a..115ec9fcd6b 100644
 -      },
 -    },
 -  },
--=======
 - f6b849a806966ab0803a1eba10ab812addf04f56
 -  {
 -    files: ['**/*.js'],
@@ -526,8 +523,6 @@ index c2bdb9f107a..115ec9fcd6b 100644
 -      'no-console': 'off',
 -    },
 -  },
-->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
--=======
 +        ...globals.browser,
          ...globals.node
        }
@@ -538,6 +533,5 @@ index c2bdb9f107a..115ec9fcd6b 100644
 -      'prefer-const': 'error'
      }
    }
-->>>>>>> 
  ];
 \ No newline at end of file

@@ -1,6 +1,4 @@
 :pages/ITServices.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react';
 import Layout from '../components/Layout';
@@ -28,19 +26,15 @@ export default function ITServices() {
   );
 
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function ITServices() {
   return (
     <Layout
       title="IT Services - Zion Tech Group"
-=======
 
 export default function ITServices() {}
   return (;
     <Layout;
       title="IT Services - Zion Tech Group""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation."
     >"
       <div className="min-h-screen bg-gray-50 py-20">"
@@ -55,16 +49,11 @@ export default function ITServices() {}
 
 }
 
-<<<<<<< HEAD
 import { Star } from 'lucide-react';
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Star } from 'lucide-react';
 '
 import React from 'react';
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -82,7 +71,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-=======
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -91,16 +79,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MainLayout from '../src/components/layout/MainLayout';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
 import { 
-=======
 '
 import Head from 'next/head';'
 import Link from 'next/link';'
 import { motion } from 'framer-motion';'
 import MainLayout from '../src/components/layout/MainLayout';
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Server, 
   Shield, 
   Cloud, 
@@ -121,7 +106,6 @@ Database,
   Laptop, 
   Globe, 
   CheckCircle, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   ArrowRight,
   CheckCircle,
   Clock,
@@ -133,19 +117,15 @@ Database,
   BarChart3,
   Headphones,
   Wrench,
-<<<<<<< HEAD
   HardDrive,
   Wifi,
   Phone,
   Mail,
   MapPin,
   FileText,
-<<<<<<< HEAD:pages/ITServices.tsx
   Cpu
-=======
   Cpu,
   Lock
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
 } from 'lucide-react';
 
 const itServices = [
@@ -463,24 +443,18 @@ const processSteps = [
     title: "Optimization",
     description: "Ongoing optimization and updates to keep your IT infrastructure current."
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 ];
 
 const stats = [
   { number: "99.9%", label: "Uptime Guarantee" },
-<<<<<<< HEAD
   { number: "15min", label: "Response Time" },
   { number: "500+", label: "IT Projects Completed" },
   { number: "24/7", label: "Support Available" }
   { number: "15min", label: "Average Response Time" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 ];
 
-<<<<<<< HEAD
 export default function ITServices() {
     >
       {/* Hero Section */}
@@ -655,13 +629,11 @@ export default function ITServices() {
                   <div className="text-2xl font-bold text-green-600">
                     {solution.pricing}
                   </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Link
                     href="/contact"
                     className="px-4 py-2 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-semibold"
                   >
                     Start Free Trial
-=======
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -695,20 +667,17 @@ export default function ITServices() {
                   >
                     Get Started"
                     <ArrowRight className="h-4 w-4 ml-2" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </Link>
                 </div>
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -723,7 +692,6 @@ export default function ITServices() {
               A proven methodology that ensures successful IT implementation and maximum value for your investment.
             </p>
 :pages/ITServices.tsx
-<<<<<<< HEAD
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {processSteps.map((step, index) => (
@@ -806,13 +774,11 @@ Let's discuss your IT needs and create a comprehensive solution that supports yo
               <Link 
                 href="/contact" 
 :pages/ITServices.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
               >
                 Get Free IT Consultation
               </Link>
 :pages/ITServices.tsx
-<<<<<<< HEAD
               <Link
                 href="tel:+13024640950"
                 className="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold"
@@ -838,9 +804,6 @@ Let's discuss your IT needs and create a comprehensive solution that supports yo
                 <MapPin className="h-5 w-5 mr-2" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -855,7 +818,6 @@ Let's discuss your IT needs and create a comprehensive solution that supports yo
               Contact us today to discuss your IT needs and get expert solutions.
             </p>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </motion.div>
         </div>
@@ -863,20 +825,7 @@ Let's discuss your IT needs and create a comprehensive solution that supports yo
     </Layout>
   );
 :pages/ITServices.tsx
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:backup-problematic-files/temp_broken_files/pages/ITServices.tsx

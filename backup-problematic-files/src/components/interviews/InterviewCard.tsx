@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react",;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -84,12 +83,10 @@ title:"Error",;
 title:"Interview cancelled",;
         description:"The interview has been cancelled successfully.";
   description:"The interview has been cancelled successfully.";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }),;
       await onRefresh(),;
     } else {;
       toast({;
-<<<<<<< HEAD
         title:"Error",;
         description:"Failed to cancel the interview. Please try again.",;
         variant:"destructive";
@@ -303,4 +300,3 @@ pr-12325
   isLoading ;
 }/> </DialogContent> </Dialog> </Card>) ;
 }'"
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

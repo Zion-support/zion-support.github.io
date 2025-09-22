@@ -1,5 +1,4 @@
 :src/components/profile/ProfileAvailability.tsx
-<<<<<<< HEAD
 
 import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge",
@@ -39,8 +38,6 @@ function ProfileAvailability() {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') =>: any {
     switch (status) {
 :src/components/profile/ProfileAvailability.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       case 'available':
         return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
       case 'limited':
@@ -79,7 +76,6 @@ function ProfileAvailability() {
       case 'unavailable':;
         return 'Currently Unavailable';
       default:;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         return '' }
   }
       case 'available':
@@ -172,7 +168,6 @@ import { Calendar } from 'lucide-react';
 
 interface ProfileAvailabilityProps {
   availability: Availability
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {;
@@ -340,10 +335,8 @@ export function ProfileAvailability(): any ({;
               </div>;
 
             ))}
-<<<<<<< HEAD
           </div>
         </div>
-<<<<<<< HEAD
       )}
 
                 </div>
@@ -354,11 +347,9 @@ export function ProfileAvailability(): any ({;
 
       )};
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>;
   );
 }
-<<<<<<< HEAD
 
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
       <h3 className='text - xl font - bold text - white mb - 4'>Availability</h3>;
@@ -428,17 +419,9 @@ export function ProfileAvailability(): any ({;
     </div>);
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/ProfileAvailability.tsx

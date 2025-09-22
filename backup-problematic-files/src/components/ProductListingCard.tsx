@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
       }}
     >;
@@ -133,13 +132,11 @@ pr-12325
                   key={idx} ;"
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full";"
                 >;                  {tag}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </span>;
               ))}
             </div>;
           )}
         </div>;
-<<<<<<< HEAD
               onClick={(e) => {;
 
                 <>;"
@@ -176,12 +173,10 @@ setImageError (true) ;
 `relative $ {;
   imageContainerClasses ;
 }` ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }> {;
   /* Ensure this container has dimensions */ ;
 }<Image Featured </Badge>) ;
 }{;
-<<<<<<< HEAD
   stockStatus && (<Badge variant= {;
   stockVariant as any ;
 }className="absolute top-2 left-2" > {;"
@@ -205,12 +200,10 @@ setImageError (true) ;
 }</div> <span key= {;
 idx ";
 }className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full" > {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   tag ;
 }</span>) ) ;
 }</div>) ;
 }</div> </span>) ";
-<<<<<<< HEAD
   (e) => {;
   e.stopPropagation (), //Prevent card click event addToCart () ;
 }
@@ -233,4 +226,3 @@ router.push ('/checkout') ;
 }</div> </div> </div> </div>) 
 };
 '"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

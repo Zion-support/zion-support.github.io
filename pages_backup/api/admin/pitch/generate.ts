@@ -1,12 +1,9 @@
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 :pages_backup/api/admin/pitch/generate.ts
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
 const client = new OpenAI({
-<<<<<<< HEAD
   apiKey: process.env.OPENAI_API_KEY |process.env.NEXT_PUBLIC_OPENAI_API_KEY
 
 });
@@ -38,9 +35,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { allowed } = await ensureAdminFromApi(req);
 "
   if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
@@ -64,12 +59,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 try {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
 Operator Prompt: ${operatorPrompt}
     const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
 Operator Prompt: ${operator_prompt}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 Company Mission: ${inputs?.mission}
 
 Key Metrics: ${JSON && JSON.stringify(metrics)}
@@ -100,7 +93,6 @@ function extractSection(body: string, title: string): string {"
   return "";
 
 :pages_backup/api/admin/pitch/generate.ts
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 "
       content = chat.choices?.[0]?.message?.content || "";
@@ -138,7 +130,6 @@ if ( {) {}
   }"
   return "";
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -150,19 +141,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 :pages_backup/api/admin/pitch/generate.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const isAdmin = req.headers['x-admin'] === 'true';
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   try {}
 ';
     const isAdmin = req.headers['x-admin'] === 'true';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/admin/pitch/generate.ts
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 '
     if (req.method === 'POST') {}
@@ -200,10 +184,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   }
 }
 :pages_backup/api/admin/pitch/generate.ts
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/admin/pitch/generate.ts

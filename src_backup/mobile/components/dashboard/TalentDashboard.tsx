@@ -1,5 +1,4 @@
 :src/mobile/components/dashboard/TalentDashboard.tsx
-<<<<<<< HEAD
 
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
@@ -7,7 +6,6 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
 import Link from "next/link",
-=======
 import { Badge } from "@/components/ui/badge";
 import React from 'react'
 import {
@@ -34,8 +32,6 @@ import { Badge } from "@/components/ui/badge"
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
 import Link from "next/link";
 :src/mobile/components/dashboard/TalentDashboard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function TalentDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -93,17 +89,11 @@ export function TalentDashboard() {
                 </div>
               </div>
 :src/mobile/components/dashboard/TalentDashboard.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="flex gap-2 mt-3">
                 <Button size="sm">Apply Now</Button>
                 <Button size="sm" variant="outline">View Details</Button>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/dashboard/TalentDashboard.tsx
               <div className='flex gap-2 mt-3'>
                 <Button size='sm'>Apply Now</Button>
                 <Button size='sm' variant='outline'>
@@ -116,11 +106,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 :src/mobile/components/dashboard/TalentDashboard.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section>
         <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
         <Card>
@@ -144,14 +131,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Button variant="outline" className="w-full mt-4">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/dashboard/TalentDashboard.tsx
 <section>
         <h2 className='text-lg font-medium mb-4'>Application Tracker</h2>
         <Card>
@@ -186,8 +166,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>
       </section>
 :src/mobile/components/dashboard/TalentDashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
@@ -307,7 +285,6 @@ import React from './react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react';
 import Link from './next / link';
 export /**
@@ -437,7 +414,6 @@ function TalentDashboard() {
             <Image className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Portfolio</span>;
           </Button>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button
             variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
@@ -489,9 +465,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 :src/mobile/components/dashboard/TalentDashboard.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Learning Hub</h2>
@@ -502,14 +476,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className='text-lg font-medium'>Learning Hub</h2>
           <Button variant='ghost' size='sm' className='h-8'>
 :src/mobile/components/dashboard/TalentDashboard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             View all
           </Button>
         </div>
         <Card>
 :src/mobile/components/dashboard/TalentDashboard.tsx
-<<<<<<< HEAD
           <CardContent className="p-4">
 
             <div className="flex items-center gap-3">
@@ -544,7 +515,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
 
             aria-label="Set Availability">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Clock className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Availability</span>;
           </Button>;
@@ -579,8 +549,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 ;
-=======
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/dashboard/TalentDashboard.tsx

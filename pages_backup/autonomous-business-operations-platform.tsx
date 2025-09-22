@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       color: "from-blue-500 to-cyan-500"
     }
@@ -37,11 +35,6 @@
   Building2, Gauge, BarChart3, Settings, Workflow;
 } from 'lucide-react',
 :pages_backup/autonomous-business-operations-platform.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Bot,
   Brain,
   Cpu,
@@ -65,17 +58,13 @@
   Workflow,;
 } from 'lucide-react';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const AutonomousBusinessOperationsPlatform = () => {
   const features = [
     {
       icon: Bot,
-<<<<<<< HEAD
       title: "AI Autonomous Management",
       description: "Fully autonomous business operations with intelligent decision-making",
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       description: "Automated production lines, quality control, and supply chain management"
     }
     {"
@@ -91,7 +80,6 @@ const AutonomousBusinessOperationsPlatform = () => {
       description: "Inventory management, customer service, and sales optimization"
     }
 :pages_backup/autonomous-business-operations-platform.tsx
-<<<<<<< HEAD
   ]
   const benefits = [
     {
@@ -175,11 +163,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Automated trading, risk management, and compliance monitoring',
     },
     {
-<<<<<<< HEAD
       title: "Retail"
       description: "Inventory management, customer service, and sales optimization"
     }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -203,11 +189,7 @@ const AutonomousBusinessOperationsPlatform = () => {
       title: "AI Autonomous Management",
       description: "Fully autonomous business operations with intelligent decision-making",
       color: "from-blue-500 to-cyan-500"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     {
       icon: Bot,
       title: "AI Autonomous Management",
@@ -221,7 +203,6 @@ const AutonomousBusinessOperationsPlatform = () => {
 "
       color: "from-purple-500 to-pink-500"
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     },
     {}
       icon: Workflow,"
@@ -231,26 +212,21 @@ const AutonomousBusinessOperationsPlatform = () => {
 
 color: "from-emerald-500 to-teal-500"
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     },
     {}
       icon: Shield,"
       title: "Intelligent Security",
 :pages_backup/autonomous-business-operations-platform.tsx
 
-<<<<<<< HEAD
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 "
       description: "AI-powered security monitoring and threat prevention","
       color: "from-red-500 to-orange-500"
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/autonomous-business-operations-platform.tsx
   ],
   const capabilities = ["
     "24/7 autonomous operation","
@@ -262,19 +238,14 @@ color: "from-emerald-500 to-teal-500"
     "Performance monitoring","
     "Risk assessment",
 :pages_backup/autonomous-business-operations-platform.tsx
-<<<<<<< HEAD
     "Compliance automation"
   ],
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/autonomous-business-operations-platform.tsx
     "Compliance automation"
   ],
 
 :pages_backup/autonomous-business-operations-platform.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const industries = [
     {
       title: "Manufacturing",
@@ -298,15 +269,12 @@ color: "from-emerald-500 to-teal-500"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ],
   const benefits = [
     {
       icon: TrendingUp,
       title: "Increased Efficiency",
       value: "300%",
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       description: "Boost in operational efficiency"
     },
     {}
@@ -329,17 +297,11 @@ color: "from-emerald-500 to-teal-500"
 :pages_backup/autonomous-business-operations-platform.tsx
     }
       } catch (error) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
               animate={{ opacity: 1, y: 0 }  } catch (error) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       title: 'Retail',
       description:
         'Inventory management, customer service, and sales optimization',
@@ -373,8 +335,6 @@ title: 'Increased Efficiency',
     },
   ];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
@@ -390,9 +350,7 @@ title: 'Increased Efficiency',
 
 :pages_backup/autonomous-business-operations-platform.tsx
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Hero Section */  } catch (error) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -416,10 +374,6 @@ transition={{ duration: 0.8 }  } catch (error) {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
@@ -462,9 +416,7 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
           <div className='relative max-w-7xl mx-auto text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Transform your business with AI-powered autonomous operations that work 24/7
-=======
         {/* Hero Section */  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
@@ -477,17 +429,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="relative max-w-7xl mx-auto text-center">
             <motion.div;
                 Transform your business with AI-powered autonomous operations that work 24/7;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/autonomous-business-operations-platform.tsx
                 Transform your business with AI-powered autonomous operations that work 24/7,
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD:pages/autonomous-business-operations-platform.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/autonomous-business-operations-platform.tsx
       description: "Boost in operational efficiency";
     },
     {}
@@ -522,35 +468,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>;"
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900">;
 :pages_backup/autonomous-business-operations-platform.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Hero Section */}
         <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="absolute inset - 0 bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20"></div>;
-=======
 
         {/* Hero Section */}"
         <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;"
           <div className="absolute inset - 0 bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20"></div>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/autonomous-business-operations-platform.tsx
           <div className="relative max - w-7xl mx - auto text - center">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 :pages_backup/autonomous-business-operations-platform.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Transform your business with AI-powered autonomous operations that work 24/7,
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
                 Transform your business with AI-powered autonomous operations that work 24/7, 
 
                 Transform your business with AI-powered autonomous operations that work 24/7,
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/autonomous-business-operations-platform.tsx
                 making intelligent decisions and optimizing every aspect of your business.
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -560,7 +496,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>"
                 <Link href="/services" className="inline-flex items-center px-8 py-3 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200">
 :pages_backup/autonomous-business-operations-platform.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
 <div className='flex justify-center mb-6'>
                 <div className='p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full'>
@@ -591,18 +526,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href='/services'
                   className='inline-flex items-center px-8 py-3 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200'
                 >
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Learn More
-=======
                   Learn More;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/autonomous-business-operations-platform.tsx
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Features Section */}
 
 :pages_backup/autonomous-business-operations-platform.tsx
@@ -782,9 +712,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
             </motion.div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -811,10 +738,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
   }
 }
 :pages_backup/autonomous-business-operations-platform.tsx
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -829,9 +752,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
 {features.map((feature, index) => (
                 <motion.div
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 Revolutionary Features;
               </h2>"
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -848,9 +768,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 :pages_backup/autonomous-business-operations-platform.tsx
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>"
@@ -859,21 +776,15 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
                   <p className="text-gray-400">{feature.description}</p>
 :pages_backup/autonomous-business-operations-platform.tsx
-<<<<<<< HEAD
 
                 </motion.div>
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -902,10 +813,8 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
                   >
                     <feature.icon className='w-6 h-6 text-white' />
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -943,10 +852,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
   }
 }
 :pages_backup/autonomous-business-operations-platform.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -961,9 +866,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
 {capabilities.map((capability, index) => (
                 <motion.div
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 Advanced Capabilities;
               </h2>"
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -980,15 +882,11 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
 
 :pages_backup/autonomous-business-operations-platform.tsx
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="flex items-center space-x-3"
                 >"
                   <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />"
                   <span className="text-gray-300">{capability}</span>
 :pages_backup/autonomous-business-operations-platform.tsx
-<<<<<<< HEAD
 
                 </motion.div>
                   <h3 className='text-xl font-semibold text-white mb-3'>
@@ -1003,16 +901,11 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
         {/* Capabilities Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50'>
           <div className='max-w-7xl mx-auto'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -1036,10 +929,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   viewport={{ once: true }}
 className='flex items-center space-x-3'
                 >
-<<<<<<< HEAD
                   <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
                   <span className="text-gray-300">{capability}</span>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1077,10 +968,6 @@ className='flex items-center space-x-3'
   }
 }
 :pages_backup/autonomous-business-operations-platform.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1088,8 +975,6 @@ className='flex items-center space-x-3'
                 Measurable Results
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <CheckCircle className='w-6 h-6 text-blue-400 flex-shrink-0' />
                   <span className='text-gray-300'>{capability}</span>
                 </motion.div>
@@ -1112,7 +997,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Measurable Results
               </h2>
               <p className='text-xl text-gray-400 max-w-2xl mx-auto'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 See the real impact of autonomous operations on your business
               </p>
             </motion.div>
@@ -1120,11 +1004,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               {benefits.map((benefit, index) => (
                 <motion.div
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               className="text - center mb - 16";
             >;
@@ -1139,18 +1019,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {benefits.map ((benefit, index) => (
                 <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -1169,7 +1043,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1184,7 +1057,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {industries.map((industry, index) => (
                 <motion.div
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >
                   <h3 className="text-2xl font-semibold text-white mb-4">{industry.title}</h3>
@@ -1209,7 +1081,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <motion.div
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -1231,11 +1102,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Automate Your Business?
@@ -1261,7 +1128,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   )
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
@@ -1281,9 +1147,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p className="text-gray-400 text-sm">{benefit.description}</p>
 
 :pages_backup/autonomous-business-operations-platform.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >"
                   <h3 className="text-2xl font-semibold text-white mb-4">{industry.title}</h3>"
@@ -1295,7 +1158,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 :pages_backup/autonomous-business-operations-platform.tsx
-<<<<<<< HEAD
 }
             </div>;
           </div>;
@@ -1305,9 +1167,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1354,7 +1213,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   )
 }
-=======
 }
             </div>;
           </div>;
@@ -1365,16 +1223,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-=======
               className="text-center mb-16"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/autonomous-business-operations-platform.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <div className='text-3xl font-bold text-blue-400 mb-2'>
                       {benefit.value}
                     </div>
@@ -1393,14 +1244,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Industries Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50'>
           <div className='max-w-7xl mx-auto'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <motion.div
-=======
 "
         <section className="py-20 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/autonomous-business-operations-platform.tsx
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1429,13 +1277,11 @@ className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50
 export default AutonomousBusinessOperationsPlatform;
 
 :pages_backup/autonomous-business-operations-platform.tsx
-<<<<<<< HEAD
 },
 
 export default AutonomousBusinessOperationsPlatform,;
 :pages_backup/autonomous-business-operations-platform.tsx
 ;
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -1526,13 +1372,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 };
 export default AutonomousBusinessOperationsPlatform;
-<<<<<<< HEAD
 
 },
 
 export default AutonomousBusinessOperationsPlatform,;
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default AutonomousBusinessOperationsPlatform,
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
@@ -1553,30 +1397,15 @@ export default AutonomousBusinessOperationsPlatform,
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     </>);
 },
 export default AutonomousBusinessOperationsPlatform,;
 ;
 :pages_backup/autonomous-business-operations-platform.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 },
 
 :pages_backup/autonomous-business-operations-platform.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/autonomous-business-operations-platform.tsx
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/autonomous-business-operations-platform.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

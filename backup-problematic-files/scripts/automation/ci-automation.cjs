@@ -132,13 +132,9 @@ ci.run().catch(error => {})
   console.error("CI automation "failed": ', error);
     process.exit(1)})};
 ;
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
   ci.run().catch(error => {})"
 
     process.exit(1)})};
 module.exports = CIAutomation;
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

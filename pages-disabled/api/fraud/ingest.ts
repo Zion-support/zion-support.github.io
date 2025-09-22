@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";"
@@ -56,7 +50,6 @@ const metadata =
     const userId = typeof body.userId === 'string' ? body.userId : null;'
     const content = typeof body.content === 'string' ? body.content : null;'
     const metadata = (body.metadata && typeof body.metadata === 'object') ? body.metadata : null;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const ip = extractClientIp(req);
     const store = getFraudStore();
 
@@ -80,8 +73,6 @@ AdminActionRecord
   GptClassificationLabel
   MonitoredSource
   StoredFraudRecord
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   AdminActionRecord,
   GptClassification,
   GptClassificationLabel,
@@ -104,7 +95,6 @@ const allowed_sources: MonitoredSource[] = [;"
   "message","
   "quote","
   "review",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 export default async function handler(
   req: NextApiRequest
@@ -166,12 +156,9 @@ const event = newEvent({
       content,
       metadata,
       ipAddress: ip,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     });
 const heuristic = await evaluateHeuristics(event, {
       countEventsByIp: (ip, s, m) => store.countEventsByIp(ip, s, m)
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     });
 // Privacy opt-out check for content analysis
     let gpt: GptClassification | undefined = undefined;
@@ -179,7 +166,6 @@ const heuristic = await evaluateHeuristics(event, {
       const privacy = await store.getPrivacySettings(userId);
       if (!privacy.monitoringContentAnalysisOptOut) {
         gpt = await classifyWithGPT(content, source);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       }
 } else if (content && !userId) {
       gpt = await classifyWithGPT(content, source);
@@ -189,7 +175,6 @@ const heuristic = await evaluateHeuristics(event, {
     if (heuristic.severity === "high") combinedLabel = "DANGEROUS";
     if (gpt?.label === "DANGEROUS") combinedLabel = "DANGEROUS";
     const autoHide =
-<<<<<<< HEAD
       process.env.FRAUD_AUTOHIDE === "true" &&
       combinedLabel !== "SAFE" &&
       source === "message";
@@ -214,8 +199,6 @@ status: 'PENDING',
 const saved = await store.saveEvent(stored);
     if (process.env.FRAUD_EMAIL_WARNINGS === "true" && userId) {
       const prior = await store.countFlaggedForUser(userId);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       if (prior <= 1 && combinedLabel !== "SAFE") {
         await sendWarningEmail({
 toUserId: userId,
@@ -224,13 +207,11 @@ toUserId: userId,
         });
       }
     }
-<<<<<<< HEAD
     res.status(200).json({
       id: saved.id
 
     res && res.status(200).json({
       id: saved && saved.id
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       flagged: combinedLabel !== "SAFE"
       label: combinedLabel
       heuristic
@@ -249,7 +230,6 @@ toUserId: userId,
     res
       .status(500)
   } catch (e: any) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       .json({ error: "Internal error", details: e?.message |String(e) });
       .json({ error: "Internal error", details: e?.message || String(e) });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -280,15 +260,11 @@ export default async function handler(req, res) {
 
     const saved = await store.saveEvent(stored);
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
   } catch (e: any) {
 
       .json({ error: "Internal error", details: e?.message || String(e) });
 
-=======
-=======
 
     });
   } catch (e: any) {}
@@ -296,7 +272,6 @@ export default async function handler(req, res) {
       .json({ error: "Internal error", details: e?.message || String(e) });
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       .json({ error: "Internal error", details: e?.message |String(e) });
   }
 }
@@ -322,7 +297,6 @@ export default async function handler(req, res) {
   } catch (e: any) {'
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
 }
-<<<<<<< HEAD
 }
   }
 }
@@ -390,19 +364,11 @@ res;
   } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   try {
     const body = null;
@@ -414,4 +380,3 @@ res;
       .json({ error: "Internal error", details: e?.message || String(e) });
   }
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

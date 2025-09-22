@@ -1,5 +1,4 @@
 
-=======
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
@@ -30,13 +29,11 @@ const DashboardRoutes = () => {;
       <Route ;
         path="/dashboard" ;
         element={;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <ProtectedRoute>;
             <Dashboard />;
           </ProtectedRoute>;
         } ;
       />;
-<<<<<<< HEAD
 
           <ProtectedRoute>;
             <ClientDashboard />;

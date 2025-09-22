@@ -1,7 +1,4 @@
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD:pages/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin;
 } from 'lucide-react''
@@ -9,10 +6,6 @@ import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
 :pages_backup/pricing-2033.tsx
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Check,
   Star,
   Zap,
@@ -58,25 +51,17 @@ import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react',;
 import Head from 'next/head',;
-=======
 '
 import React, { useState } from 'react',;'
 import Head from 'next/head',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-2033.tsx
 import { motion } from 'framer-motion',;
 import {}
   Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin';
 } from 'lucide-react',;'
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations',;'
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const contactInfo = {
 
 const contactInfo = {}
@@ -91,9 +76,7 @@ export default function Pricing2033Page() {}
 ';
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 
-=======
 const contactInfo = {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -104,14 +87,11 @@ export default function Pricing2033Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly'
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
 :pages_backup/pricing-2033.tsx
   // Enhanced service categories with pricing
   const serviceCategories = [
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next / head',
 import { motion } from 'framer-motion',
@@ -137,24 +117,16 @@ function Pricing2033Page() {
   const service_categories = [;
 
     {
-<<<<<<< HEAD:pages/pricing-2033.tsx
-<<<<<<< HEAD
   ]
-<<<<<<< HEAD
       name: 'Revolutionary AI Services',
       description: 'AI consciousness evolution and emotional intelligence',
-=======
 function Pricing2033Page() { return null; }
     {}
 '
       name: 'Revolutionary AI Services','
       description: 'AI consciousness evolution and emotional intelligence','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-2033.tsx
       services: ['AI Consciousness EvolutionAI Emotional IntelligenceAI Creativity OrchestratorAI Autonomous Business Manager'],
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       name: 'Revolutionary AI Services',
       description: 'AI consciousness evolution and emotional intelligence',
 services: [
@@ -239,8 +211,6 @@ services: [
       color: 'from-orange-500 to-red-500',
     },
   ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   // Enhanced pricing tiers with more realistic and comprehensive offerings;
   const pricingTiers = []
@@ -252,21 +222,13 @@ services: [
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
 :pages_backup/pricing-2033.tsx
       features: [
-<<<<<<< HEAD:pages/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       features: []
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-2033.tsx
         'API Access (1000 calls/month)Community Support'
       ]
       popular: false'
       color: 'from-gray-500 to-gray-600'
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 'Access to 100+ Core Services',
         'Basic AI Integration',
         'Standard Support (24/7)',
@@ -281,8 +243,6 @@ services: [
       popular: false,
       color: 'from-gray-500 to-gray-600',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
@@ -290,9 +250,6 @@ services: [
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
     {'
       name: 'Professional''
@@ -302,15 +259,11 @@ services: [
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: []
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-2033.tsx
         'API Access (10,000 calls/month)Dedicated Account ManagerCustom IntegrationsAdvanced Reporting'
       ]
       popular: true'
       color: 'from-purple-500 to-cyan-500'
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 'Access to 200+ Advanced Services',
         'Advanced AI Integration',
         'Priority Support (24/7)',
@@ -327,8 +280,6 @@ services: [
       popular: true,
       color: 'from-purple-500 to-cyan-500',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
@@ -336,9 +287,6 @@ services: [
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
     {'
       name: 'Enterprise''
@@ -348,14 +296,12 @@ services: [
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: []
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-2033.tsx
         'Unlimited API AccessDedicated Success ManagerCustom DevelopmentAdvanced ComplianceWhite-label SolutionsSLA Guarantees'
       ]
       popular: false'
       color: 'from-blue-500 to-indigo-500'
     }
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
       savings: 'Save 70% vs. competitors'
     }
     {'
@@ -376,8 +322,6 @@ services: [
     }
 :pages_backup/pricing-2033.tsx
     {
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 'Access to All 500+ Services',
         'Full AI & Quantum Integration',
         'Premium Support (24/7)',
@@ -441,8 +385,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       savings: 'Save 80% vs. competitors',
     },
     {
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: 'AI Business Intelligence Suite'
       price: '$299/month'
       description: 'Comprehensive business intelligence platform powered by artificial intelligence'
@@ -450,19 +392,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       features: ['AI-powered analyticsPredictive insightsAutomated reporting']
       savings: 'Save 50% vs. competitors'
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   ],
 
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import Head from 'next/head';
-=======
     {'
       name: 'AI Business Intelligence Suite''
       price: '$299/month''
@@ -474,7 +409,6 @@ import Head from 'next/head';
 '
 import React, { useState } from 'react';'
 import Head from 'next/head';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-2033.tsx
 import { motion } from 'framer-motion';
 import {;
   Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin;'
@@ -637,19 +571,8 @@ export default function Pricing2033Page(req, res) {}
   }
 }
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
   ],
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   ],
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       name: 'AI Business Intelligence Suite',
       price: '$299/month',
       description:
@@ -724,14 +647,8 @@ export default function Pricing2033Page(req, res) {}
               >
                 <div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium'>
                   <Crown className='w-4 h-4' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
   return (
     <>
       <Head>
@@ -752,12 +669,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>"
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
         {/* Header */  } catch (error) {
     console.error("Error:", error);
@@ -767,21 +679,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/pricing-2033.tsx
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center">
               <motion.div
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -795,29 +699,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/pricing-2033.tsx
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 transition={{ duration: 0.6 }} className="mb-6">
                 <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
-=======
                 transition={{ duration: 0.6 }} className="mb-6">
                 <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Crown className="w-4 h-4" />
                   <span>2033 Revolutionary Pricing</span>
                 </div>
               </motion.div>
 <motion.h1
-<<<<<<< HEAD:pages/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 transition={{ duration: 0.6, delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Revolutionary Technology;
@@ -827,12 +718,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.h1>
 :pages_backup/pricing-2033.tsx
               <motion.p
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
               <motion.h1
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.6, delay: 0.1 }}
@@ -846,8 +732,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='text-white'>Pricing</span>
               </motion.h1>
               <motion.p
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 transition={{ duration: 0.6, delay: 0.2 }} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
                 Experience the future of technology with our revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions at competitive prices.
               </motion.p>
@@ -868,10 +752,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 transition={{ duration: 0.6, delay: 0.3 }} className="flex items-center justify-center space-x-4 mb-8">
                 <span className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                   Monthly
@@ -1074,8 +954,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                     className={`w - 6 h - 6 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - full transition - transform duration - 200 ${
                       billing_cycle === 'yearly' ? 'translate - x-8' : 'translate - x-0';
 :pages_backup/pricing-2033.tsx
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     }`}
 
                   />;
@@ -1094,16 +972,10 @@ price: billing_cycle === 'monthly' ? 999 : 799,
         {/* Pricing Tiers */}
 :pages_backup/pricing-2033.tsx
 {/* Pricing Tiers */  } catch (error) {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Pricing Tiers */  } catch (error) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
                 transition={{ duration: 0.6, delay: 0.3 }} className="flex items-center justify-center space-x-4 mb-8">
                 <span className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.6, delay: 0.2 }}
@@ -1137,18 +1009,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div
                     className={`w-6 h-6 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full transition-transform duration-200 ${
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD:pages/pricing-2033.tsx
-<<<<<<< HEAD
                       billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-0'
         {/* Pricing Tiers */  } catch (error) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                   />
                 </button>
                 <span className={`text-sm ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
@@ -1162,14 +1029,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1177,7 +1037,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {pricingTiers.map((tier, index) => (
                 <motion.div
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
         <div className="relative py - 20">;
           <div className="absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 via - transparent to - cyan - 500 / 5"></div>;
           <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -1213,21 +1072,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/pricing-2033.tsx
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
                   <div className={`relative bg-gray-900/50 border border-purple-500/30 rounded-2xl p-8 h-full backdrop-blur-sm ${
                     tier.popular ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25' : ''
                   }`}>
@@ -1241,9 +1092,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 </div>
                       {tier.savings && ("
                         <div className="text-green-400 text-sm font-medium">{tier.savings}</div>
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 :pages_backup/pricing-2033.tsx
                       )  } catch (error) {
@@ -1252,11 +1101,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </div>
                     <ul className="space-y-4 mb-8">
                       {tier.features.map((feature, idx) => ("
@@ -1265,12 +1109,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <span className="text-gray-300">{feature}</span>
                         </li>
 :pages_backup/pricing-2033.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
                     </div>
                     <ul className="space-y-4 mb-8">
@@ -1280,7 +1118,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <span className="text-gray-300">{feature}</span>
                         </li>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
                       billingCycle === 'yearly'
                         ? 'translate-x-8'
                         : 'translate-x-0'
@@ -1357,9 +1194,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <span className='text-gray-300'>{feature}</span>
                         </li>
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD:pages/pricing-2033.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1400,13 +1234,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1423,10 +1251,6 @@ Service Category Pricing
               {serviceCategories.map((category, index) => (
 :pages_backup/pricing-2033.tsx
                 <motion.div
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                 Service Category Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1437,7 +1261,6 @@ Service Category Pricing
               {serviceCategories.map((category, index) => (
                 <motion.div
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
                       ))}
                     </ul>
                     <button
@@ -1475,9 +1298,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {serviceCategories.map((category, index) => (
                 <motion.div
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD:pages/pricing-2033.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   key={category.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1494,19 +1314,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
                       <category.icon className="w-6 h-6 text-white" />
@@ -1525,18 +1337,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <li key={idx} className="flex items-center space-x-2">"
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />"
                         <span className="text-sm text-gray-300">{service}</span>
-=======
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
                       <category.icon className="w-6 h-6 text-white" />
 :pages_backup/pricing-2033.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">{category.name}</h3>
@@ -1552,7 +1358,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <li key={idx} className="flex items-center space-x-2">
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{service}</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
                   key={category.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -1590,31 +1395,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <li key={idx} className='flex items-center space-x-2'>
                         <Check className='w-4 h-4 text-green-400 flex-shrink-0' />
                         <span className='text-sm text-gray-300'>{service}</span>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </li>
                     ))}
                   </ul>
 :pages_backup/pricing-2033.tsx
                   <a
-<<<<<<< HEAD
                     href="/services" className="inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium">
                     <span>Learn More</span>"
                     <ArrowRight className="w-4 h-4" />
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 href='/services'
                     className='inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium'
                   >
                     <span>Learn More</span>
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD:pages/pricing-2033.tsx
-<<<<<<< HEAD
                     <ArrowRight className="w-4 h-4" />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1629,13 +1425,7 @@ href='/services'
   }
 }
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1652,14 +1442,7 @@ Popular Services
               {popularServices.map((service, index) => (
 :pages_backup/pricing-2033.tsx
                 <motion.div
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                 Popular Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1670,7 +1453,6 @@ Popular Services
               {popularServices.map((service, index) => (
                 <motion.div
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
                     <ArrowRight className='w-4 h-4' />
                   </a>
                 </motion.div>
@@ -1697,9 +1479,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {popularServices.map((service, index) => (
                 <motion.div
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD:pages/pricing-2033.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   key={service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1716,13 +1495,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
@@ -1730,15 +1503,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                       <div className="inline-flex items-center px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                         {service.category}
 
 :pages_backup/pricing-2033.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
                         {service.category}
 
                     <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
@@ -1856,7 +1625,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className="inline - flex items - center px - 3 py - 1 bg - purple - 500 / 20 text - purple - 300 text - xs rounded - full">;
                         {service.category}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
                   key={service.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -1874,16 +1642,12 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <div className='inline-flex items-center px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.category}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         {service.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       </div>
                     </div>"
                     <div className="text-right ml-4">"
@@ -1900,7 +1664,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
                   </ul>
 :pages_backup/pricing-2033.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div className="flex space-x-3">
                     <a"
                       href="/contact" className="flex-1 px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 text-center">
@@ -1948,25 +1711,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       href={`tel:${contactInfo.mobile}`}
                       className='px-4 py-2 bg-gray-800/50 border border-purple-500/30 text-purple-300 text-sm font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200'
                     >
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       Call Now
                     </a>
                   </div>
                 </motion.div>
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD:pages/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
               ))  } catch (error) {
     console.error("Error:", error);
-=======
                       Call Now;
                     </a>
                   </div>
@@ -1974,7 +1727,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-2033.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1987,25 +1739,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-2xl p-12 backdrop-blur-sm text-center">
-=======
 
 "
         <div className="relative py-20">"
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>"
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-2xl p-12 backdrop-blur-sm text-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-2033.tsx
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>"
@@ -2036,7 +1780,6 @@ Join the future of technology with our revolutionary AI, quantum computing, and 
   }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Get in touch with our experts to discuss your transformation journey and pricing options.
               </p>"
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -2044,19 +1787,10 @@ Join the future of technology with our revolutionary AI, quantum computing, and 
                   href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg hover:shadow-purple-500/25">
                   Start Your Journey"
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
-<<<<<<< HEAD:pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <a
                   href={`tel:${contactInfo.mobile}`} className="px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200">
                   <Phone className="w-5 h-5 mr-2 inline" />
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
               ))}
             </div>
           </div>
@@ -2093,24 +1827,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className='px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200'
                 >
                   <Phone className='w-5 h-5 mr-2 inline' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Call Now
                 </a>
               </div>
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD:pages/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="mt-12 pt-8 border-t border-purple-500/20">
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300">
                   <div className="flex items-center space-x-2">
-=======
 
                 <a"`
                   href={`tel:${contactInfo.mobile}`} className="px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200">"
@@ -2123,7 +1847,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="mt-12 pt-8 border-t border-purple-500/20">"
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300">"
                   <div className="flex items-center space-x-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-2033.tsx
                     <Phone className="w-4 h-4 text-purple-400" />
 <span>{contactInfo.mobile}</span>
                   </div>"
@@ -2133,9 +1856,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>"
                   <div className="flex items-center space-x-2">"
                     <MapPin className="w-4 h-4 text-purple-400" />
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
               <div className="mt-12 pt-8 border-t border-purple-500/20">
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300">
                   <div className="flex items-center space-x-2">
@@ -2148,7 +1868,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <div className="flex items-center space-x-2">
                     <MapPin className="w-4 h-4 text-purple-400" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
               {/* Contact Info */}
 <div className='mt-12 pt-8 border-t border-purple-500/20'>
                 <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300'>
@@ -2163,7 +1882,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <div className='flex items-center space-x-2'>
                     <MapPin className='w-4 h-4 text-purple-400' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
@@ -2174,14 +1892,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </>
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD:pages_backup/pricing-2033.tsx
-<<<<<<< HEAD:pages/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx
   )
   } catch (error) {
     console.error("Error:", error);
@@ -2189,16 +1901,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-}
-=======
 
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-2033.tsx
+}
+
                       </div>;
                     </div>;"
                     <div className="text - right ml - 4">;"
@@ -2276,24 +1983,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 :pages_backup/pricing-2033.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/pricing-2033.tsx
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-2033.tsx
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-2033.tsx

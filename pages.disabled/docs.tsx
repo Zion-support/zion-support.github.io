@@ -1,9 +1,4 @@
 :pages_backup/docs.tsx
-<<<<<<< HEAD:pages/docs.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import Head from 'next/head';
@@ -261,7 +256,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const Page = () => {
   return (
-<<<<<<< HEAD
     <MainLayout 
       title="Page - Zion Tech Group"
       description="Zion Tech Group page"
@@ -278,9 +272,7 @@ const Page = () => {
 
 export default Page;
 :pages_backup/docs.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from 'react',
 origin/cursor/automate-test-improve-and-merge-code-2533
 import Head from 'next/head';
@@ -292,13 +284,9 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
 export default function DocsPage() {
 	return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 		<Layout>
 			<Head>
 				<title>Documentation | Zion Tech Group</title>
@@ -336,10 +324,8 @@ return (
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
-=======
 
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
 
 		<Layout>
 			<Head>
@@ -365,8 +351,6 @@ import Layout from '../components/layout/Layout',;
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export default function DocsPage() {
 	return (
@@ -382,20 +366,10 @@ export default function DocsPage() {
 		</Layout>
 	)
 :pages_backup/docs.tsx
-<<<<<<< HEAD:pages/docs.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -403,16 +377,8 @@ export default function DocsPage() {
 }
 :pages_backup/docs.tsx
 ;
-<<<<<<< HEAD:pages/docs.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -434,27 +400,14 @@ const Page = () => {
 
 export default Page;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
 
 :pages_backup/docs.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
-=======
 ;
 
 ;
 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
   return (
     <Layout>
       <Head>
@@ -693,9 +646,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 :pages_backup/docs.tsx
-<<<<<<< HEAD:pages/docs.tsx
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx

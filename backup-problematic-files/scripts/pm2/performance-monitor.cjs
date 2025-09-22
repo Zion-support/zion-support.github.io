@@ -45,12 +45,10 @@ const startTime = Date.now();
   log(`Build completed in ${buildTime}ms`);
   return { }
     success: buildResult.success, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     buildTime: buildTime,
 
 const checkMemoryUsage = () => {}
   log('Checking memory usage');
-<<<<<<< HEAD
   try {}
     const memInfo = execSync('free -m', { encoding: 'utf8' }
 });
@@ -66,7 +64,6 @@ const totalMem = parseInt(memLine[1]);
     const memUsagePercent = (usedMem / totalMem) * 100;
     `;
     log(`Memory usage: ${memUsagePercent.toFixed(2)}% (${usedMem}MB / ${totalMem}MB)`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return {}
       success: true,
       total: totalMem,
@@ -83,7 +80,6 @@ const generatePerformanceReport = (results) => {}
       issues: 0;
 };
   };
-<<<<<<< HEAD
   // Calculate overall status;
   if (results.build && results.build.performance === 'POOR') {}
     report.overall.status = 'WARNING';
@@ -139,9 +135,5 @@ main().catch(error => {})
   log(`Performance Monitor Process failed: ${error.message}`);
   process.exit(1);
 }
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

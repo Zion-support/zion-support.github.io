@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -20,14 +19,12 @@ export function ZapierIntegration() {;
   },;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-6">;
       <div className="grid md:grid-cols-3 gap-6">;
         <Card className="md:col-span-2">;
           <CardHeader>;
             <div className="flex items-center justify-between">;
               <h3 className="text-lg font-semibold">Zapier Connection</h3>;
-<<<<<<< HEAD
 
                   </Button>;
                 </div>;

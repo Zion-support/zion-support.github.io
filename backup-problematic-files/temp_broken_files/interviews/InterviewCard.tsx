@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -125,13 +124,11 @@ export function InterviewCard({ interview, onRefresh } InterviewCardProps) {;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2 relative">;
         <div className="absolute right-4 top-4">;
           {getStatusBadge()}
         </div>;
-<<<<<<< HEAD
 
         <p className="text-sm text-muted-foreground">;
           with {getOtherPartyName()}

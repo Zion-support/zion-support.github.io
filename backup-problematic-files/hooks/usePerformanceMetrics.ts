@@ -1,4 +1,3 @@
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -24,7 +23,6 @@ const [isSupported, setIsSupported] = useState(false);
       }, 0);
       const fidEntries = window.performance.getEntriesByType("first-input");
       const fid = fidEntries[0] as PerformanceEventTiming;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       setMetrics({
         loadTime: navigation.loadEventEnd - navigation.loadEventStart
         firstContentfulPaint: fcp ? fcp.startTime : 0
@@ -47,4 +45,3 @@ export function usePerformanceMetrics() {;
   }, []);
   return { metrics, isSupported }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

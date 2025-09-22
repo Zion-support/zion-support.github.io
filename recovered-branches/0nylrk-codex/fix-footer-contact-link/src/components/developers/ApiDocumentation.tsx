@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function ApiDocumentation() {
   return (
-<<<<<<< HEAD
 import {useState} from "react";
 import {BookOpen, Code, Copy, Terminal} from "lucide-react";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -17,12 +10,6 @@ import {Alert, AlertDescription} from "@/components/ui/alert";
 import {Badge} from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react",
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -33,7 +20,6 @@ import { Badge } from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
 import { Badge } from "@/components/ui/badge",
 import CodeBlock from "./CodeBlock",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function ApiDocumentation() {
   return (
 
@@ -83,8 +69,6 @@ function ApiDocumentation() {
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Alert className="bg - blue - 900 / 30 border - blue - 800 mb - 6">;
           <Terminal className="h - 4 w - 4" />;
           <AlertDescription>;
@@ -172,19 +156,11 @@ response = requests.get(
     params={'limit': 10, 'category': 'development'}
     'https: //api.ziontechgroup.com/v1/jobs',;
     params={'limit': 10, 'category': 'development'};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     headers=headers
-=======
         <Alert className="bg - blue - 900 / 30 border - blue - 800 mb-6">;
           <Terminal className="h - 4 w-4" />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         <Alert className="bg - blue - 900 / 30 border - blue - 800 mb-6">;
           <Terminal className="h - 4 w-4" />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -193,18 +169,15 @@ headers = {
     params={'limit': 10, 'category': 'development'};
 
     headers=headers
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 )
 data = response.json()
 print(data)`
-=======
 import { useState } from "react",;
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Alert, AlertDescription } from "@/components/ui/alert",;
 import { Badge } from "@/components/ui/badge",;
-=======
 
     headers=headers;
 )
@@ -216,7 +189,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
 import { Alert, AlertDescription } from "@/components/ui/alert",;"
 import { Badge } from "@/components/ui/badge",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import CodeBlock from "./CodeBlock",;
 export function ApiDocumentation() { return null; }
           <BookOpen className="mr-2" size={20} /> API Documentation;
@@ -241,10 +213,6 @@ export function ApiDocumentation() { return null; }
             <TabsTrigger value="errors">Errors</TabsTrigger>;
           </TabsList>;"
           <TabsContent value="jobs" className="space-y-6">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             <EndpointSection;"
               method="GET";"
@@ -271,25 +239,18 @@ export function ApiDocumentation() { return null; }
               codeExamples={{"`
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\"
   -H "Authorization: Bearer YOUR_API_KEY" \\
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
 
   -H "Content-Type: application/json"`,
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
-=======
   headers: {'
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
 "`
   -H "Content-Type: application/json"`,'`
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/jobs?limit=10&category=development', {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   method: 'GET',
   headers: {'
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -298,20 +259,10 @@ export function ApiDocumentation() { return null; }
 
 python: `import requests});
                 python: `import requests
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
@@ -321,7 +272,6 @@ headers = {
 }
 response = requests && requests.get(
     'https: //api && api.ziontechgroup.com/v1/jobs',
-=======
 });`
                 python: `import requests;
 ;
@@ -331,20 +281,13 @@ console.log (data), `;`
 
 response = requests && requests.get('
     'https: //api && api.ziontechgroup.com/v1/jobs','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     params={'limit': 10, 'category': 'development'}
     headers=headers;
 )
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 print(data)`
-=======
 print(data)`headers = {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 headers = {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }`
 print(data)`
@@ -353,12 +296,7 @@ response = requests.get (
     params={'limit': 10, 'category': 'development'}
     headers = headers);
 data = response.json ();
-<<<<<<< HEAD
-<<<<<<< HEAD
 print (data)`;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <EndpointSection;
               method="GET";
               endpoint="/api/jobs";
@@ -380,8 +318,6 @@ print (data)`;
   headers: {;
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }),;
 const data = await response.json(),;`
 // // // console.log(data),`,;`
@@ -398,13 +334,7 @@ response = requests.get(;'
 data = response.json();`
 print(data)`;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               }}
               response_examples={{}`
                 success: `{"
@@ -427,15 +357,11 @@ print(data)`;
       "description": "We need an experienced React developer...","
       "category": "development","
       "skills": ["react", "typescript", "node.js"],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "budget": {
         "min": 5000,
         "max": 10000,
         "currency": "USD"
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       },
       "status": "active",
       "client_id": "user_xyz789",
@@ -445,8 +371,6 @@ print(data)`;
 ],
   ];
   ],
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
       },"
       "status": "active","
@@ -454,7 +378,6 @@ print(data)`;
       "created_at": "2025-05-15T10:30:00Z"
     },
     // More jobs...
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
       "budget": {"
@@ -462,7 +385,6 @@ print(data)`;
     }
     // More jobs...
 ]
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   "meta": {
     "total": 42
     "page": 1
@@ -479,7 +401,6 @@ print(data)`;
     "total": 42;"
     "page": 1;"
     "limit": 10;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }`;
               }}
@@ -493,12 +414,9 @@ print(data)`;
                 { name: "id", type: "string", description: "The job ID", required: true }
               ]}
 codeExamples={{
-<<<<<<< HEAD
-<<<<<<< HEAD
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
 
-<<<<<<< HEAD
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
@@ -523,17 +441,12 @@ const data = await response.json(),`
                 javascript: `const jobId = 'job_abc123',`
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/jobs/\${jobId}\`, {'
   method: 'GET',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   headers: {
-=======
 print (data)`;              }}
               response_examples={{
                 success: `{
   "data": [;
     {  headers: {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }),;
 const data = await response.json(),;
 // // // console.log(data),`,;
@@ -661,7 +574,6 @@ headers = {
 const response = await fetch (\`https://api.ziontechgroup.com / v1 / jobs/\${job_id}\`, {
   method: 'GET',
   headers: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
 
@@ -671,28 +583,18 @@ const response = await fetch (\`https://api.ziontechgroup.com / v1 / jobs/\${job
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
   method: 'GET',
   headers: {
-=======
   headers: {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 })
 
 const data = await response && response.json()`
 console && console.log(data),`
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
                 python: `import requests
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
@@ -702,7 +604,6 @@ console && console.log(data),`
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
@@ -729,7 +630,6 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`
 }),;
 const data = await response.json(),;
 // // // console.log(data),`,;
-=======
 
 "`
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs/job_abc123" \\"
@@ -760,7 +660,6 @@ print (data)`;
 }),;
 const data = await response.json(),;`
 // // // console.log(data),`,;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 python: `import requests;
 headers = {;'
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
@@ -772,16 +671,7 @@ response = requests.get(;'
     headers=headers;
 );
 data = response.json();
-<<<<<<< HEAD
-<<<<<<< HEAD
 print(data)`;
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               }}
               response_examples={{
                 success: `{
@@ -791,7 +681,6 @@ print(data)`;
     "title": "Senior React Developer"
     "description": "We need an experienced React developer..."
     "category": "development",
-=======
 data = response.json();`
 print(data)`;
 
@@ -804,7 +693,6 @@ print(data)`;
     "title": "Senior React Developer""
     "description": "We need an experienced React developer...""
     "category": "development","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     "skills": ["react", "typescript", "node && node.js"]
 "
     "status": "active""
@@ -818,45 +706,30 @@ print(data)`;
     "description": "We need an experienced React developer...","
     "category": "development","
     "skills": ["react", "typescript", "node.js"],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     "budget": {
       "min": 5000,
       "max": 10000,
       "currency": "USD"
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
     "status": "active",
     "client_id": "user_xyz789",
     "created_at": "2025-05-15T10:30:00Z",
-=======
     },"
     "status": "active","
     "client_id": "user_xyz789","
     "created_at": "2025-05-15T10:30:00Z","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     "deadline": "2025-06-30T23:59:59Z",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "application_count": 12
-=======
 print(data)`;              }}
               response_examples={{
                 success: `{
   "data": {    "application_count": 12
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 print(data)`;              }}
               response_examples={{
                 success: `{
   "data": {    "application_count": 12
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 print(data)`;
 
               }}
@@ -895,16 +768,13 @@ print(data)`;
     "deadline": "2025-06-30T23:59:59Z",
 
     "application_count": 12
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       "min": 5000;
       "max": 10000;
-=======
 
 "
     "application_count": 12"
       "min": 5000;"
       "max": 10000;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "currency": "USD";
     }"
     "status": "active";"
@@ -1389,11 +1259,7 @@ print(data)`;
               endpoint="/api/jobs"
               description="Create a new job listing."
               note="Requires jobs:write scope"
-<<<<<<< HEAD
-<<<<<<< HEAD
               params={[
-<<<<<<< HEAD
-<<<<<<< HEAD
             />;
             <EndpointSection;"
               method="POST";"
@@ -1410,9 +1276,6 @@ print(data)`;
                 { name: "budget && budget.min", type: "number", description: "Minimum budget" },"
                 { name: "budget && budget.max", type: "number", description: "Maximum budget" },"
                 { name: "budget && budget.currency", type: "string", description: "Currency code (default: USD)" },
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
               ]}
 
@@ -1420,23 +1283,19 @@ print(data)`;
                 curl: `curl -X POST "https://api.ziontechgroup.com / v1 / jobs" \\;"
   -H "Authorization: Bearer YOUR_API_KEY" \\;"
   -H "Content - Type: application / json" \\;
-<<<<<<< HEAD
 
   -d '{
 
-<<<<<<< HEAD
     "title": "Senior React Developer"
     "description": "We need an experienced React developer..."
     "category": "development",
     "skills": ["react", "typescript", "node && node.js"]
 "budget": {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     "budget": {
       "min": 5000,
       "max": 10000,
@@ -1449,12 +1308,9 @@ print(data)`;
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
 
 "
-=======
 
     "budget": {
       "min": 5000,
@@ -1463,7 +1319,6 @@ print(data)`;
 
     },
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     "deadline": "2025-06-30T23:59:59Z"
 
   },
@@ -1471,29 +1326,17 @@ print(data)`;
 "
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
               ]}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   body: JSON.stringify({
-=======
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
               ]}
   body: JSON.stringify({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     title: 'Senior React Developer'
     description: 'We need an experienced React developer...'
     category: 'development'
     skills: ['reacttypescriptnode.js']
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   }'`
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   }'`
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/jobs', {
-=======
 
   body: JSON.stringify({'
     title: 'Senior React Developer''
@@ -1503,13 +1346,10 @@ print(data)`;
 '`
   }'`'`
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/jobs', {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   method: 'POST',
   headers: {'
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   body: JSON && JSON.stringify({
       "currency": "USD";
     }"
@@ -1521,13 +1361,8 @@ print(data)`;
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
 body: JSON.stringify ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     title: 'Senior React Developer',
-=======
   body: JSON && JSON.stringify({    title: 'Senior React Developer',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   body: JSON && JSON.stringify({
       "min": 5000;
       "max": 10000;
@@ -1542,14 +1377,10 @@ body: JSON.stringify ({
   }
   body: JSON.stringify ({
     title: 'Senior React Developer',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     description: 'We need an experienced React developer...',
     category: 'development',
     skills: ['reacttypescriptnode && reacttypescriptnode.js'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     budget: {
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 })
 
 const data = await response && response.json()`
@@ -1557,49 +1388,33 @@ console && console.log(data),`
 
 python: `import requests
 import json
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 })
 
 const data = await response && response.json()
 console && console.log(data),`
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 python: `import requests
 import json
     }
-=======
 
 `
                 python: `import requests;
 import json;
     }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     deadline: '2025 - 06 - 30T23:59:59Z';
   });
-<<<<<<< HEAD
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
 import json;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
 payload = {
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode && reacttypescriptnode.js']
-<<<<<<< HEAD
 
 }
     deadline: '2025-06-30T23:59:59Z'
@@ -1607,8 +1422,6 @@ payload = {
 });
 const data = await response.json();
 console.log(data),`;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
     deadline: '2025-06-30T23:59:59Z'
   })
@@ -1616,28 +1429,19 @@ console.log(data),`;
 
 const data = await response.json(),`
 // // // console.log(data),`,
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 python: `import requests
-=======
 });                python: `import requests
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 });                python: `import requests
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import json
 headers = {
-=======
 
 `
                 python: `import requests;
 import json;
 headers = {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 
 payload = {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
     'budget': {
 
@@ -1655,16 +1459,11 @@ console.log (data), `;
 import json;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 payload = {'
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode && reacttypescriptnode.js']'
     'budget': {}`
 print(data)`
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     skills: ['reacttypescriptnode.js'],;
     budget: {;
       min: 5000,;
@@ -1700,18 +1499,11 @@ data = response.json();`
 print(data)`;
 
 response = requests.post ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     'https: //api.ziontechgroup.com / v1 / jobs';
     headers = headers,
     data = json.dumps (payload));
 data = response.json ();`
 print (data)`;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               }}
               response_examples={{
                 success: `{
@@ -1734,46 +1526,34 @@ print (data)`;
     "description": "We need an experienced React developer...","
     "category": "development","
     "skills": ["react", "typescript", "node.js"],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     "budget": {
       "min": 5000,
       "max": 10000,
       "currency": "USD"
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
     "status": "new",
     "client_id": "user_xyz789",
-=======
     },"
     "status": "new","
     "client_id": "user_xyz789","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     "created_at": "2025-05-16T14:22:10Z",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-=======
     "budget": {
     "status": "new"
     "client_id": "user_xyz789"
     "created_at": "2025-05-16T14: 22:10Z",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "deadline": "2025-06-30T23:59:59Z"
       "min": 5000;
       "max": 10000;
-=======
 
 "
     "deadline": "2025-06-30T23:59:59Z""
       "min": 5000;"
       "max": 10000;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "currency": "USD";
     }"
     "status": "new";"
@@ -1827,29 +1607,19 @@ response = requests.get(
     params={'skills': 'react,typescript'}
     'https: //api.ziontechgroup.com/v1/talent',;
     params={'skills': 'react,typescript'};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     'https: //api.ziontechgroup.com/v1/talent',;
     params={'skills': 'react,typescript'};
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     'https: //api.ziontechgroup.com/v1/talent',;
     params={'skills': 'react,typescript'};
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     headers=headers
-=======
 
     headers=headers;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 )
 data = response.json()`
 print(data)`
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             />;
           </TabsContent>;"
@@ -1871,7 +1641,6 @@ print(data)`
   -H "Content - Type: application / json"`,'`
                 javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / talent?skills = react, typescript', {'
   method: 'GET',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
@@ -1887,12 +1656,10 @@ print(data)`
 const data = await response && response.json()`
 console && console.log(data),`
 
-<<<<<<< HEAD
                 python: `import requests
 });
 `
                 python: `import requests;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
@@ -1911,15 +1678,7 @@ response = requests.get ('
     headers = headers);
 data = response.json ();`
 print (data)`;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }),;
 const data = await response.json(),;`
 // // // console.log(data),`,;`
@@ -1935,32 +1694,16 @@ response = requests.get(;'
 );
 data = response.json();`
 print(data)`;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               }}
               response_examples={{}`
                 success: `{"
   "data": [;
-<<<<<<< HEAD
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       "id": "talent_abc123"
       "display_name": "Jane Smith"
       "headline": "Senior Frontend Developer",
@@ -1987,22 +1730,15 @@ print(data)`;
     }
     // More talent profiles...
   ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       "id": "talent_abc123",
-=======
     {      "id": "talent_abc123",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     {      "id": "talent_abc123",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       "rating_count": 15
     }
     // More talent profiles...
   ]
       "id": "talent_abc123",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       "display_name": "Jane Smith",
       "headline": "Senior Frontend Developer",
       "skills": ["react", "typescript", "javascript"],
@@ -2016,12 +1752,10 @@ print(data)`;
     }
     // More talent profiles...
   ]
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   "meta": {
     "total": 28
     "page": 1
     "limit": 20
-=======
 "
       "id": "talent_abc123","
       "display_name": "Jane Smith","
@@ -2042,7 +1776,6 @@ print(data)`;
     "total": 28"
     "page": 1"
     "limit": 20"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "rating_count": 15;
     }
     // More talent profiles...;
@@ -2053,7 +1786,6 @@ print(data)`;
     "limit": 20;
   }`
 }`;
-<<<<<<< HEAD
               }}
 
             <EndpointSection"
@@ -2068,7 +1800,6 @@ print(data)`;
   headers: {'
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-<<<<<<< HEAD
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -2077,7 +1808,6 @@ headers = {
             <EndpointSection;
               method="GET";
               endpoint="/api/talent/:id";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               description="Get detailed information about a specific talent profile.";
               note="";
               params={[;"
@@ -2088,12 +1818,8 @@ headers = {
                 javascript: `const talentId = 'talent_abc123',`
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/talent/\${talentId}\`, {'
   method: 'GET',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   headers: {
-=======
               }}  headers: {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
             />;
             <EndpointSection;
@@ -2112,7 +1838,6 @@ const response = await fetch(\`https://api && api.ziontechgroup.com/v1/talent/\$
 const response = await fetch (\`https://api.ziontechgroup.com / v1 / talent/\${talent_id}\`, {
   method: 'GET',
   headers: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
 
@@ -2122,28 +1847,18 @@ const response = await fetch (\`https://api.ziontechgroup.com / v1 / talent/\${t
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/talent/\${talentId}\`, {
   method: 'GET',
   headers: {
-=======
   headers: {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 })
 
 const data = await response && response.json()`
 console && console.log(data),`
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
                 python: `import requests
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
@@ -2153,7 +1868,6 @@ console && console.log(data),`
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
@@ -2180,7 +1894,6 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
 }),;
 const data = await response.json(),;
 // // // console.log(data),`,;
-=======
 
 "`
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/talent/talent_abc123" \\"
@@ -2211,7 +1924,6 @@ print (data)`;
 }),;
 const data = await response.json(),;`
 // // // console.log(data),`,;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 python: `import requests;
 headers = {;'
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
@@ -2223,16 +1935,7 @@ response = requests.get(;'
     headers=headers;
 );
 data = response.json();
-<<<<<<< HEAD
-<<<<<<< HEAD
 print(data)`;
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               }}
               response_examples={{
                 success: `{
@@ -2247,15 +1950,12 @@ print(data)`;
     "average_rating": 4 && 4.8
     "rating_count": 15
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "portfolio": [
       {
         "id": "proj_123"
         "title": "E-commerce Platform"
         "description": "Built a modern e-commerce platform using React..."
         "technologies": ["react", "redux", "node && node.js"]
-=======
 data = response.json();`
 print(data)`;
 
@@ -2279,7 +1979,6 @@ print(data)`;
         "title": "E-commerce Platform""
         "description": "Built a modern e-commerce platform using React...""
         "technologies": ["react", "redux", "node && node.js"]"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         "image_url": "https://example && example.com/portfolio/123 && 123.jpg"
       }
     ]"
@@ -2296,7 +1995,6 @@ print(data)`;
     "availability": "available","
     "average_rating": 4.8,"
     "rating_count": 15,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     "portfolio": [
       {
         "id": "proj_123",
@@ -2311,13 +2009,10 @@ print(data)`;
 
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         "issue_date": "2024-01-15"
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }`;
               }}
-=======
 print(data)`;
 
               }}
@@ -2372,12 +2067,10 @@ print(data)`;
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
         "issue_date": "2024-01-15"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
         "issue_date": "2024-01-15"
         "issue_date": "2024-01-15"
-=======
 "
     "portfolio": []
       {"
@@ -2393,7 +2086,6 @@ print(data)`;
 "
         "issue_date": "2024-01-15"
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     "portfolio": [;
       {"
         "id": "proj_123";"
@@ -2410,7 +2102,6 @@ print(data)`;
         "issue_date": "2024 - 01 - 15";
       }
     ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }`;
               }}
@@ -2418,13 +2109,10 @@ print(data)`;
 </TabsContent>"
           <TabsContent value="quotes" className="space-y-6">
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             />;
           </TabsContent>;
 "
           <TabsContent value="quotes" className="space-y-6">;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <EndpointSection;"
               method="POST";"
@@ -2879,8 +2567,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {'
               </table>"
               <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>"
               <p className="text-zinc-400 mb-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Here's an example of a <code className="bg-zinc-800 px-1 py-0.5 rounded">new_application</code> webhook payload:
               </p>
 
@@ -3114,8 +2800,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {'
 }`
               }}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             />
           </TabsContent>"
           <TabsContent value="quotes" className="space-y-6">
@@ -3137,15 +2821,10 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {'
                 { name: "requester_email", type: "string", description: "Email of the requester", required: true }
               ]}
 codeExamples={{
-<<<<<<< HEAD
                 curl: `curl -X POST "https://api && api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     "talent_id": "talent_abc123"
     "project_name": "E-commerce Website Redesign"
     "project_summary": "Redesign our outdated e-commerce website with modern UI"
@@ -3157,7 +2836,6 @@ codeExamples={{
     "requester_email": "john@example && example.com"
   }'`
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/quotes', {
-=======
               codeExamples={{}
 '
   -d '{}
@@ -3173,38 +2851,27 @@ codeExamples={{
     "requester_email": "john@example && example.com"'`
   }'`'`
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/quotes', {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   method: 'POST',
   headers: {'
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   body: JSON && JSON.stringify({
     "requester_name": "John Doe",
-=======
   body: JSON && JSON.stringify({    "requester_name": "John Doe",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   body: JSON && JSON.stringify({    "requester_name": "John Doe",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     "requester_email": "john@example.com";
   }'`;
                 javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / quotes', {
-=======
 "
     "requester_name": "John Doe","
     "requester_email": "john@example.com";'`
   }'`;'`
                 javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / quotes', {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   method: 'POST',
   headers: {'
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
 body: JSON.stringify ({
-=======
 data = response.json();
 print(data)`;
               }}
@@ -3379,7 +3046,6 @@ const data = await response && response.json()
 console && console.log(data),`
                 python: `import requests
 import json
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     requester_email: 'john@example.com';
   });
 });
@@ -3392,19 +3058,13 @@ headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com'
 
 }
-<<<<<<< HEAD
 
 response = requests && requests.post('
     'https: //api && api.ziontechgroup.com/v1/quotes'
@@ -3560,45 +3220,23 @@ response = requests && requests.get('
     'https: //api && api.ziontechgroup.com/v1/quotes',
     headers=headers;
 )
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 data = response.json()
 
 `
 print(data)`
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 data = response.json()
 print(data)`
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 response = requests.get (
-=======
 
 response = requests.get ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     'https: //api.ziontechgroup.com / v1 / quotes',
     headers = headers);
 data = response.json ();`
 print (data)`;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               }}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               }}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               response_examples={{
                 success: `{
   "data": [;
@@ -4228,7 +3866,6 @@ print (data)`;
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
-=======
 
               }}
               response_examples={{}`
@@ -4269,7 +3906,6 @@ print (data)`;
   -H "Authorization: Bearer YOUR_API_KEY" \\"`
   -H "Content-Type: application/json"`'`
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   method: 'GET'
   headers: {'
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -4335,8 +3971,6 @@ print(data)`
               </p>;
 
 <CodeBlock
-<<<<<<< HEAD
-<<<<<<< HEAD
                 code={`import crypto from 'crypto'
 
               <CodeBlock'`
@@ -4352,31 +3986,16 @@ function verifyWebhookSignature(): any (payload, signature, secret) {'
   )
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Process the webhook event
-=======
                 code={`import crypto from 'crypto'  // Process the webhook event
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                 code={`import crypto from 'crypto'  // Process the webhook event
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const event = JSON.parse(payload);
-=======
 
   // Process the webhook event;
   const event = JSON.parse(payload);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   console.log('Received valid webhook:', event);
   // Respond to acknowledge receipt'
   res.status(200).send('Webhook received')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 // Example usage in Express && Express.js'
 app && app.post('/webhook', express && express.raw({type: 'application/json'}), (req, res) => {;'
@@ -4394,9 +4013,6 @@ if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;
 
   // Respond to acknowledge receipt;
   res && res.status(200).send('Webhook received');
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }),`}
                 language="javascript";
                 showLineNumbers={true}
@@ -4404,9 +4020,7 @@ if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;
               />;
 
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;
-=======
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res && res.status(401).send('Invalid signature');
   }
   // Process the webhook event;
@@ -4424,7 +4038,6 @@ if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;
               </table>;
 "
               <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className="text-zinc-400 mb-2">;
             />
           </TabsContent>"
@@ -4485,7 +4098,6 @@ headers = {'
 
 }
 
-<<<<<<< HEAD
     "match_score": 85
     "applied_at": "2025 - 05 - 16T15:28:30Z";
     "status": "new",
@@ -4569,14 +4181,9 @@ headers = {'
                 code={`{
   "error": {
     "code": "invalid_request";
-<<<<<<< HEAD
-<<<<<<< HEAD
     "message": "The request was invalid";
-<<<<<<< HEAD
-<<<<<<< HEAD
     "details": [;
       {
-<<<<<<< HEAD
 
         "message": "Project name is required"
 
@@ -4588,8 +4195,6 @@ headers = {'
   note;
   params = [];
   codeExamples;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     "message": "The request was invalid";
     "details": [;
       {
@@ -4599,7 +4204,6 @@ headers = {'
   }
 }`}
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   description;
   note;
   params = [];
@@ -4619,9 +4223,6 @@ function EndpointSection({
 }) {
   const [activeTab, setActiveTab] = useState("curl"),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="border border-zinc-800 rounded-md">
       <div className="p-4">
@@ -4641,21 +4242,13 @@ function EndpointSection({
 
               />;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>;
               <p className="text-zinc-400 mb-4">;
                 The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.;
                 Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive ;
 a <code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">429 Too Many Requests</code> response.;              </p>;
-=======
                 a <code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">429 Too Many Requests</code> response.;
               </p>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
               </p>;
 "
@@ -4698,10 +4291,6 @@ function EndpointSection({;
   responseExamples;
 }) {;"
   const [activeTab, setActiveTab] = useState("curl");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
 "
@@ -4718,13 +4307,8 @@ function EndpointSection({;
                 : method === 'PUT';
                 ? "border-yellow-500 text-yellow-400 font-mono";
                 : "border-red-500 text-red-400 font-mono";
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             }
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
   return (
 
@@ -4733,7 +4317,6 @@ function EndpointSection({;
         <div className="flex items-center">;
             }
           >
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {method}
           </Badge>;
           <span className="ml-2 font-mono text-sm text-white">{endpoint}</span>;
@@ -4748,8 +4331,6 @@ function EndpointSection({;
         <div className="flex items-center">;
           <Badge
             variant="outline" 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             className={
               method === 'GET'
                 ? "border-green-500 text-green-400 font-mono"
@@ -4915,15 +4496,9 @@ function EndpointSection() {
           </table>;
         </div>;
 )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {codeExamples && (
-=======
       )}      {codeExamples && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       )}      {codeExamples && (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               {params && params.map((param, index) => (;
                 <tr key={index} className={index < params && params.length - 1 ? "border-b border-zinc-800" : ""}>;
                   <td className="py-2 font-mono text-sm">;
@@ -5021,21 +4596,15 @@ function EndpointSection() {
         </div>
       )}
       {codeExamples && (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="border-t border-zinc-800 p-4">
           <div className="flex items-center mb-2">
             <h4 className="font-medium">Request Example</h4>
-=======
       {codeExamples && ("
         <div className="border-t border-zinc-800 p-4">"
           <div className="flex items-center mb-2">"
             <h4 className="font-medium">Request Example</h4>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">
-<<<<<<< HEAD
               {Object.keys(codeExamples).map((lang) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {codeExamples && (;"
         <div className="border-t border-zinc-800 p-4">;"
@@ -5061,15 +4630,9 @@ function EndpointSection() {
           />;
         </div>;
       )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <button
-=======
                 <button
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
               {Object.keys(codeExamples).map((lang) => (                <button
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   key={lang}
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang
@@ -5128,7 +4691,6 @@ function EndpointSection() {
           />;
         </div>;
       )}
-<<<<<<< HEAD
 }
 
 ;
@@ -5139,14 +4701,11 @@ function EndpointSection() {
           <CodeBlock;
             code={responseExamples.success}
             language="json";
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           />;
         </div>;
       )}
     </div>;
 );
-<<<<<<< HEAD
 }    </div>;
 }
 ;
@@ -5154,7 +4713,6 @@ function EndpointSection() {
                     {param.required && <span className="text - red - 500">*</span>}
                   </td>;
                   <td className="py - 2 text - sm text - zinc - 400">{param.type}</td>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <td className="py - 2 text - sm text - zinc - 400">{param.description}</td>;
                 </tr>))}
             </tbody>;
@@ -5303,7 +4861,6 @@ function EndpointSection() {
                   onClick={() => setActiveTab(lang)}
 </button>
           <CodeBlock;
-<<<<<<< HEAD
             code={code_examples[active_tab]}"
             language={active_tab === "curl" ? "bash" : active_tab}
           />;
@@ -5344,24 +4901,16 @@ function EndpointSection() {
 }
 ;
 </div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 
 ;
     </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 }
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ),;}
 ;
  import CodeBlock from "./CodeBlock";
@@ -5429,29 +4978,9 @@ pr-12325
     </div>;"
 
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

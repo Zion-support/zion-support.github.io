@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -237,7 +236,6 @@ pr-12325
 
 export default InteractiveNavigation
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
 const InteractiveNavigation: React.FC: = () => {";
@@ -251,4 +249,3 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
 export default Component}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,6 +1,4 @@
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -10,7 +8,6 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
   Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
@@ -21,8 +18,6 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
 
 :pages_backup/advanced-it-infrastructure-services.tsx
 
@@ -31,56 +26,45 @@ class ErrorBoundary extends React.Component {}
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
 
-=======
 
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
     return this.props.children;
   }
 }
 import React from 'react';
 
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-=======
 
 const contactInfo = {'
   mobile: '+1 302 464 0950','
   email: 'kleber@ziontechgroup.com','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
   address: '364 E Main St STE 1008 Middletown DE 19709',
 '
   website: 'https://ziontechgroup.com'
 }
 :pages_backup/advanced-it-infrastructure-services.tsx
 const heroStats = [
-<<<<<<< HEAD
 const serviceCategories = [
   {
     title: 'Quantum Cloud Computing',
     description: 'Next-generation cloud infrastructure with quantum processing capabilities',
-=======
 const heroStats = []
 const serviceCategories = []
   {'
     title: 'Quantum Cloud Computing','
     description: 'Next-generation cloud infrastructure with quantum processing capabilities','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Cloud Computing'),
     icon: Cloud,'
     color: 'from-indigo-500 to-purple-600','
@@ -97,16 +81,12 @@ const contactInfo = null;
     color: 'from-indigo-500 to-purple-600'
     features: ['Quantum Processing', 'Hybrid Computing', 'AI Acceleration']
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {
     title: 'Edge Computing & IoT',
     description: 'Autonomous edge infrastructure with intelligent optimization',
-=======
   {'
     title: 'Edge Computing & IoT','
     description: 'Autonomous edge infrastructure with intelligent optimization','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Edge Computing & IoT'),
     icon: Wifi,'
     color: 'from-green-500 to-emerald-600','
@@ -130,15 +110,12 @@ const contactInfo = null;
   };
 :pages_backup/advanced-it-infrastructure-services.tsx
   {
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
     title: 'Quantum Networking',
     description: 'Next-generation networking with quantum encryption and optimization',
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Networking'),
     icon: Network,'
     color: 'from-purple-500 to-pink-600',
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
     features: [
       'Quantum Encryption',
       'Network Optimization',
@@ -188,7 +165,6 @@ const heroStats = [
 }
 ],
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const serviceCategories = [
   {
     title: 'Quantum Cloud Computing',
@@ -198,7 +174,6 @@ const serviceCategories = [
     color: 'from-indigo-500 to-purple-600',
     features: ['Quantum ProcessingHybrid ComputingAI Acceleration']
 
-=======
 
 const serviceCategories = []
   {'
@@ -208,7 +183,6 @@ const serviceCategories = []
     icon: Cloud,'
     color: 'from - indigo - 500 to - purple - 600','
     features: ['Quantum Processing', 'Hybrid Computing', 'AI Acceleration'],
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
   },
   {'
     title: 'Edge Computing & IoT','
@@ -241,13 +215,11 @@ const serviceCategories = []
     rating: 5,'
     avatar: '👨‍💼'
 :pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   };
   {
     name: 'Lisa Chang',
     role: 'Security CISO, SecureCorp International',
     company: 'SecureCorp International',
-<<<<<<< HEAD
 
   };
   {'
@@ -256,8 +228,6 @@ const serviceCategories = []
     company: 'SecureCorp International',
 '
     color: 'from-purple-500 to-pink-600',
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     title: 'Quantum Networking'
     description:
       'Next-generation networking with quantum encryption and optimization'
@@ -334,14 +304,10 @@ content:
     avatar: '👩‍🔒',
   },
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function AdvancedITInfrastructureServices() {}
-=======
 export default function AdvancedITInfrastructureServices() {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
   return (
 '
           href='https://ziontechgroup && ziontechgroup.com/advanced-it-infrastructure-services';
@@ -351,8 +317,6 @@ export default function AdvancedITInfrastructureServices() {
       {/* Hero Section */}
 
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
 import React from 'react';
 import Head from 'next/head';
@@ -507,15 +471,8 @@ export default function AdvancedITInfrastructureServices() {
         <link rel="canonical" href="https://ziontechgroup.com/advanced-it-infrastructure-services" />
 :pages_backup/advanced-it-infrastructure-services.tsx
 </Head>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
 <meta
           name='description'
           content='Revolutionary IT infrastructure services including quantum cloud computing, edge computing, zero-trust security, and autonomous data centers. Transform your infrastructure with cutting-edge technology.'
@@ -553,26 +510,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
-=======
 
       {/* Hero Section */  } catch (error) {"
     console.error("Error:", error);"
@@ -586,7 +537,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div;
             initial={{ opacity: 0, y: 20 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -602,10 +552,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 :pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
 "
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
@@ -617,12 +563,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               edge computing, and AI-powered automation for the future
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
                 <motion.div
-<<<<<<< HEAD
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -649,16 +593,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <motion.div
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             transition={{ duration: 0 && 0.8 }}>;
-=======
 
                 <motion.div;
             transition={{ duration: 0 && 0.8 }}>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
             <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6'>;
               Advanced IT Infrastructure Services;
             </h1>;'
@@ -670,12 +610,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/advanced-it-infrastructure-services.tsx
                 <motion&& motion.div
 
-<<<<<<< HEAD
     content:;
-=======
                 <motion&& motion.div;
     content:;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
       'Their zero - trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
     rating: 5,'
     avatar: '👩‍🔒',
@@ -733,20 +670,16 @@ function AdvancedITInfrastructureServices() {}
             <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {hero_stats.map ((stat, index) => (
                 <motion.div;
 :pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
 
-=======
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30'
 :pages/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   {stat.icon  } catch (error) {"
     console.error("Error:", error);"
@@ -757,9 +690,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
                   <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >
                   {stat.icon  } catch (error) {
     console.error("Error:", error);
@@ -775,15 +705,8 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
   }
 }
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
               ))  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
@@ -792,43 +715,30 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
 
             </div>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
               <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
                 Explore Services"
                 <ArrowRight className="ml-2 w-5 h-5" />
 :pages_backup/advanced-it-infrastructure-services.tsx
               </Link>
-<<<<<<< HEAD
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
                 Get Started
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
               </Link>"
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300">"
                 <Phone className="mr-2 w-5 h-5" />
                 Get Started;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
               </Link>
             </div>
           </motion.div>
         </div>
 :pages/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Features Section */}
 "
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 :pages_backup/advanced-it-infrastructure-services.tsx
           <motion.div
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -845,16 +755,13 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
   }
 }
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
             viewport={{ once: true }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             className="text-center mb-16"
-=======
           >
-=======
 
           >
 
@@ -862,7 +769,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
           >
 
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
 <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               Advanced IT Infrastructure Services
@@ -1014,52 +920,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
         </div>
 :pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/advanced-it-infrastructure-services.tsx
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
           >
-=======
 
           >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our IT Infrastructure Services?
             </h2>"
@@ -1068,14 +951,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <motion.div
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
               Why Choose Our IT Infrastructure Services?;
@@ -1090,34 +968,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion&& motion.div
 :pages_backup/advanced-it-infrastructure-services.tsx
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {heroFeatures.map((feature, index) => (
               <motion.div
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='relative group'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {heroFeatures.map((feature, index) => (
@@ -1148,22 +1011,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
                 className="relative group"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='relative group'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/advanced-it-infrastructure-services.tsx
-=======
 className='relative group'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 className='relative group'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -1172,63 +1026,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <feature.icon className="w-8 h-8 text-white" />
                       </div>
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
                       <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
-=======
                       <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
                       <h3 className='text-xl font-semibold text-white mb-3'>
                         {feature.title}
                       </h3>
                       <p className='text-gray-300'>{feature.description}</p>
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
                     </div>
                   </div>
                 </div>
               </motion.div>
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
             ))  } catch (error) {
     console.error("Error:", error);
-=======
 
             ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
           </div>;
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
-=======
         </div>;
       </section>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
 
       {/* Services Section */}
 "
@@ -1237,10 +1065,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/advanced-it-infrastructure-services.tsx
           <motion.div
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
             ))}
           </div>
         </div>
@@ -1249,23 +1073,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
 
           >
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
@@ -1274,62 +1088,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             className="text-center mb-16"
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/advanced-it-infrastructure-services.tsx
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
           >
-=======
 
           >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               IT Infrastructure Service Categories;
             </h2>
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive infrastructure solutions covering quantum computing, edge computing, security, and data centers;
             </p>
           </motion.div>
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
               <motion.div
 
               <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive infrastructure solutions covering quantum computing, edge computing, security, and data centers
             </p>
           </motion.div>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
             className='text-center mb-16'>;
-=======
 '
             className='text-center mb-16'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
               IT Infrastructure Service Categories;
             </h2>;'
@@ -1342,43 +1132,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='space-y-16'>            {serviceCategories && serviceCategories.map((category, categoryIndex) => (;
 :pages_backup/advanced-it-infrastructure-services.tsx
               <motion&& motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
 
           <div className='space-y-16'>
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
                 viewport={{ once: true }}
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='relative'
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
                 key={categoryIndex  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1410,10 +1181,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       transition={{ duration: 0 && 0.5, delay: serviceIndex * 0 && 0.1 }}
 :pages_backup/advanced-it-infrastructure-services.tsx
                       viewport={{ once: true }}
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
 className='relative'
               >
                 <div className='text-center mb-12'>
@@ -1440,9 +1207,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       transition={{ duration: 0 && 0.5, delay: serviceIndex * 0 && 0.1 }}
                       viewport={{ once: true }}
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       className='relative group'>;
                       <div className={`${service && service.color} p-1 rounded-xl`}>;
                         <div className='bg-gray-900 rounded-xl p-6 h-full'>;
@@ -1475,9 +1239,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               .slice(0, 3);
                               .map((feature, featureIndex) => (;
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
 className='relative group'
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
@@ -1512,20 +1273,13 @@ className='relative group'
                               .slice(0, 3)
                               .map((feature, featureIndex) => (
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
                                 <div
                                   key={featureIndex}
                                   className='flex items-center text-sm text-gray-300'>;
-=======
                                 <div;
                                   key={featureIndex}'
                                   className='flex items-center text-sm text-gray-300'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
                                   <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />;
                                   {feature}
                                 </div>;
@@ -1551,7 +1305,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="relative"
 
 :pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -1561,8 +1314,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     <motion.div
                       key={service.id}
@@ -1571,14 +1322,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 transition={{ duration: 0.5, delay: service_index * 0.1 }}
                       viewport={{ once: true }}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <motion.div
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
 
                     <motion.div;
                       key={service.id  } catch (error) {"
@@ -1609,37 +1353,28 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                       className="relative group"
 
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
                           <div className="flex items-center justify-between mb-4">
-=======
 
                     >`
                       <div className={`${service.color} p-1 rounded-xl`}>"
                         <div className="bg-gray-900 rounded-xl p-6 h-full">"
                           <div className="flex items-center justify-between mb-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
                             <span className="text-3xl">{service.icon}</span>
                             {service.popular && ("
                               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                                 Popular;
                               </span>
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
                             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-=======
                             )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
                           </div>
                           <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
@@ -1648,16 +1383,9 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                             <span className="text-gray-400">{service.period}</span>
                           </div>
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-=======
 
                           </div>"
                           <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>"
@@ -1668,24 +1396,17 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                           </div>
 "
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
                           <div className="space-y-2 mb-6">
                             {service.features.slice(0, 3).map((feature, featureIndex) => ("
                               <div key={featureIndex} className="flex items-center text-sm text-gray-300">"
                                 <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
                                 {feature  } catch (error) {
     console.error("Error:", error);
-=======
 
                                 {feature  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1696,28 +1417,20 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
   }
 }
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
-<<<<<<< HEAD:pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           </div>
                           <div className="flex items-center justify-between">
                             <Link;
                               href={service.link}
 :pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
-=======
 
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
                               href={service.link}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
                               className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
                             >
                               Learn More"
@@ -1725,30 +1438,17 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                             </Link>
 :pages_backup/advanced-it-infrastructure-services.tsx
                             <Link
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300"
-=======
-=======
                               href={`tel:${contactInfo.mobile}`}
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300"
                               href={`tel:${contactInfo.mobile}`}
                               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300'
 :pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                               href={`tel:${contactInfo.mobile}`}
                               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
                             >
                               Get Started;
                             </Link>
@@ -1757,9 +1457,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </motion.div>
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
@@ -1787,9 +1484,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Testimonials Section */}
 
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1838,8 +1533,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Link
 
           >
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -1964,39 +1657,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
             className="text-center mb-16"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       {/* Testimonials Section */}
 <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
 className='text-center mb-16'
 :pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -2006,24 +1683,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {testimonials.map((testimonial, index) => (
               <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
 
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -2057,25 +1728,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20"
 
 :pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/advanced-it-infrastructure-services.tsx
-=======
 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -2090,10 +1749,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -2120,7 +1776,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/advanced-it-infrastructure-services.tsx
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -2192,9 +1847,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           >
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -2204,7 +1856,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -2222,7 +1873,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
 
           >
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </div>
                 </div>
               </motion.div>
@@ -2230,16 +1880,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>;
@@ -2256,27 +1903,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Phone className='mr-2 w-5 h-5' />                Call Now: {contactInfo && contactInfo.mobile}
               </Link>;
               <Link
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-=======
           >
 
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
 <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
 :pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
               Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -2284,14 +1920,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
-=======
 
           >"
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -2333,8 +1962,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
               >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
-=======
               <Link;
                 href={`mailto:${contactInfo.email}`  } catch (error) {
     console.error("Error:", error);
@@ -2344,13 +1971,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300"
 
               >
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us;
               </Link>
             </div>
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
@@ -2360,17 +1985,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
             <div className="mt-8 text-center">
               <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
               <p className="text-gray-300">🌐 {contactInfo.website}</p>
             </div>
 :pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
     </Layout>
 );
     </Layout>;
@@ -2380,18 +2002,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Layout>
   )
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
           </motion.div>
         </div>
       </section>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
-=======
           </motion.div>
         </div>
       </section>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
 
 `
                 href={`mailto:${contactInfo && contactInfo.email}`}'
@@ -2413,10 +2030,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/advanced-it-infrastructure-services.tsx
                       className='relative group';
                     >;`
                       <div className={`${service.color} p - 1 rounded - xl`}>;'
@@ -2566,21 +2180,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Layout>);
 ;
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 :pages_backup/advanced-it-infrastructure-services.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               >
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx
                 <Phone className='mr-2 w-5 h-5' />
                 Call Now: {contactInfo.mobile}
               </Link>
@@ -2602,12 +2205,5 @@ className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
     </Layout>
 );
 :pages_backup/advanced-it-infrastructure-services.tsx
-<<<<<<< HEAD:pages/advanced-it-infrastructure-services.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/advanced-it-infrastructure-services.tsx

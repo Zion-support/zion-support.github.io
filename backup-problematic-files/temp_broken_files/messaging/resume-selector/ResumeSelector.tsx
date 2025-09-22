@@ -1,5 +1,4 @@
 
-=======
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
@@ -95,7 +94,6 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
           variant:"destructive";
         }),;
         return,;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
       ;
       // Create a custom resume option;
@@ -110,7 +108,6 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
       setSelectedResume(customOption),;
       onResumeSelected(customOption),;
     }
-<<<<<<< HEAD
 
         className="space-y-3";
       >;

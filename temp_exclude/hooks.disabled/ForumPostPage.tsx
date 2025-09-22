@@ -261,7 +261,6 @@ export default function ForumPostPage() {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
 '"
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   // Check if user is admin/mod'
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',

@@ -1,5 +1,4 @@
 :src/mobile/components/resume/MobileResumeBuilder.tsx
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -73,7 +72,6 @@ export function MobileResumeBuilder() {;
         return <SkillsStep />,;
       default:;
         return <BasicsStep />;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   },
 
@@ -81,8 +79,6 @@ export function MobileResumeBuilder() {;
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
         <Button
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}
@@ -118,17 +114,11 @@ export function MobileResumeBuilder() {;
 
       {renderStepContent()}
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
       </Button>
@@ -232,14 +222,12 @@ export function MobileResumeBuilder() {;
       <Button className="w-full flex gap-2" size="lg">;
         <Zap className="h-5 w-5" /> Enhance with AI;
       </Button>;
-=======
       {renderStepContent()}
 ;
       <Button className="w-full flex gap-2" size="lg">;
         <Zap className="h-5 w-5" /> Enhance with AI;
       </Button>;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/resume/MobileResumeBuilder.tsx
       <Button variant="default" className="w-full" size="lg">;
         Save & Preview;
       </Button>;
@@ -261,7 +249,6 @@ function BasicsStep() {;
 :src/mobile/components/resume/MobileResumeBuilder.tsx
 
         </div>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-2">;
           <Label htmlFor="fullName">Full Name</Label>;
           <Input id="fullName" name="fullName" placeholder="Your full name" autoComplete="name" />;
@@ -269,11 +256,9 @@ function BasicsStep() {;
         <div className="space-y-2">;
           <Label htmlFor="email">Email Address</Label>;
 :src/mobile/components/resume/MobileResumeBuilder.tsx
-<<<<<<< HEAD
           <Input id="email" name="email" type="email" placeholder="you@example && example.com" autoComplete="email" />;        </div>;
 
         </div>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-2">;
           <Label htmlFor="phone">Phone Number</Label>;
           <Input id="phone" name="phone" placeholder="Your phone number" autoComplete="tel" />;
@@ -294,15 +279,12 @@ function BasicsStep() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
 
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }]),
 
@@ -375,7 +357,6 @@ function ExperienceStep() {
   )
 }
 
-<<<<<<< HEAD
 function EducationStep() {
   const [educations, setEducations] = useState([{ id: '1' }]),
 
@@ -511,7 +492,6 @@ function SkillsStep() {
     </div>;
   };
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }
 ;
@@ -664,12 +644,7 @@ function SkillsStep() {;
     </div>
   )
 }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
-=======
 ;
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -686,5 +661,3 @@ import {
 }<Button > <Plus className="h-4 w-4" /> Add Another Skill </Button> </div> </CardContent> </Card> <Card> <CardContent className="p-4" > <div className="space-y-2" > <Label>Skill Categories</Label> <div className="grid grid-cols-2 gap-2" > <Button variant="outline" className="justify-start" >Development</Button> <Button variant="outline" className="justify-start" >Design</Button> <Button variant="outline" className="justify-start" >Marketing</Button> <Button variant="outline" className="justify-start" >Business</Button> <Button variant="outline" className="justify-start" >Data Analysis</Button> <Button variant="outline" className="justify-start" >Languages</Button> </div> </div> </CardContent> </Card> </div>) ;
 }"
 :src/mobile/components/resume/MobileResumeBuilder.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

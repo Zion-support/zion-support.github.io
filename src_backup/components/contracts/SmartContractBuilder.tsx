@@ -1,6 +1,4 @@
 :src/components/contracts/SmartContractBuilder.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -56,12 +54,9 @@ interface SmartContractBuilderProps {
 export function SmartContractBuilder({
   isOpen;
 :src/components/contracts/SmartContractBuilder.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onClose;
   talent;
   clientName;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   onContractGenerated}: SmartContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
   const [generatedContract, setGeneratedContract] = useState<string | null>(null),
@@ -124,7 +119,6 @@ interface SmartContractBuilderProps {;
   clientName: string,;
   onContractGenerated?: (contractContent: string) => void;
 }
-<<<<<<< HEAD
 ;
 export function SmartContractBuilder({;
   return () => {
@@ -132,7 +126,6 @@ export function SmartContractBuilder({;
 }
 return []};
 export function SmartContractBuilder(): any ({;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   isOpen,;
   onClose,;
   talent,;
@@ -159,7 +152,6 @@ export function SmartContractBuilder(): any ({;
   const handleDeployContract = async () => {;
     if (!generatedContract) return,;
     try {;
-<<<<<<< HEAD
       setDeployStatus('deploying'),;
       const contractInfo = await deploySmartContract(generatedContract, deployOptions),;
       if (contractInfo) {;
@@ -170,7 +162,6 @@ export function SmartContractBuilder(): any ({;
         setDeployStatus('error'),;
         toast.error("Failed to deploy smart contract");
         throw error}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if(data && data.markdownContent) { // Assuming your Supabase func returns { markdownContent: "..." }
         setGeneratedMarkdownContract(data.markdownContent)
         if(onLegalDraftGenerated) {}
@@ -204,11 +195,8 @@ if ( {) {}
       setIsLoadingLegalDraft (false)}
 
 :src_backup/components/contracts/SmartContractBuilder.tsx
-<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
   }
-=======
   }"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/contracts/SmartContractBuilder.tsx
       toast.info ("Generating PDF...");
       html2pdf ().from (element).set (opt).save ();"
         .then (() => toast.success ("PDF downloaded successfully!"));
@@ -354,9 +342,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',      <DialogConte
 :src_backup/components/contracts/SmartContractBuilder.tsx
   return (<Dialog open={isOpen} onOpenChange={onClose}>;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/SmartContractBuilder.tsx
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <DialogHeader>;
           <DialogTitle>Smart Contract Builder</DialogTitle>;
           <DialogDescription>;
@@ -366,9 +352,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',      <DialogConte
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
           <div className="flex justify-between items-center mb-4">;
             <TabsList className="grid grid-cols-3"> {/* Added new tab */}
-<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               <TabsTrigger value="form">1 && 1.Details</TabsTrigger>;
               <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2 && 2.Legal Draft</TabsTrigger>;
               <TabsTrigger value="preview_solidity" disabled={!enableOnChainAgreement && !generatedSolidityContract}>3 && 3.On-Chain Contract</TabsTrigger>;
@@ -442,7 +425,6 @@ if ( { // Chain not added) {}
             throw new Error (`Please add ${selected_network} to MetaMask and switch to it.`)}`
           throw new Error (`Failed to switch network: ${switch_error.message}`)}
 :src_backup/components/contracts/SmartContractBuilder.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
     } catch (error) {;
       logErrorToProduction('Error deploying contract:', { data: error }),;
@@ -504,11 +486,9 @@ if ( { // Chain not added) {}
             <TabsList className="grid grid-cols-2">;"
               <TabsTrigger value="form">Contract Details</TabsTrigger>;"
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
-=======
               <TabsTrigger value="form">1.Details</TabsTrigger>;
               <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2.Legal Draft</TabsTrigger>;
               <TabsTrigger value="preview_solidity" disabled={!enableOnChainAgreement && !generatedSolidityContract}>3.On-Chain Contract</TabsTrigger>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </TabsList>;
 :src_backup/components/contracts/SmartContractBuilder.tsx
             <div className="flex gap-2">;
@@ -521,14 +501,11 @@ if ( { // Chain not added) {}
 <Save className="h-4 w-4" />;
 
 :src/components/contracts/SmartContractBuilder.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 Templates;
               </Button>;
             </div>;
           </div>;
 :src/components/contracts/SmartContractBuilder.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
           <TabsContent value="form" className="pt-4">;
             <ContractForm;
               talent={talent}
@@ -548,14 +525,11 @@ if ( { // Chain not added) {}
 
 :src_backup/components/contracts/SmartContractBuilder.tsx
                 <ContractPreview
-<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
                   generatedContract = {generatedContract,}
                   talent = {talent,}
                   onClose = {onClose,}
                   deploymentInfo = {deploymentInfo,}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/SmartContractBuilder.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   generatedContract = {generatedContract,}
                   talent = {talent,}
                   onClose = {onClose,}
@@ -563,7 +537,6 @@ deploymentInfo = {deploymentInfo,}          </TabsContent>;
                       onClick = {handleDeployContract,}
                       disabled = {deployStatus === 'deploying',}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;
-=======
                 {!deploymentInfo && deployOptions && deployOptions.deployToChain && (;"
                   <div className="mt-6 flex justify-center">;
 
@@ -571,7 +544,6 @@ deploymentInfo = {deploymentInfo,}          </TabsContent>;
                       onClick = {handleDeployContract,}'
                       disabled = {deployStatus === 'deploying',}"
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/contracts/SmartContractBuilder.tsx
                       {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
                     </Button>;
                   </div>                )}
@@ -580,9 +552,7 @@ deploymentInfo = {deploymentInfo,}          </TabsContent>;
 
 :src/components/contracts/SmartContractBuilder.tsx
         <TemplateManager
-=======
         <TemplateManager;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/contracts/SmartContractBuilder.tsx
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}
@@ -590,22 +560,17 @@ deploymentInfo = {deploymentInfo,}          </TabsContent>;
 
 :src/components/contracts/SmartContractBuilder.tsx
           </TabsContent>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Tabs>;
 
 :src_backup/components/contracts/SmartContractBuilder.tsx
         <TemplateManager
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
                 <ContractPreview 
 :src/components/contracts/SmartContractBuilder.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                   generatedContract={generatedContract}
                   talent={talent}
                   onClose={onClose}
@@ -627,37 +592,26 @@ deploymentInfo = {deploymentInfo,}          </TabsContent>;
 </TabsContent>;
         </Tabs>;
         <TemplateManager;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/SmartContractBuilder.tsx
           isOpen={templateManagerOpen}
-=======
             {!generatedMarkdownContract && !isLoadingLegalDraft && <p>Generate a legal draft to preview and download.</p>}
           </TabsContent>;
         </Tabs>;
         <TemplateManager;          isOpen={templateManagerOpen}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
 :src/components/contracts/SmartContractBuilder.tsx
-<<<<<<< HEAD
 />;
       </DialogContent>;
     </Dialog>;
   );
 }
 ;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/SmartContractBuilder.tsx
 
 ;
 :src/components/contracts/SmartContractBuilder.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         />
       </DialogContent>
     </Dialog>
@@ -701,8 +655,4 @@ setActiveTab ("preview");
 }/> </DialogContent> </Dialog>) ;
 }'"
 :src/components/contracts/SmartContractBuilder.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/contracts/SmartContractBuilder.tsx

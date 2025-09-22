@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
@@ -17,12 +16,8 @@ export default function FrontLanding() {
   return (
 export default function FrontLanding() {
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
-=======
-=======
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <Head>
         <title>Zion — Autonomous Cloud Automations</title>"
         <meta name="description" content="Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously." />
@@ -34,7 +29,6 @@ export default function FrontLanding() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
         <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />
@@ -43,8 +37,6 @@ export default function FrontLanding() {
         <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]">
           <div className="twinkle-field absolute inset-0" />
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       </div>
 
           </div>
@@ -56,10 +48,6 @@ export default function FrontLanding() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Link href="/"><a className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</Link></Link>
           </div>"
           <div className="hidden gap-6 md:flex">"
@@ -68,10 +56,7 @@ export default function FrontLanding() {
             <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</Link></Link>"
             <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</Link></Link>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
           <div className='hidden gap-6 md:flex'>'
             <Link href='/'>'
@@ -89,13 +74,10 @@ export default function FrontLanding() {
         </nav>
       </header>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
             </Link>
           </div>
         </nav>
       </header>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Hero */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -104,19 +86,13 @@ export default function FrontLanding() {
       <main className="relative z-10">"
         <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24">"
           <div className="text-center">
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <motion.div
               initial={{ opacity: 0, y: 10 }  } catch (error) {
     console.error("Error:", error);
-=======
 
             <motion.div;
               initial={{ opacity: 0, y: 10 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -131,12 +107,10 @@ export default function FrontLanding() {
   }
 }"
               className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
               Autonomous agents running continuous improvements;
             </motion.div>
-<<<<<<< HEAD
             {/* Quick stats */}
             <div className='mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4'>
               {[
@@ -144,20 +118,12 @@ export default function FrontLanding() {
                 ['Main', 'Direct Sync']
                 ['0 Ops', 'Cloud‑Native']
                 ['Safety', 'Guardrails']
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 ['24/7', 'Autonomous'],
                 ['Main', 'Direct Sync'],
                 ['0 Ops', 'Cloud‑Native'],
                 ['Safety', 'Guardrails'],
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               ].map(([k, v]) => (                <motion.div
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
                 ['24/7', 'Autonomous'],'
@@ -165,7 +131,6 @@ export default function FrontLanding() {
                 ['0 Ops', 'Cloud‑Native'],'
                 ['Safety', 'Guardrails'],
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   key={k}
                   initial={{ opacity: 0, y: 6 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -173,7 +138,6 @@ export default function FrontLanding() {
 transition={{ duration: 0.5 }}
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))}
 '
                   className='glow - card rounded - xl border border - white / 10 bg - white / 5 px - 4 py - 3 text - left';
@@ -184,7 +148,6 @@ transition={{ duration: 0.5 }}
           </div>;
         </section>;
 {/* Features */}
-<<<<<<< HEAD
         <section className='mx - auto max - w-7xl px - 6 pb - 14'>;
           <h2 className='text - center text - 2xl font - bold tracking - wide text - white / 90'>;
             Features;
@@ -192,14 +155,12 @@ transition={{ duration: 0.5 }}
           <div className='mt - 6 grid grid - cols - 1 gap - 5 md:grid - cols - 2 lg:grid - cols - 3'>;
             {[;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {
 
         <section className="mx-auto max-w-7xl px-6 pb-14">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
-<<<<<<< HEAD
                 title: 'Self‑Improving'
                 desc: 'Agents continuously analyze, invent, and evolve automations.'
               }
@@ -228,31 +189,24 @@ transition={{ duration: 0.5 }}
                 desc: 'Agents continuously analyze, invent, and evolve automations.',
               },
               {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               {}
 "
         <section className="mx-auto max-w-7xl px-6 pb-14">"
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>"
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[]
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}'
                 title: 'Observability','
                 desc: 'Dashboards, reports, and GitHub Actions artifacts.',
               },
             ].map (function => (              <motion.article;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 '
                 title: 'Self‑Improving','
                 desc: 'Agents continuously analyze, invent, and evolve automations.',
               },
 {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 title: 'Repo Sync',
                 desc: 'Changes are committed and pushed automatically to main.',
               },
@@ -272,23 +226,14 @@ transition={{ duration: 0.5 }}
                 title: 'Observability','
                 desc: 'Dashboards, reports, and GitHub Actions artifacts.',
               },
-<<<<<<< HEAD
 
             ].map(f => (              <motion.article
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
             ].map(f => (              <motion.article
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 key={f.title}
                 initial={{ opacity: 0, coordinate_y: 8 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 transition={{ duration: 0.6 }}
             ))}
           </div>
@@ -339,7 +284,6 @@ title: 'Content & SEO',
                 title: 'Performance & A11y',
                 desc: 'Optimizes bundles, assets, and accessibility with continuous checks.',
               },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {
                 title: 'Content & SEO',
                 desc: 'Curates content, updates promotions, and tunes metadata for reach.',
@@ -357,8 +301,6 @@ desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.',
               },
 ].map(c => (              <motion.article
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 key={c.title}
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -379,7 +321,6 @@ className='relative overflow-hidden rounded-2xl border border-white/10 bg-gradie
           </h2>'
           <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2'>
 {[
-<<<<<<< HEAD
               '24/7 progress without human intervention'
               'Rapid feedback loop with safe, incremental edits'
               'Continuous delivery directly to main branch'
@@ -389,15 +330,12 @@ className='relative overflow-hidden rounded-2xl border border-white/10 bg-gradie
               'Continuous delivery directly to main branch',
               'Fewer regressions via layered checks and reports',
 ].map(b => (              <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             {['
               '24/7 progress without human intervention','
               'Rapid feedback loop with safe, incremental edits','
               'Continuous delivery directly to main branch','
               'Fewer regressions via layered checks and reports',
             ].map(b => (              <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 key={b}
                 initial={{ opacity: 0, y: 6 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -417,7 +355,6 @@ className='flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
 className='animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl'
-<<<<<<< HEAD
             <motion.h1
               initial={{ opacity: 0, y: 8 }  } catch (error) {
     console.error("Error:", error);
@@ -721,17 +658,13 @@ export default function FrontLanding(req, res) {}
                 <h3 className="text-lg font-semibold">{f.title}</h3>"
                 <p className="mt-1 text-sm text-white/75">{f.desc}</p>
               </motion.article>
-<<<<<<< HEAD
 
                 key={c.title}
           </div>;
         </section>;
 
         {/* Capabilities */}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}'
                 title: 'Content & SEO','
@@ -742,7 +675,6 @@ export default function FrontLanding(req, res) {}
                 initial={{ opacity: 0, coordinate_y: 8 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
 
 </div>;
         </section>;
@@ -759,72 +691,51 @@ export default function FrontLanding(req, res) {}
               'Continuous delivery directly to main branch',;
               'Fewer regressions via layered checks and reports',;
             ].map(b => (              <motion&& motion.div
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 key={b}
                 initial={{ opacity: 0, coordinate_y: 6 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
 
         {/* CTA */}"
         <section className="mx-auto max-w-7xl px-6 pb-24">
 <motion.div
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
           <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 key={c.title}
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 key={c.title}
                 initial={{ opacity: 0, coordinate_y: 8 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 viewport={{ once: true }}
 
-=======
                 transition={{ duration: 0.6 }}
 
             ].map(b => (              <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 key={b}
                 initial={{ opacity: 0, coordinate_y: 6 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
 
         {/* CTA */}
         <section className="mx-auto max-w-7xl px-6 pb-24">
           <motion.div
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-=======
 className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
-=======
                 key={c.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -938,23 +849,15 @@ className="animated-border relative overflow-hidden rounded-3xl border border-wh
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
             className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           >"
             <h3 className="text-2xl font-bold">Ready to build with autonomous cloud agents?</h3>"
             <p className="mx-auto mt-2 max-w-2xl text-white/80">Scale development with a tireless fleet of self‑improving automations.</p>"
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           </motion.div>
         </section>
         {/* Explore more */}
@@ -964,7 +867,6 @@ className="animated-border relative overflow-hidden rounded-3xl border border-wh
         </section>
         {/* Explore more */}
 <section className='mx-auto max-w-7xl px-6 pb-16'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Explore more
           </h2>
@@ -1159,27 +1061,16 @@ className="animated-border relative overflow-hidden rounded-3xl border border-wh
         </section>;
       </main>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>;
   );
 
 }
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Explore more */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -1190,7 +1081,6 @@ className="animated-border relative overflow-hidden rounded-3xl border border-wh
             <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Status — live agents & reports</span></a></Link>
             <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>
             <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>
-=======
 
         {/* Explore more */  } catch (error) {"
     console.error("Error:", error);"
@@ -1208,15 +1098,12 @@ className="animated-border relative overflow-hidden rounded-3xl border border-wh
             <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Status — live agents & reports</span></a></Link>"
             <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>"
             <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact — discuss your use‑case</span></a></Link>
           </div>
         </section>
       </main>
     </div>
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <section className="mx-auto max-w-7xl px-6 pb-16">;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>;
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">;
@@ -1227,7 +1114,6 @@ className="animated-border relative overflow-hidden rounded-3xl border border-wh
             <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Status — live agents & reports</span></a></Link>;
             <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>;
             <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>;
-=======
 "
         <section className="mx-auto max-w-7xl px-6 pb-16">;"
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>;"
@@ -1239,7 +1125,6 @@ className="animated-border relative overflow-hidden rounded-3xl border border-wh
             <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Status — live agents & reports</span></a></Link>;"
             <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>;"
             <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact — discuss your use‑case</span></a></Link>;
           </div>;
         </section>;
@@ -1251,17 +1136,5 @@ className="animated-border relative overflow-hidden rounded-3xl border border-wh
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

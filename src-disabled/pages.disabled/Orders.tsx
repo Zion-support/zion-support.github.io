@@ -1,13 +1,7 @@
 :src_backup/pages/Orders.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
-=======
 import React from "react";
 import MainLayout from "../components/layout/MainLayout";
->>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
 const Orders: React.FC = () => {
   return (
@@ -27,11 +21,7 @@ import {
   TableCell
   TableHead
   TableHeader
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Orders.tsx
 
 export default function OrdersPage() {;
 
@@ -69,10 +59,7 @@ const getStatusBadge = (status: string,) => {;
       default:;
         return status;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth',
@@ -81,7 +68,6 @@ import {
   Table,
   TableBody,
   TableCell,
-<<<<<<< HEAD
 TableRow;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
@@ -116,7 +102,6 @@ export default function OrdersPage() {;
 :src_backup/pages/Orders.tsx
 const formatDate = (date: string) => new Date(date).toLocaleDateString();
   const getStatusBadge = (status: string,) => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   TableHead,
   TableHeader,
   TableRow} from '@/components/ui/table',
@@ -130,7 +115,6 @@ export default function OrdersPage() {
   const formatDate = (date: string) => new Date(date).toLocaleDateString(),
 
 :src/pages/Orders.tsx
-<<<<<<< HEAD
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'in_escrow':
@@ -159,8 +143,6 @@ export default function OrdersPage() {
   },
   const formatDate = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Orders.tsx
   return (
     <div className="container max-w-4xl py-10">
       <h1 className="text-3xl font-bold mb-6">Order History</h1>
@@ -230,9 +212,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   );
 :src_backup/pages/Orders.tsx
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
         return (
           <Badge variant='warning' className='flex items - center gap - 1'>;
             <Clock className='h - 3 w - 3' /> In Escrow;
@@ -322,21 +302,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Table>)}
     </div>);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Orders.tsx
-=======
         )
       default:
           <Badge variant='destructive' className='flex items-center gap-1'>;
@@ -477,4 +445,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           ;)
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Orders.tsx

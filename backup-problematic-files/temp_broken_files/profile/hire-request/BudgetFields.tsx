@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { UseFormReturn } from "react-hook-form",;
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
@@ -48,7 +47,6 @@ export function BudgetFields({ form, talent } BudgetFieldsProps) {;
                   type="number" ;
                   className="pl-7 bg-zion-blue border-zion-blue-light text-white" ;
                   {...field} ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 />;
               </div>;
             </FormControl>;
@@ -56,4 +54,3 @@ export function BudgetFields({ form, talent } BudgetFieldsProps) {;
           </FormItem>;
         )}
       />;
-<<<<<<< HEAD

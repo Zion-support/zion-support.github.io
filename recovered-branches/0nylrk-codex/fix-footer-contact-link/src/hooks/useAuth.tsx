@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';'
 import { supabase } from '@/integrations / supabase / client';'
@@ -8,17 +5,10 @@ import { AuthContext } from '@/context / auth / AuthContext';
 import type { UserDetails as AuthUserDetails } from "@/types / auth";
 // Define types for our context;
 export interface UserDetails {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export interface UserDetails {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 export interface UserDetails {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id?: string;
 
   name?: string;
@@ -30,24 +20,14 @@ export interface UserDetails {
   profile_complete?: boolean;
   role?: string;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {AuthContext} from "@/context/auth/AuthContext";
 import type { UserDetails as AuthUserDetails } from "@/types/auth";
 // Define types for our context
 export interface UserDetails {;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id?: string;
   name?: string;
   email?: string;
@@ -63,14 +43,12 @@ import { AuthContext } from "@/context/auth/AuthContext";"
 import type { UserDetails as AuthUserDetails } from "@/types/auth";
 // Define types for our context;
 export interface UserDetails {};
-=======
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {AuthContext} from "@/context/auth/AuthContext";
 import type { UserDetails as AuthUserDetails } from "@/types/auth";
 // Define types for our context
 export interface UserDetails {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id?: string;
   name?: string;
   email?: string;
@@ -126,10 +104,6 @@ export interface UserDetails {;
   bio?: string,;
   createdAt?: string,;
   updatedAt?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';
 import { supabase } from '@/integrations / supabase / client';
@@ -147,15 +121,7 @@ export interface UserDetails {
   headline?: string;
   profile_complete?: boolean;
   role?: string;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 export interface AuthContextType {;
@@ -175,11 +141,7 @@ export interface AuthContextType {;
   loginWithFacebook: () => Promise<void>,;
   loginWithTwitter: () => Promise<void>,;
   loginWithWeb3: () => Promise<void>;
-<<<<<<< HEAD
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   user: UserDetails | null;
   isAuthenticated: boolean;
@@ -188,7 +150,6 @@ export interface AuthContextType {;
   signOut: () => Promise<void>
   signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
   // Aliases for compatibility with other components;
-=======
 }
 
   user: UserDetails | null
@@ -198,7 +159,6 @@ export interface AuthContextType {;
   signOut: () => Promise<void>
   signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
   // Aliases for compatibility with other components
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   login: (email: string, password: string) => Promise<{ error: any }>
   logout: () => Promise<void>
   signup: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
@@ -211,14 +171,11 @@ export interface AuthContextType {;
   loginWithWeb3: () => Promise<void>
 }
 // Create a provider component
-<<<<<<< HEAD
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<UserDetails | null>(null),
 
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Mock auth functions for now - these would connect to Supabase in a real implementation
 
   const signIn = async (email: string, password: string) => {
@@ -226,7 +183,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 console.log("Sign in attempted with:", email);
     // Mock successful sign-in
 
-<<<<<<< HEAD
 export interface AuthContextType {;
   user: UserDetails | null,;
   isAuthenticated: boolean,;
@@ -285,7 +241,6 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {}
     // This would be replaced with actual Supabase auth"
     console.log("Sign up attempted with:", email, userData);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       companyId: "company-123"
     }),
     return { error: null }
@@ -294,10 +249,8 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
     // This would be replaced with actual Supabase auth"
     // // // console.log("Sign out attempted"),
     setUser(null)
-=======
   }
   },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {}
     // This would be replaced with actual Supabase auth"
@@ -311,10 +264,8 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: userData?.name |"New User"
 userType: userData?.userType
       profileComplete: false
-<<<<<<< HEAD
     });
     return { error: null }
-<<<<<<< HEAD
   },
 
   const resetPassword = async (email: string) => {}
@@ -329,7 +280,6 @@ userType: userData?.userType
     return { error: null }
   }
   },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const resetPassword = async (email: string) => {}
     // Mock implementation"
@@ -346,21 +296,15 @@ userType: userData?.userType
     return { error: null }
 const loginWithGoogle = async () => {
     // // // console.log("Google login requested"),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Mock implementation
-=======
 }  // Mock auth functions for now - these would connect to Supabase in a real implementation
 
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth    // Mock implementation
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }  // Mock auth functions for now - these would connect to Supabase in a real implementation
 
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth    // Mock implementation
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   // Mock auth functions for now - these would connect to Supabase in a real implementation
 
   const signIn = async (email: string, password: string) => {
@@ -500,12 +444,10 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const loginWithGoogle = async () => {
     // // // console.log("Google login requested"),
     // Mock implementation
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setUser({
       id: "google-user-id"
       email: "google@example.com"
       displayName: "Google User"
-=======
 
   const loginWithGoogle = async () => {"
     // // // console.log("Google login requested"),
@@ -515,23 +457,14 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       id: "google-user-id""
       email: "google@example.com""
       displayName: "Google User""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       name: "Google User"
       profileComplete: true;
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   },
 
   const loginWithFacebook = async () => {
     console.log("Facebook login requested");
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const loginWithFacebook = async () => {
     // // // console.log("Facebook login requested"),
     // Mock implementation
@@ -539,7 +472,6 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       id: "facebook-user-id"
       email: "facebook@example.com"
       displayName: "Facebook User"
-=======
 
   const loginWithFacebook = async () => {"
     // // // console.log("Facebook login requested"),
@@ -549,23 +481,14 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       id: "facebook-user-id""
       email: "facebook@example.com""
       displayName: "Facebook User""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       name: "Facebook User"
       profileComplete: true;
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   },
 
   const loginWithTwitter = async () => {
     console.log("Twitter login requested");
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const loginWithTwitter = async () => {
     // // // console.log("Twitter login requested"),
     // Mock implementation
@@ -573,7 +496,6 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       id: "twitter-user-id"
       email: "twitter@example.com"
       displayName: "Twitter User"
-=======
 
   const loginWithTwitter = async () => {"
     // // // console.log("Twitter login requested"),
@@ -583,12 +505,9 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       id: "twitter-user-id""
       email: "twitter@example.com""
       displayName: "Twitter User""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       name: "Twitter User"
       profileComplete: true;
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   };
 
@@ -608,11 +527,8 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 
   },
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const loginWithWeb3 = async () => {
     // // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
@@ -665,22 +581,15 @@ console.warn("No wallet detected");
   }
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
-=======
     // // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     // // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
-=======
 
   const loginWithWeb3 = async () => {"
     // // // console.log("Web3 login requested"),
@@ -688,20 +597,14 @@ export function useAuth(): AuthContextType {
     if (!ethereum) {}
 // Custom hook to use the auth context;
 export function useAuth(): AuthContextType {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const context = useContext(AuthContext);
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   if (context === undefined) {"
     throw new Error("useAuth must be used within an AuthProvider")
   }
   return context;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 // Custom hook to use the auth context;
 export function useAuth(): AuthContextType {;
@@ -709,10 +612,6 @@ export function useAuth(): AuthContextType {;
   if (context === undefined) {"
     throw new Error("useAuth must be used within an AuthProvider")
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 // Custom hook to use the auth context;
 export function useAuth(): AuthContextType {;
@@ -720,25 +619,14 @@ export function useAuth(): AuthContextType {;
   if (context === undefined) {"
     throw new Error("useAuth must be used within an AuthProvider")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.warn("No wallet detected"),
       return;
 ;
@@ -775,16 +663,13 @@ displayName: userData?.name || "New User",;
     // Mock implementation;"
     console && console.log("Profile update requested with:", data);
     if (user) {;
-<<<<<<< HEAD
       setUser({ ...user, ...data });
   permissions?: string[];
   company_id?: string;
   bio?: string;
   created_at?: string;
   updated_at?: string;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
-<<<<<<< HEAD
   user: UserDetails | null,
   is_authenticated: boolean,
   is_loading: boolean,
@@ -899,9 +784,7 @@ export /**;
 function AuthProvider() {}
   const [user, set_user] = useState < UserDetails | null>(null);
   const [is_loading, setIsLoading] = useState (true);
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
-<<<<<<< HEAD
       company_id: "company - 123";
     });
     return { error: null }
@@ -929,7 +812,6 @@ set_user ({
       id: "mock - user - id",
       email,
       display_name: user_data?.name || "New User",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       name: user_data?.name || "New User",
       user_type: user_data?.user_type,
       profile_complete: false;
@@ -937,7 +819,6 @@ set_user ({
     return { error: null }
   }
 ;
-<<<<<<< HEAD
   const reset_password = async (email: string) => {}
     // Mock implementation;"
     console.log ("Password reset requested for:", email);
@@ -956,14 +837,12 @@ if ( {) {}
     // Check condition;
 if ( {) {
 $2
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       set_user ({ ...user, ...data });
     }
     return { error: null }
   }
 ;
-<<<<<<< HEAD
   const loginWithGoogle = async () => {"
     console.log ("Google login requested");
     // Mock implementation;
@@ -1033,7 +912,6 @@ if ( {) {}
     setUser({ ;
       id: "google-user-id", ;
       email: "google@example && example.com", ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }),;
   },;
   const resetPassword = async (email: string) => {;
@@ -1055,22 +933,13 @@ const loginWithGoogle = async () => {;"
     setUser({;"
       id: "google-user-id",;"
       email: "google@example.com",;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       displayName: "Google User",;
-=======
       setUser({ ...user, ...data });      displayName: "Google User",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       setUser({ ...user, ...data });      displayName: "Google User",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: "Google User",;
       profileComplete: true;
     })
 };  },;  const loginWithFacebook = async () => {;
-=======
 
 "
       displayName: "Google User",;"
@@ -1083,8 +952,6 @@ const loginWithGoogle = async () => {;"
   };
 
   const loginWithFacebook = async () => {;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   const loginWithGoogle = async () => {;
     // // // console.log("Google login requested"),;
     // Mock implementation;
@@ -1100,7 +967,6 @@ const loginWithGoogle = async () => {;"
   },;
   };
   const loginWithFacebook = async () => {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console && console.log("Facebook login requested");
     // Mock implementation;
     setUser({ ;"
@@ -1146,17 +1012,13 @@ email: "twitter@example.com",;
     } catch (err) {
       console.error ('Web3 login failed', err);
     }
-<<<<<<< HEAD
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   },;
   const loginWithWeb3 = async () => {;"
     // // // console.log("Web3 login requested"),;
     const ethereum = (window as any).ethereum,;
     if (!ethereum) {;"
-=======
   }
 
   },;
@@ -1164,7 +1026,6 @@ email: "twitter@example.com",;
     // // // console.log("Web3 login requested"),;
     const ethereum = (window as any).ethereum,;
     if (!ethereum) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.warn("No wallet detected"),;
       return;
     }
@@ -1176,7 +1037,6 @@ try {;'
         method: 'personal_sign',;
         params: [address, address];
       });
-=======
 try {;
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),;
       const address = accounts[0],;
@@ -1184,14 +1044,12 @@ try {;
         method: 'personal_sign',;
         params: [address, address];
       }),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setUser({;
         id: address,;
         displayName: address,;
         profileComplete: true;
       });
     } catch (err) {;
-<<<<<<< HEAD
       console && console.error('Web3 login failed', err);
     }
   };
@@ -1199,8 +1057,6 @@ try {;
   // Check for existing session on mount;
   useEffect(() => {;
     // Mock loading state and then set a null user to simulate no session;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     setIsLoading(true);
     setTimeout(() => {;
       setUser(null);
@@ -1272,21 +1128,12 @@ export function useAuth(): any (): AuthContextType {;
 }
   return context;
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   }    isLoading;
     signIn;
     signOut;
     signUp;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   const value = {;
     user;
@@ -1433,4 +1280,3 @@ export function useAuth(): AuthContextType {;
 }
 ;
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

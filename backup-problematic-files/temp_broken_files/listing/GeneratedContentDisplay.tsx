@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
@@ -22,14 +21,12 @@ interface GeneratedContentDisplayProps {;
 ;
 export function GeneratedContentDisplay({ content, onApply } GeneratedContentDisplayProps) {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card className="border border-zion-blue-light bg-zion-blue-dark">;
       <CardHeader>;
         <CardTitle className="text-white">Generated Content</CardTitle>;
       </CardHeader>;
       <CardContent className="space-y-4">;
         <div>;
-<<<<<<< HEAD
 
                 {tag}
               </Badge>;

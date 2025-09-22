@@ -73,7 +73,6 @@ const About: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 :src/pages/About.tsx
-<<<<<<< HEAD
             We are a leading technology company specializing in AI solutions, cybersecurity,
             and cloud infrastructure. Our mission is to transform businesses through
             innovative technology solutions.
@@ -263,7 +262,6 @@ const About: React.FC = () => {
         </div>
       </div>
     </div>
->>>>>>> pr-12243
   );
 };
 

@@ -1,9 +1,4 @@
 :src_backup/components/jobs/ApplicationScoreCard.tsx
-<<<<<<< HEAD:src/components/jobs/ApplicationScoreCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
@@ -13,8 +8,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/ApplicationScoreCard.tsx
 interface ApplicationScoreCardProps {
   application: JobApplication,
   onScoreUpdated?: (updatedApplication: JobApplication) => void
@@ -38,13 +31,11 @@ interface ApplicationScoreCardProps {
   onScoreUpdated?: (updatedApplication: JobApplication) => void
 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
 :src_backup/components/jobs/ApplicationScoreCard.tsx
   const [isScoring, setIsScoring] = useState(false),
 
   // Determine if application has been scored
-<<<<<<< HEAD
   const hasScore = typeof application.match_score === 'number',
 
   // Format the date when the application was scored
@@ -53,7 +44,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     : null,
 
   // Get suggestion color
-<<<<<<< HEAD
   const getSuggestionColor = (suggestion: string | undefined) => {
     switch (suggestion) {
       case "Strongly Recommended": return "bg-green-100 text-green-800",
@@ -62,17 +52,13 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {      case "Recommended for Review":
-=======
 
 :src/components/jobs/ApplicationScoreCard.tsx
       case "Recommended for Review":
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return "bg-blue-100 text-blue-800"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case "Low Match":
         return "bg-orange-100 text-orange-800",
       default:
-=======
 // Get suggestion color;
   const getSuggestionColor = (suggestion: string | undefined,) => {}
     switch (suggestion) {}
@@ -83,15 +69,11 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       case "Low Match":"
         return "bg-orange-100 text-orange-800"
       default:"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplicationScoreCard.tsx
         return "bg-gray-100 text-gray-800"
 :src/components/jobs/ApplicationScoreCard.tsx
-<<<<<<< HEAD
-=======
 
 :src_backup/components/jobs/ApplicationScoreCard.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/ApplicationScoreCard.tsx
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -125,12 +107,8 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       default:;
         return "bg-gray-100 text-gray-800";
 
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/ApplicationScoreCard.tsx
     }
   },;
   // Trigger the scoring process;
@@ -140,7 +118,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       // Call the trigger_resume_scoring function;
       const { error } = await supabase.rpc(;
         'trigger_resume_scoring',;
-=======
 export function ApplicationScoreCard() { return null; }
     }
   }
@@ -151,13 +128,8 @@ export function ApplicationScoreCard() { return null; }
       // Call the trigger_resume_scoring function;
       const { error } = await supabase.rpc('
         'trigger_resume_scoring'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplicationScoreCard.tsx
         { application_id: application.id }
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ),
 
       if (error) throw error,
@@ -262,12 +234,10 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
           toast.error("Failed to check scoring status"),
           return;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
 :src_backup/components/jobs/ApplicationScoreCard.tsx
 
         if (data.scored_at) {
-<<<<<<< HEAD
           setIsScoring(false),
           toast.success("Resume scoring completed"),
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),
@@ -278,9 +248,7 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
 
         }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000)
         } else {}
@@ -560,34 +528,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
 :src_backup/components/jobs/ApplicationScoreCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                       </div>;
                       </div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     )}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
                     {application.match_breakdown.experience_match && (
                       <div>"
                         <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
-=======
                       </div>;
                       </div>;
                     )}
                     {application.match_breakdown.experience_match && (
                       <div>
                         <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/ApplicationScoreCard.tsx
                         <p>{application.match_breakdown.experience_match.analysis}</p>
                       </div>
 :src_backup/components/jobs/ApplicationScoreCard.tsx
                     )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     {application.match_breakdown.certifications_match && (
                       <div>
@@ -766,21 +725,15 @@ if ( {) {}
                       </div>)}
 :src_backup/components/jobs/ApplicationScoreCard.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/ApplicationScoreCard.tsx
                     {application.match_breakdown.certifications_match && (
 :src_backup/components/jobs/ApplicationScoreCard.tsx
                       <div>;
                         <p className="font-medium">Certifications Match: {application.match_breakdown.certifications_match.score}/100</p>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         {application.match_breakdown.certifications_match.matching && (
 <p>Matching certs: {application.match_breakdown.certifications_match.matching.join(", ")}</p>
                         )}
                         {application.match_breakdown.certifications_match.missing && (
 :src/components/jobs/ApplicationScoreCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                           <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
                         )}
                       </div>;
@@ -789,12 +742,9 @@ if ( {) {}
                       </div>;
 :src_backup/components/jobs/ApplicationScoreCard.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     )}
-=======
                           <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
                         )}                    )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
                     {application.match_breakdown.education_match && (
                       <div>"
@@ -802,7 +752,6 @@ if ( {) {}
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
 :src/components/jobs/ApplicationScoreCard.tsx
-<<<<<<< HEAD
                       </div>;
                     )}
                     {application && application.match_breakdown.experience_match && (;
@@ -828,13 +777,11 @@ if ( {) {}
                         <p>{application && application.match_breakdown.education_match && education_match.analysis}</p>;
                       </div>;
 :src_backup/components/jobs/ApplicationScoreCard.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/ApplicationScoreCard.tsx
                     )}
                   </div>;
                 </details>;
               </div>;
 :src_backup/components/jobs/ApplicationScoreCard.tsx
-<<<<<<< HEAD:src/components/jobs/ApplicationScoreCard.tsx
             )}
 </div>
         ) : (
@@ -846,9 +793,7 @@ if ( {) {}
               onClick={handleScore} 
               disabled={isScoring}
 
-=======
             )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/ApplicationScoreCard.tsx
           </div>;
         ) : (;"
           <div className="text-center py-4">;"
@@ -869,23 +814,18 @@ if ( {) {}
 :src_backup/components/jobs/ApplicationScoreCard.tsx
               ) : (;
 "Score Resume";
-<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
 
-<<<<<<< HEAD:src/components/jobs/ApplicationScoreCard.tsx
             <Button 
               onClick={handleScore} 
               disabled={isScoring}
 
 :src/components/jobs/ApplicationScoreCard.tsx
-<<<<<<< HEAD
             <Button 
 
               onClick={handleScore} 
               disabled={isScoring}
 
 :src/components/jobs/ApplicationScoreCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               ) : (;"
                 "Score Resume";
 
@@ -897,8 +837,6 @@ if ( {) {}
               onClick={handleScore} 
               disabled={isScoring}
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplicationScoreCard.tsx
-=======
             <Button
               onClick={handleScore}
               disabled={isScoring}
@@ -923,7 +861,6 @@ if ( {) {}
             <Button 
               onClick={handleScore} 
               disabled={isScoring}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/ApplicationScoreCard.tsx
               className="w-full"
             >
               {isScoring ? (
@@ -939,8 +876,6 @@ if ( {) {}
           </div>;
         )}
 :src_backup/components/jobs/ApplicationScoreCard.tsx
-<<<<<<< HEAD:src/components/jobs/ApplicationScoreCard.tsx
-<<<<<<< HEAD
 
       </CardContent>;
     </Card>;
@@ -977,27 +912,16 @@ disabled = {is_scoring, }
     </Card>);
 }
 :src_backup/components/jobs/ApplicationScoreCard.tsx
-<<<<<<< HEAD
-
-<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
 }
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/ApplicationScoreCard.tsx
-=======
+}
+
 }
 }}}}
 ;
 
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/ApplicationScoreCard.tsx
       </CardContent>
     </Card>
   );
@@ -1026,12 +950,7 @@ disabled = {is_scoring, }
 }</CardContent> </Card>) ;
 }'"
 :src/components/jobs/ApplicationScoreCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/ApplicationScoreCard.tsx
-=======
 
   // Render the score result or button to score;
   return ("
@@ -1170,4 +1089,3 @@ disabled = {is_scoring, }
                 "Score Resume")}"
     );"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/jobs/ApplicationScoreCard.tsx

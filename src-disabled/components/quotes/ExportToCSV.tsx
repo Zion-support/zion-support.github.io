@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react';"
 import type { QuoteRequest } from "@/types/quotes";
@@ -41,10 +40,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     // Create CSV content;
     const csvContent = []
       headers.join()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       ...rows.map(row =>
         row.map(cell =>
 
@@ -198,7 +193,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
   } }
   return (
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
@@ -246,13 +240,11 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
             : cell
         ).join()
       )
-<<<<<<< HEAD
 '"},;
 ;
   );
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ].join('\n'),
 
     // Create download link
@@ -345,15 +337,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       Export CSV;
     </Button>;
   );
-<<<<<<< HEAD
 };
-=======
 }
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
             : 'Not specified'),
       quote.timeline,
       quote.status,
@@ -400,14 +385,8 @@ URL.revokeObjectURL(url);
 );
 };
 '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes";
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

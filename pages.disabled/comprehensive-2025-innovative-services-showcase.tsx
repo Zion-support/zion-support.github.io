@@ -1,8 +1,4 @@
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -15,9 +11,7 @@ import {
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   ArrowRight, CheckCircle, Globe;
   Search, Grid, List, Star as StarIcon;
   Phone, Mail, MapPin
@@ -26,16 +20,13 @@ import {
   Search, Grid, List, Star as StarIcon;
   Phone, Mail, MapPin
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 } from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion',;
 import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services',;
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function Comprehensive2025InnovativeServicesShowcase() {
-<<<<<<< HEAD
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
@@ -46,7 +37,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
   const allServices = [...comprehensiveInnovativeServices, ...specializedEnterpriseServices],
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length },
     { id: 'AI & Machine Learning', name: 'AI & ML', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },
@@ -63,7 +53,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     { id: 'Space Technology', name: 'Space Tech', count: allServices.filter(s => s.category.includes('Space')).length },
     { id: 'Neural Technology & BCI', name: 'Neural Tech', count: allServices.filter(s => s.category.includes('Neural')).length },
     { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: allServices.filter(s => s.category.includes('Advanced IoT')).length },
-=======
 
 import {};
   ArrowRight, CheckCircle, Globe;
@@ -91,7 +80,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {}
     { id: 'Space Technology', name: 'Space Tech', count: allServices.filter(s => s.category.includes('Space')).length },'
     { id: 'Neural Technology & BCI', name: 'Neural Tech', count: allServices.filter(s => s.category.includes('Neural')).length },'
     { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: allServices.filter(s => s.category.includes('Advanced IoT')).length },'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
     { id: 'Advanced Analytics & AI', name: 'Advanced Analytics', count: allServices.filter(s => s.category.includes('Advanced Analytics')).length }
   ],
 
@@ -101,20 +89,12 @@ export default function Comprehensive2025InnovativeServicesShowcase() {}
     if (numPrice < 5000) return 'mid','
     return 'enterprise'
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
 import React, { useState } from 'react';
 import Head from 'next/head';
-=======
 ';
 import React, { useState } from 'react';'
 import Head from 'next/head';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
 import { motion } from 'framer-motion';
 import {;
   ArrowRight, CheckCircle, Globe,;
@@ -122,16 +102,7 @@ import {;
   Phone, Mail, MapPin;'
 } from 'lucide-react',;
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
   ArrowRight,
   CheckCircle,
   Globe,
@@ -144,22 +115,13 @@ import {;
   MapPin,;
 } from 'lucide-react';
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
 import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services';
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
   try {
@@ -172,12 +134,9 @@ export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      return matchesSearch && matchesCategory && matchesPrice
-=======
       return matchesSearch && matchesCategory && matchesPrice
       return matchesSearch && matchesCategory && matchesPrice
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
+      return matchesSearch && matchesCategory && matchesPrice
 
   };
 
@@ -194,15 +153,8 @@ const matchesSearch =
         priceRange === 'all' || getPriceRange(service.price) === priceRange;
       return matchesSearch && matchesCategory && matchesPrice;
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
     })
     .sort((a, b) => {}
       switch (sortBy) {'
@@ -210,10 +162,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)'
         case 'price':
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         default: return 0;
       }
@@ -228,11 +176,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
   };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
         default: return 0
       }
@@ -319,7 +262,6 @@ if (return 'mid', ) {
     hidden: { opacity: 0 },
 
         default: return 0
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
 return (
             parseFloat(a.price.replace('$', '').replace(',', '')) -
             parseFloat(b.price.replace('$', '').replace(',', ''))
@@ -346,20 +288,13 @@ staggerChildren: 0.1,
   };
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   },
   const item_variants = {
     hidden: { opacity: 0, coordinate_y: 20 },
@@ -367,18 +302,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       opacity: 1,
       coordinate_y: 0,
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       transition: {
 
-=======
   const itemVariants = {}
     hidden: { opacity: 0, y: 20 }
     visible: {}
       opacity: 1;
       y: 0;
       transition: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
         duration: 0.5;
       }
     }
@@ -484,11 +415,9 @@ export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
-=======
   const contactInfo = {'
     mobile: '+1 302 464 0950''
     email: 'kleber@ziontechgroup.com''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
     address: '364 E Main St STE 1008 Middletown DE 19709'
 
   };
@@ -502,9 +431,7 @@ case 'popularity':
         case 'rating':
           return b.rating - a.rating,
         case 'newest':
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-<<<<<<< HEAD
   },
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -578,9 +505,6 @@ website: 'https://ziontechgroup.com'
   },
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -597,9 +521,6 @@ console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
 duration: 0.5,
       },
     },
@@ -642,13 +563,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       <EnhancedNavigation />
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -673,10 +591,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
       <section className="relative py-20 px-6">
@@ -685,38 +599,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='relative py-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       {/* Hero Section */}
 <section className='relative py-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
             {/* Contact Information */}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
       <section className="relative py - 20 px - 6">;
-=======
 "
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
@@ -732,7 +630,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0.8 }}
 "
       <section className="relative py - 20 px - 6">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
         <div className="max - w-7xl mx - auto text - center">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
@@ -748,12 +645,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
             {/* Contact Information */}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
           >
 <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent'>
               2025 Comprehensive Services Showcase
@@ -767,9 +661,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             {/* Contact Information */}
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Discover our extensive collection of cutting-edge micro SAAS services, AI solutions,
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
@@ -779,10 +670,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
@@ -794,16 +681,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>"
               <div className="flex items-center gap-2">"
                 <MapPin className="w-5 h-5" />
-=======
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">
               <div className="flex items-center gap-2">
@@ -829,7 +709,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
             <div className='flex flex-wrap justify-center gap-6 mb-8 text-white/70'>
               <div className='flex items-center gap-2'>
                 <Phone className='w-5 h-5' />
@@ -842,26 +721,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <div className='flex items-center gap-2'>
                 <MapPin className='w-5 h-5' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <span>{contactInfo.address}</span>
               </div>
             </div>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             {/* Stats */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">{allServices.length}+</div>
@@ -879,9 +748,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-center">"
                 <div className="text-3xl font-bold text-orange-400">{allServices.filter(s => s.rating >= 4.5).length}</div>"
                 <div className="text-white/60">Top Rated</div>
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400">{allServices.filter(s => s.popular).length}</div>
@@ -894,7 +760,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-center">
                 <div className="text-3xl font-bold text-orange-400">{allServices.filter(s => s.rating >= 4.5).length}</div>
                 <div className="text-white/60">Top Rated</div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
             {/* Stats */}
 <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>
               <div className='text-center'>
@@ -921,20 +786,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {allServices.filter(s => s.rating >= 4.5).length}
                 </div>
                 <div className='text-white/60'>Top Rated</div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             transition={{ duration: 0.6 }}"
             className="bg - white / 5 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 10";
@@ -942,9 +800,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Search Bar */}
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="mb-6">
               <div className="relative max-w-2xl mx-auto">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
@@ -952,15 +807,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   type="text""
                   placeholder="Search services by name, description, or features..."
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Search and Filters */}
-=======
       {/* Search and Filters */}
 
           >;
@@ -1042,7 +890,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0.6 }}
             className="bg - white / 5 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 10";
           >;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
 <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
@@ -1058,18 +905,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5' />
                 <input
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
                   type="text"
                   placeholder="Search services by name, description, or features..."
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all duration-300"
                 />
               </div>
             </div>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="mb - 6">;
               <div className="relative max - w-2xl mx - auto">;
                 <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - white / 50 w - 5 h - 5" />;
@@ -1086,11 +928,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Filters */}
             <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 4">;
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Category Filter */}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             {/* Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1106,7 +945,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div>
                 <label className="block text-sm font-medium text-white/70 mb-2">Category</label>
                 <select
-=======
               {/* Category Filter */}
 
             {/* Filters */  } catch (error) {
@@ -1122,7 +960,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
               <div>
                 <label className="block text-sm font-medium text-white/70 mb-2">Category</label>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
                   type='text'
                   placeholder='Search services by name, description, or features...'
                   value={searchTerm}
@@ -1141,9 +978,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </label>
                 <select
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   value={selectedCategory  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1155,22 +989,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   {categories.map((category) => (
-=======
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
@@ -1300,28 +1122,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     <List className="w-4 h-4" />
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
                   value={selectedCategory}
                   onChange={e => setSelectedCategory(e.target.value)}
                   className='w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   {categories.map(category => (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >"
                   <option value="all">All Prices</option>"
@@ -1331,11 +1142,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </select>
               </div>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >"
                   <option value="popularity">Popularity</option>"
@@ -1345,37 +1151,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </select>
               </div>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div>
                 <label className="block text-sm font-medium text-white/70 mb-2">View Mode</label>
                 <div className="flex gap-2">
                   <button
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   >
                     <Grid className="w-4 h-4" />
                   </button>
                   <button
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   >
                     <List className="w-4 h-4" />
-=======
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
                   ))}
                 </select>
               </div>
@@ -1433,7 +1221,6 @@ viewMode === 'list'
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     <List className='w-4 h-4' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </button>
                 </div>
               </div>
@@ -1442,19 +1229,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
           <motion.div
             variants={containerVariants}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             variants={containerVariants  } catch (error) {"
     console.error("Error:", error);"
@@ -1465,16 +1245,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
           <motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             variants={containerVariants  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             initial="hidden"
             animate="visible"
             className="mb-8"
@@ -1487,11 +1263,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
 Showing results for &quot,{searchTerm |'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
                 Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
             initial="hidden"
             animate="visible"
@@ -1510,7 +1281,6 @@ Showing results for &quot,{searchTerm |'all services'}&quot, in {selectedCategor
             initial="hidden"
             animate="visible"
             className="mb-8"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
       {/* Services Grid */}
 <section className='px-6 pb-20'>
         <div className='max-w-7xl mx-auto'>
@@ -1526,22 +1296,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {filteredServices.length} Services Found
               </h2>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
               <p className="text-white/60">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Showing results for "{searchTerm || 'all services'}" in {selectedCategory === 'all' ? 'all categories' : selectedCategory  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </p>
             </div>
             {filteredServices.length === 0 ? ("
@@ -1552,26 +1313,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
                 <button
                   onClick={() => {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                 <button;
                   onClick={() => {}
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
 
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
               </p>
             </div>
@@ -1580,7 +1328,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-white/60 mb-6">Try adjusting your search criteria or filters</p>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
               <p className='text-white/60'>
                 Showing results for &quot;{searchTerm || 'all services'}&quot;
                 in{' '}
@@ -1620,16 +1367,12 @@ setPriceRange('all');
                   }}
 origin/cursor/automate-test-improve-and-merge-code-2533
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   Clear Filters;
                 </button>
               </div>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
               }>
@@ -1638,9 +1381,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 {/* Service Card Content */}
                     <div className={`p - 6 ${view_mode === 'list' ? 'flex - 1' : ''}`}>;
                       {/* Header */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ) : (
-=======
             ) : (
 
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
@@ -1764,7 +1505,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
               }>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
 <div
                 className={
                   viewMode === 'grid'
@@ -1776,33 +1516,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {filteredServices.map((service, index) => (
                   <motion.div
                     key={service.id}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8''
                 : 'space-y-6'
               }>
                 {filteredServices.map((service, index) => (
                   <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
                     key={service.id}
                     variants={item_variants}
                     className={`group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl ${'
                       view_mode === 'list' ? 'flex' : '';`
                     }`}
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
                   >;
 
-<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     {/* Service Card Content */  } catch (error) {
     console.error("Error:", error);
-=======
                     {/* Service Card Content */  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }'`
@@ -1813,19 +1544,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex items-center gap-3">
-=======
 "
                       <div className="flex items-start justify-between mb-4">"
                         <div className="flex items-center gap-3">'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
                           <div className={`text-3xl ${service.color.includes('from-') ? '' : service.color}`}>
                             {service.icon  } catch (error) {"
     console.error("Error:", error);"
@@ -1836,24 +1561,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div>"
                             <h3 className="font-bold text-lg text-white group-hover:text-cyan-300 transition-colors duration-300">
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
                               {service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             </h3>
                             <p className="text-sm text-white/60">{service.tagline}</p>
                           </div>
@@ -1863,9 +1578,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
                             Popular
                           </div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                         {service.popular && (
 
                         {service.popular && (
@@ -1878,13 +1590,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {/* Description */}
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                         {service.popular && (
                           <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
                   >
                     {/* Service Card Content */}
 <div
@@ -1933,9 +1640,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </p>
                       {/* Features */}
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1960,23 +1664,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-white/70 mb-2">Key Features:</h4>
-=======
 
 "
                       <div className="mb-4">"
                         <h4 className="text-sm font-semibold text-white/70 mb-2">Key Features:</h4>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
                         <div className="grid grid-cols-1 gap-1">
                           {service.features.slice(0, 3).map((feature, idx) => ("
                             <div key={idx} className="flex items-center gap-2 text-xs text-white/60">"
                               <CheckCircle className="w-3 h-3 text-green-400" />
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
 
                           {service.features.length > 3 && (
                             <div className="text-xs text-white/40">
@@ -1987,7 +1685,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
                         </div>;
                       </div>;
                       {/* Price and Rating */  } catch (error) {
@@ -1998,16 +1695,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               {feature}
                             </div>))}
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
                               {feature  } catch (error) {
     console.error("Error:", error);
-=======
 
                               {feature  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -2018,27 +1711,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
-=======
 
                           {service.features.length > 3 && (
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
                           {service.features.length > 3 && (
 
                           {service.price}
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
                           <span className="text - sm text - white / 60">{service.period}</span>;
                         </div>;"
                         <div className="flex items - center gap - 1">;"
@@ -2048,37 +1730,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       </div>;
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
                           href={service.link}
 
                           href={service.link}
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       {/* Action Buttons */  } catch (error) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-2xl font-bold text-cyan-400">
                           {service.price  } catch (error) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                       <div className="flex gap-2">
                         <a
                           href={service.link  } catch (error) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
                           <span className="text-sm text-white/60">{service.period}</span>
                         </div>
                         <div className="flex items-center gap-1">
@@ -2088,28 +1761,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       </div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           {service.features.length > 3 && (
 
                           {service.price}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
-=======
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
                           target="_blank"
                           rel="noopener noreferrer"
@@ -2117,7 +1778,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
 <div className='mb-4'>
                         <h4 className='text-sm font-semibold text-white/70 mb-2'>
                           Key Features:
@@ -2165,21 +1825,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           rel='noopener noreferrer'
                           className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105'
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
                         >
                           Learn More;
                         </a>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
                         <a
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                           href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`  } catch (error) {
     console.error("Error:", error);
@@ -2187,43 +1838,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           className="px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10"
-=======
-=======
 
                           className="px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
                           className="px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10"
                           href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
 className='px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10'
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                           href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
 className='px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
                         >
                           Contact;
                         </a>
                       </div>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                       {/* Additional Info */  } catch (error) {
     console.error("Error:", error);
@@ -2233,19 +1864,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <div className="mt-4 pt-4 border-t border-white/10">
                         <div className="grid grid-cols-2 gap-4 text-xs text-white/50">
                           <div>"
                             <span className="block text-white/70">Setup Time:</span>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                             {service.setupTime  } catch (error) {
     console.error("Error:", error);
@@ -2255,9 +1879,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           </div>
                           <div>"
                             <span className="block text-white/70">Trial:</span>
@@ -2270,9 +1891,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div>"
                             <span className="block text-white/70">ROI:</span>'"
                             <span className="text-green-400">{service.roi.split(' ').slice(0, 3).join(' ')}...</span>
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                           </div>
                           <div>
                             <span className="block text-white/70">Trial:</span>
@@ -2285,7 +1903,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div>
                             <span className="block text-white/70">ROI:</span>
                             <span className="text-green-400">{service.roi.split(' ').slice(0, 3).join(' ')}...</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
                       {/* Additional Info */}
 <div className='mt-4 pt-4 border-t border-white/10'>
                         <div className='grid grid-cols-2 gap-4 text-xs text-white/50'>
@@ -2311,20 +1928,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <span className='text-green-400'>
                               {service.roi.split(' ').slice(0, 3).join(' ')}...
                             </span>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           </div>
                         </div>
                       </div>
                     </div>
                   </motion.div>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           target="_blank";
                           rel="noopener noreferrer";
                           className="flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 rounded - lg text - white text - sm font - medium text - center transition - all duration - 300 transform hover:scale - 105";
@@ -2367,14 +1977,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Contact CTA */}
       <section className="px - 6 pb - 20">;
-=======
 
       {/* Contact CTA */}"
       <section className="px - 6 pb - 20">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
         <div className="max - w-4xl mx - auto text - center">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
@@ -2382,18 +1989,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
                 ))  } catch (error) {
     console.error("Error:", error);
-=======
 
                 ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -2435,10 +2036,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20"
           >"
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -2448,17 +2045,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 Our team of experts is ready to help you implement the perfect solution for your business needs.
               Our team of experts is ready to help you implement the perfect solution for your business needs. 
               Our team of experts is ready to help you implement the perfect solution for your business needs.
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
       {/* Contact CTA */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
 <section className='px-6 pb-20'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
@@ -2473,10 +2065,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Ready to Transform Your Business?
             </h2>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               Get in touch today for a personalized consultation.
             </p>
@@ -2489,21 +2078,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Get in touch today for a personalized consultation.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
               <a
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
             <p className='text-xl text-white/80 mb-8 max-w-2xl mx-auto'>
               Our team of experts is ready to help you implement the perfect
               solution for your business needs. Get in touch today for a
@@ -2513,20 +2092,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
               >
                 Schedule Consultation"
                 <ArrowRight className="w-5 h-5" />
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               </Link>
               <a
@@ -2538,9 +2109,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="px-8 py-4 border border-white/20 hover:border-cyan-400/50 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
               >"
                 <Phone className="w-5 h-5" />
@@ -2550,9 +2118,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="mt-8 text-white/60">
               <p>Contact us directly:</p>"
               <div className="flex flex-wrap justify-center gap-6 mt-4">
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                 className="px-8 py-4 border border-white/20 hover:border-cyan-400/50 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
@@ -2563,7 +2128,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p>Contact us directly:</p>
               <div className="flex flex-wrap justify-center gap-6 mt-4">
                 className="px-8 py-4 border border-white/20 hover:border-cyan-400/50 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
                 href={`mailto:${contactInfo.email}?subject=Business Consultation Request`}
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2'
               >
@@ -2582,7 +2146,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='mt-8 text-white/60'>
               <p>Contact us directly:</p>
               <div className='flex flex-wrap justify-center gap-6 mt-4'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <span>{contactInfo.mobile}</span>
                 <span>{contactInfo.email}</span>
                 <span>{contactInfo.address}</span>
@@ -2594,14 +2157,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <EnhancedFooter />
     </div>
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD:pages/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
   )
   } catch (error) {
     console.error("Error:", error);
@@ -2610,16 +2167,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
-=======
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx
             className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 backdrop - blur - xl rounded - 3xl p - 12 border border - cyan - 400 / 20";
           >;"
             <h2 className="text - 4xl font - bold text - white mb - 6">;
@@ -2660,21 +2210,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
 }
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
-<<<<<<< HEAD
 
 :pages_backup/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-2025-innovative-services-showcase.tsx
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/comprehensive-2025-innovative-services-showcase.tsx

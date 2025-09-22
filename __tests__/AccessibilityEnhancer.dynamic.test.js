@@ -6,8 +6,6 @@ describe('AccessibilityEnhancer.dynamic', () => {
   });
 });
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityEnhancerdynamic from '../components/AccessibilityEnhancer.dynamic'; describe('AccessibilityEnhancerdynamic',() => { test('renders without crashing',() => { render(<AccessibilityEnhancerdynamic />); expect( screen.getByTestId('accessibilityenhancer.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityEnhancerdynamic />)}); test('handles user interactions',() => { render(<AccessibilityEnhancerdynamic />)}); test('applies correct styling',() => { render(<AccessibilityEnhancerdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
 main
@@ -25,7 +23,6 @@ describe('AccessibilityEnhancerdynamic', () => {
       screen.getByTestId('accessibilityenhancer.dynamic')
     ).toBeInTheDocument();
   });
-<<<<<<< HEAD
   test('displays correct content', () => {
     render(<AccessibilityEnhancerdynamic />);
   });
@@ -115,6 +112,3 @@ describe('AccessibilityEnhancerdynamic'
 });
 
 import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityEnhancerdynamic from '../components/AccessibilityEnhancer.dynamic'; describe('AccessibilityEnhancerdynamic',() => { test('renders without crashing',() => { render(<AccessibilityEnhancerdynamic />); expect( screen.getByTestId('accessibilityenhancer.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityEnhancerdynamic />)}); test('handles user interactions',() => { render(<AccessibilityEnhancerdynamic />)}); test('applies correct styling',() => { render(<AccessibilityEnhancerdynamic />)})});
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/main

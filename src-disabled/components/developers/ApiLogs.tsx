@@ -1,6 +1,4 @@
 :src/components/developers/ApiLogs.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
@@ -275,12 +273,7 @@ function ApiLogs() {
   );
 }
 :src/components/developers/ApiLogs.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiLogs.tsx
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import { List, RefreshCw } from 'lucide-react';
@@ -304,8 +297,6 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { ApiLogsChart } from './ApiLogsChart';
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/developers/ApiLogs.tsx
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { List, RefreshCw } from 'lucide-react'
@@ -492,5 +483,3 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
 }</tbody> </table> </div> </div> <div className=" flex space-x-2" > <Button > Previous </Button> <Button > Next </Button> </div> </div>) ;
 }</CardContent> </Card>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,17 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 /**
  * Deployment Automation for Zion Tech Group
  * Automated deployment with health checks and rollback capabilities
  */
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -201,19 +194,8 @@ if (require.main === module) {
 automation.runDeploymentAutomation().catch(error => {
     console.error('Deployment automation failed:', error);
     process.exit(1);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
   automation.runDeploymentAutomation().catch(error => {)
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

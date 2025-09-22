@@ -1,5 +1,4 @@
 
-=======
 import { Card, CardContent } from "@/components/ui/card",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -121,10 +120,8 @@ function StatCard({ title, value, icon } StatCardProps) {;
               {title}
             </p>;
             <h4 className="text-2xl font-bold text-white">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {value}
             </h4>;
           </div>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD

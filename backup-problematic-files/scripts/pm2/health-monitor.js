@@ -6,8 +6,6 @@
     try {,;
       this.log('💻 Checking system resources...'),;
 ,;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const memInfo = execSync('free -m', { encodin:g:'utf8' }),;
       const diskInfo = execSync('df -h', { encodin:g:'utf8' }),;
       const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encodin:g:'utf8' }),;
@@ -37,10 +35,8 @@
 usagePercen:t:Math.round(cpuUsage),;
         };
       };
-=======
           usagePercen:t:Math.round(cpuUsage),;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch (error) {,;
         succes:s:false,;
         erro:r:error.message,;
@@ -55,8 +51,6 @@ cp:u:null,;
     try {,;
       this.log('🔄 Checking process health...'),;
 ,;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const pm2List = execSync('pm2 list --json', { encodin:g:'utf8' }),;
       const processes = JSON.parse(pm2List),;
       const processHealth = {,;
@@ -100,8 +94,6 @@ healt:h:null,;
     try {,;
       this.log('🌐 Checking application health...'),;
 ,;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const healthChecks = [],;
       // Check if the application is running,;
         const pm2List = execSync('pm2 list', { encodin:g:'utf8' }),;
@@ -149,8 +141,6 @@ check:s:[],;
     try {,;
       this.log('📝 Checking log health...'),;
 ,;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const logsDir = path.join(this.projectRoot, 'logs/pm2'),;
       const logFiles = [],;
       if (fs.existsSync(logsDir)) {,;
@@ -229,10 +219,8 @@ pr-12325
 totalScore += 5,;
       };
     };
-=======
         totalScore += 5,;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     maxScore += 25,;
     // Process health,;
     if (processInfo.success && processInfo.health) {,;
@@ -297,10 +285,8 @@ pr-12325
           actio:n:'Consider restarting processes or increasing memory',;
 }),;
       };
-=======
           actio:n:'Consider restarting processes or increasing memory',;')
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (systemInfo.disk?.usagePercent > 80) {,;
           messag:e:'High disk usage detected',;
           actio:n:'Clean up logs and temporary files',;
@@ -347,9 +333,7 @@ this.log(`Error saving:report:${error.message}`),;
 ,;
   async run() {,;
     this.log('🏥 Starting Health Monitor...'),;
-=======
     this.log(' Starting Health Monitor...'),;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Project:root:${this.projectRoot}`),;
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
@@ -383,10 +367,8 @@ this.log('\n📊 Health Monitor:Summary:'),;
 this.log('\n💡 Recommendation:s:'),;
         report.recommendations.forEach(rec => {,;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
-=======
         report.recommendations.forEach(rec => {,;)`;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           this.log(`    Actio:n:${rec.action}`),;
         }),;
       } else {,;
@@ -443,8 +425,6 @@ healthMonitor.run().catch(error => {,;)
     try {,
 this.log('🔄 Checking process health...'),
 ,
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const pm2List = execSync('pm2 list --json', { encoding: 'utf8' }),
       const processes = JSON.parse(pm2List),
       const processHealth = {,
@@ -650,7 +630,6 @@ this.log('\n✨ All systems are healthy!')
         this.log('\n All systems are healthy!')
 
       this.log(` Error running health: monitor: ${error.message}`),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       process.exit(1)
     }
   }};

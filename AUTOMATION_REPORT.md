@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Comprehensive Automation Report
 
 ## Summary
@@ -35,7 +34,6 @@ SyntaxError: Unexpected token '{'
 Node.js v22.16.0
 
 - auto-fixer.js failed: Command failed: node scripts/auto-fixer.js
-=======
 # Automation Report
 
 **Timestamp:** 2025-09-07T02:51:20.034Z
@@ -69,7 +67,6 @@ Error fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/
 }
 
 - scripts/auto-fixer.js: Command failed: node scripts/auto-fixer.js
->>>>>>> origin/main
 file:///workspace/scripts/auto-fixer.js:3
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';
 ^
@@ -83,7 +80,6 @@ SyntaxError: Invalid or unexpected token
 
 Node.js v22.16.0
 
-<<<<<<< HEAD
 - syntax-fixer.cjs failed: Command failed: node scripts/syntax-fixer.cjs
 /workspace/scripts/syntax-fixer.cjs:9
   async log(message, level = "INFO")
@@ -121,9 +117,7 @@ SyntaxError: Invalid or unexpected token
 Node.js v22.16.0
 
 - advanced-build-optimizer.js failed: Command failed: node scripts/advanced-build-optimizer.js
-=======
 - scripts/advanced-build-optimizer.js: Command failed: node scripts/advanced-build-optimizer.js
->>>>>>> origin/main
 file:///workspace/scripts/advanced-build-optimizer.js:3
 ursor/integrate-build-improve-and-re-verify-8f7d;
                                             ^
@@ -137,7 +131,6 @@ SyntaxError: Invalid or unexpected token
 
 Node.js v22.16.0
 
-<<<<<<< HEAD
 - build-optimizer.cjs failed: Command failed: node scripts/build-optimizer.cjs
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
@@ -161,9 +154,7 @@ SyntaxError: Unexpected token ','
 Node.js v22.16.0
 
 - performance-monitor-enhanced.js failed: Command failed: node scripts/performance-monitor-enhanced.js
-=======
 - scripts/performance-monitor-enhanced.js: Command failed: node scripts/performance-monitor-enhanced.js
->>>>>>> origin/main
 file:///workspace/scripts/performance-monitor-enhanced.js:3
 ursor/fix-syntax-push-and-merge-to-main-40de;
                                         ^^
@@ -177,7 +168,6 @@ SyntaxError: Invalid or unexpected token
 
 Node.js v22.16.0
 
-<<<<<<< HEAD
 - performance-optimizer.js failed: Command failed: node scripts/performance-optimizer.js
 file:///workspace/scripts/performance-optimizer.js:2
 ursor/automate-test-improve-and-merge-code-646c;
@@ -265,7 +255,6 @@ Node.js v22.16.0
 
 ### Warnings
 - ESLint had issues: Command failed: npm run lint
-=======
 - scripts/performance-optimizer.js: Command failed: node scripts/performance-optimizer.js
 file:///workspace/scripts/performance-optimizer.js:2
 const fs = require('fs');
@@ -281,12 +270,10 @@ This file is being treated as an ES module because it has a '.js' file extension
 Node.js v22.16.0
 
 - ESLint: Command failed: npm run lint
->>>>>>> origin/main
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
-<<<<<<< HEAD
 node:internal/modules/cjs/loader:1404
   throw err;
   ^
@@ -307,16 +294,13 @@ Error: Cannot find module '/workspace/node_modules/.bin/eslint'
 Node.js v22.16.0
 
 - TypeScript had issues: Command failed: npm run type-check
-=======
 
 - TypeScript: spawnSync /bin/sh ENOBUFS
 - Build: Command failed: npm run build
->>>>>>> origin/main
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
-<<<<<<< HEAD
 node:internal/modules/cjs/loader:1404
   throw err;
   ^
@@ -342,7 +326,6 @@ npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
 sh: 1: jest: not found
-=======
 Failed to compile.
 
 app/layout.tsx
@@ -462,15 +445,11 @@ Import trace for requested module:
 
 
 ## Warnings
->>>>>>> origin/main
 
 
 ## Recommendations
 - Address all errors before deployment
-<<<<<<< HEAD
 - Review and address warnings for better code quality
-=======
->>>>>>> origin/main
 - Implement continuous integration for automated testing
 - Set up automated deployment pipeline
 - Monitor performance metrics in production

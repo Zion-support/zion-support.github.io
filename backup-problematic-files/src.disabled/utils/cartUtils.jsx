@@ -10,4 +10,3 @@ export default function CartUtils({ }: CartUtilsProps) {
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

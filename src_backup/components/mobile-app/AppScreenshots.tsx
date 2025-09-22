@@ -1,5 +1,4 @@
 :src/components/mobile-app/AppScreenshots.tsx
-<<<<<<< HEAD
 // These would be replaced with actual screenshots
 const mockScreenshots = [
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
@@ -17,8 +16,6 @@ export const AppScreenshots: React.FC = () => {
         left: direction === "left" ? -scrollAmount : scrollAmount
         behavior: "smooth"})
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useRef } from "react",
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -52,13 +49,10 @@ export const AppScreenshots: React.FC = () => {;
         left: direction === "left" ? -scrollAmount : scrollAmount,;
         behavior: "smooth"});
 :src/components/mobile-app/AppScreenshots.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppScreenshots.tsx
     }
   }
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null),
@@ -72,7 +66,6 @@ export const AppScreenshots: React.FC = () => {
     }
   },
 
-<<<<<<< HEAD
   return (
     <section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -96,9 +89,7 @@ export const AppScreenshots: React.FC = () => {
         <div className="relative">;
 
 :src/components/mobile-app/AppScreenshots.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="relative">
           <Button
             variant="ghost"
@@ -136,7 +127,6 @@ aria-label="Scroll left";
 
 </div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div 
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -166,7 +156,6 @@ aria-label="Scroll left";
 :src/components/mobile-app/AppScreenshots.tsx
 onClick={() => scroll("right")}
             aria-label="Scroll right"
-=======
 
   return (
     <section className="py-16 bg-zion-blue-dark">
@@ -183,7 +172,6 @@ onClick={() => scroll("right")}
             variant="ghost"
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           >
             <ChevronRight className="h-6 w-6" />
           </Button>
@@ -191,8 +179,6 @@ onClick={() => scroll("right")}
       </div>
     </section>
 :src/components/mobile-app/AppScreenshots.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 },
 import React, { useRef } from "react",;
@@ -258,16 +244,12 @@ className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 te
             size="icon";
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
             onClick={() => scroll("right")}
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppScreenshots.tsx
             aria-label="Scroll right";
-=======
           </div>;
           <Button;
             variant="ghost";
             size="icon";            aria-label="Scroll right";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           >;
             <ChevronRight className="h-6 w-6" />;
           </Button>;
@@ -358,11 +340,7 @@ if ( {) {
 
   )
 :src/components/mobile-app/AppScreenshots.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/AppScreenshots.tsx
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from "@/components/ui/button";
@@ -371,5 +349,3 @@ import { Button } from "@/components/ui/button";
 };
 '"
 :src/components/mobile-app/AppScreenshots.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

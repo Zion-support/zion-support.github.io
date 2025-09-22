@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Environment Polyfill for Browser
  * 
@@ -7,9 +6,7 @@
  */
   NODE_ENV:
     (typeof (globalThis as any).process !== 'undefined' &&
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
 // Define safe defaults for environment variables
 const defaultEnv = {
   NODE_ENV: 'production', // Default to production for safety
@@ -59,10 +56,8 @@ export const processEnv =
 // Define safe defaults for environment variables;
 const default_env = {
   NODE_ENV: 'production', // Default to production for safety;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   NEXT_PUBLIC_APP_URL: '',
   NEXT_PUBLIC_SUPABASE_URL: '',
-<<<<<<< HEAD
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
 
 // Create a safe process object
@@ -161,7 +156,6 @@ export default safeEnv;
 }
 }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 // Ensure process is available on globalThis
 if (typeof globalThis !== 'undefined') {
@@ -229,14 +223,11 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''};
 // // // console.log('✅ Environment polyfill loaded successfully');
 export default safeEnv;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 console.log ('✅ Environment polyfill loaded successfully');
 export default safe_env;
 export default safe_env;
 export default safe_env;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /**
  * Environment Polyfill for Browser
  *
@@ -247,5 +238,3 @@ export default safe_env;
 console.log('✅ Environment polyfill loaded successfully');
 
 export default safeEnv;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

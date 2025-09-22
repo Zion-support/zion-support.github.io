@@ -1,28 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const Dashboard: NextPage = () => {
-=======
 
 const Dashboard: NextPage = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div className="space-y-6 pb-16">
       <Head>
         <title>Dashboard - Zion</title>
       </Head>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <h1 className="text-2xl font-semibold">Dashboard</h1>
       <section>
@@ -31,18 +18,11 @@ const Dashboard: NextPage = () => {}
           title="No jobs yet"
           description="Post your first job to get quotes from top talent."
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           icon={<span>🧰</span>  } catch (error) {
     console.error("Error:", error);
-=======
 
           icon={<span>🧰</span>  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -81,8 +61,6 @@ primaryAction={{ label: 'Post a job', href: '/jobs/post' }  } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         />
       </section>
         />
@@ -99,7 +77,6 @@ primaryAction={{ label: 'Post a job', href: '/jobs/post' }  } catch (error) {
       <section>
 <h2 className='text-lg font-semibold mb-2'>Messages</h2>
         <EmptyState
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           title="No messages yet"
           icon={<span>💬</span>  } catch (error) {"
     console.error("Error:", error);"
@@ -112,16 +89,11 @@ primaryAction={{ label: 'Post a job', href: '/jobs/post' }  } catch (error) {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next / head',
-=======
 '
 import type { NextPage } from 'next','
 import Head from 'next / head','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import EmptyState from '../../components / ui / EmptyState',
 const Dashboard: NextPage = () => {}
   return (";
@@ -140,12 +112,7 @@ icon={<span>🧰</span>}
           secondary_action={{ label: 'Explore talent', href: '/talent' }}
         />;
       </section>;
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import EmptyState from '../../components / ui / EmptyState',
@@ -163,12 +130,9 @@ const Dashboard: NextPage = () => {
           description="Post your first job to get quotes from top talent.";
           icon={<span>🧰</span>}
           primary_action={{ label: 'Post a job', href: '/jobs / post' }}
-=======
           icon={<span>🧰</span>}'
           primary_action={{ label: 'Post a job', href: '/jobs / post' }}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           secondary_action={{ label: 'Explore talent', href: '/talent' }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         />;
       </section>;
 
@@ -198,12 +162,5 @@ const Dashboard: NextPage = () => {}
   );
 },;
 export default Dashboard;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default Dashboard;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

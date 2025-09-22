@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import {;
   Dialog,;
@@ -35,12 +34,10 @@ export function LeaveReviewModal({;
   }, [isOpen]),;
   ;
   const handleOpenChange = (open:boolean) => {;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     setOpen(open),;
     if (!open) {;
       onClose();
     }
-<<<<<<< HEAD
 
     <Dialog open={open} onOpenChange={handleOpenChange}>;
       <DialogContent className="max-w-md">;

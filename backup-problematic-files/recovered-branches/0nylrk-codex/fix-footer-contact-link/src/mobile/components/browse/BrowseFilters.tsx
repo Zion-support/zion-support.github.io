@@ -59,7 +59,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
 ;
                 <div className="space-y-2">;
                   <Label>Location</Label>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <Select>;
 
                     <SelectTrigger>;
@@ -73,7 +72,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                     </SelectContent>;
                   </Select>;
                 </div>;
-<<<<<<< HEAD
                   <Switch />;
 
               <SheetFooter>;
@@ -85,7 +83,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
           ;
           <Select>;
             <SelectTrigger className="w-[120px] h-8">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <SelectValue placeholder="Sort By" />;
             </SelectTrigger>;
             <SelectContent>;
@@ -94,7 +91,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
               <SelectItem value="salary">Highest Pay</SelectItem>;
             </SelectContent>;
           </Select>;
-<<<<<<< HEAD
             <Badge ;
               key={filter} ;"
               variant="secondary";""
@@ -103,7 +99,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
 {filter}
               <X ;
                 className="h-3 w-3 cursor-pointer" ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 onClick={() => removeFilter(filter)} ;
               />;
             </Badge>;
@@ -111,4 +106,3 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD

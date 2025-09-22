@@ -1,5 +1,4 @@
 :components/AccessibilityEnhancer.tsx
-<<<<<<< HEAD
 
 :components/AccessibilityEnhancer.tsx
 pr-12243
@@ -293,7 +292,6 @@ export default AccessibilityEnhancer;
 
 pr-12243
 :components/AccessibilityEnhancer.tsx
-=======
         .high-contrast * {
           color: var(--text-color) !important;
           background-color: var(--bg-color) !important;
@@ -315,4 +313,3 @@ pr-12325
 }
 
 :temp-disabled/components/AccessibilityEnhancer.tsx
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/components/AccessibilityEnhancer.tsx

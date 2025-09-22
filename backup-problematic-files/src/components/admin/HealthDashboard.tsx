@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react';
 ;
 interface HealthData {;
@@ -78,12 +77,10 @@ const HealthDashboard:React.FC = () => {;
             {autoRefresh ? 'Disable' :'Enable'} Auto-refresh;
           </Button>;
           <Button onClick={fetchHealthData} size="sm">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Refresh;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
               </div>;
             </div>;
           </CardContent>;
@@ -133,12 +130,10 @@ const HealthDashboard:React.FC = () => {;
                   <div className="flex justify-between">;
                     <span className="text-sm text-gray-600">Last Updated:</span>;
                     <span className="text-sm">{new Date(healthData.timestamp).toLocaleTimeString()}</span>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   </div>;
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
               </CardContent>;
             </Card>;
           </div>;
@@ -181,4 +176,3 @@ return (</div> <div className="flex items-center space-x-2" > <Button > {';
 };
 export default HealthDashboard;
 '"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

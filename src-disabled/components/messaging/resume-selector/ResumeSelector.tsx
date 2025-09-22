@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
@@ -220,7 +216,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const { resume, fetchResume } = useResume();
   useEffect(() => {
     const loadResumes = async () => {
-=======
 
 }
   );
@@ -251,7 +246,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   useEffect(() => {
     const loadResumes = async () => {
       setIsLoading(true),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       try {
         await fetchResume()
       } catch (error) {
@@ -324,8 +318,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     } else if (value === 'upload') {;
       setSelectedResume(null);
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   },;
   // Handle resume selection change;
@@ -425,17 +417,14 @@ return (
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="recent" id="recent" />
           <Label htmlFor="recent">Use most recent resume</Label>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
 <div className="flex items-center space-x-2">
           <RadioGroupItem value="select" id="select" />
 <Label htmlFor="select" className="text-white">Select from saved versions</Label>
           <Label htmlFor="select">Select from saved resumes</Label>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
 <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
-<<<<<<< HEAD
           <Label htmlFor="upload" className="text-white">Upload a custom resume (PDF)</Label>
         </div>
       </RadioGroup>
@@ -556,7 +545,6 @@ return (
             Export PDF;
           </Button>
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       )}
 ;
       {selectedOption === 'select' && (;
@@ -588,17 +576,10 @@ return (
         </Button>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 }
 ;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
@@ -606,14 +587,12 @@ import { Label } from "@/components/ui/label",
 import { Plus, Loader2 } from 'lucide-react'
 import { useResume } from "@/hooks/useResume",
 import { exportResumeToPDF } from "@/utils/pdfExport",
-=======
   )
 }
 ;
 import { Plus, Loader2 } from 'lucide-react'
 import { useResume } from "@/hooks/useResume",;
 import { exportResumeToPDF } from "@/utils/pdfExport",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { toast } from "@/components/ui/use-toast";
 import { ResumePreviewCard  } from './ResumePreviewCard';
 import { UploadSection  } from './UploadSection';
@@ -690,8 +669,4 @@ return (<div className="space-y-4" > <h3 className="text-lg font-medium text-whi
 }'"
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

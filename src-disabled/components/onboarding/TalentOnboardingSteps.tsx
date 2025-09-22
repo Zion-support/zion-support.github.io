@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
@@ -36,11 +35,8 @@ action: "Set"},
       id: "match",
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 return <OnboardingTracker steps={steps} />
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

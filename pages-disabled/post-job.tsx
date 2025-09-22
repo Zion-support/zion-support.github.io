@@ -1,16 +1,7 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function PostJobPage() {
-=======
 
 export default function PostJobPage() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const router = useRouter()
   const [title, setTitle] = useState('')'
   const [description, setDescription] = useState('')'
@@ -23,7 +14,6 @@ export default function PostJobPage() {}
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
 async function handleSubmit(e: React.FormEvent) {
-<<<<<<< HEAD
     e.preventDefault()
     setError(null)
     if (!title |!description |!category |!clientEmail) {
@@ -33,21 +23,12 @@ async function handleSubmit(e: React.FormEvent) {
 
     if (!title || !description || !category || !clientEmail) {'
       setError('Please fill in all required fields.');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       return
-=======
       return
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       return;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     try {}
       setIsSubmitting(true)'
@@ -55,14 +36,7 @@ async function handleSubmit(e: React.FormEvent) {
         method: 'POST''
         headers: { 'Content-Type': 'application/json' }
 body: JSON.stringify({
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
 title,
           description,
           category,
@@ -85,18 +59,11 @@ router.push(`/client/dashboard`);
       setError(err.message || 'Something went wrong');
     } finally {
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         body: JSON.stringify({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       router.push(`/client/dashboard`)
     } catch (err: any) {'
       setError(err.message |'Something went wrong')
 } finally {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       setIsSubmitting(false),
 
     }
@@ -106,10 +73,8 @@ router.push(`/client/dashboard`);
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
       {error && <p className="text-red-600 mb-3">{error}</p>}
 import { useState } from 'react';
-=======
 '
 import { useState } from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useRouter } from 'next/router';
 export default function PostJobPage(req, res) {}
   try {};
@@ -170,8 +135,6 @@ export default function PostJobPage(req, res) {}
     <div className="max-w-2xl mx-auto">"
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 export default function PostJobPage(req, res) {
@@ -200,22 +163,14 @@ export default function PostJobPage(req, res) {
   return (
 <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {error && <p className="text-red-600 mb-3">{error}</p>}
       {error && <p className="text-red-600 mb-3">{error}</p>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>"
           <label className="block text-sm font-medium">Project Title *</label>"
@@ -262,7 +217,6 @@ export default function PostJobPage(req, res) {
 );
 };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div>
           <label className='block text-sm font-medium'>Project Title *</label>
           <input
@@ -348,30 +302,23 @@ export default function PostJobPage(req, res) {
 <div className="pt-2">
           <button type="submit" className="px-4 py-2 rounded bg-black text-white disabled:opacity-50" disabled={isSubmitting}>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   );
 };
 
             {isSubmitting ? 'Posting…' : 'Post Job'  } catch (error) {
     console.error("Error:", error);
-=======
 '
             {isSubmitting ? 'Posting…' : 'Post Job'  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 import { useState } from 'react',
-=======
 '
 import { useState } from 'react','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { use_router } from 'next / router',
 export default /**;
  * PostJobPage - Function description;
@@ -481,13 +428,6 @@ if ( {) {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

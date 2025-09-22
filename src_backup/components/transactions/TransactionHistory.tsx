@@ -1,5 +1,4 @@
 :src/components/transactions/TransactionHistory.tsx
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -485,13 +484,9 @@ if (return []) {
               const can_cancel = is_client && is_pending;
               const can_refund = is_client && transaction.status === 'released';
               const counterparty_name = is_client;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 ? transaction.provider?.display_name || 'Service Provider';
                 : 'Client';
 :src/components/transactions/TransactionHistory.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               return (;
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
                   <CardHeader className="pb-3">;
@@ -600,10 +595,6 @@ if (return []) {
   );
 }
 ;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/transactions/TransactionHistory.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/transactions/TransactionHistory.tsx
 
   );
 }
@@ -704,5 +695,3 @@ default: return (<Badge variant="outline" className="bg-gray-500/20 text-gray-50
   )
 }
 :src/components/transactions/TransactionHistory.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

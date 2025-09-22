@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { useParams } from "react-router-dom",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -34,13 +33,11 @@ export default function ProfilePage() {;
     const fetchProfile = async () => {;
       setIsLoading(true),;
       setIsError(false),;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       try {;
         const { data, error } = await supabase;
           .from("talent_profiles");
           .select("*");
           .eq("id", profileId);
-<<<<<<< HEAD
 
       />;
       <AppHeader />;

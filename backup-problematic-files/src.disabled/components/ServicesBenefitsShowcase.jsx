@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const ServicesBenefitsShowcase = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,7 +7,6 @@ const ServicesBenefitsShowcase = ({ className }) => {
     </div>
   )
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     </div>)'
 pr-12325

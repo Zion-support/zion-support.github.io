@@ -1,6 +1,4 @@
 :src/components/ui/calendar.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { DayPicker } from "react-day-picker",
@@ -124,23 +122,15 @@ class_name, class_names,  showOutsideDays = true, ...props;
 }";
 
 :src/components/ui/calendar.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/calendar.tsx
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { DayPicker } from "react-day-picker",
 import { cn } from "@/lib/utils",
 import { buttonVariants } from "@/components/ui/button",
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 :src/components/ui/calendar.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/calendar.tsx
 import { DayPicker } from "react-day-picker",
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -163,5 +153,3 @@ export { Calendar }
 }/>)
 }"
 :src/components/ui/calendar.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

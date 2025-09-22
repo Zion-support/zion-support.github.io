@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
@@ -366,4 +365,3 @@ this.log("� Report "generated": ${reportFile}")
   this.log("� Build check passed successfully!")
         return { "success": true, "errors": [], "fixed"}
       this.log("� Build Error Detector completed!")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

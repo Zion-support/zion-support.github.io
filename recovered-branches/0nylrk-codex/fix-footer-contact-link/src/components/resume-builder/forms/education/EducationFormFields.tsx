@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
@@ -13,7 +9,6 @@ import { Button  } from '@/components/ui/button';
 import { Textarea  } from '@/components/ui/textarea';
 import { Input  } from '@/components/ui/input';
 import { Checkbox  } from '@/components/ui/checkbox';
-=======
 import { useForm  } from 'react-hook-form';'
 import { zodResolver  } from '@hookform/resolvers/zod';'
 import { z  } from 'zod';'
@@ -23,7 +18,6 @@ import { Button  } from '@/components/ui/button';'
 import { Textarea  } from '@/components/ui/textarea';'
 import { Input  } from '@/components/ui/input';'
 import { Checkbox  } from '@/components/ui/checkbox';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
 import { useForm  } from 'react-hook-form';''
@@ -44,15 +38,8 @@ FormLabel;
   FormMessage } from '@/components/ui/form';
 import { useState  } from 'react';
 import { EducationFormFieldsProps  } from './types';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Education } from '@/types/resume';
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { Education } from '@/types/resume';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -68,18 +55,10 @@ import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
 import {Education} from '@/types/resume';
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Define schema for form validation
-=======
 import { Education } from '@/types/resume';// Define schema for form validation
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { Education } from '@/types/resume';// Define schema for form validation
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   FormLabel;'
   FormMessage } from '@/components/ui/form';'
 import { useState  } from 'react';'
@@ -101,7 +80,6 @@ import {useState} from 'react';'
 import {EducationFormFieldsProps} from './types';'
 import {Education} from '@/types/resume';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 // Define schema for form validation;
 const educationSchema = z.object({'
@@ -113,34 +91,25 @@ const educationSchema = z.object({'
   is_current: z.boolean().default(false)
   description: z.string().optional()
   location: z.string().optional()})
-<<<<<<< HEAD
 type EducationFormValues = z.infer<typeof educationSchema>;
-<<<<<<< HEAD
 export function EducationFormFields({
   isEditing
   onSubmit
   onCancel
 }: EducationFormFieldsProps) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 type EducationFormValues = z.infer<typeof educationSchema>;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function EducationFormFields({ 
   isEditing, 
   onSubmit, 
   onCancel 
 }: EducationFormFieldsProps) {;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({
-=======
 
 export function EducationFormFields() { return null; }
   const form = useForm<EducationFormValues>({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     resolver: zodResolver(educationSchema)
     defaultValues: {'
       institution: '''
@@ -171,23 +140,15 @@ import {Alert, AlertDescription} from '@/components / ui / alert';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
 import {useState} from 'react';
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {EducationFormFieldsProps} from './types';
 
     }
   }
   };
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useForm } from 'react-hook-form',;
-=======
 type EducationFormValues = z.infer<typeof educationSchema>;import { useForm } from 'react-hook-form',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import { useForm } from 'react-hook-form',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
 import { format } from 'date-fns',;
@@ -196,7 +157,6 @@ import { Button } from '@/components/ui/button',;
 import { Textarea } from '@/components/ui/textarea',;
 import { Input } from '@/components/ui/input',;
 import { Checkbox } from '@/components/ui/checkbox',;
-=======
 '
 import { useForm } from 'react-hook-form',;'
 import { zodResolver } from '@hookform/resolvers/zod',;'
@@ -207,7 +167,6 @@ import { Button } from '@/components/ui/button',;'
 import { Textarea } from '@/components/ui/textarea',;'
 import { Input } from '@/components/ui/input',;'
 import { Checkbox } from '@/components/ui/checkbox',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Alert, AlertDescription } from '@/components/ui/alert',;
 import {;
   Form,;
@@ -261,28 +220,13 @@ start_date: format(new Date(), 'yyyy-MM-dd');
       setError(err && err.message || 'An error occurred');
     } finally {;
       setIsLoading(false);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
 
   },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;"
@@ -292,21 +236,12 @@ start_date: format(new Date(), 'yyyy-MM-dd');
             name="institution"
 render={({ field }) => (;
               <FormItem>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <FormLabel>Institution</FormLabel>;
 import {Education} from '@/types / resume';
-=======
                 <FormLabel>Institution</FormLabel>;import {Education} from '@/types / resume';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                 <FormLabel>Institution</FormLabel>;import {Education} from '@/types / resume';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 <FormLabel>Institution</FormLabel>;
 import {Education} from '@/types / resume';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 start_date: format(new Date(), 'yyyy-MM-dd'),;
       is_current: false,;
       description: '',;
@@ -380,7 +315,6 @@ start_date: format(new Date(), 'yyyy-MM-dd'),;
                 <FormLabel>Institution</FormLabel>;
 import {Education} from '@/types / resume';
                 <FormLabel>Institution</FormLabel>;import {Education} from '@/types / resume';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Define schema for form validation;
 const education_schema = z.object ({'
   institution: z.string ().min (1, 'Institution is required');'
@@ -424,10 +358,8 @@ const handle_submit = async (data: EducationFormValues) => {}
 ;
   return (
 <Form {...form}>;
-<<<<<<< HEAD
       <form on_submit={form.handle_submit (handle_submit)} className="space-y-4">;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
-=======
 import { Education } from '@/types/resume';
 
   return (
@@ -435,16 +367,13 @@ import { Education } from '@/types/resume';
     <Form {...form}>;
       <form on_submit={form.handle_submit (handle_submit)} className="space-y-4">;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <FormField;
             control={form.control}"
             name="institution";
             render={({ field }) => (
               <FormItem>;
                 <FormLabel > Institution</FormLabel>;
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -493,13 +422,10 @@ export function EducationFormFields({ ;
       degree:'',;
       field_of_study:'',;
       start_date:format(new Date(), 'yyyy-MM-dd'),;
-<<<<<<< HEAD
       is_current:false,,
   description:'',;
-=======
       is_current:false,,
   description:'',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       location:''}}),;
 ;
   const handleSubmit = async (data:EducationFormValues) => {;
@@ -537,92 +463,54 @@ import {EducationFormFieldsProps} from './types';
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Institution</FormLabel>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             control={form && form.control}
             name="institution"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <FormControl>;
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
 
-=======
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           />;
 
           <FormField
             control={form && form.control}
-<<<<<<< HEAD
             name="degree"
-<<<<<<< HEAD
           <FormField;
             control={form && form.control}"
             name="degree"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             control={form && form.control}
             name="degree"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             name="degree"          <FormField
             control={form && form.control}
             name="degree"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Degree</FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Input placeholder="Bachelor's, Master's, Ph && Ph.D, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
             )}
-<<<<<<< HEAD
 
           />;
         </div>;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 />;
         </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <FormField
           control={form && form.control}
-=======
 
         <FormField;
           control={form && form.control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           name="field_of_study"
           render={({ field }) => (;
             <FormItem>;
@@ -632,8 +520,6 @@ import {EducationFormFieldsProps} from './types';
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         />;
           <FormField
@@ -651,31 +537,20 @@ import {EducationFormFieldsProps} from './types';
                 <FormControl>
                   <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
           <FormField;
             control={form && form.control}"
             name="start_date"
 
-<<<<<<< HEAD
                   <Input 
                     type="date" 
-<<<<<<< HEAD
-<<<<<<< HEAD
                     {...field}
-=======
                     {...field}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     value={field.value |''}
                   />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <Input 
                     type="date" 
 
@@ -689,13 +564,11 @@ import {EducationFormFieldsProps} from './types';
                     {...field}
                     value={field.value |''}
                   />
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
 />
-<<<<<<< HEAD
         </div>
         <FormField
           control={form.control}
@@ -718,32 +591,19 @@ import {EducationFormFieldsProps} from './types';
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           />"
           <div className="space-y-4">
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
           />
           <div className="space-y-4">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Start Date</FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Input
                     type="date"
                   <Input 
                     type="date" 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     {...field}
 value={field && field.value || ''}                   />;
                 </FormControl>;
@@ -753,10 +613,6 @@ value={field && field.value || ''}                   />;
           />;
 
 <div className="space-y-4">;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <FormField
               control={form && form.control}
               name="is_current"
@@ -766,7 +622,6 @@ value={field && field.value || ''}                   />;
                     <Checkbox
                       checked={field && field.value}
                       onCheckedChange={field && field.onChange}
-<<<<<<< HEAD
             <FormField;
               control={form && form.control}"
               name="is_current"
@@ -776,17 +631,9 @@ value={field && field.value || ''}                   />;
                     <Checkbox;
 checked={field.value}
                       onCheckedChange={field.onChange}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                       checked={field && field.value}
                       onCheckedChange={field && field.onChange}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ;
           <div className="space-y-4">;
             <FormField;
@@ -798,7 +645,6 @@ checked={field.value}
                     <Checkbox;
                       checked={field.value}
                       onCheckedChange={field.onChange}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     />;
                   </FormControl>;"
                   <div className="space-y-1 leading-none">;
@@ -840,14 +686,8 @@ checked={field.value}
           name="location"
           render={({ field }) => (;
             <FormItem>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <FormLabel>Location (Optional)</FormLabel>;
-<<<<<<< HEAD
-=======
               <FormLabel>Location (Optional)</FormLabel>;                )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               <FormLabel>Location (Optional)</FormLabel>;
 </FormItem>)}
         />;
@@ -911,13 +751,10 @@ checked={field.value}
             <FormItem>;
               <FormLabel > Location (Optional)</FormLabel>;
                 )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <Input ;
-=======
 
                 )}
                       <Input ;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         type="date" ;
                         {...field} ;'
                         value={field.value || ''} ;
@@ -940,14 +777,8 @@ checked={field.value}
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Location (Optional)</FormLabel>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <FormControl>;
-=======
               <FormControl>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <Input placeholder="Cambridge, MA" {...field} />;
               </FormControl>;
               <FormMessage />;
@@ -970,21 +801,13 @@ name="description";
 <Textarea;"
                   placeholder="Notable achievements, courses, activities...";"
                   className="min - h-[100px]";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                 <Textarea;
                   placeholder="Notable achievements, courses, activities...";
                   className="min - h-[100px]";
 <Textarea;
                   placeholder="Notable achievements, courses, activities...";
                   className="min-h-[100px]";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   {...field}
                 />;
               </FormControl>;
@@ -996,10 +819,6 @@ name="description";
             onClick={onCancel}>;'
             {isEditing ? 'Cancel' : 'Back'}
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </Button>;
 "
           <Button type="submit" disabled={isLoading}>;"
@@ -1007,11 +826,6 @@ name="description";
             {isEditing ? 'Update' : 'Add'} Education;
 
           </Button>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         />;
 
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
@@ -1133,7 +947,6 @@ name="description";
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {isEditing ? 'Update' :'Add'} Education;
           </Button>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>;
       </form>;
     </Form>;
@@ -1152,11 +965,8 @@ name="description";
             {is_editing ? 'Cancel' : 'Back'}
 </Button>;
           <Button type="submit" disabled={is_loading}>;
-<<<<<<< HEAD
             {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />}
-=======
             {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {is_editing ? 'Update' : 'Add'} Education;
 </Form>)'
       <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;"
@@ -1495,22 +1305,8 @@ type EducationFormValues = z.infer<typeof educationSchema>,;
 }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   // TODO: Implement
       setIsLoading (false);
   return (
@@ -1658,4 +1454,3 @@ type EducationFormValues = z.infer<typeof educationSchema>,;
 }  </div> </form> ) "
 pr-12325
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

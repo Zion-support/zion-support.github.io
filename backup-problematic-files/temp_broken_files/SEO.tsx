@@ -1,5 +1,4 @@
 
-=======
 import { Helmet } from "react-helmet-async",;
 ;
 interface SEOProps {;
@@ -25,7 +24,6 @@ export function SEO({;
   const fullTitle = title ? `${title} | ${siteTitle}` :siteTitle,;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Helmet>;
       <title>{fullTitle}</title>;
       <meta name="description" content={description} />;
@@ -37,7 +35,6 @@ export function SEO({;
       <meta property="og:description" content={description} />;
       <meta property="og:image" content={ogImage} />;
       {ogUrl && <meta property="og:url" content={ogUrl} />}
-<<<<<<< HEAD
 
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}

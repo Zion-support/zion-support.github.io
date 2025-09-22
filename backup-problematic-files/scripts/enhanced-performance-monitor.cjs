@@ -1,5 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-performance-monitor.cjs
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/enhanced-performance-monitor.cjs
     log('info', `Average CPU "usage": ${performanceMetrics.summary.averageCpu}%`);
     log('info', `Peak CPU "usage": ${performanceMetrics.summary.peakCpu}%`);
     log('info', `Average memory "usage": ${performanceMetrics.summary.averageMemory}%`);
@@ -41,23 +39,16 @@
 
 // Run the enhanced performance monitor
 main();#!/usr/bin/env node;
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/enhanced-performance-monitor.cjs
-=======
 main();
 #!/usr/bin/env node;
 main();#!/usr/bin/env node;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
     process.exit(1)}
 
 // Run the enhanced performance monitor;
 main();
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -109,8 +100,4 @@ console.log('=')
       "message"
       "action"
       log('warn', 'Performance "Alerts")
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

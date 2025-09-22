@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
 import { useState, useEffect } from "react";
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useEffect} from "react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -9,7 +7,6 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {ReviewForm} from "./ReviewForm";
 import {useReviews} from "@/hooks/useReviews";
 import {
-=======
 import {useState, useEffect} from "react";"
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";"
 import {Button} from "@/components/ui/button";"
@@ -18,7 +15,6 @@ import {ReviewForm} from "./ReviewForm";"
 import {useReviews} from "@/hooks/useReviews";"
 import { useState, useEffect } from "react",
 import {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Dialog;
   DialogContent;
   DialogDescription;
@@ -41,7 +37,6 @@ interface LeaveReviewModalProps {}
   onClose: () => void;
 "
 import { useState, useEffect } from "react",;
-=======
 
 import {
   Dialog;
@@ -55,7 +50,6 @@ interface LeaveReviewModalProps {
   isOpen: boolean,}
   onClose: () => void;}
 import { useState, useEffect } from \"react\";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   Dialog,;
   DialogContent,;
@@ -67,10 +61,7 @@ import { Button } from "@/components/ui/button",;"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
 import { ReviewForm } from "./ReviewForm",;"
 import { useReviews } from "@/hooks/useReviews",;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useReviews} from "@/hooks/useReviews";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface LeaveReviewModalProps {;
   projectId: string,;
   revieweeId: string,;
@@ -94,12 +85,7 @@ if (success) {;
       }
       return success;
     }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>;"
       <DialogContent className="max-w-md">;
@@ -113,7 +99,6 @@ if (success) {;
           onSubmit={handleSubmit}
           defaultValues={userReview |undefined}
           isSubmitting={isSubmitting}
-<<<<<<< HEAD
 import { useState, useEffect } from './react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
@@ -129,7 +114,6 @@ interface LeaveReviewModalProps {}
   on_close: () => void;
 }
 export /**;
-=======
 import { use_reviews } from '@/hooks / use_reviews';
 interface LeaveReviewModalProps {
   project_id: string,
@@ -139,11 +123,9 @@ interface LeaveReviewModalProps {
   on_close: () = /> void;}
 }
 export /**
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  * LeaveReviewModal - Function description;
  */
 function LeaveReviewModal() {}
   const { user_review, submit_review, update_review, is_submitting } = use_reviews (project_id);
   const [open, set_open] = useState (is_open);
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,5 +1,4 @@
 :src/components/partners/PartnerDashboard.tsx
-<<<<<<< HEAD
 import {;
   Card,;
   CardContent,;
@@ -31,14 +30,10 @@ const stats = {
     totalRevenue: 850.0
     pendingRevenue: 200.0
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 :src_backup/components/partners/PartnerDashboard.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerDashboard.tsx
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -46,8 +41,6 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
-<<<<<<< HEAD
-<<<<<<< HEAD
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   },
@@ -55,8 +48,6 @@ export function PartnerDashboard() {
     pendingRevenue: 200.00
   },
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerDashboard.tsx
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react';
@@ -97,10 +88,7 @@ export function PartnerDashboard() {
   };
 :src_backup/components/partners/PartnerDashboard.tsx
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   return (
     <div className="space-y-6">"
       {/* Stats Overview */}
@@ -114,7 +102,6 @@ export function PartnerDashboard() {
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>"
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>"
             <p className="text-xs text-zion-slate-light">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerDashboard.tsx
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -126,18 +113,13 @@ export function PartnerDashboard() {
           </CardHeader>
           <CardContent>
 :src/components/partners/PartnerDashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
-=======
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
 :src_backup/components/partners/PartnerDashboard.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerDashboard.tsx
 
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <p className="text-xs text-zion-slate-light">
               {stats.completedReferrals} completed, {stats.pendingReferrals} pending
             </p>
@@ -145,10 +127,6 @@ export function PartnerDashboard() {
         </Card>
 
 :src_backup/components/partners/PartnerDashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerDashboard.tsx
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
@@ -181,10 +159,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>
 
 :src_backup/components/partners/PartnerDashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Total Earnings</CardTitle>
@@ -195,10 +170,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-xs text-zion-slate-light">
 :src_backup/components/partners/PartnerDashboard.tsx
 
-<<<<<<< HEAD
               ${stats.pendingRevenue} pending payout
 
-=======
 
               ${stats.pendingRevenue} pending payout
 
@@ -214,27 +187,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className='text-xs text-zion-slate-light'>
               ${stats.pendingRevenue} pending payout
 :src/components/partners/PartnerDashboard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </p>
           </CardContent>
         </Card>
       </div>
 :src_backup/components/partners/PartnerDashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {/* Performance Chart */}
-=======
 
 :src/components/partners/PartnerDashboard.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
       {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">"
 
       {/* Performance Chart */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerDashboard.tsx
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
@@ -254,22 +219,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-zion-slate-light">Detailed analytics will be available soon</p>
           </div>
 :src/components/partners/PartnerDashboard.tsx
-<<<<<<< HEAD
         </CardContent>
       </Card>
 
 :src_backup/components/partners/PartnerDashboard.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       {/* Recent Referrals */}
-<<<<<<< HEAD:src/components/partners/PartnerDashboard.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerDashboard.tsx
-=======
       {/* Recent Referrals */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerDashboard.tsx
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
           <div>
@@ -285,9 +243,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-xs text-zion-slate-light">"
           <Button variant="outline" size="sm">View All</Button>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
 {/* Performance Chart */}
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
@@ -297,8 +252,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Track your referral performance over time
           </CardDescription>
 :src/components/partners/PartnerDashboard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </CardHeader>
         <CardContent>
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
@@ -311,10 +264,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </CardContent>
       </Card>
 :src_backup/components/partners/PartnerDashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>
   )
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -407,14 +356,8 @@ export function PartnerDashboard() {;
   );
 }
 ;
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/partners/PartnerDashboard.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/partners/PartnerDashboard.tsx
         </CardContent>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       </Card>
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">"
@@ -430,9 +373,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <CardDescription>Your latest partner referrals</CardDescription>
           </div>
 :src_backup/components/partners/PartnerDashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           <Button variant="outline" size="sm">View All</Button>
         </CardHeader>
@@ -446,7 +386,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </CardContent>
 :src_backup/components/partners/PartnerDashboard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader className="flex flex-row items-center justify-between">;
           <div>;
@@ -462,9 +401,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 ;
 :src_backup/components/partners/PartnerDashboard.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 <Button variant='outline' size='sm'>
             View All
           </Button>
@@ -483,5 +420,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 :src/components/partners/PartnerDashboard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

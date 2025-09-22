@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   ArrowRight,
   Award,
@@ -16,15 +14,8 @@
   Calendar,
   ShoppingCart,
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   BookOpen,
   Brain,
   Building,
@@ -59,7 +50,6 @@
   Star,
   Target,
   TrendingUp,
-<<<<<<< HEAD
 
   Truck,
   Users,
@@ -68,11 +58,7 @@
 } from "lucide-react";
 } from 'lucide-react';
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Clock,
   DollarSign,
   Cpu,
@@ -111,22 +97,15 @@
   Clock as Time,
   DollarSign as Money;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 } from 'lucide-react';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 } from 'lucide-react';
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ArrowRight
   Award
   BarChart3
@@ -169,17 +148,10 @@ import {
   X
   Zap
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const navigationItems = [
   {
     title: "Services"
-=======
   ArrowRight;
   Award;
   BarChart3;
@@ -224,7 +196,6 @@ const navigationItems = [
 const navigationItems = []
   {}
     title: "Services""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     href: "/services"
     icon: Settings;
     submenu: []
@@ -432,31 +403,20 @@ const navigation_items = [;
     ]
   }
 ];
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
 export default function Navigation() {;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-=======
 
 export default function Navigation() { return null; }
 const Navigation: React.FC<NavigationProps> = ({ className }) => {}
   return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}"
       <div className="bg-blue-600 text-white py-2">;"
@@ -480,10 +440,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {}
               </Link>;
               <Link"
                 href="/pricing"
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 View Pricing;
               </Link>;
             </div>;
@@ -744,7 +701,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {}
       </div>;
     </nav>);
 }
-<<<<<<< HEAD
 import MainLayout from '../../src/components/layout/MainLayout';
 
 const Page = () => {}
@@ -764,10 +720,5 @@ const Page = () => {}
 };
 
 export default Page;
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

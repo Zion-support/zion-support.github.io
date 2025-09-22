@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Calendar, ArrowRight } from "lucide-react",;
@@ -7,7 +6,6 @@ import { Calendar, ArrowRight } from "lucide-react",;
 export function EnterpriseCTA() {;
   return (;
     <section className="py-20 px-4 md:px-6">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="container mx-auto max-w-6xl">;
         <div className="rounded-xl bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-purple-light/20 p-1">;
           <div className="bg-card rounded-lg shadow-sm p-8 md:p-12">;
@@ -17,7 +15,6 @@ export function EnterpriseCTA() {;
                   Ready to transform your talent acquisition?;
                 </h2>;
                 <p className="text-xl text-muted-foreground mb-8">;
-<<<<<<< HEAD
 
                 </p>;
                 <div className="flex flex-col sm:flex-row gap-4">;

@@ -73,14 +73,11 @@ export function ApiKeysManager() {;
                       <div key={scope.value} className="flex items-center space-x-2">;"
                         <Checkbox ;
                           id={scope.value} ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
 
                         <Label;
 htmlFor={scope.value}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         >;
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>;"
                       </div>;
@@ -88,13 +85,11 @@ htmlFor={scope.value}
 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>;
                 <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>;
                   Create Key;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </Button>;
               </DialogFooter>;
             </DialogContent>;
           </Dialog>;
         </div>;
-<<<<<<< HEAD
           <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">;
             <div className="flex justify-between items-start mb-2">;
               <span className="font-medium flex items-center">;
@@ -151,12 +146,10 @@ className="cursor-pointer text-red-500";
                         disabled={!key.is_active}
                       >;
                         <X size={14} className="mr-2" /> Revoke;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       </DropdownMenuItem>;
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
-<<<<<<< HEAD
                     <Badge ;
                       key={scope} ;"
                       variant="secondary";""
@@ -183,12 +176,10 @@ className="cursor-pointer text-red-500";
                   </Popover>;
                   {key.expires_at && (;
                     <span>Expires:{format(new Date(key.expires_at), 'MMM d, yyyy')}</span>;                  )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </div>;
               </div>;
             ));
           )}
-<<<<<<< HEAD
       <CardFooter className="justify-between border-t border-zinc-800 py-4">;
         <div className="text-xs text-zinc-500">;
           Keep your API keys secure. They have the same permissions as your account.;
@@ -211,14 +202,12 @@ className="cursor-pointer text-red-500";
             <AlertDialogAction ;
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
 className="bg-blue-600 hover:bg-blue-700";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >;
               Regenerate;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-<<<<<<< HEAD
         open={showDeleteConfirm !== null} ;
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
 
@@ -226,14 +215,12 @@ className="bg-blue-600 hover:bg-blue-700";
 
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
 className="bg-red-600 hover:bg-red-700";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >;
               Revoke;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-<<<<<<< HEAD
 const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null> (null);
 const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null> (null);
 //Create key form state //Load keys on mount await createApiKey (keyName, selectedScopes);
@@ -311,4 +298,3 @@ pr-12325
   (open) => !open && setShowDeleteConfirm (null) ";
 }> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Revoke API Key?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will revoke the API key and it can no longer be used to access the API. This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Revoke </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;
 }'"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

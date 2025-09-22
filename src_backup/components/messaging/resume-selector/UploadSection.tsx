@@ -1,13 +1,10 @@
 :src/components/messaging/resume-selector/UploadSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react',
 import { Button } from "@/components/ui/button",
 import { Upload, FileText } from 'lucide-react'
 
 interface UploadSectionProps {
-<<<<<<< HEAD
   customFile: File | null,
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
@@ -30,8 +27,6 @@ import { Upload, FileText } from 'lucide-react';
 import React from 'react';
 import { Button } from "@/components/ui/button";
 :src/components/messaging/resume-selector/UploadSection.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
@@ -46,12 +41,10 @@ interface UploadSectionProps {
             ? custom_file.name;
             : 'Drag & drop your PDF or click to browse'}
 :src/components/messaging/resume-selector/UploadSection.tsx
-<<<<<<< HEAD
         </p>;
         <Button variant='outline' className='relative'>;
           Browse Files;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             type="file"
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             accept=".pdf"
@@ -68,14 +61,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Button>
       </div>
 :src/components/messaging/resume-selector/UploadSection.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {customFile && (
 
       {customFile && (
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -150,12 +140,6 @@ interface UploadSectionProps {;
 </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     </div>;
   );
 };
@@ -240,4 +224,3 @@ export function UploadSection({
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/resume-selector/UploadSection.tsx

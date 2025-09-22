@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader", ;
 import { Footer } from "@/components/Footer",;
@@ -28,7 +27,6 @@ function TalentDashboardContent() {;
       <SEO ;
         title="Talent Dashboard | Zion AI Marketplace" ;
         description="Your personalized talent dashboard with job matches and professional opportunities." ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
@@ -51,7 +49,6 @@ function TalentDashboardContent() {;
             </Button>;
           </div>;
         </div>;
-<<<<<<< HEAD
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
           <div>;

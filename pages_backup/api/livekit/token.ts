@@ -1,7 +1,5 @@
 });
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -24,7 +22,6 @@ identity: String(identity)
       name: name ? String(name) : String(identity)
       ttl: 60 * 60, // 1 hour
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     });
     at.addGrant({
       roomJoin: true
@@ -120,18 +117,14 @@ if ( {) {
       token;
       url: LIVEKIT_HOST});
   } catch (error) {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error('Token error', err);
     return res.status(500).json({ error: 'Failed to create token' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
 
 const token = await at && at.toJwt();
 
     return res && res.status(200).json({
-<<<<<<< HEAD
       token,
 
   }
@@ -144,7 +137,6 @@ const token = await at && at.toJwt();
 }
     console.error ("Token error", err);
     return res.status (500).json ({ error: "Failed to create token" });
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     });
     at.addGrant({
@@ -208,12 +200,5 @@ if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {;
 :pages_backup/api/livekit/token.ts
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/livekit/token.ts

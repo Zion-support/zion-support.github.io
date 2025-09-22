@@ -52,12 +52,8 @@ export const SEO = ({
       <meta name="theme-color" content="#000000" />
     </Head>
 :src_backup/components/SEO.tsx
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
-=======
 main
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/SEO.tsx
   url?: string;
   image?: string;
   type?: string;
@@ -130,7 +126,6 @@ title = 'Zion Tech Group - Leading AI & Technology Solutions',
   const siteName = 'Zion Tech Group';
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullUrl = url ? `https://ziontechgroup.com${url}` : 'https://ziontechgroup.com';
-=======
   type?: 'website' | 'article' | 'product' | 'service';
   author?: string;
   publishedTime?: string;
@@ -195,7 +190,6 @@ export function SEO({
       "Quantum Computing",
       "Machine Learning"
     ]
-=======
 export const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Leading technology solutions provider offering AI services, IT services, and micro SaaS solutions. Enterprise-grade infrastructure and development services.',
   keywords = 'technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity', image = 'https: //ziontechgroup.com/og-image.jpg',
@@ -211,7 +205,6 @@ export const SEO: React.FC<SEOProps> = ({
       '@type': 'ContactPoint',
       'telephone': '+1-555-ZION-TECH', 'contactType': 'customer service'
     }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   };
   return (
     <Helmet>
@@ -358,7 +351,6 @@ export const SEO: React.FC<SEOProps> = ({
     }
     return null;
   };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 
   // Combine all structured data
   const combinedStructuredData = [
@@ -429,19 +421,15 @@ pr-12325
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:title" content={fullTitle} />
-=======
-=======
       <link rel="canonical" href={fullUrl} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:title" content={fullTitle} />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/SEO.tsx
       <meta property="og: type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
 
@@ -496,7 +484,6 @@ pr-12325
 };
 :src_backup/components/SEO.tsx
 export default SEO;
-<<<<<<< HEAD
       <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
 
@@ -600,5 +587,3 @@ export default SEO;
   );
 }
 :src_backup/components/SEO.tsx
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172

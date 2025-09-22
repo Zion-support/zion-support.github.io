@@ -23,7 +23,6 @@ export function AppHeader() {
   const [loginOpen, setLoginOpen] = useState(false);
   const isMobile = null;
 const showTagline = router.pathname === '/'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const isMobile = useIsMobile()
@@ -111,27 +110,16 @@ className={cn(
             </nav>;
           </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-=======
 
           {/* Mobile menu button */}"
           <div className="md:hidden ml-auto mr-4">
             <button;
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}'
               aria-label={t('general.toggle_mobile_menu')}
@@ -153,10 +141,6 @@ className={cn(
                 href="/auth/login"
                 className="text-sm font-medium text-foreground/70 hover:text-foreground"
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
@@ -168,14 +152,10 @@ className={cn(
 router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   openLoginModal(router.asPath)
 }}
               >;
-=======
                   // For consistency with how sub-menus now set it:;,
                   router && router.push({ pathname: '/auth/login', query: { returnTo: router && router.asPath } }, undefined, { shallow: true }),;
                   openLoginModal(router && router.asPath);
@@ -198,27 +178,18 @@ router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, und
                   openLoginModal(router.asPath)
                 }}
               >;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {t('auth.login')}
               </Link>
               <Link"
                 href="/signup""
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 aria-label={t('auth.signup')}
 
-=======
 '
                 aria-label={t('auth.signup')}
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 data-testid="signup-nav-link"
               >'
                 {t('auth.signup')}
@@ -234,7 +205,6 @@ router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, und
         </div>;
       </header>;
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-<<<<<<< HEAD
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-60 pt-16">
           <div 
@@ -248,7 +218,6 @@ router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, und
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
 
             <MobileMenu
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             onClick={() => setMobileMenuOpen(false)}
 
             aria-hidden="true"
@@ -261,7 +230,6 @@ router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, und
             />
           </div>
         </div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               unreadCount={unreadCount} 
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={openLoginModal}
@@ -272,11 +240,6 @@ router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, und
 ;
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const show_tagline = router.pathname === '/';
   const [mobileMenuOpen, setMobileMenuOpen] = useState (false),
   const [login_open, setLoginOpen] = useState (false),
@@ -374,7 +337,6 @@ className="inline - flex items - center justify - center rounded - md p - 2 text
 />;
           <div className="relative bg - background border - t border - border h - auto max - h-[calc (100vh - 4rem)] overflow-y-auto">;
           <div className="relative bg - background border - t border - border h - auto max - h-[calc (100vh - 4rem)] overflow - y-auto">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <MobileMenu;
               unread_count = {unread_count, }
               on_close = {() => setMobileMenuOpen (false), }
@@ -554,7 +516,6 @@ return ();`
 {/* Solutions Dropdown */}
             <div className="relative dropdown-container">;
               <button;
-<<<<<<< HEAD
                 on_click={() => toggle_dropdown ('solutions')}
                 className="flex items - center px - 3 py - 2 rounded - md text - sm font - medium text - zion - slate - light hover:text - zion - cyan hover:bg - zion - cyan / 10 transition-colors";
                 aria - expanded={active_dropdown === 'solutions'}
@@ -1288,8 +1249,6 @@ className="px - 4 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - z
               </div>;
               </div>;
 {/* Mobile Services */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className="space-y-2">;
                 <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">;
                   Services;
@@ -1297,8 +1256,6 @@ className="px - 4 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - z
                 {services && services.map((service) => (;                  <Link
 
                   <Link
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
               {/* Mobile Services */}"
               <div className="space-y-2">"
                 <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">
@@ -1306,7 +1263,6 @@ className="px - 4 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - z
                 </div>
                 {services.map((service) => (
                   <Link;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     key={service.name}
                     to={service.href}
 onClick={closeMobileMenu}"
@@ -1527,14 +1483,12 @@ className="block w - full px - 4 py - 2 text - center text - zion - cyan border 
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
 }
 
 ;
-=======
 ;
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
@@ -1568,8 +1522,4 @@ className="block w - full px - 4 py - 2 text - center text - zion - cyan border 
   setLoginOpen ;
 }/> </>) ;'";
 }'"'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

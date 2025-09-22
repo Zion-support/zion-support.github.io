@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',;
 import type { NextPage } from 'next',;
 import type { Review } from '../../types/reviews',;
@@ -16,15 +15,11 @@ const AdminReviewsPage: NextPage = () => {
       setAll(data.reviews),
       setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
     }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
-=======
 
 import React, { useEffect, useState } from 'react';'
 import type { NextPage } from 'next';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { Review } from '../../types/reviews';
 '
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') |'dev-admin-key')
@@ -39,19 +34,15 @@ const AdminReviewsPage: NextPage = () => {}
     }
   }
 useEffect(() => { refresh() }, [])
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function moderate(action: 'approve' | 'remove', reviewId: string) {
     const res = await fetch('/api/reviews/moderate', {
       method: 'POST'
       headers: {
-<<<<<<< HEAD
         'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'
     },
     body: JSON.stringify({ action, reviewId })});
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (res.ok) refresh()
   }
-<<<<<<< HEAD
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key');
 const AdminReviewsPage: NextPage = () => {;
   const [pending, setPending] = useState<Review[]>([]);
@@ -61,8 +52,6 @@ const AdminReviewsPage: NextPage = () => {;
       } catch (error) {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
     } catch (error) {"
@@ -81,12 +70,8 @@ const AdminReviewsPage: NextPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
   }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <main className='max-w-5xl mx-auto p-6 space-y-6'>
       <h1 className='text-2xl font-semibold'>Review Moderation</h1>
@@ -125,7 +110,6 @@ const AdminReviewsPage: NextPage = () => {;
                 >
                   Remove
                 </button>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>
             </div>
           ))}
@@ -143,9 +127,7 @@ const AdminReviewsPage: NextPage = () => {;
 
 },
 export default AdminReviewsPage,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
 
 },
 
@@ -154,16 +136,9 @@ export default AdminReviewsPage,
 },
 export default AdminReviewsPage,
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default AdminReviewsPage,;
 export default AdminReviewsPage,
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 <section className='enhanced-card'>
         <h2 className='text-xl font-semibold mb-2'>All Reviews</h2>
         <pre className='text-xs whitespace-pre-wrap'>
@@ -186,8 +161,5 @@ export default AdminReviewsPage,
 
 export default AdminReviewsPage,;
 export default AdminReviewsPage,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

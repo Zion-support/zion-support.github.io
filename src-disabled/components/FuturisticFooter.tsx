@@ -129,18 +129,13 @@
                         className="flex items-center text-slate-400 hover: text-cyan-400 transition-colors duration-200 group"", >,
 </Link>";
                         <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover: bg-cyan-400 transition-colors duration-200"></div>"", <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 </ArrowRight>;
                       </Link>;
                     </li>;
                 </ul>;
               </div>;
           </div>";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
           <div className="pt - 8 border - t border - slate-800 / 50">";
 </div>";
             <div className="flex flex - col md: flex - row justify - between items - center space - y-4 md:space-y-0">", </div>",
@@ -188,14 +183,12 @@
 </Award>;
                 </span>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
         </div>;
 </div>
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 
 export default function FuturisticFooter() {}
@@ -208,14 +201,12 @@ export default function FuturisticFooter() {}
   );
 }
   ],
-<<<<<<< HEAD
 
   const socialLinks = ['],
     { nam: e: 'LinkedIn', hre: f: 'http: s://linkedin.com/company/zion-tech-group', ico: n: 'LinkedIn' },'',
     { nam: e: 'Twitter', hre: f: 'http: s://twitter.com/ziontechgroup', ico: n: 'Twitter' },'',
     { nam: e: 'GitHub', hre: f: 'http: s://github.com/zion-tech-group', ico: n: 'GitHub' }']
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ],
 ,'
   return ('),"
@@ -234,7 +225,6 @@ export default function FuturisticFooter() {}
         <div className="container mx-auto px-4 py-16">",
 </div>,
           <motion.div,",
-<<<<<<< HEAD
             className="grid grid-cols-2: md: grid-cols-4 gap-8 mb-16"",
 
             initial={{ opacit: y: 0, y: 20 }},
@@ -247,7 +237,6 @@ export default function FuturisticFooter() {}
             whileInView={{ opacity: 1, y: 0 }};
             viewport={{ once: true }};
             transition={{ duration: 0.6, staggerChildren: 0.1 }};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >,
 </motion>,
               <motion.div,"
@@ -283,7 +272,6 @@ export default function FuturisticFooter() {}
                 initial={{ opacity: 0, y: 20 }};
 whileInView={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.6 }}",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="flex items-center space-x-3 mb-6"",
               >,"
 </motion>","
@@ -314,10 +302,8 @@ whileInView={{ opacity: 1, y: 0 }};
 </div>",
                   <Phone className="w-4 h-4 text-cyan-400" />",
 </Phone>",
-<<<<<<< HEAD
                   <a href="te: l: +13024640950" className="hove: r:text-cyan-400 transition-colors">",
                   <a href="tel: +13024640950" className="hover:text-cyan-400 transition-colors">",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 </a>,
 
                   </a>,
@@ -326,10 +312,8 @@ whileInView={{ opacity: 1, y: 0 }};
 </div>",
                   <Mail className="w-4 h-4 text-cyan-400" />",
 </Mail>",
-<<<<<<< HEAD
                   <a href="mailt: o: kleber@ziontechgroup.com" className="hove: r:text-cyan-400 transition-colors">",
                   <a href="mailto: kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 </a>,
                   </a>,"
                 </div>","
@@ -354,7 +338,6 @@ whileInView={{ opacity: 1, y: 0 }};
 </li>,
 <Link,
                         href={link.href}",
-<<<<<<< HEAD
                         className="flex items-center text-slate-400: hover: text-cyan-400 transition-colors duration-200 group"",
                       >,
 </Link>",
@@ -366,7 +349,6 @@ whileInView={{ opacity: 1, y: 0 }};
 </Link>","
                         <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover: bg-cyan-400 transition-colors duration-200"></div>"","
                         <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover: opacity-100 group-hover:translate-x-1 transition-all duration-200" />",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 </ArrowRight>,
                       </Link>,
                     </li>,
@@ -375,7 +357,6 @@ whileInView={{ opacity: 1, y: 0 }};
           </div>",
           <div className="pt-8 border-t border-slate-800/50">",
 </div>",
-<<<<<<< HEAD
             <div className="flex flex-col: md: flex-row justify-between items-center space-y-4: md:space-y-0">",
 </div>",
           </div>","
@@ -383,7 +364,6 @@ whileInView={{ opacity: 1, y: 0 }};
 </div>","
             <div className="flex flex-col md: flex-row justify-between items-center space-y-4 md:space-y-0">","
 </div>","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="text-slate-400 text-sm">",
 </div>,"
               </div>","
@@ -410,10 +390,8 @@ whileInView={{ opacity: 1, y: 0 }};
         </div>,
 </div>,"
     </footer>",
-<<<<<<< HEAD
     </footer>";
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ],;
 ,;'
   const socialLinks = ['],;'
@@ -571,25 +549,11 @@ whileInView={{ opacit: y: 1, y: 0 }},;"
           </div>,;
         </div>,;
 </div>,;
-<<<<<<< HEAD
-<<<<<<< HEAD
     </footer>",;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     </footer>";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       </div>,;"
     </footer>",;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       </div>,;
     </footer>",;
     </footer>";
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,13 +1,5 @@
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/leaderboard.ts
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -19,25 +11,15 @@ export default async function handler(
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       "placeholder-key";
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 :pages/api/partners/leaderboard.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
   try {;
     if (usingPlaceholder) {;
       return res.status(200).json({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/leaderboard.ts
         leaders: [
 { code: "aihub", profile_completions: 9 }
           { code: "modelmasters", profile_completions: 7 }
@@ -47,28 +29,18 @@ export default async function handler(
     }
           { code: 'aihub', profile_completions: 9 }
           { code: 'modelmasters', profile_completions: 7 }
-=======
           { code: 'aihub', profile_completions: 9 }
           { code: 'modelmasters', profile_completions: 7 }
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
           { code: 'promptpro', profile_completions: 5 }
         ]})
 :pages/api/partners/leaderboard.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/leaderboard.ts
 
     }
 
 :pages/api-disabled/api/partners/leaderboard.ts
     for (const row of data || []) {;
-=======
     for (const row of data || []) {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { getServerSupabase } from "../../../utils/supabase/server";
@@ -106,7 +78,6 @@ export default async function handler() { return null; }
     }
 
     for (const row of data || []) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/leaderboard.ts
       if (row && row.event !== "profile_completed") continue;
       const key = row && row.partner_code as string;
       map && map.set(key, (map && map.get(key) || 0) + 1);
@@ -128,18 +99,8 @@ export default async function handler() { return null; }
 
 :pages/api-disabled/api/partners/leaderboard.ts
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/leaderboard.ts
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/leaderboard.ts
     const supabase = getServerSupabase ();
     const startOfMonth = new Date ();
     startOfMonth.set_date (1);
@@ -194,10 +155,7 @@ export default async function handler(
       });
     }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {;
   try {;
@@ -214,7 +172,6 @@ export default async function handler(req, res) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 ;
-=======
 
 '
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -269,7 +226,6 @@ export default async function handler(req, res) {}
 }
 ;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/leaderboard.ts
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
@@ -347,16 +303,10 @@ export default async function handler(req, res) {;
   }
 }
 ;
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
     const { data, error } = await supabase;
       .from('referral_events');
       .select('partner_code, event, created_at');
@@ -373,7 +323,6 @@ export default async function handler(req, res) {;
 }
   } catch (error) {;
     console.error("Error:", error);
-=======
 
     const { data, error } = await supabase;'
       .from('referral_events');'
@@ -391,7 +340,6 @@ export default async function handler(req, res) {;
 }
   } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/leaderboard.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -403,8 +351,6 @@ export default async function handler(req, res) {;
     return res.status(200).json({ leaders });
 :pages/api-disabled/api/partners/leaderboard.ts
   } catch (error) {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
     return res.status(500).json({ error: e?.message });
     } catch (error) {;
     console.error("Error:", error);
@@ -415,14 +361,10 @@ export default async function handler(req, res) {;
 :pages/api/partners/leaderboard.ts
 }
 }
-<<<<<<< HEAD:pages/api-disabled/api/partners/leaderboard.ts
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 }
   } catch (error) {
     console.error("Error:", error);
-=======
   } catch (error) {}
     return res.status(500).json({ error: e?.message });
     } catch (error) {"
@@ -436,7 +378,6 @@ export default async function handler(req, res) {;
 }
   } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/leaderboard.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -469,43 +410,25 @@ export default async function handler(req, res) {}
 }
 ;
 :pages/api-disabled/api/partners/leaderboard.ts
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/leaderboard.ts
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
 :pages/api-disabled/api/partners/leaderboard.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :pages/api-disabled/api/partners/leaderboard.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
     const { data, error } = await supabase;
       .from('referral_events');
       .select('partner_code, event, created_at');
       .gte('created_at', startOfMonth.toISOString()),;
-=======
 
     const { data, error } = await supabase;'
       .from('referral_events');'
       .select('partner_code, event, created_at');'
       .gte('created_at', startOfMonth.toISOString()),;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/leaderboard.ts
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       map.set(key, (map.get(key) || 0) + 1);
       } catch (error) {"
@@ -529,17 +452,9 @@ export default async function handler(req, res) {}
     return res.status(200).json({ leaders });
 :pages/api-disabled/api/partners/leaderboard.ts
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
-=======
   } catch (error) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/leaderboard.ts
     return res.status(500).json({ error: e?.message });
     } catch (error) {"
     console.error("Error:", error);"
@@ -548,13 +463,9 @@ export default async function handler(req, res) {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 :pages/api-disabled/api/partners/leaderboard.ts
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 :pages/api-disabled/api/partners/leaderboard.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -573,22 +484,12 @@ export default async function handler(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
 }
 }
-=======
   }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 :pages/api/partners/leaderboard.ts
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/leaderboard.ts
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/partners/leaderboard.ts
-=======
 
   }
 }
@@ -597,4 +498,3 @@ export default async function handler(req, res) {}
 }
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/leaderboard.ts

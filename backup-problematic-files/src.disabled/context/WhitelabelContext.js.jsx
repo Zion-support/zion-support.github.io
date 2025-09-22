@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
 const WhitelabelContext.js = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const WhitelabelContext.js = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

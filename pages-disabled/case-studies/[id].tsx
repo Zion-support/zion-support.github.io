@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-=======
 import React from 'react',;'
 import Head from 'next/head',;'
 import Link from 'next/link',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useRouter } from 'next/router',;
 export default function CaseStudyPage() {}
   const router = useRouter(),
@@ -27,8 +22,6 @@ import { useRouter } from 'next/router';
       duration: '6 months',
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ';
 import React from 'react';'
 import Head from 'next/head';'
@@ -43,7 +36,6 @@ import { useRouter } from 'next/router';
       duration: '6 months','
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       fullContent: `
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
@@ -68,7 +60,6 @@ import { useRouter } from 'next/router';
           <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
         </ul>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -83,8 +74,6 @@ import { useRouter } from 'next/router';
           <li>Intelligent scheduling and resource allocation</li>
         </ul>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '
 import React from 'react';'
@@ -92,7 +81,6 @@ import Head from 'next/head';'
 import Link from 'next/link';'
 import { useRouter } from 'next/router';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <h2>Results</h2>
         <p>The implementation delivered exceptional results:</p>
         <ul>
@@ -139,9 +127,6 @@ title: 'Scaling Content Generation 10x',
       industry: 'Technology',
       challenge: 'Cloud costs were spiraling out of control with poor resource utilization.',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
         Their infrastructure was not scaling efficiently with their business growth.</p>
@@ -151,21 +136,14 @@ title: 'Scaling Content Generation 10x',
         <h2>Solution</h2>
 <p>We designed and implemented a comprehensive cloud optimization system: </p>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <ul>
           <li>Auto-scaling infrastructure with intelligent resource allocation</li>
           <li>Self-healing systems with automatic failure recovery</li>
           <li>Cost optimization algorithms</li>
           <li>Performance monitoring and alerting</li>
         </ul>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <h2>Results</h2>
         <p>The optimization delivered outstanding results:</p>
         <ul>
@@ -173,26 +151,18 @@ title: 'Scaling Content Generation 10x',
           <li><strong>99.9% uptime achieved</strong> - Self-healing systems prevented outages</li>
           <li><strong>3x improvement in performance</strong> - Optimized infrastructure handled traffic spikes</li>
         </ul>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <p>The project was completed in 8 months with careful planning to avoid service disruption.
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>`
       `
     }
 ]
   const caseStudy = caseStudies.find(study => study.id === id)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function CaseStudyPage(req, res) {
   try {
-=======
 '
 import React from 'react';'
 import Head from 'next/head';'
@@ -201,7 +171,6 @@ import { useRouter } from 'next/router';
 
 export default function CaseStudyPage(req, res) {}
   try {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const router = useRouter();
   const { id } = router.query;
   // Case studies data - this should match the data in case-studies.tsx;
@@ -323,33 +292,20 @@ export default function CaseStudyPage(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!caseStudy) {
     return (
       <>
         <Head>
           <title>Case Study Not Found | Zion Tech Group</title>
 </Head>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <main className="container mx-auto px-6 py-12">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6 text-white">Case Study Not Found</h1>
@@ -359,12 +315,9 @@ export default function CaseStudyPage(req, res) {}
 <Link
               <Link 
               <Link
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href="/case-studies"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 ← Back to Case Studies;
               </Link>
@@ -374,8 +327,6 @@ export default function CaseStudyPage(req, res) {}
       </>
 )
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 
     <>
@@ -389,31 +340,23 @@ export default function CaseStudyPage(req, res) {}
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
-=======
       </Head>"
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">"
         <main className="container mx-auto px-6 py-12">"
           <div className="max-w-4xl mx-auto">"
             <nav className="mb-8">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               </Link>
             </nav>"
             <header className="mb-12">"
               <div className="mb-6">"
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   {caseStudy.industry  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </span>
               </div>"
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>"
@@ -432,7 +375,6 @@ export default function CaseStudyPage(req, res) {}
                     <div>"
                       <h3 className="font-semibold text-fuchsia-400 text-lg mb-2">Solution</h3>"
                       <p className="text-white/80">{caseStudy.solution}</p>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </span>
               </div>
               <h1 className='text-4xl font-bold mb-4 text-white'>
@@ -462,15 +404,11 @@ export default function CaseStudyPage(req, res) {}
                         Solution
                       </h3>
                       <p className='text-white/80'>{caseStudy.solution}</p>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className="space-y-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Results</h3>
                   <ul className="space-y-3">
@@ -576,25 +514,15 @@ export default function CaseStudyPage(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
                   </ul>
                 </div>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </ul>
                 </div>
 
 "
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <div className="space-y-3">
                     <div>"
                       <span className="text-white/60 text-sm">Duration:</span>"
@@ -614,7 +542,6 @@ export default function CaseStudyPage(req, res) {}
                       <p className='text-white font-medium'>
                         {caseStudy.industry}
                       </p>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>
                   </div>
                 </div>
@@ -622,28 +549,21 @@ export default function CaseStudyPage(req, res) {}
             </div>
 <div
                 className="prose prose-invert max-w-none"
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
               />
             </div>
             <div className="text-center">
               <Link
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 "
                 href="/contact""
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
 
-=======
 <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12'>
               <div
                 className='prose prose-invert max-w-none'
                 dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               />
             </div>
 
@@ -651,7 +571,6 @@ export default function CaseStudyPage(req, res) {}
               <Link
 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 Get Started with Your Project;
               </Link>
@@ -660,7 +579,6 @@ href="/contact"
         </main>
       </div>
     </>
-<<<<<<< HEAD
   );
 };
   )
@@ -672,17 +590,13 @@ href="/contact"
 
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       solution: 'Built self - healing, auto - scaling cloud infrastructure with intelligent cost optimization.',
       results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],
       duration: '8 months',
       description: 'Building self - healing, auto - scaling cloud infrastructure.',
-=======
 
 }
 
@@ -691,7 +605,6 @@ href="/contact"
       results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],'
       duration: '8 months','
       description: 'Building self - healing, auto - scaling cloud infrastructure.',`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       full_content: `;
         <h2 > Background</h2>;
         <p > A growing e - commerce platform was experiencing skyrocketing cloud costs and frequent outages.;
@@ -811,44 +724,20 @@ if ( {) {}
                     <div>;"
                       <span className="text - white / 60 text - sm">Industry:</span>;"
                       <p className="text - white font - medium">{case_study.industry}</p>;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >;
                 Get Started with Your Project;
               </Link>;
             </div>;
           </div>;
         </main>;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

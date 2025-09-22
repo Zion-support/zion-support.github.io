@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
@@ -16,7 +14,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     fs.mkdirSync(outDir, { recursive: true });
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
@@ -29,13 +26,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   try {
     const seedTopics = [
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import fs from 'fs',
 import path from 'path';
 import OpenAI from 'openai';
@@ -46,7 +40,6 @@ const openai = null;
   }
   try {
     const seedTopics = [
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'AI Devs in Brazil'
       'AI Devs in Kenya'
       'AI Devs in Vietnam'
@@ -63,8 +56,6 @@ const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4);
     const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4);
     const outDir = path.join(process.cwd(), 'datapage-metadataseo');
     fs.mkdirSync(outDir, { recursive: true });
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     for (const prompt of picks) {
       const regionMatch = prompt && prompt.match(/in\s+([A-Za-z\s]+)/i);
       const region = regionMatch ? regionMatch[1].trim() : undefined;
@@ -180,17 +171,12 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4);
     const outDir = path.join(process.cwd(), 'data', 'page-metadata', 'seo');
     fs.mkdirSync(outDir, { recursive: true });
@@ -219,4 +205,3 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
     return res.status(500).json({ error: 'Failed to schedule landing pages' })
   }
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

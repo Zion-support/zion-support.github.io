@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { ParsedFilters } from './parser';
 import { TALENT_PROFILES } from '../../data/talent';
 import type { TalentProfile } from '../../data/talent';
@@ -124,4 +123,3 @@ pr-12325
   keywords?: string[];
 }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

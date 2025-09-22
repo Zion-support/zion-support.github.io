@@ -1,12 +1,5 @@
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -29,19 +22,14 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
 export default function PricingEnhanced2026Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   },
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const popularServices = getPopularServices(),
 :pages_backup/pricing-enhanced-2026.tsx
   ;
@@ -58,22 +46,13 @@ export default function PricingEnhanced2026Page() {
     ...emergingTech2026ServicesV3,
 :pages_backup/pricing-enhanced-2026.tsx
     ...enterpriseIT2026ServicesV3
-<<<<<<< HEAD:pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react';
 :pages_backup/pricing-enhanced-2026.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
 import {
   Check,
   Star,
@@ -135,12 +114,7 @@ import {
   Infinity,;
 } from 'lucide-react';
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -152,7 +126,6 @@ import {
   getServicesByCategory,
   getPopularServices,;
 } from '../data/enhanced-real-micro-saas-services';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
@@ -163,17 +136,10 @@ import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   ],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   ],
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       name: 'ArrowRight - Generation AI 2026',
       description: 'Revolutionary AI platforms with quantum integration',
       services: ['AI Quantum Financial TradingAI Healthcare DiagnosticsAI Autonomous ManufacturingAI Cybersecurity Threat Intelligence'],
@@ -208,11 +174,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
 
 :pages_backup/pricing-enhanced-2026.tsx
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     ...enterpriseIT2026ServicesV3;
   ],;
   // Enhanced service categories with pricing for 2026;
@@ -277,7 +238,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
 }
 
   ],
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
 export default function PricingEnhanced2026Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly'
@@ -398,12 +358,7 @@ services: [
   ];
 
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -414,22 +369,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
         'Mobile App AccessAPI Access (1000 calls/month)'
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       ]
       icon: <Sparkles className="w-8 h-8" />'
       variant: 'quantum' as const;
       popular: false'
       cta: 'Start Free Trial'
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
         'Mobile App AccessAPI Access (1000 calls/month)'
 
@@ -440,19 +387,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       cta: 'Start Free Trial',
 
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
       color: 'from-blue-500 to-indigo-600'
 
     };
 
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
 'Access to 100+ Core Services',
         'Basic AI Integration',
         'Standard Support (24/7)',
@@ -471,12 +410,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       color: 'from-blue-500 to-indigo-600',
     },
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
     {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
@@ -485,18 +419,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         'Custom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       ]
       icon: <Star className="w-8 h-8" />
       variant: 'holographic' as const
       popular: true
       cta: 'Start Free Trial'
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
         'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features'
         'Custom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
 
@@ -507,19 +436,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       cta: 'Start Free Trial',
 
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
       color: 'from-purple-500 to-pink-600'
 
     };
 
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
 'Access to 500+ Services',
         'Advanced AI & Quantum Features',
         'Priority Support (24/7)',
@@ -540,12 +461,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       color: 'from-purple-500 to-pink-600',
     },
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
     {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
@@ -554,11 +470,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       ]
       icon: <Crown className="w-8 h-8" />
       variant: 'quantum-advanced' as const
@@ -567,7 +479,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       color: 'from-yellow-500 to-orange-600'
     }
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
       color: 'from-green-500 to-emerald-600'
     }
     {'
@@ -590,9 +501,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 :pages_backup/pricing-enhanced-2026.tsx
     {
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
       color: 'from-green-500 to-emerald-600'
     }
@@ -616,7 +524,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
       color: 'from-green-500 to-emerald-600'
     }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
 'Access to ALL Services (1000+)',
         'Full AI & Quantum Suite',
         'Dedicated Support Users',
@@ -686,9 +593,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
     {
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: 'Quantum Internet Security Platform'
       price: '$4,999/month'
       description: 'Unbreakable quantum encryption for the future internet'
@@ -698,7 +602,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       color: 'from-blue-500 to-cyan-600'
     }
   ]
-<<<<<<< HEAD
 
 :pages_backup/pricing-enhanced-2026.tsx
       ],
@@ -757,10 +660,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   ],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance'
         'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
 
@@ -821,7 +720,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ],
 
   return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
       name: 'Quantum Internet Security Platform',
       price: '$4,999/month',
       description: 'Unbreakable quantum encryption for the future internet',
@@ -888,18 +786,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Enhanced Header Section */}
         <div className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
-=======
   return ("
     <UltraFuturisticBackground variant="holographic" intensity="high">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-enhanced-2026.tsx
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
         <Head>
           <title>Enhanced 2026 Pricing - Zion Tech Group</title>"
@@ -907,8 +798,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee" />"
           <link rel="icon" href="/favicon.svg" />
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           {/* Open Graph */  } catch (error) {
     console.error("Error:", error);
@@ -916,21 +805,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       avg_price: '$2, 499 / month',
       savings: 'Save 60 - 80% vs. competitors',
@@ -1090,11 +972,9 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 
           {/* Twitter */}
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <meta name="twitter:card" content="summary_large_image" />;
           <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />;
           <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />;
-=======
 
 "
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />"
@@ -1106,7 +986,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
           <meta name="twitter:card" content="summary_large_image" />;"
           <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />;"
           <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-enhanced-2026.tsx
           <meta name="twitter:image" content="https://ziontechgroup.com / og - image.svg" />;
         </Head>;
         {/* Enhanced Header Section */}
@@ -1118,21 +997,15 @@ price: billing_cycle === 'monthly' ? 999 : 799,
             transition={{ duration: 0.8 }}
 :pages_backup/pricing-enhanced-2026.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
         </Head>
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
         {/* Enhanced Header Section */  } catch (error) {
     console.error("Error:", error);
-=======
 "
           <meta name="twitter:card" content="summary_large_image" />"
           <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />"
@@ -1142,23 +1015,17 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 
         {/* Enhanced Header Section */  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-enhanced-2026.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
         <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
 :pages_backup/pricing-enhanced-2026.tsx
           <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
-=======
           <motion.div;
             initial={{ opacity: 0, y: 20 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-enhanced-2026.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1173,31 +1040,18 @@ price: billing_cycle === 'monthly' ? 999 : 799,
   }
 }
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className="max-w-7xl mx-auto text-center"
           >"
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
               Enhanced 2026 Pricing;
             </h1>"
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
             className="max-w-7xl mx-auto text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
             className="max-w-7xl mx-auto text-center"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1208,10 +1062,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Enhanced 2026 Pricing
             </h1>
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
 
               Achieve remarkable ROI with transparent, competitive pricing.
@@ -1227,8 +1078,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
             {/* Billing Cycle Toggle */}
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.
               Achieve remarkable ROI with transparent, competitive pricing.
             </p>
@@ -1238,8 +1087,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-enhanced-2026.tsx
 
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
@@ -1247,13 +1094,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
 
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
               <button
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Transform your business with our comprehensive collection of
               innovative AI, quantum computing, and enterprise IT services.
@@ -1273,7 +1117,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     billingCycle === 'monthly' ? 'yearly' : 'monthly'
                   )
                 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                   billingCycle === 'yearly' ? 'bg-cyan-600' : 'bg-gray-600'
                 }`}
@@ -1283,15 +1126,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/pricing-enhanced-2026.tsx
 billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
                   }`}
-<<<<<<< HEAD
 billingCycle === 'yearly'
                       ? 'translate-x-8'
                       : 'translate-x-1'
                   }`}
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="flex items - center justify - center space - x-4 mb - 8">;
               <span className={`text - lg ${billing_cycle === 'monthly' ? 'text - white' : 'text - gray - 400'}`}>Monthly</span>;
               <button;'
@@ -1302,8 +1141,6 @@ billingCycle === 'yearly'
               >;
                 <span;
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className={`inline - block h - 6 w - 6 transform rounded - full bg - white transition - transform ${
                     billing_cycle === 'yearly' ? 'translate - x-8' : 'translate - x-1';
                   }`}
@@ -1311,14 +1148,11 @@ billingCycle === 'yearly'
 :pages_backup/pricing-enhanced-2026.tsx
 
             {/* Contact Information */  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
                 />
               </button>
               <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
@@ -1326,14 +1160,7 @@ billingCycle === 'yearly'
               </span>
             </div>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -1349,9 +1176,6 @@ billingCycle === 'yearly'
                 <div className="flex items-center justify-center space-x-2">"
                   <MapPin className="w-4 h-4 text-purple-400" />"
                   <span className="text-center">{contactInfo.address}</span>
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                   <Phone className="w-4 h-4 text-purple-400" />
                   <span>{contactInfo.mobile}</span>
                 </div>
@@ -1362,7 +1186,6 @@ billingCycle === 'yearly'
                 <div className="flex items-center justify-center space-x-2">
                   <MapPin className="w-4 h-4 text-purple-400" />
                   <span className="text-center">{contactInfo.address}</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
                 />
               </button>
               <span
@@ -1389,17 +1212,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex items-center justify-center space-x-2'>
                   <MapPin className='w-4 h-4 text-purple-400' />
                   <span className='text-center'>{contactInfo.address}</span>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
               </div>
             </div>
           </motion.div>
         </div>
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 />;
               </button>;
@@ -1428,7 +1246,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>;
         </div>;
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         {/* Enhanced Pricing Tiers */}
         {/* Enhanced Pricing Tiers */  } catch (error) {
@@ -1437,21 +1254,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <motion.div
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
         <div className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 mb - 20">;
           <div className="max - w-7xl mx - auto">;
@@ -1460,12 +1269,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div;
 
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
         {/* Enhanced Pricing Tiers */}
 <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
@@ -1473,8 +1279,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               {pricingTiers.map((tier, index) => (
                 <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">"
@@ -1482,17 +1286,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-enhanced-2026.tsx
                   key={tier.name}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="relative"
 className='relative'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
 :pages_backup/pricing-enhanced-2026.tsx
                   <UltraFuturisticCard
@@ -1507,7 +1307,6 @@ className='relative'
   }
 }
                   >
-<<<<<<< HEAD
 
                   key={tier.name  } catch (error) {
     console.error("Error:", error);
@@ -1532,8 +1331,6 @@ className='relative'
 
 :pages_backup/pricing-enhanced-2026.tsx
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="relative"
                 >
                   <UltraFuturisticCard
@@ -1547,7 +1344,6 @@ className='relative'
 
                     {tier.popular && (
 :pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                           Most Popular
@@ -1562,18 +1358,12 @@ className='relative'
                   >;
 
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
@@ -1581,8 +1371,6 @@ className='relative'
                         </div>
                       </div>
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <p className="text-gray-400 mb-6">{tier.description}</p>
                       <div className="mb-6">
                         <span className="text-4xl font-bold text-cyan-400">${tier.price}</span>
@@ -1590,7 +1378,6 @@ className='relative'
                         {tier.savings && ("
                           <div className="text-sm text-green-400 mt-1">{tier.savings}</div>
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 :pages_backup/pricing-enhanced-2026.tsx
                         )  } catch (error) {
@@ -1599,10 +1386,6 @@ className='relative'
   }
 }
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       </div>
                       <ul className="text-left space-y-3 mb-8">
                         {tier.features.map((feature, idx) => ("
@@ -1613,9 +1396,6 @@ className='relative'
                         ))}
                       </ul>
 :pages_backup/pricing-enhanced-2026.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
                       </div>
                       <ul className="text-left space-y-3 mb-8">
@@ -1626,7 +1406,6 @@ className='relative'
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                         <div className='bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                           Most Popular
@@ -1671,9 +1450,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         ))}
                       </ul>
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                                              <Button
                                                    variant="primary"
                          size="lg"
@@ -1684,8 +1460,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                            } else {'`
                              window.open(`mailto:${contactInfo.email}?subject=Start Free Trial - ${tier.name}`, '_blank')
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                        </Button>
                     </div>
@@ -1696,9 +1470,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               initial={{ opacity: 0, y: 20 }  } catch (error) {"
     console.error("Error:", error);"
@@ -1709,13 +1480,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
-=======
               whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-enhanced-2026.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1735,7 +1503,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-12"
             >"
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -1749,7 +1516,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {serviceCategories.map((category, index) => (
 :pages_backup/pricing-enhanced-2026.tsx
                 <motion.div
-<<<<<<< HEAD
                   key={category.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1793,7 +1559,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {category.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-=======
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Service Categories & Pricing
@@ -1803,7 +1568,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
 
                       <Button
                         variant='primary'
@@ -1855,11 +1619,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
               {serviceCategories.map((category, index) => (
                 <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 <motion.div;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-enhanced-2026.tsx
               className="text - center mb - 12";
             >;"
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
@@ -1872,35 +1633,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
               {service_categories.map ((category, index) => (
                 <motion.div;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   key={category.name}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                       </ul>
 
                       </ul>
 
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <Button
                         variant="primary"
                         size="sm"
                         className="w-full"
-<<<<<<< HEAD:pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                         onClick={() => window.open(`/2026-services-showcase-enhanced`, '_blank')  } catch (error) {
     console.error("Error:", error);
@@ -1910,19 +1660,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/pricing-enhanced-2026.tsx
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       >
                         View Services"
                         <ArrowRight className="w-4 h-4 ml-2" />
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                       >
                         View Services
                         <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
                 >
 <UltraFuturisticCard
                     variant='quantum-advanced'
@@ -1978,19 +1721,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       >
                         View Services
                         <ArrowRight className='w-4 h-4 ml-2' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </Button>
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 >;
                   <UltraFuturisticCard variant="quantum - advanced" className="h - full">;
                     <div className="p - 6">;
@@ -2029,14 +1765,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
 
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Featured Services Showcase */}
         <div className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 mb - 20">;
-=======
 
         {/* Featured Services Showcase */}"
         <div className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 mb - 20">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-enhanced-2026.tsx
           <div className="max - w-7xl mx - auto">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
@@ -2044,18 +1777,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
               ))  } catch (error) {
     console.error("Error:", error);
-=======
 
               ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-enhanced-2026.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -2091,7 +1818,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 :pages_backup/pricing-enhanced-2026.tsx
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-12"
             >"
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -2105,7 +1831,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {featuredServices.map((service, index) => (
 :pages_backup/pricing-enhanced-2026.tsx
                 <motion.div
-<<<<<<< HEAD
                   key={service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2147,7 +1872,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.features.map((feature, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-=======
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Featured Services
@@ -2157,7 +1881,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
 <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
@@ -2180,11 +1903,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
               {featuredServices.map((service, index) => (
                 <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 <motion.div;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-enhanced-2026.tsx
               className="text - center mb - 12";
             >;"
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
@@ -2197,17 +1917,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
               {featured_services.map ((service, index) => (
                 <motion.div;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   key={service.name}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                       </ul>
 
@@ -2215,20 +1931,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/pricing-enhanced-2026.tsx
 
-<<<<<<< HEAD:pages_backup/pricing-enhanced-2026.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <div className="flex space-x-2">
                         <Button"
                           variant="primary""
                           size="sm""
                           className="flex-1"
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                           onClick={() => window.open(service.link, '_blank')  } catch (error) {
     console.error("Error:", error);
@@ -2238,9 +1947,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :pages_backup/pricing-enhanced-2026.tsx
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         >
                           Learn More"
                           <ArrowRight className="w-4 h-4 ml-1" />
@@ -2249,10 +1955,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           variant="secondary""
                           size="sm"
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               initial={{ opacity: 0, y: 20 }  } catch (error) {"
     console.error("Error:", error);"
@@ -2268,12 +1971,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
           <div className="max-w-4xl mx-auto">
             <motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
                         >
                           Learn More
                           <ArrowRight className="w-4 h-4 ml-1" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
                 >
 <UltraFuturisticCard variant='holographic' className='h-full'>
                     <div className='p-6'>
@@ -2320,11 +2020,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </Button>
                         <Button
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
                           variant="secondary"
                           size="sm"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2346,7 +2043,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
             >"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -2360,14 +2056,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variant="primary""
                   size="lg"
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation;
@@ -2376,11 +2065,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variant="secondary""
                   size="lg"
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now;
@@ -2388,12 +2072,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>"
               <div className="mt-8 text-sm text-gray-400">
                 <p>Contact: {contactInfo.mobile} | {contactInfo.email}</p>
-=======
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
 :pages_backup/pricing-enhanced-2026.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
@@ -2414,7 +2094,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 >
                   <Mail className="w-5 h-5 mr-2" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
                           variant='secondary'
                           size='sm'
                           onClick={() =>
@@ -2486,7 +2165,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p>
                   Contact: {contactInfo.mobile} | {contactInfo.email}
                 </p>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <p>{contactInfo.address}</p>
               </div>
             </motion.div>
@@ -2495,13 +2173,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </UltraFuturisticBackground>
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx
   )
   } catch (error) {"
     console.error("Error:", error);"
@@ -2509,12 +2182,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-enhanced-2026.tsx
               className="bg - gradient - to - r from - cyan - 900 / 50 via - purple - 900 / 50 to - pink - 900 / 50 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 30 text - center";
             >;"
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -2552,21 +2220,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </UltraFuturisticBackground>);
 }
 :pages_backup/pricing-enhanced-2026.tsx
-<<<<<<< HEAD
 
 :pages_backup/pricing-enhanced-2026.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/pricing-enhanced-2026.tsx
-=======
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/pricing-enhanced-2026.tsx

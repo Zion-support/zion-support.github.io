@@ -71,8 +71,6 @@ const BLOG_POSTS:BlogPost[] = [;
 <h2>Creating Compelling AI Missions</h2>;
 <p>Top AI talent is increasingly mission-driven, seeking roles where their work creates meaningful impact. Articulating how your AI initiatives address important challenges—whether in sustainability, healthcare, education, or other domains—can be a powerful recruitment tool.</p>;
 ;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <h2>Remote-First Talent Strategies</h2>;
 <p>The most successful AI employers have embraced truly global talent strategies, creating distributed teams that leverage expertise regardless of location. This approach requires investing in collaboration tools, asynchronous workflows, and inclusive management practices.</p>;
 <h2>Retention Through Growth Paths</h2>;`;
@@ -94,7 +92,6 @@ title="Blog - AI & Tech Insights" ;
         description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." ;
         keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT";
         canonical="https://app.ziontechgroup.com/blog";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       />;
 
       <Header />;
@@ -109,8 +106,6 @@ title="Blog - AI & Tech Insights" ;
 </p>
             </p>;
 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="mb-16">;
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>;
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
@@ -147,13 +142,11 @@ title="Blog - AI & Tech Insights" ;
                   >;
 `;
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       Read Article;
                     </Link>;
                   </Button>;
                 </div>;
               </div>;
-<<<<<<< HEAD
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -209,7 +202,6 @@ title="Blog - AI & Tech Insights" ;
                 onClick={() => {;
 setSearchQuery(""),;
                   setSelectedCategory("All Categories"),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
               >;
@@ -222,7 +214,6 @@ setSearchQuery(""),;
       <Footer />;
 
     </>;
-<<<<<<< HEAD
   CATEGORIES.map ( (category) => (<SelectItem key= {
   category;
 }value= {
@@ -246,5 +237,4 @@ setSearchQuery(""),;
 }> Read More     ) ) "
 }</div>) : (<div className="text-center py-16"> <h3 className="text-xl font-bold text-white mb-2">No articles found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your search or filter criteria</p> <Button;"
 }</div> </div> <Footer /> </>) 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }

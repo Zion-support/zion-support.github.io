@@ -1,8 +1,4 @@
 :src_backup/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
 
   Form
@@ -53,7 +49,6 @@ export function ProductSubmissionForm() {
   const [isSubmitting, setIsSubmitting] = React.useState(false)
   const [imagePreview, setImagePreview] = React.useState(null as string | null)
   const [activeTab, setActiveTab] = React.useState('manual')
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -173,21 +168,15 @@ export function ProductSubmissionForm() {
     try {
       // Create the product listing
 const productData = {
-=======
 try {
       // Create the product listing;
       const product_data = {
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductSubmissionForm.tsx
-=======
 try {}
       // Create the product listing;
       const product_data = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ProductSubmissionForm.tsx
         title: values.title,
-=======
       const productData = {        title: values.title,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         description: values.description,
         price: parseFloat(values.price),
         category: values.category,
@@ -309,8 +298,6 @@ if ( {) {}
       }
 
 :src_backup/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -321,11 +308,8 @@ import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/router';
 
 :src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const { data: productRecord, error: productError } = await supabase
-=======
 '
 import React from 'react';'
 import { useForm, ControllerRenderProps } from 'react-hook-form';'
@@ -339,20 +323,16 @@ import Image from 'next/image'; // Import next/image;'
 import { logErrorToProduction } from '@/utils/productionLogger';
 
       const { data: productRecord, error: productError } = await supabase'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ProductSubmissionForm.tsx
         .from('product_listings')
         .insert([productData])'
         .select('id')
 
 :src/components/ProductSubmissionForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         .single(),
-=======
           name: user.displayName || "Anonymous Creator",
           id: user.id},
         createdAt: new Date().toISOString()},
               .single(),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       if (productError) {}
         throw new Error(productError.message)
@@ -374,7 +354,6 @@ import {;
   FormItem,;
   FormLabel,;
 :src_backup/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
   FormMessage} from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -388,7 +367,6 @@ const productSchema = z.object({;
   title: z.string().min(3, "Title must be at least 3 characters"),;
   description: z.string().min(10, "Description must be at least 10 characters"),;
   description: z && z.string().min(10, 'Description must be at least 10 characters'),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   price: z;
     .string();
 :src_backup/components/ProductSubmissionForm.tsx
@@ -410,21 +388,16 @@ export function ProductSubmissionForm() {;
   const [activeTab, setActiveTab] = React.useState("manual"),;
 
 :src/components/ProductSubmissionForm.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
 :src_backup/components/ProductSubmissionForm.tsx
     defaultValues: {;
-<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: "",;
       description: "",;
       price: "",;
       category: "",;
       category: '',;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductSubmissionForm.tsx
       video: undefined,;
 :src_backup/components/ProductSubmissionForm.tsx
       model: undefined,;
@@ -491,9 +464,6 @@ export function ProductSubmissionForm() {;
           id: user.id},;
         createdAt: new Date().toISOString()},;
       const { data: productRecord, error: productError } = await supabase;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         title: values && values.title,;
         description: values && values.description,;
         price: parseFloat(values && values.price),;
@@ -508,7 +478,6 @@ export function ProductSubmissionForm() {;
       };
 
       const { data: productRecord, error: productError } = await supabase;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ProductSubmissionForm.tsx
         .from('product_listings');
         .insert([productData]);'
         .select('id');
@@ -534,16 +503,12 @@ throw new Error(productError.message);
           .from('products');
           .getPublicUrl(imagePath),;
         imagePublicUrl = publicUrlData.publicUrl,;
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductSubmissionForm.tsx
         // Update the product with the image URL;
         const { error: updateError } = await supabase;'
           .from('product_listings');
           .update({;
 :src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             images: [imagePublicUrl];
           });
           .eq('id', productRecord.id),;
@@ -675,18 +640,14 @@ throw new Error(productError.message);
             sellerId: user && user.id,;
           },;
 :src/components/ProductSubmissionForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         });
 :src_backup/components/ProductSubmissionForm.tsx
       } catch (err) {;
-=======
       } catch (err) {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ProductSubmissionForm.tsx
         logErrorToProduction('Error invoking moderation:', { data: err });
       }
 
 :src/components/ProductSubmissionForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 :src_backup/components/ProductSubmissionForm.tsx
       // Show success message
@@ -695,17 +656,14 @@ throw new Error(productError.message);
         description: "Your product has been successfully published on Zion."}),
 :src/components/ProductSubmissionForm.tsx
 // Redirect to product page
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
 
 title: 'Publication Failed',
 
-<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
         description:
           error instanceof Error ? error.message : 'An unknown error occurred'
-=======
       // Redirect to product page;`
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {}
@@ -715,7 +673,6 @@ title: 'Publication Failed',
 
         description:'
           error instanceof Error ? error.message : 'An unknown error occurred''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ProductSubmissionForm.tsx
         variant: 'destructive'
       })
     } finally {}
@@ -723,7 +680,6 @@ title: 'Publication Failed',
     }
 :src_backup/components/ProductSubmissionForm.tsx
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         title: "Publication Failed",
         description: error instanceof Error ? error.message : "An unknown error occurred",
         variant: "destructive"})
@@ -734,9 +690,6 @@ title: 'Publication Failed',
 
 :src_backup/components/ProductSubmissionForm.tsx
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">
@@ -759,17 +712,13 @@ title: 'Publication Failed',
           value='ai'
 
 :src_backup/components/ProductSubmissionForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <TabsContent value="manual">
-=======
 
 :src_backup/components/ProductSubmissionForm.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
               control={form.control}
-<<<<<<< HEAD
               name='title';
 
               render={({}
@@ -778,7 +727,6 @@ title: 'Publication Failed',
               control={form.control}
 :src_backup/components/ProductSubmissionForm.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               name="title"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "title"> }) => {
                 const { onChange, onBlur, value, ref } = field,
@@ -839,15 +787,12 @@ title: 'Publication Failed',
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         ref={ref}
-=======
 
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
                       <Input                        ref={ref}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       />;
                     </FormControl>;
                     <FormDescription>;
@@ -877,10 +822,8 @@ title: 'Publication Failed',
 :src_backup/components/ProductSubmissionForm.tsx
                     <Textarea;
                       placeholder="Describe your product in detail...";
-<<<<<<< HEAD
                       className="min-h-32";
 
-<<<<<<< HEAD
                       {...field}
                     />;
                   </FormControl>;
@@ -898,12 +841,8 @@ title: 'Publication Failed',
 name="price"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (
                   <FormItem>
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductSubmissionForm.tsx
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>"
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />
@@ -915,7 +854,6 @@ name="price"
                   </FormItem>
 
 :src_backup/components/ProductSubmissionForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             />;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <FormField;
@@ -925,10 +863,8 @@ name="price"
 :src/components/ProductSubmissionForm.tsx
                   <FormItem>;
                     <FormLabel>Price (USD)</FormLabel>;
-=======
                       className="min-h-32";                  <FormItem>;
                     <FormLabel > Product Title</FormLabel>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <FormControl>;
 :src_backup/components/ProductSubmissionForm.tsx
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
@@ -996,8 +932,6 @@ field: ControllerRenderProps<ProductFormValues, 'description'>;
                   </FormItem>;
                 )}
 :src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               />;
 
@@ -1029,15 +963,12 @@ field: ControllerRenderProps<ProductFormValues, 'description'>;
 '
                   field: ControllerRenderProps<ProductFormValues, 'category'>;
                 }) => (                  <FormItem>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </FormItem>;
                 )}
 :src/components/ProductSubmissionForm.tsx
               />;
-=======
 
               />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <FormField;
                 control={form.control}"
                 name="category""
@@ -1063,22 +994,13 @@ field: ControllerRenderProps<ProductFormValues, 'description'>;
                     <FormMessage />
                   </FormItem>
 :src_backup/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductSubmissionForm.tsx
                 name="category";
-=======
             <FormField
               control={form && form.control}
               name='tags'                name="category";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 "
                 name="category";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ProductSubmissionForm.tsx
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (;
                   <FormItem>;
                     <FormLabel>Category</FormLabel>;
@@ -1128,8 +1050,6 @@ field: ControllerRenderProps<ProductFormValues, 'description'>;
             </div>;
             <FormField;
 :src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               control={form.control}
 "
               name="tags""
@@ -1147,10 +1067,8 @@ field: ControllerRenderProps<ProductFormValues, 'description'>;
                   <FormDescription>
 :src_backup/components/ProductSubmissionForm.tsx
 
-<<<<<<< HEAD
                 field: ControllerRenderProps<ProductFormValues, 'tags'>;
               }) => (                <FormItem>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <FormLabel>Tags</FormLabel>;
                   <FormControl>;
                     <Input placeholder="Enter tags separated by commas" {...field} />;
@@ -1170,14 +1088,12 @@ field: ControllerRenderProps<ProductFormValues, 'description'>;
                     Add relevant tags to help users find your product (e && e.g., ai,;
                     productivity, design);
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductSubmissionForm.tsx
                   </FormDescription>;
                   <FormMessage />;
                 </FormItem>;
               )}
             />;
 :src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
             <FormField;
               control={form.control}
               name="image"
@@ -1200,35 +1116,23 @@ field: ControllerRenderProps<ProductFormValues, 'description'>;
                 </FormItem>
 
 :src/components/ProductSubmissionForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               render={() => (
                 <FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
 :src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
                     <Input
-=======
 
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductSubmissionForm.tsx
                     <Input 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       type="file" 
-=======
                     <Input "
                       type="file" "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ProductSubmissionForm.tsx
                       accept="image/*" 
                       onChange={handleImageChange}"
                       className="cursor-pointer"
                     />
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </FormControl>
                   <FormDescription>
 :src_backup/components/ProductSubmissionForm.tsx
@@ -1237,15 +1141,12 @@ field: ControllerRenderProps<ProductFormValues, 'description'>;
                   <FormMessage />
 
 :src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
 
                   {imagePreview && (
                     <div className="mt-2 w-full max-w-md border rounded overflow-hidden">
                       <AspectRatio ratio={3/2}>
                         <Image
-=======
                         <Image;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ProductSubmissionForm.tsx
                           src={imagePreview}
 alt="Product image preview"
                           width={600} // Example width, adjust as needed
@@ -1258,10 +1159,7 @@ alt="Product image preview"
                         />
                       </AspectRatio>
 </div>
-=======
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ProductSubmissionForm.tsx
                           alt="Product image preview"
                           width={600} // Example width, adjust as needed;
                           height={400} // Example height, adjust as needed'
@@ -1274,11 +1172,8 @@ alt="Product image preview"
                       </AspectRatio>;
                     </div>;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductSubmissionForm.tsx
                   )}
-=======
                     </div>                  )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </FormItem>;
               )}
 
@@ -1403,24 +1298,17 @@ alt="Product image preview"
 :src_backup/components/ProductSubmissionForm.tsx
                 disabled={isSubmitting}
                 className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             />;
             <FormField;
               control={form.control}"
               name="video"
               render={() => (
 
-=======
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductSubmissionForm.tsx
                 <FormItem>
                   <FormLabel>Product Video (MP4)</FormLabel>
                   <FormControl>"
@@ -1434,7 +1322,6 @@ alt="Product image preview"
               )}
 
 :src/components/ProductSubmissionForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             />;
             <FormField;
               control={form.control}"
@@ -1454,7 +1341,6 @@ alt="Product image preview"
             />
 
 :src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
             <div className="flex justify-end">
               <Button 
                 type="submit" 
@@ -1462,16 +1348,13 @@ alt="Product image preview"
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
               >
                 {isSubmitting ? "Publishing..." : "Publish Product"}
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductSubmissionForm.tsx
               </Button>
             </div>
           </form>
         </Form>
       </TabsContent>
 :src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
 
       <TabsContent value="ai">
         <AIListingGenerator 
@@ -1520,7 +1403,6 @@ if ( {) {}
           onApplyGenerated={handleApplyGenerated}          initialValues={{'
             title: form && form.getValues('title'),'
             category: form && form.getValues('category'),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }}
         />;
       </TabsContent>;
@@ -1540,8 +1422,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> ;
 }";
-<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
 }/> <FormFieldDescribe your product in detail..." className="min-h-32" {
   ...field '
 }/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";
@@ -1671,16 +1551,9 @@ const {
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify - end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>);
 }'"  );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 :src/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ProductSubmissionForm.tsx
 }/> <FormField Describe your product in detail..." className="min-h-32" {;
   ...field ';
 }/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";
@@ -1703,9 +1576,6 @@ const {
 }/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
 }'"
 :src/components/ProductSubmissionForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }"
 }className="w - full"> <TabsList className="grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple"> <Sparkles className="h - 4 w - 4 mr - 2"/> AI - Powered Creation </TabsTrigger> </TabsList>;"
@@ -1732,4 +1602,3 @@ const {
 }/> <div className="flex justify - end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>);'"
 }'"  );
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ProductSubmissionForm.tsx

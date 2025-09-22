@@ -1,7 +1,4 @@
 :src_backup/components/ListingCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
@@ -33,7 +30,6 @@ interface ListingCardProps {;
   className?: string,;
 
   title: string,;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   description: string,;
   images?: string[],;
   category: string,;
@@ -43,7 +39,6 @@ interface ListingCardProps {;
   profileType?: 'service' | 'talent';
 }
 :src/components/ListingCard.tsx
-<<<<<<< HEAD
 
 interface ListingCardProps {;
   id?: string;
@@ -54,14 +49,11 @@ interface ListingCardProps {;
   tags?: string[];
   author?: { name: string; id?: string; avatarUrl?: string; email?: string };
   className?: string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   profileType?: 'service' | 'talent';
 }
 ;
 export function ListingCard({;
   id,;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   title,;
   description,;
   images,;
@@ -99,10 +91,7 @@ className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
 
 :src/components/ListingCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       )}
       <div className="flex flex-col p-4 flex-grow">
         <div className="mb-2">
@@ -111,30 +100,23 @@ className="object-cover transition-transform duration-300 group-hover:scale-105"
           </Badge>
         </div>
 :src/components/ListingCard.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ListingCard.tsx
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>
 
         {tags && tags.length > 0 && (
 
-=======
 
 :src/components/ListingCard.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
 :src/components/ListingCard.tsx
-<<<<<<< HEAD
               </Badge>;
             ))}
           </div>;
         )}
-=======
 
               </Badge>;
 
@@ -163,7 +145,6 @@ className="object-cover transition-transform duration-300 group-hover:scale-105"
             <span className="text-sm text-zion-slate-light">{author && author.name}</span>;
           </div>;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ListingCard.tsx
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -253,7 +234,6 @@ export function ListingCard({
               <Badge;
                 key={i}
 :src_backup/components/ListingCard.tsx
-<<<<<<< HEAD
                 variant='outline';
                 className='border - zion - slate - dark text - zion - slate - light';
               >                {tag}              <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light">;
@@ -288,19 +268,10 @@ export function ListingCard({
     </Link>);
 }"}) })";
 :src_backup/components/ListingCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ListingCard.tsx
-=======
 ;
 }))
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ListingCard.tsx
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
               >
@@ -331,9 +302,6 @@ export function ListingCard({
   );
 }
 :src/components/ListingCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           <div className="flex items - center mt - auto pt - 4 border - t border - zion - blue - light">;"
 </div>)"
               <Image src={author.avatar_url} alt={author.name} width={32} height={32} className="rounded - full mr - 2" loading="lazy" />) : ("
@@ -342,4 +310,3 @@ export function ListingCard({
             <span className="text - sm text - zion - slate - light">{author.name}</span>;"
     );"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ListingCard.tsx

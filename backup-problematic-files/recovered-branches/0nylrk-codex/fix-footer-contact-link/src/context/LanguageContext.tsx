@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar',;
 export type LanguageContextType = {;
@@ -35,7 +34,6 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
     }
   }, [currentLanguage, i18n]),;
   ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Sync language preference with user profile when authenticated;
   useEffect(() => {;
     const syncLanguageWithProfile = async () => {;
@@ -43,7 +41,6 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
         try {;
           const { error } = await supabase;
             .from('profiles');
-<<<<<<< HEAD
             .eq('id', user.id),;
             ;
           if (error) {;
@@ -116,4 +113,3 @@ const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage> ( (i18
 )
 }</LanguageContext.Provider>) 
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

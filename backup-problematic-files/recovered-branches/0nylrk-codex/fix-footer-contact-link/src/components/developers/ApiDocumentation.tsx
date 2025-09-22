@@ -1,5 +1,4 @@
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
           <BookOpen className="mr-2" size={20} /> API Documentation;

@@ -1,6 +1,4 @@
 :src/components/community/ReplyCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
@@ -70,13 +68,9 @@ export const ReplyCard = ({;
       "transition-shadow",;
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",;
       className;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 className
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ReplyCard.tsx
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
@@ -87,8 +81,6 @@ className
           <div className="flex items-center">;
             <span className="font-medium">;
 :src/components/community/ReplyCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
               {reply.authorName}
             </span>;
             {reply.authorRole && (;
@@ -107,8 +99,6 @@ import { Badge } from '@/components/ui/badge';
 import { ForumReply } from '@/types/community';
 import { cn } from '@/lib/utils';
 :src/components/community/ReplyCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
@@ -142,7 +132,6 @@ export const ReplyCard = ({
             {reply.authorRole && (
               <Badge variant="outline" className="ml-2 text-xs">
                 {reply.authorRole}
-<<<<<<< HEAD
               </Badge>;
             )}
             {reply.isAnswer && (
@@ -154,7 +143,6 @@ export const ReplyCard = ({
           </div>
           <div className="text-xs text-muted-foreground">
             {timeAgo}
-<<<<<<< HEAD
           </div>
         </div>
       </CardHeader>
@@ -162,10 +150,7 @@ export const ReplyCard = ({
       <CardContent>
         <div>{reply.content}</div>
       </CardContent>
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
               {reply && reply.authorName}
             </span>;
             {reply && reply.authorRole && (;
@@ -184,7 +169,6 @@ export const ReplyCard = ({
           <div className="text-xs text-muted-foreground">;
             {timeAgo}
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ReplyCard.tsx
       <CardFooter className="flex justify-between">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" className="px-2">
@@ -290,18 +274,9 @@ export const ReplyCard = ({
     </Card>);
 }
 :src/components/community/ReplyCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default ReplyCard;
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 export default ReplyCard;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/community/ReplyCard.tsx
 import { ForumReply } from "@/types/community";
 import { cn } from "@/lib/utils";
 interface ReplyCardProps {
@@ -310,5 +285,3 @@ interface ReplyCardProps {
 export default ReplyCard;
 "
 :src/components/community/ReplyCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

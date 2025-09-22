@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     try {
       const { stdout, stderr } = await execAsync(command, {
         cwd: process.cwd(),
@@ -14,7 +12,6 @@
         cwd: process.cwd(), 
         timeout: 60000, 
 ...options 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       });
       return { success: true, stdout, stderr };
     } catch (error) {
@@ -178,4 +175,3 @@ const path = require('path')
       return { "success": true, "message"}
     const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")
       "operation"
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

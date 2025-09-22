@@ -1,7 +1,4 @@
 :src/pages/ForumCategoryPage.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -59,10 +56,8 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: true,
     icon: "Megaphone"
   }
-=======
 "feedback": {
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/ForumCategoryPage.tsx
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
@@ -90,7 +85,6 @@ const categories_info: Record < string, ForumCategoryInfo> = {
     icon: "Briefcase";
   }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },
 
 const iconMap = {
@@ -105,9 +99,7 @@ function CategoryContent({
   categoryId,
   category,
   IconComponent,
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/ForumCategoryPage.tsx
   user}: {
   categoryId: string,
   category: ForumCategoryInfo,
@@ -123,18 +115,14 @@ function CategoryContent({
     ...featuredPosts.filter(post => post.categoryId === categoryId),
 
 :src/pages/ForumCategoryPage.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
 :src/pages/ForumCategoryPage.tsx
-<<<<<<< HEAD
   ),
 
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/ForumCategoryPage.tsx
   // Apply search filter
   const filteredPosts = searchQuery 
     ? categoryPosts.filter(post => 
@@ -149,7 +137,6 @@ function CategoryContent({
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     : categoryPosts,
 
   const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
@@ -163,11 +150,7 @@ function CategoryContent({
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
       return
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/ForumCategoryPage.tsx
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -271,7 +254,6 @@ function CategoryContent({;
   const handleFollow = () => {;
     if (!user) {;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
-<<<<<<< HEAD
       return;
     }
     if (isFollowed(categoryId)) {;
@@ -283,9 +265,7 @@ function CategoryContent({;
       return;
 
 :src/pages/ForumCategoryPage.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/ForumCategoryPage.tsx
     }
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
@@ -296,7 +276,6 @@ function CategoryContent({;
 
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   logInfo('CategoryContent - categoryId:', { data: categoryId }),;
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
   logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),;
@@ -309,8 +288,6 @@ function CategoryContent({;
 };
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   )
 }
@@ -364,7 +341,6 @@ function CategoryContent({;
     </div>;
   );
 }
-<<<<<<< HEAD
 ;
 export default function ForumCategoryPage() {;
   const router = useRouter(),;
@@ -427,17 +403,10 @@ export default function ForumCategoryPage() {;
 }
 ;
 :src/pages/ForumCategoryPage.tsx
-=======
 export default ForumCategoryPage;
->>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
-=======
   );
 
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-=======
 
   };
 
@@ -453,7 +422,6 @@ export default ForumCategoryPage;
 
 }
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/ForumCategoryPage.tsx
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -506,5 +474,3 @@ This category is only accessible to administrators. </p> <Button asChild> <Link 
   )
 }
 :src/pages/ForumCategoryPage.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -5,7 +5,6 @@ import axios from "axios",;
 import { v4 as uuidv4 } from "uuid",;
 import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -22,17 +21,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 const { fromDAO, toDAO, resolutionId, decision, timestamp } = req.body as {
     fromDAO: string, toDAO: string, resolutionId: string, decision: "endorse" | "reject", timestamp?: number
-=======
   const { fromDAO, toDAO, resolutionId, decision, timestamp } = req.body as {"
     fromDAO: string, toDAO: string, resolutionId: string, decision: "endorse" | "reject", timestamp?: number;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   if (!fromDAO |!toDAO |!resolutionId |!decision) {"
     return res.status(400).json({ error: "fromDAO, toDAO, resolutionId, decision required" })
   }
   const version = nextVersionFor(state, resolutionId)
 const event = {
-<<<<<<< HEAD
     eventId: uuidv4(),
     type: "dao_endorsement" as const,
     payload: { id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp || Date.now() },
@@ -40,9 +36,7 @@ const event = {
     version,
     timestamp: Date.now()},
 
-=======
   const event = {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   upsertEvent(state, event);
   writeState(state);
 
@@ -54,7 +48,6 @@ if (sig) headers["x-zion-signature"] = sig;
     state.config.peers;
       .filter((p) => !p.paused)
 .map(async (peer) => {
-<<<<<<< HEAD
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
         try {
           await axios.post(url, body, { headers, timeout: 5000 });
@@ -92,8 +85,6 @@ export default async function handler(req, res) {
       .map(async (peer) => {
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {}
@@ -191,16 +182,10 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
-=======
->>>>>>> pr-12243
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 "
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

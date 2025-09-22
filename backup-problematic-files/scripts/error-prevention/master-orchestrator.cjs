@@ -86,9 +86,7 @@ try {}
   runCommand(command, args) {}
     return new Promise((resolve, reject) => {;}
       const child = spawn(command, args, { "stdio": 'inherit' };);
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       child.on('close', (code) => {}
         if ( {})
           resolve()} else {}
@@ -109,13 +107,11 @@ try {}
       console.log('No logs found')};
   };
 };
-=======
 
       process.exit(1)};
   runCommand(command, args) {}
     return new Promise((resolve, reject) => {;}"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // CLI Interface;
 const orchestrator = new ErrorPreventionOrchestrator;(;);
 const command = process.argv[2];
@@ -140,9 +136,5 @@ case 'start':
     orchestrator.logs();
     break;
 "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

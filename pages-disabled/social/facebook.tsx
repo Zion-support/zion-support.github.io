@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,8 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import Head from 'next / head';
 export default /**;
@@ -51,10 +48,7 @@ if ( {) {}
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function FacebookRedirect() {
-=======
   }
 }
 import React, { useEffect } from 'react';
@@ -65,12 +59,10 @@ useEffect(() => {
       window.location.replace('https: //facebook.com/ziontechgroup')
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
-=======
 
 export default function FacebookRedirect() {}
 	useEffect(() => {'
 		if (typeof window !== 'undefined') {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			window.location.replace('https: //facebook.com/ziontechgroup')
 		};
 	}, []);
@@ -90,8 +82,6 @@ export default function FacebookRedirect() {}
 		</>
 	)
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <title > Facebook | Zion Tech Group</title>;'
         <link rel='canonical' href='https: //facebook.com / ziontechgroup' />;
@@ -128,20 +118,15 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 export default function FacebookRedirect() {
 
-<<<<<<< HEAD
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.location.replace('https: //facebook.com/ziontechgroup')
     }'
       window.location.replace('https: //facebook.com/ziontechgroup'),;
     };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
       window.location.replace('https: //facebook.com/ziontechgroup'),
     };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }, []);
   return (
     <>
@@ -194,15 +179,11 @@ class ErrorBoundary extends React.Component {}
     }
 
     return this.props.children;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }'
 import React, { useEffect } from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Head from 'next / head';
 export default /**;
  * FacebookRedirect - Function description;
@@ -218,7 +199,6 @@ if ( {) {}
       window.location.replace('https: //facebook.com/ziontechgroup'),
     };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }, []);
   return (
     <>;
@@ -248,19 +228,6 @@ export default function FacebookRedirect() {}
 		</>
 	)
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

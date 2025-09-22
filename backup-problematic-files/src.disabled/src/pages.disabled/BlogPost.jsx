@@ -5,7 +5,6 @@ interface BlogPostProps {
 export default function BlogPost({ }: BlogPostProps) {
 
 export default function Security.spec({ }: Security.specProps) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:tests/security/security.spec.ts
   return (
     <div>
       <h1>BlogPost</h1>
@@ -13,4 +12,3 @@ export default function Security.spec({ }: Security.specProps) {
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:tests/security/security.spec.ts

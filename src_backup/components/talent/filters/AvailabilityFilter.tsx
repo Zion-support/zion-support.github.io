@@ -1,5 +1,4 @@
 :src/components/talent/filters/AvailabilityFilter.tsx
-<<<<<<< HEAD
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Checkbox } from "@/components/ui/checkbox",
@@ -62,7 +61,6 @@ function AvailabilityFilter() {}
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;
 
-<<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
       {expanded && (
 :src/components/talent/filters/AvailabilityFilter.tsx
 <div className='mt - 4 space - y-2'>;
@@ -73,11 +71,8 @@ function AvailabilityFilter() {}
       </button>;
 :src_backup/components/talent/filters/AvailabilityFilter.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {expanded && (;'
         <div className='mt-4 space-y-2'>;
@@ -95,14 +90,10 @@ import { AvailabilityFilterProps } from "@/types/filters";
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   { id: "project", label: "Project-based" }
 :src/components/talent/filters/AvailabilityFilter.tsx
-<<<<<<< HEAD
 ]
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/talent/filters/AvailabilityFilter.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -243,7 +234,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         className="flex w-full items-center justify-between text-white font-medium"
       >
         <span>Availability</span>
@@ -264,13 +254,11 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 checked={selectedAvailability.includes(option.id)}
 :src_backup/components/talent/filters/AvailabilityFilter.tsx
                 onCheckedChange={() => toggleAvailability(option.id)}
-<<<<<<< HEAD
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
                 htmlFor={`availability-${option.id}`}
 :src/components/talent/filters/AvailabilityFilter.tsx
-<<<<<<< HEAD
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -315,7 +303,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 }"};
 :src_backup/components/talent/filters/AvailabilityFilter.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {option.label}

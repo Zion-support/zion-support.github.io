@@ -1,7 +1,4 @@
 :src/components/blog/AuthorBio.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',;
 import type { BlogAuthor } from '@/types/blog',;
 interface AuthorBioProps {;
@@ -12,34 +9,25 @@ import type { BlogAuthor } from '@/types/blog';
 interface AuthorBioProps {
   author: BlogAuthor;
 :src/components/blog/AuthorBio.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function AuthorBio({ author }: AuthorBioProps) {
   if (!author.bio) return null,
   return (
 :src/components/blog/AuthorBio.tsx
-<<<<<<< HEAD
     <div className="mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6">
       <img
 <img
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         src={author.avatarUrl}
         alt={author.name}
         className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
         onError={(e) => {
 const target = e.currentTarget as HTMLImageElement,
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/blog/AuthorBio.tsx
           target.src = '/images/blog-placeholder.svg'
         }}
       />
       <div>
-=======
 
 export function AuthorBio({ author }: AuthorBioProps) {
   if (!author.bio) return null,
@@ -48,7 +36,6 @@ export function AuthorBio({ author }: AuthorBioProps) {
       />
       <div>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <p className="font-medium text-lg">{author.name}</p>
         {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
         <p>{author.bio}</p>
@@ -86,7 +73,6 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
 }</p>;
 }'"};
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 export function AuthorBio({ author }: AuthorBioProps) {;
   if (!author.bio) return null;
@@ -101,11 +87,8 @@ export function AuthorBio({ author }: AuthorBioProps) {;
           target.src = '/images/blog-placeholder.svg';
         }}
 :src/components/blog/AuthorBio.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       />;
       <div>;
-<<<<<<< HEAD
         <p className="font-medium text-lg">{author.name}</p>;
         {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
         <p>{author.bio}</p>;
@@ -125,7 +108,6 @@ export function AuthorBio({ author }: AuthorBioProps) {;
       <img
 
       <img
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         src={author && author.avatarUrl}
         alt={author && author.name}
         className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
@@ -139,7 +121,6 @@ export function AuthorBio({ author }: AuthorBioProps) {;
 </div>;
     </div>;
   );
-<<<<<<< HEAD
 
 }
   return (
@@ -185,17 +166,10 @@ export function AuthorBio({ author }: AuthorBioProps) {;
   author.bio;
 }</p>;
 }'"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 :src/components/blog/AuthorBio.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/blog/AuthorBio.tsx
 <div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>
       <img
         src={author.avatarUrl}
@@ -226,5 +200,3 @@ export function AuthorBio({ author }: AuthorBioProps) {;
 }</p> ;
 }'"
 :src/components/blog/AuthorBio.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

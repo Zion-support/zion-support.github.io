@@ -1,8 +1,4 @@
 :src_backup/components/admin/fraud-detection/FraudFilters.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import { Input } from "@/components/ui/input",
@@ -21,15 +17,11 @@ interface FraudFiltersProps {
   resetFilters: () => void
 
 resetFilters: () => void
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({  searchQuery
-=======
 
 :src/components/admin/fraud-detection/FraudFilters.tsx
   searchQuery
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   setSearchQuery
   statusFilter
   setStatusFilter
@@ -40,7 +32,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({  searchQuery
 :src/components/admin/fraud-detection/FraudFilters.tsx
 import React from 'react'
 import React from 'react';
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudFilters.tsx
 };
 
 interface FraudFiltersProps {;
@@ -53,7 +44,6 @@ interface FraudFiltersProps {;
   contentTypeFilter: string | null,;
   setContentTypeFilter: (value: string | null,) => void,;
   resetFilters: () => void;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
@@ -69,15 +59,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   return ("
     <div className="flex flex-col md:flex-row gap-4 mb-6">
       <div className="relative flex-1">
-=======
 "
       <div className="relative flex-1">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/fraud-detection/FraudFilters.tsx
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input"
           placeholder="Search by user or content..."
 :src/components/admin/fraud-detection/FraudFilters.tsx
-<<<<<<< HEAD
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="pl-10"
@@ -91,7 +78,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </div>
             <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
         </SelectTrigger>
@@ -104,17 +90,13 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         </SelectContent>
       </Select>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 :src_backup/components/admin/fraud-detection/FraudFilters.tsx
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
-=======
 "
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>"
         <SelectTrigger className="w-[180px]">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/fraud-detection/FraudFilters.tsx
           <SelectValue placeholder="Severity" />
         </SelectTrigger>
         <SelectContent>"
@@ -125,17 +107,13 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         </SelectContent>
       </Select>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 :src_backup/components/admin/fraud-detection/FraudFilters.tsx
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
-=======
 "
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>"
         <SelectTrigger className="w-[180px]">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/fraud-detection/FraudFilters.tsx
           <SelectValue placeholder="Content Type" />
         </SelectTrigger>
         <SelectContent>"
@@ -149,7 +127,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Select>
 
 :src/components/admin/fraud-detection/FraudFilters.tsx
-<<<<<<< HEAD
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">
         <Filter className="h-4 w-4 mr-2" /> Reset Filters
       </Button>
@@ -161,14 +138,12 @@ import React from "react",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-=======
 
 },"
 import React from "react",;"
 import { Input } from "@/components/ui/input",;"
 import { Button } from "@/components/ui/button",;"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/fraud-detection/FraudFilters.tsx
 import { Search, Filter } from 'lucide-react';
 interface FraudFiltersProps {;
   searchQuery: string,;
@@ -184,9 +159,7 @@ interface FraudFiltersProps {;
 :src_backup/components/admin/fraud-detection/FraudFilters.tsx
 }
 ;
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudFilters.tsx
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   searchQuery,;
   setSearchQuery,;
@@ -210,18 +183,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
       </div>;
 :src_backup/components/admin/fraud-detection/FraudFilters.tsx
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudFilters.tsx
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
-=======
 "
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;"
         <SelectTrigger className="w-[180px]">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/fraud-detection/FraudFilters.tsx
           <SelectValue placeholder="Status" />;
         </SelectTrigger>;
         <SelectContent>;"
@@ -233,21 +200,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>;
       </Select>;
 :src_backup/components/admin/fraud-detection/FraudFilters.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudFilters.tsx
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <SelectTrigger className="w-[180px]">;
-=======
 "
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>;"
         <SelectTrigger className="w-[180px]">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/fraud-detection/FraudFilters.tsx
           <SelectValue placeholder="Severity" />;
         </SelectTrigger>;
         <SelectContent>;"
@@ -259,15 +217,11 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
       </Select>;
 :src_backup/components/admin/fraud-detection/FraudFilters.tsx
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
-=======
 "
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>;"
         <SelectTrigger className="w-[180px]">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/fraud-detection/FraudFilters.tsx
           <SelectValue placeholder="Content Type" />;
         </SelectTrigger>;
         <SelectContent>;"
@@ -280,19 +234,10 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>;
       </Select>;
 :src_backup/components/admin/fraud-detection/FraudFilters.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudFilters.tsx
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 "
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/fraud-detection/FraudFilters.tsx
         <Filter className="h-4 w-4 mr-2" /> Reset Filters;
       </Button>;
     </div>;
@@ -374,13 +319,7 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({};
 '"},
 :src_backup/components/admin/fraud-detection/FraudFilters.tsx
 }
-<<<<<<< HEAD:src/components/admin/fraud-detection/FraudFilters.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/fraud-detection/FraudFilters.tsx
 import React from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -409,8 +348,4 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 };
 '"
 :src/components/admin/fraud-detection/FraudFilters.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/admin/fraud-detection/FraudFilters.tsx

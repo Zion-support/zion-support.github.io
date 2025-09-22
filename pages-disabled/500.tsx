@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
     <>
       <Head>
@@ -40,91 +39,58 @@
       </div>
     </>
   )
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               Something went wrong on our end. We&apos,re working to fix it.
               Something went wrong on our end. We're working to fix it.
               Something went wrong on our end. We&apos,re working to fix it. '
               Something went wrong on our end. We're working to fix it.
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               Please try again in a few moments.
             </p>
           </div>
           <div className="space-y-4">
-<<<<<<< HEAD
             <Link
               href="/"
             <Link 
-=======
             <Link "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               href="/" 
             <Link"
               href="/"
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
             >
               Go Home;
             </Link>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
               <Link
                 href="/about"
               <Link 
-=======
               <Link "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 href="/about" 
               <Link"
                 href="/about"
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 About Us;
               </Link>
-<<<<<<< HEAD
               <Link
                 href="/services"
               <Link 
-=======
               <Link "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 href="/services" 
               <Link"
                 href="/services"
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Services;
               </Link>
-<<<<<<< HEAD
               <Link
                 href="/contact"
               <Link 
-=======
               <Link "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 href="/contact" 
               <Link"
                 href="/contact"
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 Contact;
               </Link>
@@ -152,11 +118,7 @@ import Link from 'next/link';
 export default function Custom500(req, res) {}
   try {};
   return (;
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>;
       <Head>;
         <title > 500 - Server Error | Zion Tech Group</title>;'"
@@ -210,14 +172,7 @@ export default function Custom500(req, res) {}
       </div>;
     </>);
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

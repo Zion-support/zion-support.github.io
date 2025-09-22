@@ -14,7 +14,6 @@ const path = require('path'),;
 const README_TEMPLATE = `# Zion Tech Group  Autonomous Innovation Hub;
 Leading-edge technology solutions and autonomous innovation systems.;
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 \`\`\`bash;
 # Install dependencies;
@@ -27,7 +26,6 @@ npm run build;
 npm run automation:all;`;
 \`\`\`;
 ;
-<<<<<<< HEAD
 ## 🏗️ Project Structure;
 - \`styles/\` - Global CSS and Tailwind configuration;
 - \`automation/\` - Autonomous automation systems;
@@ -57,7 +55,6 @@ npm run automation:all;`;
 - **Performance Optimization** - Continuous performance monitoring;
 - **Modern UI/UX** - Responsive design with Tailwind CSS;
 ;
-<<<<<<< HEAD
 
 - Automated health checks;
 - Comprehensive logging;
@@ -78,11 +75,9 @@ We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for de
 - Automated health checks;
 - Comprehensive logging;
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 This project is proprietary software. All rights reserved.;
 ---;
-<<<<<<< HEAD
 `,;
 function generateReadme() {;
   const outputPath = path.join(__dirname, '..README.md'),;
@@ -100,4 +95,3 @@ if (require.main === module) {;
 }
 ;
 module.exports = { generateReadme },// Simple README maintenance: append an automation run footer with timestamp
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

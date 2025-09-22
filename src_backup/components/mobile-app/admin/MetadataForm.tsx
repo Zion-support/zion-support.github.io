@@ -1,7 +1,4 @@
 :src/components/mobile-app/admin/MetadataForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
@@ -40,8 +37,6 @@ interface MetadataFormProps {
 }
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 :src/components/mobile-app/admin/MetadataForm.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { control, register, watch, setValue } = form,
@@ -73,7 +68,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
       if (value && !keywords && keywords.includes(value)) {;
         setValue("keywords", [...keywords, value]);
         e && e.currentTarget.value = "";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
     }
   },
@@ -87,7 +81,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000,
   const longDescription = watch("longDescription"),
-=======
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
 };  const removeKeyword = (keyword: string,) => {;
     setValue(;
@@ -99,9 +92,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000,;
   const longDescription = watch("longDescription"),;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/admin/MetadataForm.tsx
   return (
-=======
   const { control, register, watch, setValue } = form
   const keywords = watch("keywords")
   const platform = watch("platform")
@@ -124,7 +115,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   }
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000
   const longDescription = watch("longDescription")  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle>App Metadata</CardTitle>
@@ -136,14 +126,12 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
               control={control}
               name="appTitle"
 :src/components/mobile-app/admin/MetadataForm.tsx
-<<<<<<< HEAD
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>App Title</FormLabel>
                   <FormControl>
                     <Input
                     <Input
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       placeholder="Enter app title"
                       maxLength={platform === "ios" ? 30 : 50}
                       {...field}
@@ -208,7 +196,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                       maxLength={platform === "ios" ? 30 : 50}
                       {...field}
 :src/components/mobile-app/admin/MetadataForm.tsx
-<<<<<<< HEAD
                     />;
                   </FormControl>;
                   <FormDescription>;
@@ -264,7 +251,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                       placeholder="Detailed description of your app";
                       className="min-h-32";
                       max_length = {maxDescriptionLength, }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       {...field}
                     />;
                   </FormControl>;
@@ -286,20 +272,16 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                       maxLength = {maxDescriptionLength,}
 
               <Input
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown={addKeyword}
                 className="mb-2"
-<<<<<<< HEAD
               />
 
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
                   <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
                     {keyword}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <button
                       type="button"
                       onClick={() => removeKeyword(keyword)}
@@ -320,7 +302,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
             <FormField
               control={control}
               name="version"
-<<<<<<< HEAD
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>App Version</FormLabel>
@@ -336,7 +317,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
           </div>;
         </Form>;
       </CardContent>;
-<<<<<<< HEAD
     </Card>;
   );
 };
@@ -344,7 +324,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
     </Card>);
 },
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       {...field}
                     />
                   </FormControl>
@@ -361,7 +340,4 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Badge } from "@/components/ui/badge",
 import { X } from 'lucide-react'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

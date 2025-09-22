@@ -61,8 +61,6 @@ pr-12325
     try {,
       this.log('📊 Checking bundle analyzer availability...'),
 ,
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       const hasAnalyzer = packageJson.devDependencies &&,
         (packageJson.devDependencies['webpack-bundle-analyzer'] ||,')
@@ -83,8 +81,6 @@ pr-12325
     try {,
       this.log('⚙️  Checking optimization settings...'),
 ,
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const settings = {,
         compression: false;
       // Check Next.js config,
@@ -172,9 +168,7 @@ pr-12325
 ,
   async run() {,
     this.log('🚀 Starting Build Optimizer...'),
-=======
     this.log(' Starting Build Optimizer...'),`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Project root: ${this.projectRoot}`),
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
@@ -218,7 +212,6 @@ this.log('\n✨ Build is well optimized!')
       process.exit(1)
     }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ,
 pr-12325
@@ -226,7 +219,4 @@ pr-12325
 const optimizer = new BuildOptimizer(),
 optimizer.run().catch(error => {,)
 }),
-<<<<<<< HEAD
-=======
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

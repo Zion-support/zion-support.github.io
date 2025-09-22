@@ -1,40 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import { cn } from &quot;@/lib/utils&quot;
 import * as React from &quot;react&quot;
 import { cn } from &quot;@/lib/utils&quot;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import * as React from "react"
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import * as React from "react"
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import * as React from "react"
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import * as React from "react"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { cn } from "@/lib/utils"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const Table = React.forwardRef<
   HTMLTableElement
-=======
 
 const Table = React.forwardRef<;
   HTMLTableElement;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   React.HTMLAttributes<HTMLTableElement>
-<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
 "
   <div className="relative w-full overflow-auto">
@@ -42,17 +26,11 @@ const Table = React.forwardRef<;
       ref={ref}"
       className={cn("w-full caption-bottom text-sm", className)}
       {...props}
-<<<<<<< HEAD
-<<<<<<< HEAD
 />
   </div>
 ))
-<<<<<<< HEAD
 import * as React from &quot;react & quot;
-=======
 >(({ className, ...props }, ref) => (import * as React from &quot;react & quot;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 >(({ className, ...props }, ref) => (
   <div className=&quot;relative w-full overflow-auto&quot;>
     <table
@@ -65,7 +43,6 @@ import * as React from &quot;react & quot;
   </div>
 ))
 import * as React from &quot;react & quot;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 import { cn } from &quot;@/lib / utils & quot;
 ;
@@ -97,11 +74,7 @@ const Table = React.forward_ref<;
       {...props}
 
 Table.displayName = "Table"
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const TableHeader = React.forwardRef<
   HTMLTableSectionElement;
@@ -120,48 +93,28 @@ TableHeader.displayName = &quot;TableHeader&quot;
 TableHeader.displayName = "TableHeader"
 const TableBody = React.forwardRef<
   HTMLTableSectionElement
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
 
 "
 TableHeader.displayName = "TableHeader"
 
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const TableBody = React.forwardRef<
   HTMLTableSectionElement;
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
 <tbody
-<<<<<<< HEAD
     ref={ref}
     className={cn("[&_tr:last-child]:border-0", className)}
-<<<<<<< HEAD
-<<<<<<< HEAD
     {...props}
 />
 ))
-<<<<<<< HEAD
 />;
-=======
     {...props}/>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     {...props}/>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ref={ref}
     className={cn("[&_tr:last-child]:border-0", className)}
     {...props}
@@ -171,7 +124,6 @@ ref={ref}
     ref={ref}
     className={cn("[&_tr:last-child]:border-0", className)}
     {...props}/>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </div>));
 Table.display_name = &quot;Table & quot;
 ;
@@ -206,65 +158,38 @@ const TableFooter = React.forwardRef<
     ref={ref}
     className={cn(
 "border-t bg-muted/50 font-medium [&>tr]:last:border-b-0",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 &quot;border-t bg-muted/50 font-medium [&>tr]:last:border-b-0&quot;
       "border-t bg-muted/50 font-medium [&>tr]:last:border-b-0",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className
-=======
 
 "border-t bg-muted/50 font-medium [&>tr]:last:border-b-0",
 
       &quot;border-t bg-muted/50 font-medium [&>tr]:last:border-b-0&quot;
       "border-t bg-muted/50 font-medium [&>tr]:last:border-b-0",
       className
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     )}
     {...props}
   />
 ))
-<<<<<<< HEAD
 
 TableFooter.displayName = "TableFooter"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 TableFooter.displayName = &quot;TableFooter&quot;
 TableFooter.displayName = "TableFooter"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const TableRow = React.forwardRef<
   HTMLTableRowElement;
   React.HTMLAttributes<HTMLTableRowElement>
 >(({ className, ...props }, ref) => (
   <tr;
     ref={ref}
-<<<<<<< HEAD
     className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 &quot;border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted&quot;
       "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className
-=======
     className={cn(
 
       "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",
@@ -274,106 +199,65 @@ const TableRow = React.forwardRef<
       &quot;border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted&quot;
       "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",
       className
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     )}
     {...props}
   />
 ))
-<<<<<<< HEAD
 
 TableRow.displayName = "TableRow"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const TableHead = React.forwardRef<
-=======
     className={cn(const TableHead = React.forwardRef<
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     className={cn(const TableHead = React.forwardRef<
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 const TableHead = React.forwardRef<
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 TableRow.displayName = &quot;TableRow&quot;
 TableRow.displayName = "TableRow"
 const TableHead = React.forwardRef<
     className={cn(const TableHead = React.forwardRef<
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   HTMLTableCellElement
-=======
 
 const TableHead = React.forwardRef<
   HTMLTableCellElement;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   React.HTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => (
   <th;
     ref={ref}
     className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 &quot;h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0&quot;
       "h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className
-=======
 
 "h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
 
       &quot;h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0&quot;
       "h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
       className
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     )}
     {...props}
   />
 ))
-<<<<<<< HEAD
 
 TableHead.displayName = "TableHead"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
       "h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
       "h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 TableHead.displayName = &quot;TableHead&quot;
 TableHead.displayName = "TableHead"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const TableCell = React.forwardRef<
   HTMLTableCellElement;
   React.HTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => (
 <td
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     className={cn("p-4 align-middle [&:has([role=checkbox])]:pr-0", className)}
     {...props}
 />
 ))
-<<<<<<< HEAD
 
     ref={ref}
     className={cn (&quot;p - 4 align - middle [&:has ([role = checkbox])]:pr - 0&quot;, class_name)}
@@ -381,21 +265,12 @@ const TableCell = React.forwardRef<
 
 TableCell.displayName = "TableCell"
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-/>));
-=======
-    ref={ref}/>));
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    ref={ref}/>));
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-/>));
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 />));
     ref={ref}/>));
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    ref={ref}/>));
+/>));
+/>));
+    ref={ref}/>));
 TableBody.display_name = &quot;TableBody & quot;
 ;
 const TableFooter = React.forward_ref<;
@@ -448,31 +323,17 @@ ref={ref}
 
 TableCell.displayName = "TableCell"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     ref={ref}
     className={cn (&quot;p - 4 align - middle [&:has ([role = checkbox])]:pr - 0&quot;, class_name)}
     {...props}
 
-=======
 TableCell.displayName = &quot;TableCell&quot;
 TableCell.displayName = "TableCell"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ref={ref}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
     ref={ref}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const TableCaption = React.forwardRef<
   HTMLTableCaptionElement;
   React.HTMLAttributes<HTMLTableCaptionElement>
@@ -483,13 +344,8 @@ const TableCaption = React.forwardRef<
     {...props}
 />
 ))
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 />));
 TableCell.display_name = &quot;TableCell & quot;
 ;
@@ -502,17 +358,13 @@ const TableCaption = React.forward_ref<;
     className={cn (&quot;mt - 4 text - sm text - muted - foreground & quot;, class_name)}
     {...props}
 
-=======
 
 />));
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 TableCaption.display_name = &quot;TableCaption & quot;
 ;
 "
 TableCaption.displayName = "TableCaption"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     ref={ref}
     className={cn (&quot;mt - 4 text - sm text - muted - foreground & quot;, class_name)}
@@ -607,7 +459,6 @@ const TableCaption = React.forward_ref<;
     className={cn (&quot;mt - 4 text - sm text - muted - foreground & quot;, class_name)}
 
 export {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Table,
   TableHeader,
   TableBody,
@@ -619,9 +470,7 @@ export {
 ;
 ;
 
-<<<<<<< HEAD
   TableCaption}
-<<<<<<< HEAD
 import * as React from "react";
 ;
 import { cn } from "@/lib/utils";
@@ -688,20 +537,8 @@ React.HTMLAttributes<HTMLTableCaptionElement> > ( ({
   TableCaption}
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   TableCaption}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }, ref) => (<caption />) ) TableCaption.displayName = "TableCaption" export {"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

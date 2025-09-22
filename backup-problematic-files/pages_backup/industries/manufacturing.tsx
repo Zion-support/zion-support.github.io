@@ -5,8 +5,6 @@ import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrenc
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -25,14 +23,10 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 import {
-=======
 import {
   // TODO: Implement;
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Settings,
   Brain,
   Shield,
@@ -43,12 +37,9 @@ import {
   Wrench,
   Activity,
   Database,
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   Users;
 } from 'lucide-react';
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
 import Layout from '../../components/Layout';';
 const services = [;
   {}
@@ -60,7 +51,6 @@ const services = [
     title: 'Smart Factory Solutions',
     description: 'IoT-enabled manufacturing systems for intelligent production management.',
     icon: Settings,
-=======
   Users;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
@@ -71,7 +61,6 @@ const services = [
     title: 'Smart Factory Solutions';,
     description: 'IoT-enabled manufacturing systems for intelligent production management.';,
     icon: Settings;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     features: [;
       'Real-time production monitoring,',
       'Automated quality control',',
@@ -146,7 +135,6 @@ title: 'Digital Twin Technology,',;
       'Scenario planning'';
     ];
   }
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
 ;];
 const benefits = [;
   {}
@@ -204,7 +192,6 @@ const benefits = [;
   description: 'Optimized operations and reduced waste lower manufacturing costs.,',;
     icon: BarChart3,;
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;];
     title: 'Increased Efficiency;,',;
     description: 'Automated processes and AI optimization improve production efficiency.;,',;
@@ -264,15 +251,12 @@ export default function ManufacturingPage() {;
               </div>;
             </motion && motion.div>;
         </section>;
-<<<<<<< HEAD
 ];
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return (
     <Layout
       title="Manufacturing Technology Solutions - Zion Tech Group"
       description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -327,7 +311,6 @@ transition={{ duration: 0.8 }}
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
 Comprehensive Industry 4.0 solutions designed for modern manufacturing operations,
                 from small workshops to large industrial facilities.;
-=======
     <Layout;"
       title="Manufacturing Technology Solutions - Zion Tech Group"""
       description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology.""
@@ -345,12 +328,10 @@ Comprehensive Industry 4.0 solutions designed for modern manufacturing operation
 </h2>
               </h2>;"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </p>;
             </motion.div>;"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";"
                 <motion.div}),
-<<<<<<< HEAD
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -412,7 +393,6 @@ Comprehensive Industry 4.0 solutions designed for modern manufacturing operation
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 
-=======
               className="text-center mb-16""
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"
@@ -451,7 +431,6 @@ Comprehensive Industry 4.0 solutions designed for modern manufacturing operation
         <section className="py-20 bg-gray-50">""
           <div className="container mx-auto px-4">";"
               transition={{ duration: 0.8 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -465,9 +444,6 @@ Our manufacturing technology solutions deliver measurable improvements in effici
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -494,15 +470,12 @@ initial={{ opacity: 0, y: 20 }}
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
             </div>,
           </div>;
         </section>;
-=======
             </div>,
           </div>;
         </section>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
         </section>
@@ -513,12 +486,9 @@ initial={{ opacity: 0, y: 20 }}
 initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
-=======
               initial={{ opacity: 0;, y: 20 ;}}
               animate={{ opacity: 1;, y: 0 ;}}
               transition={{ duration: 0.8 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Manufacturing?;
@@ -710,10 +680,7 @@ initial={{ opacity: 0, y: 20 }}
         </section>;
       </div>;
 </Layout>;
-<<<<<<< HEAD
-=======
     </Layout>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Manufacturing?
@@ -736,7 +703,6 @@ initial={{ opacity: 0, y: 20 }}
       </div>
     </Layout>
 );
-=======
   )
 };
 pr-12325
@@ -826,4 +792,3 @@ pr-12325
             </motion.div>
         </section>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

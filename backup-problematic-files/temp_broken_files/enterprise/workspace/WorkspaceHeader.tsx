@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { type Company } from "./CompanyDashboard",;
@@ -11,12 +10,10 @@ interface WorkspaceHeaderProps {;
 ;
 export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <div className="flex items-center gap-4">;
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
-<<<<<<< HEAD
 
         <div className="flex items-center gap-2">;
           <Button variant="outline" size="icon">;

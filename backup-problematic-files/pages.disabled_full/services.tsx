@@ -1391,4 +1391,3 @@ className='inline-flex items-center px-6 py-3 border border-gray-300 text-base f
 								href='/'
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

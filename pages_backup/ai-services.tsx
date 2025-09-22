@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -1088,9 +1086,7 @@ export default function AIServices() {
   ];
   */
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>
       <Head>
         <title>AI Services - Zion Tech Group</title>
@@ -1125,7 +1121,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     </>
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <section className="py-8 px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -1371,18 +1366,11 @@ className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold tra
       </ErrorBoundary>
     </>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-=======
 import React from 'react';
 import Head from 'next/head';
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 import React from 'react';
 import Head from 'next/head';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -1595,11 +1583,6 @@ export default function AIServicesPage() {
     </MainLayout>
   );
 }
-<<<<<<< HEAD
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     <>
       <Head>
         <title>AI Services & Solutions - Zion Tech Group | Machine Learning, AI Development</title>
@@ -1852,6 +1835,3 @@ export default function AIServicesPage(req, res) {
   }
 }
 ;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

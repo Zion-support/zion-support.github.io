@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -75,12 +74,10 @@ export function MyApplications() {;
             </div>;
             <p className="text-sm text-muted-foreground">;
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix:true })}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </p>;
           </CardHeader>;
           <CardContent>;
             <div className="space-y-3">;
-<<<<<<< HEAD
 
                     <MessageSquare className="h-3 w-3 mr-1" /> Contact Client;
                   </Link>;

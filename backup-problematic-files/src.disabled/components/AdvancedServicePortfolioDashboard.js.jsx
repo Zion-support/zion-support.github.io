@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const React from";react" const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState("all") const [selectedStatus,setSelectedStatus] = useState("all") const [selectedComplexity,setSelectedComplexity] = useState("all") const [searchTerm,setSearchTerm] = useState(") const [viewMode,setViewMode] = useState("overview")"";";''"
 const AdvancedServicePortfolioDashboard.js = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const AdvancedServicePortfolioDashboard.js = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

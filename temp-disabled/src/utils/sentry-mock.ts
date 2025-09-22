@@ -1,11 +1,7 @@
 :src_backup/utils/sentry-mock.ts
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
 // Mock Sentry instance with all common methods
 const mockSentry = {
   // Core Sentry methods
-=======
 
 :src/utils/sentry-mock.ts
 // Mock implementation for Sentry to prevent Node.js module import issues during build
@@ -36,7 +32,6 @@ const noopReturn = () => null;
 const mockSentry = {
   // Core Sentry methods;
 :temp-disabled/src/utils/sentry-mock.ts
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/utils/sentry-mock.ts
   init: noop,
   captureException: noop,
   captureMessage: noop,
@@ -81,7 +76,6 @@ pr-12325
   wrap: (fn: (...args: any[]) => any) => fn,
 
 :src_backup/utils/sentry-mock.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   // Server-specific methods (Node.js)
   Handlers: {
     requestHandler:
@@ -211,9 +205,6 @@ finishTransaction: noop,
   withSentryConfig: (config: any,) => config,
 
 :src_backup/utils/sentry-mock.ts
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
   SentryWebpackPlugin: class SentryWebpackPlugin {
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>
         next(),
@@ -229,7 +220,6 @@ finishTransaction: noop,
   withSentryConfig: (config: any) => config,
 :src_backup/utils/sentry-mock.ts
   SentryWebpackPlugin: class SentryWebpackPlugin {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/utils/sentry-mock.ts
     constructor() {}
     apply() {}
   },
@@ -474,10 +464,6 @@ Severity: {
   }
 }
 :src_backup/utils/sentry-mock.ts
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
-=======
 main
 pr-12243
 :temp-disabled/src/utils/sentry-mock.ts
@@ -495,7 +481,6 @@ pr-12325
   },
 };
 :temp-disabled/src/utils/sentry-mock.ts
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/utils/sentry-mock.ts
 
 export const init = mockSentry && mockSentry.init;
 export const captureException = mockSentry && mockSentry.captureException;
@@ -534,7 +519,6 @@ export const Severity = mockSentry && mockSentry.Severity;
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
-<<<<<<< HEAD
 
   // Browser-specific methods
   onLoad: noop, wrap: (fn: (...args: any[]) => any) => fn,
@@ -634,14 +618,8 @@ export const Severity = mock_sentry.Severity;
 :src_backup/utils/sentry-mock.ts
 export { mock_sentry as Sentry }
 // All exports are already defined above;
-<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
-=======
 export { mock_sentry as Sentry };
 // All exports are already defined above;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/utils/sentry-mock.ts
-=======
 }}}}
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
@@ -806,4 +784,3 @@ pr-12325
 
 "
 :temp-disabled/src/utils/sentry-mock.ts
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/utils/sentry-mock.ts

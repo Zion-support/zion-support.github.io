@@ -5,7 +5,6 @@ const LIVEKIT_API_KEY = process && process.env.LIVEKIT_API_KEY || "";
 const LIVEKIT_API_SECRET = process && process.env.LIVEKIT_API_SECRET || "";
 const LIVEKIT_HOST = process && process.env.LIVEKIT_HOST || "";
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -26,7 +25,6 @@ const opts: CreateRoomOptions = {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
         name: room_name,
@@ -49,7 +47,6 @@ return res.status(400).json({ error: "Missing projectId" });
 
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
       return res.status(500).json({ error: 'LiveKit env vars not configured' });
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
         name: room_name,
@@ -60,8 +57,6 @@ return res.status(400).json({ error: "Missing projectId" });
           created_by: preferred_name || "host",
         }),
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     if (!LIVEKIT_API_KEY |!LIVEKIT_API_SECRET |!LIVEKIT_HOST) {
       return res.status(500).json({ error: "LiveKit env vars not configured" });
@@ -75,7 +70,6 @@ return res.status(400).json({ error: "Missing projectId" });
       const roomService = new RoomServiceClient(
         LIVEKIT_HOST
         LIVEKIT_API_KEY
-=======
 return res.status(400).json({ error: 'Missing projectId' });
     }
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
@@ -90,7 +84,6 @@ return res.status(400).json({ error: 'Missing projectId' });
 const roomService = new RoomServiceClient(
         LIVEKIT_HOST,
         LIVEKIT_API_KEY,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         LIVEKIT_API_SECRET
       );
       const opts: CreateRoomOptions = {
@@ -113,13 +106,10 @@ maxParticipants: 24
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 }
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -147,21 +137,17 @@ maxParticipants: 24
     }
     return res.status (200).json ({ room_name });
   } catch (err: any) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     console.error('Room create error', err);
     return res.status(500).json({ error: 'Failed to create room' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {;
       return res.status(500).json({ error: 'LiveKit env vars not configured' });
       } catch (error) {
@@ -182,8 +168,3 @@ maxParticipants: 24
     const date = new Date();
     const pad = (n: number) => String(n).padStart(2, '0');
     const roomName = `${projectId}-${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}-${pad(date.getHours())}${pad(date.getMinutes())}`;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

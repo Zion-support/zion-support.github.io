@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -8,7 +5,6 @@ import SignupForm from '@/components/auth/SignupForm',;
 import { AuthButtons } from '@/components/AuthButtons',;
 import { fireEvent } from '@/lib/analytics',;
 import { logInfo } from '@/utils/productionLogger',;
-=======
 
 import React, { useEffect } from 'react',;'
 import Head from 'next/head',;'
@@ -17,7 +13,6 @@ import SignupForm from '@/components/auth/SignupForm',;'
 import { AuthButtons } from '@/components/AuthButtons',;'
 import { fireEvent } from '@/lib/analytics',;'
 import { logInfo } from '@/utils/productionLogger',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useRouter } from 'next/router',;
 const RegisterPage = () => {}
   const router = useRouter(),
@@ -35,11 +30,6 @@ const RegisterPage = () => {}
     } else {'
       router.push('/auth/login?registrationSuccess=true')
     }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -76,7 +66,6 @@ const RegisterPage = () => {}
   useEffect(() => {'
     fireEvent('signup_page_view')
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const RegisterPage = () => {;
   const router = useRouter();
   useEffect(() => {;'
@@ -85,13 +74,11 @@ const RegisterPage = () => {;
   const handleSuccess = ({ email, emailVerificationRequired }: {;
     email: string;
 
-<<<<<<< HEAD
 
 '
       router.push ('/auth / login?registration_success = true');
 
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React, { useEffect } from 'react';
 import Head from 'next/head';
@@ -104,16 +91,12 @@ import { useRouter } from 'next/router';
 
   },
 
-=======
 
       router.push ('/auth / login?registration_success = true');
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
     }
 
   },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
@@ -172,7 +155,6 @@ export default RegisterPage,
             <p className="mt-2 text-center text-sm text-gray-600">;
               Or{' '  } catch (error) {
               width={48  } catch (error) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -188,7 +170,6 @@ export default RegisterPage,
           <SignupForm onSuccess={handleSuccess} />;
           {/* Social signup options */  } catch (error) {
     console.error("Error:", error);
-=======
               width={48  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
@@ -196,7 +177,6 @@ export default RegisterPage,
 }
               height={48  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -256,25 +236,17 @@ export default RegisterPage;
               <Link"
                 href="/auth/login""
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
-=======
             <p className='mt-2 text-center text-sm text-gray-600'>
               Or{' '}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <Link
                 href='/auth/login'
                 className='font-medium text-blue-600 hover:text-blue-500 underline'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 sign in if you already have an account;
               </Link>
             </p>
           </div>
           <SignupForm onSuccess={handleSuccess} />
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -302,19 +274,15 @@ By creating an account, you agree to our{' '}
           <div className='text-center mt-4'>
             <p className='text-xs text-gray-500'>
               By creating an account, you agree to our{' '}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Link href="/legal / terms" className="text - blue - 600 hover:text - blue - 500">;
                 Terms of Service;'
               </Link>{' '}'
               and{' '}
-<<<<<<< HEAD
               By creating an account, you agree to our{' '  } catch (error) {
     console.error("Error:", error);
-=======
 '
               By creating an account, you agree to our{' '  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
@@ -335,19 +303,12 @@ and{' '  } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Privacy Policy
-=======
 
 "
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
                 Privacy Policy;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </Link>
             </p>
           </div>
@@ -356,7 +317,6 @@ and{' '  } catch (error) {
     </>
 )
 
-<<<<<<< HEAD
 export default RegisterPage,;
 ;
 export default RegisterPage,
@@ -415,12 +375,8 @@ export default RegisterPage,
   }
 }
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">;
-<<<<<<< HEAD
               <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Privacy Policy;
               </Link>;
             </p>;
@@ -431,22 +387,11 @@ export default RegisterPage,
   );
 },;
 export default RegisterPage;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     </>);
 },
 export default RegisterPage,;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,4 @@
 :pages/api-disabled/api/partners/request-payout.ts
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
@@ -22,8 +21,6 @@ export default async function handler(
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
 return res.status(500).json({ error: e?.message });
     const { error } = await supabase.from('payout_requests').insert({
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
   const { code, amount } = req && req.body || {};
   if (!code) return res && res.status($1).json({ $2 });
@@ -90,16 +87,13 @@ export default async function handler(req, res) {;
     return res.status(500).json({ error: e?.message });
 :pages/api/partners/request-payout.ts
     const { error } = await supabase.from('payout_requests').insert({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       partner_code: String(code).toLowerCase(),
       amount: Number(amount) || null,
       status: "requested",
-=======
     const { error } = await supabase.from('payout_requests').insert({;
       partner_code: String(code).toLowerCase();
       amount: Number(amount) || null;
       status: "requested"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/request-payout.ts
     });
 :pages/api-disabled/api/partners/request-payout.ts
   } catch (e: any) {;
@@ -108,7 +102,6 @@ export default async function handler(req, res) {;
   }
 }
 :pages/api-disabled/api/partners/request-payout.ts
-<<<<<<< HEAD
 
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, amount } = req.body |{}
@@ -124,12 +117,10 @@ export default async function handler(req, res) {;
     }
     const supabase = getServerSupabase();
 
-<<<<<<< HEAD
     return res.status(500).json({ error: e?.message });
 
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
 export default async /**
@@ -166,14 +157,9 @@ if ( {) {
     return res.status (200).json ({ ok: true, status: "requested" });
   } catch (e: any) {
 :pages/api/partners/request-payout.ts
-<<<<<<< HEAD
   }
 }
 
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
     });"
     if (return res.status (500).json ({ error: "Database error" })) {}
@@ -185,4 +171,3 @@ if ( {) {
 }
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/request-payout.ts

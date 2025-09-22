@@ -1,5 +1,4 @@
 
-=======
 import { format } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
 import { Avatar } from "@/components/ui/avatar",;
@@ -217,13 +216,11 @@ variant=&quot;outline&quot;
                     <ApplicationActions,
 application={application}
                       processingId={processingId}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       onViewApplication={onViewApplication}
                       onStatusChange={onStatusChange}
                     />;
                   </div>;
                 </TableCell>;
-<<<<<<< HEAD
 
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;

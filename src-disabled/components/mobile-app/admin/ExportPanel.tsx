@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'"
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { toast } from "sonner",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 interface ExportPanelProps {
@@ -40,7 +36,6 @@ export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }
         // Add keywords as additional rows;
         content += '\n\nKeywords:\n' + metadata.keywords.join();
 };        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       let content: string,
       let file_name: string,
       // Check condition
@@ -51,7 +46,6 @@ if ( {) {
         file_name = `zion - app - metadata-${platform}-${metadata.version}.json`;
 
       } else {
-<<<<<<< HEAD
         // Convert object to CSV format
         const headers = ['appTitleshortDescriptionlongDescriptionversionplatform']
         const values = [
@@ -66,7 +60,6 @@ if ( {) {
         content += '\n\nKeywords:\n' + metadata.keywords.join();
 };        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {
   const handleExport = (format: 'json' | 'csv') => {
@@ -192,7 +185,6 @@ content = JSON.stringify(metadata, null, 2),;
   },;
   const trackAnalytics = () => {;
     logInfo("Tracking app installation analytics..."),;
-<<<<<<< HEAD
     toast.success("Analytics tracking enabled");
   };
   return (;
@@ -237,10 +229,6 @@ content = JSON.stringify(metadata, null, 2),;
     </Card>);
 },
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -254,11 +242,5 @@ interface ExportPanelProps {
 return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export & Analytics</CardTitle> </CardHeader> <CardContent> <div className=" space-y-4"> <div> <h4 className=" font-medium mb-2">Export Metadata</h4> <p className=" text-sm text-gray-400 mb-3"> Export your app metadata for submission to app stores </p> CSV </Button> </div> </div> <div className=" border-t border-zion-purple/20 pt-4"> <h4 className=" font-medium mb-2">Installation Analytics</h4> <p className=" text-sm text-gray-400 mb-3"> Track how many users click " Install" from web </p> Enable Analytics </Button> </div> </div> </CardContent> </Card>) ;
 };
 '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

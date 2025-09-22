@@ -8,7 +8,6 @@ import { Link } from "react-router-dom",;
 ;
 export function ClientDashboard() {;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-6 px-4 pb-24">;
       <section className="mt-4">;
         <Button className="w-full py-6" size="lg">;
@@ -31,7 +30,6 @@ export function ClientDashboard() {;
 </div>
                 <div>;
 <h3 className="font-medium">Website Redesign</h3>;
-<<<<<<< HEAD
                   <div className="text-sm text-muted-foreground">In Progress • Due in 12 days</div>;
                 </div>;
                 <Badge>3 Milestones</Badge>;
@@ -56,7 +54,6 @@ export function ClientDashboard() {;
               </div>;
             </CardContent>;
           </Card>;
-<<<<<<< HEAD
                 <Button size="sm">View Profile</Button>;
                 <Button size="sm" variant="outline">Message</Button>;
               </div>;
@@ -77,5 +74,4 @@ export function ClientDashboard() {;
   {"
   width: '60%;
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 " " " " " " """"";";'"'"
 const ChatBotPanel.js = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const ChatBotPanel.js = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

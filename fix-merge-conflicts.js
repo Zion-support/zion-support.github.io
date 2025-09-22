@@ -29,7 +29,6 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
 
     // Check if file has merge conflicts
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
       console.log(`Processing: ${filePath}`);
       const resolved = resolveMergeConflicts(content);
       fs.writeFileSync(filePath, resolved);

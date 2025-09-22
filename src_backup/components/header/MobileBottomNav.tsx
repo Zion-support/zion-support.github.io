@@ -1,6 +1,4 @@
 :src/components/header/MobileBottomNav.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { useRouter } from "next/router",
 import Link from "next/link",
@@ -139,10 +137,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   if (cartContextValue && cartContextValue.items) {
     cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
   } else {
-=======
 
 :src/components/header/MobileBottomNav.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
   }
@@ -153,27 +149,18 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       href: "/",
       icon: Home,
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       name: "Browse",
       href: "/talent",
       icon: Search,
 matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
     },
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       name: "Community",
       href: "/community",
       icon: MessageCircle,
 matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       name: "Wishlist",
       href: "/wishlist",
@@ -181,10 +168,6 @@ matches: (path: string) => path.startsWith("/community") || path.startsWith("/fo
 matches: (path: string) => path.startsWith("/wishlist"),
       badge: favoritesCount,
       authRequired: true
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     {
       name: "Messages",
@@ -193,10 +176,6 @@ matches: (path: string) => path.startsWith("/wishlist"),
 matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
       badge: unreadCount,
       authRequired: true
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     {
       name: "Cart",
@@ -205,10 +184,6 @@ matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inb
 matches: (path: string) => path.startsWith("/cart"),
       badge: cartCount
     },
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       name: "Dashboard",
       href: "/dashboard",
@@ -255,8 +230,6 @@ import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User }
 interface MobileBottomNavProps {;
   unreadCount?: number;
 :src/components/header/MobileBottomNav.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 ;
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
@@ -406,8 +379,6 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
                 </span>;
 :src/components/header/MobileBottomNav.tsx
   return (;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">;
       <div className="flex justify-around items-center h-16">;
         {visibleItems.map(item => (;
@@ -445,7 +416,6 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
   );
 }
 
-<<<<<<< HEAD
       name: 'Browse',
       href: '/talent',
       icon: Search,
@@ -488,7 +458,6 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
       auth_required: true,
     },
   ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Filter items based on auth status;
   const visibleItems = navItems.filter(item =>;
     !item.authRequired || (item.authRequired && isAuthenticated);
@@ -525,17 +494,11 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
 }
 ;
 :src/components/header/MobileBottomNav.tsx
-<<<<<<< HEAD
-=======
       </div>
     </nav>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       </div>
     </nav>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/header/MobileBottomNav.tsx

@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
@@ -60,7 +59,6 @@ export function AIEnhancementPanel({;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card className="w-full max-w-2xl mx-auto">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -72,7 +70,6 @@ export function AIEnhancementPanel({;
         {/* Input area */}
         <div className="space-y-2">;
           <label className="text-sm font-medium">Content to enhance</label>;
-<<<<<<< HEAD
 
         {/* Instructions input (optional) */}
         {showInstructions && (;

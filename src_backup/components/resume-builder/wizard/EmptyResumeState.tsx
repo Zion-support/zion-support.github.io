@@ -38,10 +38,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </CardContent>
     </Card>
 :src/components/resume-builder/wizard/EmptyResumeState.tsx
-<<<<<<< HEAD
   )
 
-<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { FilePlus } from 'lucide-react'
@@ -77,16 +75,12 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {;
           <h2 className="text-2xl font-bold mb-2">Create Your Resume</h2>;
           <p className="text-muted-foreground mb-6">Create a professional resume to showcase your skills and experience</p>;
 :src/components/resume-builder/wizard/EmptyResumeState.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
           <Button
             onClick = {onCreateClick,}
             className="gap-2">;
             <FilePlus className="h-4 w-4" />;          </Button>;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/wizard/EmptyResumeState.tsx
 
           </Button>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </CardContent>;
     </Card>;
@@ -94,7 +88,6 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {;
 };
 
   );
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 
 import { Card, CardContent } from '@/components / ui / card';
@@ -129,5 +122,3 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any { 
   );
 }
 :src/components/resume-builder/wizard/EmptyResumeState.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

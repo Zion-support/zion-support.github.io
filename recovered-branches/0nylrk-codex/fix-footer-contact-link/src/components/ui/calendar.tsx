@@ -1,67 +1,31 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-=======
-import React from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import React from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+import React from 'react';
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
 import * as React from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {DayPicker} from "react-day-picker";
 import {cn} from "@/lib/utils";
 import {buttonVariants} from "@/components/ui/button";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react",
 import { DayPicker } from "react-day-picker",
 import { cn } from "@/lib/utils",
 import { buttonVariants } from "@/components/ui/button",
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 function Calendar({
   className,
   classNames,
@@ -85,7 +49,6 @@ function Calendar({
         ...classNames}}
       components={{
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   classNames,;
   showOutsideDays = true,;
   ...props;
@@ -191,12 +154,8 @@ function Calendar() {
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {...props}
     />;
   );
@@ -207,7 +166,6 @@ Calendar.displayName = "Calendar",
 export { Calendar },";
 Calendar.displayName = "Calendar";
 export { Calendar };
-<<<<<<< HEAD
       className={cn ("p - 3", class_name)}
       class_names={{"
         months: "flex flex - col sm:flex - row space - y-4 sm:space - x-4 sm:space - y-0","
@@ -246,11 +204,6 @@ Calendar.display_name = "Calendar";
 ;
 export { Calendar };
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
       {...props}
@@ -259,28 +212,14 @@ export { Calendar };
 }
 Calendar.displayName = "Calendar";
 export { Calendar }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 Calendar.displayName = "Calendar",
 
 export { Calendar },";
 Calendar.displayName = "Calendar";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export { Calendar };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import * as React from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 import { DayPicker } from "react-day-picker",;
@@ -369,21 +308,9 @@ day hidden: "invisible";
 }
 export { Calendar };
 export { Calendar };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 export { Calendar };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 export { Calendar };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

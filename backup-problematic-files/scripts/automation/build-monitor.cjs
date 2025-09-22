@@ -41,9 +41,7 @@ setupSignalHandlers() {}
     const timestamp = new Date().toISOString();
 const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
     console.log(message);
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     const logFile = path.join(this.logDir, 'build-monitor.log');
     fs.appendFileSync(logFile, message + '\n')};
   async runCommand(command, options = {}) {}
@@ -72,7 +70,6 @@ exec('npm run build', { })
         resolve({})
           "success": error === null,
           duration,
-=======
 setupSignalHandlers() {}"
 
       return { "success": false, "output": error.message, "code": error.status }};"
@@ -88,7 +85,6 @@ setupSignalHandlers() {}"
         resolve({})"
           "success": error === null,"
           duration,"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           "output": stdout,
           "error": stderr,
           "errorMessage": error ? error.message : null;"
@@ -231,9 +227,5 @@ const monitor = new BuildMonitor();
 monitor.start().catch(error => {})
 console.error('Failed to start Build "Monitor": ', error);
   process.exit(1)}
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

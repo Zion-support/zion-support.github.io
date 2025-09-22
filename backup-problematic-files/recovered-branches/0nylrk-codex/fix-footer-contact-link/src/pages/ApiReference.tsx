@@ -24,9 +24,7 @@ path:"/api/jobs",;
       responses:{;
 "200":{;
           description:"A list of jobs",;
-=======
   description: "A list of jobs";,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           example:`{;
   "jobs":[;
     {;
@@ -51,9 +49,7 @@ path:"/api/jobs",;
         },;
 "401":{;
           description:"Unauthorized",;
-=======
   description: "Unauthorized";,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           example:`{;
   "error":"invalid_token",;
   "message":"The provided API key is invalid or expired";
@@ -61,9 +57,7 @@ path:"/api/jobs",;
         },;
 "429":{;
           description:"Rate limit exceeded",;
-=======
   description: "Rate limit exceeded";,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           example:`{;
   "error":"rate_limit_exceeded",;
   "message":"Rate limit exceeded. Please try again in 60 seconds",;
@@ -132,9 +126,7 @@ path:"/api/jobs",;
       responses:{;
 "201":{;
           description:"Job created successfully",;
-=======
   description: "Job created successfully";,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           example:`{;
   "id":"job-456",;
   "title":"UX Designer",;
@@ -151,9 +143,7 @@ path:"/api/jobs",;
         },;
 "400":{;
           description:"Bad request",;
-=======
   description: "Bad request";,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           example:`{;
   "error":"validation_error",;
   "message":"Invalid input",;
@@ -226,9 +216,7 @@ path:"/api/talent",;
       responses:{;
 "200":{;
           description:"A list of talent profiles",;
-=======
   description: "A list of talent profiles";,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           example:`{;
   "talent":[;
     {;
@@ -269,7 +257,6 @@ pr-12325
   // Find the active endpoint data;
   const activeEndpointData = endpoints.find(e => e.id === activeEndpoint),;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <ApiDocsLayout>;
 <div className="grid md:grid-cols-5 gap-8">;
         {/* Endpoint list */}
@@ -288,15 +275,11 @@ className={`w-full text-left px-3 py-2 rounded-md text-sm flex items-center ${;
                     }`}
                   >;
                     <span className={`inline-block w-16 font-mono ${endpoint.method === "GET" ? "text-green-500" :endpoint.method === "POST" ? "text-blue-500" :"text-yellow-500"}`}>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       {endpoint.method}
                     </span>;
                     <span className="truncate">{endpoint.path}</span>;
                   </button>;
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         <div className="md:col-span-4">;
           {activeEndpointData ? (;
             <div>;
@@ -328,12 +311,10 @@ className={`w-full text-left px-3 py-2 rounded-md text-sm flex items-center ${;
                             </thead>;
                             <tbody>;
 </tr>;                              ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                             </tbody>;
                           </table>;
                       </>;
                     )}
-<<<<<<< HEAD
                     <CodeBlock ;
                       code={activeEndpointData.requestExample} ;"
                       language="bash";"
@@ -353,7 +334,6 @@ className={`w-full text-left px-3 py-2 rounded-md text-sm flex items-center ${;
                         <CodeBlock ;
                           code={response.example} ;
                           language="json";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           showLineNumbers={true}
                         />;
                       </div>;

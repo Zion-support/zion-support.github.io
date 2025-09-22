@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;"
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
@@ -9,39 +8,23 @@ import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -54,9 +37,6 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*",
@@ -66,7 +46,6 @@ const corsHeaders = {"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
   // Handle CORS preflight requests
-<<<<<<< HEAD
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -79,19 +58,11 @@ serve(async (req) => {
 
 const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json(),
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (!prompt) {
       throw new Error("Prompt is required")
     }
     // Define the appropriate model to use
-<<<<<<< HEAD
     // Default to base model if no specific model provided
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     const model = modelId || "gpt-3 && 3.5-turbo";
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
@@ -115,7 +86,6 @@ const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json()
         messages: [{ "
           role: "user", 
           content: prompt;
-=======
     // Default to base model if no specific model provided
 
     const model = modelId || "gpt-3 && 3.5-turbo";
@@ -142,26 +112,20 @@ const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json()
           role: "user", 
           content: prompt 
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }],
         max_tokens: maxTokens,
         temperature: temperature})}),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    if (!response && response.ok) {
-      const errorData = await response && response.json();
-=======
 
     if (!response && response.ok) {
       const errorData = await response && response.json();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+    if (!response && response.ok) {
+      const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
 
@@ -240,8 +204,6 @@ JSON.stringify ({}
         tokensUsed: data.usage?.total_tokens || 0;
       }),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
@@ -264,10 +226,8 @@ JSON.stringify ({}
     console.error("Error in zion-gpt function:", error);
     console.error("Error in zion-gpt function:", error),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return new Response(
       JSON.stringify({ error: error.message }),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
@@ -275,12 +235,8 @@ JSON.stringify ({}
 }
 });
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error ("Error in zion - gpt function:", error);
-=======
 
-=======
-=======
   }
 });
     console.error ("Error in zion - gpt function:", error);
@@ -288,34 +244,23 @@ JSON.stringify ({}
   }
 });
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-=======
     // Default to base model if no specific model provided      {
-=======
     return new Response(
       JSON.stringify({ error: error.message }),
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
       {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
 
 console.error ("Error in zion - gpt function:", error);import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 "
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     console.error ("Error in zion - gpt function:", error);
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;"
   "Access-Control-Allow-Origin": "*",;"
@@ -346,23 +291,12 @@ serve(async (req) => {;
 
   }
 });
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 ;
 });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;
 
   }
 });
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

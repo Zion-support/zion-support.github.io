@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import Link from 'next/link',;
 import Link from 'next/link';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function AdminIndex() {
   return (
     <div className="space-y-2">"
@@ -13,7 +11,6 @@ export default function AdminIndex() {
       </ul>
     </div>
 
-=======
 
 }
 
@@ -32,8 +29,6 @@ function AdminIndex() {}
 }
 
 import Link from 'next/link';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Link from 'next/link',;
 import Link from 'next/link';
 
@@ -47,14 +42,9 @@ return (
     </div>
 )
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
-=======
-=======
 import React from 'react';
 export default function Page() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='space-y-2'>
       <h1 className='text-2xl font-semibold'>Admin</h1>
@@ -67,27 +57,12 @@ export default function Page() {
       </ul>
     </div>
   );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

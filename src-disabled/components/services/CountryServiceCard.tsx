@@ -17,7 +17,6 @@ interface CountryServiceCardProps {
   isPopular?: boolean
 }
 
-<<<<<<< HEAD
 export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
   const getRegionEmoji = (countryName: string | undefined): string => {
@@ -25,9 +24,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/CountryServiceCard.tsx
 import { Badge } from "@/components/ui/badge";
 import {
   Card
@@ -70,7 +67,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
 
 :src_backup/components/services/CountryServiceCard.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!countryName) return "🌐",
 
     const emojiMap: Record<string string> = {
@@ -122,10 +118,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="flex items-center space-x-2">
             <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (!countryName) return "🌐",
 
     const emojiMap: Record<string string> = {
@@ -177,15 +170,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="flex items-center space-x-2">
             <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 :src/components/services/CountryServiceCard.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/CountryServiceCard.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/CountryServiceCard.tsx
           </div>
           {isPopular && (
             <Badge className='bg-zion-purple text-white border-none'>
@@ -199,24 +185,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ${country.pricePerIncident.toFixed(2)}
         </p>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="space-y-2 text-zion-slate-light">
           <div className="flex items-start">
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />
             <span>Typical response time: {getResponseTime(country.country)}</span>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
           <div className='flex items-start'>
             <MapPin className='h-4 w-4 mr-2 text-zion-purple mt-1' />
@@ -232,7 +206,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </CardContent>
-<<<<<<< HEAD
       <CardFooter className="flex flex-col space-y-2">
         <Button
           onClick={() => onSelect(country)}
@@ -276,7 +249,6 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 :src_backup/components/services/CountryServiceCard.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
 import { CountryPricing } from "@/data/onsiteServicePricing",;
 interface CountryServiceCardProps {;
@@ -501,7 +473,6 @@ export function CountryServiceCard(): any ({;
           <div className='flex items-start'>;
             <Check className='h-4 w-4 mr-2 text-zion-purple mt-1' />;            <span>First hour included</span>;
             <span>First hour included</span>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
         </div>;
       </CardContent>;
@@ -581,11 +552,6 @@ export function CountryServiceCard(): any ({;
       </CardFooter>
     </Card>
 :src_backup/components/services/CountryServiceCard.tsx
-<<<<<<< HEAD:src/components/services/CountryServiceCard.tsx
-<<<<<<< HEAD
   )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/CountryServiceCard.tsx

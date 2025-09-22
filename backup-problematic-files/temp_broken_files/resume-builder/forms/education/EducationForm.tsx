@@ -1,5 +1,4 @@
 
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Education } from '@/types/resume',;
@@ -67,7 +66,6 @@ export function EducationForm({ ;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-6">;
       <div>;
         <h2 className="text-xl font-semibold mb-2">Education</h2>;
@@ -75,7 +73,6 @@ export function EducationForm({ ;
           Add your educational background and academic achievements.;
         </p>;
       </div>;
-<<<<<<< HEAD
 
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}

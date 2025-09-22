@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 import { useState } from "react";
 import FeedbackModal from "../../components/ui/FeedbackModal";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {useState} from 'react';
 
   const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
@@ -15,7 +8,6 @@ import {useState} from 'react';
   const [agreementUrl, setAgreementUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any | null>(null),
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [showFeedback, setShowFeedback] = useState(false);
   async function sendOffer() {;
     setLoading(true);
@@ -25,14 +17,12 @@ import {useState} from 'react';
 
         ? { type: 'hourly', hourlyRateUsd }
         : termsType === 'fixed';
-=======
 
   const [showFeedback, setShowFeedback] = useState(false);
 
   async function sendOffer() { return null; }
         ? { type: 'hourly', hourlyRateUsd }'
         : termsType === 'fixed';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ? { type: 'fixed', fixedAmountUsd }
 '
           : { type: 'milestone', milestones: [] };
@@ -62,18 +52,14 @@ import {useState} from 'react';
       setResult(json && json.offer);
 
 setShowFeedback(true);    }
-<<<<<<< HEAD
       termsType === "hourly"
         ? { type: "hourly", hourlyRateUsd }
         : termsType === "fixed"
         ? { type: "fixed", fixedAmountUsd }
-<<<<<<< HEAD
 import { useState } from "react",
 import FeedbackModal from "../../components/ui/FeedbackModal",
 import { useState } from "react",
 import FeedbackModal from "../../components/ui/FeedbackModal",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function ClientHirePage() {
   const [talentSlug, setTalentSlug] = useState("ava-chen");
   const [startDateIso, setStartDateIso] = useState<string>(new Date().toISOString().slice(0, 10)),
@@ -94,7 +80,6 @@ export default function ClientHirePage() {
   const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
   const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
   const [agreementUrl, setAgreementUrl] = useState('');
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any | null>(null),
   const [showFeedback, setShowFeedback] = useState(false);
@@ -103,7 +88,6 @@ export default function ClientHirePage() {
     setResult(null);
 
   const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module"),
-=======
       setShowFeedback(true);    }"
       termsType === "hourly""
         ? { type: "hourly", hourlyRateUsd }"
@@ -116,7 +100,6 @@ export default function ClientHirePage() { return null; }
     setResult(null);
 "
   const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module"),"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [termsType, setTermsType] = useState("hourly"),
   const [hourlyRateUsd, setHourlyRateUsd] = useState(120),
   const [fixedAmountUsd, setFixedAmountUsd] = useState(5000),"
@@ -124,9 +107,6 @@ export default function ClientHirePage() { return null; }
   const [loading, setLoading] = useState(false),
   const [result, setResult] = useState<any | null>(null),
   const [showFeedback, setShowFeedback] = useState(false),
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function sendOffer() {
     setLoading(true),
     setResult(null),
@@ -171,13 +151,10 @@ termsType === 'hourly'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         : { type: "milestone", milestones: [] },
     const res = await fetch("/api/marketplace/offers", {
       method: "POST",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       headers: {
-=======
   async function sendOffer() {}
     setLoading(true),
     setResult(null),
@@ -199,7 +176,6 @@ termsType === 'hourly'
     const res = await fetch("/api/marketplace/offers", {"
       method: "POST",
       headers: {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
        "Content-Type": "application/json", "x-demo-user-role": "client", "x-demo-user-id": "client-1" 
     },
     body: JSON.stringify({ talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl })});
@@ -212,7 +188,6 @@ termsType === 'hourly'
 setShowFeedback(true)
     }
   }
-<<<<<<< HEAD
 
   }
   return (
@@ -223,14 +198,9 @@ setShowFeedback(true)
       <h1 className="text-xl font-semibold">Hire Talent</h1>
 "
       <div className="space-y-4 border rounded p-4">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div>
           <label className='block text-sm font-medium'>
-=======
 
-=======
         <div>
           <label className='block text-sm font-medium'>Talent</label>
           <input
@@ -294,11 +264,9 @@ setShowFeedback(true)
             />
           </div>
         )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
         <div>
 <label className='block text-sm font-medium'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Agreement URL (optional)
           </label>
           <input;
@@ -324,13 +292,7 @@ setShowFeedback(true)
             <option value="milestone">Milestone</option>
           </select>
         </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div>
             <label className="block text-sm font-medium">Hourly rate (USD)</label>
             <input type="number" value={hourlyRateUsd} onChange={(e) => setHourlyRateUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2" />
@@ -365,7 +327,6 @@ return res.status(500).json({ error: "Internal server error" });
         userHeaders={{ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }}
       />
     </div>
-<<<<<<< HEAD
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -381,12 +342,10 @@ return res.status(500).json({ error: "Internal server error" });
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div>
           <label className="block text-sm font-medium">Agreement URL (optional)</label>
           <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder="https://..." className="w-full border rounded px-3 py-2" />
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className='flex justify-end'>
           <button
             onClick={sendOffer}
@@ -394,16 +353,12 @@ return res.status(500).json({ error: "Internal server error" });
             className='px-4 py-2 rounded bg-indigo-600 text-white'
           >
 {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )}
       <FeedbackModal
         isOpen={showFeedback}
         onClose={() => setShowFeedback(false)}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         }}
         userHeaders={{;
           'x-demo-user-role': 'client',;
@@ -413,8 +368,6 @@ return res.status(500).json({ error: "Internal server error" });
       </div>
       {result && (
       {result && (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className='border rounded p - 4 bg - emerald - 50'>;
           <div className='font - medium'>Offer sent</div>;
           <div className='text - sm'>Offer ID: {result.id}</div>        </div>)}
@@ -428,33 +381,26 @@ return res.status(500).json({ error: "Internal server error" });
         user_headers={{
           'x - demo - user - role': 'client',
           'x - demo - user - id': 'client - 1',
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
         <div>"
           <label className="block text-sm font-medium">Agreement URL (optional)</label>"
           <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder="https://..." className="w-full border rounded px-3 py-2" />
         </div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       />
     </div>
 );
 
 }
-<<<<<<< HEAD
         <div className="flex justify-end">
           <button onClick={sendOffer} disabled={loading} className="px-4 py-2 rounded bg-indigo-600 text-white">
             {loading ? "Sending…" : "Send Offer to Confirm"  } catch (error) {
     console.error("Error:", error);
-=======
 "
         <div className="flex justify-end">"
           <button onClick={sendOffer} disabled={loading} className="px-4 py-2 rounded bg-indigo-600 text-white">"
             {loading ? "Sending…" : "Send Offer to Confirm"  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -462,15 +408,11 @@ return res.status(500).json({ error: "Internal server error" });
         </div>
       </div>
       {result && (
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="border rounded p-4 bg-emerald-50">
           <div className="font-medium">Offer sent</div>
-=======
 "
         <div className="border rounded p-4 bg-emerald-50">"
           <div className="font-medium">Offer sent</div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="text-sm">Offer ID: {result.id}</div>
         </div>"
         : { type: "milestone", milestones: [] },;"
@@ -596,16 +538,5 @@ return res.status(500).json({ error: "Internal server error" });
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

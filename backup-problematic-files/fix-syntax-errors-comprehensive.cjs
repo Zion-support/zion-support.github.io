@@ -103,7 +103,6 @@ content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*
     content = content.replace(/title\s*=\s*['"]\s*;\s*([^'"]*)\s*['"]/g, 'title=\'$1\'');
     return content}
 console.log('🔧 Starting comprehensive syntax error fixing...');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -111,8 +110,6 @@ function fixSyntaxErrors(filePath) {
 // Fix common syntax errors
     // Fix unnecessary escape characters
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     content = content.replace(/\\:/g, ':');
     content = content.replace(/\\,/g, ',');
     content = content.replace(/\\;/g, ';');
@@ -171,18 +168,13 @@ function fixSyntaxErrors(filePath) {
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Fix malformed function declarations
     content = content.replace(/export\s+const\s+SEO:\s*Reac\s+t\.FC<[^>]+>\s*=\s*\(/g, 'export const SEO: React.FC<SEOProps> = (');
     // Fix malformed return statements in functions
     content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
     // Fix missing semicolons
 // Fix missing semicolons at end of statements
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Fix missing semicolons at end of statements
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     content = content.replace(/([^;}])\s*$/gm, '$1;');
     // Fix missing commas in objects
     content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
@@ -227,8 +219,6 @@ function fixSyntaxErrors(filePath) {
     return { content, fixes };
 }
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Function to process a single file
 function processFile(filePath) {
     try {
@@ -300,7 +290,6 @@ function fixSyntaxErrors(content, filePath) {;
   fixed = fixed.replace(malformedArrayRegex, "$1$2$3,$4");"
   return { fixed, changes }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Function to process a single file;
 function processFile(filePath) {;
   try {;"
@@ -351,8 +340,6 @@ async function main() {"
                 totalFixes += fixes;
                 filesProcessed++;
     if (totalFixes > 0) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     fixed = fixed.replace(
         /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
         'return this.props.children;\n  }\n}\n\nexport default)
@@ -376,7 +363,6 @@ if (openBraces > closeBraces) {
     const closeBrackets = (content.match(/\]/g) || []).length;
 
     if (openBrackets > closeBrackets) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const missingBraces = openBraces - closeBraces;
       content += '\n''}'.repeat(missingBraces);
       modified = true;
@@ -407,7 +393,6 @@ if (openBraces > closeBraces) {
       content = uniqueImports.join('\n') + '\n' + nonImportLines.join('\n');
       modified = true;
     }
-<<<<<<< HEAD
 ;
     // Fix missing React import;
     if (content.includes('React') && !content.includes('import React')) {;
@@ -536,13 +521,6 @@ if (content !== fs.readFileSync(filePath, 'utf8')) {
     return false;
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       stat.isDirectory() &&
 
     } else if ()
@@ -557,4 +535,3 @@ return fixedCount;
 console.log('Starting comprehensive syntax error fixes...');
 const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { useParams, Link, useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
@@ -45,13 +44,11 @@ export default function BlogPost() {;
   ;
   if (!post) {;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <AppLayout>;
         <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">;
           <div className="animate-pulse">Loading article...</div>;
         </div>;
       </AppLayout>;
-<<<<<<< HEAD
 
       />;
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">;

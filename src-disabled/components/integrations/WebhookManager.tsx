@@ -1,8 +1,4 @@
 :src_backup/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -74,18 +70,12 @@ export function WebhookManager() {
       return
     error,
 
-=======
 export function WebhookManager() {
   const { 
     webhooks,
     loading,     error,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
     error,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/integrations/WebhookManager.tsx
 
 import React, { useEffect, useState } from 'react';
 import {;
@@ -277,9 +267,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 
     await createWebhook(
@@ -289,8 +277,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/integrations/WebhookManager.tsx
       newWebhook.secret || undefined
 ),
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Reset form
     setNewWebhook({
 :src/components/integrations/WebhookManager.tsx
@@ -305,12 +291,6 @@ secret: ""
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   },
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/integrations/WebhookManager.tsx
       name: ''
       url: ''
       selectedEvent: '' as WebhookEventType
@@ -325,15 +305,9 @@ secret: ""
     await testWebhook(webhookId, eventType)
   }
 :src/components/integrations/WebhookManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/integrations/WebhookManager.tsx
   return (
-=======
   return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/integrations/WebhookManager.tsx
     <div className="space-y-8">
       <Card>
         <CardHeader>
@@ -343,16 +317,13 @@ secret: ""
           </CardDescription>
         </CardHeader>
 :src_backup/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-=======
 "
         <CardContent className="space-y-4">"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
             <div className="space-y-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/integrations/WebhookManager.tsx
               <Label htmlFor="webhook-name">Webhook Name</Label>
               <Input "
                 id="webhook-name" "
@@ -364,18 +335,12 @@ onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
               />
             </div>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
                 value={newWebhook.name}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/integrations/WebhookManager.tsx
             <div className="space-y-2">
-=======
               <Select;
             "
             <div className="space-y-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/integrations/WebhookManager.tsx
               <Label htmlFor="webhook-url">URL</Label>
               <Input "
                 id="webhook-url" "
@@ -505,7 +470,6 @@ export function WebhookManager() { return null; }
                   {eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>;
               ))}
-<<<<<<< HEAD
             </div>;
             <div className="flex space-x-2">;
               <Select;
@@ -514,14 +478,10 @@ export function WebhookManager() { return null; }
               >
                 <SelectTrigger className="w-full">
 :src_backup/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD
                   <SelectValue placeholder="Select event" />
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/integrations/WebhookManager.tsx
                 </SelectTrigger>
-=======
                   <SelectValue placeholder="Select event" />                </SelectTrigger>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <SelectContent>
                   {eventOptions.map(option => (
                     <SelectItem key={option.value} value={option.value}>
@@ -536,7 +496,6 @@ export function WebhookManager() { return null; }
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
 
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
@@ -767,7 +726,6 @@ export function WebhookManager() { return null; }
               placeholder="A secret key to verify the webhook source"
               value={newWebhook && newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e && e.target.value})}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             />;
             <p className="text-xs text-muted-foreground">;
 :src_backup/components/integrations/WebhookManager.tsx
@@ -808,7 +766,6 @@ export function WebhookManager() { return null; }
                           variant='outline''
                           size='sm'
 
-<<<<<<< HEAD
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
 
@@ -818,8 +775,6 @@ export function WebhookManager() { return null; }
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                         <Button
 
               value={newWebhook.secret}
@@ -850,7 +805,6 @@ export function WebhookManager() { return null; }
                     <div>;
                       <CardTitle className="text-lg">{webhook.name}</CardTitle>;
                       <CardDescription className="truncate max-w-md">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/integrations/WebhookManager.tsx
                         {webhook.url}
                       </CardDescription>
                     </div>"
@@ -860,9 +814,6 @@ export function WebhookManager() { return null; }
                         <span className="text-sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>
                       </div>
 :src_backup/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/integrations/WebhookManager.tsx
                       <div className="flex-shrink-0">
                         <Button "
                           variant="outline" "
@@ -871,11 +822,7 @@ export function WebhookManager() { return null; }
                         >;
 :src_backup/components/integrations/WebhookManager.tsx
 
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/integrations/WebhookManager.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/integrations/WebhookManager.tsx
                           {webhook.is_active ? 'Disable' : 'Enable'}
                         </Button>
                       </div>
@@ -942,7 +889,6 @@ export function WebhookManager() { return null; }
                   </Button>;
 :src_backup/components/integrations/WebhookManager.tsx
 
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
                   <Select
                     onValueChange={value =>;
 :src_backup/components/integrations/WebhookManager.tsx
@@ -978,7 +924,6 @@ export function WebhookManager() { return null; }
                           Test{' '}
                           {event_options.find (e => e.value === event)?.label ||;
                             event}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <Label className="text-sm">Events</Label>
                       <div className="flex flex-wrap gap-2 mt-1">
                         {webhook.event_types.map((event: WebhookEventType) => ("
@@ -1000,15 +945,10 @@ export function WebhookManager() { return null; }
                 <CardFooter className="flex justify-between pt-2">
 :src_backup/components/integrations/WebhookManager.tsx
                   <Button
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/integrations/WebhookManager.tsx
                     variant="outline"
-=======
                   <Button;
 "
                     variant="outline""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/integrations/WebhookManager.tsx
                     size="sm"
                     onClick={() => deleteWebhook(webhook.id)}
                   >;"
@@ -1024,7 +964,6 @@ export function WebhookManager() { return null; }
                     <SelectContent>"
                       <SelectItem value="test_event">Test (generic)</SelectItem>
                       {webhook.event_types.map((event: WebhookEventType) => (
-<<<<<<< HEAD
                         <SelectItem key={event} value={event}>
                           Test {eventOptions.find(e => e.value === event)?.label || event}
                         </SelectItem>;
@@ -1063,7 +1002,6 @@ export function WebhookManager() { return null; }
                   <span className='font-medium'>Status:</span>
 
 :src_backup/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD
         {testResult && (;
           <Card className='mt-4 border-blue-200'>;
             <CardHeader>;'
@@ -1074,19 +1012,14 @@ export function WebhookManager() { return null; }
                 <div className='flex justify-between'>;'
                   <span className='font-medium'>Status:</span>;
 :src_backup/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD:src/components/integrations/WebhookManager.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/integrations/WebhookManager.tsx
                   <span
                     className={
                       testResult && testResult.status>= 200 && testResult && testResult.status < 300;
                         ? 'text-green-600';
-=======
                   <span;
                     className={}
                       testResult && testResult.status>= 200 && testResult && testResult.status < 300;'
                         ? 'text-green-600';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/integrations/WebhookManager.tsx
                         : 'text-red-600';
                     }
                     onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
@@ -1110,9 +1043,7 @@ export function WebhookManager() { return null; }
         )}
 
 :src/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
         {testResult && (;"
           <Card className="mt-4 border-blue-200">;
@@ -1131,7 +1062,6 @@ export function WebhookManager() { return null; }
                   <span className="font-medium">Response:</span>;"
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">;
 :src_backup/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD
                     {testResult.responseBody || '<empty>'}
                     {testResult.responseBody || '<empty>'}
                   </pre>
@@ -1141,7 +1071,6 @@ export function WebhookManager() { return null; }
           </Card>
         )}
 :src_backup/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD
 
                   >                    {testResult && testResult.status} {testResult && testResult.statusText}
                   </span>;
@@ -1150,7 +1079,6 @@ export function WebhookManager() { return null; }
                   <span className='font-medium'>Response:</span>;'
                   <pre className='mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto'>;'
                     {testResult && testResult.responseBody || '<empty>'}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </pre>;
                 </div>;
               </div>;
@@ -1207,7 +1135,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }) ";"
 }> <SelectTrigger className="w-full"> <SelectValue placeholder=" Select event"/> </SelectTrigger> <SelectContent> {;
 :src_backup/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
   eventOptions.map (option => (<SelectItem key= {;
   option.value ;
 }value= {;
@@ -1248,8 +1175,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</div>) ;
 }{";
 :src_backup/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD:src/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD
   testResult && (<Card className="mt-4 border-blue-200"> <CardHeader> <CardTitle className="text-lg">Webhook Test Result</CardTitle> </CardHeader> <CardContent> <div className="space-y-2"> <div className="flex justify-between"> <span className="font-medium">Status:</span> <spanclassName= {'
   testResult && testResult.status>= 200 && testResult && testResult.status < 300 ? 'text-green-600' : 'text-red-600' ;
 }> {;
@@ -1263,8 +1188,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }'"}
 
 }
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/integrations/WebhookManager.tsx
 
 :src_backup/components/integrations/WebhookManager.tsx
 }newWebhook.url
@@ -1387,18 +1310,10 @@ event_types: [...new_webhook.event_types, new_webhook.selected_event];
 }
 :src_backup/components/integrations/WebhookManager.tsx
 
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 :src/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
 :src_backup/components/integrations/WebhookManager.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/integrations/WebhookManager.tsx
   testResult && (<Card className="mt-4 border-blue-200"> <CardHeader> <CardTitle className="text-lg">Webhook Test Result</CardTitle> </CardHeader> <CardContent> <div className="space-y-2"> <div className="flex justify-between"> <span className="font-medium">Status:</span> <span className= {';
   testResult.status >= 200 && testResult.status < 300 ? 'text-green-600' : 'text-red-600' ;
 }> {;
@@ -1411,8 +1326,4 @@ event_types: [...new_webhook.event_types, new_webhook.selected_event];
 }</div> </div>) ;
 }'"
 :src/components/integrations/WebhookManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/integrations/WebhookManager.tsx

@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ;
@@ -53,7 +52,6 @@ export function QuickAccess() {;
   ],;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <section className="py-12 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-8">;
@@ -64,4 +62,3 @@ export function QuickAccess() {;
             Jump directly to our most popular features;
           </p>;
         </div>;
-<<<<<<< HEAD

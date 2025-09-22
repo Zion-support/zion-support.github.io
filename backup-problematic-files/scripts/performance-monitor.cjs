@@ -106,7 +106,6 @@ if (fs.existsSync(publicDir)) {;
       } catch (error) {;
         // Skip files that can't be accessed;
       }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node
 /**
  * Performance Monitor;
@@ -131,9 +130,4 @@ const monitor = new PerformanceMonitor();
 monitor.run().catch(console.error);
 
 module.exports = PerformanceMonitor;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

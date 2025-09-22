@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-this-alias */
@@ -126,7 +125,6 @@ if (
         'Class extends value ' + String (b) + ' is not a constructor or null');
     /**
 * __extends_helper - Function description
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
  */
 
 // Type declarations for global augmentation
@@ -234,7 +232,6 @@ __rest: function (s: any, e: string[]) {
       for (let i = 0, i < symbols.length, i++) {
         const symbol = symbols[i],
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
-=======
   __rest: function (s: any, e: string[]) {
     let t: any = {},
     for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -244,12 +241,10 @@ __rest: function (s: any, e: string[]) {
       for (let i = 0, i < symbols.length, i++) {
         const symbol = symbols[i],
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           t[symbol] = s[symbol]
       }
     }
 return t
-<<<<<<< HEAD
     let c = arguments && arguments.length,
 
       r =
@@ -272,7 +267,6 @@ return t
 
           r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return (c > 3 && r && key && Object && Object.defineProperty(target, key, r), r);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
 
   __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
@@ -339,11 +333,8 @@ if (< 0 &&) {}
   $2;
 }
           Object.prototype.propertyIsEnumerable.call (s, symbol));
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         const symbol = symbols[i];
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol));
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           t[symbol] = s[symbol];
       }
     }
@@ -389,7 +380,6 @@ try {;
       }
     }
   }
-<<<<<<< HEAD
 } catch (e) {;
   const originalOnError = window && window.onerror;
   window && window.onerror = function (message, source, lineno, colno, error) {}
@@ -413,7 +403,6 @@ try {;
 // Call original error handler for other errors
     if (originalOnError) {
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Silently handle any errors in error prevention setup;
 }
 ;
@@ -433,7 +422,6 @@ if (typeof window !== 'undefined') {;
     }
 ;
     // Call original error handler for other errors;
-<<<<<<< HEAD
     if (originalOnError) {;
       return originalOnError.call(this, message, source, lineno, colno, error);
 }
@@ -446,9 +434,7 @@ if (typeof window !== 'undefined') {;
   const originalOnUnhandledRejection = window.onunhandledrejection;
   window.onunhandledrejection = function (event) {}
       return originalOnError && originalOnError.call(this, message, source, lineno, colno, error);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
-<<<<<<< HEAD
     return false;
   };
   const originalOnUnhandledRejection = window.onunhandledrejection;
@@ -477,7 +463,6 @@ if (typeof window !== 'undefined') {;
     if (originalOnUnhandledRejection) {}
       return originalOnUnhandledRejection && originalOnUnhandledRejection.call(this, event);
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Suppress specific promise rejection errors;
 
     if (event.reason && typeof event.reason.message === 'string') {;
@@ -517,12 +502,9 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {;
   });
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
-<<<<<<< HEAD
-<<<<<<< HEAD
     selfDefined: typeof self !== 'undefined',
     webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
     tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
@@ -577,7 +559,6 @@ export const verify_polyfills = () =>: any {}
   };
 
 typeof __extends !== 'undefined' && typeof __assign !== 'undefined'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
   },
 
@@ -585,7 +566,6 @@ typeof __extends !== 'undefined' && typeof __assign !== 'undefined'
   return Object.values(checks).every(Boolean)
 },
 }, // Ensure this can be imported as a module'"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
@@ -616,13 +596,11 @@ if (process.env.NODE_ENV === 'development') {
   }
   '
   console.log('Serverless polyfill verification:', checks)
-=======
     selfDefined: typeof self !== 'undefined',
     webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
     tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return Object.values(checks).every(Boolean)
 },
 
@@ -652,9 +630,5 @@ export const verifyPolyfills = () => {;
 if (process.env.NODE_ENV === 'development') {;
   setTimeout(() => verifyPolyfills(), 100);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default {}, // Ensure this can be imported as a module;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

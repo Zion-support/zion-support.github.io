@@ -1,8 +1,5 @@
 Table;
 
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 import {
   Table,
@@ -21,8 +18,6 @@ import { toast } from '@/hooks/use-toast';
 import React from "react";
 import {
   Table;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   TableBody;
   TableCell;
   TableHead;
@@ -41,7 +36,6 @@ import { toast } from "@/hooks/use-toast"
 ";
 import React from "react";
 import {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
 import {}
   Table,
@@ -49,22 +43,17 @@ import {}
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-<<<<<<< HEAD
   TableRow} from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
-=======
 "
   TableRow} from "@/components/ui/table","
 import { Button } from "@/components/ui/button","
 import { Badge } from "@/components/ui/badge",'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Download, FileText, Search } from 'lucide-react'
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
 import { toast } from "@/hooks/use-toast",
-=======
 
   TableRow} from "@/components/ui/table",
 import { Button } from "@/components/ui/button",;
@@ -73,15 +62,10 @@ import { Download, FileText, Search } from 'lucide-react'
 
 import { Input } from "@/components/ui/input",;
 import { toast } from "@/hooks/use-toast",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function InvoiceHistory() {
   // Mock invoice data
-<<<<<<< HEAD
   const invoices = [
     {
 id: "INV-1234",
@@ -146,81 +130,54 @@ id: "INV-1234",
       amount: "$1,999.00",
       id: "INV-1234",
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       status: "paid",
       period: "May 2025"},
     {"
       id: "INV-1233",
 date: "Apr 1, 2025",
       amount: "$1,999.00",
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
       date: "Apr 1, 2025",
       amount: "$1,999.00",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       status: "paid",
-=======
 "
       status: "paid","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       period: "Apr 2025"},
     {"
       id: "INV-1232",
 date: "Mar 1, 2025",
       amount: "$1,999.00",
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
       date: "Mar 1, 2025",
       amount: "$1,999.00",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       status: "paid",
-=======
 "
       status: "paid","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       period: "Mar 2025"},
     {"
       id: "INV-1231",
 date: "Feb 1, 2025",
       amount: "$1,999.00",
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
       date: "Feb 1, 2025",
       amount: "$1,999.00",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       status: "paid",
-=======
 "
       status: "paid","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       period: "Feb 2025"},
     {"
       id: "INV-1230",
 date: "Jan 1, 2025",
       amount: "$1,999.00",
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
       date: "Jan 1, 2025",
       amount: "$1,999.00",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       status: "paid",
-=======
 "
       status: "paid","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       period: "Jan 2025"},
     {"
       id: "INV-1229",
-<<<<<<< HEAD
 
     toast({"
       title: "Downloading invoice"`
       description: `Downloading invoice ${invoiceId} as PDF.`})
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       date: "Dec 1, 2024",
       amount: "$1,999.00",
       status: "paid",
@@ -440,9 +397,7 @@ title: "Downloading invoice",;
 
   )
 }
-<<<<<<< HEAD
       case "paid": return <Badge className="bg - green - 500">Paid</Badge>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         return <Badge variant="destructive">Overdue</Badge>;
       default:;"
         return <Badge variant="outline">{status}</Badge>;
@@ -522,9 +477,7 @@ title: "Downloading invoice",;
   );
 }
 ;
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
   );
@@ -538,5 +491,3 @@ title: "Downloading invoice",;
 }"
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -11,7 +11,6 @@ const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Bell, Calendar, X } from "lucide-react",
@@ -30,7 +29,6 @@ export function ProjectOfferBanner() {
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
   const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   useEffect(() => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent');
@@ -52,7 +50,6 @@ export function ProjectOfferBanner() {
 
     return null
   }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Bell, Calendar, X } from "lucide-react",;
@@ -86,8 +83,6 @@ export function ProjectOfferBanner() {;
     return null;
   }
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
     })
 };
   const handleViewOffer = (projectId: string) => {;
@@ -97,11 +92,8 @@ export function ProjectOfferBanner() {;
     return null;
   }
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
   }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className=\"mb-6 space-y-3\" />
       {pendingOffers;
@@ -162,4 +154,3 @@ function ProjectOfferBanner() {}
   const [pending_offers, setPendingOffers] = useState < Project[]>([]);
   const [dismissed, set_dismissed] = useState < Set < string>>(new Set ());
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

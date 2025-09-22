@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -178,12 +177,10 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
         </p>;
       </div>;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="space-y-4">;
         <div className="space-y-2">;
           <div className="flex justify-between items-center">;
             <label htmlFor="title" className="text-lg font-medium">;
-<<<<<<< HEAD
 
               className="flex items-center gap-1";
             >;

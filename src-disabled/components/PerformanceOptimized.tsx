@@ -1,9 +1,7 @@
 :src/components/PerformanceOptimized.tsx
-<<<<<<< HEAD
 }
 }
 }
-<<<<<<< HEAD
 }
 }
 }
@@ -25,14 +23,12 @@ export const usePerformanceMetrics = () = > {const [metrics, setMetrics] = React
 }
 }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Debounced search hook
 export const useDebouncedSearch = (value: string, delay: number = 300) = > {const [debouncedValue, setDebouncedValue] = React.useState(value); React.useEffect(() = > {const handler = setTimeout(() = > {; setDebouncedValue(value)}, delay); return () = > {clearTimeout(handler)}}, [value, delay]); return debouncedValue}
 // Performance metrics collection
 export const usePerformanceMetrics = () = > {const [metrics, setMetrics] = React.useState({renderCount: 0, lastRenderTime: 0, averageRenderTime: 0}); const recordRender = useCallback((renderTime: number) = > {, setMetrics(prev = > ({, renderCount: prev.renderCount + 1, lastRenderTime: renderTime, averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)}))}, []); return { metrics, recordRender }} }
 }
 }
-=======
 }
 }
 
@@ -68,7 +64,6 @@ export const usePerformanceMetrics = () => {}
   return { metrics, recordRender }
 }
 :src_backup/components/PerformanceOptimized.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PerformanceOptimized.tsx
 
 return (
     <div className="performance-optimized">"
@@ -234,11 +229,6 @@ export const: OptimizedImage: React.FC<{,;
   );
 :src_backup/components/PerformanceOptimized.tsx
 
-<<<<<<< HEAD:src/components/PerformanceOptimized.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
 }
 }
 }
@@ -250,7 +240,6 @@ export const useDebouncedSearch = (value: string, delay: number = 300) => {,
     const handler = setTimeout(() => {
       setDebouncedValue(value)
     }, delay)
-<<<<<<< HEAD
 // Debounced search hook;
 export const useDebouncedSearch = (value: string, delay: number = 300) => {}
   const [debouncedValue, setDebouncedValue] = React.useState(value)
@@ -266,19 +255,13 @@ export const useDebouncedSearch = (value: string, delay: number = 300) =>: any {
       setDebouncedValue (value);
     }, delay);
 :src_backup/components/PerformanceOptimized.tsx
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PerformanceOptimized.tsx
     return () => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       clear_timeout (handler);
 }
   }, [value, delay]);
   return debounced_value;
 }
 :src_backup/components/PerformanceOptimized.tsx
-<<<<<<< HEAD:src/components/PerformanceOptimized.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Performance metrics collection
 export const usePerformanceMetrics = () => {
   const [metrics, setMetrics] = React.useState({
@@ -292,9 +275,6 @@ export const usePerformanceMetrics = () => {
   }, []); return { metrics, recordRender }
 }
   return { metrics, recordRender }
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
 import React, { memo, useMemo, useCallback } from 'react';
 // Higher-order component for performance optimization;
 export const withPerformanceOptimization = <P extends object>(; Component: React && React.ComponentType<P>, options: {, memo?: boolean; memoDeps?: (props:,  P) = > any[]; displayName?: string} = {};,
@@ -389,7 +369,6 @@ export const useStableCallback = <T extends (...args: any[]) => any>(,
 :src_backup/components/PerformanceOptimized.tsx
 }
 };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/PerformanceOptimized.tsx
 };
 };
 :src_backup/components/PerformanceOptimized.tsx
@@ -503,19 +482,10 @@ export const usePerformanceMetrics = () =>: any {}
 }
 :src_backup/components/PerformanceOptimized.tsx
 
-<<<<<<< HEAD:src_backup/components/PerformanceOptimized.tsx
 },
 :src/components/PerformanceOptimized.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PerformanceOptimized.tsx
-=======
 },
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/PerformanceOptimized.tsx
 import React, { memo, useMemo, useCallback } from 'react';
 ;
 // Higher-order component for performance optimization;
@@ -593,8 +563,4 @@ export const usePerformanceMetrics = () => {;
   return { metrics, recordRender };
 };
 :src/components/PerformanceOptimized.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 },'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/PerformanceOptimized.tsx

@@ -1,8 +1,4 @@
 :src/components/notifications/NotificationItem.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -37,8 +33,6 @@ import { Notification, NotificationType } from '@/context/notifications'
       className={cn(
                   onMarkAsRead(notification.id); import React from 'react'
 :src/components/notifications/NotificationItem.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -71,7 +65,6 @@ export const getTypeIcon = (type: NotificationType,) => {
       return <span className="text-orange-500">📦</span>
     default:
       return <span className="text-gray-500">📣</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -80,7 +73,6 @@ import { Badge } from '@/components/ui/badge',
 import { formatDistanceToNow } from 'date-fns',
 import { cn } from '@/lib/utils',
 
-=======
 import {
   Tooltip,
   TooltipContent,
@@ -121,8 +113,6 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-orange-500">📦</span>,;
     default:;
 :src/components/notifications/NotificationItem.tsx
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx
 import React from 'react';
 import { Check, Trash2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -152,8 +142,6 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-orange-500">📦</span>;
     default:
 :src/components/notifications/NotificationItem.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       return <span className="text-gray-500">📣</span>
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
@@ -190,16 +178,8 @@ export const getTypeIcon = (type: NotificationType) => {;
     case 'order_status':;
       return <span className="text-orange-500">📦</span>,;
     default:;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx
       return <span className="text-gray-500">📣</span>;
   }
 },;
@@ -223,14 +203,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
       router.push(notification.action_url), // Changed to router.push;
     }
 :src/components/notifications/NotificationItem.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (<div
       className = {cn(
         'p-3 border-b border-zion-blue-light relative group'
         !notification.read ? 'bg-zion-blue-dark/30' : ''),}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },;
   return (;
     <div;
@@ -244,7 +220,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
         <div className="flex-1">
           <div className="flex justify-between items-center mb-1">
             <h4 className="font-medium text-white">
-<<<<<<< HEAD
               {notification.title || 'Notification'}
             </h4>
             {!notification.read && (
@@ -313,12 +288,7 @@ onClick={(e) => {
                 aria-label="Dismiss notification"
               >
                 <Trash2 className="h-3.5 w-3.5 text-red-400" />
-=======
         <TooltipProvider>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx
   };
 
   const handleMarkAsRead = (e: React.MouseEvent) => {
@@ -398,10 +368,7 @@ onClick={(e) => {
           )}
 
 :src/components/notifications/NotificationItem.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
@@ -418,11 +385,7 @@ onClick={(e) => {
             </TooltipContent>
           </Tooltip>
 :src/components/notifications/NotificationItem.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         </TooltipProvider>
-<<<<<<< HEAD
       </div>
     </div>
   )
@@ -482,23 +445,13 @@ onClick={(e) => {
       </div>
     </div>
 )
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx
         </div>
       </div>
     </TooltipProvider>
   );
 };
 :src/components/notifications/NotificationItem.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/notifications/NotificationItem.tsx
   );
 };
 interface NotificationItemProps {;
@@ -521,5 +474,3 @@ onDismiss ;
 };
 '"
 :src/components/notifications/NotificationItem.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

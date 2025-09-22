@@ -1,8 +1,4 @@
 :src_backup/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react',;
 import { QueryClient } from '@tanstack/react-query',;
 import * as Sentry from '@sentry/nextjs',;
@@ -120,11 +116,9 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
       }
 
       return (
-=======
       }
 
       return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
 }
       return (
       // Reset error state after a brief delay;
@@ -159,8 +153,6 @@ if ( {) {
   $2
 }
         return this.props.fallback;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
 :src_backup/components/ApiErrorBoundary.tsx
 
@@ -173,9 +165,6 @@ if ( {) {
               </AlertDescription>;
             </Alert>;
 :src_backup/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         <div className="flex min-h-screen items-center justify-center p-4">"
           <div className="w-full max-w-md space-y-4">"
             <Alert variant="destructive">"
@@ -327,11 +316,8 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
       }
 
       return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
         <div className="flex min-h-screen items-center justify-center p-4">
-=======
       return (        <div className="flex min-h-screen items-center justify-center p-4">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
               <div className="flex items-center gap-2">
@@ -340,16 +326,12 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 ) : (
 :src_backup/components/ApiErrorBoundary.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <RefreshCw className="h-4 w-4" />
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
 :src_backup/components/ApiErrorBoundary.tsx
 
-<<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -365,22 +347,14 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
               </AlertDescription>
             </Alert>
 :src/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD
 
 :src_backup/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD
             <div className="flex flex-col gap-2">
               <Button
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ApiErrorBoundary.tsx
-=======
             <div className="flex flex-col gap-2">
               <Button
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
                 onClick={this.handleRetry}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
@@ -407,25 +381,17 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
 :src_backup/components/ApiErrorBoundary.tsx
 </Button>
 
-<<<<<<< HEAD:src/components/ApiErrorBoundary.tsx
-<<<<<<< HEAD
               <Button
-=======
               </Button>
 
               <Button
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
                 variant="outline"
                 onClick={() => window.location.reload()}
                 className="w-full"
               >
 :src_backup/components/ApiErrorBoundary.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
                 Reload Page
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </Button>
             </div>
 
@@ -436,8 +402,6 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 <span>Offline</span>
               </div>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <AlertDescription className='mt - 2'>;
@@ -517,22 +481,18 @@ export const useApiErrorHandler = () =>: any {
             )}
 :src_backup/components/ApiErrorBoundary.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ApiErrorBoundary.tsx
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <pre className="mt-2 whitespace-pre-wrap break-all">
 
-=======
               <details className="mt-4 rounded border p-2 text-xs">"
                 <summary className="cursor-pointer font-medium">"
                   Debug Info (Development,  Only)
                 </summary>
                 <pre className="mt-2 whitespace-pre-wrap break-all">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>;
@@ -562,10 +522,4 @@ Sentry.withScope((scope) => {;
 return { handleApiError }
 };
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ApiErrorBoundary.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ApiErrorBoundary.tsx

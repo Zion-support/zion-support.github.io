@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 
-=======
 
 :pages/space-tech.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout/Layout";
@@ -14,8 +11,6 @@ return (
       <meta
         name="description"
         content="Space mission control, satellite operations, and secure communications consulting."
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div
                 key={f}
                 className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">;
@@ -187,7 +182,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </Layout>
 );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </a>
             <a href="/market-pricing" className="px-8 py-4">
               See Market Pricing
@@ -224,9 +218,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   </Layout>
 );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <Head>
         <title>Space Technology | Zion Tech Group</title>
         <meta name="description" content="Space mission control, satellite operations, and secure communications consulting." />
@@ -245,7 +236,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </header>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -254,23 +244,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <section className="text-center">
             <a href="/space-technology" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
               <Globe2 className="w-4 h-4" />
               <span>Explore detailed Space Technology offerings</span>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </section>
         </div>
       </div>
     </Layout>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>;
           </section>;
           <section className="text-center">;
@@ -289,15 +272,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/space-tech.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -46,7 +46,6 @@ import { GradientHeading } from "@/components/GradientHeading";"
 import { Button } from "@/components/ui/button";'
 import Link from 'next/link';
 :temp_exclude/hooks.disabled/features/AdminDashboard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function AdminDashboard() {
   const schema = {
     "@context": "https://schema.org",
@@ -56,7 +55,6 @@ export default function AdminDashboard() {
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
   },
 
-<<<<<<< HEAD
   return (
     <>
       <SEO
@@ -69,7 +67,6 @@ export default function AdminDashboard() {
   return (
     <>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script"
@@ -156,9 +153,7 @@ export default function AdminDashboard() {;
               src="https: //placehold.co/800x400";
               alt="Screenshot of admin dashboard";
               className="object-cover";
-=======
 ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/AdminDashboard.tsx
             />;
           </div>;"
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;"
@@ -195,7 +190,6 @@ export default function AdminDashboard() {;
 
 :temp_exclude/hooks.disabled/features/AdminDashboard.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Link href="/admin">View Dashboard</Link>;
             </Button>;
           </div>;

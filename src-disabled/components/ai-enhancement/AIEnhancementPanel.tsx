@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
@@ -29,38 +27,29 @@ import { Button } from '@/components/ui/button';'
 import { Input } from '@/components/ui/input';'
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
 import {;
-=======
 
   title: string;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ai-enhancement/AIEnhancementPanel.tsx
   useAIContentEnhancer,;
   AIEnhancementOptions,;'
 } from '@/hooks/useAIContentEnhancer';
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
 interface AIEnhancementPanelProps {  title: string;
-=======
 
 :src/components/ai-enhancement/AIEnhancementPanel.tsx
   title: string;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 interface AIEnhancementPanelProps {;
   title: string;,
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ai-enhancement/AIEnhancementPanel.tsx
   defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import {}
   Card,
@@ -75,7 +64,6 @@ import { Textarea } from '@/components / ui / textarea';'
 import { Button } from '@/components / ui / button';'
 import { Input } from '@/components / ui / input';'
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
   useAIContentEnhancer,
   AIEnhancementOptions,'
 } from '@/hooks / useAIContentEnhancer';
@@ -125,14 +113,11 @@ if ( {) {}
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
     if (on_close ()) {
   $2
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 export function AIEnhancementPanel({;
 
 :src/components/ai-enhancement/AIEnhancementPanel.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
   initialContent?: string;
 export function AIEnhancementPanel(): any ({;
 
@@ -179,9 +164,7 @@ if ( {) {
   initialContent?: string;
 export function AIEnhancementPanel(): any ({;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ai-enhancement/AIEnhancementPanel.tsx
   title,;
-=======
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
 interface AIEnhancementPanelProps {;
   title: string,;
@@ -193,18 +176,13 @@ interface AIEnhancementPanelProps {;
 }
 ;
 export function AIEnhancementPanel({;  title,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   defaultOptions,;
   onApply,;
   onClose,;
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
   showInstructions = true,;
-<<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   initialContent = '';
   initialContent = '',;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
     ...defaultOptions,;
@@ -213,12 +191,10 @@ export function AIEnhancementPanel({;  title,;
   const [generatedContent, setGeneratedContent] = useState<string>(''),;
   const [copied, setCopied] = useState(false),;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
-=======
   });
   const [generatedContent, setGeneratedContent] = useState<string>('');,
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ai-enhancement/AIEnhancementPanel.tsx
   const handleGenerate = async () => {;
     const result = await enhanceContent(options),;
     if (result) {;
@@ -226,10 +202,8 @@ export function AIEnhancementPanel({;  title,;
     }
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
   },
-=======
 
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             value={options && options.content}
             onChange={e => handleInputChange(e, 'content')}          />;
         </div>;
@@ -312,7 +286,6 @@ export function AIEnhancementPanel({;  title,;
     }
   },
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
   const handleInputChange = (
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -320,9 +293,6 @@ e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setOptions({
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       ...options,
       [field]: e.target.value})
   },
@@ -342,11 +312,7 @@ const handleApply = () => {
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
   },
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ...options,
       [field]: e.target.value})
   },
@@ -370,8 +336,6 @@ export function AIEnhancementPanel({
   onClose;
   showInstructions;
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>"
@@ -386,17 +350,10 @@ export function AIEnhancementPanel({
           <label className="text-sm font-medium">Content to enhance</label>
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
           <Textarea
-<<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ai-enhancement/AIEnhancementPanel.tsx
             placeholder="Enter your content to enhance..."
-=======
           <Textarea;
 "
             placeholder="Enter your content to enhance...""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
             className="min-h-[100px]"
             value={options.content}'
             onChange={(e) => handleInputChange(e, 'content')}
@@ -471,8 +428,6 @@ pr-12325
               value={options.instructions}
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ai-enhancement/AIEnhancementPanel.tsx
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
@@ -481,31 +436,23 @@ pr-12325
 ;
         {/* Generate button */}
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Button 
           onClick={handleGenerate}
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
         >
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD
           {isEnhancing ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           {isEnhancing ? (
             <>'
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           {isEnhancing ? (
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />'
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ai-enhancement/AIEnhancementPanel.tsx
               Enhancing...
         <Button;
           onClick={handleGenerate} "
@@ -521,7 +468,6 @@ pr-12325
           ) : (
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
             <>
-<<<<<<< HEAD
               <Sparkles className="mr-2 h-4 w-4" />
               Generate Enhanced Content
             </>
@@ -532,7 +478,6 @@ pr-12325
             </>
           )}
 :src/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD
         </Button>
           disabled={isEnhancing || (!options && options.content && !options && options.context)}>;
           {isEnhancing ? (;
@@ -549,19 +494,14 @@ pr-12325
         </Button>;
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Output area */}
         {generatedContent && (
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD
           <div className="space-y-2 mt-4">
             <div className="flex justify-between items-center">
-=======
 "
           <div className="space-y-2 mt-4">"
             <div className="flex justify-between items-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
               <label className="text-sm font-medium">Generated content</label>
               <Button "
                 variant="ghost" "
@@ -571,13 +511,8 @@ pr-12325
               >
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
-<<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ai-enhancement/AIEnhancementPanel.tsx
                 {copied ? (
-=======
                 {copied ? ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : ("
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>
@@ -589,7 +524,6 @@ pr-12325
               <Textarea
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
                 value={generatedContent}
-=======
 
             </>)
           )}
@@ -616,11 +550,8 @@ pr-12325
             <div className='relative'>;
 pr-12325
                 value={generatedContent}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ai-enhancement/AIEnhancementPanel.tsx
                 onChange={(e) => setGeneratedContent(e.target.value)}
-=======
                 onChange={(e) => setGeneratedContent(e.target.value)}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
                 className="min-h-[200px]"
               />
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
@@ -629,7 +560,6 @@ pr-12325
         )}
 
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD
 
 {generatedContent && (
         <CardFooter className="flex justify-between">
@@ -639,9 +569,7 @@ pr-12325
             </Button>
           )}
       {generatedContent && (
-=======
       {generatedContent && ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
         <CardFooter className='flex justify-between'>
           {onClose && ('
             <Button variant='outline' onClick={onClose}>
@@ -661,16 +589,11 @@ pr-12325
     </Card>;
   );
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
 }
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ai-enhancement/AIEnhancementPanel.tsx
     <Card className='w - full max - w-2xl mx - auto'>;
       <CardHeader>;'
         <CardTitle className='flex items - center gap - 2'>;'
@@ -771,37 +694,25 @@ pr-12325
 };
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
         </CardFooter>;
       )}
 :src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD
     </Card>;
   );
 }
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     </Card>;
   );
 }
 ;
 }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ai-enhancement/AIEnhancementPanel.tsx
 ;
     </Card>
   );
 :src/components/ai-enhancement/AIEnhancementPanel.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
-=======
 
                     <Check className='h - 4 w - 4 mr - 1' /> Copied;
 
@@ -817,4 +728,3 @@ pr-12325
     );
           <Button onClick={handleApply}>;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ai-enhancement/AIEnhancementPanel.tsx

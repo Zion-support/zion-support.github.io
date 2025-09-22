@@ -1,11 +1,7 @@
 :src_backup/components/QuoteRequestForm/TimelineStep.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-=======
 
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/QuoteRequestForm/TimelineStep.tsx
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
 import {
@@ -29,8 +25,6 @@ import { cn } from "@/lib/utils","
 import { QuoteFormData } from "@/types/quotes","
 
 :src_backup/components/QuoteRequestForm/TimelineStep.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
@@ -46,8 +40,6 @@ interface TimelineStepProps {
 }
 :src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
 import { format } from "date-fns",
@@ -66,10 +58,7 @@ interface TimelineStepProps {
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
 :src/components/QuoteRequestForm/TimelineStep.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className="space-y-6">
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">When do you need this?</h3>
@@ -82,7 +71,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                   ? "bg-zion-purple/20 border-zion-purple" 
                   : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
 }`}
-<<<<<<< HEAD
 
               onClick={() => updateFormData({ timeline: 'fixed' })}            >;
               <h4 className='font-medium text-white'>Fixed Dates</h4>;
@@ -93,7 +81,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 
             <div
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               onClick={() => updateFormData({ timeline: "fixed" })}
             >
               <h4 className="font-medium text-white">Fixed Dates</h4>
@@ -105,12 +92,10 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                 formData.timeline === "flexible" 
                   ? "bg-zion-purple/20 border-zion-purple" 
                   : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
-=======
               }`}              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'flexible'
                   ? 'bg-zion-purple/20 border-zion-purple'
                   : 'bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               }`}
 onClick={() => updateFormData({ timeline: "flexible" })}
             >
@@ -155,7 +140,6 @@ onClick={() => updateFormData({ timeline: "flexible" })}
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
-=======
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'flexible'
                   ? 'bg-zion-purple/20 border-zion-purple'
@@ -176,15 +160,12 @@ onClick={() => updateFormData({ timeline: "flexible" })}
               </p>;
             </div>;
           </div>;              <div>
-=======
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-=======
 
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
@@ -224,7 +205,6 @@ onClick={() => updateFormData({ timeline: "flexible" })}
 
 :src/components/QuoteRequestForm/TimelineStep.tsx
               <div>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Label className='block mb-2 text-zion-slate-light'>
                   End Date
                 </Label>
@@ -270,7 +250,6 @@ onClick={() => updateFormData({ timeline: "flexible" })}
               </div>;
 
 :src/components/QuoteRequestForm/TimelineStep.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       variant="outline"
                       className={cn(
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
@@ -315,9 +294,7 @@ pr-12325
                       initialFocus
 :src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm/TimelineStep.tsx
                       className="p-3 pointer-events-auto"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { format } from "date-fns",;
 import { Calendar } from "@/components/ui/calendar",;
 import { Button } from "@/components/ui/button",;
@@ -435,16 +412,11 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
       </div>;
     </div>;
   );
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm/TimelineStep.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/QuoteRequestForm/TimelineStep.tsx
             </div>)}
         </div>;
       </div>;
     </div>);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 :src/components/QuoteRequestForm/TimelineStep.tsx
 selected={formData.endDate}
@@ -519,9 +491,6 @@ selected={formData.endDate}
     </div>
   );
 :src/components/QuoteRequestForm/TimelineStep.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                         date < (formData && formData.startDate || new Date());
 
@@ -566,4 +535,3 @@ interface TimelineStepProps {;
             </div>)}
     </div>);`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/QuoteRequestForm/TimelineStep.tsx

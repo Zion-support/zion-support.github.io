@@ -1,9 +1,4 @@
 :src_backup/pages/ITServices.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'; const ITServices = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> IT Services </h1> <p className="text - xl text - gray - 600"> Comprehensive IT solutions to support your business operations. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Infrastructure Management</h3> <p className="text - gray - 600 mb - 4">Complete management of your IT infrastructure and systems.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Network Security</h3> <p className="text - gray - 600 mb - 4">Protect your network with advanced security solutions.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Cloud Solutions</h3> <p className="text - gray - 600 mb - 4">Migrate to the cloud with our comprehensive cloud solutions.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> </div> </div> </div> )} export default ITServices;
 import React from 'react'; const ITServices = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> IT Services </h1> <p className="text-xl text-gray-600"> Comprehensive IT solutions to support your business operations. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Infrastructure Management</h3> <p className="text-gray-600 mb-4">Complete management of your IT infrastructure and systems.</p> <span className="text-sm text-blue-600">Learn More</span> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Network Security</h3> <p className="text-gray-600 mb-4">Protect your network with advanced security solutions.</p> <span className="text-sm text-blue-600">Learn More</span> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Solutions</h3> <p className="text-gray-600 mb-4">Migrate to the cloud with our comprehensive cloud solutions.</p> <span className="text-sm text-blue-600">Learn More</span> </div> </div> </div> </div> )}; export default ITServices;
 import React from 'react'; const ITServices = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> IT Services </h1> <p className="text - xl text - gray - 600"> Comprehensive IT solutions to support your business operations. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Infrastructure Management</h3> <p className="text - gray - 600 mb - 4">Complete management of your IT infrastructure and systems.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Network Security</h3> <p className="text - gray - 600 mb - 4">Protect your network with advanced security solutions.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Cloud Solutions</h3> <p className="text - gray - 600 mb - 4">Migrate to the cloud with our comprehensive cloud solutions.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> </div> </div> </div> )} export default ITServices;
@@ -325,7 +320,6 @@ function Plan({ name, price, duration, features, popular = false }: {
 
 export default ITServices;
 :src_backup/pages/ITServices.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 import React from "react";
 import MainLayout from "../components/layout/MainLayout";
 
@@ -341,16 +335,7 @@ const ITServices: React.FC = () => {
 };
 
 export default ITServices;
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/ITServices.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/pages/ITServices.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -377,4 +362,3 @@ import React from 'react'; const ITServices = () => { return ( <div className="m
 
 :src/pages/ITServices.tsx
 import React from 'react'; const ITServices = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> IT Services </h1> <p className="text - xl text - gray - 600"> Comprehensive IT solutions to support your business operations. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Infrastructure Management</h3> <p className="text - gray - 600 mb - 4">Complete management of your IT infrastructure and systems.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Network Security</h3> <p className="text - gray - 600 mb - 4">Protect your network with advanced security solutions.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Cloud Solutions</h3> <p className="text - gray - 600 mb - 4">Migrate to the cloud with our comprehensive cloud solutions.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> </div> </div> </div> )} export default ITServices;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,5 +1,4 @@
 
-=======
 import React, { useState, useEffect, useCallback } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { toast } from "sonner",;
@@ -43,12 +42,10 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
   useEffect(() => {;
     if (jobId) {;
       setIsFormLoading(true),;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       getJobById(jobId);
         .then((job) => {;
           if (job) {;
             // Set form values;
-<<<<<<< HEAD
 
     }
   },;

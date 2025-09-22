@@ -50,7 +50,6 @@ this.log(`✅ Fixed ${this.fixedFiles.length} files`),;
             this.log(` Fixed ${this.fixedFiles.length} files`),;
             if (this.errors.length > 0) {;`;
                 this.log(`  ${this.errors.length} files had errors that couldn't be auto-fixed`),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             }
 ;
             return {;
@@ -59,7 +58,6 @@ this.log(`✅ Fixed ${this.fixedFiles.length} files`),;
             },;
 ;
         } catch (error) {;
-<<<<<<< HEAD
             this.log(`❌ Error fixing syntax:${error.message}`),;
             throw error,;
     async fixFile(filePath) {;
@@ -245,4 +243,3 @@ new winston.transports.File ({
 process.on ('SIGTERM', () => {
   // Add cleanup logic here process.exit (0) 
 });
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

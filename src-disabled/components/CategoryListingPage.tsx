@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
@@ -11,11 +8,8 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",
 import { safeStorage } from "@/utils/safeStorage",
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Example listing type
-=======
 // Example listing type
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface Listing {
   id: string,
   title: string,
@@ -142,7 +136,6 @@ export function CategoryListingPage({
           <div className='text-center mb-12'>
             <GradientHeading>{title}</GradientHeading>
             <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useEffect } from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { ListingScoreCard } from "@/components/ListingScoreCard",;
@@ -155,7 +148,6 @@ import { safeStorage } from "@/utils/safeStorage",;
 // Example listing type;
 interface Listing {;
   id: string,;
-<<<<<<< HEAD
   title: string,;
   description: string,;
   category: string,;
@@ -170,7 +162,6 @@ interface Listing {;
   price?: number | null,;
   createdAt: string;
 }
-<<<<<<< HEAD
 ;
 interface CategoryListingPageProps {;
   title: string,;
@@ -656,7 +647,6 @@ export function CategoryListingPage({;
               {searchQuery && ` for "${searchQuery}"`}
             </p>
           </div>
-<<<<<<< HEAD
                 >
                   Clear all filters
                 </Button>
@@ -714,12 +704,6 @@ export function CategoryListingPage({;
     </div>
   );
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </>
   );
 
@@ -805,8 +789,4 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" ;
 }</div> </div> </div> </>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

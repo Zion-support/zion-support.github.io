@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 </div>
 import { Check } from 'lucide-react';
 
@@ -27,11 +26,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { Check } from 'lucide-react'
 
-<<<<<<< HEAD
             </div>
             <div>
               <h3 className='text-white font-medium'>First Hour of Service</h3>
@@ -87,7 +84,6 @@ import { Check } from 'lucide-react'
 
 import { Check } from 'lucide-react'
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function ServiceIncludes() {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
@@ -152,9 +148,7 @@ export function ServiceIncludes() {
               <Check className="h-5 w-5 text-zion-cyan" />
             </div>
             <div>
-<<<<<<< HEAD
               <h3 className="text-white font-medium">Service Documentation</h3>
-=======
           </div>"
           <div className="flex items-start">"
             <div className="mt-1 mr-4">"
@@ -170,7 +164,6 @@ export function ServiceIncludes() {
             <div>
 "
               <h3 className="text-white font-medium">Service Documentation</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
@@ -186,12 +179,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </div>
   )
 
     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Check } from 'lucide-react';
 export function ServiceIncludes() {;
   return (;
@@ -400,7 +391,6 @@ function ServiceIncludes() {
             <div>;
               <h3 className="text - white font-medium">Service Documentation</h3>;
               <p className="text - zion - slate-light">Detailed report of work performed and recommendations.</p>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>;
           </div>;
         </div>;
@@ -411,11 +401,6 @@ function ServiceIncludes() {
 ;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }}))
     </div>;
   );
@@ -424,4 +409,3 @@ function ServiceIncludes() {
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

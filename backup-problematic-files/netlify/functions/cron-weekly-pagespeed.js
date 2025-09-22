@@ -1,6 +1,4 @@
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { upsertFile } = require('./_lib/github');
 async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed');
@@ -44,13 +42,8 @@ statusCode: 200
       body: JSON.stringify({ ok: true, pages: results.length })
     }
   } catch (e) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
     return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) }
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

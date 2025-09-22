@@ -1,5 +1,4 @@
 
-=======
 import { ApplicationStatus } from "@/types/jobs",;
 import { Progress } from "@/components/ui/progress",;
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",;
@@ -30,7 +29,6 @@ export function ApplicationProgress({ status, className } ApplicationProgressPro
     <div className={cn("w-full space-y-2", className)}>;
       <Progress value={progressValue} className="h-2" />;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="flex justify-between text-xs text-muted-foreground">;
         <div className="flex flex-col items-center">;
           <StatusIcon status={status} current="new" />;
@@ -54,6 +52,5 @@ export function ApplicationProgress({ status, className } ApplicationProgressPro
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
 
 }

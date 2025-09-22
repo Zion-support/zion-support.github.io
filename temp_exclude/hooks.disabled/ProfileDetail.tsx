@@ -28,7 +28,6 @@ export default function ProfileDetail() {
           setError("Profile ID is missing.");
           return;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   useEffect(() => {}
     const fetchProfile = async () => {}
@@ -37,7 +36,6 @@ export default function ProfileDetail() {
 :temp_exclude/hooks.disabled/ProfileDetail.tsx
       try {
         if (!profileId) {
-<<<<<<< HEAD
           setError("Profile ID is missing."),
           return
         }
@@ -64,7 +62,6 @@ const { data, error } = await supabase
           setError("Profile not found.");
           return;
 :temp_exclude/hooks.disabled/ProfileDetail.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         if (!data) {
           setError("Profile not found."),
@@ -324,7 +321,6 @@ id: profileData?.id || '',
                 hourly_rate: profileData?.hourly_rate || 0
                 professional_title: profileData?.professional_title || '',
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               }}
 :temp_exclude/hooks.disabled/ProfileDetail.tsx
             />;
@@ -372,7 +368,6 @@ id: profileData?.id || '',
                     <Github className="h-4 w-4" />
 :temp_exclude/hooks.disabled/ProfileDetail.tsx
                     GitHub
-<<<<<<< HEAD
                   </Link>
                 )}
                 {profileData.twitter_url && (;
@@ -417,6 +412,4 @@ id: profileData?.id || '',
 }
 
 ;
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ProfileDetail.tsx

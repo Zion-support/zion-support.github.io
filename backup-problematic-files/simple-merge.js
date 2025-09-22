@@ -7,7 +7,6 @@
     }
   }
   ;
-=======
           try {;`;
             execSync(`git checkout --ours "${file}"`);"
           } catch (e) {;"`;
@@ -16,7 +15,6 @@
         }
       // Commit the merge;"
       execSync('git commit -m "feat:resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Get all branches;
 
       // Continue with other branches;
@@ -33,4 +31,3 @@
 ;
 } catch (error) {;
   process.exit(1);}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

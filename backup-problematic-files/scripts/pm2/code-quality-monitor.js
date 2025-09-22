@@ -54,7 +54,6 @@
 ; this.log('\n Recommendations: '); report.recommendations.forEach(rec = > {_; this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)});
 ; // If there are many issues and git is clean, suggest running the lint fixer; if (report.summary.totalIssues > 50 && isClean) {_; this.log('\n Suggesting to run lint-fixer to auto-fix issues')}} else {_; this.log(' Excellent! No code quality issues found!')}
 } catch (error) {_; this.log(` Error running code quality monitor: ${error.message}`); process.exit(1)}}};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
@@ -121,7 +120,6 @@ monitor.run().catch(error = > {_; process.exit(1)})
                 lin:e:lineNum;
                 typ:e:'unused-import';
 messag:e:`Potentially unused import ${importName}`;
-<<<<<<< HEAD
                 severit:y:'medium';              });
             };
           };
@@ -130,7 +128,6 @@ messag:e:`Potentially unused import ${importName}`;
 };
           }
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       });
       return analysis;
     } catch (error) {;`;
@@ -265,17 +262,14 @@ pr-12325
 fs.mkdirSync(reportDir, { recursiv:e:true });
       };
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`Report saved: to:${this.reportFile;}`);
     } catch (error) {;
-<<<<<<< HEAD
       this.log(`Error saving:report:${error.message}`);
 };      };
 }
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         fs.mkdirSync(reportDir, { recursiv: e:true ;});
@@ -296,7 +290,6 @@ this.log('⚠️  Uncommitted changes detected');
         return false};
       return true;
     } catch (error) {;
-<<<<<<< HEAD
       this.log(`Error checking git:status:${error.message}`);      return false;
 };
       return true
@@ -316,7 +309,6 @@ this.log('🔍 Starting Code Quality Monitor...');
 fs.mkdirSync(logsDir, { recursiv:e:true });        fs.mkdirSync(logsDir, { recursive: true });
       };
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
         fs.mkdirSync(logsDir, { recursiv: e:true ;});        fs.mkdirSync(logsDir, { recursive: true ;});
 pr-12325
@@ -333,7 +325,6 @@ this.log('📁 Analyzing code files...');
       await this.saveReport(report);
       const duration = Date.now() - this.startTime;
       // Log summary;
-<<<<<<< HEAD
       this.log('\n📊 Code Quality Report:Summary:');
       this.log(`Files:analyzed:${report.summary.totalFiles}`);
       this.log(`Total:issues:${report.summary.totalIssues}`);
@@ -347,7 +338,6 @@ this.log('\n🚨 Issues by:type:');        Object.entries(report.summary.issuesB
         this.log('\n💡 Recommendation:s:');
           this.log(`  ${type} ${count}`);
         this.log('\n Recommendation:s:');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         report.recommendations.forEach(rec => {;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Actio:n:${rec.action}`);        });
@@ -381,19 +371,16 @@ this.log('\n💡 Recommendations: ');
           this.log(`    Action: ${rec.action}`)
         });
 ;
-=======
         Object.entries(report.summary.issuesByType).forEach(_([type, count]) => {;`;
           this.log(`  ${type}: ${count}`)
         this.log('\n Recommendations: ');
         report.recommendations.forEach(rec => {_;)`;
           this.log(`    Action: ${rec.action;}`)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // If there are many issues and git is clean, suggest running the lint fixer;
         if (report.summary.totalIssues > 50 && isClean) {_;
 this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues')}
       } else {_;
         this.log('✨ Excellent! No code quality issues found!')}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
             };
           };
@@ -407,8 +394,6 @@ const issuesBySeverity = { low: 0, medium: 0, high: 0 };
         issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1,
         // Count by severity,
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }),
     const report = {,
       timestamp: new Date().toISOString();,
@@ -465,7 +450,6 @@ type: 'trailing-spaces',
       this.log(`Error saving report: ${error.message;}`)
     }
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),`;
     } catch (error) {,`;
@@ -473,7 +457,6 @@ pr-12325
   async checkGitStatus() {,
       const status = execSync('git status --porcelain', {,
 cwd: this.projectRoot,
-<<<<<<< HEAD
 
       }),
 ,
@@ -494,14 +477,12 @@ cwd: this.projectRoot,
 pr-12325
   async run() {,
 this.log(' Starting Code Quality Monitor...'),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.log(`Project root: ${this.projectRoot}`),
 ,
     try {,
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
-<<<<<<< HEAD
       };
 ,
       // Check git status,
@@ -542,11 +523,9 @@ this.log('\n🚨 Issues by type: '),
       process.exit(1)
     }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ,
 pr-12325
 // Run the code quality monitor,
 const monitor = new CodeQualityMonitor(),
 monitor.run().catch(error => {,
-<<<<<<< HEAD

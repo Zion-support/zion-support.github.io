@@ -1,6 +1,4 @@
 :src_backup/components/services/GeneratedDescriptionDisplay.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -33,9 +31,7 @@ import {;
 } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Check, Pencil } from 'lucide-react';
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/GeneratedDescriptionDisplay.tsx
 
 interface GeneratedDescriptionDisplayProps {,
   description: string;
@@ -140,11 +136,7 @@ export function GeneratedDescriptionDisplay({
     })
   },
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -238,10 +230,6 @@ export function GeneratedDescriptionDisplay({;
         ) : (
           <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {editedDescription}
           </div>;
         )}
@@ -250,24 +238,18 @@ export function GeneratedDescriptionDisplay({;
       {isEditing && (;
         <CardFooter>;
           <Button;
-=======
       </CardContent>;
       {isEditing && (;
         <CardFooter>;
-=======
       </CardContent>;
       {isEditing && (;
         <CardFooter>;
 
             onClick={handleSave}
 :src_backup/components/services/GeneratedDescriptionDisplay.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onClick={handleSave}
-=======
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/GeneratedDescriptionDisplay.tsx
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
           >
 
@@ -326,6 +308,4 @@ export function GeneratedDescriptionDisplay({;
 }</Card>);
 }'";
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

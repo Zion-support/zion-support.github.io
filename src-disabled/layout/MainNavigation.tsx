@@ -1,8 +1,4 @@
 :src_backup/layout/MainNavigation.tsx
-<<<<<<< HEAD:src/layout/MainNavigation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import { useCart } from "@/context/CartContext";
 import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
@@ -11,7 +7,6 @@ import { HoverCard, HoverCardTrigger, HoverCardContent  } from '@/components/ui/
 import { MiniCartPreview  } from '@/components/cart/MiniCartPreview';
 
 import { LoginModal } from '@/components/auth/LoginModal';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/layout/MainNavigation.tsx
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { useState } from "react",
@@ -43,22 +38,18 @@ import { LanguageSelector } from '@/components/header/LanguageSelector',;
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',;
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview',;
 import { LoginModal } from '@/components/auth/LoginModal',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { useCart } from "@/context/CartContext",
 import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
 import { LanguageSelector } from '@/components/header/LanguageSelector',
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview',
 import { LoginModal } from '@/components/auth/LoginModal',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/layout/MainNavigation.tsx
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
   className?: string
 :src_backup/layout/MainNavigation.tsx
 
-<<<<<<< HEAD
 import Link from 'next/link';
 import { use_router } from 'next / router';
 import { useState } from 'react';
@@ -79,7 +70,6 @@ import { useFavorites } from '@/hooks/useFavorites'
 import { useCart } from '@/context/CartContext'
 origin/cursor/automate-test-improve-and-merge-code-2533
 import {
-=======
 interface MainNavigationProps {}
   isAdmin?: boolean;
   unreadCount?: number;
@@ -93,7 +83,6 @@ import { use_translation } from 'react - i18next';'
 import { use_favorites } from '@/hooks / use_favorites';'
 import { use_cart } from '@/context / CartContext';
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/layout/MainNavigation.tsx
   Heart,
   MessageSquare,
   CreditCard,
@@ -198,8 +187,6 @@ import { LoginModal } from '@/components/auth/LoginModal';import { LanguageSelec
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';'
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview';'
 import { LoginModal } from '@/components/auth/LoginModal';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import Link from "next/link",;
 import { useRouter } from "next/router",;
 import { useState } from "react",;
@@ -213,7 +200,6 @@ import { LanguageSelector } from '@/components/header/LanguageSelector',;
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',;
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview',;
 import { LoginModal } from '@/components/auth/LoginModal',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/layout/MainNavigation.tsx
 interface MainNavigationProps {;
   isAdmin?: boolean,;
   unreadCount?: number,;
@@ -242,7 +228,6 @@ export function MainNavigation() { return null; }
   },;
 
 :src_backup/layout/MainNavigation.tsx
-<<<<<<< HEAD
 interface MainNavigationProps {;
   isAdmin?: boolean;
   unreadCount?: number;
@@ -321,9 +306,7 @@ matches: (path: string) => path === '/';
     links.push({;
       key: 'analytics',;
       name: t('nav.analytics'),;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/layout/MainNavigation.tsx
 
-<<<<<<< HEAD
   const links = baseLinks && baseLinks.map(link => ({;
     ...link,;
     name: t(`nav.${link && link.key}`),;
@@ -344,7 +327,6 @@ matches: (path: string) => path === '/';
   if (isAdmin) {;
     links && links.push({;
       key: 'analytics',;
-<<<<<<< HEAD
       name: t('nav.analytics'),;
       href: '/analytics',;
       matches: (path: string) => path.startsWith('/analytics');
@@ -367,7 +349,6 @@ aria-controls="main-navbar-collapse"
   return (
 :src/layout/MainNavigation.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <nav
 className={cn("navbar", className)}
         role="navigation"
@@ -392,23 +373,16 @@ className={cn("navbar", className)}
 
         <div
 :src/layout/MainNavigation.tsx
-<<<<<<< HEAD
           id='main-navbar-collapse'          className={cn(
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           id="main-navbar-collapse"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/layout/MainNavigation.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/layout/MainNavigation.tsx
 
           className={cn(
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   href={link.href}
                   aria-label={link.name}
                   onClick={() => setIsMobileMenuOpen(false)}
 :src_backup/layout/MainNavigation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className={cn(
 
                     'nav-link',
@@ -419,9 +393,7 @@ className={cn("navbar", className)}
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}                >
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     "nav-link",
-=======
 
 '
                     'nav-link','
@@ -433,7 +405,6 @@ className={cn("navbar", className)}
                   )}                >
 "
                     "nav-link","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/layout/MainNavigation.tsx
                     "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     link.matches(router.pathname)"
                       ? "bg-zion-purple/20 text-zion-cyan""
@@ -441,35 +412,26 @@ className={cn("navbar", className)}
                   )}
                 >;
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {link.name}
 :src_backup/layout/MainNavigation.tsx
                 </Link>;
               </li>;
             ))}
 
-=======
 :src/layout/MainNavigation.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/layout/MainNavigation.tsx
 
                     onClick={handleCartClick}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     className={cn(
 :src_backup/layout/MainNavigation.tsx
                       'nav-link'
                       'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router.pathname.startsWith('/cart')
 origin/cursor/automate-test-improve-and-merge-code-2533
                         ? 'bg-zion-purple/20 text-zion-cyan'
-=======
 '
                       'nav-link','
                       'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router && router.pathname.startsWith('/cart')
 '
                         ? 'bg-zion-purple/20 text-zion-cyan''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/layout/MainNavigation.tsx
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
 :src_backup/layout/MainNavigation.tsx
                     ),}>;'
@@ -483,9 +445,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       href: '/marketplace','
       matches: (path: string) => path.starts_with ('/marketplace'),    },
 {
-<<<<<<< HEAD:src/layout/MainNavigation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
       key: 'categories',
       href: '/categories',
       matches: (path: string) => path.starts_with ('/categories'),    },
@@ -513,8 +472,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   // Check condition
 if ( {) {
   $2}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/layout/MainNavigation.tsx
-=======
                     ),}>;
                     <ShoppingCart className='w-4 h-4 mr-1' />;
                     {t('nav && nav.cart', 'Cart')}'
@@ -526,11 +483,9 @@ if ( {) {
       matches: (path:,  string) => path.starts_with ('/marketplace'),    },'
     {
       matches: (path:,  string)  => path.startsWith('/contact')'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/layout/MainNavigation.tsx
 
 }
 :src_backup/layout/MainNavigation.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     links.push ({
 key: 'dashboard',
       name: t ('nav.dashboard'),
@@ -944,11 +899,7 @@ matches: (path: string)  => path && path.startsWith('/contact')
                               : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;`
 }`}
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
             {/* Wishlist link */}
             {isAuthenticated && ("
@@ -1046,7 +997,6 @@ matches: (path: string)  => path && path.startsWith('/contact')
                     <ShoppingCart className="w-4 h-4 mr-1" />
                     {t('nav.cartCart')}
                     {cartCount > 0 && (
-<<<<<<< HEAD
 }`};
 ;'`
                           {link.name}'`;'`
@@ -1144,7 +1094,6 @@ matches: (path: string)  => path && path.startsWith('/contact')
                             : 'text-zion-slate-light hover:text-white hover:bg-white/10'``
 }`}
                         onClick={: unknown setIsMobileMenuOpen(false)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   >;"
                     <ShoppingCart className="w-4 h-4 mr-1" />;'
@@ -1154,10 +1103,6 @@ matches: (path: string)  => path && path.startsWith('/contact')
                         {cartCount}
                       </span>;
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     )}
                   </Link>
                 </HoverCardTrigger>
@@ -1178,11 +1123,6 @@ matches: (path: string)  => path && path.startsWith('/contact')
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
 :src_backup/layout/MainNavigation.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/layout/MainNavigation.tsx
 
                         {link && link.name}
                       </Link>;
@@ -1225,7 +1165,6 @@ matches: (path: string)  => path && path.startsWith('/contact')
 }
 :src_backup/layout/MainNavigation.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 }
 :src_backup/layout/MainNavigation.tsx

@@ -185,8 +185,6 @@ export default function Home() {
   ];
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
->>>>>>> pr-12243
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -196,7 +194,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>
           Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions
         </title>
@@ -245,7 +242,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
->>>>>>> pr-12243
     ),
   };
 return (;
@@ -324,7 +320,6 @@ function HomePage() {
             <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
-<<<<<<< HEAD
             <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
               100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
@@ -463,9 +458,6 @@ origin/cursor/analyze-improve-and-deploy-application-0a01
               </Link>
               <Link 
                 href="/services-catalog" 
-<<<<<<< HEAD
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
                 className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
                 aria-label="Browse our services catalog"
                 tabIndex={animationState.isLoaded ? 0 : -1}
@@ -477,8 +469,6 @@ origin/cursor/analyze-improve-and-deploy-application-0a01
               </Link>
               <Link 
                 href="/contact" 
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> pr-12243
                 className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
                 aria-label="Get a quote for our services"
                 tabIndex={animationState.isLoaded ? 0 : -1}
@@ -637,8 +627,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   View All IT Services
                   <ChevronRightIcon className="w-5 h-5 ml-2" />
                 </Link>
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
->>>>>>> pr-12243
               </div>
             </div>
           </div>
@@ -1069,7 +1057,6 @@ origin/automation-improvements-final
         {/* Featured Services */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1182,9 +1169,6 @@ origin/automation-improvements-final
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 gradient-text">Our Services</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -1224,7 +1208,6 @@ origin/automation-improvements-final
                     <item.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
->>>>>>> pr-12243
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -1395,7 +1378,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 <Link
                   href="tel:+13024640950"
 
->>>>>>> pr-12243
                 </Link>
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
           <div className="max-w-4xl mx-auto text-center">
@@ -1421,8 +1403,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 <Button variant="outline" size="lg">
                   Schedule Consultation
                 </Button>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold mb-6 gradient-text">Ready to Transform Your Business?</h2>
@@ -1437,7 +1417,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 Learn More About Us
               </Link>
             </div>
->>>>>>> pr-12243
 
 </Link>
     );
@@ -1629,14 +1608,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-blue-200 mb-8">
               Join thousands of companies already using our AI-powered solutions
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> pr-12243
             </p>
             <a href="/ai-services" className="text-blue-600 hover:text-blue-800">
               Learn More →
@@ -1865,9 +1841,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
           </div>
         </section>
           </div>
@@ -1877,13 +1850,8 @@ origin/automation-improvements-final
     </MainLayout>
   );
 }
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> pr-12243
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </main>
     </>
 
@@ -2064,9 +2032,6 @@ We deliver exceptional results through innovation, expertise, and dedication;
 }
 </main>;
     </>;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
@@ -2098,5 +2063,3 @@ We deliver exceptional results through innovation, expertise, and dedication;
     </>
   );
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> pr-12243

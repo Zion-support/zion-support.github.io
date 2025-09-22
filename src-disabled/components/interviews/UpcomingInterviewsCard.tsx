@@ -1,9 +1,4 @@
 :src_backup/components/interviews/UpcomingInterviewsCard.tsx
-<<<<<<< HEAD:src/components/interviews/UpcomingInterviewsCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -20,18 +15,12 @@ export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews(),
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true),
-=======
 // Filter for confirmed interviews in the future
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/UpcomingInterviewsCard.tsx
         const upcoming = interviews
-=======
         // Filter for confirmed interviews in the future        const upcoming = interviews
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 // Filter for confirmed interviews in the future;
         const upcoming = interviews;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/UpcomingInterviewsCard.tsx
           .filter(
             interview =>
               interview.status === 'confirmed' &&
@@ -51,7 +40,6 @@ export function UpcomingInterviewsCard() {
           data: error;
         })
 :src/components/interviews/UpcomingInterviewsCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   useEffect(() => {
     const loadInterviews = async () => {
@@ -101,8 +89,6 @@ export function UpcomingInterviewsCard() {
                 </div>
               </div>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -111,17 +97,12 @@ import { Interview } from "@/types/interview",;
 import { format, isPast, parseISO } from "date-fns",;
 import Link from "next/link",;
 :src/components/interviews/UpcomingInterviewsCard.tsx
-<<<<<<< HEAD
 import { Calendar, Clock, Video } from 'lucide-react';
 import { Avatar } from "@/components/ui/avatar",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/UpcomingInterviewsCard.tsx
 import React, { useEffect, useState } from 'react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useInterviews } from '@/hooks/useInterviews';
@@ -130,10 +111,8 @@ import { format, isPast, parseISO } from 'date-fns';
 import Link from 'next/link';
 import { Calendar, Clock, Video } from 'lucide-react';
 :src/components/interviews/UpcomingInterviewsCard.tsx
-<<<<<<< HEAD
 import { Avatar } from '@/components/ui/avatar';
 import { logErrorToProduction } from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function UpcomingInterviewsCard() {;
   const { fetchInterviews } = useInterviews(),;
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
@@ -141,7 +120,6 @@ export function UpcomingInterviewsCard() {;
   useEffect(() => {;
     const loadInterviews = async () => {;
       setIsLoading(true),;
-=======
 "
 import React, { useEffect, useState } from "react",;"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;"
@@ -203,7 +181,6 @@ export function UpcomingInterviewsCard() { return null; }
 
   useEffect((,) => {;
     const loadInterviews = async () => {      setIsLoading(true);
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/UpcomingInterviewsCard.tsx
       try {;
         const interviews = await fetchInterviews(),;
         // Filter for confirmed interviews in the future;
@@ -247,13 +224,11 @@ if ( {) {}
           <CardTitle className='text - lg flex items - center'>;'
             <Video className='h - 5 w - 5 mr - 2 text - zion - purple' />;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/UpcomingInterviewsCard.tsx
             Upcoming Interviews;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
 :src/components/interviews/UpcomingInterviewsCard.tsx
-<<<<<<< HEAD
           <div className="space-y-4">;
             {[1, 2].map(i => (;
               <div key={i} className="flex items-center gap-3 animate-pulse">;
@@ -268,9 +243,7 @@ if ( {) {}
         </CardContent>;
       </Card>;
     );
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/UpcomingInterviewsCard.tsx
   }
 :src_backup/components/interviews/UpcomingInterviewsCard.tsx
   if (upcomingInterviews.length === 0) {
@@ -288,7 +261,6 @@ if ( {) {}
             <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>
             <Button asChild className="mt-4" variant="outline" size="sm">
               <Link href="/interviews">Schedule Interview</Link>
-=======
   if (upcomingInterviews.length === 0) {}
     return ('
       <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>
@@ -306,14 +278,12 @@ if ( {) {}
             </p>'
             <Button asChild className='mt-4' variant='outline' size='sm'>'
               <Link href='/interviews'>Schedule Interview</Link>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/UpcomingInterviewsCard.tsx
             </Button>
           </div>
         </CardContent>
       </Card>
     )
 :src/components/interviews/UpcomingInterviewsCard.tsx
-<<<<<<< HEAD
   }
 
   return (
@@ -328,7 +298,6 @@ if ( {) {}
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
@@ -339,11 +308,8 @@ if ( {) {}
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime(),
 
-=======
 
 :src_backup/components/interviews/UpcomingInterviewsCard.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Avatar } from '@/components/ui/avatar';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
@@ -355,14 +321,10 @@ export function UpcomingInterviewsCard() {
   useEffect(() => {
     const loadInterviews = null;
 :src/components/interviews/UpcomingInterviewsCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             return (
               <div key={interview.id} className="flex items-center gap-3">
-=======
             return ("
               <div key={interview.id} className="flex items-center gap-3">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/UpcomingInterviewsCard.tsx
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
                   {interview.client_avatar || interview.talent_avatar ? (
                     <img;
@@ -372,8 +334,6 @@ export function UpcomingInterviewsCard() {
 loading="lazy"
                     />
                   ) : (
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
                     </div>
@@ -385,10 +345,7 @@ loading="lazy"
                     <p className="font-medium line-clamp-1">
                       {interview.title || "Interview"}
 :src/components/interviews/UpcomingInterviewsCard.tsx
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/UpcomingInterviewsCard.tsx
-=======
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">"
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}"
                     </div>
@@ -398,19 +355,15 @@ loading="lazy"
                   <div className="flex justify-between items-start">"
                     <p className="font-medium line-clamp-1">"
                       {interview.title || "Interview"}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/interviews/UpcomingInterviewsCard.tsx
                     </p>
 :src_backup/components/interviews/UpcomingInterviewsCard.tsx
                     {isStartingSoon && (
-<<<<<<< HEAD
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
                         Soon
                       </span>
                         Soon
                       </span>
 :src/components/interviews/UpcomingInterviewsCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
       <CardHeader>;'
         <CardTitle className='text-lg flex items-center'>;'
@@ -471,16 +424,12 @@ loading="lazy"
                       <span className='text-xs px-1 && 1.5 py-0 && 0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>;
                         Soon;
                       </span>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     )}
                   </div>
 :src_backup/components/interviews/UpcomingInterviewsCard.tsx
-<<<<<<< HEAD
                   <div className="flex items-center text-sm text-muted-foreground">
-=======
 "
                   <div className="flex items-center text-sm text-muted-foreground">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/UpcomingInterviewsCard.tsx
                     <Clock className="h-3 w-3 mr-1" />
                     {formattedDate} at {formattedTime}
                   </div>;
@@ -491,36 +440,23 @@ loading="lazy"
         </div>
 :src_backup/components/interviews/UpcomingInterviewsCard.tsx
 
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/interviews/UpcomingInterviewsCard.tsx
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
           <Button asChild size="sm" variant="outline" className="w-full">
-=======
         "
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">"
           <Button asChild size="sm" variant="outline" className="w-full">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/UpcomingInterviewsCard.tsx
             <Link href="/interviews">
               View All Interviews;
             </Link>
 :src_backup/components/interviews/UpcomingInterviewsCard.tsx
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/interviews/UpcomingInterviewsCard.tsx
           </Button>
         </div>
       </CardContent>
     </Card>
 :src_backup/components/interviews/UpcomingInterviewsCard.tsx
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
                   </div>;
                 </div>;
@@ -651,25 +587,14 @@ if ( {) {}
 }
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 :src/components/interviews/UpcomingInterviewsCard.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 ;
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/interviews/UpcomingInterviewsCard.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/UpcomingInterviewsCard.tsx
-=======
                 </div>;)
               </div>))}
       );
@@ -709,4 +634,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             <Link href='/interviews'>View All Interviews;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/interviews/UpcomingInterviewsCard.tsx

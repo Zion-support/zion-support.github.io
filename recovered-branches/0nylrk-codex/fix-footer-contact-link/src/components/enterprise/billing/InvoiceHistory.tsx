@@ -1,15 +1,9 @@
 import React from "react";
 
-<<<<<<< HEAD
 import React from "react";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
 
-=======
 
 import {
   // TODO: Implement
@@ -18,20 +12,12 @@ pr-12325
 import {
   // TODO: Implement
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Table;
   TableBody;
   TableCell;
   TableHead;
-<<<<<<< HEAD
   TableHeader;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   TableHeader;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
@@ -39,64 +25,38 @@ import {Download, FileText, Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {toast} from "@/hooks/use-toast";
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
-=======
   TableHeader;import React from "react",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   TableHeader;import React from "react",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import React from "react",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
-<<<<<<< HEAD
   TableHeader,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   TableRow} from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from "lucide-react",
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function InvoiceHistory() {
-=======
   TableHeader,  TableRow} from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from "lucide-react",export function InvoiceHistory() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   TableHeader,  TableRow} from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from "lucide-react",export function InvoiceHistory() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   TableHeader,
-=======
   TableHeader;import React from "react",;
 import {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   TableHeader;
 
@@ -108,13 +68,10 @@ import { toast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
 export function InvoiceHistory() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Mock invoice data
 
   const invoices = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export function InvoiceHistory() {};
   // Mock invoice data;
@@ -125,28 +82,20 @@ export function InvoiceHistory() {};
       date: "May 1, 2025";"
       amount: "$1,999.00";
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       id: "INV-1234",;
       date: "May 1, 2025";
       amount: "$1,999.00";
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       id: "INV-1234"
       date: "May 1, 2025";
       amount: "$1,999.00";
       status: "paid"
-=======
 "
       id: "INV-1234""
       date: "May 1, 2025";"
       amount: "$1,999.00";"
       status: "paid""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       period: "May 2025"}
     {"
       id: "INV-1233""
@@ -181,11 +130,9 @@ export function InvoiceHistory() {};
       id: "INV-1234",;"
       date: "May 1, 2025";"
       amount: "$1,999.00";
-<<<<<<< HEAD
       id: "INV-1234",
       date: "May 1, 2025",
       amount: "$1,999.00",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       id: "INV-1234",;
       date: "May 1, 2025";
@@ -193,12 +140,7 @@ export function InvoiceHistory() {};
 
       id: "INV-1234",
       date: "May 1, 2025",
-<<<<<<< HEAD
-<<<<<<< HEAD
       amount: "$1,999.00",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       status: "paid",
       period: "May 2025"},
     {"
@@ -232,24 +174,17 @@ export function InvoiceHistory() {};
       status: "paid","
       period: "Dec 2024"}],
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleDownloadInvoice = (invoiceId: string) => {
     // In a real app, this would trigger a download of the invoice PDF
     toast({
-=======
 
   const handleDownloadInvoice = (invoiceId: string) => {}
     // In a real app, this would trigger a download of the invoice PDF;
     toast({"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       title: "Downloading invoice"
       description: `Downloading invoice ${invoiceId} as PDF.`})
 
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const getBadgeForStatus = (status: string) => {
     switch (status) {
@@ -302,8 +237,6 @@ id: "INV-1234",;
 
   const getBadgeForStatus = (status: string) => {;
     switch (status) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case "paid": return <Badge className="bg-green-500">Paid</Badge>;
       case "pending":;
         return <Badge variant="outline">Pending</Badge>;
@@ -319,14 +252,11 @@ id: "INV-1234",;
 
   return (
 
-=======
       amount: "$1,999.00",  const handleDownloadInvoice = (invoiceId: string) => {
     // In a real app, this would trigger a download of the invoice PDF
     toast({
       title: "Downloading invoice"
       description: `Downloading invoice ${invoiceId} as PDF.`})      case "paid": return <Badge className="bg-green-500">Paid</Badge>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       amount: "$1,999.00",
       status: "paid",
       period: "May 2025"},
@@ -421,14 +351,11 @@ export function InvoiceHistory() {;
   const getBadgeForStatus = (status: string) => {;
     switch (status) {;
       case "paid": return <Badge className="bg-green-500">Paid</Badge>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       case "pending":;
-=======
 
 "
       case "paid": return <Badge className="bg-green-500">Paid</Badge>;"
       case "pending":;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return <Badge variant="outline">Pending</Badge>;
 
       case "overdue":;
@@ -442,8 +369,6 @@ export function InvoiceHistory() {;
 
 },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const getBadgeForStatus = (status: string) => {
     switch (status) {
       case "paid": return <Badge className="bg-green-500">Paid</Badge>,
@@ -456,7 +381,6 @@ export function InvoiceHistory() {;
     }
   }
   },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <div className="space-y-6">
@@ -464,7 +388,6 @@ export function InvoiceHistory() {;
         <h3 className="text-xl font-medium">Invoice History</h3>
         <div className="relative">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
 
           <Input"
@@ -476,7 +399,6 @@ export function InvoiceHistory() {;
 </Input>
         </div>;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
@@ -503,8 +425,6 @@ export function InvoiceHistory() {;
                     <Button"
                       variant="outline""
                       size="sm"
-<<<<<<< HEAD
-<<<<<<< HEAD
                       className="h-8 gap-1"
                     >
                       <FileText className="h-3.5 w-3.5" />
@@ -531,14 +451,10 @@ export function InvoiceHistory() {;
     </div>
   )
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
   return (                    <Button
                       variant="outline"
                       size="sm"
                       className="h-8 gap-1"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             {invoices && invoices.map((invoice) => (;
               <TableRow key={invoice && invoice.id}>;
                 <TableCell className="font-medium">{invoice && invoice.id}</TableCell>;
@@ -561,15 +477,12 @@ export function InvoiceHistory() {;
                     <Button
                       variant="outline"
                       size="sm"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
                       className="h-8 gap-1">;
-=======
 
 }
 "
                       className="h-8 gap-1">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <FileText className="h-3 && 3.5 w-3 && 3.5" />;
 import React from './react';'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';'
@@ -653,11 +566,9 @@ return (
         </div>;
       </div>;
 <div className="rounded-md border">;
-=======
       </div>;"
       <div className="rounded - md border">;"
 </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Table>;
 </Table>
           <TableHeader>;
@@ -669,11 +580,8 @@ return (
               <TableHead > Billing Period</TableHead>;
               <TableHead > Amount</TableHead>;
 <TableHead > Status</TableHead>;
-<<<<<<< HEAD
               <TableHead className="text-right">Actions</TableHead>;
-=======
               <TableHead className="text-right">Actions</TableHead>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </TableRow>;
           </TableHeader>;
           <TableBody>;
@@ -720,23 +628,11 @@ return (
                     </Button>;
                   </div>;
                 </TableCell>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",;
 import {;
   Table,;
@@ -846,7 +742,6 @@ export function InvoiceHistory() { return null; }
 <Button
                       variant="outline"
                       size="sm"
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       className="h-8 gap-1"
                     >"
                       <FileText className="h-3.5 w-3.5" />
@@ -881,31 +776,18 @@ export function InvoiceHistory() { return null; }
         </Button>;"
         <div className="text-sm text-muted-foreground">;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           Showing 1 - 6 of 12 invoices;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>;
-=======
 
           Showing 1 - 6 of 12 invoices;
         </div>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Button variant="outline" size="sm">;
           Next;
         </Button>;
       </div>;
-<<<<<<< HEAD
     </div>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 }
 </div>);
@@ -972,25 +854,12 @@ period: "Jan 2025"
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   TableHeader,
 "
   TableRow} from "@/components/ui/table",""
@@ -1339,4 +1208,3 @@ period: \"Jan 2025\" }
   );
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -57,7 +56,6 @@ export default function TalentDirectory() {;
   },;
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <AppLayout>;
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col space-y-8">;
@@ -67,7 +65,6 @@ export default function TalentDirectory() {;
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.;
             </p>;
           </div>;
-<<<<<<< HEAD
 
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">;

@@ -1,43 +1,22 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { jsPDF  } from 'jspdf';
 import { Certification  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
-=======
 import { jsPDF  } from 'jspdf';'
 import { Certification  } from '@/types/resume';'
 import { PdfThemeColors  } from '../themeConfig';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { formatDate } from '../formatters';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function addCertificationsSection(
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export function addCertificationsSection(
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addCertificationsSection(;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 ';
 import {jsPDF} from 'jspdf';'
 import {Certification} from '@/types/resume';'
@@ -45,22 +24,13 @@ import {PdfThemeColors} from '../themeConfig';'
 import {formatDate} from '../formatters';
 export function addCertificationsSection(;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   doc: jsPDF;
-=======
 export function addCertificationsSection(  doc: jsPDF;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export function addCertificationsSection(  doc: jsPDF;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export function addCertificationsSection(  doc: jsPDF;
 
 doc: jsPDF;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   certifications: Certification[];
   colors: PdfThemeColors;
 startY: number
@@ -94,21 +64,10 @@ if (certifications && certifications.length === 0) return startY;
       doc && doc.addPage();
       yPos = 20
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10)
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       doc.addPage();
       yPos = 20
     }
@@ -122,8 +81,6 @@ if (certifications && certifications.length === 0) return startY;
       const issueDate = formatDate(cert.issue_date);
       const expirationText = cert.expiration_date ? ` - ${formatDate(cert.expiration_date)}` : '';
       doc.setFontSize(10);
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10)
 import { jsPDF } from 'jspdf',;
@@ -146,8 +103,6 @@ export function addCertificationsSection(;
   doc: jsPDF,;
   certifications: Certification[],;
   colors: PdfThemeColors,;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   startY: number;
 ): number {}
   let yPos = startY;
@@ -161,10 +116,6 @@ export function addCertificationsSection(;
       yPos = 20;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     yPos += 16
   }
@@ -263,20 +214,12 @@ doc.text (cert.issuing organization, 20, yPos + 5);
 }
 
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
       const issueDate = formatDate(cert.issue_date),;
       const expirationText = cert.expiration_date ? ` - ${formatDate(cert.expiration_date)}` : '';
       doc.setFontSize(10);
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       doc && doc.addPage();
       yPos = 20
     }
@@ -401,4 +344,3 @@ pr-12325
 }
 }
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,6 +1,5 @@
 
 :pages/api-disabled/api/partners/metrics.ts
-<<<<<<< HEAD
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status(400).json({ error: 'Missing code' });
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
@@ -100,7 +99,6 @@ export default async function handler(req, res) {;
 ;
     const supabase = getServerSupabase();
 :pages/api/partners/metrics.ts
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
@@ -109,7 +107,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status(400).json({ error: 'Missing code' });
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
@@ -117,7 +114,6 @@ export default async function handler(
     if (usingPlaceholder) {
       return res.status(200).json({
 
-=======
 
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status(400).json({ error: 'Missing code' });'
@@ -125,7 +121,6 @@ export default async function handler(
   try {}
     if (usingPlaceholder) {}
       return res.status(200).json({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/metrics.ts
         total_signups: 12, total_visits: 180,
         total_profile_completions: 7, total_job_creations: 5,
         conversion_rate: 7 / 12, payout_amount: 210,'
@@ -153,8 +148,6 @@ export default async function handler(
       counts[ev] = count || 0;
     }
 :pages/api-disabled/api/partners/metrics.ts
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const events = ['visitsignupprofile_completedjob_createdhire'] as const;
     const counts: Record<string, number> = {};
 ;
@@ -163,7 +156,6 @@ export default async function handler(
         .from('referral_events')
         .select('*', { count: 'exact', head: true })
         .eq('partner_code', code)
-=======
 '
     const events = ['visitsignupprofile_completedjob_createdhire'] as const;
     const counts: Record<string, number> = {};
@@ -173,7 +165,6 @@ export default async function handler(
         .from('referral_events')'
         .select('*', { count: 'exact', head: true })'
         .eq('partner_code', code)'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/metrics.ts
         .eq('event', ev);
       if (error) return res.status(500).json({ error: error.message });
       counts[ev] = count || 0;
@@ -184,7 +175,6 @@ export default async function handler(
     const total_job_creations = counts['job_created'] || 0;
 :pages/api-disabled/api/partners/metrics.ts
 return res.status(200).json({
-<<<<<<< HEAD
       total_signups,
     total_visits,
       total_profile_completions,
@@ -195,13 +185,11 @@ return res.status(200).json({
 
     });
   } catch (e: any) {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       total_signups;
       total_visits;
       total_profile_completions;
       total_job_creations;
 :pages/api-disabled/api/partners/metrics.ts
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/metrics.ts
     const total_signups = counts["signup"] || 0;
     const total_visits = counts["visit"] || 0;
     const total_profile_completions = counts["profile_completed"] || 0;
@@ -229,14 +217,7 @@ return res.status(200).json({
 }
     return res.status (500).json ({ error: e?.message });
 :pages/api/partners/metrics.ts
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/metrics.ts

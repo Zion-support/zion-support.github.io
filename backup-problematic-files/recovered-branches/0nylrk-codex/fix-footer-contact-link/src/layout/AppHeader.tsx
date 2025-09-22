@@ -1,5 +1,4 @@
 
-=======
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
 import { MainNavigation } from './MainNavigation',;
@@ -24,7 +23,6 @@ export function AppHeader() {;
   }
   ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">;
         <div className="container flex h-16 items-center px-4 sm:px-6">;
@@ -32,7 +30,6 @@ export function AppHeader() {;
           <div className="ml-6 flex-1 hidden md:block">;
             <MainNavigation unreadCount={unreadCount} />;
           </div>;
-<<<<<<< HEAD
 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none";

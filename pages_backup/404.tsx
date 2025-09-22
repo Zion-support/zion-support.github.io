@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:pages/404.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -19,8 +16,6 @@ const NotFoundPage = () => {
           <p className="text-xl mb-8">This page is under construction.</p>
           <Link href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
             Go Home
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {
@@ -43,19 +38,13 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/404.tsx
-=======
 import React from 'react';
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </Link>
         </main>
       </div>
     </>
-<<<<<<< HEAD
   );
 }
 
@@ -91,10 +80,8 @@ const NotFoundPage: NextPage = () => {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 export default function Custom404() {
   return (
     <>
@@ -104,7 +91,6 @@ export default function Custom404() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>404 - Page Not Found</title>
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/404.tsx
       </Head>
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center">
         <div className="text-center max-w-2xl px-4">
@@ -133,12 +119,7 @@ export default function Custom404() {
       </main>
     </>
   );
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/404.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </main>;
     </>;
   );
@@ -147,25 +128,12 @@ export default function Custom404() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/404.tsx
-=======
 
 }
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

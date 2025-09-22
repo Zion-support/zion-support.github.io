@@ -236,7 +236,6 @@ export default function JobDetails() {;
                     <p className="font-medium">"
                       {job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"}
                     </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>
                 </div>
 :temp_exclude/hooks.disabled/JobDetails.tsx
@@ -260,14 +259,12 @@ export default function JobDetails() {;
                   <div className="ml-3">
                     <p className="text-sm text-muted-foreground">Deadline</p>
                     <p className="font-medium">
-=======
                 "
                 <div className="flex items-start">"
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />"
                   <div className="ml-3">"
                     <p className="text-sm text-muted-foreground">Deadline</p>"
                     <p className="font-medium">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/JobDetails.tsx
                       {job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"}
                     </p>
                   </div>
@@ -307,7 +304,6 @@ export default function JobDetails() {;
 :temp_exclude/hooks.disabled/JobDetails.tsx
         <ApplyToJobModal
           job={{
-<<<<<<< HEAD
             id: job && job.id,
             title: job && job.title,
             description: job && job.description,'
@@ -336,7 +332,6 @@ export default function JobDetails() {;
         <ApplyToJobModal;
 :temp_exclude/hooks.disabled/JobDetails.tsx
           job={{
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             id: job.id,
             title: job.title,
             description: job.description,
@@ -350,7 +345,6 @@ export default function JobDetails() {;
     </>;
   );
 }
-<<<<<<< HEAD
 ;
   job.title ;
 '
@@ -391,4 +385,3 @@ export default function JobDetails() {;
             company_name: job.company_name ?? "Company",
 :temp_exclude/hooks.disabled/JobDetails.tsx
             budget: formatBudget(job.budget),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

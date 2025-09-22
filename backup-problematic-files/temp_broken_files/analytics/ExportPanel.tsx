@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -44,10 +43,8 @@ export function ExportPanel() {;
             variant="outline" ;
             className="border-zion-blue-light text-zion-slate-light";
             onClick={() => handleExport('json')}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >;
             Export as JSON;
           </Button>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD

@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/referrals/ReferralStats.tsx
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/referrals/ReferralStats.tsx
 ;
 interface ReferralStatsProps {;
   stats: ReferralStatsType;,;
@@ -44,7 +42,6 @@ title:"Total Rewards",;
       value:stats.totalRewards > 0 ? `$${stats.totalRewards.toFixed(2)}` :"-",;
       icon:<Award className="h-5 w-5 text-muted-foreground" />,,
   description:"Credits earned from referrals"}],;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
   return (;
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;
@@ -68,9 +65,6 @@ pr-12325
                 <div className="text-2xl font-bold">{card.value}</div>;""
                 <p className="text-xs text-muted-foreground">{card.description}</p>;"
               </>;            )}
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/referrals/ReferralStats.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </CardContent>;
         </Card>;
       ))}

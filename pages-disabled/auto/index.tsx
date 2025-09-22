@@ -1,17 +1,12 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
-=======
 
 import type { NextPage } from 'next','
 import Head from 'next/head','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Link from 'next/link',
 const AutoIndex: NextPage = () => {}
   return (
@@ -35,23 +30,12 @@ const AutoIndex: NextPage = () => {}
           <li className="border rounded p-4">"
             <h2 className="font-semibold text-lg"><Link href="/auto/seo-audit">Autonomous SEO Auditor</Link></h2>"
             <p className="text-sm text-gray-600">Scans pages for SEO gaps and commits a report for fixes.</p>
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 const AutoIndex: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </li>
         </ul>
       </main>
@@ -61,9 +45,6 @@ const AutoIndex: NextPage;
 
   )
 export default AutoIndex;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 },
 export default AutoIndex,';
 import type { NextPage } from 'next';'
@@ -97,25 +78,12 @@ const AutoIndex: NextPage = () => {;
     </div>;
 );
 },;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default AutoIndex;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
 );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default AutoIndex;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

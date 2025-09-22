@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { ;
@@ -70,7 +69,6 @@ export function DeveloperPortal() {;
         </div>;
       </div>;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Tab content */}
       <div>;
         {activeTab === "documentation" && <ApiDocumentation />}
@@ -79,4 +77,3 @@ export function DeveloperPortal() {;
         {activeTab === "logs" && <ApiLogs />}
       </div>;
     </div>;
-<<<<<<< HEAD

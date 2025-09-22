@@ -8,7 +8,6 @@ import { extraServices } from '../data/extra-services'
 export default function SecurityAwarenessPhishingPage() {
   const service = extraServices.find(s => s.link.endsWith('/security-awareness-phishing'))
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!service) return null,
 
   return (

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState, useMemo } from 'react';'
 import Head from 'next/head';'
@@ -6,19 +5,16 @@ import Link from 'next/link';'
 import { motion, AnimatePresence } from 'framer-motion';
 
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-=======
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Search,
   Star,
@@ -38,11 +34,6 @@ import {
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
@@ -77,21 +68,15 @@ const categories = [
 // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Filter and sort services;
   const filteredServices = useMemo(() => {}
     let filtered = allServices;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         switch (selectedCategory) {
           case 'ai':
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           case 'quantum':
             return service.category?.includes('Quantum');
           case 'enterprise':
@@ -100,17 +85,13 @@ const categories = [
             return service.category?.includes('Micro SaaS');
           case 'emerging':
 
-=======
             return service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes('Synthetic');
           default: return true
         }
       })
     }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Price range filter
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 return (
               service.category?.includes('Emerging') ||
               service.category?.includes('Neuromorphic') ||
@@ -122,12 +103,9 @@ return (
       });
     }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     // Price range filter
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
-=======
 
     // Category filter'
     if (selectedCategory !== 'all') {}
@@ -148,14 +126,9 @@ return (
 '
     if (selectedPriceRange !== 'all') {}
       filtered = filtered.filter(service => {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
         switch (selectedPriceRange) {'
           case 'low':
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const categories = [;'
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;'
@@ -219,7 +192,6 @@ return (
         const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
         switch (selectedPriceRange) {;'
           case 'low':;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             return price < 500;
           case 'medium':;
             return price >= 500 && price <= 1000;'
@@ -232,7 +204,6 @@ return b.rating - a.rating;
           return b.rating - a.rating;
         case 'popularity':;
           return b.customers - a.customers;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           default: return true,;
         }
@@ -261,8 +232,6 @@ return b.rating - a.rating;
         case 'popularity':;
           return b && b.customers - a && a.customers;
         default: return a && a.name.localeCompare(b && b.name),;
-<<<<<<< HEAD
-<<<<<<< HEAD
       }
     });
       }
@@ -272,7 +241,6 @@ return b.rating - a.rating;
   }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
 
 const containerVariants = {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         default: return a.name.locale_compare (b.name),
       }
     });
@@ -287,7 +255,6 @@ const containerVariants = {
     }
   };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -296,28 +263,21 @@ const containerVariants = {
         staggerChildren: 0 && 0.1,;
       },;
     },  };
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         duration: 0.5,
       },
     },  };
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function Innovative2026ServicesShowcase(req, res) {
   try {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-=======
 export default function Innovative2026ServicesShowcase(req, res) {}
   try {';
   const [searchTerm, setSearchTerm] = useState('');'
   const [selectedCategory, setSelectedCategory] = useState<string>('all');'
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [sortBy, setSortBy] = useState<string>('name');
   const allServices = [;
     ...innovative2026MicroSaasServicesV4;
@@ -466,25 +426,14 @@ export default function Innovative2026ServicesShowcase(req, res) {}
   }
 }
   };
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const itemVariants = {;
     hidden: { y: 20, opacity: 0 },;
     visible: {;
       y: 0,;
       opacity: 1,;
       transition: {;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         duration: 0.5;
         } catch (error) {"
     console.error("Error:", error);"
@@ -498,12 +447,7 @@ export default function Innovative2026ServicesShowcase(req, res) {}
 }
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
 '
@@ -512,15 +456,11 @@ export default function Innovative2026ServicesShowcase(req, res) {}
       </Head>;
 
 <UltraAdvancedFuturisticBackground2026
-<<<<<<< HEAD
         intensity='extreme'
         colorScheme='neural-network'        particleCount={800}
         animationSpeed={3 && 3.0}
 
-<<<<<<< HEAD
-=======
       <UltraAdvancedFuturisticBackground2026;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <>
       <Head>
         <title>2026 Innovative Services Showcase - Zion Tech Group</title>"
@@ -532,17 +472,11 @@ export default function Innovative2026ServicesShowcase(req, res) {}
         <meta property="og:url" content="https://ziontechgroup.com/2026-innovative-services-showcase" />"
         <link rel="canonical" href="https://ziontechgroup.com/2026-innovative-services-showcase" />
       </Head>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         enableHolographic={true}
         enableQuantumEffects={true}
         enableNeuralNetworks={true}
         enableMultidimensional={true}
-<<<<<<< HEAD
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
@@ -609,9 +543,6 @@ transition={{ duration: 0.8 }}
   }
 }
               className="mb-8"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
       />
       <UltraAdvancedNavigation2026 />
 
@@ -624,10 +555,7 @@ transition={{ duration: 0.8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 className='mb-8'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
-=======
 
         {/* Hero Section */}'
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;'
@@ -636,25 +564,20 @@ className='mb-8'
               animate={{ opacity: 1, y: 0 }}
 
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 2026 Innovative Services;
               </h1>
-<<<<<<< HEAD
             </motion.div>
             <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 From AI-powered solutions to quantum computing and emerging technologies,
                 transform your business with next-generation innovation.
               </p>
             </motion.div>
 <motion.div
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3">
                 <span className="text-blue-400 font-semibold">{allServices.length}+ Services</span>
@@ -670,26 +593,19 @@ className='mb-8'
               </div>
 
             </motion.div>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
               <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
                 Discover the future of technology with our cutting-edge 2026
                 services. From AI-powered solutions to quantum computing and
                 emerging technologies, transform your business with
                 next-generation innovation.
               </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {/* Search and Filters */}
             <motion&& motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -699,20 +615,17 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               <div className='relative mb-8'>;
                 <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <input
                   type='text'
                   placeholder='Search innovative services...'
                   value={searchTerm}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <div className="relative mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
                   type="text""
                   placeholder="Search innovative services..."
-<<<<<<< HEAD
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent"
@@ -722,7 +635,6 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 {categories.map((category) => (
                   <button
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
@@ -730,7 +642,6 @@ key={category.id}
                       selectedCategory === category.id
                         ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300'
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   onChange={e => setSearchTerm(e && e.target.value)}
                   className='w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent';
                 />;
@@ -740,13 +651,7 @@ key={category.id}
                 {categories && categories.map(category => (                  <button;
                     key={category && category.id}
                     onClick={() => setSelectedCategory(category && category.id)}
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className={`px-6 py-3 rounded-full backdrop-blur-sm border transition-all duration-300 ${;
                       selectedCategory === category && category.id;'
                         ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300';'
@@ -756,14 +661,8 @@ key={category.id}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 `
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     }`}
                   >;'
                     <span className='mr-2'>{category && category.icon}</span>                    {category && category.name} ({category && category.count});
@@ -778,7 +677,6 @@ key={category.id}
 
                 ))}
               </div>
-<<<<<<< HEAD
 
                     key={range.id}
                     onClick={() => setSelectedPriceRange(range.id)}
@@ -796,7 +694,6 @@ key={category.id}
                       selectedPriceRange === range && range.id;'
                         ? 'bg-gradient-to-r from-green-600/30 to-emerald-600/30 border-green-500/50 text-green-300';'
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50';
-<<<<<<< HEAD
 
                     }`}
 
@@ -811,7 +708,6 @@ key={category.id}
 }
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <motion.div
               variants={containerVariants  } catch (error) {
     console.error("Error:", error);
@@ -847,7 +743,6 @@ key={category.id}
                         <span className="text-4xl">{service.icon}</span>
                         {service.popular && (
 <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             POPULAR
                           </span>
                         )  } catch (error) {
@@ -858,7 +753,6 @@ key={category.id}
                       </div>
 <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-gray-300 text-sm">{service.tagline}</p>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>
                     {/* Service Content */}
                     <div className='p-6'>
@@ -867,24 +761,17 @@ key={category.id}
                       </p>
                       <div className='flex items-center justify-between mb-4'>
 
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         {/* Services Grid */}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <div className='flex items-center space-x-2'>
                           <Users className='w-4 h-4 text-blue-400' />
-=======
 
                         </div>'
                         <div className='flex items-center space-x-2'>'
                           <Users className='w-4 h-4 text-blue-400' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <span className='text-gray-300 text-sm'>
                             {service.customers}+
                           </span>
@@ -897,7 +784,6 @@ key={category.id}
                           <Star className='w - 4 h - 4 text - yellow - 500 fill - current' />;'
                           <span className='text - white text - sm'>;
                             {service.rating}
-<<<<<<< HEAD
                           </span>
                           <span className='text-gray-400 text-sm'>
                             ({service.reviews})
@@ -952,7 +838,6 @@ key={category.id}
                       </div>
 {/* Features Preview */}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                           </span>;
                           <span className='text - gray - 400 text - sm'>;
                             ({service.reviews});
@@ -1019,12 +904,10 @@ key={category.id}
                       </div>;
 
 {/* Features Preview */}
-<<<<<<< HEAD
                       <div className='mb-4'>
 
                       {/* Features Preview */}
 <div className='mb-4'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         <h4 className='text-white font-semibold mb-2'>
                           Key Features:
                         </h4>
@@ -1062,28 +945,21 @@ key={category.id}
   }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <div className="mb-4">
                         <h4 className="text-white font-semibold mb-2">Key Features:</h4>
-=======
 "
                       <div className="mb-4">"
                         <h4 className="text-white font-semibold mb-2">Key Features:</h4>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <div className="space-y-1">
                           {service.features.slice(0, 3).map((feature, index) => ("
                             <div key={index} className="flex items-center space-x-2">"
                               <CheckCircle className="w-3 h-3 text-green-400" />"
                               <span className="text-gray-300 text-xs">{feature}</span>
                             </div>
-<<<<<<< HEAD
 
                       <Link href={service.link}>
                         <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           ))}
                           {service.features.length > 3 && ("
                             <span className="text-gray-500 text-xs">+{service.features.length - 3} more features</span>
@@ -1095,12 +971,7 @@ key={category.id}
                       <div className="mb-4">`
                         <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}>
                           {service.category}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         </span>
                       </div>
                       {/* CTA Button */}
@@ -1108,29 +979,21 @@ key={category.id}
 className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service && service.textColor} bg-opacity-20`}>                          {service && service.category}
                         </span>;
                       </div>;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           <span className="flex items-center justify-center space-x-2">
                             <span>Learn More</span>"
                             <ArrowRight className="w-4 h-4" />
-=======
                           <span className="flex items-center justify-center space-x-2">
                             <span>Learn More</span>
                             <ArrowRight className="w-4 h-4" />
-=======
 <button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
                           <span className='flex items-center justify-center space-x-2'>
                             <span>Learn More</span>
                             <ArrowRight className='w-4 h-4' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           </span>
                         </button>
                       </Link>
                     </div>
-<<<<<<< HEAD
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />                  </div>;
                 </motion && motion.div>;
@@ -1141,7 +1004,6 @@ className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service &&
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
                 <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
                 <button
@@ -1149,7 +1011,6 @@ className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service &&
 
                     setSearchTerm('');
                     setSelectedCategory('all');
-<<<<<<< HEAD
                     setSelectedPriceRange('all')
                   }}
 
@@ -1193,17 +1054,12 @@ className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service &&
                     setSelectedPriceRange('all')
                   }}
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                 >
                   Clear Filters;
                 </button>
               </motion.div>
-<<<<<<< HEAD
             )}
           </div>
         </section>
@@ -1220,17 +1076,13 @@ className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service &&
   }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>;
         </section>;
 
 {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1251,14 +1103,10 @@ className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service &&
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         {/* Contact Section */}'
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;'
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div;
@@ -1266,16 +1114,13 @@ className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service &&
         <section className="py-20 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
             >
 "
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Ready to Transform Your Business?
               </h2>"
               <p className="text-xl text-gray-300 mb-8">
@@ -1286,25 +1131,20 @@ className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service &&
                   <Phone className='w-8 h-8 text-blue-400 mx-auto mb-4' />
                   <h3 className='text-white font-semibold mb-2'>Call Us</h3>
                   <p className='text-blue-300'>+1 302 464 0950</p>
-<<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6">
                   <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />
                   <h3 className="text-white font-semibold mb-2">Call Us</h3>
                   <p className="text-blue-300">+1 302 464 0950</p>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>
                 <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6">
                   <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />
                   <h3 className="text-white font-semibold mb-2">Email Us</h3>
-=======
 
                 </div>"
                 <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6">"
                   <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />"
                   <h3 className="text-white font-semibold mb-2">Email Us</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <p className="text-purple-300">kleber@ziontechgroup.com</p>
                 </div>"
                 <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30 rounded-xl p-6">"
@@ -1313,12 +1153,7 @@ className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service &&
                   <p className="text-green-300">ziontechgroup.com</p>
                 </div>
               </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </button>
               </Link>
             </motion.div>
@@ -1326,7 +1161,6 @@ className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service &&
         </section>
       </div>
     </>
-<<<<<<< HEAD
 
 )
             >;
@@ -1360,10 +1194,6 @@ className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service &&
                 </button>;
               </Link>;
             </motion && motion.div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>;
         </section>;
       </div>;
@@ -1371,7 +1201,6 @@ className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service &&
   );
 )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         </div>;
                       </div>;'
                       <div className='flex items - center justify - between mb - 4'>;'
@@ -1491,18 +1320,11 @@ className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service &&
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   } catch (error) {"
     console.error("Error:", error);"
@@ -1511,4 +1333,3 @@ className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service &&
 }
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

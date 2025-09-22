@@ -48,7 +48,6 @@ class TypeScriptIssueFixer {
       const issues = [];
       if (content.length > 50000) {
         issues.push('Very large file');
-      if (content.includes('') || content.includes('>>>>>>>')) {
         issues.push('Merge conflict markers');
       if (content.includes('export * from') && content.split('export * from').length > 10) {
         issues.push('Too many wildcard exports');

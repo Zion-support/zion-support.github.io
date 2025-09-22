@@ -1,7 +1,4 @@
 :src/components/hiring-tracker/CandidateCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -43,20 +40,15 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
-=======
 const handleSaveNotes = () => {
     // Here you would save the notes to the database
-=======
   const handleSaveNotes = () => {    // Here you would save the notes to the database
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // For now, we'll just show a toast
     toast({
-=======
 
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       title: 'Notes saved',
       description: 'Your notes have been saved',
@@ -116,7 +108,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
@@ -242,7 +233,6 @@ title: "Notes saved",;
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
 :src/components/hiring-tracker/CandidateCard.tsx
-<<<<<<< HEAD
                       {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>
@@ -301,7 +291,6 @@ title: "Notes saved",;
                           View Resume;
                         </a>;
                       </DropdownMenuItem>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     )}
 
                   </DropdownMenuContent>;
@@ -361,7 +350,6 @@ title: "Notes saved",;
               )}
               {/* Action Buttons */}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="flex justify-between mt-2 gap-1">
                 <Button 
                   variant="outline" 
@@ -370,20 +358,12 @@ title: "Notes saved",;
                   asChild
                 >
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
                 </Button>
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button 
                   variant="outline" 
                   size="sm" 
@@ -391,8 +371,6 @@ title: "Notes saved",;
                   asChild
                 >
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {application.resume?.file_url ? (
                     <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
                       <FileText className="h-3 w-3 mr-1" /> Resume
@@ -404,8 +382,6 @@ title: "Notes saved",;
                   )}
 </Button>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button 
                   variant="default" 
                   size="sm" 
@@ -419,8 +395,6 @@ title: "Notes saved",;
           </Card>;
         )}
 :src/components/hiring-tracker/CandidateCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       </Draggable>;
 
@@ -518,7 +492,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   handleHireConfirmed ;
 }/> </>) ;
 :src/components/hiring-tracker/CandidateCard.tsx
-<<<<<<< HEAD
 }'"}
 
   add_suffix: true;
@@ -552,7 +525,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   handleHireConfirmed;
 }/> </>);
 }'"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </Draggable>;
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
@@ -566,13 +538,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 ;
 
-=======
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;
 
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/hiring-tracker/CandidateCard.tsx

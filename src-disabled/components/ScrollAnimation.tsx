@@ -110,7 +110,6 @@ visible: { ...baseVariants.visible, opacity: 1, scale: 1 },
           ...baseVariants,
           hidden: { opacity: 0, rotate: -180 },
 visible: { ...baseVariants.visible, opacity: 1, rotate: 0 },
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         };
       default:
         return baseVariants;
@@ -122,7 +121,6 @@ return (
       initial="hidden"
       animate={controls}
       variants={getAnimationVariants()}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       className={className}
       initial={animations[animation]}
       animate={isInView ? animateTo : animations[animation]}
@@ -138,4 +136,3 @@ return (
 };
 
 export default ScrollAnimation;
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172

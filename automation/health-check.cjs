@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
-<<<<<<< HEAD
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 console.log('🏥 Running Health Check...');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const checks = [
   { name: 'Build Status', command: 'npm run build' },
   { name: 'Test Status', command: 'npm run test:smoke' },
@@ -32,9 +22,6 @@ checks.forEach(check => {
     console.log(`❌ ${check.name}: FAILED`);
   }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 "timestamp": new Date().toISOString(),
   "checks": {},
   "status": 'healthy'};
@@ -119,18 +106,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 #!/usr/bin/env node
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("fs");
 const path = require("path");
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class HealthChecker {
   // TODO: Implement
   constructor() {
@@ -139,18 +118,14 @@ this.checks = [];
     this.errors = [];
   }
 
-<<<<<<< HEAD
   log(message) {
     console.log(`🏥 [Health Check] ${message}`);
 #!/usr/bin/env node
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 /**
  * Health Check Monitor;
  * Monitors application health and provides alerts;
  */
-<<<<<<< HEAD
 const healthReport = {
     timestamp: new Date().toISOString(),
     status: 'healthy',
@@ -387,10 +362,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
     recommendations.push('Monitor application performance regularly');
     recommendations.push('Set up automated alerts for critical issues');
     return recommendations;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   async check() {
 
@@ -411,32 +383,11 @@ if (require.main === module) {
   const monitor = new HealthCheckMonitor();
   monitor.start().catch(console.error);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 module.exports = HealthCheckMonitor;
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 module.exports = HealthChecker;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 module.exports = HealthChecker;
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 module.exports = HealthCheckMonitor;
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
   // TODO: Implement
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

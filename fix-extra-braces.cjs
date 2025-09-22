@@ -11,8 +11,6 @@ function fixExtraBraces(filePath) {
     // Remove any stray commit hashes
     content = content.replace(/[a-f0-9]{40}/g, '');
     // Remove any remaining merge conflict markers
-    content = content.replace(/[\s\S]*?>>>>>>>/g, '');
-    content = content.replace(/[\s\S]*?>>>>>>>/g, '');
     // Clean up any extra whitespace at the end
     content = content.trim() + '\n';
     const originalContent = fs.readFileSync(filePath, 'utf8');

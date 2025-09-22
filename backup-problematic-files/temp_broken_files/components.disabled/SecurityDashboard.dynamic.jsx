@@ -1,11 +1,6 @@
 const SecurityDashboard = dynamic(() => import("./SecurityDashboard"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SecurityDashboard' ,'
-<<<<<<< HEAD
-<<<<<<< HEAD
 </p>'
-=======
 </p>'
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
 </p>'
 </p>'
 </p>'
@@ -29,4 +24,3 @@ ursor/add-new-services-and-deploy-updates-0462
 const SecurityDashboard = dynamic(() => import(\"./SecurityDashboard\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default SecurityDashboard\' ,
 const SecurityDashboard = dynamic(() => import("./SecurityDashboard"),{"; loading: () => <p>Loading.</p,>,}) export: "default SecurityDashboard" ,"""
 const SecurityDashboard = dynamic(() => import("./SecurityDashboard"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SecurityDashboard' ,'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { useForm, type UseFormReturn } from "react-hook-form",;
@@ -43,7 +42,6 @@ export default function ForgotPassword() {;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <Header />;
       <div className="flex min-h-screen bg-zion-blue">;
@@ -57,7 +55,6 @@ export default function ForgotPassword() {;
                 Enter your email and we'll send you a link to reset your password.;
               </p>;
             </div>;
-<<<<<<< HEAD
 
             <div className="bg-zion-blue-dark rounded-lg p-6">;
               {submitted ? (;

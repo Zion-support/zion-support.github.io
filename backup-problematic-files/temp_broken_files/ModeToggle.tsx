@@ -1,5 +1,4 @@
 
-=======
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 ;
@@ -21,9 +20,7 @@ export function ModeToggle() {;
       {theme === "dark" ? (;
         <Sun className="h-5 w-5 text-yellow-300" />;
       ) :(;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <Moon className="h-5 w-5 text-slate-300" />;
       )}
       <span className="sr-only">Toggle theme</span>;
     </Button>;
-<<<<<<< HEAD

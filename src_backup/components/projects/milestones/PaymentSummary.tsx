@@ -1,5 +1,4 @@
 :src_backup/components/projects/milestones/PaymentSummary.tsx
-<<<<<<< HEAD
 
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
@@ -29,7 +28,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
       (sum, m) => sum + parseFloat(m && m.amount.toString());      0;
     ).toFixed(2);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 :src_backup/components/projects/milestones/PaymentSummary.tsx
     <Card className="mb-8 bg-muted/30">
@@ -66,7 +64,5 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 </Card>;
   );
 };
-=======
 }'"
 '";'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/projects/milestones/PaymentSummary.tsx

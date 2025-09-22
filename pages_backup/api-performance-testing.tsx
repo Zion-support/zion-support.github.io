@@ -1,5 +1,4 @@
 :pages_backup/api-performance-testing.tsx
-<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import SEO from '../components/SEO';
@@ -48,8 +47,6 @@ import {Check, ExternalLink} from 'lucide-react';
                 </p>;
               </div>;
 :pages_backup/api-performance-testing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 '
               <div className='rounded - 2xl border border - emerald - 400 / 30 p - 6'>;'
@@ -63,20 +60,15 @@ import {Check, ExternalLink} from 'lucide-react';
             <p className='mt - 4 text - sm text - gray - 400'>;'
               Market references:{' '}
 :pages_backup/api-performance-testing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <a;
                 className='underline hover:text - cyan - 300';
                 href='https://k6.io / pricing/';
                 target='_blank';
-=======
 
               <a;'
                 className='underline hover:text - cyan - 300';'
                 href='https://k6.io / pricing/';'
                 target='_blank';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api-performance-testing.tsx
                 rel='noreferrer';
               >;
                 Grafana k6;
@@ -113,7 +105,6 @@ import {Check, ExternalLink} from 'lucide-react';
         </div>;
       </section>;
     </div>;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   );
 
 }'
@@ -138,15 +129,11 @@ export default function ApiPerformanceTestingPage() {}
 							{ title: 'Protocol Coverage', desc: 'HTTP/REST, GraphQL, gRPC, WebSocket, and streaming APIs.' },
 							{ title: 'Regression Gates', desc: 'Fail builds when latency regresses beyond thresholds or budgets are exhausted.' },
 							{ title: 'Realistic Traffic', desc: 'Custom scenarios, auth flows, test data seeding, and user think time.' },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 	const features = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 							{ title: 'Reports & Export', desc: 'Beautiful HTML/CSV exports, signed artifacts, and webhook notifications.' }].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
-=======
 						{['
 							{ title: 'Distributed Load', desc: 'Run tests from multiple regions with coordinated ramp-up and soak phases.' },'
 							{ title: 'SLO Dashboards', desc: 'Track p50/p95/p99 latency, error budgets, and throughput trends over time.' },'
@@ -156,7 +143,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 							{ title: 'Reports & Export', desc: 'Beautiful HTML/CSV exports, signed artifacts, and webhook notifications.' }].map((f) => ("
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">"
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api-performance-testing.tsx
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
 							</div>;
 						))  } catch (error) {";
@@ -196,8 +182,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 		</div>
 	)
 :pages_backup/api-performance-testing.tsx
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <a;
                 className='underline hover:text - cyan - 300';
                 href='https://k6.io / pricing/';
@@ -240,16 +224,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
 
 :pages_backup/api-performance-testing.tsx
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import SEO from '../components/SEO';
-=======
 
 '
 import React from 'react';'
 import SEO from '../components/SEO';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api-performance-testing.tsx
 import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage(req, res) {}
   try {};
@@ -316,14 +296,9 @@ export default function ApiPerformanceTestingPage(req, res) {}
   }
 }
 :pages_backup/api-performance-testing.tsx
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 :pages_backup/api-performance-testing.tsx
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 <div className='mt - 14 flex flex - wrap items - center gap - 4'>;
             <Link;'
               href='/contact';'
@@ -344,14 +319,6 @@ export default function ApiPerformanceTestingPage(req, res) {}
     </div>);
 ;
 
-<<<<<<< HEAD:pages/api-performance-testing.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const features = [
     'k6/Gatling-compatible test runner'
     'SLO-aware latency reports'
@@ -493,8 +460,4 @@ export default function ApiPerformanceTestingPage(req, res) {}
       </section>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -4,8 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import { User, Mail, Calendar, Shield } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 import { GetServerSideProps, GetServerSidePropsContext } from 'next / types';'
 import { createServerSideClient } from '../src / utils / supabase / server';'
@@ -21,42 +19,27 @@ import type { User as SupabaseUser } from '@supabase / supabase - js';
 interface PrivatePageProps {}
   user: SupabaseUser;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   } catch (error) {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 export default /**;
  * PrivatePage - Function description;
  */
 function PrivatePage() {}
   return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <title>Private Profile - Zion Tech Marketplace</title>
         <meta name="description" content="Private user profile page" />
       </Head>
-<<<<<<< HEAD
       <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
       <div className="container max-w-4xl mx-auto py-8">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <Card>
           <CardHeader>
             <CardTitle className=&quot;flex items-center gap-2&quot;>
@@ -104,17 +87,12 @@ function PrivatePage() {}
                   <span className=&quot;font-medium&quot;>Last Sign In: </span>
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
-=======
 "
             <div className="p-4 bg-muted/50 rounded-lg">"
               <h4 className="font-medium mb-2">Authentication Details</h4>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="grid gap-2 text-sm">
                 <div>"
                   <span className="font-medium">Last Sign In: </span>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {user.last_sign_in_at
                     ? new Date(user.last_sign_in_at).toLocaleString()
                     : 'Never'
@@ -157,16 +135,10 @@ if ( {) {}
     return {}
       redirect: {'
         destination: '/auth / login';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
     <>
       <Head>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Card>
           <CardHeader>"
             <CardTitle className="flex items-center gap-2">"
@@ -261,10 +233,6 @@ if ( {) {}
       </div>
     </>
   )
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   } catch (error) {"
     console.error("Error:", error);"
@@ -297,23 +265,13 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 } ;
 } ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 } ;
 
 } ;
 } ;
 } ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

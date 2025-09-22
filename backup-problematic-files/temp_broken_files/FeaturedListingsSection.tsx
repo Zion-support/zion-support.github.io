@@ -1,5 +1,4 @@
 
-=======
 import { ProductListingCard } from "@/components/ProductListingCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -97,13 +96,11 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
 ;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
           {featuredListings.map((listing) => (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <ProductListingCard;
               key={listing.id}
               listing={listing}
               view="grid";
               onRequestQuote={() => {}}
-<<<<<<< HEAD
 
           >;
             <Link to="/marketplace">View All Listings</Link>;

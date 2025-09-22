@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button","
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card","
 import { Badge } from "@/components/ui/badge",
 :src_backup/components/video/VideoCallRoom.tsx
-<<<<<<< HEAD
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
 import './video-call.css',
@@ -101,7 +100,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({};
         <div className="flex items-center space-x-2">
           <CardTitle className="text-white">Video Call</CardTitle>
           <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
 import './video-call.css',;
 interface Participant {;
@@ -348,9 +346,7 @@ if ( {) {}
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
 <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
                     {/* Placeholder for actual video stream */}
-=======
                     {/* Placeholder for actual video stream */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx
                     <Video className="h-12 w-12 opacity-50" />
                   </div>
                 ) : participant.isScreenSharing ? ("
@@ -450,7 +446,6 @@ if ( {) {}
 :src_backup/components/video/VideoCallRoom.tsx
 },
 
-=======
 "
             aria-label="Leave call">;"
             <Phone className="rotate-135" />;
@@ -543,4 +538,3 @@ if ( {) {}
     </Card>);
 },
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/video/VideoCallRoom.tsx

@@ -1,5 +1,4 @@
 
-=======
 import React from 'react',;
 import { GradientHeading } from "./GradientHeading",;
 import { Check, Handshake, Search, Send } from 'lucide-react';
@@ -75,7 +74,6 @@ export function HowItWorksSection({ className, style } HowItWorksSectionProps) {
                       <p className="text-zion-slate-light">{step.description}</p>;
                     </div>;
                   ) :null}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </div>;
               </div>;
             ))}
@@ -83,4 +81,3 @@ export function HowItWorksSection({ className, style } HowItWorksSectionProps) {
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD

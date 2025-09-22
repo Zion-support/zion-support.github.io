@@ -13,8 +13,6 @@ const Checkbox = React.forwardRef<
 >(({ className, ...props }, ref) => (
 :src_backup/components/ui/checkbox.tsx
   <CheckboxPrimitive.Root
-<<<<<<< HEAD
-<<<<<<< HEAD
     ref={ref}
     className={cn(
       "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
@@ -46,11 +44,7 @@ export { Checkbox }
 ))
 
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   >;
     <CheckboxPrimitive.Indicator;'
       className={cn ('flex items - center justify - center text - current')}
@@ -62,4 +56,3 @@ Checkbox.display_name = CheckboxPrimitive.Root.display_name;
 export { Checkbox }
 
 Checkbox.displayName = CheckboxPrimitive.Root.displayName'";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/checkbox.tsx

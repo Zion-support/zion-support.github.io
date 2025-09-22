@@ -45,7 +45,6 @@ function fixMergeConflicts(filePath) {
       } else if (line.includes('')) {
         conflictType = 'newer';
         continue;
-      } else if (line.includes('>>>>>>>')) {
         inConflict = false;
         conflictType = null;
         continue;

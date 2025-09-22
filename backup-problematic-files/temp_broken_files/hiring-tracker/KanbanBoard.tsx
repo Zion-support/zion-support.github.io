@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -53,12 +52,10 @@ export function KanbanBoard({ jobId } KanbanBoardProps) {;
   const [columns, setColumns] = useState<Record<string JobApplication[]>>({}),;
   const isMobile = useIsMobile(),;
   ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Initialize columns with applications based on their status;
   useEffect(() => {;
     if (applications) {;
       // Group applications by status;
-<<<<<<< HEAD
 
           <Card key={i} className="h-[500px]">;
             <CardHeader>;

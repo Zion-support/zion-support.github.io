@@ -1,5 +1,4 @@
 
-=======
 import React, { forwardRef } from "react",;
 import { ChevronDown } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -28,12 +27,10 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
           )}
         >;
           <div className="flex items-center gap-2">;            {icon && <span className="text-muted-foreground">{icon}</span>}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <span>{children}</span>;
           </div>;
           {badge && <span>{badge}</span>}
         </a>;
-<<<<<<< HEAD
 
         <div className="flex items-center gap-2">;
           {icon && <span className="text-muted-foreground">{icon}</span>}

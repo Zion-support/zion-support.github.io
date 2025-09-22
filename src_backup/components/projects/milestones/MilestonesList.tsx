@@ -45,8 +45,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 
   if (isLoading) {
     return (
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="space-y-4">
         {[1, 2, 3].map((i) => (
           <Card key={i}>
@@ -61,24 +59,14 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     );
       </div>
     )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
         icon = {<span className="text-3xl">📊</span>,}
         title="No Milestones Yet"
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         description={isClient ? 
           "Break down the project into manageable milestones to track progress and payments." : 
           "No milestones have been created for this project yet."}
@@ -92,7 +80,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     );
   }
 
-<<<<<<< HEAD
   if (milestones && milestones.length === 0 && !showAddForm) {;
     return (
       <EmptyState
@@ -107,10 +94,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             onClick: (,) => setShowAddForm(true);
           } : undefined;
         }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
 :src/components/projects/milestones/MilestonesList.tsx
-<<<<<<< HEAD
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
         <div className="flex justify-end">;
@@ -119,16 +104,13 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             Add Milestone;
           </Button>;
         </div>;      )}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/projects/milestones/MilestonesList.tsx
 
       )}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
-<<<<<<< HEAD
             <AddMilestoneForm 
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
@@ -150,9 +132,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             />
           </CardContent>
         </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       )}
-<<<<<<< HEAD
 
       <div className="space-y-4">
         {milestones.map((milestone) => (
@@ -160,7 +140,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       <div className="space-y-4">;
         {milestones && milestones.map((milestone,) => (;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <MilestoneCard
 key={milestone.id}
             id={milestone.id}
@@ -177,7 +156,6 @@ key={milestone.id}
       </div>;
     </div>;
 );
-<<<<<<< HEAD
 };
 };
 
@@ -257,8 +235,6 @@ if ( {) {
 
             <AddMilestoneForm
 :src/components/projects/milestones/MilestonesList.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import {
   Milestone,
@@ -299,5 +275,3 @@ interface MilestonesListProps {
 }
 export const MilestonesList: React.FC<MilestonesListProps> = ({
 :src/components/projects/milestones/MilestonesList.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

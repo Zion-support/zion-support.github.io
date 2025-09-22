@@ -1,7 +1,4 @@
 :src_backup/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState } from "react",
 import { useRouter } from 'next/router',
@@ -35,8 +32,6 @@ import Link from 'next/link';
 import { useState } from "react";
 import { useRouter  } from 'next/router';
 :src/components/auth/login/LoginForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod";
@@ -44,7 +39,6 @@ import { LogIn, User, Eye, EyeOff } from 'lucide-react'';
 import { fireEvent  } from '@/lib/analytics';"
 import { useAuth } from "@/context/auth/AuthProvider",
 :src_backup/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
 
 import { useState } from 'react';
 import { use_router } from 'next / router';
@@ -65,7 +59,6 @@ import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
 
 import {
-=======
 ';
 import { useState } from 'react';'
 import { use_router } from 'next / router';'
@@ -85,7 +78,6 @@ import { use_auth  } from '@/context / auth / AuthProvider';'
 import { Button  } from '@/components / ui / button';'
 import { Input  } from '@/components / ui / input';
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
   Form,
   FormControl,
   FormField,
@@ -161,7 +153,6 @@ import {}
   FormLabel,
 :src_backup/components/auth/login/LoginForm.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import {}
@@ -171,8 +162,6 @@ import {}
   FormItem,
   FormLabel,
 :src_backup/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
     resolver: zodResolver(loginSchema) as any,
     defaultValues: {'
       email: '','
@@ -188,10 +177,8 @@ import {}
       const result = await login(data.email, data.password, data.rememberMe);
 :src_backup/components/auth/login/LoginForm.tsx
       if (result?.error) {;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/LoginForm.tsx
 
         let errorMessage = 'Login failed. Please try again.'; // Default generic error
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (result?.error && result?.error?.message) {
           if (
             result.error.message.toLowerCase().includes('email not confirmed')
@@ -199,21 +186,15 @@ import {}
             errorMessage ='
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
 :src_backup/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   FormMessage} from "@/components/ui/form",
   FormMessage} from "@/components/ui/form",
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
 import { Checkbox } from "@/components/ui/checkbox",
 // Form validation schema
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-=======
 "
   FormMessage} from "@/components/ui/form","
 import { Alert, AlertDescription } from "@/components/ui/alert","
@@ -222,7 +203,6 @@ import { Checkbox } from "@/components/ui/checkbox",;
 // Form validation schema;
 const loginSchema = z.object({"
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
   password: z.string().min(6, "Password must be at least 6 characters"),
   rememberMe: z.boolean()}),
 
@@ -238,20 +218,15 @@ export function LoginForm() {}
 
 :src_backup/components/auth/login/LoginForm.tsx
   const form = useForm<LoginFormValues>({
-<<<<<<< HEAD
     resolver: zodResolver(loginSchema) as any,
     defaultValues: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       email: "",
-=======
   const form = useForm<LoginFormValues>({};
     resolver: zodResolver(loginSchema) as any;
     defaultValues: {}
 "
       email: "","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
       password: "",
       rememberMe: false}}),
 
@@ -262,19 +237,15 @@ export function LoginForm() {}
     try {
       setIsSubmitting(true),
       // Pass email and password to the login function
-<<<<<<< HEAD
-<<<<<<< HEAD
       const result = await login(data.email, data.password, data.rememberMe),
       if (result?.error) {
         let errorMessage = "Login failed. Please try again.", // Default generic error
         if (result?.error && result?.error?.message) {
           if (result.error.message.toLowerCase().includes("email not confirmed")) {
             errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
-=======
 
       const result = await login(data.email, data.password, data.rememberMe),
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/LoginForm.tsx
           } else {
             errorMessage = result.error.message
           }
@@ -314,7 +285,6 @@ if ( {) {}
   }
 :src_backup/components/auth/login/LoginForm.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         form.setError("root", { message: errorMessage })
       } else {'
         fireEvent('login', { method: 'email' })"
@@ -330,18 +300,14 @@ import { Button } from "@/components/ui/button",;"
 import { Input } from "@/components/ui/input",;
 :src/components/auth/login/LoginForm.tsx
 import {;
-=======
     resolver: zodResolver(loginSchema) as any
     defaultValues: {import {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
   FormLabel,;
 :src_backup/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   FormMessage} from "@/components/ui/form",;
 import { Alert, AlertDescription } from "@/components/ui/alert",;
 import Link from "next/link",;
@@ -367,7 +333,6 @@ const loginSchema = z && z.object({;
 type LoginFormValues = z && z.infer<typeof loginSchema>;
 
 :src_backup/components/auth/login/LoginForm.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/LoginForm.tsx
 export function LoginForm() {;
   const { isLoading, login } = useAuth(),;
   const [showPassword, setShowPassword] = useState(false),;
@@ -398,16 +363,11 @@ export function LoginForm() {;
           }
 :src_backup/components/auth/login/LoginForm.tsx
         }
-<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
         form.setError("root", { message: errorMessage });
       } else {;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         }'
         form && form.setError('root', { message: errorMessage });
       } else {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
         fireEvent('login', { method: 'email' });
       }
     } finally {;
@@ -427,7 +387,6 @@ export function LoginForm() {;
     try {;
       const response = await fetch('/api/auth/resend-verification-email', {;
         method: 'POST',;
-=======
   const handleResendEmail = async () => {;'
     const email = form && form.getValues('email');
     if (!email) {;'
@@ -439,10 +398,8 @@ export function LoginForm() {;
     try {;'
       const response = await fetch('/api/auth/resend-verification-email', {;'
         method: 'POST',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
         headers: { 'Content-Type': 'application/json' },;
 :src/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
         body: JSON.stringify({ email });
       }),;
       const data = await response.json(),;
@@ -453,9 +410,7 @@ export function LoginForm() {;
       }
 :src_backup/components/auth/login/LoginForm.tsx
     } catch (err) {;
-=======
     } catch (err) {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
       setVerificationMessage('Failed to resend verification email.');
     } finally {;
       setIsResending(false);
@@ -507,18 +462,11 @@ if ( {) {}
             field
           }: {
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/LoginForm.tsx
-=======
           render={({}
             field;
           }: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
   return (
     <Form {...form}>
       {form.formState.errors.root && ("
@@ -527,27 +475,19 @@ if ( {) {}
         </Alert>
       )}
 :src/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/LoginForm.tsx
       <form;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         onSubmit={form.handleSubmit(onSubmit, (errors) => {;
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
           if (firstError) {;
             form.setFocus(firstError);
           }
         })}"
-=======
 
             form.setFocus(firstError);
           }
         })}
         className="space-y-6""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/login/LoginForm.tsx
         className="space-y-6"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -577,12 +517,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <FormItem>"
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
 <FormControl>
-<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
                 <div className="relative">
                   <Input
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className='relative'>
             field: ControllerRenderProps<LoginFormValues, 'email'>;
           }) => (            <FormItem>;'
@@ -625,7 +561,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/components/auth/login/LoginForm.tsx
 
 <Input
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/LoginForm.tsx
                     type={showPassword ? 'text' : 'password'}
                     placeholder='Enter password'
                     aria-label='Password'
@@ -641,7 +576,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     onClick={() => setShowPassword(!showPassword)}                  >;
 :src_backup/components/auth/login/LoginForm.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     placeholder="you@example.com"
                     aria-label="Email address"
                     aria-invalid={!!form.formState.errors.email}"
@@ -649,25 +583,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {...field}
 :src_backup/components/auth/login/LoginForm.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   />
-=======
                   />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                 </div>
               </FormControl>"
               <FormMessage className="text-red-400" />
             </FormItem>
 :src_backup/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/login/LoginForm.tsx
         className="space-y-6";
       >;
         <FormField;
@@ -740,11 +664,7 @@ pr-12325
               <FormMessage className='text-red-400' />
             </FormItem>
 :src/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />'
                 </div>
               </FormControl>
@@ -756,10 +676,7 @@ pr-12325
               </FormControl>;
               <FormMessage className="text-red-400" />;
             </FormItem>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/login/LoginForm.tsx
           )}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         />;
         <FormField;
 :src_backup/components/auth/login/LoginForm.tsx
@@ -858,22 +775,17 @@ pr-12325
                       <Eye className='h - 4 w - 4' />)}'
                     <span className='sr - only'>;'
                       {show_password ? 'Hide password' : 'Show password'}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
                     </span>;
                   </Button>;
                 </div>;
               </FormControl>;
 :src_backup/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
               <FormMessage className="text-red-400" />;
             </FormItem>;
           )}
         />;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
           name="rememberMe"
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "rememberMe"> }) => (
             <FormItem className="flex flex-row items-start space-x-3 space-y-0">
@@ -891,15 +803,11 @@ pr-12325
               <FormControl>;
 :src_backup/components/auth/login/LoginForm.tsx
                 <Checkbox
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/LoginForm.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <FormControl>
-<<<<<<< HEAD
                 <Checkbox
                   checked={field.value}
                   onCheckedChange={field.onChange}
-<<<<<<< HEAD
                   className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white"
                   aria-label="Remember me"
                 />
@@ -912,36 +820,29 @@ pr-12325
               <FormControl>;
 :src_backup/components/auth/login/LoginForm.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </FormControl>
               <div className="space-y-1 leading-none">
-=======
               </FormControl>"
               <div className="space-y-1 leading-none">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
               </div>
             </FormItem>
           )}
 :src_backup/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
         />
         <div className="flex items-center justify-between">
           <div className="text-sm">
             {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
 :src_backup/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
             {/* If "Remember me" was previously here, it's moved. */}
             {/* If "Remember me" was previously here, it's moved. */}
 '
-=======
             {/* If "Remember me" was previously here, it's moved. */}
         />;
         <div className='flex items-center justify-between'>;
           <div className='text-sm'>;
             {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}'
             {/* If "Remember me" was previously here, it's moved. */}'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/login/LoginForm.tsx
             field: ControllerRenderProps < LoginFormValues, 'remember_me'>;
           }) => ('
             <FormItem className='flex flex - row items - start space - x-3 space - y-0'>;
@@ -1008,13 +909,10 @@ pr-12325
           <Link'
             href='/signup'
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/LoginForm.tsx
           </div>
           <div className="text-sm">
-=======
           </div>"
           <div className="text-sm">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
             <Link href="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
               Forgot password?
             </Link>
@@ -1022,18 +920,11 @@ pr-12325
         </div>
 :src_backup/components/auth/login/LoginForm.tsx
         <Button
-<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           type="submit"
-=======
         <Button;
 "
           type="submit""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
           className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible"
           disabled={isLoading || isSubmitting}
         >"
@@ -1111,12 +1002,9 @@ pr-12325
             type='button'
             variant='outline'
             className='w-1/2 ml-2'            Check status
-=======
 
 :src/components/auth/login/LoginForm.tsx
             Check status
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
           </p>
         )}"
         <div className="flex justify-between mt-4">
@@ -1138,7 +1026,6 @@ pr-12325
 :src_backup/components/auth/login/LoginForm.tsx
 
             Check status;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
           </Button>
         </div>"
         <p className="text-sm text-center mt-4">"
@@ -1149,10 +1036,7 @@ pr-12325
       </form>
     </Form>
 :src_backup/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
           </Button>;
           <Button;
             type="button";
@@ -1170,19 +1054,15 @@ return;
 
 :src_backup/components/auth/login/LoginForm.tsx
 
-<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
 }setIsResending (true);'
 setVerificationMessage ('')
 try {'
   const response = await fetch ('/api/auth/resend-verification-email', {'
   method: 'POST'
 headers: {'
-=======
 '
-=======
   )
 return;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/login/LoginForm.tsx
 }setIsResending (true);''
 setVerificationMessage ('')'
 try {''
@@ -1190,7 +1070,6 @@ try {''
 :src_backup/components/auth/login/LoginForm.tsx
   method: 'POST''
 headers: {''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
   'Content-Type': 'application/json'
 }
 body: JSON.stringify ({}
@@ -1218,23 +1097,18 @@ if (!email) {''
 
 return;
 
-<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
 
-<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
-=======
 `
 }router.push (`/verify-status?email=$ {}
   encodeURIComponent (email)`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
 }`)
 }
 }> {"
   form.formState.errors.root && (<Alert variant="destructive" className="mb-4" > form.formState.errors.root.message;
 }</AlertDescription> </Alert>)
 }<form"
-=======
   message: 'Please enter your email address.''
 })
 return;
@@ -1246,7 +1120,6 @@ return;
   form.formState.errors.root && (<Alert variant="destructive" className="mb-4" > form.formState.errors.root.message"
 }</AlertDescription> </Alert>)
 }<form
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/login/LoginForm.tsx
 }) ""
 }className="space-y-6" > <FormField text-zion-slate-light">Email address</FormLabel> <FormControl> <div className=" relative"> <Input /> <User className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) ""
 }/> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Password</FormLabel> relative" > <Input /> <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Button) : (<Eye className="h-4 w-4" />) ""
@@ -1260,15 +1133,9 @@ return;
   isResending ? 'Sending...': 'Resend / Verify e-mail'
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
 }'"}
-<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
             className='font-medium text-zion-cyan hover:text-zion-cyan-light'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
             className='font-medium text-zion-cyan hover:text-zion-cyan-light'>;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/LoginForm.tsx
-=======
 }/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light" /> Forgot password? </Link> </div> </div> <Button {",
   verificationMessage
 }</p>) ""
@@ -1289,7 +1156,6 @@ return;
         </div>;
         <p className="text-sm text-center mt-4">;
           <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/login/LoginForm.tsx
             Create account;
           </Link>;
         </p>;
@@ -1298,7 +1164,6 @@ return;
 </Form>;
   );
 :src_backup/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
 }
         </Button>;
         {verification_message && ('
@@ -1411,18 +1276,8 @@ return;`
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>);'"
 }'"}
 }
-<<<<<<< HEAD:src_backup/components/auth/login/LoginForm.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/LoginForm.tsx
-=======
 }<form;
 }) ";
 }className="space - y-6" > <FormField text - zion - slate - light">Email address</FormLabel> <FormControl> <div className=" relative"> <Input /> <User className=" absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4"/> </div> </FormControl> <FormMessage className=" text - red - 400"/> </FormItem>) ";
@@ -1440,7 +1295,6 @@ return;`
 ;
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/login/LoginForm.tsx
   );
 
 }else {;
@@ -1512,12 +1366,7 @@ return ;
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>) ;
 }'"
 :src/components/auth/login/LoginForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/login/LoginForm.tsx
-=======
 
             variant='outline';
             className='w - 1/2 ml - 2';
@@ -1541,4 +1390,3 @@ return ;
 }<div className=" flex justify - between mt - 4" > <Button > {';
 } <Button > Check status  </div> Create account  </p> </form> );
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/auth/login/LoginForm.tsx

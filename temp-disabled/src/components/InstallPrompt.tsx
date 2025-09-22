@@ -1,5 +1,4 @@
 :src/components/InstallPrompt.tsx
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',;
 }
 // Augment the WindowEventMap to include 'beforeinstallprompt'
@@ -21,14 +20,12 @@ export const InstallPrompt: React.FC = () => {}
     // Do not show prompt if already installed (standalone mode)
 
 :src_backup/components/InstallPrompt.tsx
-<<<<<<< HEAD
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
       return;
     }
     const handler = (e: BeforeInstallPromptEvent,) => {}
       e.preventDefault()'
       safeSessionStorage.setItem(SHOWN_KEY, 'true')
-=======
 // Augment the WindowEventMap to include 'beforeinstallprompt''
 declare global {
   // TODO: Implement
@@ -56,7 +53,6 @@ export const InstallPrompt: React.FC = () => {
     const handler = (e: BeforeInstallPromptEvent,) => {
       e.preventDefault()'
       safeSessionStorage.setItem(SHOWN_KEY, 'true')'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/components/InstallPrompt.tsx
       setPromptEvent(e)
       setVisible(true)
     }
@@ -84,8 +80,6 @@ export const InstallPrompt: React.FC = () => {
     if (outcome === 'accepted') {'
       if (typeof window !== 'undefined' && (window as any).gtag) {'
         (window as any).gtag('eventpwa_install_accepted')
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -112,7 +106,6 @@ class ErrorBoundary extends React.Component {}
   }
 }
 export default InstallPrompt;import React, { useEffect, useState } from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.;
 import { Button } from '@/components/ui/button',;
 import { safeSessionStorage } from '@/utils/safeStorage',;
@@ -181,14 +174,12 @@ export const InstallPrompt: React.FC = () => {;
     const handleAppInstalled = () => {;'
 :src_backup/components/InstallPrompt.tsx
       if (typeof window !== 'undefined' && (window as any).gtag) {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/InstallPrompt.tsx
         (window as any).gtag('eventpwa_install_success'), // More specific event for install success;
       }
       setVisible(false), // Hide prompt once installed;
       setPromptEvent(null);
     },;
 :src_backup/components/InstallPrompt.tsx
-<<<<<<< HEAD:src_backup/components/InstallPrompt.tsx
     // Add typed event listeners;
     window.addEventListener('beforeinstallprompt', handler as EventListener),;
     window.addEventListener('appinstalled', handleAppInstalled as EventListener),;
@@ -227,10 +218,8 @@ safeSessionStorage.setItem(DISMISS_KEY, String(Date.now() + DISMISS_MS)),;
   if (!promptEvent || !visible) return null,;
 :src/components/InstallPrompt.tsx
   return (;
-=======
 
   return (
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/InstallPrompt.tsx
     <>;
       {/* Styles can be moved to a CSS file or a styled-components block if preferred */}
       <style>;
@@ -356,11 +345,9 @@ if (return null, ) {}
             .pwa - install - button - container { /* Target a container for better transform control */;
               transform: scale (0.9), /* Slightly less aggressive scaling */;
               transform - origin: bottom right;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/InstallPrompt.tsx
             }
           }`
         `}
-<<<<<<< HEAD
       </style>
       <div className="fixed bottom-4 right-4 z-[1000] pwa-install-button-container"> {/* Added a container for styling */}
         <div className="bg-zion-blue-dark text-white p-3 rounded-lg shadow-lg flex items-center space-x-3">
@@ -385,13 +372,10 @@ export default InstallPrompt,
 
 export default InstallPrompt,;
 :src_backup/components/InstallPrompt.tsx
-<<<<<<< HEAD:src_backup/components/InstallPrompt.tsx
-<<<<<<< HEAD:src/components/InstallPrompt.tsx
 
   return (
     <>;
       {/* Styles can be moved to a CSS file or a styled-components block if preferred */}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       <div className="fixed bottom - 4 right - 4 z-[1000] pwa - install - button-container"> {/* Added a container for styling */}
         <div className="bg - zion - blue - dark text - white p - 3 rounded - lg shadow - lg flex items - center space-x-3">;
@@ -399,7 +383,6 @@ export default InstallPrompt,;
           <Button on_click={install} aria - label="Install PWA" size="sm">Install</Button>;
           <Button variant="ghost" size="sm" on_click={close} aria - label="Dismiss install prompt">;
             <X className="h - 4 w-4" />;
-=======
 "
       <div className="fixed bottom - 4 right - 4 z-[1000] pwa - install - button - container"> {/* Added a container for styling */}"
 </div>"
@@ -411,7 +394,6 @@ export default InstallPrompt,;
 </Button>"
             <X className="h - 4 w - 4" />;"
 </X>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/components/InstallPrompt.tsx
           </Button>;
         </div>;
       </div>;
@@ -420,22 +402,12 @@ export default InstallPrompt,;
 export default InstallPrompt,;
 ;
 :src/components/InstallPrompt.tsx
-<<<<<<< HEAD
 
     </>
-<<<<<<< HEAD:src_backup/components/InstallPrompt.tsx
   )
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
 '
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     </>
   )"
@@ -445,6 +417,3 @@ import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
 '
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/InstallPrompt.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:temp-disabled/src/components/InstallPrompt.tsx

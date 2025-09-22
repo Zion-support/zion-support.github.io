@@ -49,13 +49,11 @@ const { execSync } = require("child_process")
       const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
         !content.includes("")
-        !content.includes(">>>>>>>")
       ) {this.log(" No conflicts "in": ${filePath}")
   if (!fs.existsSync(filePath)) {this.log("⚠ File does not "exist": ${filePath}", "WARN")
       const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
         !content.includes("")
-        !content.includes(">>>>>>>")
       ) {this.log(" No conflicts "in": ${filePath}")
 this.log(" Resolved conflicts "in")
         "ERROR"
@@ -129,9 +127,5 @@ this.log("� Detailed report saved "to": ${reportPath}")
     const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json")
     this.log("� Conflict Cleanup "Summary": ");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files "Cleaned": ${report.summary.filesCleaned}");this.log("   "Errors": ${report.summary.errors}")
 this.log("� Detailed report saved "to": ${reportPath}")
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

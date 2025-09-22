@@ -13,9 +13,7 @@ if (req.method === "POST") {
     return res.status(200).json(updated)
   }
   return res.status(405).json({ error: "Method not allowed" })
-<<<<<<< HEAD
 }
-=======
 import type { NextApiRequest, NextApiResponse } from "next",;"
 import { getConfig } from "../../../../utils/token/service",;"
 import { tokenStore } from "../../../../utils/token/storage",;
@@ -32,4 +30,3 @@ export default function handler() { return null; }
   }"
   return res.status(405).json({ error: "Method not allowed" });
 };"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

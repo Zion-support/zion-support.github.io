@@ -11,9 +11,6 @@ export default function IncidentAutomationSuitePage() {
 
   return (
     <UltraAdvancedFuturisticBackground>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Head>
         <title>{service.name} - Zion Tech Group</title>
         <meta name="description" content={service.description} />
@@ -33,8 +30,6 @@ export default function IncidentAutomationSuitePage() {
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /><span>{feat}</span></li>
                 ))}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>"
 
       <Head>
@@ -58,4 +53,3 @@ export default function IncidentAutomationSuitePage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">"
 </ul>"
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /><span>{feat}</span></li>")"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

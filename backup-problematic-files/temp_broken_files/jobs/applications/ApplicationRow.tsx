@@ -1,5 +1,4 @@
 
-=======
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
 import { Calendar, User, FileText, BarChart } from "lucide-react",;
@@ -37,13 +36,11 @@ export function ApplicationRow({;
                 alt={application.talent_profile.full_name} ;
               />;
             ) :(;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <User className="h-5 w-5 text-gray-400" />;
             )}
           </Avatar>;
           <div>;
             <div className="font-medium">;
-<<<<<<< HEAD
 
             </div>;
           </div>;

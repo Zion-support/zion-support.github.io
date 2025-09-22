@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-=======
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // @ts-ignore
 import data from '../../data/github-pulse.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -13,17 +8,11 @@ import data from '../../data/github-pulse.json',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/github-pulse.json',
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/github-pulse.json',
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function GithubPulsePage() {
-=======
 
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore'
@@ -38,13 +27,11 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore;'
 import data from '../../data/github-pulse.json',
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function GithubPulsePage() {}
   const repo = data?.repo |{}
   const last24h = data?.last24h |{}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">"
@@ -65,7 +52,6 @@ function Metric({ label, value }: { label: string, value: any }) {}
   return ("
     <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">"
       <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
-<<<<<<< HEAD
       <div className="text-lg font-semibold">{value ?? '—'}</div>
     </div>
   );
@@ -77,7 +63,6 @@ function Metric({ label, value }: { label: string, value: any }) {}
   }
 }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function GithubPulsePage() {
 
 const repo = data?.repo |{}
@@ -104,21 +89,17 @@ const repo = data?.repo |{}
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 
 }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
-=======
 
 }
 
 '
 import EnhancedLayout from '../../components / layout / EnhancedLayout',;
 // @ts - ignore;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import data from '../../data / github - pulse.json',
 export default /**;
  * GithubPulsePage - Function description;
@@ -151,18 +132,13 @@ function Metric() {}
       <div className="text - xs text - gray - 500 dark:text - gray - 400">{label}</div>;'"
       <div className="text - lg font - semibold">{value ?? '—'}</div>;
     </div>);
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 
     </div>
 
   )
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore'
 import data from '../../data/github-pulse.json';
@@ -205,11 +181,5 @@ export default function GithubPulsePage() {}
 
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

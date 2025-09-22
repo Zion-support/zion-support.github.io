@@ -30,11 +30,9 @@ import React, { useState } from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
-=======
 '
 import Link from 'next/link';'
 import { useRouter  } from 'next/router';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/ApiDocsLayout.tsx
 import { Search } from 'lucide-react'
 ;
   const current_path = router.pathname;
@@ -51,9 +49,7 @@ getDocsSearchPath;
 docsSearchSuggestions;'
 } from '@/data / docsSearchData';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD:src_backup/components/developers/ApiDocsLayout.tsx
 import { SearchSuggestion } from "@/types/search",
 import React, { useState } from "react",
 import Link from 'next/link',
@@ -66,10 +62,7 @@ import {
  getDocsSearchPath,
  docsSearchSuggestions
 :src/components/developers/ApiDocsLayout.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "@/data/docsSearchData",
 
 interface ApiDocsLayoutProps {
@@ -77,7 +70,6 @@ interface ApiDocsLayoutProps {
   children: React.ReactNode
   children: React.ReactNode;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiDocsLayout.tsx
 }
 
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
@@ -90,22 +82,17 @@ const navigationItems = [
     { title: "API Reference", path: "/developers/docs/reference" },
     { title: "API Reference", path: "/developers/docs/reference" },
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiDocsLayout.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const router = useRouter(),
   const currentPath = router.pathname,"
   const [searchValue, setSearchValue] = useState(""),
 
 :src/components/developers/ApiDocsLayout.tsx
-<<<<<<< HEAD
   const navigationItems = [
 
 :src_backup/components/developers/ApiDocsLayout.tsx
   const navigationItems = [
 
-<<<<<<< HEAD:src/components/developers/ApiDocsLayout.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
     { title: "Webhooks", path: "/developers/docs/webhooks" },
@@ -146,7 +133,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
 
     { title: "Webhooks", path: "/developers/docs/webhooks" },;
     { title: "Sample Code", path: "/docs/sample-code" },;
-=======
 
 export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
   const router = useRouter();
@@ -158,11 +144,9 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
     { title: "API Reference", path: "/developers/docs/reference" },;"
     { title: "Webhooks", path: "/developers/docs/webhooks" },;"
     { title: "Sample Code", path: "/docs/sample-code" },;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/ApiDocsLayout.tsx
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],;
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {;
 :src/components/developers/ApiDocsLayout.tsx
-<<<<<<< HEAD
     const path = getDocsSearchPath(suggestion.text),;
     if (path) {;
       router.push(path),;"
@@ -183,13 +167,10 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
      {/* Sidebar */}"
      <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
 :src/components/developers/ApiDocsLayout.tsx
-=======
 
 :src_backup/components/developers/ApiDocsLayout.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiDocsLayout.tsx
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Link href="/developers/docs" className="flex items-center mb-8">
        <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">
         <span className="text-white font-bold">Z</span>
@@ -201,9 +182,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
       <div className="mb-6">
        <form onSubmit={handleSubmit} className="relative">
         <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         <EnhancedSearchInput
      <div className="hidden md: block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">;
       <Link href="/developers/docs" className="flex items-center mb-8">;
@@ -219,16 +197,12 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
 :src_backup/components/developers/ApiDocsLayout.tsx
         <EnhancedSearchInput
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
          value={searchValue}
          onChange={setSearchValue}
          onSelectSuggestion={handleSelectSuggestion}
          searchSuggestions={docsSearchSuggestions}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/ApiDocsLayout.tsx
          placeholder="Search documentation"
         />
        </form>
@@ -249,7 +223,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
         </Link>;
 :src_backup/components/developers/ApiDocsLayout.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           "block px-3 py-2 rounded-md text-sm",
           currentPath === item.path"
            ? "bg-zion-purple/20 text-zion-cyan""
@@ -258,7 +231,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
         >;
 :src/components/developers/ApiDocsLayout.tsx
          {item.title}
-<<<<<<< HEAD
         </Link>;
        ))}
       </nav>;
@@ -393,15 +365,12 @@ if ( {) {}
 "export default ApiDocsLayout;
 
 :src/components/developers/ApiDocsLayout.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
      </div>;
-=======
          className={cn(           ? "bg-zion-purple/20 text-zion-cyan"
            : "text-zinc-400 hover: text-white hover:bg-zinc-900"
          )}>;
          {item && item.title}
         </Link>;     </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>;
   );
 }
@@ -409,19 +378,12 @@ if ( {) {}
 :src_backup/components/developers/ApiDocsLayout.tsx
 export default ApiDocsLayout;
 
-=======
 }
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const router = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const router = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/developers/ApiDocsLayout.tsx
-=======
 export default ApiDocsLayout;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/developers/ApiDocsLayout.tsx

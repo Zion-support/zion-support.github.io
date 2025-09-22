@@ -22,11 +22,7 @@ class ComprehensiveConflictCleaner {
 
       // Clean merge conflicts - keep the HEAD version by default
       let cleanedContent = content
-        .replace(/<<<<<<< HEAD[\s\S]*?
-          // Extract the HEAD version (before =======)
           const headMatch = match.match(/([\s\S]*?)
-          // Extract the HEAD version (before =======)
-          const headMatch = match.match(/<<<<<<< [^\n]+([\s\S]*?)=======/);
           return headMatch ? headMatch[1].trim() : '';
         })
         .replace(/^$/gm, '')
@@ -60,7 +56,6 @@ console.log('Script executed successfully');
 
     try {
       // Find all files with merge conflicts
-      const result = execSync('find . -type f \\( -name "*.cjs" -o -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" \\) -exec grep -l "<<<<<<< HEAD" {} \\;', { encoding: 'utf8' });
       const files = result.trim().split('\n').filter(file => file.trim());
 
       console.log(`Found ${files.length} files with merge conflicts`);
@@ -114,8 +109,6 @@ console.log('Script executed successfully');
               // Check if file is severely corrupted
               if (content.length < 100 && (
                 content.includes('<<<<<<<') || 
-                content.includes('=======') || 
-                content.includes('>>>>>>>') ||
                 content.trim().length === 0
               )) {
                 console.log(`Removing severely corrupted file: ${filePath}`);

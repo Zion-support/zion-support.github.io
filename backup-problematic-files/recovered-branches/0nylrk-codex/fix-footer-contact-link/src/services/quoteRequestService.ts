@@ -154,4 +154,3 @@ return data[0] as QuoteRequest
 if (error) throw error;
 return true;
 }
-<<<<<<< HEAD

@@ -1,5 +1,4 @@
 :pages/api/admin/partners/update.ts
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -7,7 +6,6 @@ import { getServerSupabase } from '../../../../utils/supabase/server',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (error) return res.status(500).json({ error: error.message });
     return res.status(200).json({ ok: true });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const supabase = getServerSupabase (),
     const updates: any = {},
     // Check condition
@@ -30,11 +28,8 @@ if (updates.commission_rate = commission_rate, ) {
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   try {
     if (usingPlaceholder) {
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -44,7 +39,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {;
     if (usingPlaceholder) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/admin/partners/update.ts
       return res.status(200).json({ ok: true, mock: true })
     }
     const supabase = getServerSupabase();
@@ -60,15 +54,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e?.message })
   }
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

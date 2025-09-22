@@ -1,5 +1,4 @@
 :src/components/talent/filters/RegionFilter.tsx
-<<<<<<< HEAD
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Checkbox } from "@/components/ui/checkbox",
@@ -54,13 +53,11 @@ function RegionFilter() {
 
       </button>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   { id: "North America", label: "North America" },
   { id: "Europe", label: "Europe" },
   { id: "Asia", label: "Asia" },
   { id: "South America", label: "South America" },
   { id: "Australia", label: "Australia" },
-<<<<<<< HEAD
 
       {expanded && (;
         <div className='mt-4 space-y-2'>;
@@ -76,26 +73,21 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";const REGION_OPTIONS = [;
 
 const REGION_OPTIONS = [;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   { id: "North America", label: "North America" },;
   { id: "Europe", label: "Europe" },;
   { id: "Asia", label: "Asia" },;
   { id: "South America", label: "South America" },;
   { id: "Australia", label: "Australia" },;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   { id: "Africa", label: "Africa" }
 ],
 
 :src/components/talent/filters/RegionFilter.tsx
-<<<<<<< HEAD
 export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button
         onClick={toggleSection}
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";
 const REGION_OPTIONS = null;
@@ -136,7 +128,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         className="flex w-full items-center justify-between text-white font-medium"
       >
         <span>Region</span>
@@ -167,20 +158,15 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
               </label>;
             </div>;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <Checkbox
                 id={`region-${region.id}`}
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
 :src/components/talent/filters/RegionFilter.tsx
-<<<<<<< HEAD
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
-<<<<<<< HEAD
               />
               <label
-=======
               />              <label
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 htmlFor={`region-${region.id}`}
 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >

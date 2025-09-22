@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
-=======
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
-=======
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -21,7 +16,6 @@ const corsHeaders = {}
   \"Access-Control-Allow-Headers\": \"authorization, x-client-info, apikey, content-type\"}import \"https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts\",;
 import {serve} from \"https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get(\"OPENAI_API_KEY\");
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -52,31 +46,18 @@ const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*","
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -86,16 +67,12 @@ serve(async (req) => {
 serve(async (req) => {
   // Handle CORS preflight requests
 if (req.method === "OPTIONS") {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return new Response(null, { headers: corsHeaders })
   }
   try {};
     // Get personalization request data;
     const {}
-=======
-=======
 if (req.method === "OPTIONS") {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -105,12 +82,10 @@ serve(async (req) => {
     // Get personalization request data
 
     const { 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       emailType, 
       userData, 
       activityData,
 
-<<<<<<< HEAD
       template = {} 
     } = await req && req.json();
     if (!emailType || !userData) {
@@ -119,9 +94,6 @@ serve(async (req) => {
 
         subjectContext = "Create a short, motivational subject line about profile completion.";
         break;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
       throw new Error("Missing required parameters: emailType and userData")
@@ -151,7 +123,6 @@ serve(async (req) => {
 userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion |0}% of their profile. Focus on how a complete profile increases visibility.`;
         subjectContext = "Create a short, motivational subject line about profile completion.";
         break;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       throw new Error("Missing required parameters: emailType and userData")
     }
@@ -190,7 +161,6 @@ template = {}
         userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion |0}% of their profile. Focus on how a complete profile increases visibility.`;
         subjectContext = "Create a short, motivational subject line about profile completion.";
         break;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.",
     let userPrompt = "",
     // Subject line context
@@ -211,49 +181,28 @@ template = {}
         userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`,
         subjectContext = "Create a short, motivational subject line about profile completion.",
         break,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
         userPrompt = `Create an email for ${userData && userData.firstName} reminding them to complete their profile. They have completed ${userData && userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`;
-=======
 userPrompt = `Create an email for ${userData && userData.firstName} reminding them to complete their profile. They have completed ${userData && userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         subjectContext = "Create a short, motivational subject line about profile completion.";
         break;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       default:
         userPrompt = `Create a re-engagement email for a user named ${userData && userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
     // Add subject line request to the prompt
-<<<<<<< HEAD
-<<<<<<< HEAD
     userPrompt += `\n\n${subjectContext |"Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`;
     userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     // Call OpenAI API to generate personalized content
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 default:
         userPrompt = `Create a re-engagement email for a user named ${userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
     // Add subject line request to the prompt
     userPrompt += `\n\n${subjectContext |"Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`;
     userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     // Call OpenAI API to generate personalized content
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -297,20 +246,14 @@ userPrompt += `\n\n${subjectContext || \"Create an engaging subject line for thi
       body: JSON.stringify({
         model: "gpt-4o-mini"
 
-=======
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       method: "POST",
       headers: {"`
         "Authorization": `Bearer ${openAIApiKey}`;"
         "Content-Type": "application/json"};
 body: JSON && JSON.stringify({"
         model: "gpt-4o-mini",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         messages: [
-<<<<<<< HEAD
 
         messages: []
 "
@@ -389,8 +332,6 @@ if ( {) {}
         messages: [;"
           { role: "system", content: system_prompt }"
           { role: "user", content: user_prompt }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         ];
       body: JSON.stringify({
@@ -402,9 +343,7 @@ if ( {) {}
           { role: "user", content: userPrompt }
         ];
         temperature: 0.7})});
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           { role: "system", content: systemPrompt },
-=======
     // Check condition
 if ( {) {
   $2
@@ -470,41 +409,29 @@ if ( {) {
         ];
         temperature: 0.7})});
           { role: "system", content: systemPrompt },
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           { role: "user", content: userPrompt }
         ],
         temperature: 0.7})}),
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         temperature: 0 && 0.7})});
 
 if (!response && response.ok) {}
       const errorData = await response && response.json();`
     if (!response && response.ok) {
       const errorData = await response && response.json();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
 
     const data = await response && response.json();
     const generatedContentText = data && data.choices[0].message && message.content;
-<<<<<<< HEAD
 
         ];
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Parse the JSON response from OpenAI
     let generatedContent;
     try {}
@@ -537,7 +464,6 @@ if ( {) {
   $2
 }
       const error_data = await response.json ();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       throw new Error (`OpenAI API error: ${JSON.stringify (error_data)}`);
     }
     const data = await response.json ();
@@ -558,8 +484,6 @@ if ( {) {}
 }
         try {}
           generated_content = JSON.parse (json_match[0]);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         } catch (e2) {
           throw new Error ("Could not parse the generated content as JSON");
         }
@@ -567,7 +491,6 @@ if ( {) {}
         throw new Error ("Could not extract JSON from the generated content");
       }
     }
-<<<<<<< HEAD
     // Apply the generated content to the template or return it directly
     return new Response(JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
@@ -582,8 +505,6 @@ if ( {) {}
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 "
     console && console.error("Error in personalize-email function:", error);
@@ -601,15 +522,9 @@ if ( {) {}
       status: 500,"
       headers: { ...cors_headers, "Content - Type": "application / json" }});
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
-=======
         messages: [import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         messages: [import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     try {
       generated_content = JSON.parse (generatedContentText);
     } catch (e) {
@@ -655,13 +570,10 @@ console && console.error("Error in personalize-email function:", error);
 }
 });
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-=======
 "
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;"
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
 const corsHeaders = {;"
   "Access-Control-Allow-Origin": "*",;"
@@ -1066,11 +978,8 @@ pr-12325
     return new Response(JSON.stringify({ error: error.message }), {;
       status: 500,;"
       headers: { ...corsHeaders, "Content-Type": "application/json" }});
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
-<<<<<<< HEAD
 });
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
     }
 ;
@@ -1148,16 +1057,9 @@ if (jsonMatch) {
 });
 }
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 ;
       generatedContent = JSON.parse(generatedContentText);
 
@@ -1375,4 +1277,3 @@ pr-12325
 });
   }
 });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

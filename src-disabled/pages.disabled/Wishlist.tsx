@@ -1,8 +1,4 @@
 :src_backup/pages/Wishlist.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useFavorites  } from '@/hooks/useFavorites';
 import { X } from 'lucide-react'
 import { MARKETPLACE_LISTINGS  } from '@/data/marketplaceData';
@@ -17,7 +13,6 @@ import { useRouter } from 'next/router', // Changed from useNavigate
 import { useEffect } from 'react', // Added useEffect
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useFavorites } from '@/hooks/useFavorites',;
 import { X } from 'lucide-react';
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData',;
@@ -43,9 +38,7 @@ export default function WishlistPage() {;
   if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens;
     return null, // Or a loading spinner;
   }
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
   const { items, dispatch } = useCart(),;
   const addToCart = (item: { id: string, title?: string, price?: number }) => {;
@@ -141,26 +134,14 @@ export default function WishlistPage() {;
           })}
         </div>;
       )}
-<<<<<<< HEAD:src_backup/pages/Wishlist.tsx
 }
 :src/pages/Wishlist.tsx
-<<<<<<< HEAD
 ;
 :src_backup/pages/Wishlist.tsx
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Wishlist.tsx
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Wishlist.tsx
     </div>
   );
 
@@ -187,5 +168,3 @@ export default function WishlistPage() {;
 }</div>) ;
 }'"
 :src_backup/pages/Wishlist.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

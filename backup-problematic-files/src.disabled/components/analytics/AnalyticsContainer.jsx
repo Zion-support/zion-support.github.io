@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
 const AnalyticsContainer = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const AnalyticsContainer = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

@@ -3,5 +3,3 @@ import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {; return (; <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\"> <h1 className=\"text-white text-4xl\">Test Page Working!></div> ></div> );}; export default Test;
 import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> )}; export default Test;
 
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages.disabled_auto/test.tsx

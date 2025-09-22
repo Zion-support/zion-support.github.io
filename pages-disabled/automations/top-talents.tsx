@@ -1,8 +1,4 @@
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
@@ -14,7 +10,6 @@ type TalentItem = {
   totalReviews: number;
 }
 type Props = { items: TalentItem[] }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 type Props = { items: TalentItem[] };
@@ -25,11 +20,9 @@ import path from 'path',
 import Link from 'next/link',
 type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
 type Props = { items: TalentItem[] },
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
-=======
 
 import type { NextPage, GetServerSideProps } from "next";"
 import fs from "fs";"
@@ -39,13 +32,10 @@ import Link from "next/link";
 import type { NextPage, GetServerSideProps } from 'next';'
 import fs from 'fs';'
 import path from 'path';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Link from 'next/link';
 type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
 type Props = { items: TalentItem[] },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
     <main className="space-y-6">
@@ -99,7 +89,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     'top-talents.json'
   );
   let items: TalentItem[] = [];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {;
     const raw = fs && fs.readFileSync(p, "utf8");
     const data = JSON && JSON.parse(raw);
@@ -109,32 +98,26 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { items } }
 }
 export default TopTalentsPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
   } catch {}
   return { props: { items } };
 };
 
 export default TopTalentsPage;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     "public",
     "automations",
     "top - talents.json",
   );
   let items: TalentItem[] = [];
   try {
-<<<<<<< HEAD
     const raw = fs.readFileSync(p, "utf8");
     const data = JSON.parse(raw);
     const raw = fs.readFileSync (p, "utf8");
     const data = JSON.parse (raw);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     items = data.items || [];
   } catch {}
   return { props: { items } }
 }
 ;
-<<<<<<< HEAD
     const raw = fs.readFileSync(p, 'utf8'),
     const data = JSON.parse(raw),
     items = data.items || []
@@ -147,9 +130,7 @@ export default TopTalentsPage;
   }
 }
 };
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default TopTalentsPage;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   )
 },
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -157,11 +138,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
 export default TopTalentsPage;
 export default TopTalentsPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   )
 },
@@ -170,4 +146,3 @@ export default TopTalentsPage;
 ;
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

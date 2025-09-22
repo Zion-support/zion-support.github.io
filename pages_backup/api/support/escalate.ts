@@ -1,9 +1,5 @@
 :pages_backup/api/support/escalate.ts
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/escalate.ts
 
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { readJson, writeJson } from "../../../utils/fsDb";"
@@ -45,9 +41,6 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" });
   const { sessionId, reason, tag } = req.body as {
     sessionId: string;
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/escalate.ts
 
     reason?: string;
     tag?: string;
@@ -107,23 +100,12 @@ export default async function handler() { return null; }
 }
 
 :pages_backup/api/support/escalate.ts
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/escalate.ts
 
 :pages_backup/api/support/escalate.ts
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/escalate.ts

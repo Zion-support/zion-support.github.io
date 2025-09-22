@@ -1,17 +1,12 @@
 :src_backup/components/enterprise/EnterprisePricingTable.tsx
-<<<<<<< HEAD
 import { Check, X } from 'lucide-react'
 
 :src_backup/components/enterprise/EnterprisePricingTable.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-<<<<<<< HEAD
 TableBody,
   TableCell,
   TableHead,
   TableHeader,
 :src_backup/components/enterprise/EnterprisePricingTable.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -36,9 +31,6 @@ import { Badge } from "@/components/ui/badge";
 export function EnterprisePricingTable() {
   const plans = null;
 :src_backup/components/enterprise/EnterprisePricingTable.tsx
-<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -61,17 +53,14 @@ export function EnterprisePricingTable() {
     {
       name: "Business",
 :src/components/enterprise/EnterprisePricingTable.tsx
-<<<<<<< HEAD
       price: "$1,999",      billing: "/month",
 
       billing: "/month",
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
       features: [
 :src/components/enterprise/EnterprisePricingTable.tsx
-<<<<<<< HEAD
         { name: 'Private hiring portal', included: true }
         { name: 'Dedicated talent pool', included: true }
         { name: 'Enhanced SLA (8h)', included: true }
@@ -90,7 +79,6 @@ export function EnterprisePricingTable() {
       description: 'For large organizations'
       users: 'Unlimited users'
       popular: false
-<<<<<<< HEAD
       features: [      <div className="container mx-auto max-w-7xl">
 
         { name: "Private hiring portal", included: true },
@@ -113,7 +101,6 @@ export function EnterprisePricingTable() {
 
 :src/components/enterprise/EnterprisePricingTable.tsx
       <div className="container mx-auto max-w-7xl">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -293,15 +280,12 @@ export function EnterprisePricingTable() {;
                         <span className='text-2xl font-bold'>{plan.price}</span>
                         <span className='text-sm text-muted-foreground ml-1'>
 :src/components/enterprise/EnterprisePricingTable.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           {plan.billing}
                         </span>
                       </div>
                       <p className='text-sm text-muted-foreground mt-1'>
                         {plan.description}
 :src/components/enterprise/EnterprisePricingTable.tsx
-<<<<<<< HEAD
 
                       </Button>
                     </div>
@@ -323,8 +307,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </TableHead>
                 ))}
 :src_backup/components/enterprise/EnterprisePricingTable.tsx
-<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
-<<<<<<< HEAD
               </TableRow>;
             </TableHeader>;
             <TableBody>;
@@ -376,10 +358,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
         </div>
 :src_backup/components/enterprise/EnterprisePricingTable.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </section>
 :src_backup/components/enterprise/EnterprisePricingTable.tsx
       </div>;
@@ -406,7 +385,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </TableRow>;
               ))}
 :src_backup/components/enterprise/EnterprisePricingTable.tsx
-<<<<<<< HEAD
 
             </TableBody>;
           </Table>;
@@ -425,8 +403,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 :src_backup/components/enterprise/EnterprisePricingTable.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   );
 }
@@ -435,7 +411,6 @@ import { Button } from '@/components / ui / button';
 import { Check, X } from 'lucide-react';
 :src_backup/components/enterprise/EnterprisePricingTable.tsx
 import {  Table,  Table,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   TableBody,
   TableCell,
   TableHead,
@@ -678,7 +653,6 @@ export function EnterprisePricingTable() {;
         </div>;
       </div>;
     </section>);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;)))]]
         <div className="mt-8 text-center text-sm text-muted-foreground">;
@@ -691,13 +665,7 @@ export function EnterprisePricingTable() {;
 ;
 ;
 :src_backup/components/enterprise/EnterprisePricingTable.tsx
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
             </TableBody>
           </Table>
         </div>
@@ -711,9 +679,6 @@ export function EnterprisePricingTable() {;
   );
 }
 :src/components/enterprise/EnterprisePricingTable.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                       <p className='text - sm text - muted - foreground mt - 1'>;
                       <p className='text - sm font - medium mt - 2'>{plan.users}</p>                      <Button;`;
                         className={`mt - 4 w - full ${plan.popular ? 'bg - zion - purple hover:bg - zion - purple / 90' : }`}
@@ -742,4 +707,3 @@ export function EnterprisePricingTable() {;
 }        <div className="mt - 8 text - center text - sm text - muted - foreground">;"
     </section>);"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx

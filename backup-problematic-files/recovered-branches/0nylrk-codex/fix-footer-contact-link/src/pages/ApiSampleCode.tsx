@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
 import { CodeBlock } from "@/components/developers/CodeBlock",;
@@ -52,12 +51,10 @@ async function searchTalent(filters = {}) {;
   }
 }
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Example usage;
 async function main() {;
   try {;
     // Get all open jobs;
-<<<<<<< HEAD
 
   // Python example with requests;
   const pythonExample = `# Using requests with Python;

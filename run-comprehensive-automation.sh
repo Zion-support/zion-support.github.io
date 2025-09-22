@@ -35,7 +35,6 @@ info() {
 }
 
 print_header "🚀 Comprehensive Automation Runner for Zion Tech Group"
-echo "=============================================================="
 echo
 
 # Create logs directory
@@ -78,7 +77,6 @@ run_optional() {
 }
 
 echo "🔧 Phase 1: System Health & Dependencies"
-echo "========================================"
 
 # Install dependencies
 run_with_log "Dependency Installation" "npm install"
@@ -88,14 +86,12 @@ run_with_log "Git Status Check" "git status"
 
 echo
 echo "🔧 Phase 2: Run Automation Scripts"
-echo "=================================="
 
 # Run master automation
 run_optional "Master Automation" "node scripts/master-automation.cjs"
 
 echo
 echo "🔧 Phase 3: Build and Test"
-echo "=========================="
 
 # Run build
 run_with_log "Build Application" "npm run build"
@@ -105,7 +101,6 @@ run_optional "Smoke Tests" "npm run test:smoke"
 
 echo
 echo "🔧 Phase 4: Code Quality Checks"
-echo "==============================="
 
 # Run linting
 run_optional "ESLint Check" "npm run lint"
@@ -115,7 +110,6 @@ run_optional "TypeScript Check" "npm run type-check"
 
 echo
 echo "🔧 Phase 5: Performance and Security"
-echo "===================================="
 
 # Run performance checks
 run_optional "Performance Analysis" "node scripts/performance-monitor.cjs"
@@ -125,7 +119,6 @@ run_optional "Security Audit" "node scripts/security-audit.cjs"
 
 echo
 echo "🔧 Phase 6: Git Operations"
-echo "=========================="
 
 # Check for changes
 info "Checking for changes to commit..."
@@ -167,7 +160,6 @@ fi
 
 echo
 echo "🎉 Comprehensive Automation Complete!"
-echo "===================================="
 echo
 echo "📊 Summary:"
 echo "- ✅ Dependencies installed and updated"

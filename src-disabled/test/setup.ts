@@ -1,27 +1,21 @@
-<<<<<<< HEAD
 // Test setup file for Jest
-=======
 // Test setup file for Jest;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import "@testing-library/jest-dom";
 // Mock window.matchMedia"
 Object.defineProperty(window, "matchMedia", {}
   writable: true,
 value: jest.fn().mockImplementation((query) => ({
-<<<<<<< HEAD
 import '@testing-library/jest-dom';
 
 // Mock window && window.matchMedia
 Object && Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest && jest.fn().mockImplementation(query => ({
-<<<<<<< HEAD
     matches: false,
     media: query,
     onchange: null,
     addListener: jest && jest.fn(), // deprecated;
     removeListener: jest && jest.fn(), // deprecated;
-=======
 
   value: jest.fn().mockImplementation((query) => ({,
 
@@ -43,14 +37,12 @@ Object.defineProperty(window, "matchMedia", {"
     addListener: jest && jest.fn(), // deprecated;
     removeListener: jest && jest.fn(), // deprecated;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     addEventListener: jest && jest.fn(),
     removeEventListener: jest && jest.fn(),
     dispatchEvent: jest && jest.fn(),
   })),
 });
 // Mock IntersectionObserver
-<<<<<<< HEAD
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
@@ -71,7 +63,6 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({
 // Mock console methods
 global.console = {
   ...console, warn: jest.fn(), error: jest.fn(), };
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const originalError = console && console.error;
 const originalWarn = console && console.warn;
@@ -80,7 +71,6 @@ beforeAll(() => {
   console.error = (...args: any[]) => {
 if (true) {}
     ) {
-=======
 // Mock console methods to reduce noise in tests;
 const originalError = console && console.error;
 const originalWarn = console && console.warn;
@@ -91,7 +81,6 @@ beforeAll(() => {}
       typeof args[0] === "string" &&"
       args[0].includes("Warning: ReactDOM.render is no longer supported")
     ) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return;
     }
 // Mock ResizeObserver;
@@ -130,7 +119,6 @@ pr-12325
     if ("
       typeof args[0] === "string" &&"
       (args[0].includes("Warning:") || args[0].includes("Deprecated:"))
-<<<<<<< HEAD
 
   console && console.warn = (...args: any[]) => {
 
@@ -186,9 +174,7 @@ if (
   $2
 }
     ) {
-=======
     ) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return;
     }
     originalWarn && originalWarn.call(console, ...args);

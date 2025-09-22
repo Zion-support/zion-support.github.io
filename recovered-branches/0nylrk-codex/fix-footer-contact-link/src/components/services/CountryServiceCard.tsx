@@ -1,24 +1,15 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Globe, Server, Clock, MapPin, Check} from "lucide-react";
 import {CountryPricing} from "@/data/onsiteServicePricing";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Globe, Server, Clock, MapPin, Check} from "lucide-react";
 import {CountryPricing} from "@/data/onsiteServicePricing";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -26,14 +17,7 @@ import { Globe, Server, Clock, MapPin, Check } from "lucide-react";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react",
 import { CountryPricing } from "@/data/onsiteServicePricing",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface CountryServiceCardProps {
-=======
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card","
 import { Button } from "@/components/ui/button","
 import { Badge } from "@/components/ui/badge",";
@@ -41,7 +25,6 @@ import { Globe, Server, Clock, MapPin, Check } from "lucide-react";"
 import { CountryPricing } from "@/data/onsiteServicePricing";"
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react","
 import { CountryPricing } from "@/data/onsiteServicePricing",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 interface CountryServiceCardProps {};
   country: CountryPricing;
@@ -54,15 +37,12 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
 const getRegionEmoji = (countryName: string): string => {
 const emojiMap: Record<string, string> = {
     const emojiMap: Record<string, string> = {;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Globe, Server, Clock, MapPin, Check} from "lucide-react";
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {CountryPricing} from "@/data/onsiteServicePricing";
 interface CountryServiceCardProps {;
   country: CountryPricing,;
@@ -94,8 +74,6 @@ function CountryServiceCard() {}
     const emoji_map: Record < string, string> = {}
     const emojiMap: Record<string, string> = {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export /**
  * CountryServiceCard - Function description
  */
@@ -106,32 +84,22 @@ function CountryServiceCard() {
 
 const emojiMap: Record<string, string> = {;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const emojiMap: Record<string, string> = {;
 
     const emojiMap: Record<string, string> = {
     const emojiMap: Record<string, string> = {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "United States": "🇺🇸";
       "United Kingdom": "🇬🇧";
       "Canada": "🇨🇦";
       "Australia": "🇦🇺";
 "Germany": "🇩🇪"
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 "
       "Germany": "🇩🇪", ;
-=======
       "United Kingdom": "🇬🇧";
       "Canada": "🇨🇦";
       "Australia": "🇦🇺";
       "Germany": "🇩🇪",      "Germany": "🇩🇪", ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       "United States": "🇺🇸";
       "United Kingdom": "🇬🇧";
       "Canada": "🇨🇦";
@@ -140,14 +108,11 @@ const emojiMap: Record<string, string> = {;
       "Germany": "🇩🇪", ;
 
       "Germany": "🇩🇪", ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       "Germany": "🇩🇪", ;
       "Germany": "🇩🇪",
       "Germany": "🇩🇪"
       "Germany": "🇩🇪",
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "France": "🇫🇷";
       "Japan": "🇯🇵";
       "China": "🇨🇳";
@@ -157,7 +122,6 @@ const emojiMap: Record<string, string> = {;
       "Singapore": "🇸🇬";
       "South Korea": "🇰🇷";
       "South Africa": "🇿🇦";
-<<<<<<< HEAD
       // Default if no flag is found
       "default": "🌐"
     }
@@ -167,9 +131,6 @@ const emojiMap: Record<string, string> = {;
   const getResponseTime = (countryName: string): string => {
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const emojiMap: Record<string string> = {
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
@@ -177,20 +138,11 @@ const emojiMap: Record<string, string> = {;
 
       "Australia": "🇦🇺",
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       "Australia": "🇦🇺",
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       "Germany": "🇩🇪", 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       "France": "🇫🇷",
       "Japan": "🇯🇵",
       "China": "🇨🇳",
@@ -210,94 +162,55 @@ const emojiMap: Record<string, string> = {;
     }"
     return emojiMap[countryName] |emojiMap["default"]
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Get response time estimate based on country
-<<<<<<< HEAD
-<<<<<<< HEAD
   const getResponseTime = (countryName: string): string => {
-<<<<<<< HEAD
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (tier1.includes(countryName)) {
-=======
   const getResponseTime = (countryName: string): string => {    if (tier1.includes(countryName)) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const getResponseTime = (countryName: string): string => {    if (tier1.includes(countryName)) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   // Get response time estimate based on country;
   const getResponseTime = (countryName: string): string => {}
     if (tier1.includes(countryName)) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   const getResponseTime = (countryName: string): string => {
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
 
     if (tier1.includes(countryName)) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return "4 hours"
     } else if (tier2.includes(countryName)) {"
       return "6 hours"
     } else {"
       return "8-24 hours"
-<<<<<<< HEAD
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   },
 
   }
 
   },
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
     }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   },
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${}
       isPopular"
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple"
-<<<<<<< HEAD
-=======
     }  return (
-=======
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 const emojiMap: Record<string, string> = {;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     }  return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 `
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }`}
         >
           Select Service;
@@ -364,21 +277,14 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
       "Singapore": "🇸🇬",;
       "South Korea": "🇰🇷",;
       "South Africa": "🇿🇦",;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       // Default if no flag is found;
       "default": "🌐";
     };
-=======
 export function CountryServiceCard() { return null; }
     };"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       // Default if no flag is found;
       "default": "🌐";
     };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return emojiMap[countryName] || emojiMap["default"];
   };
 
@@ -390,17 +296,8 @@ const getResponseTime = (countryName: string): string => {;"
     if (tier1 && tier1.includes(countryName)) {;"
       return "4 hours";
     } else if (tier2 && tier2.includes(countryName)) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   const getResponseTime = (countryName: string): string => {;
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
@@ -408,7 +305,6 @@ const getResponseTime = (countryName: string): string => {;"
     if (tier1 && tier1.includes(countryName)) {;
       return "4 hours";
     } else if (tier2 && tier2.includes(countryName)) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return "6 hours";
     } else {;"
       return "8-24 hours";
@@ -419,10 +315,6 @@ return (
     <CardclassName={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular 
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         : "bg-zion-blue-dark border-zion-blue-light"
 `
     }`}>;"
@@ -452,11 +344,8 @@ return (
           <div className="flex items-start">;"
             <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" />;
             <span>First hour included</span>;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
           </div>;
         </div>;
@@ -502,8 +391,6 @@ isPopular?: boolean;
 ;
 
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }`}>;
       <CardHeader className="pb-2">;
         <div className="flex items-center justify-between">;
@@ -624,8 +511,6 @@ ${country.pricePerIncident.toFixed(2)}
         </div>;
       </CardContent>;
       <CardFooter>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         : "bg-zion-blue-dark border-zion-blue-light"        : "bg-zion-blue-dark border-zion-blue-light"
     }`}>;
       <CardHeader className="pb-2">;
@@ -634,7 +519,6 @@ ${country.pricePerIncident.toFixed(2)}
         </div>;
       </CardContent>;
       <CardFooter>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         <Button;
           on_click={() => on_select (country)}
@@ -689,4 +573,3 @@ isPopular?: boolean
 }
 ;
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

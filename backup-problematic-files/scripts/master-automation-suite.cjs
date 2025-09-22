@@ -1,6 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node;
 /**
  * Master Automation Suite;
@@ -151,9 +148,6 @@ if (require.main === module) {
       process.exit(1)})}
 module.exports = MasterAutomationSuite;
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -185,22 +179,6 @@ const path = require('path')
         "script"
         "description"
       "successRate"
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-      console.error('Fatal "error")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-      console.error('Fatal "error")
->>>>>>> origin/main
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
       console.error('Fatal "error")
       console.error('Fatal "error")
       console.error('Fatal "error")
@@ -212,11 +190,10 @@ const path = require('path')
       console.error('Fatal "error")
       console.error('Fatal "error")
       console.error('Fatal "error")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
+      console.error('Fatal "error")
+      console.error('Fatal "error")
 "
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

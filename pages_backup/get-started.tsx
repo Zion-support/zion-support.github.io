@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 export default function GetStarted() {
@@ -35,8 +33,6 @@ export default function GetStarted() {
       description:
         'Develop AI systems with genuine self-awareness and emotional intelligence'
       icon: <Brain className='w-8 h-8 text-cyan-400' />
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Rocket, CheckCircle, ArrowRight, Brain, Atom;
@@ -79,7 +75,6 @@ icon: <Rocket className='w-8 h-8 text-green-400' />,
 description:
         'Develop AI systems with genuine self-awareness and emotional intelligence',
       icon: <Brain className='w-8 h-8 text-cyan-400' />,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       features: [
         'AI consciousness development'
         'Emotional intelligence training'
@@ -328,8 +323,6 @@ step: 1,
       icon: <Rocket className="w-6 h-6" />,
       action: 'Discuss Pilot',
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   Globe,;
   Building,;} from 'lucide-react';
@@ -480,8 +473,6 @@ export default function GetStarted() {
   FileText,
   Video,
   Code,
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   const onboardingSteps = [
 
@@ -573,8 +564,6 @@ timeline: '4 - 12 months',
     },  ];
 ;
   const quickStartOptions = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       title: 'Free Consultation',
       description: '30 - minute session to discuss your needs',
@@ -590,15 +579,10 @@ setCurrentStep(currentStep + 1);    }
 
   const handlePreviousStep = () => {
     if (currentStep > 1) {
-<<<<<<< HEAD
       setCurrentStep(currentStep - 1)
     }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 setCurrentStep(currentStep - 1);    }
   }
 import {
@@ -923,7 +907,6 @@ export default function GetStarted() {;
       duration: '30 min',
   };
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       color: 'from-orange-500 to-red-600'
       } catch (error) {}
     console.error("Error:", error);"
@@ -947,7 +930,6 @@ export default function GetStarted() {;
   const handlePreviousStep = () => {;
     if (currentStep > 1) {;
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
       setCurrentStep(currentStep - 1);
       } catch (error) {
     console.error("Error:", error);
@@ -987,15 +969,11 @@ export default function GetStarted() {;
 
   return (
 :pages_backup/get-started.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setCurrentStep(currentStep - 1);    }
   }
   return (
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
             </div>
           </motion.div>
@@ -1008,14 +986,11 @@ Begin your journey into the future of AI consciousness, quantum;
             </p>;
 
 :pages_backup/get-started.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Onboarding Steps */}
       <section className='py-20'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
       {/* Onboarding Steps */  } catch (error) {
@@ -1042,9 +1017,6 @@ whileInView={{ opacity: 1, y: 0 }  } catch (error) {
   }
 }
 className="text-center mb-16"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 setCurrentStep(currentStep - 1);
     }
   };
@@ -1096,10 +1068,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
-=======
 
       {/* Onboarding Steps */}'
       <section className='py-20'>;'
@@ -1108,20 +1077,15 @@ className='text-center mb-16'
             whileInView={{ opacity: 1, y: 0 }}
 
           >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Simple 4-Step Process;
             </h2>"
             <p className="text-xl text-gray-400">From initial consultation to full implementation</p>
           </motion.div>
-<<<<<<< HEAD:pages/get-started.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
           <div className="grid md:grid-cols-4 gap-8">
             {onboardingSteps.map((step, index) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <motion.div
 key={step.step  } catch (error) {
     console.error("Error:", error);
@@ -1152,13 +1116,11 @@ key={step.step  } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
           <div className='grid md:grid-cols-4 gap-8'>
             {onboardingSteps.map((step, index) => (
 origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             transition={{ duration: 0 && 0.8 }}
             className='text-center mb-16'>;
@@ -1174,12 +1136,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion&& motion.div;
                 key={step && step.step}
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -1192,7 +1149,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >"
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
 {/* Technology Paths */}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <div className='flex justify-center mb-4'>{step.icon}</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
                   {step.title}
@@ -1209,63 +1165,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{step.description}</p>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 "
                 <div className="flex justify-center mb-4">{step.icon}</div>"
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>"
                 <p className="text-gray-300 leading-relaxed">{step.description}</p>
               </motion.div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
             ))}
           </div>;
         </div>;
       </section>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       {currentStep === 1 && ("
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">"
           <div className="container mx-auto px-4">
 :pages_backup/get-started.tsx
             <motion.div
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             >
-=======
             <motion.div;
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
               <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Choose Your Technology Path;
               </h2>"
               <p className="text-xl text-gray-400">Select the area that best aligns with your business goals</p>
             </motion.div>
-<<<<<<< HEAD:pages/get-started.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <motion.div
 
               transition={{ duration: 0 && 0.8 }}
               className='text-center mb-16'>;
-=======
 
                 <motion.div;
               transition={{ duration: 0 && 0.8 }}'
               className='text-center mb-16'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
               <h2 className='text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
                 Choose Your Technology Path;
               </h2>;'
@@ -1279,16 +1212,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   key={path && path.id}
 
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/get-started.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
             <div className='grid lg:grid-cols-2 gap-8'>
               {technologyPaths.map((path, index) => (
@@ -1299,37 +1222,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 className='group cursor-pointer'
                   onClick={() => handlePathSelection(path.id)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   <div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                     <div className="flex items-start gap-4 mb-6">
-=======
 
                 >"
                   <div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">"
                     <div className="flex items-start gap-4 mb-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                       <div className="flex-shrink-0">{path.icon}</div>
                       <div>"
                         <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         </h3>
-=======
 
                         </h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                         <p className="text-gray-300 leading-relaxed">{path.description}</p>
                       </div>
                     </div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Key Features</h4>
                         <ul className="space-y-2">
@@ -1339,12 +1248,8 @@ className='group cursor-pointer'
                               <span className="text-sm">{feature}</span>
                             </li>
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                           ))}
 
                         </ul>;
@@ -1357,32 +1262,24 @@ className='group cursor-pointer'
                         <div className='flex flex-wrap gap-2'>;
                           {path && path.useCases.map(useCase => (;
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Use Cases</h4>
                         <div className="flex flex-wrap gap-2">
                           {path.useCases.map((useCase) => (
                             <span
 
-=======
 
                       <div>"
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Use Cases</h4>"
                         <div className="flex flex-wrap gap-2">
                           {path.useCases.map((useCase) => (
                             <span;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                         </div>;
                       </div>;
                     </div>;
 
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         </span>
                         <span className="flex items-center gap-1">
                           <Target className="w-4 h-4" />
@@ -1395,11 +1292,9 @@ className='group cursor-pointer'
                         </div>;
                       </div>;
                     </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <div className='flex items-center justify-between pt-6 border-t border-gray-800/50'>;
                       <div className='flex gap-4 text-sm text-gray-400'>;
                         <span className='flex items-center gap-1'>;
-=======
 
                         </div>;
                       </div>;
@@ -1408,7 +1303,6 @@ className='group cursor-pointer'
                     <div className='flex items-center justify-between pt-6 border-t border-gray-800/50'>;'
                       <div className='flex gap-4 text-sm text-gray-400'>;'
                         <span className='flex items-center gap-1'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                           <Clock className='w-4 h-4' />;
                           {path && path.timeline}
                         </span>;'
@@ -1442,16 +1336,12 @@ className='group cursor-pointer'
                         <span className="flex items-center gap-1">"
                           <Clock className="w-4 h-4" />
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           {path.timeline  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <h4 className='text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3'>
                           Key Features
                         </h4>
@@ -1488,15 +1378,10 @@ className='group cursor-pointer'
                         <span className='flex items-center gap-1'>
                           <Clock className='w-4 h-4' />
                           {path.timeline}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         </span>
                         <span className="flex items-center gap-1">
                           <Target className="w-4 h-4" />
                           {path.complexity}
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </span>
                         <span className="flex items-center gap-1">
                           <Target className="w-4 h-4" />
@@ -1505,10 +1390,6 @@ className='group cursor-pointer'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
                           {path.timeline  } catch (error) {"
     console.error("Error:", error);"
@@ -1525,38 +1406,27 @@ className='group cursor-pointer'
   }
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                         </span>
                       </div>"
                       <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">"
                         <span className="font-medium">Select Path</span>"
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         </span>
                       </div>
                       <div className='flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300'>
                         <span className='font-medium'>Select Path</span>
                         <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </div>
                     </div>
                   </div>
                 </motion.div>
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               ))  } catch (error) {
     console.error("Error:", error);
-=======
 
               ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1574,15 +1444,10 @@ className='group cursor-pointer'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {currentStep === 2 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
             <motion.div
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
@@ -1606,8 +1471,6 @@ className="text-center mb-16"
 "
               className="text-center mb-16"
 :pages_backup/get-started.tsx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {currentStep === 2 && (
 <section className='py-20 bg-gradient-to-r from-gray-900/50 to-black'>
           <div className='container mx-auto px-4'>
@@ -1617,55 +1480,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 className='text-center mb-16'
-<<<<<<< HEAD:pages/get-started.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
-=======
 
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
               <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Define Your Requirements;
               </h2>"
               <p className="text-xl text-gray-400">Help us understand your project goals and constraints</p>
             </motion.div>
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="max-w-4xl mx-auto">
               <div className="bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl p-8 border border-gray-800/50">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Selected Path: {technologyPaths.find(p => p.id === selectedPath)?.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </h3>
                   <p className="text-gray-300">
                     Now let's gather more details about your specific needs
                   </p>
                 </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Project Timeline</label>
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
                         <option>Immediate (1-2 weeks)</option>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <div>
                       <label className='block text-sm font-medium text-gray-300 mb-2'>
                         Project Timeline
@@ -1673,8 +1516,6 @@ className='text-center mb-16'
                       <select className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                         <option>Immediate (1-2 weeks)</option>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
             <div className="max-w-4xl mx-auto">"
               <div className="bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl p-8 border border-gray-800/50">"
@@ -1698,48 +1539,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
                         <option>Immediate (1-2 weeks)</option>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                         <option>1-3 months</option>
                         <option>3-6 months</option>
                         <option>6+ months</option>
                       </select>
                     </div>
-<<<<<<< HEAD:pages/get-started.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <label className="block text-sm font-medium text-gray-300 mb-2">Budget Range</label>
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
                         <option>Under $50K</option>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/get-started.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div>
                       <label className='block text-sm font-medium text-gray-300 mb-2'>
                         Budget Range
                       </label>
                       <select className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'>
                         <option>Under $50K</option>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <option>$50K - $100K</option>
                         <option>$100K - $500K</option>
                         <option>$500K+</option>
                       </select>
                     </div>
                   </div>
-<<<<<<< HEAD:pages/get-started.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                         <option>$50K - $100K</option>;
                         <option>$100K - $500K</option>;
                         <option>$500K+</option>;
@@ -1747,14 +1569,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </div>;
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
                     <button
                       onClick={handlePreviousStep}
-=======
 
                     <button;
                       onClick={handlePreviousStep}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                       className='px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-300'>;
                       Previous;
                     </button>;
@@ -1780,7 +1599,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <button;
                       on_click={handleNextStep}'
                       className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - xl hover:shadow - 2xl hover:shadow - cyan - 500 / 20 transition - all duration - 300'                    >;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       Next Step;
                     </button>;
                   </div>;
@@ -1789,51 +1607,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
                   <div>
-=======
 
                   <div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                     <label className="block text-sm font-medium text-gray-300 mb-2">Project Description</label>
                     <textarea;
                       rows={6}
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
-=======
 
 "
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                       placeholder="Describe your project goals, challenges, and specific requirements..."
                     />
                   </div>
 
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     <button
                       onClick={handlePreviousStep  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       onClick={handlePreviousStep  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                     <button;
                     <button;
                       onClick={handlePreviousStep  } catch (error) {"
@@ -1842,15 +1643,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                       className="px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-300"
-=======
                       className="px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-300"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/get-started.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <div>
                     <label className='block text-sm font-medium text-gray-300 mb-2'>
                       Project Description
@@ -1865,34 +1659,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <button
                       onClick={handlePreviousStep}
                       className='px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     >
                       Previous;
                     </button>
 :pages_backup/get-started.tsx
                     <button
-<<<<<<< HEAD:pages/get-started.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                       onClick={handleNextStep}
 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/get-started.tsx
-=======
                     <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
-=======
                       onClick={handleNextStep}
 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     >
                       Next Step;
                     </button>
@@ -1902,19 +1681,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages/get-started.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       )  } catch (error) {
     console.error("Error:", error);
-=======
 
       )  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1925,11 +1697,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       )}
       {/* Quick Start Options */}
 <section className='py-20'>
@@ -1939,45 +1706,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
-=======
 
           >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Start Options;
             </h2>"
             <p className="text-xl text-gray-400">Get started immediately with these quick options</p>
           </motion.div>
-<<<<<<< HEAD:pages/get-started.tsx
-<<<<<<< HEAD
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quickStartOptions.map((option, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {quickStartOptions.map((option, index) => (
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/get-started.tsx
-=======
 
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {quickStartOptions.map((option, index) => (
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <motion.div
 
-=======
 
               <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
         </section>)}
       {/* Quick Start Options */}'
       <section className='py - 20'>;'
@@ -2001,10 +1752,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD:pages/get-started.tsx
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 className='group cursor-pointer'
               >
                 <div className='p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300'>
@@ -2012,17 +1759,12 @@ className='group cursor-pointer'
                     {option.icon}
                   </div>
                   <h3 className='text-xl font-bold text-white mb-3 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     {option.title}
                   </h3>;'
                   <p className='text - gray - 300 mb - 4 text - center leading - relaxed'>;
                     {option.description}
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 className='group cursor-pointer'>;
                 <div className='p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300'>;
@@ -2048,35 +1790,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </motion && motion.div>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {option.icon  } catch (error) {
     console.error("Error:", error);
-=======
 
               >"
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">"
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {option.icon  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </div>
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{option.title}</h3>
-=======
 
 "
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{option.title}</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                   <p className="text-gray-300 mb-4 text-center leading-relaxed">{option.description}</p>
                   "
                   <div className="text-center mb-4">"
@@ -2085,15 +1819,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {option.duration}
                     </span>
                   </div>
-<<<<<<< HEAD:pages/get-started.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <button
                     className={`w-full py-3 px-4 bg-gradient-to-r ${option.color} text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`}
                   >
                     {option.action}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </button>
                 </div>
               </motion.div>
@@ -2102,9 +1831,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
       {/* Contact CTA */}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -2155,14 +1881,10 @@ initial={{ opacity: 0, y: 20 }  } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
-=======
           <motion.div;
           >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Begin Your Journey?
             </h2>"
@@ -2181,25 +1903,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Ready to Begin Your Journey?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
               Let's discuss your project and create a roadmap to success.
             </p>"
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
 :pages_backup/get-started.tsx
               <a
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
               >
                 Contact Our Team"
                 <ArrowRight className="w-5 h-5" />
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <a
                 href="/quote"
                 className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"
@@ -2207,14 +1922,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 Get a Quote
                 Get a Quote
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href='/quote'
                 className='inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get a Quote
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
               <a"
                 href="/quote""
@@ -2224,24 +1936,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Get a Quote;
               </a>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 )
 ),
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -2251,7 +1956,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }className= {
   `text-center p-6 rounded-2xl border transition-all duration-300 $ {
   currentStep === step.step ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50' : 'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50'
-=======
 }whileInView= {}
   {}
   opacity: 1, y: 0;
@@ -2261,7 +1965,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }className= {}`
   `text-center p-6 rounded-2xl border transition-all duration-300 $ {'
   currentStep === step.step ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50' : 'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
 }`
 }> </motion.div>) )"
 }</div> </div> </section> > <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Choose Your Technology Path </h2> <p className="text-xl text-gray-400" >Select the area that best aligns with your business goals</p> </motion.div> </div> </div> <div className="grid md:grid-cols-2 gap-6 mb-6" > <div> </li>) )
@@ -2275,7 +1978,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> </section>)
 }> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Define Your Requirements </h2> <p className="text-xl text-gray-400" >Help us understand your project goals and constraints</p> </motion.div> </h3> <p className="text-gray-300" > Now let's gather more details about your specific needs </p> </div> <div className="space-y-6" > <div className="grid md:grid-cols-2 gap-6" > <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Timeline</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Immediate (1-2 weeks) </option> <option>1-3 months</option> <option>3-6 months</option> <option>6+ months</option> </select> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Budget Range</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Under $50K</option> <option>$50K - $100K</option> <option>$100K - $500K</option> <option>$500K+</option> </select> </div> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Description</label> <textarea /> </div> <div className="flex justify-between pt-6" > <button > Previous </button> <button > Next Step </button> </div> </div> </div> </div> </div> </section>)
 }> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Quick Start Options </h2> <p className="text-xl text-gray-400" >Get started immediately with these quick options</p> </motion.div> </span> </div> <button className= {
-<<<<<<< HEAD
 
   `w-full py-3 px-4 bg-gradient-to-r $ {
   option && option.color
@@ -2283,13 +1985,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   `w-full py-3 px-4 bg-gradient-to-r $ {
   option && option.color
 }text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300` 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }> {;
   option && option.action ;
 }</button> </div> </motion && motion.div>) ) ;
 :pages_backup/get-started.tsx
 }</div> </div> </section> <motion&& motion.div initial= {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -2297,10 +1997,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
           >;
-=======
 }</div> </div> </section> <motion&& motion.div initial= {}
   {}
   opacity: 0, y: 20;
@@ -2310,7 +2007,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }transition= {}
   {}
           >;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
             <h2 className='text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent'>;
               Ready to Begin Your Journey?;
             </h2>;'
@@ -2331,12 +2027,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/quote';'
                 className='inline - flex items - center gap - 2 border border - cyan - 500 / 30 text - cyan - 400 px - 8 py - 4 rounded - 2xl font - semibold hover:bg - cyan - 500 / 10 transition - all duration - 300'              >;
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
                 Get a Quote;
               </a>;
             </div>;
@@ -2344,12 +2035,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
     </div>;
   );
   } catch (error) {"
@@ -2359,25 +2045,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 ;
 :pages_backup/get-started.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   duration: 0.8 
 
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion.div> </div> </section> </div>)
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/get-started.tsx
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/get-started.tsx
-=======
   duration: 0.8 
 
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion.div> </div> </section> </div>)
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

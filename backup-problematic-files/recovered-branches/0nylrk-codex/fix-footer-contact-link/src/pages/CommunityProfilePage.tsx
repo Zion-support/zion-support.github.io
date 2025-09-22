@@ -1,5 +1,4 @@
 
-=======
 import { useState, useEffect } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -147,12 +146,10 @@ export default function CommunityProfilePage() {;
   return (;
     <AppLayout>;
       <SEO ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
       />;
-<<<<<<< HEAD
 
                 </div>;
               </CardContent>;

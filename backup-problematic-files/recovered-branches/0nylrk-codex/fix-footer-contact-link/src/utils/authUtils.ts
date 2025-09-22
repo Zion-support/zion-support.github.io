@@ -79,4 +79,3 @@ export const checkNewRegistration = async (user:UserDetails) => {;
   //Check if user has received welcome email already .from ("email campaigns") .select ("id") .eq ("user id", user.id) .eq ("campaign type", "welcome series") .maybeSingle ();
 // Create a scheduled job for the welcome email await supabase .from ("scheduled jobs") .insert ({
 }
-<<<<<<< HEAD

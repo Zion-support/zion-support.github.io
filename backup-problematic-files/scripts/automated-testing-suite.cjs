@@ -16,12 +16,9 @@ async function runTests() {
   ];
 
   const results = [];
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
   ];
 
   const results = [];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   for (const test of tests) {
     try {
   // TODO: Implement
@@ -38,7 +35,6 @@ summary: {
       failed: results.filter(r => r.status === 'failed').length
     }
   };
-<<<<<<< HEAD
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
   console.log('\n📊 Test Summary:');
   console.log(`Total: ${report.summary.total}`);
@@ -46,10 +42,7 @@ summary: {
   console.log(`Failed: ${report.summary.failed}`);
 return report;
 }
-<<<<<<< HEAD
 runTests().catch(console.error);
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return report;
 
 runTests().catch(console.error);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

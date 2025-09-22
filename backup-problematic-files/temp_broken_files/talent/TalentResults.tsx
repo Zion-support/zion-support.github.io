@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { TalentProfile } from "@/types/talent",;
 import { ActiveFilters } from "@/components/talent/ActiveFilters",;
@@ -50,7 +49,6 @@ export function TalentResults({;
         resultCount={filteredTalents.length} ;
       />;
       ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Talents grid */}
       <TalentGrid ;
         talents={filteredTalents}
@@ -60,6 +58,5 @@ export function TalentResults({;
         handleRequestHire={handleRequestHire}
         savedTalentIds={savedTalents}
         onToggleSave={handleToggleSave}
-<<<<<<< HEAD
 
 }

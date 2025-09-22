@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useEffect, useState } from "react",
 import Link from "next/link",
@@ -9,32 +7,23 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects(),
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   useEffect(() => {
     if (projects && !isLoading) {
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 export function ActiveProjectsCard() {};
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
 
   useEffect(() => {}
     if (projects && !isLoading) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const active = projects.filter(p => 
         ['offer_acceptedin_progress'].includes(p.status)
       ).slice(0, 3), // Limit to 3 most recent projects;
@@ -73,11 +62,7 @@ export function ActiveProjectsCard() { return null; }
 
   if (isLoading) {;
     return (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     return (
             <BriefcaseIcon className="h-5 w-5 text-primary" />"
   if (isLoading) {
@@ -85,7 +70,6 @@ export function ActiveProjectsCard() { return null; }
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <BriefcaseIcon className="h-5 w-5 text-primary" />
       <Card>
         <CardHeader>
@@ -97,31 +81,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
 <CardContent>
-<<<<<<< HEAD
           <div className="space-y-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
             {[1, 2].map(idx => (
                 className='h-16 animate-pulse bg-muted rounded'></div>            ))}
-=======
           <div className="space-y-2">"
                 className='h-16 animate-pulse bg-muted rounded'></div>            ))}'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>;
         </CardContent>;
       </Card>;
     );"
   }          <div className="space-y-2">;
             {[1, 2].map(idx => (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>"
           <div className="space-y-2">
             {[1, 2].map(idx => (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
 import { useEffect, useState } from "react",;
 import Link from "next/link",;
@@ -130,7 +104,6 @@ import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { useProjects } from "@/hooks/useProjects",;
-=======
 "
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>"
 import { useEffect, useState } from "react",;"
@@ -140,7 +113,6 @@ import { Button } from "@/components/ui/button",;"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
 import { Badge } from "@/components/ui/badge",;"
 import { useProjects } from "@/hooks/useProjects",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Project } from "@/types/projects",;
 export function ActiveProjectsCard() { return null; }
   const { projects, isLoading } = useProjects(),;
@@ -189,25 +161,16 @@ export function ActiveProjectsCard() { return null; }
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   if (activeProjects.length === 0) {}
     return (
       <Card>
         <CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <CardTitle className="flex items-center gap-2">
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
   if (activeProjects.length === 0) {
     return (
@@ -216,7 +179,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <CardTitle className="flex items-center gap-2">"
             <BriefcaseIcon className="h-5 w-5 text-primary" />"
           <CardTitle className="flex items-center gap-2">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <BriefcaseIcon className="h-5 w-5 text-primary" />
 <CardTitle className='flex items-center gap-2'>
             <BriefcaseIcon className='h-5 w-5 text-primary' />
@@ -225,11 +187,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (activeProjects && activeProjects.length === 0) {;
     return (
       <Card>;
@@ -257,11 +215,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Card>;
     );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           </p>;
           <Button variant='outline' asChild>;
             <Link href='/jobs' />Find Opportunities</Link>          </Button>        <CardContent className="text-center py-6">;
@@ -275,29 +229,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>'
           <Button variant="outline" asChild>"
             <Link href="/jobs" />Find Opportunities</Link>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <CardContent className="text-center py-6">
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
           <Button variant="outline" asChild>
-=======
 "
         <CardContent className="text-center py-6">'"
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>"
           <Button variant="outline" asChild>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Link href="/jobs">Find Opportunities</Link>
           </Button>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </CardContent>
       </Card>
     )
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
 
@@ -305,11 +251,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
 
-=======
   return (
   }
   return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <Card>;
       <CardHeader>;'
         <CardTitle className='flex items-center gap-2'>;'
@@ -319,13 +263,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </CardHeader>;'
       <CardContent className='space-y-4'>  ;
 return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Card>
       <CardHeader>"
         <CardTitle className="flex items-center gap-2">"
           <BriefcaseIcon className="h-5 w-5 text-primary" />
-<<<<<<< HEAD
           <span>Active Projects</span>
         </CardTitle>
         <CardDescription>Your ongoing work</CardDescription>
@@ -359,7 +300,6 @@ return (
           <div key={project && project.id} className='border rounded-md p-3'>;
             <div className='flex justify-between items-start mb-2'>;
 <h3 className='font-medium text-sm'>{project && project.job?.title}</h3>;              <Badge
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">"
@@ -384,10 +324,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div key={project.id} className='border rounded-md p-3'>
             <div className='flex justify-between items-start mb-2'>
               <h3 className='font-medium text-sm'>{project.job?.title}</h3>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Badge
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 variant={
 
                   project.status === 'in_progress' ? 'default' : 'outline'
@@ -421,10 +358,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>;
         </CardFooter>;
       )}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </Badge>
             </div>
             <div className='flex items-center text-xs text-muted-foreground gap-2'>
@@ -434,8 +368,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </span>
             </div>
             <Button size='sm' variant='outline' className='w-full mt-2' asChild>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>
@@ -644,11 +576,7 @@ return (<Card> <CardHeader> <CardTitle className="flex items - center gap-2" > <
 if ( {'") {
   $2
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
@@ -814,4 +742,3 @@ if ( {) {
           <Button variant="ghost" className="w-full" asChild>;"
     ;"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

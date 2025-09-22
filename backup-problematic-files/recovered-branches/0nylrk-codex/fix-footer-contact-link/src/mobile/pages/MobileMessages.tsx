@@ -1,5 +1,4 @@
 
-=======
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -107,12 +106,10 @@ export function MobileMessages() {;
             id:currentContact?.id || "",;
             name:currentContact?.name || "",;
             status:"Online";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           }}
           messages={messages}
           onBack={handleBack}
           onSendMessage={handleSendMessage}
-<<<<<<< HEAD
 
               conversations={mockConversations}
               onSelectConversation={handleSelectConversation}

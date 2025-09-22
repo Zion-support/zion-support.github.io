@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react';
 ;
 export type BadgeKey =;
@@ -72,4 +71,3 @@ export const badgeList:BadgeMeta[] = [;
 export const getBadgeMeta = (key:BadgeKey) =>;
   badgeList.find((b) => b.key === key);
 ; export type BadgeKey = export const getBadgeMeta = (key: BadgeKey) => badgeList.find ( (b) => b.key === key);
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

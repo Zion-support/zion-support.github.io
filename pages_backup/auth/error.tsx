@@ -1,5 +1,4 @@
 :pages_backup/auth/error.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { use_router } from 'next / router';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -16,18 +15,13 @@ const errorMessages: Record<string string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 const errorMessages: Record<string string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const errorMessages: Record<string, string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
-=======
 
 import { use_router } from 'next / router';'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';'
@@ -47,7 +41,6 @@ const errorMessages: Record<string string> = {;'
 
 const errorMessages: Record<string string> = {;'
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/auth/error.tsx
   default: 'There was an issue with your authentication request.';
 
 const errorMessages: Record<string, string> = {;'
@@ -58,9 +51,6 @@ const errorMessages: Record<string, string> = {;'
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 :pages_backup/auth/error.tsx
 export default function AuthErrorPage() {
@@ -87,7 +77,6 @@ return (
               </Button>
               <Button asChild variant="outline" className="w-full">
                 <Link href="/">Go to Homepage</Link>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <>
       <Head>
@@ -97,9 +86,6 @@ return (
         <meta name="description" content="Authentication error page" />
 
 :pages_backup/auth/error.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </Head>
       <div className=&quot;min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4&quot;>
         <Card className=&quot;w-full max-w-md&quot;>
@@ -117,7 +103,6 @@ return (
               </Button>
               <Button asChild variant=&quot;outline&quot; className=&quot;w-full&quot;>
                 <Link href=&quot;/&quot;>Go to Homepage</Link>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </Button>
             </div>
           </CardContent>
@@ -126,7 +111,6 @@ return (
     </>
   )
 :pages_backup/auth/error.tsx
-<<<<<<< HEAD
 
   } catch (error) {"
     console.error("Error:", error);"
@@ -136,6 +120,3 @@ return (
 ;
 
 :pages_backup/auth/error.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

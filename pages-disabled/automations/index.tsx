@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },'
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
@@ -6,19 +5,10 @@
 import type { NextPage } from 'next';'
 import Link from 'next/link';
 
-<<<<<<< HEAD
-=======
-=======
 
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 const AutomationsIndex: NextPage = () => {}
   const items = ['
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' }'
@@ -30,7 +20,6 @@ const AutomationsIndex: NextPage = () => {}
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },'
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <main className="space-y-6">"
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>"
@@ -41,17 +30,14 @@ const AutomationsIndex: NextPage = () => {}
             <div className="enhanced-card hover:shadow-lg cursor-pointer">"
               <h2 className="text-xl font-semibold">{it.title}</h2>"
               <p className="text-sm text-gray-600 mt-1">{it.desc}</p>
-<<<<<<< HEAD
 
             </div>
           </Link>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 '
 import type { NextPage } from 'next','
@@ -73,7 +59,6 @@ const AutomationsIndex: NextPage = () => {};
             </div>;
           </Link>))}
       </div>;
-<<<<<<< HEAD
             </div>
           </Link>
         ))}
@@ -93,11 +78,9 @@ export default AutomationsIndex,;
   }
 }
       </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <p className="text - sm text - gray - 600 mt - 1">{it.desc}</p>;
             </div>;
           </Link>))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>;
 
             </div>
@@ -129,22 +112,10 @@ const AutomationsIndex: NextPage = () => {};
 },;
 export default AutomationsIndex;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default AutomationsIndex;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

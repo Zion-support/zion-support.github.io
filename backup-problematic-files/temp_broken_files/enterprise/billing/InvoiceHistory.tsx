@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import {;
   Table,;
@@ -14,12 +13,10 @@ import { Download, FileText, Search } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
 import { toast } from "@/hooks/use-toast",;
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function InvoiceHistory() {;
   // Mock invoice data;
   const invoices = [;
     {;
-<<<<<<< HEAD
 
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;

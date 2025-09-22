@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react",;
@@ -17,12 +16,10 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
         variant="ghost";
         size="icon";
         title="View Details";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         onClick={() => alert("View details (would open a detailed view)")}
       >;
         <Eye className="h-4 w-4" />;
       </Button>;
-<<<<<<< HEAD
 
         >;
           Ignore;

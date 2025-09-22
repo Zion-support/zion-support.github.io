@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatBotPanel.tsx
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { ScrollArea } from "@/components/ui/scroll-area",;
@@ -10,7 +9,6 @@ import { ChatMessage } from "./ChatMessage",;
 import { QuickReplyButton } from "./QuickReplyButton",;
 import { Send, Loader2 } from "lucide-react",;
 import { useTheme } from "@/hooks/useTheme",;
-=======
 import React, { useState, useRef, useEffect } from "react";""
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button";""
@@ -23,7 +21,6 @@ import { ChatMessage } from "./ChatMessage";""
 import { QuickReplyButton } from "./QuickReplyButton";""
 import { Send, Loader2 } from 'lucide-react';
 import { useTheme } from "@/hooks/useTheme";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 // Define suggested quick replies;
 const QUICK_REPLIES = [;"
@@ -96,19 +93,16 @@ export function ChatBotPanel() {;
         setFailedAttempts(0),;
       }
     } catch (error) {;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatBotPanel.tsx
       console.error("Error in AI chat:", error),;
       toast({;
         variant:"destructive",;
         title:"Communication Error",;
         description:"We're having trouble connecting to our support service."}),;
-=======
       logErrorToProduction("Error in AI chat", error as Error, { component: 'ChatBotPanel' ;}),;
       toast({;
         variant: "destructive";,;
         title: "Communication Error";,,
   description: "We're having trouble connecting to our support service.";}),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ;
       setFailedAttempts((prev) => prev + 1),;
       if (failedAttempts >= 2) {;
@@ -134,7 +128,6 @@ export function ChatBotPanel() {;
           success: false;,;
           message:"I'm having trouble connecting to my knowledge base right now.";
         },;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
       ;
       const data = await response.json(),;
@@ -143,11 +136,8 @@ export function ChatBotPanel() {;
         message:data.message;
       },;
     } catch (error) {;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatBotPanel.tsx
       console.error("Error in AI chat:", error),;
-=======
       logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component: 'ChatBotPanel';, functionName: 'ai-chat' ;}),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return {;
         success: false;,;
         message:"I'm experiencing technical difficulties. Please try again later.";
@@ -160,7 +150,6 @@ export function ChatBotPanel() {;
           )}
         </div>;
       </ScrollArea>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatBotPanel.tsx
       ;
       {messages.length === 1 && (;
         <div className="px-4 py-3">;
@@ -190,13 +179,11 @@ Chat with Live Agent;
               size="sm";
               variant="outline";
             >;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/support/ChatBotPanel.tsx
               Email Support;
             </Button>;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatBotPanel.tsx
       ;
       <div className={cn(;
         "p-4 border-t", ;
@@ -224,13 +211,11 @@ placeholder="Type your question...";
             className="bg-zion-cyan hover:bg-zion-cyan/80 text-white";
             aria-label="Send message";
           >;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/support/ChatBotPanel.tsx
             <Send className="h-4 w-4" />;
           </Button>;
         </form>;
       </div>;
     </div>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatBotPanel.tsx
 
 }
   ); type Message = {;
@@ -318,7 +303,6 @@ timestamp: new Date () ;
 timestamp: new Date () ;
 }]);
 //In a real implementation, this would trigger a live chat request 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 :temp_broken_files/support/ChatBotPanel.tsx
 
@@ -326,7 +310,6 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatBotPanel.t
   setMessages ( (prev) => [ ...prev, {;
   id: `user-$ {;
 Date.now () ;"}`;'";"content: "I'd like to email support",";"sender: "user",
-<<<<<<< HEAD
 timestamp: new Date () ;
 };
 timestamp: new Date () ;
@@ -334,7 +317,6 @@ timestamp: new Date () ;
 };
 timestamp: new Date () ;
 }]) 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 pr-12325
 </div>) ;
@@ -344,6 +326,4 @@ pr-12325
   reply.text ;
 }onClick={;
   () => handleQuickReply (reply.text) ;
-<<<<<<< HEAD
 }/>) ) ;"}</div> </div>) ";"}Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) ";"}aria-label="Send message" h-4 w-4" /> </Button> </form> </div> </div>) ;"}'"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/support/ChatBotPanel.tsx

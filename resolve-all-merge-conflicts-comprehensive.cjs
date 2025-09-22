@@ -62,7 +62,6 @@ class ComprehensiveMergeConflictResolver {
       let content = fs.readFileSync(filePath, 'utf8');
 
       // Check if file has merge conflict markers
-      if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
         this.log(`File ${filePath} has no merge conflict markers, skipping...`);
         return;
       }

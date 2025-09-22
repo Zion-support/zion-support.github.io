@@ -1,8 +1,6 @@
 
-=======
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react';
 import {;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Sidebar,;
   SidebarContent,;
   SidebarGroup,;
@@ -11,7 +9,6 @@ import {;
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;
-<<<<<<< HEAD
 
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>;
             <span>Messages</span>;

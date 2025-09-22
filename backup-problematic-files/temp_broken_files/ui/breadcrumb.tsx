@@ -1,5 +1,4 @@
 
-=======
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { ChevronRight } from "lucide-react";
@@ -17,12 +16,10 @@ const Breadcrumb = React.forwardRef<;
     className={cn(;
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",;
       className;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     )}
     {...props}
   />;
 ));
-<<<<<<< HEAD
 
     ref={ref}
     className={cn("flex items-center gap-1.5", className)}

@@ -47,12 +47,10 @@ export function MobileJobPost() {;"
             <Badge variant={currentStep === "preview" ? "default" :"outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>;
           </div>;
           ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <Button variant="outline" className="flex gap-1">;
             <Zap className="h-4 w-4" /> AI Assist;
           </Button>;
         </div>;
-<<<<<<< HEAD
               onClick={goToPrevStep}
             >;
               <ChevronLeft className="h-4 w-4" /> Back;"
@@ -61,12 +59,10 @@ export function MobileJobPost() {;"
             onClick={goToNextStep}
 >;
             {currentStep === "preview" ? "Publish Job" :"Continue"}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
           </Button>;
         </div>;
       </main>;
-<<<<<<< HEAD
       <div className="space-y-2">;
         <Label htmlFor="company">Company Name</Label>;
         <Input id="company" placeholder="Your company name" />;
@@ -85,7 +81,6 @@ export function MobileJobPost() {;"
           </SelectContent>;
         </Select>;
       </div>;
-<<<<<<< HEAD
       <div className="space-y-2">;
         <Label htmlFor="jobType">Job Type</Label>;
         <Select>;
@@ -206,12 +201,10 @@ export function MobileJobPost() {;"
           <p className="text-muted-foreground">TechCorp Inc.  Remote  Full-time</p>;
           ;
           <div className="flex gap-2 my-3">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <Badge variant="outline">React</Badge>;
             <Badge variant="outline">TypeScript</Badge>;
             <Badge variant="outline">Node.js</Badge>;
           </div>;
-<<<<<<< HEAD
             <p>$80,000 - $120,000 USD / year</p>;
           <div className="space-y-1 text-sm mt-3">;"
             <p className="font-medium">Experience Level:</p>;"
@@ -272,4 +265,3 @@ min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"clas
 }<div className=" space-y-2"> <Label htmlFor=" paymentType">Payment Type</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select payment type"/> </SelectTrigger> <SelectContent> <SelectItem value=" hourly">Hourly Rate</SelectItem> <SelectItem value=" fixed">Fixed Price</SelectItem> <SelectItem value=" salary">Salary</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label>Salary Range</Label> <div className=" flex gap-4 items-center"> <Input placeholder=" Min"type=" number"className=" w-full"/> <span>to</span> <Input placeholder=" Max"type=" number"className=" w-full"/> <Select defaultValue=" usd"> <SelectTrigger className=" w-24"> <SelectValue placeholder=" Currency"/> </SelectTrigger> <SelectContent> <SelectItem value=" usd">USD</SelectItem> <SelectItem value=" eur">EUR</SelectItem> <SelectItem value=" gbp">GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=" space-y-2"> <Label htmlFor=" deadline">Application Deadline</Label> <Input type=" date"id=" deadline"/> </div> <div className=" space-y-2"> <Label htmlFor=" startDate">Expected Start Date</Label> <Input type=" date"id=" startDate"/> </div> <div className=" space-y-2"> <Label htmlFor=" duration">Project Duration</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select project duration"/> </SelectTrigger> <SelectContent> <SelectItem value=" ltw">Less than a week</SelectItem> <SelectItem value=" ltm">Less than a month</SelectItem> <SelectItem value=" 1-3m">1-3 months</SelectItem> <SelectItem value=" 3-6m">3-6 months</SelectItem> <SelectItem value=" 6m+">6+ months</SelectItem> <SelectItem value=" ongoing">Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" additionalInfo">Additional Budget Information</Label> <Textarea id=" additionalInfo"placeholder=" Any additional information about budget or payment"rows= {
   3 
 }/> </div> </div>) 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

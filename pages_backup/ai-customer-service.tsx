@@ -1,13 +1,4 @@
-<<<<<<< HEAD:pages/ai-customer-service.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-customer-service.tsx
     <>;
       <Head>;
         <title > AI Customer Service | Zion Tech Group</title>;
@@ -23,28 +14,16 @@
     </>);
 }
 :pages_backup/ai-customer-service.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         </section>
       </div>
     </>
   )
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-customer-service.tsx
 ;
 ;
 
 :pages_backup/ai-customer-service.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -74,8 +53,4 @@ const AICustomerService: React.FC = () => {
       </main>
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

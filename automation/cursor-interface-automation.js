@@ -1,28 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`;  try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => {  automation.stop(); const stats = automation.getStats();  ); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); .toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else {  process.exit(1)} })} module.exports = CursorInterfaceAutomation;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`;  try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => {  automation.stop(); const stats = automation.getStats();  ); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); .toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else {  process.exit(1)} })} module.exports = CursorInterfaceAutomation;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`;  try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => {  automation.stop(); const stats = automation.getStats();  ); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); .toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else {  process.exit(1)} })} module.exports = CursorInterfaceAutomation;
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`;  try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => {  automation.stop(); const stats = automation.getStats();  ); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); .toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else {  process.exit(1)} })} module.exports = CursorInterfaceAutomation;
@@ -36,40 +15,20 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`;  try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => {  automation.stop(); const stats = automation.getStats();  ); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); .toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else {  process.exit(1)} })} module.exports = CursorInterfaceAutomation;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`;  try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => {  automation.stop(); const stats = automation.getStats();  ); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); .toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else {  process.exit(1)} })} module.exports = CursorInterfaceAutomation;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`;  try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => {  automation.stop(); const stats = automation.getStats();  ); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); .toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else {  process.exit(1)} })} module.exports = CursorInterfaceAutomation;
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`;  try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => {  automation.stop(); const stats = automation.getStats();  ); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); .toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else {  process.exit(1)} })} module.exports = CursorInterfaceAutomation;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node
-=======
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`;  try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => {  automation.stop(); const stats = automation.getStats();  ); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); .toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else {  process.exit(1)} })} module.exports = CursorInterfaceAutomation;
 
 #!/usr/bin/env node;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /**
  * Cursor Interface Automation System'
  * Actually interacts with Cursor's interface to send commands;
  *"
  * "Features": * - Real interface interaction using keyboard automation;
-=======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`;  try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => {  automation.stop(); const stats = automation.getStats();  ); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); .toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else {  process.exit(1)} })} module.exports = CursorInterfaceAutomation;
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`;  try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => {  automation.stop(); const stats = automation.getStats();  ); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); .toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else {  process.exit(1)} })} module.exports = CursorInterfaceAutomation;
@@ -86,7 +45,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
  * Actually interacts with Cursor's interface to send commands;
  *
  * "Features": * - Real interface interaction using keyboard automation;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  * - Clipboard-based command injection;
  * - Multiple command patterns;
  * - Session management with real Cursor windows;
@@ -115,25 +73,8 @@ class CursorInterfaceAutomation {'
     this.setupPlatformSpecific();'
     this.log('Cursor Interface Automation initialized');
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 '
-=======
  */"
 const fs = require('fs');
 const path = require('path');
@@ -158,36 +99,19 @@ class CursorInterfaceAutomation {
       "lastError": null};"
     this.platform = process.platform;
     this.setupPlatformSpecific();"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log('Cursor Interface Automation initialized');
   }
 this.log('Cursor Interface Automation initialized');
   }
 
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 this.log('Cursor Interface Automation initialized');
   }
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 this.log('Cursor Interface Automation initialized');
   }
 
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   /**
    * Load configuration from file;
    */
@@ -196,40 +120,14 @@ this.log('Cursor Interface Automation initialized');
       const configData = fs.readFileSync(configPath, 'utf8');
       return JSON.parse(configData);
 } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
     } catch (error) {}
 '`
       this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
 
       this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
@@ -248,33 +146,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
       this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
       this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
 
       this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
       this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
 
 this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
 
       this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(
 `;
       this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');`;
@@ -287,46 +170,22 @@ this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
       // Return default config;
       return {"
         "automation": {}
-=======
         'ERROR)
       );
       // Return default config;
       return {
   // TODO: Implement
         "automation": {"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           enabled: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           interval: 30000,
           maxSessions: 5,
           enableLogging: true,
@@ -335,45 +194,24 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         sessions: []
       };
 
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           "interval": 30000,
           "maxSessions": 5,
           "enableLogging": true,
           "autoRestart": true},
-=======
 
 "
           "interval": 30000,"
           "maxSessions": 5,"
           "enableLogging": true,"
           "autoRestart": true},"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         "sessions": []};
     }
   }
@@ -413,22 +251,9 @@ break;'
           "sendCommand": 'xdotool key ctrl+c','"
           "sendEnter": 'xdotool key Return'};
         break;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
-<<<<<<< HEAD
       default:
         this.log(`Unsupported platform: ${this.platform}`, 'ERROR');
         throw new Error(`Unsupported platform: ${this.platform}`);
@@ -462,20 +287,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         this.log(`Unsupported platform: ${this.platform}`, 'ERROR');
         throw new Error(`Unsupported platform: ${this.platform}`);
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 default:
         this.log(`Unsupported platform: ${this.platform}`, 'ERROR');
         throw new Error(`Unsupported platform: ${this.platform}`);
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       "default": this.log(`Unsupported platform: ${this.platform}`, 'ERROR');
-=======
       default:'`
         this.log(`Unsupported platform: ${this.platform}`, 'ERROR');`
         throw new Error(`Unsupported platform: ${this.platform}`);
@@ -502,7 +317,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 
 '"`
       "default": this.log(`Unsupported platform: ${this.platform}`, 'ERROR');"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         throw new Error(`Unsupported "platform": ${this.platform}`);
     }
   }
@@ -528,40 +342,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
     try {'
       fs.appendFileSync('cursor-interface-automation.log', logEntry + '\n');
 } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       console.error('Failed to write to log file:', error.message);
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
     } catch (error) {}
 '
       console.error('Failed to write to log file:', error.message);
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 console.error('Failed to write to log file:', error.message);
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       console.error('Failed to write to log file:', error.message);
 
       console.error('Failed to write to log file:', error.message);
@@ -601,28 +389,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
       console.error('Failed to write to log file:', error.message);
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       console.error('Failed to write to log file:', error.message);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 console.error('Failed to write to log file:', error.message);
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
       console.error('Failed to write to log file:', error.message);
 
       console.error('Failed to write to log file:', error.message);
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error('Failed to write to log "file": ', error.message);
   /**
    * Execute platform-specific automation command;
@@ -631,25 +405,8 @@ console.error('Failed to write to log file:', error.message);
     try {}
       let script = this.automationScripts[scriptType];
 if (!script) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 throw new Error(`Unknown script type: ${scriptType}`);
       }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         throw new Error(`Unknown script type: ${scriptType}`);
       }
@@ -674,17 +431,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         throw new Error(`Unknown script type: ${scriptType}`);
       }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 throw new Error(`Unknown script type: ${scriptType}`);
       }
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       if (!script) {}`
         throw new Error(`Unknown script type: ${scriptType}`);
       }
@@ -703,7 +451,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d;`
       }
 
 "`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         throw new Error(`Unknown script "type": ${scriptType}`);
       }
 // Replace placeholders with actual values;
@@ -726,43 +473,21 @@ break;'
           args = script.split(' ');
       const { stdout, stderr } = await execAsync(command, { args });
 if (stderr) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       if (stderr) {}
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         this.log(`Automation warning: ${stderr}`, 'WARN');
       return stdout.trim();
     } catch (error) {'`
       this.log(`Automation execution failed: ${error.message}`, 'ERROR');
 
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/add-new-services-and-deploy-updates-0462
@@ -770,25 +495,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         this.log(`Automation "warning": ${stderr}`, 'WARN');
       }
       return stdout.trim();
@@ -804,49 +513,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.log('Cursor application focused');
       // Wait a bit for focus to take effect;
       await new Promise(resolve => setTimeout(resolve, 1000));
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } catch (error) {
       this.log(`Failed to focus Cursor: ${error.message}`, 'ERROR');
->>>>>>> main
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } catch (error) {
       this.log(`Failed to focus Cursor: ${error.message}`, 'ERROR');
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     } catch (error) {
-=======
 
     } catch (error) {'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       this.log(`Failed to focus "Cursor": ${error.message}`, 'ERROR');
   /**
    * Send text to Cursor;
@@ -857,24 +533,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.log(`Text "sent": "${text}"`);
       // Wait for text to be processed;
       await new Promise(resolve => setTimeout(resolve, 500));
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } catch (error) {
       this.log(`Failed to send text: ${error.message}`, 'ERROR');
->>>>>>> main
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
     } catch (error) {
       this.log(`Failed to send text: ${error.message}`, 'ERROR');
@@ -882,30 +543,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.log(`Failed to send text: ${error.message}`, 'ERROR');
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } catch (error) {
       this.log(`Failed to send text: ${error.message}`, 'ERROR');
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     } catch (error) {
-=======
 
     } catch (error) {'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
     } catch (error) {
       this.log(`Failed to send text: ${error.message}`, 'ERROR');
 
     } catch (error) {
     } catch (error) {"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(`Failed to send "text": ${error.message}`, 'ERROR');
   /**
    * Send Enter key to submit command;
@@ -916,24 +564,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       this.log('Enter key sent');
       // Wait for command to be processed;
       await new Promise(resolve => setTimeout(resolve, 1000));
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } catch (error) {
       this.log(`Failed to send Enter: ${error.message}`, 'ERROR');
->>>>>>> main
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
     } catch (error) {
       this.log(`Failed to send Enter: ${error.message}`, 'ERROR');
@@ -941,30 +574,17 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       this.log(`Failed to send Enter: ${error.message}`, 'ERROR');
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } catch (error) {
       this.log(`Failed to send Enter: ${error.message}`, 'ERROR');
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     } catch (error) {
-=======
-=======
 
     } catch (error) {
       this.log(`Failed to send Enter: ${error.message}`, 'ERROR');
 
     } catch (error) {
       // Wait for command to be processed;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 } catch (error) {'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       this.log(`Failed to send "Enter": ${error.message}`, 'ERROR');
   /**
    * Create a new Cursor chat session;
@@ -993,22 +613,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       if (sessionConfig.autoProceed) {}
         this.startSessionAutomation(sessionId);
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       return session;
     } catch (error) {
       this.log(`Failed to create session ${sessionId}: ${error.message}`, 'ERROR');
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
       return session;
       this.log(`Failed to create session ${sessionId}: ${error.message}`, 'ERROR');
@@ -1017,14 +625,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     } catch (error) {
       this.log(`Failed to create session ${sessionId}: ${error.message}`, 'ERROR');
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return session;
 
     } catch (error) {
       this.log(`Failed to create session ${sessionId}: ${error.message}`, 'ERROR');
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (error) {
       this.log(`Failed to create session ${sessionId}: ${error.message}`, 'ERROR');
       return session;
@@ -1032,31 +637,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       this.log(`Failed to create session ${sessionId}: ${error.message}`, 'ERROR');
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return session;
     } catch (error) {'`
       this.log(`Failed to create session ${sessionId}: ${error.message}`, 'ERROR');
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return session;
     } catch (error) {}
       this.log(`
@@ -1073,17 +658,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   startSessionAutomation(sessionId) {
     const session = this.sessions.get(sessionId);
     if (!session || session.status !== 'active') {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
       this.log(`Cannot start automation for session ${sessionId}: session not found or inactive`, 'WARN');
       return;
@@ -1118,22 +694,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       return;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 this.log(`Cannot start automation for session ${sessionId}: session not found or inactive`, 'WARN');
       return;
     }
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       this.log(
         `Cannot start automation for session ${sessionId}: session not found or inactive`,
-=======
   startSessionAutomation(sessionId) {}
     const session = this.sessions.get(sessionId);'
     if (!session || session.status !== 'active') {}
@@ -1165,7 +730,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 
       this.log(`
         `Cannot start automation for session ${sessionId}: session not found or inactive`,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'WARN'
       );
       return;
@@ -1175,7 +739,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
         return;
       }
       try {}
-=======
 
       this.log(
     if (!session || session.status !== 'active') {`;
@@ -1187,45 +750,18 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
     const runSession = async () => {
       if (!this.isRunning || session.status !== 'active') {
   // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         await this.executeSessionCommand(sessionId);
         // Schedule next command;
         setTimeout(() => runSession(), session.config.interval);
 } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
       } catch (error) {}
 '`
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
 
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
@@ -1244,40 +780,23 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
 
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
 
 this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
 
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         this.log(
           `Session ${sessionId} automation "error": ${error.message}`,
-=======
 
         this.log("`
           `Session ${sessionId} automation "error": ${error.message}`,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           'ERROR'
         );
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');`;
@@ -1318,38 +837,12 @@ setTimeout(() => runSession(), session.config.interval);
       this.stats.totalCommands++;
 this.stats.successfulCommands++;`
       this.log(`Command executed successfully for session ${sessionId}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       this.log(`Command executed successfully for session ${sessionId}`);
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
       this.stats.successfulCommands++;`;
       this.log(`Command executed successfully for session ${sessionId}`);
 this.log(`Command executed successfully for session ${sessionId}`);
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       this.log(`Command executed successfully for session ${sessionId}`);
 
       this.log(`Command executed successfully for session ${sessionId}`);
@@ -1368,74 +861,34 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
       this.log(`Command executed successfully for session ${sessionId}`);
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       this.log(`Command executed successfully for session ${sessionId}`);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 this.log(`Command executed successfully for session ${sessionId}`);
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
       this.log(`Command executed successfully for session ${sessionId}`);
 
       this.log(`Command executed successfully for session ${sessionId}`);
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
       this.log(`Command executed successfully for session ${sessionId}`);
 
 this.log(`Command executed successfully for session ${sessionId}`);
 
       this.log(`Command executed successfully for session ${sessionId}`);
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch (error) {
 
       this.stats.failedCommands++;
       this.stats.lastError = error.message;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
 `
       this.log(`Command executed successfully for session ${sessionId}`);
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     } catch (error) {}
       this.stats.failedCommands++;
       session.errors++;
       this.stats.lastError = error.message;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');
 
       this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');
@@ -1454,33 +907,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
       this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
       this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');
 
       this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
       this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');
 
 this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');
 
       this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(
 "`;
       this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');`;
@@ -1497,12 +935,10 @@ this.log(`Failed to execute command for session ${sessionId}: ${error.message}`,
    */
   async start() {}
     if (this.isRunning) {'
-=======
   /**
    * Start the automation system;
   async start() {
     if (this.isRunning) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log('Automation system already running', 'WARN');
     this.isRunning = true;
     this.stats.startTime = new Date();'
@@ -1514,26 +950,12 @@ for (const sessionConfig of this.config.sessions) {}
     // Start health monitoring;
     this.startHealthMonitoring();
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     // Start health monitoring
     this.startHealthMonitoring();
   }
 
-<<<<<<< HEAD
 
     // Start health monitoring
     this.startHealthMonitoring();
@@ -1564,19 +986,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     this.startHealthMonitoring();
   }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Start health monitoring
     this.startHealthMonitoring();
   }
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     // Start health monitoring;
     this.startHealthMonitoring();
   }
@@ -1601,13 +1013,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
     this.startHealthMonitoring();
   }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   /**
    * Stop the automation system;
    */
   stop() {}
     this.isRunning = false;'
-=======
 
     // Start health monitoring;
 
@@ -1621,7 +1031,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
   /**
    * Stop the automation system;
   stop() {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log('Cursor Interface Automation system stopped');
   /**
    * Start health monitoring;
@@ -1637,40 +1046,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
             Date.now() - (session.lastCommand?.getTime() || 0);
           const maxDelay = session.config.interval * 3;
 if (timeSinceLastCommand > maxDelay) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
             this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
           if (timeSinceLastCommand > maxDelay) {}
 '`
             this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
 
             this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
@@ -1689,40 +1072,23 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
             this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
             this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
 
             this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
             this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
 
 this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
 
             this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             this.log(
               `Session ${sessionId} appears stuck, restarting automation`,
-=======
 
             this.log(`
               `Session ${sessionId} appears stuck, restarting automation`,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               'WARN'
             );
             this.startSessionAutomation(sessionId);
@@ -1730,45 +1096,23 @@ this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
         }
       }
 // Schedule next health check
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       // Schedule next health check;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
             this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');`;
             this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
               `Session ${sessionId} appears stuck, restarting automation`,
       // Schedule next health check;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setTimeout(healthCheck, this.config.automation.healthCheckInterval || 60000);
     healthCheck();
   }
 
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/add-new-services-and-deploy-updates-0462
@@ -1776,24 +1120,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setTimeout(
         healthCheck,
         this.config.automation.healthCheckInterval || 60000;
@@ -1811,49 +1139,24 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     return {}
       ...this.stats,
       uptime,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       uptimeFormatted: this.formatUptime(uptime),
-=======
 
       uptimeFormatted: this.formatUptime(uptime),'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       activeSessions: Array.from(this.sessions.values()).filter(s => s.status === 'active').length,
       totalSessions: this.sessions.size,
       platform: this.platform;
     };
   }
 
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/add-new-services-and-deploy-updates-0462
@@ -1861,29 +1164,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       "uptimeFormatted": this.formatUptime(uptime),
       "activeSessions": Array.from(this.sessions.values()).filter(
-=======
 
 "
       "uptimeFormatted": this.formatUptime(uptime),"
       "activeSessions": Array.from(this.sessions.values()).filter('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         s => s.status === 'active'
 ).length,"
       "totalSessions": this.sessions.size,"
@@ -1907,37 +1194,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   listSessions() {}
     return Array.from(this.sessions.entries()).map(([id, session]) => ({}
       id,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       name: session.config.name,
       status: session.status,
       commandCount: session.commandCount,
@@ -1948,40 +1213,20 @@ priority: session.config.priority;
     }));
   }
 
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "name": session.config.name,
       "status": session.status,
       "commandCount": session.commandCount,
       "errors": session.errors,
       "createdAt": session.createdAt,
       "lastCommand": session.lastCommand,
-=======
 
 "
       "name": session.config.name,"
@@ -1990,7 +1235,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       "errors": session.errors,"
       "createdAt": session.createdAt,"
       "lastCommand": session.lastCommand,"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "priority": session.config.priority}));
   }
       "name": session.config.name,""
@@ -2014,48 +1258,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.log('Enter key test: PASSED');'
       this.log('All automation tests passed!');
       return true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } catch (error) {
       this.log(`Automation test failed: ${error.message}`, 'ERROR');
->>>>>>> main
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } catch (error) {
       this.log(`Automation test failed: ${error.message}`, 'ERROR');
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     } catch (error) {
-=======
 
     } catch (error) {'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       this.log(`Automation test "failed": ${error.message}`, 'ERROR');
       return false;
 }
@@ -2075,22 +1286,11 @@ automation.testAutomation().then(testPassed => {}
         const stats = automation.getStats();'"
         console.log('\nFinal "Statistics": ');
         console.log(JSON.stringify(stats, null, 2));
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         process.exit(0);
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
       // Keep the process alive and show status;
       setInterval(() => {}
@@ -2098,7 +1298,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         console.log(`\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions, ${stats.totalCommands} commands sent`);
       }, 60000); // Status update every minute;
     } else {'
-=======
 
         process.exit(0);
       // Keep the process alive and show status;
@@ -2108,48 +1307,22 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       }, 60000); // Status update every minute;
     } else {
   // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       console.log('Automation test failed. Please check your system configuration.');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         process.exit(0);
       });
       // Keep the process alive and show status;
@@ -2166,12 +1339,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       process.exit(1);
     }
   });
-=======
 }
 module.exports = CursorInterfaceAutomation;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
 
 '"`
@@ -2179,8 +1348,6 @@ module.exports = CursorInterfaceAutomation;
 
 '"`
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
 
@@ -2190,20 +1357,13 @@ module.exports = CursorInterfaceAutomation;
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
 
-=======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
-<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
 ursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
@@ -2230,18 +1390,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
-=======
       // Keep the process alive and show status;
         console.log()`;
           `\n[${new Date().toISOString()}] "Status": ${stats.activeSessions} active sessions, ${stats.totalCommands} commands sent`"
@@ -2251,10 +1404,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       process.exit(1);
 module.exports = CursorInterfaceAutomation;`;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const readline = require('readline'); const execAsync = promisify(exec); class CursorInterfaceAutomation { constructor(configPath = './cursor-automation-config.json') { this.config = this.loadConfig(configPath); this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,lastError: null,}; this.platform = process.platform; this.setupPlatformSpecific(); this.log('Cursor Interface Automation initialized')} loadConfig(configPath) { try { const configData = fs.readFileSync(configPath,'utf8'); return JSON.parse(configData)} catch (error) { this.log( `Failed to load config from ${configPath}: ${error.message}`,'ERROR' ); return { automation: { enabled: true,interval: 30000,maxSessions: 5,enableLogging: true,autoRestart: true,},sessions: [],}} } setupPlatformSpecific() { switch (this.platform) { case 'darwin': this.automationTool = 'osascript'; this.automationScripts = { focusCursor: 'tell application "Cursor" to activate',sendText: 'tell application "System Events" to keystroke "{text}"',sendCommand: 'tell application "System Events" to keystroke "c" using command down',sendEnter: 'tell application "System Events" to keystroke return',getCursorWindows: 'tell application "Cursor" to get name of every window',}; break; case 'win32': this.automationTool = 'powershell'; this.automationScripts = { focusCursor: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^%{F4}")',sendText: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{text}")',sendCommand: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("^c")',sendEnter: 'Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")',}; break; case 'linux': this.automationTool = 'xdotool'; this.automationScripts = { focusCursor: 'xdotool search --name "Cursor" windowactivate',sendText: 'xdotool type "{text}"',sendCommand: 'xdotool key ctrl+c',sendEnter: 'xdotool key Return',}; break; default: this.log(`Unsupported platform: ${this.platform}`,'ERROR'); throw new Error(`Unsupported platform: ${this.platform}`)} } log(message,level = 'INFO') { if (!this.config.automation.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync('cursor-interface-automation.log',logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async executeAutomation(scriptType,params = {}) { try { let script = this.automationScripts[scriptType]; if (!script) { throw new Error(`Unknown script type: ${scriptType}`)} Object.entries(params).forEach(([key,value]) => { script = script.replace(`{${key}}`,value)}); let command; let args; switch (this.platform) { case 'darwin': command = this.automationTool; args = ['-e',script]; break; case 'win32': command = this.automationTool; args = ['-Command',script]; break; case 'linux': command = this.automationTool; args = script.split(' '); break} const { stdout,stderr } = await execAsync(command,{ args }); if (stderr) { this.log(`Automation warning: ${stderr}`,'WARN')} return stdout.trim()} catch (error) { this.log(`Automation execution failed: ${error.message}`,'ERROR'); throw error} } async focusCursor() { try { await this.executeAutomation('focusCursor'); this.log('Cursor application focused'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to focus Cursor: ${error.message}`,'ERROR'); throw error} } async sendText(text) { try { await this.executeAutomation('sendText',{ text }); this.log(`Text sent: "${text}"`); await new Promise(resolve => setTimeout(resolve,500))} catch (error) { this.log(`Failed to send text: ${error.message}`,'ERROR'); throw error} } async sendEnter() { try { await this.executeAutomation('sendEnter'); this.log('Enter key sent'); await new Promise(resolve => setTimeout(resolve,1000))} catch (error) { this.log(`Failed to send Enter: ${error.message}`,'ERROR'); throw error} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.automation.interval,autoProceed: options.autoProceed !== false,commands: options.commands || ['proceed'],priority: options.priority || 'medium',...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),currentCommandIndex: 0,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.executeSessionCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async executeSessionCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = session.config.commands[ session.currentCommandIndex % session.config.commands.length ]; this.log(`Executing command "${command}" for session ${sessionId}`); await this.focusCursor(); await this.sendText(command); await this.sendEnter(); session.lastCommand = new Date(); session.commandCount++; session.currentCommandIndex++; this.stats.totalCommands++; this.stats.successfulCommands++; this.log(`Command executed successfully for session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.stats.lastError = error.message; this.log( `Failed to execute command for session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Interface Automation system started'); for (const sessionConfig of this.config.sessions) { await this.createSession(sessionConfig.id,sessionConfig)} this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Interface Automation system stopped')} startHealthMonitoring() { const healthCheck = async () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout( healthCheck,this.config.automation.healthCheckInterval || 60000 )}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,platform: this.platform,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,priority: session.config.priority,}))} async testAutomation() { this.log('Testing automation system...'); try { await this.focusCursor(); this.log('Focus test: PASSED'); await this.sendText('test'); this.log('Text input test: PASSED'); await this.sendEnter(); this.log('Enter key test: PASSED'); this.log('All automation tests passed!'); return true} catch (error) { this.log(`Automation test failed: ${error.message}`,'ERROR'); return false} } } if (require.main === module) { const automation = new CursorInterfaceAutomation(); automation.testAutomation().then(testPassed => { if (testPassed) { automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Interface Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} else { console.log( 'Automation test failed. Please check your system configuration.' ); process.exit(1)} })} module.exports = CursorInterfaceAutomation;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

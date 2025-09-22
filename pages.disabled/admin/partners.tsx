@@ -1,22 +1,8 @@
 :pages_backup/admin/partners.tsx
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-<<<<<<< HEAD:pages/admin/partners.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
 
-=======
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
 import { useEffect, useState  } from 'react';
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]),
@@ -28,9 +14,6 @@ export default function AdminPartners() {
         const res = null;
     setFlags(json.flags || [])
 :pages_backup/admin/partners.tsx
-<<<<<<< HEAD:pages/admin/partners.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from 'react';
 '
 import Head from 'next / head';
@@ -38,7 +21,6 @@ import Head from 'next / head';
 
 :pages_backup/admin/partners.tsx
 interface Partner {
-<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
@@ -46,18 +28,13 @@ import Head from 'next/head';
 interface Partner {
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface Partner {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 interface Partner {}
 '
 import React, { useState, useEffect } from 'react';'
 import Head from 'next/head';
 
 interface Partner {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
 interface Partner {;
   id: string;
   code: string;
@@ -65,10 +42,7 @@ interface Partner {;
   status: 'active' | 'inactive' | 'pending';
   commission: number;
 :pages_backup/admin/partners.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);'
   const [searchTerm, setSearchTerm] = useState('');'
@@ -97,10 +71,7 @@ useEffect(() => {
     setFlags(json.flags |[]);
 
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
 import { useEffect, useState } from 'react';
 
 export default function AdminPartners() {};
@@ -108,7 +79,6 @@ export default function AdminPartners() {};
   const [selected, setSelected] = useState<string>('');
   const [flags, setFlags] = useState<any[]>([]);
 :pages_backup/admin/partners.tsx
-<<<<<<< HEAD
 
 import { useEffect, useState } from 'react';
 export default function AdminPartners(req, res) {
@@ -121,8 +91,6 @@ export default function AdminPartners(req, res) {
     setTimeout(() => {;
       setPartners(mockPartners);
       setLoading(false);
-<<<<<<< HEAD:pages/admin/partners.tsx
-<<<<<<< HEAD
     }, 1000);  }, []);
 
   async function updatePartner(): any (code: string, updates: any) {;
@@ -132,7 +100,6 @@ export default function AdminPartners(req, res) {
       body: JSON && JSON.stringify({ code, ...updates }),;
 });
     const res = await fetch('/api/admin/partners/list');
-<<<<<<< HEAD
     const json = await res && res.json();
     setPartners(json && json.partners || []);  }
   async function viewFlags(): any (code: string) {;
@@ -164,23 +131,18 @@ const res = await fetch(
     );
     const json = await res.json();
     setFlags(json.flags |[]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 ;
   async function viewFlags(code: string) {;
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
   }
 }
 
@@ -219,7 +181,6 @@ type='number'                    defaultValue={p.commission_rate}
                     max={1}
                     step={0.01}
 onBlur={e =>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       updatePartner(p.code, {
                         commission_rate: Number(e.target.value)
                       })
@@ -252,7 +213,6 @@ onBlur={e =>
   }
 }
                     className="w-24 border rounded px-2 py-1"
-<<<<<<< HEAD
 
   return (
     <div className='space-y-6'>;
@@ -427,7 +387,6 @@ useEffect(() => {
 
 :pages_backup/admin/partners.tsx
 return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
       <div className='overflow-auto'>;
@@ -470,13 +429,9 @@ return (
                     Reject;
                   </button>;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   />
                 </td>
-<<<<<<< HEAD:pages_backup/admin/partners.tsx
-<<<<<<< HEAD
                 <td className="py-2 pr-4 space-x-2">
                   <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'approved' })}>Approve</button>
                   <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'rejected' })}>Reject</button>
@@ -484,17 +439,12 @@ return (
                 </td>
               </tr>
 :pages_backup/admin/partners.tsx
-<<<<<<< HEAD
 
         <div className="p-4 rounded border">
           <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>
           <ul className="list-disc pl-6">
             {flags.map((f, idx) => (
               <li key={idx}>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
             ))}
 
           </tbody>;
@@ -542,12 +492,6 @@ return (
 
 :pages_backup/admin/partners.tsx
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
                 <td className='py-2 pr-4 space-x-2'>
                   <button
                     className='px-2 py-1 rounded border'
@@ -612,19 +556,12 @@ return (
           </div>
         </div>
 :pages_backup/admin/partners.tsx
-<<<<<<< HEAD:pages/admin/partners.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
-=======
 
         {/* Filters */}"
         <div className="bg-white rounded-lg shadow p-6 mb-6">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <div>;"
               <label className="block text-sm font-medium mb-2">Search Partners</label>;
@@ -641,8 +578,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :pages_backup/admin/partners.tsx
               <select
                 value={statusFilter}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   <button;
                     className='px - 2 py - 1 rounded border';
@@ -706,13 +641,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 value={statusFilter}
 
 :pages_backup/admin/partners.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {loading ? (
             <div className="text - center py - 8">Loading partners...</div>) : filtered_partners.length === 0 ? (
-=======
           {loading ? ("
             <div className="text - center py - 8">Loading partners...</div>) : filtered_partners.length === 0 ? ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
             <div className="text - center py - 8 text - gray - 500">;
               No partners found matching your criteria.;
             </div>) : ("
@@ -773,8 +705,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="flex space - x-2">;'
                           {partner.status === 'pending' && (
 :pages_backup/admin/partners.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 onChange={(e) => setStatusFilter(e && e.target.value)}
                 className="w-full p-2 border rounded-md";
@@ -858,14 +788,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <>;
 
 :pages_backup/admin/partners.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                               <button
                                 onClick={() => handleStatusChange(partner && partner.id, 'active')}
-=======
 
                               <button'
                                 onClick={() => handleStatusChange(partner && partner.id, 'active')}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
                                 className="text-green-600 hover:text-green-900";
                               >;
                                 Approve;
@@ -895,17 +822,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </button>;
                           )}
 :pages_backup/admin/partners.tsx
-<<<<<<< HEAD
           )}
         </div>
       </main>
     </>
   );
 :pages_backup/admin/partners.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/partners.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                           <button className="text-blue-600 hover:text-blue-900">;
                             <>;
@@ -957,29 +879,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 
 :pages_backup/admin/partners.tsx
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
 
 }
 }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       )  } catch (error) {
     console.error("Error:", error);
-=======
 
       )  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -991,23 +902,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 :pages_backup/admin/partners.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/partners.tsx

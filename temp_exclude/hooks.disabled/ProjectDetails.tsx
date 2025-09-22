@@ -55,7 +55,6 @@ import { Button  } from '@/components / ui / button';'
 import {logErrorToProduction} from '@/utils / production_logger';
 
 :temp_exclude/hooks.disabled/ProjectDetails.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {
   Card,
   CardContent,
@@ -648,9 +647,7 @@ function ProjectDetailsContent() {;
 
                           <Button
 
-=======
                           <Button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ProjectDetails.tsx
                             onClick = {handleSubmitNote,}
 '
                             {isSubmittingNote ? 'Posting...' : 'Post Note'}
@@ -662,18 +659,14 @@ function ProjectDetailsContent() {;
                 </Card>
               </TabsContent>
 
-=======
               "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ProjectDetails.tsx
               <TabsContent value="reviews">
                 <ProjectReviewSection project={project} />
               </TabsContent>
             </Tabs>
           </div>
 
-=======
           "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/ProjectDetails.tsx
           <div className="order-1 lg:order-2 lg:col-span-1">
             <Card>
               <CardHeader>
@@ -779,7 +772,6 @@ function ProjectDetailsContent() {;
                 <div className='space - y-6'>;'
                   <div className='flex items - start gap - 4'>;'
                     <Avatar className='h - 10 w - 10'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       {project.talent_profile?.profile_picture_url ? (
                         <img;
                           src={project.talent_profile.profile_picture_url}
@@ -843,7 +835,6 @@ loading="lazy"
                   <div className="flex items-start gap-4">"
                     <Avatar className="h-10 w-10">
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       {project.talent_profile?.profile_picture_url ? (
                         <img;
                           src={project.talent_profile.profile_picture_url}
@@ -1404,7 +1395,6 @@ loading="lazy"
                 </CardFooter>
               )}
 :temp_exclude/hooks.disabled/ProjectDetails.tsx
-<<<<<<< HEAD
 
               {project.status === "completed" && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
@@ -1415,7 +1405,6 @@ loading="lazy"
                     <MessageSquare className='mr-2 h-4 w-4' /> Discuss Changes;
                   </Button>;
                 </CardFooter>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               )}
 :temp_exclude/hooks.disabled/ProjectDetails.tsx
 
@@ -1484,4 +1473,3 @@ export default function ProjectDetails() {;
 :temp_exclude/hooks.disabled/ProjectDetails.tsx
                 Contact Us
               </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

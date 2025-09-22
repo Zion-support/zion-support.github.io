@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -23,10 +22,8 @@ export default function DigitalTransformationPage() {
   const services = [
 
 import React from 'react';
-=======
 
 import React from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Head from 'next / head';
 '
 import { motion } from 'framer-motion';
@@ -53,9 +50,7 @@ export default /**;
  */
 function DigitalTransformationPage() {}
   const services = [;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
-<<<<<<< HEAD
       title: 'Digital Strategy & Roadmap'
       description:
         'Comprehensive digital transformation strategy and implementation planning'
@@ -116,9 +111,6 @@ function DigitalTransformationPage() {}
     { number: '300%', label: 'ROI Improvement', icon: Star }
     { number: '24/7', label: 'Support Available', icon: Clock }
   ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Rocket,
   Zap,
   Shield,
@@ -129,7 +121,6 @@ function DigitalTransformationPage() {}
   CheckCircle,
   Star,
   Clock,
-<<<<<<< HEAD
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -145,10 +136,7 @@ export default function DigitalTransformationPage() {
       description: "Comprehensive digital transformation strategy and implementation planning",
       features: ["Technology Assessment", "Change Management", "ROI Planning", "Implementation Roadmap"],
       price: "From $15,000",
-<<<<<<< HEAD
-=======
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       title: 'Digital Strategy & Roadmap',
       description:;'
         'Comprehensive digital transformation strategy and implementation planning',
@@ -159,9 +147,7 @@ export default function DigitalTransformationPage() {
         'Implementation Roadmap',
       ],'
       price: 'From $15, 000',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       icon: Rocket,
-<<<<<<< HEAD
       color: "from-yellow-500 to-orange-500"
     },
     {
@@ -196,9 +182,7 @@ export default function DigitalTransformationPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
   ],
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const stats = [
     { number: "500+", label: "Transformations Completed", icon: Rocket },
     { number: "40%", label: "Average Cost Reduction", icon: TrendingUp },
@@ -215,8 +199,6 @@ export default function DigitalTransformationPage() {
         <link rel="canonical" href="https://ziontechgroup.com/services/transformation" />
       </Head>
       <EnhancedNavigation />
-=======
-=======
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
@@ -248,8 +230,6 @@ export default function DigitalTransformationPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='mb-8'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
               Digital Transformation
@@ -260,8 +240,6 @@ className='mb-8'
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
               From strategy development to implementation, we guide businesses
@@ -312,8 +290,6 @@ className='mb-8'
               Digital Transformation;
             </h1>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Start Transformation'
@@ -333,14 +309,11 @@ className='mb-8'
           >"
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
 From strategy development to implementation, we guide businesses through complete 
-<<<<<<< HEAD
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
               Start Transformation
               <ArrowRight className="w-5 h-5" />
-=======
               <ArrowRight className='w-5 h-5' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </button>
           </motion.div>
         </div>
@@ -468,14 +441,9 @@ export default function DigitalTransformationPage(req, res) {
             </p>;
           </motion.div>;
           <motion.div;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </p>
           </motion.div>
           <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 className='text-center'
               >
                 <div className='w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4'>
@@ -494,14 +462,12 @@ className='text-center'
 <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 </p>
           </motion.div>
           <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -522,8 +488,6 @@ transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
           >"
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
 From strategy development to implementation, we guide businesses through complete
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               digital transformation journeys that drive innovation, efficiency, and growth.
             </p>"
             <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -533,9 +497,7 @@ From strategy development to implementation, we guide businesses through complet
           </motion.div>
         </div>
       </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
 
 >
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6'>
@@ -559,7 +521,6 @@ From strategy development to implementation, we guide businesses through complet
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From strategy development to implementation, we guide businesses through complete 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               digital transformation journeys that drive innovation, efficiency, and growth.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -570,7 +531,6 @@ From strategy development to implementation, we guide businesses through complet
         </div>
       </section>
 
-<<<<<<< HEAD
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -584,10 +544,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
               >"
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">"
                   <stat.icon className="w-8 h-8 text-orange-400" />
@@ -597,38 +553,27 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
 
           </div>;
         </div>;
       </section>;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <h2 className="text-4xl font-bold text-white mb-6">Digital Transformation Services</h2>
-=======
 
           >"
             <h2 className="text-4xl font-bold text-white mb-6">Digital Transformation Services</h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Comprehensive transformation solutions designed to modernize your business operations;
             </p>
           </motion.div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <motion.div
                 key={service.title  } catch (error) {
     console.error("Error:", error);
@@ -656,11 +601,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <motion.div
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
               <motion.div;
 '
@@ -678,57 +619,36 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               <motion&& motion.div;
                 key={service && service.title}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>"
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
-=======
 "
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>"
                 <p className="text-white/70 mb-6">{service.description}</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature) => ("
                     <li key={feature} className="flex items-center text-white/80">"
                       <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
                 </ul>
                 <div className="flex items-center justify-between">
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </ul>
                 <div className="flex items-center justify-between">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {feature  } catch (error) {
     console.error("Error:", error);
-=======
 
                       {feature  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -739,28 +659,19 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   }
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </ul>
                 <div className="flex items-center justify-between">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <span className="text-2xl font-bold text-orange-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Get Started
                   </button>
                 </div>
               </motion.div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             ))  } catch (error) {
     console.error("Error:", error);
-=======
 
                 </ul>"
                 <div className="flex items-center justify-between">
@@ -774,13 +685,11 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
             ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
           </div>;
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
@@ -812,17 +721,12 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
 "
             <h2 className="text-4xl font-bold text-white mb-6">
-=======
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
-=======
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
@@ -832,45 +736,30 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             viewport={{ once: true }}
           >
 <h2 className='text-4xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Ready to Transform Your Business?
             </h2>"
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">'
               Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth.
             </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 View Success Stories
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                 View Success Stories;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }</div> </div> </section> <motion.div initial= {
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ),
 "
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 
 }</div> </div> </section> <motion.div initial= {
-<<<<<<< HEAD
 }</div> </div> </section> <motion.div initial= {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }</div> </div> </section> <motion.div initial= {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;'
             <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -897,11 +786,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 "
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
-<<<<<<< HEAD
 }</div> </div> </section> <motion.div initial= {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -923,8 +808,6 @@ duration: 0 && 0.8
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }</div> </div> </section> <motion&& motion.div initial= {}
 }</div> </div> </section> <motion.div initial= {}
   {}
@@ -938,7 +821,6 @@ duration: 0 && 0.8
 '"
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   )
 }'
             <button className='px - 8 py - 4 bg - gradient - to - r from - yellow - 600 to - orange - 600 hover:from - yellow - 700 hover:to - orange - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>;
@@ -1044,7 +926,6 @@ duration: 0 && 0.8
                 Transformation Assessment;
               </button>;'
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Success Stories;
-<<<<<<< HEAD
 
   )
           >;"
@@ -1060,18 +941,13 @@ duration: 0 && 0.8
               </button>;"
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
                 View Success Stories;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </button>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
       <EnhancedFooter />;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>;
   );
   } catch (error) {"
@@ -1079,12 +955,5 @@ duration: 0 && 0.8
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

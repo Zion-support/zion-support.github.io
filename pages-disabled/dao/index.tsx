@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react',;
 ;
 type Holder = { address: string, amount: string },
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useEffect, useState } from 'react';
 
 type Holder = { address: string, amount: string }
@@ -61,23 +54,12 @@ export default function DaoMetrics(req, res) {}
   }, []),
   if (loading) return <div>Loading...</div>,
   if (!data) return <div>Error loading data</div>,
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 type Holder = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-6">
-=======
 
   return ("
     <div className="space-y-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="flex items-end justify-between">
         <div>"
           <h1 className="text-2xl font-semibold">DAO Metrics</h1>'"
@@ -96,21 +78,14 @@ type Holder = any;
                 </div>"
                 <div className="w-full h-2 bg-gray-200 dark:bg-gray-800 rounded">"
                   <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </div>
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 "
         <div className="border rounded p-4">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
             <thead>"
@@ -121,13 +96,9 @@ type Holder = any;
             </thead>
             <tbody>
 {data.topHolders.map((h) => (
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <td className="py-1 pr-2 truncate max-w-[10rem]">{h.address}</td>
                   <td className="py-1">{h.amount}</td>
-=======
 
 <div className='border rounded p-4'>
           <div className='font-medium mb-2'>Top Holders (approx)</div>
@@ -148,17 +119,12 @@ type Holder = any;
                     {h.address}
                   </td>
                   <td className='py-1'>{h.amount}</td>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <div className="font-medium mb-2">Active Proposals</div>
           {data.activeProposals.length ? ("
             <ul className="list-disc pl-5 text-sm">
@@ -167,38 +133,22 @@ type Holder = any;
               ))}
             </ul>
           ) : (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="text-sm text-gray-600">No active proposals.</div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="text-sm text-gray-600">No active proposals.</div>
           )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
           <div className="text-3xl font-semibold">{data.governanceParticipationRate}%</div>
           <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded mt-2">
-=======
           )  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
@@ -210,15 +160,11 @@ type Holder = any;
           <div className="font-medium mb-2">Governance Participation Rate</div>"
           <div className="text-3xl font-semibold">{data.governanceParticipationRate}%</div>"
           <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded mt-2">"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="h-3 bg-indigo-600 rounded" style={{ width: `${Math.min(100, data.governanceParticipationRate)}%` }} />
           </div>"
           <div className="text-xs text-gray-500 mt-1">Weekly updates via Etherscan</div>
-=======
-=======
 <div className='text-sm text-gray-600'>No active proposals.</div>
           )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 
         <div className='border rounded p-4'>
@@ -237,13 +183,9 @@ type Holder = any;
           <div className='text-xs text-gray-500 mt-1'>
             Weekly updates via Etherscan
           </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   )
   } catch (error) {
@@ -251,23 +193,16 @@ type Holder = any;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from 'react',
-=======
 
 }
 
 '
 import { useEffect, useState } from 'react',;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 type Holder = { address: string, amount: string },
 type Metrics = {}
@@ -370,18 +305,6 @@ if (return <div > Error loading data</div>, ) {}
     </div>);
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

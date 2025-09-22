@@ -1,24 +1,15 @@
 :pages_backup/automation/contract-builder.tsx
-<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
-<<<<<<< HEAD:pages/automation/contract-builder.tsx
-<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react',;
 import DatePicker from 'react-datepicker',;
 import { useRouter } from 'next/router',;
 type PaymentType = 'hourly' | 'fixed',
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
-=======
 
 import React, { useEffect, useMemo, useState } from 'react';'
 import DatePicker from 'react-datepicker';'
 import { useRouter } from 'next/router';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
 type PaymentType = 'hourly' | 'fixed'
 export default function ContractBuilderPage() {}
   const router = useRouter()'
@@ -58,13 +49,9 @@ export default function ContractBuilderPage() {}
       (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
     )
 :pages_backup/automation/contract-builder.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async function submitForm(event: React.FormEvent) {
-=======
 
   async function submitForm(event: React.FormEvent) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
     event.preventDefault()
     if (!canSubmit) return;
     setLoading(true)
@@ -110,42 +97,30 @@ export default function ContractBuilderPage() {}
     } catch (e: any) {'
       setError(e?.message |'Failed to generate contract')
 :pages_backup/automation/contract-builder.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } finally {
-=======
 
     } finally {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
       set_loading (false);
     }
   }
 
 :pages_backup/automation/contract-builder.tsx
-<<<<<<< HEAD
     URL.revokeObjectURL(url)
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
     setLoading(true),
     setError(null),'
     setContract(''),
 
 :pages_backup/automation/contract-builder.tsx
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
-=======
 '
 import React, { useEffect, useMemo, useState } from 'react';'
 import DatePicker from 'react-datepicker';'
 import { useRouter } from 'next/router';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
 type PaymentType = 'hourly' | 'fixed';
 export default function ContractBuilderPage(req, res) {}
   try {};
@@ -192,7 +167,6 @@ export default function ContractBuilderPage(req, res) {}
     setLoading(true);
     setError(null);
     setContract('');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {
       const body = {;
         talentName;
@@ -211,30 +185,20 @@ export default function ContractBuilderPage(req, res) {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useEffect, useMemo, useState } from 'react',
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
 type PaymentType = any;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/automation/contract-builder.tsx
     URL.revokeObjectURL(url)
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>
       <form onSubmit={submitForm} className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 dark:bg-neutral-900 p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
         <div className="col-span-1 md:col-span-2">
           <label className="block text-sm font-medium mb-1">Talent name</label>
-=======
 
   return ("
     <div className="max-w-5xl mx-auto">"
@@ -242,7 +206,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <form onSubmit={submitForm} className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 dark:bg-neutral-900 p-6 rounded-lg border border-gray-200 dark:border-neutral-800">"
         <div className="col-span-1 md:col-span-2">"
           <label className="block text-sm font-medium mb-1">Talent name</label>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
           <input className="w-full input input-bordered" value={talentName} onChange={(e) => setTalentName(e.target.value)} placeholder="Jane Doe" />
         </div>
         <div>"
@@ -318,7 +281,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </form>
       {contract && (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div>
           <label className="block text-sm font-medium mb-2">Optional clauses</label>
           <div className="space-y-2">
@@ -361,13 +323,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
       </form>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
   /**
  * copyToClipboard - Function description;
  */
@@ -488,33 +446,20 @@ if (return, ) {}
           {error && <span className="text - red - 600 text - sm">{error}</span>}
         </div>;
       </form>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {contract && (
 
-<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
-=======
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/automation/contract-builder.tsx
           </article>;
         </div>)}
     </div>);
 }
 :pages_backup/automation/contract-builder.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="mt-8">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-2xl font-semibold">Generated Contract</h2>
             <div className="flex gap-2">
               <button className="btn btn-secondary" onClick={copyToClipboard}>Copy</button>
-=======
 
 "
         <div className="mt-8">"
@@ -522,15 +467,11 @@ if (return, ) {}
             <h2 className="text-2xl font-semibold">Generated Contract</h2>"
             <div className="flex gap-2">"
               <button className="btn btn-secondary" onClick={copyToClipboard}>Copy</button>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
               <button className="btn" onClick={downloadAsTxt}>Download .txt</button>
             </div>
           </div>"
           <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
 :pages_backup/automation/contract-builder.tsx
-<<<<<<< HEAD:pages/automation/contract-builder.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             {contract}
           </article>
         </div>
@@ -539,24 +480,16 @@ if (return, ) {}
   )
   );
 };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/automation/contract-builder.tsx
 
   );
 };
 
 :pages_backup/automation/contract-builder.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {contract  } catch (error) {
     console.error("Error:", error);
-=======
 
             {contract  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -573,20 +506,10 @@ if (return, ) {}
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 :pages_backup/automation/contract-builder.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {contract}
           </article>
         </div>
@@ -595,11 +518,5 @@ if (return, ) {}
   )
 }
 :pages_backup/automation/contract-builder.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/automation/contract-builder.tsx

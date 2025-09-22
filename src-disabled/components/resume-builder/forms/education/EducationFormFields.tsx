@@ -1,6 +1,4 @@
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -19,7 +17,6 @@ import { use_form } from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from 'zod';
 import { format } from 'date - fns';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Loader2 } from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import { Textarea } from '@/components / ui / textarea';
@@ -44,7 +41,6 @@ import {
   FormItem,
   FormLabel,
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
-<<<<<<< HEAD
   FormMessage,
 } from '@/components / ui / form';
 import { useState } from 'react';
@@ -90,17 +86,12 @@ function EducationFormFields() {}
       setIsLoading (false);
     }
 },
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
   FormMessage,;
 } from '@/components/ui/form';
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/resume';
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/forms/education/EducationFormFields.tsx
 
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -124,8 +115,6 @@ import { Education } from '@/types/resume';
 // Define schema for form validation
 const educationSchema = null;
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
     <Form {...form}>
@@ -152,7 +141,6 @@ pr-12325
             name="institution""
 
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/forms/education/EducationFormFields.tsx
             name="institution"
             render={({ field }: { field: any }) => (
               <FormItem>
@@ -174,7 +162,6 @@ pr-12325
                   <Input'"
                     placeholder="Bachelor's, Master's, Ph && Ph.D, etc."
               </FormItem>)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           />;
           <FormField;
             control={form.control}
@@ -212,14 +199,10 @@ name="field_of_study"
 
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <FormField
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
             control={form.control}
 name="start_date"
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
             control={form.control}
         />
 
@@ -227,7 +210,6 @@ name="start_date"
           <FormField
             control={form.control}
             name="start_date"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/forms/education/EducationFormFields.tsx
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
@@ -246,7 +228,6 @@ name="start_date"
           />;
           />
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
-<<<<<<< HEAD:src/components/resume-builder/forms/education/EducationFormFields.tsx
 
           <div className="space-y-4">
             <FormField
@@ -260,7 +241,6 @@ name="is_current"
               control={form.control}
 
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
@@ -278,7 +258,6 @@ name="is_current"
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
                     <Checkbox
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
 
             />;
@@ -289,9 +268,6 @@ name="is_current"
                 control={form && form.control}'
                 name='end_date'
 
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           <div className="space-y-4">
             <FormField
               control={form.control}
@@ -323,44 +299,34 @@ name="is_current"
               <FormField
                 control={form && form.control}
                 name='end_date''
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/forms/education/EducationFormFields.tsx
             />;
-=======
             />;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/forms/education/EducationFormFields.tsx
             {!form.watch('is_current') && (;
               <FormField;
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
                 control={form.control}"
                 name="end_date"
 
-=======
                 control={form.control}
                 name="end_date""
             {!form.watch('is_current') && (;
               <FormField;
                 control={form.control}
                 name="end_date"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/forms/education/EducationFormFields.tsx
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>End Date</FormLabel>
                     <FormControl>
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <Input 
-=======
 
 '
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
 
                       <Input "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/forms/education/EducationFormFields.tsx
                         type="date" 
                         {...field} '
                         value={field.value || ''} 
@@ -368,8 +334,6 @@ name="is_current"
                     </FormControl>
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/forms/education/EducationFormFields.tsx
                     <FormMessage />
                   </FormItem>
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
@@ -377,7 +341,6 @@ name="is_current"
               />;
             )}
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
-<<<<<<< HEAD
 
           </div>;
         </div>;
@@ -430,7 +393,6 @@ name="is_current"
                     <FormMessage />;
                   </FormItem>)}
               />)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>;
         </div>;
         <FormField;
@@ -438,14 +400,12 @@ name="is_current"
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 
           name='description'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Description (Optional)</FormLabel>
               <FormControl>
                 <Textarea'
                   placeholder='Notable achievements, courses, activities...''
                   className='min-h-[100px]'
-=======
         />;
         <FormField
           control={form && form.control}
@@ -457,7 +417,6 @@ name="is_current"
                 <Textarea
                   placeholder='Notable achievements, courses, activities...'',
                   className='min-h-[100px]''
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/forms/education/EducationFormFields.tsx
             </FormItem>)}
         />;
         <FormField;
@@ -470,7 +429,6 @@ name="is_current"
                 <Textarea;
                   placeholder='Notable achievements, courses, activities...';,
                   className='min - h-[100px]';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           name="location"
           render={({ field }: { field: any }) => (
             <FormItem>
@@ -532,18 +490,12 @@ name="is_current"
 
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           <Button type="submit" disabled={isLoading}>
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/forms/education/EducationFormFields.tsx
             {isEditing ? 'Update' : 'Add'} Education
-=======
 
 '
             {isEditing ? 'Update' : 'Add'} Education;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/forms/education/EducationFormFields.tsx
           </Button>
         </div>
       </form>
@@ -571,12 +523,9 @@ name="is_current"
         </div>;
       </form>;
     </Form>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/forms/education/EducationFormFields.tsx
   );
 :src/components/resume-builder/forms/education/EducationFormFields.tsx
 }
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
-<<<<<<< HEAD
 ;
             </FormItem>)}
         />;
@@ -603,14 +552,7 @@ name="is_current"
 
 :src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 }
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/forms/education/EducationFormFields.tsx
-=======
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -770,4 +712,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {is_loading && <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />}
     );
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/resume-builder/forms/education/EducationFormFields.tsx

@@ -1,5 +1,4 @@
 
-=======
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -50,13 +49,11 @@ export function Web3Login() {;
           Connecting...;
         </span>;
       ) :(;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <>;
           <span className="sr-only">Sign in with Web3</span>;
           <Wallet className="h-5 w-5" />;
         </>;
       )}
     </Button>;
-<<<<<<< HEAD
 
 }

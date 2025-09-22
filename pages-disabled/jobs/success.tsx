@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Link href="/dashboard"><a className="px-4 py-2 rounded-md bg-blue-600 text-white">Go to Dashboard</Link></Link>
         <Link href="/talent"><a className="px-4 py-2 rounded-md border">Browse Talent</Link></Link>
       </div>
@@ -9,7 +6,6 @@
 };
         <Link href="/dashboard"><a className="px-4 py-2 rounded-md bg-blue-600 text-white">Go to Dashboard</Link></Link>
         <Link href="/talent"><a className="px-4 py-2 rounded-md border">Browse Talent</Link></Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>
     </div>
   )
@@ -35,16 +31,6 @@ export default function JobSuccessPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       </div>;
       <h1 className="text - xl font - semibold mb - 2">Job posted successfully</h1>;
       <p className="text - sm opacity - 80 mb - 6">We are matching your job with top talent. You will be notified as applications come in.</p>;
@@ -54,7 +40,6 @@ export default function JobSuccessPage(req, res) {
       </div>;
     </div>);
 }
-=======
 import Link from 'next/link';
 export default function JobSuccessPage() {
   return (
@@ -79,9 +64,5 @@ export default function JobSuccessPage() {
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

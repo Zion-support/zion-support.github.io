@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -15,14 +7,8 @@ import {Download} from "lucide-react";
 import {AppPlatform, AppMetadataValues} from "./MetadataManager";
 import {toast} from "sonner";
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -30,15 +16,8 @@ import { Download } from "lucide-react",
 import { AppPlatform, AppMetadataValues } from "./MetadataManager";
 import { toast } from "sonner";
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
-<<<<<<< HEAD
 import { toast } from "sonner",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ExportPanelProps {
-=======
 
 import React from "react","
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card","
@@ -48,7 +27,6 @@ import { AppPlatform, AppMetadataValues } from "./MetadataManager";"
 import { toast } from "sonner";"
 import { AppPlatform, AppMetadataValues } from "./MetadataManager","
 import { toast } from "sonner",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 interface ExportPanelProps {};
   platform: AppPlatform;
@@ -59,7 +37,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 
   const handleExport = (format: 'json' | 'csv') => {
     try {
-<<<<<<< HEAD
       let content: string
       let fileName: string
       let content: string,
@@ -69,8 +46,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       if (format === 'json') {
         content = JSON.stringify(metadata, null, 2),
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import React from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
@@ -78,8 +53,6 @@ import {Button} from "@/components/ui/button";
 import {Download} from "lucide-react";
 import {AppPlatform, AppMetadataValues} from "./MetadataManager";
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {toast} from "sonner";
 interface ExportPanelProps {;
   platform: AppPlatform,;
@@ -108,43 +81,27 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata && metadata.platform;
         ];
 
-<<<<<<< HEAD
       let content: string,
       let fileName: string,
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
-=======
 import { toast } from "sonner",        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { toast } from "sonner",        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       } else {
         // Convert object to CSV format
-=======
 `
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {}
         // Convert object to CSV format'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'],
         const values = []
           metadata.appTitle,
           metadata.shortDescription,
           metadata.longDescription,
           metadata.version,
-<<<<<<< HEAD
-<<<<<<< HEAD
           metadata.platform
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           metadata.platform;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         ],
         '"`
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(),
@@ -152,9 +109,7 @@ import { toast } from "sonner",        fileName = `zion-app-metadata-${platform}
 // Add keywords as additional rows
 content += '\n\nKeywords:\n' + metadata.keywords.join(),
 
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       // Create download link
@@ -166,10 +121,8 @@ content += '\n\nKeywords:\n' + metadata.keywords.join(),
       // Create download link
       const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),
       const url = URL.createObjectURL(blob),'
-=======
       const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),
       const url = URL.createObjectURL(blob),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const link = document.createElement('a'),
       link.href = url,
       link.download = fileName,
@@ -229,9 +182,7 @@ if ( {) {}
       URL.revokeObjectURL (url);
 ;`
       toast.success (`Exported ${format.toUpperCase ()} file successfully`);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } catch (error) {
-<<<<<<< HEAD
     }
 
   const trackAnalytics = () => {
@@ -240,24 +191,12 @@ if ( {) {}
 
   },
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-=======
           metadata.platform  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           metadata.platform  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     } catch (error) {}
   return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>"
         <CardTitle className="text-lg">Export & Analytics</CardTitle>
@@ -293,15 +232,11 @@ if ( {) {}
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
 '"`
         content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -383,19 +318,13 @@ interface ExportPanelProps {;
               </Button>;
               <Button variant="outline" on_click={() => handle_export ('csv')} className="flex - 1">;
                 <Download className="mr - 2 h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
         content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 CSV;
               </Button>;
             </div>;
           </div>;              Enable Analytics;
-=======
 
                 CSV;
               </Button>;
@@ -403,36 +332,23 @@ interface ExportPanelProps {;
           </div>;
 
               Enable Analytics;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Button>;
           </div>;
         </div>;
 </CardContent>;
-<<<<<<< HEAD
     </Card>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
     </Card>);
 }
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
 };
     </Card>);
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
     </Card>);
 }
@@ -460,21 +376,8 @@ return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export &
     </Card>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 let content: string
       let fileName: string
       let content: string,
@@ -485,4 +388,3 @@ let content: string
         content = JSON.stringify(metadata, null, 2),
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -42,7 +42,6 @@ return [{}]
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
         ];
       },
-<<<<<<< HEAD
       {}
         "source": '/public/(.*)',
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
@@ -53,4 +52,3 @@ return [{}]
 
 module.exports = nextConfig;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

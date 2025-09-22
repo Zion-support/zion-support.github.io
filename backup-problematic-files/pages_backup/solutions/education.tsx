@@ -51,7 +51,6 @@ const features = [
   },
   {}
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     title: 'Digital Content Management',
     description: 'Interactive digital content creation and distribution'
   },
@@ -178,8 +177,6 @@ const benefits = [
 ];
 export default function EducationSolutions() {
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     title: 'Virtual Classrooms',
     description: 'Online learning platform with video conferencing and collaboration',
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording']
@@ -233,12 +230,10 @@ export default function EducationSolutionsPage() {
                 </button>
               </div>
             </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -251,9 +246,7 @@ export default function EducationSolutionsPage() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our education solutions are designed to enhance learning and improve outcomes.
 </p>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/education.tsx
               </p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
@@ -264,7 +257,6 @@ export default function EducationSolutionsPage() {
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -284,7 +276,6 @@ export default function EducationSolutionsPage() {
                     {feature.description}
                   </p>
                 </div>
-<<<<<<< HEAD
     title: 'Virtual Classrooms,',;
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
   },;
@@ -588,19 +579,16 @@ Our education solutions are built with accessibility in mind, ;
                   </div>;
                 </motion && motion.div>;
               ))}
-=======
                       </div>
                     ))}
                   </div>
                 </motion.div>
               ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -633,7 +621,6 @@ Our education solutions are built with accessibility in mind, ;
 </div>
         </section>
       </div>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/education.tsx
     </Layout>
     </Layout>
     </>
@@ -645,4 +632,3 @@ Our education solutions are built with accessibility in mind, ;
     </Layout>
     </Layout>
     </>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

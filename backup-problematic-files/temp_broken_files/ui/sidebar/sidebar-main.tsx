@@ -1,5 +1,4 @@
 
-=======
 import * as React from "react";
 import type { CSSProperties } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
@@ -23,7 +22,6 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
           "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",;
           props.className;
         )}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         ref={ref}
         {...props}
       >;
@@ -31,7 +29,6 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
       </div>;
     );
   }
-<<<<<<< HEAD
 
         >;
           {props.children}

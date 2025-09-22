@@ -1,5 +1,4 @@
 
-=======
 import React from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -13,14 +12,12 @@ export function TransactionHistory() {;
 ;
   if (loading) {;
     return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <Card>;
         <CardHeader>;
           <CardTitle>Transaction History</CardTitle>;
           <CardDescription>Loading transactions...</CardDescription>;
         </CardHeader>;
       </Card>;
-<<<<<<< HEAD
 
     <Card>;
       <CardHeader>;

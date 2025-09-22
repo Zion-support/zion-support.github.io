@@ -1,6 +1,4 @@
 :src/components/PageErrorBoundary.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',;
 import Link from 'next/link',;
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary',;
@@ -38,12 +36,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 :src/components/PageErrorBoundary.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
 :src_backup/components/PageErrorBoundary.tsx
-<<<<<<< HEAD
     <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
         {/* Main Error Card */}
@@ -60,7 +54,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ? 'This page cannot load due to missing authentication configuration';'
                 : 'An unexpected error occurred while loading this page'}
 :src_backup/components/PageErrorBoundary.tsx
-<<<<<<< HEAD
 import {
   logInfo
   logErrorToProduction as prodLogError
@@ -114,7 +107,6 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
             </div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
               {pageName ? `${pageName} Unavailable` : 'Page Unavailable'}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </h1>
             <p className="text-gray-600">
               {isAuthConfigError 
@@ -123,7 +115,6 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
               }
             </p>
           </div>
-<<<<<<< HEAD
           {isAuthConfigError && (
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
               <div className="flex">
@@ -241,14 +232,12 @@ if ( {) {}
 
 :src_backup/components/PageErrorBoundary.tsx
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PageErrorBoundary.tsx
             <details className="bg-gray-50 rounded-lg p-4 mb-6">
               <summary className="cursor-pointer text-gray-700 font-medium">
                 Technical Details;
               </summary>
 :src_backup/components/PageErrorBoundary.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
                 {error.message}
               </pre>;
@@ -273,17 +262,13 @@ if ( {) {}
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
 
 :src/components/PageErrorBoundary.tsx
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
             >
-=======
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/PageErrorBoundary.tsx
               <Home className="w-4 h-4 mr-2" />
               Go Home;
             </Link>
 :src_backup/components/PageErrorBoundary.tsx
           </div>
-<<<<<<< HEAD
               <RefreshCw className='w-4 h-4 mr-2' />;
               Try Again;
             </button>;
@@ -297,7 +282,6 @@ if ( {) {}
           </div>;
 
 :src_backup/components/PageErrorBoundary.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PageErrorBoundary.tsx
           {/* Navigation Options */}
           <div className="border-t pt-6">
             <h3 className="font-semibold text-gray-900 mb-3">You can also visit:</h3>
@@ -318,7 +302,6 @@ if ( {) {}
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Support Information */}
         <div className="bg-gray-800 text-white rounded-lg p-6 text-center">
           <p className="mb-3">Need help? Contact our support team</p>
@@ -438,12 +421,10 @@ function PageErrorBoundary() {}
 
 :src/components/PageErrorBoundary.tsx
     ((props: FallbackProps) => (
-=======
           {error?.message && (            <details className="bg-gray-50 rounded-lg p-4 mb-6">
               <summary className="cursor-pointer text-gray-700 font-medium">
                 Technical Details
               </summary>    ((props: FallbackProps) => (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <PageErrorFallback {...props} pageName={pageName} />
     ))
       onReset={() => {        // Reset any application state if needed;
@@ -454,16 +435,9 @@ function PageErrorBoundary() {}
 '`
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
 :src_backup/components/PageErrorBoundary.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/PageErrorBoundary.tsx
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <button;
               onClick={handleRefresh}"
               className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors";
@@ -508,21 +482,15 @@ function PageErrorBoundary() {}
             >;
               support@zion.tech;
 :src/components/PageErrorBoundary.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
             </a>;
             <Link href="/status" className="text-blue-400 hover:underline">;
-=======
 
             </a>;
             <Link href='/status' className='text-blue-400 hover:underline'>;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PageErrorBoundary.tsx
               Service Status;
-=======
             </a>;
             <Link href="/status" className="text-blue-400 hover:underline">;              Service Status;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </Link>;
           </div>;
         </div>;
@@ -530,8 +498,6 @@ function PageErrorBoundary() {}
     </div>;
   );
 :src/components/PageErrorBoundary.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 ;
 interface PageErrorBoundaryProps {;
@@ -565,13 +531,10 @@ export default function PageErrorBoundary({;
         // Reset any application state if needed;
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
 }}
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/PageErrorBoundary.tsx
     >;
       {children}
     </ErrorBoundary>;
   );
-=======
 
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
 
@@ -579,14 +542,10 @@ export default function PageErrorBoundary({;
 
 :src/components/PageErrorBoundary.tsx
 } ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } ;
-=======
 
-=======
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface PageErrorBoundaryProps {;
   children: React.ReactNode,;
   pageName?: string,;
@@ -639,12 +598,9 @@ export default function PageErrorBoundary({;
       {children}
     </ErrorBoundary>);
 :src/components/PageErrorBoundary.tsx
-<<<<<<< HEAD
 }
 }
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 }
 }
@@ -652,8 +608,4 @@ export default function PageErrorBoundary({;
     </ErrorBoundary>
   );
 :src/components/PageErrorBoundary.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/PageErrorBoundary.tsx

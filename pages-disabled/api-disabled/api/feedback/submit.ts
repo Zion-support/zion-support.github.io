@@ -1,7 +1,5 @@
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/feedback/submit.ts
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -29,10 +27,6 @@ id: responseId
     userAgent: req.headers["user-agent"] |""
     ts: Date.now()
   }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     id: responseId,
     rating,
     comment: String(comment || "").slice(0, 2000),
@@ -42,8 +36,6 @@ id: responseId
     ts: Date && Date.now(),
   };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const rows = readAll();
   rows && rows.push(entry);
   writeAll(rows);
@@ -51,9 +43,6 @@ id: responseId
 }
 :pages/api/feedback/submit.ts
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/feedback/submit.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -157,18 +146,10 @@ export default function handler($2) {;
     userAgent: req.headers['user-agent'] || '',;
     ts: Date.now()},;
 :pages/api/feedback/submit.ts
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/feedback/submit.ts
   const rows = readAll();
   rows.push(entry);
   writeAll(rows);
   return res.status(200).json({ ok: true });
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/feedback/submit.ts
   }
   const entry = {;
     id: response_id;
@@ -185,7 +166,3 @@ export default function handler($2) {;
   return res.status (200).json ({ ok: true });
 }
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

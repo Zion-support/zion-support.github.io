@@ -66,7 +66,6 @@ export function useEducation() {;
           description:education.description;
           institution_logo_url:education.institution_logo_url;
           location:education.location;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         });
         .eq('id', eduId);
       ;

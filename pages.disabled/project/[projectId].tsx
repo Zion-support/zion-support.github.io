@@ -1,17 +1,9 @@
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD:pages/project/[projectId].tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-=======
 import { useEffect, useState } from "react";"
 import { useRouter } from "next/router";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/project/[projectId].tsx
 import FeedbackModal from "../../components/ui/FeedbackModal";
 export default function ProjectPage() {}
   const router = useRouter()
@@ -27,12 +19,7 @@ export default function ProjectPage() {}
     // "x-demo-user-role": "talent""
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import { useEffect, useState } from "react",;
 import { useRouter } from "next/router",;
@@ -45,14 +32,9 @@ import FeedbackModal from "../../components/ui/FeedbackModal",
 
 :pages_backup/project/[projectId].tsx
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function ProjectPage() {
-=======
 
 export default function ProjectPage() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/project/[projectId].tsx
   const router = useRouter(),
   const { projectId } = router.query as { projectId?: string },
   const [project, setProject] = useState<any | null>(null),
@@ -61,7 +43,6 @@ export default function ProjectPage() {}
   const [note, setNote] = useState(""),
 
 :pages_backup/project/[projectId].tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const headers = {
     "x-demo-user-role": "client",
     "x-demo-user-id": "client-1",
@@ -69,22 +50,13 @@ export default function ProjectPage() {}
     // "x-demo-user-role": "talent","
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>,
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/project/[projectId].tsx
   useEffect(() => {
     async function load() {
       if (!projectId) return
       try {
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD
 
         setLoading(true),
         const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers }),
@@ -130,25 +102,20 @@ if (return, ) {
 }
         set_project (json.project);
 :pages_backup/project/[projectId].tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       } catch (e: any) {
         set_error (e.message);
       } finally {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         setProject(json.project)
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       } catch (e: any) {
         setError(e.message)
       } finally {
         setLoading(false)
-<<<<<<< HEAD
       } catch (e: any) {
         set_error (e.message);
       } finally {
 
         setLoading(false)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -161,14 +128,8 @@ if (return, ) {
 }
     load()
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/project/[projectId].tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/project/[projectId].tsx
   }, [projectId]),
   const [showFeedback, setShowFeedback] = useState(false),
   async function addNote() {}
@@ -178,12 +139,7 @@ if (return, ) {
       body: JSON.stringify({ id: projectId, action: "add_note", content: note })}),
     const json = await res.json(),
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/project/[projectId].tsx
     if (json.ok) {
       setProject(json.project)
       setNote("")
@@ -200,14 +156,9 @@ if (return, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/project/[projectId].tsx
       } catch (error) {
     console.error("Error:", error);
-=======
 
     if (json.ok) {}
       setProject(json.project)"
@@ -216,10 +167,8 @@ if (return, ) {
 
       } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/project/[projectId].tsx
     return res.status(500).json({ error: "Internal server error" });
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
     } catch (error) {"
@@ -233,9 +182,6 @@ async function markCompleted() {
       method: "PATCH",
       headers: { "Content-Type": "application/json", ...headers },
       body: JSON.stringify({ id: projectId, action: "mark_completed" })}),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (json.ok) {
       setProject(json.project)
 
@@ -244,8 +190,6 @@ async function markCompleted() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useEffect, useState } from "react",
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
@@ -253,7 +197,6 @@ export default function ProjectPage() {
   const router = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
       setShowFeedback(true)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {loading && <div>Loading…</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -269,8 +212,6 @@ if (json.ok) {
       setProject(json.project)
 
       setShowFeedback(true)
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       {project && (
         <div className="space-y-6">
@@ -283,9 +224,6 @@ if (json.ok) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
     if (json.ok) {}
       setProject(json.project)
@@ -309,7 +247,6 @@ if (json.ok) {
   }
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/project/[projectId].tsx
             </span>
           </div>"
           <section className="rounded border p-4">"
@@ -325,10 +262,7 @@ if (json.ok) {
             <h2 className="font-medium mb-2">Timeline</h2>"
             <ul className="list-disc pl-6 space-y-1 text-sm">
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/project/[projectId].tsx
             </span>;
           </div>;"
           <section className="rounded border p - 4">;"
@@ -344,10 +278,7 @@ if (json.ok) {
             <h2 className="font - medium mb - 2">Timeline</h2>;"
             <ul className="list - disc pl - 6 space - y-1 text - sm">;
 :pages_backup/project/[projectId].tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {project.timeline?.length ? (
-<<<<<<< HEAD
                 project.timeline.map((m: any) => (
                   <li key={m.id}>
                     <span className="font-medium">{m.title}</span>
@@ -431,12 +362,8 @@ if ( {) {
               {project.timeline?.length ? (;
                 project.timeline.map((m: any) => (;
                   <li key={m.id}>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
               {project.timeline?.length ? (
 :pages_backup/project/[projectId].tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                 project.timeline.map((m: any) => (
                   <li key={m.id}>
@@ -565,7 +492,6 @@ export default function ProjectPage(req, res) {
               {project.timeline?.length ? (;
                 project.timeline.map((m: any) => (;
                   <li key={m.id}>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/project/[projectId].tsx
                     <span className="font-medium">{m.title}</span>;
                     {m.dueDateIso && <span> • due {new Date(m.dueDateIso).toLocaleDateString()}</span>  } catch (error) {"
     console.error("Error:", error);"
@@ -592,31 +518,17 @@ export default function ProjectPage(req, res) {
   }
 }
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/project/[projectId].tsx
 
             </ul>
           </section>
 
 :pages_backup/project/[projectId].tsx
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/project/[projectId].tsx
             </ul>
           </section>"
           <section className="rounded border p-4">"
             <h2 className="font-medium mb-2">Documents</h2>"
             <ul className="list-disc pl-6 space-y-1 text-sm">
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </li>))) : (
                 <li > No timeline defined</li>)}
             </ul>;
@@ -625,7 +537,6 @@ export default function ProjectPage(req, res) {
             <h2 className="font - medium mb - 2">Documents</h2>;
             <ul className="list - disc pl - 6 space - y-1 text - sm">;
 :pages_backup/project/[projectId].tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {project.documents?.length ? (
                 project.documents.map((d: any) => (
                   <li key={d.id}>
@@ -636,26 +547,17 @@ export default function ProjectPage(req, res) {
                       <a href={d.url} className="text-indigo-600 underline" target="_blank" rel="noreferrer">{d.name}</Link>
                     ) : (
                       <span>{d.name}</span>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/project/[projectId].tsx
                     <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
 
                     <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
                     <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </li>
                 ))
               ) : (
@@ -664,11 +566,7 @@ export default function ProjectPage(req, res) {
             </ul>
 :pages_backup/project/[projectId].tsx
           </section>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <section className="rounded border p-4 space-y-3">
             <h2 className="font-medium">Shared notes/messages</h2>
             <div className="space-y-2">
@@ -676,8 +574,6 @@ export default function ProjectPage(req, res) {
                 project.notes.map((n: any) => ("
                   <div key={n.id} className="text-sm">
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     <span className="font-medium">{n.authorRole}</span>: {n.content  } catch (error) {
     console.error("Error:", error);
@@ -687,21 +583,13 @@ export default function ProjectPage(req, res) {
 
 :pages_backup/project/[projectId].tsx
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/project/[projectId].tsx
                     <span className="text-gray-500"> • {new Date(n.createdAtIso).toLocaleString()}</span>
                   </div>
                 ))
               ) : ("
                 <div className="text-sm text-gray-600">No notes yet.</div>
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 :pages_backup/project/[projectId].tsx
               )  } catch (error) {
@@ -710,23 +598,13 @@ export default function ProjectPage(req, res) {
   }
 }
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/project/[projectId].tsx
             </div>
             <div className="flex gap-2">
               <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a note" className="flex-1 border rounded px-3 py-2" />
-=======
             </div>"
             <div className="flex gap-2">"
               <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a note" className="flex-1 border rounded px-3 py-2" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/project/[projectId].tsx
               <button onClick={addNote} className="px-3 py-2 rounded bg-gray-900 text-white">Add</button>
             </div>
           </section>"
@@ -734,14 +612,9 @@ export default function ProjectPage(req, res) {
             {project.status !== "COMPLETED" && ("
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD:pages_backup/project/[projectId].tsx
-<<<<<<< HEAD:pages/project/[projectId].tsx
-<<<<<<< HEAD
 
 />
     </div>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
             )  } catch (error) {"
     console.error("Error:", error);"
@@ -762,11 +635,9 @@ export default function ProjectPage(req, res) {
 :pages_backup/project/[projectId].tsx
             )  } catch (error) {
     console.error("Error:", error);
-=======
 
             )  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/project/[projectId].tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -806,23 +677,13 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 :pages_backup/project/[projectId].tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/project/[projectId].tsx
             )}
           </div>
         </div>
@@ -837,12 +698,5 @@ export default function ProjectPage(req, res) {
   )
 }
 :pages_backup/project/[projectId].tsx
-<<<<<<< HEAD:pages/project/[projectId].tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/project/[projectId].tsx

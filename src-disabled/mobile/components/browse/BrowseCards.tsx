@@ -1,6 +1,4 @@
 :src_backup/mobile/components/browse/BrowseCards.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface BrowseItem {;
 import React, { useState } from 'react';'
 import { Card, CardContent } from '@/components / ui / card';'
@@ -38,7 +36,6 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface BrowseItem {
-=======
 
 interface BrowseItem {
   id: string;,
@@ -47,7 +44,6 @@ interface BrowseItem {
   description: string;,
   location?: string;,
   badges: string[];,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/components/browse/BrowseCards.tsx
   id: string;
   title: string;
   subtitle: string;
@@ -145,31 +141,16 @@ return (
                     </div>;
 
 :src_backup/mobile/components/browse/BrowseCards.tsx
-<<<<<<< HEAD:src/mobile/components/browse/BrowseCards.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 :src/mobile/components/browse/BrowseCards.tsx
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 :src/mobile/components/browse/BrowseCards.tsx
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/mobile/components/browse/BrowseCards.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/browse/BrowseCards.tsx
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-=======
 "
 import React, { useState } from "react","
 import { Card, CardContent } from "@/components/ui/card","
@@ -177,7 +158,6 @@ import { Button } from "@/components/ui/button","
 import { Badge } from "@/components/ui/badge",'
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseCards.tsx
 
 interface BrowseItem {}
   id: string,
@@ -191,9 +171,7 @@ interface BrowseItem {}
   image?: string;
   match?: number;
   timePosted?: string
-=======
   timePosted?: string
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/components/browse/BrowseCards.tsx
 }
 interface BrowseCardsProps {,
   items: BrowseItem[],
@@ -245,18 +223,11 @@ const [ savedItems, setSavedItems ] = useState<string[]>([]),
       {items.map((item) => ("
         <Card key={item.id} className="overflow-hidden">
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/components/browse/BrowseCards.tsx
           <CardContent className="p-0">
             <div className="p-4">
               <div className="flex justify-between">
                 <div className="flex items-center gap-3">
                   {type === "talents" ? (
-=======
 
 "
           <CardContent className="p-0">"
@@ -264,11 +235,9 @@ const [ savedItems, setSavedItems ] = useState<string[]>([]),
               <div className="flex justify-between">"
                 <div className="flex items-center gap-3">"
                   {type === "talents" ? ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseCards.tsx
                     <Avatar className="h-12 w-12">
                       <AvatarImage src={item.image} alt={item.title} />
 :src_backup/mobile/components/browse/BrowseCards.tsx
-<<<<<<< HEAD
                       <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
                     </Avatar>
                   ) : ("
@@ -276,8 +245,6 @@ const [ savedItems, setSavedItems ] = useState<string[]>([]),
                       <span className="text-primary font-semibold">JOB</span>
                     </div>
                   )}
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
-<<<<<<< HEAD
                   <div>
                     <h3 className="font-medium">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>
@@ -295,7 +262,6 @@ const [ savedItems, setSavedItems ] = useState<string[]>([]),
 
 <button
                   className="h-8 w-8 flex items-center justify-center"
-=======
                 <button
                   className="h-8 w-8 flex items-center justify-center""
                   onClick={() => toggleSaved(item.id)}
@@ -307,7 +273,6 @@ const [ savedItems, setSavedItems ] = useState<string[]>([]),
 
                 <button
                   className="h-8 w-8 flex items-center justify-center"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/components/browse/BrowseCards.tsx
 
                   )}
                 </button>;
@@ -377,7 +342,6 @@ const [ savedItems, setSavedItems ] = useState<string[]>([]),
                 </div>
                 <button "
                   className="h-8 w-8 flex items-center justify-center"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   onClick={() => toggleSaved(item.id)}
                 >
                   {savedItems.includes(item.id) ? ("
@@ -388,15 +352,9 @@ const [ savedItems, setSavedItems ] = useState<string[]>([]),
                 </button>
               </div>
 :src_backup/mobile/components/browse/BrowseCards.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
               "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseCards.tsx
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/components/browse/BrowseCards.tsx
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge, index) => (
                   <Badge;
@@ -458,9 +416,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     </div>;
 :src_backup/mobile/components/browse/BrowseCards.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   )}
 :src_backup/mobile/components/browse/BrowseCards.tsx
 <div>;
@@ -527,21 +482,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
               </div>
 :src_backup/mobile/components/browse/BrowseCards.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
 
               <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
 
 :src_backup/mobile/components/browse/BrowseCards.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {item.location && (
                   <div className="flex items-center gap-1">
-=======
                 {item.location && ("
                   <div className="flex items-center gap-1">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseCards.tsx
                     <MapPin className="h-3 w-3" />
                     <span>{item.location}</span>
                   </div>
@@ -564,12 +514,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 )}
 :src_backup/mobile/components/browse/BrowseCards.tsx
 {item.match && (
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 {item.match && (
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/components/browse/BrowseCards.tsx
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
 <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
 
@@ -596,19 +542,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     {item.match}% match
-=======
 
 "
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
                     {item.match}% match;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseCards.tsx
                   </div>
                 )}
               </div>
             </div>
 :src_backup/mobile/components/browse/BrowseCards.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               </div>;
 '
@@ -691,33 +633,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ))}
 :src_backup/mobile/components/browse/BrowseCards.tsx
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
                 size="sm"
-=======
-=======
             "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseCards.tsx
             <div className="border-t border-border p-3 flex justify-end">
               <Button "
                 size="sm"
 
 :src_backup/mobile/components/browse/BrowseCards.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 onClick={() => onViewDetails(item.id)}
                 className="gap-1"
-=======
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
                 size="sm"
 
                 onClick={() => onViewDetails(item.id)}
                 className="gap-1"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/components/browse/BrowseCards.tsx
 <div className='border-t border-border p-3 flex justify-end'>
               <Button
                 size='sm'
@@ -727,8 +659,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 View Details <ChevronRight className='h-4 w-4' />
 :src_backup/mobile/components/browse/BrowseCards.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/components/browse/BrowseCards.tsx
               </Button>
             </div>
           </CardContent>
@@ -872,20 +802,13 @@ setSavedItems (prev =>;
 }
 
 :src_backup/mobile/components/browse/BrowseCards.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       ))}
 :src/mobile/components/browse/BrowseCards.tsx
 </div>;
   );
 }
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
       ))}
     </div>;
   );
@@ -900,14 +823,11 @@ setSavedItems (prev =>;
 ;
 
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/components/browse/BrowseCards.tsx
     </div>
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src_backup/mobile/components/browse/BrowseCards.tsx
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/browse/BrowseCards.tsx
-=======
 </string>
     <div className='space-y-4 pb-24'>;
 </div>
@@ -1142,4 +1062,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     </div>);
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/mobile/components/browse/BrowseCards.tsx

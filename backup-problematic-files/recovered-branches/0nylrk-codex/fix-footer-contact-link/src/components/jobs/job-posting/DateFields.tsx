@@ -16,7 +16,6 @@ interface DateFieldsProps {;
 }
 export function DateFields({ startDate, setStartDate, endDate, setEndDate } DateFieldsProps) {;
 return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       <div>;
 </div>)"
@@ -26,11 +25,7 @@ return (;
           <PopoverTrigger asChild>;
 
             <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                 )}
               >;
 
@@ -48,12 +43,10 @@ return (;
                 ) :(;
                   <span>Pick a date</span>;
                 )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               </Button>;
             </FormControl>;
           </PopoverTrigger>;
           <PopoverContent className="w-auto p-0" align="start">;
-<<<<<<< HEAD
               initialFocus;
             />;
           </PopoverContent>;
@@ -94,4 +87,3 @@ setEndDate: (date: Date | undefined) => void
 }</Button> </FormControl> </PopoverTrigger> <PopoverContent className=" w-auto p-0"align=" start"> <Calendar initialFocus /> </PopoverContent> </Popover> </div> <div> <Label htmlFor=" expiryDate">Expiry Date (Optional) </Label> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
 }</Button> </FormControl> </PopoverTrigger> <PopoverContent className=" w-auto p-0"align=" start" > <Calendar initialFocus /> </PopoverContent> </Popover> </div> </div>) 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

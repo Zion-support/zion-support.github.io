@@ -1,13 +1,10 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/CountrySelector.tsx
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
-=======
 import { useState, useEffect } from "react";""
 import { Globe } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";""
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 interface CountrySelectorProps {;
   onCountryChange: (country:CountryPricing | null) => void;,;
@@ -27,8 +24,6 @@ export function CountrySelector({ onCountryChange, selectedCountry } CountrySele
         onValueChange={handleCountryChange} ;
         value={selectedCountry?.country}
       >;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/CountrySelector.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
           <SelectValue placeholder="Select a country" />;
         </SelectTrigger>;
@@ -41,19 +36,16 @@ export function CountrySelector({ onCountryChange, selectedCountry } CountrySele
           <div className="p-2">;
             <p className="text-sm text-zion-slate-light pb-1">All Countries</p>;
             {onsiteServicePricing;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/CountrySelector.tsx
               .sort((a, b) => a.country.localeCompare(b.country));
               .map((item) => (;
               <SelectItem key={item.country} value={item.country} className="text-white">;
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/services/CountrySelector.tsx
               </SelectItem>;
             ))}
           </div>;
         </SelectContent>;
       </Select>;
     </div>;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/CountrySelector.tsx
   ),;}
  interface CountrySelectorProps {;
   onCountryChange: (country: CountryPricing | null) => void;
@@ -82,4 +74,3 @@ return (<div className="mb-6" > <h3 className="text-xl font-semibold text-white 
 }</div> </SelectContent> </Select> </div>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/CountrySelector.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/services/CountrySelector.tsx

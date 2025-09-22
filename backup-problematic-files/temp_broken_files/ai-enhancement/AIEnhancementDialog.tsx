@@ -1,5 +1,4 @@
 
-=======
 import React from 'react',;
 import {;
   Dialog,;
@@ -32,13 +31,11 @@ export function AIEnhancementDialog({;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;
       <DialogContent className="max-w-3xl">;
         <DialogHeader>;
           <DialogTitle>{title}</DialogTitle>;
         </DialogHeader>;
-<<<<<<< HEAD
 
           title={title}
           defaultOptions={defaultOptions}

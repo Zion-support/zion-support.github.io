@@ -210,7 +210,6 @@ title:"Proceeding to checkout",;
   },;
 ;
   return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -221,8 +220,6 @@ title:"Proceeding to checkout",;
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;
                 {/* Main Image */}
                 <div className="aspect-video w-full relative">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <img ;
                     src={equipment.images[selectedImageIndex]} ;
                     alt={equipment.name} ;"
@@ -260,33 +257,27 @@ title:"Proceeding to checkout",;
                   <TabsContent value="description" className="mt-4">;
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
                       <p className="text-zion-slate-light whitespace-pre-line">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         {equipment.description}
                       </p>;
                     </div>;
                   </TabsContent>;
-<<<<<<< HEAD
                           </li>;                        ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       </ul>;
 </div>;
                   </TabsContent>;
                 </Tabs>;
               </div>;
             </div>;
-<<<<<<< HEAD
                         <Star;
                           key={i}`;
                           className={`h-5 w-5 ${;
 i < Math.floor(equipment.rating!) ;
                               ? "text-zion-cyan fill-zion-cyan" ;
                               :"text-zion-slate-light";                          }`}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                         />;
                       ))}
                     </div>;
                     <span className="text-sm text-zion-slate-light">;
-<<<<<<< HEAD
                     </span>;
                   </div>;                )}"
                 <div className="text-3xl font-bold text-white mb-4">;                  {equipment.currency}{equipment.price.toLocaleString()}"
@@ -301,12 +292,10 @@ i < Math.floor(equipment.rating!) ;
                     </div>;                  )}
 </div>;
                 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {/* Quantity */}
                 <div className="mb-6">;
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>;
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">;
-<<<<<<< HEAD
                       onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
 </button>
                       disabled={quantity <= 1 || !equipment.inStock}
@@ -321,13 +310,11 @@ i < Math.floor(equipment.rating!) ;
 </input>
                       onClick={() => setQuantity(prev => prev + 1)}
 disabled={!equipment.inStock}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     >;
                       +;
                     </button>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
                   <Button ;
                     onClick={handleBuyNow}
                     disabled={isAdding || !equipment.inStock}"
@@ -338,12 +325,10 @@ disabled={isAdding || !equipment.inStock}
                     variant="outline";
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10";
                   >;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <ShoppingCart className="h-4 w-4 mr-2" />;
                     Add to Cart;
                   </Button>;
                 </div>;
-<<<<<<< HEAD
                 {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
@@ -548,5 +533,4 @@ if (!equipment) {"
 }<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {"
 }</p> </div> </div>) 
 }</div> </div> </div> </div> </div> </div> <Footer /> </>) 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }

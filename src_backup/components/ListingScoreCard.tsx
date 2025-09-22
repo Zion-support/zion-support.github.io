@@ -1,6 +1,4 @@
 :src/components/ListingScoreCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -29,8 +27,6 @@ interface ListingScoreCardProps {
   tags?: string[];
   author?: string;
 :src/components/ListingScoreCard.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 interface ListingScoreCardProps {
   title: string,
@@ -53,7 +49,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 export function ListingScoreCard({ 
 :src/components/ListingScoreCard.tsx
-<<<<<<< HEAD
   title, 
   description, 
   image, 
@@ -74,17 +69,13 @@ interface ListingScoreCardProps {
 }
 
 :src/components/ListingScoreCard.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   tags,
-=======
 export function ListingScoreCard({ 
   title, 
   description, 
   image, 
   category,   tags,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   author,
   authorImage,
   aiScore,
@@ -93,8 +84,6 @@ export function ListingScoreCard({
   className
 }: ListingScoreCardProps) {
 :src/components/ListingScoreCard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [mainImageError, setMainImageError] = useState(false),
   const [authorImageError, setAuthorImageError] = useState(false),
 
@@ -107,17 +96,13 @@ export function ListingScoreCard({
         <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
           <Image
             src={image}
-=======
 
-=======
 
       {image && !mainImageError && (
         <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
           <Image
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ListingScoreCard.tsx
             src={image} 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             alt={title} 
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             onError={() => setMainImageError(true)}
@@ -125,12 +110,7 @@ export function ListingScoreCard({
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
           />
 :src/components/ListingScoreCard.tsx
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src/components/ListingScoreCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ListingScoreCard.tsx
         </div>
       )}
       {(!image || mainImageError) && ( // Fallback if no image or error
@@ -140,7 +120,6 @@ export function ListingScoreCard({
       )}
 
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
 
         {rating > 0 && (
@@ -190,7 +169,6 @@ export function ListingScoreCard(): any ({;  author_image?: string;
   reviewCount = 0,;
 :src/components/ListingScoreCard.tsx
   author_image?: string;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ai_score?: number;
   rating?: number;
   review_count?: number;
@@ -226,7 +204,6 @@ function ListingScoreCard() {
             variant='secondary'
             className='bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30'>;
             {category}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       <div className="flex flex-col p-4 flex-grow">
         <div className="mb-2 flex items-center justify-between">
@@ -362,8 +339,6 @@ className={cn(;
                   )}
                 />
 :src/components/ListingScoreCard.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))}
             </div>
             <span className="text-sm text-zion-slate-light ml-1">
@@ -386,13 +361,10 @@ className={cn(;
         </Button>
 
 :src/components/ListingScoreCard.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {author && (
           <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">
-=======
                 {author && (
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {authorImage && !authorImageError ? (
 <div className="relative h-8 w-8 rounded-full mr-2 overflow-hidden"> {/* Added relative and overflow-hidden */}
                 <Image
@@ -406,7 +378,6 @@ className={cn(;
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
 :src/components/ListingScoreCard.tsx
-<<<<<<< HEAD
                 {author.charAt(0)}
               </div>;
             )}
@@ -416,33 +387,22 @@ className={cn(;
             )}
 
 :src/components/ListingScoreCard.tsx
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <span className="text-sm text-zion-slate-light">{author}</span>
           </div>
         )}
 </div>;
     </div>;
-<<<<<<< HEAD
   );
 
 }
 ;
 :src/components/ListingScoreCard.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       </div>
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ListingScoreCard.tsx

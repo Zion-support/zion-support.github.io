@@ -80,12 +80,10 @@ export type {;
   EntityExtraction;
   TextSummary;
 } from './textAnalysisService',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // Service categories for easy discovery;
 export const SERVICE_CATEGORIES = {;
   UTILITIES:{;
-<<<<<<< HEAD
     name:'Utility Tools';
     description:'Essential tools for everyday tasks';
     services:['urlShortenerpasswordGenerator', 'qrCodeGenerator'];
@@ -114,12 +112,10 @@ export const SERVICE_CATEGORIES = {;
     services:['textAnalysis'];
   }
 } as const,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // Service metadata for the application;
 export const SERVICES_METADATA = {;
   urlShortener:{;
-<<<<<<< HEAD
     name:'URL Shortener';
     description:'Create short, trackable URLs with analytics';
     icon:'🔗';
@@ -246,12 +242,10 @@ features:[;
     apiEndpoint:'/api/text-analysis';
   }
 } as const,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 // Service availability and status;
 export const getServiceStatus = () => {;
   return {;
-<<<<<<< HEAD
     urlShortener:{ status:'active', uptime:'99.9%', lastUpdated:new Date() };
     passwordGenerator:{ status:'active', uptime:'99.9%', lastUpdated:new Date() };
     qrCodeGenerator:{ status:'active', uptime:'99.9%', lastUpdated:new Date() };
@@ -263,7 +257,6 @@ textAnalysis:{ status:'active', uptime:'99.9%', lastUpdated:new Date() }
 // Service usage statistics;
 export const getServiceStats = () => {;
   return {;
-<<<<<<< HEAD
     totalUsers:15420;
     totalRequests:2847500;
     averageResponseTime:125;
@@ -322,4 +315,3 @@ textAnalysis: {
 }
 }
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

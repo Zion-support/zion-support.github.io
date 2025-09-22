@@ -11,7 +11,6 @@ import { useState, useEffect, useCallback, useMemo } from 'react','
 import { motion, AnimatePresence } from 'framer-motion',
 :temp_exclude/hooks.disabled/TalentsPage.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
 import { generateAITalents, getTalentMarketStats, getRecommendedTalents } from '@/utils/talentAutoFeedAlgorithm',
@@ -595,6 +594,4 @@ export default function TalentsPage() { return null; }
 }
 
 ;
-=======
 ;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/TalentsPage.tsx

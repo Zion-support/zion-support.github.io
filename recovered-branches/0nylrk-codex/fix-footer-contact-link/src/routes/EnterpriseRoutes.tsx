@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import EnterprisePlans from "../pages/EnterprisePlans";
@@ -8,21 +5,13 @@ import EnterpriseAdmin from "../pages/EnterpriseAdmin";
 import CompanyWorkspace from "../pages/CompanyWorkspace";
 import EnterpriseBilling from "../pages/EnterpriseBilling";
 import ZionHireAI from "../pages/ZionHireAI";
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const EnterpriseRoutes = () => {
 import {Fragment} from "react";
-=======
 const EnterpriseRoutes = () => {import {Fragment} from "react";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 const EnterpriseRoutes = () => {import {Fragment} from "react";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 const EnterpriseRoutes = () => {
 const EnterpriseRoutes = () => {;
 import {Fragment} from "react";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Route, Routes} from "react-router-dom";
 import EnterprisePlans from "../pages/EnterprisePlans";
 import EnterpriseAdmin from "../pages/EnterpriseAdmin";
@@ -35,7 +24,6 @@ import EnterprisePlans from "../pages/EnterprisePlans",
 import EnterpriseAdmin from "../pages/EnterpriseAdmin",
 import CompanyWorkspace from "../pages/CompanyWorkspace",
 import EnterpriseBilling from "../pages/EnterpriseBilling";
-=======
 import { Fragment } from "react";"
 import { Route, Routes } from "react-router-dom";"
 import EnterprisePlans from "../pages/EnterprisePlans";"
@@ -53,7 +41,6 @@ import EnterprisePlans from "../pages/EnterprisePlans";"
 import EnterpriseAdmin from "../pages/EnterpriseAdmin";"
 import CompanyWorkspace from "../pages/CompanyWorkspace";"
 import EnterpriseBilling from "../pages/EnterpriseBilling";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import ZionHireAI from "../pages/ZionHireAI";
 
 "
@@ -94,11 +81,8 @@ import EnterpriseAdmin from "../pages/EnterpriseAdmin",;"
 import CompanyWorkspace from "../pages/CompanyWorkspace",;"
 import EnterpriseBilling from "../pages/EnterpriseBilling",;"
 import ZionHireAI from "../pages/ZionHireAI",;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const EnterpriseRoutes = () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const EnterpriseRoutes = () => {;
       <Route path="/zion-hire-ai" element={<ZionHireAI />} />
       <Route path="/hire-ai" element={<ZionHireAI />} />
@@ -109,11 +93,7 @@ const EnterpriseRoutes = () => {;
 export default EnterpriseRoutes;
 export default EnterpriseRoutes;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default EnterpriseRoutes;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 };
 
 };
@@ -123,7 +103,6 @@ import EnterprisePlans from "../pages / EnterprisePlans";
 import EnterpriseAdmin from "../pages / EnterpriseAdmin";
 import CompanyWorkspace from "../pages / CompanyWorkspace";
 import EnterpriseBilling from "../pages / EnterpriseBilling";
-=======
 
 };
 
@@ -133,7 +112,6 @@ import EnterprisePlans from "../pages / EnterprisePlans";"
 import EnterpriseAdmin from "../pages / EnterpriseAdmin";"
 import CompanyWorkspace from "../pages / CompanyWorkspace";"
 import EnterpriseBilling from "../pages / EnterpriseBilling";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import ZionHireAI from "../pages / ZionHireAI";
 const EnterpriseRoutes = () =>: any {}
   return (
@@ -152,10 +130,6 @@ const EnterpriseRoutes = () =>: any {}
 ;
 export default EnterpriseRoutes;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),;
 },;
 ;export default EnterpriseRoutes,
@@ -184,16 +158,6 @@ export default EnterpriseRoutes;
   );
 },;
 export default EnterpriseRoutes;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

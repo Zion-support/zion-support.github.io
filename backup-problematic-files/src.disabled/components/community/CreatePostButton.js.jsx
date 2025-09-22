@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return() <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
 const CreatePostButton.js = ({ className }) => {
   return ('
@@ -10,4 +9,3 @@ const CreatePostButton.js = ({ className }) => {
   )
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

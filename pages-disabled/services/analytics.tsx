@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -23,10 +22,8 @@ export default function AnalyticsServicesPage() {
   const services = [
 
 import React from 'react';
-=======
 
 import React from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Head from 'next / head';
 '
 import { motion } from 'framer-motion';
@@ -53,9 +50,7 @@ export default /**;
  */
 function AnalyticsServicesPage() {}
   const services = [;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
-<<<<<<< HEAD
       title: 'Big Data Processing'
       description: 'Scalable data processing and analytics platforms'
       features: [
@@ -114,9 +109,6 @@ function AnalyticsServicesPage() {}
     { number: '24/7', label: 'Real-time Analytics', icon: Clock }
     { number: '300%', label: 'ROI Improvement', icon: TrendingUp }
   ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   BarChart3,
   Database,
   Zap,
@@ -127,7 +119,6 @@ function AnalyticsServicesPage() {}
   CheckCircle,
   Star,
   Users,
-<<<<<<< HEAD
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -143,12 +134,9 @@ export default function AnalyticsServicesPage() {
       description: "Scalable data processing and analytics platforms",
       features: ["Data Pipeline Engineering", "Real-time Processing", "Batch Processing", "Data Quality"],
       price: "From $8,000",
-<<<<<<< HEAD
       title: 'Big Data Processing',
-=======
 '
       title: 'Big Data Processing','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: 'Scalable data processing and analytics platforms',
       features: [;'
         'Data Pipeline Engineering','
@@ -157,9 +145,7 @@ export default function AnalyticsServicesPage() {
         'Data Quality',
       ],'
       price: 'From $8, 000',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       icon: Database,
-<<<<<<< HEAD
       color: "from-indigo-500 to-purple-500"
     },
     {
@@ -194,9 +180,7 @@ export default function AnalyticsServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
   ],
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const stats = [
     { number: "1M+", label: "Data Points Processed", icon: Database },
     { number: "95%", label: "Accuracy Rate", icon: CheckCircle },
@@ -213,8 +197,6 @@ export default function AnalyticsServicesPage() {
         <link rel="canonical" href="https://ziontechgroup.com/services/analytics" />
       </Head>
       <EnhancedNavigation />
-=======
-=======
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
@@ -246,8 +228,6 @@ export default function AnalyticsServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='mb-8'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-6">
               Data Analytics
@@ -258,8 +238,6 @@ className='mb-8'
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
               From big data processing to predictive analytics, we help
@@ -310,8 +288,6 @@ className='mb-8'
               Data Analytics;
             </h1>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Data Consultation'
@@ -331,14 +307,11 @@ className='mb-8'
           >"
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
 From big data processing to predictive analytics, we help businesses harness the power 
-<<<<<<< HEAD
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
               Data Consultation
               <ArrowRight className="w-5 h-5" />
-=======
               <ArrowRight className='w-5 h-5' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </button>
           </motion.div>
         </div>
@@ -466,14 +439,9 @@ export default function AnalyticsServicesPage(req, res) {
             </p>;
           </motion.div>;
           <motion.div;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </p>
           </motion.div>
           <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 className='text-center'
               >
                 <div className='w-16 h-16 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4'>
@@ -492,14 +460,12 @@ className='text-center'
 <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 </p>
           </motion.div>
           <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -520,8 +486,6 @@ transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
           >"
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
 From big data processing to predictive analytics, we help businesses harness the power
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               of their data to make informed decisions and gain competitive advantages.
             </p>"
             <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -531,9 +495,7 @@ From big data processing to predictive analytics, we help businesses harness the
           </motion.div>
         </div>
       </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
 
 >
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-6'>
@@ -557,7 +519,6 @@ From big data processing to predictive analytics, we help businesses harness the
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From big data processing to predictive analytics, we help businesses harness the power 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               of their data to make informed decisions and gain competitive advantages.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -568,7 +529,6 @@ From big data processing to predictive analytics, we help businesses harness the
         </div>
       </section>
 
-<<<<<<< HEAD
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -582,10 +542,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
               >"
                 <div className="w-16 h-16 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">"
                   <stat.icon className="w-8 h-8 text-purple-400" />
@@ -595,38 +551,27 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
 
           </div>;
         </div>;
       </section>;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <h2 className="text-4xl font-bold text-white mb-6">Data Analytics Services</h2>
-=======
 
           >"
             <h2 className="text-4xl font-bold text-white mb-6">Data Analytics Services</h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Comprehensive analytics solutions designed to unlock the value of your data;
             </p>
           </motion.div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <motion.div
                 key={service.title  } catch (error) {
     console.error("Error:", error);
@@ -654,11 +599,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <motion.div
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
               <motion.div;
 '
@@ -676,57 +617,36 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               <motion&& motion.div;
                 key={service && service.title}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>"
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
-=======
 "
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>"
                 <p className="text-white/70 mb-6">{service.description}</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature) => ("
                     <li key={feature} className="flex items-center text-white/80">"
                       <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
                 </ul>
                 <div className="flex items-center justify-between">
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </ul>
                 <div className="flex items-center justify-between">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {feature  } catch (error) {
     console.error("Error:", error);
-=======
 
                       {feature  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -737,28 +657,19 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   }
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </ul>
                 <div className="flex items-center justify-between">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <span className="text-2xl font-bold text-purple-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Get Started
                   </button>
                 </div>
               </motion.div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             ))  } catch (error) {
     console.error("Error:", error);
-=======
 
                 </ul>"
                 <div className="flex items-center justify-between">
@@ -772,13 +683,11 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
             ))  } catch (error) {"
     console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
           </div>;
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
@@ -810,56 +719,37 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
           >
 "
             <h2 className="text-4xl font-bold text-white mb-6">'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               Ready to Unlock Your Data's Potential?
             </h2>"
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">'
               Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making.
             </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 View Demos
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                 View Demos;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }</div> </div> </section> <motion.div initial= {
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ),
 "
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 
 }</div> </div> </section> <motion.div initial= {
-<<<<<<< HEAD
 }</div> </div> </section> <motion.div initial= {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }</div> </div> </section> <motion.div initial= {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;'
             <h2 className='text-4xl font-bold text-white mb-6'>;'
@@ -886,11 +776,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 "
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
-<<<<<<< HEAD
 }</div> </div> </section> <motion.div initial= {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -912,8 +798,6 @@ duration: 0 && 0.8
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Unlock Your Data's Potential? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making. </p> Data Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Demos </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }</div> </div> </section> <motion&& motion.div initial= {}
 }</div> </div> </section> <motion.div initial= {}
   {}
@@ -927,7 +811,6 @@ duration: 0 && 0.8
 '"
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Unlock Your Data's Potential? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making. </p> Data Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Demos </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   )
 }'
             <button className='px - 8 py - 4 bg - gradient - to - r from - indigo - 600 to - purple - 600 hover:from - indigo - 700 hover:to - purple - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>;
@@ -1033,7 +916,6 @@ duration: 0 && 0.8
                 Data Assessment;
               </button>;'
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Demos;
-<<<<<<< HEAD
 
   )
           >;"
@@ -1049,18 +931,13 @@ duration: 0 && 0.8
               </button>;"
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
                 View Demos;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </button>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
       <EnhancedFooter />;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>;
   );
   } catch (error) {"
@@ -1068,12 +945,5 @@ duration: 0 && 0.8
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

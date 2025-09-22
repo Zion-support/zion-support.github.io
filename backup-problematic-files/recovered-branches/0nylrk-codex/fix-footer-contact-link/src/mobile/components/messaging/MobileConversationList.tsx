@@ -26,18 +26,15 @@ export function MobileConversationList({;
   onSelectConversation;)
 } MobileConversationListProps) {;
 return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-4">;
       <div className="px-4 mb-2">;
         <div className="relative">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />;
-<<<<<<< HEAD
           />;
 
         </div>;
 </div>;
       ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="px-4 pb-4 space-y-2">;
         <div className="flex space-x-2">;
           <Badge variant="secondary" className="rounded-full px-3">All</Badge>;
@@ -46,7 +43,6 @@ return (;
           <Badge variant="outline" className="rounded-full px-3">Projects</Badge>;
         </div>;
       </div>;
-<<<<<<< HEAD
           <div;
             key={conversation.id}
             className={cn(;"
@@ -78,7 +74,6 @@ return (;
                   {conversation.unreadCount > 0 && (;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                       {conversation.unreadCount}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     </Badge>;
                   )}
                 </div>;
@@ -89,4 +84,3 @@ return (;
         ))}
       </div>;
     </div>;
-<<<<<<< HEAD

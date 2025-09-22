@@ -1,5 +1,4 @@
 :src/components/home/InteractiveFeatures.tsx
-<<<<<<< HEAD
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next / link';
 import { cn } from '@/lib / utils';interface InteractiveFeaturesProps {
@@ -9,8 +8,6 @@ import { cn } from '@/lib / utils';interface InteractiveFeaturesProps {
 }
 interface InteractiveFeaturesProps {
 :src/components/home/InteractiveFeatures.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -134,15 +131,12 @@ import {;
   CardDescription,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from "next/link",;
 import { cn } from "@/lib/utils",;
 
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface InteractiveFeaturesProps {;
   className?: string,;
   style?: React.CSSProperties;
@@ -198,15 +192,10 @@ setOpenIndex((prev) => (prev === index ? null : index));
             <Card;
               key={index}
               key={index}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
               <CardHeader className="flex flex-row items-start space-x-3">
@@ -244,26 +233,17 @@ setOpenIndex((prev) => (prev === index ? null : index));
     </section>;
   );
 :src/components/home/InteractiveFeatures.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             </Card>))}
         </div>;
       </div>;
     </section>);
 export default InteractiveFeatures;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 export default InteractiveFeatures;
 :src/components/home/InteractiveFeatures.tsx
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/home/InteractiveFeatures.tsx
 import React from 'react';
 import {
   Card
@@ -278,5 +258,3 @@ import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
 
 export default InteractiveFeatures;
 :src/components/home/InteractiveFeatures.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

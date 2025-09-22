@@ -87,7 +87,6 @@ const Contact = () => {
                   placeholder="Your name"
                 />
               </div>
-<<<<<<< HEAD
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -233,7 +232,6 @@ const Contact = () => {
                 Send Message
               </button>
             </form>
->>>>>>> pr-12243
           </div>
         </div>
       </div>

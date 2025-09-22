@@ -1,5 +1,4 @@
 :src/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD
 return (
     <div className='space-y-3'>;'
       <div className='flex justify-between items-center px-4'>;'
@@ -194,7 +193,6 @@ function BrowseFilters() {}
                     </div>;
 
 :src_backup/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
@@ -237,14 +235,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
-=======
 import React, { useState } from "react","
 import { Button } from "@/components/ui/button","
 import { Slider } from "@/components/ui/slider","
@@ -261,7 +254,6 @@ interface BrowseFiltersProps {}
   return ("
     <div className="space-y-3">"
       <div className="flex justify-between items-center px-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
         <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">
           <Sheet>
             <SheetTrigger asChild>"
@@ -275,20 +267,14 @@ interface BrowseFiltersProps {}
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
                   <>
-=======
               "
               <div className="py-6 space-y-6">"
                 {type === "jobs" ? (
 
                   <>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                     <div className="space-y-2">
                       <Label>Job Type</Label>"
                       <div className="flex gap-2 flex-wrap">"
@@ -299,16 +285,11 @@ interface BrowseFiltersProps {}
                       </div>
                     </div>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <div className="space-y-2">
                       <Label>Experience Level</Label>
                       <div className="flex gap-2 flex-wrap">
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Mid Level</Badge>
-=======
                     "
                     <div className="space-y-2">
 
@@ -316,7 +297,6 @@ interface BrowseFiltersProps {}
                       <div className="flex gap-2 flex-wrap">"
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>"
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Mid Level</Badge>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Senior</Badge>
                       </div>
                     </div>
@@ -333,13 +313,7 @@ interface BrowseFiltersProps {}
                       </div>
                     </div>
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                     "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
                       <Slider"
@@ -357,13 +331,7 @@ interface BrowseFiltersProps {}
                   </>
                 )}
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                 <div className="space-y-2">
                   <Label>Location</Label>
                   <Select>
@@ -381,20 +349,15 @@ interface BrowseFiltersProps {}
                 </div>
 
                 <div className="space-y-2">
-=======
 
-=======
                 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                 <div className="space-y-2">
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <Label>Salary Range</Label>
                   <div className='flex gap-4 items-center'>
                     <Input placeholder='Min' type='number' className='w-full' />
                     <span>to</span>
                     <Input placeholder='Max' type='number' className='w-full' />                  </div>
-=======
                 <div className="space-y-2">
 
 :src_backup/mobile/components/browse/BrowseFilters.tsx
@@ -402,32 +365,24 @@ interface BrowseFiltersProps {}
 <Input placeholder="Min" type="number" className="w-full" />
                     <span>to</span>"
                     <Input placeholder="Max" type="number" className="w-full" />
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/mobile/components/browse/BrowseFilters.tsx
 
                   </div>
                 </div>
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/browse/BrowseFilters.tsx
                 <div className="space-y-2">
 
 :src_backup/mobile/components/browse/BrowseFilters.tsx
                   <Label>Salary Range</Label>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                   </div>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </div>
-<<<<<<< HEAD
 
                 <div className="space-y-2">
                 <div className="space-y-2">
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                 <div className="space-y-2">
 
 :src_backup/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <Label>Skills</Label>
 <div className="grid grid-cols-2 gap-2">
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>
@@ -471,27 +426,18 @@ interface BrowseFiltersProps {}
                   </Select>;
                 </div>;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
                 <div className="flex items-center justify-between">
                 <div className="flex items-center justify-between">
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                 <div className="flex items-center justify-between">
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <SheetFooter>
                 <Button variant='outline' className='w-full'>
                   Reset
@@ -502,19 +448,14 @@ interface BrowseFiltersProps {}
                 >
                   Apply Filters
                 </Button>
-=======
 
               <SheetFooter>"
                 <Button variant="outline" className="w-full">Reset</Button>"
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
               </SheetFooter>
             </SheetContent>
           </Sheet>
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <Select>
             <SelectTrigger className='w-[120px] h-8'>
               <SelectValue placeholder='Sort By' />
@@ -631,7 +572,6 @@ interface BrowseFiltersProps {}
   )
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {activeFilters.map((filter) => (
             <Badge;
               key={filter} "
@@ -651,8 +591,6 @@ interface BrowseFiltersProps {}
     </div>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           {active_filters.map (filter => (
             <Badge;
@@ -670,12 +608,9 @@ interface BrowseFiltersProps {}
     </div>);
 }
 :src_backup/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
         </div>
       </div>
     </div>
   );
 :src/mobile/components/browse/BrowseFilters.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
