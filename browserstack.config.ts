@@ -9,36 +9,23 @@ export default defineConfig({
   projects: [
     {
       name: 'Desktop Chrome',
-      use: {
-        browserName: 'chromium',
-        channel: 'chrome',
-      },
+      use: { ...devices['Desktop Chrome'] },
     },
     {
       name: 'Desktop Firefox',
-      use: {
-        browserName: 'firefox',
-      },
+      use: { ...devices['Desktop Firefox'] },
     },
     {
       name: 'Desktop Safari',
-      use: {
-        browserName: 'webkit',
-      },
+      use: { ...devices['Desktop Safari'] },
     },
     {
       name: 'Mobile Chrome',
-      use: {
-        browserName: 'chromium',
-        ...devices['Pixel 5'],
-      },
+      use: { ...devices['Pixel 5'] },
     },
     {
       name: 'Mobile Safari',
-      use: {
-        browserName: 'webkit',
-        ...devices['iPhone 12'],
-      },
+      use: { ...devices['iPhone 12'] },
     },
   ],
   reporter: [
