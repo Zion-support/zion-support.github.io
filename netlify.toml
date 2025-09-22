@@ -7,6 +7,9 @@
   NODE_OPTIONS = "--max-old-space-size=4096"
   NEXT_TELEMETRY_DISABLED = "1"
 
+[[plugins]]
+package = "@netlify/plugin-nextjs"
+
 ## Static export: no Next.js runtime plugin or functions needed
 
 ## Security and caching headers for static assets
