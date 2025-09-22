@@ -1,28 +1,95 @@
 {
-  "timestamp": "2025-09-06T00:32:21.706Z",
-  "vulnerabilities": 11,
-  "recommendations": [
+  "timestamp": "2025-09-21T14:40:22.032Z",
+  "score": 25,
+  "issues": [
     {
-      "type": "file_permissions",
-      "message": "package.json is world-readable",
-      "severity": "medium"
+      "category": "dependencies",
+      "severity": "high",
+      "message": "Vulnerable dependencies found",
+      "details": [
+        {
+          "error": "Could not run npm audit"
+        }
+      ],
+      "timestamp": "2025-09-21T14:40:20.978Z"
     },
     {
-      "type": "file_permissions",
-      "message": "package-lock.json is world-readable",
-      "severity": "medium"
+      "category": "environment",
+      "severity": "high",
+      "message": "Hardcoded secret in .env: NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "details": [],
+      "timestamp": "2025-09-21T14:40:22.029Z"
+    },
+    {
+      "category": "permissions",
+      "severity": "medium",
+      "message": "File package.json has overly permissive permissions",
+      "details": [],
+      "timestamp": "2025-09-21T14:40:22.029Z"
+    },
+    {
+      "category": "permissions",
+      "severity": "medium",
+      "message": "File package-lock.json has overly permissive permissions",
+      "details": [],
+      "timestamp": "2025-09-21T14:40:22.029Z"
+    },
+    {
+      "category": "permissions",
+      "severity": "medium",
+      "message": "File .env has overly permissive permissions",
+      "details": [],
+      "timestamp": "2025-09-21T14:40:22.029Z"
+    },
+    {
+      "category": "permissions",
+      "severity": "medium",
+      "message": "File .env.production has overly permissive permissions",
+      "details": [],
+      "timestamp": "2025-09-21T14:40:22.029Z"
+    },
+    {
+      "category": "headers",
+      "severity": "medium",
+      "message": "Missing security headers",
+      "details": [
+        "X-Frame-Options",
+        "X-Content-Type-Options",
+        "X-XSS-Protection",
+        "Strict-Transport-Security",
+        "Content-Security-Policy"
+      ],
+      "timestamp": "2025-09-21T14:40:22.029Z"
+    },
+    {
+      "category": "network",
+      "severity": "medium",
+      "message": "HTTPS enforcement not configured",
+      "details": [],
+      "timestamp": "2025-09-21T14:40:22.032Z"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "action": "Update vulnerable dependencies",
+      "description": "Run npm audit fix to update vulnerable packages"
+    },
+    {
+      "priority": "high",
+      "action": "Secure environment variables",
+      "description": "Move secrets to environment variables and use proper secret management"
+    },
+    {
+      "priority": "medium",
+      "action": "Add security headers",
+      "description": "Implement security headers in next.config.js"
     }
   ],
   "summary": {
-    "totalVulnerabilities": 0,
-    "totalRecommendations": 2,
-    "securityScore": 90,
-    "status": "good"
+    "totalIssues": 8,
+    "criticalIssues": 2,
+    "mediumIssues": 6,
+    "lowIssues": 0
   }
-}
-    "Review and remove any hardcoded secrets",
-    "Update outdated dependencies",
-    "Implement proper environment variable management",
-    "Add security headers to Next.js configuration"
-  ]
 }

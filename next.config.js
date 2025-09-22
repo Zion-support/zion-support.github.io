@@ -1,161 +1,68 @@
+import path from 'path';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true
-  compress: true
-  poweredByHeader: false
-  eslint: {
-    ignoreDuringBuilds: true
-  }
+  reactStrictMode: false,
+  trailingSlash: true,
+  
+  // Static export configuration
+  output: 'export',
+  
+  // Image optimization
+  images: {
+    unoptimized: true, // Required for static export
+  },
   typescript: {
-<<<<<<< HEAD
     ignoreBuildErrors: true,
   },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  trailingSlash: true,
-  images: {
-    domains: [
-      'localhost',
-      'ziontechgroup.com',
-      'images.unsplash.com',
-      'via.placeholder.com'
-    ],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000
+  eslint: {
+    ignoreDuringBuilds: true,
   },
-=======
-    ignoreBuildErrors: true
-  }
-  pageExtensions: ["tsx", "ts", "jsx", "js"]
-  trailingSlash: true
-  images: {
-    domains: [
-      "localhost"
-      "ziontechgroup.com"
-      "images.unsplash.com"
-      "via.placeholder.com"
-    ]
-    formats: ["image/webp", "image/avif"]
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
-    minimumCacheTTL: 31536000
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  webpack: (config, { dev, isServer }) => {
-    if (dev) {
-      config.watchOptions = {
-        ignored: [
-<<<<<<< HEAD
-          "**/node_modules/**",
-          "**/.git/**",
-          "**/pages_backup*/**",
-          "**/pages.*/**",
-          "**/pages-*/**",
-          "**/pages_disabled*/**",
-          "**/pages.disabled*/**",
-          "**/pages.broken*/**",
-          "**/pages.corrupted*/**",
-          "**/pages.old*/**",
-          "**/pages._*/**",
-          "**/pages.__*/**",
-          "**/backup-pages/**",
-          "**/src.pages.disabled/**",
-          "**/lib_backup*/**",
-          "**/src_backup*/**",
-          "**/corrupted-files-backup*/**",
-          "**/performance-reports*/**",
-          "**/log-analysis-reports*/**",
-          "**/link-reports*/**",
-          "**/lint-target*/**",
-          "**/monitoring*/**",
-          "**/pm2-automation*/**",
-          "**/automation/logs*/**",
-          "**/automation/backup*/**",
-          "**/performance-*.json",
-          "**/performance-*.js",
-          "**/performance-*.cjs",
-          "**/performance-*.sh",
-          "**/performance-*.html",
-          "**/performance-*.md",
-          "**/performance-*.txt",
-          "**/apps/**",
-        ],
-        poll: 1000,
-        aggregateTimeout: 300
+  
+  // Experimental features
+  experimental: {
+    optimizeCss: false,
+    scrollRestoration: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'react', 'react-dom'],
+  },
+  
+  // Compiler optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+    styledComponents: true,
+  },
+  
+  // Performance optimizations
+  poweredByHeader: false,
+  compress: true,
+  generateEtags: true,
+  
+  
+  // Generate unique build ID for better caching
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
+  },
+  
+  // Webpack configuration
+  webpack: (config, { isServer }) => {
+    // Fix for CSS processing issues with Node.js compatibility
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+        path: false,
+        crypto: 'crypto-browserify',
+        stream: 'stream-browserify',
+        util: false,
+        buffer: 'buffer',
+        process: 'process/browser',
       };
-=======
-          "**/node_modules/**"
-          "**/.git/**"
-          "**/pages_backup*/**"
-          "**/pages.*/**"
-          "**/pages-*/**"
-          "**/pages_disabled*/**"
-          "**/pages.disabled*/**"
-          "**/pages.broken*/**"
-          "**/pages.corrupted*/**"
-          "**/pages.old*/**"
-          "**/pages._*/**"
-          "**/pages.__*/**"
-          "**/backup-pages/**"
-          "**/src.pages.disabled/**"
-          "**/lib_backup*/**"
-          "**/src_backup*/**"
-          "**/corrupted-files-backup*/**"
-          "**/performance-reports*/**"
-          "**/log-analysis-reports*/**"
-          "**/link-reports*/**"
-          "**/lint-target*/**"
-          "**/monitoring*/**"
-          "**/pm2-automation*/**"
-          "**/automation/logs*/**"
-          "**/automation/backup*/**"
-          "**/performance-*.json"
-          "**/performance-*.js"
-          "**/performance-*.cjs"
-          "**/performance-*.sh"
-          "**/performance-*.html"
-          "**/performance-*.md"
-          "**/performance-*.txt"
-          "**/apps/**"
-        ]
-        poll: 1000
-        aggregateTimeout: 300
-      }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     }
-    // Exclude apps directory from compilation
-    config.module.rules.push({
-      test: /\.(ts|tsx|js|jsx)$/
-      include: /apps\//
-      use: "ignore-loader"
-    });
+    
     return config;
-  }
-  async headers() {
-    return [
-      {
-        source: "/(.*)"
-        headers: [
-          {
-            key: "X-Content-Type-Options"
-            value: "nosniff"
-          }
-          {
-            key: "X-Frame-Options"
-            value: "DENY"
-          }
-          {
-            key: "X-XSS-Protection"
-            value: "1; mode=block"
-          }
-          {
-            key: "Referrer-Policy"
-            value: "origin-when-cross-origin"
-          }
-        ]
-      }
-    ];
-  }
-}
+  },
+};
+
 export default nextConfig;
