@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SEOOptimizer from '../components/SEOOptimizer';
+import BackToTop from '../components/BackToTop';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -71,6 +72,7 @@ export default function RootLayout({
         <Navigation />
         <main id="main-content" tabIndex={-1}>{children}</main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );
