@@ -11,10 +11,31 @@ const config = {
   maxRetries: 3,
   batchSize: 10,
   delayBetweenBatches: 2000,
-  delayBetweenOperations: 500
+  delayBetweenOperations: 500,
+  maxBranches: 100
 };
 
+// Results tracking
+const results = {
+  summary: {
+    totalBranches: 0,
+    successfullyMerged: 0,
+    failedBranches: 0,
+    conflictsResolved: 0,
+    startTime: new Date().toISOString(),
+    endTime: null,
+    duration: null
+  },
+  processedBranches: [],
+  mergedBranches: [],
+  failedBranches: []
+};
+
+<<<<<<< HEAD
+// Utility functions
+=======
 // Helper functions
+>>>>>>> 28908383ab8249c4831cce95a5056b00fef63057
 function execCommand(command, options = {}) {
   try {
     const result = execSync(command, { 
@@ -80,6 +101,72 @@ function resolveMergeConflict(filePath) {
     return true;
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+<<<<<<< HEAD
+    return false;
+  }
+}
+
+function resolveMergeConflicts(branchName) {
+  console.log(`🔧 Resolving merge conflicts for branch: ${branchName}`);
+  
+  try {
+    // Configure git to use merge strategy
+    execCommand('git config pull.rebase false');
+    
+    // Checkout the branch
+    const checkoutResult = execCommand(`git checkout ${branchName}`);
+    if (!checkoutResult.success) {
+      console.log(`❌ Failed to checkout branch ${branchName}: ${checkoutResult.error}`);
+      return false;
+    }
+    
+    // Pull latest changes from main with merge strategy
+    const pullResult = execCommand('git pull origin main --no-rebase');
+    if (!pullResult.success) {
+      console.log(`⚠️  Pull failed for ${branchName}, attempting to resolve conflicts...`);
+      
+      // Try to resolve conflicts automatically
+      const statusResult = execCommand('git status --porcelain');
+      if (statusResult.success) {
+        const conflictedFiles = statusResult.output
+          .split('\n')
+          .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
+          .map(line => line.split(' ').pop());
+        
+        console.log(`📝 Found ${conflictedFiles.length} conflicted files in ${branchName}`);
+        
+        // Resolve conflicts using the unified function
+        for (const file of conflictedFiles) {
+          if (resolveMergeConflict(file)) {
+            execCommand(`git add ${file}`);
+          }
+        }
+        
+        // Try to commit the resolved conflicts
+        const commitResult = execCommand('git commit -m "Resolve merge conflicts with main branch"');
+        if (!commitResult.success) {
+          console.log(`❌ Failed to commit resolved conflicts for ${branchName}`);
+          return false;
+        }
+      }
+    }
+    
+    // Merge the branch into main
+    execCommand('git checkout main');
+    const mergeResult = execCommand(`git merge ${branchName} --no-ff -m "Merge ${branchName} into main"`);
+    
+    if (mergeResult.success) {
+      console.log(`✅ Successfully merged ${branchName} into main`);
+      return true;
+    } else {
+      console.log(`❌ Failed to merge ${branchName} into main: ${mergeResult.error}`);
+      return false;
+    }
+    
+  } catch (error) {
+    console.log(`❌ Error processing branch ${branchName}: ${error.message}`);
+=======
+>>>>>>> 28908383ab8249c4831cce95a5056b00fef63057
     return false;
   }
 }
@@ -138,6 +225,68 @@ async function resolveAllConflicts() {
   return resolvedCount > 0;
 }
 
+async function processBranches() {
+  console.log('📋 Getting list of branches to process...');
+  
+  // Get all remote branches
+  const branchResult = execCommand('git branch -r --format="%(refname:short)"');
+  if (!branchResult.success) {
+    console.log('❌ Failed to get branch list');
+    return;
+  }
+  
+  const allBranches = branchResult.output
+    .split('\n')
+    .filter(branch => 
+      branch && 
+      !branch.includes('origin/main') && 
+      !branch.includes('origin/HEAD') &&
+      branch.startsWith('origin/')
+    )
+    .map(branch => branch.replace('origin/', ''))
+    .slice(0, config.maxBranches);
+  
+  console.log(`📊 Found ${allBranches.length} branches to process`);
+  results.summary.totalBranches = allBranches.length;
+  
+  // Process branches in batches
+  for (let i = 0; i < allBranches.length; i += config.batchSize) {
+    const batch = allBranches.slice(i, i + config.batchSize);
+    console.log(`\n🔄 Processing batch ${Math.floor(i / config.batchSize) + 1}/${Math.ceil(allBranches.length / config.batchSize)}`);
+    console.log(`📦 Branches: ${batch.join(', ')}`);
+    
+    for (const branch of batch) {
+      results.processedBranches.push(branch);
+      
+      console.log(`\n🌿 Processing branch: ${branch}`);
+      
+      const success = resolveMergeConflicts(branch);
+      
+      if (success) {
+        results.mergedBranches.push(branch);
+        results.summary.successfullyMerged++;
+        console.log(`✅ Successfully processed ${branch}`);
+      } else {
+        results.failedBranches.push({
+          branch: branch,
+          error: 'Failed to resolve merge conflicts or merge into main'
+        });
+        results.summary.failedBranches++;
+        console.log(`❌ Failed to process ${branch}`);
+      }
+      
+      // Small delay between branches
+      await sleep(config.delayBetweenOperations);
+    }
+    
+    // Delay between batches
+    if (i + config.batchSize < allBranches.length) {
+      console.log(`⏳ Waiting ${config.delayBetweenBatches / 1000} seconds before next batch...`);
+      await sleep(config.delayBetweenBatches);
+    }
+  }
+}
+
 async function mergeAllOpenPRs() {
   console.log('🔄 Starting merge process for all open PRs...');
   
@@ -167,7 +316,8 @@ async function mergeAllOpenPRs() {
     .split('\n')
     .map(line => line.trim())
     .filter(line => line && !line.includes('origin/HEAD') && line !== 'origin/main')
-    .filter(line => line.startsWith('origin/'));
+    .filter(line => line.startsWith('origin/'))
+    .slice(0, config.maxBranches); // Limit to prevent overwhelming
   
   console.log(`📋 Found ${allBranches.length} remote branches to process`);
   
