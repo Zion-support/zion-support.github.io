@@ -9,6 +9,7 @@ export const metadata = {
 
 export default function MultimodalAgentsEnterprise2025Page() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-white">
       <SEO
         title="Multimodal Agents in the Enterprise (2025)"
@@ -54,3 +55,11 @@ export default function MultimodalAgentsEnterprise2025Page() {
     </div>
   );
 }
+=======
+    <div>
+      <h1>Multimodal Agents in the Enterprise (2025)</h1>
+      <p>Design and deploy agents that see, hear, and act to deliver measurable outcomes across the enterprise.</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-5236
