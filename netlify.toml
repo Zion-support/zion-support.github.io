@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = "out"
   functions = "netlify/empty-functions"
 
 [build.environment]
@@ -8,10 +8,7 @@
   NODE_OPTIONS = "--max-old-space-size=4096"
   NEXT_TELEMETRY_DISABLED = "1"
 
-## Enable Netlify Next.js runtime
-# For static exports, the Next.js Netlify plugin is not required
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+## Next.js Netlify plugin is not required for static export (`output = 'export'`)
 
 ## Security and caching headers for static assets
 [[headers]]
