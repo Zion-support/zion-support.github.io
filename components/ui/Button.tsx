@@ -1,201 +1,200 @@
+
 import React from 'react';
-import { cn } from '../../utils/cn';
+import Link from 'next/link';
 
-interface BaseButtonProps {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'accent' | 'futuristic' | 'quantum';
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  icon?: React.ReactNode;
-  iconPosition?: 'left' | 'right';
-  loading?: boolean;
+interface ButtonProps {
+  children: React.ReactNode;
+  href?: string;
+  onClick?: () => void;
+  className?: string;
+  variant?: 'primary' | 'secondary' | 'outline';
+
+  size?: 'sm' | 'md' | 'lg';}
+}
+}
+
+export default function Button() {const baseClasses  = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
+
+const variantClasses = {primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500';}
+  secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500';,outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-blue-500';}
+  }
+
+const sizeClasses = {sm: 'px-3 py-2 text-sm';}
+  md: 'px-4 py-2 text-base';,lg: 'px-6 py-3 text-lg';}
+  }
+
+const classes  = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;if (href) {return (<Link href={href} className={classes} />;
+        {children}
+      </Link>
+    );
+  }
+  return (
+    <button onClick={onClick} className={classes}>
+      {children}
+    </button>
+  );
+}
+pr-12243
+import React from "react";
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+interface ButtonProps {
+  children: React.ReactNode;
+  variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  href?: string;
+interface ButtonProps {;
+  children: React && React.ReactNode;
+  variant?: "primary" | "secondary" | "outline" | "ghost";
+  size?: "sm" | "md" | "lg";
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  if (asChild) {
+    return React.cloneElement(children as React.ReactElement, {
+      className: classes;
+      onClick
+      disabled
+      type
+      ...props
+const Button: React.FC<ButtonProps> = ({;
+  children,;
+  variant = "primary",;
+  size = "md",;
+  className = "",;
+  onClick,;
+  disabled = false,;
+  type = "button",;
+  asChild = false,;
+  ...props;
+}) => {;
+  const baseClasses =;
+    "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
+  const variantClasses = {;
+    primary: "bg-blue-600 text-white hover:bg-blue-700",;
+    secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300",;
+    outline: "border border-gray-300 bg-transparent hover:bg-gray-50",;
+    ghost: "hover:bg-gray-100",;
+  };
+  const sizeClasses = {;
+    sm: "h-8 px-3 text-xs",;
+    md: "h-10 px-4 py-2",;
+    lg: "h-12 px-8 text-lg",;
+  };
+  class_name?: string;
+  on_click?: () => void;
   disabled?: boolean;
-  fullWidth?: boolean;
-  rounded?: boolean;
-  glow?: boolean;
-  animated?: boolean;
+  type?: "button" | "submit" | "reset";
+  as_child?: boolean;
 }
-
-interface ButtonProps extends BaseButtonProps, React.ButtonHTMLAttributes<HTMLButtonElement> {
-  href?: never;
-}
-
-interface LinkButtonProps extends BaseButtonProps, React.AnchorHTMLAttributes<HTMLAnchorElement> {
-  href: string;
-}
-
-type ButtonComponentProps = ButtonProps | LinkButtonProps;
-
-const Button: React.FC<ButtonComponentProps> = ({
-  variant = 'primary',
-  size = 'md',
+const Button: React.FC < ButtonProps> = ({
   children,
-  className,
-  icon,
-  iconPosition = 'left',
-  loading = false,
+  variant = "primary",
+  size = "md",
+  class_name = "",
+  on_click,
   disabled = false,
-  fullWidth = false,
-  rounded = false,
-  glow = false,
-  animated = true,
-  ...props
+  type = "button",
+  ...props;
 }) => {
-  const baseClasses = cn(
-    'inline-flex items-center justify-center font-semibold transition-all duration-300',
-    'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black',
-    'disabled:opacity-50 disabled:cursor-not-allowed',
-    'relative overflow-hidden group',
-    fullWidth && 'w-full',
-    rounded && 'rounded-full',
-    !rounded && 'rounded-xl',
-    animated && 'transform hover:scale-105 active:scale-95',
-    className
-  );
-
+  const base_classes =;
+    "inline - flex items - center justify - center rounded - md font - medium transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:pointer - events - none disabled:opacity - 50";
+;
+  const variant_classes = {
+    primary: "bg - blue - 600 text - white hover:bg - blue - 700",
+    secondary: "bg - gray - 200 text - gray - 900 hover:bg - gray - 300",
+    outline: "border border - gray - 300 bg - transparent hover:bg - gray - 50",
+    ghost: "hover:bg - gray - 100",
+  }
+;
+  const size_classes = {
+    sm: "h - 8 px - 3 text - xs",
+    md: "h - 10 px - 4 py - 2",
+    lg: "h - 12 px - 8 text - lg",
+  }
+;
+  const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${class_name}`;
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return React.clone_element (children as React.ReactElement, {
+      class_name: classes,
+      on_click,
+      disabled,
+      type,
+      ...props,
+    });
+  }
+  return (
+    <button;
+      className={classes}
+      on_click={on_click}
+      disabled={disabled}
+      type={type}
+  onClick?: () => void;
+  className?: string;
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset',
+  icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right',
+  style?: React.CSSProperties;
+}
+const Button: React.FC<ButtonProps> = ({
+    primary:
+      'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 border-0',
+    secondary:
+      'bg-gray-800 hover:bg-gray-700 text-white border border-gray-600 hover:border-gray-500 hover:shadow-lg hover:-translate-y-0.5',
+    ghost:
+      'bg-transparent hover:bg-white/5 text-gray-300 hover:text-white hover:shadow-md hover:-translate-y-0.5',
+    outline:
+      'bg-transparent border border-white/20 text-white hover:bg-white/5 hover:border-white/40 hover:shadow-md hover:-translate-y-0.5',
+  };
   const sizeClasses = {
-    sm: 'px-3 py-2 text-sm',
-    md: 'px-4 py-2.5 text-base',
-    lg: 'px-6 py-3 text-lg',
-    xl: 'px-8 py-4 text-xl'
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg',
   };
+const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
-  const variantClasses = {
-    primary: cn(
-      'bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600',
-      'hover:from-blue-500 hover:via-blue-400 hover:to-blue-500',
-      'text-white shadow-lg hover:shadow-xl',
-      'border border-blue-500/20',
-      glow && 'neon-glow text-blue-400'
-    ),
-    secondary: cn(
-      'bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700',
-      'hover:from-gray-600 hover:via-gray-500 hover:to-gray-600',
-      'text-white shadow-lg hover:shadow-xl',
-      'border border-gray-500/20',
-      glow && 'neon-glow text-gray-400'
-    ),
-    outline: cn(
-      'bg-transparent border-2 border-blue-500/50',
-      'hover:bg-blue-500/10 hover:border-blue-400',
-      'text-blue-400 hover:text-blue-300',
-      'backdrop-blur-sm',
-      glow && 'neon-glow'
-    ),
-    ghost: cn(
-      'bg-transparent hover:bg-white/5',
-      'text-gray-300 hover:text-white',
-      'border border-transparent hover:border-white/20',
-      'backdrop-blur-sm'
-    ),
-    accent: cn(
-      'bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-600',
-      'hover:from-emerald-500 hover:via-emerald-400 hover:to-emerald-500',
-      'text-white shadow-lg hover:shadow-xl',
-      'border border-emerald-500/20',
-      glow && 'neon-glow text-emerald-400'
-    ),
-    futuristic: cn(
-      'bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600',
-      'hover:from-purple-500 hover:via-blue-500 hover:to-cyan-500',
-      'text-white shadow-lg hover:shadow-2xl',
-      'border border-purple-400/30',
-      'backdrop-blur-md',
-      'relative overflow-hidden',
-      'before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent',
-      'before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700',
-      glow && 'neon-glow text-cyan-400'
-    ),
-    quantum: cn(
-      'bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600',
-      'hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500',
-      'text-white shadow-lg hover:shadow-2xl',
-      'border border-cyan-400/30',
-      'backdrop-blur-md',
-      'relative overflow-hidden',
-      'before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent',
-      'before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700',
-      glow && 'neon-glow text-cyan-400'
-    )
-  };
-
-  const iconClasses = cn(
-    'transition-transform duration-200',
-    iconPosition === 'left' && 'mr-2',
-    iconPosition === 'right' && 'ml-2',
-    animated && 'group-hover:scale-110'
-  );
-
-  const loadingSpinner = (
-    <div className="animate-spin rounded-full h-4 w-4 border-2 border-current border-t-transparent" />
-  );
-
-  const buttonContent = (
+  const content = (
     <>
-      {/* Futuristic background effect */}
-      {variant === 'futuristic' && (
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      {/* Shine effect for primary buttons */}
+      {variant === 'primary' && (
+        <div className='absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-transform duration-1000' />;
       )}
-      
-      {/* Content wrapper */}
-      <div className="relative z-10 flex items-center">
-        {loading && iconPosition === 'left' && loadingSpinner}
-        {!loading && icon && iconPosition === 'left' && (
-          <span className={iconClasses}>{icon}</span>
-        )}
-        
-        <span className="relative">
-          {children}
-          {/* Futuristic text glow effect */}
-          {variant === 'futuristic' && (
-            <span className="absolute inset-0 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm">
-              {children}
-            </span>
-          )}
-        </span>
-        
-        {!loading && icon && iconPosition === 'right' && (
-          <span className={iconClasses}>{icon}</span>
-        )}
-        {loading && iconPosition === 'right' && loadingSpinner}
-      </div>
 
-      {/* Hover effect overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%]" />
+      {icon && iconPosition === 'left' && (
+        <span className='mr-2 transition-transform duration-200 group-hover:scale-110'>;
+          {icon}
+        </span>
+      )}
+      <span className='relative z-10'>{children}</span>
+      {icon && iconPosition === 'right' && (
+        <span className='ml-2 transition-transform duration-200 group-hover:scale-110'>;
+          {icon}
+        </span>
+      )}
     </>
   );
 
-  if ('href' in props && props.href) {
-    const { href, ...anchorProps } = props as LinkButtonProps;
+  if (href) {
     return (
-      <a
-        href={href}
-        className={cn(
-          baseClasses,
-          sizeClasses[size],
-          variantClasses[variant],
-          'no-underline'
-        )}
-        {...anchorProps}
-      >
-        {buttonContent}
-      </a>
+      <Link href={href} className={classes} style={style}>
+        {content}
+      </Link>
     );
   }
 
-    return (
-    <button
-      className={cn(
-        baseClasses,
-        sizeClasses[size],
-        variantClasses[variant],
-        loading && 'cursor-wait',
-        disabled && 'cursor-not-allowed'
-      )}
-      disabled={disabled || loading}
-      {...(props as ButtonProps)}
+  
     >
-      {buttonContent}
+      {content}
     </button>
   );
 };
 
 export default Button;
+origin/cursor/automate-test-improve-and-merge-code-2533
+export { Button };
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+pr-12243
+
