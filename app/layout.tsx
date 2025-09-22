@@ -37,14 +37,15 @@ export const metadata: Metadata = {
     title: 'Zion Tech Group - AI Solutions & Technology Services',
     description: 'Leading provider of AI solutions, micro SaaS development, and comprehensive IT services.',
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
   verification: {
     google: 'your-google-verification-code',
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
