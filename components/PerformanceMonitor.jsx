@@ -1,144 +1,147 @@
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const PerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState({
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    fcp: 0,
+    ttfb: 0,
+    isVisible: false
+  });
+
   useEffect(() => {
-    // Web Vitals monitoring
-    const reportWebVitals = (metric) => {
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', metric);
-      }
-      
-      // Send to analytics in production
-      if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
-        // Send to Google Analytics or other analytics service
-        if (window.gtag) {
-          window.gtag('event', metric.name, {
-            event_category: 'Web Vitals',
-            event_label: metric.id,
-            value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-            non_interaction: true,
-          });
+    if (typeof window === 'undefined') return;
+
+    // Only show in development
+    if (process.env.NODE_ENV !== 'development') return;
+
+    const measurePerformance = () => {
+      // Largest Contentful Paint
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         }
-      }
-    };
+      }).observe({ entryTypes: ['largest-contentful-paint'] });
 
-    // Monitor Core Web Vitals
-    const measureWebVitals = () => {
-      // First Contentful Paint (FCP)
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.name === 'first-contentful-paint') {
-              reportWebVitals({
-                name: 'FCP',
-                value: entry.startTime,
-                id: 'fcp'
-              });
-            }
-          }
-        });
-        observer.observe({ entryTypes: ['paint'] });
-      }
-
-      // Largest Contentful Paint (LCP)
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          reportWebVitals({
-            name: 'LCP',
-            value: lastEntry.startTime,
-            id: 'lcp'
-          });
-        });
-        observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      }
-
-      // First Input Delay (FID)
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            reportWebVitals({
-              name: 'FID',
-              value: entry.processingStart - entry.startTime,
-              id: 'fid'
-            });
-          }
-        });
-        observer.observe({ entryTypes: ['first-input'] });
-      }
-
-      // Cumulative Layout Shift (CLS)
-      if ('PerformanceObserver' in window) {
-        let clsValue = 0;
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-            }
-          }
-          reportWebVitals({
-            name: 'CLS',
-            value: clsValue,
-            id: 'cls'
-          });
-        });
-        observer.observe({ entryTypes: ['layout-shift'] });
-      }
-    };
-
-    // Monitor resource loading performance
-    const monitorResourcePerformance = () => {
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'resource') {
-              const loadTime = entry.responseEnd - entry.startTime;
-              if (loadTime > 1000) { // Log resources taking more than 1 second
-                console.warn('Slow resource detected:', {
-                  name: entry.name,
-                  duration: loadTime,
-                  size: entry.transferSize
-                });
-              }
-            }
-          }
-        });
-        observer.observe({ entryTypes: ['resource'] });
-      }
-    };
-
-    // Monitor memory usage
-    const monitorMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = performance.memory;
-        const memoryUsage = {
-          used: Math.round(memory.usedJSHeapSize / 1048576), // MB
-          total: Math.round(memory.totalJSHeapSize / 1048576), // MB
-          limit: Math.round(memory.jsHeapSizeLimit / 1048576) // MB
-        };
-        
-        if (memoryUsage.used > memoryUsage.limit * 0.8) {
-          console.warn('High memory usage detected:', memoryUsage);
+      // First Input Delay
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          setMetrics(prev => ({ 
+            ...prev, 
+            fid: entry.processingStart - entry.startTime 
+          }));
         }
+      }).observe({ entryTypes: ['first-input'] });
+
+      // Cumulative Layout Shift
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (!entry.hadRecentInput) {
+            setMetrics(prev => ({ 
+              ...prev, 
+              cls: prev.cls + entry.value 
+            }));
+          }
+        }
+      }).observe({ entryTypes: ['layout-shift'] });
+
+      // First Contentful Paint
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (entry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+          }
+        }
+      }).observe({ entryTypes: ['paint'] });
+
+      // Time to First Byte
+      const navigation = performance.getEntriesByType('navigation')[0];
+      if (navigation) {
+        setMetrics(prev => ({ 
+          ...prev, 
+          ttfb: navigation.responseStart - navigation.requestStart 
+        }));
       }
     };
 
-    // Initialize monitoring
-    measureWebVitals();
-    monitorResourcePerformance();
-    
-    // Monitor memory usage every 30 seconds
-    const memoryInterval = setInterval(monitorMemoryUsage, 30000);
-    
-    // Cleanup
-    return () => {
-      clearInterval(memoryInterval);
-    };
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+      setMetrics(prev => ({ ...prev, isVisible: true }));
+    } else {
+      window.addEventListener('load', () => {
+        measurePerformance();
+        setMetrics(prev => ({ ...prev, isVisible: true }));
+      });
+    }
   }, []);
 
-  return null; // This component doesn't render anything
+  // Don't render in production
+  if (process.env.NODE_ENV !== 'development' || !metrics.isVisible) {
+    return null;
+  }
+
+  const getScoreColor = (value, thresholds) => {
+    if (value <= thresholds.good) return 'text-green-400';
+    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  const getScoreText = (value, thresholds) => {
+    if (value <= thresholds.good) return 'Good';
+    if (value <= thresholds.needsImprovement) return 'Needs Improvement';
+    return 'Poor';
+  };
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-black/90 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
+      <div className="mb-2 font-bold text-cyan-400">Performance Metrics</div>
+      
+      <div className="space-y-1">
+        <div className="flex justify-between">
+          <span>FCP:</span>
+          <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
+            {metrics.fcp.toFixed(0)}ms
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>LCP:</span>
+          <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
+            {metrics.lcp.toFixed(0)}ms
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>FID:</span>
+          <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
+            {metrics.fid.toFixed(0)}ms
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>CLS:</span>
+          <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
+            {metrics.cls.toFixed(3)}
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>TTFB:</span>
+          <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>
+            {metrics.ttfb.toFixed(0)}ms
+          </span>
+        </div>
+      </div>
+      
+      <div className="mt-3 pt-2 border-t border-gray-600">
+        <div className="text-xs text-gray-400">
+          Core Web Vitals Monitor
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default PerformanceMonitor;
