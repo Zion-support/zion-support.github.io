@@ -1,355 +1,852 @@
+<<<<<<< HEAD:pages_backup/docs.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/docs.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
+<<<<<<< HEAD
+import MainLayout from '../components/layout/MainLayout';
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  BookOpen, Code, FileText, Play, 
-  Brain, Atom, Shield, Rocket, Globe,
-  Search, Download, ExternalLink, ChevronRight,
-  Zap, Settings, Database, Server, Wifi,
-  Users, Lock, BarChart3, Lightbulb
+import {
+  BookOpen,
+  Search,
+  FileText,
+  Code,
+  Database,
+  Cloud,
+  Shield,
+  Users,
+  ArrowRight,
+  Download,
+  ExternalLink,
+  Clock,
 } from 'lucide-react';
 
-export default function Docs() {
-  const categories = [
+export default function Documentation() {
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
+  const documentationSections = [
+origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
     {
-      name: 'Getting Started',
-      icon: <Play className="w-6 h-6" />,
-      color: 'from-blue-500 to-cyan-500',
+      title: 'Getting Started',
+      description: 'Quick start guides and setup instructions',
+      icon: BookOpen,
       docs: [
-        { title: 'Quick Start Guide', description: 'Get up and running in minutes', time: '5 min read' },
-        { title: 'Installation Guide', description: 'Step-by-step setup instructions', time: '10 min read' },
-        { title: 'First Project', description: 'Create your first AI project', time: '15 min read' },
-        { title: 'Configuration', description: 'Configure your environment', time: '8 min read' }
-      ]
+        {
+          title: 'Quick Start Guide',
+          description: 'Get up and running in minutes',
+          time: '5 min read',
+        },
+        {
+          title: 'Installation Guide',
+          description: 'Step-by-step installation instructions',
+          time: '10 min read',
+        },
+        {
+          title: 'Configuration',
+          description: 'Configure your environment',
+          time: '15 min read',
+        },
+        {
+          title: 'First Project',
+          description: 'Create your first project',
+          time: '20 min read',
+        },
+      ],
     },
     {
-      name: 'AI Services',
-      icon: <Brain className="w-6 h-6" />,
-      color: 'from-purple-500 to-pink-500',
+      title: 'API Reference',
+      description: 'Complete API documentation and endpoints',
+      icon: Code,
       docs: [
-        { title: 'AI Consciousness Platform', description: 'Build conscious AI systems', time: '20 min read' },
-        { title: 'AI Ethics & Governance', description: 'Best practices for responsible AI', time: '12 min read' },
-        { title: 'AI Creativity Studio', description: 'Generate creative content with AI', time: '18 min read' },
-        { title: 'AI Decision Engine', description: 'Autonomous decision-making systems', time: '25 min read' }
-      ]
+        {
+          title: 'Authentication',
+          description: 'API authentication and security',
+          time: '8 min read',
+        },
+        {
+          title: 'Endpoints',
+          description: 'All available API endpoints',
+          time: '25 min read',
+        },
+        {
+          title: 'Rate Limits',
+          description: 'API rate limiting and quotas',
+          time: '5 min read',
+        },
+        {
+          title: 'Error Codes',
+          description: 'Common error codes and solutions',
+          time: '10 min read',
+        },
+      ],
     },
     {
-      name: 'Quantum Computing',
-      icon: <Atom className="w-6 h-6" />,
-      color: 'from-indigo-500 to-blue-500',
+      title: 'AI Services',
+      description: 'AI and machine learning service documentation',
+      icon: Database,
       docs: [
-        { title: 'Quantum AI Fusion', description: 'Combine quantum and AI technologies', time: '30 min read' },
-        { title: 'Quantum Neural Networks', description: 'Quantum-enhanced neural networks', time: '22 min read' },
-        { title: 'Quantum Security', description: 'Quantum-resistant cryptography', time: '16 min read' },
-        { title: 'Quantum Infrastructure', description: 'Set up quantum computing environment', time: '28 min read' }
-      ]
+        {
+          title: 'AI Models',
+          description: 'Available AI models and capabilities',
+          time: '15 min read',
+        },
+        {
+          title: 'Training Data',
+          description: 'Data preparation and training',
+          time: '20 min read',
+        },
+        {
+          title: 'Model Deployment',
+          description: 'Deploy and manage AI models',
+          time: '12 min read',
+        },
+        {
+          title: 'Performance Tuning',
+          description: 'Optimize model performance',
+          time: '18 min read',
+        },
+      ],
     },
     {
-      name: 'Business Operations',
-      icon: <Rocket className="w-6 h-6" />,
-      color: 'from-green-500 to-emerald-500',
+      title: 'Cloud Services',
+      description: 'Cloud infrastructure and deployment guides',
+      icon: Cloud,
       docs: [
-        { title: 'Autonomous Operations', description: 'Automate business processes', time: '24 min read' },
-        { title: 'IT Asset Management', description: 'Manage technology infrastructure', time: '20 min read' },
-        { title: 'DevOps Automation', description: 'Streamline development workflows', time: '18 min read' },
-        { title: 'Business Intelligence', description: 'Data-driven decision making', time: '22 min read' }
-      ]
+        {
+          title: 'Cloud Setup',
+          description: 'Configure cloud environments',
+          time: '15 min read',
+        },
+        {
+          title: 'Deployment',
+          description: 'Deploy applications to cloud',
+          time: '20 min read',
+        },
+        {
+          title: 'Scaling',
+          description: 'Scale your applications',
+          time: '12 min read',
+        },
+        {
+          title: 'Monitoring',
+          description: 'Monitor cloud resources',
+          time: '10 min read',
+        },
+      ],
     },
     {
-      name: 'API Reference',
-      icon: <Code className="w-6 h-6" />,
-      color: 'from-orange-500 to-red-500',
+      title: 'Security',
+      description: 'Security best practices and guidelines',
+      icon: Shield,
       docs: [
-        { title: 'Authentication', description: 'API keys and security', time: '8 min read' },
-        { title: 'Endpoints', description: 'Complete API reference', time: '35 min read' },
-        { title: 'Rate Limits', description: 'Usage limits and quotas', time: '5 min read' },
-        { title: 'Error Handling', description: 'Handle API errors gracefully', time: '10 min read' }
-      ]
+        {
+          title: 'Security Overview',
+          description: 'Security architecture and principles',
+          time: '12 min read',
+        },
+        {
+          title: 'Authentication',
+          description: 'User authentication and authorization',
+          time: '15 min read',
+        },
+        {
+          title: 'Data Protection',
+          description: 'Protect sensitive data',
+          time: '18 min read',
+        },
+        {
+          title: 'Compliance',
+          description: 'Meet compliance requirements',
+          time: '20 min read',
+        },
+      ],
     },
     {
-      name: 'Tutorials',
-      icon: <Lightbulb className="w-6 h-6" />,
-      color: 'from-yellow-500 to-orange-500',
+      title: 'Support',
+      description: 'Help and support resources',
+      icon: Users,
       docs: [
-        { title: 'Building AI Chatbots', description: 'Create intelligent conversational agents', time: '45 min read' },
-        { title: 'Quantum Machine Learning', description: 'ML algorithms on quantum computers', time: '60 min read' },
-        { title: 'Business Process Automation', description: 'Automate workflows with AI', time: '40 min read' },
-        { title: 'Data Analysis & Visualization', description: 'Extract insights from data', time: '35 min read' }
-      ]
-    }
+        {
+          title: 'FAQ',
+          description: 'Frequently asked questions',
+          time: '10 min read',
+        },
+        {
+          title: 'Troubleshooting',
+          description: 'Common issues and solutions',
+          time: '15 min read',
+        },
+        {
+          title: 'Contact Support',
+          description: 'Get help from our team',
+          time: '5 min read',
+        },
+        {
+          title: 'Community',
+          description: 'Join our developer community',
+          time: '8 min read',
+        },
+      ],
+    },
   ];
 
   const popularDocs = [
-    { title: 'Quick Start Guide', category: 'Getting Started', views: '12.5k', rating: 4.9 },
-    { title: 'AI Consciousness Platform', category: 'AI Services', views: '8.9k', rating: 4.8 },
-    { title: 'Quantum AI Fusion', category: 'Quantum Computing', views: '7.2k', rating: 4.7 },
-    { title: 'API Authentication', category: 'API Reference', views: '6.8k', rating: 4.9 },
-    { title: 'Business Process Automation', category: 'Tutorials', views: '5.4k', rating: 4.6 }
+    {
+      title: 'Quick Start Guide',
+      description: 'Get started with Zion Tech Group services in minutes',
+      category: 'Getting Started',
+      views: '12.5k',
+      rating: 4.9,
+    },
+    {
+      title: 'API Authentication',
+      description: 'Learn how to authenticate with our APIs',
+      category: 'API Reference',
+      views: '8.2k',
+      rating: 4.8,
+    },
+    {
+      title: 'AI Model Training',
+      description: 'Train custom AI models for your use case',
+      category: 'AI Services',
+      views: '6.7k',
+      rating: 4.9,
+    },
+    {
+      title: 'Cloud Deployment',
+      description: 'Deploy your applications to the cloud',
+      category: 'Cloud Services',
+      views: '5.9k',
+      rating: 4.7,
+    },
   ];
 
-  const recentUpdates = [
-    { title: 'New AI Ethics Guidelines', date: '2025-01-15', type: 'New' },
-    { title: 'Quantum Security Updates', date: '2025-01-12', type: 'Updated' },
-    { title: 'API Rate Limiting Changes', date: '2025-01-10', type: 'Updated' },
-    { title: 'Business Intelligence Tutorial', date: '2025-01-08', type: 'New' }
+  const resources = [
+    {
+      title: 'SDK Downloads',
+      description: 'Download our SDKs for popular programming languages',
+      icon: Download,
+      items: ['Python SDK', 'JavaScript SDK', 'Java SDK', 'C# SDK'],
+    },
+    {
+      title: 'Code Examples',
+      description: 'Ready-to-use code examples and snippets',
+      icon: Code,
+      items: [
+        'REST API Examples',
+        'Webhook Examples',
+        'Integration Examples',
+        'Best Practices',
+      ],
+    },
+    {
+      title: 'Video Tutorials',
+      description: 'Step-by-step video tutorials',
+      icon: ExternalLink,
+      items: [
+        'Getting Started',
+        'Advanced Features',
+        'Troubleshooting',
+        'Case Studies',
+      ],
+    },
   ];
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
+const Page = () => {
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/docs.tsx
+<<<<<<< HEAD
+=======
+
+
+
+export default function DocsPage() {
+	return (
+		<Layout>
+			<Head>
+				<title>Documentation | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/docs" />
+			</Head>
+			<section className="container mx-auto px-4 py-24">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
+				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
+			</section>
+		</Layout>
+	)
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+<<<<<<< HEAD:pages_backup/docs.tsx
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+import React from 'react',
+origin/cursor/automate-test-improve-and-merge-code-2533
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/docs.tsx
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
+export default function DocsPage() {
+	return (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+		<Layout>
+			<Head>
+				<title>Documentation | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/docs" />
+			</Head>
+			<section className="container mx-auto px-4 py-24">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
+				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
+			</section>
+		</Layout>
+	)
+<<<<<<< HEAD:pages_backup/docs.tsx
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+export default function DocsPage() {
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+
+}
+<<<<<<< HEAD
+;
+=======
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+export default function DocsPage() {
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+import React from 'react',
+import Head from 'next / head',
+import Layout from '../components / layout / Layout',
+export default /**
+ * DocsPage - Function description
+ */
+function DocsPage() {
+return (
+  <Layout>;
+  <Head>;
+    <title > Documentation | Zion Tech Group</title>;
+    <link rel="canonical" href="https://ziontechgroup.com / docs" />;
+  </Head>;
+  <section className="container mx - auto px - 4 py - 24">;
+    <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6">Documentation</h1>;
+    <p className="text - gray - 300">Guides, API docs, and best practices. Coming soon.</p>;
+  </section>;
+  </Layout>);
+}
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+=======
+
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
+
+		<Layout>
+			<Head>
+				<title>Documentation | Zion Tech Group</title>
+				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/docs&quot; />
+			</Head>
+			<section className=&quot;container mx-auto px-4 py-24&quot;>
+				<h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6&quot;>Documentation</h1>
+				<p className=&quot;text-gray-300&quot;>Guides, API docs, and best practices. Coming soon.</p>
+			</section>
+		</Layout>
+	)
+}
+
+import React from 'react';
+
+<<<<<<< HEAD:pages_backup/docs.tsx
+
+
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+export default function DocsPage() {
+	return (
+		<Layout>
+			<Head>
+				<title>Documentation | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/docs" />
+			</Head>
+			<section className="container mx-auto px-4 py-24">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
+				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
+			</section>
+		</Layout>
+	)
+<<<<<<< HEAD:pages_backup/docs.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/docs.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+
+export default function DocsPage() {
+	return (
+		<Layout>
+			<Head>
+				<title>Documentation | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/docs" />
+			</Head>
+			<section className="container mx-auto px-4 py-24">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
+				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
+			</section>
+		</Layout>
+	)
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/docs.tsx
+;
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/docs.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
+
+
+
+
+<<<<<<< HEAD:pages_backup/docs.tsx
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+;
+
+
+
+;
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx
+  return (
+    <Layout>
+      <Head>
+        <title>Documentation | Zion Tech Group</title>
+        <link rel='canonical' href='https://ziontechgroup.com/docs' />
+      </Head>
+      <section className='container mx-auto px-4 py-24'>
+        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>
+          Documentation
+        </h1>
+        <p className='text-gray-300'>
+          Guides, API docs, and best practices. Coming soon.
+        </p>
+      </section>
+    </Layout>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
     <>
       <Head>
         <title>Documentation - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive documentation for Zion Tech Group's AI, quantum computing, and technology platforms. Get started guides, API references, and tutorials." />
-        <meta name="keywords" content="documentation, API reference, tutorials, getting started, AI documentation, quantum computing docs" />
-        <link rel="canonical" href="https://ziontechgroup.com/docs" />
+        <meta
+          name="description"
+          content="Comprehensive documentation for Zion Tech Group services. Get started with our APIs, AI services, and cloud solutions."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
-                <BookOpen className="w-4 h-4 mr-2" />
-                Documentation
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
                 Documentation
               </h1>
-              
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Everything you need to build with our revolutionary AI, quantum computing, and technology platforms. 
-                From quick start guides to advanced tutorials.
+              <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
+                Everything you need to get started with Zion Tech Group services
+                and APIs.
               </p>
-
-              {/* Search Bar */}
               <div className="max-w-2xl mx-auto">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
                     type="text"
                     placeholder="Search documentation..."
-                    className="w-full px-12 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 text-lg"
+                    className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
-                  <button className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200">
-                    Search
-                  </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Popular Documentation */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-16"
-            >
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {popularDocs.map((doc, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 cursor-pointer group"
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
+        <section className="py-20 sm:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                Popular Documentation
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                Most viewed and highly rated documentation
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {popularDocs.map((doc, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-lg p-6 hover: shadow-xl transition-shadow"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        {doc.title}
+                      </h3>
+                      <p className="text-gray-600 mb-3">{doc.description}</p>
+                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
                         {doc.category}
                       </span>
-                      <div className="flex items-center space-x-2">
-                        <span className="text-yellow-400 text-sm">★</span>
-                        <span className="text-gray-300 text-sm">{doc.rating}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <div className="flex items-center">
+                        <Users className="w-4 h-4 mr-1" />
+                        {doc.views} views
+                      </div>
+                      <div className="flex items-center">
+                        <span className="text-yellow-400">★</span>
+                        {doc.rating}
                       </div>
                     </div>
-                    
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-200">
-                      {doc.title}
-                    </h3>
-                    
-                    <div className="flex items-center justify-between text-sm text-gray-400">
-                      <span>{doc.views} views</span>
-                      <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+                    <Link
+                      href="#"
+                      className="text-blue-600 hover:text-blue-700 font-semibold flex items-center"
+                    >
+                      Read More
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Documentation Categories */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-16"
-            >
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">Browse by Category</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {categories.map((category, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
-                  >
-                    <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mb-4`}>
-                      {category.icon}
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-white mb-4">{category.name}</h3>
-                    
-                    <div className="space-y-3 mb-6">
-                      {category.docs.map((doc, docIndex) => (
-                        <div key={docIndex} className="flex items-center justify-between p-3 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-colors duration-200 cursor-pointer group">
-                          <div className="flex-1">
-                            <h4 className="text-sm font-medium text-white group-hover:text-blue-400 transition-colors duration-200">
-                              {doc.title}
-                            </h4>
-                            <p className="text-xs text-gray-400">{doc.description}</p>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <span className="text-xs text-gray-500">{doc.time}</span>
-                            <ChevronRight className="w-4 h-4 text-gray-400 group-hover:translate-x-1 transition-transform duration-200" />
-                          </div>
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                Documentation Categories
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                Browse documentation by category
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {docCategories.map((category, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-50 rounded-xl p-6 hover: shadow-lg transition-shadow"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                    <category.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {category.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{category.description}</p>
+                  <div className="space-y-2">
+                    {category.docs.map((doc, docIndex) => (
+                      <div
+                        key={docIndex}
+                        className="flex items-center justify-between p-2 hover: bg-white rounded-lg transition-colors"
+                      >
+                        <div className="flex-1">
+                          <h4 className="text-sm font-semibold text-gray-900">
+                            {doc.title}
+                          </h4>
+                          <p className="text-xs text-gray-600">
+                            {doc.description}
+                          </p>
                         </div>
-                      ))}
-                    </div>
-                    
-                    <button className="w-full py-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200">
-                      View All
-                    </button>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+                        <div className="flex items-center text-xs text-gray-500">
+                          <Clock className="w-3 h-3 mr-1" />
+                          {doc.time}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <Link
+                    href="#"
+                    className="text-blue-600 hover: text-blue-700 font-semibold flex items-center mt-4"
+                  >
+                    View All
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* Recent Updates */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-16"
-            >
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">Recent Updates</h2>
-              
-              <div className="space-y-4">
-                {recentUpdates.map((update, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="flex items-center justify-between p-4 bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-xl hover:border-blue-500/50 transition-all duration-300"
-                  >
-                    <div className="flex items-center space-x-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        update.type === 'New' 
-                          ? 'bg-green-500/20 text-green-300 border border-green-500/30'
-                          : 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
-                      }`}>
-                        {update.type}
-                      </span>
-                      <h3 className="text-lg font-semibold text-white">{update.title}</h3>
-                    </div>
-                    
-                    <span className="text-gray-400 text-sm">
-                      {new Date(update.date).toLocaleDateString()}
-                    </span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
+        {/* Resources */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                Additional Resources
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                Tools and resources to help you succeed
+              </p>
+            </div>
 
-        {/* Quick Actions */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h2 className="text-3xl font-bold text-white mb-8">Quick Actions</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[
-                  { title: 'Download SDK', icon: <Download className="w-8 h-8" />, color: 'from-green-500 to-emerald-600' },
-                  { title: 'View API Docs', icon: <Code className="w-8 h-8" />, color: 'from-blue-500 to-cyan-600' },
-                  { title: 'Get Support', icon: <Users className="w-8 h-8" />, color: 'from-purple-500 to-pink-600' },
-                  { title: 'Security Guide', icon: <Lock className="w-8 h-8" />, color: 'from-orange-500 to-red-600' }
-                ].map((action, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 cursor-pointer group"
-                  >
-                    <div className={`w-16 h-16 bg-gradient-to-r ${action.color} rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-200`}>
-                      {action.icon}
-                    </div>
-                    <h3 className="text-lg font-semibold text-white">{action.title}</h3>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {resources.map((resource, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-lg p-6 text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <resource.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {resource.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{resource.description}</p>
+                  <ul className="space-y-2 text-left">
+                    {resource.items.map((item, itemIndex) => (
+                      <li
+                        key={itemIndex}
+                        className="flex items-center text-sm text-gray-700"
+                      >
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Dive into our comprehensive documentation and start building the future with our 
-                revolutionary AI and quantum computing technologies.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200">
-                  Contact Sales
-                  <ExternalLink className="w-5 h-5 ml-2" />
-                </Link>
-                <Link href="/support" className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
-                  Get Help
-                </Link>
-              </div>
-            </motion.div>
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Need Help?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Can&apos;t find what you&apos;re looking for? Our support team is
+              here to help.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+              <Link href="/contact">
+                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                  Contact Support
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </button>
+              </Link>
+              <Link href="/help">
+                <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                  Help Center
+                </button>
+              </Link>
+            </div>
           </div>
         </section>
-      </div>
+      </main>
     </>
   );
 }
+<<<<<<< HEAD:pages_backup/docs.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/docs.tsx
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/docs.tsx
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/docs.tsx

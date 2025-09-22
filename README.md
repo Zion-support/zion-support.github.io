@@ -1,3173 +1,2305 @@
-# bolt.new.zion.app
+# Zion Tech Group - Advanced Technology Solutions
 
-![Automations: 227](https://img.shields.io/badge/Automations-227-informational) ![Pages: 15+](https://img.shields.io/badge/Pages-15+-success) ![Components: 50+](https://img.shields.io/badge/Components-50+-blue) ![Blueprints: 7](https://img.shields.io/badge/Blueprints-7-purple)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
-Autonomous, cloud‑native app with self‑running automations.
+A modern, responsive website built with React, TypeScript, and Vite, showcasing Zion Tech Group's comprehensive technology solutions.
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+## 🌟 Overview
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, cloud infrastructure, and digital transformation services. We provide comprehensive technology solutions for enterprises, startups, and government organizations.
 
-Home: https://github.com/Zion-Holdings/zion.app#readme
+## 🚀 Key Features
+- **AI-Powered Solutions**: Advanced artificial intelligence and machine learning services
+- **Cloud Infrastructure**: Scalable cloud solutions and migration services
+- **Digital Transformation**: Complete digital transformation consulting and implementation
+- **Cybersecurity**: Advanced security solutions and compliance services
+- **Custom Development**: Tailored software solutions for unique business needs
 
-### Highlights
-- **Autonomous cloud automations**: GitHub Actions run on schedules to maintain, audit, and improve the repo without human intervention.
-- **Rapid sync**: A 1-minute cadence keeps branches synchronized.
-- **Self-healing CI**: Automatic detection and PRs for fixes after failures.
+## 🛠️ Technology Stack
 
-### Key Directories
-- `automation/`: Cloud automation scripts (content, SEO, security, sync).
-- `scripts/`: Utility scripts (sitemap, SEO, radar, README generator).
-- `pages/`: Next.js pages.
-- `components/`: Reusable UI components.
+## 🛠️ Tech Stack
 
-### New Content & Features
-- **Blueprint System**: 7 comprehensive technical blueprints covering autonomous cloud automation, AI-powered talent marketplace, DeFi infrastructure, quantum computing, edge computing, blockchain governance, and AI ethics.
-- **API Documentation**: Complete API reference with examples in JavaScript, Python, and cURL.
-- **Component Library**: 50+ reusable UI components with interactive examples and usage guidelines.
-- **Enhanced Reports**: Updated report system with structured content and improved navigation.
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, Custom CSS
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **SEO**: React Helmet Async
+- **Animations**: Framer Motion
+- **Build Tool**: Vite with ESBuild
+- **Package Manager**: npm
 
-### Routes
-- /
-- /404
-- /500
-- /_app
-- /_document
-- /about
-- /api-documentation
-- /automation
-- /automation-health
-- /blog
-- /component-library
-- /contact
-- /privacy
-- /reports
-- /reports/updates
-- /reports/blueprints
-- /reports/blueprints/blueprint-2025-08-18-122901
-- /reports/blueprints/blueprint-2025-08-18-122931
-- /reports/blueprints/blueprint-2025-08-18-122952
-- /reports/blueprints/blueprint-2025-08-18-123006
-- /reports/blueprints/blueprint-2025-08-18-123030
-- /reports/blueprints/blueprint-2025-08-18-123102
-- /reports/blueprints/blueprint-2025-08-18-123152
-- /services
-- /reports/blueprints/blueprint-2025-08-18-131847
-- /reports/blueprints/blueprint-2025-08-18-131910
-- /reports/blueprints/blueprint-2025-08-18-132004
-- /reports/blueprints/blueprint-2025-08-18-132029
-- /reports/blueprints/blueprint-2025-08-18-132105
-- /reports/blueprints/blueprint-2025-08-18-132208
-- /reports/blueprints/blueprint-2025-08-18-132331
-- /reports/blueprints/blueprint-2025-08-18-132426
-- /reports/blueprints/blueprint-2025-08-18-132558
-- /reports/blueprints/blueprint-2025-08-18-132615
-- /reports/blueprints/blueprint-2025-08-18-132719
-- /reports/blueprints/blueprint-2025-08-18-132754
-- /reports/blueprints/blueprint-2025-08-18-132824
-- /reports/blueprints/blueprint-2025-08-18-132923
-- /reports/blueprints/blueprint-2025-08-18-132948
-- /reports/blueprints/blueprint-2025-08-18-133027
-- /reports/blueprints/blueprint-2025-08-18-133059
-- /reports/blueprints/blueprint-2025-08-18-133127
-- /reports/blueprints/blueprint-2025-08-18-133201
-- /reports/blueprints/blueprint-2025-08-18-133316
-- /reports/blueprints/blueprint-2025-08-18-133351
-- /reports/blueprints/blueprint-2025-08-18-133444
-- /reports/blueprints/blueprint-2025-08-18-133512
-- /reports/blueprints/blueprint-2025-08-18-133622
-- /reports/blueprints/blueprint-2025-08-18-133636
-- /reports/blueprints/blueprint-2025-08-18-133714
-- /reports/blueprints/blueprint-2025-08-18-133757
-- /reports/blueprints/blueprint-2025-08-18-133828
-- /reports/blueprints/blueprint-2025-08-18-133857
-- /reports/blueprints/blueprint-2025-08-18-133929
-- /reports/blueprints/blueprint-2025-08-18-134004
-- /reports/blueprints/blueprint-2025-08-18-134033
-- /reports/blueprints/blueprint-2025-08-18-134148
-- /reports/blueprints/blueprint-2025-08-18-134223
-- /reports/blueprints/blueprint-2025-08-18-134254
-- /reports/blueprints/blueprint-2025-08-18-134328
-- /reports/blueprints/blueprint-2025-08-18-134401
-- /reports/blueprints/blueprint-2025-08-18-134426
-- /reports/blueprints/blueprint-2025-08-18-134451
-- /reports/blueprints/blueprint-2025-08-18-134518
-- /reports/blueprints/blueprint-2025-08-18-134544
-- /reports/blueprints/blueprint-2025-08-18-134638
-- /reports/blueprints/blueprint-2025-08-18-134654
-- /reports/blueprints/blueprint-2025-08-18-134739
-- /reports/blueprints/blueprint-2025-08-18-134807
-- /reports/blueprints/blueprint-2025-08-18-134837
-- /reports/blueprints/blueprint-2025-08-18-134901
-- /reports/blueprints/blueprint-2025-08-18-134923
-- /reports/blueprints/blueprint-2025-08-18-135003
-- /reports/blueprints/blueprint-2025-08-18-135026
-- /reports/blueprints/blueprint-2025-08-18-135055
-- /reports/blueprints/blueprint-2025-08-18-135156
-- /reports/blueprints/blueprint-2025-08-18-135201
-- /reports/blueprints/blueprint-2025-08-18-135314
-- /reports/blueprints/blueprint-2025-08-18-135407
-- /reports/blueprints/blueprint-2025-08-18-135427
-- /reports/blueprints/blueprint-2025-08-18-135447
-- /reports/blueprints/blueprint-2025-08-18-135518
-- /reports/blueprints/blueprint-2025-08-18-135550
-- /reports/blueprints/blueprint-2025-08-18-135642
-- /reports/blueprints/blueprint-2025-08-18-135737
-- /reports/blueprints/blueprint-2025-08-18-135830
-- /reports/blueprints/blueprint-2025-08-18-135856
-- /reports/blueprints/blueprint-2025-08-18-135918
-- /reports/blueprints/blueprint-2025-08-18-140003
-- /reports/blueprints/blueprint-2025-08-18-140047
-- /reports/blueprints/blueprint-2025-08-18-140141
-- /reports/blueprints/blueprint-2025-08-18-140215
-- /reports/blueprints/blueprint-2025-08-18-140328
-- /reports/blueprints/blueprint-2025-08-18-140420
-- /reports/blueprints/blueprint-2025-08-18-140449
-- /reports/blueprints/blueprint-2025-08-18-140519
-- /reports/blueprints/blueprint-2025-08-18-140552
-- /reports/blueprints/blueprint-2025-08-18-140651
-- /reports/blueprints/blueprint-2025-08-18-140722
-- /reports/blueprints/blueprint-2025-08-18-140728
-- /reports/blueprints/blueprint-2025-08-18-140753
-- /reports/blueprints/blueprint-2025-08-18-140820
-- /reports/blueprints/blueprint-2025-08-18-140842
-- /reports/blueprints/blueprint-2025-08-18-140915
-- /reports/blueprints/blueprint-2025-08-18-140939
-- /reports/blueprints/blueprint-2025-08-18-141006
-- /reports/blueprints/blueprint-2025-08-18-141036
-- /reports/blueprints/blueprint-2025-08-18-141102
-- /reports/blueprints/blueprint-2025-08-18-141224
-- /reports/blueprints/blueprint-2025-08-18-141229
-- /reports/blueprints/blueprint-2025-08-18-141343
-- /reports/blueprints/blueprint-2025-08-18-141407
-- /reports/blueprints/blueprint-2025-08-18-141434
-- /reports/blueprints/blueprint-2025-08-18-141552
-- /reports/blueprints/blueprint-2025-08-18-141654
-- /reports/blueprints/blueprint-2025-08-18-141722
-- /reports/blueprints/blueprint-2025-08-18-141736
-- /reports/blueprints/blueprint-2025-08-18-141749
-- /reports/blueprints/blueprint-2025-08-18-141839
-- /reports/blueprints/blueprint-2025-08-18-141902
-- /reports/blueprints/blueprint-2025-08-18-141927
-- /reports/blueprints/blueprint-2025-08-18-141954
-- /reports/blueprints/blueprint-2025-08-18-142057
-- /reports/blueprints/blueprint-2025-08-18-142201
-- /reports/blueprints/blueprint-2025-08-18-142224
-- /reports/blueprints/blueprint-2025-08-18-142243
-- /reports/blueprints/blueprint-2025-08-18-142251
-- /reports/blueprints/blueprint-2025-08-18-142319
-- /reports/blueprints/blueprint-2025-08-18-142342
-- /reports/blueprints/blueprint-2025-08-18-142406
-- /reports/blueprints/blueprint-2025-08-18-142433
-- /reports/blueprints/blueprint-2025-08-18-142501
-- /reports/blueprints/blueprint-2025-08-18-142530
-- /reports/blueprints/blueprint-2025-08-18-142603
-- /reports/blueprints/blueprint-2025-08-18-142659
-- /reports/blueprints/blueprint-2025-08-18-142724
-- /reports/blueprints/blueprint-2025-08-18-142750
-- /reports/blueprints/blueprint-2025-08-18-142819
-- /reports/blueprints/blueprint-2025-08-18-142844
-- /reports/blueprints/blueprint-2025-08-18-142906
-- /reports/blueprints/blueprint-2025-08-18-142956
-- /reports/blueprints/blueprint-2025-08-18-143003
-- /reports/blueprints/blueprint-2025-08-18-143038
-- /reports/blueprints/blueprint-2025-08-18-143300
-- /reports/blueprints/blueprint-2025-08-18-143349
-- /reports/blueprints/blueprint-2025-08-18-143442
-- /reports/blueprints/blueprint-2025-08-18-143507
-- /reports/blueprints/blueprint-2025-08-18-143534
-- /reports/blueprints/blueprint-2025-08-18-143608
-- /reports/blueprints/blueprint-2025-08-18-143700
-- /reports/blueprints/blueprint-2025-08-18-143724
-- /reports/blueprints/blueprint-2025-08-18-143747
-- /reports/blueprints/blueprint-2025-08-18-143839
-- /reports/blueprints/blueprint-2025-08-18-143902
-- /reports/blueprints/blueprint-2025-08-18-143929
-- /reports/blueprints/blueprint-2025-08-18-143957
-- /reports/blueprints/blueprint-2025-08-18-144004
-- /reports/blueprints/blueprint-2025-08-18-144028
-- /reports/blueprints/blueprint-2025-08-18-144054
-- /reports/blueprints/blueprint-2025-08-18-144249
-- /reports/blueprints/blueprint-2025-08-18-144316
-- /reports/blueprints/blueprint-2025-08-18-144340
-- /reports/blueprints/blueprint-2025-08-18-144452
-- /reports/blueprints/blueprint-2025-08-18-144527
-- /reports/blueprints/blueprint-2025-08-18-144554
-- /reports/blueprints/blueprint-2025-08-18-144729
-- /reports/blueprints/blueprint-2025-08-18-144845
-- /reports/blueprints/blueprint-2025-08-18-145003
-- /reports/blueprints/blueprint-2025-08-18-145037
-- /reports/blueprints/blueprint-2025-08-18-145203
-- /reports/blueprints/blueprint-2025-08-18-145233
-- /reports/blueprints/blueprint-2025-08-18-145258
-- /reports/blueprints/blueprint-2025-08-18-145321
-- /reports/blueprints/blueprint-2025-08-18-145326
-- /reports/blueprints/blueprint-2025-08-18-145346
-- /reports/blueprints/blueprint-2025-08-18-145432
-- /reports/blueprints/blueprint-2025-08-18-145456
-- /reports/blueprints/blueprint-2025-08-18-145555
-- /reports/blueprints/blueprint-2025-08-18-145657
-- /reports/blueprints/blueprint-2025-08-18-145722
-- /reports/blueprints/blueprint-2025-08-18-145817
-- /reports/blueprints/blueprint-2025-08-18-145911
-- /reports/blueprints/blueprint-2025-08-18-150008
-- /reports/blueprints/blueprint-2025-08-18-150220
-- /reports/blueprints/blueprint-2025-08-18-150248
-- /reports/blueprints/blueprint-2025-08-18-150342
-- /reports/blueprints/blueprint-2025-08-18-150348
-- /reports/blueprints/blueprint-2025-08-18-150419
-- /reports/blueprints/blueprint-2025-08-18-150601
-- /reports/blueprints/blueprint-2025-08-18-150738
-- /reports/blueprints/blueprint-2025-08-18-150807
-- /reports/blueprints/blueprint-2025-08-18-150841
-- /reports/blueprints/blueprint-2025-08-18-150917
-- /reports/blueprints/blueprint-2025-08-18-150952
-- /reports/blueprints/blueprint-2025-08-18-151028
-- /reports/blueprints/blueprint-2025-08-18-151054
-- /reports/blueprints/blueprint-2025-08-18-151203
-- /reports/blueprints/blueprint-2025-08-18-151230
-- /reports/blueprints/blueprint-2025-08-18-151325
-- /reports/blueprints/blueprint-2025-08-18-151355
-- /reports/blueprints/blueprint-2025-08-18-151420
-- /reports/blueprints/blueprint-2025-08-18-151450
-- /reports/blueprints/blueprint-2025-08-18-151523
-- /reports/blueprints/blueprint-2025-08-18-151648
-- /reports/blueprints/blueprint-2025-08-18-151716
-- /reports/blueprints/blueprint-2025-08-18-151738
-- /reports/blueprints/blueprint-2025-08-18-151941
-- /reports/blueprints/blueprint-2025-08-18-152028
-- /reports/blueprints/blueprint-2025-08-18-152156
-- /reports/blueprints/blueprint-2025-08-18-152247
-- /reports/blueprints/blueprint-2025-08-18-152317
-- /reports/blueprints/blueprint-2025-08-18-152342
-- /reports/blueprints/blueprint-2025-08-18-152411
-- /reports/blueprints/blueprint-2025-08-18-152449
-- /reports/blueprints/blueprint-2025-08-18-152546
-- /reports/blueprints/blueprint-2025-08-18-152719
-- /reports/blueprints/blueprint-2025-08-18-152743
-- /reports/blueprints/blueprint-2025-08-18-152812
-- /reports/blueprints/blueprint-2025-08-18-152835
-- /reports/blueprints/blueprint-2025-08-18-152859
-- /reports/blueprints/blueprint-2025-08-18-152957
-- /reports/blueprints/blueprint-2025-08-18-153003
-- /reports/blueprints/blueprint-2025-08-18-153029
-- /reports/blueprints/blueprint-2025-08-18-153103
-- /reports/blueprints/blueprint-2025-08-18-153205
-- /reports/blueprints/blueprint-2025-08-18-153258
-- /reports/blueprints/blueprint-2025-08-18-153322
-- /reports/blueprints/blueprint-2025-08-18-153346
-- /reports/blueprints/blueprint-2025-08-18-153426
-- /reports/blueprints/blueprint-2025-08-18-153449
-- /reports/blueprints/blueprint-2025-08-18-153602
-- /reports/blueprints/blueprint-2025-08-18-153702
-- /reports/blueprints/blueprint-2025-08-18-153723
-- /reports/blueprints/blueprint-2025-08-18-153747
-- /reports/blueprints/blueprint-2025-08-18-153831
-- /reports/blueprints/blueprint-2025-08-18-153852
-- /reports/blueprints/blueprint-2025-08-18-153916
-- /reports/blueprints/blueprint-2025-08-18-153932
-- /reports/blueprints/blueprint-2025-08-18-154018
-- /reports/blueprints/blueprint-2025-08-18-154048
-- /reports/blueprints/blueprint-2025-08-18-154144
-- /reports/blueprints/blueprint-2025-08-18-154213
-- /reports/blueprints/blueprint-2025-08-18-154234
-- /reports/blueprints/blueprint-2025-08-18-154255
-- /reports/blueprints/blueprint-2025-08-18-154318
-- /reports/blueprints/blueprint-2025-08-18-154340
-- /reports/blueprints/blueprint-2025-08-18-154408
-- /reports/blueprints/blueprint-2025-08-18-154433
-- /reports/blueprints/blueprint-2025-08-18-154440
-- /reports/blueprints/blueprint-2025-08-18-154507
-- /reports/blueprints/blueprint-2025-08-18-154535
-- /reports/blueprints/blueprint-2025-08-18-154846
-- /reports/blueprints/blueprint-2025-08-18-154912
-- /reports/blueprints/blueprint-2025-08-18-154937
-- /reports/blueprints/blueprint-2025-08-18-155004
-- /reports/blueprints/blueprint-2025-08-18-155010
-- /reports/blueprints/blueprint-2025-08-18-155045
-- /reports/blueprints/blueprint-2025-08-18-155155
-- /reports/blueprints/blueprint-2025-08-18-155247
-- /reports/blueprints/blueprint-2025-08-18-155344
-- /reports/blueprints/blueprint-2025-08-18-155444
-- /reports/blueprints/blueprint-2025-08-18-155455
-- /reports/blueprints/blueprint-2025-08-18-155556
-- /reports/blueprints/blueprint-2025-08-18-155822
-- /reports/blueprints/blueprint-2025-08-18-155845
-- /reports/blueprints/blueprint-2025-08-18-155921
-- /reports/blueprints/blueprint-2025-08-18-160004
-- /reports/blueprints/blueprint-2025-08-18-160047
-- /reports/blueprints/blueprint-2025-08-18-160144
-- /reports/blueprints/blueprint-2025-08-18-160238
-- /reports/blueprints/blueprint-2025-08-18-160303
-- /reports/blueprints/blueprint-2025-08-18-160333
-- /reports/blueprints/blueprint-2025-08-18-160408
-- /reports/blueprints/blueprint-2025-08-18-160430
-- /reports/blueprints/blueprint-2025-08-18-160453
-- /reports/blueprints/blueprint-2025-08-18-160511
-- /reports/blueprints/blueprint-2025-08-18-160527
-- /reports/blueprints/blueprint-2025-08-18-160556
-- /reports/blueprints/blueprint-2025-08-18-160744
-- /reports/blueprints/blueprint-2025-08-18-160836
-- /reports/blueprints/blueprint-2025-08-18-160926
-- /reports/blueprints/blueprint-2025-08-18-160957
-- /reports/blueprints/blueprint-2025-08-18-161003
-- /reports/blueprints/blueprint-2025-08-18-161028
-- /reports/blueprints/blueprint-2025-08-18-161059
-- /reports/blueprints/blueprint-2025-08-18-161238
-- /reports/blueprints/blueprint-2025-08-18-161301
-- /reports/blueprints/blueprint-2025-08-18-161323
-- /reports/blueprints/blueprint-2025-08-18-161422
-- /reports/blueprints/blueprint-2025-08-18-161445
-- /reports/blueprints/blueprint-2025-08-18-161518
-- /reports/blueprints/blueprint-2025-08-18-161529
-- /reports/blueprints/blueprint-2025-08-18-161552
-- /reports/blueprints/blueprint-2025-08-18-161806
-- /reports/blueprints/blueprint-2025-08-18-161833
-- /reports/blueprints/blueprint-2025-08-18-161907
-- /reports/blueprints/blueprint-2025-08-18-161937
-- /reports/blueprints/blueprint-2025-08-18-162004
-- /reports/blueprints/blueprint-2025-08-18-162037
-- /reports/blueprints/blueprint-2025-08-18-162237
-- /reports/blueprints/blueprint-2025-08-18-162407
-- /reports/blueprints/blueprint-2025-08-18-162457
-- /reports/blueprints/blueprint-2025-08-18-162525
-- /reports/blueprints/blueprint-2025-08-18-162543
-- /reports/blueprints/blueprint-2025-08-18-162652
-- /reports/blueprints/blueprint-2025-08-18-162853
-- /reports/blueprints/blueprint-2025-08-18-162924
-- /reports/blueprints/blueprint-2025-08-18-162951
-- /reports/blueprints/blueprint-2025-08-18-163004
-- /reports/blueprints/blueprint-2025-08-18-163041
-- /reports/blueprints/blueprint-2025-08-18-163443
-- /reports/blueprints/blueprint-2025-08-18-163513
-- /reports/blueprints/blueprint-2025-08-18-163545
-- /reports/blueprints/blueprint-2025-08-18-163806
-- /reports/blueprints/blueprint-2025-08-18-163934
-- /reports/blueprints/blueprint-2025-08-18-164031
-- /reports/blueprints/blueprint-2025-08-18-164113
-- /reports/cases/case-2025-08-18-122902
-- /reports/cases/case-2025-08-18-122931
-- /reports/cases/case-2025-08-18-122952
-- /reports/cases/case-2025-08-18-123007
-- /reports/cases/case-2025-08-18-123031
-- /reports/cases/case-2025-08-18-123103
-- /reports/cases/case-2025-08-18-123153
-- /reports/cases/case-2025-08-18-123222
-- /reports/cases/case-2025-08-18-123247
-- /reports/cases/case-2025-08-18-123317
-- /reports/cases/case-2025-08-18-123341
-- /reports/cases/case-2025-08-18-123342
-- /reports/cases/case-2025-08-18-123407
-- /reports/cases/case-2025-08-18-123429
-- /reports/cases/case-2025-08-18-123450
-- /reports/cases/case-2025-08-18-123513
-- /reports/cases/case-2025-08-18-123531
-- /reports/cases/case-2025-08-18-123543
-- /reports/cases/case-2025-08-18-123611
-- /reports/cases/case-2025-08-18-123649
-- /reports/cases/case-2025-08-18-123716
-- /reports/cases/case-2025-08-18-123737
-- /reports/cases/case-2025-08-18-123801
-- /reports/cases/case-2025-08-18-123825
-- /reports/cases/case-2025-08-18-123846
-- /reports/cases/case-2025-08-18-123909
-- /reports/cases/case-2025-08-18-123933
-- /reports/cases/case-2025-08-18-123955
-- /reports/cases/case-2025-08-18-124006
-- /reports/cases/case-2025-08-18-124030
-- /reports/cases/case-2025-08-18-124039
-- /reports/cases/case-2025-08-18-124106
-- /reports/cases/case-2025-08-18-124150
-- /reports/cases/case-2025-08-18-124214
-- /reports/cases/case-2025-08-18-124236
-- /reports/cases/case-2025-08-18-124258
-- /reports/cases/case-2025-08-18-130835
-- /reports/cases/case-2025-08-18-130857
-- /reports/cases/case-2025-08-18-130921
-- /reports/cases/case-2025-08-18-130941
-- /reports/cases/case-2025-08-18-131415
-- /reports/cases/case-2025-08-18-131416
-- /reports/cases/case-2025-08-18-131442
-- /reports/cases/case-2025-08-18-131506
-- /reports/cases/case-2025-08-18-131534
-- /reports/cases/case-2025-08-18-131553
-- /reports/cases/case-2025-08-18-131618
-- /reports/cases/case-2025-08-18-131658
-- /reports/cases/case-2025-08-18-131659
-- /reports/cases/case-2025-08-18-131720
-- /reports/cases/case-2025-08-18-131741
-- /reports/cases/case-2025-08-18-131802
-- /reports/cases/case-2025-08-18-131821
-- /reports/cases/case-2025-08-18-131847
-- /reports/cases/case-2025-08-18-131910
-- /reports/cases/case-2025-08-18-132005
-- /reports/cases/case-2025-08-18-132029
-- /reports/cases/case-2025-08-18-132106
-- /reports/cases/case-2025-08-18-132208
-- /reports/cases/case-2025-08-18-132332
-- /reports/cases/case-2025-08-18-132427
-- /reports/cases/case-2025-08-18-132558
-- /reports/cases/case-2025-08-18-132559
-- /reports/cases/case-2025-08-18-132616
-- /reports/cases/case-2025-08-18-132719
-- /reports/cases/case-2025-08-18-132754
-- /reports/cases/case-2025-08-18-132824
-- /reports/cases/case-2025-08-18-132924
-- /reports/cases/case-2025-08-18-132949
-- /reports/cases/case-2025-08-18-133027
-- /reports/cases/case-2025-08-18-133100
-- /reports/cases/case-2025-08-18-133127
-- /reports/cases/case-2025-08-18-133128
-- /reports/cases/case-2025-08-18-133201
-- /reports/cases/case-2025-08-18-133316
-- /reports/cases/case-2025-08-18-133317
-- /reports/cases/case-2025-08-18-133352
-- /reports/cases/case-2025-08-18-133445
-- /reports/cases/case-2025-08-18-133513
-- /reports/cases/case-2025-08-18-133623
-- /reports/cases/case-2025-08-18-133637
-- /reports/cases/case-2025-08-18-133714
-- /reports/cases/case-2025-08-18-133757
-- /reports/cases/case-2025-08-18-133758
-- /reports/cases/case-2025-08-18-133828
-- /reports/cases/case-2025-08-18-133858
-- /reports/cases/case-2025-08-18-133930
-- /reports/cases/case-2025-08-18-134005
-- /reports/cases/case-2025-08-18-134033
-- /reports/cases/case-2025-08-18-134149
-- /reports/cases/case-2025-08-18-134224
-- /reports/cases/case-2025-08-18-134255
-- /reports/cases/case-2025-08-18-134328
-- /reports/cases/case-2025-08-18-134401
-- /reports/cases/case-2025-08-18-134426
-- /reports/cases/case-2025-08-18-134452
-- /reports/cases/case-2025-08-18-134518
-- /reports/cases/case-2025-08-18-134519
-- /reports/cases/case-2025-08-18-134545
-- /reports/cases/case-2025-08-18-134639
-- /reports/cases/case-2025-08-18-134654
-- /reports/cases/case-2025-08-18-134739
-- /reports/cases/case-2025-08-18-134807
-- /reports/cases/case-2025-08-18-134838
-- /reports/cases/case-2025-08-18-134901
-- /reports/cases/case-2025-08-18-134923
-- /reports/cases/case-2025-08-18-135004
-- /reports/cases/case-2025-08-18-135027
-- /reports/cases/case-2025-08-18-135056
-- /reports/cases/case-2025-08-18-135156
-- /reports/cases/case-2025-08-18-135201
-- /reports/cases/case-2025-08-18-135314
-- /reports/cases/case-2025-08-18-135407
-- /reports/cases/case-2025-08-18-135427
-- /reports/cases/case-2025-08-18-135448
-- /reports/cases/case-2025-08-18-135519
-- /reports/cases/case-2025-08-18-135551
-- /reports/cases/case-2025-08-18-135642
-- /reports/cases/case-2025-08-18-135737
-- /reports/cases/case-2025-08-18-135831
-- /reports/cases/case-2025-08-18-135856
-- /reports/cases/case-2025-08-18-135919
-- /reports/cases/case-2025-08-18-140003
-- /reports/cases/case-2025-08-18-140048
-- /reports/cases/case-2025-08-18-140141
-- /reports/cases/case-2025-08-18-140215
-- /reports/cases/case-2025-08-18-140240
-- /reports/cases/case-2025-08-18-140328
-- /reports/cases/case-2025-08-18-140420
-- /reports/cases/case-2025-08-18-140449
-- /reports/cases/case-2025-08-18-140520
-- /reports/cases/case-2025-08-18-140553
-- /reports/cases/case-2025-08-18-140652
-- /reports/cases/case-2025-08-18-140722
-- /reports/cases/case-2025-08-18-140728
-- /reports/cases/case-2025-08-18-140754
-- /reports/cases/case-2025-08-18-140821
-- /reports/cases/case-2025-08-18-140843
-- /reports/cases/case-2025-08-18-140939
-- /reports/cases/case-2025-08-18-141006
-- /reports/cases/case-2025-08-18-141036
-- /reports/cases/case-2025-08-18-141102
-- /reports/cases/case-2025-08-18-141224
-- /reports/cases/case-2025-08-18-141229
-- /reports/cases/case-2025-08-18-141344
-- /reports/cases/case-2025-08-18-141408
-- /reports/cases/case-2025-08-18-141434
-- /reports/cases/case-2025-08-18-141552
-- /reports/cases/case-2025-08-18-141654
-- /reports/cases/case-2025-08-18-141722
-- /reports/cases/case-2025-08-18-141736
-- /reports/cases/case-2025-08-18-141749
-- /reports/cases/case-2025-08-18-141839
-- /reports/cases/case-2025-08-18-141903
-- /reports/cases/case-2025-08-18-141927
-- /reports/cases/case-2025-08-18-141954
-- /reports/cases/case-2025-08-18-142057
-- /reports/cases/case-2025-08-18-142202
-- /reports/cases/case-2025-08-18-142224
-- /reports/cases/case-2025-08-18-142243
-- /reports/cases/case-2025-08-18-142252
-- /reports/cases/case-2025-08-18-142319
-- /reports/cases/case-2025-08-18-142342
-- /reports/cases/case-2025-08-18-142406
-- /reports/cases/case-2025-08-18-142434
-- /reports/cases/case-2025-08-18-142501
-- /reports/cases/case-2025-08-18-142531
-- /reports/cases/case-2025-08-18-142603
-- /reports/cases/case-2025-08-18-142604
-- /reports/cases/case-2025-08-18-142659
-- /reports/cases/case-2025-08-18-142700
-- /reports/cases/case-2025-08-18-142724
-- /reports/cases/case-2025-08-18-142751
-- /reports/cases/case-2025-08-18-142819
-- /reports/cases/case-2025-08-18-142844
-- /reports/cases/case-2025-08-18-142906
-- /reports/cases/case-2025-08-18-142956
-- /reports/cases/case-2025-08-18-143004
-- /reports/cases/case-2025-08-18-143038
-- /reports/cases/case-2025-08-18-143301
-- /reports/cases/case-2025-08-18-143350
-- /reports/cases/case-2025-08-18-143443
-- /reports/cases/case-2025-08-18-143507
-- /reports/cases/case-2025-08-18-143534
-- /reports/cases/case-2025-08-18-143608
-- /reports/cases/case-2025-08-18-143701
-- /reports/cases/case-2025-08-18-143724
-- /reports/cases/case-2025-08-18-143747
-- /reports/cases/case-2025-08-18-143839
-- /reports/cases/case-2025-08-18-143902
-- /reports/cases/case-2025-08-18-143929
-- /reports/cases/case-2025-08-18-143957
-- /reports/cases/case-2025-08-18-144004
-- /reports/cases/case-2025-08-18-144028
-- /reports/cases/case-2025-08-18-144054
-- /reports/cases/case-2025-08-18-144249
-- /reports/cases/case-2025-08-18-144317
-- /reports/cases/case-2025-08-18-144340
-- /reports/cases/case-2025-08-18-144453
-- /reports/cases/case-2025-08-18-144527
-- /reports/cases/case-2025-08-18-144554
-- /reports/cases/case-2025-08-18-144729
-- /reports/cases/case-2025-08-18-144846
-- /reports/cases/case-2025-08-18-145003
-- /reports/cases/case-2025-08-18-145038
-- /reports/cases/case-2025-08-18-145203
-- /reports/cases/case-2025-08-18-145233
-- /reports/cases/case-2025-08-18-145258
-- /reports/cases/case-2025-08-18-145322
-- /reports/cases/case-2025-08-18-145326
-- /reports/cases/case-2025-08-18-145346
-- /reports/cases/case-2025-08-18-145432
-- /reports/cases/case-2025-08-18-145457
-- /reports/cases/case-2025-08-18-145555
-- /reports/cases/case-2025-08-18-145657
-- /reports/cases/case-2025-08-18-145723
-- /reports/cases/case-2025-08-18-145818
-- /reports/cases/case-2025-08-18-145911
-- /reports/cases/case-2025-08-18-150008
-- /reports/cases/case-2025-08-18-150220
-- /reports/cases/case-2025-08-18-150249
-- /reports/cases/case-2025-08-18-150343
-- /reports/cases/case-2025-08-18-150349
-- /reports/cases/case-2025-08-18-150419
-- /reports/cases/case-2025-08-18-150601
-- /reports/cases/case-2025-08-18-150738
-- /reports/cases/case-2025-08-18-150807
-- /reports/cases/case-2025-08-18-150841
-- /reports/cases/case-2025-08-18-150952
-- /reports/cases/case-2025-08-18-151005
-- /reports/cases/case-2025-08-18-151028
-- /reports/cases/case-2025-08-18-151055
-- /reports/cases/case-2025-08-18-151204
-- /reports/cases/case-2025-08-18-151230
-- /reports/cases/case-2025-08-18-151325
-- /reports/cases/case-2025-08-18-151356
-- /reports/cases/case-2025-08-18-151420
-- /reports/cases/case-2025-08-18-151450
-- /reports/cases/case-2025-08-18-151451
-- /reports/cases/case-2025-08-18-151523
-- /reports/cases/case-2025-08-18-151649
-- /reports/cases/case-2025-08-18-151716
-- /reports/cases/case-2025-08-18-151739
-- /reports/cases/case-2025-08-18-151904
-- /reports/cases/case-2025-08-18-151942
-- /reports/cases/case-2025-08-18-152028
-- /reports/cases/case-2025-08-18-152156
-- /reports/cases/case-2025-08-18-152248
-- /reports/cases/case-2025-08-18-152317
-- /reports/cases/case-2025-08-18-152343
-- /reports/cases/case-2025-08-18-152411
-- /reports/cases/case-2025-08-18-152449
-- /reports/cases/case-2025-08-18-152546
-- /reports/cases/case-2025-08-18-152719
-- /reports/cases/case-2025-08-18-152743
-- /reports/cases/case-2025-08-18-152812
-- /reports/cases/case-2025-08-18-152835
-- /reports/cases/case-2025-08-18-152836
-- /reports/cases/case-2025-08-18-152859
-- /reports/cases/case-2025-08-18-152918
-- /reports/cases/case-2025-08-18-152957
-- /reports/cases/case-2025-08-18-153004
-- /reports/cases/case-2025-08-18-153030
-- /reports/cases/case-2025-08-18-153103
-- /reports/cases/case-2025-08-18-153205
-- /reports/cases/case-2025-08-18-153258
-- /reports/cases/case-2025-08-18-153323
-- /reports/cases/case-2025-08-18-153346
-- /reports/cases/case-2025-08-18-153426
-- /reports/cases/case-2025-08-18-153450
-- /reports/cases/case-2025-08-18-153602
-- /reports/cases/case-2025-08-18-153702
-- /reports/cases/case-2025-08-18-153723
-- /reports/cases/case-2025-08-18-153724
-- /reports/cases/case-2025-08-18-153747
-- /reports/cases/case-2025-08-18-153831
-- /reports/cases/case-2025-08-18-153853
-- /reports/cases/case-2025-08-18-153916
-- /reports/cases/case-2025-08-18-153932
-- /reports/cases/case-2025-08-18-154018
-- /reports/cases/case-2025-08-18-154048
-- /reports/cases/case-2025-08-18-154145
-- /reports/cases/case-2025-08-18-154213
-- /reports/cases/case-2025-08-18-154234
-- /reports/cases/case-2025-08-18-154255
-- /reports/cases/case-2025-08-18-154319
-- /reports/cases/case-2025-08-18-154341
-- /reports/cases/case-2025-08-18-154409
-- /reports/cases/case-2025-08-18-154434
-- /reports/cases/case-2025-08-18-154440
-- /reports/cases/case-2025-08-18-154508
-- /reports/cases/case-2025-08-18-154535
-- /reports/cases/case-2025-08-18-154846
-- /reports/cases/case-2025-08-18-154912
-- /reports/cases/case-2025-08-18-154937
-- /reports/cases/case-2025-08-18-155004
-- /reports/cases/case-2025-08-18-155010
-- /reports/cases/case-2025-08-18-155046
-- /reports/cases/case-2025-08-18-155155
-- /reports/cases/case-2025-08-18-155156
-- /reports/cases/case-2025-08-18-155247
-- /reports/cases/case-2025-08-18-155344
-- /reports/cases/case-2025-08-18-155445
-- /reports/cases/case-2025-08-18-155456
-- /reports/cases/case-2025-08-18-155556
-- /reports/cases/case-2025-08-18-155822
-- /reports/cases/case-2025-08-18-155845
-- /reports/cases/case-2025-08-18-155921
-- /reports/cases/case-2025-08-18-155922
-- /reports/cases/case-2025-08-18-160004
-- /reports/cases/case-2025-08-18-160047
-- /reports/cases/case-2025-08-18-160144
-- /reports/cases/case-2025-08-18-160238
-- /reports/cases/case-2025-08-18-160303
-- /reports/cases/case-2025-08-18-160333
-- /reports/cases/case-2025-08-18-160408
-- /reports/cases/case-2025-08-18-160430
-- /reports/cases/case-2025-08-18-160453
-- /reports/cases/case-2025-08-18-160511
-- /reports/cases/case-2025-08-18-160527
-- /reports/cases/case-2025-08-18-160556
-- /reports/cases/case-2025-08-18-160744
-- /reports/cases/case-2025-08-18-160837
-- /reports/cases/case-2025-08-18-160926
-- /reports/cases/case-2025-08-18-160957
-- /reports/cases/case-2025-08-18-161004
-- /reports/cases/case-2025-08-18-161028
-- /reports/cases/case-2025-08-18-161059
-- /reports/cases/case-2025-08-18-161238
-- /reports/cases/case-2025-08-18-161302
-- /reports/cases/case-2025-08-18-161323
-- /reports/cases/case-2025-08-18-161422
-- /reports/cases/case-2025-08-18-161446
-- /reports/cases/case-2025-08-18-161518
-- /reports/cases/case-2025-08-18-161529
-- /reports/cases/case-2025-08-18-161553
-- /reports/cases/case-2025-08-18-161806
-- /reports/cases/case-2025-08-18-161834
-- /reports/cases/case-2025-08-18-161907
-- /reports/cases/case-2025-08-18-161937
-- /reports/cases/case-2025-08-18-162004
-- /reports/cases/case-2025-08-18-162037
-- /reports/cases/case-2025-08-18-162237
-- /reports/cases/case-2025-08-18-162407
-- /reports/cases/case-2025-08-18-162458
-- /reports/cases/case-2025-08-18-162526
-- /reports/cases/case-2025-08-18-162544
-- /reports/cases/case-2025-08-18-162652
-- /reports/cases/case-2025-08-18-162853
-- /reports/cases/case-2025-08-18-162924
-- /reports/cases/case-2025-08-18-162952
-- /reports/cases/case-2025-08-18-163005
-- /reports/cases/case-2025-08-18-163041
-- /reports/cases/case-2025-08-18-163443
-- /reports/cases/case-2025-08-18-163514
-- /reports/cases/case-2025-08-18-163545
-- /reports/cases/case-2025-08-18-163806
-- /reports/cases/case-2025-08-18-163934
-- /reports/cases/case-2025-08-18-164031
-- /reports/cases/case-2025-08-18-164113
-- /reports/guides/guide-2025-08-18-122902
-- /reports/guides/guide-2025-08-18-122931
-- /reports/guides/guide-2025-08-18-122952
-- /reports/guides/guide-2025-08-18-123007
-- /reports/guides/guide-2025-08-18-123031
-- /reports/guides/guide-2025-08-18-123103
-- /reports/guides/guide-2025-08-18-123153
-- /reports/guides/guide-2025-08-18-123222
-- /reports/guides/guide-2025-08-18-123247
-- /reports/guides/guide-2025-08-18-123317
-- /reports/guides/guide-2025-08-18-123341
-- /reports/guides/guide-2025-08-18-123342
-- /reports/guides/guide-2025-08-18-123407
-- /reports/guides/guide-2025-08-18-123429
-- /reports/guides/guide-2025-08-18-123450
-- /reports/guides/guide-2025-08-18-123513
-- /reports/guides/guide-2025-08-18-123531
-- /reports/guides/guide-2025-08-18-123543
-- /reports/guides/guide-2025-08-18-123611
-- /reports/guides/guide-2025-08-18-123649
-- /reports/guides/guide-2025-08-18-123716
-- /reports/guides/guide-2025-08-18-123737
-- /reports/guides/guide-2025-08-18-123801
-- /reports/guides/guide-2025-08-18-123825
-- /reports/guides/guide-2025-08-18-123846
-- /reports/guides/guide-2025-08-18-123909
-- /reports/guides/guide-2025-08-18-123933
-- /reports/guides/guide-2025-08-18-123955
-- /reports/guides/guide-2025-08-18-124006
-- /reports/guides/guide-2025-08-18-124030
-- /reports/guides/guide-2025-08-18-124039
-- /reports/guides/guide-2025-08-18-124106
-- /reports/guides/guide-2025-08-18-124150
-- /reports/guides/guide-2025-08-18-124214
-- /reports/guides/guide-2025-08-18-124236
-- /reports/guides/guide-2025-08-18-124258
-- /reports/guides/guide-2025-08-18-130835
-- /reports/guides/guide-2025-08-18-130857
-- /reports/guides/guide-2025-08-18-130921
-- /reports/guides/guide-2025-08-18-130941
-- /reports/guides/guide-2025-08-18-131415
-- /reports/guides/guide-2025-08-18-131416
-- /reports/guides/guide-2025-08-18-131442
-- /reports/guides/guide-2025-08-18-131506
-- /reports/guides/guide-2025-08-18-131534
-- /reports/guides/guide-2025-08-18-131553
-- /reports/guides/guide-2025-08-18-131618
-- /reports/guides/guide-2025-08-18-131658
-- /reports/guides/guide-2025-08-18-131659
-- /reports/guides/guide-2025-08-18-131720
-- /reports/guides/guide-2025-08-18-131741
-- /reports/guides/guide-2025-08-18-131802
-- /reports/guides/guide-2025-08-18-131821
-- /reports/guides/guide-2025-08-18-131847
-- /reports/guides/guide-2025-08-18-131910
-- /reports/guides/guide-2025-08-18-132005
-- /reports/guides/guide-2025-08-18-132029
-- /reports/guides/guide-2025-08-18-132106
-- /reports/guides/guide-2025-08-18-132208
-- /reports/guides/guide-2025-08-18-132332
-- /reports/guides/guide-2025-08-18-132427
-- /reports/guides/guide-2025-08-18-132558
-- /reports/guides/guide-2025-08-18-132559
-- /reports/guides/guide-2025-08-18-132616
-- /reports/guides/guide-2025-08-18-132719
-- /reports/guides/guide-2025-08-18-132754
-- /reports/guides/guide-2025-08-18-132824
-- /reports/guides/guide-2025-08-18-132924
-- /reports/guides/guide-2025-08-18-132949
-- /reports/guides/guide-2025-08-18-133027
-- /reports/guides/guide-2025-08-18-133100
-- /reports/guides/guide-2025-08-18-133127
-- /reports/guides/guide-2025-08-18-133128
-- /reports/guides/guide-2025-08-18-133201
-- /reports/guides/guide-2025-08-18-133316
-- /reports/guides/guide-2025-08-18-133317
-- /reports/guides/guide-2025-08-18-133352
-- /reports/guides/guide-2025-08-18-133445
-- /reports/guides/guide-2025-08-18-133513
-- /reports/guides/guide-2025-08-18-133623
-- /reports/guides/guide-2025-08-18-133637
-- /reports/guides/guide-2025-08-18-133714
-- /reports/guides/guide-2025-08-18-133757
-- /reports/guides/guide-2025-08-18-133758
-- /reports/guides/guide-2025-08-18-133828
-- /reports/guides/guide-2025-08-18-133858
-- /reports/guides/guide-2025-08-18-133930
-- /reports/guides/guide-2025-08-18-134005
-- /reports/guides/guide-2025-08-18-134033
-- /reports/guides/guide-2025-08-18-134149
-- /reports/guides/guide-2025-08-18-134224
-- /reports/guides/guide-2025-08-18-134255
-- /reports/guides/guide-2025-08-18-134328
-- /reports/guides/guide-2025-08-18-134401
-- /reports/guides/guide-2025-08-18-134426
-- /reports/guides/guide-2025-08-18-134452
-- /reports/guides/guide-2025-08-18-134518
-- /reports/guides/guide-2025-08-18-134519
-- /reports/guides/guide-2025-08-18-134545
-- /reports/guides/guide-2025-08-18-134639
-- /reports/guides/guide-2025-08-18-134654
-- /reports/guides/guide-2025-08-18-134739
-- /reports/guides/guide-2025-08-18-134807
-- /reports/guides/guide-2025-08-18-134838
-- /reports/guides/guide-2025-08-18-134901
-- /reports/guides/guide-2025-08-18-134923
-- /reports/guides/guide-2025-08-18-135004
-- /reports/guides/guide-2025-08-18-135027
-- /reports/guides/guide-2025-08-18-135056
-- /reports/guides/guide-2025-08-18-135156
-- /reports/guides/guide-2025-08-18-135201
-- /reports/guides/guide-2025-08-18-135314
-- /reports/guides/guide-2025-08-18-135407
-- /reports/guides/guide-2025-08-18-135427
-- /reports/guides/guide-2025-08-18-135448
-- /reports/guides/guide-2025-08-18-135519
-- /reports/guides/guide-2025-08-18-135551
-- /reports/guides/guide-2025-08-18-135642
-- /reports/guides/guide-2025-08-18-135737
-- /reports/guides/guide-2025-08-18-135831
-- /reports/guides/guide-2025-08-18-135856
-- /reports/guides/guide-2025-08-18-135919
-- /reports/guides/guide-2025-08-18-140003
-- /reports/guides/guide-2025-08-18-140048
-- /reports/guides/guide-2025-08-18-140141
-- /reports/guides/guide-2025-08-18-140215
-- /reports/guides/guide-2025-08-18-140240
-- /reports/guides/guide-2025-08-18-140328
-- /reports/guides/guide-2025-08-18-140420
-- /reports/guides/guide-2025-08-18-140449
-- /reports/guides/guide-2025-08-18-140520
-- /reports/guides/guide-2025-08-18-140553
-- /reports/guides/guide-2025-08-18-140652
-- /reports/guides/guide-2025-08-18-140722
-- /reports/guides/guide-2025-08-18-140728
-- /reports/guides/guide-2025-08-18-140754
-- /reports/guides/guide-2025-08-18-140821
-- /reports/guides/guide-2025-08-18-140843
-- /reports/guides/guide-2025-08-18-140939
-- /reports/guides/guide-2025-08-18-141006
-- /reports/guides/guide-2025-08-18-141036
-- /reports/guides/guide-2025-08-18-141102
-- /reports/guides/guide-2025-08-18-141224
-- /reports/guides/guide-2025-08-18-141229
-- /reports/guides/guide-2025-08-18-141344
-- /reports/guides/guide-2025-08-18-141408
-- /reports/guides/guide-2025-08-18-141434
-- /reports/guides/guide-2025-08-18-141552
-- /reports/guides/guide-2025-08-18-141654
-- /reports/guides/guide-2025-08-18-141722
-- /reports/guides/guide-2025-08-18-141736
-- /reports/guides/guide-2025-08-18-141749
-- /reports/guides/guide-2025-08-18-141839
-- /reports/guides/guide-2025-08-18-141903
-- /reports/guides/guide-2025-08-18-141927
-- /reports/guides/guide-2025-08-18-141954
-- /reports/guides/guide-2025-08-18-142057
-- /reports/guides/guide-2025-08-18-142202
-- /reports/guides/guide-2025-08-18-142224
-- /reports/guides/guide-2025-08-18-142243
-- /reports/guides/guide-2025-08-18-142252
-- /reports/guides/guide-2025-08-18-142319
-- /reports/guides/guide-2025-08-18-142342
-- /reports/guides/guide-2025-08-18-142406
-- /reports/guides/guide-2025-08-18-142434
-- /reports/guides/guide-2025-08-18-142501
-- /reports/guides/guide-2025-08-18-142531
-- /reports/guides/guide-2025-08-18-142603
-- /reports/guides/guide-2025-08-18-142604
-- /reports/guides/guide-2025-08-18-142659
-- /reports/guides/guide-2025-08-18-142700
-- /reports/guides/guide-2025-08-18-142724
-- /reports/guides/guide-2025-08-18-142751
-- /reports/guides/guide-2025-08-18-142819
-- /reports/guides/guide-2025-08-18-142844
-- /reports/guides/guide-2025-08-18-142906
-- /reports/guides/guide-2025-08-18-142956
-- /reports/guides/guide-2025-08-18-143004
-- /reports/guides/guide-2025-08-18-143038
-- /reports/guides/guide-2025-08-18-143301
-- /reports/guides/guide-2025-08-18-143350
-- /reports/guides/guide-2025-08-18-143443
-- /reports/guides/guide-2025-08-18-143507
-- /reports/guides/guide-2025-08-18-143534
-- /reports/guides/guide-2025-08-18-143608
-- /reports/guides/guide-2025-08-18-143701
-- /reports/guides/guide-2025-08-18-143724
-- /reports/guides/guide-2025-08-18-143747
-- /reports/guides/guide-2025-08-18-143839
-- /reports/guides/guide-2025-08-18-143902
-- /reports/guides/guide-2025-08-18-143929
-- /reports/guides/guide-2025-08-18-143957
-- /reports/guides/guide-2025-08-18-144004
-- /reports/guides/guide-2025-08-18-144028
-- /reports/guides/guide-2025-08-18-144054
-- /reports/guides/guide-2025-08-18-144249
-- /reports/guides/guide-2025-08-18-144317
-- /reports/guides/guide-2025-08-18-144340
-- /reports/guides/guide-2025-08-18-144453
-- /reports/guides/guide-2025-08-18-144527
-- /reports/guides/guide-2025-08-18-144554
-- /reports/guides/guide-2025-08-18-144729
-- /reports/guides/guide-2025-08-18-144846
-- /reports/guides/guide-2025-08-18-145003
-- /reports/guides/guide-2025-08-18-145038
-- /reports/guides/guide-2025-08-18-145203
-- /reports/guides/guide-2025-08-18-145233
-- /reports/guides/guide-2025-08-18-145258
-- /reports/guides/guide-2025-08-18-145322
-- /reports/guides/guide-2025-08-18-145326
-- /reports/guides/guide-2025-08-18-145346
-- /reports/guides/guide-2025-08-18-145432
-- /reports/guides/guide-2025-08-18-145457
-- /reports/guides/guide-2025-08-18-145555
-- /reports/guides/guide-2025-08-18-145657
-- /reports/guides/guide-2025-08-18-145723
-- /reports/guides/guide-2025-08-18-145818
-- /reports/guides/guide-2025-08-18-145911
-- /reports/guides/guide-2025-08-18-150008
-- /reports/guides/guide-2025-08-18-150220
-- /reports/guides/guide-2025-08-18-150249
-- /reports/guides/guide-2025-08-18-150343
-- /reports/guides/guide-2025-08-18-150349
-- /reports/guides/guide-2025-08-18-150419
-- /reports/guides/guide-2025-08-18-150601
-- /reports/guides/guide-2025-08-18-150738
-- /reports/guides/guide-2025-08-18-150807
-- /reports/guides/guide-2025-08-18-150841
-- /reports/guides/guide-2025-08-18-150952
-- /reports/guides/guide-2025-08-18-151005
-- /reports/guides/guide-2025-08-18-151028
-- /reports/guides/guide-2025-08-18-151055
-- /reports/guides/guide-2025-08-18-151204
-- /reports/guides/guide-2025-08-18-151230
-- /reports/guides/guide-2025-08-18-151325
-- /reports/guides/guide-2025-08-18-151356
-- /reports/guides/guide-2025-08-18-151420
-- /reports/guides/guide-2025-08-18-151450
-- /reports/guides/guide-2025-08-18-151451
-- /reports/guides/guide-2025-08-18-151523
-- /reports/guides/guide-2025-08-18-151649
-- /reports/guides/guide-2025-08-18-151716
-- /reports/guides/guide-2025-08-18-151739
-- /reports/guides/guide-2025-08-18-151904
-- /reports/guides/guide-2025-08-18-151942
-- /reports/guides/guide-2025-08-18-152028
-- /reports/guides/guide-2025-08-18-152156
-- /reports/guides/guide-2025-08-18-152248
-- /reports/guides/guide-2025-08-18-152317
-- /reports/guides/guide-2025-08-18-152343
-- /reports/guides/guide-2025-08-18-152411
-- /reports/guides/guide-2025-08-18-152449
-- /reports/guides/guide-2025-08-18-152546
-- /reports/guides/guide-2025-08-18-152719
-- /reports/guides/guide-2025-08-18-152743
-- /reports/guides/guide-2025-08-18-152812
-- /reports/guides/guide-2025-08-18-152835
-- /reports/guides/guide-2025-08-18-152836
-- /reports/guides/guide-2025-08-18-152859
-- /reports/guides/guide-2025-08-18-152918
-- /reports/guides/guide-2025-08-18-152957
-- /reports/guides/guide-2025-08-18-153004
-- /reports/guides/guide-2025-08-18-153030
-- /reports/guides/guide-2025-08-18-153103
-- /reports/guides/guide-2025-08-18-153205
-- /reports/guides/guide-2025-08-18-153258
-- /reports/guides/guide-2025-08-18-153323
-- /reports/guides/guide-2025-08-18-153346
-- /reports/guides/guide-2025-08-18-153426
-- /reports/guides/guide-2025-08-18-153450
-- /reports/guides/guide-2025-08-18-153602
-- /reports/guides/guide-2025-08-18-153702
-- /reports/guides/guide-2025-08-18-153723
-- /reports/guides/guide-2025-08-18-153724
-- /reports/guides/guide-2025-08-18-153747
-- /reports/guides/guide-2025-08-18-153831
-- /reports/guides/guide-2025-08-18-153853
-- /reports/guides/guide-2025-08-18-153916
-- /reports/guides/guide-2025-08-18-153932
-- /reports/guides/guide-2025-08-18-154018
-- /reports/guides/guide-2025-08-18-154048
-- /reports/guides/guide-2025-08-18-154145
-- /reports/guides/guide-2025-08-18-154213
-- /reports/guides/guide-2025-08-18-154234
-- /reports/guides/guide-2025-08-18-154255
-- /reports/guides/guide-2025-08-18-154319
-- /reports/guides/guide-2025-08-18-154341
-- /reports/guides/guide-2025-08-18-154409
-- /reports/guides/guide-2025-08-18-154434
-- /reports/guides/guide-2025-08-18-154440
-- /reports/guides/guide-2025-08-18-154508
-- /reports/guides/guide-2025-08-18-154535
-- /reports/guides/guide-2025-08-18-154846
-- /reports/guides/guide-2025-08-18-154912
-- /reports/guides/guide-2025-08-18-154937
-- /reports/guides/guide-2025-08-18-155004
-- /reports/guides/guide-2025-08-18-155010
-- /reports/guides/guide-2025-08-18-155046
-- /reports/guides/guide-2025-08-18-155155
-- /reports/guides/guide-2025-08-18-155156
-- /reports/guides/guide-2025-08-18-155247
-- /reports/guides/guide-2025-08-18-155344
-- /reports/guides/guide-2025-08-18-155445
-- /reports/guides/guide-2025-08-18-155456
-- /reports/guides/guide-2025-08-18-155556
-- /reports/guides/guide-2025-08-18-155822
-- /reports/guides/guide-2025-08-18-155845
-- /reports/guides/guide-2025-08-18-155921
-- /reports/guides/guide-2025-08-18-155922
-- /reports/guides/guide-2025-08-18-160004
-- /reports/guides/guide-2025-08-18-160047
-- /reports/guides/guide-2025-08-18-160144
-- /reports/guides/guide-2025-08-18-160238
-- /reports/guides/guide-2025-08-18-160303
-- /reports/guides/guide-2025-08-18-160333
-- /reports/guides/guide-2025-08-18-160408
-- /reports/guides/guide-2025-08-18-160430
-- /reports/guides/guide-2025-08-18-160453
-- /reports/guides/guide-2025-08-18-160511
-- /reports/guides/guide-2025-08-18-160527
-- /reports/guides/guide-2025-08-18-160556
-- /reports/guides/guide-2025-08-18-160744
-- /reports/guides/guide-2025-08-18-160837
-- /reports/guides/guide-2025-08-18-160926
-- /reports/guides/guide-2025-08-18-160957
-- /reports/guides/guide-2025-08-18-161004
-- /reports/guides/guide-2025-08-18-161028
-- /reports/guides/guide-2025-08-18-161059
-- /reports/guides/guide-2025-08-18-161238
-- /reports/guides/guide-2025-08-18-161302
-- /reports/guides/guide-2025-08-18-161323
-- /reports/guides/guide-2025-08-18-161422
-- /reports/guides/guide-2025-08-18-161446
-- /reports/guides/guide-2025-08-18-161518
-- /reports/guides/guide-2025-08-18-161529
-- /reports/guides/guide-2025-08-18-161553
-- /reports/guides/guide-2025-08-18-161806
-- /reports/guides/guide-2025-08-18-161834
-- /reports/guides/guide-2025-08-18-161907
-- /reports/guides/guide-2025-08-18-161937
-- /reports/guides/guide-2025-08-18-162004
-- /reports/guides/guide-2025-08-18-162037
-- /reports/guides/guide-2025-08-18-162237
-- /reports/guides/guide-2025-08-18-162407
-- /reports/guides/guide-2025-08-18-162458
-- /reports/guides/guide-2025-08-18-162526
-- /reports/guides/guide-2025-08-18-162544
-- /reports/guides/guide-2025-08-18-162652
-- /reports/guides/guide-2025-08-18-162853
-- /reports/guides/guide-2025-08-18-162924
-- /reports/guides/guide-2025-08-18-162952
-- /reports/guides/guide-2025-08-18-163005
-- /reports/guides/guide-2025-08-18-163041
-- /reports/guides/guide-2025-08-18-163443
-- /reports/guides/guide-2025-08-18-163514
-- /reports/guides/guide-2025-08-18-163545
-- /reports/guides/guide-2025-08-18-163806
-- /reports/guides/guide-2025-08-18-163934
-- /reports/guides/guide-2025-08-18-164031
-- /reports/guides/guide-2025-08-18-164113
-- /reports/innovations/innovation-2025-08-18-1229
-- /reports/innovations/innovation-2025-08-18-1230
-- /reports/innovations/innovation-2025-08-18-1231
-- /reports/innovations/innovation-2025-08-18-1232
-- /reports/innovations/innovation-2025-08-18-1233
-- /reports/innovations/innovation-2025-08-18-1234
-- /reports/innovations/innovation-2025-08-18-1235
-- /reports/innovations/innovation-2025-08-18-1236
-- /reports/innovations/innovation-2025-08-18-1237
-- /reports/innovations/innovation-2025-08-18-1238
-- /reports/innovations/innovation-2025-08-18-1239
-- /reports/innovations/innovation-2025-08-18-1240
-- /reports/innovations/innovation-2025-08-18-1241
-- /reports/innovations/innovation-2025-08-18-1242
-- /reports/innovations/innovation-2025-08-18-1308
-- /reports/innovations/innovation-2025-08-18-1309
-- /reports/innovations/innovation-2025-08-18-1314
-- /reports/innovations/innovation-2025-08-18-1315
-- /reports/innovations/innovation-2025-08-18-1316
-- /reports/innovations/innovation-2025-08-18-1317
-- /reports/innovations/innovation-2025-08-18-1318
-- /reports/innovations/innovation-2025-08-18-1319
-- /reports/innovations/innovation-2025-08-18-1320
-- /reports/innovations/innovation-2025-08-18-1321
-- /reports/innovations/innovation-2025-08-18-1322
-- /reports/innovations/innovation-2025-08-18-1323
-- /reports/innovations/innovation-2025-08-18-1324
-- /reports/innovations/innovation-2025-08-18-1325
-- /reports/innovations/innovation-2025-08-18-1326
-- /reports/innovations/innovation-2025-08-18-1327
-- /reports/innovations/innovation-2025-08-18-1328
-- /reports/innovations/innovation-2025-08-18-1329
-- /reports/innovations/innovation-2025-08-18-1330
-- /reports/innovations/innovation-2025-08-18-1331
-- /reports/innovations/innovation-2025-08-18-1332
-- /reports/innovations/innovation-2025-08-18-1333
-- /reports/innovations/innovation-2025-08-18-1334
-- /reports/innovations/innovation-2025-08-18-1335
-- /reports/innovations/innovation-2025-08-18-1336
-- /reports/innovations/innovation-2025-08-18-1337
-- /reports/innovations/innovation-2025-08-18-1338
-- /reports/innovations/innovation-2025-08-18-1339
-- /reports/innovations/innovation-2025-08-18-1340
-- /reports/innovations/innovation-2025-08-18-1341
-- /reports/innovations/innovation-2025-08-18-1342
-- /reports/innovations/innovation-2025-08-18-1343
-- /reports/innovations/innovation-2025-08-18-1344
-- /reports/innovations/innovation-2025-08-18-1345
-- /reports/innovations/innovation-2025-08-18-1346
-- /reports/innovations/innovation-2025-08-18-1347
-- /reports/innovations/innovation-2025-08-18-1348
-- /reports/innovations/innovation-2025-08-18-1349
-- /reports/innovations/innovation-2025-08-18-1350
-- /reports/innovations/innovation-2025-08-18-1351
-- /reports/innovations/innovation-2025-08-18-1352
-- /reports/innovations/innovation-2025-08-18-1353
-- /reports/innovations/innovation-2025-08-18-1354
-- /reports/innovations/innovation-2025-08-18-1355
-- /reports/innovations/innovation-2025-08-18-1356
-- /reports/innovations/innovation-2025-08-18-1357
-- /reports/innovations/innovation-2025-08-18-1358
-- /reports/innovations/innovation-2025-08-18-1359
-- /reports/innovations/innovation-2025-08-18-1400
-- /reports/innovations/innovation-2025-08-18-1401
-- /reports/innovations/innovation-2025-08-18-1403
-- /reports/innovations/innovation-2025-08-18-1404
-- /reports/innovations/innovation-2025-08-18-1405
-- /reports/innovations/innovation-2025-08-18-1406
-- /reports/innovations/innovation-2025-08-18-1407
-- /reports/innovations/innovation-2025-08-18-1408
-- /reports/innovations/innovation-2025-08-18-1409
-- /reports/innovations/innovation-2025-08-18-1410
-- /reports/innovations/innovation-2025-08-18-1411
-- /reports/innovations/innovation-2025-08-18-1412
-- /reports/innovations/innovation-2025-08-18-1413
-- /reports/innovations/innovation-2025-08-18-1414
-- /reports/innovations/innovation-2025-08-18-1415
-- /reports/innovations/innovation-2025-08-18-1416
-- /reports/innovations/innovation-2025-08-18-1417
-- /reports/innovations/innovation-2025-08-18-1418
-- /reports/innovations/innovation-2025-08-18-1419
-- /reports/innovations/innovation-2025-08-18-1420
-- /reports/innovations/innovation-2025-08-18-1422
-- /reports/innovations/innovation-2025-08-18-1423
-- /reports/innovations/innovation-2025-08-18-1424
-- /reports/innovations/innovation-2025-08-18-1425
-- /reports/innovations/innovation-2025-08-18-1426
-- /reports/innovations/innovation-2025-08-18-1427
-- /reports/innovations/innovation-2025-08-18-1428
-- /reports/innovations/innovation-2025-08-18-1429
-- /reports/innovations/innovation-2025-08-18-1430
-- /reports/innovations/innovation-2025-08-18-1433
-- /reports/innovations/innovation-2025-08-18-1434
-- /reports/innovations/innovation-2025-08-18-1435
-- /reports/innovations/innovation-2025-08-18-1436
-- /reports/innovations/innovation-2025-08-18-1437
-- /reports/innovations/innovation-2025-08-18-1438
-- /reports/innovations/innovation-2025-08-18-1439
-- /reports/innovations/innovation-2025-08-18-1440
-- /reports/innovations/innovation-2025-08-18-1442
-- /reports/innovations/innovation-2025-08-18-1443
-- /reports/innovations/innovation-2025-08-18-1444
-- /reports/innovations/innovation-2025-08-18-1445
-- /reports/innovations/innovation-2025-08-18-1447
-- /reports/innovations/innovation-2025-08-18-1448
-- /reports/innovations/innovation-2025-08-18-1450
-- /reports/innovations/innovation-2025-08-18-1452
-- /reports/innovations/innovation-2025-08-18-1453
-- /reports/innovations/innovation-2025-08-18-1454
-- /reports/innovations/innovation-2025-08-18-1455
-- /reports/innovations/innovation-2025-08-18-1456
-- /reports/innovations/innovation-2025-08-18-1457
-- /reports/innovations/innovation-2025-08-18-1458
-- /reports/innovations/innovation-2025-08-18-1459
-- /reports/innovations/innovation-2025-08-18-1500
-- /reports/innovations/innovation-2025-08-18-1502
-- /reports/innovations/innovation-2025-08-18-1503
-- /reports/innovations/innovation-2025-08-18-1504
-- /reports/innovations/innovation-2025-08-18-1506
-- /reports/innovations/innovation-2025-08-18-1507
-- /reports/innovations/innovation-2025-08-18-1508
-- /reports/innovations/innovation-2025-08-18-1509
-- /reports/innovations/innovation-2025-08-18-1510
-- /reports/innovations/innovation-2025-08-18-1512
-- /reports/innovations/innovation-2025-08-18-1513
-- /reports/innovations/innovation-2025-08-18-1514
-- /reports/innovations/innovation-2025-08-18-1515
-- /reports/innovations/innovation-2025-08-18-1516
-- /reports/innovations/innovation-2025-08-18-1517
-- /reports/innovations/innovation-2025-08-18-1519
-- /reports/innovations/innovation-2025-08-18-1520
-- /reports/innovations/innovation-2025-08-18-1521
-- /reports/innovations/innovation-2025-08-18-1522
-- /reports/innovations/innovation-2025-08-18-1523
-- /reports/innovations/innovation-2025-08-18-1524
-- /reports/innovations/innovation-2025-08-18-1525
-- /reports/innovations/innovation-2025-08-18-1526
-- /reports/innovations/innovation-2025-08-18-1527
-- /reports/innovations/innovation-2025-08-18-1528
-- /reports/innovations/innovation-2025-08-18-1529
-- /reports/innovations/innovation-2025-08-18-1530
-- /reports/innovations/innovation-2025-08-18-1531
-- /reports/innovations/innovation-2025-08-18-1532
-- /reports/innovations/innovation-2025-08-18-1533
-- /reports/innovations/innovation-2025-08-18-1534
-- /reports/innovations/innovation-2025-08-18-1536
-- /reports/innovations/innovation-2025-08-18-1537
-- /reports/innovations/innovation-2025-08-18-1538
-- /reports/innovations/innovation-2025-08-18-1539
-- /reports/innovations/innovation-2025-08-18-1540
-- /reports/innovations/innovation-2025-08-18-1541
-- /reports/innovations/innovation-2025-08-18-1542
-- /reports/innovations/innovation-2025-08-18-1543
-- /reports/innovations/innovation-2025-08-18-1544
-- /reports/innovations/innovation-2025-08-18-1545
-- /reports/innovations/innovation-2025-08-18-1548
-- /reports/innovations/innovation-2025-08-18-1549
-- /reports/innovations/innovation-2025-08-18-1550
-- /reports/innovations/innovation-2025-08-18-1551
-- /reports/innovations/innovation-2025-08-18-1552
-- /reports/innovations/innovation-2025-08-18-1553
-- /reports/innovations/innovation-2025-08-18-1554
-- /reports/innovations/innovation-2025-08-18-1555
-- /reports/innovations/innovation-2025-08-18-1558
-- /reports/innovations/innovation-2025-08-18-1559
-- /reports/innovations/innovation-2025-08-18-1600
-- /reports/innovations/innovation-2025-08-18-1601
-- /reports/innovations/innovation-2025-08-18-1602
-- /reports/innovations/innovation-2025-08-18-1603
-- /reports/innovations/innovation-2025-08-18-1604
-- /reports/innovations/innovation-2025-08-18-1605
-- /reports/innovations/innovation-2025-08-18-1607
-- /reports/innovations/innovation-2025-08-18-1608
-- /reports/innovations/innovation-2025-08-18-1609
-- /reports/innovations/innovation-2025-08-18-1610
-- /reports/innovations/innovation-2025-08-18-1612
-- /reports/innovations/innovation-2025-08-18-1613
-- /reports/innovations/innovation-2025-08-18-1614
-- /reports/innovations/innovation-2025-08-18-1615
-- /reports/innovations/innovation-2025-08-18-1618
-- /reports/innovations/innovation-2025-08-18-1619
-- /reports/innovations/innovation-2025-08-18-1620
-- /reports/innovations/innovation-2025-08-18-1622
-- /reports/innovations/innovation-2025-08-18-1624
-- /reports/innovations/innovation-2025-08-18-1625
-- /reports/innovations/innovation-2025-08-18-1626
-- /reports/innovations/innovation-2025-08-18-1628
-- /reports/innovations/innovation-2025-08-18-1629
-- /reports/innovations/innovation-2025-08-18-1630
-- /reports/innovations/innovation-2025-08-18-1632
-- /reports/innovations/innovation-2025-08-18-1634
-- /reports/innovations/innovation-2025-08-18-1635
-- /reports/innovations/innovation-2025-08-18-1636
-- /reports/innovations/innovation-2025-08-18-1638
-- /reports/innovations/innovation-2025-08-18-1639
-- /reports/innovations/innovation-2025-08-18-1640
-- /reports/innovations/innovation-2025-08-18-1641
-- /reports/innovations/insight-2025-08-18-1229
-- /reports/innovations/insight-2025-08-18-1230
-- /reports/innovations/insight-2025-08-18-1231
-- /reports/innovations/insight-2025-08-18-1232
-- /reports/innovations/insight-2025-08-18-1233
-- /reports/innovations/insight-2025-08-18-1234
-- /reports/innovations/insight-2025-08-18-1235
-- /reports/innovations/insight-2025-08-18-1236
-- /reports/innovations/insight-2025-08-18-1237
-- /reports/innovations/insight-2025-08-18-1238
-- /reports/innovations/insight-2025-08-18-1239
-- /reports/innovations/insight-2025-08-18-1240
-- /reports/innovations/insight-2025-08-18-1241
-- /reports/innovations/insight-2025-08-18-1242
-- /reports/innovations/insight-2025-08-18-1308
-- /reports/innovations/insight-2025-08-18-1309
-- /reports/innovations/insight-2025-08-18-1314
-- /reports/innovations/insight-2025-08-18-1315
-- /reports/innovations/insight-2025-08-18-1316
-- /reports/innovations/insight-2025-08-18-1317
-- /reports/innovations/insight-2025-08-18-1318
-- /reports/innovations/insight-2025-08-18-1319
-- /reports/innovations/insight-2025-08-18-1320
-- /reports/innovations/insight-2025-08-18-1321
-- /reports/innovations/insight-2025-08-18-1322
-- /reports/innovations/insight-2025-08-18-1323
-- /reports/innovations/insight-2025-08-18-1324
-- /reports/innovations/insight-2025-08-18-1325
-- /reports/innovations/insight-2025-08-18-1326
-- /reports/innovations/insight-2025-08-18-1327
-- /reports/innovations/insight-2025-08-18-1328
-- /reports/innovations/insight-2025-08-18-1329
-- /reports/innovations/insight-2025-08-18-1330
-- /reports/innovations/insight-2025-08-18-1331
-- /reports/innovations/insight-2025-08-18-1332
-- /reports/innovations/insight-2025-08-18-1333
-- /reports/innovations/insight-2025-08-18-1334
-- /reports/innovations/insight-2025-08-18-1335
-- /reports/innovations/insight-2025-08-18-1336
-- /reports/innovations/insight-2025-08-18-1337
-- /reports/innovations/insight-2025-08-18-1338
-- /reports/innovations/insight-2025-08-18-1339
-- /reports/innovations/insight-2025-08-18-1340
-- /reports/innovations/insight-2025-08-18-1341
-- /reports/innovations/insight-2025-08-18-1342
-- /reports/innovations/insight-2025-08-18-1343
-- /reports/innovations/insight-2025-08-18-1344
-- /reports/innovations/insight-2025-08-18-1345
-- /reports/innovations/insight-2025-08-18-1346
-- /reports/innovations/insight-2025-08-18-1347
-- /reports/innovations/insight-2025-08-18-1348
-- /reports/innovations/insight-2025-08-18-1349
-- /reports/innovations/insight-2025-08-18-1350
-- /reports/innovations/insight-2025-08-18-1351
-- /reports/innovations/insight-2025-08-18-1352
-- /reports/innovations/insight-2025-08-18-1353
-- /reports/innovations/insight-2025-08-18-1354
-- /reports/innovations/insight-2025-08-18-1355
-- /reports/innovations/insight-2025-08-18-1356
-- /reports/innovations/insight-2025-08-18-1357
-- /reports/innovations/insight-2025-08-18-1358
-- /reports/innovations/insight-2025-08-18-1359
-- /reports/innovations/insight-2025-08-18-1400
-- /reports/innovations/insight-2025-08-18-1401
-- /reports/innovations/insight-2025-08-18-1403
-- /reports/innovations/insight-2025-08-18-1404
-- /reports/innovations/insight-2025-08-18-1405
-- /reports/innovations/insight-2025-08-18-1406
-- /reports/innovations/insight-2025-08-18-1407
-- /reports/innovations/insight-2025-08-18-1408
-- /reports/innovations/insight-2025-08-18-1409
-- /reports/innovations/insight-2025-08-18-1410
-- /reports/innovations/insight-2025-08-18-1411
-- /reports/innovations/insight-2025-08-18-1412
-- /reports/innovations/insight-2025-08-18-1413
-- /reports/innovations/insight-2025-08-18-1414
-- /reports/innovations/insight-2025-08-18-1415
-- /reports/innovations/insight-2025-08-18-1416
-- /reports/innovations/insight-2025-08-18-1417
-- /reports/innovations/insight-2025-08-18-1418
-- /reports/innovations/insight-2025-08-18-1419
-- /reports/innovations/insight-2025-08-18-1420
-- /reports/innovations/insight-2025-08-18-1422
-- /reports/innovations/insight-2025-08-18-1423
-- /reports/innovations/insight-2025-08-18-1424
-- /reports/innovations/insight-2025-08-18-1425
-- /reports/innovations/insight-2025-08-18-1426
-- /reports/innovations/insight-2025-08-18-1427
-- /reports/innovations/insight-2025-08-18-1428
-- /reports/innovations/insight-2025-08-18-1429
-- /reports/innovations/insight-2025-08-18-1430
-- /reports/innovations/insight-2025-08-18-1432
-- /reports/innovations/insight-2025-08-18-1433
-- /reports/innovations/insight-2025-08-18-1434
-- /reports/innovations/insight-2025-08-18-1435
-- /reports/innovations/insight-2025-08-18-1436
-- /reports/innovations/insight-2025-08-18-1437
-- /reports/innovations/insight-2025-08-18-1438
-- /reports/innovations/insight-2025-08-18-1439
-- /reports/innovations/insight-2025-08-18-1440
-- /reports/innovations/insight-2025-08-18-1442
-- /reports/innovations/insight-2025-08-18-1443
-- /reports/innovations/insight-2025-08-18-1444
-- /reports/innovations/insight-2025-08-18-1445
-- /reports/innovations/insight-2025-08-18-1447
-- /reports/innovations/insight-2025-08-18-1448
-- /reports/innovations/insight-2025-08-18-1450
-- /reports/innovations/insight-2025-08-18-1452
-- /reports/innovations/insight-2025-08-18-1453
-- /reports/innovations/insight-2025-08-18-1454
-- /reports/innovations/insight-2025-08-18-1455
-- /reports/innovations/insight-2025-08-18-1456
-- /reports/innovations/insight-2025-08-18-1457
-- /reports/innovations/insight-2025-08-18-1458
-- /reports/innovations/insight-2025-08-18-1459
-- /reports/innovations/insight-2025-08-18-1500
-- /reports/innovations/insight-2025-08-18-1502
-- /reports/innovations/insight-2025-08-18-1503
-- /reports/innovations/insight-2025-08-18-1504
-- /reports/innovations/insight-2025-08-18-1506
-- /reports/innovations/insight-2025-08-18-1507
-- /reports/innovations/insight-2025-08-18-1508
-- /reports/innovations/insight-2025-08-18-1509
-- /reports/innovations/insight-2025-08-18-1510
-- /reports/innovations/insight-2025-08-18-1512
-- /reports/innovations/insight-2025-08-18-1513
-- /reports/innovations/insight-2025-08-18-1514
-- /reports/innovations/insight-2025-08-18-1515
-- /reports/innovations/insight-2025-08-18-1516
-- /reports/innovations/insight-2025-08-18-1517
-- /reports/innovations/insight-2025-08-18-1519
-- /reports/innovations/insight-2025-08-18-1520
-- /reports/innovations/insight-2025-08-18-1521
-- /reports/innovations/insight-2025-08-18-1522
-- /reports/innovations/insight-2025-08-18-1523
-- /reports/innovations/insight-2025-08-18-1524
-- /reports/innovations/insight-2025-08-18-1525
-- /reports/innovations/insight-2025-08-18-1526
-- /reports/innovations/insight-2025-08-18-1527
-- /reports/innovations/insight-2025-08-18-1528
-- /reports/innovations/insight-2025-08-18-1529
-- /reports/innovations/insight-2025-08-18-1530
-- /reports/innovations/insight-2025-08-18-1531
-- /reports/innovations/insight-2025-08-18-1532
-- /reports/innovations/insight-2025-08-18-1533
-- /reports/innovations/insight-2025-08-18-1534
-- /reports/innovations/insight-2025-08-18-1536
-- /reports/innovations/insight-2025-08-18-1537
-- /reports/innovations/insight-2025-08-18-1538
-- /reports/innovations/insight-2025-08-18-1539
-- /reports/innovations/insight-2025-08-18-1540
-- /reports/innovations/insight-2025-08-18-1541
-- /reports/innovations/insight-2025-08-18-1542
-- /reports/innovations/insight-2025-08-18-1543
-- /reports/innovations/insight-2025-08-18-1544
-- /reports/innovations/insight-2025-08-18-1545
-- /reports/innovations/insight-2025-08-18-1548
-- /reports/innovations/insight-2025-08-18-1549
-- /reports/innovations/insight-2025-08-18-1550
-- /reports/innovations/insight-2025-08-18-1551
-- /reports/innovations/insight-2025-08-18-1552
-- /reports/innovations/insight-2025-08-18-1553
-- /reports/innovations/insight-2025-08-18-1554
-- /reports/innovations/insight-2025-08-18-1555
-- /reports/innovations/insight-2025-08-18-1558
-- /reports/innovations/insight-2025-08-18-1559
-- /reports/innovations/insight-2025-08-18-1600
-- /reports/innovations/insight-2025-08-18-1601
-- /reports/innovations/insight-2025-08-18-1602
-- /reports/innovations/insight-2025-08-18-1603
-- /reports/innovations/insight-2025-08-18-1604
-- /reports/innovations/insight-2025-08-18-1605
-- /reports/innovations/insight-2025-08-18-1607
-- /reports/innovations/insight-2025-08-18-1608
-- /reports/innovations/insight-2025-08-18-1609
-- /reports/innovations/insight-2025-08-18-1610
-- /reports/innovations/insight-2025-08-18-1612
-- /reports/innovations/insight-2025-08-18-1613
-- /reports/innovations/insight-2025-08-18-1614
-- /reports/innovations/insight-2025-08-18-1615
-- /reports/innovations/insight-2025-08-18-1618
-- /reports/innovations/insight-2025-08-18-1619
-- /reports/innovations/insight-2025-08-18-1620
-- /reports/innovations/insight-2025-08-18-1622
-- /reports/innovations/insight-2025-08-18-1624
-- /reports/innovations/insight-2025-08-18-1625
-- /reports/innovations/insight-2025-08-18-1626
-- /reports/innovations/insight-2025-08-18-1628
-- /reports/innovations/insight-2025-08-18-1629
-- /reports/innovations/insight-2025-08-18-1630
-- /reports/innovations/insight-2025-08-18-1632
-- /reports/innovations/insight-2025-08-18-1634
-- /reports/innovations/insight-2025-08-18-1635
-- /reports/innovations/insight-2025-08-18-1636
-- /reports/innovations/insight-2025-08-18-1638
-- /reports/innovations/insight-2025-08-18-1639
-- /reports/innovations/insight-2025-08-18-1640
-- /reports/innovations/insight-2025-08-18-1641
-- /reports/innovations/insight-2025-08-18T12-29
-- /reports/innovations/insight-2025-08-18T12-30
-- /reports/innovations/insight-2025-08-18T12-31
-- /reports/innovations/insight-2025-08-18T12-32
-- /reports/innovations/insight-2025-08-18T12-33
-- /reports/innovations/insight-2025-08-18T12-34
-- /reports/innovations/insight-2025-08-18T12-35
-- /reports/innovations/insight-2025-08-18T12-36
-- /reports/innovations/insight-2025-08-18T12-37
-- /reports/innovations/insight-2025-08-18T12-38
-- /reports/innovations/insight-2025-08-18T12-39
-- /reports/innovations/insight-2025-08-18T12-40
-- /reports/innovations/insight-2025-08-18T12-41
-- /reports/innovations/insight-2025-08-18T12-42
-- /reports/innovations/insight-2025-08-18T13-08
-- /reports/innovations/insight-2025-08-18T13-09
-- /reports/innovations/insight-2025-08-18T13-14
-- /reports/innovations/insight-2025-08-18T13-15
-- /reports/innovations/insight-2025-08-18T13-16
-- /reports/innovations/insight-2025-08-18T13-17
-- /reports/innovations/insight-2025-08-18T13-18
-- /reports/innovations/insight-2025-08-18T13-19
-- /reports/innovations/insight-2025-08-18T13-20
-- /reports/innovations/insight-2025-08-18T13-21
-- /reports/innovations/insight-2025-08-18T13-22
-- /reports/innovations/insight-2025-08-18T13-23
-- /reports/innovations/insight-2025-08-18T13-24
-- /reports/innovations/insight-2025-08-18T13-25
-- /reports/innovations/insight-2025-08-18T13-26
-- /reports/innovations/insight-2025-08-18T13-27
-- /reports/innovations/insight-2025-08-18T13-28
-- /reports/innovations/insight-2025-08-18T13-29
-- /reports/innovations/insight-2025-08-18T13-30
-- /reports/innovations/insight-2025-08-18T13-31
-- /reports/innovations/insight-2025-08-18T13-32
-- /reports/innovations/insight-2025-08-18T13-33
-- /reports/innovations/insight-2025-08-18T13-34
-- /reports/innovations/insight-2025-08-18T13-35
-- /reports/innovations/insight-2025-08-18T13-36
-- /reports/innovations/insight-2025-08-18T13-37
-- /reports/innovations/insight-2025-08-18T13-38
-- /reports/innovations/insight-2025-08-18T13-39
-- /reports/innovations/insight-2025-08-18T13-40
-- /reports/innovations/insight-2025-08-18T13-41
-- /reports/innovations/insight-2025-08-18T13-42
-- /reports/innovations/insight-2025-08-18T13-43
-- /reports/innovations/insight-2025-08-18T13-44
-- /reports/innovations/insight-2025-08-18T13-45
-- /reports/innovations/insight-2025-08-18T13-46
-- /reports/innovations/insight-2025-08-18T13-47
-- /reports/innovations/insight-2025-08-18T13-48
-- /reports/innovations/insight-2025-08-18T13-49
-- /reports/innovations/insight-2025-08-18T13-50
-- /reports/innovations/insight-2025-08-18T13-51
-- /reports/innovations/insight-2025-08-18T13-52
-- /reports/innovations/insight-2025-08-18T13-53
-- /reports/innovations/insight-2025-08-18T13-54
-- /reports/innovations/insight-2025-08-18T13-55
-- /reports/innovations/insight-2025-08-18T13-56
-- /reports/innovations/insight-2025-08-18T13-57
-- /reports/innovations/insight-2025-08-18T13-58
-- /reports/innovations/insight-2025-08-18T13-59
-- /reports/innovations/insight-2025-08-18T14-00
-- /reports/innovations/insight-2025-08-18T14-01
-- /reports/innovations/insight-2025-08-18T14-03
-- /reports/innovations/insight-2025-08-18T14-04
-- /reports/innovations/insight-2025-08-18T14-05
-- /reports/innovations/insight-2025-08-18T14-06
-- /reports/innovations/insight-2025-08-18T14-07
-- /reports/innovations/insight-2025-08-18T14-08
-- /reports/innovations/insight-2025-08-18T14-09
-- /reports/innovations/insight-2025-08-18T14-10
-- /reports/innovations/insight-2025-08-18T14-11
-- /reports/innovations/insight-2025-08-18T14-12
-- /reports/innovations/insight-2025-08-18T14-13
-- /reports/innovations/insight-2025-08-18T14-14
-- /reports/innovations/insight-2025-08-18T14-15
-- /reports/innovations/insight-2025-08-18T14-16
-- /reports/innovations/insight-2025-08-18T14-17
-- /reports/innovations/insight-2025-08-18T14-18
-- /reports/innovations/insight-2025-08-18T14-19
-- /reports/innovations/insight-2025-08-18T14-20
-- /reports/innovations/insight-2025-08-18T14-22
-- /reports/innovations/insight-2025-08-18T14-23
-- /reports/innovations/insight-2025-08-18T14-24
-- /reports/innovations/insight-2025-08-18T14-25
-- /reports/innovations/insight-2025-08-18T14-26
-- /reports/innovations/insight-2025-08-18T14-27
-- /reports/innovations/insight-2025-08-18T14-28
-- /reports/innovations/insight-2025-08-18T14-29
-- /reports/innovations/insight-2025-08-18T14-30
-- /reports/innovations/insight-2025-08-18T14-33
-- /reports/innovations/insight-2025-08-18T14-34
-- /reports/innovations/insight-2025-08-18T14-35
-- /reports/innovations/insight-2025-08-18T14-36
-- /reports/innovations/insight-2025-08-18T14-37
-- /reports/innovations/insight-2025-08-18T14-38
-- /reports/innovations/insight-2025-08-18T14-39
-- /reports/innovations/insight-2025-08-18T14-40
-- /reports/innovations/insight-2025-08-18T14-42
-- /reports/innovations/insight-2025-08-18T14-43
-- /reports/innovations/insight-2025-08-18T14-44
-- /reports/innovations/insight-2025-08-18T14-45
-- /reports/innovations/insight-2025-08-18T14-47
-- /reports/innovations/insight-2025-08-18T14-48
-- /reports/innovations/insight-2025-08-18T14-50
-- /reports/innovations/insight-2025-08-18T14-52
-- /reports/innovations/insight-2025-08-18T14-53
-- /reports/innovations/insight-2025-08-18T14-54
-- /reports/innovations/insight-2025-08-18T14-55
-- /reports/innovations/insight-2025-08-18T14-56
-- /reports/innovations/insight-2025-08-18T14-57
-- /reports/innovations/insight-2025-08-18T14-58
-- /reports/innovations/insight-2025-08-18T14-59
-- /reports/innovations/insight-2025-08-18T15-00
-- /reports/innovations/insight-2025-08-18T15-02
-- /reports/innovations/insight-2025-08-18T15-03
-- /reports/innovations/insight-2025-08-18T15-04
-- /reports/innovations/insight-2025-08-18T15-06
-- /reports/innovations/insight-2025-08-18T15-07
-- /reports/innovations/insight-2025-08-18T15-08
-- /reports/innovations/insight-2025-08-18T15-09
-- /reports/innovations/insight-2025-08-18T15-10
-- /reports/innovations/insight-2025-08-18T15-12
-- /reports/innovations/insight-2025-08-18T15-13
-- /reports/innovations/insight-2025-08-18T15-14
-- /reports/innovations/insight-2025-08-18T15-15
-- /reports/innovations/insight-2025-08-18T15-16
-- /reports/innovations/insight-2025-08-18T15-17
-- /reports/innovations/insight-2025-08-18T15-19
-- /reports/innovations/insight-2025-08-18T15-20
-- /reports/innovations/insight-2025-08-18T15-21
-- /reports/innovations/insight-2025-08-18T15-22
-- /reports/innovations/insight-2025-08-18T15-23
-- /reports/innovations/insight-2025-08-18T15-24
-- /reports/innovations/insight-2025-08-18T15-25
-- /reports/innovations/insight-2025-08-18T15-27
-- /reports/innovations/insight-2025-08-18T15-28
-- /reports/innovations/insight-2025-08-18T15-29
-- /reports/innovations/insight-2025-08-18T15-30
-- /reports/innovations/insight-2025-08-18T15-31
-- /reports/innovations/insight-2025-08-18T15-32
-- /reports/innovations/insight-2025-08-18T15-33
-- /reports/innovations/insight-2025-08-18T15-34
-- /reports/innovations/insight-2025-08-18T15-36
-- /reports/innovations/insight-2025-08-18T15-37
-- /reports/innovations/insight-2025-08-18T15-38
-- /reports/innovations/insight-2025-08-18T15-39
-- /reports/innovations/insight-2025-08-18T15-40
-- /reports/innovations/insight-2025-08-18T15-41
-- /reports/innovations/insight-2025-08-18T15-42
-- /reports/innovations/insight-2025-08-18T15-43
-- /reports/innovations/insight-2025-08-18T15-44
-- /reports/innovations/insight-2025-08-18T15-45
-- /reports/innovations/insight-2025-08-18T15-48
-- /reports/innovations/insight-2025-08-18T15-49
-- /reports/innovations/insight-2025-08-18T15-50
-- /reports/innovations/insight-2025-08-18T15-51
-- /reports/innovations/insight-2025-08-18T15-52
-- /reports/innovations/insight-2025-08-18T15-53
-- /reports/innovations/insight-2025-08-18T15-54
-- /reports/innovations/insight-2025-08-18T15-55
-- /reports/innovations/insight-2025-08-18T15-58
-- /reports/innovations/insight-2025-08-18T15-59
-- /reports/innovations/insight-2025-08-18T16-00
-- /reports/innovations/insight-2025-08-18T16-01
-- /reports/innovations/insight-2025-08-18T16-02
-- /reports/innovations/insight-2025-08-18T16-03
-- /reports/innovations/insight-2025-08-18T16-04
-- /reports/innovations/insight-2025-08-18T16-05
-- /reports/innovations/insight-2025-08-18T16-07
-- /reports/innovations/insight-2025-08-18T16-08
-- /reports/innovations/insight-2025-08-18T16-09
-- /reports/innovations/insight-2025-08-18T16-10
-- /reports/innovations/insight-2025-08-18T16-12
-- /reports/innovations/insight-2025-08-18T16-13
-- /reports/innovations/insight-2025-08-18T16-14
-- /reports/innovations/insight-2025-08-18T16-15
-- /reports/innovations/insight-2025-08-18T16-18
-- /reports/innovations/insight-2025-08-18T16-19
-- /reports/innovations/insight-2025-08-18T16-20
-- /reports/innovations/insight-2025-08-18T16-22
-- /reports/innovations/insight-2025-08-18T16-24
-- /reports/innovations/insight-2025-08-18T16-25
-- /reports/innovations/insight-2025-08-18T16-26
-- /reports/innovations/insight-2025-08-18T16-28
-- /reports/innovations/insight-2025-08-18T16-29
-- /reports/innovations/insight-2025-08-18T16-30
-- /reports/innovations/insight-2025-08-18T16-34
-- /reports/innovations/insight-2025-08-18T16-35
-- /reports/innovations/insight-2025-08-18T16-38
-- /reports/innovations/insight-2025-08-18T16-39
-- /reports/innovations/insight-2025-08-18T16-40
-- /reports/innovations/insight-2025-08-18T16-41
-- /reports/patterns/pattern-2025-08-18-122902
-- /reports/patterns/pattern-2025-08-18-122931
-- /reports/patterns/pattern-2025-08-18-122952
-- /reports/patterns/pattern-2025-08-18-123007
-- /reports/patterns/pattern-2025-08-18-123031
-- /reports/patterns/pattern-2025-08-18-123103
-- /reports/patterns/pattern-2025-08-18-123153
-- /reports/patterns/pattern-2025-08-18-123222
-- /reports/patterns/pattern-2025-08-18-123247
-- /reports/patterns/pattern-2025-08-18-123317
-- /reports/patterns/pattern-2025-08-18-123341
-- /reports/patterns/pattern-2025-08-18-123342
-- /reports/patterns/pattern-2025-08-18-123407
-- /reports/patterns/pattern-2025-08-18-123429
-- /reports/patterns/pattern-2025-08-18-123450
-- /reports/patterns/pattern-2025-08-18-123513
-- /reports/patterns/pattern-2025-08-18-123531
-- /reports/patterns/pattern-2025-08-18-123543
-- /reports/patterns/pattern-2025-08-18-123611
-- /reports/patterns/pattern-2025-08-18-123649
-- /reports/patterns/pattern-2025-08-18-123716
-- /reports/patterns/pattern-2025-08-18-123737
-- /reports/patterns/pattern-2025-08-18-123801
-- /reports/patterns/pattern-2025-08-18-123825
-- /reports/patterns/pattern-2025-08-18-123846
-- /reports/patterns/pattern-2025-08-18-123909
-- /reports/patterns/pattern-2025-08-18-123933
-- /reports/patterns/pattern-2025-08-18-123955
-- /reports/patterns/pattern-2025-08-18-124006
-- /reports/patterns/pattern-2025-08-18-124030
-- /reports/patterns/pattern-2025-08-18-124039
-- /reports/patterns/pattern-2025-08-18-124106
-- /reports/patterns/pattern-2025-08-18-124150
-- /reports/patterns/pattern-2025-08-18-124214
-- /reports/patterns/pattern-2025-08-18-124236
-- /reports/patterns/pattern-2025-08-18-124258
-- /reports/patterns/pattern-2025-08-18-130835
-- /reports/patterns/pattern-2025-08-18-130857
-- /reports/patterns/pattern-2025-08-18-130921
-- /reports/patterns/pattern-2025-08-18-130941
-- /reports/patterns/pattern-2025-08-18-131415
-- /reports/patterns/pattern-2025-08-18-131416
-- /reports/patterns/pattern-2025-08-18-131441
-- /reports/patterns/pattern-2025-08-18-131442
-- /reports/patterns/pattern-2025-08-18-131506
-- /reports/patterns/pattern-2025-08-18-131534
-- /reports/patterns/pattern-2025-08-18-131553
-- /reports/patterns/pattern-2025-08-18-131618
-- /reports/patterns/pattern-2025-08-18-131658
-- /reports/patterns/pattern-2025-08-18-131659
-- /reports/patterns/pattern-2025-08-18-131720
-- /reports/patterns/pattern-2025-08-18-131741
-- /reports/patterns/pattern-2025-08-18-131802
-- /reports/patterns/pattern-2025-08-18-131821
-- /reports/patterns/pattern-2025-08-18-131847
-- /reports/patterns/pattern-2025-08-18-131910
-- /reports/patterns/pattern-2025-08-18-132005
-- /reports/patterns/pattern-2025-08-18-132029
-- /reports/patterns/pattern-2025-08-18-132106
-- /reports/patterns/pattern-2025-08-18-132208
-- /reports/patterns/pattern-2025-08-18-132332
-- /reports/patterns/pattern-2025-08-18-132427
-- /reports/patterns/pattern-2025-08-18-132558
-- /reports/patterns/pattern-2025-08-18-132559
-- /reports/patterns/pattern-2025-08-18-132616
-- /reports/patterns/pattern-2025-08-18-132719
-- /reports/patterns/pattern-2025-08-18-132754
-- /reports/patterns/pattern-2025-08-18-132824
-- /reports/patterns/pattern-2025-08-18-132924
-- /reports/patterns/pattern-2025-08-18-132949
-- /reports/patterns/pattern-2025-08-18-133027
-- /reports/patterns/pattern-2025-08-18-133100
-- /reports/patterns/pattern-2025-08-18-133127
-- /reports/patterns/pattern-2025-08-18-133128
-- /reports/patterns/pattern-2025-08-18-133201
-- /reports/patterns/pattern-2025-08-18-133316
-- /reports/patterns/pattern-2025-08-18-133317
-- /reports/patterns/pattern-2025-08-18-133352
-- /reports/patterns/pattern-2025-08-18-133445
-- /reports/patterns/pattern-2025-08-18-133513
-- /reports/patterns/pattern-2025-08-18-133623
-- /reports/patterns/pattern-2025-08-18-133637
-- /reports/patterns/pattern-2025-08-18-133714
-- /reports/patterns/pattern-2025-08-18-133757
-- /reports/patterns/pattern-2025-08-18-133758
-- /reports/patterns/pattern-2025-08-18-133828
-- /reports/patterns/pattern-2025-08-18-133858
-- /reports/patterns/pattern-2025-08-18-133930
-- /reports/patterns/pattern-2025-08-18-134005
-- /reports/patterns/pattern-2025-08-18-134033
-- /reports/patterns/pattern-2025-08-18-134149
-- /reports/patterns/pattern-2025-08-18-134224
-- /reports/patterns/pattern-2025-08-18-134255
-- /reports/patterns/pattern-2025-08-18-134328
-- /reports/patterns/pattern-2025-08-18-134401
-- /reports/patterns/pattern-2025-08-18-134426
-- /reports/patterns/pattern-2025-08-18-134452
-- /reports/patterns/pattern-2025-08-18-134518
-- /reports/patterns/pattern-2025-08-18-134519
-- /reports/patterns/pattern-2025-08-18-134545
-- /reports/patterns/pattern-2025-08-18-134639
-- /reports/patterns/pattern-2025-08-18-134654
-- /reports/patterns/pattern-2025-08-18-134739
-- /reports/patterns/pattern-2025-08-18-134807
-- /reports/patterns/pattern-2025-08-18-134838
-- /reports/patterns/pattern-2025-08-18-134901
-- /reports/patterns/pattern-2025-08-18-134923
-- /reports/patterns/pattern-2025-08-18-135004
-- /reports/patterns/pattern-2025-08-18-135027
-- /reports/patterns/pattern-2025-08-18-135056
-- /reports/patterns/pattern-2025-08-18-135156
-- /reports/patterns/pattern-2025-08-18-135201
-- /reports/patterns/pattern-2025-08-18-135314
-- /reports/patterns/pattern-2025-08-18-135407
-- /reports/patterns/pattern-2025-08-18-135427
-- /reports/patterns/pattern-2025-08-18-135448
-- /reports/patterns/pattern-2025-08-18-135519
-- /reports/patterns/pattern-2025-08-18-135551
-- /reports/patterns/pattern-2025-08-18-135642
-- /reports/patterns/pattern-2025-08-18-135737
-- /reports/patterns/pattern-2025-08-18-135831
-- /reports/patterns/pattern-2025-08-18-135856
-- /reports/patterns/pattern-2025-08-18-135919
-- /reports/patterns/pattern-2025-08-18-140003
-- /reports/patterns/pattern-2025-08-18-140048
-- /reports/patterns/pattern-2025-08-18-140141
-- /reports/patterns/pattern-2025-08-18-140215
-- /reports/patterns/pattern-2025-08-18-140240
-- /reports/patterns/pattern-2025-08-18-140328
-- /reports/patterns/pattern-2025-08-18-140420
-- /reports/patterns/pattern-2025-08-18-140449
-- /reports/patterns/pattern-2025-08-18-140520
-- /reports/patterns/pattern-2025-08-18-140552
-- /reports/patterns/pattern-2025-08-18-140553
-- /reports/patterns/pattern-2025-08-18-140652
-- /reports/patterns/pattern-2025-08-18-140722
-- /reports/patterns/pattern-2025-08-18-140728
-- /reports/patterns/pattern-2025-08-18-140754
-- /reports/patterns/pattern-2025-08-18-140821
-- /reports/patterns/pattern-2025-08-18-140843
-- /reports/patterns/pattern-2025-08-18-140939
-- /reports/patterns/pattern-2025-08-18-141006
-- /reports/patterns/pattern-2025-08-18-141036
-- /reports/patterns/pattern-2025-08-18-141102
-- /reports/patterns/pattern-2025-08-18-141224
-- /reports/patterns/pattern-2025-08-18-141229
-- /reports/patterns/pattern-2025-08-18-141344
-- /reports/patterns/pattern-2025-08-18-141408
-- /reports/patterns/pattern-2025-08-18-141434
-- /reports/patterns/pattern-2025-08-18-141552
-- /reports/patterns/pattern-2025-08-18-141654
-- /reports/patterns/pattern-2025-08-18-141722
-- /reports/patterns/pattern-2025-08-18-141736
-- /reports/patterns/pattern-2025-08-18-141749
-- /reports/patterns/pattern-2025-08-18-141839
-- /reports/patterns/pattern-2025-08-18-141903
-- /reports/patterns/pattern-2025-08-18-141927
-- /reports/patterns/pattern-2025-08-18-141954
-- /reports/patterns/pattern-2025-08-18-142057
-- /reports/patterns/pattern-2025-08-18-142202
-- /reports/patterns/pattern-2025-08-18-142224
-- /reports/patterns/pattern-2025-08-18-142243
-- /reports/patterns/pattern-2025-08-18-142252
-- /reports/patterns/pattern-2025-08-18-142319
-- /reports/patterns/pattern-2025-08-18-142342
-- /reports/patterns/pattern-2025-08-18-142406
-- /reports/patterns/pattern-2025-08-18-142434
-- /reports/patterns/pattern-2025-08-18-142501
-- /reports/patterns/pattern-2025-08-18-142531
-- /reports/patterns/pattern-2025-08-18-142603
-- /reports/patterns/pattern-2025-08-18-142604
-- /reports/patterns/pattern-2025-08-18-142659
-- /reports/patterns/pattern-2025-08-18-142700
-- /reports/patterns/pattern-2025-08-18-142724
-- /reports/patterns/pattern-2025-08-18-142751
-- /reports/patterns/pattern-2025-08-18-142819
-- /reports/patterns/pattern-2025-08-18-142844
-- /reports/patterns/pattern-2025-08-18-142906
-- /reports/patterns/pattern-2025-08-18-142956
-- /reports/patterns/pattern-2025-08-18-143004
-- /reports/patterns/pattern-2025-08-18-143038
-- /reports/patterns/pattern-2025-08-18-143301
-- /reports/patterns/pattern-2025-08-18-143350
-- /reports/patterns/pattern-2025-08-18-143443
-- /reports/patterns/pattern-2025-08-18-143507
-- /reports/patterns/pattern-2025-08-18-143534
-- /reports/patterns/pattern-2025-08-18-143608
-- /reports/patterns/pattern-2025-08-18-143701
-- /reports/patterns/pattern-2025-08-18-143724
-- /reports/patterns/pattern-2025-08-18-143747
-- /reports/patterns/pattern-2025-08-18-143839
-- /reports/patterns/pattern-2025-08-18-143902
-- /reports/patterns/pattern-2025-08-18-143929
-- /reports/patterns/pattern-2025-08-18-143957
-- /reports/patterns/pattern-2025-08-18-144004
-- /reports/patterns/pattern-2025-08-18-144028
-- /reports/patterns/pattern-2025-08-18-144054
-- /reports/patterns/pattern-2025-08-18-144249
-- /reports/patterns/pattern-2025-08-18-144317
-- /reports/patterns/pattern-2025-08-18-144340
-- /reports/patterns/pattern-2025-08-18-144453
-- /reports/patterns/pattern-2025-08-18-144527
-- /reports/patterns/pattern-2025-08-18-144554
-- /reports/patterns/pattern-2025-08-18-144729
-- /reports/patterns/pattern-2025-08-18-144846
-- /reports/patterns/pattern-2025-08-18-145003
-- /reports/patterns/pattern-2025-08-18-145038
-- /reports/patterns/pattern-2025-08-18-145203
-- /reports/patterns/pattern-2025-08-18-145233
-- /reports/patterns/pattern-2025-08-18-145258
-- /reports/patterns/pattern-2025-08-18-145322
-- /reports/patterns/pattern-2025-08-18-145326
-- /reports/patterns/pattern-2025-08-18-145346
-- /reports/patterns/pattern-2025-08-18-145432
-- /reports/patterns/pattern-2025-08-18-145457
-- /reports/patterns/pattern-2025-08-18-145555
-- /reports/patterns/pattern-2025-08-18-145657
-- /reports/patterns/pattern-2025-08-18-145723
-- /reports/patterns/pattern-2025-08-18-145818
-- /reports/patterns/pattern-2025-08-18-145911
-- /reports/patterns/pattern-2025-08-18-150008
-- /reports/patterns/pattern-2025-08-18-150220
-- /reports/patterns/pattern-2025-08-18-150249
-- /reports/patterns/pattern-2025-08-18-150343
-- /reports/patterns/pattern-2025-08-18-150349
-- /reports/patterns/pattern-2025-08-18-150419
-- /reports/patterns/pattern-2025-08-18-150601
-- /reports/patterns/pattern-2025-08-18-150738
-- /reports/patterns/pattern-2025-08-18-150807
-- /reports/patterns/pattern-2025-08-18-150841
-- /reports/patterns/pattern-2025-08-18-150952
-- /reports/patterns/pattern-2025-08-18-151005
-- /reports/patterns/pattern-2025-08-18-151028
-- /reports/patterns/pattern-2025-08-18-151055
-- /reports/patterns/pattern-2025-08-18-151204
-- /reports/patterns/pattern-2025-08-18-151230
-- /reports/patterns/pattern-2025-08-18-151325
-- /reports/patterns/pattern-2025-08-18-151356
-- /reports/patterns/pattern-2025-08-18-151420
-- /reports/patterns/pattern-2025-08-18-151450
-- /reports/patterns/pattern-2025-08-18-151451
-- /reports/patterns/pattern-2025-08-18-151523
-- /reports/patterns/pattern-2025-08-18-151649
-- /reports/patterns/pattern-2025-08-18-151716
-- /reports/patterns/pattern-2025-08-18-151739
-- /reports/patterns/pattern-2025-08-18-151904
-- /reports/patterns/pattern-2025-08-18-151942
-- /reports/patterns/pattern-2025-08-18-152028
-- /reports/patterns/pattern-2025-08-18-152156
-- /reports/patterns/pattern-2025-08-18-152248
-- /reports/patterns/pattern-2025-08-18-152317
-- /reports/patterns/pattern-2025-08-18-152343
-- /reports/patterns/pattern-2025-08-18-152411
-- /reports/patterns/pattern-2025-08-18-152449
-- /reports/patterns/pattern-2025-08-18-152546
-- /reports/patterns/pattern-2025-08-18-152719
-- /reports/patterns/pattern-2025-08-18-152743
-- /reports/patterns/pattern-2025-08-18-152812
-- /reports/patterns/pattern-2025-08-18-152835
-- /reports/patterns/pattern-2025-08-18-152836
-- /reports/patterns/pattern-2025-08-18-152859
-- /reports/patterns/pattern-2025-08-18-152918
-- /reports/patterns/pattern-2025-08-18-152957
-- /reports/patterns/pattern-2025-08-18-153004
-- /reports/patterns/pattern-2025-08-18-153030
-- /reports/patterns/pattern-2025-08-18-153103
-- /reports/patterns/pattern-2025-08-18-153205
-- /reports/patterns/pattern-2025-08-18-153258
-- /reports/patterns/pattern-2025-08-18-153323
-- /reports/patterns/pattern-2025-08-18-153346
-- /reports/patterns/pattern-2025-08-18-153426
-- /reports/patterns/pattern-2025-08-18-153450
-- /reports/patterns/pattern-2025-08-18-153602
-- /reports/patterns/pattern-2025-08-18-153702
-- /reports/patterns/pattern-2025-08-18-153723
-- /reports/patterns/pattern-2025-08-18-153724
-- /reports/patterns/pattern-2025-08-18-153747
-- /reports/patterns/pattern-2025-08-18-153831
-- /reports/patterns/pattern-2025-08-18-153853
-- /reports/patterns/pattern-2025-08-18-153916
-- /reports/patterns/pattern-2025-08-18-153932
-- /reports/patterns/pattern-2025-08-18-154018
-- /reports/patterns/pattern-2025-08-18-154048
-- /reports/patterns/pattern-2025-08-18-154145
-- /reports/patterns/pattern-2025-08-18-154213
-- /reports/patterns/pattern-2025-08-18-154234
-- /reports/patterns/pattern-2025-08-18-154255
-- /reports/patterns/pattern-2025-08-18-154319
-- /reports/patterns/pattern-2025-08-18-154341
-- /reports/patterns/pattern-2025-08-18-154409
-- /reports/patterns/pattern-2025-08-18-154434
-- /reports/patterns/pattern-2025-08-18-154440
-- /reports/patterns/pattern-2025-08-18-154508
-- /reports/patterns/pattern-2025-08-18-154535
-- /reports/patterns/pattern-2025-08-18-154846
-- /reports/patterns/pattern-2025-08-18-154912
-- /reports/patterns/pattern-2025-08-18-154937
-- /reports/patterns/pattern-2025-08-18-155004
-- /reports/patterns/pattern-2025-08-18-155010
-- /reports/patterns/pattern-2025-08-18-155046
-- /reports/patterns/pattern-2025-08-18-155155
-- /reports/patterns/pattern-2025-08-18-155156
-- /reports/patterns/pattern-2025-08-18-155247
-- /reports/patterns/pattern-2025-08-18-155344
-- /reports/patterns/pattern-2025-08-18-155445
-- /reports/patterns/pattern-2025-08-18-155456
-- /reports/patterns/pattern-2025-08-18-155556
-- /reports/patterns/pattern-2025-08-18-155822
-- /reports/patterns/pattern-2025-08-18-155845
-- /reports/patterns/pattern-2025-08-18-155921
-- /reports/patterns/pattern-2025-08-18-155922
-- /reports/patterns/pattern-2025-08-18-160004
-- /reports/patterns/pattern-2025-08-18-160047
-- /reports/patterns/pattern-2025-08-18-160144
-- /reports/patterns/pattern-2025-08-18-160238
-- /reports/patterns/pattern-2025-08-18-160303
-- /reports/patterns/pattern-2025-08-18-160333
-- /reports/patterns/pattern-2025-08-18-160408
-- /reports/patterns/pattern-2025-08-18-160430
-- /reports/patterns/pattern-2025-08-18-160453
-- /reports/patterns/pattern-2025-08-18-160511
-- /reports/patterns/pattern-2025-08-18-160527
-- /reports/patterns/pattern-2025-08-18-160556
-- /reports/patterns/pattern-2025-08-18-160744
-- /reports/patterns/pattern-2025-08-18-160837
-- /reports/patterns/pattern-2025-08-18-160926
-- /reports/patterns/pattern-2025-08-18-160957
-- /reports/patterns/pattern-2025-08-18-161004
-- /reports/patterns/pattern-2025-08-18-161028
-- /reports/patterns/pattern-2025-08-18-161059
-- /reports/patterns/pattern-2025-08-18-161238
-- /reports/patterns/pattern-2025-08-18-161302
-- /reports/patterns/pattern-2025-08-18-161323
-- /reports/patterns/pattern-2025-08-18-161422
-- /reports/patterns/pattern-2025-08-18-161446
-- /reports/patterns/pattern-2025-08-18-161518
-- /reports/patterns/pattern-2025-08-18-161529
-- /reports/patterns/pattern-2025-08-18-161553
-- /reports/patterns/pattern-2025-08-18-161806
-- /reports/patterns/pattern-2025-08-18-161834
-- /reports/patterns/pattern-2025-08-18-161907
-- /reports/patterns/pattern-2025-08-18-161937
-- /reports/patterns/pattern-2025-08-18-162004
-- /reports/patterns/pattern-2025-08-18-162037
-- /reports/patterns/pattern-2025-08-18-162237
-- /reports/patterns/pattern-2025-08-18-162407
-- /reports/patterns/pattern-2025-08-18-162458
-- /reports/patterns/pattern-2025-08-18-162526
-- /reports/patterns/pattern-2025-08-18-162544
-- /reports/patterns/pattern-2025-08-18-162652
-- /reports/patterns/pattern-2025-08-18-162853
-- /reports/patterns/pattern-2025-08-18-162924
-- /reports/patterns/pattern-2025-08-18-162952
-- /reports/patterns/pattern-2025-08-18-163005
-- /reports/patterns/pattern-2025-08-18-163041
-- /reports/patterns/pattern-2025-08-18-163443
-- /reports/patterns/pattern-2025-08-18-163514
-- /reports/patterns/pattern-2025-08-18-163545
-- /reports/patterns/pattern-2025-08-18-163806
-- /reports/patterns/pattern-2025-08-18-163934
-- /reports/patterns/pattern-2025-08-18-164031
-- /reports/patterns/pattern-2025-08-18-164113
-- /reports/playbooks/playbook-2025-08-18-122902
-- /reports/playbooks/playbook-2025-08-18-122932
-- /reports/playbooks/playbook-2025-08-18-122952
-- /reports/playbooks/playbook-2025-08-18-123007
-- /reports/playbooks/playbook-2025-08-18-123031
-- /reports/playbooks/playbook-2025-08-18-123103
-- /reports/playbooks/playbook-2025-08-18-123153
-- /reports/playbooks/playbook-2025-08-18-123222
-- /reports/playbooks/playbook-2025-08-18-123247
-- /reports/playbooks/playbook-2025-08-18-123317
-- /reports/playbooks/playbook-2025-08-18-123342
-- /reports/playbooks/playbook-2025-08-18-123407
-- /reports/playbooks/playbook-2025-08-18-123429
-- /reports/playbooks/playbook-2025-08-18-123451
-- /reports/playbooks/playbook-2025-08-18-123514
-- /reports/playbooks/playbook-2025-08-18-123532
-- /reports/playbooks/playbook-2025-08-18-123544
-- /reports/playbooks/playbook-2025-08-18-123612
-- /reports/playbooks/playbook-2025-08-18-123650
-- /reports/playbooks/playbook-2025-08-18-123716
-- /reports/playbooks/playbook-2025-08-18-123737
-- /reports/playbooks/playbook-2025-08-18-123801
-- /reports/playbooks/playbook-2025-08-18-123825
-- /reports/playbooks/playbook-2025-08-18-123846
-- /reports/playbooks/playbook-2025-08-18-123910
-- /reports/playbooks/playbook-2025-08-18-123933
-- /reports/playbooks/playbook-2025-08-18-123955
-- /reports/playbooks/playbook-2025-08-18-124006
-- /reports/playbooks/playbook-2025-08-18-124030
-- /reports/playbooks/playbook-2025-08-18-124039
-- /reports/playbooks/playbook-2025-08-18-124106
-- /reports/playbooks/playbook-2025-08-18-124150
-- /reports/playbooks/playbook-2025-08-18-124214
-- /reports/playbooks/playbook-2025-08-18-124236
-- /reports/playbooks/playbook-2025-08-18-124258
-- /reports/playbooks/playbook-2025-08-18-130835
-- /reports/playbooks/playbook-2025-08-18-130857
-- /reports/playbooks/playbook-2025-08-18-130921
-- /reports/playbooks/playbook-2025-08-18-130941
-- /reports/playbooks/playbook-2025-08-18-131416
-- /reports/playbooks/playbook-2025-08-18-131442
-- /reports/playbooks/playbook-2025-08-18-131506
-- /reports/playbooks/playbook-2025-08-18-131534
-- /reports/playbooks/playbook-2025-08-18-131553
-- /reports/playbooks/playbook-2025-08-18-131618
-- /reports/playbooks/playbook-2025-08-18-131659
-- /reports/playbooks/playbook-2025-08-18-131721
-- /reports/playbooks/playbook-2025-08-18-131742
-- /reports/playbooks/playbook-2025-08-18-131802
-- /reports/playbooks/playbook-2025-08-18-131821
-- /reports/playbooks/playbook-2025-08-18-131848
-- /reports/playbooks/playbook-2025-08-18-131910
-- /reports/playbooks/playbook-2025-08-18-132005
-- /reports/playbooks/playbook-2025-08-18-132030
-- /reports/playbooks/playbook-2025-08-18-132106
-- /reports/playbooks/playbook-2025-08-18-132209
-- /reports/playbooks/playbook-2025-08-18-132332
-- /reports/playbooks/playbook-2025-08-18-132427
-- /reports/playbooks/playbook-2025-08-18-132559
-- /reports/playbooks/playbook-2025-08-18-132616
-- /reports/playbooks/playbook-2025-08-18-132719
-- /reports/playbooks/playbook-2025-08-18-132755
-- /reports/playbooks/playbook-2025-08-18-132825
-- /reports/playbooks/playbook-2025-08-18-132924
-- /reports/playbooks/playbook-2025-08-18-132949
-- /reports/playbooks/playbook-2025-08-18-133028
-- /reports/playbooks/playbook-2025-08-18-133100
-- /reports/playbooks/playbook-2025-08-18-133128
-- /reports/playbooks/playbook-2025-08-18-133201
-- /reports/playbooks/playbook-2025-08-18-133317
-- /reports/playbooks/playbook-2025-08-18-133352
-- /reports/playbooks/playbook-2025-08-18-133445
-- /reports/playbooks/playbook-2025-08-18-133513
-- /reports/playbooks/playbook-2025-08-18-133623
-- /reports/playbooks/playbook-2025-08-18-133637
-- /reports/playbooks/playbook-2025-08-18-133715
-- /reports/playbooks/playbook-2025-08-18-133828
-- /reports/playbooks/playbook-2025-08-18-133858
-- /reports/playbooks/playbook-2025-08-18-133930
-- /reports/playbooks/playbook-2025-08-18-134005
-- /reports/playbooks/playbook-2025-08-18-134034
-- /reports/playbooks/playbook-2025-08-18-134149
-- /reports/playbooks/playbook-2025-08-18-134224
-- /reports/playbooks/playbook-2025-08-18-134255
-- /reports/playbooks/playbook-2025-08-18-134328
-- /reports/playbooks/playbook-2025-08-18-134401
-- /reports/playbooks/playbook-2025-08-18-134426
-- /reports/playbooks/playbook-2025-08-18-134452
-- /reports/playbooks/playbook-2025-08-18-134519
-- /reports/playbooks/playbook-2025-08-18-134545
-- /reports/playbooks/playbook-2025-08-18-134639
-- /reports/playbooks/playbook-2025-08-18-134654
-- /reports/playbooks/playbook-2025-08-18-134739
-- /reports/playbooks/playbook-2025-08-18-134807
-- /reports/playbooks/playbook-2025-08-18-134838
-- /reports/playbooks/playbook-2025-08-18-134902
-- /reports/playbooks/playbook-2025-08-18-134924
-- /reports/playbooks/playbook-2025-08-18-135004
-- /reports/playbooks/playbook-2025-08-18-135027
-- /reports/playbooks/playbook-2025-08-18-135056
-- /reports/playbooks/playbook-2025-08-18-135156
-- /reports/playbooks/playbook-2025-08-18-135201
-- /reports/playbooks/playbook-2025-08-18-135314
-- /reports/playbooks/playbook-2025-08-18-135407
-- /reports/playbooks/playbook-2025-08-18-135427
-- /reports/playbooks/playbook-2025-08-18-135448
-- /reports/playbooks/playbook-2025-08-18-135519
-- /reports/playbooks/playbook-2025-08-18-135551
-- /reports/playbooks/playbook-2025-08-18-135643
-- /reports/playbooks/playbook-2025-08-18-135738
-- /reports/playbooks/playbook-2025-08-18-135831
-- /reports/playbooks/playbook-2025-08-18-135856
-- /reports/playbooks/playbook-2025-08-18-135919
-- /reports/playbooks/playbook-2025-08-18-140048
-- /reports/playbooks/playbook-2025-08-18-140215
-- /reports/playbooks/playbook-2025-08-18-140240
-- /reports/playbooks/playbook-2025-08-18-140328
-- /reports/playbooks/playbook-2025-08-18-140421
-- /reports/playbooks/playbook-2025-08-18-140449
-- /reports/playbooks/playbook-2025-08-18-140520
-- /reports/playbooks/playbook-2025-08-18-140553
-- /reports/playbooks/playbook-2025-08-18-140652
-- /reports/playbooks/playbook-2025-08-18-140722
-- /reports/playbooks/playbook-2025-08-18-140729
-- /reports/playbooks/playbook-2025-08-18-140754
-- /reports/playbooks/playbook-2025-08-18-140821
-- /reports/playbooks/playbook-2025-08-18-140843
-- /reports/playbooks/playbook-2025-08-18-140939
-- /reports/playbooks/playbook-2025-08-18-141006
-- /reports/playbooks/playbook-2025-08-18-141037
-- /reports/playbooks/playbook-2025-08-18-141103
-- /reports/playbooks/playbook-2025-08-18-141224
-- /reports/playbooks/playbook-2025-08-18-141229
-- /reports/playbooks/playbook-2025-08-18-141344
-- /reports/playbooks/playbook-2025-08-18-141408
-- /reports/playbooks/playbook-2025-08-18-141434
-- /reports/playbooks/playbook-2025-08-18-141552
-- /reports/playbooks/playbook-2025-08-18-141655
-- /reports/playbooks/playbook-2025-08-18-141723
-- /reports/playbooks/playbook-2025-08-18-141749
-- /reports/playbooks/playbook-2025-08-18-141839
-- /reports/playbooks/playbook-2025-08-18-141903
-- /reports/playbooks/playbook-2025-08-18-141927
-- /reports/playbooks/playbook-2025-08-18-141954
-- /reports/playbooks/playbook-2025-08-18-142057
-- /reports/playbooks/playbook-2025-08-18-142202
-- /reports/playbooks/playbook-2025-08-18-142224
-- /reports/playbooks/playbook-2025-08-18-142244
-- /reports/playbooks/playbook-2025-08-18-142252
-- /reports/playbooks/playbook-2025-08-18-142319
-- /reports/playbooks/playbook-2025-08-18-142343
-- /reports/playbooks/playbook-2025-08-18-142406
-- /reports/playbooks/playbook-2025-08-18-142434
-- /reports/playbooks/playbook-2025-08-18-142501
-- /reports/playbooks/playbook-2025-08-18-142531
-- /reports/playbooks/playbook-2025-08-18-142700
-- /reports/playbooks/playbook-2025-08-18-142725
-- /reports/playbooks/playbook-2025-08-18-142751
-- /reports/playbooks/playbook-2025-08-18-142819
-- /reports/playbooks/playbook-2025-08-18-142844
-- /reports/playbooks/playbook-2025-08-18-142906
-- /reports/playbooks/playbook-2025-08-18-142957
-- /reports/playbooks/playbook-2025-08-18-143004
-- /reports/playbooks/playbook-2025-08-18-143038
-- /reports/playbooks/playbook-2025-08-18-143301
-- /reports/playbooks/playbook-2025-08-18-143350
-- /reports/playbooks/playbook-2025-08-18-143443
-- /reports/playbooks/playbook-2025-08-18-143507
-- /reports/playbooks/playbook-2025-08-18-143534
-- /reports/playbooks/playbook-2025-08-18-143609
-- /reports/playbooks/playbook-2025-08-18-143701
-- /reports/playbooks/playbook-2025-08-18-143724
-- /reports/playbooks/playbook-2025-08-18-143747
-- /reports/playbooks/playbook-2025-08-18-143839
-- /reports/playbooks/playbook-2025-08-18-143902
-- /reports/playbooks/playbook-2025-08-18-143929
-- /reports/playbooks/playbook-2025-08-18-143957
-- /reports/playbooks/playbook-2025-08-18-144028
-- /reports/playbooks/playbook-2025-08-18-144054
-- /reports/playbooks/playbook-2025-08-18-144249
-- /reports/playbooks/playbook-2025-08-18-144317
-- /reports/playbooks/playbook-2025-08-18-144340
-- /reports/playbooks/playbook-2025-08-18-144453
-- /reports/playbooks/playbook-2025-08-18-144527
-- /reports/playbooks/playbook-2025-08-18-144554
-- /reports/playbooks/playbook-2025-08-18-144729
-- /reports/playbooks/playbook-2025-08-18-144820
-- /reports/playbooks/playbook-2025-08-18-144846
-- /reports/playbooks/playbook-2025-08-18-145004
-- /reports/playbooks/playbook-2025-08-18-145038
-- /reports/playbooks/playbook-2025-08-18-145203
-- /reports/playbooks/playbook-2025-08-18-145233
-- /reports/playbooks/playbook-2025-08-18-145258
-- /reports/playbooks/playbook-2025-08-18-145322
-- /reports/playbooks/playbook-2025-08-18-145326
-- /reports/playbooks/playbook-2025-08-18-145347
-- /reports/playbooks/playbook-2025-08-18-145432
-- /reports/playbooks/playbook-2025-08-18-145457
-- /reports/playbooks/playbook-2025-08-18-145555
-- /reports/playbooks/playbook-2025-08-18-145657
-- /reports/playbooks/playbook-2025-08-18-145723
-- /reports/playbooks/playbook-2025-08-18-145818
-- /reports/playbooks/playbook-2025-08-18-145911
-- /reports/playbooks/playbook-2025-08-18-150009
-- /reports/playbooks/playbook-2025-08-18-150220
-- /reports/playbooks/playbook-2025-08-18-150249
-- /reports/playbooks/playbook-2025-08-18-150343
-- /reports/playbooks/playbook-2025-08-18-150349
-- /reports/playbooks/playbook-2025-08-18-150419
-- /reports/playbooks/playbook-2025-08-18-150601
-- /reports/playbooks/playbook-2025-08-18-150738
-- /reports/playbooks/playbook-2025-08-18-150807
-- /reports/playbooks/playbook-2025-08-18-150952
-- /reports/playbooks/playbook-2025-08-18-151005
-- /reports/playbooks/playbook-2025-08-18-151028
-- /reports/playbooks/playbook-2025-08-18-151055
-- /reports/playbooks/playbook-2025-08-18-151204
-- /reports/playbooks/playbook-2025-08-18-151231
-- /reports/playbooks/playbook-2025-08-18-151326
-- /reports/playbooks/playbook-2025-08-18-151356
-- /reports/playbooks/playbook-2025-08-18-151420
-- /reports/playbooks/playbook-2025-08-18-151451
-- /reports/playbooks/playbook-2025-08-18-151524
-- /reports/playbooks/playbook-2025-08-18-151649
-- /reports/playbooks/playbook-2025-08-18-151717
-- /reports/playbooks/playbook-2025-08-18-151739
-- /reports/playbooks/playbook-2025-08-18-151904
-- /reports/playbooks/playbook-2025-08-18-151942
-- /reports/playbooks/playbook-2025-08-18-152028
-- /reports/playbooks/playbook-2025-08-18-152156
-- /reports/playbooks/playbook-2025-08-18-152248
-- /reports/playbooks/playbook-2025-08-18-152318
-- /reports/playbooks/playbook-2025-08-18-152343
-- /reports/playbooks/playbook-2025-08-18-152412
-- /reports/playbooks/playbook-2025-08-18-152449
-- /reports/playbooks/playbook-2025-08-18-152547
-- /reports/playbooks/playbook-2025-08-18-152719
-- /reports/playbooks/playbook-2025-08-18-152743
-- /reports/playbooks/playbook-2025-08-18-152813
-- /reports/playbooks/playbook-2025-08-18-152836
-- /reports/playbooks/playbook-2025-08-18-152859
-- /reports/playbooks/playbook-2025-08-18-152918
-- /reports/playbooks/playbook-2025-08-18-152958
-- /reports/playbooks/playbook-2025-08-18-153004
-- /reports/playbooks/playbook-2025-08-18-153030
-- /reports/playbooks/playbook-2025-08-18-153103
-- /reports/playbooks/playbook-2025-08-18-153205
-- /reports/playbooks/playbook-2025-08-18-153258
-- /reports/playbooks/playbook-2025-08-18-153323
-- /reports/playbooks/playbook-2025-08-18-153347
-- /reports/playbooks/playbook-2025-08-18-153426
-- /reports/playbooks/playbook-2025-08-18-153450
-- /reports/playbooks/playbook-2025-08-18-153603
-- /reports/playbooks/playbook-2025-08-18-153703
-- /reports/playbooks/playbook-2025-08-18-153724
-- /reports/playbooks/playbook-2025-08-18-153747
-- /reports/playbooks/playbook-2025-08-18-153832
-- /reports/playbooks/playbook-2025-08-18-153853
-- /reports/playbooks/playbook-2025-08-18-153917
-- /reports/playbooks/playbook-2025-08-18-153932
-- /reports/playbooks/playbook-2025-08-18-154019
-- /reports/playbooks/playbook-2025-08-18-154048
-- /reports/playbooks/playbook-2025-08-18-154145
-- /reports/playbooks/playbook-2025-08-18-154213
-- /reports/playbooks/playbook-2025-08-18-154234
-- /reports/playbooks/playbook-2025-08-18-154255
-- /reports/playbooks/playbook-2025-08-18-154319
-- /reports/playbooks/playbook-2025-08-18-154341
-- /reports/playbooks/playbook-2025-08-18-154409
-- /reports/playbooks/playbook-2025-08-18-154434
-- /reports/playbooks/playbook-2025-08-18-154440
-- /reports/playbooks/playbook-2025-08-18-154508
-- /reports/playbooks/playbook-2025-08-18-154536
-- /reports/playbooks/playbook-2025-08-18-154846
-- /reports/playbooks/playbook-2025-08-18-154912
-- /reports/playbooks/playbook-2025-08-18-154937
-- /reports/playbooks/playbook-2025-08-18-155004
-- /reports/playbooks/playbook-2025-08-18-155011
-- /reports/playbooks/playbook-2025-08-18-155046
-- /reports/playbooks/playbook-2025-08-18-155156
-- /reports/playbooks/playbook-2025-08-18-155248
-- /reports/playbooks/playbook-2025-08-18-155345
-- /reports/playbooks/playbook-2025-08-18-155445
-- /reports/playbooks/playbook-2025-08-18-155456
-- /reports/playbooks/playbook-2025-08-18-155556
-- /reports/playbooks/playbook-2025-08-18-155822
-- /reports/playbooks/playbook-2025-08-18-155845
-- /reports/playbooks/playbook-2025-08-18-155922
-- /reports/playbooks/playbook-2025-08-18-160004
-- /reports/playbooks/playbook-2025-08-18-160048
-- /reports/playbooks/playbook-2025-08-18-160144
-- /reports/playbooks/playbook-2025-08-18-160238
-- /reports/playbooks/playbook-2025-08-18-160303
-- /reports/playbooks/playbook-2025-08-18-160333
-- /reports/playbooks/playbook-2025-08-18-160408
-- /reports/playbooks/playbook-2025-08-18-160430
-- /reports/playbooks/playbook-2025-08-18-160453
-- /reports/playbooks/playbook-2025-08-18-160511
-- /reports/playbooks/playbook-2025-08-18-160527
-- /reports/playbooks/playbook-2025-08-18-160556
-- /reports/playbooks/playbook-2025-08-18-160744
-- /reports/playbooks/playbook-2025-08-18-160837
-- /reports/playbooks/playbook-2025-08-18-160926
-- /reports/playbooks/playbook-2025-08-18-160957
-- /reports/playbooks/playbook-2025-08-18-161004
-- /reports/playbooks/playbook-2025-08-18-161028
-- /reports/playbooks/playbook-2025-08-18-161059
-- /reports/playbooks/playbook-2025-08-18-161238
-- /reports/playbooks/playbook-2025-08-18-161302
-- /reports/playbooks/playbook-2025-08-18-161323
-- /reports/playbooks/playbook-2025-08-18-161422
-- /reports/playbooks/playbook-2025-08-18-161446
-- /reports/playbooks/playbook-2025-08-18-161518
-- /reports/playbooks/playbook-2025-08-18-161529
-- /reports/playbooks/playbook-2025-08-18-161553
-- /reports/playbooks/playbook-2025-08-18-161806
-- /reports/playbooks/playbook-2025-08-18-161834
-- /reports/playbooks/playbook-2025-08-18-161908
-- /reports/playbooks/playbook-2025-08-18-161937
-- /reports/playbooks/playbook-2025-08-18-162004
-- /reports/playbooks/playbook-2025-08-18-162037
-- /reports/playbooks/playbook-2025-08-18-162237
-- /reports/playbooks/playbook-2025-08-18-162407
-- /reports/playbooks/playbook-2025-08-18-162458
-- /reports/playbooks/playbook-2025-08-18-162526
-- /reports/playbooks/playbook-2025-08-18-162544
-- /reports/playbooks/playbook-2025-08-18-162550
-- /reports/playbooks/playbook-2025-08-18-162653
-- /reports/playbooks/playbook-2025-08-18-162854
-- /reports/playbooks/playbook-2025-08-18-162952
-- /reports/playbooks/playbook-2025-08-18-163005
-- /reports/playbooks/playbook-2025-08-18-163042
-- /reports/playbooks/playbook-2025-08-18-163444
-- /reports/playbooks/playbook-2025-08-18-163514
-- /reports/playbooks/playbook-2025-08-18-163545
-- /reports/playbooks/playbook-2025-08-18-163807
-- /reports/playbooks/playbook-2025-08-18-163935
-- /reports/playbooks/playbook-2025-08-18-164031
-- /reports/playbooks/playbook-2025-08-18-164114
-- /reports/updates/update-2025-08-18-0928
-- /reports/updates/update-2025-08-18-0929
-- /reports/updates/update-2025-08-18-0930
-- /reports/updates/update-2025-08-18-0931
-- /reports/updates/update-2025-08-18-0932
-- /reports/updates/update-2025-08-18-0933
-- /reports/updates/update-2025-08-18-0934
-- /reports/updates/update-2025-08-18-0935
-- /reports/updates/update-2025-08-18-0936
-- /reports/updates/update-2025-08-18-0937
-- /reports/updates/update-2025-08-18-0938
-- /reports/updates/update-2025-08-18-0939
-- /reports/updates/update-2025-08-18-0940
-- /reports/updates/update-2025-08-18-0941
-- /reports/updates/update-2025-08-18-0942
-- /reports/updates/update-2025-08-18-0943
-- /reports/updates/update-2025-08-18-1005
-- /reports/updates/update-2025-08-18-1008
-- /reports/updates/update-2025-08-18-1009
-- /reports/updates/update-2025-08-18-1014
-- /reports/updates/update-2025-08-18-1015
-- /reports/updates/update-2025-08-18-1016
-- /reports/updates/update-2025-08-18-1017
-- /reports/updates/update-2025-08-18-1018
-- /reports/updates/update-2025-08-18-1019
-- /reports/updates/update-2025-08-18-1020
-- /reports/updates/update-2025-08-18-1021
-- /reports/updates/update-2025-08-18-1022
-- /reports/updates/update-2025-08-18-1023
-- /reports/updates/update-2025-08-18-1024
-- /reports/updates/update-2025-08-18-1025
-- /reports/updates/update-2025-08-18-1026
-- /reports/updates/update-2025-08-18-1027
-- /reports/updates/update-2025-08-18-1028
-- /reports/updates/update-2025-08-18-1029
-- /reports/updates/update-2025-08-18-1030
-- /reports/updates/update-2025-08-18-1031
-- /reports/updates/update-2025-08-18-1032
-- /reports/updates/update-2025-08-18-1033
-- /reports/updates/update-2025-08-18-1034
-- /reports/updates/update-2025-08-18-1035
-- /reports/updates/update-2025-08-18-1036
-- /reports/updates/update-2025-08-18-1037
-- /reports/updates/update-2025-08-18-1038
-- /reports/updates/update-2025-08-18-1039
-- /reports/updates/update-2025-08-18-1040
-- /reports/updates/update-2025-08-18-1041
-- /reports/updates/update-2025-08-18-1042
-- /reports/updates/update-2025-08-18-1043
-- /reports/updates/update-2025-08-18-1044
-- /reports/updates/update-2025-08-18-1045
-- /reports/updates/update-2025-08-18-1046
-- /reports/updates/update-2025-08-18-1047
-- /reports/updates/update-2025-08-18-1048
-- /reports/updates/update-2025-08-18-1049
-- /reports/updates/update-2025-08-18-1050
-- /reports/updates/update-2025-08-18-1051
-- /reports/updates/update-2025-08-18-1052
-- /reports/updates/update-2025-08-18-1053
-- /reports/updates/update-2025-08-18-1054
-- /reports/updates/update-2025-08-18-1055
-- /reports/updates/update-2025-08-18-1056
-- /reports/updates/update-2025-08-18-1057
-- /reports/updates/update-2025-08-18-1058
-- /reports/updates/update-2025-08-18-1059
-- /reports/updates/update-2025-08-18-1100
-- /reports/updates/update-2025-08-18-1101
-- /reports/updates/update-2025-08-18-1102
-- /reports/updates/update-2025-08-18-1103
-- /reports/updates/update-2025-08-18-1104
-- /reports/updates/update-2025-08-18-1105
-- /reports/updates/update-2025-08-18-1106
-- /reports/updates/update-2025-08-18-1107
-- /reports/updates/update-2025-08-18-1108
-- /reports/updates/update-2025-08-18-1109
-- /reports/updates/update-2025-08-18-1110
-- /reports/updates/update-2025-08-18-1111
-- /reports/updates/update-2025-08-18-1112
-- /reports/updates/update-2025-08-18-1113
-- /reports/updates/update-2025-08-18-1114
-- /reports/updates/update-2025-08-18-1115
-- /reports/updates/update-2025-08-18-1116
-- /reports/updates/update-2025-08-18-1117
-- /reports/updates/update-2025-08-18-1118
-- /reports/updates/update-2025-08-18-1119
-- /reports/updates/update-2025-08-18-1120
-- /reports/updates/update-2025-08-18-1121
-- /reports/updates/update-2025-08-18-1122
-- /reports/updates/update-2025-08-18-1123
-- /reports/updates/update-2025-08-18-1124
-- /reports/updates/update-2025-08-18-1125
-- /reports/updates/update-2025-08-18-1126
-- /reports/updates/update-2025-08-18-1127
-- /reports/updates/update-2025-08-18-1128
-- /reports/updates/update-2025-08-18-1129
-- /reports/updates/update-2025-08-18-1130
-- /reports/updates/update-2025-08-18-1131
-- /reports/updates/update-2025-08-18-1132
-- /reports/updates/update-2025-08-18-1133
-- /reports/updates/update-2025-08-18-1134
-- /reports/updates/update-2025-08-18-1135
-- /reports/updates/update-2025-08-18-1136
-- /reports/updates/update-2025-08-18-1137
-- /reports/updates/update-2025-08-18-1138
-- /reports/updates/update-2025-08-18-1139
-- /reports/updates/update-2025-08-18-1140
-- /reports/updates/update-2025-08-18-1141
-- /reports/updates/update-2025-08-18-1143
-- /reports/updates/update-2025-08-18-1144
-- /reports/updates/update-2025-08-18-1145
-- /reports/updates/update-2025-08-18-1146
-- /reports/updates/update-2025-08-18-1147
-- /reports/updates/update-2025-08-18-1148
-- /reports/updates/update-2025-08-18-1149
-- /reports/updates/update-2025-08-18-1150
-- /reports/updates/update-2025-08-18-1151
-- /reports/updates/update-2025-08-18-1152
-- /reports/updates/update-2025-08-18-1153
-- /reports/updates/update-2025-08-18-1154
-- /reports/updates/update-2025-08-18-1155
-- /reports/updates/update-2025-08-18-1156
-- /reports/updates/update-2025-08-18-1157
-- /reports/updates/update-2025-08-18-1158
-- /reports/updates/update-2025-08-18-1159
-- /reports/updates/update-2025-08-18-1200
-- /reports/updates/update-2025-08-18-1201
-- /reports/updates/update-2025-08-18-1202
-- /reports/updates/update-2025-08-18-1203
-- /reports/updates/update-2025-08-18-1204
-- /reports/updates/update-2025-08-18-1205
-- /reports/updates/update-2025-08-18-1206
-- /reports/updates/update-2025-08-18-1207
-- /reports/updates/update-2025-08-18-1208
-- /reports/updates/update-2025-08-18-1209
-- /reports/updates/update-2025-08-18-1210
-- /reports/updates/update-2025-08-18-1211
-- /reports/updates/update-2025-08-18-1212
-- /reports/updates/update-2025-08-18-1213
-- /reports/updates/update-2025-08-18-1214
-- /reports/updates/update-2025-08-18-1215
-- /reports/updates/update-2025-08-18-1216
-- /reports/updates/update-2025-08-18-1217
-- /reports/updates/update-2025-08-18-1219
-- /reports/updates/update-2025-08-18-1220
-- /reports/updates/update-2025-08-18-1221
-- /reports/updates/update-2025-08-18-1222
-- /reports/updates/update-2025-08-18-1223
-- /reports/updates/update-2025-08-18-1224
-- /reports/updates/update-2025-08-18-1225
-- /reports/updates/update-2025-08-18-1226
-- /reports/updates/update-2025-08-18-1227
-- /reports/updates/update-2025-08-18-1228
-- /reports/updates/update-2025-08-18-1229
-- /reports/updates/update-2025-08-18-1230
-- /reports/updates/update-2025-08-18-1231
-- /reports/updates/update-2025-08-18-1232
-- /reports/updates/update-2025-08-18-1233
-- /reports/updates/update-2025-08-18-1234
-- /reports/updates/update-2025-08-18-1235
-- /reports/updates/update-2025-08-18-1236
-- /reports/updates/update-2025-08-18-1237
-- /reports/updates/update-2025-08-18-1238
-- /reports/updates/update-2025-08-18-1239
-- /reports/updates/update-2025-08-18-1240
-- /reports/updates/update-2025-08-18-1241
-- /reports/updates/update-2025-08-18-1242
-- /reports/updates/update-2025-08-18-1243
-- /reports/updates/update-2025-08-18-1244
-- /reports/updates/update-2025-08-18-1245
-- /reports/updates/update-2025-08-18-1246
-- /reports/updates/update-2025-08-18-1247
-- /reports/updates/update-2025-08-18-1248
-- /reports/updates/update-2025-08-18-1249
-- /reports/updates/update-2025-08-18-1250
-- /reports/updates/update-2025-08-18-1251
-- /reports/updates/update-2025-08-18-1252
-- /reports/updates/update-2025-08-18-1253
-- /reports/updates/update-2025-08-18-1254
-- /reports/updates/update-2025-08-18-1255
-- /reports/updates/update-2025-08-18-1256
-- /reports/updates/update-2025-08-18-1258
-- /reports/updates/update-2025-08-18-1259
-- /reports/updates/update-2025-08-18-1300
-- /reports/updates/update-2025-08-18-1301
-- /reports/updates/update-2025-08-18-1302
-- /reports/updates/update-2025-08-18-1303
-- /reports/updates/update-2025-08-18-1304
-- /reports/updates/update-2025-08-18-1305
-- /reports/updates/update-2025-08-18-1307
-- /reports/updates/update-2025-08-18-1308
-- /reports/updates/update-2025-08-18-1309
-- /reports/updates/update-2025-08-18-1310
-- /reports/updates/update-2025-08-18-1311
-- /reports/updates/update-2025-08-18-1312
-- /reports/updates/update-2025-08-18-1313
-- /reports/updates/update-2025-08-18-1314
-- /reports/updates/update-2025-08-18-1315
-- /reports/updates/update-2025-08-18-1316
-- /reports/updates/update-2025-08-18-1317
-- /reports/updates/update-2025-08-18-1318
-- /reports/updates/update-2025-08-18-1319
-- /reports/updates/update-2025-08-18-1320
-- /reports/updates/update-2025-08-18-1321
-- /reports/updates/update-2025-08-18-1322
-- /reports/updates/update-2025-08-18-1323
-- /reports/updates/update-2025-08-18-1324
-- /reports/updates/update-2025-08-18-1325
-- /reports/updates/update-2025-08-18-1326
-- /reports/updates/update-2025-08-18-1327
-- /reports/updates/update-2025-08-18-1328
-- /reports/updates/update-2025-08-18-1329
-- /reports/updates/update-2025-08-18-1330
-- /reports/updates/update-2025-08-18-1331
-- /reports/updates/update-2025-08-18-1332
-- /reports/updates/update-2025-08-18-1333
-- /reports/updates/update-2025-08-18-1334
-- /reports/updates/update-2025-08-18-1335
-- /reports/updates/update-2025-08-18-1336
-- /reports/updates/update-2025-08-18-1337
-- /reports/updates/update-2025-08-18-1338
-- /reports/updates/update-2025-08-18-1339
-- /reports/updates/update-2025-08-18-1340
-- /reports/updates/update-2025-08-18-1341
-- /reports/updates/update-2025-08-18-1342
-- /reports/updates/update-2025-08-18-1343
-- /reports/updates/update-2025-08-18-1344
-- /reports/updates/update-2025-08-18-1345
-- /reports/updates/update-2025-08-18-1346
-- /reports/updates/update-2025-08-18-1347
-- /reports/updates/update-2025-08-18-1348
-- /reports/updates/update-2025-08-18-1349
-- /reports/updates/update-2025-08-18-1350
-- /reports/updates/update-2025-08-18-1351
-- /reports/updates/update-2025-08-18-1352
-- /reports/updates/update-2025-08-18-1353
-- /reports/updates/update-2025-08-18-1354
-- /reports/updates/update-2025-08-18-1355
-- /reports/updates/update-2025-08-18-1356
-- /reports/updates/update-2025-08-18-1357
-- /reports/updates/update-2025-08-18-1358
-- /reports/updates/update-2025-08-18-1359
-- /reports/updates/update-2025-08-18-1400
-- /reports/updates/update-2025-08-18-1401
-- /reports/updates/update-2025-08-18-1403
-- /reports/updates/update-2025-08-18-1404
-- /reports/updates/update-2025-08-18-1405
-- /reports/updates/update-2025-08-18-1406
-- /reports/updates/update-2025-08-18-1407
-- /reports/updates/update-2025-08-18-1408
-- /reports/updates/update-2025-08-18-1409
-- /reports/updates/update-2025-08-18-1410
-- /reports/updates/update-2025-08-18-1411
-- /reports/updates/update-2025-08-18-1412
-- /reports/updates/update-2025-08-18-1413
-- /reports/updates/update-2025-08-18-1414
-- /reports/updates/update-2025-08-18-1415
-- /reports/updates/update-2025-08-18-1416
-- /reports/updates/update-2025-08-18-1417
-- /reports/updates/update-2025-08-18-1418
-- /reports/updates/update-2025-08-18-1419
-- /reports/updates/update-2025-08-18-1420
-- /reports/updates/update-2025-08-18-1422
-- /reports/updates/update-2025-08-18-1423
-- /reports/updates/update-2025-08-18-1424
-- /reports/updates/update-2025-08-18-1425
-- /reports/updates/update-2025-08-18-1426
-- /reports/updates/update-2025-08-18-1427
-- /reports/updates/update-2025-08-18-1428
-- /reports/updates/update-2025-08-18-1429
-- /reports/updates/update-2025-08-18-1430
-- /reports/updates/update-2025-08-18-1432
-- /reports/updates/update-2025-08-18-1433
-- /reports/updates/update-2025-08-18-1434
-- /reports/updates/update-2025-08-18-1435
-- /reports/updates/update-2025-08-18-1436
-- /reports/updates/update-2025-08-18-1437
-- /reports/updates/update-2025-08-18-1438
-- /reports/updates/update-2025-08-18-1439
-- /reports/updates/update-2025-08-18-1440
-- /reports/updates/update-2025-08-18-1442
-- /reports/updates/update-2025-08-18-1443
-- /reports/updates/update-2025-08-18-1444
-- /reports/updates/update-2025-08-18-1445
-- /reports/updates/update-2025-08-18-1447
-- /reports/updates/update-2025-08-18-1448
-- /reports/updates/update-2025-08-18-1450
-- /reports/updates/update-2025-08-18-1452
-- /reports/updates/update-2025-08-18-1453
-- /reports/updates/update-2025-08-18-1454
-- /reports/updates/update-2025-08-18-1455
-- /reports/updates/update-2025-08-18-1456
-- /reports/updates/update-2025-08-18-1457
-- /reports/updates/update-2025-08-18-1458
-- /reports/updates/update-2025-08-18-1459
-- /reports/updates/update-2025-08-18-1500
-- /reports/updates/update-2025-08-18-1502
-- /reports/updates/update-2025-08-18-1503
-- /reports/updates/update-2025-08-18-1504
-- /reports/updates/update-2025-08-18-1506
-- /reports/updates/update-2025-08-18-1507
-- /reports/updates/update-2025-08-18-1508
-- /reports/updates/update-2025-08-18-1509
-- /reports/updates/update-2025-08-18-1510
-- /reports/updates/update-2025-08-18-1512
-- /reports/updates/update-2025-08-18-1513
-- /reports/updates/update-2025-08-18-1514
-- /reports/updates/update-2025-08-18-1515
-- /reports/updates/update-2025-08-18-1516
-- /reports/updates/update-2025-08-18-1517
-- /reports/updates/update-2025-08-18-1519
-- /reports/updates/update-2025-08-18-1520
-- /reports/updates/update-2025-08-18-1521
-- /reports/updates/update-2025-08-18-1522
-- /reports/updates/update-2025-08-18-1523
-- /reports/updates/update-2025-08-18-1524
-- /reports/updates/update-2025-08-18-1525
-- /reports/updates/update-2025-08-18-1526
-- /reports/updates/update-2025-08-18-1527
-- /reports/updates/update-2025-08-18-1528
-- /reports/updates/update-2025-08-18-1529
-- /reports/updates/update-2025-08-18-1530
-- /reports/updates/update-2025-08-18-1531
-- /reports/updates/update-2025-08-18-1532
-- /reports/updates/update-2025-08-18-1533
-- /reports/updates/update-2025-08-18-1534
-- /reports/updates/update-2025-08-18-1536
-- /reports/updates/update-2025-08-18-1537
-- /reports/updates/update-2025-08-18-1538
-- /reports/updates/update-2025-08-18-1539
-- /reports/updates/update-2025-08-18-1540
-- /reports/updates/update-2025-08-18-1541
-- /reports/updates/update-2025-08-18-1542
-- /reports/updates/update-2025-08-18-1543
-- /reports/updates/update-2025-08-18-1544
-- /reports/updates/update-2025-08-18-1545
-- /reports/updates/update-2025-08-18-1548
-- /reports/updates/update-2025-08-18-1549
-- /reports/updates/update-2025-08-18-1550
-- /reports/updates/update-2025-08-18-1551
-- /reports/updates/update-2025-08-18-1552
-- /reports/updates/update-2025-08-18-1553
-- /reports/updates/update-2025-08-18-1554
-- /reports/updates/update-2025-08-18-1555
-- /reports/updates/update-2025-08-18-1558
-- /reports/updates/update-2025-08-18-1559
-- /reports/updates/update-2025-08-18-1600
-- /reports/updates/update-2025-08-18-1601
-- /reports/updates/update-2025-08-18-1602
-- /reports/updates/update-2025-08-18-1603
-- /reports/updates/update-2025-08-18-1604
-- /reports/updates/update-2025-08-18-1605
-- /reports/updates/update-2025-08-18-1607
-- /reports/updates/update-2025-08-18-1608
-- /reports/updates/update-2025-08-18-1609
-- /reports/updates/update-2025-08-18-1610
-- /reports/updates/update-2025-08-18-1612
-- /reports/updates/update-2025-08-18-1613
-- /reports/updates/update-2025-08-18-1614
-- /reports/updates/update-2025-08-18-1615
-- /reports/updates/update-2025-08-18-1618
-- /reports/updates/update-2025-08-18-1619
-- /reports/updates/update-2025-08-18-1620
-- /reports/updates/update-2025-08-18-1622
-- /reports/updates/update-2025-08-18-1624
-- /reports/updates/update-2025-08-18-1625
-- /reports/updates/update-2025-08-18-1626
-- /reports/updates/update-2025-08-18-1628
-- /reports/updates/update-2025-08-18-1629
-- /reports/updates/update-2025-08-18-1630
-- /reports/updates/update-2025-08-18-1632
-- /reports/updates/update-2025-08-18-1634
-- /reports/updates/update-2025-08-18-1635
-- /reports/updates/update-2025-08-18-1636
-- /reports/updates/update-2025-08-18-1638
-- /reports/updates/update-2025-08-18-1639
-- /reports/updates/update-2025-08-18-1640
-- /reports/updates/update-2025-08-18-1641
-- /reports/updates/update-2025-08-18T12-29
-- /reports/updates/update-2025-08-18T12-30
-- /reports/updates/update-2025-08-18T12-31
-- /reports/updates/update-2025-08-18T12-32
-- /reports/updates/update-2025-08-18T12-33
-- /reports/updates/update-2025-08-18T12-34
-- /reports/updates/update-2025-08-18T12-35
-- /reports/updates/update-2025-08-18T12-36
-- /reports/updates/update-2025-08-18T12-37
-- /reports/updates/update-2025-08-18T12-38
-- /reports/updates/update-2025-08-18T12-39
-- /reports/updates/update-2025-08-18T12-40
-- /reports/updates/update-2025-08-18T12-41
-- /reports/updates/update-2025-08-18T12-42
-- /reports/updates/update-2025-08-18T13-08
-- /reports/updates/update-2025-08-18T13-09
-- /reports/updates/update-2025-08-18T13-14
-- /reports/updates/update-2025-08-18T13-15
-- /reports/updates/update-2025-08-18T13-16
-- /reports/updates/update-2025-08-18T13-17
-- /reports/updates/update-2025-08-18T13-18
-- /reports/updates/update-2025-08-18T13-19
-- /reports/updates/update-2025-08-18T13-20
-- /reports/updates/update-2025-08-18T13-21
-- /reports/updates/update-2025-08-18T13-22
-- /reports/updates/update-2025-08-18T13-23
-- /reports/updates/update-2025-08-18T13-24
-- /reports/updates/update-2025-08-18T13-25
-- /reports/updates/update-2025-08-18T13-26
-- /reports/updates/update-2025-08-18T13-27
-- /reports/updates/update-2025-08-18T13-28
-- /reports/updates/update-2025-08-18T13-29
-- /reports/updates/update-2025-08-18T13-30
-- /reports/updates/update-2025-08-18T13-31
-- /reports/updates/update-2025-08-18T13-32
-- /reports/updates/update-2025-08-18T13-33
-- /reports/updates/update-2025-08-18T13-34
-- /reports/updates/update-2025-08-18T13-35
-- /reports/updates/update-2025-08-18T13-36
-- /reports/updates/update-2025-08-18T13-37
-- /reports/updates/update-2025-08-18T13-38
-- /reports/updates/update-2025-08-18T13-39
-- /reports/updates/update-2025-08-18T13-40
-- /reports/updates/update-2025-08-18T13-41
-- /reports/updates/update-2025-08-18T13-42
-- /reports/updates/update-2025-08-18T13-43
-- /reports/updates/update-2025-08-18T13-44
-- /reports/updates/update-2025-08-18T13-45
-- /reports/updates/update-2025-08-18T13-46
-- /reports/updates/update-2025-08-18T13-47
-- /reports/updates/update-2025-08-18T13-48
-- /reports/updates/update-2025-08-18T13-49
-- /reports/updates/update-2025-08-18T13-50
-- /reports/updates/update-2025-08-18T13-51
-- /reports/updates/update-2025-08-18T13-52
-- /reports/updates/update-2025-08-18T13-53
-- /reports/updates/update-2025-08-18T13-54
-- /reports/updates/update-2025-08-18T13-55
-- /reports/updates/update-2025-08-18T13-56
-- /reports/updates/update-2025-08-18T13-57
-- /reports/updates/update-2025-08-18T13-58
-- /reports/updates/update-2025-08-18T13-59
-- /reports/updates/update-2025-08-18T14-00
-- /reports/updates/update-2025-08-18T14-01
-- /reports/updates/update-2025-08-18T14-03
-- /reports/updates/update-2025-08-18T14-04
-- /reports/updates/update-2025-08-18T14-05
-- /reports/updates/update-2025-08-18T14-06
-- /reports/updates/update-2025-08-18T14-07
-- /reports/updates/update-2025-08-18T14-08
-- /reports/updates/update-2025-08-18T14-09
-- /reports/updates/update-2025-08-18T14-10
-- /reports/updates/update-2025-08-18T14-11
-- /reports/updates/update-2025-08-18T14-12
-- /reports/updates/update-2025-08-18T14-13
-- /reports/updates/update-2025-08-18T14-14
-- /reports/updates/update-2025-08-18T14-15
-- /reports/updates/update-2025-08-18T14-16
-- /reports/updates/update-2025-08-18T14-17
-- /reports/updates/update-2025-08-18T14-18
-- /reports/updates/update-2025-08-18T14-19
-- /reports/updates/update-2025-08-18T14-20
-- /reports/updates/update-2025-08-18T14-22
-- /reports/updates/update-2025-08-18T14-23
-- /reports/updates/update-2025-08-18T14-24
-- /reports/updates/update-2025-08-18T14-25
-- /reports/updates/update-2025-08-18T14-26
-- /reports/updates/update-2025-08-18T14-27
-- /reports/updates/update-2025-08-18T14-28
-- /reports/updates/update-2025-08-18T14-29
-- /reports/updates/update-2025-08-18T14-30
-- /reports/updates/update-2025-08-18T14-33
-- /reports/updates/update-2025-08-18T14-34
-- /reports/updates/update-2025-08-18T14-35
-- /reports/updates/update-2025-08-18T14-36
-- /reports/updates/update-2025-08-18T14-37
-- /reports/updates/update-2025-08-18T14-38
-- /reports/updates/update-2025-08-18T14-39
-- /reports/updates/update-2025-08-18T14-40
-- /reports/updates/update-2025-08-18T14-42
-- /reports/updates/update-2025-08-18T14-43
-- /reports/updates/update-2025-08-18T14-44
-- /reports/updates/update-2025-08-18T14-45
-- /reports/updates/update-2025-08-18T14-47
-- /reports/updates/update-2025-08-18T14-48
-- /reports/updates/update-2025-08-18T14-50
-- /reports/updates/update-2025-08-18T14-52
-- /reports/updates/update-2025-08-18T14-53
-- /reports/updates/update-2025-08-18T14-54
-- /reports/updates/update-2025-08-18T14-55
-- /reports/updates/update-2025-08-18T14-56
-- /reports/updates/update-2025-08-18T14-57
-- /reports/updates/update-2025-08-18T14-58
-- /reports/updates/update-2025-08-18T14-59
-- /reports/updates/update-2025-08-18T15-00
-- /reports/updates/update-2025-08-18T15-02
-- /reports/updates/update-2025-08-18T15-03
-- /reports/updates/update-2025-08-18T15-04
-- /reports/updates/update-2025-08-18T15-06
-- /reports/updates/update-2025-08-18T15-07
-- /reports/updates/update-2025-08-18T15-08
-- /reports/updates/update-2025-08-18T15-09
-- /reports/updates/update-2025-08-18T15-10
-- /reports/updates/update-2025-08-18T15-12
-- /reports/updates/update-2025-08-18T15-13
-- /reports/updates/update-2025-08-18T15-14
-- /reports/updates/update-2025-08-18T15-15
-- /reports/updates/update-2025-08-18T15-16
-- /reports/updates/update-2025-08-18T15-17
-- /reports/updates/update-2025-08-18T15-19
-- /reports/updates/update-2025-08-18T15-20
-- /reports/updates/update-2025-08-18T15-21
-- /reports/updates/update-2025-08-18T15-22
-- /reports/updates/update-2025-08-18T15-23
-- /reports/updates/update-2025-08-18T15-24
-- /reports/updates/update-2025-08-18T15-25
-- /reports/updates/update-2025-08-18T15-27
-- /reports/updates/update-2025-08-18T15-28
-- /reports/updates/update-2025-08-18T15-29
-- /reports/updates/update-2025-08-18T15-30
-- /reports/updates/update-2025-08-18T15-31
-- /reports/updates/update-2025-08-18T15-32
-- /reports/updates/update-2025-08-18T15-33
-- /reports/updates/update-2025-08-18T15-34
-- /reports/updates/update-2025-08-18T15-36
-- /reports/updates/update-2025-08-18T15-37
-- /reports/updates/update-2025-08-18T15-38
-- /reports/updates/update-2025-08-18T15-39
-- /reports/updates/update-2025-08-18T15-40
-- /reports/updates/update-2025-08-18T15-41
-- /reports/updates/update-2025-08-18T15-42
-- /reports/updates/update-2025-08-18T15-43
-- /reports/updates/update-2025-08-18T15-44
-- /reports/updates/update-2025-08-18T15-45
-- /reports/updates/update-2025-08-18T15-48
-- /reports/updates/update-2025-08-18T15-49
-- /reports/updates/update-2025-08-18T15-50
-- /reports/updates/update-2025-08-18T15-51
-- /reports/updates/update-2025-08-18T15-52
-- /reports/updates/update-2025-08-18T15-53
-- /reports/updates/update-2025-08-18T15-54
-- /reports/updates/update-2025-08-18T15-55
-- /reports/updates/update-2025-08-18T15-58
-- /reports/updates/update-2025-08-18T15-59
-- /reports/updates/update-2025-08-18T16-00
-- /reports/updates/update-2025-08-18T16-01
-- /reports/updates/update-2025-08-18T16-02
-- /reports/updates/update-2025-08-18T16-03
-- /reports/updates/update-2025-08-18T16-04
-- /reports/updates/update-2025-08-18T16-05
-- /reports/updates/update-2025-08-18T16-07
-- /reports/updates/update-2025-08-18T16-08
-- /reports/updates/update-2025-08-18T16-09
-- /reports/updates/update-2025-08-18T16-10
-- /reports/updates/update-2025-08-18T16-12
-- /reports/updates/update-2025-08-18T16-13
-- /reports/updates/update-2025-08-18T16-14
-- /reports/updates/update-2025-08-18T16-15
-- /reports/updates/update-2025-08-18T16-18
-- /reports/updates/update-2025-08-18T16-19
-- /reports/updates/update-2025-08-18T16-20
-- /reports/updates/update-2025-08-18T16-22
-- /reports/updates/update-2025-08-18T16-24
-- /reports/updates/update-2025-08-18T16-25
-- /reports/updates/update-2025-08-18T16-26
-- /reports/updates/update-2025-08-18T16-28
-- /reports/updates/update-2025-08-18T16-29
-- /reports/updates/update-2025-08-18T16-30
-- /reports/updates/update-2025-08-18T16-34
-- /reports/updates/update-2025-08-18T16-35
-- /reports/updates/update-2025-08-18T16-38
-- /reports/updates/update-2025-08-18T16-39
-- /reports/updates/update-2025-08-18T16-40
-- /reports/updates/update-2025-08-18T16-41
-- /robots
-- /search
-- /site-health
-- /sitemap
-- /terms
-- /user-management
+## 📦 Installation
+A modern, responsive website built with Next.js showcasing comprehensive technology services including AI, IT solutions, micro SaaS development, and more.
 
-### Automations
-- [Accessibility Audit](https://github.com/Zion-Holdings/zion/actions/workflows/accessibility-audit.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/accessibility-audit.yml/badge.svg)
-- [Actionlint](https://github.com/Zion-Holdings/zion/actions/workflows/actionlint.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/actionlint.yml/badge.svg)
-- [Actions Keepalive](https://github.com/Zion-Holdings/zion/actions/workflows/actions-keepalive.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/actions-keepalive.yml/badge.svg)
-- [Agent Agent 1755379731005 0 Full Stack Expert](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379731005-0-full-stack-expert.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379731005-0-full-stack-expert.yml/badge.svg)
-- [Agent Agent 1755379731007 1 Deployment Expert](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379731007-1-deployment-expert.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379731007-1-deployment-expert.yml/badge.svg)
-- [Agent Agent 1755379731008 2 Monitoring Expert](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379731008-2-monitoring-expert.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379731008-2-monitoring-expert.yml/badge.svg)
-- [Agent Agent 1755379759029 0 Optimization Intermediate](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759029-0-optimization-intermediate.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759029-0-optimization-intermediate.yml/badge.svg)
-- [Agent Agent 1755379759032 1 Full Stack Intermediate](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759032-1-full-stack-intermediate.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759032-1-full-stack-intermediate.yml/badge.svg)
-- [Agent Agent 1755379759033 2 Deployment Expert](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759033-2-deployment-expert.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759033-2-deployment-expert.yml/badge.svg)
-- [Agent Agent 1755379759033 3 Frontend Expert](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759033-3-frontend-expert.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759033-3-frontend-expert.yml/badge.svg)
-- [Agent Agent 1755379759035 4 Full Stack Intermediate](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759035-4-full-stack-intermediate.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759035-4-full-stack-intermediate.yml/badge.svg)
-- [Agent Agent 1755379759035 5 Frontend Basic](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759035-5-frontend-basic.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759035-5-frontend-basic.yml/badge.svg)
-- [Agent Agent 1755379759036 6 Monitoring Advanced](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759036-6-monitoring-advanced.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759036-6-monitoring-advanced.yml/badge.svg)
-- [Agent Agent 1755379759037 7 Full Stack Intermediate](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759037-7-full-stack-intermediate.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379759037-7-full-stack-intermediate.yml/badge.svg)
-- [Agent Agent 1755379777746 0 Full Stack Advanced](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379777746-0-full-stack-advanced.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379777746-0-full-stack-advanced.yml/badge.svg)
-- [Agent Agent 1755379777749 1 Full Stack Basic](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379777749-1-full-stack-basic.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379777749-1-full-stack-basic.yml/badge.svg)
-- [Agent Agent 1755379777750 2 Monitoring Intermediate](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379777750-2-monitoring-intermediate.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379777750-2-monitoring-intermediate.yml/badge.svg)
-- [Agent Agent 1755379777751 3 Monitoring Advanced](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379777751-3-monitoring-advanced.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379777751-3-monitoring-advanced.yml/badge.svg)
-- [Agent Agent 1755379777752 5 Testing Expert](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379777752-5-testing-expert.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379777752-5-testing-expert.yml/badge.svg)
-- [Agent Agent 1755379777754 6 Backend Expert](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379777754-6-backend-expert.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379777754-6-backend-expert.yml/badge.svg)
-- [Agent Agent 1755379777755 7 Backend Intermediate](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379777755-7-backend-intermediate.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755379777755-7-backend-intermediate.yml/badge.svg)
-- [Agent Agent 1755381089841 0 Backend Expert](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089841-0-backend-expert.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089841-0-backend-expert.yml/badge.svg)
-- [Agent Agent 1755381089844 1 Deployment Advanced](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089844-1-deployment-advanced.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089844-1-deployment-advanced.yml/badge.svg)
-- [Agent Agent 1755381089845 2 Full Stack Advanced](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089845-2-full-stack-advanced.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089845-2-full-stack-advanced.yml/badge.svg)
-- [Agent Agent 1755381089846 3 Optimization Expert](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089846-3-optimization-expert.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089846-3-optimization-expert.yml/badge.svg)
-- [Agent Agent 1755381089846 4 Testing Advanced](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089846-4-testing-advanced.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089846-4-testing-advanced.yml/badge.svg)
-- [Agent Agent 1755381089847 5 Frontend Expert](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089847-5-frontend-expert.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089847-5-frontend-expert.yml/badge.svg)
-- [Agent Agent 1755381089848 6 Testing Intermediate](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089848-6-testing-intermediate.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089848-6-testing-intermediate.yml/badge.svg)
-- [Agent Agent 1755381089849 7 Monitoring Intermediate](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089849-7-monitoring-intermediate.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-agent-1755381089849-7-monitoring-intermediate.yml/badge.svg)
-- [Agent Factory Automation](https://github.com/Zion-Holdings/zion/actions/workflows/agent-factory-automation.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-factory-automation.yml/badge.svg)
-- [Agent Factory Proliferation](https://github.com/Zion-Holdings/zion/actions/workflows/agent-factory-proliferation.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-factory-proliferation.yml/badge.svg)
-- [Agent Of Agents Trigger](https://github.com/Zion-Holdings/zion/actions/workflows/agent-of-agents-trigger.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/agent-of-agents-trigger.yml/badge.svg)
-- [Ai Changelog](https://github.com/Zion-Holdings/zion/actions/workflows/ai-changelog.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ai-changelog.yml/badge.svg)
-- [Ai Content Autonomy](https://github.com/Zion-Holdings/zion/actions/workflows/ai-content-autonomy.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ai-content-autonomy.yml/badge.svg)
-- [Ai Content Factory](https://github.com/Zion-Holdings/zion/actions/workflows/ai-content-factory.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ai-content-factory.yml/badge.svg)
-- [Ai It Ads Sync](https://github.com/Zion-Holdings/zion/actions/workflows/ai-it-ads-sync.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ai-it-ads-sync.yml/badge.svg)
-- [Ai It Innovations](https://github.com/Zion-Holdings/zion/actions/workflows/ai-it-innovations.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ai-it-innovations.yml/badge.svg)
-- [Ai It Multi Factory](https://github.com/Zion-Holdings/zion/actions/workflows/ai-it-multi-factory.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ai-it-multi-factory.yml/badge.svg)
-- [Ai It Ultrafast Sync](https://github.com/Zion-Holdings/zion/actions/workflows/ai-it-ultrafast-sync.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ai-it-ultrafast-sync.yml/badge.svg)
-- [Ai Research Scout](https://github.com/Zion-Holdings/zion/actions/workflows/ai-research-scout.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ai-research-scout.yml/badge.svg)
-- [Ai Trends Radar](https://github.com/Zion-Holdings/zion/actions/workflows/ai-trends-radar.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ai-trends-radar.yml/badge.svg)
-- [App Automation](https://github.com/Zion-Holdings/zion/actions/workflows/app-automation.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/app-automation.yml/badge.svg)
-- [App Monitoring](https://github.com/Zion-Holdings/zion/actions/workflows/app-monitoring.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/app-monitoring.yml/badge.svg)
-- [Auto Fix Workflows](https://github.com/Zion-Holdings/zion/actions/workflows/auto-fix-workflows.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/auto-fix-workflows.yml/badge.svg)
-- [Auto Fix](https://github.com/Zion-Holdings/zion/actions/workflows/auto-fix.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/auto-fix.yml/badge.svg)
-- [Auto Heal Workflows](https://github.com/Zion-Holdings/zion/actions/workflows/auto-heal-workflows.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/auto-heal-workflows.yml/badge.svg)
-- [Auto Media Release](https://github.com/Zion-Holdings/zion/actions/workflows/auto-media-release.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/auto-media-release.yml/badge.svg)
-- [Auto Pr Automerge](https://github.com/Zion-Holdings/zion/actions/workflows/auto-pr-automerge.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/auto-pr-automerge.yml/badge.svg)
-- [Auto Pr Cursor Branches](https://github.com/Zion-Holdings/zion/actions/workflows/auto-pr-cursor-branches.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/auto-pr-cursor-branches.yml/badge.svg)
-- [Auto Semver Release](https://github.com/Zion-Holdings/zion/actions/workflows/auto-semver-release.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/auto-semver-release.yml/badge.svg)
-- [Auto Update Prs](https://github.com/Zion-Holdings/zion/actions/workflows/auto-update-prs.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/auto-update-prs.yml/badge.svg)
-- [Automation Advertiser](https://github.com/Zion-Holdings/zion/actions/workflows/automation-advertiser.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/automation-advertiser.yml/badge.svg)
-- [Automation Cleanup](https://github.com/Zion-Holdings/zion/actions/workflows/automation-cleanup.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/automation-cleanup.yml/badge.svg)
-- [Automation Dashboard](https://github.com/Zion-Holdings/zion/actions/workflows/automation-dashboard.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/automation-dashboard.yml/badge.svg)
-- [Automation Guardian 10min](https://github.com/Zion-Holdings/zion/actions/workflows/automation-guardian-10min.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/automation-guardian-10min.yml/badge.svg)
-- [Automation Orchestrator](https://github.com/Zion-Holdings/zion/actions/workflows/automation-orchestrator.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/automation-orchestrator.yml/badge.svg)
-- [Automations](https://github.com/Zion-Holdings/zion/actions/workflows/automations.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/automations.yml/badge.svg)
-- [Automerge Main](https://github.com/Zion-Holdings/zion/actions/workflows/automerge-main.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/automerge-main.yml/badge.svg)
-- [Autonomous Agent Orchestrator](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-agent-orchestrator.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-agent-orchestrator.yml/badge.svg)
-- [Autonomous Auto Discovery](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-auto-discovery.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-auto-discovery.yml/badge.svg)
-- [Autonomous Auto Merge To Main](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-auto-merge-to-main.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-auto-merge-to-main.yml/badge.svg)
-- [Autonomous Cloud Automations](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-cloud-automations.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-cloud-automations.yml/badge.svg)
-- [Autonomous Cloud Fast](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-cloud-fast.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-cloud-fast.yml/badge.svg)
-- [Autonomous Cloud Runner](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-cloud-runner.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-cloud-runner.yml/badge.svg)
-- [Autonomous Cloud](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-cloud.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-cloud.yml/badge.svg)
-- [Autonomous Content Curation](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-content-curation.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-content-curation.yml/badge.svg)
-- [Autonomous Content Scanner](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-content-scanner.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-content-scanner.yml/badge.svg)
-- [Autonomous Deep Maintenance](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-deep-maintenance.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-deep-maintenance.yml/badge.svg)
-- [Autonomous Deps Upgrade](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-deps-upgrade.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-deps-upgrade.yml/badge.svg)
-- [Autonomous External Links](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-external-links.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-external-links.yml/badge.svg)
-- [Autonomous Image Optimizer](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-image-optimizer.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-image-optimizer.yml/badge.svg)
-- [Autonomous Intelligence](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-intelligence.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-intelligence.yml/badge.svg)
-- [Autonomous Keepalive](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-keepalive.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-keepalive.yml/badge.svg)
-- [Autonomous Lighthouse](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-lighthouse.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-lighthouse.yml/badge.svg)
-- [Autonomous Marketing Seo](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-marketing-seo.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-marketing-seo.yml/badge.svg)
-- [Autonomous Meta](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-meta.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-meta.yml/badge.svg)
-- [Autonomous Minute Orchestrator](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-minute-orchestrator.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-minute-orchestrator.yml/badge.svg)
-- [Autonomous Quick Fixes](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-quick-fixes.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-quick-fixes.yml/badge.svg)
-- [Autonomous Release](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-release.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-release.yml/badge.svg)
-- [Autonomous Self Tune](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-self-tune.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-self-tune.yml/badge.svg)
-- [Autonomous Ultrafast](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-ultrafast.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-ultrafast.yml/badge.svg)
-- [Autonomous Workflow Cleanup](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-workflow-cleanup.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-workflow-cleanup.yml/badge.svg)
-- [Autonomous Workflow Watchdog](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-workflow-watchdog.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/autonomous-workflow-watchdog.yml/badge.svg)
-- [Branch Cleanup](https://github.com/Zion-Holdings/zion/actions/workflows/branch-cleanup.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/branch-cleanup.yml/badge.svg)
-- [Branch Pruner](https://github.com/Zion-Holdings/zion/actions/workflows/branch-pruner.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/branch-pruner.yml/badge.svg)
-- [Broken Images](https://github.com/Zion-Holdings/zion/actions/workflows/broken-images.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/broken-images.yml/badge.svg)
-- [Ci Auto Heal](https://github.com/Zion-Holdings/zion/actions/workflows/ci-auto-heal.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ci-auto-heal.yml/badge.svg)
-- [Ci Lint Types Build](https://github.com/Zion-Holdings/zion/actions/workflows/ci-lint-types-build.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ci-lint-types-build.yml/badge.svg)
-- [Ci Merge Main](https://github.com/Zion-Holdings/zion/actions/workflows/ci-merge-main.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ci-merge-main.yml/badge.svg)
-- [Ci Quality](https://github.com/Zion-Holdings/zion/actions/workflows/ci-quality.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ci-quality.yml/badge.svg)
-- [Ci Self Heal](https://github.com/Zion-Holdings/zion/actions/workflows/ci-self-heal.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ci-self-heal.yml/badge.svg)
-- [Ci](https://github.com/Zion-Holdings/zion/actions/workflows/ci.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ci.yml/badge.svg)
-- [Cleanup Merged Branches](https://github.com/Zion-Holdings/zion/actions/workflows/cleanup-merged-branches.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/cleanup-merged-branches.yml/badge.svg)
-- [Cleanup](https://github.com/Zion-Holdings/zion/actions/workflows/cleanup.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/cleanup.yml/badge.svg)
-- [Cloud Agents Fast](https://github.com/Zion-Holdings/zion/actions/workflows/cloud-agents-fast.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/cloud-agents-fast.yml/badge.svg)
-- [Cloud Agents](https://github.com/Zion-Holdings/zion/actions/workflows/cloud-agents.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/cloud-agents.yml/badge.svg)
-- [Cloud Autonomous Orchestrator](https://github.com/Zion-Holdings/zion/actions/workflows/cloud-autonomous-orchestrator.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/cloud-autonomous-orchestrator.yml/badge.svg)
-- [Cloud Deep Research](https://github.com/Zion-Holdings/zion/actions/workflows/cloud-deep-research.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/cloud-deep-research.yml/badge.svg)
-- [Cloud Maintenance](https://github.com/Zion-Holdings/zion/actions/workflows/cloud-maintenance.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/cloud-maintenance.yml/badge.svg)
-- [Cloud Marketing](https://github.com/Zion-Holdings/zion/actions/workflows/cloud-marketing.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/cloud-marketing.yml/badge.svg)
-- [Cloud Orchestrator Plus](https://github.com/Zion-Holdings/zion/actions/workflows/cloud-orchestrator-plus.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/cloud-orchestrator-plus.yml/badge.svg)
-- [Codeql Analysis](https://github.com/Zion-Holdings/zion/actions/workflows/codeql-analysis.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/codeql-analysis.yml/badge.svg)
-- [Codeql](https://github.com/Zion-Holdings/zion/actions/workflows/codeql.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/codeql.yml/badge.svg)
-- [Commit Message Lint](https://github.com/Zion-Holdings/zion/actions/workflows/commit-message-lint.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/commit-message-lint.yml/badge.svg)
-- [Commitlint](https://github.com/Zion-Holdings/zion/actions/workflows/commitlint.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/commitlint.yml/badge.svg)
-- [Components Size Report](https://github.com/Zion-Holdings/zion/actions/workflows/components-size-report.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/components-size-report.yml/badge.svg)
-- [Comprehensive Test](https://github.com/Zion-Holdings/zion/actions/workflows/comprehensive-test.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/comprehensive-test.yml/badge.svg)
-- [Content Generation](https://github.com/Zion-Holdings/zion/actions/workflows/content-generation.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/content-generation.yml/badge.svg)
-- [Continuous Deployment](https://github.com/Zion-Holdings/zion/actions/workflows/continuous-deployment.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/continuous-deployment.yml/badge.svg)
-- [Continuous Improvement](https://github.com/Zion-Holdings/zion/actions/workflows/continuous-improvement.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/continuous-improvement.yml/badge.svg)
-- [Crawl Normalize](https://github.com/Zion-Holdings/zion/actions/workflows/crawl-normalize.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/crawl-normalize.yml/badge.svg)
-- [Cursor Chat](https://github.com/Zion-Holdings/zion/actions/workflows/cursor-chat.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/cursor-chat.yml/badge.svg)
-- [Cursor Rules Autoupdate](https://github.com/Zion-Holdings/zion/actions/workflows/cursor-rules-autoupdate.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/cursor-rules-autoupdate.yml/badge.svg)
-- [Dead Code Report](https://github.com/Zion-Holdings/zion/actions/workflows/dead-code-report.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/dead-code-report.yml/badge.svg)
-- [Dependabot Auto Approve](https://github.com/Zion-Holdings/zion/actions/workflows/dependabot-auto-approve.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/dependabot-auto-approve.yml/badge.svg)
-- [Dependencies](https://github.com/Zion-Holdings/zion/actions/workflows/dependencies.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/dependencies.yml/badge.svg)
-- [Dependency Auto Upgrade](https://github.com/Zion-Holdings/zion/actions/workflows/dependency-auto-upgrade.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/dependency-auto-upgrade.yml/badge.svg)
-- [Dependency Maintenance](https://github.com/Zion-Holdings/zion/actions/workflows/dependency-maintenance.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/dependency-maintenance.yml/badge.svg)
-- [Dependency Management](https://github.com/Zion-Holdings/zion/actions/workflows/dependency-management.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/dependency-management.yml/badge.svg)
-- [Diverse Agent Matrix](https://github.com/Zion-Holdings/zion/actions/workflows/diverse-agent-matrix.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/diverse-agent-matrix.yml/badge.svg)
-- [Docs Autogen](https://github.com/Zion-Holdings/zion/actions/workflows/docs-autogen.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/docs-autogen.yml/badge.svg)
-- [Docs Intelligence](https://github.com/Zion-Holdings/zion/actions/workflows/docs-intelligence.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/docs-intelligence.yml/badge.svg)
-- [Emergency Fix](https://github.com/Zion-Holdings/zion/actions/workflows/emergency-fix.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/emergency-fix.yml/badge.svg)
-- [Ephemeral Branch Autorebase](https://github.com/Zion-Holdings/zion/actions/workflows/ephemeral-branch-autorebase.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ephemeral-branch-autorebase.yml/badge.svg)
-- [Exponential Agent Factory Proliferation](https://github.com/Zion-Holdings/zion/actions/workflows/exponential-agent-factory-proliferation.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/exponential-agent-factory-proliferation.yml/badge.svg)
-- [Exponential Ai Delegation](https://github.com/Zion-Holdings/zion/actions/workflows/exponential-ai-delegation.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/exponential-ai-delegation.yml/badge.svg)
-- [External Links](https://github.com/Zion-Holdings/zion/actions/workflows/external-links.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/external-links.yml/badge.svg)
-- [Fast Auto Push To Main](https://github.com/Zion-Holdings/zion/actions/workflows/fast-auto-push-to-main.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/fast-auto-push-to-main.yml/badge.svg)
-- [Fast Lint Sync](https://github.com/Zion-Holdings/zion/actions/workflows/fast-lint-sync.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/fast-lint-sync.yml/badge.svg)
-- [Front Scheduler](https://github.com/Zion-Holdings/zion/actions/workflows/front-scheduler.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/front-scheduler.yml/badge.svg)
-- [Frontend Sync Continuous](https://github.com/Zion-Holdings/zion/actions/workflows/frontend-sync-continuous.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/frontend-sync-continuous.yml/badge.svg)
-- [Git Health](https://github.com/Zion-Holdings/zion/actions/workflows/git-health.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/git-health.yml/badge.svg)
-- [Git Ultrafast Sync](https://github.com/Zion-Holdings/zion/actions/workflows/git-ultrafast-sync.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/git-ultrafast-sync.yml/badge.svg)
-- [Gitleaks](https://github.com/Zion-Holdings/zion/actions/workflows/gitleaks.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/gitleaks.yml/badge.svg)
-- [Guardian Scheduler](https://github.com/Zion-Holdings/zion/actions/workflows/guardian-scheduler.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/guardian-scheduler.yml/badge.svg)
-- [Homepage Auto Advertiser](https://github.com/Zion-Holdings/zion/actions/workflows/homepage-auto-advertiser.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/homepage-auto-advertiser.yml/badge.svg)
-- [Homepage Auto Update](https://github.com/Zion-Holdings/zion/actions/workflows/homepage-auto-update.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/homepage-auto-update.yml/badge.svg)
-- [Infinite Improvement Loop](https://github.com/Zion-Holdings/zion/actions/workflows/infinite-improvement-loop.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/infinite-improvement-loop.yml/badge.svg)
-- [Instagram Marketing](https://github.com/Zion-Holdings/zion/actions/workflows/instagram-marketing.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/instagram-marketing.yml/badge.svg)
-- [Instagram Six Hourly](https://github.com/Zion-Holdings/zion/actions/workflows/instagram-six-hourly.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/instagram-six-hourly.yml/badge.svg)
-- [Intelligent Content Generation](https://github.com/Zion-Holdings/zion/actions/workflows/intelligent-content-generation.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/intelligent-content-generation.yml/badge.svg)
-- [Knowledge Graph Radar](https://github.com/Zion-Holdings/zion/actions/workflows/knowledge-graph-radar.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/knowledge-graph-radar.yml/badge.svg)
-- [Labeler](https://github.com/Zion-Holdings/zion/actions/workflows/labeler.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/labeler.yml/badge.svg)
-- [Lighthouse Budgets](https://github.com/Zion-Holdings/zion/actions/workflows/lighthouse-budgets.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/lighthouse-budgets.yml/badge.svg)
-- [Lighthouse Live](https://github.com/Zion-Holdings/zion/actions/workflows/lighthouse-live.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/lighthouse-live.yml/badge.svg)
-- [Link Auto Fix](https://github.com/Zion-Holdings/zion/actions/workflows/link-auto-fix.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/link-auto-fix.yml/badge.svg)
-- [Link Scan Hourly](https://github.com/Zion-Holdings/zion/actions/workflows/link-scan-hourly.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/link-scan-hourly.yml/badge.svg)
-- [Linkedin Marketing](https://github.com/Zion-Holdings/zion/actions/workflows/linkedin-marketing.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/linkedin-marketing.yml/badge.svg)
-- [Linkedin Pro](https://github.com/Zion-Holdings/zion/actions/workflows/linkedin-pro.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/linkedin-pro.yml/badge.svg)
-- [Maintenance](https://github.com/Zion-Holdings/zion/actions/workflows/maintenance.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/maintenance.yml/badge.svg)
-- [Marketing Daily](https://github.com/Zion-Holdings/zion/actions/workflows/marketing-daily.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/marketing-daily.yml/badge.svg)
-- [Marketing Sync](https://github.com/Zion-Holdings/zion/actions/workflows/marketing-sync.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/marketing-sync.yml/badge.svg)
-- [Media Optimizer](https://github.com/Zion-Holdings/zion/actions/workflows/media-optimizer.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/media-optimizer.yml/badge.svg)
-- [Merge Conflict Guard](https://github.com/Zion-Holdings/zion/actions/workflows/merge-conflict-guard.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/merge-conflict-guard.yml/badge.svg)
-- [Monetization Continuous](https://github.com/Zion-Holdings/zion/actions/workflows/monetization-continuous.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/monetization-continuous.yml/badge.svg)
-- [Monetization Daily](https://github.com/Zion-Holdings/zion/actions/workflows/monetization-daily.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/monetization-daily.yml/badge.svg)
-- [Monetization](https://github.com/Zion-Holdings/zion/actions/workflows/monetization.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/monetization.yml/badge.svg)
-- [Netlify Auto Healer](https://github.com/Zion-Holdings/zion/actions/workflows/netlify-auto-healer.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/netlify-auto-healer.yml/badge.svg)
-- [Netlify Automation](https://github.com/Zion-Holdings/zion/actions/workflows/netlify-automation.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/netlify-automation.yml/badge.svg)
-- [Netlify Config](https://github.com/Zion-Holdings/zion/actions/workflows/netlify-config.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/netlify-config.yml/badge.svg)
-- [Netlify Functions Trigger](https://github.com/Zion-Holdings/zion/actions/workflows/netlify-functions-trigger.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/netlify-functions-trigger.yml/badge.svg)
-- [Netlify Monitor](https://github.com/Zion-Holdings/zion/actions/workflows/netlify-monitor.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/netlify-monitor.yml/badge.svg)
-- [Og Image Refresh](https://github.com/Zion-Holdings/zion/actions/workflows/og-image-refresh.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/og-image-refresh.yml/badge.svg)
-- [Og Image Update](https://github.com/Zion-Holdings/zion/actions/workflows/og-image-update.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/og-image-update.yml/badge.svg)
-- [Optimize Images](https://github.com/Zion-Holdings/zion/actions/workflows/optimize-images.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/optimize-images.yml/badge.svg)
-- [Pa11y](https://github.com/Zion-Holdings/zion/actions/workflows/pa11y.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/pa11y.yml/badge.svg)
-- [Performance Audit](https://github.com/Zion-Holdings/zion/actions/workflows/performance-audit.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/performance-audit.yml/badge.svg)
-- [Performance Monitoring](https://github.com/Zion-Holdings/zion/actions/workflows/performance-monitoring.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/performance-monitoring.yml/badge.svg)
-- [Performance Weekly](https://github.com/Zion-Holdings/zion/actions/workflows/performance-weekly.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/performance-weekly.yml/badge.svg)
-- [Pin Actions Weekly](https://github.com/Zion-Holdings/zion/actions/workflows/pin-actions-weekly.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/pin-actions-weekly.yml/badge.svg)
-- [Playwright Smoke](https://github.com/Zion-Holdings/zion/actions/workflows/playwright-smoke.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/playwright-smoke.yml/badge.svg)
-- [Pr Auto Curator](https://github.com/Zion-Holdings/zion/actions/workflows/pr-auto-curator.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/pr-auto-curator.yml/badge.svg)
-- [Pr Quality Gate](https://github.com/Zion-Holdings/zion/actions/workflows/pr-quality-gate.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/pr-quality-gate.yml/badge.svg)
-- [Pr Size Labeler](https://github.com/Zion-Holdings/zion/actions/workflows/pr-size-labeler.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/pr-size-labeler.yml/badge.svg)
-- [Pr Smoke](https://github.com/Zion-Holdings/zion/actions/workflows/pr-smoke.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/pr-smoke.yml/badge.svg)
-- [Pr Update With Main](https://github.com/Zion-Holdings/zion/actions/workflows/pr-update-with-main.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/pr-update-with-main.yml/badge.svg)
-- [Rapid Git Sync](https://github.com/Zion-Holdings/zion/actions/workflows/rapid-git-sync.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/rapid-git-sync.yml/badge.svg)
-- [Rapid Sync](https://github.com/Zion-Holdings/zion/actions/workflows/rapid-sync.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/rapid-sync.yml/badge.svg)
-- [Readme Auto Advertiser](https://github.com/Zion-Holdings/zion/actions/workflows/readme-auto-advertiser.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/readme-auto-advertiser.yml/badge.svg)
-- [Readme Autogen](https://github.com/Zion-Holdings/zion/actions/workflows/readme-autogen.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/readme-autogen.yml/badge.svg)
-- [Release Deploy](https://github.com/Zion-Holdings/zion/actions/workflows/release-deploy.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/release-deploy.yml/badge.svg)
-- [Release Drafter](https://github.com/Zion-Holdings/zion/actions/workflows/release-drafter.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/release-drafter.yml/badge.svg)
-- [Release](https://github.com/Zion-Holdings/zion/actions/workflows/release.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/release.yml/badge.svg)
-- [Repo Knowledge Graph](https://github.com/Zion-Holdings/zion/actions/workflows/repo-knowledge-graph.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/repo-knowledge-graph.yml/badge.svg)
-- [Repo Radar](https://github.com/Zion-Holdings/zion/actions/workflows/repo-radar.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/repo-radar.yml/badge.svg)
-- [Responsive Content](https://github.com/Zion-Holdings/zion/actions/workflows/responsive-content.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/responsive-content.yml/badge.svg)
-- [Revenue Ideas Daily](https://github.com/Zion-Holdings/zion/actions/workflows/revenue-ideas-daily.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/revenue-ideas-daily.yml/badge.svg)
-- [Search Index Autogen](https://github.com/Zion-Holdings/zion/actions/workflows/search-index-autogen.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/search-index-autogen.yml/badge.svg)
-- [Security Audit](https://github.com/Zion-Holdings/zion/actions/workflows/security-audit.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/security-audit.yml/badge.svg)
-- [Security Auto Heal](https://github.com/Zion-Holdings/zion/actions/workflows/security-auto-heal.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/security-auto-heal.yml/badge.svg)
-- [Security Gates](https://github.com/Zion-Holdings/zion/actions/workflows/security-gates.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/security-gates.yml/badge.svg)
-- [Security Scan](https://github.com/Zion-Holdings/zion/actions/workflows/security-scan.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/security-scan.yml/badge.svg)
-- [Security Weekly](https://github.com/Zion-Holdings/zion/actions/workflows/security-weekly.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/security-weekly.yml/badge.svg)
-- [Security](https://github.com/Zion-Holdings/zion/actions/workflows/security.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/security.yml/badge.svg)
-- [Self Healing Build](https://github.com/Zion-Holdings/zion/actions/workflows/self-healing-build.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/self-healing-build.yml/badge.svg)
-- [Self Replicating Factory Manager](https://github.com/Zion-Holdings/zion/actions/workflows/self-replicating-factory-manager.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/self-replicating-factory-manager.yml/badge.svg)
-- [Seo Audit](https://github.com/Zion-Holdings/zion/actions/workflows/seo-audit.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/seo-audit.yml/badge.svg)
-- [Seo Validator](https://github.com/Zion-Holdings/zion/actions/workflows/seo-validator.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/seo-validator.yml/badge.svg)
-- [Site Health Guardian](https://github.com/Zion-Holdings/zion/actions/workflows/site-health-guardian.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/site-health-guardian.yml/badge.svg)
-- [Site Link](https://github.com/Zion-Holdings/zion/actions/workflows/site-link.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/site-link.yml/badge.svg)
-- [Sitemap And Search](https://github.com/Zion-Holdings/zion/actions/workflows/sitemap-and-search.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/sitemap-and-search.yml/badge.svg)
-- [Sitemap Auto Commit](https://github.com/Zion-Holdings/zion/actions/workflows/sitemap-auto-commit.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/sitemap-auto-commit.yml/badge.svg)
-- [Sitemap Daily](https://github.com/Zion-Holdings/zion/actions/workflows/sitemap-daily.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/sitemap-daily.yml/badge.svg)
-- [Stale](https://github.com/Zion-Holdings/zion/actions/workflows/stale.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/stale.yml/badge.svg)
-- [Sync Health](https://github.com/Zion-Holdings/zion/actions/workflows/sync-health.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/sync-health.yml/badge.svg)
-- [Test Auth](https://github.com/Zion-Holdings/zion/actions/workflows/test-auth.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/test-auth.yml/badge.svg)
-- [Test Suite](https://github.com/Zion-Holdings/zion/actions/workflows/test-suite.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/test-suite.yml/badge.svg)
-- [Test](https://github.com/Zion-Holdings/zion/actions/workflows/test.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/test.yml/badge.svg)
-- [Todo Issue Sync](https://github.com/Zion-Holdings/zion/actions/workflows/todo-issue-sync.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/todo-issue-sync.yml/badge.svg)
-- [Topics And Clusters](https://github.com/Zion-Holdings/zion/actions/workflows/topics-and-clusters.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/topics-and-clusters.yml/badge.svg)
-- [Ui Evolution Schedule](https://github.com/Zion-Holdings/zion/actions/workflows/ui-evolution-schedule.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ui-evolution-schedule.yml/badge.svg)
-- [Ui Evolution Weekly Beautify](https://github.com/Zion-Holdings/zion/actions/workflows/ui-evolution-weekly-beautify.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ui-evolution-weekly-beautify.yml/badge.svg)
-- [Ultra Rapid Sync](https://github.com/Zion-Holdings/zion/actions/workflows/ultra-rapid-sync.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/ultra-rapid-sync.yml/badge.svg)
-- [Unused Deps Cleaner](https://github.com/Zion-Holdings/zion/actions/workflows/unused-deps-cleaner.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/unused-deps-cleaner.yml/badge.svg)
-- [Unused Exports Report](https://github.com/Zion-Holdings/zion/actions/workflows/unused-exports-report.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/unused-exports-report.yml/badge.svg)
-- [Variation](https://github.com/Zion-Holdings/zion/actions/workflows/variation.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/variation.yml/badge.svg)
-- [Venture](https://github.com/Zion-Holdings/zion/actions/workflows/venture.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/venture.yml/badge.svg)
-- [Workflow Auto Healer](https://github.com/Zion-Holdings/zion/actions/workflows/workflow-auto-healer.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/workflow-auto-healer.yml/badge.svg)
-- [Workflow Health Monitor](https://github.com/Zion-Holdings/zion/actions/workflows/workflow-health-monitor.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/workflow-health-monitor.yml/badge.svg)
-- [Workflow Manager](https://github.com/Zion-Holdings/zion/actions/workflows/workflow-manager.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/workflow-manager.yml/badge.svg)
-- [Workflow Radar](https://github.com/Zion-Holdings/zion/actions/workflows/workflow-radar.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/workflow-radar.yml/badge.svg)
-- [Workflow Supervisor](https://github.com/Zion-Holdings/zion/actions/workflows/workflow-supervisor.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/workflow-supervisor.yml/badge.svg)
-- [Workflow Validator](https://github.com/Zion-Holdings/zion/actions/workflows/workflow-validator.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/workflow-validator.yml/badge.svg)
-- [Workflow Watchdog](https://github.com/Zion-Holdings/zion/actions/workflows/workflow-watchdog.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/workflow-watchdog.yml/badge.svg)
-- [Yaml Auto Fixer Simple](https://github.com/Zion-Holdings/zion/actions/workflows/yaml-auto-fixer-simple.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/yaml-auto-fixer-simple.yml/badge.svg)
-- [Yaml Auto Fixer](https://github.com/Zion-Holdings/zion/actions/workflows/yaml-auto-fixer.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/yaml-auto-fixer.yml/badge.svg)
-- [Yaml Validator](https://github.com/Zion-Holdings/zion/actions/workflows/yaml-validator.yml) ![status](https://github.com/Zion-Holdings/zion/actions/workflows/yaml-validator.yml/badge.svg)
+## 🚀 Features
 
-### Local Development
-1. Install Node 20+ and npm 10+.
-2. Install deps: `npm ci`.
-3. Run dev: `npm run dev`.
+- **Modern UI/UX**: Clean, responsive design with Tailwind CSS
+- **Performance Optimized**: Fast loading times and optimized bundle sizes
+- **SEO Ready**: Comprehensive meta tags, structured data, and SEO optimization
+- **Accessibility**: WCAG compliant with proper ARIA labels and keyboard navigation
+- **Mobile First**: Fully responsive design that works on all devices
+- **TypeScript**: Type-safe development with comprehensive type definitions
 
-### Maintenance Commands
-- `npm run git:sync` – Advanced git sync
-- `npm run automation:cloud` – Run cloud orchestrator locally
-- `npm run sitemap` – Regenerate sitemap
-- `npm run readme:generate` – Refresh this README
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14.2.32
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Deployment**: Vercel-ready
+- **Linting**: ESLint with custom configuration
+
+## 📦 Services Covered
+
+### AI & Machine Learning
+
+- Machine Learning Models
+- AI Chatbots & Virtual Assistants
+- Predictive Analytics
+- Computer Vision
+- Natural Language Processing
+
+### IT Infrastructure
+
+- Cloud Migration & Strategy
+- DevOps Implementation
+- Infrastructure as Code
+- Multi-Cloud Management
+- Disaster Recovery
+
+### Micro SaaS Development
+
+- Custom Web Applications
+- API Development & Integration
+- Database Design & Optimization
+- User Management Systems
+- Payment Processing
+
+### Additional Services
+
+- Cybersecurity Solutions
+- Data Analytics & BI
+- Digital Transformation
+- Blockchain & Web3
+- Mobile App Development
+- E-commerce Solutions
+
+## 🚀 Getting Started
+
+A modern, responsive website built with React, TypeScript, and Vite, showcasing Zion Tech Group's comprehensive technology solutions.
+
+## 🚀 Features
+
+- **Modern React Architecture** - Built with React 18, TypeScript, and Vite
+- **Responsive Design** - Mobile-first approach with Tailwind CSS
+- **SEO Optimized** - Comprehensive meta tags and structured data
+- **Performance Optimized** - Fast loading with code splitting and optimization
+- **Accessibility** - WCAG compliant with proper ARIA labels
+- **Toast Notifications** - User-friendly feedback system
+- **Loading States** - Enhanced UX with loading indicators
+- **Error Boundaries** - Graceful error handling
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, Custom CSS
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **SEO**: React Helmet Async
+- **Animations**: Framer Motion
+- **Build Tool**: Vite with ESBuild
+- **Package Manager**: npm
+
+## 📦 Installation
+
+
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Zion-Holdings/zion.app.git
+cd zion.app
+```
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+- Node.js 18+
+- npm or yarn
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+2. Install dependencies:
+```bash
+npm install
+```
+
+- Node.js 18+
+- npm or yarn
+<<<<<<< HEAD
+main
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+4. Open your browser and navigate to `http://localhost:3000`
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory, ready for deployment.
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Zion-Holdings/zion.app.git
+cd zion.app
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
+
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+## 📁 Project Structure
+
+```
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+4. Open your browser and navigate to `http://localhost:3000`
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory, ready for deployment.
+
+## 📁 Project Structure
+
+```
+
+├── pages/                 # Next.js pages
+│   ├── index.tsx         # Homepage
+│   ├── about.tsx         # About page
+│   ├── services.tsx      # Services overview
+│   ├── ai-services.tsx   # AI services page
+│   ├── blockchain.tsx    # Blockchain services
+│   ├── micro-saas.tsx    # Micro SaaS services
+│   ├── pricing.tsx       # Pricing page
+│   └── contact.tsx       # Contact page
+├── components/           # Reusable components
+├── styles/              # Global styles
+├── public/              # Static assets
+├── ecosystem.config.cjs # PM2 configuration
+└── package.json         # Dependencies and scripts
+```
+├── pages/                 # Next.js pages
+│   ├── index.tsx         # Homepage
+│   ├── about.tsx         # About page
+│   ├── services.tsx      # Services overview
+│   ├── ai-services.tsx   # AI services page
+│   ├── blockchain.tsx    # Blockchain services
+│   ├── micro-saas.tsx    # Micro SaaS services
+│   ├── pricing.tsx       # Pricing page
+│   └── contact.tsx       # Contact page
+├── components/           # Reusable components
+├── styles/              # Global styles
+├── public/              # Static assets
+├── ecosystem.config.cjs # PM2 configuration
+└── package.json         # Dependencies and scripts
+```
+
+4. Open your browser and navigate to `http://localhost:3000`
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory, ready for deployment.
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Button.tsx      # Enhanced button component
+│   ├── Card.tsx        # Card component
+│   ├── Footer.tsx      # Footer component
+│   ├── Header.tsx      # Header with navigation
+│   ├── LoadingSpinner.tsx # Loading indicators
+│   ├── SEOHead.tsx     # SEO meta tags
+│   ├── ServiceCard.tsx # Service display cards
+│   ├── Toast.tsx       # Notification system
+│   └── layout/
+│       └── Sidebar.tsx # Sidebar navigation
+├── contexts/           # React contexts
+│   └── ToastContext.tsx # Global toast management
+├── pages/              # Page components
+│   ├── About.tsx       # About page
+│   ├── Contact.tsx     # Contact form
+│   ├── Home.tsx        # Homepage
+│   ├── Pricing.tsx     # Pricing plans
+│   └── Services.tsx    # Services showcase
+├── App.tsx             # Main app component
+├── main.tsx           # Application entry point
+└── index.css          # Global styles
+```
+
+## 🎨 Components
+
+### Button Component
+Enhanced button with multiple variants and loading states:
+- `primary` - Gradient blue to purple
+- `secondary` - Glass morphism effect
+- `outline` - Border only
+- `ghost` - Minimal styling
+- `danger` - Red styling for destructive actions
+
+### Toast Notifications
+Global notification system with context:
+- Success, Error, Warning, Info types
+- Auto-dismiss with customizable duration
+- Smooth animations and transitions
+
+### Service Cards
+Interactive service display cards with:
+- Hover effects and animations
+- Feature lists with bullet points
+- Icon support
+- Responsive design
+
+├── pages/                 # Next.js pages
+│   ├── index.tsx         # Homepage
+│   ├── about.tsx         # About page
+│   ├── services.tsx      # Services overview
+│   ├── ai-services.tsx   # AI services page
+│   ├── blockchain.tsx    # Blockchain services
+│   ├── micro-saas.tsx    # Micro SaaS services
+│   ├── pricing.tsx       # Pricing page
+│   └── contact.tsx       # Contact page
+├── components/           # Reusable components
+├── styles/              # Global styles
+├── public/              # Static assets
+├── ecosystem.config.cjs # PM2 configuration
+└── package.json         # Dependencies and scripts
+```
+
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+## 🔧 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+### Frontend
+- **React 18.2.0** - Modern React with concurrent features
+- **TypeScript 5.6.3** - Type-safe JavaScript development
+- **Vite 5.4.19** - Next-generation build tool
+- **Tailwind CSS 3.4.17** - Utility-first CSS framework
+- **Framer Motion 10.16.4** - Animation library
+### Color Palette
+
+- **Primary**: Zion Purple (`#8B5CF6`)
+- **Secondary**: Zion Cyan (`#22DDD2`)
+- **Background**: Zion Blue Dark (`#0F172A`)
+- **Text**: White, Zion Slate Light (`#94A3B8`)
+
+### Typography
+
+- **Headings**: Bold, large text for hierarchy
+- **Body**: Clean, readable text with proper contrast
+- **Accents**: Zion Cyan for highlights and CTAs
+
+### Components
+
+- **Cards**: Rounded corners with subtle borders and hover effects
+- **Buttons**: Gradient backgrounds with hover animations
+- **Navigation**: Dropdown menus with smooth transitions
+- **Forms**: Clean input fields with focus states
+
+## 📱 Responsive Design
+
+The website is built with a mobile-first approach:
+
+- **Mobile**: Stacked layouts with touch-friendly interactions
+- **Tablet**: Adjusted grid layouts for medium screens
+- **Desktop**: Full-featured layouts with hover effects and advanced navigation
+- `npm run lint:fix` - Fix ESLint errors
+
+## 🎨 Design System
+
+
+The project uses a consistent design system with:
+
+- **Colors**: Blue primary (#2563eb), with complementary grays and accent colors
+- **Typography**: Inter font family with responsive sizing
+- **Spacing**: Consistent spacing scale using Tailwind's spacing system
+- **Components**: Reusable components with consistent styling
+
+## 📱 Responsive Design
+
+- **Mobile**: Optimized for mobile devices (320px+)
+- **Tablet**: Responsive design for tablet screens (768px+)
+- **Desktop**: Full desktop experience (1024px+)
+- **Large Screens**: Optimized for large displays (1280px+)
+
+### UI Components
+- **Radix UI** - Accessible component primitives
+- **Lucide React** - Beautiful icon library
+- **React Hook Form** - Performant forms with validation
+- **Zod** - TypeScript-first schema validation
+
+
+### Main Navigation
+
+- **Home** (`/`) - Landing page with hero section and service overview
+- **Services** (`/services`) - AI, Cloud, Cybersecurity, Digital Transformation
+- **Solutions** (`/solutions`) - Industry-specific solutions
+- **About** (`/about`) - Company information and team
+- **Resources** - Case studies, research, blog, webinars
+- **Support** - Help center, training, contact
+- **Contact** (`/contact`) - Get in touch and request quotes
+
+### Footer Navigation
+
+- Organized into logical sections (Services, Solutions, Company, Resources, Support)
+- Social media links and contact information
+- Newsletter signup and trust indicators
+
+## 📱 Features
+
+
+### Frontend Framework
+
+- **Next.js 15.5.2** - React framework with SSR capabilities
+- **React 18.2.0** - Modern React with hooks and functional components
+- **TypeScript** - Type-safe development
+
+### Styling
+
+- **Tailwind CSS** - Utility-first CSS framework
+- **Custom CSS Variables** - Zion Tech Group brand colors
+- **Responsive Design** - Mobile-first approach
+
+### State Management
+
+- **React Hooks** - useState, useEffect for local state
+- **Context API** - For global state management
+- **React Router** - Client-side routing
+
+### Performance
+
+- **Lazy Loading** - Components loaded on demand
+- **Image Optimization** - Next.js image optimization
+- **Code Splitting** - Automatic bundle splitting
+### State Management & Data
+- **Redux Toolkit** - Modern Redux with best practices
+- **React Query** - Server state management
+- **React Router DOM** - Client-side routing
+
+### Performance & Monitoring
+- **Performance Observer API** - Real-time performance monitoring
+- **Intersection Observer** - Efficient lazy loading
+- **Service Worker** - Advanced caching and offline support
+
+## 📱 Features
+
+### Core Services
+- **AI & Machine Learning Solutions**
+- **Quantum Computing Platform**
+- **Cybersecurity Services**
+- **Cloud Infrastructure**
+- **Digital Transformation**
+- **Micro SaaS Solutions**
+
+### Advanced Capabilities
+- **Autonomous Business Operations**
+- **AI-Powered Analytics**
+- **Quantum Neural Networks**
+- **Predictive Maintenance**
+- **Real-time Monitoring**
+- **Intelligent Automation**
+
+### User Experience
+- **Responsive Design** - Works perfectly on all devices
+- **Dark/Light Mode** - User preference support
+- **Internationalization** - Multi-language support ready
+- **Progressive Enhancement** - Works without JavaScript
+- **Accessibility First** - Inclusive design principles
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn package manager
+- Modern web browser
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/your-org/zion-tech-group.git
+   cd zion-tech-group
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start development server**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
+
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## 📁 Key Components
+
+### Header Component (`src/components/header/Header.jsx`)
+
+- Logo with Zion Tech Group branding
+- Main navigation with dropdown menus
+- Search functionality with suggestions
+- User authentication and language selection
+- Mobile-responsive design
+
+### Footer Component (`src/components/Footer.jsx`)
+
+- Company information and branding
+- Organized link sections
+- Newsletter signup
+- Social media links
+- Trust indicators and certifications
+
+### Sidebar Component (`src/components/Sidebar.jsx`)
+
+- Collapsible navigation sections
+- Service and solution categories
+- Quick access to key pages
+- Mobile-friendly overlay design
+
+### HomePage Component (`src/pages/HomePage.jsx`)
+
+- Hero section with compelling messaging
+- Feature highlights with icons
+- Statistics and social proof
+- Service preview cards
+- Testimonials and CTA sections
+
+## 🎯 Content Management
+
+### Service Data (`src/data/marketplaceData.js`)
+
+- Search suggestions and keywords
+- Service categories and descriptions
+- Industry solutions and use cases
+- Testimonials and case studies
+
+### Page Templates
+
+- **SimplePage.jsx** - Template for various routes with dynamic content
+- **ComprehensivePricing2025.jsx** - Pricing page with plans and add-ons
+- **Sitemap.jsx** - Complete site navigation structure
+
+## 🔍 Search Functionality
+
+### Enhanced Search Input
+
+- Real-time search suggestions
+- Recent and popular searches
+- Category-based filtering
+- Keyboard navigation support
+
+### Search Suggestions
+
+- Service-related keywords
+- Industry-specific terms
+- Technology stack references
+- Company and solution names
+
+## 📊 Analytics and SEO
+
+### SEO Features
+
+- Meta tags and descriptions
+- Structured data markup
+- Sitemap generation
+- Open Graph tags
+
+### Performance Monitoring
+
+- Lighthouse performance metrics
+- Core Web Vitals tracking
+- Page load optimization
+- Bundle size analysis
+
+## 🚀 Deployment
+
+### Build Process
+
+1. **Development**: `npm run dev` for local development
+2. **Build**: `npm run build` for production build
+3. **Start**: `npm start` for production server
+
+### Environment Variables
+
+- Configure environment variables in `.env.local`
+- Set production URLs and API endpoints
+- Configure analytics and monitoring
+
+## 📜 Available Scripts
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
+
+## 🎨 Design System
+
+### Color Palette
+- **Primary**: Zion Cyan (#0ea5e9)
+- **Secondary**: Zion Purple (#8b5cf6)
+- **Accent**: Zion Green (#10b981)
+- **Neutral**: Zion Slate (#64748b)
+
+### Typography
+- **Headings**: Orbitron (Futuristic, tech-focused)
+- **Body**: Rajdhani (Clean, readable)
+
+### Components
+- **Cards**: Glass-morphism design with backdrop blur
+- **Buttons**: Gradient backgrounds with hover effects
+- **Forms**: Accessible inputs with validation
+- **Navigation**: Responsive navigation with mega menus
+
+## 🔧 Configuration
+
+### Environment Variables
+```env
+VITE_API_URL=your-api-url
+VITE_ANALYTICS_ID=your-analytics-id
+VITE_SENTRY_DSN=your-sentry-dsn
+```
+
+### Build Configuration
+- **Code Splitting**: Automatic chunk optimization
+- **Tree Shaking**: Unused code elimination
+- **Minification**: Production-ready optimized bundles
+- **Source Maps**: Development debugging support
+
+## 📊 Performance Metrics
+
+### Core Web Vitals Targets
+- **First Contentful Paint (FCP)**: < 1.8s
+- **Largest Contentful Paint (LCP)**: < 2.5s
+- **First Input Delay (FID)**: < 100ms
+- **Cumulative Layout Shift (CLS)**: < 0.1
+
+### Optimization Features
+- **Image Optimization**: WebP format with fallbacks
+- **Font Loading**: Optimized font loading strategy
+- **Critical CSS**: Inline critical styles
+- **Resource Hints**: DNS prefetch and preload
+- **Service Worker**: Advanced caching strategies
+
+## ♿ Accessibility Features
+
+### WCAG 2.1 AA Compliance
+- **Perceivable**: Alternative text, captions, audio descriptions
+- **Operable**: Keyboard navigation, focus management
+- **Understandable**: Clear navigation, readable text
+- **Robust**: Compatible with assistive technologies
+
+### Assistive Technology Support
+- **Screen Readers**: NVDA, JAWS, VoiceOver
+- **Keyboard Navigation**: Full keyboard accessibility
+- **High Contrast**: Built-in high contrast mode
+- **Font Scaling**: Adjustable text sizes
+- **Motion Reduction**: Respects user preferences
+
+## 🔒 Security Features
+
+### Security Headers
+- **Content Security Policy (CSP)**
+- **X-Frame-Options**
+- **X-Content-Type-Options**
+- **Referrer Policy**
+- **Permissions Policy**
+
+### Data Protection
+- **HTTPS Only**: Secure connections
+- **Input Validation**: XSS protection
+- **CSRF Protection**: Cross-site request forgery prevention
+- **Secure Cookies**: HttpOnly and Secure flags
+
+## 📱 PWA Features
+
+### Service Worker Capabilities
+- **Offline Support**: Works without internet
+- **Background Sync**: Offline action queuing
+- **Push Notifications**: Real-time updates
+- **App Installation**: Add to home screen
+
+### Manifest Features
+- **App Icons**: Multiple sizes for all devices
+- **Theme Colors**: Consistent branding
+- **Display Modes**: Standalone app experience
+- **Orientation**: Device orientation support
+
+## 🌐 Browser Support
+
+### Modern Browsers
+- **Chrome**: 90+
+- **Firefox**: 88+
+- **Safari**: 14+
+- **Edge**: 90+
+
+### Legacy Support
+- **Internet Explorer**: Not supported
+- **Older Versions**: Progressive enhancement
+
+## 📈 Analytics & Monitoring
+
+### Performance Monitoring
+- **Core Web Vitals**: Real-time tracking
+- **User Experience**: Performance metrics
+- **Error Tracking**: Sentry integration
+- **Analytics**: Google Analytics 4
+
+
+### User Behavior
+- **Page Views**: Navigation tracking
+- **User Engagement**: Interaction metrics
+- **Conversion Tracking**: Goal completion
+- **A/B Testing**: Experiment framework
+
+## ♿ Accessibility
+
+
+- Meta tags for all pages
+- Open Graph tags for social sharing
+- Structured data markup
+- Semantic HTML structure
+- Optimized images and assets
+- Fast loading times
+
+## ♿ Accessibility
+
+- WCAG 2.1 AA compliant
+- Proper ARIA labels
+- Keyboard navigation support
+- Screen reader friendly
+- High contrast support
+- Focus management
+
+## 🚀 Performance
+
+- Next.js optimization features
+- Image optimization
+- Code splitting
+- Lazy loading
+- Bundle analysis
+- Performance monitoring
+- `npm run type-check` - Run TypeScript checks
+
+## 🌐 Deployment
+
+The project is configured for deployment on:
+- **Netlify** - Automatic deployments from main branch
+- **Vercel** - Zero-config deployment
+- **GitHub Pages** - Static hosting
+- **Any static hosting** - Built files in `dist/`
+
+## 📱 Responsive Design
+
+- **Mobile First** - Optimized for mobile devices
+- **Breakpoints** - xs, sm, md, lg, xl, 2xl, 3xl
+- **Flexible Grid** - CSS Grid and Flexbox layouts
+- **Touch Friendly** - Proper touch targets and interactions
+
+## ♿ Accessibility
+
+- **WCAG 2.1 AA Compliant** - Meets accessibility standards
+- **Keyboard Navigation** - Full keyboard support
+- **Screen Reader Support** - Proper ARIA labels
+- **Focus Management** - Visible focus indicators
+- **Color Contrast** - High contrast ratios
+
+## 🚀 Performance
+
+- **Code Splitting** - Automatic route-based splitting
+- **Tree Shaking** - Unused code elimination
+- **Image Optimization** - Optimized asset loading
+- **Bundle Analysis** - Built-in bundle analyzer
+- **Lighthouse Score** - 90+ performance score
+
+## 🔒 Security
+
+- **Content Security Policy** - XSS protection
+- **HTTPS Only** - Secure connections
+- **Input Validation** - Form validation
+- **Error Boundaries** - Graceful error handling
+
+## 📈 SEO Features
+
+- **Meta Tags** - Comprehensive meta tag management
+- **Structured Data** - JSON-LD schema markup
+- **Open Graph** - Social media optimization
+- **Twitter Cards** - Twitter sharing optimization
+- **Sitemap** - Automatic sitemap generation
+- **Robots.txt** - Search engine directives
+
+- `npm run lint:fix` - Fix ESLint errors
+
+
+The project uses a consistent design system with:
+
+- **Colors**: Blue primary (#2563eb), with complementary grays and accent colors
+- **Typography**: Inter font family with responsive sizing
+- **Spacing**: Consistent spacing scale using Tailwind's spacing system
+- **Components**: Reusable components with consistent styling
+
+## 📱 Responsive Design
+
+- **Mobile**: Optimized for mobile devices (320px+)
+- **Tablet**: Responsive design for tablet screens (768px+)
+- **Desktop**: Full desktop experience (1024px+)
+- **Large Screens**: Optimized for large displays (1280px+)
+
+## 🔍 SEO Features
+
+- Meta tags for all pages
+- Open Graph tags for social sharing
+- Structured data markup
+- Semantic HTML structure
+- Optimized images and assets
+- Fast loading times
+
+## ♿ Accessibility
+
+- WCAG 2.1 AA compliant
+- Proper ARIA labels
+- Keyboard navigation support
+- Screen reader friendly
+- High contrast support
+- Focus management
+
+## 🚀 Performance
+
+- Next.js optimization features
+- Image optimization
+- Code splitting
+- Lazy loading
+- Bundle analysis
+- Performance monitoring
+
+## 🤝 Contributing
+
+
+### Build Process
+1. **Code Quality**: ESLint and TypeScript checking
+2. **Testing**: Unit and integration tests
+3. **Build**: Production-optimized bundles
+4. **Deploy**: Automated deployment pipeline
+
+### Hosting Options
+- **Vercel**: Recommended for React apps
+- **Netlify**: Static site hosting
+- **AWS S3**: Cloud hosting
+- **GitHub Pages**: Free hosting
+
+## 🤝 Contributing
+
+### Development Guidelines
+- **Code Style**: ESLint and Prettier configuration
+- **Type Safety**: Full TypeScript coverage
+- **Testing**: Jest and React Testing Library
+- **Accessibility**: WCAG compliance checking
+
+### Pull Request Process
+1. Fork the repository
+2. Create feature branch
+3. Make changes with tests
+4. Submit pull request
+5. Code review and approval
+
+## 🤝 Contributing
+
+1. Fork the repository
+
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Workflow
+
+1. Create a feature branch
+2. Make your changes
+3. Test thoroughly
+4. Submit a pull request
+5. Code review and approval
+
+### Code Standards
+
+- Follow React best practices
+- Use TypeScript for type safety
+- Maintain consistent styling with Tailwind CSS
+- Write meaningful component names and props
+
+## 📞 Support and Contact
+
+For technical support or questions about the website:
+
+- **Email**: contact@ziontechgroup.com
+- **Documentation**: Check the `/docs` section
+- **Issues**: Use the GitHub issues page
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+- **Cloud**: AWS, Azure, Google Cloud
+- **AI/ML**: OpenAI, TensorFlow, PyTorch
+- **DevOps**: Docker, Kubernetes, PM2
+
+## 📦 Installation
+ursor/automate-test-improve-and-merge-code-646c
+A modern, responsive website built with Next.js showcasing comprehensive technology services including AI, IT solutions, micro SaaS development, and more.
+
+## 🚀 Features
+
+- **Modern UI/UX**: Clean, responsive design with Tailwind CSS
+- **Performance Optimized**: Fast loading times and optimized bundle sizes
+- **SEO Ready**: Comprehensive meta tags, structured data, and SEO optimization
+- **Accessibility**: WCAG compliant with proper ARIA labels and keyboard navigation
+- **Mobile First**: Fully responsive design that works on all devices
+- **TypeScript**: Type-safe development with comprehensive type definitions
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14.2.32
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Deployment**: Vercel-ready
+- **Linting**: ESLint with custom configuration
+
+## 📦 Services Covered
+
+### AI & Machine Learning
+
+- Machine Learning Models
+- AI Chatbots & Virtual Assistants
+- Predictive Analytics
+- Computer Vision
+- Natural Language Processing
+
+### IT Infrastructure
+
+- Cloud Migration & Strategy
+- DevOps Implementation
+- Infrastructure as Code
+- Multi-Cloud Management
+- Disaster Recovery
+
+### Micro SaaS Development
+
+- Custom Web Applications
+- API Development & Integration
+- Database Design & Optimization
+- User Management Systems
+- Payment Processing
+
+### Additional Services
+
+- Cybersecurity Solutions
+- Data Analytics & BI
+- Digital Transformation
+- Blockchain & Web3
+- Mobile App Development
+- E-commerce Solutions
+
+## 🚀 Getting Started
+
+A modern, responsive website built with React, TypeScript, and Vite, showcasing Zion Tech Group's comprehensive technology solutions.
+
+## 🚀 Features
+
+- **Modern React Architecture** - Built with React 18, TypeScript, and Vite
+- **Responsive Design** - Mobile-first approach with Tailwind CSS
+- **SEO Optimized** - Comprehensive meta tags and structured data
+- **Performance Optimized** - Fast loading with code splitting and optimization
+- **Accessibility** - WCAG compliant with proper ARIA labels
+- **Toast Notifications** - User-friendly feedback system
+- **Loading States** - Enhanced UX with loading indicators
+- **Error Boundaries** - Graceful error handling
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, Custom CSS
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **SEO**: React Helmet Async
+- **Animations**: Framer Motion
+- **Build Tool**: Vite with ESBuild
+- **Package Manager**: npm
+
+## 📦 Installation
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+ursor/automate-test-improve-and-merge-code-646c
+
+1. Clone the repository:
+
+```bash
+# Clone the repository
+git clone https://github.com/Zion-Holdings/zion.app.git
+
+# Navigate to the project directory
+cd zion.app
+
+
+- Node.js 18+
+- npm or yarn
+
+- Node.js 18+
+- npm or yarn
+2. Install dependencies:
+```bash
+npm install
+```
+- Node.js 18+
+- npm or yarn
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+ursor/automate-test-improve-and-merge-code-646c
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+
+4. Open your browser and navigate to `http://localhost:3000`
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory, ready for deployment.
+ursor/automate-test-improve-and-merge-code-646c
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Zion-Holdings/zion.app.git
+cd zion.app
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
+# Build for production
+npm run build
+```
+
+## 🚀 Quick Start
+
+```bash
+# Development
+npm run dev
+
+# Production build
+npm run build
+
+# Start production server
+npm run start
+
+# Run tests
+npm run test
+
+# Lint and fix
+npm run lint:fix
+A modern, responsive website built with Next.js showcasing comprehensive technology services including AI, IT solutions, micro SaaS development, and more.
+
+## 🚀 Features
+
+- **Modern UI/UX**: Clean, responsive design with Tailwind CSS
+- **Performance Optimized**: Fast loading times and optimized bundle sizes
+- **SEO Ready**: Comprehensive meta tags, structured data, and SEO optimization
+- **Accessibility**: WCAG compliant with proper ARIA labels and keyboard navigation
+- **Mobile First**: Fully responsive design that works on all devices
+- **TypeScript**: Type-safe development with comprehensive type definitions
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14.2.32
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Deployment**: Vercel-ready
+- **Linting**: ESLint with custom configuration
+
+## 📦 Services Covered
+
+### AI & Machine Learning
+
+- Machine Learning Models
+- AI Chatbots & Virtual Assistants
+- Predictive Analytics
+- Computer Vision
+- Natural Language Processing
+
+### IT Infrastructure
+
+- Cloud Migration & Strategy
+- DevOps Implementation
+- Infrastructure as Code
+- Multi-Cloud Management
+- Disaster Recovery
+
+### Micro SaaS Development
+
+- Custom Web Applications
+- API Development & Integration
+- Database Design & Optimization
+- User Management Systems
+- Payment Processing
+
+### Additional Services
+
+- Cybersecurity Solutions
+- Data Analytics & BI
+- Digital Transformation
+- Blockchain & Web3
+- Mobile App Development
+- E-commerce Solutions
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Zion-Holdings/zion.app.git
+cd zion.app
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+- Node.js 18+
+- npm or yarn
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Zion-Holdings/zion.app.git
+cd zion.app
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
+
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+```
+
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+ursor/automate-test-improve-and-merge-code-646c
+
+## 📁 Project Structure
+
+```
+
+├── pages/                 # Next.js pages
+│   ├── index.tsx         # Homepage
+│   ├── about.tsx         # About page
+│   ├── services.tsx      # Services overview
+│   ├── ai-services.tsx   # AI services page
+│   ├── blockchain.tsx    # Blockchain services
+│   ├── micro-saas.tsx    # Micro SaaS services
+│   ├── pricing.tsx       # Pricing page
+│   └── contact.tsx       # Contact page
+├── components/           # Reusable components
+├── styles/              # Global styles
+├── public/              # Static assets
+├── ecosystem.config.cjs # PM2 configuration
+└── package.json         # Dependencies and scripts
+```
+
+4. Open your browser and navigate to `http://localhost:3000`
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory, ready for deployment.
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Button.tsx      # Enhanced button component
+│   ├── Card.tsx        # Card component
+│   ├── Footer.tsx      # Footer component
+│   ├── Header.tsx      # Header with navigation
+│   ├── LoadingSpinner.tsx # Loading indicators
+│   ├── SEOHead.tsx     # SEO meta tags
+│   ├── ServiceCard.tsx # Service display cards
+│   ├── Toast.tsx       # Notification system
+│   └── layout/
+│       └── Sidebar.tsx # Sidebar navigation
+├── contexts/           # React contexts
+│   └── ToastContext.tsx # Global toast management
+├── pages/              # Page components
+│   ├── About.tsx       # About page
+│   ├── Contact.tsx     # Contact form
+│   ├── Home.tsx        # Homepage
+│   ├── Pricing.tsx     # Pricing plans
+│   └── Services.tsx    # Services showcase
+├── App.tsx             # Main app component
+├── main.tsx           # Application entry point
+└── index.css          # Global styles
+```
+
+## 🎨 Components
+
+### Button Component
+Enhanced button with multiple variants and loading states:
+- `primary` - Gradient blue to purple
+- `secondary` - Glass morphism effect
+- `outline` - Border only
+- `ghost` - Minimal styling
+- `danger` - Red styling for destructive actions
+
+### Toast Notifications
+Global notification system with context:
+- Success, Error, Warning, Info types
+- Auto-dismiss with customizable duration
+- Smooth animations and transitions
+
+### Service Cards
+Interactive service display cards with:
+- Hover effects and animations
+- Feature lists with bullet points
+- Icon support
+- Responsive design
+
+ursor/automate-test-improve-and-merge-code-646c
+├── pages/                 # Next.js pages
+│   ├── index.tsx         # Homepage
+│   ├── about.tsx         # About page
+│   ├── services.tsx      # Services overview
+│   ├── ai-services.tsx   # AI services page
+│   ├── blockchain.tsx    # Blockchain services
+│   ├── micro-saas.tsx    # Micro SaaS services
+│   ├── pricing.tsx       # Pricing page
+│   └── contact.tsx       # Contact page
+├── components/           # Reusable components
+├── styles/              # Global styles
+├── public/              # Static assets
+├── ecosystem.config.cjs # PM2 configuration
+└── package.json         # Dependencies and scripts
+```
+
+
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+ursor/automate-test-improve-and-merge-code-646c
+zion.app/
+├── src/                    # Source code
+│   ├── components/         # React components
+│   ├── pages/             # Application pages
+│   ├── styles/            # CSS and styling
+│   └── utils/             # Utility functions
+├── public/                # Static assets
+├── docs/                  # Documentation
+├── tests/                 # Test files
+├── automation/            # Automation scripts
+└── deployment/            # Deployment configurations
+src/
+├── components/          # Reusable UI components
+│   ├── Button.tsx      # Enhanced button component
+│   ├── Card.tsx        # Card component
+│   ├── Footer.tsx      # Footer component
+│   ├── Header.tsx      # Header with navigation
+│   ├── LoadingSpinner.tsx # Loading indicators
+│   ├── SEOHead.tsx     # SEO meta tags
+│   ├── ServiceCard.tsx # Service display cards
+│   ├── Toast.tsx       # Notification system
+│   └── layout/
+│       └── Sidebar.tsx # Sidebar navigation
+├── contexts/           # React contexts
+│   └── ToastContext.tsx # Global toast management
+├── pages/              # Page components
+│   ├── About.tsx       # About page
+│   ├── Contact.tsx     # Contact form
+│   ├── Home.tsx        # Homepage
+│   ├── Pricing.tsx     # Pricing plans
+│   └── Services.tsx    # Services showcase
+├── App.tsx             # Main app component
+├── main.tsx           # Application entry point
+└── index.css          # Global styles
+```
+
+## 🎨 Components
+
+### Button Component
+Enhanced button with multiple variants and loading states:
+- `primary` - Gradient blue to purple
+- `secondary` - Glass morphism effect
+- `outline` - Border only
+- `ghost` - Minimal styling
+- `danger` - Red styling for destructive actions
+
+### Toast Notifications
+Global notification system with context:
+- Success, Error, Warning, Info types
+- Auto-dismiss with customizable duration
+- Smooth animations and transitions
+
+### Service Cards
+Interactive service display cards with:
+- Hover effects and animations
+- Feature lists with bullet points
+- Icon support
+- Responsive design
+
+├── pages/                 # Next.js pages
+│   ├── index.tsx         # Homepage
+│   ├── about.tsx         # About page
+│   ├── services.tsx      # Services overview
+│   ├── ai-services.tsx   # AI services page
+│   ├── blockchain.tsx    # Blockchain services
+│   ├── micro-saas.tsx    # Micro SaaS services
+│   ├── pricing.tsx       # Pricing page
+│   └── contact.tsx       # Contact page
+├── components/           # Reusable components
+├── styles/              # Global styles
+├── public/              # Static assets
+├── ecosystem.config.cjs # PM2 configuration
+└── package.json         # Dependencies and scripts
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+```
+
+## 🔧 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+- `npm run lint:fix` - Fix ESLint errors
+- `npm run test` - Run tests
+- `npm run lint` - Run linting
+- `npm run lint:fix` - Fix linting issues
+- `npm run type-check` - Run TypeScript type checking
+
+## 🌐 Services
+
+### AI Solutions
+- AI-Powered Business Intelligence
+- Machine Learning Model Development
+- Natural Language Processing
+- Computer Vision Solutions
+- Predictive Analytics
+
+### Cloud Services
+- Cloud Migration and Strategy
+- Infrastructure as Code
+- Container Orchestration
+- Serverless Architecture
+- Multi-Cloud Solutions
+
+### Cybersecurity
+- Security Audits and Assessments
+- Compliance Management
+- Threat Detection and Response
+- Identity and Access Management
+- Data Protection
+
+## 📞 Contact
+
+- **Website**: https://ziontechgroup.com
+- **Email**: contact@ziontechgroup.com
+- **Phone**: +1 (555) 123-4567
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript checks
+
+## 🌐 Deployment
+
+The project is configured for deployment on:
+- **Netlify** - Automatic deployments from main branch
+- **Vercel** - Zero-config deployment
+- **GitHub Pages** - Static hosting
+- **Any static hosting** - Built files in `dist/`
+
+## 📱 Responsive Design
+
+- **Mobile First** - Optimized for mobile devices
+- **Breakpoints** - xs, sm, md, lg, xl, 2xl, 3xl
+- **Flexible Grid** - CSS Grid and Flexbox layouts
+- **Touch Friendly** - Proper touch targets and interactions
+
+## ♿ Accessibility
+
+- **WCAG 2.1 AA Compliant** - Meets accessibility standards
+- **Keyboard Navigation** - Full keyboard support
+- **Screen Reader Support** - Proper ARIA labels
+- **Focus Management** - Visible focus indicators
+- **Color Contrast** - High contrast ratios
+
+## 🚀 Performance
+
+- **Code Splitting** - Automatic route-based splitting
+- **Tree Shaking** - Unused code elimination
+- **Image Optimization** - Optimized asset loading
+- **Bundle Analysis** - Built-in bundle analyzer
+- **Lighthouse Score** - 90+ performance score
+
+## 🔒 Security
+
+- **Content Security Policy** - XSS protection
+- **HTTPS Only** - Secure connections
+- **Input Validation** - Form validation
+- **Error Boundaries** - Graceful error handling
+
+## 📈 SEO Features
+
+- **Meta Tags** - Comprehensive meta tag management
+- **Structured Data** - JSON-LD schema markup
+- **Open Graph** - Social media optimization
+- **Twitter Cards** - Twitter sharing optimization
+- **Sitemap** - Automatic sitemap generation
+- **Robots.txt** - Search engine directives
+- `npm run lint:fix` - Fix ESLint errors
+
+## 🎨 Design System
+
+The project uses a consistent design system with:
+
+- **Colors**: Blue primary (#2563eb), with complementary grays and accent colors
+- **Typography**: Inter font family with responsive sizing
+- **Spacing**: Consistent spacing scale using Tailwind's spacing system
+- **Components**: Reusable components with consistent styling
+
+## 📱 Responsive Design
+
+- **Mobile**: Optimized for mobile devices (320px+)
+- **Tablet**: Responsive design for tablet screens (768px+)
+- **Desktop**: Full desktop experience (1024px+)
+- **Large Screens**: Optimized for large displays (1280px+)
+
+## 🔍 SEO Features
+
+- Meta tags for all pages
+- Open Graph tags for social sharing
+- Structured data markup
+- Semantic HTML structure
+- Optimized images and assets
+- Fast loading times
+
+## ♿ Accessibility
+
+- WCAG 2.1 AA compliant
+- Proper ARIA labels
+- Keyboard navigation support
+- Screen reader friendly
+- High contrast support
+- Focus management
+
+## 🚀 Performance
+
+- Next.js optimization features
+- Image optimization
+- Code splitting
+- Lazy loading
+- Bundle analysis
+- Performance monitoring
+<<<<<<< HEAD
+main
+
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+## 🤝 Contributing
+
+1. Fork the repository
+<<<<<<< HEAD
+<<<<<<< HEAD
+2. Create feature branch
+3. Make changes with tests
+4. Submit pull request
+5. Code review and approval
+origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
+### Development Workflow
+
+1. Create a feature branch
+2. Make your changes
+3. Test thoroughly
+4. Submit a pull request
+5. Code review and approval
+
+### Code Standards
+
+- Follow React best practices
+- Use TypeScript for type safety
+- Maintain consistent styling with Tailwind CSS
+- Write meaningful component names and props
+
+## 📞 Support and Contact
+
+For technical support or questions about the website:
+
+- **Email**: contact@ziontechgroup.com
+- **Documentation**: Check the `/docs` section
+- **Issues**: Use the GitHub issues page
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+- All contributors and supporters
 
 ---
-This README is auto-generated. Do not edit manually.# Triggering GitHub Actions workflows for testing
+
+Built with ❤️ by the Zion Tech Group team
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## 📄 License
+
+This project is proprietary software owned by Zion Tech Group.
+
+## 📞 Contact
+
+- **Email**: kleber@ziontechgroup.com
+- **Phone**: +1 302 464 0950
+- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+
+## 🏢 About Zion Tech Group
+
+Zion Tech Group is a leading technology company specializing in:
+- AI & Machine Learning Solutions
+- Micro SaaS Development
+- Cybersecurity Services
+- Cloud Infrastructure
+- Blockchain Technology
+- Data Analytics
+
+We provide comprehensive technology solutions to help businesses transform and scale in the digital age.
+
+---
+
+Built with ❤️ by the Zion Tech Group team
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+
+## 📄 License
+
+## ♿ Accessibility
+
+- WCAG 2.1 AA compliant
+- Proper ARIA labels
+- Keyboard navigation support
+- Screen reader friendly
+- High contrast support
+- Focus management
+
+## 🚀 Performance
+
+- Next.js optimization features
+- Image optimization
+- Code splitting
+- Lazy loading
+- Bundle analysis
+- Performance monitoring
+- `npm run type-check` - Run TypeScript checks
+
+## 🌐 Deployment
+
+The project is configured for deployment on:
+- **Netlify** - Automatic deployments from main branch
+- **Vercel** - Zero-config deployment
+- **GitHub Pages** - Static hosting
+- **Any static hosting** - Built files in `dist/`
+
+## 📱 Responsive Design
+
+- **Mobile First** - Optimized for mobile devices
+- **Breakpoints** - xs, sm, md, lg, xl, 2xl, 3xl
+- **Flexible Grid** - CSS Grid and Flexbox layouts
+- **Touch Friendly** - Proper touch targets and interactions
+
+## ♿ Accessibility
+
+- **WCAG 2.1 AA Compliant** - Meets accessibility standards
+- **Keyboard Navigation** - Full keyboard support
+- **Screen Reader Support** - Proper ARIA labels
+- **Focus Management** - Visible focus indicators
+- **Color Contrast** - High contrast ratios
+
+## 🚀 Performance
+
+- **Code Splitting** - Automatic route-based splitting
+- **Tree Shaking** - Unused code elimination
+- **Image Optimization** - Optimized asset loading
+- **Bundle Analysis** - Built-in bundle analyzer
+- **Lighthouse Score** - 90+ performance score
+
+## 🔒 Security
+
+- **Content Security Policy** - XSS protection
+- **HTTPS Only** - Secure connections
+- **Input Validation** - Form validation
+- **Error Boundaries** - Graceful error handling
+
+## 📈 SEO Features
+
+- **Meta Tags** - Comprehensive meta tag management
+- **Structured Data** - JSON-LD schema markup
+- **Open Graph** - Social media optimization
+- **Twitter Cards** - Twitter sharing optimization
+- **Sitemap** - Automatic sitemap generation
+- **Robots.txt** - Search engine directives
+ursor/automate-test-improve-and-merge-code-646c
+- `npm run lint:fix` - Fix ESLint errors
+
+## 🎨 Design System
+
+The project uses a consistent design system with:
+
+- **Colors**: Blue primary (#2563eb), with complementary grays and accent colors
+- **Typography**: Inter font family with responsive sizing
+- **Spacing**: Consistent spacing scale using Tailwind's spacing system
+- **Components**: Reusable components with consistent styling
+
+## 📱 Responsive Design
+
+- **Mobile**: Optimized for mobile devices (320px+)
+- **Tablet**: Responsive design for tablet screens (768px+)
+- **Desktop**: Full desktop experience (1024px+)
+- **Large Screens**: Optimized for large displays (1280px+)
+
+## 🔍 SEO Features
+
+- Meta tags for all pages
+- Open Graph tags for social sharing
+- Structured data markup
+- Semantic HTML structure
+- Optimized images and assets
+- Fast loading times
+
+## ♿ Accessibility
+
+- WCAG 2.1 AA compliant
+- Proper ARIA labels
+- Keyboard navigation support
+- Screen reader friendly
+- High contrast support
+- Focus management
+
+## 🚀 Performance
+
+- Next.js optimization features
+- Image optimization
+- Code splitting
+- Lazy loading
+- Bundle analysis
+- Performance monitoring
+
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+ursor/automate-test-improve-and-merge-code-646c
+
+## 🤝 Contributing
+
+1. Fork the repository
+
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+## 📊 Status
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+- All contributors and supporters
+
+---
+
+Built with ❤️ by the Zion Tech Group team
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## 📄 License
+
+This project is proprietary software owned by Zion Tech Group.
+
+## 📞 Contact
+
+- **Email**: kleber@ziontechgroup.com
+- **Phone**: +1 302 464 0950
+- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+
+## 🏢 About Zion Tech Group
+
+Zion Tech Group is a leading technology company specializing in:
+- AI & Machine Learning Solutions
+- Micro SaaS Development
+- Cybersecurity Services
+- Cloud Infrastructure
+- Blockchain Technology
+- Data Analytics
+
+We provide comprehensive technology solutions to help businesses transform and scale in the digital age.
+
+---
+
+Built with ❤️ by the Zion Tech Group team
+ursor/automate-test-improve-and-merge-code-646c
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+- All contributors and supporters
+
+---
+
+Built with ❤️ by the Zion Tech Group team
+
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+ursor/automate-test-improve-and-merge-code-646c
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/Zion-Holdings/zion.app)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- React team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+- All contributors and supporters
+
+---
+
+<<<<<<< HEAD
+Built with ❤️ by the Zion Tech Group team
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## 📄 License
+
+This project is proprietary software owned by Zion Tech Group.
+
+## 📞 Contact
+
+- **Email**: kleber@ziontechgroup.com
+- **Phone**: +1 302 464 0950
+- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+
+## 🏢 About Zion Tech Group
+
+Zion Tech Group is a leading technology company specializing in:
+- AI & Machine Learning Solutions
+- Micro SaaS Development
+- Cybersecurity Services
+- Cloud Infrastructure
+- Blockchain Technology
+- Data Analytics
+
+We provide comprehensive technology solutions to help businesses transform and scale in the digital age.
+
+---
+
+Built with ❤️ by the Zion Tech Group team
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+- All contributors and supporters
+
+---
+
+Built with ❤️ by the Zion Tech Group team
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+**Built with ❤️ by the Zion Tech Group team**
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+**Built with ❤️ by the Zion Tech Group team**
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

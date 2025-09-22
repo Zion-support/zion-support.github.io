@@ -1,1 +1,0 @@
-export const quantumSpaceServices: Array<Record<string, any>> = []

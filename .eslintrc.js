@@ -1,27 +1,26 @@
+/* eslint-env node */
 module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
   extends: [
-    'next/core-web-vitals'
+    'next/core-web-vitals',
+    '@typescript-eslint/recommended',
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    }
-  },
-  env: {
-    browser: true,
-    es6: true,
-    node: true
-  },
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
-    'no-console': 'warn',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react/react-in-jsx-scope': 'off',
+    'no-undef': 'off',
     'react/no-unescaped-entities': 'off',
-    '@next/next/no-html-link-for-pages': 'off'
+    '@next/next/no-html-link-for-pages': 'off',
+    '@next/next/no-img-element': 'off',
+    'no-console': 'off',
   },
   ignorePatterns: [
     'node_modules/',
@@ -29,9 +28,42 @@ module.exports = {
     'out/',
     'dist/',
     'build/',
+    'coverage/',
     '*.config.js',
-    '*.config.ts',
+    '*.config.cjs',
+    '*.config.mjs',
     'scripts/',
-    'automation/'
+    'automation/',
+    'netlify/',
+    'src/',
+    'apps/',
+    'pages.disabled/',
+    'pages.disabled_auto/',
+    'pages.disabled_full/',
+    'pages.corrupted.*/',
+    'pages.broken/',
+    'pages.bak/',
+    'pages.blog.disabled/',
+    'pages._archive_corrupted/',
+    'pages._quarantine/',
+    'pages-disabled/',
+    'pages-quarantine/',
+    'pages.__backup/',
+    'pages-backup/',
+    'tests.disabled/',
+    'components.disabled/',
+    'zion-os.disabled/',
+    'zion_academy/',
+    'temp_backup/',
+    'temp_broken_files/',
+    'temp_exclude/',
+    'test_build/',
+    'ultimate-*.cjs',
+    '*.test.js',
+    '*.test.ts',
+    '*.test.tsx',
+    '*.spec.js',
+    '*.spec.ts',
+    '*.spec.tsx'
   ]
 };

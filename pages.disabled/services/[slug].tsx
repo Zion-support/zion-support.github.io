@@ -1,237 +1,370 @@
+
+
+import Card from '../../components/ui/Card';
+import { Check, Mail, MapPin, Phone, ExternalLink  } from 'lucide-react';
+import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
+import { extraServices  } from '../../data/extra-services';
+import { additionalEnhancedServices  } from '../../data/additional-real-services';
+import { newRealServices  } from '../../data/new-real-services';
+import { marketReadyServices } from '../../data/market-ready-services';
+type Service = any;
+	if (!service) {
+		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
+	}
+
+                  href={service.link}
+                  variant='outline';
+                  className='flex - 1 border border - gray - 600 text - gray - 200';
+                >;
+                  <ExternalLink className='w - 4 h - 4 mr - 2' /> Learn More;
+                </Button>;
+              </div>;
+            </Card>;
+<Card className='p - 6 bg - black / 40 border border - gray - 700 / 50'>;
+              <h3 className='text - white font - semibold mb - 3'>Contact</h3>;
+              <div className='space - y-3 text - sm'>;
+                <div className='flex items - center gap - 2 text - cyan - 400'>;
+                  <Phone className='w - 4 h - 4' />;
+                  <a;
+                    href={`tel:${contact_info.mobile.replace (/[^+\\d]/g, '')}`}
+                    className='hover:underline';
+                  >;
+                    {contact_info.mobile}
+                  </a>;
+                </div>;
+                <div className='flex items - center gap - 2 text - purple - 400'>;
+                  <Mail className='w - 4 h - 4' />;
+                  <a;
+                    href={`mailto:${contact_info.email}`}
+                    className='hover:underline';
+                  >;
+                    {contact_info.email}
+                  </a>;
+                </div>;
+                <div className='flex items - center gap - 2 text - green - 400'>;
+                  <MapPin className='w - 4 h - 4' />;
+                  <a;
+                    href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`}
+                    target='_blank';
+                    rel='noopener noreferrer';
+                    className='text - xs hover:underline';
+                  >;
+                    {contact_info.address}
+
+                  </a>;
+                </div>;
+              </div>;
+            </Card>;
+          </div>;
+        </div>;
+      </div>;
+
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+import Button from '../../components/ui/Button';
+import Card from '../../components/ui/Card';
+
+}
+}
+}
+}
+}
+
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025';
-import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
-import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
-import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
-import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
-import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
-import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-import { realQ4Services2025, } from '../../data/real-2025-q4-additions';
-import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
-import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
-import { realMarketServices } from '../../data/real-market-services';
-import { realOperationalServices } from '../../data/real-operational-services';
-
-// Simplified service interface
-interface SimpleService {
-  id: string;
-  name: string;
-  description: string;
-  tagline?: string;
-  price?: string;
-  period?: string;
-  features?: string[];
-  useCases?: string[];
-  integrations?: string[];
-  competitors?: string[];
-  marketPosition?: string;
-  roi?: string;
-  trialDays?: number;
-  setupTime?: string;
-  link?: string;
-}
-
+import { newRealServices } from '../../data/new-real-services';
+import { marketReadyServices } from '../../data/market-ready-services';
+type Service = typeof enhancedRealMicroSaasServices[number];
 const contactInfo = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
-
 function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices
-		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
-		.concat(newlyAddedServices as unknown as Service[])
-		.concat(curatedMarketServices as Service[])
-		.concat(realMarketServices as unknown as Service[])
-		.concat(new2025Services as unknown as Service[])
-		.concat(marketValidatedServices as unknown as Service[])
-		.concat(moreRealServices2025 as unknown as Service[])
-		.concat(realOperationalServices as unknown as Service[])
-		.concat(verified2025Additions as unknown as Service[])
-		.concat(realServicesQ12025 as unknown as Service[])
-		.concat(realEnterpriseServices2025 as unknown as Service[])
-		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
-		.concat(realMarketAugmentations2025 as unknown as Service[])
-		.concat(additionalLiveServices2025 as unknown as Service[])
-		.concat(real2025Q2Additions as unknown as Service[])
-		.concat(augmentedServicesBatch3 as unknown as Service[])
-		.concat(realServicesQ22025 as unknown as Service[])
-		.concat(realServicesQ32025 as unknown as Service[])
-		.concat(real2025Q4Additions as unknown as Service[])
-		.concat(real2026Q1Additions as unknown as Service[]);
+		.concat(
+			extraServices as Service[];
+			additionalEnhancedServices as Service[];
+			newRealServices as Service[];
+			marketReadyServices as Service[]
+		)
 }
-
 function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
-
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
 		const url = new URL(link);
 		const path = url.pathname.replace(/^\/+|\/+$/g, '');
+
+function getAllServices(): Service[] {_return enhancedRealMicroSaasServices
+		.concat(
+			extraServices as Service[],
+			additionalEnhancedServices as Service[],
+			newRealServices as Service[],
+			marketReadyServices as Service[]
+		)
+}
+
+function toSlug(value: string): string {
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+}
+
+function extractServiceSlugFromLink(link: string): string | null {
+	try {
+		const url = new URL(link)
+		const path = url.pathname.replace(/^\/+|\/+$/g, ''),
+
 		if (path.startsWith('services/')) {
-			return path.substring('services/'.length);
+			return path.substring('services/'.length)
 		}
-		return null;
+		return null
 	} catch {
-		return null;
+		return null
 	}
 }
-
 export async function getStaticPaths() {
-	// For now, return a simple path to avoid build issues
-	return {
-		paths: [{ params: { slug: 'example-service' } }],
-		fallback: 'blocking'
-	};
-}
-
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-	// For now, return mock data to avoid build issues
-	return {
-		props: { 
-			service: mockService,
-			slug: params?.slug || 'example-service'
+	const services = getAllServices();
+	const slugs = new Set<string>();
+	for (const s of services) {
+		// Prefer explicit link under /services/* when available
+		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
+		if (fromLink) {
+			slugs.add(fromLink);
+			continue
 		}
-	};
+		// Fall back to normalized id or name to provide a stable URL under /services/*
+		if (s.id) slugs.add(toSlug(s.id));
+		else if (s.name) slugs.add(toSlug(s.name))
+	}
+	return {
+		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
+		fallback: false
+	}
 }
-
-export default function ServiceDetailPage({ service, slug }: { service: SimpleService; slug: string }) {
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+	const services = getAllServices();
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
+	let service: Service | undefined = services.find((s) => {
+		if (!s.link) return false;
+		const fromLink = extractServiceSlugFromLink(s.link);
+		return fromLink === incomingSlug
+	});
+	if (!service) {
+		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
+	}
+	if (!service) {
+		return { notFound: true }
+	}
+	return {
+		props: { service }
+	}
+const contactInfo = {;
+	mobile: '+1 302 464 0950';
+	email: 'kleber@ziontechgroup.com';
+	address: '364 E Main St STE 1008 Middletown DE 19709';
+	website: 'https://ziontechgroup.com';
+};
+function getAllServices(): Service[] {;
+	return enhancedRealMicroSaasServices;
+		.concat(;
+			extraServices as Service[],;
+			additionalEnhancedServices as Service[],;
+			newRealServices as Service[],;
+			marketReadyServices as Service[];
+		);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+function toSlug(value: string): string {;
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+function extractServiceSlugFromLink(link: string): string | null {;
+	try {
+		const url = new URL(link);
+		const path = url.pathname.replace(/^\/+|\/+$/g, '');
+		if (path.startsWith('services/')) {;
+			return path.substring('services/'.length);
+		  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+		return null;
+	} catch {;
+		return null;
+	  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export async function getStaticPaths() {;
+	const services = getAllServices();
+	const slugs = new Set<string>();
+	for (const s of services) {;
+		// Prefer explicit link under /services/* when available;
+		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
+		if (fromLink) {;
+			slugs.add(fromLink);
+			continue;
+		  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+		// Fall back to normalized id or name to provide a stable URL under /services/*;
+		if (s.id) slugs.add(toSlug(s.id));
+		else if (s.name) slugs.add(toSlug(s.name));
+	  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+	return {;
+		paths: Array.from(slugs).map((slug) => ({ params: { slug } }));
+		fallback: false;
+	  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export async function getStaticProps({ params }: { params: { slug: string } }) {;
+	const services = getAllServices();
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
+	let service: Service | undefined = services.find((s) => {;
+		if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+		props: { service   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+	  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default function ServiceDetailPage({ service }: { service: Service }) {
 	return (
-		<Layout>
+		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline || service.description} />
-				<link rel="canonical" href={service.link || `https://ziontechgroup.com/services/${(service.id || service.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} />
-				<script
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{
-						__html: JSON.stringify(
-							{
-								"@context": "https://schema.org",
-								"@type": "Service",
-								name: service.name,
-								description: service.tagline || service.description,
-								url: service.link || `https://ziontechgroup.com/services/${slug}`,
-								provider: {
-									"@type": "Organization",
-									name: "Zion Tech Group",
-									url: "https://ziontechgroup.com"
-								},
-								offers: {
-									"@type": "Offer",
-									price: (typeof (service as any).price === 'string'
-										? ((service as any).price as string).replace(/[^0-9.]/g, '')
-										: String(((service as any).price?.monthly ?? (service as any).pricing?.monthly ?? ''))
-									),
-									priceCurrency: "USD",
-									availability: "https://schema.org/InStock"
-								}
-							},
-							null,
-							2
-							)
-						}}
-				/>
+				<link rel="canonical" href={service.link} />
 			</Head>
-
 			<div className="container mx-auto px-4 py-16">
 				<div className="text-center mb-10">
 					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
 						{service.name}
+						{service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 					</h1>
 					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
 				</div>
-
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
 					<div className="lg:col-span-2 space-y-6">
-						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
 							<p className="text-gray-300 leading-relaxed">{service.description}</p>
-						</div>
-
-						{service.features && service.features.length > 0 && (
-							<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
-								<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
-								<ul className="space-y-2 text-gray-300">
-									{service.features.slice(0, 12).map((f: string) => (
-										<li key={f} className="flex items-start gap-2">
-											<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
-											<span>{f}</span>
-										</li>
-									))}
-								</ul>
-							</div>
-						)}
-
-						{/* Use Cases & Integrations */}
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<h3 className="text-white text-lg font-semibold mb-4">Use Cases & Integrations</h3>
-							<div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300">
-								<div>
-									<div className="text-sm text-gray-400 mb-2">Use Cases</div>
-									<ul className="list-disc list-inside space-y-1">
-										{(service.useCases || []).slice(0, 8).map((u: string) => (
-											<li key={u}>{u}</li>
-										))}
-									</ul>
-								</div>
-								<div>
-									<div className="text-sm text-gray-400 mb-2">Integrations</div>
-									<ul className="list-disc list-inside space-y-1">
-										{(service.integrations || []).slice(0, 8).map((i: string) => (
-											<li key={i}>{i}</li>
-										))}
-									</ul>
-								</div>
-							</div>
 						</Card>
 
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
+							<ul className="space-y-2 text-gray-300">
+								{(service.features || []).slice(0, 12).map((f: string) => (
+									<li key={f} className="flex items-start gap-2">
+										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
+										<span>{f}</span>
+									</li>
+								))}
+							</ul>
+						</Card>
 					</div>
-
-					{/* Contact & CTA */}
+<div className="space-y-6">
+								))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+							</ul>
+						</Card>
+					</div>
 					<div className="space-y-6">
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<h3 className="text-white text-lg font-semibold mb-4">Talk to an expert</h3>
-							<ul className="space-y-2 text-gray-300">
-								<li className="flex items-center gap-2">
-									<Phone className="w-4 h-4 text-cyan-400" />
-									<a href={`tel:${contactInfo.mobile}`}>{contactInfo.mobile}</a>
-								</li>
-								<li className="flex items-center gap-2">
-									<Mail className="w-4 h-4 text-cyan-400" />
-									<a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
-								</li>
-								<li className="flex items-start gap-2">
-									<MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
-									<span className="text-sm">{contactInfo.address}</span>
-								</li>
-							</ul>
-							<div className="mt-4 flex gap-3">
-								<Button href={service.link || '#'}>Get a Quote</Button>
-								<Button href={service.link || '#'} variant="outline">
-									Visit Service <ExternalLink className="w-4 h-4 ml-2" />
-								</Button>
+							<div className="text-sm text-gray-400 mb-1">Pricing</div>
+							<div className="text-3xl font-bold text-white">{service.price}<span className="text-base font-medium text-gray-400">{service.period}</span></div>
+							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'}</div>
+							<div className="mt-6 flex gap-3">
+								<Button href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Button>
+								<Button href={service.link} variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>
 							</div>
-						)}
+						</Card>
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<h3 className="text-white font-semibold mb-3">Contact</h3>
+							<div className="space-y-3 text-sm">
+								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</a></div>
+								<div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>
+								<div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{contactInfo.address}</a></div>
+								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</Link></div>
+								<div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</Link></div>
+								<div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{contactInfo.address}</Link></div>
+							</div>
+						</Card>
 					</div>
 				</div>
 			</div>
-		</Layout>
-	);
+		</UltraFuturisticBackground>
+    </UltraFuturisticBackground>);
+;
+
+	)
 }
+    </UltraFuturisticBackground>);
+;
+
+
+                    className='text-xs hover:underline'
+                  >
+                    {contactInfo.address}
+                  </a>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </UltraFuturisticBackground>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,84 +1,110 @@
 #!/bin/bash
 
-# Script to merge all open PR branches with main
-# This will resolve conflicts and push the merged branches
-
+# Script to merge all remote branches into main
 set -e
 
-echo "Starting systematic merge of all open PR branches..."
+echo "🚀 Starting comprehensive branch merge process..."
 
-# List of branches to process (first 20 to start)
-BRANCHES=(
-    "cursor/enhance-app-with-new-services-and-futuristic-design-6e47"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-6f74"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-6f84"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-7047"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-7053"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-70ec"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-713b"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-7153"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-7156"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-71a0"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-72ba"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-72dd"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-732a"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-7384"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-73aa"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-73be"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-73d5"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-7466"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-750a"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-757c"
-)
+# Get all remote branches except main and HEAD
+branches=$(git branch -r | grep -v "HEAD" | grep -v "main" | sed 's/origin\///' | head -50)
 
-# Ensure we're on main and up to date
-git checkout main
-git pull origin main
+echo "📋 Found $(echo "$branches" | wc -l) branches to process"
 
-for branch in "${BRANCHES[@]}"; do
-    echo "Processing branch: $branch"
+# Counter for tracking
+merged_count=0
+failed_count=0
+conflict_count=0
+
+# Function to merge a single branch
+merge_branch() {
+    local branch=$1
+    echo ""
+    echo "🔄 Processing branch: $branch"
     
-    # Check if branch exists remotely
-    if ! git ls-remote --heads origin "$branch" | grep -q "$branch"; then
-        echo "Branch $branch doesn't exist remotely, skipping..."
-        continue
+    # Check if branch exists locally, if not fetch it
+    if ! git show-ref --verify --quiet refs/heads/$branch; then
+        echo "📥 Fetching branch $branch..."
+        git fetch origin $branch:$branch
     fi
     
-    # Create local branch tracking remote
-    git checkout -b "$branch" "origin/$branch"
-    
-    # Try to merge with main
-    if git merge main --no-edit; then
-        echo "Successfully merged $branch with main"
+    # Check if branch can be merged
+    if git merge-base main $branch > /dev/null 2>&1; then
+        echo "✅ Branch $branch can be merged"
         
-        # Push the merged branch
-        if git push origin "$branch"; then
-            echo "Successfully pushed merged $branch"
+        # Try to merge
+        if git merge $branch --no-edit --no-ff; then
+            echo "✅ Successfully merged $branch"
+            ((merged_count++))
         else
-            echo "Failed to push $branch"
+            echo "❌ Merge conflict in $branch"
+            ((conflict_count++))
+            
+            # Try to resolve conflicts automatically
+            echo "🔧 Attempting to resolve conflicts..."
+            
+            # Check for common conflict patterns and resolve them
+            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                echo "🔍 Found merge conflicts, attempting resolution..."
+                
+                # Try to resolve common conflicts
+                git status --porcelain | while read status file; do
+                    if [[ $status =~ ^UU|^AA|^DD ]]; then
+                        echo "🔧 Resolving conflict in $file"
+                        
+                        # For common files, try to keep both versions or the newer one
+                        if [[ $file == *.tsx || $file == *.ts || $file == *.js || $file == *.jsx ]]; then
+                            # For code files, try to merge intelligently
+                            if git checkout --theirs "$file" 2>/dev/null; then
+                                git add "$file"
+                                echo "✅ Resolved $file using theirs"
+                            elif git checkout --ours "$file" 2>/dev/null; then
+                                git add "$file"
+                                echo "✅ Resolved $file using ours"
+                            else
+                                echo "⚠️  Could not auto-resolve $file"
+                            fi
+                        fi
+                    fi
+                done
+                
+                # Try to commit the merge
+                if git commit --no-edit; then
+                    echo "✅ Successfully resolved and merged $branch"
+                    ((merged_count++))
+                    ((conflict_count--))
+                else
+                    echo "❌ Could not resolve conflicts in $branch, aborting merge"
+                    git merge --abort
+                    ((failed_count++))
+                fi
+            else
+                echo "❌ Could not resolve conflicts in $branch, aborting merge"
+                git merge --abort
+                ((failed_count++))
+            fi
         fi
     else
-        echo "Merge conflict in $branch, resolving..."
-        
-        # Check for merge conflicts
-        if git status --porcelain | grep -q "^UU"; then
-            echo "Resolving conflicts in $branch..."
-            
-            # For now, just abort the merge and continue
-            # In a real scenario, you'd want to resolve conflicts manually
-            git merge --abort
-            echo "Aborted merge for $branch due to conflicts"
-        fi
+        echo "⚠️  Branch $branch cannot be merged (no common ancestor)"
+        ((failed_count++))
     fi
-    
-    # Go back to main for next iteration
-    git checkout main
-    
-    # Clean up local branch
-    git branch -D "$branch"
-    
-    echo "Completed processing $branch"
-    echo "----------------------------------------"
+}
+
+# Process each branch
+echo "$branches" | while read branch; do
+    if [ -n "$branch" ]; then
+        merge_branch "$branch"
+    fi
 done
 
-echo "Completed processing all branches!"
+echo ""
+echo "📊 Merge Summary:"
+echo "✅ Successfully merged: $merged_count branches"
+echo "❌ Failed to merge: $failed_count branches"
+echo "🔧 Resolved conflicts: $conflict_count branches"
+
+# Push all changes
+echo ""
+echo "🚀 Pushing all changes to origin..."
+git push origin main
+
+echo "🎉 Merge process completed!"
