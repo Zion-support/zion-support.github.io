@@ -46,6 +46,8 @@
     "components/vendors",
     "components/wallet",
     "components/zion",
+    "components/token",
+    "components/tokens",
     "backup",
     "backups",
     "backup-merge-conflicts",
