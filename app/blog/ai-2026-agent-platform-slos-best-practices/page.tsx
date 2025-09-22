@@ -51,3 +51,4 @@ export default function AgentPlatformSLOsBestPracticesPage() {
       </section>
     </main>
   );
+}

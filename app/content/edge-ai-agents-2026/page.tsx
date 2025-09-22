@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import React from 'react';
-<<<<<<< HEAD
 import ErrorBoundary from '../../components/ErrorBoundary';
 import SEO from '../../components/SEO';
 
@@ -8,7 +7,6 @@ export const metadata = {
   title: 'Edge AI Agents 2026 - Real-Time Autonomy Guide',
   description: 'Unlock ultra-low-latency decisioning and control with edge-native agents for real-time autonomy.',
   keywords: ['edge ai', 'ai agents', 'real-time autonomy', 'on-device ai'],
-=======
 import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 
@@ -16,14 +14,12 @@ export const metadata = {
   title: 'Edge AI Agents 2026: Real-Time Autonomy | Zion Tech Group',
   description: 'How edge-native AI agents enable ultra-low-latency decisioning and control with on-device intelligence in 2026.',
   keywords: ['edge AI', 'AI agents', 'real-time autonomy', 'on-device AI']
->>>>>>> origin/feature/new-content-and-promotions
 };
 
 export default function EdgeAIAgents2026() {
   return (
     <ErrorBoundary>
       <SEO
-<<<<<<< HEAD
         title="Edge AI Agents 2026 - Real-Time Autonomy Guide"
         description="Unlock ultra-low-latency decisioning and control with edge-native agents for real-time autonomy."
         keywords="edge ai, ai agents, real-time autonomy, on-device ai"
@@ -45,7 +41,6 @@ export default function EdgeAIAgents2026() {
                 <Link href="/services/ai-automation" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Start a Pilot</Link>
                 <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">Contact Us</Link>
               </div>
-=======
         title="Edge AI Agents 2026: Real-Time Autonomy"
         description="How edge-native AI agents enable ultra-low-latency decisioning and control with on-device intelligence in 2026."
         keywords="edge AI, AI agents, real-time autonomy, on-device AI"
@@ -65,14 +60,12 @@ export default function EdgeAIAgents2026() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services/ai-automation" className="bg-white text-emerald-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Explore AI Services</Link>
               <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-700 transition-colors">Talk to Experts</Link>
->>>>>>> origin/feature/new-content-and-promotions
             </div>
           </div>
         </section>
 
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="prose prose-lg max-w-none">
-<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Capabilities</h2>
             <ul className="list-disc list-inside text-gray-700 space-y-2 mb-8">
               <li>On-device perception with quantized multimodal models</li>
@@ -90,7 +83,6 @@ export default function EdgeAIAgents2026() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/services/ai-automation" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Explore Services</Link>
                 <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">Schedule Consultation</Link>
-=======
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Edge Agents</h2>
             <p className="text-gray-700 mb-6">Edge AI agents minimize latency, reduce bandwidth costs, and preserve privacy by processing data locally while syncing summaries to the cloud.</p>
 
@@ -111,46 +103,18 @@ export default function EdgeAIAgents2026() {
               <div className="bg-white p-6 rounded-xl shadow border border-gray-200">
                 <h4 className="text-xl font-bold text-teal-700 mb-2">Smart Retail</h4>
                 <p className="text-gray-700">On-device vision for loss prevention and planogram compliance.</p>
->>>>>>> origin/feature/new-content-and-promotions
               </div>
             </div>
           </div>
         </article>
-<<<<<<< HEAD
       </div>
-=======
       </main>
->>>>>>> origin/feature/new-content-and-promotions
     </ErrorBoundary>
   );
 }
 
-import React from 'react';
-export const metadata = {
-  title: 'Edge AI Agents: Real-Time Autonomy',
-  description: 'How edge-native agents enable ultra-low-latency decisioning at the edge.'
-};
 
-export default function EdgeAIAgents2026() {
-  return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Edge AI Agents: Real-Time Autonomy</h1>
-      <p className="text-gray-600 mb-8">
-        Discover how edge AI agents combine on-device inference, event streaming, and local control loops to act instantly where data originates.
-      </p>
-      <section className="prose max-w-none">
-        <h2>Key Capabilities</h2>
-        <ul>
-          <li>Sub-50ms decisioning with quantized models</li>
-          <li>Offline resilience and seamless cloud sync</li>
-          <li>Privacy-by-design with local data processing</li>
-        </ul>
-        <h2>Use Cases</h2>
-        <p>
-          From industrial automation and smart retail to autonomous robotics, edge agents deliver reliability and speed for mission-critical operations.
-        </p>
-      </section>
-    </main>
-  );
-}
+
+
+
 

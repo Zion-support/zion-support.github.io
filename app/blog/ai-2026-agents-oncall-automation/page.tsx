@@ -46,3 +46,4 @@ export default function AgentsOnCallAutomationPage() {
       </div>
     </main>
   );
+}

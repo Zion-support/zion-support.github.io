@@ -54,14 +54,10 @@ const ExecutiveGuideAgentAdoption: React.FC = () => {
 
 export default ExecutiveGuideAgentAdoption;
 
-import Link from 'next/link';
-import React from 'react';
 
-export const metadata = {
-  title: 'AI 2026: Executive Guide to Agent Adoption',
-  description:
-    'A concise executive playbook to adopt autonomous agents: vision, governance, controls, and measurable ROI.',
-};
+
+
+
 
 export default function Page() {
   return (

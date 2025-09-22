@@ -23,60 +23,6 @@ const BlogPage = () => {
       image: "/images/enterprise-ai-governance-2026.jpg"
     },
     {
-<<<<<<< HEAD
-      title: "AI 2025: Multimodal AI Agents – Practical Enterprise Guide",
-      description: "A hands-on 2025 playbook to design, deploy, and govern multimodal AI agents that drive measurable outcomes.",
-      slug: "ai-2025-multimodal-agents-practical-guide",
-      category: "Enterprise AI",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/multimodal-agents-2025.jpg"
-    },
-    {
-      title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
-      description: "Discover how generative AI is transforming enterprise operations in 2025, delivering unprecedented automation, creativity, and efficiency gains across all business functions.",
-      slug: "ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough",
-      category: "AI Revolution",
-      date: "2025-01-15",
-      featured: true,
-      image: "/images/generative-ai-enterprise-2025.jpg"
-    },
-    {
-      title: "Enterprise Foundation Models: A Practical Guide (2025)",
-      description: "Vendor-neutral steps to evaluate, deploy, and govern foundation models that drive measurable outcomes.",
-      slug: "ai-2025-enterprise-foundation-models-practical-guide",
-      category: "Enterprise AI",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/ai-governance-blueprint-2026.jpg"
-    },
-    {
-      title: "AI 2026: Secure Agent Architecture - Zero-Trust, Guardrails, and Compliance",
-      description: "Designing secure AI agent systems in 2026 using zero-trust principles, capability-scoped tools, runtime guardrails, and compliance-by-design.",
-      slug: "ai-2026-secure-agent-architecture",
-      category: "Security Architecture",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/secure-agent-architecture-2026.jpg"
-    },
-    {
-      title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",
-      description: "How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.",
-      slug: "ai-2025-enterprise-ai-agents-breakthrough",
-      category: "Enterprise AI",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/enterprise-ai-agents-2025.jpg"
-    },
-    {
-      title: "Quantum Computing Breakthrough 2025: Enterprise Applications",
-      description: "Explore how quantum computing is revolutionizing enterprise operations in 2025 with unprecedented processing power and breakthrough applications.",
-      slug: "ai-2025-quantum-computing-breakthrough",
-      category: "Quantum Computing",
-      date: "2025-01-15",
-      featured: true,
-      image: "/images/quantum-computing-2025.jpg"
-=======
       title: "AI 2026: Agent Observability Blueprint",
       description: "Deep visibility into autonomous agents: traces, evaluations, and safety telemetry across the lifecycle.",
       slug: "ai-2026-agent-observability-blueprint",
@@ -93,7 +39,6 @@ const BlogPage = () => {
       date: "2025-09-15",
       featured: true,
       image: "/images/autonomous-support-2026.jpg"
->>>>>>> 254598cdcbcb6f945670dbbe826d53926011bf97
     }
   ];
 

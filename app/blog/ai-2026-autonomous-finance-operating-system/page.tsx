@@ -37,3 +37,4 @@ export default function AutonomousFinanceOS2026Page() {
       </div>
     </main>
   );
+}
