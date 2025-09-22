@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { ErrorBoundary } from '../components/ErrorBoundary';
+import { generateStructuredData } from '../components/SEOEnhancer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -53,12 +55,27 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const structuredData = generateStructuredData('Organization', {
+    name: 'Zion Tech Group',
+    description: 'Leading provider of AI solutions, micro SaaS development, and comprehensive IT services.',
+  });
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+      </head>
       <body className={inter.className}>
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
+        <ErrorBoundary>
+          <Navigation />
+          <main>{children}</main>
+          <Footer />
+        </ErrorBoundary>
       </body>
     </html>
   );
