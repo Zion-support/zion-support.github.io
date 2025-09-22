@@ -31,12 +31,14 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "next-env.d.ts",
-    "src/**/*",
-    "pages/**/*",
+    "__tests__/**/*",
     "components/**/*",
     "lib/**/*",
-    "__tests__/**/*"
+    "next-env.d.ts",
+    "pages/**/*",
+    "src/**/*",
+    "types/**/*",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
