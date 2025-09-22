@@ -1,26 +1,45 @@
-
 export interface Job {
-<<<<<<< HEAD
+
 export interface Job {;
 
-=======
->>>>>>> origin/auto/autonomy-17186719616
+export interface Job {;
+
+export interface Job {export interface Job {;
+
+export interface Job {
+export interface Job {;
+export interface Job {};
   id: string;
   title: string;
+  title: string,
+
+export interface Job {;
+
+export interface Job {;
+
+export interface Job {
+export interface Job {;
+title: string,
   description: string;
   company_name?: string;
   budget?: string;
-<<<<<<< HEAD
-  client_id: string
-=======
   client_id: string;
->>>>>>> origin/auto/autonomy-17186719616
-}
 
+export interface Job {;
+
+export interface Job {export interface Job {;
+
+export interface Job {
+export interface Job {;
+  title: string,
+  description: string;
+  company_name?: string;
+  budget?: string;
+
+}
 export interface ApplyToJobModalProps {
   job: Job;
   isOpen: boolean;
-<<<<<<< HEAD
 
 
 export interface ApplyToJobModalProps {;
@@ -29,9 +48,6 @@ export interface ApplyToJobModalProps {;
   onClose: () => void;
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
-
-
-
 
 
 
@@ -48,30 +64,33 @@ export interface ApplyToJobModalProps {;
   job: Job,;
   isOpen: boolean,;
 
+  onClose: () => void;
+  isOpen: boolean,;  onClose: () => void;
 
+  onApplySuccess?: (jobId: string) => Promise<void>;
+}
+  job: Job;
+  isOpen: boolean,;  onClose: () => void;
+  isOpen: boolean,;
 
   onClose: () => void;
 
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
 
+export interface ApplyToJobModalProps {
+  job: Job;
+  is_open: boolean;
+  on_close: () => void;
+  onApplySuccess?: (job_id: string) => Promise < void>;
+}
 
 ;
+;
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-=======
-  onClose: () => void;
-  onApplySuccess?: (jobId: string) => Promise<void>;
-}
->>>>>>> origin/auto/autonomy-17186719616
+;
+;
+export interface ApplyToJobModalProps {
+job: Job;
+export interface ApplyToJobModalProps {
+  job: Job;
