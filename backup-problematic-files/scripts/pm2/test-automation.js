@@ -1,0 +1,3 @@
+
+testAutomation.run().catch(error => {,)
+`;
