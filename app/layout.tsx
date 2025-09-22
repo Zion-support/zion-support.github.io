@@ -6,6 +6,7 @@ import PerformanceMonitor from './components/PerformanceMonitor'
 import ScrollToTop from './components/ScrollToTop'
 import { ThemeProvider } from './components/ThemeProvider'
 import StructuredData, { organizationSchema, websiteSchema, serviceSchema } from './components/StructuredData'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -56,6 +57,7 @@ export default function RootLayout({
             {children}
             <ScrollToTop />
             <PerformanceMonitor />
+            <AccessibilityEnhancer />
           </ErrorBoundary>
         </ThemeProvider>
       </body>
