@@ -56,7 +56,7 @@ import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import NewContentDiscoveryWidget2025 from '../components/NewContentDiscoveryWidget2025';
-import Card from '../components/ui/Card';
+import { Card } from '../components/ui/Card';
 import FeatureCard from '../components/FeatureCard';
 import TestimonialCard from '../components/TestimonialCard';
 import PerformanceMetrics from '../components/PerformanceMetrics';
