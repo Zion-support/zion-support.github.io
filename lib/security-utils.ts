@@ -1,7 +1,7 @@
 // Security utilities
 export const sanitizeInput = (input: string): string => {
   return input
-    .replace(/[<>]/g, ) // Remove potential HTML tags
+    .replace(/[<>]/g, '') // Remove potential HTML tags
     .replace(/[&<>"']/g, (match) => {
       const escapeMap: { [key: string]: string } = {
         '&': '&amp;',
@@ -12,21 +12,28 @@ export const sanitizeInput = (input: string): string => {
       };
       return escapeMap[match];
     });
+};
 
 export const validateEmail = (email: string): boolean => {
-  const emailRegex = /^[^s@]+@[^s@]+.[^s@]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
+};
 
 export const generateCSRFToken = (): string => {
   return Math.random().toString(36).substring(2, 15) + 
          Math.random().toString(36).substring(2, 15);
+};
 
 export const hashPassword = async (password: string): Promise<string> => {
-  const encoder = new TextEncoder();
+  if (typeof window === 'undefined') {
+    throw new Error('hashPassword can only be used in browser environment');
+  }
+  const encoder = new (window as any).TextEncoder();
   const data = encoder.encode(password);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashBuffer = await window.crypto.subtle.digest('SHA-256', data);
   const hashArray = Array.from(new Uint8Array(hashBuffer));
-  return hashArray.map(b => b.toString(16).padStart(2, '0')).join();
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+};
 
 export const rateLimit = (() => {
   const requests = new Map();
@@ -44,8 +51,10 @@ export const rateLimit = (() => {
     
     if (validRequests.length >= limit) {
       return false;
+    }
     
     validRequests.push(now);
     requests.set(ip, validRequests);
     return true;
+  };
 })();
